@@ -89,13 +89,53 @@ html {
 	text-align: center;
 }
 
-.itembox {
-	height: 60px;
-	white-space: normal;
-	text-align: left;
 }
 
+.button {
+  background: darkcyan;
+  border: 1px solid cyan;
+  color: #fff;
+  display: inline-block;
+  font: normal 13px/1 "Coda";
+  letter-spacing: 1px;
+  margin: 5px;
+  padding: 10px 50px 8px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
 }
+.button:before {
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid darkcyan;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  z-index: 5;
+}
+.button:after {
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid cyan;
+  content: "";
+  display: block;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  z-index: 4;
+}
+.button:hover {
+  background: #005858;
+  color: #fff;
+}
+.button:hover:before {
+  border-bottom-color: #005858;
+}
+
 a:link {
 	color: green;
 }
@@ -109,6 +149,7 @@ a:visited {
 a:active {
 	color: blue;
 }
+
 </style>
 
 	<link rel="stylesheet" type="text/css"
@@ -128,21 +169,32 @@ a:active {
 
 			<div class="panel-caption">Citizen Intelligence
 				Agency::Tracking politicians like bugs.</div>
-				
+
 			<div class="caption-Level2Header">Objective</div>
 			Visualize political activity in Sweden, present key performance
 			indicators and metadata for the actors on national level.
-			
-			<div class="caption-Level2Header">Data</div>			
-			Software agents gather data from <a href="https://www.esv.se/psidata/">https://www.esv.se/psidata/(The Swedish National Financial Management Authority)</a>, <a href="http://data.riksdagen.se/">http://data.riksdagen.se/(Swedish parliament)</a> , <a href="http://www.val.se/">http://www.val.se/(Swedish Election)</a> and <a href="http://data.worldbank.org/">http://data.worldbank.org/(Country indicators)</a> .
-			
+
+			<div class="caption-Level2Header">Data</div>
+			Software agents gather data from <a
+				href="https://www.esv.se/psidata/">https://www.esv.se/psidata/(The
+				Swedish National Financial Management Authority)</a>, <a
+				href="http://data.riksdagen.se/">http://data.riksdagen.se/(Swedish
+				parliament)</a> , <a href="http://www.val.se/">http://www.val.se/(Swedish
+				Election)</a> and <a href="http://data.worldbank.org/">http://data.worldbank.org/(Country
+				indicators)</a> .
+
 			<div class="caption-Level2Header">Coverage</div>
-			<a href="https://www.hack23.com/cia/#!countryranking/OVERVIEW">Country indicators</a>, <a href=https://www.hack23.com/cia/#!ministryranking/CHARTS/ALL_GOVERNMENT_ROLE_CHART">government</a>, <a href="https://www.hack23.com/cia/#!governmentbodyranking/DATAGRID">government bodies</a>,ministries,government
-			members parliament members,	committees, documents, ballots, decisions and political parties.
+			<a href="https://www.hack23.com/cia/#!countryranking/OVERVIEW">Country
+				indicators</a>, <a
+				href="https://www.hack23.com/cia/#!ministryranking/CHARTS/ALL_GOVERNMENT_ROLE_CHART">government</a>,
+			<a href="https://www.hack23.com/cia/#!governmentbodyranking/DATAGRID">government
+				bodies</a>,ministries,government members parliament members, committees,
+			documents, ballots, decisions and political parties.
 
 			<div class="caption-Level2Header">How</div>
-			Analyzing the data using Business Rules Management System, Statistical Machine Intelligence
-			and Learning Engine and visualize the information/Intelligence.
+			Analyzing the data using Business Rules Management System,
+			Statistical Machine Intelligence and Learning Engine and visualize
+			the information/Intelligence.
 		</div>
 
 
@@ -151,7 +203,7 @@ a:active {
 			<div class="caption-Level2Header">Citizen Intelligence Agency
 				Demo</div>
 			<a href="https://www.hack23.com/cia/">https://www.hack23.com/cia/</a>
-			Covers rule violations, risk summary, data, metadata and charts. 
+			Covers rule violations, risk summary, data, metadata and charts.
 		</div>
 
 		<div class="overview-panel-level2">
