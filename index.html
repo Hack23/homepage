@@ -90,50 +90,53 @@ html {
 }
 
 }
-
 .button {
-  background: darkcyan;
-  border: 1px solid cyan;
-  color: #fff;
-  display: inline-block;
-  font: normal 13px/1 "Coda";
-  letter-spacing: 1px;
-  margin: 5px;
-  padding: 10px 50px 8px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
+	background: darkcyan;
+	border: 1px solid cyan;
+	color: #fff;
+	display: inline-block;
+	font: normal 13px/1 "Coda";
+	letter-spacing: 1px;
+	margin: 5px;
+	padding: 10px 50px 8px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
 }
+
 .button:before {
-  border-left: 4px solid transparent;
-  border-bottom: 4px solid darkcyan;
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 14px;
-  z-index: 5;
+	border-left: 4px solid transparent;
+	border-bottom: 4px solid darkcyan;
+	content: "";
+	display: block;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 14px;
+	z-index: 5;
 }
+
 .button:after {
-  border-left: 5px solid transparent;
-  border-bottom: 5px solid cyan;
-  content: "";
-  display: block;
-  height: 5px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 15px;
-  z-index: 4;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid cyan;
+	content: "";
+	display: block;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 15px;
+	z-index: 4;
 }
+
 .button:hover {
-  background: #005858;
-  color: #fff;
+	background: #005858;
+	color: #fff;
 }
+
 .button:hover:before {
-  border-bottom-color: #005858;
+	border-bottom-color: #005858;
 }
 
 a:link {
@@ -149,7 +152,6 @@ a:visited {
 a:active {
 	color: blue;
 }
-
 </style>
 
 	<link rel="stylesheet" type="text/css"
@@ -158,14 +160,39 @@ a:active {
 <body>
 
 	<div class="overview-panel-level1">
-		<div class="HeaderSlogan">www.hack23.com:: Open source software
-			development</div>
+		<div class="HeaderSlogan">www.hack23.com:: Open Source Software
+			Development</div>
 	</div>
 
 	<div class="panel">
 
+
 		<div class="overview-panel-level1">
-			<div class="Header">Projects</div>
+			<div class="Header">Hack23</div>						
+			<div class="panel-caption">Committers</div>
+			<a href="https://www.openhub.net/accounts/pether">James Pether Sörling</a> and <a href="https://github.com/renovate-bot">renovate-bot</a>, <a href="https://github.com/dependabot-bot">dependabot-bot</a>, <a href="https://imgbot.net/">imgbot</a> 		    
+			<div class="caption-Level2Header">Reviewer bots</div>
+			 Security/Blackducksoftware-copilot, guardrails/scan, SonarCloud Code Analysis, DeepCode, Datree insights, Datree Smart Policy, pull-request-size-bot, issue-label-bot,  
+			 license/cla, codebeat, codeclimate, jenkins and travis.			
+			<div class="caption-Level2Header">Objective</div>
+			Development of Secure Open Source Software Applications and Tools. 
+		</div>
+
+		<div class="overview-panel-level2">
+			<div class="Level2Header">Hack23 Development Resources</div>
+			<div class="caption-Level2Header">
+				<a href="https://github.com/Hack23">Source Code</a>, <a
+					href="https://www.hack23.com/sonar/projects">Quality Assurance
+					Reports</a>, <a
+					href="https://www.hack23.com/jenkins/blue/organizations/jenkins/pipelines/?search=www.hack23.com">Continuous
+					Integration / Continuous Security / Continuous Delivery</a>, <a
+					href="https://www.hack23.com/nexus/#browse/browse">Maven
+					Repository</a>
+			</div>
+		</div>
+
+		<div class="overview-panel-level1">
+			<div class="Header">Application</div>
 
 			<div class="panel-caption">Citizen Intelligence
 				Agency::Tracking politicians like bugs.</div>
@@ -176,57 +203,92 @@ a:active {
 
 			<div class="caption-Level2Header">Data</div>
 			Software agents gather data from public api:s <a
-				href="https://www.esv.se/psidata/">Swedish National Financial Management Authority</a>, <a
-				href="http://data.riksdagen.se/">Swedish Parliament</a>, <a href="http://www.val.se/">Swedish
-				Election</a> and <a href="http://data.worldbank.org/">World Bank</a>
+				href="https://www.esv.se/psidata/">Swedish National Financial
+				Management Authority</a>, <a href="http://data.riksdagen.se/">Swedish
+				Parliament</a>, <a href="http://www.val.se/">Swedish Election</a> and <a
+				href="http://data.worldbank.org/">World Bank</a>
 
 			<div class="caption-Level2Header">Coverage</div>
 			<a href="https://www.hack23.com/cia/#!countryranking/OVERVIEW">Country
-				Indicators</a>, 				
-			<a href="https://www.hack23.com/cia/#!parliamentranking/RULES/RULE_VIOLATIONS">Rule Violations</a>, <a href="https://www.hack23.com/cia/#!parliamentranking/RULES/RISK_SUMMARY">Risk Summary</a>, <a href="https://www.hack23.com/cia/#!parliamentranking/CHARTS/DECISIONACTIVITYBYTYPE">Metadata</a>, <a href="https://www.hack23.com/cia/#!governmentbodyranking/OVERVIEW">Charts</a>, <a
-				href="https://www.hack23.com/cia/#!ministryranking/CHARTS/ALL_GOVERNMENT_ROLE_CHART">Government</a>, 
+				Indicators</a>, <a
+				href="https://www.hack23.com/cia/#!parliamentranking/RULES/RULE_VIOLATIONS">Rule
+				Violations</a>, <a
+				href="https://www.hack23.com/cia/#!parliamentranking/RULES/RISK_SUMMARY">Risk
+				Summary</a>, <a
+				href="https://www.hack23.com/cia/#!parliamentranking/CHARTS/DECISIONACTIVITYBYTYPE">Metadata</a>,
+			<a href="https://www.hack23.com/cia/#!governmentbodyranking/OVERVIEW">Charts</a>,
+			<a
+				href="https://www.hack23.com/cia/#!ministryranking/CHARTS/ALL_GOVERNMENT_ROLE_CHART">Government</a>,
 			<a href="https://www.hack23.com/cia/#!governmentbodyranking/DATAGRID">Government
-				Bodies</a>, <a href="https://www.hack23.com/cia/#!ministryranking/DATAGRID">Ministries</a>, <a href="">Government Members</a>, <a href="https://www.hack23.com/cia/#!politicianranking/DATAGRID">Parliament Members</a>, <a href="https://www.hack23.com/cia/#!committeeranking/DATAGRID">Committees</a>,
-			<a href="https://www.hack23.com/cia/#!documents/OVERVIEW">Documents</a>, <a href="https://www.hack23.com/cia/#!party/VOTEHISTORY/S">Ballots</a>, <a href="https://www.hack23.com/cia/#!parliamentranking/CHARTS/DECISION_FLOW_CHART">Decisions</a> and <a href="https://www.hack23.com/cia/#!partyranking/DATAGRID">Political parties</a>.
+				Bodies</a>, <a
+				href="https://www.hack23.com/cia/#!ministryranking/DATAGRID">Ministries</a>,
+			<a href="">Government Members</a>, <a
+				href="https://www.hack23.com/cia/#!politicianranking/DATAGRID">Parliament
+				Members</a>, <a
+				href="https://www.hack23.com/cia/#!committeeranking/DATAGRID">Committees</a>,
+			<a href="https://www.hack23.com/cia/#!documents/OVERVIEW">Documents</a>,
+			<a href="https://www.hack23.com/cia/#!party/VOTEHISTORY/S">Ballots</a>,
+			<a
+				href="https://www.hack23.com/cia/#!parliamentranking/CHARTS/DECISION_FLOW_CHART">Decisions</a>
+			and <a href="https://www.hack23.com/cia/#!partyranking/DATAGRID">Political
+				parties</a>.
 
 			<div class="caption-Level2Header">How</div>
 			Analyzing the data using Business Rules Management System,
 			Statistical Machine Intelligence and Learning Engine and visualize
 			the information/Intelligence.
+						
 		</div>
 
 
 		<div class="overview-panel-level2">
-			<div class="Level2Header">Demo</div>
-			<div class="caption-Level2Header"><a class="button" href="https://www.hack23.com/cia/">Citizen Intelligence Agency
-				Demo</a></div>
-			
+			<div class="Level2Header">Citizen Intelligence Agency Demo</div>
+			<div class="caption-Level2Header">
+				<a class="button" href="https://www.hack23.com/cia/">Citizen
+					Intelligence Agency Demo</a>
+			</div>
+
 		</div>
 
 		<div class="overview-panel-level2">
-			<div class="Level2Header">Documentation</div>
-			<div class="caption-Level2Header"><a href="https://hack23.github.io/cia/">Project Documentation</a></div>
+			<div class="Level2Header">Citizen Intelligence Agency
+				Documentation</div>
+			<div class="caption-Level2Header">
+				<a href="https://hack23.github.io/cia/">Project Documentation</a> ,
+				<a href="https://hack23.github.io/cia/developer.html">Developer
+					Guide</a>, <a href="https://hack23.github.io/cia/architecture.html">Architecture
+					Overview</a>, <a
+					href="https://www.hack23.com/jenkins/job/Citizen-Intelligence-Agency-dist-cloudformation/lastSuccessfulBuild/artifact/cia-dist-cloudformation/target/cia-dist-cloudformationv2.png">Cloudformation
+					Graph</a>
+			</div>
+		</div>
+
+
+		<div class="overview-panel-level1">
+			<div class="Header">Tools</div>						
+			<div class="panel-caption">Sonar Cloudformation Plugin</div>
+
+			<div class="caption-Level2Header">Objective</div>
+			Integrate Security Check of Cloudformation before deployment. 
+
+			<div class="caption-Level2Header">How</div>
+			Use reports generated by <a href="https://github.com/stelligent/cfn_nag">cfn-nag</a> tool which looks for patterns in <a href=https://aws.amazon.com/cloudformation/resources/">CloudFormation</a> templates that may indicate insecure infrastructure.
+			Publish the reports result  by creating issues with different severities in <a href="https://www.sonarqube.org/">Sonarqube</a> during code scan. 
 		</div>
 
 		<div class="overview-panel-level2">
-			<div class="Level2Header">Source Code</div>
-			<div class="caption-Level2Header"><a href="https://github.com/Hack23/cia">Github</a></div>
+			<div class="Level2Header">Sonar Cloudformation Plugin
+				Documentation</div>
+			<div class="caption-Level2Header">
+				<a href="https://hack23.github.io/sonar-cloudformation-plugin/">Project
+					Documentation</a> , <a
+					href="https://www.hack23.com/sonar/profiles/show?language=cfn&name=Cloudformation+Rules">Demo</a>,
+				<a
+					href="https://hack23.github.io/sonar-cloudformation-plugin/apidocs/index.html">Architecture
+					Overview</a>
+			</div>
 		</div>
 
-		<div class="overview-panel-level2">
-			<div class="Level2Header">Build</div>
-			<div class="caption-Level2Header"><a href="https://www.hack23.com/jenkins/">Jenkins</a></div>
-		</div>
-
-		<div class="overview-panel-level2">
-			<div class="Level2Header">QA</div>
-			<div class="caption-Level2Header"><a href="https://www.hack23.com/sonar/">Sonarqube</a></div>
-		</div>
-
-		<div class="overview-panel-level2">
-			<div class="Level2Header">Artifacts</div>
-			<div class="caption-Level2Header"><a href="https://www.hack23.com/nexus/">Nexus Repository</a></div>
-		</div>
 
 	</div>
 
