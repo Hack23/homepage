@@ -68,7 +68,7 @@ Resources:
       RecordSets:
         - Name: !GetAtt CertificateDNSRecord.Name
           Type: !GetAtt CertificateDNSRecord.Type
-          TTL: 60
+          TTL: "60"
           Weight: 1
           SetIdentifier: !Ref Certificate
           ResourceRecords:
@@ -82,7 +82,7 @@ Resources:
       RecordSets:
         - Name: !GetAtt apexCertificateDNSRecord.Name
           Type: !GetAtt apexCertificateDNSRecord.Type
-          TTL: 60
+          TTL: "60"
           Weight: 1
           SetIdentifier: !Ref Certificate
           ResourceRecords:

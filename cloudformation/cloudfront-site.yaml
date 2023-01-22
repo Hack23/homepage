@@ -94,7 +94,7 @@ Resources:
       DistributionConfig:
         Aliases:
           - !Sub '${SubDomain}.${DomainName}'
-          - !If [ CreateApexConfig, !Ref DomainName, !Ref 'AWS::NoValue' ]
+          - !Ref DomainName, !Ref 'AWS::NoValue'
         DefaultCacheBehavior:
           Compress: true
           DefaultTTL: 86400
@@ -127,9 +127,6 @@ Resources:
         Origins:
           - DomainName: !Ref 'S3BucketRootName'
             Id: !Sub 'S3-${AWS::StackName}-root'
-            S3OriginConfig:
-              OriginAccessIdentity:
-                !Join ['', ['origin-access-identity/cloudfront/', !Ref CloudFrontOriginAccessIdentity]]
         PriceClass: 'PriceClass_All'
         ViewerCertificate:
           AcmCertificateArn: !Ref 'CertificateArn'
