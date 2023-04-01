@@ -1,168 +1,126 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>hack23.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hack23.com</title>
+    <meta name="description" content="Open Source Development">
+    <meta name="keywords" content="open source, development, coding, programming, cyber security. information security">
+    <meta name="robots" content="index, follow">
+    <meta property="og:description" content="Open Source Development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com">
+    <meta property="og:image" content="https://hack23.com/images/logo.png">
+    <meta name="DC.Subject" content="Open Source Development">
+    <meta name="DC.Description" content="Open Source Development.">
+    <meta name="DC.Type" content="Text">
+    <meta name="DC.Format" content="text/html">
+    <meta name="DC.Identifier" content="https://hack23.com">
+    <meta name="DC.Language" content="en">
+    <style>
+        /* Set global styles */
+        body {
+            color: #000;
+            background-color: #E5E5E5;
+            font-size: 16px;
+        }
 
-<meta name="description" content="Open Source Development" />
-<meta name="og:title" content="Riksdags Monitor" />
-<meta name="og:description" content="Open Source Development." />
-<meta name="og:type" content="website" />
-<meta name="og:url" content="https://hack23.com" />
-<meta name="og:locale" content="en_GB" />
-<meta name="og:site_name" content="Riksdags Monitor" />
-<meta name="DC.Subject" />
-<meta name="DC.Creator" content="Riksdags Monitor" />
-<meta name="DC.Description" content="Open Source Development."/>
-<meta name="DC.Title" lang="en" content="Riksdags Monitor" />
-<meta name="DC.Type" content="Text" />
-<meta name="DC.Format" content="text/html" />
-<meta name="DC.Identifier" content="https://hack23.com" />
-<meta name="DC.Language" content="en" />
+        /* Header styles */
+        .header {
+            background-color: #006666;
+            border-radius: 6px;
+            color: #FFF;
+            font-size: 24px;
+            height: 40px;
+            text-align: center;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<style type="text/css">
+        /* Panel caption styles */
+        .panel-caption {
+            background-color: #004D4D;
+            border-radius: 6px;
+            color: #FFF;
+            font-size: 16px;
+            height: 20px;
+            text-align: center;
+        }
 
-html {
-	color: #000000;
-	background-color: #E5E5E5;
-	font-size: 16px;
-}
+        /* Styles for level panels */
+        .overview-panel-level {
+            background-color: #FFF;
+            border-radius: 3px;
+            color: #000;
+            margin: 4px;
+            overflow: scroll;
+            padding: 6px;
+        }
 
-.panel {
-	color: #FFFFFF;
-	background-color: #006666;
-	border-radius: 0;
-	border: 2px inset #FFFFFF;
-	overflow: visible !important;
-}
-
-.Header {
-	font-size: 24px;
-	color: #FFFFFF;
-	background-color: #006666;
-	border-radius: 6px;
-	text-align: center;
-	height: 40px;
-}
-
-.panel-caption {
-	color: #FFFFFF;
-	background-color: #004D4D;
-	font-size: 16px;
-	border-radius: 6px;
-	text-align: center;
-	height: 20px;
-}
-
-
-.Level1Header {
-	color: #000000;
-	background-color: #FFFFFF;
-	font-size: 18px;
-	border-radius: 6px;
-	width: 100%;
-	height: 30px;
-}
-
-.caption-Level1Header {
-	color: #000000;
-	background-color: #FFFFFF;
-	font-size: 16px;
-	border-radius: 1px;
-	width: 100%;
-	height: 40px;
-	overflow: visible !important;
-}
-
-
-.overview-panel-level1 {
-	overflow: scroll;
-	border: 2px #000000;
-	border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
-	padding: 6px;
-	margin: 4px;
-	color: #000000;
-	background-color: #FFFFFF;
-	background: #FFFFFF;
-	overflow: visible !important;
-}
-
-
-.Level2Header {
-	color: #FFFFFF;
-	background-color: #006666;
-	font-size: 18px;
-	border-radius: 6px;
-	width: 100%;
-}
-
-.caption-Level2Header {
-	color: #FFFFFF;
-	background-color: #006666;
-	background-image: none;
-	font-size: 18px;
-	border-radius: 6px;
-}
-
-.overview-panel-level2 {
-	width: 100%;
-	background-color: #FFFFFF;
-	color: #000000;
-	border: 2px inset #000000;
-	border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
-	height: 80px;
-	display: inline-block; 
-}
-
-a:link {
-	color: #006666;
-}
-a:visited {
-	color: #006666;
-}
-a:active {
-	color: #006666;
-}
-
+  /* Link styles */
+  a:link,
+  a:visited,
+  a:active {
+    color: #006666;
+  }
 </style>
+
 
 </head>
 <body>
-	
-	<div class="panel">
-
-			<div class="Header">Hack23</div>
-			<div class="panel-caption">Open Source Development.</div>
-			
-		<div class="overview-panel-level1">
-	
-			<div class="Level1Header">About</div>
-			<div class="caption-Level1Header"><a href="https://www.openhub.net/accounts/pether">James Pether Sörling</a>(<a href="https://github.com/Hack23/talks">talks</a>) <a href="https://www.linkedin.com/in/jamessorling/">https://www.linkedin.com/in/jamessorling/</a> </div>
-
-
-			<div class="overview-panel-level2">
-				<div class="Level2Header">Press coverage</div>
-			<a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna">Computer Sweden</a>, <a href="http://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/">Riksdag och Departement</a>, <a href="https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/">Expressen</a>,
-			<a href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf">National Democratic Institute
-			: Strengthening Parliamentary Accountability, Citizen Engagement and Access to Information</a>
-			</div>
-
-			
-			<div class="overview-panel-level2">				
-				<div class="Level2Header">Past projects</div>					
-					<a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a>
-					<a href="https://github.com/Hack23/sonar-cloudformation-plugin">https://github.com/Hack23/sonar-cloudformation-plugin</a>			
-			</div>
-
-			<div class="overview-panel-level2">				
-				<div class="Level2Header">Current projects</div>
-					<a href="https://github.com/Hack23/lambda-in-private-vpc">https://github.com/Hack23/lambda-in-private-vpc</a>
-				
-			</div>
-
-		</div>
-	</div>
+  <div>
+    <div class="header">Hack23</div>
+    <div class="panel-caption">Open Source Development.</div>
+    <div class="overview-panel-level">
+	  <h2>About James Pether Sörling</h2>
+	  Experienced technology professional with expertise in information security and delivery of secure cloud systems. Strong advocate for transparency in organizations and committed to ensuring the security and reliability of my open source projects through the use of industry best practices such as OpenSSF and CII Best Practices.
+	  
+	  <ul>
+	    <li>Open source developer and founder of <a href="https://hack23.com/">Hack23</a></li>
+	    <li>Check out his <a href="https://www.openhub.net/accounts/pether">OpenHub profile</a></li>
+	    <li>View his <a href="https://github.com/Hack23/talks">talks on GitHub</a></li>
+	    <li>Connect with him on <a href="https://www.linkedin.com/in/jamessorling/">LinkedIn</a></li>
+	  </ul>
+		<h2>Press coverage</h2>
+		<ul>
+		  <li>
+		    <a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna">
+		      Computer Sweden
+		    </a>
+		    - Article about how technology can expose politicians, featuring James Pether Sorling.
+		  </li>
+		  <li>
+		    <a href="http://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/">
+		      Riksdag och Departement
+		    </a>
+		    - Swedish language article about CIA surveillance of politicians, featuring James Pether Sorling.
+		  </li>
+		  <li>
+		    <a href="https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/">
+		      Expressen
+		    </a>
+		    - Opinion piece about political absenteeism, featuring a quote from James Pether Sorling.
+		  </li>
+		  <li>
+		    <a href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf">
+		      National Democratic Institute: Strengthening Parliamentary Accountability, Citizen Engagement and Access to Information
+		    </a>
+		    - Survey report that mentions James Pether Sorling's involvement in parliamentary monitoring organizations in Sweden.
+		  </li>
+		</ul>
+		<h2>Past Projects</h2>
+		<ul>
+			<li>
+			  <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> - An open-source intelligence (OSINT) project that tracks politicians in Sweden using Statistical Machine Intelligence and Learning Engine and Business Rules Management System. The project is independent and non-partisan, developed as a voluntary effort. The goal of the project is to visualize political activity in Sweden, present key performance indicators and metadata for the actors on a national level. The application displays data, metadata, and charts related to Swedish parliament and government, covering parliament members, committees, documents, ballots, decisions, ministries, government members, and political parties. The project uses open data from various sources such as <a href="http://data.riksdagen.se/">http://data.riksdagen.se/</a>, <a href="http://www.val.se/">http://www.val.se/</a>, and <a href="http://data.worldbank.org/">http://data.worldbank.org/</a>.
+			</li>			
+			<li>
+			  <a href="https://github.com/Hack23/sonar-cloudformation-plugin">Sonar-CloudFormation-Plugin</a> - A plugin for <a href="https://www.sonarqube.org/">SonarQube</a> that allows users to analyze <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a> templates written in YAML or JSON, developed in Java. The plugin uses the SonarQube API to perform code analysis on the templates and generate detailed reports on best practices, potential security issues, and other code quality metrics. The plugin integrates with <a href="https://github.com/stelligent/cfn_nag">cfn-nag</a> and <a href="https://www.checkov.io/">Checkov</a> to provide additional security checks based on the <a href="https://cwe.mitre.org/">CWE</a>, <a href="https://www.nist.gov/">NIST 800-53</a>, and <a href="https://www.iso.org/standard/54534.html">ISO 27001</a> standards.
+			</li>		
+		</ul>
+			<h2>Current Projects</h2>
+			<ul>
+			  <li>
+			    <a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda in Private VPC</a> - POC of multi-region active/active site with Resilience Hub policy compliance and runbooks for fast recovery from failures. </li>
+			</ul>
+			<p> This project focuses on Resilience Hub policy compliance and runbooks to ensure fast recovery from failures. It features a Lambda function running in a private VPC with multi-region active/active site setup, with RTO/RPO of 5 min for application, AZ, and region failures. The project includes fault injections to test SOP and follows a zero trust model with an API Gateway for schema request validation and cross-region replicated DynamoDB. Route53 geolocation DNS setup and CloudFront failover S3 bucket in a different region for frontend. The project also includes badges for license and OpenSSF Scorecard. </p>    </div>
+  </div>
 </body>
 </html>
