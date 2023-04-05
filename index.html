@@ -23,59 +23,94 @@
     color: #333;
     background-color: #F5F5F5;
     font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
   }
+/* Container styles */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem;
+}
 
-  /* Header styles */
-  .header {
-    background-color: #004D4D;
-    border-radius: 6px;
-    color: #FFF;
-    font-size: 24px;
-    height: 40px;
-    text-align: center;
-  }
+/* Header styles */
+.header {
+background-color: #004D4D;
+border-radius: 6px;
+color: #FFF;
+font-size: 24px;
+padding: 1rem;
+text-align: center;
+}
 
-  /* Panel caption styles */
-  .panel-caption {
-    background-color: #006666;
-    border-radius: 6px;
-    color: #FFF;
-    font-size: 16px;
-    height: 20px;
-    text-align: center;
-  }
+/* Panel caption styles */
+.panel-caption {
+background-color: #006666;
+border-radius: 6px;
+color: #FFF;
+font-size: 20px;
+padding: 0.5rem;
+text-align: center;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
 
-  /* Styles for level panels */
-  .overview-panel-level {
-    background-color: #FFF;
-    border-radius: 3px;
-    color: #333;
-    margin: 4px;
-    overflow: scroll;
-    padding: 6px;
-  }
+/* Styles for level panels */
+.overview-panel-level {
+background-color: #FFF;
+border-radius: 3px;
+color: #333;
+padding: 1rem;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-  /* Link styles */
-  a:link,
-  a:visited,
-  a:active {
-    color: #004D4D;
-  }
+/* Headings */
+h2 {
+margin-bottom: 1rem;
+}
+
+
+/* Link styles */
+a:link,
+a:visited,
+a:active {
+color: #004D4D;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* Paragraphs */
+p {
+margin-bottom: 1rem;
+}
+
 </style>
-
 
 
 </head>
 <body>
-  <div>
+  <div class="container">
     <div class="header">Hack23</div>
     <div class="panel-caption">Open Source Development.</div>
     <div class="overview-panel-level">
-	  <h2>About James Pether Sörling</h2>
-	  Experienced technology professional with expertise in information security and delivery of secure cloud systems. Strong advocate for transparency in organizations and committed to ensuring the security and reliability of my open source projects through the use of industry best practices such as OpenSSF and CII Best Practices.
-	  
-	  <p>James Sörling, a security professional and open source contributor, gave a talk at <a href="https://www.youtube.com/watch?v=A_hq2Y03d6I">Javaforum Göteborg</a> where he discussed how to secure your development pipeline with static and dynamic application security tests, as well as software composition analysis using Sonarqube.</p>
-<p>In addition, Sörling was a guest on the <a href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/">Shift Left Like A Boss</a> security podcast, where he discussed open source tools that can make high velocity development more secure. As an open source contributor for cfn-nag, which performs infrastructure as code (IaC) static analysis of AWS CloudFormation, he also wrote an open source module that integrates CFN-nag into SonarQube. This allows developers, DevOps, and SREs to scan their CloudFormation during development to help fix issues early and to associate owners to IaC early in development, which aids in audit and compliance.</p>
+
+<h2>About James Pether Sörling</h2>
+<table>
+  <tr>
+    <td>
+      <img alt="James Pether Sörling" src="jamespethersorling.jpeg" style="width: 150px; margin-right: 20px;">
+    </td>
+    <td>
+      <p>Experienced technology professional with expertise in information security and delivery of secure cloud systems. Strong advocate for transparency in organizations and committed to ensuring the security and reliability of my open source projects through the use of industry best practices such as OpenSSF and CII Best Practices.</p>
+      <p>James Pether Sörling, a security professional and open source contributor, gave a talk at <a href="https://www.youtube.com/watch?v=A_hq2Y03d6I">Javaforum Göteborg</a> where he discussed how to secure your development pipeline with static and dynamic application security tests, as well as software composition analysis using Sonarqube.</p>
+      <p>In addition, Sörling was a guest on the <a href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/">Shift Left Like A Boss</a> security podcast, where he discussed open source tools that can make high velocity development more secure. As an open source contributor for cfn-nag, which performs infrastructure as code (IaC) static analysis of AWS CloudFormation, he also wrote an open source module that integrates CFN-nag into SonarQube.</p>
+    </td>
+  </tr>
+</table>
 	  
 	  <ul>
 	    <li>Open source developer and founder of <a href="https://hack23.com/">Hack23</a></li>
@@ -94,25 +129,25 @@
 		    <a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna">
 		      Computer Sweden
 		    </a>
-		    - Article about how technology can expose politicians, featuring James Pether Sorling.
+		    - Article about how technology can expose politicians, featuring James Pether Sörling.
 		  </li>
 		  <li>
 		    <a href="http://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/">
 		      Riksdag och Departement
 		    </a>
-		    - Swedish language article about CIA surveillance of politicians, featuring James Pether Sorling.
+		    - Swedish language article about CIA surveillance of politicians, featuring James Pether Sörling.
 		  </li>
 		  <li>
 		    <a href="https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/">
 		      Expressen
 		    </a>
-		    - Opinion piece about political absenteeism, featuring a quote from James Pether Sorling.
+		    - Opinion piece about political absenteeism, featuring a quote from James Pether Sörling.
 		  </li>
 		  <li>
 		    <a href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf">
 		      National Democratic Institute: Strengthening Parliamentary Accountability, Citizen Engagement and Access to Information
 		    </a>
-		    - Survey report that mentions James Pether Sorling's involvement in parliamentary monitoring organizations in Sweden.
+		    - Survey report that mentions James Pether Sörling's involvement in parliamentary monitoring organizations in Sweden.
 		  </li>
 		</ul>
 		<h2>Past Projects</h2>
