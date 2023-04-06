@@ -1,0 +1,16 @@
+name: Verify Pull Request
+on: push
+
+permissions:
+  checks: write
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+jobs:
+  verifypr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run StandardLint
+        uses: mikaelvesavuori/standardlint-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
