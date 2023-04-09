@@ -28,8 +28,5 @@ jobs:
           role-session-name: githubworkflowrolesessiont2
           aws-region: ${{ env.AWS_REGION }}
       - name: Deploy to S3
-        uses: reggionick/s3-deploy@5ed8934a7499373b51337042f7e11b5f7599d7dc # v3.2.0
-        with:
-          folder: ./
-          bucket: amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06
-          bucket-region: us-east-1
+      run: |
+            aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/
