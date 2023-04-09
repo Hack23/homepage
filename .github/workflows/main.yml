@@ -29,4 +29,4 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude "*git/*,*github/*"
+          aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
