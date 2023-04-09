@@ -1,6 +1,6 @@
 # Hack23 Homepage
 
-This repository contains the source code for the Hack23 homepage, an open-source development platform founded by James Pether Sörling. Visit the live site at https://www.hack23.com/.
+This repository contains the source code for the Hack23 homepage, an open-source development platform founded by James Pether Sörling. Visit the live site at https://hack23.com/.
 
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage)
