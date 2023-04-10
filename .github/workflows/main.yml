@@ -7,6 +7,9 @@ permissions:
   checks: write
   id-token: write   #This is required for requesting the JWT
   contents: read    #This is required for actions/checkout
+  security-events: write
+  actions: read
+
 env:
   AWS_REGION : "us-east-1"
   AWS_REGION_ZONE : "us-east-1"  
