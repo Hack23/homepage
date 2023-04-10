@@ -39,6 +39,6 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.4.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           docker_name: 'owasp/zap2docker-stable'
           target: 'https://hack23.com/'
