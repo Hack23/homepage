@@ -28,7 +28,7 @@ jobs:
         run: |
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
       - name: Audit URLs using Lighthouse
-        uses: treosh/lighthouse-ci-action@v9
+        uses: treosh/lighthouse-ci-action@2e159d989f91bb9e399801b3e1ad90bcd4749f75 # v9
         with:
           urls: |
             https://hack23.com/
@@ -36,7 +36,7 @@ jobs:
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.4.0
+        uses: zaproxy/action-full-scan@6eade0f93b10fad8cfb4e63b979703a2cbd0cc98 # v0.4.0
         with:
           token: ${{ github.token }}
           docker_name: 'owasp/zap2docker-stable'
