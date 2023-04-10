@@ -4,6 +4,8 @@ This repository contains the source code for the Hack23 homepage, an open-source
 
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage)
+[![Scorecard supply-chain security](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml)
+[![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
 
 ## Overview
 
