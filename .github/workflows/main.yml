@@ -1,8 +1,8 @@
 name: Verify and Deploy
 on:
-  pull_request_target:
-    types:
-      - closed
+  push:
+    branches:
+      - master
 permissions:
   checks: write
   id-token: write   #This is required for requesting the JWT
@@ -18,7 +18,6 @@ env:
   AWS_REGION_ZONE : "us-east-1"  
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
@@ -36,6 +35,14 @@ jobs:
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            https://hack23.com/
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.4.0
         with:
