@@ -24,8 +24,6 @@ jobs:
           role-to-assume: arn:aws:iam::172017021075:role/GithubWorkFlowRole
           role-session-name: githubworkflowrolesessiont2
           aws-region: ${{ env.AWS_REGION }}
-      - name: Minify Action
-        uses: anthonyftwang/minify-action@v1.0.1
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
