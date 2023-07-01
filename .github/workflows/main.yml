@@ -25,7 +25,7 @@ jobs:
           role-session-name: githubworkflowrolesessiont2
           aws-region: ${{ env.AWS_REGION }}
       - name: Minify Action
-        uses: dra1ex/minify-action@v1.0.3
+        uses: dra1ex/minify-action@3c54a82e092a78c827659385d1be715126f13410 # v1.0.3
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
