@@ -31,7 +31,8 @@ jobs:
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
       - name: Set cache headers S3
         run: |
-          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css --metadata-directive REPLACE --cache-control max-age=3600 --content-type "text/css"
+          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css --metadata-directive REPLACE --cache-control max-age=86400 --content-type "text/css"
+          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp --metadata-directive REPLACE --cache-control max-age=86400 --content-type "image/webp"
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@03becbfc543944dd6e7534f7ff768abb8a296826 # v9
         with:
