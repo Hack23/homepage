@@ -42,7 +42,7 @@ jobs:
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
       - name: ZAP Scan
-        uses: zaproxy/action-full-scan@bb42fb08b9103dc41cca2f758873275052df334e # v0.5.0
+        uses: zaproxy/action-full-scan@994be0395c128170ba970e8443c222517f9f614d # v0.5.1
         with:
           token: ${{ github.token }}
           docker_name: 'owasp/zap2docker-stable'
