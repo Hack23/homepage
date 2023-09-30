@@ -53,15 +53,12 @@ margin-bottom: 1rem;
 
 
 /* Link styles */
-a:link,
-a:visited,
-a:active {
-color: #004D4D;
-text-decoration: none;
+a {
+    color: #004d4d;  /* Retain the existing color */
+    text-decoration: underline;  /* Underline links */
 }
-
-a:hover {
-text-decoration: underline;
+a:hover, a:focus {
+    color: #d9534f;  /* Change color on hover and focus to Bootstrap's danger color for a contrasting red */
 }
 
 /* Paragraphs */
