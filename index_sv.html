@@ -5,8 +5,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>hack23.com</title>
  <link rel="stylesheet" type="text/css" href="styles.css">
- <meta name="theme-color" content="#004D4D">
- <link rel="manifest" href="/manifest.json">	
  <meta name="description" content="Öppen källkodsutveckling">
  <meta name="keywords" content="hack23, öppen källkod, utveckling, informationssäkerhet, molnsystem, James Pether Sörling, James Sörling, Pether Sörling, cybersäkerhet, molnbearbetning">
  <meta name="robots" content="index, follow">
@@ -134,17 +132,5 @@ Detta projekt drivs av avancerade AI-teknologier som OpenAI för databehandling 
 </ul>
 </div>
   </div>
-    <script>
-        // Register service worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful with scope:', registration.scope);
-                }, function(err) {
-                    console.log('ServiceWorker registration failed:', err);
-                });
-            });
-        }
-    </script>
 </body>
 </html>
