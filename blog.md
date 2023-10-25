@@ -5,6 +5,9 @@ Title: **Balancing the Scales: The CIA Triad, Data Classification, and the Imper
 ### Introduction:
 In the digital security theater, the play of the CIA Triad unfolds where the act of 'Confidentiality' often steals the spotlight, sometimes obscuring 'Integrity' and 'Availability'. The art lies in crafting a balanced script.
 
+![Clark Wilson Model](blog.png)
+
+
 ### The Overzealous Confidentiality:
 | Aspect | Implication |
 |--------|-------------|
