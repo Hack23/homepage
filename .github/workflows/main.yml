@@ -57,8 +57,9 @@ jobs:
           aws s3 sync . s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/ --exclude ".git/*"
       - name: Set cache headers S3
         run: |
-          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css --metadata-directive REPLACE --cache-control max-age=86400 --content-type "text/css"
-          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp --metadata-directive REPLACE --cache-control max-age=86400 --content-type "image/webp"
+          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/styles.css --metadata-directive REPLACE --cache-control max-age=31536000 --content-type "text/css"
+          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp --metadata-directive REPLACE --cache-control max-age=31536000 --content-type "image/webp"
+          aws s3 cp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling.webp s3://amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06/jamespethersorling150.webp --metadata-directive REPLACE --cache-control max-age=31536000 --content-type "image/webp"
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8 # v9
         with:
