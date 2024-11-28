@@ -11,7 +11,6 @@ The Citizen Intelligence Agency (CIA) project is a pioneering open-source intell
 6. [Risk Assessment](#risk-assessment)
 7. [Monitoring Dashboard](#monitoring-dashboard)
 8. [Decision Flow](#decision-flow)
-9. [Additional Dashboards](#additional-dashboards)
 
 ### Country Overview
 - ![Country Rankings and Indicators](https://github.com/Hack23/homepage/blob/master/screenshots/Page-countryranking-OVERVIEW-333.png)
@@ -60,11 +59,3 @@ The Citizen Intelligence Agency (CIA) project is a pioneering open-source intell
   Understand the decision-making processes within the Swedish political landscape, providing clarity on how decisions are made and implemented.
 - ![Decision Flow Additional](https://github.com/Hack23/homepage/blob/master/screenshots/Page-decisionflow-OVERVIEW-002.png)
   This additional screenshot offers a detailed view of the decision flow, highlighting key steps and stakeholders involved in the process.
-
-### Additional Dashboards
-- ![Additional Dashboard 1](https://github.com/Hack23/homepage/blob/master/screenshots/Page-additionaldashboard-OVERVIEW-001.png)
-  Explore other relevant areas with additional dashboards that provide further insights into various aspects of the political and economic landscape.
-- ![Additional Dashboard 2](https://github.com/Hack23/homepage/blob/master/screenshots/Page-additionaldashboard-OVERVIEW-002.png)
-  Gain a broader perspective with more detailed visualizations and analytics on key topics and trends.
-- ![Additional Dashboard 3](https://github.com/Hack23/homepage/blob/master/screenshots/Page-additionaldashboard-OVERVIEW-003.png)
-  This additional screenshot provides an in-depth analysis of specific areas, offering a comprehensive overview of the platform's capabilities.
