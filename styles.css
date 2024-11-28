@@ -3,65 +3,207 @@ body {
   color: #333;
   background-color: #F5F5F5;
   font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   margin: 0;
 }
 
 /* Container styles */
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Header styles */
 .header {
-background-color: #004D4D;
-border-radius: 6px;
-color: #FFF;
-font-size: 24px;
-padding: 1rem;
-text-align: center;
+  background-color: #004D4D;
+  border-radius: 6px;
+  color: #FFF;
+  font-size: 24px;
+  padding: 1rem;
+  text-align: center;
 }
 
 /* Panel caption styles */
 .panel-caption {
-background-color: #006666;
-border-radius: 6px;
-color: #FFF;
-font-size: 20px;
-padding: 0.5rem;
-text-align: center;
-margin-top: 1rem;
-margin-bottom: 1rem;
+  background-color: #006666;
+  border-radius: 6px;
+  color: #FFF;
+  font-size: 20px;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Styles for level panels */
 .overview-panel-level {
-background-color: #FFF;
-border-radius: 3px;
-color: #333;
-padding: 1rem;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #FFF;
+  border-radius: 3px;
+  color: #333;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings */
 h2 {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-
 
 /* Link styles */
 a {
-    color: #004d4d;  /* Retain the existing color */
-    text-decoration: underline;  /* Underline links */
+  color: #004d4d;  /* Retain the existing color */
+  text-decoration: underline;  /* Underline links */
 }
 a:hover, a:focus {
-    color: #d9534f;  /* Change color on hover and focus to Bootstrap's danger color for a contrasting red */
+  color: #d9534f;  /* Change color on hover and focus to Bootstrap's danger color for a contrasting red */
 }
 
 /* Paragraphs */
 p {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* New color palette */
+:root {
+  --primary-color: #004D4D;
+  --secondary-color: #006666;
+  --accent-color: #d9534f;
+  --background-color: #F5F5F5;
+  --text-color: #333;
+  --header-font: 'Roboto', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* Typography improvements */
+body {
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Spacing improvements */
+.container {
+  padding: 2rem;
+}
+
+.header {
+  padding: 2rem;
+}
+
+.panel-caption {
+  padding: 1rem;
+}
+
+.overview-panel-level {
+  padding: 2rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .panel-caption {
+    font-size: 18px;
+    padding: 0.5rem;
+  }
+
+  .overview-panel-level {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+}
+
+/* Hover effects and animations */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: var(--accent-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #FFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+  background-color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
