@@ -1,3 +1,769 @@
+# Screenshots of the CIA Project
+
+This document showcases various features of the [CIA project](https://github.com/Hack23/cia) through screenshots. The images are organized into categories for easier navigation.
+
+---
+
+## Table of Contents
+
+1. [Admin Pages](#1-admin-pages)
+2. [Ballot Pages](#2-ballot-pages)
+3. [Committee Pages](#3-committee-pages)
+4. [Country Pages](#4-country-pages)
+5. [Dashboard Pages](#5-dashboard-pages)
+6. [Document Pages](#6-document-pages)
+7. [Government Body Pages](#7-government-body-pages)
+8. [Main Pages](#8-main-pages)
+9. [Ministry Pages](#9-ministry-pages)
+10. [Parliament Ranking Pages](#10-parliament-ranking-pages)
+11. [Party Pages](#11-party-pages)
+12. [Politician Pages](#12-politician-pages)
+13. [Search Pages](#13-search-pages)
+14. [User Home Pages](#14-user-home-pages)
+
+---
+
+## 1. Admin Pages
+
+### Admin Agency
+
+- **Agency Management Interface**
+
+  ![Admin Agency Management](Page-adminagency-52-70.png)
+
+  This interface allows administrators to manage agencies within the system.
+
+- **Agency Details View**
+
+  ![Admin Agency Details](Page-adminagency-69.png)
+
+  Displays detailed information about a specific agency.
+
+### Admin Agent Operation
+
+- **Agent Operations Dashboard**
+
+  ![Admin Agent Operations](Page-adminagentoperation-87.png)
+
+  Provides an overview of agent operations and their statuses.
+
+### Admin Application Configuration
+
+- **Application Settings**
+
+  ![Admin Application Configuration](Page-adminapplicationconfiguration-47-83.png)
+
+  Interface for configuring application-wide settings.
+
+- **System Parameters**
+
+  ![Admin Application Parameters](Page-adminapplicationconfiguration-82.png)
+
+  Manage system parameters and defaults.
+
+### Admin Application Events
+
+- **Event Logs**
+
+  ![Admin Application Events Log](Page-adminapplicationevents-2004119-46.png)
+
+  View logs of application events for auditing purposes.
+
+- **Event Charts**
+
+  ![Admin Application Events Chart](Page-adminapplicationevents-CHARTS-42.png)
+
+  Visual representation of event data over time.
+
+### Admin Application Session
+
+- **Active Sessions**
+
+  ![Admin Active Sessions](Page-adminapplicationsession-19.png)
+
+  Monitor currently active user sessions.
+
+- **Session Details**
+
+  ![Admin Session Details](Page-adminapplicationsession-2004078-20.png)
+
+  Detailed information about a specific user session.
+
+- **Session Charts**
+
+  ![Admin Session Activity Chart](Page-adminapplicationsession-CHARTS-91.png)
+
+  Graphical representation of session activities.
+
+### Admin Country
+
+- **Country List**
+
+  ![Admin Country List](Page-admincountry-35.png)
+
+  Manage the list of countries within the application.
+
+- **Country Details**
+
+  ![Admin Country Details](Page-admincountry-6501-36.png)
+
+  View and edit details of a specific country.
+
+### Admin Data Summary
+
+- **Data Overview**
+
+  ![Admin Data Summary](Page-admindatasummary-15.png)
+
+  Summary of data records within the system.
+
+- **Authors Information**
+
+  ![Admin Data Authors](Page-admindatasummary-AUTHORS-49.png)
+
+  Information about data authors and contributors.
+
+### Admin Email
+
+- **Email Configuration**
+
+  ![Admin Email Settings](Page-adminemail-27.png)
+
+  Configure email server settings for notifications.
+
+### Admin Language
+
+- **Language Management**
+
+  ![Admin Language Settings](Page-adminlanguage-124-32.png)
+
+  Manage supported languages and translations.
+
+### Admin Monitoring
+
+- **System Monitoring**
+
+  ![Admin System Monitoring](Page-adminmonitoring-3.png)
+
+  Monitor system health and performance metrics.
+
+### Admin Portal
+
+- **Portal Settings**
+
+  ![Admin Portal Configuration](Page-adminportal-23.png)
+
+  Configure portal appearance and user access settings.
+
+### Admin User Account
+
+- **User Account List**
+
+  ![Admin User Accounts](Page-adminuseraccount-10.png)
+
+  Manage user accounts within the application.
+
+- **User Account Details**
+
+  ![User Account Details](Page-adminuseraccount-2004013-79.png)
+
+  View detailed information about a specific user.
+
+---
+
+## 2. Ballot Pages
+
+- **Ballot Details**
+
+  ![Ballot Details](Page-ballot-38736D18-7025-4EFE-ABC7-0D22E4AE8C11-130.png)
+
+  Information about a specific ballot.
+
+- **Ballot Results**
+
+  ![Ballot Results](Page-ballot-A1A613C2-D942-4D5D-AC29-4AE3C4B57486-287.png)
+
+  Displays the results of a ballot.
+
+- **Ballot Charts**
+
+  ![Ballot Results Chart](Page-ballot-CHARTS-A1A613C2-D942-4D5D-AC29-4AE3C4B57486-180.png)
+
+  Graphical representation of ballot outcomes.
+
+---
+
+## 3. Committee Pages
+
+### Committee Details
+
+- **Ballot Decision Summary**
+
+  ![Committee Ballot Decisions](Page-committee-BALLOTDECISIONSUMMARY-UU-154.png)
+
+  Summary of ballot decisions made by the committee.
+
+- **Decision Flow Chart**
+
+  ![Committee Decision Flow](Page-committee-CHARTS-DECISION_FLOW_CHART-UU-155.png)
+
+  Visual flow of decision-making processes.
+
+- **Current Members**
+
+  ![Committee Members](Page-committee-CURRENT_MEMBERS-UU-208.png)
+
+  List of current committee members.
+
+- **Decision Summary**
+
+  ![Committee Decisions](Page-committee-DECISIONSUMMARY-UU-283.png)
+
+  Overview of decisions made by the committee.
+
+- **Document Activity**
+
+  ![Committee Document Activity](Page-committee-DOCUMENTACTIVITY-UU-272.png)
+
+  Activity related to documents within the committee.
+
+- **Member History**
+
+  ![Committee Member History](Page-committee-MEMBERHISTORY-UU-252.png)
+
+  Historical data on committee membership.
+
+- **Committee Overview**
+
+  ![Committee Overview](Page-committee-OVERVIEW-UU-285.png)
+
+  General information about the committee.
+
+### Committee Rankings
+
+- **Committees by Headcount**
+
+  ![Committees by Headcount](Page-committeeranking-CHARTS-ALLCOMMITTEESBYHEADCOUNT-178.png)
+
+  Ranking of committees based on member count.
+
+- **Committees by Party**
+
+  ![Committees by Party](Page-committeeranking-CHARTS-COMMITTEESBYPARTY-158.png)
+
+  Distribution of committee members by party affiliation.
+
+- **Current Committees by Headcount**
+
+  ![Current Committees Headcount](Page-committeeranking-CHARTS-CURRENTCOMMITTEESBYHEADCOUNT-193.png)
+
+  Headcount of current committees.
+
+---
+
+## 4. Country Pages
+
+### Country Rankings
+
+- **Security Indicators**
+
+  ![Country Security Indicators](Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png)
+
+  Displays IT security indicators for countries.
+
+- **Country Overview**
+
+  ![Country Overview](Page-countryranking-OVERVIEW-329.png)
+
+  General information and statistics about countries.
+
+---
+
+## 5. Dashboard Pages
+
+- **System Dashboard**
+
+  ![System Dashboard](Page-dashboard-OVERVIEW-331.png)
+
+  Central dashboard providing a summary of system metrics.
+
+---
+
+## 6. Document Pages
+
+### Document Details
+
+- **Document Activity**
+
+  ![Document Activity](Page-document-DOCUMENTACTIVITY-gz02c343-229.png)
+
+  Track changes and activities related to a document.
+
+- **Document Attachments**
+
+  ![Document Attachments](Page-document-DOCUMENTATTACHMENTS-gz02c343-129.png)
+
+  List of attachments associated with a document.
+
+- **Document Data**
+
+  ![Document Data](Page-document-DOCUMENTDATA-gz02c343-281.png)
+
+  Metadata and content details of a document.
+
+- **Document Decision**
+
+  ![Document Decision](Page-document-DOCUMENTDECISION-gz02c343-175.png)
+
+  Decisions and outcomes related to a document.
+
+- **Document Details**
+
+  ![Document Details](Page-document-DOCUMENTDETAILS-gz02c343-223.png)
+
+  Comprehensive view of document information.
+
+- **Person References**
+
+  ![Document Person References](Page-document-PERSONREFERENCES-gz02c343-232.png)
+
+  Individuals referenced within the document.
+
+### Documents Overview
+
+- **All Documents**
+
+  ![Documents Overview](Page-documents-OVERVIEW-152.png)
+
+  List and search functionality for all documents.
+
+- **Document Filter**
+
+  ![Filtered Documents](Page-documents-[1200]-313.png)
+
+  Documents filtered by specific criteria.
+
+---
+
+## 7. Government Body Pages
+
+### Government Body Details
+
+- **Expenditure Overview**
+
+  ![Government Body Expenditure](Page-governmentbody-EXPENDITURE-202100-5026-328.png)
+
+  Financial expenditure details of a government body.
+
+- **Headcount Information**
+
+  ![Government Body Headcount](Page-governmentbody-HEADCOUNT-202100-5026-267.png)
+
+  Employee count and organizational structure.
+
+- **Income Overview**
+
+  ![Government Body Income](Page-governmentbody-INCOME-202100-5026-131.png)
+
+  Revenue and income sources.
+
+- **Government Body Overview**
+
+  ![Government Body Overview](Page-governmentbody-OVERVIEW-202100-5026-244.png)
+
+  General information about the government body.
+
+### Government Body Rankings
+
+- **Data Grid**
+
+  ![Government Bodies Data Grid](Page-governmentbodyranking-DATAGRID-92.png)
+
+  Tabular data comparing various government bodies.
+
+- **Expenditure Rankings**
+
+  ![Government Bodies Expenditure](Page-governmentbodyranking-EXPENDITURE-249.png)
+
+  Ranking based on expenditure levels.
+
+- **Headcount Rankings**
+
+  ![Government Bodies Headcount](Page-governmentbodyranking-HEADCOUNT-246.png)
+
+  Ranking based on the number of employees.
+
+---
+
+## 8. Main Pages
+
+### Main Page
+
+- **Homepage**
+
+  ![Main Homepage](Page-main-117.png)
+
+  The landing page of the application.
+
+### Login Pages
+
+- **User Login**
+
+  ![User Login](Page-main-LOGIN-1.png)
+
+  Interface for users to log into the system.
+
+### Overview Pages
+
+- **System Overview**
+
+  ![System Overview](Page-main-OVERVIEW-101.png)
+
+  Summary of system features and statistics.
+
+### Page Visit History
+
+- **Visit History**
+
+  ![Page Visit History](Page-main-PAGEVISITHISTORY-259.png)
+
+  Log of user page visits for analytics.
+
+### Register Pages
+
+- **User Registration**
+
+  ![User Registration](Page-main-REGISTER-107.png)
+
+  Form for new users to create an account.
+
+---
+
+## 9. Ministry Pages
+
+### Ministry Details
+
+- **Current Members**
+
+  ![Ministry Current Members](Page-ministry-CURRENTMEMBERS-Näringsdepartementet-97.png)
+
+  List of current ministry members.
+
+- **Expenditure Overview**
+
+  ![Ministry Expenditure](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-Näringsdepartementet-308.png)
+
+  Financial details of the ministry's expenditure.
+
+- **Income Overview**
+
+  ![Ministry Income](Page-ministry-GOVERNMENT_BODIES_INCOME-Näringsdepartementet-205.png)
+
+  Revenue sources for the ministry.
+
+- **Visit History**
+
+  ![Ministry Visit History](Page-ministry-PAGEVISITHISTORY-Näringsdepartementet-243.png)
+
+  Analytics on ministry page visits.
+
+- **Social Department Overview**
+
+  ![Social Department](Page-ministry-Socialdepartementet-264.png)
+
+  Information about the Social Department.
+
+### Ministry Rankings
+
+- **Ministries by Headcount**
+
+  ![Ministries by Headcount](Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png)
+
+  Ranking of ministries based on staff numbers.
+
+- **Party Days Served**
+
+  ![Ministries Party Days Served](Page-ministryranking-CHARTS-ALLMINISTRIESPARTYBYTOTALDAYS-309.png)
+
+  Total days served by parties in ministries.
+
+- **Government Role Chart**
+
+  ![Government Role Chart](Page-ministryranking-CHARTS-ALL_GOVERNMENT_ROLE_CHART-310.png)
+
+  Visual representation of government roles.
+
+---
+
+## 10. Parliament Ranking Pages
+
+- **Decision Activity by Type**
+
+  ![Decision Activity by Type](Page-parliamentranking-CHARTS-DECISIONACTIVITYBYTYPE-262.png)
+
+  Statistics on parliamentary decisions categorized by type.
+
+- **Decision Flow Chart**
+
+  ![Parliament Decision Flow](Page-parliamentranking-CHARTS-DECISION_FLOW_CHART-248.png)
+
+  Flowchart of the parliamentary decision-making process.
+
+- **Document Activity by Type**
+
+  ![Document Activity by Type](Page-parliamentranking-CHARTS-DOCUMENTACTIVITYBYTYPE-334.png)
+
+  Analysis of documents processed by parliament.
+
+- **Party Age Distribution**
+
+  ![Party Age Distribution](Page-parliamentranking-CHARTS-PARTYAGE-123.png)
+
+  Age demographics of party members.
+
+- **Party Gender Distribution**
+
+  ![Party Gender Distribution](Page-parliamentranking-CHARTS-PARTYGENDER-240.png)
+
+  Gender breakdown within political parties.
+
+- **Parliament Overview**
+
+  ![Parliament Overview](Page-parliamentranking-OVERVIEW-166.png)
+
+  General information about the parliament's composition.
+
+- **Risk Summary**
+
+  ![Parliament Risk Summary](Page-parliamentranking-RULES-RISK_SUMMARY-306.png)
+
+  Overview of potential risks identified within parliamentary activities.
+
+---
+
+## 11. Party Pages
+
+### Party Details
+
+- **Committee Ballot Decision Summary**
+
+  ![Party Ballot Decisions](Page-party-COMMITTEEBALLOTDECISIONSUMMARY-PP-326.png)
+
+  Summary of ballot decisions for a party within committees.
+
+- **Committee Roles**
+
+  ![Party Committee Roles](Page-party-COMMITTEEROLES-S-290.png)
+
+  Roles held by party members in various committees.
+
+- **Current Leaders**
+
+  ![Party Current Leaders](Page-party-CURRENTLEADERS-S-124.png)
+
+  List of current leaders within the party.
+
+- **Document Activity**
+
+  ![Party Document Activity](Page-party-DOCUMENTACTIVITY-PP-261.png)
+
+  Documents associated with the party.
+
+- **Government Roles**
+
+  ![Party Government Roles](Page-party-GOVERNMENTROLES-S-206.png)
+
+  Positions held by party members in government.
+
+- **Leader History**
+
+  ![Party Leader History](Page-party-LEADERHISTORY-S-165.png)
+
+  Historical data on party leadership.
+
+- **Member History**
+
+  ![Party Member History](Page-party-MEMBERHISTORY-S-100.png)
+
+  Past and present members of the party.
+
+- **Party Overview**
+
+  ![Party Overview](Page-party-OVERVIEW-S-181.png)
+
+  General information about the party.
+
+- **Party Support Summary**
+
+  ![Party Support Summary](Page-party-PARTYSUPPORTSUMMARY-PP-144.png)
+
+  Overview of the party's support base.
+
+- **Party Won Daily Summary Chart**
+
+  ![Party Daily Wins](Page-party-PARTYWONDAILYSUMMARYCHART-PP-241.png)
+
+  Chart showing the daily wins or successes of the party.
+
+- **Role Gantt Chart**
+
+  ![Party Role Gantt Chart](Page-party-ROLEGHANT-PP-268.png)
+
+  Timeline of roles held by party members.
+
+- **Vote History**
+
+  ![Party Vote History](Page-party-VOTEHISTORY-PP-167.png)
+
+  Record of votes cast by the party.
+
+### Party Rankings
+
+- **All Parties Chart**
+
+  ![All Parties Chart](Page-partyranking-CHARTS-ALLPARTIES-292.png)
+
+  Comparative chart of all political parties.
+
+- **Current Committees**
+
+  ![Current Committees Chart](Page-partyranking-CHARTS-CURRENTCOMMITTEES-311.png)
+
+  Overview of committees and party representation.
+
+- **Data Grid**
+
+  ![Parties Data Grid](Page-partyranking-DATAGRID-327.png)
+
+  Tabular comparison of party statistics.
+
+- **Party Rankings Overview**
+
+  ![Party Rankings Overview](Page-partyranking-OVERVIEW-146.png)
+
+  Summary of party rankings based on various metrics.
+
+---
+
+## 12. Politician Pages
+
+### Politician Details
+
+- **Politician Profile**
+
+  ![Politician Profile](Page-politician-0103624617217-151.png)
+
+  Personal and professional information about the politician.
+
+- **Ballot Decision Summary**
+
+  ![Politician Ballot Decisions](Page-politician-BALLOTDECISIONSUMMARY-0885771106404-284.png)
+
+  Summary of the politician's decisions on ballots.
+
+- **Document Activity**
+
+  ![Politician Document Activity](Page-politician-DOCUMENTACTIVITY-0885771106404-105.png)
+
+  Documents associated with the politician.
+
+- **Role Gantt Chart**
+
+  ![Politician Role Gantt Chart](Page-politician-ROLEGHANT-0218878014918-113.png)
+
+  Timeline of the politician's roles.
+
+- **Role List**
+
+  ![Politician Role List](Page-politician-ROLELIST-0980681611418-220.png)
+
+  List of positions held by the politician.
+
+- **Role Summary**
+
+  ![Politician Role Summary](Page-politician-ROLESUMMARY-0980681611418-173.png)
+
+  Summary of the politician's career roles.
+
+- **Vote History**
+
+  ![Politician Vote History](Page-politician-VOTEHISTORY-0885771106404-195.png)
+
+  Record of votes cast by the politician.
+
+### Politician Rankings
+
+- **All Parties Chart**
+
+  ![Politicians by Party](Page-politicianranking-CHARTS-ALLPARTIES-242.png)
+
+  Distribution of politicians across parties.
+
+- **Data Grid**
+
+  ![Politicians Data Grid](Page-politicianranking-DATAGRID-161.png)
+
+  Tabular data comparing politicians.
+
+- **Politician Rankings Overview**
+
+  ![Politician Rankings Overview](Page-politicianranking-OVERVIEW-225.png)
+
+  Summary of politician rankings based on various criteria.
+
+---
+
+## 13. Search Pages
+
+- **Search Interface**
+
+  ![Search Page](Page-search-135.png)
+
+  Allows users to search for information within the application.
+
+---
+
+## 14. User Home Pages
+
+### User Home
+
+- **Dashboard**
+
+  ![User Dashboard](Page-userhome-108.png)
+
+  Personalized dashboard for the logged-in user.
+
+### Security Settings
+
+- **Account Security Settings**
+
+  ![Security Settings](Page-userhome-SECURITY_SETTINGS--110.png)
+
+  Interface to manage account security and privacy settings.
+
+### User Events
+
+- **User Activity Logs**
+
+  ![User Events](Page-userhome-USER_EVENTS--121.png)
+
+  Logs of user actions within the application.
+
+### User Visits
+
+- **Visit History**
+
+  ![User Visit History](Page-userhome-USER_VISITS--202.png)
+
+  Record of pages visited by the user.
+
+---
+
+**Note:** The images referenced in this document are located in the [`screenshots`](https://github.com/Hack23/homepage/tree/master/screenshots) directory of the repository. They provide a visual representation of the CIA project's features and interfaces.
+
+For more information about the project, visit the [CIA GitHub repository](https://github.com/Hack23/cia) or the official website at [hack23.com](https://hack23.com/).
+
+
 # Citizen Intelligence Agency Screenshots Directory
 
 This directory contains screenshots from the [Citizen Intelligence Agency (CIA)](https://github.com/Hack23/cia) project. The images provide visual representation of the features and functionality of the platform. Below is a detailed list of the screenshots, organized by the type of information they represent.
