@@ -1,205 +1,184 @@
-# Screenshots of the CIA Project
-
-This document showcases various features of the [Citizen Intelligence Agency (CIA) project](https://github.com/Hack23/cia) through screenshots. The screenshots emphasize key dashboard views, high-level scoreboards, and other critical interfaces designed to enhance transparency, accountability, and decision-making in the political landscape.
+Here is the updated complete page with the revised **Table of Contents**, placing **User Home and Personal Dashboards** at the end and making all adjustments for better flow and presentation:
 
 ---
 
-## Table of Contents
+# **Screenshots of the CIA Project**
 
-1. [Dashboard and Scoreboard Views](#dashboard-and-scoreboard-views)
-2. [Administrative Agency Views](#administrative-agency-views)
-3. [Agent Operation Views](#agent-operation-views)
-4. [Committee Views](#committee-views)
-5. [Country Rankings and Analysis](#country-rankings-and-analysis)
-6. [Party and Parliament Insights](#party-and-parliament-insights)
-7. [Government Body Insights](#government-body-insights)
-8. [Politician Profiles and Analytics](#politician-profiles-and-analytics)
-9. [Decision Flow and Risk Assessments](#decision-flow-and-risk-assessments)
-10. [User Home and Personal Dashboards](#user-home-and-personal-dashboards)
+This document showcases the primary features of the [Citizen Intelligence Agency (CIA) project](https://github.com/Hack23/cia). These screenshots illustrate high-level dashboards, critical scoreboards, and detailed analytics, focusing on transparency, accountability, and decision-making in Sweden’s political landscape.
 
 ---
 
-## Dashboard and Scoreboard Views
+## **Table of Contents**
 
-**Page-dashboard-OVERVIEW-331.png**  
-A comprehensive monitoring dashboard showcasing real-time visualizations of political activities, decisions, and their impact. It serves as the central hub for analyzing trends and operational efficiency.
+1. [Dashboard and Scoreboard Views](#dashboard-and-scoreboard-views)  
+2. [Ministry Leaders and Insights](#ministry-leaders-and-insights)  
+3. [Government Body Insights](#government-body-insights)  
+4. [Party and Parliament Insights](#party-and-parliament-insights)  
+5. [Decision Flow and Risk Assessments](#decision-flow-and-risk-assessments)  
+6. [Committee Views](#committee-views)  
+7. [Country Rankings and Analysis](#country-rankings-and-analysis)  
+8. [Politician Profiles and Analytics](#politician-profiles-and-analytics)  
+9. [Administrative Agency Views](#administrative-agency-views)  
+10. [Agent Operation Views](#agent-operation-views)  
+11. [User Home and Personal Dashboards](#user-home-and-personal-dashboards)  
+
+---
+
+## **Dashboard and Scoreboard Views**
+
+### **Central Monitoring Dashboard**  
+This real-time monitoring dashboard offers visualizations of political activities, legislative decisions, and operational trends. It acts as a centralized hub for analysis.  
 
 ![Monitoring Dashboard](Page-dashboard-OVERVIEW-331.png)
 
-
-### **Ministry Leadership Scorecard**
-
-**Current Ministry Leadership Evaluation**  
-This chart provides a detailed evaluation of current ministry leaders, focusing on their efficiency, impact, and governance outcomes. The scorecard helps identify top-performing leaders and highlights areas for improvement within ministry governance.
+### **Ministry Leadership Scorecard**  
+A detailed evaluation of current ministry leaders focusing on efficiency, impact, and governance outcomes. This scorecard identifies top-performing leaders and opportunities for improvement.  
 
 ![Current Ministries Leadership Scorecard](Page-ministryranking-CHARTS-CURRENTMINISTRIESLEADERSCORECARD-269.png)
 
----
-
-This addition places emphasis on leadership metrics, aligning well with the overall goal of showcasing insights into governance quality. Let me know if you'd like further refinements or additional inclusions!
-
-**Page-parliamentranking-OVERVIEW-166.png**  
-An overview of parliamentary activities and rankings, highlighting legislative performance metrics across various categories. This view enables users to compare parliamentary entities effectively.
+### **Parliament Rankings Overview**  
+An overview of parliamentary activities and rankings, highlighting key legislative performance metrics and enabling comparative insights.  
 
 ![Parliament Ranking Overview](Page-parliamentranking-OVERVIEW-166.png)
 
-**Page-parliamentranking-CHARTS-PARTYGENDER-240.png**  
-A gender analysis within political parties represented in parliament. This visualization highlights the gender composition of decision-making bodies, reflecting broader societal trends.
+---
 
-![Party Gender Distribution Chart](Page-parliamentranking-CHARTS-PARTYGENDER-240.png)
+## **Ministry Leaders and Insights**
 
-**Page-countryranking-OVERVIEW-329.png**  
-A global ranking overview emphasizing Sweden's position on metrics such as governance quality, transparency, and economic performance.
+### **Leadership and Financial Metrics**  
+Insights into current ministry leadership, responsibilities, and financial resource allocation:  
 
-![Country Ranking Overview](Page-countryranking-OVERVIEW-329.png)
+- **Leadership Overview**: Highlights affiliations and governance roles.  
+  ![Ministry Leadership](Page-ministry-CURRENTMEMBERS-Näringsdepartementet-97.png)  
+
+- **Expenditure and Revenue**: Explores financial prioritization and funding sources.  
+  ![Expenditure Breakdown](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-Näringsdepartementet-308.png)  
+  ![Revenue Breakdown](Page-ministry-GOVERNMENT_BODIES_INCOME-Näringsdepartementet-205.png)  
+
+- **Headcount Rankings**: Ranks ministries based on staffing levels for comparative analysis.  
+  ![Ministry Headcount](Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png)  
 
 ---
 
-### **Ministry Leaders and Insights**
+## **Government Body Insights**
 
-**Ministry Leader Overview**  
-Provides an analysis of current ministry leadership, highlighting responsibilities, affiliations, and overall influence within the government structure.
+### **Roles, Income, and Accountability**  
+Detailed insights into government body structures, funding, and operational responsibilities:  
 
-![Analysis of current ministry leadership](Page-ministry-CURRENTMEMBERS-Näringsdepartementet-97.png)
+- **Government Body Overview**  
+  ![Government Body Overview](Page-governmentbody-OVERVIEW-202100-5026-244.png)  
 
-**Ministry Expenditure Analysis**  
-A breakdown of government body expenditure under the ministry, offering insights into financial prioritization and resource allocation.
-
-![Expenditure breakdown for government bodies under the ministry](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-Näringsdepartementet-308.png)
-
-**Ministry Income Sources**  
-Examines the revenue streams of government bodies overseen by the ministry, providing clarity on financial sustainability.
-
-![Ministry income sources](Page-ministry-GOVERNMENT_BODIES_INCOME-Näringsdepartementet-205.png)
-
-**Ministry Rankings by Headcount**  
-Visualizes all ministries ranked by their headcount, offering a comparative view of ministry staffing.
-
-![Ministry rankings by headcount](Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png)
+- **Income Analysis**  
+  ![Income Sources](Page-governmentbody-INCOME-202100-5026-131.png)  
 
 ---
 
-## Administrative Agency Views
+## **Party and Parliament Insights**
 
-**Page-adminagency-52-70.png**  
-A detailed interface presenting an overview of administrative agencies, providing insights into their performance and operational efficiency.
+### **Political Party Profiles**  
+An in-depth summary of a major political party's leadership structure and parliamentary dynamics.  
 
-![Administrative Agency Overview](Page-adminagency-52-70.png)
+![Political Party Overview](Page-party-OVERVIEW-S-181.png)  
 
-**Page-adminagency-69.png**  
-A closer examination of agency-specific data, including performance metrics and management efficiency indicators.
+### **Membership History**  
+A historical overview of party membership trends, illustrating shifts in political alignment.  
 
-![Administrative Agency Details](Page-adminagency-69.png)
-
----
-
-## Agent Operation Views
-
-**Page-adminagentoperation-87.png**  
-An operational scoreboard showcasing agent activity metrics, highlighting key performance indicators and workflow distribution.
-
-![Agent Operation Statistics](Page-adminagentoperation-87.png)
+![Party Membership Trends](Page-party-MEMBERHISTORY-S-100.png)  
 
 ---
 
-## Committee Views
+## **Decision Flow and Risk Assessments**
 
-**Page-committee-BALLOTDECISIONSUMMARY-UU-154.png**  
-A summary of key ballot decisions within a legislative committee, providing transparency in voting outcomes and decision-making trends.
+### **Parliamentary Risk Summary**  
+Evaluation of potential risks linked to parliamentary activities, promoting governance transparency and accountability.  
 
-![Committee Ballot Decision Summary](Page-committee-BALLOTDECISIONSUMMARY-UU-154.png)
-
-**Page-committee-CHARTS-DECISION_FLOW_CHART-UU[2016-17]-245.png**  
-A visual map of decision-making flows within a committee, offering insights into legislative processes and their outcomes during the 2016-17 period.
-
-![Committee Decision Flow Analysis](Page-committee-CHARTS-DECISION_FLOW_CHART-UU[2016-17]-245.png)
+![Risk Summary](Page-parliamentranking-RULES-RISK_SUMMARY-306.png)  
 
 ---
 
-## Country Rankings and Analysis
+## **Committee Views**
 
-**Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png**  
-Detailed IT security rankings for countries, reflecting their readiness to address digital threats and safeguard infrastructure.
+### **Ballot Decision Summaries**  
+Transparent insights into key committee ballot decisions, offering trends in legislative actions.  
 
-![Country Security Indicators](Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png)
+![Committee Ballot Decisions](Page-committee-BALLOTDECISIONSUMMARY-UU-154.png)  
 
----
+### **Decision-Making Flows**  
+A visual map of committee decision processes during the 2016-17 period, highlighting legislative pathways.  
 
-## Party and Parliament Insights
-
-**Page-party-OVERVIEW-S-181.png**  
-An insightful summary of the political party "S", focusing on its parliamentary dynamics, leadership structure, and influence across legislative processes.
-
-![Party Overview](Page-party-OVERVIEW-S-181.png)
-
-**Page-party-MEMBERHISTORY-S-100.png**  
-A historical analysis of the party’s membership trends, providing context on changes in political alignment over time.
-
-![Party Member History](Page-party-MEMBERHISTORY-S-100.png)
+![Committee Decision Flow](Page-committee-CHARTS-DECISION_FLOW_CHART-UU[2016-17]-245.png)  
 
 ---
 
-## Government Body Insights
+## **Country Rankings and Analysis**
 
-**Page-governmentbody-OVERVIEW-202100-5026-244.png**  
-An organizational snapshot of a government body, detailing its role in governance and its accountability metrics.
+### **IT Security Indicators**  
+An analysis of Sweden’s IT security metrics, emphasizing its readiness to counter digital threats and infrastructure resilience.  
 
-![Government Body Overview](Page-governmentbody-OVERVIEW-202100-5026-244.png)
+![Country IT Security Indicators](Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png)  
 
-**Page-governmentbody-INCOME-202100-5026-131.png**  
-A detailed analysis of income sources for government bodies, highlighting their funding and financial sustainability.
+### **Global Governance Rankings**  
+Sweden’s ranking across governance quality, transparency, and economic indicators, compared globally.  
 
-![Government Body Income](Page-governmentbody-INCOME-202100-5026-131.png)
-
----
-
-## Politician Profiles and Analytics
-
-**Page-politician-0103624617217-151.png**  
-A granular profile of a parliament member, focusing on their legislative contributions, decision-making patterns, and constituency representation.
-
-![Politician Profile](Page-politician-0103624617217-151.png)
-
-**Page-politician-ROLEGHANT-0218878014918-113.png**  
-A timeline of the politician’s roles and responsibilities, visualized as a Gantt chart, demonstrating their career trajectory and impact.
-
-![Politician Role Gantt Chart](Page-politician-ROLEGHANT-0218878014918-113.png)
+![Global Governance Rankings](Page-countryranking-OVERVIEW-329.png)  
 
 ---
 
-## Decision Flow and Risk Assessments
+## **Politician Profiles and Analytics**
 
-**Page-parliamentranking-RULES-RISK_SUMMARY-306.png**  
-An evaluative summary of risk factors associated with parliamentary activities, designed to promote transparency and proactive governance.
+### **Legislative Contributions and Roles**  
+A detailed profile of a parliament member, including voting patterns and decision-making impact.  
 
-![Parliament Risk Summary](Page-parliamentranking-RULES-RISK_SUMMARY-306.png)
+![Politician Profile](Page-politician-0103624617217-151.png)  
 
----
+### **Role Gantt Chart**  
+A timeline of a politician’s roles and responsibilities, visualized for career trajectory insights.  
 
-## User Home and Personal Dashboards
-
-**Page-userhome-108.png**  
-A personalized user dashboard offering quick access to relevant features and an overview of recent activities.
-
-![User Home Dashboard](Page-userhome-108.png)
-
-**Page-userhome-SECURITY_SETTINGS--110.png**  
-A dedicated interface for managing account security settings, empowering users to safeguard their data effectively.
-
-![User Security Settings](Page-userhome-SECURITY_SETTINGS--110.png)
-
-**Page-userhome-USER_VISITS--202.png**  
-A chronological log of user visits to various pages, enabling users to track their interactions within the platform.
-
-![User Visit History](Page-userhome-USER_VISITS--202.png)
+![Politician Career Timeline](Page-politician-ROLEGHANT-0218878014918-113.png)  
 
 ---
 
-## Additional Information
+## **Administrative Agency Views**
 
-For more information about the Citizen Intelligence Agency project, visit:
+### **Agency Operations Overview**  
+An interface showcasing administrative agency performance, management efficiency, and specific operational insights.  
 
-- [Citizen Intelligence Agency on GitHub](https://github.com/Hack23/cia)
-- [Official Hack23 Website](https://hack23.com/)
+![Administrative Agency Overview](Page-adminagency-52-70.png)  
+![Administrative Agency Details](Page-adminagency-69.png)  
 
-The CIA project employs advanced data visualization and analytics to deliver unparalleled insights into Sweden's political ecosystem, enhancing transparency and informed decision-making. These screenshots represent the platform’s most pivotal features, from dashboards to detailed risk assessments, demonstrating its commitment to empowering users with actionable intelligence.
+---
+
+## **Agent Operation Views**
+
+### **Operational Efficiency and Workflows**  
+A detailed view of agent activities, focusing on key performance indicators, workload management, and operational distribution.  
+
+![Agent Operation Statistics](Page-adminagentoperation-87.png)  
+
+---
+
+## **User Home and Personal Dashboards**
+
+### **Personalized Dashboard**  
+An interactive user dashboard summarizing recent activities and providing quick access to key features.  
+
+![User Home Dashboard](Page-userhome-108.png)  
+
+### **Security Settings and Visit Logs**  
+Tools to manage account security and track user interactions for enhanced safety and transparency.  
+
+![User Security Settings](Page-userhome-SECURITY_SETTINGS--110.png)  
+![User Visit History](Page-userhome-USER_VISITS--202.png)  
+
+---
+
+## **Additional Information**
+
+For more details about the Citizen Intelligence Agency project, visit:
+
+- [GitHub Repository](https://github.com/Hack23/cia)  
+- [Official Hack23 Website](https://hack23.com/)  
+
+The CIA project leverages advanced analytics and visualizations to enhance understanding and promote informed decisions in Sweden’s political ecosystem. These screenshots offer a high-level overview of its features, underlining its commitment to transparency and accountability.  
+
+---
