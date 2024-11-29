@@ -43,6 +43,30 @@ A global ranking overview emphasizing Sweden's position on metrics such as gover
 
 ---
 
+### **Ministry Leaders and Insights**
+
+**Ministry Leader Overview**  
+Provides an analysis of current ministry leadership, highlighting responsibilities, affiliations, and overall influence within the government structure.
+
+![Analysis of current ministry leadership](Page-ministry-CURRENTMEMBERS-Näringsdepartementet-97.png)
+
+**Ministry Expenditure Analysis**  
+A breakdown of government body expenditure under the ministry, offering insights into financial prioritization and resource allocation.
+
+![Expenditure breakdown for government bodies under the ministry](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-Näringsdepartementet-308.png)
+
+**Ministry Income Sources**  
+Examines the revenue streams of government bodies overseen by the ministry, providing clarity on financial sustainability.
+
+![Ministry income sources](Page-ministry-GOVERNMENT_BODIES_INCOME-Näringsdepartementet-205.png)
+
+**Ministry Rankings by Headcount**  
+Visualizes all ministries ranked by their headcount, offering a comparative view of ministry staffing.
+
+![Ministry rankings by headcount](Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png)
+
+---
+
 ## Administrative Agency Views
 
 **Page-adminagency-52-70.png**  
