@@ -1,8 +1,4 @@
-Here is the updated complete page with the revised **Table of Contents**, placing **User Home and Personal Dashboards** at the end and making all adjustments for better flow and presentation:
-
----
-
-# **Screenshots of the CIA Project**
+# **Features of the CIA Project**
 
 This document showcases the primary features of the [Citizen Intelligence Agency (CIA) project](https://github.com/Hack23/cia). These screenshots illustrate high-level dashboards, critical scoreboards, and detailed analytics, focusing on transparency, accountability, and decision-making in Sweden’s political landscape.
 
