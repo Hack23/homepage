@@ -73,6 +73,32 @@ Detailed insights into government body structures, funding, and operational resp
 
 ---
 
+## **Decision Flow and Risk Assessments**
+
+### **Legislative Decision-Making**  
+Maps out decision flows within parliamentary and committee structures, offering transparency into the legislative processes and outcomes:  
+
+- **Recent Decision Flows**  
+  Visualizes decision-making patterns within parliament for the latest legislative activities.  
+  ![Recent Decision Flow Chart](Page-parliamentranking-CHARTS-DECISION_FLOW_CHART-248.png)
+
+- **Historical Decision Flows (2016-17)**  
+  Explores decision-making trends during the 2016-17 period, highlighting pathways and legislative milestones.  
+  ![Historical Decision Flow Chart](Page-parliamentranking-CHARTS-DECISION_FLOW_CHART[2016-17]-231.png)
+
+- **Committee Decision Flows**  
+  A detailed map of committee decision-making processes during the same historical period.  
+  ![Committee Decision Flow](Page-committee-CHARTS-DECISION_FLOW_CHART-UU[2016-17]-245.png)  
+
+### **Risk Assessments**  
+Evaluates potential risks in parliamentary activities, promoting governance transparency and accountability.  
+
+![Risk Summary](Page-parliamentranking-RULES-RISK_SUMMARY-306.png)  
+
+---
+
+
+
 ## **Party and Parliament Insights**
 
 ### **Political Party Profiles**  
