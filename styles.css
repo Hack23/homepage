@@ -2,9 +2,9 @@
 body {
   color: #333;
   background-color: #F5F5F5;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-size: 18px; /* Increased font size for better readability */
+  font-family: 'Open Sans', sans-serif; /* More modern and readable font */
+  line-height: 1.8; /* Increased line height for better readability */
   margin: 0;
 }
 
@@ -12,7 +12,10 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem; /* Increased padding for more white space */
+  display: grid; /* Use grid layout for better alignment */
+  grid-template-columns: 1fr; /* Single column layout by default */
+  gap: 2rem; /* Gap between grid items */
 }
 
 /* Header styles */
@@ -20,9 +23,10 @@ body {
   background-color: #004D4D;
   border-radius: 6px;
   color: #FFF;
-  font-size: 24px;
-  padding: 1rem;
+  font-size: 2.5rem; /* Increased font size for better readability */
+  padding: 2rem; /* Increased padding for more white space */
   text-align: center;
+  font-family: 'Roboto', sans-serif; /* More modern and readable font */
 }
 
 /* Panel caption styles */
@@ -30,11 +34,11 @@ body {
   background-color: #006666;
   border-radius: 6px;
   color: #FFF;
-  font-size: 20px;
-  padding: 0.5rem;
+  font-size: 2rem; /* Increased font size for better readability */
+  padding: 1rem; /* Increased padding for more white space */
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem; /* Increased margin for more white space */
+  margin-bottom: 2rem; /* Increased margin for more white space */
 }
 
 /* Styles for level panels */
@@ -42,13 +46,13 @@ body {
   background-color: #FFF;
   border-radius: 3px;
   color: #333;
-  padding: 1rem;
+  padding: 2rem; /* Increased padding for more white space */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings */
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Increased margin for more white space */
 }
 
 /* Link styles */
@@ -62,7 +66,7 @@ a:hover, a:focus {
 
 /* Paragraphs */
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Increased margin for more white space */
 }
 
 /* New color palette */
@@ -87,27 +91,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Increased font size for better readability */
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Increased font size for better readability */
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem; /* Increased font size for better readability */
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.75rem; /* Increased font size for better readability */
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Increased font size for better readability */
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.25rem; /* Increased font size for better readability */
 }
 
 /* Spacing improvements */
@@ -131,15 +135,16 @@ h6 {
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
   }
 
   .header {
-    font-size: 20px;
+    font-size: 2rem; /* Adjusted font size for smaller screens */
     padding: 1rem;
   }
 
   .panel-caption {
-    font-size: 18px;
+    font-size: 1.75rem; /* Adjusted font size for smaller screens */
     padding: 0.5rem;
   }
 
@@ -148,27 +153,27 @@ h6 {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Adjusted font size for smaller screens */
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 2rem; /* Adjusted font size for smaller screens */
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Adjusted font size for smaller screens */
   }
 
   h4 {
-    font-size: 1.25rem;
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
   }
 
   h5 {
-    font-size: 1rem;
+    font-size: 1.25rem; /* Adjusted font size for smaller screens */
   }
 
   h6 {
-    font-size: 0.875rem;
+    font-size: 1rem; /* Adjusted font size for smaller screens */
   }
 }
 
@@ -242,4 +247,22 @@ p {
 ul, ol {
   margin-left: 20px;
   color: #555;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--primary-color);
+  color: #FFF;
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--header-font);
+}
+
+footer a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+footer a:hover, footer a:focus {
+  color: var(--accent-color);
 }
