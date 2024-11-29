@@ -26,6 +26,18 @@ A comprehensive monitoring dashboard showcasing real-time visualizations of poli
 
 ![Monitoring Dashboard](Page-dashboard-OVERVIEW-331.png)
 
+
+### **Ministry Leadership Scorecard**
+
+**Current Ministry Leadership Evaluation**  
+This chart provides a detailed evaluation of current ministry leaders, focusing on their efficiency, impact, and governance outcomes. The scorecard helps identify top-performing leaders and highlights areas for improvement within ministry governance.
+
+![Current Ministries Leadership Scorecard](Page-ministryranking-CHARTS-CURRENTMINISTRIESLEADERSCORECARD-269.png)
+
+---
+
+This addition places emphasis on leadership metrics, aligning well with the overall goal of showcasing insights into governance quality. Let me know if you'd like further refinements or additional inclusions!
+
 **Page-parliamentranking-OVERVIEW-166.png**  
 An overview of parliamentary activities and rankings, highlighting legislative performance metrics across various categories. This view enables users to compare parliamentary entities effectively.
 
