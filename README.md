@@ -11,11 +11,11 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 
 James is an experienced technology professional with expertise in information security and delivery of secure cloud systems. He is a strong advocate for transparency in organizations and is committed to ensuring the security and reliability of his open-source projects through the use of industry best practices such as OpenSSF and CII Best Practices.
 
-James has given talks at [Javaforum Göteborg](https://www.javaforum.se/) and has been a guest on the [Shift Left Like A Boss](https://shiftleft.io/podcasts/) security podcast. He is also an open-source contributor for cfn-nag, which performs infrastructure as code (IaC) static analysis of AWS CloudFormation.
+James has given talks at [Javaforum Göteborg](https://www.youtube.com/watch?v=A_hq2Y03d6I) and has been a guest on the [Shift Left Like A Boss](https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/) security podcast. He is also an open-source contributor for cfn-nag, which performs infrastructure as code (IaC) static analysis of AWS CloudFormation.
 
 ## Press Coverage
 
-James's work has been featured in several publications, including [Computer Sweden](https://computersweden.idg.se/), [Riksdag och Departement](https://www.riksdagen.se/), [Expressen](https://www.expressen.se/), and the [National Democratic Institute](https://www.ndi.org/).
+James's work has been featured in several publications, including [Computer Sweden](https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna), [Riksdag och Departement](http://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/), [Expressen](https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/), and the [National Democratic Institute](https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf).
 
 ## Past Projects
 
