@@ -45,11 +45,11 @@ An overview of parliamentary activities and rankings, highlighting key legislati
 Insights into current ministry leadership, responsibilities, and financial resource allocation:  
 
 - **Leadership Overview**: Highlights affiliations and governance roles.  
-  ![Ministry Leadership](Page-ministry-CURRENTMEMBERS-Näringsdepartementet-97.png)  
+  ![Ministry Leadership](Page-ministry-CURRENTMEMBERS-N%25C3%25A4ringsdepartementet-97.png)  
 
 - **Expenditure and Revenue**: Explores financial prioritization and funding sources.  
-  ![Expenditure Breakdown](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-Näringsdepartementet-308.png)  
-  ![Revenue Breakdown](Page-ministry-GOVERNMENT_BODIES_INCOME-Näringsdepartementet-205.png)  
+  ![Expenditure Breakdown](Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-N%25C3%25A4ringsdepartementet-308.png)  
+  ![Revenue Breakdown](Page-ministry-GOVERNMENT_BODIES_INCOME-N%25C3%25A4ringsdepartementet-205.png)  
 
 - **Headcount Rankings**: Ranks ministries based on staffing levels for comparative analysis.  
   ![Ministry Headcount](Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png)  
@@ -92,8 +92,6 @@ Evaluates potential risks in parliamentary activities, promoting governance tran
 ![Risk Summary](Page-parliamentranking-RULES-RISK_SUMMARY-306.png)  
 
 ---
-
-
 
 ## **Party and Parliament Insights**
 
@@ -204,3 +202,39 @@ For more details about the Citizen Intelligence Agency project, visit:
 The CIA project leverages advanced analytics and visualizations to enhance understanding and promote informed decisions in Sweden’s political ecosystem. These screenshots offer a high-level overview of its features, underlining its commitment to transparency and accountability.  
 
 ---
+
+### **Overview of the committee's activities and key metrics**  
+![Overview of the committee's activities and key metrics](Page-committee-OVERVIEW-UU-285.png)
+
+### **Ranking of committees based on performance and other criteria**  
+![Ranking of committees based on performance and other criteria](Page-committeeranking-OVERVIEW-226.png)
+
+### **Overview of the government body's structure and functions**  
+![Overview of the government body's structure and functions](Page-governmentbody-OVERVIEW-202100-5026-244.png)
+
+### **Ranking of government bodies based on various performance metrics**  
+![Ranking of government bodies based on various performance metrics](Page-governmentbodyranking-OVERVIEW-169.png)
+
+### **Main dashboard providing a high-level overview of the project's key features**  
+![Main dashboard providing a high-level overview of the project's key features](Page-main-OVERVIEW-101.png)
+
+### **Overview of the Ministry of Enterprise and its key activities**  
+![Overview of the Ministry of Enterprise and its key activities](Page-ministry-OVERVIEW-N%C3%A4ringsdepartementet-253.png)
+
+### **Ranking of ministries based on performance and other criteria**  
+![Ranking of ministries based on performance and other criteria](Page-ministryranking-OVERVIEW-168.png)
+
+### **Overview of parliamentary rankings and key legislative metrics**  
+![Overview of parliamentary rankings and key legislative metrics](Page-parliamentranking-OVERVIEW-166.png)
+
+### **Overview of the political party's structure and activities**  
+![Overview of the political party's structure and activities](Page-party-OVERVIEW-S-181.png)
+
+### **Ranking of political parties based on various performance metrics**  
+![Ranking of political parties based on various performance metrics](Page-partyranking-OVERVIEW-146.png)
+
+### **Detailed profile of a specific politician, including their activities and performance**  
+![Detailed profile of a specific politician, including their activities and performance](Page-politician-OVERVIEW-0980681611418-164.png)
+
+### **Ranking of politicians based on their performance and other criteria**  
+![Ranking of politicians based on their performance and other criteria](Page-politicianranking-OVERVIEW-225.png)
