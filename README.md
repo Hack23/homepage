@@ -35,15 +35,8 @@ We welcome contributions to the Hack23 homepage project. If you have an idea or 
 
 This project is licensed under the [MIT License](https://github.com/Hack23/homepage/blob/master/LICENSE).
 
-# Citizen Intelligence Agency Screenshots Directory
 
-To integrate the content into the main `readme.md` file of your GitHub repository (`https://github.com/Hack23/homepage/blob/master/readme.md`) and ensure all links point correctly to the `screenshots/` folder, I'll revise the document by updating all image and section links.
-
-Here's the **updated version** with appropriate links:
-
----
-
-# **Screenshots of the CIA Project**
+# **Features of the CIA Project**
 
 This document showcases the extensive features of the [Citizen Intelligence Agency (CIA) project](https://github.com/Hack23/cia), providing detailed screenshots of dashboards, scoreboards, and critical analytics. The focus is on transparency, accountability, and data-driven decision-making in Sweden’s political ecosystem.
 
