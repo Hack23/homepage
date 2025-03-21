@@ -1,0 +1,240 @@
+{
+  "cSpell.words": [
+    "capex",
+    "opex",
+    "CAPEX",
+    "OPEX",
+    "Elems",
+    "partyrock",
+    "testid",
+    "jsdom",
+    "vitest",
+    "tailwindcss",
+    "esbuild",
+    "autoprefixer",
+    "postcss",
+    "dbaeumer",
+    "esbenp",
+    "antfu",
+    "Zixuan",
+    "bradlc",
+    "dsznajder",
+    "hbenl",
+    "ryanluker",
+    "kohler",
+    "formulahendry",
+    "errorlens",
+    "usernamehw",
+    "eamodio",
+    "gitlens",
+    "oderwat",
+    "deque",
+    "stackbreak",
+    "mhutchie",
+    "devcontainers",
+    "libgbm",
+    "libnotify",
+    "libnss",
+    "libxss",
+    "libasound",
+    "libxtst",
+    "xauth",
+    "dbus",
+    "pkill",
+    "xvfb",
+    "Xvfb",
+    "DBUS",
+    // Added domain-specific terms
+    "NIST",
+    "GDPR",
+    "HIPAA",
+    "SOC2",
+    "CSF",
+    "GRC",
+    "SIEM",
+    "SOAR",
+    "CMDB",
+    "ITSM",
+    "OSCAL",
+    "TAXII",
+    "STIX",
+    "triad",
+    "RBAC",
+    // Additional security and compliance terms
+    "MTTR",
+    "MTBF",
+    "MTTD",
+    "MTTF",
+    "MTTS",
+    "RPO",
+    "RTO",
+    "BCM",
+    "BCP",
+    "DRP",
+    "MFA",
+    "FIPS",
+    "ZTA",
+    "ZERO",
+    // UI/UX terms
+    "WCAG",
+    "a11y",
+    "microcopy",
+    "heatmap",
+    "wireframe",
+    "handoff",
+    "microinteraction",
+    "prototyping",
+    "affordance",
+    "usability",
+    "skeuomorphic",
+    "neumorphic",
+    // Business development terms
+    "CISO",
+    "CRO",
+    "ROI",
+    "TCO",
+    "TAM",
+    "SAM",
+    "SOM",
+    "KPI",
+    "OKR",
+    "GTM",
+    "CAC",
+    "LTV",
+    "ARR",
+    "MRR",
+    "B2B",
+    "B2G",
+    "RACI"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders"
+  ],
+
+  // Editor settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+
+  // TypeScript settings - enhanced for quality
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggestionActions.enabled": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.preferences.renameMatchingJsxTags": true,
+  "javascript.preferences.renameMatchingJsxTags": true,
+
+  // Tailwind settings
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "css.validate": false,
+
+  // Testing settings - enhanced
+  "vitest.enable": true,
+  "vitest.commandLine": "npx vitest",
+  "vitest.include": ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+  "testing.automaticallyOpenPeekView": "never",
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "coverage-gutters.highlightdark": "rgba(45, 121, 10, 0.2)",
+  "coverage-gutters.noHighlightDark": "rgba(121, 31, 10, 0.2)",
+  "coverage-gutters.partialHighlightDark": "rgba(245, 196, 0, 0.2)",
+  "vitest.showFailMessages": true,
+
+  // File associations
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.module.css": "tailwindcss",
+    "*.test.ts": "typescript",
+    "*.test.tsx": "typescriptreact",
+    "*.cy.ts": "typescript"
+  },
+
+  // Error visualization
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.exclude": ["never used"],
+  "problems.showCurrentInStatus": true,
+
+  // Eslint settings - enhanced
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact"
+  ],
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.run": "onType",
+  "eslint.workingDirectories": [{ "mode": "auto" }, "./src", "./cypress"],
+  "eslint.codeActionsOnSave.rules": [
+    "@typescript-eslint/no-unused-vars",
+    "@typescript-eslint/no-explicit-any",
+    "react-hooks/rules-of-hooks",
+    "react-hooks/exhaustive-deps"
+  ],
+
+  // Copilot settings
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "typescript": true,
+    "typescriptreact": true,
+    "javascript": true,
+    "javascriptreact": true
+  },
+  "github.copilot.advanced": {
+    "language.enableAutoCompletions": {
+      "typescript": true,
+      "typescriptreact": true
+    },
+    "indentationMode": "keep",
+    "inlineSuggestCount": 3,
+    "listCount": 5,
+    "temperature": 0.3
+  },
+
+  // Custom instructions for GitHub Copilot
+  "github.copilot.editor.customization": {
+    "repositoryInstructions": {
+      "instructions": ""
+    }
+  },
+
+  // Additional supportive settings
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.test.ts, ${capture}.spec.ts, ${capture}.cy.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx, ${capture}.cy.tsx",
+    "*.js": "${capture}.test.js, ${capture}.spec.js",
+    "*.jsx": "${capture}.test.jsx, ${capture}.spec.jsx",
+    "types.ts": "${capture}.d.ts, ${capture}.schema.ts"
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "diffEditor.ignoreTrimWhitespace": false
+}
