@@ -1,653 +1,212 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>hack23.com</title>
+	<title>Hack23 - Projekt för Öppen Källkod inom Säkerhet</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="alternate" hreflang="en" href="https://www.hack23.com/index.html" />
-	<meta name="description" content="Hack23 är en öppen källkodsutvecklingsplattform grundad av James Pether Sörling.">
-	<meta name="keywords"
-		content="hack23, öppen källkod, utveckling, informationssäkerhet, molnsystem, James Pether Sörling, James Sörling, Pether Sörling, cybersäkerhet, molnbearbetning">
+	<meta name="description" content="Hack23 är en plattform för öppen källkod grundad av James Pether Sörling, med fokus på säkerhet, regelefterlevnad och transparensverktyg">
+	<meta name="keywords" content="hack23, CIA triad, compliance, säkerhetsbedömning, informationssäkerhet, molnsystem, James Pether Sörling, cybersäkerhet, molndatorteknik">
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="James Pether Sörling">
-	<meta property="og:description" content="Hack23 är en öppen källkodsutvecklingsplattform grundad av James Pether Sörling.">
+	<meta property="og:description" content="Hack23 - Projekt för öppen källkod inom säkerhet och transparens av James Pether Sörling">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://hack23.com">
-	<meta property="og:image" content="https://hack23.com/images/logo.png">
-	<meta name="DC.Subject" content="Öppen källkodsutveckling, Cybersäkerhet, Molnbearbetning, James Pether Sörling">
-	<meta name="DC.Description"
-		content="Hack23 är en öppen källkodsutvecklingsplattform grundad av James Pether Sörling.">
-	<meta name="DC.Type" content="Text">
-	<meta name="DC.Format" content="text/html">
-	<meta name="DC.Identifier" content="https://hack23.com">
-	<meta name="DC.Language" content="sv">
+	<meta property="og:image" content="https://hack23.github.io/cia-compliance-manager/icon-192.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
 </head>
-
 <body>
-
 	<header>
-		<div class="container">
-				<div>
-					<h1 class="header">Hack23</h1>
-					<p class="panel-caption">Öppen källkodsutveckling</p>
-					<a href="https://www.hack23.com/index.html" lang="en">(English version)</a>
-				</div>
-		</div>
-	</header>
-
-
-	<main class="overview-panel-level">
-		<section>
-			<h2 class="panel-caption">Hack23 </h2>
-				<table><caption>Om James Pether Sörling</caption>
-					<tr>
-						<th scope="col">
-							<figure>
-								<img src="jamespethersorling150.webp" alt="James Pether Sörling"
-									style="width: 150px; height: 150px; margin-right: 20px;" loading="lazy">
-								<figcaption>Om James Pether Sörling</figcaption>
-							</figure>
-						</th>
-						<td>
-							<p>Erfaren teknikprofessional med expertis inom informationssäkerhet och leverans av säkra
-								molnsystem. Stark förespråkare för transparens i organisationer och engagerad i att
-								säkerställa säkerheten och tillförlitligheten i mina öppna källkodsprojekt genom användning
-								av branschens bästa metoder som OpenSSF och CII Best Practices.</p>
-							<p>James Pether Sörling, en säkerhetsprofessional och bidragsgivare till öppen källkod, gav ett
-								föredrag på <a href="https://www.youtube.com/watch?v=A_hq2Y03d6I">Javaforum Göteborg</a> där
-								han diskuterade hur man säkrar din utvecklingspipeline med statiska och dynamiska
-								applikationssäkerhetstester, samt mjukvarusammansättningsanalys med Sonarqube.</p>
-							<p>Utöver detta var Sörling gäst på säkerhetspodcasten <a
-									href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/">Shift Left Like A
-									Boss</a>, där han diskuterade öppna källkodsverktyg som kan göra höghastighetsutveckling
-								mer säker. Som en bidragsgivare till öppen källkod för cfn-nag, som utför infrastruktur som
-								kod (IaC) statisk analys av AWS CloudFormation, skrev han också en öppen källkodsmodul som
-								integrerar CFN-nag i SonarQube.</p>
-
-							<ul>
-								<li>Öppen källkodsutvecklare och grundare av <a href="https://hack23.com/">Hack23</a></li>
-								<li>Kolla in hans <a href="https://www.openhub.net/accounts/pether">OpenHub-profil</a></li>
-								<li>Se hans <a href="https://github.com/Hack23/talks">presentationer på GitHub</a></li>
-								<li>Koppla upp dig med honom på <a
-										href="https://www.linkedin.com/in/jamessorling/">LinkedIn</a></li>
-								<li>Läs hans <a href="https://www.hack23.com/blog.html">blogg</a></li>
-							</ul>
-						</td>
-					</tr>
-				</table>
-		</section>
-		<section>
-			<h2 class="panel-caption">Press Coverage</h2>
-			<ul>
-				<li>
-					<a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna">
-						Computer Sweden
-					</a>
-					- Denna artikel belyser den innovativa användningen av teknik för att avslöja politikers
-					aktiviteter. Den presenterar James Pether Sörlings arbete med att använda datadrivna insikter för
-					att främja transparens i politiska processer.
-				</li>
-				<li>
-					<a
-						href="https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/">
-						Riksdag och Departement
-					</a>
-					- En svensk publikation som diskuterar rollen för Citizen Intelligence Agency i övervakningen av
-					politiker. Den understryker James Pether Sörlings engagemang för att främja ansvarsskyldighet i
-					politiken genom strategisk användning av teknik.
-				</li>
-				<li>
-					<a href="https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/">
-						Expressen
-					</a>
-					- En åsiktsartikel som tar upp frågan om politisk frånvaro. Den innehåller ett citat från James
-					Pether Sörling, vilket visar hans ledarskap inom området för politisk transparens och
-					ansvarsskyldighet.
-				</li>
-				<li>
-					<a
-						href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf">
-						National Democratic Institute: Strengthening Parliamentary Accountability, Citizen Engagement
-						and Access to Information
-					</a>
-					- En omfattande undersökningsrapport som understryker betydelsen av parlamentariska
-					övervakningsorganisationer i Sverige. Den erkänner James Pether Sörlings betydande bidrag till dessa
-					organisationer, vilket förstärker hans engagemang för att stärka demokratiska processer.
-				</li>
-			</ul>
-		</section>
-		<section>
-			<h2 class="panel-caption">Current Projects</h2>
-			<ul>
-				<li></li>
-			</ul>
-		</section>
-		<section>
-			<h2 class="panel-caption">Past Projects</h2>
-			<ul>
-				<li>
-					<a href="https://github.com/Hack23/cia">Medborgarunderrättelsebyrån</a> - Ett volontärdrivet, öppen
-					källkodsunderrättelseprojekt (OSINT) som ger en neutral och omfattande översikt över politisk
-					aktivitet i Sverige. Genom att övervaka nyckelpolitiska figurer och institutioner erbjuder
-					plattformen värdefulla insikter i finansiell prestanda, riskmätvärden och politiska trender.
-					Dessutom har instrumentpanelen ett rankningssystem, vilket gör att användare objektivt kan jämföra
-					politiker baserat på prestanda. Medborgarunderrättelsebyrån strävar efter att uppmuntra till
-					informerat beslutsfattande, öka transparensen i styrningen och odla ett engagerat och välunderrättat
-					medborgarskap. Initiativet är oberoende och icke-partiskt, och använder data, metadata och diagram
-					relaterade till den svenska riksdagen och regeringen, inklusive riksdagsledamöter, utskott,
-					dokument, röstsedlar, beslut, ministerier, regeringsmedlemmar och politiska partier. Projektet
-					förlitar sig på öppna data från olika källor som:
-					<ul>
-						<li><a href="https://data.riksdagen.se/">Sveriges riksdags öppna data</a> - Erbjuder ett brett
-							utbud av data relaterade till Sveriges riksdag, inklusive medlemmar, utskott och dokument.
-						</li>
-						<li><a href="https://www.val.se/">Sveriges valmyndighet</a> - Ger information om valprocesser,
-							resultat och politiska partier i Sverige.</li>
-						<li><a href="https://data.worldbank.org/">Världsbankens öppna data</a> - Innehåller global
-							utvecklingsdata, inklusive ekonomiska indikatorer och demografisk information.</li>
-						<li><a href="https://www.esv.se/statistik-och-data/psidata/">Svenska ekonomistyrningsverkets
-								(ESV) offentliga sektorns information (PSI) Data</a> - Erbjuder data om statens
-							finanser, ekonomiska trender och offentliga sektorns verksamhet i Sverige.</li>
-					</ul>
-					Software Badges 
-					<ul>
-						<li>					<a href="https://github.com/Hack23/cia/releases">
-					  <img src="https://img.shields.io/github/v/release/Hack23/cia" alt="GitHub Release">
-					</a>
-					<a href="https://bestpractices.coreinfrastructure.org/projects/770">
-					  <img src="https://bestpractices.coreinfrastructure.org/projects/770/badge" alt="CII Best Practices">
-					</a>
-					<a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">
-					  <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard">
-					</a>
-					<a href="https://slsa.dev/spec/v1.0/levels">
-					  <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3">
-					</a>
-					<a href="https://github.com/Hack23/cia/actions/workflows/release.yml">
-					  <img src="https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg" alt="Verify & Release">
-					</a>
-					<a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">
-					  <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=ncloc" alt="Lines of Code">
-					</a>
-					<a href="https://github.com/Hack23/cia/actions/workflows/codeql-analysis.yml">
-					  <img src="https://github.com/Hack23/cia/actions/workflows/codeql-analysis.yml/badge.svg" alt="Verify PR">
-					</a>
-					<a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">
-					  <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=alert_status" alt="Quality Gate Status">
-					</a>
-					<a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">
-					  <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating" alt="Security Rating">
-					</a>
-					<a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">
-					  <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=sqale_rating" alt="Maintainability Rating">
-					</a>
-					<a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">
-					  <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=reliability_rating" alt="Reliability Rating">
-					</a>
-					<a href="https://isitmaintained.com/project/Hack23/cia">
-					  <img src="https://isitmaintained.com/badge/resolution/Hack23/cia.svg" alt="Average time to resolve an issue">
-					</a>
-					<a href="https://isitmaintained.com/project/Hack23/cia">
-					  <img src="https://isitmaintained.com/badge/open/Hack23/cia.svg" alt="Percentage of issues still open">
-					</a>
-					<a href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt">
-					  <img src="https://img.shields.io/github/license/Hack23/cia.svg" alt="License">
-					</a>
-					<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia?ref=badge_shield">
-					  <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia.svg?type=shield" alt="FOSSA Status">
-					</a>
-					<a href="https://cla-assistant.io/Hack23/cia">
-					  <img src="https://cla-assistant.io/readme/badge/Hack23/cia" alt="CLA Assistant">
-					</a>
-						</li>
-					</ul>
-					Utforska vår
-					<a href="https://hack23.github.io/cia/architecture.html" target="_blank">
-						Översikt över Medborgarunderrättelsebyråns arkitektur
-					</a>,
-					där du kan dyka in i den detaljerade strukturen i vårt projekt. Denna sida ger en omfattande titt på
-					vårt projekts systemkontext, dess olika komponenter och implementeringsstrategin. Den innehåller
-					också guider för utvecklare och databasadministratörer, vilket gör det till en värdefull resurs för
-					att förstå mekaniken i vårt arbete.
-
-				<li><a href="https://github.com/Hack23/cia/blob/master/dashboard.md">Medborgarunderrättelsebyrån
-						- Dashboard för politisk aktivitet i Sverige</a>
-					<p>
-						Medborgarunderrättelsebyrån är ett volontärdrivet, öppen källkodsunderrättelseprojekt (OSINT)
-						som fokuserar på politisk aktivitet i Sverige. Genom att övervaka nyckelpolitiska figurer och
-						institutioner ger plattformen värdefulla insikter i finansiell prestanda, riskmätvärden och
-						politiska trender. Instrumentpanelen har ett rankningssystem, vilket gör att användare objektivt
-						kan jämföra politiker baserat på prestanda. Initiativet är oberoende och icke-partiskt och
-						strävar efter att uppmuntra till informerat beslutsfattande, öka transparensen i styrningen och
-						odla ett engagerat och välunderrättat medborgarskap.
-					</p>
-					<p>
-						Detta projekt drivs av avancerade AI-teknologier som OpenAI för databehandling och analys. Vi
-						använder AI för att bearbeta och analysera en stor mängd data, och datavisualiseringsverktyg för
-						att representera data i ett lättförståeligt format.
-					</p>
-
-				</li>
-				<li>
-					<a href="https://github.com/Hack23/sonar-cloudformation-plugin">Sonar-CloudFormation-Plugin</a> -
-					Ett plugin för <a href="https://www.sonarqube.org/">SonarQube</a> som låter användare analysera <a
-						href="https://aws.amazon.com/cloudformation/">CloudFormation</a> mallar skrivna i YAML eller
-					JSON, utvecklade i Java. Pluginet använder SonarQube API för att utföra kodanalys på mallarna och
-					generera detaljerade rapporter om bästa praxis, potentiella säkerhetsproblem och andra
-					kodkvalitetsmätvärden. Pluginet integrerar med <a
-						href="https://github.com/stelligent/cfn_nag">cfn-nag</a> och <a
-						href="https://www.checkov.io/">Checkov</a> för att tillhandahålla ytterligare
-					säkerhetskontroller baserat på <a href="https://cwe.mitre.org/">CWE</a>, <a
-						href="https://www.nist.gov/">NIST 800-53</a>, och <a
-						href="https://www.iso.org/standard/54534.html">ISO 27001</a> standarder.
-					  <a href="https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt">
-    <img src="https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg" alt="License">
-  </a>
-  <a href="http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin">
-    <img src="https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg" alt="Maven Central">
-  </a>
-  <a href="https://bestpractices.coreinfrastructure.org/projects/4545">
-    <img src="https://bestpractices.coreinfrastructure.org/projects/4545/badge" alt="CII Best Practices">
-  </a>
-  <a href="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin">
-    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge" alt="OpenSSF Scorecard">
-  </a>
-				</li>
-				<li>
-					<a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda i privat VPC</a> - Lambda i privat
-					VPC är ett bevis-på-koncept (POC) som visar en flerregionsaktiv/aktiv webbplats och utnyttjar
-					Resilience Hubs policyöverensstämmelse och driftböcker för att underlätta snabb återhämtning från
-					fel.
-					  <a href="https://github.com/Hack23/lambda-in-private-vpc/raw/master/LICENSE.md">
-    <img src="https://img.shields.io/github/license/Hack23/lambda-in-private-vpc.svg" alt="License">
-  </a>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/lambda-in-private-vpc">
-    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/lambda-in-private-vpc/badge" alt="OpenSSF Scorecard">
-  </a>
-  <a href="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml">
-    <img src="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml/badge.svg" alt="Verify and Deploy">
-  </a>
-  <a href="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml">
-    <img src="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security">
-  </a>
-
-					<p>Läs mer om AWS Resilience Hub-koncept och förstå de viktigaste termerna och principerna som är
-						involverade i att bygga robusta applikationer <a
-							href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/concepts-terms.html">här</a>.
-					</p>
-					<ul>
-						<li>
-							<a
-								href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-ref-ddb.html">DynamoDB
-								driftbok</a> - Denna driftbok automatiserar hanteringen av DynamoDB-tabeller och index.
-						</li>
-						<li>
-							<a
-								href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-ref-lam.html">Lambda
-								driftbok</a> - Denna driftbok hjälper till att hantera Lambda-funktioner, lager och
-							alias.
-						</li>
-						<li>
-							<a
-								href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-ref-abp.html">Application
-								Bridge driftbok</a> - Denna driftbok stödjer hantering av Amazon App Runner-tjänster och
-							anpassade domäner.
-						</li>
-						<li>
-							<a
-								href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/automation-ref-iam.html">IAM
-								driftbok</a> - Denna driftbok underlättar hanteringen av IAM-användare, grupper, roller
-							och behörigheter.
-						</li>
-					</ul>
-
-				</li>
-			</ul>
-		</section>
-	<section>
-       
-        <section id="features">
-	<h2>Features of the CIA Project</h2>
-	<p>This document showcases the primary features of the <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency (CIA) project</a>. These screenshots illustrate high-level dashboards, critical scoreboards, and detailed analytics, focusing on transparency, accountability, and decision-making in Sweden’s political landscape.</p>
-        </section>
-
-	<hr />
-
-	<h3 class="panel-caption">Table of Contents</h3>
-	<ol>
-		<li><a href="#dashboard-and-scoreboard-views">Dashboard and Scoreboard Views</a></li>
-		<li><a href="#ministry-leaders-and-insights">Ministry Leaders and Insights</a></li>
-		<li><a href="#government-body-insights">Government Body Insights</a></li>
-		<li><a href="#party-and-parliament-insights">Party and Parliament Insights</a></li>
-		<li><a href="#decision-flow-and-risk-assessments">Decision Flow and Risk Assessments</a></li>
-		<li><a href="#committee-views">Committee Views</a></li>
-		<li><a href="#country-rankings-and-analysis">Country Rankings and Analysis</a></li>
-		<li><a href="#politician-profiles-and-analytics">Politician Profiles and Analytics</a></li>
-		<li><a href="#administrative-agency-views">Administrative Agency Views</a></li>
-		<li><a href="#agent-operation-views">Agent Operation Views</a></li>
-		<li><a href="#user-home-and-personal-dashboards">User Home and Personal Dashboards</a></li>
-	</ol>
-
-	<hr />
-
-	<h3 class="panel-caption" id="dashboard-and-scoreboard-views">Dashboard and Scoreboard Views</h3>
-
-	<h4 class="panel-caption">Central Monitoring Dashboard</h4>
-	<p>This real-time monitoring dashboard offers visualizations of political activities, legislative decisions, and operational trends. It acts as a centralized hub for analysis.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png" alt="Monitoring Dashboard">
-		<figcaption>Monitoring Dashboard</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Ministry Leadership Scorecard</h4>
-	<p>A detailed evaluation of current ministry leaders focusing on efficiency, impact, and governance outcomes. This scorecard identifies top-performing leaders and opportunities for improvement.</p>
-	<figure>
-			<img src="https://hack23.com/screenshots/Page-ministryranking-CHARTS-CURRENTMINISTRIESLEADERSCORECARD-269.png" alt="Current Ministries Leadership Scorecard">
-		<figcaption>Current Ministries Leadership Scorecard</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Parliament Rankings Overview</h4>
-	<p>An overview of parliamentary activities and rankings, highlighting key legislative performance metrics and enabling comparative insights.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-parliamentranking-OVERVIEW-166.png" alt="Parliament Ranking Overview">
-		<figcaption>Parliament Ranking Overview</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="ministry-leaders-and-insights">Ministry Leaders and Insights</h3>
-
-	<h4 class="panel-caption">Leadership and Financial Metrics</h4>
-	<p>Insights into current ministry leadership, responsibilities, and financial resource allocation:</p>
-	<ul>
-		<li><strong>Leadership Overview</strong>: Highlights affiliations and governance roles.</li>
-	</ul>
-
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministry-CURRENTMEMBERS-N%25C3%25A4ringsdepartementet-97.png" alt="Ministry Leadership">
-		<figcaption>Ministry Leadership</figcaption>
-	</figure>
-	<ul>
-		<li><strong>Expenditure and Revenue</strong>: Explores financial prioritization and funding sources.</li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministry-GOVERNMENT_BODIES_EXPENDITURE-N%25C3%25A4ringsdepartementet-308.png" alt="Expenditure Breakdown">
-		<figcaption>Expenditure Breakdown</figcaption>
-	</figure>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministry-GOVERNMENT_BODIES_INCOME-N%25C3%25A4ringsdepartementet-205.png" alt="Revenue Breakdown">
-		<figcaption>Revenue Breakdown</figcaption>
-	</figure>
-	<ul>
-		<li><strong>Headcount Rankings</strong>: Ranks ministries based on staffing levels for comparative analysis.</li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministryranking-CHARTS-ALLMINISTRIESBYHEADCOUNT-273.png" alt="Ministry Headcount">
-		<figcaption>Ministry Headcount</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="government-body-insights">Government Body Insights</h3>
-
-	<h4 class="panel-caption">Roles, Income, and Accountability</h4>
-	<p>Detailed insights into government body structures, funding, and operational responsibilities:</p>
-	<ul>
-		<li><strong>Government Body Overview</strong></li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-governmentbody-OVERVIEW-202100-5026-244.png" alt="Government Body Overview">
-		<figcaption>Government Body Overview</figcaption>
-	</figure>
-	<ul>
-		<li><strong>Income Analysis</strong></li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-governmentbody-INCOME-202100-5026-131.png" alt="Income Sources">
-		<figcaption>Income Sources</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="party-and-parliament-insights">Party and Parliament Insights</h3>
-
-	<h4 class="panel-caption">Political Party Profiles</h4>
-	<p>An in-depth summary of a major political party's leadership structure and parliamentary dynamics.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-party-OVERVIEW-S-181.png" alt="Political Party Overview">
-		<figcaption>Political Party Overview</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Membership History</h4>
-	<p>A historical overview of party membership trends, illustrating shifts in political alignment.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-party-MEMBERHISTORY-S-100.png" alt="Party Membership Trends">
-		<figcaption>Party Membership Trends</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="decision-flow-and-risk-assessments">Decision Flow and Risk Assessments</h3>
-
-	<h4 class="panel-caption">Legislative Decision-Making</h4>
-	<p>Maps out decision flows within parliamentary and committee structures, offering transparency into the legislative processes and outcomes:</p>
-	<ul>
-		<li><strong>Recent Decision Flows</strong>: Visualizes decision-making patterns within parliament for the latest legislative activities.</li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-parliamentranking-CHARTS-DECISION_FLOW_CHART-248.png" alt="Recent Decision Flow Chart">
-		<figcaption>Recent Decision Flow Chart</figcaption>
-	</figure>
-	<ul>
-		<li><strong>Historical Decision Flows (2016-17)</strong>: Explores decision-making trends during the 2016-17 period, highlighting pathways and legislative milestones.</li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-parliamentranking-CHARTS-DECISION_FLOW_CHART%5B2016-17%5D-231.png" alt="Historical Decision Flow Chart">
-		<figcaption>Historical Decision Flow Chart</figcaption>
-	</figure>
-	<ul>
-		<li><strong>Committee Decision Flows</strong>: A detailed map of committee decision-making processes during the same historical period.</li>
-	</ul>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-committee-CHARTS-DECISION_FLOW_CHART-UU%5B2016-17%5D-245.png" alt="Committee Decision Flow">
-		<figcaption>Committee Decision Flow</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Risk Assessments</h4>
-	<p>Evaluates potential risks in parliamentary activities, promoting governance transparency and accountability.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-parliamentranking-RULES-RISK_SUMMARY-306.png" alt="Risk Summary">
-		<figcaption>Risk Summary</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="committee-views">Committee Views</h3>
-
-	<h4 class="panel-caption">Ballot Decision Summaries</h4>
-	<p>Transparent insights into key committee ballot decisions, offering trends in legislative actions.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-committee-BALLOTDECISIONSUMMARY-UU-154.png" alt="Committee Ballot Decisions">
-		<figcaption>Committee Ballot Decisions</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Decision-Making Flows</h4>
-	<p>A visual map of committee decision processes during the 2016-17 period, highlighting legislative pathways.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-committee-CHARTS-DECISION_FLOW_CHART-UU%5B2016-17%5D-245.png" alt="Committee Decision Flow">
-		<figcaption>Committee Decision Flow</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="country-rankings-and-analysis">Country Rankings and Analysis</h3>
-
-	<h4 class="panel-caption">IT Security Indicators</h4>
-	<p>An analysis of Sweden’s IT security metrics, emphasizing its readiness to counter digital threats and infrastructure resilience.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png" alt="Country IT Security Indicators">
-		<figcaption>Country IT Security Indicators</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Global Governance Rankings</h4>
-	<p>Sweden’s ranking across governance quality, transparency, and economic indicators, compared globally.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-countryranking-OVERVIEW-329.png" alt="Global Governance Rankings">
-		<figcaption>Global Governance Rankings</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="politician-profiles-and-analytics">Politician Profiles and Analytics</h3>
-
-	<h4 class="panel-caption">Legislative Contributions and Roles</h4>
-	<p>A detailed profile of a parliament member, including voting patterns and decision-making impact.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-politician-0103624617217-151.png" alt="Politician Profile">
-		<figcaption>Politician Profile</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Role Gantt Chart</h4>
-	<p>A timeline of a politician’s roles and responsibilities, visualized for career trajectory insights.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-politician-ROLEGHANT-0218878014918-113.png" alt="Politician Career Timeline">
-		<figcaption>Politician Career Timeline</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="administrative-agency-views">Administrative Agency Views</h3>
-
-	<h4 class="panel-caption">Agency Operations Overview</h4>
-	<p>An interface showcasing administrative agency performance, management efficiency, and specific operational insights.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-adminagency-52-70.png" alt="Administrative Agency Overview">
-		<figcaption>Administrative Agency Overview</figcaption>
-	</figure>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-adminagency-69.png" alt="Administrative Agency Details">
-		<figcaption>Administrative Agency Details</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="agent-operation-views">Agent Operation Views</h3>
-
-	<h4 class="panel-caption">Operational Efficiency and Workflows</h4>
-	<p>A detailed view of agent activities, focusing on key performance indicators, workload management, and operational distribution.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-adminagentoperation-87.png" alt="Agent Operation Statistics">
-		<figcaption>Agent Operation Statistics</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption" id="user-home-and-personal-dashboards">User Home and Personal Dashboards</h3>
-
-	<h4 class="panel-caption">Personalized Dashboard</h4>
-	<p>An interactive user dashboard summarizing recent activities and providing quick access to key features.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-userhome-108.png" alt="User Home Dashboard">
-		<figcaption>User Home Dashboard</figcaption>
-	</figure>
-
-	<h4 class="panel-caption">Security Settings and Visit Logs</h4>
-	<p>Tools to manage account security and track user interactions for enhanced safety and transparency.</p>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-userhome-SECURITY_SETTINGS--110.png" alt="User Security Settings">
-		<figcaption>User Security Settings</figcaption>
-	</figure>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-userhome-USER_VISITS--202.png" alt="User Visit History">
-		<figcaption>User Visit History</figcaption>
-	</figure>
-
-	<hr />
-
-	<h3 class="panel-caption">Additional Information</h3>
-	<p>For more details about the Citizen Intelligence Agency project, visit:</p>
-	<ul>
-		<li><a href="https://github.com/Hack23/cia">GitHub Repository</a></li>
-		<li><a href="https://hack23.com/">Official Hack23 Website</a></li>
-	</ul>
-	<p>The CIA project leverages advanced analytics and visualizations to enhance understanding and promote informed decisions in Sweden’s political ecosystem. These screenshots offer a high-level overview of its features, underlining its commitment to transparency and accountability.</p>
-
-	<hr />
-	<h3 class="panel-caption">Overview of the committee's activities and key metrics</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-committee-OVERVIEW-UU-285.png" alt="Overview of the committee's activities and key metrics">
-		<figcaption>Overview of the committee's activities and key metrics</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Ranking of committees based on performance and other criteria</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-committeeranking-OVERVIEW-226.png" alt="Ranking of committees based on performance and other criteria">
-		<figcaption>Ranking of committees based on performance and other criteria</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Overview of the government body's structure and functions</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-governmentbody-OVERVIEW-202100-5026-244.png" alt="Overview of the government body's structure and functions">
-		<figcaption>Overview of the government body's structure and functions</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Ranking of government bodies based on various performance metrics</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-governmentbodyranking-OVERVIEW-169.png" alt="Ranking of government bodies based on various performance metrics">
-		<figcaption>Ranking of government bodies based on various performance metrics</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Main dashboard providing a high-level overview of the project's key features</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-main-OVERVIEW-101.png" alt="Main dashboard providing a high-level overview of the project's key features">
-		<figcaption>Main dashboard providing a high-level overview of the project's key features</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Overview of the Ministry of Enterprise and its key activities</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministry-OVERVIEW-N%C3%A4ringsdepartementet-253.png" alt="Overview of the Ministry of Enterprise and its key activities">
-		<figcaption>Overview of the Ministry of Enterprise and its key activities</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Ranking of ministries based on performance and other criteria</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-ministryranking-OVERVIEW-168.png" alt="Ranking of ministries based on performance and other criteria">
-		<figcaption>Ranking of ministries based on performance and other criteria</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Overview of parliamentary rankings and key legislative metrics</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-parliamentranking-OVERVIEW-166.png" alt="Overview of parliamentary rankings and key legislative metrics">
-		<figcaption>Overview of parliamentary rankings and key legislative metrics</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Overview of the political party's structure and activities</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-party-OVERVIEW-S-181.png" alt="Overview of the political party's structure and activities">
-		<figcaption>Overview of the political party's structure and activities</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Ranking of political parties based on various performance metrics</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-partyranking-OVERVIEW-146.png" alt="Ranking of political parties based on various performance metrics">
-		<figcaption>Ranking of political parties based on various performance metrics</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Detailed profile of a specific politician, including their activities and performance</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-politician-OVERVIEW-0980681611418-164.png" alt="Detailed profile of a specific politician, including their activities and performance">
-		<figcaption>Detailed profile of a specific politician, including their activities and performance</figcaption>
-	</figure>
-
-	<h3 class="panel-caption">Ranking of politicians based on their performance and other criteria</h3>
-	<figure>
-		<img src="https://hack23.com/screenshots/Page-politicianranking-OVERVIEW-225.png" alt="Ranking of politicians based on their performance and other criteria">
-		<figcaption>Ranking of politicians based on their performance and other criteria</figcaption>
-	</figure>
-</section>
-</main>	
-		
+      <div class="logo-container">
+        <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logotyp" class="logo" />
+      </div>
+      <h1>Hack23 <span class="app-version">Öppen Källkodsutveckling</span></h1>
+      <p>Öppna källkodsverktyg för säkerhet, regelefterlevnad och transparensplattformar av James Pether Sörling.</p>
+      <div class="badges">
+        <a href="https://github.com/Hack23" title="GitHub Profil">
+          <img src="https://img.shields.io/badge/GitHub-Hack23-181717?logo=github&style=flat" alt="GitHub Hack23" />
+        </a>
+        <a href="https://www.openhub.net/accounts/pether" title="OpenHub Profil">
+          <img src="https://img.shields.io/badge/OpenHub-Profil-blue" alt="OpenHub Profil" />
+        </a>
+        <a href="https://github.com/Hack23/talks" title="Tekniska Presentationer">
+          <img src="https://img.shields.io/badge/Presentationer-Säkerhet-red" alt="Tekniska Presentationer" />
+        </a>
+      </div>
+      <div class="app-link">
+        <a href="cia-compliance-manager-features_sv.html" title="Visa CIA Compliance Manager funktioner">CIA Compliance Manager</a>
+        <a href="cia-features_sv.html" title="Visa Medborgarunderrättelsebyråns funktioner">Medborgarunderrättelsebyrån</a>
+        <a href="https://www.linkedin.com/in/jamessorling/" class="btn" title="Anslut på LinkedIn">LinkedIn Profil</a>
+      </div>
+    </header>
+
+	<main>
+		<section id="projects">
+        <h2>Aktuella Projekt</h2>
+        
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>CIA Compliance Manager</h3>
+            <p>En omfattande plattform för säkerhetsbedömning inom CIA-triaden: Konfidentialitet, Integritet och Tillgänglighet.</p>
+            <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
+              <a href="https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md" title="Licens">
+                <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="Licens" />
+              </a>
+              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" title="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard" />
+              </a>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+              <a href="cia-compliance-manager-features_sv.html" title="Visa funktioner">Funktioner</a>
+              <a href="https://hack23.github.io/cia-compliance-manager/" title="Starta applikationen">Starta App</a>
+              <a href="https://github.com/Hack23/cia-compliance-manager" title="Visa GitHub Repository">GitHub</a>
+            </div>
+          </div>
+          
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>Medborgarunderrättelsebyrån</h3>
+            <p>En underrättelseplattform med öppen källkod för politisk transparens i Sverige, som ger insikter om styrning och ansvarsmetriker.</p>
+            <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
+              <a href="https://github.com/Hack23/cia/releases" title="GitHub Release">
+                <img src="https://img.shields.io/github/v/release/Hack23/cia" alt="GitHub Release" />
+              </a>
+              <a href="https://bestpractices.coreinfrastructure.org/projects/770" title="CII Best Practices">
+                <img src="https://bestpractices.coreinfrastructure.org/projects/770/badge" alt="CII Best Practices" />
+              </a>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+              <a href="cia-features_sv.html" title="Visa funktioner">Funktioner</a>
+              <a href="https://github.com/Hack23/cia" title="Visa GitHub Repository">GitHub</a>
+            </div>
+          </div>
+          
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Lambda i Privat VPC</h3>
+            <p>En multiregional aktiv/aktiv webbplats som utnyttjar Resilience Hub policy-efterlevnad och runbooks för snabb återhämtning från fel och hög tillgänglighet.</p>
+            <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
+              <a href="https://github.com/Hack23/lambda-in-private-vpc/raw/master/LICENSE.md" title="Licens">
+                <img src="https://img.shields.io/github/license/Hack23/lambda-in-private-vpc.svg" alt="Licens" />
+              </a>
+              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/lambda-in-private-vpc" title="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/lambda-in-private-vpc/badge" alt="OpenSSF Scorecard" />
+              </a>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+              <a href="https://github.com/Hack23/lambda-in-private-vpc" title="Visa GitHub Repository">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-developer">
+        <h2>Om James Pether Sörling</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Säkerhets- & Öppen Källkodsexpert</h3>
+            <figure>
+              <img src="jamespethersorling150.webp" alt="James Pether Sörling" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 20px; display: block;" loading="lazy">
+            </figure>
+            <p>Erfaren teknikprofessional med expertis inom informationssäkerhet och leverans av säkra molnsystem. Stark förespråkare för transparens i organisationer och engagerad för att säkerställa säkerheten och tillförlitligheten i projekt med öppen källkod.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+              <a href="https://www.linkedin.com/in/jamessorling/" title="Anslut på LinkedIn">LinkedIn</a>
+              <a href="https://www.openhub.net/accounts/pether" title="OpenHub Profil">OpenHub Profil</a>
+              <a href="https://github.com/Hack23/talks" title="Tekniska Presentationer">Presentationer</a>
+              <a href="https://www.hack23.com/blog.html" title="Läs Blogg">Blogg</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Betydande Bidrag</h3>
+            <p>Som bidragsgivare till öppen källkod för cfn-nag, som utför infrastruktur som kod (IaC) statisk analys av AWS CloudFormation, utvecklade han en modul som integrerar CFN-nag i SonarQube, vilket förbättrar säkerhetsanalysförmågan.</p>
+            <ul>
+              <li>Talare på <a href="https://www.youtube.com/watch?v=A_hq2Y03d6I">Javaforum Göteborg</a></li>
+              <li>Gäst på <a href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/">Shift Left Like A Boss</a> säkerhetspodcast</li>
+              <li>Utvecklare av <a href="https://github.com/Hack23/sonar-cloudformation-plugin">Sonar-CloudFormation-Plugin</a></li>
+            </ul>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Ytterligare Projekt</h3>
+            <p>James leder flera andra projekt inklusive:</p>
+            <ul>
+              <li><a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda i privat VPC</a> - En multiregional aktiv/aktiv webbplats som utnyttjar Resilience Hub policy-efterlevnad</li>
+              <li><a href="https://github.com/Hack23/cia/blob/master/dashboard.md">Medborgarunderrättelsebyråns Dashboard</a> - Dashboard för politisk aktivitet i Sverige</li>
+            </ul>
+            <a href="https://github.com/Hack23/" title="Visa Alla GitHub-projekt">Visa Alla Projekt</a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="past-projects">
+        <h2>Tidigare Projekt</h2>
+        <div class="cards">
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Sonar-CloudFormation-Plugin</h3>
+            <p>SonarQube-plugin för analys av AWS CloudFormation-mallar med säkerhets best practices baserade på NIST, CWE och ISO-standarder.</p>
+            <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
+              <a href="https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt" title="Licens">
+                <img src="https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg" alt="Licens" />
+              </a>
+              <a href="https://bestpractices.coreinfrastructure.org/projects/4545" title="CII Best Practices">
+                <img src="https://bestpractices.coreinfrastructure.org/projects/4545/badge" alt="CII Best Practices" />
+              </a>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+              <a href="https://github.com/Hack23/sonar-cloudformation-plugin" title="Visa GitHub Repository">GitHub</a>
+              <a href="http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin" title="Maven Central">Maven Central</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>CIA Dashboard</h3>
+            <p>Dashboard för politisk aktivitet i Sverige, som erbjuder omfattande visualiseringar av parlamentarisk aktivitet och politiska prestationsmått.</p>
+            <a href="https://github.com/Hack23/cia/blob/master/dashboard.md" title="Visa Dashboard Dokumentation">Visa Dokumentation</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="press-coverage">
+        <h2>Presstäckning</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Computer Sweden</h3>
+            <p>Denna artikel belyser den innovativa användningen av teknik för att avslöja politikers aktiviteter. Den presenterar James Pether Sörlings arbete med att använda datadrivna insikter för att främja transparens i politiska processer.</p>
+            <a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna" title="Läs Artikel">Läs Artikel</a>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Riksdag och Departement</h3>
+            <p>En svensk publikation som diskuterar rollen för Medborgarunderrättelsebyrån i övervakningen av politiker. Den understryker James Pether Sörlings engagemang för att främja ansvarsskyldighet i politiken genom strategisk användning av teknik.</p>
+            <a href="https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/" title="Läs Artikel">Läs Artikel</a>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>National Democratic Institute</h3>
+            <p>En omfattande undersökningsrapport som understryker betydelsen av parlamentariska övervakningsorganisationer i Sverige. Den erkänner James Pether Sörlings betydande bidrag till dessa organisationer, vilket förstärker hans engagemang för att stärka demokratiska processer.</p>
+            <a href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf" title="Visa Rapport">Visa Rapport</a>
+          </div>
+        </div>
+      </section>
+    </main>	
+    <footer>
+      <p>&copy; 2023 Hack23 - Utvecklad av <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> | <a href="https://www.hack23.com/index.html" lang="en">English version</a></p>
+    </footer>	
 </body>
 </html>
