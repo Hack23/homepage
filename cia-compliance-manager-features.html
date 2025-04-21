@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Security assessment platform for CIA triad with business impact analysis and compliance mapping to NIST, ISO, GDPR.">
     <meta name="twitter:image" content="https://hack23.github.io/cia-compliance-manager/icon-192.png">
     
-    <meta name="keywords" content="CIA triad, compliance management, security assessment, information security, confidentiality, integrity, availability, regulatory compliance, NIST, ISO, GDPR, security controls, data classification">
+    <meta name="keywords" content="CIA triad, compliance management, security assessment, information security, confidentiality, integrity, availability, regulatory compliance, NIST, ISO, GDPR, security controls, data classification, business impact analysis, cost estimation">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,34 +62,47 @@
   <body>
     <header>
       <div class="logo-container">
-        <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="CIA Compliance Manager Logo" class="logo" />
+        <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="CIA Compliance Manager Logo" class="logo" width="80" height="80" />
       </div>
-      <h1>CIA Compliance Manager Features <span class="app-version">v1.0</span></h1>
+      <h1>CIA Compliance Manager Features <span class="app-version">Latest</span></h1>
       <p>Comprehensive security assessment and compliance management for the CIA triad.</p>
       <div class="badges">
+        <a href="https://github.com/Hack23/cia-compliance-manager/releases" title="GitHub Release">
+          <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager" alt="GitHub Release" />
+        </a>
         <a href="https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md" title="License">
           <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="License" />
+        </a>
+        <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield" title="FOSSA Status">
+          <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield" alt="FOSSA Status" />
+        </a>
+        <a href="https://bestpractices.coreinfrastructure.org/projects/10365" title="CII Best Practices">
+          <img src="https://bestpractices.coreinfrastructure.org/projects/10365/badge" alt="CII Best Practices" />
         </a>
         <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" title="OpenSSF Scorecard">
           <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard" />
         </a>
-        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/deploy.yml" title="Deploy Status">
-          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/deploy.yml/badge.svg" alt="Deploy" />
+        <a href="https://github.com/Hack23/cia-compliance-manager/attestations" title="SLSA Level 3">
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" />
         </a>
-        <a href="https://snyk.io/test/github/Hack23/cia-compliance-manager" title="Known Vulnerabilities">
-          <img src="https://snyk.io/test/github/Hack23/cia-compliance-manager/badge.svg" alt="Known Vulnerabilities" />
+        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml" title="Deploy Status">
+          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg" alt="Verify & Release" />
+        </a>
+        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml" title="Scorecard Supply-Chain Security">
+          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security" />
         </a>
       </div>
       <div class="app-link">
         <a href="index.html" title="Back to Home">Home</a>
         <a href="cia-features.html" title="View CIA Project Features">Citizen Intelligence Features</a>
-        <a href="https://hack23.github.io/cia-compliance-manager/" title="Launch the application" class="btn">Launch Application</a>
+        <a href="https://hack23.github.io/cia-compliance-manager/" class="btn" title="Try the CIA Compliance Manager application">Try It Now!</a>
       </div>
     </header>
     <main>
       <section id="features-overview">
         <h2>Platform Overview</h2>
-        <p>The CIA Compliance Manager is designed to help organizations assess, implement, and manage security controls across the CIA triad (Confidentiality, Integrity, and Availability). This platform provides tools for evaluating security posture, measuring compliance with regulatory frameworks, and analyzing the business impacts of security implementations.</p>
+        <p>The CIA Compliance Manager is designed to help organizations assess, implement, and manage security controls across the CIA triad (Confidentiality, Integrity, and Availability). This comprehensive platform provides tools for evaluating security posture, measuring compliance with regulatory frameworks, analyzing the business impacts of security implementations, and estimating implementation costs to support security investment decisions.</p>
+        <p>Experience the application firsthand by <a href="https://hack23.github.io/cia-compliance-manager/" title="Try the CIA Compliance Manager application">trying it now</a> and see how it can help improve your organization's security posture.</p>
       </section>
       
       <section id="key-features">
@@ -97,42 +110,42 @@
         <div class="cards">
           <div class="card confidentiality-card" id="security-assessment">
             <div class="scanner-effect"></div>
-            <h3>Security Level Assessment</h3>
+            <h3>🔐 Security Level Assessment</h3>
             <p>Assess and configure security levels across Confidentiality, Integrity, and Availability dimensions. Define security requirements based on business needs and regulatory obligations.</p>
             <p><strong>For Analysts:</strong> Generate comprehensive security posture reports for stakeholders and auditors.</p>
           </div>
           
           <div class="card integrity-card" id="compliance-mapping">
             <div class="scanner-effect"></div>
-            <h3>Compliance Mapping</h3>
+            <h3>📋 Compliance Mapping</h3>
             <p>Map security controls to frameworks like NIST, ISO, GDPR, HIPAA, SOC2, and PCI DSS. Visualize compliance coverage and identify gaps across multiple regulatory requirements.</p>
             <p><strong>For Policy Analysts:</strong> Simplify cross-framework compliance analysis and reporting.</p>
           </div>
           
           <div class="card availability-card" id="business-impact">
             <div class="scanner-effect"></div>
-            <h3>Business Impact Analysis</h3>
+            <h3>📊 Business Impact Analysis</h3>
             <p>Analyze the financial, operational, and regulatory impacts of your security measures. Understand the consequences of security incidents and the value of preventive controls.</p>
             <p><strong>For Business Leaders:</strong> Quantify security ROI and justify security investments.</p>
           </div>
           
           <div class="card confidentiality-card">
             <div class="scanner-effect"></div>
-            <h3>Cost Estimation</h3>
+            <h3>💰 Cost Estimation</h3>
             <p>Estimate CAPEX and OPEX for security implementations to support ROI analysis and budget planning. Compare costs across different security posture options.</p>
             <p><strong>For Financial Planners:</strong> Develop accurate security budgets and long-term investment strategies.</p>
           </div>
           
           <div class="card integrity-card">
             <div class="scanner-effect"></div>
-            <h3>Interactive Visualizations</h3>
+            <h3>📈 Interactive Visualizations</h3>
             <p>View security data and compliance status through intuitive interactive charts and dashboards. Gain insights through visual analysis of security metrics and trends.</p>
             <p><strong>For Executives:</strong> Access clear, actionable security intelligence for strategic decision-making.</p>
           </div>
           
           <div class="card availability-card">
             <div class="scanner-effect"></div>
-            <h3>Implementation Guidance</h3>
+            <h3>📝 Implementation Guidance</h3>
             <p>Access detailed guidance on deploying and optimizing security controls based on industry best practices and compliance requirements. Follow step-by-step implementation instructions tailored to your environment.</p>
             <p><strong>For Security Teams:</strong> Implement controls consistently and efficiently across your organization.</p>
           </div>
@@ -141,6 +154,7 @@
       
       <section id="security-levels">
         <h2>Security Assessment Levels</h2>
+        <p>The CIA Compliance Manager helps you assess and implement the appropriate security level for your organization's needs. Each level represents a different investment and protection balance:</p>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -159,7 +173,7 @@
           <div class="card">
             <div class="scanner-effect"></div>
             <h3>High Level</h3>
-            <p>Required for businesses where data integrity, uptime, and confidentiality are critical. High costs, but justified in regulated industries like finance, healthcare, or e-commerce.</p>
+            <p>Required for businesses where data integrity, uptime, and confidentiality are critical. Higher costs, but justified in regulated industries like finance, healthcare, or e-commerce.</p>
             <p><strong>For Analysts:</strong> Essential for regulated environments and high-value data protection.</p>
           </div>
           
@@ -172,8 +186,80 @@
         </div>
       </section>
       
+      <section id="cia-triad-components">
+        <h2>CIA Triad Components</h2>
+        
+        <div class="feature-section">
+          <h3>Availability Components</h3>
+          <p>Availability ensures information and systems are accessible when needed. Our platform helps you implement appropriate availability controls based on your business needs:</p>
+          
+          <ul>
+            <li><strong>Basic:</strong> Manual backup and recovery with ~95% uptime (5% CAPEX/5% OPEX)</li>
+            <li><strong>Moderate:</strong> Pilot light standby systems with ~99% uptime (15% CAPEX/15% OPEX)</li>
+            <li><strong>High:</strong> Warm standby with fast recovery and ~99.9% uptime (25% CAPEX/40% OPEX)</li>
+            <li><strong>Very High:</strong> Multi-site active/active with real-time failover and ~99.99% uptime (60% CAPEX/70% OPEX)</li>
+          </ul>
+          
+          <p>Each level includes detailed technical implementation guidance, CAPEX/OPEX drivers, and business impact analysis to help you make informed decisions.</p>
+        </div>
+        
+        <div class="feature-section">
+          <h3>Integrity Components</h3>
+          <p>Integrity maintains the accuracy and completeness of data. Our platform helps you implement appropriate controls:</p>
+          
+          <ul>
+            <li><strong>Basic:</strong> Manual validation with minimal checks (5% CAPEX/10% OPEX)</li>
+            <li><strong>Moderate:</strong> Automated validation with enhanced accuracy (20% CAPEX/20% OPEX)</li>
+            <li><strong>High:</strong> Blockchain validation with immutable records (35% CAPEX/50% OPEX)</li>
+            <li><strong>Very High:</strong> Smart contracts with real-time validation (60% CAPEX/70% OPEX)</li>
+          </ul>
+          
+          <p>Each level includes technical implementation details and business impacts to help you align your integrity controls with your organization's needs.</p>
+        </div>
+        
+        <div class="feature-section">
+          <h3>Confidentiality Components</h3>
+          <p>Confidentiality ensures information is accessible only to authorized users. Our platform helps you implement appropriate controls:</p>
+          
+          <ul>
+            <li><strong>Basic:</strong> Public data with minimal protection (5% CAPEX/5% OPEX)</li>
+            <li><strong>Moderate:</strong> Restricted data with AES-256 encryption (15% CAPEX/20% OPEX)</li>
+            <li><strong>High:</strong> Confidential data with MFA and robust monitoring (30% CAPEX/40% OPEX)</li>
+            <li><strong>Very High:</strong> Secret data with quantum-safe encryption (50% CAPEX/60% OPEX)</li>
+          </ul>
+          
+          <p>Each level includes technical implementation details tailored to different data sensitivity requirements.</p>
+        </div>
+      </section>
+      
+      <section id="business-impact">
+        <h2>Business Impact Analysis</h2>
+        <p>Understanding the business impact of security controls is crucial for making informed investment decisions. Our platform provides:</p>
+        
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>Value Creation Analysis</h3>
+            <p>Quantify the business value created by security implementations at different levels. Understand how investments in security translate to tangible business benefits like customer trust, competitive advantage, and regulatory compliance.</p>
+          </div>
+          
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>Cost-Benefit Analysis</h3>
+            <p>Compare security implementation costs against potential breach costs and operational benefits. Make data-driven decisions about security investments based on your organization's risk profile and budget constraints.</p>
+          </div>
+          
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Risk Quantification</h3>
+            <p>Calculate potential financial impacts of security incidents at different security levels. Understand the relationship between security investments and risk reduction to optimize your security strategy.</p>
+          </div>
+        </div>
+      </section>
+      
       <section id="documentation">
         <h2>Documentation & Resources</h2>
+        <p>The CIA Compliance Manager includes comprehensive documentation to help you implement and manage your security controls:</p>
         <div class="cards">
           <div class="card confidentiality-card">
             <div class="scanner-effect"></div>
@@ -184,9 +270,9 @@
           
           <div class="card integrity-card">
             <div class="scanner-effect"></div>
-            <h3>Developer Resources</h3>
-            <p>Access technical specifications, API documentation, and developer guides for extending or integrating the CIA Compliance Manager.</p>
-            <a href="https://hack23.github.io/cia-compliance-manager/api/" title="View API Documentation">View API Documentation</a>
+            <h3>Architecture Resources</h3>
+            <p>Explore the system architecture, including C4 models, state diagrams, process flowcharts, and concept mindmaps.</p>
+            <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/ARCHITECTURE.md" title="View Architecture Documentation">View Architecture</a>
           </div>
           
           <div class="card availability-card">
@@ -197,9 +283,18 @@
           </div>
         </div>
       </section>
+      
+      <section id="try-now">
+        <h2>Experience It Today</h2>
+        <p>Ready to improve your organization's security posture? Try the CIA Compliance Manager now and see how it can help you implement effective security controls aligned with your business needs.</p>
+        <div class="cta-container">
+          <a href="https://hack23.github.io/cia-compliance-manager/" class="btn primary-btn" title="Try the CIA Compliance Manager application">Launch Application</a>
+          <a href="https://github.com/Hack23/cia-compliance-manager" class="btn secondary-btn" title="View the GitHub Repository">GitHub Repository</a>
+        </div>
+      </section>
     </main>
     <footer>
-      <p>&copy; 2023 CIA Compliance Manager - Developed by <a href="https://hack23.com/">Hack23</a></p>
+      <p>&copy; 2025 CIA Compliance Manager - Developed by <a href="https://hack23.com/">Hack23</a></p>
     </footer>
   </body>
 </html>

@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Säkerhetsbedömningsplattform för CIA-triaden med affärspåverkananalys och efterlevnadsmappning till NIST, ISO, GDPR.">
     <meta name="twitter:image" content="https://hack23.github.io/cia-compliance-manager/icon-192.png">
     
-    <meta name="keywords" content="CIA-triad, efterlevnadshantering, säkerhetsbedömning, informationssäkerhet, konfidentialitet, integritet, tillgänglighet, regelefterlevnad, NIST, ISO, GDPR, säkerhetskontroller, dataklassificering">
+    <meta name="keywords" content="CIA-triad, efterlevnadshantering, säkerhetsbedömning, informationssäkerhet, konfidentialitet, integritet, tillgänglighet, regelefterlevnad, NIST, ISO, GDPR, säkerhetskontroller, dataklassificering, affärspåverkananalys, kostnadsuppskattning">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,32 +64,45 @@
       <div class="logo-container">
         <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="CIA Compliance Manager Logotyp" class="logo" width="80" height="80" />
       </div>
-      <h1>CIA Compliance Manager Funktioner <span class="app-version">v1.0</span></h1>
+      <h1>CIA Compliance Manager Funktioner <span class="app-version">Latest</span></h1>
       <p>Omfattande säkerhetsbedömning och efterlevnadshantering för CIA-triaden.</p>
       <div class="badges">
+        <a href="https://github.com/Hack23/cia-compliance-manager/releases" title="GitHub Release">
+          <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager" alt="GitHub Release" />
+        </a>
         <a href="https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md" title="Licens">
           <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="Licens" />
+        </a>
+        <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield" title="FOSSA Status">
+          <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield" alt="FOSSA Status" />
+        </a>
+        <a href="https://bestpractices.coreinfrastructure.org/projects/10365" title="CII Best Practices">
+          <img src="https://bestpractices.coreinfrastructure.org/projects/10365/badge" alt="CII Best Practices" />
         </a>
         <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" title="OpenSSF Scorecard">
           <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard" />
         </a>
-        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/deploy.yml" title="Distributionsstatus">
-          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/deploy.yml/badge.svg" alt="Deploy" />
+        <a href="https://github.com/Hack23/cia-compliance-manager/attestations" title="SLSA Nivå 3">
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" />
         </a>
-        <a href="https://snyk.io/test/github/Hack23/cia-compliance-manager" title="Kända Sårbarheter">
-          <img src="https://snyk.io/test/github/Hack23/cia-compliance-manager/badge.svg" alt="Known Vulnerabilities" />
+        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml" title="Utrullningsstatus">
+          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg" alt="Verifiera & Publicera" />
+        </a>
+        <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml" title="Scorecard Leveranskedjesäkerhet">
+          <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security" />
         </a>
       </div>
       <div class="app-link">
         <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
         <a href="cia-features_sv.html" title="Visa Medborgarunderrättelsebyråns Funktioner">Medborgarunderrättelsebyråns Funktioner</a>
-        <a href="https://hack23.github.io/cia-compliance-manager/" title="Starta applikationen" class="btn">Starta Applikationen</a>
+        <a href="https://hack23.github.io/cia-compliance-manager/" class="btn" title="Prova CIA Compliance Manager-applikationen">Prova Nu!</a>
       </div>
     </header>
     <main>
       <section id="features-overview">
         <h2>Plattformsöversikt</h2>
-        <p>CIA Compliance Manager är designad för att hjälpa organisationer att bedöma, implementera och hantera säkerhetskontroller över CIA-triaden (Konfidentialitet, Integritet och Tillgänglighet). Denna plattform tillhandahåller verktyg för att utvärdera säkerhetsläget, mäta efterlevnad mot regulatoriska ramverk och analysera affärspåverkan av säkerhetsimplementationer.</p>
+        <p>CIA Compliance Manager är utformad för att hjälpa organisationer att bedöma, implementera och hantera säkerhetskontroller över CIA-triaden (Konfidentialitet, Integritet och Tillgänglighet). Denna omfattande plattform tillhandahåller verktyg för att utvärdera säkerhetsläget, mäta efterlevnad mot regulatoriska ramverk, analysera affärspåverkan av säkerhetsimplementationer, och uppskatta implementationskostnader för att stödja säkerhetsinvesteringsbeslut.</p>
+        <p>Upplev applikationen på egen hand genom att <a href="https://hack23.github.io/cia-compliance-manager/" title="Prova CIA Compliance Manager-applikationen">prova den nu</a> och se hur den kan hjälpa till att förbättra din organisations säkerhetsställning.</p>
       </section>
       
       <section id="key-features">
@@ -97,16 +110,188 @@
         <div class="cards">
           <div class="card confidentiality-card" id="security-assessment">
             <div class="scanner-effect"></div>
-            <h3>Säkerhetsnivåbedömning</h3>
+            <h3>🔐 Säkerhetsnivåbedömning</h3>
             <p>Bedöm och konfigurera säkerhetsnivåer över dimensionerna Konfidentialitet, Integritet och Tillgänglighet. Definiera säkerhetskrav baserat på verksamhetsbehov och regulatoriska skyldigheter.</p>
             <p><strong>För Analytiker:</strong> Generera omfattande säkerhetslägesrapporter för intressenter och revisorer.</p>
           </div>
           
-          <!-- ...remaining cards with Swedish translations... -->
+          <div class="card integrity-card" id="compliance-mapping">
+            <div class="scanner-effect"></div>
+            <h3>📋 Efterlevnadsmappning</h3>
+            <p>Mappa säkerhetskontroller till ramverk som NIST, ISO, GDPR, HIPAA, SOC2 och PCI DSS. Visualisera efterlevnadstäckning och identifiera luckor över flera regulatoriska krav.</p>
+            <p><strong>För Policyanalytiker:</strong> Förenkla korsramverksanalys och rapportering för efterlevnad.</p>
+          </div>
+          
+          <div class="card availability-card" id="business-impact">
+            <div class="scanner-effect"></div>
+            <h3>📊 Affärspåverkansanalys</h3>
+            <p>Analysera de finansiella, operativa och regulatoriska effekterna av dina säkerhetsåtgärder. Förstå konsekvenserna av säkerhetsincidenter och värdet av förebyggande kontroller.</p>
+            <p><strong>För Företagsledare:</strong> Kvantifiera säkerhets-ROI och motivera säkerhetsinvesteringar.</p>
+          </div>
+          
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>💰 Kostnadsuppskattning</h3>
+            <p>Uppskatta CAPEX och OPEX för säkerhetsimplementationer för att stödja ROI-analys och budgetplanering. Jämför kostnader mellan olika säkerhetslägesalternativ.</p>
+            <p><strong>För Ekonomiska Planerare:</strong> Utveckla korrekta säkerhetsbudgetar och långsiktiga investeringsstrategier.</p>
+          </div>
+          
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>📈 Interaktiva Visualiseringar</h3>
+            <p>Visa säkerhetsdata och efterlevnadsstatus genom intuitiva interaktiva diagram och dashboards. Få insikter genom visuell analys av säkerhetsmetriker och trender.</p>
+            <p><strong>För Chefer:</strong> Få tillgång till tydlig, användbar säkerhetsinformation för strategiskt beslutsfattande.</p>
+          </div>
+          
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>📝 Implementationsguide</h3>
+            <p>Få tillgång till detaljerad vägledning om implementering och optimering av säkerhetskontroller baserat på branschens bästa praxis och efterlevnadskrav. Följ steg-för-steg implementationsinstruktioner anpassade till din miljö.</p>
+            <p><strong>För Säkerhetsteam:</strong> Implementera kontroller konsekvent och effektivt över hela organisationen.</p>
+          </div>
         </div>
       </section>
       
-      <!-- ...remaining sections with Swedish translations... -->
+      <section id="security-levels">
+        <h2>Säkerhetsbedömningsnivåer</h2>
+        <p>CIA Compliance Manager hjälper dig att bedöma och implementera lämplig säkerhetsnivå för din organisations behov. Varje nivå representerar en annan investerings- och skyddsbalans:</p>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Grundnivå</h3>
+            <p>Minimal investering, lågt skydd och högre risk för driftstopp eller dataintrång. Lämplig för icke-kritiska eller publika system med begränsad känslig data.</p>
+            <p><strong>För Analytiker:</strong> En utgångspunkt för att utveckla mer robusta säkerhetsställningar.</p>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Måttlig Nivå</h3>
+            <p>En balanserad approach till kostnad och skydd, bra för medelstora företag som behöver efterlevnad utan att överinvestera i redundanta system.</p>
+            <p><strong>För Analytiker:</strong> Det vanligaste målet för organisationer som balanserar säkerhet med operativa behov.</p>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Hög Nivå</h3>
+            <p>Nödvändig för verksamheter där dataintegritet, tillgänglighet och konfidentialitet är kritiska. Högre kostnader, men motiverade i reglerade branscher som finans, sjukvård eller e-handel.</p>
+            <p><strong>För Analytiker:</strong> Väsentlig för reglerade miljöer och skydd av högvärdesdata.</p>
+          </div>
+          
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Mycket Hög Nivå</h3>
+            <p>Extremt skydd och tillgänglighet designat för mission-kritiska system, såsom de inom försvar eller högsäkerhetsfinans. Extremt höga CAPEX och OPEX.</p>
+            <p><strong>För Analytiker:</strong> Reserverad för de mest kritiska nationella säkerhets- och finansiella systemen.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="cia-triad-components">
+        <h2>CIA-Triad Komponenter</h2>
+        
+        <div class="feature-section">
+          <h3>Tillgänglighetskomponenter</h3>
+          <p>Tillgänglighet säkerställer att information och system är tillgängliga när de behövs. Vår plattform hjälper dig att implementera lämpliga tillgänglighetskontroller baserat på dina affärsbehov:</p>
+          
+          <ul>
+            <li><strong>Grundnivå:</strong> Manuell säkerhetskopiering och återställning med ~95% tillgänglighet (5% CAPEX/5% OPEX)</li>
+            <li><strong>Måttlig:</strong> Pilot light stand-by-system med ~99% tillgänglighet (15% CAPEX/15% OPEX)</li>
+            <li><strong>Hög:</strong> Varm stand-by med snabb återställning och ~99,9% tillgänglighet (25% CAPEX/40% OPEX)</li>
+            <li><strong>Mycket Hög:</strong> Multi-site aktiv/aktiv med realtidsfailover och ~99,99% tillgänglighet (60% CAPEX/70% OPEX)</li>
+          </ul>
+          
+          <p>Varje nivå inkluderar detaljerad teknisk implementationsvägledning, CAPEX/OPEX-drivare och affärspåverkansanalys för att hjälpa dig fatta informerade beslut.</p>
+        </div>
+        
+        <div class="feature-section">
+          <h3>Integritetskomponenter</h3>
+          <p>Integritet upprätthåller noggrannheten och fullständigheten hos data. Vår plattform hjälper dig att implementera lämpliga kontroller:</p>
+          
+          <ul>
+            <li><strong>Grundnivå:</strong> Manuell validering med minimala kontroller (5% CAPEX/10% OPEX)</li>
+            <li><strong>Måttlig:</strong> Automatiserad validering med förbättrad noggrannhet (20% CAPEX/20% OPEX)</li>
+            <li><strong>Hög:</strong> Blockkedje-validering med oföränderliga register (35% CAPEX/50% OPEX)</li>
+            <li><strong>Mycket Hög:</strong> Smarta kontrakt med realtidsvalidering (60% CAPEX/70% OPEX)</li>
+          </ul>
+          
+          <p>Varje nivå inkluderar tekniska implementationsdetaljer och affärspåverkan för att hjälpa dig anpassa dina integritetskontroller efter din organisations behov.</p>
+        </div>
+        
+        <div class="feature-section">
+          <h3>Konfidentialitetskomponenter</h3>
+          <p>Konfidentialitet säkerställer att information endast är tillgänglig för behöriga användare. Vår plattform hjälper dig att implementera lämpliga kontroller:</p>
+          
+          <ul>
+            <li><strong>Grundnivå:</strong> Publik data med minimalt skydd (5% CAPEX/5% OPEX)</li>
+            <li><strong>Måttlig:</strong> Begränsad data med AES-256-kryptering (15% CAPEX/20% OPEX)</li>
+            <li><strong>Hög:</strong> Konfidentiell data med MFA och robust övervakning (30% CAPEX/40% OPEX)</li>
+            <li><strong>Mycket Hög:</strong> Hemlig data med kvantsäker kryptering (50% CAPEX/60% OPEX)</li>
+          </ul>
+          
+          <p>Varje nivå inkluderar tekniska implementationsdetaljer anpassade till olika datakänslighetskrav.</p>
+        </div>
+      </section>
+      
+      <section id="business-impact">
+        <h2>Affärspåverkansanalys</h2>
+        <p>Att förstå affärspåverkan av säkerhetskontroller är avgörande för att fatta informerade investeringsbeslut. Vår plattform tillhandahåller:</p>
+        
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>Värdeskapandeanalys</h3>
+            <p>Kvantifiera affärsvärdet som skapas av säkerhetsimplementationer på olika nivåer. Förstå hur investeringar i säkerhet översätts till påtagliga affärsfördelar som kundförtroende, konkurrensfördelar och regelefterlevnad.</p>
+          </div>
+          
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>Kostnads-nyttoanalys</h3>
+            <p>Jämför säkerhetsimplementationskostnader mot potentiella intrångskostnader och operativa fördelar. Fatta datadriven beslut om säkerhetsinvesteringar baserat på din organisations riskprofil och budgetbegränsningar.</p>
+          </div>
+          
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Riskkvantifiering</h3>
+            <p>Beräkna potentiell finansiell påverkan av säkerhetsincidenter vid olika säkerhetsnivåer. Förstå förhållandet mellan säkerhetsinvesteringar och riskreduktion för att optimera din säkerhetsstrategi.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="documentation">
+        <h2>Dokumentation &amp; Resurser</h2>
+        <p>CIA Compliance Manager inkluderar omfattande dokumentation för att hjälpa dig implementera och hantera dina säkerhetskontroller:</p>
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>Omfattande Dokumentation</h3>
+            <p>Få tillgång till detaljerad dokumentation som täcker arkitektur, implementationsguider och bästa praxis för CIA Compliance Manager.</p>
+            <a href="https://hack23.github.io/cia-compliance-manager/documentation.html" title="Visa Dokumentation">Visa Dokumentation</a>
+          </div>
+          
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>Arkitekturresurser</h3>
+            <p>Utforska systemarkitekturen, inklusive C4-modeller, tillståndsdiagram, processflödesscheman och konceptuella tankekartor.</p>
+            <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/ARCHITECTURE.md" title="Visa Arkitekturdokumentation">Visa Arkitektur</a>
+          </div>
+          
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Testning &amp; Kvalitet</h3>
+            <p>Granska testtäckning, prestandamätningar och kvalitetssäkringsdata för CIA Compliance Manager.</p>
+            <a href="https://hack23.github.io/cia-compliance-manager/coverage/index.html" title="Visa Täckningsrapport">Visa Testtäckning</a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="try-now">
+        <h2>Upplev Det Idag</h2>
+        <p>Redo att förbättra din organisations säkerhetsställning? Prova CIA Compliance Manager nu och se hur den kan hjälpa dig implementera effektiva säkerhetskontroller anpassade till dina affärsbehov.</p>
+        <div class="cta-container">
+          <a href="https://hack23.github.io/cia-compliance-manager/" class="btn primary-btn" title="Prova CIA Compliance Manager-applikationen">Starta Applikationen</a>
+          <a href="https://github.com/Hack23/cia-compliance-manager" class="btn secondary-btn" title="Visa GitHub-repositoryt">GitHub-Repository</a>
+        </div>
+      </section>
     </main>
     <footer>
       <p>&copy; 2025 CIA Compliance Manager - Utvecklad av <a href="https://hack23.com/">Hack23</a></p>

@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omfattande dokumentation för CIA Compliance Manager - ett kraftfullt säkerhetsbedömningsverktyg för CIA-triaden (Konfidentialitet, Integritet, Tillgänglighet) som hjälper organisationer att efterleva säkerhetsstandarder och regelverk."
+    />
+    <title>CIA Compliance Manager Dokumentation | Säkerhetsbedömning och Efterlevnadshantering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="alternate" hreflang="en" href="https://www.hack23.com/cia-compliance-manager-docs.html" />
+    <link rel="canonical" href="https://www.hack23.com/cia-compliance-manager-docs_sv.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="CIA Compliance Manager Dokumentation | Säkerhetsbedömning och Efterlevnadshantering" />
+    <meta property="og:description" content="Omfattande dokumentation för säkerhetsbedömningsverktyget CIA Compliance Manager som hjälper organisationer att bedöma, implementera och hantera säkerhetskontroller." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hack23.com/cia-compliance-manager-docs_sv.html" />
+    <meta property="og:image" content="https://hack23.github.io/cia-compliance-manager/icon-192.png" />
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="CIA-triad, informationssäkerhet, konfidentialitet, integritet, tillgänglighet, säkerhetsbedömning, efterlevnadshantering, GDPR, NIS2, ISO 27001, säkerhetskontroll, riskbedömning, säkerhetsstandarder, cybersäkerhet, dataklassificering, sårbarhetsanalys, dokumentation" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "CIA Compliance Manager Dokumentation",
+      "description": "Omfattande dokumentation för CIA Compliance Manager - ett säkerhetsbedömningsverktyg för CIA-triaden",
+      "image": "https://hack23.github.io/cia-compliance-manager/icon-192.png",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hack23.com/cia-compliance-manager-docs_sv.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "CIA Compliance Manager",
+        "applicationCategory": "SecurityApplication"
+      }
+    }
+    </script>
+    
+    <style>
+      /* Base variables with combined light/dark mode support */
+      :root {
+        /* Light Mode */
+        --primary-color: #006633;
+        --primary-light: #008844;
+        --primary-dark: #004422;
+        --accent-color: #669900;
+        --bg-color: #f0f0f0;
+        --card-bg: #ffffff;
+        --text-color: #222222;
+        --text-secondary: #444444;
+        --header-color: #0366d6;
+        --border-color: rgba(0, 102, 51, 0.2);
+        --card-border: #e1e4e8;
+        --card-shadow: rgba(0, 0, 0, 0.12);
+        --link-color: #0366d6;
+        --link-hover: #024ea4;
+        --button-bg: #0366d6;
+        --button-text: #fff;
+        --section-border: #eaeaea;
+        --badge-bg: #f5f5f5;
+        --confidentiality-color: #8e44ad;
+        --integrity-color: #27ae60;
+        --availability-color: #2980b9;
+        --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        --font-accent: "Inter", system-ui, -apple-system, sans-serif;
+        --font-mono: "Share Tech Mono", monospace;
+      }
+
+      /* Dark Mode - Ingress Inspired Theme */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #00cc66;
+          --primary-light: #00ff88;
+          --primary-dark: #00bb77;
+          --accent-color: #33eeff;
+          --bg-color: #001a1a;
+          --card-bg: #001c25;
+          --text-color: #f0f0f0;
+          --text-secondary: #aaaaaa;
+          --header-color: #58a6ff;
+          --border-color: rgba(0, 204, 102, 0.3);
+          --card-border: rgba(0, 204, 102, 0.3);
+          --card-shadow: rgba(0, 204, 102, 0.2);
+          --link-color: #58a6ff;
+          --link-hover: #79b8ff;
+          --button-bg: #2188ff;
+          --button-text: #e0e0e0;
+          --section-border: #444;
+          --badge-bg: #333;
+          --confidentiality-color: #bd93f9;
+          --integrity-color: #50fa7b;
+          --availability-color: #8be9fd;
+          --font-accent: "Orbitron", sans-serif;
+        }
+      }
+
+      /* Base styles */
+      * {
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Scan line effect for dark mode */
+      @media (prefers-color-scheme: dark) {
+        body::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: repeating-linear-gradient(
+            transparent 0px,
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 2px
+          );
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.3;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%2300cc66' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/svg%3E");
+          opacity: 0.2;
+          z-index: -1;
+          pointer-events: none;
+        }
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        font-family: var(--font-accent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3 {
+          font-family: "Orbitron", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          text-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--section-border);
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a:hover {
+          text-shadow: 0 0 8px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      /* Header and navigation */
+      header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--section-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        header {
+          border-bottom: 1px solid rgba(0, 204, 102, 0.3);
+        }
+      }
+
+      .logo-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.5);
+        }
+
+        .logo:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 30px rgba(0, 204, 102, 0.7);
+        }
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        justify-content: center;
+      }
+
+      .badges a {
+        text-decoration: none;
+      }
+
+      .badges img {
+        height: 20px;
+        vertical-align: middle;
+      }
+
+      .app-link {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+
+      .app-link a {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .app-link a:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-link a {
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 204, 102, 0.2),
+            rgba(0, 136, 68, 0.4)
+          );
+          border: 1px solid var(--border-color);
+          position: relative;
+          overflow: hidden;
+          color: var(--primary-light);
+        }
+
+        .app-link a:hover {
+          box-shadow: 0 0 15px rgba(0, 204, 102, 0.3);
+          border-color: var(--primary-light);
+        }
+
+        .app-link a::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0, 204, 102, 0.2) 50%,
+            transparent 100%
+          );
+          transition: all 0.5s ease;
+        }
+
+        .app-link a:hover::before {
+          left: 100%;
+        }
+      }
+
+      /* Cards */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        box-shadow: 0 4px 6px var(--card-shadow);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        color: var(--header-color);
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        margin-bottom: 1.2rem;
+        color: var(--text-secondary);
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px var(--card-shadow);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .card {
+          background: linear-gradient(
+            135deg,
+            rgba(0, 26, 37, 0.95) 0%,
+            rgba(0, 20, 26, 0.98) 100%
+          );
+          border: 1px solid var(--border-color);
+          box-shadow: 0 0 10px rgba(0, 204, 102, 0.2);
+        }
+
+        .card:hover {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.4);
+        }
+
+        /* Cyberpunk corner elements on cards */
+        .card::before,
+        .card::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border: 2px solid var(--primary-color);
+          opacity: 0.6;
+          z-index: 1;
+          transition: all 0.3s ease;
+        }
+
+        .card::before {
+          top: -2px;
+          left: -2px;
+          border-right: none;
+          border-bottom: none;
+        }
+
+        .card::after {
+          bottom: -2px;
+          right: -2px;
+          border-left: none;
+          border-top: none;
+        }
+
+        .card:hover::before,
+        .card:hover::after {
+          width: 30px;
+          height: 30px;
+          opacity: 0.8;
+        }
+
+        /* Scanner animation effect for active cards */
+        @keyframes scanner {
+          0%,
+          100% {
+            background-position: 0% 0%;
+          }
+          50% {
+            background-position: 100% 100%;
+          }
+        }
+
+        .card:hover .scanner-effect {
+          opacity: 1;
+        }
+
+        .scanner-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            45deg,
+            rgba(0, 204, 102, 0) 85%,
+            rgba(0, 204, 102, 0.2) 90%,
+            rgba(0, 204, 102, 0) 95%
+          );
+          pointer-events: none;
+          background-size: 300% 300%;
+          animation: scanner 3s ease infinite;
+          z-index: 1;
+          border-radius: inherit;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .card h3 {
+          text-shadow: 0 0 6px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      /* CIA Themed Cards */
+      .confidentiality-card {
+        border-left: 4px solid var(--confidentiality-color);
+      }
+
+      .integrity-card {
+        border-left: 4px solid var(--integrity-color);
+      }
+
+      .availability-card {
+        border-left: 4px solid var(--availability-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .confidentiality-card {
+          box-shadow: -2px 0 8px rgba(155, 89, 182, 0.3);
+        }
+
+        .integrity-card {
+          box-shadow: -2px 0 8px rgba(46, 204, 113, 0.3);
+        }
+
+        .availability-card {
+          box-shadow: -2px 0 8px rgba(52, 152, 219, 0.3);
+        }
+      }
+
+      /* Links section */
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 0;
+      }
+
+      ul li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      ul li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        ul li::before {
+          content: "▶";
+          font-size: 0.7rem;
+          left: 0;
+          top: 0.25rem;
+          color: var(--primary-color);
+        }
+      }
+
+      ul li a {
+        display: inline-block;
+        padding: 0.2rem 0;
+        transition: all 0.2s ease;
+      }
+
+      /* Button */
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .btn {
+          background: rgba(0, 204, 102, 0.2);
+          color: var(--primary-light);
+          border: 1px solid rgba(0, 204, 102, 0.3);
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 0.5px;
+          padding: 0.5rem 1.2rem;
+        }
+
+        .btn:hover {
+          background: rgba(0, 204, 102, 0.3);
+          box-shadow: 0 0 12px rgba(0, 204, 102, 0.4);
+        }
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--section-border);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        footer {
+          border-top: 1px solid rgba(0, 204, 102, 0.3);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        header,
+        main {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .app-version {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .app-link {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .app-link a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .badges {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* Animation keyframes */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.8);
+        }
+        100% {
+          box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 0.99;
+        }
+        5% {
+          opacity: 0.96;
+        }
+        10% {
+          opacity: 0.97;
+        }
+        15% {
+          opacity: 0.99;
+        }
+        20% {
+          opacity: 0.94;
+        }
+        25% {
+          opacity: 0.98;
+        }
+        30% {
+          opacity: 0.97;
+        }
+        35% {
+          opacity: 0.99;
+        }
+        40% {
+          opacity: 0.98;
+        }
+        45% {
+          opacity: 0.97;
+        }
+        50% {
+          opacity: 0.99;
+        }
+        55% {
+          opacity: 0.98;
+        }
+        60% {
+          opacity: 0.97;
+        }
+        65% {
+          opacity: 0.99;
+        }
+        70% {
+          opacity: 0.96;
+        }
+        75% {
+          opacity: 0.99;
+        }
+        80% {
+          opacity: 0.98;
+        }
+        85% {
+          opacity: 0.99;
+        }
+        90% {
+          opacity: 0.96;
+        }
+        95% {
+          opacity: 0.99;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          animation: pulse 4s infinite;
+        }
+
+        main {
+          animation: flicker 10s infinite;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="https://hack23.github.io/cia-compliance-manager/icon-192.png"
+          alt="CIA Compliance Manager Logotyp"
+          class="logo"
+          width="80"
+          height="80"
+        />
+      </div>
+      <h1>
+        CIA Compliance Manager Dokumentation
+        <span class="app-version">latest</span>
+      </h1>
+      <p>
+        Omfattande dokumentation för CIA (Konfidentialitet, Integritet,
+        Tillgänglighet) Compliance Manager.
+      </p>
+      <div class="badges">
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/releases"
+          title="GitHub Releaser"
+        >
+          <img
+            src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager"
+            alt="GitHub Release"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md"
+          title="Licens"
+        >
+          <img
+            src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg"
+            alt="Licens"
+          />
+        </a>
+        <a
+          href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield"
+          title="FOSSA Status"
+        >
+          <img
+            src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield"
+            alt="FOSSA Status"
+          />
+        </a>
+        <a
+          href="https://bestpractices.coreinfrastructure.org/projects/10365"
+          title="CII Best Practices"
+        >
+          <img
+            src="https://bestpractices.coreinfrastructure.org/projects/10365/badge"
+            alt="CII Best Practices"
+          />
+        </a>
+        <a
+          href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager"
+          title="OpenSSF Scorecard"
+        >
+          <img
+            src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge"
+            alt="OpenSSF Scorecard"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/attestations"
+          title="SLSA Nivå 3"
+        >
+          <img
+            src="https://slsa.dev/images/gh-badge-level3.svg"
+            alt="SLSA 3"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml"
+          title="Utrullningsstatus"
+        >
+          <img
+            src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg"
+            alt="Verifiera & Publicera"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml"
+          title="Scorecard leveranskedjesäkerhet"
+        >
+          <img
+            src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main"
+            alt="Scorecard leveranskedjesäkerhet"
+          />
+        </a>
+      </div>
+      <div class="app-link">
+        <a
+          href="index_sv.html"
+          title="Gå till hemsidan"
+        >
+          Hemsida
+        </a>
+        <a
+          href="cia-compliance-manager-features_sv.html"
+          title="Se produktfunktionerna"
+        >
+          Produktfunktioner
+        </a>
+        <a
+          href="https://hack23.github.io/cia-compliance-manager/"
+          title="Starta CIA Compliance Manager-applikationen"
+        >
+          Starta Applikation
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager"
+          class="btn"
+          title="Visa GitHub-repositoryt"
+        >
+          GitHub-repository
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Projektöversikt</h2>
+        <p>
+          CIA Compliance Manager är en omfattande webbapplikation utformad 
+          för att hjälpa organisationer att bedöma, implementera och hantera säkerhetskontroller 
+          över CIA-triaden (Konfidentialitet, Integritet, Tillgänglighet). 
+          Applikationen gör det möjligt för användare att utvärdera säkerhetsläget, 
+          mäta efterlevnad mot större ramverk och analysera affärspåverkan 
+          av säkerhetsimplementationer.
+        </p>
+      </section>
+
+      <section id="features">
+        <h2>Nyckelfunktioner</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Säkerhetsnivåbedömning</h3>
+            <p>
+              Bedöm och konfigurera säkerhetsnivåer över dimensionerna Konfidentialitet, 
+              Integritet och Tillgänglighet.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Efterlevnadsmappning</h3>
+            <p>
+              Kartlägg säkerhetskontroller mot ramverk som NIST, ISO, GDPR, HIPAA, 
+              SOC2 och PCI DSS.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Affärspåverkansanalys</h3>
+            <p>
+              Analysera de finansiella, operativa och regulatoriska effekterna av dina 
+              säkerhetsåtgärder.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Kostnadsberäkning</h3>
+            <p>
+              Uppskatta CAPEX och OPEX för säkerhetsimplementationer för att stödja 
+              ROI-analys och budgetplanering.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Interaktiva Visualiseringar</h3>
+            <p>
+              Visa säkerhetsdata och efterlevnadsstatus genom intuitiva 
+              interaktiva diagram och instrumentpaneler.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Implementationsriktlinjer</h3>
+            <p>
+              Få tillgång till detaljerade riktlinjer för att implementera och optimera säkerhetskontroller 
+              baserat på branschens bästa praxis och efterlevnadskrav.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="diagrams">
+        <h2>Arkitektur & Dokumentation</h2>
+        <p>
+          Utforska den kompletta arkitektur- och tekniska dokumentationen för 
+          CIA Compliance Manager. Dessa detaljerade resurser hjälper dig att förstå 
+          systemarkitekturen, beslutsflöden och implementationsstrategier.
+        </p>
+
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Nuvarande Arkitektur</h3>
+            <p>
+              C4-modell som visar nuvarande systemcontainrar, komponenter och dynamik 
+              för CIA Compliance Manager.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/ARCHITECTURE.md"
+              title="Visa Nuvarande Arkitektur"
+            >
+              Visa Arkitektur
+            </a>
+          </div>
+
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Framtida Arkitektur</h3>
+            <p>
+              Vision för kontextmedveten säkerhetslägehanteringsplattform och 
+              framtida systemutveckling.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_ARCHITECTURE.md"
+              title="Visa Framtida Arkitektur"
+            >
+              Visa Framtida Arkitektur
+            </a>
+          </div>
+
+          <!-- Behavior Group -->
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Tillståndsdiagram</h3>
+            <p>
+              Säkerhetsprofil och efterlevnadsstatus tillståndsövergångar för 
+              nuvarande systemimplementation.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/STATEDIAGRAM.md"
+              title="Visa Tillståndsdiagram"
+            >
+              Visa Tillståndsdiagram
+            </a>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Framtida Tillståndsdiagram</h3>
+            <p>
+              Kontextmedvetna och adaptiva säkerhetstillståndsövergångar för 
+              framtida plattformsversioner.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_STATEDIAGRAM.md"
+              title="Visa Framtida Tillståndsdiagram"
+            >
+              Visa Framtida Tillstånd
+            </a>
+          </div>
+
+          <!-- Process Group -->
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Processflödesscheman</h3>
+            <p>
+              Säkerhetsbedömning och efterlevnadsarbetsflöden för 
+              nuvarande implementation.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FLOWCHART.md"
+              title="Visa Processflödesscheman"
+            >
+              Visa Flödesscheman
+            </a>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Framtida Flödesscheman</h3>
+            <p>
+              ML-förbättrade och kontextmedvetna arbetsflöden planerade för framtida releaser.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_FLOWCHART.md"
+              title="Visa Framtida Flödesscheman"
+            >
+              Visa Framtida Flöden
+            </a>
+          </div>
+
+          <!-- Conceptual Group -->
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 Konceptuella Mindmaps</h3>
+            <p>
+              Systemstruktur och komponentrelationer visualiserade genom 
+              mind mapping.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/MINDMAP.md"
+              title="Visa Mindmaps"
+            >
+              Visa Mindmaps
+            </a>
+          </div>
+
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 Framtida Konceptkartor</h3>
+            <p>
+              Utvecklingsplan och kapacitetsexpansionsplaner för 
+              framtida utveckling.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_MINDMAP.md"
+              title="Visa Framtida Mindmaps"
+            >
+              Visa Framtida Koncept
+            </a>
+          </div>
+
+          <!-- Business Group -->
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 SWOT-analys</h3>
+            <p>
+              Strategiska styrkor, svagheter, möjligheter och hot för 
+              nuvarande plattform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SWOT.md"
+              title="Visa SWOT-analys"
+            >
+              Visa SWOT-analys
+            </a>
+          </div>
+
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 Framtida SWOT</h3>
+            <p>
+              Strategisk analys av kontextmedveten säkerhetsplattform och 
+              marknadspositionering.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_SWOT.md"
+              title="Visa Framtida SWOT-analys"
+            >
+              Visa Framtida SWOT
+            </a>
+          </div>
+
+          <!-- DevOps Group -->
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 CI/CD-arbetsflöden</h3>
+            <p>
+              Bygg-, test- och distributionsautomatisering för nuvarande 
+              applikationsarkitektur.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/WORKFLOWS.md"
+              title="Visa CI/CD-arbetsflöden"
+            >
+              Visa CI/CD-arbetsflöden
+            </a>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 Framtida Arbetsflöden</h3>
+            <p>
+              Avancerad CI/CD med ML och säkerhetsautomatisering planerad för 
+              framtida releaser.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_WORKFLOWS.md"
+              title="Visa Framtida Arbetsflöden"
+            >
+              Visa Framtida DevOps
+            </a>
+          </div>
+
+          <!-- Data Model -->
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Datamodell</h3>
+            <p>
+              Nuvarande dataarkitektur för att stödja framtida 
+              plattformsfunktioner.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/DATA_MODEL.md"
+              title="Visa Datamodell"
+            >
+              Visa Dataarkitektur
+            </a>
+          </div>
+
+          <!-- Future Data Model -->
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Framtida Datamodell</h3>
+            <p>
+              Förbättrad kontextmedveten dataarkitektur för att stödja 
+              framtida plattformsfunktioner.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_DATA_MODEL.md"
+              title="Visa Framtida Datamodell"
+            >
+              Visa Framtida Dataarkitektur
+            </a>
+          </div>
+
+          <!-- Testing Documentation -->
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>🧪 Enhetstester</h3>
+            <p>
+              Visuell representation av enhetstestresultat och täckning av 
+              kodbasen.
+            </p>
+            <a
+              href="https://hack23.github.io/cia-compliance-manager/test-results/"
+              title="Visa Testresultat"
+            >
+              Testresultat
+            </a>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/UnitTestPlan.md"
+              title="Visa Enhetstestplan"
+            >
+              Testplan
+            </a>
+          </div>
+
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Testtäckning</h3>
+            <p>
+              Testtäckningsrapporter som visar hur mycket av kodbasen som 
+              täcks av tester.
+            </p>
+            <a
+              href="https://hack23.github.io/cia-compliance-manager/coverage/index.html"
+              title="Visa Kodtäckningsrapport"
+            >
+              Visa Täckningsrapport
+            </a>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔍 E2E-systemtester</h3>
+            <p>End-to-end testrapporter som visar fullständiga systemvalideringsresultat.</p>
+            <a
+              href="https://hack23.github.io/cia-compliance-manager/cypress/mochawesome/index.html"
+              title="Visa E2E-testrapport"
+            >
+              Visa Testrapport
+            </a>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/E2ETestPlan.md"
+              title="Visa E2E-testplan"
+            >
+              E2E-plan
+            </a>
+          </div>
+
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>⚡ Prestandatester</h3>
+            <p>
+              Benchmarks och prestandaanalys under olika belastningsförhållanden.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/performance-testing.md"
+              title="Visa Prestandatestresultat"
+            >
+              Visa Prestandadata
+            </a>
+          </div>
+
+          <!-- API Documentation -->
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>📘 API-dokumentation</h3>
+            <p>
+              Detaljerad API-referens för alla komponenter, typer och funktioner i 
+              applikationen.
+            </p>
+            <a
+              href="https://hack23.github.io/cia-compliance-manager/api/"
+              title="Visa API-dokumentation"
+            >
+              Visa API-dokumentation
+            </a>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Verksamhetskontinuitet</h3>
+            <p>
+              Omfattande planering för verksamhetskontinuitet och återhämtningsstrategier 
+              anpassade till CIA-principer.
+            </p>
+            <a
+              href="https://hack23.github.io/cia-compliance-manager/business-continuity.html"
+              title="Visa Verksamhetskontinuitetsplan"
+            >
+              Visa Plan
+            </a>
+            <a
+              href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/BCPPlan.md"
+              title="Visa Markdown-version"
+            >
+              Visa Diagram- och Mindmap-version
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 CIA Compliance Manager - Utvecklad av <a href="https://hack23.com/">Hack23</a></p>
+      <p>
+        <a href="cia-compliance-manager-docs.html" title="English documentation">English Documentation</a> | 
+        <a href="cia-compliance-manager-docs_sv.html" title="Dokumentation på svenska">Svensk Dokumentation</a>
+      </p>
+    </footer>
+  </body>
+</html>

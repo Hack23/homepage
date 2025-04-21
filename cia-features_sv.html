@@ -51,6 +51,99 @@
       "screenshot": "https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png"
     }
     </script>
+    
+    <style>
+      .screenshot-container {
+        position: relative;
+        margin: 1.5rem 0;
+        overflow: hidden;
+      }
+      
+      .screenshot-container img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+        cursor: zoom-in;
+      }
+      
+      .screenshot-container figcaption {
+        margin-top: 0.5rem;
+        font-style: italic;
+        color: var(--text-secondary);
+      }
+      
+      .fullscreen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: zoom-out;
+      }
+      
+      .fullscreen-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+      
+      .fullscreen-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .expand-hint {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+      
+      .panel-caption {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 6px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      
+      .feature-section {
+        margin-bottom: 2rem;
+      }
+      
+      .feature-description {
+        margin-bottom: 2.5rem;
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        .panel-caption {
+          background-color: var(--primary-dark);
+          border: 1px solid var(--primary-light);
+          text-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -89,14 +182,14 @@
       </div>
     </header>
     <main>
-      <section id="features">
-        <h2>Funktioner i Medborgarunderrättelsebyrån</h2>
-        <p>Detta dokument visar de primära funktionerna i <a href="https://github.com/Hack23/cia">Medborgarunderrättelsebyrån (CIA) projektet</a>. Dessa skärmbilder illustrerar övergripande dashboards, kritiska poängtavlor och detaljerad analys, med fokus på transparens, ansvarsskyldighet och beslutsfattande i Sveriges politiska landskap.</p>
+      <section id="features" class="feature-section">
+        <h2>Plattform för Politisk Transparens med Öppen Källkod</h2>
+        <p><a href="https://github.com/Hack23/cia">Medborgarunderrättelsebyrån (CIA) projektet</a> är en volontärdriven plattform med öppen källkod fokuserad på politisk transparens i Sverige. Detta dokument visar skärmbilder som illustrerar avancerade dashboards, kritiska poängtavlor och detaljerade analyser som belyser politiskt beslutsfattande, resursallokering och styrningsresultat i Sveriges demokratiska institutioner.</p>
       </section>
 
       <hr />
 
-      <h3 class="panel-caption">Innehållsförteckning</h3>
+      <h3 class="panel-caption">Analyskategorier</h3>
       <ol>
         <li><a href="#dashboard-and-scoreboard-views">Dashboard och Poängtavlor</a></li>
         <li><a href="#ministry-leaders-and-insights">Ministerieledare och Insikter</a></li>
@@ -113,17 +206,477 @@
 
       <hr />
 
-      <h3 class="panel-caption" id="dashboard-and-scoreboard-views">Dashboard och Poängtavlor</h3>
+      <section id="dashboard-and-scoreboard-views" class="feature-section">
+        <h3 class="panel-caption">Dashboard och Poängtavlor</h3>
 
-      <h4 class="panel-caption">Central Övervakningsdashboard</h4>
-      <p>Denna realtidsövervakningsdashboard erbjuder visualiseringar av politiska aktiviteter, lagstiftningsbeslut och operativa trender. Den fungerar som en centraliserad knutpunkt för analys.</p>
-      <figure>
-        <img src="https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png" alt="Övervakningsdashboard">
-        <figcaption>Övervakningsdashboard</figcaption>
-      </figure>
+        <div class="feature-description">
+          <h4 class="panel-caption">Central Övervakningsdashboard</h4>
+          <p>Denna omfattande övervakningsdashboard syntetiserar politiska aktivitetsdataströmmar, vilket gör det möjligt för användare att identifiera mönster och trender i lagstiftningsbeteenden. Visualiseringsarkitekturen använder flera datadimensioner för att avslöja korrelationer mellan politiska beslut och operativa resultat som skulle förbli dolda i traditionell rapportering.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png" alt="Omfattande övervakningsdashboard som visar mätvärden för politisk aktivitet och nyckeltal för prestanda" loading="lazy">
+            <figcaption>Omfattande övervakningsdashboard som tillhandahåller flerdimensionell analys av politiska aktiviteter och styrningsmetrik</figcaption>
+          </figure>
+        </div>
 
-      <!-- ...existing content continued with Swedish translations... -->
+        <div class="feature-description">
+          <h4 class="panel-caption">Ministerieledarskapsprestandaanalys</h4>
+          <p>Detta analytiska styrkort tillämpar kvantitativa bedömningsmetoder på ministeriellt ledarskap, och skapar ett evidensbaserat utvärderingsramverk för styrningseffektivitet. Genom att syntetisera prestationsmått över flera dimensioner möjliggör denna visualisering jämförande analys av ministeriell effektivitet och ansvarsskyldighet.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministryranking-CHARTS-CURRENTMINISTRIESLEADERSCORECARD-269.png" alt="Detaljerat styrkort som mäter ministeriellt ledarskapsprestanda över flera styrningsdimensioner" loading="lazy">
+            <figcaption>Multifaktoranalys av nuvarande ministerieledarskapsprestanda med sammansatt poängmetodik</figcaption>
+          </figure>
+        </div>
+        
+        <div class="feature-description">
+          <h4 class="panel-caption">Partiledarskapseffektivitetsindex</h4>
+          <p>Detta omfattande bedömningsramverk utvärderar partiledarskapsprestation genom flera analytiska perspektiv, vilket producerar ett sammansatt effektivitetsindex. Visualiseringen visar hur ledarskapsresultat kan kvantifieras genom objektiva mätvärden, vilket ger insikter i styrningsförmåga över det politiska spektrumet samtidigt som det identifierar distinkta ledarskapsmetoder bland olika politiska enheter.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-partyranking-CHARTS-CURRENTPARTYLEADERSCORECARD-194.png" alt="Jämförande analys av partiledarskapseffektivitet med standardiserade mätvärden" loading="lazy">
+            <figcaption>Jämförande effektivitetsanalys av nuvarande partiledarskap med standardiserade prestandaindikatorer</figcaption>
+          </figure>
+        </div>
+        
+        <div class="feature-description">
+          <h4 class="panel-caption">Plattformsöversiktsdashboard</h4>
+          <p>Denna dashboard på ledningsnivå ger en omfattande systemöversikt, integrerar nyckelmetrik och åtkomstpunkter för analytiska förmågor. Gränssnittsarkitekturen balanserar informationstäthet med navigeringstydlighet, vilket möjliggör snabb orientering och åtkomst till djupare analytiska lager.</p>
+          
+          <figure class="screenshot-container"></figure>
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-main-OVERVIEW-101.png" alt="Dashboard på ledningsnivå som tillhandahåller omfattande systemöversikt och åtkomst till viktiga analytiska förmågor" loading="lazy">
+            <figcaption>Huvuddashboard som ger en översikt på hög nivå av projektets nyckelfunktioner</figcaption>
+          </figure>
+        </div>
+        
+        <div class="feature-description">
+          <h4 class="panel-caption">Parlamentarisk Prestationsanalytik</h4>
+          <p>Detta analytiska ramverk tillämpar kvantitativa bedömningsmetoder på parlamentariska aktiviteter, vilket möjliggör objektiv jämförelse av lagstiftningsprestanda. Visualiseringen syntetiserar flera prestandadimensioner för att skapa ett omfattande utvärderingssystem som överskrider traditionella subjektiva bedömningar.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-parliamentranking-OVERVIEW-166.png" alt="Omfattande bedömning av parlamentarisk prestanda med flera analytiska dimensioner" loading="lazy">
+            <figcaption>Översikt av parlamentariska rankningar och viktiga lagstiftningsmetrik</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="ministry-leaders-and-insights" class="feature-section">
+        <h3 class="panel-caption">Ministerieledare och Insikter</h3>
+
+        <div class="feature-description">
+          <h4 class="panel-caption">Ministeriellt Ledarskap och Resursallokeringsanalys</h4>
+          <p>Denna analytiska svit tillhandahåller omfattande insikter om ministeriella styrningsstrukturer, ledarskapsnätverk och resursutnyttjandemönster. Visualiseringarna avslöjar sammankopplingen mellan ledarskapsutnämningspraxis, politisk tillhörighet och resursallokeringsprioriteringar:</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministryranking-OVERVIEW-168.png" alt="Nätverksanalys av ministeriella ledarskapspositioner och politiska tillhörigheter" loading="lazy">
+            <figcaption>Rankning av ministerier baserat på prestanda och andra kriterier</figcaption>
+          </figure>
+          
+          <h5>Utgiftsanalys</h5>
+          <p>Detaljerad analys av utgiftsmönster och finansiell prioritering över ministeriella strukturer.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministryranking-GOVERNMENT_BODIES_EXPENDITURE-228.png" alt="Detaljerad nedbrytning av ministeriella utgiftsmönster och finansiell prioritering" loading="lazy">
+            <figcaption>Ministeriell utgiftsanalys som avslöjar resursallokeringsprioriteringar och utgiftsmönster</figcaption>
+          </figure>
+          
+          <h5>Intäktsanalys</h5>
+          <p>Analys av intäktskällor och finansiella strukturer över ministeriella portföljer.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministryranking-GOVERNMENT_BODIES_INCOME-159.png" alt="Analys av ministeriella intäktskällor och finansiella resursstrukturer" loading="lazy">
+            <figcaption>Intäktskällanalys som avslöjar ministeriella finansieringsberoenden och finansiella strukturer</figcaption>
+          </figure>
+          
+          <h5>Personalresursfördelningsanalys</h5>
+          <p>Utvärderar organisatorisk skala och personalallokering över ministeriella enheter, möjliggör jämförande bedömning av administrativ resursfördelning.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministryranking-GOVERNMENT_BODIES_HEADCOUNT-98.png" alt="Jämförande analys av ministeriella personalnivåer och personalresursallokering" loading="lazy">
+            <figcaption>Jämförande personalanalys som avslöjar personalresursfördelning över ministeriella strukturer</figcaption>
+          </figure>
+          
+          <h5>Ministerieöversikt</h5>
+          <p>Omfattande vy över ett specifikt ministeriums struktur och verksamhet.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-ministry-OVERVIEW-N%C3%A4ringsdepartementet-253.png" alt="Översikt över Näringsdepartementet och dess huvudaktiviteter" loading="lazy">
+            <figcaption>Översikt över Näringsdepartementet och dess huvudaktiviteter</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="government-body-insights" class="feature-section">
+        <h3 class="panel-caption">Insikter om Myndighetsorgan</h3>
+
+        <div class="feature-description">
+          <h4 class="panel-caption">Institutionell Struktur och Finansiell Verksamhetsanalys</h4>
+          <p>Detta analytiska ramverk ger djupa insikter om statliga institutionella strukturer, finansiella verksamheter och resursutnyttjandemönster. Visualiseringssviten möjliggör omfattande bedömning av organisatorisk effektivitet, finansiell ledningspraxis och resursallokeringsprioriteringar:</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-governmentbody-OVERVIEW-202100-5026-244.png" alt="Detaljerad analys av myndighetsorgans organisationsstruktur och operativa mandat" loading="lazy">
+            <figcaption>Översikt över myndighetens struktur och funktioner</figcaption>
+          </figure>
+          
+          <h5>Intäktskällanalys</h5>
+          <p>Detaljerad kartläggning av finansiella intäkter och finansieringsberoenden.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-governmentbody-INCOME-202100-5026-131.png" alt="Omfattande nedbrytning av myndighetsorgans finansieringskällor och intäktsströmmar" loading="lazy">
+            <figcaption>Intäktskällor</figcaption>
+          </figure>
+
+          <h5>Resursallokeringsanalys</h5>
+          <p>Detaljerad analys av utgiftsmönster som avslöjar operativa prioriteringar och finansiell ledningspraxis.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-governmentbody-EXPENDITURE-202100-5026-328.png" alt="Detaljerad analys av myndighetsorgans utgiftsmönster och finansiella prioriteringar" loading="lazy">
+            <figcaption>Utgiftsnedbrytning</figcaption>
+          </figure>
+          
+          <h5>Myndighetsrankningar</h5>
+          <p>Jämförande analys av myndigheter baserat på prestandametrik.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-governmentbodyranking-OVERVIEW-169.png" alt="Rankning av myndigheter baserat på olika prestandamått" loading="lazy">
+            <figcaption>Rankning av myndigheter baserat på olika prestandamått</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="party-and-parliament-insights" class="feature-section">
+        <h3 class="panel-caption">Parti- och Riksdagsinsikter</h3>
+
+        <div class="feature-description">
+          <h4 class="panel-caption">Politisk Organisationsunderrättelse</h4>
+          <p>Detta analytiska ramverk tillhandahåller omfattande insikter om partistrukturer, ledarskapsnätverk och operativa mönster. Visualiseringssviten möjliggör evidensbaserad bedömning av partiorganisation, medlemskapsdynamik och inflytandemekanismer:</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-party-OVERVIEW-S-181.png" alt="Omfattande analys av politisk partistruktur, ledarskapsnätverk och parlamentarisk närvaro" loading="lazy">
+            <figcaption>Översikt över partiets struktur och aktiviteter</figcaption>
+          </figure>
+
+          <h4 class="panel-caption">Tidsmässig Medlemskapsmönsteranalys</h4>
+          <p>Detta historiska analysverktyg spårar medlemskapsfluktuationsmönster över tid, avslöjar organisatorisk stabilitet, tillväxtbanor och potentiell respons på politiska händelser. Visualiseringen möjliggör identifiering av kritiska inflexionspunkter i partiutveckling och stödbasevolution.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-party-MEMBERHISTORY-S-100.png" alt="Tidsmässig analys av politiska partimedlemskapsmönster och organisatorisk utveckling" loading="lazy">
+            <figcaption>Partmedlemskapstrender</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Partirankningar</h4>
+          <p>Jämförande analys av politiska partier baserat på olika prestandamått.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-partyranking-OVERVIEW-146.png" alt="Rankning av politiska partier baserat på olika prestandamått" loading="lazy">
+            <figcaption>Rankning av politiska partier baserat på olika prestandamått</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="decision-flow-and-risk-assessments" class="feature-section">
+        <h3 class="panel-caption">Beslutsflöde och Riskbedömningar</h3>
+        
+        <div class="feature-description">
+          <h4 class="panel-caption">Lagstiftningbeslutsfattande</h4>
+          <p>Denna analytiska funktion kartlägger beslutsflöden inom parlamentariska och utskottsstrukturer, vilket erbjuder transparens i lagstiftningsprocesserna och resultaten.</p>
+          
+          <h5>Aktuella Beslutsflöden</h5>
+          <p>Visualiserar beslutsfattningsmönster inom parlamentet för de senaste lagstiftningsaktiviteterna.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-parliamentranking-CHARTS-DECISION_FLOW_CHART-248.png" alt="Nätverksanalysvisualisering av aktuella lagstiftningsbeslutvägar och godkännandeprocesser" loading="lazy">
+            <figcaption>Aktuell Beslutsflödestabell</figcaption>
+          </figure>
+          
+          <h5>Historiska Beslutsflöden (2016-17)</h5>
+          <p>Utforskar beslutsfattningstrender under perioden 2016-17, belyser vägar och lagstiftningsmilstolpar.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-parliamentranking-CHARTS-DECISION_FLOW_CHART%5B2016-17%5D-230.png" alt="Jämförande historisk analys av lagstiftningsbeslutsstrukturer från perioden 2016-17" loading="lazy">
+            <figcaption>Historisk Beslutsflödestabell</figcaption>
+          </figure>
+          
+          <h5>Riskbedömningar</h5>
+          <p>Utvärderar potentiella risker i parlamentariska aktiviteter, främjar styrningens transparens och ansvarsskyldighet.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-parliamentranking-RULES-RISK_SUMMARY-306.png" alt="Riskbedömningssammanfattning för parlamentariska aktiviteter" loading="lazy">
+            <figcaption>Parlamentarisk Risköversikt</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="committee-views" class="feature-section">
+        <h3 class="panel-caption">Utskottsvyer</h3>
+        
+        <div class="feature-description">
+          <p>Detta avsnitt fokuserar på parlamentariska utskottsoperationer, tillhandahåller detaljerad analys av utskottssammansättning, beslutsmönster och politiskt inflytande. Det analytiska ramverket avslöjar den kritiska rollen utskott spelar i lagstiftningsutveckling och politikstyrning.</p>
+          
+          <h4 class="panel-caption">Utskottsöversikt</h4>
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-committee-OVERVIEW-UU-285.png" alt="Översikt över utskottets aktiviteter och nyckeltal" loading="lazy">
+            <figcaption>Översikt över utskottets aktiviteter och nyckeltal</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Utskottsrankningar</h4>
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-committeeranking-OVERVIEW-226.png" alt="Rankning av utskott baserat på prestanda och andra kriterier" loading="lazy">
+            <figcaption>Rankning av utskott baserat på prestanda och andra kriterier</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Omröstningsbeslutsammanfattningar</h4>
+          <p>Transparenta insikter i viktiga utskottsomröstningsbeslut, erbjuder trender i lagstiftningsåtgärder.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-committee-BALLOTDECISIONSUMMARY-UU-154.png" alt="Utskottsomröstningsbeslut sammanfattning" loading="lazy">
+            <figcaption>Utskottsomröstningsbeslut</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Utskottsbeslutsflöden</h4>
+          <p>En visuell karta över utskottsbeslutsprocesser under perioden 2016-17, framhäver lagstiftningsvägar.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-committee-CHARTS-DECISION_FLOW_CHART-UU%5B2016-17%5D-245.png" alt="Utskottsbeslutsflödesvisualisering" loading="lazy">
+            <figcaption>Utskottsbeslutsflöde</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="country-rankings-and-analysis" class="feature-section">
+        <h3 class="panel-caption">Landsrankningar och Analys</h3>
+        
+        <div class="feature-description">
+          <p>Detta jämförande analysramverk möjliggör tvärnationell analys av styrningsmetrik och prestandaindikatorer. Visualiseringssviten underlättar riktmärkning av nationell prestanda över flera dimensioner, vilket ger kontext för inhemsk politikutvärdering.</p>
+          
+          <h4 class="panel-caption">IT-säkerhetsindikatorer</h4>
+          <p>En analys av Sveriges IT-säkerhetsmetrik, betonar dess beredskap att möta digitala hot och infrastrukturmotståndskraft.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-countryranking-INDICATORS-IT.NET.SECR.P6-149.png" alt="Landets IT-säkerhetsindikatorer" loading="lazy">
+            <figcaption>Landets IT-säkerhetsindikatorer</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Globala Styrningsrankningar</h4>
+          <p>Sveriges rankning över styrningskvalitet, transparens och ekonomiska indikatorer, jämfört globalt.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-countryranking-OVERVIEW-329.png" alt="Globala styrningsrankningar" loading="lazy">
+            <figcaption>Globala Styrningsrankningar</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="politician-profiles-and-analytics" class="feature-section">
+        <h3 class="panel-caption">Politikerprofiler och Analys</h3>
+        
+        <div class="feature-description">
+          <p>Denna modul tillhandahåller omfattande analytiska profiler av enskilda politiska aktörer, integrerar prestationsmått, röstmönster och rollutveckling över tid. Ramverket möjliggör evidensbaserad bedömning av politisk effektivitet och politisk konsekvens.</p>
+          
+          <h4 class="panel-caption">Lagstiftningsbidrag och Roller</h4>
+          <p>En detaljerad profil av en riksdagsledamot, inklusive röstmönster och beslutsfattande påverkan.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-politician-0103624617217-151.png" alt="Politikerprofil" loading="lazy">
+            <figcaption>Politikerprofil</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Roll-Gantt-schema</h4>
+          <p>En tidslinje över en politikers roller och ansvar, visualiserad för insikter i karriärbana.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-politician-ROLEGHANT-0218878014918-113.png" alt="Politikerkarriärtidslinje" loading="lazy">
+            <figcaption>Politikerkarriärtidslinje</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Politikeröversikt</h4>
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-politician-OVERVIEW-0980681611418-164.png" alt="Detaljerad profil av en specifik politiker" loading="lazy">
+            <figcaption>Detaljerad profil av en specifik politiker, inklusive deras aktiviteter och prestanda</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Politikerrankningar</h4>
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-politicianranking-OVERVIEW-225.png" alt="Rankning av politiker baserat på deras prestanda" loading="lazy">
+            <figcaption>Rankning av politiker baserat på deras prestanda och andra kriterier</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="administrative-agency-views" class="feature-section">
+        <h3 class="panel-caption">Administrativa Myndighetsvyer</h3>
+        
+        <div class="feature-description">
+          <p>Denna analytiska domän fokuserar på de operativa mönstren och prestandan hos administrativa myndigheter, tillhandahåller insikter om byråkratisk funktion och styrningsimplementering. Visualiseringssviten avslöjar den kritiska kopplingen mellan politikutveckling och operativt utförande.</p>
+          
+          <h4 class="panel-caption">Myndighetsverksamhetsöversikt</h4>
+          <p>Ett gränssnitt som visar administrativ myndighetsprestanda, ledningseffektivitet och specifika operativa insikter.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-adminagency-52-70.png" alt="Administrativ myndighetsöversikt" loading="lazy">
+            <figcaption>Administrativ Myndighetsöversikt</figcaption>
+          </figure>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-adminagency-69.png" alt="Administrativa myndighetsdetaljer" loading="lazy">
+            <figcaption>Administrativa Myndighetsdetaljer</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="agent-operation-views" class="feature-section">
+        <h3 class="panel-caption">Agenters Verksamhetsvyer</h3>
+        
+        <div class="feature-description">
+          <p>Denna modul tillhandahåller analytiska ramverk för att bedöma operativa aktiviteter inom systemet. Visualiseringsförmågorna möjliggör prestandaövervakning, arbetsbelastningsfördelningsanalys och processeffektivitetsutvärdering.</p>
+          
+          <h4 class="panel-caption">Operativ Effektivitet och Arbetsflöden</h4>
+          <p>En detaljerad vy av agentaktiviteter, med fokus på viktiga prestationsindikatorer, arbetsbelastningshantering och operativ fördelning.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-adminagentoperation-87.png" alt="Agentverksamhetsstatistik" loading="lazy">
+            <figcaption>Agentverksamhetsstatistik</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="user-home-and-personal-dashboards" class="feature-section">
+        <h3 class="panel-caption">Användarhems- och Personliga Dashboards</h3>
+        
+        <div class="feature-description">
+          <p>Detta gränssnitt tillhandahåller personaliserade analytiska förmågor, möjliggör anpassad övervakning och skräddarsydda informationsflöden. Ramverket stödjer individuella användarkrav samtidigt som det upprätthåller systemsäkerhet och åtkomstkontroll.</p>
+          
+          <h4 class="panel-caption">Personaliserad Dashboard</h4>
+          <p>En interaktiv användardashboard som sammanfattar senaste aktiviteter och ger snabb åtkomst till viktiga funktioner.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-userhome-108.png" alt="Användarhemdashboard" loading="lazy">
+            <figcaption>Användarhemdashboard</figcaption>
+          </figure>
+          
+          <h4 class="panel-caption">Säkerhetsinställningar och Besöksloggar</h4>
+          <p>Verktyg för att hantera kontosäkerhet och spåra användarinteraktioner för förbättrad säkerhet och transparens.</p>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-userhome-SECURITY_SETTINGS--110.png" alt="Användarsäkerhetsinställningar" loading="lazy">
+            <figcaption>Användarsäkerhetsinställningar</figcaption>
+          </figure>
+          
+          <figure class="screenshot-container">
+            <div class="expand-hint">Klicka för att förstora</div>
+            <img src="https://hack23.com/screenshots/Page-userhome-USER_VISITS--202.png" alt="Användarbesökshistorik" loading="lazy">
+            <figcaption>Användarbesökshistorik</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="feature-section">
+        <h3 class="panel-caption">Ytterligare Information</h3>
+        <p>För omfattande information om Medborgarunderrättelsebyråns projekts analytiska förmågor och metodologiska ramverk, vänligen konsultera följande resurser:</p>
+        <ul>
+          <li><a href="https://github.com/Hack23/cia">Projektförvaret och Teknisk Dokumentation</a></li>
+          <li><a href="https://hack23.com/">Officiell Projekthemsida</a></li>
+        </ul>
+        <p>CIA-projektet är ett volontärdrivet, öppen källkod-initiativ som tillämpar avancerade dataanalysmetoder för demokratisk övervakning. Genom att utnyttja sofistikerad datavisualisering och analytiska ramverk demokratiserar plattformen tillgång till politisk prestandabedömning och styrningsutvärdering.</p>
+      </section>
     </main>
+    
+    <div class="fullscreen-overlay" id="imageOverlay">
+      <img id="fullscreenImage" src="" alt="Fullskärmsvy">
+      <div class="fullscreen-caption" id="fullscreenCaption"></div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('imageOverlay');
+        const fullImg = document.getElementById('fullscreenImage');
+        const caption = document.getElementById('fullscreenCaption');
+        
+        // For all screenshots, add click handler
+        document.querySelectorAll('.screenshot-container img').forEach(img => {
+          img.addEventListener('click', function() {
+            fullImg.src = this.src;
+            fullImg.alt = this.alt;
+            caption.textContent = this.nextElementSibling.textContent;
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+          });
+          
+          // Add hover effect
+          img.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02)';
+          });
+          
+          img.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+          });
+        });
+        
+        // Close overlay on click
+        overlay.addEventListener('click', function() {
+          this.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        });
+      });
+    </script>
+    
     <footer>
       <p>&copy; 2025 Medborgarunderrättelsebyrån - Utvecklad av <a href="https://hack23.com/">Hack23</a></p>
     </footer>
