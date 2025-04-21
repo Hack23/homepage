@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comprehensive documentation for the Citizen Intelligence Agency - an open-source intelligence (OSINT) platform focused on monitoring Swedish political activity and providing transparency insights."
+    />
+    <title>Citizen Intelligence Agency Documentation | Political Transparency and OSINT Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="alternate" hreflang="sv" href="https://www.hack23.com/cia-docs_sv.html" />
+    <link rel="canonical" href="https://www.hack23.com/cia-docs.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Citizen Intelligence Agency Documentation | Political Transparency and OSINT Platform" />
+    <meta property="og:description" content="Comprehensive documentation for the Citizen Intelligence Agency - a volunteer-driven OSINT platform for political transparency in Sweden." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hack23.com/cia-docs.html" />
+    <meta property="og:image" content="https://hack23.github.io/cia/images/logo.png" />
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="citizen intelligence agency, political transparency, OSINT, open source intelligence, Sweden, political monitoring, data analysis, governance metrics, parliament tracking, democracy" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Citizen Intelligence Agency Documentation",
+      "description": "Comprehensive documentation for the Citizen Intelligence Agency - an open-source intelligence platform for political transparency",
+      "image": "https://hack23.github.io/cia/images/logo.png",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia/images/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hack23.com/cia-docs.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Citizen Intelligence Agency",
+        "applicationCategory": "AnalyticsApplication"
+      }
+    }
+    </script>
+    
+    <style>
+      /* Base variables with combined light/dark mode support */
+      :root {
+        /* Light Mode */
+        --primary-color: #006633;
+        --primary-light: #008844;
+        --primary-dark: #004422;
+        --accent-color: #669900;
+        --bg-color: #f0f0f0;
+        --card-bg: #ffffff;
+        --text-color: #222222;
+        --text-secondary: #444444;
+        --header-color: #0366d6;
+        --border-color: rgba(0, 102, 51, 0.2);
+        --card-border: #e1e4e8;
+        --card-shadow: rgba(0, 0, 0, 0.12);
+        --link-color: #0366d6;
+        --link-hover: #024ea4;
+        --button-bg: #0366d6;
+        --button-text: #fff;
+        --section-border: #eaeaea;
+        --badge-bg: #f5f5f5;
+        --confidentiality-color: #8e44ad;
+        --integrity-color: #27ae60;
+        --availability-color: #2980b9;
+        --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        --font-accent: "Inter", system-ui, -apple-system, sans-serif;
+        --font-mono: "Share Tech Mono", monospace;
+      }
+
+      /* Dark Mode - Ingress Inspired Theme */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #00cc66;
+          --primary-light: #00ff88;
+          --primary-dark: #00bb77;
+          --accent-color: #33eeff;
+          --bg-color: #001a1a;
+          --card-bg: #001c25;
+          --text-color: #f0f0f0;
+          --text-secondary: #aaaaaa;
+          --header-color: #58a6ff;
+          --border-color: rgba(0, 204, 102, 0.3);
+          --card-border: rgba(0, 204, 102, 0.3);
+          --card-shadow: rgba(0, 204, 102, 0.2);
+          --link-color: #58a6ff;
+          --link-hover: #79b8ff;
+          --button-bg: #2188ff;
+          --button-text: #e0e0e0;
+          --section-border: #444;
+          --badge-bg: #333;
+          --confidentiality-color: #bd93f9;
+          --integrity-color: #50fa7b;
+          --availability-color: #8be9fd;
+          --font-accent: "Orbitron", sans-serif;
+        }
+      }
+
+      /* Base styles */
+      * {
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Scan line effect for dark mode */
+      @media (prefers-color-scheme: dark) {
+        body::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: repeating-linear-gradient(
+            transparent 0px,
+            rgba(0, 0, 0, 0.05) 1px,
+            transparent 2px
+          );
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.3;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%2300cc66' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/svg%3E");
+          opacity: 0.2;
+          z-index: -1;
+          pointer-events: none;
+        }
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        font-family: var(--font-accent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3 {
+          font-family: "Orbitron", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          text-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--section-border);
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a:hover {
+          text-shadow: 0 0 8px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      /* Header and navigation */
+      header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--section-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        header {
+          border-bottom: 1px solid rgba(0, 204, 102, 0.3);
+        }
+      }
+
+      .logo-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.5);
+        }
+
+        .logo:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 30px rgba(0, 204, 102, 0.7);
+        }
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        justify-content: center;
+      }
+
+      .badges a {
+        text-decoration: none;
+      }
+
+      .badges img {
+        height: 20px;
+        vertical-align: middle;
+      }
+
+      .app-link {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+
+      .app-link a {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .app-link a:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-link a {
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 204, 102, 0.2),
+            rgba(0, 136, 68, 0.4)
+          );
+          border: 1px solid var(--border-color);
+          position: relative;
+          overflow: hidden;
+          color: var(--primary-light);
+        }
+
+        .app-link a:hover {
+          box-shadow: 0 0 15px rgba(0, 204, 102, 0.3);
+          border-color: var(--primary-light);
+        }
+
+        .app-link a::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0, 204, 102, 0.2) 50%,
+            transparent 100%
+          );
+          transition: all 0.5s ease;
+        }
+
+        .app-link a:hover::before {
+          left: 100%;
+        }
+      }
+
+      /* Cards */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        box-shadow: 0 4px 6px var(--card-shadow);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        color: var(--header-color);
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        margin-bottom: 1.2rem;
+        color: var(--text-secondary);
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px var(--card-shadow);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .card {
+          background: linear-gradient(
+            135deg,
+            rgba(0, 26, 37, 0.95) 0%,
+            rgba(0, 20, 26, 0.98) 100%
+          );
+          border: 1px solid var(--border-color);
+          box-shadow: 0 0 10px rgba(0, 204, 102, 0.2);
+        }
+
+        .card:hover {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.4);
+        }
+
+        /* Cyberpunk corner elements on cards */
+        .card::before,
+        .card::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border: 2px solid var(--primary-color);
+          opacity: 0.6;
+          z-index: 1;
+          transition: all 0.3s ease;
+        }
+
+        .card::before {
+          top: -2px;
+          left: -2px;
+          border-right: none;
+          border-bottom: none;
+        }
+
+        .card::after {
+          bottom: -2px;
+          right: -2px;
+          border-left: none;
+          border-top: none;
+        }
+
+        .card:hover::before,
+        .card:hover::after {
+          width: 30px;
+          height: 30px;
+          opacity: 0.8;
+        }
+
+        /* Scanner animation effect for active cards */
+        @keyframes scanner {
+          0%,
+          100% {
+            background-position: 0% 0%;
+          }
+          50% {
+            background-position: 100% 100%;
+          }
+        }
+
+        .card:hover .scanner-effect {
+          opacity: 1;
+        }
+
+        .scanner-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            45deg,
+            rgba(0, 204, 102, 0) 85%,
+            rgba(0, 204, 102, 0.2) 90%,
+            rgba(0, 204, 102, 0) 95%
+          );
+          pointer-events: none;
+          background-size: 300% 300%;
+          animation: scanner 3s ease infinite;
+          z-index: 1;
+          border-radius: inherit;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .card h3 {
+          text-shadow: 0 0 6px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      /* Themed Cards */
+      .architecture-card {
+        border-left: 4px solid #8e44ad;
+      }
+
+      .concept-card {
+        border-left: 4px solid #27ae60;
+      }
+
+      .process-card {
+        border-left: 4px solid #2980b9;
+      }
+      
+      .business-card {
+        border-left: 4px solid #f39c12;
+      }
+      
+      .devops-card {
+        border-left: 4px solid #e74c3c;
+      }
+
+      .data-card {
+        border-left: 4px solid #3498db;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .architecture-card {
+          box-shadow: -2px 0 8px rgba(155, 89, 182, 0.3);
+        }
+
+        .concept-card {
+          box-shadow: -2px 0 8px rgba(46, 204, 113, 0.3);
+        }
+
+        .process-card {
+          box-shadow: -2px 0 8px rgba(52, 152, 219, 0.3);
+        }
+        
+        .business-card {
+          box-shadow: -2px 0 8px rgba(243, 156, 18, 0.3);
+        }
+        
+        .devops-card {
+          box-shadow: -2px 0 8px rgba(231, 76, 60, 0.3);
+        }
+        
+        .data-card {
+          box-shadow: -2px 0 8px rgba(52, 152, 219, 0.3);
+        }
+      }
+
+      /* Links section */
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 0;
+      }
+
+      ul li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      ul li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        ul li::before {
+          content: "▶";
+          font-size: 0.7rem;
+          left: 0;
+          top: 0.25rem;
+          color: var(--primary-color);
+        }
+      }
+
+      ul li a {
+        display: inline-block;
+        padding: 0.2rem 0;
+        transition: all 0.2s ease;
+      }
+
+      /* Button */
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .btn {
+          background: rgba(0, 204, 102, 0.2);
+          color: var(--primary-light);
+          border: 1px solid rgba(0, 204, 102, 0.3);
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 0.5px;
+          padding: 0.5rem 1.2rem;
+        }
+
+        .btn:hover {
+          background: rgba(0, 204, 102, 0.3);
+          box-shadow: 0 0 12px rgba(0, 204, 102, 0.4);
+        }
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--section-border);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        footer {
+          border-top: 1px solid rgba(0, 204, 102, 0.3);
+        }
+      }
+
+      /* Table styles */
+      .data-sources-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      .data-sources-table th, 
+      .data-sources-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--card-border);
+      }
+
+      .data-sources-table th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+
+      .data-sources-table tr:hover {
+        background-color: rgba(0, 102, 51, 0.05);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .data-sources-table th {
+          background-color: var(--primary-dark);
+          border-bottom: 1px solid var(--primary-light);
+        }
+        
+        .data-sources-table tr:hover {
+          background-color: rgba(0, 204, 102, 0.05);
+        }
+      }
+      
+      /* Runtime environment table */
+      .runtime-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+      
+      .runtime-table th, 
+      .runtime-table td {
+        padding: 0.75rem;
+        border: 1px solid var(--card-border);
+      }
+      
+      .runtime-table th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+      
+      .badge-success {
+        background-color: #27ae60;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+      }
+      
+      .badge-warning {
+        background-color: #f39c12;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+      }
+      
+      /* Documentation map table */
+      .documentation-map {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+      
+      .documentation-map th, 
+      .documentation-map td {
+        padding: 0.75rem;
+        text-align: left;
+        border: 1px solid var(--card-border);
+      }
+      
+      .documentation-map th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+      
+      .documentation-map tr:hover {
+        background-color: rgba(0, 102, 51, 0.05);
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        .documentation-map th {
+          background-color: var(--primary-dark);
+        }
+        
+        .documentation-map tr:hover {
+          background-color: rgba(0, 204, 102, 0.05);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        header,
+        main {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .app-version {
+          display: block;
+          margin-top: 0.5rem;
+        }
+        
+        .data-sources-table, 
+        .runtime-table,
+        .documentation-map {
+          font-size: 0.8rem;
+        }
+        
+        .data-sources-table th, 
+        .data-sources-table td,
+        .runtime-table th, 
+        .runtime-table td,
+        .documentation-map th, 
+        .documentation-map td {
+          padding: 0.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .app-link {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .app-link a {
+          width: 100%;
+          text-align: center;
+        }
+
+        .badges {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .data-sources-table, 
+        .runtime-table,
+        .documentation-map {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+
+      /* Animation keyframes */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(0, 204, 102, 0.8);
+        }
+        100% {
+          box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+        }
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 0.99;
+        }
+        5% {
+          opacity: 0.96;
+        }
+        10% {
+          opacity: 0.97;
+        }
+        15% {
+          opacity: 0.99;
+        }
+        20% {
+          opacity: 0.94;
+        }
+        25% {
+          opacity: 0.98;
+        }
+        30% {
+          opacity: 0.97;
+        }
+        35% {
+          opacity: 0.99;
+        }
+        40% {
+          opacity: 0.98;
+        }
+        45% {
+          opacity: 0.97;
+        }
+        50% {
+          opacity: 0.99;
+        }
+        55% {
+          opacity: 0.98;
+        }
+        60% {
+          opacity: 0.97;
+        }
+        65% {
+          opacity: 0.99;
+        }
+        70% {
+          opacity: 0.96;
+        }
+        75% {
+          opacity: 0.99;
+        }
+        80% {
+          opacity: 0.98;
+        }
+        85% {
+          opacity: 0.99;
+        }
+        90% {
+          opacity: 0.96;
+        }
+        95% {
+          opacity: 0.99;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          animation: pulse 4s infinite;
+        }
+
+        main {
+          animation: flicker 10s infinite;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="https://hack23.github.io/cia/images/logo.png"
+          alt="Citizen Intelligence Agency Logo"
+          class="logo"
+          width="80"
+          height="80"
+        />
+      </div>
+      <h1>
+        Citizen Intelligence Agency Documentation
+        <span class="app-version">latest</span>
+      </h1>
+      <p>
+        Comprehensive documentation for the Citizen Intelligence Agency - an independent, volunteer-driven OSINT platform for political transparency in Sweden.
+      </p>
+      <div class="badges">
+        <a
+          href="https://github.com/Hack23/cia/releases"
+          title="GitHub Release"
+        >
+          <img
+            src="https://img.shields.io/github/v/release/Hack23/cia"
+            alt="GitHub Release"
+          />
+        </a>
+        <a
+          href="https://bestpractices.coreinfrastructure.org/projects/770"
+          title="CII Best Practices"
+        >
+          <img
+            src="https://bestpractices.coreinfrastructure.org/projects/770/badge"
+            alt="CII Best Practices"
+          />
+        </a>
+        <a
+          href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia"
+          title="OpenSSF Scorecard"
+        >
+          <img
+            src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge"
+            alt="OpenSSF Scorecard"
+          />
+        </a>
+        <a
+          href="https://slsa.dev/spec/v1.0/levels"
+          title="SLSA Level 3"
+        >
+          <img
+            src="https://slsa.dev/images/gh-badge-level3.svg"
+            alt="SLSA 3"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia/actions/workflows/release.yml"
+          title="Deploy Status"
+        >
+          <img
+            src="https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg"
+            alt="Verify & Release"
+          />
+        </a>
+        <a
+          href="https://sonarcloud.io/summary/new_code?id=Hack23_cia"
+          title="Quality Gate Status"
+        >
+          <img
+            src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=alert_status"
+            alt="Quality Gate Status"
+          />
+        </a>
+        <a
+          href="https://sonarcloud.io/summary/new_code?id=Hack23_cia"
+          title="Security Rating"
+        >
+          <img
+            src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating"
+            alt="Security Rating"
+          />
+        </a>
+        <a
+          href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt"
+          title="License"
+        >
+          <img
+            src="https://img.shields.io/github/license/Hack23/cia.svg"
+            alt="License"
+          />
+        </a>
+      </div>
+      <div class="app-link">
+        <a
+          href="index.html"
+          title="Go to Home"
+        >
+          Home
+        </a>
+        <a
+          href="cia-features.html"
+          title="View Project Features"
+        >
+          Project Features
+        </a>
+        <a
+          href="https://github.com/Hack23/cia"
+          class="btn"
+          title="View the GitHub repository"
+        >
+          GitHub Repository
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Project Overview</h2>
+        <p>
+          The Citizen Intelligence Agency is a volunteer-driven, open-source intelligence (OSINT) project that provides 
+          comprehensive analysis of political activities in Sweden. Through advanced monitoring of key political 
+          figures and institutions, we deliver:
+        </p>
+        <ul>
+          <li>Financial performance metrics</li>
+          <li>Risk assessment analytics</li>
+          <li>Political trend analysis</li>
+          <li>Politician ranking system</li>
+          <li>Performance comparisons</li>
+          <li>Transparency insights</li>
+        </ul>
+        <p>
+          Our initiative remains strictly independent and non-partisan, focused on fostering informed decision-making 
+          and enhancing democratic engagement.
+        </p>
+      </section>
+
+      <section id="features">
+        <h2>Key Features</h2>
+        <p>
+          The Citizen Intelligence Agency provides a comprehensive set of features for political transparency and analysis:
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Interactive Dashboards</h3>
+            <p>
+              Real-time dashboards visualizing political activities, governance metrics, and institutional performance across 
+              Swedish political entities.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🏆 Political Scoreboard Systems</h3>
+            <p>
+              Quantitative assessments and rankings of political figures, parties, and institutions based on objective 
+              performance metrics.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📈 Critical Analytics Tools</h3>
+            <p>
+              Advanced data analysis capabilities providing insights into political trends, voting patterns, and governance 
+              effectiveness.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🔍 Transparency Metrics</h3>
+            <p>
+              Standardized measurements of transparency across government entities, highlighting areas of strength and 
+              opportunities for improvement.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>⚖️ Accountability Measures</h3>
+            <p>
+              Tools for tracking commitments, voting consistency, and alignment between political promises and policy 
+              implementation.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📱 Data-Driven Insights</h3>
+            <p>
+              Evidence-based assessments powered by open data sources to provide objective analyses of political 
+              performance.
+            </p>
+          </div>
+        </div>
+        <p>
+          Explore our <a href="https://hack23.com/cia-features.html">comprehensive feature set</a> for a detailed 
+          overview of available capabilities, including dashboard screenshots and functionality details.
+        </p>
+      </section>
+
+      <section id="data-sources">
+        <h2>Data Sources</h2>
+        <p>
+          Our analysis is powered by authoritative Swedish government and international data sources:
+        </p>
+        
+        <table class="data-sources-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🏛️ <a href="http://data.riksdagen.se/">Swedish Parliament Open Data</a></td>
+              <td>Parliamentary members, committees, and official documents</td>
+            </tr>
+            <tr>
+              <td>🗳️ <a href="http://www.val.se/">Swedish Election Authority</a></td>
+              <td>Election data, political parties, and voting results</td>
+            </tr>
+            <tr>
+              <td>🌍 <a href="http://data.worldbank.org/">World Bank Open Data</a></td>
+              <td>Global economic indicators and demographic data</td>
+            </tr>
+            <tr>
+              <td>💹 <a href="https://www.esv.se/">Swedish Financial Management Authority</a></td>
+              <td>Government finances and economic trends</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="runtime-environment">
+        <h2>Runtime Environment</h2>
+        
+        <table class="runtime-table">
+          <thead>
+            <tr>
+              <th>JDK Version</th>
+              <th>Status</th>
+              <th>Release Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-21-brightgreen.svg" alt="JDK-21"></td>
+              <td><span class="badge-success">Supported</span></td>
+              <td>LTS Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-22-orange.svg" alt="JDK-22"></td>
+              <td><span class="badge-warning">Compatible</span></td>
+              <td>Feature Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-23-orange.svg" alt="JDK-23"></td>
+              <td><span class="badge-warning">Compatible</span></td>
+              <td>Feature Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-24-brightgreen.svg" alt="JDK-24"></td>
+              <td><span class="badge-success">Supported</span></td>
+              <td>Future LTS</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>For details on technology lifecycle management, see the <a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">End-of-Life Strategy</a>.</p>
+      </section>
+
+      <section id="architecture-documentation">
+        <h2>Architecture & Documentation</h2>
+        <p>
+          Explore comprehensive architecture documentation, system diagrams, and technical resources for the Citizen Intelligence Agency project.
+        </p>
+
+        <div class="cards">
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Current Architecture</h3>
+            <p>
+              C4 model showing current system structure, containers, components, and relationships.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md"
+              title="View Current Architecture"
+            >
+              View Architecture
+            </a>
+          </div>
+
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Future Architecture</h3>
+            <p>
+              C4 model showing future system structure and planned enhancements for the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md"
+              title="View Future Architecture"
+            >
+              View Future Architecture
+            </a>
+          </div>
+
+          <div class="card concept-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 System Mindmaps</h3>
+            <p>
+              Current system component relationships and conceptual architecture visualized through mind mapping.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/MINDMAP.md"
+              title="View System Mindmaps"
+            >
+              View Mindmaps
+            </a>
+          </div>
+
+          <div class="card concept-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 Future Concept Maps</h3>
+            <p>
+              Evolution roadmap with AI-enhanced capabilities and future system expansion plans.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md"
+              title="View Future Mindmaps"
+            >
+              View Future Concepts
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 SWOT Analysis</h3>
+            <p>
+              Strategic assessment of the platform's strengths, weaknesses, opportunities, and threats.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/SWOT.md"
+              title="View SWOT Analysis"
+            >
+              View SWOT Analysis
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 Future SWOT</h3>
+            <p>
+              Strategic analysis of future platform positioning and opportunities for development.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md"
+              title="View Future SWOT Analysis"
+            >
+              View Future SWOT
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Data Model</h3>
+            <p>
+              Current data structures, relationships, and entity frameworks used in the system.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md"
+              title="View Data Model"
+            >
+              View Data Model
+            </a>
+            <a
+              href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html"
+              title="View Entity Documentation"
+            >
+              View Entity Documentation
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Future Data Model</h3>
+            <p>
+              Enhanced political data architecture planned for future system iterations.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md"
+              title="View Future Data Model"
+            >
+              View Future Data Architecture
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Process Flowcharts</h3>
+            <p>
+              Current data processing workflows and business process models used in the system.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FLOWCHART.md"
+              title="View Process Flowcharts"
+            >
+              View Flowcharts
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Future Flowcharts</h3>
+            <p>
+              Enhanced AI-driven workflows planned for future development of the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md"
+              title="View Future Flowcharts"
+            >
+              View Future Flows
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 State Diagrams</h3>
+            <p>
+              Current system state transitions and behavioral models of platform components.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md"
+              title="View State Diagrams"
+            >
+              View State Diagrams
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Future State Diagrams</h3>
+            <p>
+              Enhanced adaptive state transitions planned for future system implementation.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md"
+              title="View Future State Diagrams"
+            >
+              View Future States
+            </a>
+          </div>
+
+          <div class="card devops-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 CI/CD Workflows</h3>
+            <p>
+              Current automation processes and continuous integration/deployment pipelines.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md"
+              title="View CI/CD Workflows"
+            >
+              View CI/CD Workflows
+            </a>
+          </div>
+
+          <div class="card devops-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 Future Workflows</h3>
+            <p>
+              Enhanced CI/CD with machine learning capabilities planned for future development.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md"
+              title="View Future Workflows"
+            >
+              View Future DevOps
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>📅 Lifecycle Management</h3>
+            <p>
+              Maintenance and end-of-life planning for the platform's technology components.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md"
+              title="View End-of-Life Strategy"
+            >
+              View EOL Strategy
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>💰 Security Implementation</h3>
+            <p>
+              Cost and security implementation guidelines for safely deploying the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md"
+              title="View Financial Security Plan"
+            >
+              View Security Plan
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 API Documentation</h3>
+            <p>
+              Detailed API reference and technical documentation for developers and integrators.
+            </p>
+            <a
+              href="https://hack23.github.io/cia/apidocs/index.html"
+              title="View API Documentation"
+            >
+              View API Docs
+            </a>
+          </div>
+          
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>🖼️ Feature Showcase</h3>
+            <p>
+              Visual showcase of platform features, dashboards, and political analytics capabilities.
+            </p>
+            <a
+              href="https://hack23.com/cia-features.html"
+              title="View Feature Showcase"
+            >
+              View Feature Showcase
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="documentation-map">
+        <h2>Documentation Map</h2>
+        <p>
+          This documentation map provides a comprehensive overview of all available documentation resources for the Citizen Intelligence Agency project:
+        </p>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>Focus</th>
+              <th>Description</th>
+              <th>Documentation Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Architecture</strong></td>
+              <td>🏛️ Architecture</td>
+              <td>C4 model showing current system structure</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Architecture</strong></td>
+              <td>🏛️ Architecture</td>
+              <td>C4 model showing future system structure</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Mindmaps</strong></td>
+              <td>🧠 Concept</td>
+              <td>Current system component relationships</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/MINDMAP.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Mindmaps</strong></td>
+              <td>🧠 Concept</td>
+              <td>Future capability evolution</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>SWOT Analysis</strong></td>
+              <td>💼 Business</td>
+              <td>Current strategic assessment</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/SWOT.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future SWOT Analysis</strong></td>
+              <td>💼 Business</td>
+              <td>Future strategic opportunities</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Data Model</strong></td>
+              <td>📊 Data</td>
+              <td>Current data structures and relationships</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Data Model</strong></td>
+              <td>📊 Data</td>
+              <td>Enhanced political data architecture</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Flowcharts</strong></td>
+              <td>🔄 Process</td>
+              <td>Current data processing workflows</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FLOWCHART.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Flowcharts</strong></td>
+              <td>🔄 Process</td>
+              <td>Enhanced AI-driven workflows</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>State Diagrams</strong></td>
+              <td>🔄 Behavior</td>
+              <td>Current system state transitions</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future State Diagrams</strong></td>
+              <td>🔄 Behavior</td>
+              <td>Enhanced adaptive state transitions</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>CI/CD Workflows</strong></td>
+              <td>🔧 DevOps</td>
+              <td>Current automation processes</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Workflows</strong></td>
+              <td>🔧 DevOps</td>
+              <td>Enhanced CI/CD with ML</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>End-of-Life Strategy</strong></td>
+              <td>📅 Lifecycle</td>
+              <td>Maintenance and EOL planning</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Financial Security Plan</strong></td>
+              <td>💰 Security</td>
+              <td>Cost and security implementation</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>CIA Features</strong></td>
+              <td>🚀 Features</td>
+              <td>Platform features overview</td>
+              <td><a href="https://hack23.com/cia-features.html">View on hack23.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section id="deployment-options">
+        <h2>Deployment Options</h2>
+        
+        <h3>AWS CloudFormation Deployment</h3>
+        <p>
+          The Citizen Intelligence Agency can be deployed on AWS using our provided CloudFormation template:
+        </p>
+        <ol>
+          <li>Download the <a href="https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json">CloudFormation stack file</a></li>
+          <li>Create a new stack in the AWS CloudFormation console</li>
+          <li>Upload the template file and configure parameters</li>
+          <li>Acknowledge IAM resource creation and launch the stack</li>
+          <li>Access the application via the URL in the stack outputs</li>
+        </ol>
+        
+        <h3>Debian/Ubuntu Installation</h3>
+        <p>
+          For local or self-hosted deployment on Debian/Ubuntu 24.4+:
+        </p>
+        <ol>
+          <li>
+            Install prerequisites:
+            <pre><code>sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit</code></pre>
+          </li>
+          <li>Configure PostgreSQL as detailed in the <a href="https://github.com/Hack23/cia#postgresql-16-configuration-guide">PostgreSQL configuration guide</a>.</li>
+          <li>
+            Create database and user:
+            <pre><code>sudo su - postgres
+psql
+postgres=# CREATE USER eris WITH password 'discord';
+postgres=# CREATE DATABASE cia_dev;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;</code></pre>
+          </li>
+          <li>
+            Download and install the Debian package:
+            <pre><code>wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb
+sudo dpkg -i cia-dist-deb-2025.1.2.all.deb</code></pre>
+          </li>
+          <li>Access the server at <a href="https://localhost:28443/cia/">https://localhost:28443/cia/</a></li>
+        </ol>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Citizen Intelligence Agency - Developed by <a href="https://hack23.com/">Hack23</a> | <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a></p>
+      <p>
+        <a href="cia-docs.html" title="English documentation">English Documentation</a> | 
+        <a href="cia-docs_sv.html" title="Documentation in Swedish">Swedish Documentation</a>
+      </p>
+    </footer>
+  </body>
+</html>
