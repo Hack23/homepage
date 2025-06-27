@@ -28,7 +28,20 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 
 ## Hack23
 
-Hack23 AB is a Swedish registered company (Org.nr 5595347807) founded in 2025 as an innovation hub specializing in creating immersive and precise game experiences alongside expert cybersecurity consulting. We develop advanced open-source security assessment tools for the CIA triad (Confidentiality, Integrity, Availability), compliance management, political transparency platforms, and precision combat gaming experiences. Our flagship project, Black Trigram, represents the pinnacle of realistic martial arts gaming combined with educational value.
+Hack23 AB is a Swedish registered company (Org.nr 5595347807) founded in 2025 as an innovation hub specializing in creating immersive and precise game experiences alongside expert cybersecurity consulting. Drawing from over three decades of experience in software development and security architecture, we deliver practical security solutions that integrate seamlessly into development processes without hindering innovation. Our flagship project, Black Trigram, represents the pinnacle of realistic martial arts gaming combined with educational value.
+
+**Core Business Services:**
+- **Security Architecture & Strategy**: Enterprise security frameworks, risk assessment, governance design
+- **Cloud Security & DevSecOps**: AWS security, Infrastructure as Code, CI/CD integration
+- **Secure Development & Code Quality**: SSDLC implementation, supply chain security, SLSA Level 3 compliance
+- **Compliance & Regulatory**: GDPR/NIS2/ISO 27001 implementation, ISMS design, audit preparation
+- **Open Source Security**: OSPO establishment, vulnerability management, security tool development
+- **Security Culture & Training**: Organization-wide security awareness, developer training, incident response
+
+**Service Delivery:**
+- **Availability**: Remote or in-person (Gothenburg)
+- **Approach**: Security seamlessly integrated into existing processes, not bolted on afterward
+- **Philosophy**: Building security culture where protection becomes natural part of team workflows
 
 ## About James Pether Sörling
 
@@ -38,7 +51,7 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 - **Current Role:** CEO/Founder Hack23 AB (Jun 2025-Present), Application Security Officer at Stena Group IT (Oct 2024-Present)
 - **Previous Roles:** Information Security Officer at Polestar (Mar 2022-Sep 2024), Senior Security Architect at WirelessCar (Jan 2018-Mar 2022)
 - **Certifications:** CISSP, CISM, AWS Security Specialty, AWS Solutions Architect Professional
-- **Expertise:** Information Security, Cloud Security, Open Source Leadership, Security Architecture
+- **Expertise:** Security Architecture, Cloud Security, DevSecOps Integration, Open Source Security, Compliance Management
 
 **Company Information:**
 - **Company:** Hack23 AB
@@ -67,11 +80,12 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 - **Cultural Integration:** Deep understanding of Korean martial arts traditions directly influences the authentic techniques and educational value in Black Trigram
 
 **Core Expertise Areas:**
-- **Information Security:** Risk Assessment, Security Architecture, CISSP & CISM Certified, Compliance Frameworks (ISO 27001, NIST 800-53, GDPR)
-- **Cloud Security:** AWS Advanced, Multi-Cloud Expertise, Infrastructure as Code, Secure Cloud Services
-- **Leadership & Governance:** Information Security Officer, Policy Development, AI Governance, Team Leadership
-- **Software Engineering:** Secure Development (SSDLC), Java/Spring Full-Stack, CI/CD Automation, Code Quality (SLSA Level 3)
-- **Open Source Leadership:** Project Creator & Maintainer, Community Contributor, Security Tool Development
+- **Security Architecture & Strategy:** Enterprise security frameworks, risk assessment, policy development, AI governance
+- **Cloud Security & DevSecOps:** AWS Advanced, multi-cloud strategies, Infrastructure as Code security, CI/CD integration
+- **Secure Development:** SSDLC implementation, code quality analysis, supply chain security, SLSA Level 3 compliance
+- **Compliance & Governance:** ISMS design, regulatory compliance (GDPR, NIS2, ISO 27001), audit preparation
+- **Open Source Security:** OSPO leadership, vulnerability management, security tool development, community engagement
+- **Security Culture & Training:** Organization-wide awareness programs, developer training, incident response capability building
 
 **Technology & Skills:**
 - **Security & Compliance:** Security Architecture, Risk Management, ISO 27001, NIST 800-53, GDPR, CIS Controls, Vulnerability Management, Incident Response, SSDLC, AI Governance
