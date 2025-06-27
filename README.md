@@ -35,8 +35,8 @@ Hack23 AB is a Swedish registered company (Org.nr 5595347807) founded in 2025 as
 CEO/Founder of Hack23 AB (founded 2025), James is an experienced security professional with over 30 years in information technology, specializing in security architecture, cloud security, and compliance. Strong advocate for transparency in organizations, secure software development practices, and innovative open source solutions.
 
 **Professional Background:**
-- **Current Role:** CEO/Founder Hack23 AB, Application Security Officer at Stena Group IT
-- **Previous Roles:** Information Security Officer at Polestar, Senior Security Architect at WirelessCar
+- **Current Role:** CEO/Founder Hack23 AB (Jun 2025-Present), Application Security Officer at Stena Group IT (Oct 2024-Present)
+- **Previous Roles:** Information Security Officer at Polestar (Mar 2022-Sep 2024), Senior Security Architect at WirelessCar (Jan 2018-Mar 2022)
 - **Certifications:** CISSP, CISM, AWS Security Specialty, AWS Solutions Architect Professional
 - **Expertise:** Information Security, Cloud Security, Open Source Leadership, Security Architecture
 
@@ -49,12 +49,22 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 - **Copyright:** James Pether Sörling 2008-2025
 
 **Career Highlights:**
+- Founded Hack23 AB in 2025 as Swedish Innovation Hub for cybersecurity and gaming
 - Led Open Source Program Office at Polestar (2022-2024)
 - Senior Security Architect at WirelessCar supporting secure delivery practices (2018-2022)
+- Consultant roles at Omegapoint (2018) and Consid AB (2017-2018) focusing on open source development
 - Cloud Architect at Keypasco developing cloud security solutions (2010-2017)
+- Early career includes positions at Sky, Glu Mobile, Volantis Systems (London), and system administration roles
+- Military service as NBC-Defence Group Leader in Swedish Armed Forces (1996-1997)
 - Speaker at Javaforum Göteborg on secure architecture patterns
 - Guest on "Shift Left Like A Boss" security podcast
 - Featured in Computer Sweden and National Democratic Institute reports
+
+**Martial Arts Background:**
+- **1999:** Black Belt Song Moo Kwan Korea - Traditional Taekwondo certification
+- **2024:** 3rd Dan Kukkiwon - World Taekwondo Headquarters certification
+- **Teaching Experience:** Taekwondo instructor at multiple clubs (1994-2017) including Tor Taekwondo klub, Haga Taekwondo club, and Hworangi Taekwondo
+- **Cultural Integration:** Deep understanding of Korean martial arts traditions directly influences the authentic techniques and educational value in Black Trigram
 
 **Core Expertise Areas:**
 - **Information Security:** Risk Assessment, Security Architecture, CISSP & CISM Certified, Compliance Frameworks (ISO 27001, NIST 800-53, GDPR)
