@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Trigram Documentation - Korean Martial Arts Combat Simulator Guide</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="alternate" hreflang="ko" href="https://www.hack23.com/black-trigram-docs_ko.html" />
+    <link rel="canonical" href="https://www.hack23.com/black-trigram-docs.html">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Black Trigram Documentation | Korean Martial Arts Combat Game" />
+    <meta property="og:description" content="Complete documentation for Black Trigram - a precision combat simulator featuring traditional Korean martial arts with anatomical targeting across 5 fighter archetypes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hack23.com/black-trigram-docs.html" />
+    <meta property="og:image" content="https://blacktrigram.com/black-trigram.png" />
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="Black Trigram, 흑괘, Korean martial arts, precision combat, vital point striking, 급소격, 정격자, 비수, 암살자, game documentation, anatomical targeting, combat simulator, traditional fighting, Korean culture" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Black Trigram Documentation",
+      "description": "Complete documentation for Black Trigram - a precision combat game inspired by Korean martial arts",
+      "image": "https://blacktrigram.com/black-trigram.png",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hack23.com/black-trigram-docs.html"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "Black Trigram",
+        "applicationCategory": "Game"
+      }
+    }
+    </script>
+    
+    <style>
+      /* Base variables with combined light/dark mode support */
+      :root {
+        /* Light Mode */
+        --primary-color: #006633;
+        --primary-light: #008844;
+        --primary-dark: #004422;
+        --accent-color: #669900;
+        --bg-color: #f0f0f0;
+        --card-bg: #ffffff;
+        --text-color: #222222;
+        --text-secondary: #444444;
+        --header-color: #0366d6;
+        --border-color: rgba(0, 102, 51, 0.2);
+        --card-border: #e1e4e8;
+        --card-shadow: rgba(0, 0, 0, 0.12);
+        --link-color: #0366d6;
+        --link-hover: #024ea4;
+        --button-bg: #0366d6;
+        --button-text: #fff;
+        --section-border: #eaeaea;
+        --badge-bg: #f5f5f5;
+        --musa-color: #8e44ad;
+        --amsalja-color: #27ae60;
+        --hacker-color: #2980b9;
+        --jeongbo-color: #e74c3c;
+        --jojik-color: #f39c12;
+        --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        --font-accent: "Inter", system-ui, -apple-system, sans-serif;
+        --font-mono: "Share Tech Mono", monospace;
+        --korean-font: "Noto Sans KR", "Malgun Gothic", sans-serif;
+      }
+
+      /* Dark Mode - Martial Arts Inspired Theme */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #ff6b6b;
+          --primary-light: #ff8e8e;
+          --primary-dark: #ff4757;
+          --accent-color: #ffd700;
+          --bg-color: #1a1a1a;
+          --card-bg: #2c2c2c;
+          --text-color: #f0f0f0;
+          --text-secondary: #aaaaaa;
+          --header-color: #ff6b6b;
+          --border-color: rgba(255, 107, 107, 0.3);
+          --card-border: rgba(255, 107, 107, 0.3);
+          --card-shadow: rgba(255, 107, 107, 0.2);
+          --link-color: #ff8e8e;
+          --link-hover: #ff6b6b;
+          --button-bg: #ff6b6b;
+          --button-text: #1a1a1a;
+          --section-border: #444;
+          --badge-bg: #333;
+          --musa-color: #bd93f9;
+          --amsalja-color: #50fa7b;
+          --hacker-color: #8be9fd;
+          --jeongbo-color: #ff79c6;
+          --jojik-color: #f1fa8c;
+          --font-accent: "Orbitron", sans-serif;
+        }
+      }
+
+      /* Base styles */
+      * {
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Martial arts pattern effect for dark mode */
+      @media (prefers-color-scheme: dark) {
+        body::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            rgba(255, 107, 107, 0.02) 1px,
+            transparent 2px
+          );
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.3;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff6b6b' fill-opacity='0.02'%3E%3Cpath d='M30 30m-30 0a30 30 0 1 1 60 0a30 30 0 1 1 -60 0'/%3E%3C/g%3E%3C/svg%3E");
+          opacity: 0.2;
+          z-index: -1;
+          pointer-events: none;
+        }
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        font-family: var(--font-accent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3 {
+          font-family: "Orbitron", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--section-border);
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      .korean-text {
+        font-family: var(--korean-font);
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a:hover {
+          text-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+        }
+      }
+
+      /* Header and navigation */
+      header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--section-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        header {
+          border-bottom: 1px solid rgba(255, 107, 107, 0.3);
+        }
+      }
+
+      .logo-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        .logo:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+        }
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        justify-content: center;
+      }
+
+      .badges a {
+        text-decoration: none;
+      }
+
+      .badges img {
+        height: 20px;
+        vertical-align: middle;
+      }
+
+      .app-link {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+
+      .app-link a {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .app-link a:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      /* Cards */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        box-shadow: 0 4px 6px var(--card-shadow);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        color: var(--header-color);
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        margin-bottom: 1.2rem;
+        color: var(--text-secondary);
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px var(--card-shadow);
+      }
+
+      /* Archetype themed cards */
+      .musa-card {
+        border-left: 4px solid var(--musa-color);
+      }
+
+      .amsalja-card {
+        border-left: 4px solid var(--amsalja-color);
+      }
+
+      .hacker-card {
+        border-left: 4px solid var(--hacker-color);
+      }
+
+      .jeongbo-card {
+        border-left: 4px solid var(--jeongbo-color);
+      }
+
+      .jojik-card {
+        border-left: 4px solid var(--jojik-color);
+      }
+
+      /* Tables */
+      .archetype-table,
+      .trigram-table,
+      .control-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      .archetype-table th,
+      .archetype-table td,
+      .trigram-table th,
+      .trigram-table td,
+      .control-table th,
+      .control-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--card-border);
+      }
+
+      .archetype-table th,
+      .trigram-table th,
+      .control-table th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--section-border);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .archetype-table,
+        .trigram-table,
+        .control-table {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="logo-container">
+            <img src="https://blacktrigram.com/black-trigram-256.png" alt="Black Trigram Logo" class="logo" width="80" height="80" />
+        </div>
+        <h1>Black Trigram Documentation <span class="app-version">Latest</span></h1>
+        <p>Complete guide to the Korean martial arts precision combat simulator</p>
+        
+        <div class="badges">
+            <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub Releases">
+                <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub Release">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/raw/master/LICENSE.md" title="License">
+                <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="License">
+            </a>
+            <a href="https://blacktrigram.com" title="Official Website">
+                <img src="https://img.shields.io/website?url=https://blacktrigram.com" alt="Website Status">
+            </a>
+        </div>
+        
+        <div class="app-link">
+            <a href="index.html" title="Back to Home">Home</a>
+            <a href="black-trigram-features.html" title="Game Features">Game Features</a>
+            <a href="https://blacktrigram.com" class="btn" title="Play Black Trigram">🎮 Enter the Dojang</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>📖 Game Overview</h2>
+            <p><strong>Black Trigram (흑괘)</strong> is a realistic 2D precision combat game inspired by Korean martial arts philosophy and the I Ching. The game teaches authentic Korean martial arts through precise anatomical targeting, featuring 70 vital points and 5 distinct fighter archetypes built with modern web technologies.</p>
+        </section>
+
+        <section id="quick-start">
+            <h2>🚀 Quick Start</h2>
+            
+            <h3>🌐 Web Version (Recommended)</h3>
+            <div class="installation-step">
+                <h4>Instant Access</h4>
+                <p>The easiest way to start is through your web browser:</p>
+                <div class="code-block">
+                    1. Visit https://blacktrigram.com
+                    2. Click "Enter the Dojang"
+                    3. Begin combat training immediately
+                </div>
+            </div>
+
+            <h3>🔧 Local Development</h3>
+            <div class="installation-step">
+                <h4>Developer Setup</h4>
+                <p>For development or local hosting:</p>
+                <div class="code-block">
+                    # Clone repository
+                    git clone https://github.com/Hack23/blacktrigram.git
+                    cd blacktrigram
+
+                    # Install dependencies
+                    npm install
+
+                    # Start development server
+                    npm run dev
+
+                    # Build for production
+                    npm run build
+
+                    # Run tests
+                    npm run test
+                    npm run test:combat
+                </div>
+            </div>
+        </section>
+
+        <section id="combat-controls">
+            <h2>🎮 Combat Controls</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⌨️ Combat Input System</h3>
+                    <ul>
+                        <li><strong>🏃 Movement:</strong> WASD or Arrow Keys - Tactical positioning and footwork</li>
+                        <li><strong>⚔️ Techniques:</strong> 1–8 (Trigram-based combat techniques)</li>
+                        <li><strong>🛡️ Guard:</strong> Spacebar - Defensive positioning and blocks</li>
+                        <li><strong>🎯 Vital Strike:</strong> Mouse - Targeted vital-point attacks</li>
+                        <li><strong>🔄 Archetype Switch:</strong> Tab - Change between 5 fighter types</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🩸 Combat Feedback</h3>
+                    <ul>
+                        <li><strong>💥 Impact Effects:</strong> Bone contact sounds and visual trauma</li>
+                        <li><strong>🩸 Injury System:</strong> Realistic bleeding and damage progression</li>
+                        <li><strong>😵 Incapacitation:</strong> Visual indicators of combat effectiveness</li>
+                        <li><strong>⚖️ Balance:</strong> Physical stance and vulnerability windows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="training-modules">
+            <h2>🎭 Training Modules</h2>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 해부학 연구 (Anatomical Study)</h3>
+                    <ul>
+                        <li><strong>📚 급소학습 (Vital Point Study)</strong> - 70 anatomical target points</li>
+                        <li><strong>🎯 정밀타격 (Precision Striking)</strong> - Accurate targeting techniques</li>
+                        <li><strong>⚫ 고급기법 (Advanced Techniques)</strong> - Professional combat methods</li>
+                        <li><strong>🥋 실전응용 (Practical Application)</strong> - Combat effectiveness training</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>⚔️ 무술 기법 (Martial Techniques)</h3>
+                    <ul>
+                        <li><strong>🥋 기본기 (Fundamentals)</strong> - Basic striking and positioning</li>
+                        <li><strong>🔢 팔괘술 (Eight Trigram Arts)</strong> - Traditional Korean combat philosophy</li>
+                        <li><strong>🔗 연계기법 (Combination Techniques)</strong> - Flowing technique sequences</li>
+                        <li><strong>🎯 정밀술 (Precision Arts)</strong> - Exact targeting and timing</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥊 실전 훈련 (Combat Training)</h3>
+                    <ul>
+                        <li><strong>👤 일대일 (One-on-One)</strong> - Single opponent combat simulation</li>
+                        <li><strong>🏢 환경전투 (Environmental Combat)</strong> - Using surroundings tactically</li>
+                        <li><strong>🧘 정신수양 (Mental Cultivation)</strong> - Psychological combat preparation</li>
+                        <li><strong>🏃 연속대전 (Continuous Combat)</strong> - Multiple opponent scenarios</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical-architecture">
+            <h2>🔧 Technical Architecture</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 Combat Components</h3>
+                    <ul>
+                        <li><strong>VitalPointTargeter</strong> - Interactive anatomical targeting system</li>
+                        <li><strong>CombatTracker</strong> - Real-time damage and status monitoring</li>
+                        <li><strong>TechniqueCalculator</strong> - Precise combat effectiveness calculations</li>
+                        <li><strong>CombatAnalyzer</strong> - Post-match technique analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Security Features</h3>
+                    <ul>
+                        <li><strong>🛡️ Supply Chain Security</strong> - OSSF Scorecard analysis</li>
+                        <li><strong>🔍 Static Analysis</strong> - CodeQL scanning for vulnerabilities</li>
+                        <li><strong>📦 Dependency Protection</strong> - Automated vulnerability checks</li>
+                        <li><strong>🏆 SLSA Level 3</strong> - Build provenance and attestations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="comprehensive-documentation">
+            <h2>📚 Comprehensive Documentation</h2>
+            <p>Access detailed technical documentation and development resources:</p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Architecture & Design</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="Architecture Documentation">📐 ARCHITECTURE.md</a> - High-level C4 models, container/component views, and system context</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="Future Architecture">📈 FUTURE_ARCHITECTURE.md</a> - Vision for upcoming architectural enhancements and PWA integration</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API Documentation">API Docs</a> - Detailed API reference for all components, types, and functions</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Combat & Mechanics</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="Combat Architecture">🥋 COMBAT_ARCHITECTURE.md</a> - In-depth battleflow, trigram integration, vital-point targeting, and damage pipeline</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="Game Design">🗺️ game-design.md</a> - Overall game mechanics, archetype breakdowns, and design decisions</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="Game Status">📊 game-status.md</a> - Current progress, feature roadmap, and milestone tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Assets & Media</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="Art Assets">🖼️ ART_ASSETS.md</a> - Guidelines for sprite sheets, particle textures, color palettes, and UI icons</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="Audio Assets">🎵 AUDIO_ASSETS.md</a> - List of traditional Korean instrument loops, impact SFX, and mixing notes</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="Video Assets">🎬 VIDEO_ASSETS.md</a> - Black Trigram: The Path of Shadows video content</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 CI/CD & Security</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="Development Guide">🔒 development.md</a> - Comprehensive security measures and development practices</li>
+                        <li><strong>🕷️ ZAP Security Scanning</strong> - OWASP ZAP dynamic application security testing</li>
+                        <li><strong>⚡ Lighthouse Performance</strong> - Automated performance and accessibility audits</li>
+                        <li><strong>📄 SBOM Generation</strong> - Software Bill of Materials for transparency</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>🎯 Combat Philosophy</h2>
+            <blockquote>
+                <p><strong>"어둠 속에서 완벽한 일격을 찾아라"</strong></p>
+                <p><em>"In darkness, seek the perfect strike"</em></p>
+            </blockquote>
+            
+            <p>Each technique focuses on:</p>
+            <ul>
+                <li><strong>정확한 타격 (Precise Targeting)</strong> - Exact anatomical vulnerable points</li>
+                <li><strong>최대 효과 (Maximum Effectiveness)</strong> - One-strike incapacitation</li>
+                <li><strong>전투 심리 (Combat Psychology)</strong> - Mental preparation for combat</li>
+                <li><strong>전통 지식 (Traditional Knowledge)</strong> - Authentic Korean martial arts</li>
+                <li><strong>원형 특화 (Archetype Specialization)</strong> - Unique approach per fighter type</li>
+            </ul>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="https://blacktrigram.com" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">🎮 Enter the Dojang</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Black Trigram - Developed by <a href="https://hack23.com/">Hack23 AB</a></p>
+        <p>
+            <a href="black-trigram-docs.html" title="English version">English</a> | 
+            <a href="black-trigram-docs_ko.html" title="한국어 버전">한국어</a>
+        </p>
+    </footer>
+</body>
+</html>
+            <h3>⚔️ <span class="korean-text">비수</span> (Bisu) - Lethal Technique</h3>
+            <p>Decisive unarmed combat methods for maximum effectiveness.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="combat-mechanics">
+        <h2>Combat Mechanics</h2>
+        <p>
+          Black Trigram implements realistic combat physics and body mechanics for authentic martial arts simulation:
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>🩸 Authentic Trauma System</h3>
+            <p>Realistic injury visualization and blood effects based on actual combat damage patterns.</p>
+          </div>
+
+          <div class="card">
+            <h3>🦴 Bone Impact Audio</h3>
+            <p>Genuine bone contact and fracture sounds for realistic combat feedback.</p>
+          </div>
+
+          <div class="card">
+            <h3>🫁 Breathing Disruption</h3>
+            <p>Respiratory system targeting affects stamina and combat performance.</p>
+          </div>
+
+          <div class="card">
+            <h3>⚖️ Balance System</h3>
+            <p>Realistic stance and momentum physics affecting combat stability.</p>
+          </div>
+
+          <div class="card">
+            <h3>🧠 Consciousness States</h3>
+            <p>Progressive awareness impairment from successful combat techniques.</p>
+          </div>
+
+          <div class="card">
+            <h3>😵 Pain Response</h3>
+            <p>Physiological pain affecting performance and combat effectiveness.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="controls">
+        <h2>Combat Controls</h2>
+        <p>
+          Master the combat input system for precise technique execution:
+        </p>
+
+        <table class="control-table">
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>Action</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WASD / Arrow Keys</td>
+              <td>Movement</td>
+              <td>Tactical positioning and footwork</td>
+            </tr>
+            <tr>
+              <td>1-8</td>
+              <td>Trigram Techniques</td>
+              <td>Execute techniques based on Eight Trigrams</td>
+            </tr>
+            <tr>
+              <td>Spacebar</td>
+              <td>Guard</td>
+              <td>Defensive positioning and blocks</td>
+            </tr>
+            <tr>
+              <td>Mouse</td>
+              <td>Vital Strike</td>
+              <td>Targeted vital-point attacks</td>
+            </tr>
+            <tr>
+              <td>Tab</td>
+              <td>Archetype Switch</td>
+              <td>Change between 5 fighter types</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="training-modules">
+        <h2>Training Modules</h2>
+        <p>
+          Black Trigram offers comprehensive training modules for mastering Korean martial arts techniques:
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>🎯 <span class="korean-text">해부학 연구</span> (Anatomical Study)</h3>
+            <p>Learn 70 anatomical target points, precision striking, and advanced combat techniques.</p>
+          </div>
+
+          <div class="card">
+            <h3>⚔️ <span class="korean-text">무술 기법</span> (Martial Techniques)</h3>
+            <p>Master fundamental techniques, Eight Trigram arts, and combination sequences.</p>
+          </div>
+
+          <div class="card">
+            <h3>🥊 <span class="korean-text">실전 훈련</span> (Combat Training)</h3>
+            <p>Practice one-on-one combat, environmental fighting, and multiple opponent scenarios.</p>
+          </div>
+
+          <div class="card">
+            <h3>🎭 <span class="korean-text">원형 특화</span> (Archetype Mastery)</h3>
+            <p>Specialized training for each of the five fighter archetypes and their unique techniques.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="technical-overview">
+        <h2>Technical Architecture</h2>
+        <p>
+          Black Trigram is built with modern web technologies optimized for performance and realism:
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>🎮 Combat Physics Engine</h3>
+            <p>Built with PixiJS 8.x, React 19, and TypeScript for strict type safety and performance.</p>
+          </div>
+
+          <div class="card">
+            <h3>⚡ Performance Optimized</h3>
+            <p>Vite for fast development, WebGL for hardware acceleration, and Howler.js for audio.</p>
+          </div>
+
+          <div class="card">
+            <h3>🎨 Visual Effects</h3>
+            <p>Custom particle engine, WebGL shaders, and 60fps animation for smooth combat.</p>
+          </div>
+
+          <div class="card">
+            <h3>🎯 Combat Components</h3>
+            <p>VitalPointTargeter, CombatTracker, TechniqueCalculator, and CombatAnalyzer systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="documentation-links">
+        <h2>Additional Documentation</h2>
+        <p>
+          Explore comprehensive documentation and development resources:
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>📐 Architecture Documentation</h3>
+            <p>High-level C4 models, container/component views, and system context.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="View Architecture">View Architecture</a>
+          </div>
+
+          <div class="card">
+            <h3>🥋 Combat Architecture</h3>
+            <p>In-depth battle flow, trigram integration, vital-point targeting, and damage pipeline.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="View Combat Architecture">View Combat Systems</a>
+          </div>
+
+          <div class="card">
+            <h3>🎮 Game Design</h3>
+            <p>Overall game mechanics, archetype breakdowns, and design decisions.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="View Game Design">View Game Design</a>
+          </div>
+
+          <div class="card">
+            <h3>📊 Development Status</h3>
+            <p>Current progress, feature roadmap, and milestone tracking.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="View Game Status">View Progress</a>
+          </div>
+
+          <div class="card">
+            <h3>🖼️ Art Assets</h3>
+            <p>Guidelines for sprite sheets, particle textures, color palettes, and UI icons.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="View Art Assets">View Art Guide</a>
+          </div>
+
+          <div class="card">
+            <h3>🎵 Audio Assets</h3>
+            <p>Traditional Korean instrument loops, impact SFX, and mixing notes.</p>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="View Audio Assets">View Audio Guide</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Black Trigram - Developed by <a href="https://hack23.com/">Hack23</a> | <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a></p>
+      <p>
+        <a href="black-trigram-docs.html" title="English version">English</a> | 
+        <a href="black-trigram-docs_ko.html" title="한국어 버전">한국어</a>
+      </p>
+    </footer>
+  </body>
+</html>

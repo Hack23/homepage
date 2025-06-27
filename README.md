@@ -1,6 +1,6 @@
 # Hack23 Homepage
 
-Welcome to the Hack23 homepage repository. This is the source code for [Hack23](https://hack23.com/), an open-source development platform founded by James Pether Sörling, focusing on security, compliance, and transparency tools.
+Welcome to the Hack23 homepage repository. This is the source code for [Hack23](https://hack23.com/), a Swedish innovation hub founded in 2025 by James Pether Sörling, focusing on precision gaming experiences, security, compliance, and transparency tools.
 
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
@@ -13,76 +13,190 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 2.  [About James Pether Sörling](#about-james-pether-sörling)
 3.  [Press Coverage](#press-coverage)
 4.  [Current Projects](#current-projects)
-    1.  [CIA Compliance Manager](#cia-compliance-manager)
-    2.  [Citizen Intelligence Agency](#citizen-intelligence-agency)
-    3.  [Lambda in Private VPC](#lambda-in-private-vpc)
+    1.  [Black Trigram](#black-trigram)
+    2.  [CIA Compliance Manager](#cia-compliance-manager)
+    3.  [Citizen Intelligence Agency](#citizen-intelligence-agency)
+    4.  [Lambda in Private VPC](#lambda-in-private-vpc)
 5.  [Past Projects](#past-projects)
     1.  [Sonar-CloudFormation-Plugin](#sonar-cloudformation-plugin)
 6.  [Badges](#badges)
-    1.  [Citizen Intelligence Agency](#citizen-intelligence-agency-badges)
+    1.  [Black Trigram](#black-trigram-badges)
     2.  [CIA Compliance Manager](#cia-compliance-manager-badges)
-    3.  [Sonar-CloudFormation-Plugin](#sonar-cloudformation-plugin-badges)
-    4.  [Lambda in Private VPC](#lambda-in-private-vpc-badges)
+    3.  [Citizen Intelligence Agency](#citizen-intelligence-agency-badges)
+    4.  [Sonar-CloudFormation-Plugin](#sonar-cloudformation-plugin-badges)
+    5.  [Lambda in Private VPC](#lambda-in-private-vpc-badges)
 
 ## Hack23
 
-Hack23 develops advanced open-source security assessment tools for the CIA triad (Confidentiality, Integrity, Availability), compliance management, and political transparency platforms. The platform focuses on information security, cloud systems, and transparency in organizations, aiming to provide secure and reliable open-source projects using industry best practices such as OpenSSF and CII Best Practices.
-
-Visit the [Hack23 website](https://hack23.com/) to learn more about our projects and initiatives.
+Hack23 AB is a Swedish registered company (Org.nr 5595347807) founded in 2025 as an innovation hub specializing in creating immersive and precise game experiences alongside expert cybersecurity consulting. We develop advanced open-source security assessment tools for the CIA triad (Confidentiality, Integrity, Availability), compliance management, political transparency platforms, and precision combat gaming experiences. Our flagship project, Black Trigram, represents the pinnacle of realistic martial arts gaming combined with educational value.
 
 ## About James Pether Sörling
 
-James is an experienced technology professional with expertise in information security and delivery of secure cloud systems. He is a strong advocate for transparency in organizations and is committed to ensuring the security and reliability of his open-source projects through the use of industry best practices such as OpenSSF and CII Best Practices.
+CEO/Founder of Hack23 AB (founded 2025), James is an experienced security professional with over 30 years in information technology, specializing in security architecture, cloud security, and compliance. Strong advocate for transparency in organizations, secure software development practices, and innovative open source solutions.
 
-James has given talks at [Javaforum Göteborg](https://www.youtube.com/watch?v=A_hq2Y03d6I) and has been a guest on the [Shift Left Like A Boss](https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble/) security podcast. He is also an open-source contributor for cfn-nag, which performs infrastructure as code (IaC) static analysis of AWS CloudFormation.
+**Professional Background:**
+- **Current Role:** CEO/Founder Hack23 AB, Application Security Officer at Stena Group IT
+- **Previous Roles:** Information Security Officer at Polestar, Senior Security Architect at WirelessCar
+- **Certifications:** CISSP, CISM, AWS Security Specialty, AWS Solutions Architect Professional
+- **Expertise:** Information Security, Cloud Security, Open Source Leadership, Security Architecture
 
-<ul>
-  <li>Open source developer and founder of <a href="https://hack23.com/">Hack23</a></li>
-  <li>Check out his <a href="https://www.openhub.net/accounts/pether">OpenHub profile</a></li>
-  <li>View his <a href="https://github.com/Hack23/talks">talks on GitHub</a></li>
-  <li>Connect with him on <a href="https://www.linkedin.com/in/jamessorling/">LinkedIn</a></li>
-  <li>Read his <a href="https://www.hack23.com/blog.html">blog</a></li>
-</ul>
+**Company Information:**
+- **Company:** Hack23 AB
+- **Registration Number:** 5595347807
+- **Country:** Sweden
+- **Founded:** 2025
+- **Industry:** Cybersecurity Consulting & Gaming Innovation
+- **Copyright:** James Pether Sörling 2008-2025
+
+**Career Highlights:**
+- Led Open Source Program Office at Polestar (2022-2024)
+- Senior Security Architect at WirelessCar supporting secure delivery practices (2018-2022)
+- Cloud Architect at Keypasco developing cloud security solutions (2010-2017)
+- Speaker at Javaforum Göteborg on secure architecture patterns
+- Guest on "Shift Left Like A Boss" security podcast
+- Featured in Computer Sweden and National Democratic Institute reports
+
+**Core Expertise Areas:**
+- **Information Security:** Risk Assessment, Security Architecture, CISSP & CISM Certified, Compliance Frameworks (ISO 27001, NIST 800-53, GDPR)
+- **Cloud Security:** AWS Advanced, Multi-Cloud Expertise, Infrastructure as Code, Secure Cloud Services
+- **Leadership & Governance:** Information Security Officer, Policy Development, AI Governance, Team Leadership
+- **Software Engineering:** Secure Development (SSDLC), Java/Spring Full-Stack, CI/CD Automation, Code Quality (SLSA Level 3)
+- **Open Source Leadership:** Project Creator & Maintainer, Community Contributor, Security Tool Development
+
+**Technology & Skills:**
+- **Security & Compliance:** Security Architecture, Risk Management, ISO 27001, NIST 800-53, GDPR, CIS Controls, Vulnerability Management, Incident Response, SSDLC, AI Governance
+- **Cloud & Infrastructure:** AWS (Advanced), Microsoft Azure, CloudFormation, Terraform, Docker, Linux/Unix, Security Hub, GuardDuty, Solution Architecture  
+- **Development & DevOps:** Java/Spring, TypeScript/JavaScript/React, PostgreSQL, SonarQube, GitHub Actions, Jenkins, ElasticSearch, OWASP ZAP, SLSA Level 3
+- **Leadership & Management:** Information Security Management, Team Leadership, Policy Development, Open Source Program Office, Strategic Planning, Six Sigma Black Belt
+
+**Links:**
+- **Company LinkedIn:** [https://www.linkedin.com/company/hack23/](https://www.linkedin.com/company/hack23/)
+- **Company Registration:** [Allabolag.se](https://www.allabolag.se/foretag/hack23-ab/-/-/2KJBPZZI0000)
+- **Personal LinkedIn:** [James Pether Sörling](https://www.linkedin.com/in/jamessorling/)
+- **OpenHub Profile:** [https://www.openhub.net/accounts/pether](https://www.openhub.net/accounts/pether)
 
 ## Press Coverage
 
-James's work has been featured in several publications, including [Computer Sweden](https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna), [Riksdag och Departement](http://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/), [Expressen](https://www.expressen.se/ledare/eric-erfors/eric-erfors-skolkaren-sahlin/), and the [National Democratic Institute](https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf).
+- **Computer Sweden**: [Technology that reveals politicians](https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna)
+- **Riksdag och Departement**: [CIA keeps track of parliament members](https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/)
+- **National Democratic Institute**: [Parliamentary Monitoring Organizations Survey](https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf)
 
 ## Current Projects
 
+### Black Trigram
+
+🥋 **어둠의 무예로 완벽한 일격을 추구하라** - "Master the dark arts through the pursuit of the perfect strike"
+
+**🔥 Flagship Project** - A realistic 2D precision combat simulator inspired by traditional Korean martial arts, emphasizing anatomical targeting, realistic physics, and authentic techniques across 5 distinct fighter archetypes.
+
+**Key Features:**
+
+- **70 Anatomical Vital Points**: Strategic targeting system based on traditional Korean martial arts knowledge (급소격)
+- **5 Unique Player Archetypes**: Musa (무사), Amsalja (암살자), Hacker, Intelligence Operative, Organized Crime
+- **Authentic Korean Martial Arts**: Traditional techniques including Taekkyeon, Hapkido, and historical combat methods
+- **Realistic Combat Physics**: Advanced trauma simulation and realistic damage modeling with authentic body mechanics
+- **Educational Gameplay**: Combines traditional philosophy with modern game mechanics for cultural learning
+- **Precision Combat System**: Emphasis on timing, positioning, and anatomical knowledge for tactical advantage
+- **Cultural Authenticity**: Deep integration of Korean martial arts philosophy and terminology with respectful representation
+
+**Technical Specifications:**
+
+- Built with Rust for maximum performance and memory safety
+- Cross-platform compatibility (Windows, macOS, Linux)
+- Modern graphics rendering with realistic physics simulation
+- Comprehensive testing with high code coverage
+- Supply chain security with SLSA Level 3 compliance and OpenSSF best practices
+
+**Links:**
+
+- 🎮 [Play Now](https://blacktrigram.com)
+- 📖 [Documentation](black-trigram-docs.html)
+- ⭐ [Features](black-trigram-features.html)
+- 💾 [GitHub Repository](https://github.com/Hack23/blacktrigram)
+
 ### CIA Compliance Manager
 
-A comprehensive security assessment platform for the CIA triad (Confidentiality, Integrity, and Availability). Helps organizations assess security posture, ensure compliance with frameworks (NIST, ISO, GDPR, etc.), analyze business impact, and manage security controls effectively.
+A comprehensive security assessment platform for the CIA triad (Confidentiality, Integrity, Availability) with business impact analysis, compliance mapping to regulatory frameworks like NIST, ISO, GDPR, and cost estimation features.
 
--   [CIA Compliance Manager Features](https://hack23.com/cia-compliance-manager-features.html) - Explore the key features
--   [CIA Compliance Manager Documentation](https://hack23.com/cia-compliance-manager-docs.html) - View the documentation
--   [Live Application](https://hack23.github.io/cia-compliance-manager/) - Try the application online
--   [GitHub Repository](https://github.com/Hack23/cia-compliance-manager)
+**Key Features:**
+
+- Security level assessment across CIA triad dimensions
+- Compliance mapping to major frameworks (NIST, ISO, GDPR, HIPAA, SOC2, PCI DSS)
+- Business impact analysis and cost estimation
+- Interactive visualizations and implementation guidance
+
+**Links:**
+
+- 🚀 [Launch Application](https://hack23.github.io/cia-compliance-manager/)
+- 📖 [Documentation](cia-compliance-manager-docs.html)
+- ⭐ [Features](cia-compliance-manager-features.html)
+- 💾 [GitHub Repository](https://github.com/Hack23/cia-compliance-manager)
 
 ### Citizen Intelligence Agency
 
-An open-source intelligence (OSINT) platform providing political transparency in Sweden. Offers governance insights, accountability metrics, and analysis of political activities using open data from official sources like the Swedish Parliament and Election Authority.
+A volunteer-driven open source intelligence (OSINT) project providing comprehensive analysis of political activities in Sweden. Through advanced monitoring of key political figures and institutions, it delivers financial performance metrics, risk assessment analysis, political trend analysis, politician ranking systems, performance comparisons, and transparency insights.
 
--   [Citizen Intelligence Agency Features](https://hack23.com/cia-features.html) - Explore the detailed features
--   [Citizen Intelligence Agency Documentation](https://hack23.com/cia-docs.html) - View the documentation
--   [GitHub Repository](https://github.com/Hack23/cia)
+**Key Features:**
+
+- Interactive dashboards for political activity visualization
+- Political scoreboard systems and performance rankings
+- Critical analysis tools for political trends and voting patterns
+- Transparency metrics and accountability measures
+- Data-driven insights from authoritative Swedish government sources
+
+**Links:**
+
+- 📖 [Documentation](cia-docs.html)
+- ⭐ [Features](cia-features.html)
+- 💾 [GitHub Repository](https://github.com/Hack23/cia)
 
 ### Lambda in Private VPC
 
-A proof-of-concept (POC) demonstrating a multi-region active/active AWS architecture using Resilience Hub policy compliance and runbooks for high availability and rapid failure recovery.
+A multi-region active/active website leveraging AWS Resilience Hub policy compliance and runbooks for rapid recovery from failures and high availability. Demonstrates cloud architecture best practices for availability and resilience.
 
--   [GitHub Repository](https://github.com/Hack23/lambda-in-private-vpc)
+**Links:**
+
+- 💾 [GitHub Repository](https://github.com/Hack23/lambda-in-private-vpc)
 
 ## Past Projects
 
 ### Sonar-CloudFormation-Plugin
 
-A SonarQube plugin for static analysis of AWS CloudFormation templates (YAML/JSON). Enhances security analysis based on best practices from NIST, CWE, and ISO standards.
+SonarQube plugin for analyzing AWS CloudFormation templates with security best practices based on NIST, CWE, and ISO standards. Integrates CFN-nag static analysis capabilities into SonarQube for enhanced infrastructure as code security scanning.
 
--   [GitHub Repository](https://github.com/Hack23/sonar-cloudformation-plugin)
--   [Maven Central](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
+**Links:**
+
+- 💾 [GitHub Repository](https://github.com/Hack23/sonar-cloudformation-plugin)
+- 📦 [Maven Central](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
 
 ## Badges
+
+### Black Trigram Badges
+
+[![GitHub Release](https://img.shields.io/github/v/release/Hack23/blacktrigram)](https://github.com/Hack23/blacktrigram/releases)
+[![License](https://img.shields.io/github/license/Hack23/blacktrigram.svg)](https://github.com/Hack23/blacktrigram/raw/master/LICENSE.md)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10777/badge)](https://bestpractices.coreinfrastructure.org/projects/10777)
+[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://github.com/Hack23/blacktrigram/attestations)
+[![Scorecard supply-chain security](https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml/badge.svg?branch=main)](https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml)
+[![Test & Report](https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml/badge.svg?branch=main)](https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram?ref=badge_shield)
+
+### CIA Compliance Manager Badges
+
+[![GitHub Release](https://img.shields.io/github/v/release/Hack23/cia-compliance-manager)](https://github.com/Hack23/cia-compliance-manager/releases)
+[![License](https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg)](https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10365/badge)](https://bestpractices.coreinfrastructure.org/projects/10365)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager)
+[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://github.com/Hack23/cia-compliance-manager/attestations)
+[![Verify & Release](https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg)](https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml)
+[![Scorecard Supply-Chain Security](https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main)](https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml)
 
 ### Citizen Intelligence Agency Badges
 
@@ -90,36 +204,18 @@ A SonarQube plugin for static analysis of AWS CloudFormation templates (YAML/JSO
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/770/badge)](https://bestpractices.coreinfrastructure.org/projects/770)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/cia)
 [![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev/spec/v1.0/levels)
-[![Verify & Release](https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg)](https://github.com/Hack23/cia/actions/workflows/release.yml)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Hack23_cia)
-[![Verify PR](https://github.com/Hack23/cia/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Hack23/cia/actions/workflows/codeql-analysis.yml)
+[![Verify & Deploy](https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/Hack23/cia/actions/workflows/release.yml)
+[![Scorecard supply-chain security](https://github.com/Hack23/cia/actions/workflows/scorecards.yml/badge.svg?branch=master)](https://github.com/Hack23/cia/actions/workflows/scorecards.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Hack23_cia)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_cia)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_cia)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Hack23_cia)
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/Hack23/cia.svg)](https://isitmaintained.com/project/Hack23/cia)
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/Hack23/cia.svg)](https://isitmaintained.com/project/Hack23/cia)
 [![License](https://img.shields.io/github/license/Hack23/cia.svg)](https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia)
-[![CLA Assistant](https://cla-assistant.io/readme/badge/Hack23/cia)](https://cla-assistant.io/Hack23/cia)
-
-### CIA Compliance Manager Badges
-
-[![GitHub Release](https://img.shields.io/github/v/release/Hack23/cia-compliance-manager)](https://github.com/Hack23/cia-compliance-manager/releases)
-[![License](https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg)](https://github.com/Hack23/cia-compliance-manager/raw/master/LICENSE.md)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10365/badge)](https://bestpractices.coreinfrastructure.org/projects/10365)
-[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://github.com/Hack23/cia-compliance-manager/attestations)
-[![Verify & Release](https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg)](https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield)
-[![Scorecard Supply-Chain Security](https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main)](https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml)
 
 ### Sonar-CloudFormation-Plugin Badges
 
 [![License](https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg)](https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt)
-[![Maven Central](https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg)](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4545/badge)](https://bestpractices.coreinfrastructure.org/projects/4545)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge)](https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin)
+[![Maven Central](https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg)](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
 
 ### Lambda in Private VPC Badges
 

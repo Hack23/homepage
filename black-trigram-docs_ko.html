@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흑괘 문서 - 한국 전통무예 게임 가이드 및 매뉴얼</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="alternate" hreflang="en" href="https://www.hack23.com/black-trigram-docs.html" />
+    <link rel="canonical" href="https://www.hack23.com/black-trigram-docs_ko.html">
+    
+    <meta name="description" content="흑괘(Black Trigram) 게임의 완전한 문서 - 설치 가이드, 게임플레이 매뉴얼, 무예 기법 설명, 급소점 가이드 및 개발자 정보를 제공합니다.">
+    <meta name="keywords" content="흑괘 문서, Black Trigram 가이드, 한국무예 게임 매뉴얼, 택견 게임, 합기도 시뮬레이터, 급소격 가이드">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        font-weight: 600;
+      }
+      
+      .code-block {
+        background: #f6f8fa;
+        border: 1px solid #d0d7de;
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        font-family: 'Courier New', monospace;
+        overflow-x: auto;
+      }
+      
+      .korean-term {
+        font-weight: 600;
+        color: #ff6b35;
+      }
+      
+      .installation-step {
+        background: #f0f9ff;
+        border-left: 4px solid #0369a1;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://blacktrigram.com/black-trigram-256.png" alt="흑괘 로고" class="logo" width="80" height="80" />
+        </div>
+        <h1>흑괘 (Black Trigram) 문서 <span class="app-version">한국어</span></h1>
+        <p>한국 전통무예 정밀 격투 시뮬레이터 완전 가이드</p>
+        
+        <div class="badges">
+            <a href="https://github.com/Hack23/blacktrigram" title="GitHub 저장소">
+                <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub 릴리스">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/raw/master/LICENSE.md" title="라이선스">
+                <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="라이선스">
+            </a>
+            <a href="https://blacktrigram.com" title="공식 웹사이트">
+                <img src="https://img.shields.io/website?url=https://blacktrigram.com" alt="웹사이트 상태">
+            </a>
+        </div>
+        
+        <div class="app-link">
+            <a href="index_ko.html" title="홈으로">홈</a>
+            <a href="black-trigram-features_ko.html" title="게임 기능">게임 기능</a>
+            <a href="https://blacktrigram.com" class="btn" title="흑괘 플레이">지금 플레이</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>📖 게임 개요</h2>
+            <p><strong class="korean-term">흑괘(Black Trigram)</strong>는 한국 무예 철학과 주역에서 영감을 받은 현실적인 2D 정밀 격투 게임입니다. 이 게임은 정밀한 해부학적 타겟팅을 통해 진정한 한국 무술을 가르치며, 70개의 급소점과 5개의 독특한 전투 원형을 현대적인 웹 기술로 구현했습니다.</p>
+        </section>
+
+        <section id="quick-start">
+            <h2>🚀 빠른 시작</h2>
+            
+            <h3>🌐 웹 버전 (권장)</h3>
+            <div class="installation-step">
+                <h4>즉시 접근</h4>
+                <p>웹 브라우저를 통해 시작하는 것이 가장 쉬운 방법입니다:</p>
+                <div class="code-block">
+                    1. https://blacktrigram.com 방문
+                    2. "도장에 입문하세요" 클릭
+                    3. 즉시 격투 훈련 시작
+                </div>
+            </div>
+
+            <h3>🔧 로컬 개발</h3>
+            <div class="installation-step">
+                <h4>개발자 설정</h4>
+                <p>개발 또는 로컬 호스팅을 위해:</p>
+                <div class="code-block">
+                    # 저장소 복제
+                    git clone https://github.com/Hack23/blacktrigram.git
+                    cd blacktrigram
+
+                    # 의존성 설치
+                    npm install
+
+                    # 개발 서버 시작
+                    npm run dev
+
+                    # 프로덕션용 빌드
+                    npm run build
+
+                    # 테스트 실행
+                    npm run test
+                    npm run test:combat
+                </div>
+            </div>
+        </section>
+
+        <section id="combat-controls">
+            <h2>🎮 격투 조작</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⌨️ 격투 입력 시스템</h3>
+                    <ul>
+                        <li><strong>🏃 이동:</strong> WASD 또는 화살표 키 - 전술적 위치 잡기와 발놀림</li>
+                        <li><strong>⚔️ 기법:</strong> 1–8 (팔괘 기반 격투 기법)</li>
+                        <li><strong>🛡️ 가드:</strong> 스페이스바 - 방어 자세와 블록</li>
+                        <li><strong>🎯 급소 타격:</strong> 마우스 - 타겟 급소점 공격</li>
+                        <li><strong>🔄 원형 전환:</strong> Tab - 5가지 전투 유형 간 변경</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🩸 격투 피드백</h3>
+                    <ul>
+                        <li><strong>💥 충격 효과:</strong> 뼈 접촉 소리와 시각적 외상</li>
+                        <li><strong>🩸 부상 시스템:</strong> 현실적인 출혈과 손상 진행</li>
+                        <li><strong>😵 무력화:</strong> 격투 효과의 시각적 지표</li>
+                        <li><strong>⚖️ 균형:</strong> 물리적 자세와 취약성 윈도우</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="training-modules">
+            <h2>🎭 훈련 모듈</h2>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 해부학 연구 (Anatomical Study)</h3>
+                    <ul>
+                        <li><strong>📚 급소학습 (Vital Point Study)</strong> - 70개 해부학적 목표점</li>
+                        <li><strong>🎯 정밀타격 (Precision Striking)</strong> - 정확한 타겟팅 기법</li>
+                        <li><strong>⚫ 고급기법 (Advanced Techniques)</strong> - 전문 격투 방법</li>
+                        <li><strong>🥋 실전응용 (Practical Application)</strong> - 격투 효과 훈련</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>⚔️ 무술 기법 (Martial Techniques)</h3>
+                    <ul>
+                        <li><strong>🥋 기본기 (Fundamentals)</strong> - 기본 타격과 위치 잡기</li>
+                        <li><strong>🔢 팔괘술 (Eight Trigram Arts)</strong> - 전통 한국 격투 철학</li>
+                        <li><strong>🔗 연계기법 (Combination Techniques)</strong> - 흐르는 기법 시퀀스</li>
+                        <li><strong>🎯 정밀술 (Precision Arts)</strong> - 정확한 타겟팅과 타이밍</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥊 실전 훈련 (Combat Training)</h3>
+                    <ul>
+                        <li><strong>👤 일대일 (One-on-One)</strong> - 단일 상대 격투 시뮬레이션</li>
+                        <li><strong>🏢 환경전투 (Environmental Combat)</strong> - 주변 환경을 전술적으로 활용</li>
+                        <li><strong>🧘 정신수양 (Mental Cultivation)</strong> - 심리적 격투 준비</li>
+                        <li><strong>🏃 연속대전 (Continuous Combat)</strong> - 다중 상대 시나리오</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical-architecture">
+            <h2>🔧 기술 아키텍처</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 격투 컴포넌트</h3>
+                    <ul>
+                        <li><strong>VitalPointTargeter</strong> - 대화형 해부학적 타겟팅 시스템</li>
+                        <li><strong>CombatTracker</strong> - 실시간 손상 및 상태 모니터링</li>
+                        <li><strong>TechniqueCalculator</strong> - 정밀한 격투 효과 계산</li>
+                        <li><strong>CombatAnalyzer</strong> - 경기 후 기법 분석</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 보안 기능</h3>
+                    <ul>
+                        <li><strong>🛡️ 공급망 보안</strong> - OSSF Scorecard 분석</li>
+                        <li><strong>🔍 정적 분석</strong> - 취약점을 위한 CodeQL 스캐닝</li>
+                        <li><strong>📦 의존성 보호</strong> - 자동화된 취약점 검사</li>
+                        <li><strong>🏆 SLSA Level 3</strong> - 빌드 출처 및 증명</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="comprehensive-documentation">
+            <h2>📚 포괄적 문서</h2>
+            <p>상세한 기술 문서 및 개발 리소스에 액세스하세요:</p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 아키텍처 & 디자인</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="아키텍처 문서">📐 ARCHITECTURE.md</a> - 고수준 C4 모델, 컨테이너/컴포넌트 뷰, 시스템 맥락</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="미래 아키텍처">📈 FUTURE_ARCHITECTURE.md</a> - 향후 아키텍처 개선 및 PWA 통합 비전</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API 문서">API 문서</a> - 모든 컴포넌트, 타입, 함수에 대한 상세 API 참조</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 격투 & 메커니즘</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="격투 아키텍처">🥋 COMBAT_ARCHITECTURE.md</a> - 심층 배틀플로우, 팔괘 통합, 급소점 타겟팅, 손상 파이프라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="게임 디자인">🗺️ game-design.md</a> - 전반적인 게임 메커니즘, 원형 분석, 디자인 결정</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="게임 상태">📊 game-status.md</a> - 현재 진행 상황, 기능 로드맵, 마일스톤 추적</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 자산 & 미디어</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산">🖼️ ART_ASSETS.md</a> - 스프라이트 시트, 파티클 텍스처, 색상 팔레트, UI 아이콘 가이드라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산">🎵 AUDIO_ASSETS.md</a> - 전통 한국 악기 루프, 임팩트 SFX, 믹싱 노트 목록</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="비디오 자산">🎬 VIDEO_ASSETS.md</a> - 흑괘: 그림자의 길 비디오 콘텐츠</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 CI/CD & 보안</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="개발 가이드">🔒 development.md</a> - 포괄적인 보안 조치 및 개발 관행</li>
+                        <li><strong>🕷️ ZAP 보안 스캐닝</strong> - OWASP ZAP 동적 응용 프로그램 보안 테스트</li>
+                        <li><strong>⚡ Lighthouse 성능</strong> - 자동화된 성능 및 접근성 감사</li>
+                        <li><strong>📄 SBOM 생성</strong> - 투명성을 위한 소프트웨어 부품 명세서</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>🎯 격투 철학</h2>
+            <blockquote>
+                <p><strong>"어둠 속에서 완벽한 일격을 찾아라"</strong></p>
+                <p><em>"In darkness, seek the perfect strike"</em></p>
+            </blockquote>
+            
+            <p>각 기법의 초점:</p>
+            <ul>
+                <li><strong>정확한 타격 (Precise Targeting)</strong> - 정확한 해부학적 취약점</li>
+                <li><strong>최대 효과 (Maximum Effectiveness)</strong> - 일격 무력화</li>
+                <li><strong>전투 심리 (Combat Psychology)</strong> - 격투를 위한 정신적 준비</li>
+                <li><strong>전통 지식 (Traditional Knowledge)</strong> - 진정한 한국 무술</li>
+                <li><strong>원형 특화 (Archetype Specialization)</strong> - 전투 유형별 독특한 접근</li>
+            </ul>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="https://blacktrigram.com" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">🎮 도장에 입문하세요</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 흑괘 (Black Trigram) - <a href="https://hack23.com/">Hack23 AB</a>에서 개발</p>
+        <p>
+            <a href="black-trigram-docs.html" title="English version">English</a> | 
+            <a href="black-trigram-docs_ko.html" title="한국어 버전">한국어</a>
+        </p>
+    </footer>
+</body>
+</html>

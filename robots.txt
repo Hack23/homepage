@@ -1,9 +1,42 @@
-Sitemap: https://hack23.com/sitemap.xml
+Sitemap: https://www.hack23.com/sitemap.xml
 User-agent: *
 Allow: /
 
-# Note: The following directives are technically redundant since "Allow: /" 
-# already permits everything, but are kept for documentation purposes
-Allow: /images/
-Allow: /screenshots/
-Allow: /assets/
+# Sitemap location
+Sitemap: https://www.hack23.com/sitemap.xml
+
+# Allow crawling of all content
+Crawl-delay: 1
+
+# Specific paths
+Allow: /index.html
+Allow: /index_sv.html
+Allow: /index_ko.html
+Allow: /black-trigram-features.html
+Allow: /black-trigram-features_ko.html
+Allow: /black-trigram-docs.html
+Allow: /black-trigram-docs_ko.html
+Allow: /cia-compliance-manager-features.html
+Allow: /cia-compliance-manager-features_sv.html
+Allow: /cia-compliance-manager-docs.html
+Allow: /cia-compliance-manager-docs_sv.html
+Allow: /cia-features.html
+Allow: /cia-features_sv.html
+Allow: /cia-docs.html
+Allow: /cia-docs_sv.html
+Allow: /cia-triad-faq.html
+Allow: /cia-triad-faq_sv.html
+Allow: /blog.html
+Allow: /styles.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.webp
+Allow: /*.svg
+
+# Block development files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
