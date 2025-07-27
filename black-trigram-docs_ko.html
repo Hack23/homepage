@@ -11,20 +11,422 @@
     <meta name="description" content="흑괘(Black Trigram) 게임의 완전한 문서 - 설치 가이드, 게임플레이 매뉴얼, 무예 기법 설명, 급소점 가이드 및 개발자 정보를 제공합니다.">
     <meta name="keywords" content="흑괘 문서, Black Trigram 가이드, 한국무예 게임 매뉴얼, 택견 게임, 합기도 시뮬레이터, 급소격 가이드">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="흑괘 문서 | 한국 전통무예 격투 게임" />
+    <meta property="og:description" content="흑괘의 완전한 문서 - 5가지 격투 원형으로 해부학적 타겟팅을 특징으로 하는 한국 전통무예 정밀 격투 시뮬레이터." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hack23.com/black-trigram-docs_ko.html" />
+    <meta property="og:image" content="https://blacktrigram.com/black-trigram.png" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "흑괘 문서",
+      "description": "흑괘의 완전한 문서 - 한국 무예에서 영감을 받은 정밀 격투 게임",
+      "image": "https://blacktrigram.com/black-trigram.png",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hack23.com/black-trigram-docs_ko.html"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "흑괘",
+        "applicationCategory": "Game"
+      }
+    }
+    </script>
     
     <style>
-      body {
-        font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      /* Base variables with combined light/dark mode support */
+      :root {
+        /* Light Mode */
+        --primary-color: #006633;
+        --primary-light: #008844;
+        --primary-dark: #004422;
+        --accent-color: #669900;
+        --bg-color: #f0f0f0;
+        --card-bg: #ffffff;
+        --text-color: #222222;
+        --text-secondary: #444444;
+        --header-color: #0366d6;
+        --border-color: rgba(0, 102, 51, 0.2);
+        --card-border: #e1e4e8;
+        --card-shadow: rgba(0, 0, 0, 0.12);
+        --link-color: #0366d6;
+        --link-hover: #024ea4;
+        --button-bg: #0366d6;
+        --button-text: #fff;
+        --section-border: #eaeaea;
+        --badge-bg: #f5f5f5;
+        --musa-color: #8e44ad;
+        --amsalja-color: #27ae60;
+        --hacker-color: #2980b9;
+        --jeongbo-color: #e74c3c;
+        --jojik-color: #f39c12;
+        --font-main: "Noto Sans KR", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        --font-accent: "Noto Sans KR", "Inter", system-ui, -apple-system, sans-serif;
+        --font-mono: "Share Tech Mono", monospace;
+        --korean-font: "Noto Sans KR", "Malgun Gothic", sans-serif;
       }
-      
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Noto Sans KR', 'Inter', sans-serif;
+
+      /* Dark Mode - Martial Arts Inspired Theme */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #ff6b6b;
+          --primary-light: #ff8e8e;
+          --primary-dark: #ff4757;
+          --accent-color: #ffd700;
+          --bg-color: #1a1a1a;
+          --card-bg: #2c2c2c;
+          --text-color: #f0f0f0;
+          --text-secondary: #aaaaaa;
+          --header-color: #ff6b6b;
+          --border-color: rgba(255, 107, 107, 0.3);
+          --card-border: rgba(255, 107, 107, 0.3);
+          --card-shadow: rgba(255, 107, 107, 0.2);
+          --link-color: #ff8e8e;
+          --link-hover: #ff6b6b;
+          --button-bg: #ff6b6b;
+          --button-text: #1a1a1a;
+          --section-border: #444;
+          --badge-bg: #333;
+          --musa-color: #bd93f9;
+          --amsalja-color: #50fa7b;
+          --hacker-color: #8be9fd;
+          --jeongbo-color: #ff79c6;
+          --jojik-color: #f1fa8c;
+          --font-accent: "Orbitron", sans-serif;
+        }
+      }
+
+      /* Base styles */
+      * {
+        transition-property: color, background-color, border-color, box-shadow;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Martial arts pattern effect for dark mode */
+      @media (prefers-color-scheme: dark) {
+        body::after {
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            rgba(255, 107, 107, 0.02) 1px,
+            transparent 2px
+          );
+          pointer-events: none;
+          z-index: 9999;
+          opacity: 0.3;
+        }
+
+        body::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff6b6b' fill-opacity='0.02'%3E%3Cpath d='M30 30m-30 0a30 30 0 1 1 60 0a30 30 0 1 1 -60 0'/%3E%3C/g%3E%3C/svg%3E");
+          opacity: 0.2;
+          z-index: -1;
+          pointer-events: none;
+        }
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        font-family: var(--font-accent);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        h1,
+        h2,
+        h3 {
+          font-family: "Orbitron", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--section-border);
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+
+      .korean-text {
+        font-family: var(--korean-font);
         font-weight: 600;
       }
-      
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a:hover {
+          text-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+        }
+      }
+
+      /* Header and navigation */
+      header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--section-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        header {
+          border-bottom: 1px solid rgba(255, 107, 107, 0.3);
+        }
+      }
+
+      .logo-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary-color);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+        }
+
+        .logo:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+        }
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        justify-content: center;
+      }
+
+      .badges a {
+        text-decoration: none;
+      }
+
+      .badges img {
+        height: 20px;
+        vertical-align: middle;
+      }
+
+      .app-link {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+
+      .app-link a {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        background: var(--button-bg);
+        color: var(--button-text);
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .app-link a:hover {
+        background: var(--link-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+      }
+
+      /* Cards */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        box-shadow: 0 4px 6px var(--card-shadow);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        color: var(--header-color);
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        margin-bottom: 1.2rem;
+        color: var(--text-secondary);
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px var(--card-shadow);
+      }
+
+      /* Archetype themed cards */
+      .musa-card {
+        border-left: 4px solid var(--musa-color);
+      }
+
+      .amsalja-card {
+        border-left: 4px solid var(--amsalja-color);
+      }
+
+      .hacker-card {
+        border-left: 4px solid var(--hacker-color);
+      }
+
+      .jeongbo-card {
+        border-left: 4px solid var(--jeongbo-color);
+      }
+
+      .jojik-card {
+        border-left: 4px solid var(--jojik-color);
+      }
+
+      /* Tables */
+      .archetype-table,
+      .trigram-table,
+      .control-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      .archetype-table th,
+      .archetype-table td,
+      .trigram-table th,
+      .trigram-table td,
+      .control-table th,
+      .control-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--card-border);
+      }
+
+      .archetype-table th,
+      .trigram-table th,
+      .control-table th {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--section-border);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .cards {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .archetype-table,
+        .trigram-table,
+        .control-table {
+          font-size: 0.8rem;
+        }
+      }
+
       .code-block {
         background: #f6f8fa;
         border: 1px solid #d0d7de;
@@ -95,8 +497,8 @@
         
         <div class="app-link">
             <a href="index_ko.html" title="홈으로">홈</a>
-            <a href="black-trigram-features_ko.html" title="게임 기능">✨ 기능</a>
-            <a href="https://blacktrigram.com" class="btn" title="흑괘 플레이">🎮 지금 플레이</a>
+            <a href="black-trigram-features_ko.html" title="게임 기능">게임 기능</a>
+            <a href="https://blacktrigram.com" class="btn" title="흑괘 플레이">🎮 도장 입문</a>
         </div>
     </header>
 
@@ -184,8 +586,8 @@
                     <h3>🔗 아키텍처 & 디자인</h3>
                     <ul>
                         <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="아키텍처 문서">📐 ARCHITECTURE.md</a> - 고수준 C4 모델, 컨테이너/컴포넌트 뷰</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="미래 아키텍처">📈 FUTURE_ARCHITECTURE.md</a> - 향후 개선 비전</li>
-                        <li><a href="https://blacktrigram.com/api/" title="API 문서">API 문서</a> - 상세 API 참조</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="미래 아키텍처">📈 FUTURE_ARCHITECTURE.md</a> - 미래 개선 비전</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API 문서">API 문서</a> - 상세한 API 참조</li>
                     </ul>
                 </div>
                 
@@ -193,9 +595,9 @@
                     <div class="scanner-effect"></div>
                     <h3>🔗 격투 & 메커니즘</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="격투 아키텍처">🥋 COMBAT_ARCHITECTURE.md</a> - 격투 시스템 디자인</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="게임 디자인">🗺️ game-design.md</a> - 게임 메커니즘 개요</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="게임 상태">📊 game-status.md</a> - 현재 진행 상황 추적</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="격투 아키텍처">🥋 COMBAT_ARCHITECTURE.md</a> - 심화 전투 플로우, 괘 통합, 급소점 타겟팅, 손상 파이프라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="게임 디자인">🗺️ game-design.md</a> - 전체 게임 메커니즘, 원형 분석, 디자인 결정</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="게임 상태">📊 game-status.md</a> - 현재 진행 상황, 기능 로드맵, 마일스톤 추적</li>
                     </ul>
                 </div>
                 
@@ -203,9 +605,86 @@
                     <div class="scanner-effect"></div>
                     <h3>🔗 자산 & 미디어</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산">🖼️ ART_ASSETS.md</a> - 비주얼 자산 가이드라인</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산">🎵 AUDIO_ASSETS.md</a> - 오디오 구현</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="비디오 자산">🎬 VIDEO_ASSETS.md</a> - 비디오 콘텐츠</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산">🖼️ ART_ASSETS.md</a> - 스프라이트 시트, 파티클 텍스처, 컬러 팔레트, UI 아이콘 가이드라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산">🎵 AUDIO_ASSETS.md</a> - 전통 한국 악기 루프, 충격 SFX, 믹싱 노트 목록</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="비디오 자산">🎬 VIDEO_ASSETS.md</a> - 흑괘: 그림자의 길 비디오 콘텐츠</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 CI/CD & 보안</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="개발 가이드">🔒 development.md</a> - 포괄적인 보안 조치 및 개발 관행</li>
+                        <li><strong>🕷️ ZAP 보안 스캐닝</strong> - OWASP ZAP 동적 애플리케이션 보안 테스트</li>
+                        <li><strong>⚡ Lighthouse 성능</strong> - 자동화된 성능 및 접근성 감사</li>
+                        <li><strong>📄 SBOM 생성</strong> - 투명성을 위한 소프트웨어 자재 명세서</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 보안 아키텍처</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md" title="보안 아키텍처">🔐 SECURITY_ARCHITECTURE.md</a> - 보안 설계 및 구현 패턴</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md" title="미래 보안 아키텍처">🔐 FUTURE_SECURITY_ARCHITECTURE.md</a> - AI 향상된 고급 보안 아키텍처</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="개발 가이드">🔒 development.md</a> - 보안 조치 및 개발 관행</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 개념 & 전략</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/MINDMAP.md" title="시스템 마인드맵">🧠 MINDMAP.md</a> - 현재 시스템 구성 요소 관계 및 개념 아키텍처</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_MINDMAP.md" title="미래 마인드맵">🧠 FUTURE_MINDMAP.md</a> - 향상된 기능이 포함된 진화 로드맵</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SWOT.md" title="SWOT 분석">💼 SWOT.md</a> - 강점, 약점, 기회, 위협의 전략적 평가</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SWOT.md" title="미래 SWOT 분석">💼 FUTURE_SWOT.md</a> - 미래 포지셔닝 및 기회의 전략적 분석</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 데이터 & 프로세스</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/DATA_MODEL.md" title="데이터 모델">📊 DATA_MODEL.md</a> - 현재 데이터 구조, 관계 및 엔티티 프레임워크</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_DATA_MODEL.md" title="미래 데이터 모델">📊 FUTURE_DATA_MODEL.md</a> - 미래 반복을 위한 향상된 데이터 아키텍처</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FLOWCHART.md" title="프로세스 플로우차트">🔄 FLOWCHART.md</a> - 현재 데이터 처리 워크플로 및 비즈니스 프로세스</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_FLOWCHART.md" title="미래 플로우차트">🔄 FUTURE_FLOWCHART.md</a> - 미래 개발을 위한 향상된 워크플로</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 행동 시스템</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/STATEDIAGRAM.md" title="상태 다이어그램">🔄 STATEDIAGRAM.md</a> - 현재 시스템 상태 전환 및 행동 모델</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_STATEDIAGRAM.md" title="미래 상태 다이어그램">🔄 FUTURE_STATEDIAGRAM.md</a> - 미래 구현을 위한 향상된 적응형 상태 전환</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/WORKFLOWS.md" title="CI/CD 워크플로">🔧 WORKFLOWS.md</a> - 현재 자동화 프로세스 및 CI/CD 파이프라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_WORKFLOWS.md" title="미래 워크플로">🔧 FUTURE_WORKFLOWS.md</a> - 고급 기능이 포함된 향상된 CI/CD</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 테스팅 & 품질 보증</h3>
+                    <ul>
+                        <li><a href="https://blacktrigram.com/test-results/" title="단위 테스트 결과">🧪 단위 테스트 결과</a> - 단위 테스트 결과 및 커버리지의 시각적 표현</li>
+                        <li><a href="https://blacktrigram.com/coverage/" title="테스트 커버리지">📊 테스트 커버리지</a> - 코드베이스 커버리지를 보여주는 테스트 커버리지 보고서</li>
+                        <li><a href="https://blacktrigram.com/cypress/" title="E2E 테스트 보고서">🔍 E2E 테스트 보고서</a> - 전체 시스템 검증을 보여주는 종단간 테스트 보고서</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md" title="단위 테스트 계획">🎓 UnitTestPlan.md</a> - 포괄적인 단위 테스트 전략</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md" title="E2E 테스트 계획">🎮 E2ETestPlan.md</a> - 종단간 테스트 전략</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 성능 & 운영</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md" title="성능 테스팅">⚡ performance-testing.md</a> - 다양한 조건에서의 벤치마크 및 성능 분석</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/BCPPlan.md" title="사업 연속성 계획">🔄 BCPPlan.md</a> - 포괄적인 사업 연속성 계획 및 복구 전략</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/End-of-Life-Strategy.md" title="생명주기 관리">📅 End-of-Life-Strategy.md</a> - 기술 구성 요소의 유지 관리 및 수명 종료 계획</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API 문서">📘 API 문서</a> - 모든 구성 요소, 유형 및 함수에 대한 상세한 API 참조</li>
                     </ul>
                 </div>
             </div>
@@ -228,9 +707,227 @@
             </ul>
             
             <div style="text-align: center; margin: 2rem 0;">
-                <a href="https://blacktrigram.com" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 0.5rem;">🎮 지금 플레이</a>
-                <a href="https://www.youtube.com/channel/UCiGwB6sLC8rog_ZPAiXChAQ" style="background: #FF0000; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 0.5rem;">📺 YouTube 채널</a>
-                <a href="https://www.tiktok.com/@blacktrigram" style="background: #000000; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 0.5rem;">🎵 TikTok</a>
+                <a href="https://blacktrigram.com" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">🎮 도장 입문</a>
+            </div>
+        </section>
+
+        <section id="korean-martial-arts">
+            <h2>한국 무예 기초</h2>
+            <p>
+              흑괘는 진정한 한국 무예 원리를 기반으로 구축되어 전통 기법과 철학을 통합합니다:
+            </p>
+
+            <div class="cards">
+              <div class="card">
+                <h3>🥋 <span class="korean-text">택견</span> (Taekkyeon) - 전통 한국 발차기</h3>
+                <p>리듬, 균형, 연속적인 움직임을 강조하는 유동적인 다리 기법으로 격투 효과를 극대화합니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🤼 <span class="korean-text">씨름</span> (Ssireum) - 한국 레슬링</h3>
+                <p>던지기, 테이크다운, 그라운드 컨트롤 방법에 초점을 맞춘 그래플링 기법입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🗡️ <span class="korean-text">검술</span> (Geomsul) - 검 무예</h3>
+                <p>맨손 격투 응용을 위해 적응된 전통 한국 검술 원리입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🎯 <span class="korean-text">급소술</span> (Geupso-sul) - 급소점 타격</h3>
+                <p>최대 격투 효율을 위한 해부학적 취약점의 정밀한 타겟팅입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>⚔️ <span class="korean-text">비수</span> (Bisu) - 치명적 기법</h3>
+                <p>최대 효과를 위한 결정적인 맨손 격투 방법입니다.</p>
+              </div>
+            </div>
+        </section>
+
+        <section id="combat-mechanics">
+            <h2>격투 메커니즘</h2>
+            <p>
+              흑괘는 진정한 무예 시뮬레이션을 위해 현실적인 격투 물리학과 신체 역학을 구현합니다:
+            </p>
+
+            <div class="cards">
+              <div class="card">
+                <h3>🩸 진정한 외상 시스템</h3>
+                <p>실제 격투 손상 패턴을 기반으로 한 현실적인 부상 시각화 및 출혈 효과입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🦴 뼈 충격 오디오</h3>
+                <p>현실적인 격투 피드백을 위한 진짜 뼈 접촉 및 골절 소리입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🫁 호흡 방해</h3>
+                <p>호흡계 타겟팅이 체력과 격투 성능에 영향을 미칩니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>⚖️ 균형 시스템</h3>
+                <p>격투 안정성에 영향을 미치는 현실적인 자세와 운동량 물리학입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🧠 의식 상태</h3>
+                <p>성공적인 격투 기법으로부터의 점진적인 인식 손상입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>😵 통증 반응</h3>
+                <p>성능과 격투 효과에 영향을 미치는 생리적 통증입니다.</p>
+              </div>
+            </div>
+        </section>
+
+        <section id="controls">
+            <h2>격투 조작</h2>
+            <p>
+              정밀한 기법 실행을 위한 격투 입력 시스템을 마스터하세요:
+            </p>
+
+            <table class="control-table">
+              <thead>
+                <tr>
+                  <th>조작</th>
+                  <th>액션</th>
+                  <th>설명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WASD / 화살표 키</td>
+                  <td>이동</td>
+                  <td>전술적 위치 잡기와 발놀림</td>
+                </tr>
+                <tr>
+                  <td>1-8</td>
+                  <td>괘 기법</td>
+                  <td>팔괘를 기반으로 한 기법 실행</td>
+                </tr>
+                <tr>
+                  <td>스페이스바</td>
+                  <td>가드</td>
+                  <td>방어 자세와 블록</td>
+                </tr>
+                <tr>
+                  <td>마우스</td>
+                  <td>급소 타격</td>
+                  <td>타겟 급소점 공격</td>
+                </tr>
+                <tr>
+                  <td>Tab</td>
+                  <td>원형 전환</td>
+                  <td>5가지 격투 유형 간 변경</td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+
+        <section id="training-modules">
+            <h2>훈련 모듈</h2>
+            <p>
+              흑괘는 한국 무예 기법을 마스터하기 위한 포괄적인 훈련 모듈을 제공합니다:
+            </p>
+
+            <div class="cards">
+              <div class="card">
+                <h3>🎯 <span class="korean-text">해부학 연구</span> (Anatomical Study)</h3>
+                <p>70개의 해부학적 타겟 포인트, 정밀 타격, 고급 격투 기법을 학습합니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>⚔️ <span class="korean-text">무술 기법</span> (Martial Techniques)</h3>
+                <p>기본 기법, 팔괘 무예, 콤비네이션 시퀀스를 마스터합니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🥊 <span class="korean-text">실전 훈련</span> (Combat Training)</h3>
+                <p>일대일 격투, 환경 격투, 다수 상대 시나리오를 연습합니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🎭 <span class="korean-text">원형 특화</span> (Archetype Mastery)</h3>
+                <p>5가지 격투 원형 각각과 그들의 독특한 기법에 대한 전문 훈련입니다.</p>
+              </div>
+            </div>
+        </section>
+
+        <section id="technical-overview">
+            <h2>기술 아키텍처</h2>
+            <p>
+              흑괘는 성능과 현실감을 위해 최적화된 현대적인 웹 기술로 구축되었습니다:
+            </p>
+
+            <div class="cards">
+              <div class="card">
+                <h3>🎮 격투 물리 엔진</h3>
+                <p>엄격한 타입 안전성과 성능을 위해 PixiJS 8.x, React 19, TypeScript로 구축되었습니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>⚡ 성능 최적화</h3>
+                <p>빠른 개발을 위한 Vite, 하드웨어 가속을 위한 WebGL, 오디오를 위한 Howler.js입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🎨 시각 효과</h3>
+                <p>부드러운 격투를 위한 맞춤 파티클 엔진, WebGL 셰이더, 60fps 애니메이션입니다.</p>
+              </div>
+
+              <div class="card">
+                <h3>🎯 격투 컴포넌트</h3>
+                <p>VitalPointTargeter, CombatTracker, TechniqueCalculator, CombatAnalyzer 시스템입니다.</p>
+              </div>
+            </div>
+        </section>
+
+        <section id="documentation-links">
+            <h2>추가 문서</h2>
+            <p>
+              포괄적인 문서와 개발 리소스를 탐색하세요:
+            </p>
+
+            <div class="cards">
+              <div class="card">
+                <h3>📐 아키텍처 문서</h3>
+                <p>고수준 C4 모델, 컨테이너/컴포넌트 뷰, 시스템 컨텍스트입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="아키텍처 보기">아키텍처 보기</a>
+              </div>
+
+              <div class="card">
+                <h3>🥋 격투 아키텍처</h3>
+                <p>심화 전투 플로우, 괘 통합, 급소점 타겟팅, 손상 파이프라인입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="격투 아키텍처 보기">격투 시스템 보기</a>
+              </div>
+
+              <div class="card">
+                <h3>🎮 게임 디자인</h3>
+                <p>전체 게임 메커니즘, 원형 분석, 디자인 결정사항입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="게임 디자인 보기">게임 디자인 보기</a>
+              </div>
+
+              <div class="card">
+                <h3>📊 개발 상태</h3>
+                <p>현재 진행 상황, 기능 로드맵, 마일스톤 추적입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="게임 상태 보기">진행 상황 보기</a>
+              </div>
+
+              <div class="card">
+                <h3>🖼️ 아트 자산</h3>
+                <p>스프라이트 시트, 파티클 텍스처, 컬러 팔레트, UI 아이콘 가이드라인입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산 보기">아트 가이드 보기</a>
+              </div>
+
+              <div class="card">
+                <h3>🎵 오디오 자산</h3>
+                <p>전통 한국 악기 루프, 충격 SFX, 믹싱 노트입니다.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산 보기">오디오 가이드 보기</a>
+              </div>
             </div>
         </section>
     </main>
