@@ -356,7 +356,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Verify and Deploy](https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml/badge.svg)](https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml)
 [![Scorecard Supply-Chain Security](https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml/badge.svg?branch=main)](https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml)
 
-
+---
 
 ## 🏷️ CIA Classification & Business Continuity Framework
 
