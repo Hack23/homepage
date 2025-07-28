@@ -360,6 +360,17 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ## 🏷️ CIA Classification & Business Continuity Framework
 
+### 💰 Business Impact Analysis Matrix
+
+| **Impact Category** | **Financial** | **Operational** | **Reputational** | **Regulatory** |
+|---------------------|---------------|-----------------|------------------|----------------|
+| **🔒 Confidentiality** | ![Financial Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Very High](https://img.shields.io/badge/$5K--10K_daily-darkred?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![High](https://img.shields.io/badge/Trust_erosion-orange?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![7-30 days](https://img.shields.io/badge/7--30_days-orange?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Very High](https://img.shields.io/badge/GDPR_violations-darkred?style=flat-square) |
+| **✅ Integrity** | ![Financial High](https://img.shields.io/badge/High-orange?style=flat-square) ![500-2K](https://img.shields.io/badge/$500--2K_incident-orange?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![40-60% loss](https://img.shields.io/badge/40--60%25_efficiency-red?style=flat-square) | ![Reputational Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![3-10 days](https://img.shields.io/badge/3--10_days-yellow?style=flat-square) | ![Regulatory High](https://img.shields.io/badge/High-orange?style=flat-square) ![Audit challenges](https://img.shields.io/badge/Audit_challenges-orange?style=flat-square) |
+| **⏱️ Availability** | ![Financial Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![<1% revenue](https://img.shields.io/badge/<1%25_revenue-yellow?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Process halt](https://img.shields.io/badge/Process_halt-red?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![1-7 days](https://img.shields.io/badge/1--7_days-orange?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Evidence gaps](https://img.shields.io/badge/Evidence_gaps-red?style=flat-square) |
+| **🚨 RTO Breach** | ![Financial High](https://img.shields.io/badge/High-orange?style=flat-square) ![2K+ emergency](https://img.shields.io/badge/$2K+_emergency-orange?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Service cascade](https://img.shields.io/badge/Service_cascade-red?style=flat-square) | ![Reputational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Immediate](https://img.shields.io/badge/Immediate-red?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Timeline violations](https://img.shields.io/badge/Timeline_violations-red?style=flat-square) |
+| **🔄 RPO Failure** | ![Financial Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![Reconstruction](https://img.shields.io/badge/Reconstruction_costs-yellow?style=flat-square) | ![Operational High](https://img.shields.io/badge/High-orange?style=flat-square) ![Historical gaps](https://img.shields.io/badge/Historical_gaps-orange?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![Long-term erosion](https://img.shields.io/badge/Long--term_erosion-orange?style=flat-square) | ![Regulatory High](https://img.shields.io/badge/High-orange?style=flat-square) ![Trail disruption](https://img.shields.io/badge/Trail_disruption-orange?style=flat-square) |
+
+
 ### 🔒 Security Classification Overview
 
 | Category | Badge | Level | Description |
@@ -376,6 +387,41 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 | **RPO** | ![RPO](https://img.shields.io/badge/RPO-Near_Realtime_(15min)-blue?style=for-the-badge&logo=database&logoColor=white) | 15min | Maximum acceptable data loss measured in time during incidents |
 
 ---
+
+### 📈 Impact Level Definitions
+
+#### 💸 **Financial Impact Levels**
+- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![>10K daily](https://img.shields.io/badge/>$10K_daily-darkred?style=flat-square) Major revenue impact, significant penalties
+- ![Very High](https://img.shields.io/badge/Very_High-darkred?style=flat-square) ![5K-10K daily](https://img.shields.io/badge/$5K--10K_daily-darkred?style=flat-square) Substantial penalties, customer compensation
+- ![High](https://img.shields.io/badge/High-orange?style=flat-square) ![1K-5K daily](https://img.shields.io/badge/$1K--5K_daily-orange?style=flat-square) Regulatory fines, recovery costs
+- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![500-1K daily](https://img.shields.io/badge/$500--1K_daily-yellow?style=flat-square) Incident response costs, efficiency losses
+- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) ![<500 daily](https://img.shields.io/badge/<$500_daily-lightgreen?style=flat-square) Minimal financial impact
+- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) ![No impact](https://img.shields.io/badge/No_measurable_impact-lightgrey?style=flat-square) No financial consequences
+
+#### 🏢 **Operational Impact Levels**
+- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) Complete service outage, total process halt, emergency response
+- ![High](https://img.shields.io/badge/High-orange?style=flat-square) Major service degradation, 40-60% efficiency loss, manual workarounds
+- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Partial service impact, delays in processes, reduced productivity
+- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Minor inconvenience, limited impact, normal operations continue
+- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No operational impact, business as usual
+
+#### 🤝 **Reputational Impact Levels**
+- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) International media coverage, long-term brand damage, customer exodus
+- ![High](https://img.shields.io/badge/High-orange?style=flat-square) National coverage, significant trust erosion, competitive disadvantage
+- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Industry attention, customer concern, temporary reputation impact
+- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Limited visibility, minor customer questions, quick recovery
+- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No reputational impact, internal matter only
+
+#### 📜 **Regulatory Impact Levels**
+- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) Criminal charges, license revocation, congressional hearings
+- ![Very High](https://img.shields.io/badge/Very_High-darkred?style=flat-square) Major penalties, regulatory sanctions, industry oversight
+- ![High](https://img.shields.io/badge/High-orange?style=flat-square) Significant fines, audit requirements, compliance violations
+- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Minor penalties, reporting requirements, documentation gaps
+- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Warnings, recommendations, corrective actions
+- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No regulatory implications
+
+---
+
 
 ### 📊 Classification Level Framework
 
@@ -429,46 +475,4 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ---
 
-### 💰 Business Impact Analysis Matrix
 
-| **Impact Category** | **Financial** | **Operational** | **Reputational** | **Regulatory** |
-|---------------------|---------------|-----------------|------------------|----------------|
-| **🔒 Confidentiality** | ![Financial Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Very High](https://img.shields.io/badge/$5K--10K_daily-darkred?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![High](https://img.shields.io/badge/Trust_erosion-orange?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![7-30 days](https://img.shields.io/badge/7--30_days-orange?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Very High](https://img.shields.io/badge/GDPR_violations-darkred?style=flat-square) |
-| **✅ Integrity** | ![Financial High](https://img.shields.io/badge/High-orange?style=flat-square) ![500-2K](https://img.shields.io/badge/$500--2K_incident-orange?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![40-60% loss](https://img.shields.io/badge/40--60%25_efficiency-red?style=flat-square) | ![Reputational Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![3-10 days](https://img.shields.io/badge/3--10_days-yellow?style=flat-square) | ![Regulatory High](https://img.shields.io/badge/High-orange?style=flat-square) ![Audit challenges](https://img.shields.io/badge/Audit_challenges-orange?style=flat-square) |
-| **⏱️ Availability** | ![Financial Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![<1% revenue](https://img.shields.io/badge/<1%25_revenue-yellow?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Process halt](https://img.shields.io/badge/Process_halt-red?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![1-7 days](https://img.shields.io/badge/1--7_days-orange?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Evidence gaps](https://img.shields.io/badge/Evidence_gaps-red?style=flat-square) |
-| **🚨 RTO Breach** | ![Financial High](https://img.shields.io/badge/High-orange?style=flat-square) ![2K+ emergency](https://img.shields.io/badge/$2K+_emergency-orange?style=flat-square) | ![Operational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Service cascade](https://img.shields.io/badge/Service_cascade-red?style=flat-square) | ![Reputational Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Immediate](https://img.shields.io/badge/Immediate-red?style=flat-square) | ![Regulatory Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![Timeline violations](https://img.shields.io/badge/Timeline_violations-red?style=flat-square) |
-| **🔄 RPO Failure** | ![Financial Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![Reconstruction](https://img.shields.io/badge/Reconstruction_costs-yellow?style=flat-square) | ![Operational High](https://img.shields.io/badge/High-orange?style=flat-square) ![Historical gaps](https://img.shields.io/badge/Historical_gaps-orange?style=flat-square) | ![Reputational High](https://img.shields.io/badge/High-orange?style=flat-square) ![Long-term erosion](https://img.shields.io/badge/Long--term_erosion-orange?style=flat-square) | ![Regulatory High](https://img.shields.io/badge/High-orange?style=flat-square) ![Trail disruption](https://img.shields.io/badge/Trail_disruption-orange?style=flat-square) |
-
-### 📈 Impact Level Definitions
-
-#### 💸 **Financial Impact Levels**
-- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) ![>10K daily](https://img.shields.io/badge/>$10K_daily-darkred?style=flat-square) Major revenue impact, significant penalties
-- ![Very High](https://img.shields.io/badge/Very_High-darkred?style=flat-square) ![5K-10K daily](https://img.shields.io/badge/$5K--10K_daily-darkred?style=flat-square) Substantial penalties, customer compensation
-- ![High](https://img.shields.io/badge/High-orange?style=flat-square) ![1K-5K daily](https://img.shields.io/badge/$1K--5K_daily-orange?style=flat-square) Regulatory fines, recovery costs
-- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) ![500-1K daily](https://img.shields.io/badge/$500--1K_daily-yellow?style=flat-square) Incident response costs, efficiency losses
-- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) ![<500 daily](https://img.shields.io/badge/<$500_daily-lightgreen?style=flat-square) Minimal financial impact
-- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) ![No impact](https://img.shields.io/badge/No_measurable_impact-lightgrey?style=flat-square) No financial consequences
-
-#### 🏢 **Operational Impact Levels**
-- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) Complete service outage, total process halt, emergency response
-- ![High](https://img.shields.io/badge/High-orange?style=flat-square) Major service degradation, 40-60% efficiency loss, manual workarounds
-- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Partial service impact, delays in processes, reduced productivity
-- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Minor inconvenience, limited impact, normal operations continue
-- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No operational impact, business as usual
-
-#### 🤝 **Reputational Impact Levels**
-- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) International media coverage, long-term brand damage, customer exodus
-- ![High](https://img.shields.io/badge/High-orange?style=flat-square) National coverage, significant trust erosion, competitive disadvantage
-- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Industry attention, customer concern, temporary reputation impact
-- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Limited visibility, minor customer questions, quick recovery
-- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No reputational impact, internal matter only
-
-#### 📜 **Regulatory Impact Levels**
-- ![Critical](https://img.shields.io/badge/Critical-red?style=flat-square) Criminal charges, license revocation, congressional hearings
-- ![Very High](https://img.shields.io/badge/Very_High-darkred?style=flat-square) Major penalties, regulatory sanctions, industry oversight
-- ![High](https://img.shields.io/badge/High-orange?style=flat-square) Significant fines, audit requirements, compliance violations
-- ![Moderate](https://img.shields.io/badge/Moderate-yellow?style=flat-square) Minor penalties, reporting requirements, documentation gaps
-- ![Low](https://img.shields.io/badge/Low-lightgreen?style=flat-square) Warnings, recommendations, corrective actions
-- ![Negligible](https://img.shields.io/badge/Negligible-lightgrey?style=flat-square) No regulatory implications
-
----
