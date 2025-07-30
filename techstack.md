@@ -46,7 +46,7 @@ Full tech stack [here](/techstack.md)
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1046/git.png' alt='Git'>
   <br>
-  <sub><a href="http://git-scm.com/">Git</a></sub>
+  <sub><a href="https://git-scm.com/">Git</a></sub>
   <br>
   <sub></sub>
 </td>

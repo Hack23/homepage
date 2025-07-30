@@ -299,7 +299,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 **Links:**
 
 - 💾 [GitHub Repository](https://github.com/Hack23/sonar-cloudformation-plugin)
-- 📦 [Maven Central](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
+- 📦 [Maven Central](https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
 
 ## Badges
 
@@ -347,7 +347,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![License](https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg)](https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4545/badge)](https://bestpractices.coreinfrastructure.org/projects/4545)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge)](https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin)
-[![Maven Central](https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg)](http://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
+[![Maven Central](https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg)](https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin)
 
 ### Lambda in Private VPC Badges
 
