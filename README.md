@@ -396,8 +396,8 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ### 🛡️ Security Investment Returns
 [![ROI Level](https://img.shields.io/badge/ROI-Minimal-lightgrey?style=for-the-badge&logo=chart-line&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-20%_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-<$100_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-20%25_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-Under_$100_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
 [![Market Position](https://img.shields.io/badge/Position-Follower-yellow?style=for-the-badge&logo=trending-up&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
@@ -438,7 +438,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ### 🛡️ Security Investment Returns
 [![ROI Level](https://img.shields.io/badge/ROI-Basic-orange?style=for-the-badge&logo=chart-line&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-45%_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-45%25_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-$800_Savings-orange?style=for-the-badge&logo=lock&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
@@ -480,7 +480,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ### 🛡️ Security Investment Returns
 [![ROI Level](https://img.shields.io/badge/ROI-High-green?style=for-the-badge&logo=chart-line&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-85%_Reduction-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-85%25_Reduction-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-$8M_Savings-green?style=for-the-badge&logo=lock&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
@@ -522,7 +522,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ### 🛡️ Security Investment Returns
 [![ROI Level](https://img.shields.io/badge/ROI-Moderate-yellow?style=for-the-badge&logo=chart-line&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-70%_Reduction-yellow?style=for-the-badge&logo=shield&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-70%25_Reduction-yellow?style=for-the-badge&logo=shield&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-$2M_Savings-yellow?style=for-the-badge&logo=lock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
@@ -564,7 +564,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ### 🛡️ Security Investment Returns
 [![ROI Level](https://img.shields.io/badge/ROI-High-green?style=for-the-badge&logo=chart-line&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-85%_Reduction-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
+[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-85%25_Reduction-green?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-$6M_Savings-green?style=for-the-badge&logo=lock&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
