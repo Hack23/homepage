@@ -236,7 +236,8 @@ Copy this template for each Hack23 project README:
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-[THREAT_LEVEL]-secondary?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-[ADVANTAGE_LEVEL]-primary?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
-```markdown
+
+```
 
 ---
 
