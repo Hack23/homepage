@@ -106,15 +106,27 @@ This document outlines the classification framework and business impact analysis
 
 ## 🎯 Project Type Classifications {#project-type-classifications}
 
+### 🏗️ Technical Project Types
 | Project Type | Badge | Description | Typical Security Level |
 |--------------|-------|-------------|------------------------|
 | **Core Infrastructure** | [![Core](https://img.shields.io/badge/Type-Core_Infrastructure-red?style=for-the-badge&logo=server&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Critical systems supporting all services | High to Mission Critical |
-| **Security Tools** | [![Security](https://img.shields.io/badge/Type-Security_Tools-blue?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Security assessment and monitoring | Very High to Extreme |
+| **Security Tools** | [![Security](https://img.shields.io/badge/Type-Security_Tools-darkblue?style=for-the-badge&logo=shield-alt&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Security assessment and monitoring | Very High to Extreme |
 | **Compliance Platform** | [![Compliance](https://img.shields.io/badge/Type-Compliance_Platform-green?style=for-the-badge&logo=clipboard-check&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Regulatory compliance systems | High to Very High |
-| **Data Analytics** | [![Analytics](https://img.shields.io/badge/Type-Data_Analytics-orange?style=for-the-badge&logo=chart-bar&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Data processing and analysis | Moderate to High |
-| **API Services** | [![API](https://img.shields.io/badge/Type-API_Services-purple?style=for-the-badge&logo=code&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Backend services and APIs | Moderate to High |
-| **Frontend Apps** | [![Frontend](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=desktop&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | User-facing applications | Low to Moderate |
-| **Development Tools** | [![DevTools](https://img.shields.io/badge/Type-Development_Tools-lightblue?style=for-the-badge&logo=tools&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Development utilities | Low to Moderate |
+| **Data Analytics** | [![Analytics](https://img.shields.io/badge/Type-Data_Analytics-orange?style=for-the-badge&logo=chart-line&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Data processing and analysis | Moderate to High |
+| **API Services** | [![API](https://img.shields.io/badge/Type-API_Services-purple?style=for-the-badge&logo=cloud&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Backend services and APIs | Moderate to High |
+| **Frontend Apps** | [![Frontend](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | User-facing applications | Low to Moderate |
+| **Development Tools** | [![DevTools](https://img.shields.io/badge/Type-Development_Tools-lightblue?style=for-the-badge&logo=wrench&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Development utilities | Low to Moderate |
+
+### 🏢 Business Process Types
+| Process Type | Badge | Description | Typical Security Level |
+|--------------|-------|-------------|------------------------|
+| **Sales** | [![Sales](https://img.shields.io/badge/Process-Sales-darkgreen?style=for-the-badge&logo=handshake&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Customer relationships, sales pipeline | Moderate to High |
+| **Marketing** | [![Marketing](https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Brand management, campaigns | Low to Moderate |
+| **Finance** | [![Finance](https://img.shields.io/badge/Process-Finance-darkblue?style=for-the-badge&logo=dollar-sign&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Financial reporting, payments | High to Very High |
+| **Human Resources** | [![HR](https://img.shields.io/badge/Process-Human_Resources-teal?style=for-the-badge&logo=users&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Employee management, payroll | High to Very High |
+| **Legal** | [![Legal](https://img.shields.io/badge/Process-Legal-darkred?style=for-the-badge&logo=balance-scale&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Contract management, compliance | Very High to Extreme |
+| **Operations** | [![Operations](https://img.shields.io/badge/Process-Operations-brown?style=for-the-badge&logo=cogs&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Business operations, logistics | Moderate to High |
+| **Executive** | [![Executive](https://img.shields.io/badge/Process-Executive-gold?style=for-the-badge&logo=university&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications) | Strategic planning, governance | Very High to Extreme |
 
 ---
 
