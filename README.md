@@ -358,7 +358,12 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 
 ---
 
-## 🏆 Business Value & Strategic Impact
+
+# 🏷️ Project Classifications According to Hack23 Framework
+
+*Following the [Hack23 Classification & Business Continuity Framework](CLASSIFICATION.md) guidelines*
+
+## 📊 Homepage Project Classification
 
 ### 🎯 Project Classification
 [![Project Type](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
@@ -387,7 +392,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-<$100_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
-[![Market Position](https://img.shields.io/badge/Position-Follower-yellow?style=for-the-badge&logo=users&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
+[![Market Position](https://img.shields.io/badge/Position-Follower-yellow?style=for-the-badge&logo=trending-up&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 [![Customer Trust](https://img.shields.io/badge/Trust-Basic_scores-yellow?style=for-the-badge&logo=handshake&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 [![Regulatory Access](https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 
@@ -398,14 +403,9 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Disadvantage-red?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
+---
 
-### Black Trigram
-
-🥋 **어둠의 무예로 완벽한 일격을 추구하라** - "Master the dark arts through the pursuit of the perfect strike"
-
-**🔥 Flagship Project** - A realistic 2D precision combat simulator inspired by traditional Korean martial arts, emphasizing anatomical targeting, realistic physics, and authentic techniques across 5 distinct fighter archetypes.
-
-## 🏆 Business Value & Strategic Impact
+## 🥋 Black Trigram Project Classification
 
 ### 🎯 Project Classification
 [![Project Type](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
@@ -434,7 +434,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-$800_Savings-orange?style=for-the-badge&logo=lock&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
 
 ### 🎯 Competitive Differentiation
-[![Market Position](https://img.shields.io/badge/Position-Competitive-green?style=for-the-badge&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
+[![Market Position](https://img.shields.io/badge/Position-Competitive-green?style=for-the-badge&logo=trending-up&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 [![Customer Trust](https://img.shields.io/badge/Trust-Standard_scores-green?style=for-the-badge&logo=handshake&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 [![Regulatory Access](https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
 
@@ -445,36 +445,9 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Competitive_Advantage-green?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
-**Key Features:**
+---
 
-- **70 Anatomical Vital Points**: Strategic targeting system based on traditional Korean martial arts knowledge (급소격)
-- **5 Unique Player Archetypes**: Musa (무사), Amsalja (암살자), Hacker, Intelligence Operative, Organized Crime
-- **Authentic Korean Martial Arts**: Traditional techniques including Taekkyeon, Hapkido, and historical combat methods
-- **Realistic Combat Physics**: Advanced trauma simulation and realistic damage modeling with authentic body mechanics
-- **Educational Gameplay**: Combines traditional philosophy with modern game mechanics for cultural learning
-- **Precision Combat System**: Emphasis on timing, positioning, and anatomical knowledge for tactical advantage
-- **Cultural Authenticity**: Deep integration of Korean martial arts philosophy and terminology with respectful representation
-
-**Technical Specifications:**
-
-- Built with Rust for maximum performance and memory safety
-- Cross-platform compatibility (Windows, macOS, Linux)
-- Modern graphics rendering with realistic physics simulation
-- Comprehensive testing with high code coverage
-- Supply chain security with SLSA Level 3 compliance and OpenSSF best practices
-
-**Links:**
-
-- 🎮 [Play Now](https://blacktrigram.com)
-- 📖 [Documentation](black-trigram-docs.html)
-- ⭐ [Features](black-trigram-features.html)
-- 💾 [GitHub Repository](https://github.com/Hack23/blacktrigram)
-
-### CIA Compliance Manager
-
-A comprehensive security assessment platform for the CIA triad (Confidentiality, Integrity, Availability) with business impact analysis, compliance mapping to regulatory frameworks like NIST, ISO, GDPR, and cost estimation features.
-
-## 🏆 Business Value & Strategic Impact
+## 🛡️ CIA Compliance Manager Project Classification
 
 ### 🎯 Project Classification
 [![Project Type](https://img.shields.io/badge/Type-Compliance_Platform-green?style=for-the-badge&logo=clipboard-check&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
@@ -514,25 +487,9 @@ A comprehensive security assessment platform for the CIA triad (Confidentiality,
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-Low-lightgreen?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Strong_Advantage-blue?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
-**Key Features:**
+---
 
-- Security level assessment across CIA triad dimensions
-- Compliance mapping to major frameworks (NIST, ISO, GDPR, HIPAA, SOC2, PCI DSS)
-- Business impact analysis and cost estimation
-- Interactive visualizations and implementation guidance
-
-**Links:**
-
-- 🚀 [Launch Application](https://hack23.github.io/cia-compliance-manager/)
-- 📖 [Documentation](cia-compliance-manager-docs.html)
-- ⭐ [Features](cia-compliance-manager-features.html)
-- 💾 [GitHub Repository](https://github.com/Hack23/cia-compliance-manager)
-
-### Citizen Intelligence Agency
-
-A volunteer-driven open source intelligence (OSINT) project providing comprehensive analysis of political activities in Sweden. Through advanced monitoring of key political figures and institutions, it delivers financial performance metrics, risk assessment analysis, political trend analysis, politician ranking systems, performance comparisons, and transparency insights.
-
-## 🏆 Business Value & Strategic Impact
+## 🏛️ Citizen Intelligence Agency Project Classification
 
 ### 🎯 Project Classification
 [![Project Type](https://img.shields.io/badge/Type-Data_Analytics-orange?style=for-the-badge&logo=chart-line&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
@@ -572,25 +529,9 @@ A volunteer-driven open source intelligence (OSINT) project providing comprehens
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-Minimal-success?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Dominant_Advantage-darkblue?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
-**Key Features:**
+---
 
-- Interactive dashboards for political activity visualization
-- Political scoreboard systems and performance rankings
-- Critical analysis tools for political trends and voting patterns
-- Transparency metrics and accountability measures
-- Data-driven insights from authoritative Swedish government sources
-
-**Links:**
-
-- 📖 [Documentation](cia-docs.html)
-- ⭐ [Features](cia-features.html)
-- 💾 [GitHub Repository](https://github.com/Hack23/cia)
-
-### Lambda in Private VPC
-
-A multi-region active/active website leveraging AWS Resilience Hub policy compliance and runbooks for rapid recovery from failures and high availability. Demonstrates cloud architecture best practices for availability and resilience.
-
-## 🏆 Business Value & Strategic Impact
+## ☁️ Lambda in Private VPC Project Classification
 
 ### 🎯 Project Classification
 [![Project Type](https://img.shields.io/badge/Type-Core_Infrastructure-red?style=for-the-badge&logo=server&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
@@ -630,70 +571,4 @@ A multi-region active/active website leveraging AWS Resilience Hub policy compli
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-Low-lightgreen?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Strong_Advantage-blue?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
 
-**Links:**
-
-- 💾 [GitHub Repository](https://github.com/Hack23/lambda-in-private-vpc)
-
-## Past Projects
-
-### Sonar-CloudFormation-Plugin
-
-SonarQube plugin for analyzing AWS CloudFormation templates with security best practices based on NIST, CWE, and ISO standards. Integrates CFN-nag static analysis capabilities into SonarQube for enhanced infrastructure as code security scanning.
-
-## 🏆 Business Value & Strategic Impact
-
-### 🎯 Project Classification
-[![Project Type](https://img.shields.io/badge/Type-Security_Tools-darkblue?style=for-the-badge&logo=shield-alt&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
-[![Process Type](https://img.shields.io/badge/Process-Operations-brown?style=for-the-badge&logo=cogs&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
-
-### 🔒 Security Classification
-[![Confidentiality](https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels)
-[![Integrity](https://img.shields.io/badge/Integrity-Critical-red?style=for-the-badge&<!-- filepath: /workspaces/homepage/README.md -->
-# Hack23 Homepage
-
-Welcome to the Hack23 homepage repository. This is the source code for [Hack23](https://hack23.com/), a Swedish innovation hub founded in 2025 by James Pether Sörling, focusing on precision gaming experiences, security, compliance, and transparency tools.
-
-![License](https://img.shields.io/github/license/Hack23/homepage)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
-[![Scorecard supply-chain security](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml)
-[![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
-
-## 🏆 Business Value & Strategic Impact
-
-### 🎯 Project Classification
-[![Project Type](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
-[![Process Type](https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications)
-
-### 🔒 Security Classification
-[![Confidentiality](https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels)
-[![Integrity](https://img.shields.io/badge/Integrity-Low-lightgreen?style=for-the-badge&logo=check-circle&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels)
-[![Availability](https://img.shields.io/badge/Availability-Standard-lightgreen?style=for-the-badge&logo=server&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels)
-
-### ⏱️ Business Continuity
-[![RTO](https://img.shields.io/badge/RTO-Standard_(>72hrs)-lightgrey?style=for-the-badge&logo=clock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications)
-[![RPO](https://img.shields.io/badge/RPO-Extended_(>24hrs)-lightgrey?style=for-the-badge&logo=database&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications)
-
-### 💰 Business Impact Analysis Matrix
-
-| Impact Category | Financial | Operational | Reputational | Regulatory |
-|-----------------|-----------|-------------|--------------|------------|
-| **🔒 Confidentiality** | [![Negligible - No impact](https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels) | [![Negligible - No impact](https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels) | [![Negligible - No impact](https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=newspaper&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels) | [![Negligible - No implications](https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels) |
-| **✅ Integrity** | [![Negligible - No impact](https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels) | [![Low - Minor inconvenience](https://img.shields.io/badge/Low-Minor_inconvenience-lightgreen?style=for-the-badge&logo=trending-down&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels) | [![Low - Limited visibility](https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels) | [![Negligible - No implications](https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels) |
-| **⏱️ Availability** | [![Negligible - No impact](https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels) | [![Low - Minor inconvenience](https://img.shields.io/badge/Low-Minor_inconvenience-lightgreen?style=for-the-badge&logo=stop-circle&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels) | [![Low - Limited visibility](https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels) | [![Negligible - No implications](https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels) |
-
-### 🛡️ Security Investment Returns
-[![ROI Level](https://img.shields.io/badge/ROI-Minimal-lightgrey?style=for-the-badge&logo=chart-line&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Risk Mitigation](https://img.shields.io/badge/Risk_Mitigation-20%_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-[![Breach Prevention](https://img.shields.io/badge/Breach_Prevention-<$100_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns)
-
-### 🎯 Competitive Differentiation
-[![Market Position](https://img.shields.io/badge/Position-Follower-yellow?style=for-the-badge&logo=users&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
-[![Customer Trust](https://img.shields.io/badge/Trust-Basic_scores-yellow?style=for-the-badge&logo=handshake&logoColor=black)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
-[![Regulatory Access](https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation)
-
-### 📈 Porter's Five Forces Strategic Impact
-[![Buyer Power](https://img.shields.io/badge/Buyer_Power-High-orange?style=flat-square&logo=users&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
-[![Supplier Power](https://img.shields.io/badge/Supplier_Power-Minimal-success?style=flat-square&logo=handshake&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
-[![Entry Barriers](https://img.shields.io/badge/Entry_Barriers-Low-lightgreen?style=flat-square&logo=shield-alt&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
-[![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
-[![Rivalry](https://img.shields.io/badge/Rivalry-Disadvantage-red?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces)
+---
