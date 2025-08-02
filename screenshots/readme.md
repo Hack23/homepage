@@ -219,7 +219,7 @@ The CIA project leverages advanced analytics and visualizations to enhance under
 ![Main dashboard providing a high-level overview of the project's key features](Page-main-OVERVIEW-101.png)
 
 ### **Overview of the Ministry of Enterprise and its key activities**  
-![Overview of the Ministry of Enterprise and its key activities](Page-ministry-OVERVIEW-N%C3%A4ringsdepartementet-253.png)
+![Overview of the Ministry of Enterprise and its key activities](https://hack23.com/screenshots/Page-ministry-OVERVIEW-Naringsdepartementet-253.png)
 
 ### **Ranking of ministries based on performance and other criteria**  
 ![Ranking of ministries based on performance and other criteria](Page-ministryranking-OVERVIEW-168.png)
