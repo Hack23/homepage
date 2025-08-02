@@ -211,7 +211,7 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 
 **Links:**
 - **Company LinkedIn:** [https://www.linkedin.com/company/hack23/](https://www.linkedin.com/company/hack23/)
-- **Company Registration:** [Allabolag.se](https://www.allabolag.se/foretag/hack23-ab/-/-/2KJBPZZI0000)
+- **Company Registration:** [Allabolag.se](https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I)
 - **Personal LinkedIn:** [James Pether Sörling](https://www.linkedin.com/in/jamessorling/)
 - **OpenHub Profile:** [https://www.openhub.net/accounts/pether](https://www.openhub.net/accounts/pether)
 
