@@ -1,6 +1,6 @@
 # Hack23
 
-[Hack23](https://www.hack23.com/) är ett initiativ av James Pether Sörling, en säkerhetsprofessional och bidragsgivare till öppen källkod. Webbplatsen visar hans expertis inom informationssäkerhet och leverans av säkra molnsystem. Han är en stark förespråkare för transparens i organisationer och är engagerad i att säkerställa säkerheten och tillförlitligheten i sina öppna källkodsprojekt genom användning av branschens bästa praxis som [OpenSSF](https://openssf.org/) och [CII Best Practices](https://bestpractices.coreinfrastructure.org/).
+[Hack23](https://hack23.com/) är ett initiativ av James Pether Sörling, en säkerhetsprofessional och bidragsgivare till öppen källkod. Webbplatsen visar hans expertis inom informationssäkerhet och leverans av säkra molnsystem. Han är en stark förespråkare för transparens i organisationer och är engagerad i att säkerställa säkerheten och tillförlitligheten i sina öppna källkodsprojekt genom användning av branschens bästa praxis som [OpenSSF](https://openssf.org/) och [CII Best Practices](https://bestpractices.coreinfrastructure.org/).
 
 # Medborgarunderrättelsebyrån (CIA)
 
