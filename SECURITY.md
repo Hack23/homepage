@@ -10,7 +10,7 @@ This project is under active development, and we provide security updates for th
 
 ## Reporting a Vulnerability
 
-We take the security of the lambda-in-private-vpc project seriously. If you have found a potential security vulnerability, we kindly ask you to report it privately, so that we can assess and address the issue before it becomes publicly known.
+We take the security of the project project seriously. If you have found a potential security vulnerability, we kindly ask you to report it privately, so that we can assess and address the issue before it becomes publicly known.
 
 ### What Constitutes a Vulnerability
 
@@ -26,14 +26,14 @@ A vulnerability is a weakness or flaw in the project that can be exploited to co
 
 Please follow these steps to privately report a security vulnerability:
 
-1. On GitHub.com, navigate to the main page of the [lambda-in-private-vpc repository](https://github.com/Hack23/lambda-in-private-vpc).
+1. On GitHub.com, navigate to the main page of the project.
 2. Under the repository name, click **Security**. If you cannot see the "Security" tab, select the dropdown menu, and then click **Security**.
 3. In the left sidebar, under "Reporting", click **Advisories**.
 4. Click **Report a vulnerability** to open the advisory form.
 5. Fill in the advisory details form. Provide as much information as possible to help us understand and reproduce the issue.
 6. At the bottom of the form, click **Submit report**.
 
-After you submit the report, the maintainers of the lambda-in-private-vpc repository will be notified. They will review the report, validate the vulnerability, and take necessary actions to address the issue. You will be added as a collaborator and credited for the security advisory.
+After you submit the report, the maintainers of the project repository will be notified. They will review the report, validate the vulnerability, and take necessary actions to address the issue. You will be added as a collaborator and credited for the security advisory.
 
 ### Disclosure Timeline
 
@@ -48,4 +48,4 @@ Upon receipt of a vulnerability report, our team will:
 
 We appreciate your effort in helping us maintain a secure and reliable project. If your report results in a confirmed security fix, we will recognize your contribution in the release notes and/or a public acknowledgment, unless you request to remain anonymous.
 
-Thank you for helping us keep the lambda-in-private-vpc project and its users safe.
+Thank you for helping us keep the project project and its users safe.
