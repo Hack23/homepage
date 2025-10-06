@@ -1196,6 +1196,161 @@ footer {
   }
 }
 
+/* ==================================================
+   SCREENSHOT CONTAINER STYLES
+   ================================================== */
+.screenshot-container {
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.screenshot-container:hover {
+  box-shadow: 0 4px 16px var(--card-shadow);
+  transform: translateY(-2px);
+}
+
+.screenshot-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.screenshot-container img:hover {
+  transform: scale(1.02);
+}
+
+.screenshot-container figcaption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.expand-hint {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.screenshot-container:hover .expand-hint {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .screenshot-container {
+    border-color: var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 204, 102, 0.2);
+  }
+  
+  .screenshot-container:hover {
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.4);
+  }
+  
+  .expand-hint {
+    background: rgba(0, 204, 102, 0.3);
+    border: 1px solid var(--border-color);
+    text-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+}
+
+/* Fullscreen overlay for screenshots */
+.fullscreen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.fullscreen-overlay img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.fullscreen-caption {
+  color: white;
+  margin-top: 1.5rem;
+  max-width: 800px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fullscreen-overlay {
+    background: rgba(0, 26, 26, 0.98);
+  }
+  
+  .fullscreen-overlay img {
+    box-shadow: 0 0 40px rgba(0, 204, 102, 0.3);
+  }
+  
+  .fullscreen-caption {
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(0, 204, 102, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .screenshot-container {
+    padding: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  .expand-hint {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .fullscreen-overlay {
+    padding: 1rem;
+  }
+  
+  .fullscreen-overlay img {
+    max-width: 95%;
+    max-height: 75vh;
+  }
+  
+  .fullscreen-caption {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+}
+
 /* Add dark theme overrides at the end of your file to always force a dark look */
 :root {
   --primary-color: #00cc66;
