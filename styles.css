@@ -56,6 +56,312 @@
   }
 }
 
+/* ==================================================
+   BLACK TRIGRAM THEME (Martial Arts Red)
+   ================================================== */
+.theme-black-trigram {
+  --primary-color: #c0392b;
+  --primary-light: #e74c3c;
+  --primary-dark: #a93226;
+  --accent-color: #ffd700;
+  --header-color: #c0392b;
+  --border-color: rgba(192, 57, 43, 0.2);
+  --card-border: rgba(192, 57, 43, 0.2);
+  --korean-font: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  
+  /* Archetype Colors */
+  --musa-color: #8e44ad;
+  --amsalja-color: #27ae60;
+  --hacker-color: #2980b9;
+  --jeongbo-color: #e74c3c;
+  --jojik-color: #f39c12;
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-black-trigram {
+    --primary-color: #ff6b6b;
+    --primary-light: #ff8e8e;
+    --primary-dark: #ff4757;
+    --accent-color: #ffd700;
+    --bg-color: #1a1a1a;
+    --card-bg: #2c2c2c;
+    --text-color: #f0f0f0;
+    --text-secondary: #aaaaaa;
+    --header-color: #ff6b6b;
+    --border-color: rgba(255, 107, 107, 0.3);
+    --card-border: rgba(255, 107, 107, 0.3);
+    --card-shadow: rgba(255, 107, 107, 0.2);
+    --link-color: #ff8e8e;
+    --link-hover: #ff6b6b;
+    --button-bg: #ff6b6b;
+    --button-text: #1a1a1a;
+    
+    /* Dark mode archetype colors */
+    --musa-color: #bd93f9;
+    --amsalja-color: #50fa7b;
+    --hacker-color: #8be9fd;
+    --jeongbo-color: #ff79c6;
+    --jojik-color: #f1fa8c;
+  }
+  
+  /* Black Trigram scan line effect override */
+  .theme-black-trigram::after {
+    background: repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      rgba(255, 107, 107, 0.02) 1px,
+      transparent 2px
+    );
+  }
+
+  /* Black Trigram pattern - circular instead of hex */
+  .theme-black-trigram::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ff6b6b' fill-opacity='0.02'%3E%3Cpath d='M30 30m-30 0a30 30 0 1 1 60 0a30 30 0 1 1 -60 0'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  /* Override buttons for Black Trigram */
+  .theme-black-trigram .app-link a {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 107, 107, 0.2),
+      rgba(255, 75, 87, 0.4)
+    );
+  }
+  
+  .theme-black-trigram .app-link a::before {
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 107, 107, 0.2) 50%,
+      transparent 100%
+    );
+  }
+  
+  .theme-black-trigram .btn {
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+  }
+  
+  .theme-black-trigram .btn:hover {
+    background: rgba(255, 107, 107, 0.3);
+  }
+  
+  /* Scanner effect for Black Trigram */
+  .theme-black-trigram .scanner-effect {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 107, 107, 0) 85%,
+      rgba(255, 107, 107, 0.2) 90%,
+      rgba(255, 107, 107, 0) 95%
+    );
+  }
+  
+  /* Card borders for Black Trigram */
+  .theme-black-trigram .card {
+    background: linear-gradient(
+      135deg,
+      rgba(42, 42, 42, 0.95) 0%,
+      rgba(26, 26, 26, 0.98) 100%
+    );
+  }
+}
+
+/* Korean font support */
+.theme-black-trigram .korean-text,
+.theme-black-trigram h1,
+.theme-black-trigram h2,
+.theme-black-trigram h3 {
+  font-family: var(--korean-font);
+}
+
+/* Black Trigram specific card */
+.black-trigram-card {
+  border: 2px solid #ff6b35;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));
+}
+
+/* ==================================================
+   BLACK TRIGRAM ARCHETYPE CARDS
+   ================================================== */
+.musa-card {
+  border-left: 4px solid var(--musa-color);
+}
+
+.amsalja-card {
+  border-left: 4px solid var(--amsalja-color);
+}
+
+.hacker-card {
+  border-left: 4px solid var(--hacker-color);
+}
+
+.jeongbo-card {
+  border-left: 4px solid var(--jeongbo-color);
+}
+
+.jojik-card {
+  border-left: 4px solid var(--jojik-color);
+}
+
+/* ==================================================
+   BLACK TRIGRAM TABLES
+   ================================================== */
+.archetype-table,
+.trigram-table,
+.control-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.archetype-table th,
+.archetype-table td,
+.trigram-table th,
+.trigram-table td,
+.control-table th,
+.control-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.archetype-table th,
+.trigram-table th,
+.control-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .archetype-table,
+  .trigram-table,
+  .control-table {
+    font-size: 0.8rem;
+  }
+}
+
+/* Korean Impact Matrix (Black Trigram specific) */
+.korean-impact-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.korean-impact-matrix th,
+.korean-impact-matrix td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.korean-impact-matrix th {
+  background-color: #ff6b35;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.korean-impact-matrix td img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .korean-impact-matrix {
+    font-size: 0.8rem;
+  }
+  
+  .korean-impact-matrix th,
+  .korean-impact-matrix td {
+    padding: 0.5rem;
+  }
+}
+
+/* ==================================================
+   CODE AND INSTALLATION BLOCKS
+   ================================================== */
+.code-block {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .code-block {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
+}
+
+.installation-step {
+  background: #f0f9ff;
+  border-left: 4px solid #0369a1;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .installation-step {
+    background: rgba(3, 105, 161, 0.1);
+    border-left-color: var(--primary-color);
+  }
+}
+
+/* Badge groups */
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.badge-group img {
+  height: auto;
+  max-width: 100%;
+}
+
+.porters-forces {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.porters-forces img {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Korean emphasis and martial arts terms */
+.korean-emphasis {
+  font-weight: 700;
+  color: #ff6b35;
+}
+
+.martial-arts-term {
+  font-weight: 600;
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+@media (prefers-color-scheme: dark) {
+  .korean-emphasis {
+    color: #ff8e8e;
+  }
+  
+  .martial-arts-term {
+    border-bottom-color: #aaa;
+  }
+}
+
 /* Base styles */
 * {
   transition-property: color, background-color, border-color, box-shadow;
@@ -700,6 +1006,194 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* ==================================================
+   DOCUMENTATION-SPECIFIC STYLES
+   ================================================== */
+
+/* Documentation tables */
+.documentation-map,
+.data-sources-table,
+.runtime-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.documentation-map th,
+.documentation-map td,
+.data-sources-table th,
+.data-sources-table td,
+.runtime-table th,
+.runtime-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--section-border);
+}
+
+.documentation-map th,
+.data-sources-table th,
+.runtime-table th {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.documentation-map tbody tr:last-child td,
+.data-sources-table tbody tr:last-child td,
+.runtime-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.documentation-map tbody tr:hover,
+.data-sources-table tbody tr:hover,
+.runtime-table tbody tr:hover {
+  background: var(--bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .documentation-map,
+  .data-sources-table,
+  .runtime-table {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 204, 102, 0.1);
+  }
+  
+  .documentation-map th,
+  .data-sources-table th,
+  .runtime-table th {
+    background: rgba(0, 204, 102, 0.2);
+    color: var(--primary-light);
+    text-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+  
+  .documentation-map tbody tr:hover,
+  .data-sources-table tbody tr:hover,
+  .runtime-table tbody tr:hover {
+    background: rgba(0, 204, 102, 0.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .documentation-map,
+  .data-sources-table,
+  .runtime-table {
+    font-size: 0.85rem;
+  }
+  
+  .documentation-map th,
+  .documentation-map td,
+  .data-sources-table th,
+  .data-sources-table td,
+  .runtime-table th,
+  .runtime-table td {
+    padding: 0.5rem;
+  }
+}
+
+/* Status badges */
+.badge-success,
+.badge-warning {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-success {
+  background: #28a745;
+  color: white;
+}
+
+.badge-warning {
+  background: #ffc107;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-success {
+    background: rgba(40, 167, 69, 0.3);
+    color: #50fa7b;
+    border: 1px solid #50fa7b;
+    box-shadow: 0 0 8px rgba(80, 250, 123, 0.3);
+  }
+  
+  .badge-warning {
+    background: rgba(255, 193, 7, 0.3);
+    color: #f1fa8c;
+    border: 1px solid #f1fa8c;
+    box-shadow: 0 0 8px rgba(241, 250, 140, 0.3);
+  }
+}
+
+/* Specialized card types for documentation */
+.architecture-card {
+  border-left: 4px solid #0366d6;
+}
+
+.security-card {
+  border-left: 4px solid #8e44ad;
+}
+
+.data-card {
+  border-left: 4px solid #27ae60;
+}
+
+.concept-card {
+  border-left: 4px solid #2980b9;
+}
+
+.process-card {
+  border-left: 4px solid #e74c3c;
+}
+
+.devops-card {
+  border-left: 4px solid #f39c12;
+}
+
+.business-card {
+  border-left: 4px solid #16a085;
+}
+
+@media (prefers-color-scheme: dark) {
+  .architecture-card {
+    box-shadow: -2px 0 8px rgba(3, 102, 214, 0.3);
+  }
+  
+  .security-card {
+    box-shadow: -2px 0 8px rgba(142, 68, 173, 0.3);
+  }
+  
+  .data-card {
+    box-shadow: -2px 0 8px rgba(39, 174, 96, 0.3);
+  }
+  
+  .concept-card {
+    box-shadow: -2px 0 8px rgba(41, 128, 185, 0.3);
+  }
+  
+  .process-card {
+    box-shadow: -2px 0 8px rgba(231, 76, 60, 0.3);
+  }
+  
+  .devops-card {
+    box-shadow: -2px 0 8px rgba(243, 156, 18, 0.3);
+  }
+  
+  .business-card {
+    box-shadow: -2px 0 8px rgba(22, 160, 133, 0.3);
+  }
 }
 
 /* Add dark theme overrides at the end of your file to always force a dark look */
