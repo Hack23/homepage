@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Omfattande dokumentation för Medborgarunderrättelsebyrån - en plattform för öppen underrättelsetjänst (OSINT) fokuserad på att övervaka svensk politisk aktivitet och ge transparensinsikter."
+      content="Politisk transparensplattform arkitektur: C4-modeller, dataarkitektur för riksdag/regering/myndigheter, Världsbanken integration, OSINT-mönster, API-dokumentation."
     />
-    <title>Medborgarunderrättelsebyråns Dokumentation | Komplett Politisk Transparens & OSINT-plattformsguide</title>
+    <title>Citizen Intelligence Agency Arkitekturdokumentation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,25 +18,25 @@
     <link rel="canonical" href="https://hack23.com/cia-docs_sv.html" />
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Medborgarunderrättelsebyråns Dokumentation | Politisk Transparens och OSINT-plattform" />
-    <meta property="og:description" content="Omfattande dokumentation för Medborgarunderrättelsebyrån - en volontärdriven OSINT-plattform för politisk transparens i Sverige." />
+    <meta property="og:title" content="Citizen Intelligence Agency Arkitekturdokumentation" />
+    <meta property="og:description" content="Öppen källkod politisk transparensplattform arkitektur: C4-modeller, datadesign för riksdag/regeringsövervakning, Världsbanken integration, OSINT-mönster, API-dokumentation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hack23.com/cia-docs_sv.html" />
     <meta property="og:image" content="https://cia.sourceforge.io/cia-logo.png" />
     
     <!-- Additional SEO keywords -->
-    <meta name="keywords" content="medborgarunderrättelsebyrån, politisk transparens, OSINT, öppen underrättelsetjänst, Sverige, politisk övervakning, dataanalys, styrningsmetriker, riksdagsspårning, demokrati" />
+    <meta name="keywords" content="politisk dataarkitektur, C4 arkitekturmodeller, OSINT systemdesign, öppen källkod plattformsarkitektur, regeringsdata visualisering, lösningsarkitektur, utvecklardokumentation, riksdag API, öppen data arkitektur, transparensplattform design">
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "Medborgarunderrättelsebyråns Dokumentation",
-      "description": "Omfattande dokumentation för politisk transparens OSINT-plattform som täcker svensk riksdagsövervakning, styrningsmetriker, demokratiska ansvarsskyldighet dashboards, C4-arkitekturmodeller, säkerhetsimplementationer, datamodeller, SWOT-analys och kompletta politiska underrättelsesamling metoder.",
+      "headline": "Citizen Intelligence Agency - Arkitektur & Systemdokumentation",
+      "description": "Teknisk dokumentation för utvecklare, lösningsarkitekter, molnarkitekter och IT-chefer som bygger politiska transparensplattformar. Inkluderar C4-arkitekturmodeller, dataarkitektur för riksdag/regering/myndighetsövervakning, Världsbanken integrationsmönster, säkerhetsarkitektur, system mindmaps, SWOT-analys, datamodeller med entitetsrelationer, processflödesscheman, tillståndsdiagram, CI/CD-arbetsflöden och API-dokumentation. Öppen källkod OSINT-plattform med transparent systemdesign för demokratisk ansvarsskyldighet.",
       "image": "https://cia.sourceforge.io/cia-logo.png",
       "datePublished": "2025-01-01",
-      "dateModified": "2025-09-23",
+      "dateModified": "2025-10-06",
       "inLanguage": "sv",
       "author": {
         "@type": "Person",
@@ -45,7 +45,8 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Hack23",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
         "logo": {
           "@type": "ImageObject",
           "url": "https://cia.sourceforge.io/cia-logo.png"
@@ -57,40 +58,77 @@
       },
       "about": {
         "@type": "SoftwareApplication",
-        "name": "Medborgarunderrättelsebyrån",
+        "name": "Citizen Intelligence Agency",
+        "alternateName": "CIA Political Transparency Platform",
         "applicationCategory": "AnalyticsApplication",
-        "applicationSubCategory": "Politisk Transparensplattform"
+        "applicationSubCategory": "Politisk Transparensplattform",
+        "operatingSystem": "Plattformsoberoende"
       },
-      "teaches": [
-        "Politisk Transparensövervakning",
-        "OSINT Underrättelsesamling",
-        "Demokratisk Ansvarsskyldighetanalys",
-        "Riksdagsdataanalys",
-        "Styrningsmetriker Bedömning",
-        "Politisk Beslutsspårning",
-        "Öppen Källkodsunderrättelsetjänst Metoder"
-      ],
-      "educationalLevel": "Mellan till Avancerad",
-      "learningResourceType": [
-        "Plattformsdokumentation",
-        "Politisk Analysguide",
-        "OSINT Metodologi",
-        "Datavisualiseringsguide",
-        "Demokratisk Övervakningsmanual"
+      "audience": [
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Utvecklare",
+          "name": "Mjukvaruutvecklare & Öppen Källkod Bidragsgivare"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Lösningsarkitekt",
+          "name": "Lösnings- & Molnarkitekter"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "IT-professionell",
+          "name": "IT-chefer & IT-ledare"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Dataarkitekt",
+          "name": "Dataarkitekter & Analysprofessionella"
+        }
       ],
       "featureList": [
-        "Nuvarande & Framtida Arkitektur (Politisk Plattform C4 Modeller)",
+        "Kompletta C4 Arkitekturmodeller (Nuvarande & Framtida Tillstånd)",
+        "Politisk Dataarkitektur (Riksdag, Regering, Myndigheter, Världsbanken)",
         "Säkerhetsarkitektur för Politisk Data",
-        "Systemkartor & Framtida Konceptkartor",
+        "System Mindmaps & Framtida Konceptkartor",
         "Strategisk SWOT-analys (Nuvarande & Framtida)",
-        "Datamodeller med Politisk Entitetsdokumentation",
-        "Riksdagsövervakningdashboards",
-        "Ministerieaktivitetsspårning",
+        "Omfattande Datamodeller med Entitetsdokumentation",
+        "Processflödesscheman & Tillståndsdiagram",
+        "CI/CD Arbetsflöden & DevOps Integration",
+        "Komplett API-dokumentation",
+        "Riksdagsövervakningsdashboards",
+        "Ministerium & Myndighetsspårning",
+        "Världsbanken Landsindikatorer Integration",
         "Politisk Beslutsflödesanalys",
-        "Styrningsmetriker & Prestationsrankningar",
-        "Demokratisk Ansvarsskyldighetrapportering"
+        "Styrningsmetriker & Prestandarankningar",
+        "Demokratisk Ansvarsskyldighetrapportering",
+        "Öppen Källkod Bidragsriktlinjer",
+        "15+ Tekniska Diagram & Dokumentationsresurser"
       ],
-      "keywords": "politisk transparens, OSINT-plattform, svensk riksdagsövervakning, demokratisk ansvarsskyldighet, styrningsmetriker, politisk analys, öppen källkodsunderrättelsetjänst, transparens Sverige"
+      "teaches": [
+        "C4 Arkitekturmodellering för Politiska Plattformar",
+        "Politisk Dataarkitektur Design",
+        "OSINT Systemintegrationsmönster",
+        "Regeringsdata Visualiseringstekniker",
+        "Öppen Data API Integration (Riksdag, Världsbanken)",
+        "Demokratisk Ansvarsskyldighetmetrik Design",
+        "Politisk Transparensplattform Arkitektur",
+        "Systemdatamodellering för Politiska Entiteter",
+        "CI/CD för Öppen Källkod Projekt",
+        "Bidra till Öppen Källkod Politiska Verktyg"
+      ],
+      "educationalLevel": "Professionell / Avancerad",
+      "learningResourceType": [
+        "Arkitekturdokumentation",
+        "Systemdesignmönster",
+        "Dataarkitekturguide",
+        "Teknisk Referens",
+        "API-dokumentation",
+        "Öppen Källkod Bidragsguide"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": "politisk transparens arkitektur, C4 modeller, OSINT plattformsdesign, riksdag dataarkitektur, regeringsdata visualisering, öppen källkod utveckling, lösningsarkitektur, molnarkitektur, demokratisk ansvarsskyldighet, öppen data integration, Världsbanken API, politisk analys"
     }
     </script>
     
@@ -923,18 +961,18 @@
       <div class="logo-container">
         <img
           src="https://cia.sourceforge.io/cia-logo.png"
-          alt="Medborgarunderrättelsebyråns Logotyp"
+          alt="Citizen Intelligence Agency Logotyp"
           class="logo"
           width="80"
           height="80"
         />
       </div>
       <h1>
-        Medborgarunderrättelsebyråns Dokumentation
+        Citizen Intelligence Agency Dokumentation
         <span class="app-version">senaste</span>
       </h1>
       <p>
-        Omfattande dokumentation för Medborgarunderrättelsebyrån - en oberoende, volontärdriven OSINT-plattform för politisk transparens i Sverige.
+        Omfattande dokumentation för Citizen Intelligence Agency - en oberoende, volontärdriven OSINT-plattform för riksdag, regering, myndigheter och globala indikatorer i Sverige.
       </p>
       <div class="badges">
         <a
@@ -1037,9 +1075,17 @@
       <section id="overview">
         <h2>Projektöversikt</h2>
         <p>
-          Medborgarunderrättelsebyrån är ett volontärdrivet projekt för öppen källkodsunderrättelse (OSINT) som 
-          tillhandahåller omfattande analys av politiska aktiviteter i Sverige. Genom avancerad övervakning av viktiga 
-          politiska personer och institutioner levererar vi:
+          Citizen Intelligence Agency är ett volontärdrivet projekt för öppen källkodsunderrättelse (OSINT) som 
+          tillhandahåller omfattande analys av politiska aktiviteter i Sverige. Plattformen täcker fyra huvudområden:
+        </p>
+        <ul>
+          <li><strong>Riksdagen</strong> - Sveriges parlament med ledamöter, utskott och beslutsprocesser</li>
+          <li><strong>Regeringen</strong> - Ministerier och ministeriell verksamhet</li>
+          <li><strong>Myndigheter</strong> - Statliga verk och administrativa organ</li>
+          <li><strong>Världsbanken Indikatorer</strong> - Globala ekonomiska och utvecklingsindikatorer</li>
+        </ul>
+        <p>
+          Genom avancerad övervakning av viktiga politiska personer och institutioner levererar plattformen:
         </p>
         <ul>
           <li>Finansiella prestandamått</li>
@@ -1058,7 +1104,7 @@
       <section id="features">
         <h2>Nyckelfunktioner</h2>
         <p>
-          Medborgarunderrättelsebyrån tillhandahåller en omfattande uppsättning funktioner för politisk transparens och analys:
+          Citizen Intelligence Agency tillhandahåller en omfattande uppsättning funktioner för politisk transparens och analys:
         </p>
         <div class="cards">
           <div class="card">
@@ -1118,7 +1164,7 @@
       <section id="data-sources">
         <h2>Datakällor</h2>
         <p>
-          Vår analys drivs av auktoritativa svenska regeringskällor och internationella datakällor:
+          Vår analys drivs av auktoritativa svenska regeringskällor och internationella datakällor som täcker riksdag, regering, myndigheter och globala indikatorer:
         </p>
         
         <table class="data-sources-table">
@@ -1126,24 +1172,34 @@
             <tr>
               <th>Källa</th>
               <th>Beskrivning</th>
+              <th>Täckning</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>🏛️ <a href="https://data.riksdagen.se/">Riksdagens öppna data</a></td>
               <td>Riksdagsledamöter, utskott och officiella dokument</td>
+              <td><strong>Riksdagen</strong></td>
             </tr>
             <tr>
               <td>🗳️ <a href="https://www.val.se/">Valmyndigheten</a></td>
               <td>Valdata, politiska partier och röstningsresultat</td>
+              <td><strong>Riksdagen</strong></td>
+            </tr>
+            <tr>
+              <td>� <a href="https://www.regeringen.se/">Regeringen</a></td>
+              <td>Ministerier, statsråd och regeringsbeslut</td>
+              <td><strong>Regeringen</strong></td>
+            </tr>
+            <tr>
+              <td>🏛️ <a href="https://www.esv.se/">Ekonomistyrningsverket</a></td>
+              <td>Statliga finanser, myndighetsekonomi och ekonomiska trender</td>
+              <td><strong>Myndigheter</strong></td>
             </tr>
             <tr>
               <td>🌍 <a href="https://data.worldbank.org/">Världsbankens öppna data</a></td>
-              <td>Globala ekonomiska indikatorer och demografiska data</td>
-            </tr>
-            <tr>
-              <td>💹 <a href="https://www.esv.se/">Ekonomistyrningsverket</a></td>
-              <td>Statliga finanser och ekonomiska trender</td>
+              <td>Globala ekonomiska indikatorer, utvecklingsdata och demografisk statistik</td>
+              <td><strong>Världsbanken Indikatorer</strong></td>
             </tr>
           </tbody>
         </table>
@@ -1841,7 +1897,7 @@ sudo dpkg -i cia-dist-deb-${VERSION}.all.deb
     </main>
     
     <footer>
-      <p>&copy; 2025 Medborgarunderrättelsebyrån - Utvecklad av <a href="https://hack23.com/">Hack23</a> | <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a></p>
+      <p>&copy; 2025 Citizen Intelligence Agency - Utvecklad av <a href="https://hack23.com/">Hack23</a> | <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a></p>
       <p>
         <a href="cia-docs.html" title="Engelsk dokumentation">Engelsk Dokumentation</a> | 
         <a href="cia-docs_sv.html" title="Dokumentation på svenska">Svensk Dokumentation</a>

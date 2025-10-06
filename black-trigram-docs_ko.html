@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>흑괘 문서 | 완전한 한국 전통무예 게임 가이드 및 매뉴얼</title>
+    <title>흑괘 아키텍처 문서</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="alternate" hreflang="en" href="https://hack23.com/black-trigram-docs.html" />
     <link rel="canonical" href="https://hack23.com/black-trigram-docs_ko.html">
     
-    <meta name="description" content="흑괘(Black Trigram) 게임의 완전한 문서 - 설치 가이드, 게임플레이 매뉴얼, 무예 기법 설명, 급소점 가이드 및 개발자 정보를 제공합니다.">
-    <meta name="keywords" content="흑괘 문서, Black Trigram 가이드, 한국무예 게임 매뉴얼, 택견 게임, 합기도 시뮬레이터, 급소격 가이드">
+    <meta name="description" content="한국 무술 게임 아키텍처: C4 모델, Unity 통합, 전투 시스템 디자인, 에셋 파이프라인, 보안 아키텍처, 문화 보존 패턴.">
+    <meta name="keywords" content="게임 아키텍처 문서, C4 게임 디자인, 한국 무예 게임 개발, 오픈소스 게임 플랫폼, Unity 아키텍처 패턴, 게임 보안 설계, 개발자 문서, 문화 보존 게임, 교육용 게임 아키텍처, 전투 시스템 디자인, 에셋 파이프라인 아키텍처">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="흑괘 문서 | 한국 전통무예 격투 게임" />
-    <meta property="og:description" content="흑괘의 완전한 문서 - 5가지 격투 원형으로 해부학적 타겟팅을 특징으로 하는 한국 전통무예 정밀 격투 시뮬레이터." />
+    <meta property="og:title" content="흑괘 아키텍처 문서" />
+    <meta property="og:description" content="오픈소스 한국 무술 게임 아키텍처: C4 모델, Unity 통합, 전투 시스템 디자인, 에셋 파이프라인, 문화 보존 패턴." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hack23.com/black-trigram-docs_ko.html" />
     <meta property="og:image" content="https://blacktrigram.com/black-trigram.png" />
@@ -23,11 +23,11 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "흑괘 문서",
-      "description": "C4 모델, 전투 메커니즘, 한국 무술 통합, 보안 아키텍처, 에셋 관리, CI/CD 워크플로우, 문화유산 보호, 게임 특화 위협 모델링, 교육용 무술 플랫폼을 위한 CRA 평가를 다루는 종합적인 게임 아키텍처 문서.",
+      "headline": "흑괘 - 게임 아키텍처 및 시스템 문서",
+      "description": "오픈소스 한국 무술 교육 게임 아키텍처 문서. C4 모델, 게임 디자인 패턴, 보안 아키텍처, Unity 통합, 에셋 파이프라인, 문화 보존을 다루는 게임 개발자, Unity 아키텍트, 오픈소스 기여자를 위한 기술 문서.",
       "image": "https://blacktrigram.com/black-trigram.png",
       "datePublished": "2025-01-01",
-      "dateModified": "2025-09-23",
+      "dateModified": "2025-10-06",
       "inLanguage": "ko",
       "author": {
         "@type": "Person",
@@ -36,54 +36,92 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Hack23",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+          "url": "https://hack23.com/jamespethersorling150.webp"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://hack23.com/black-trigram-docs_ko.html"
       },
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "게임 개발자 및 Unity 개발자"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "게임 아키텍트 및 솔루션 아키텍트"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "오픈소스 기여자 및 교육용 게임 제작자"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "보안 아키텍트 및 문화 보존 전문가"
+        }
+      ],
       "about": {
         "@type": "VideoGame",
         "name": "흑괘",
         "alternateName": "Black Trigram",
         "applicationCategory": "Game",
         "genre": ["격투", "교육", "문화"],
-        "gamePlatform": "크로스 플랫폼"
+        "gamePlatform": "크로스 플랫폼",
+        "description": "전통 기술과 문화적 존중을 특징으로 하는 정통 한국 무술 교육 전투 게임.",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
       },
       "teaches": [
-        "한국 무술 철학",
-        "전통 전투 기술", 
-        "문화유산 보존",
-        "게임 보안 아키텍처",
-        "교육용 게임 디자인",
-        "에셋 파이프라인 관리",
-        "크로스 플랫폼 개발"
+        "게임 시스템을 위한 C4 아키텍처 모델링",
+        "게임 보안 아키텍처 설계",
+        "Unity 플랫폼 통합 패턴",
+        "교육용 게임 메커니즘 디자인",
+        "게임에서의 문화 보존",
+        "에셋 파이프라인 아키텍처",
+        "게임 데이터 모델 설계",
+        "전투 시스템 상태 관리",
+        "오픈소스 게임 개발 기여",
+        "게임 플랫폼을 위한 CRA 평가"
       ],
-      "educationalLevel": "초급부터 고급까지",
+      "educationalLevel": "전문가 / 고급",
       "learningResourceType": [
-        "게임 개발 가이드",
-        "무술 참고 자료",
-        "문화 문서",
-        "보안 구현 가이드", 
-        "에셋 제작 매뉴얼"
+        "게임 아키텍처 문서",
+        "시스템 디자인 패턴",
+        "기술 참고 자료",
+        "Unity 통합 가이드",
+        "보안 아키텍처 가이드",
+        "오픈소스 기여 가이드"
       ],
       "featureList": [
-        "아키텍처 & 디자인 (C4 모델, 미래 비전)",
-        "전투 & 메커니즘 (택견, 합기도 통합)",
-        "에셋 & 미디어 (아트, 오디오, 비디오 가이드라인)",
-        "보안 아키텍처 (게임 특화, 문화 보호)",
-        "CI/CD & DevOps (ZAP 스캐닝, Lighthouse, SBOM)",
-        "개념 & 전략 (마인드맵, SWOT 분석)",
-        "데이터 & 프로세스 (모델, 워크플로우, 상태 다이어그램)",
-        "테스팅 & QA (단위, E2E, 성능 테스트)",
-        "문화적 민감성을 고려한 게임 특화 위협 모델",
-        "교육용 게임 플랫폼을 위한 CRA 평가"
+        "C4 아키텍처 모델",
+        "게임 시스템 아키텍처 문서",
+        "교육용 게임을 위한 보안 아키텍처",
+        "Unity 플랫폼 통합 설계",
+        "에셋 파이프라인 아키텍처",
+        "전투 메커니즘 데이터 모델",
+        "상태 전환 다이어그램",
+        "시스템 마인드맵 및 컨텍스트 다이어그램",
+        "게임 개발을 위한 SWOT 분석",
+        "문화 보존 기술 패턴",
+        "게임 프로젝트를 위한 CI/CD 워크플로우",
+        "게임 시스템을 위한 API 문서",
+        "70개 급소점 데이터 아키텍처",
+        "5가지 파이터 원형 시스템 설계",
+        "전통 기술 구현 패턴",
+        "교육 진행 시스템 아키텍처",
+        "오픈소스 기여 가이드라인",
+        "15개 이상의 기술 게임 아키텍처 다이어그램"
       ],
-      "keywords": "한국 무술, 택견, 합기도, 게임 개발, 문화 보존, 교육 게임, 전투 시뮬레이션, 전통 무술, 게임 보안, 에셋 파이프라인"
+      "isAccessibleForFree": true,
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "keywords": "게임 아키텍처 문서, C4 게임 디자인, 한국 무예 게임 개발, 오픈소스 게임 플랫폼, Unity 아키텍처 패턴, 게임 보안 설계, 개발자 문서, 문화 보존 게임, 교육용 게임 아키텍처, 전투 시스템 디자인, 에셋 파이프라인 아키텍처"
     }
     </script>
     
