@@ -1,6 +1,15 @@
-# GitHub Copilot Agent Profiles
+# GitHub Copilot Custom Agent Profiles
 
-This directory contains specialized agent profiles that enable domain-specific assistance from GitHub Copilot coding agents. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations.
+This directory contains specialized custom agent profiles that enable domain-specific assistance from GitHub Copilot. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations.
+
+## Agent Profile Format
+
+Each agent profile is a Markdown file with YAML frontmatter that specifies:
+- **name**: Unique identifier for the agent (kebab-case)
+- **description**: Brief explanation of the agent's capabilities and expertise
+- **tools**: List of tools the agent can use (optional - if omitted, agent has access to all tools)
+
+The YAML frontmatter is followed by the agent's instructions in Markdown format, which define behavior, expertise, and guidelines.
 
 ## Available Agent Profiles
 
@@ -13,6 +22,8 @@ Expert in creating accessible, responsive, and visually appealing web interfaces
 - Responsive design and mobile-first approaches
 - Performance optimization and Lighthouse compliance
 - Cross-browser compatibility and progressive enhancement
+
+**Available Tools**: view, edit, create, bash, browser tools for testing
 
 **Use Cases**:
 - Improving website accessibility and keyboard navigation
@@ -33,6 +44,8 @@ Expert in B2B business development for cybersecurity consulting services. Specia
 - Partnership development and channel strategies
 - Market positioning and competitive differentiation
 
+**Available Tools**: view, edit, search, bash, web search
+
 **Use Cases**:
 - Developing go-to-market strategies
 - Identifying target market segments and ideal customers
@@ -42,7 +55,7 @@ Expert in B2B business development for cybersecurity consulting services. Specia
 
 ---
 
-### 3. Political Analyst / Intelligence Operative (`political-analyst.md`)
+### 3. Political Analyst (`political-analyst.md`)
 **Focus**: OSINT, Political Analysis, Information Operations
 
 Expert in open source intelligence, political analysis, and ethical information operations. Specializes in:
@@ -51,6 +64,8 @@ Expert in open source intelligence, political analysis, and ethical information 
 - Strategic communication and influence operations
 - Information warfare awareness and defense
 - Data analysis and visualization for intelligence
+
+**Available Tools**: view, edit, search, bash, web search
 
 **Use Cases**:
 - Enhancing the Citizen Intelligence Agency project
@@ -71,6 +86,8 @@ Expert in B2B technology marketing for cybersecurity professional services. Spec
 - Content marketing and thought leadership
 - Marketing analytics and performance optimization
 
+**Available Tools**: view, edit, search, bash
+
 **Use Cases**:
 - Developing content marketing strategies
 - Optimizing website for SEO and conversions
@@ -82,11 +99,88 @@ Expert in B2B technology marketing for cybersecurity professional services. Spec
 
 ## How to Use These Profiles
 
-These agent profiles are designed to be used by GitHub Copilot's coding agent to provide specialized, context-aware assistance. When working on tasks related to a specific domain, the appropriate agent profile will be invoked to provide expert guidance.
+These custom agent profiles are designed to be used with GitHub Copilot's coding agent to provide specialized, context-aware assistance. When you need help with a specific domain, you can select the appropriate agent from the dropdown in the Copilot prompt box.
+
+### Invoking an Agent
+
+1. Click in the Copilot prompt box
+2. Select the agent from the dropdown menu that appears
+3. Describe your task or question
+4. The agent will respond with specialized expertise and use its configured tools
 
 ### Profile Structure
 
-Each profile includes:
+Each profile follows the GitHub Copilot custom agents format:
+
+```markdown
+---
+name: agent-name
+description: Brief description of capabilities
+tools: ["tool1", "tool2", "tool3"]  # Optional
+---
+
+Agent instructions and behavior guidelines in Markdown...
+```
+
+**Components:**
+1. **YAML Frontmatter**: Contains metadata (name, description, tools)
+2. **Name**: Unique identifier in kebab-case
+3. **Description**: Brief explanation of agent's capabilities
+4. **Tools**: Optional list of allowed tools. If omitted, agent has access to all tools
+5. **Instructions**: Markdown content defining behavior, expertise, and guidelines
+
+---
+
+## Creating New Agent Profiles
+
+To create a new custom agent profile:
+
+1. Create a new `.md` file in `.github/agents/` directory
+2. Use kebab-case for the filename (e.g., `my-agent.md`)
+3. Add YAML frontmatter with required properties:
+   ```yaml
+   ---
+   name: my-agent
+   description: Brief description of what the agent does
+   tools: ["read", "edit", "search"]  # Optional
+   ---
+   ```
+4. Write the agent's instructions in Markdown below the frontmatter
+5. Commit the file to the repository
+6. Refresh the Copilot agents dropdown to see your new agent
+
+### Tool Configuration
+
+**Tools property** defines which tools the agent can use:
+- **Omit the property**: Agent has access to all available tools
+- **Specify tools**: Limit agent to only the listed tools
+
+Common tools include:
+- `view`, `edit`, `create` - File operations
+- `bash` - Command execution
+- `search_code`, `search_repositories` - Code search
+- `web_search` - Web search capabilities
+- Browser tools: `playwright-browser_*` - Browser automation
+
+Example limiting tools:
+```yaml
+tools: ["view", "edit", "bash"]
+```
+
+### Profile Alignment
+
+### Profile Alignment
+
+All agent profiles are aligned with Hack23's core values:
+- **Transparency**: Open practices and honest communication
+- **Practicality**: Real-world solutions that work
+- **Expertise**: Deep technical knowledge and experience
+- **Ethics**: Responsible and ethical practices
+- **Quality**: High standards and attention to detail
+
+### Profile Content Structure
+
+Each profile typically includes:
 1. **Core Expertise**: Deep domain knowledge and technical skills
 2. **Project Context**: Understanding of Hack23 AB, its projects, and business model
 3. **Responsibilities**: Specific tasks and areas of focus
@@ -94,15 +188,6 @@ Each profile includes:
 5. **Constraints & Guidelines**: What to do and what to avoid
 6. **Success Metrics**: How to measure effectiveness
 7. **Collaboration**: How to work with other specialists
-
-### Profile Alignment
-
-All profiles are aligned with Hack23's core values:
-- **Transparency**: Open practices and honest communication
-- **Practicality**: Real-world solutions that work
-- **Expertise**: Deep technical knowledge and experience
-- **Ethics**: Responsible and ethical practices
-- **Quality**: High standards and attention to detail
 
 ---
 
