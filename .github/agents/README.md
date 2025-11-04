@@ -23,7 +23,7 @@ Expert in creating accessible, responsive, and visually appealing web interfaces
 - Performance optimization and Lighthouse compliance
 - Cross-browser compatibility and progressive enhancement
 
-**Available Tools**: view, edit, create, bash
+**Available Tools**: view, edit, create, bash, playwright-browser automation tools
 
 **Use Cases**:
 - Improving website accessibility and keyboard navigation
@@ -162,6 +162,7 @@ Common tools include:
 - `web` - Web search capabilities (if enabled)
 - `custom-agent` - Invoke other custom agents
 - `todo` - Task management (if enabled)
+- Browser automation: `playwright-browser_snapshot`, `playwright-browser_take_screenshot`, `playwright-browser_navigate`, `playwright-browser_click`
 
 Example limiting tools:
 ```yaml
@@ -220,108 +221,6 @@ Hack23 AB is a Swedish cybersecurity consulting company (Org.nr 5595347807) foun
 
 ---
 
-## Agent Validation and Quality Standards
-
-### YAML Frontmatter Validation
-
-All custom agent profiles must have valid YAML frontmatter with these properties:
-
-#### Required Properties
-```yaml
-name: agent-name           # Lowercase, hyphen-separated, unique identifier
-description: Brief description (max 200 chars)
-tools: ["tool1", "tool2"]  # Array of valid tool aliases
-```
-
-#### Tool Aliases (Official GitHub Copilot Names)
-
-Use only these standardized tool aliases:
-
-| Tool Alias | Purpose |
-|------------|---------|
-| `view` | Read file contents |
-| `edit` | Modify file contents |
-| `create` | Create new files |
-| `bash` | Execute shell commands |
-| `search` | Search code and repositories |
-| `web` | Web search (if enabled) |
-| `custom-agent` | Invoke other custom agents |
-| `todo` | Task management (if enabled) |
-
-**Important:** Do NOT use these incorrect aliases:
-- ❌ `search_code` - Use `search` instead
-- ❌ `search_repositories` - Use `search` instead  
-- ❌ `web_search` - Use `web` instead
-- ❌ `read` - Use `view` instead
-- ❌ `shell` - Use `bash` instead
-
-### Agent Naming Standards
-
-**✅ Good Names:**
-- `marketing-specialist` - Descriptive role with hyphen separation
-- `ui-enhancement-specialist` - Clear purpose and function
-- `business-development-specialist` - Domain expertise clear
-- `political-analyst` - Area and role defined
-
-**❌ Bad Names:**
-- `agent1` - Generic, not descriptive
-- `MyAgent` - Use lowercase with hyphens
-- `marketing_specialist` - Use hyphens, not underscores
-- `really-long-agent-name-that-is-too-verbose` - Keep concise
-
-### Description Guidelines
-
-- **Maximum 200 characters** (GitHub UI requirement)
-- Clear and concise explanation of expertise
-- Describes key capabilities and focus areas
-- Professional tone appropriate for enterprise use
-- Avoids jargon where possible
-
-### Validation Checklist
-
-Before committing a new or updated agent profile:
-
-- [ ] Valid YAML syntax (no parsing errors)
-- [ ] `name` follows kebab-case convention (lowercase, hyphens)
-- [ ] `description` is under 200 characters
-- [ ] `tools` array uses only valid aliases from the table above
-- [ ] No extra or invalid properties in frontmatter
-- [ ] Proper indentation (2 spaces for YAML)
-- [ ] Agent prompt content is clear and well-structured
-- [ ] Examples provided where helpful
-- [ ] Tested with GitHub Copilot (if possible)
-
-### Common Validation Errors
-
-#### Error: Invalid Tool Alias
-```yaml
-# ❌ Wrong
-tools: ["view", "edit", "search_code", "bash"]
-
-# ✅ Correct
-tools: ["view", "edit", "search", "bash"]
-```
-
-#### Error: Description Too Long
-```yaml
-# ❌ Wrong (over 200 chars)
-description: This is a really long description that goes on and on explaining every single detail about what this agent can do and all the various capabilities it has which makes it way too long for the GitHub UI to handle properly
-
-# ✅ Correct (under 200 chars)
-description: Expert in B2B marketing, digital strategy, SEO, and demand generation for cybersecurity professional services
-```
-
-#### Error: Invalid Name Format
-```yaml
-# ❌ Wrong
-name: Marketing_Specialist
-
-# ✅ Correct
-name: marketing-specialist
-```
-
----
-
 ## Maintenance
 
 These profiles should be updated when:
@@ -330,6 +229,5 @@ These profiles should be updated when:
 - New technologies or methodologies are adopted
 - Feedback indicates gaps or inaccuracies in agent guidance
 - Regulatory or industry standards evolve
-- GitHub Copilot tool aliases or standards change
 
 Last updated: 2025-01-04
