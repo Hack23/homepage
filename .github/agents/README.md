@@ -23,7 +23,7 @@ Expert in creating accessible, responsive, and visually appealing web interfaces
 - Performance optimization and Lighthouse compliance
 - Cross-browser compatibility and progressive enhancement
 
-**Available Tools**: view, edit, create, bash, browser tools for testing
+**Available Tools**: view, edit, create, bash
 
 **Use Cases**:
 - Improving website accessibility and keyboard navigation
@@ -44,7 +44,7 @@ Expert in B2B business development for cybersecurity consulting services. Specia
 - Partnership development and channel strategies
 - Market positioning and competitive differentiation
 
-**Available Tools**: view, edit, search, bash, web search
+**Available Tools**: view, edit, search, bash, web
 
 **Use Cases**:
 - Developing go-to-market strategies
@@ -65,7 +65,7 @@ Expert in open source intelligence, political analysis, and ethical information 
 - Information warfare awareness and defense
 - Data analysis and visualization for intelligence
 
-**Available Tools**: view, edit, search, bash, web search
+**Available Tools**: view, edit, search, bash, web
 
 **Use Cases**:
 - Enhancing the Citizen Intelligence Agency project
@@ -158,9 +158,10 @@ To create a new custom agent profile:
 Common tools include:
 - `view`, `edit`, `create` - File operations
 - `bash` - Command execution
-- `search_code`, `search_repositories` - Code search
-- `web_search` - Web search capabilities
-- Browser tools: `playwright-browser_*` - Browser automation
+- `search` - Code and repository search
+- `web` - Web search capabilities (if enabled)
+- `custom-agent` - Invoke other custom agents
+- `todo` - Task management (if enabled)
 
 Example limiting tools:
 ```yaml
