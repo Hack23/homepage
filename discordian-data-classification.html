@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Classification: Five Levels of Actually Giving a Damn | Hack23 Discordian Blog</title>
+    <meta name="description" content="Data classification deep dive. Public, Internal, Confidential, Secret, Top Secret—five levels with handling requirements, encryption, access control.">
+    <meta name="keywords" content="data classification, information classification, data security levels, classification policy, ISMS classification, discordian security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Data Classification: Five Levels of Actually Giving a Damn">
+    <meta property="og:description" content="Data classification deep dive. Five levels with handling requirements, encryption, access control.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-data-classification.html">
+    <meta property="og:image" content="https://hack23.com/blog.png">
+    <link rel="canonical" href="https://hack23.com/discordian-data-classification.html">
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Data Classification: Five Levels of Actually Giving a Damn",
+  "description": "Data classification deep dive. Public, Internal, Confidential, Secret, Top Secret—five levels with handling requirements, encryption, access control.",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+    }
+  },
+  "datePublished": "2025-11-05",
+  "dateModified": "2025-11-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-data-classification.html"
+  },
+  "keywords": "data classification, information security levels, classification policy",
+  "articleSection": "Information Security"
+}
+</script>
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>🗂️ Data Classification: Five Levels of Actually Giving a Damn</h1>
+            
+            <p class="subtitle"><em>"Not all data is created equal. Some can be leaked. Some can't. Know the difference."</em></p>
+
+            <h2>🍎 The Golden Apple: Treating All Data Equally Is Expensive and Stupid</h2>
+            
+            <p>Organizations protect everything equally—or nothing at all. Marketing blog posts get the same encryption as customer databases. Public documentation requires the same access controls as source code.</p>
+            
+            <p><strong>Data classification fixes this insanity.</strong></p>
+            
+            <p>Label data by sensitivity. Apply proportional controls. Encrypt secrets, not press releases. Restrict access to confidential data, not public websites. Security effort aligned with actual risk.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> Without classification, you're either over-protecting public data (wasting resources) or under-protecting secrets (inviting breaches). Both are expensive stupidity.
+            </div>
+
+            <h2>🛡️ The Five Levels of Data Classification</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>Level 1: Public</h3>
+                    <p><strong>Designed for public disclosure.</strong></p>
+                    <p><strong>Examples:</strong> Marketing materials, blog posts, public documentation. <strong>Controls:</strong> Minimal. <strong>Leak Impact:</strong> None—already public.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Level 2: Internal</h3>
+                    <p><strong>Internal use, low sensitivity.</strong></p>
+                    <p><strong>Examples:</strong> Internal wikis, meeting notes, org charts. <strong>Controls:</strong> Basic access control. <strong>Leak Impact:</strong> Embarrassment, not disaster.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Level 3: Confidential</h3>
+                    <p><strong>Business-sensitive information.</strong></p>
+                    <p><strong>Examples:</strong> Financial reports, customer lists, contracts. <strong>Controls:</strong> Encryption, role-based access, audit logging. <strong>Leak Impact:</strong> Competitive harm, regulatory penalties.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Level 4: Secret</h3>
+                    <p><strong>Highly sensitive, restricted access.</strong></p>
+                    <p><strong>Examples:</strong> Trade secrets, source code, cryptographic keys. <strong>Controls:</strong> Strong encryption, MFA, need-to-know access. <strong>Leak Impact:</strong> Severe competitive harm, security compromise.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Level 5: Top Secret</h3>
+                    <p><strong>Mission-critical, existential risk.</strong></p>
+                    <p><strong>Examples:</strong> Master keys, root credentials, M&A plans. <strong>Controls:</strong> Hardware tokens, air-gapped storage, executive-only access. <strong>Leak Impact:</strong> Company-ending.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Most organizations have three real levels: Public, Internal, Secret. Call them Level 1, 2, 5 if you want military cosplay—but pragmatism beats methodology theater.
+            </div>
+
+            <h2>📋 Hack23's Data Classification Policy (Deep Dive)</h2>
+            
+            <p>Detailed classification framework: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/files/Data_Classification_Policy.md" target="_blank">Data Classification Policy</a></p>
+            
+            <ul>
+                <li><strong>Classification Criteria</strong> - Confidentiality, integrity, availability requirements, regulatory constraints, business impact</li>
+                <li><strong>Handling Requirements by Level</strong> - Storage (encryption), transmission (TLS/VPN), access (RBAC/MFA), disposal (secure deletion)</li>
+                <li><strong>Labeling Standards</strong> - Document headers, file metadata, email subject tags, visual markings</li>
+                <li><strong>Access Control Matrix</strong> - Who can access what classification level, under what conditions</li>
+                <li><strong>Reclassification Process</strong> - When data becomes more/less sensitive, how to update classification</li>
+                <li><strong>Declassification Schedules</strong> - When confidential data becomes internal/public (contract expiration, product launch)</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Classification isn't bureaucracy—it's risk-based resource allocation. Spend security budget protecting secrets, not press releases.
+            </div>
+
+            <h2>🎯 Handling Requirements by Classification Level</h2>
+            
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                <thead>
+                    <tr style="background-color: #2c3e50; color: white;">
+                        <th style="padding: 10px; border: 1px solid #34495e;">Requirement</th>
+                        <th style="padding: 10px; border: 1px solid #34495e;">Public</th>
+                        <th style="padding: 10px; border: 1px solid #34495e;">Internal</th>
+                        <th style="padding: 10px; border: 1px solid #34495e;">Confidential</th>
+                        <th style="padding: 10px; border: 1px solid #34495e;">Secret</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #34495e;"><strong>Storage Encryption</strong></td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">No</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Optional</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Required</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">AES-256</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #34495e;"><strong>Transmission Encryption</strong></td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">No</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">TLS 1.2+</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">TLS 1.3</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">TLS 1.3 + VPN</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #34495e;"><strong>Access Control</strong></td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">None</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">SSO Auth</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">RBAC + MFA</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Need-to-know + MFA</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #34495e;"><strong>Backup Retention</strong></td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Variable</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">30 days</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">7 years</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">As required</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #34495e;"><strong>Disposal</strong></td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Standard delete</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Delete + overwite</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Secure wipe</td>
+                        <td style="padding: 10px; border: 1px solid #34495e;">Crypto shred</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>🔍 Common Classification Failures</h2>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>❌ Over-Classification</h3>
+                    <p><strong>Problem:</strong> Marking everything "Confidential" to be safe.</p>
+                    <p><strong>Result:</strong> Users ignore labels, share freely anyway. Classification becomes meaningless.</p>
+                    <p><strong>Fix:</strong> Default to lowest appropriate level. Most data is Internal, not Confidential.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Under-Classification</h3>
+                    <p><strong>Problem:</strong> Marking secrets as "Internal" because classification is inconvenient.</p>
+                    <p><strong>Result:</strong> Sensitive data leaked with insufficient controls.</p>
+                    <p><strong>Fix:</strong> Make classification easy, not optional. Automate where possible.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Inconsistent Labeling</h3>
+                    <p><strong>Problem:</strong> Same document marked differently in different systems.</p>
+                    <p><strong>Result:</strong> Confusion, incorrect handling, security gaps.</p>
+                    <p><strong>Fix:</strong> Single source of truth for classification, propagate consistently.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ No Declassification</h3>
+                    <p><strong>Problem:</strong> Data marked Confidential stays Confidential forever.</p>
+                    <p><strong>Result:</strong> Security burden grows exponentially without need.</p>
+                    <p><strong>Fix:</strong> Declassification schedules, periodic review, lifecycle management.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>ULTIMATE ILLUMINATION:</strong> Data classification is risk management, not bureaucracy. If classification process hinders productivity without improving security, you're doing it wrong.
+            </div>
+
+            <h2>🎯 Practical Classification Implementation</h2>
+
+            <p>Making classification work in reality:</p>
+
+            <ol>
+                <li><strong>Default Classifications by System</strong> - Source code repos = Secret, Marketing CMS = Public, HR database = Confidential</li>
+                <li><strong>Automatic Labeling</strong> - Tag files based on storage location, creator role, content scanning</li>
+                <li><strong>Clear Guidelines</strong> - Decision tree: "Does this contain customer PII?" Yes = Confidential. "Is this public documentation?" Yes = Public.</li>
+                <li><strong>Technical Enforcement</strong> - DLP policies block Secret data in email, encryption enforced for Confidential, access controls automatic by classification</li>
+                <li><strong>User Training</strong> - Teach why classification matters, not just how to apply labels</li>
+            </ol>
+
+            <h2>🎯 Conclusion: Classify to Protect Efficiently</h2>
+            
+            <p>Data classification aligns security effort with risk. <strong>Protect secrets intensely. Protect public data minimally. Save resources for what matters.</strong></p>
+            
+            <p>Five levels (or three pragmatic ones). Handling requirements proportional to sensitivity. Technical enforcement, not user compliance theater.</p>
+
+            <p>Over-classification wastes money. Under-classification invites breaches. Accurate classification enables efficient security.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question every classification—including this blog post (probably Public)."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/files/Data_Classification_Policy.md" target="_blank">Data Classification Policy</a></p>
+    </footer>
+</body>
+</html>
