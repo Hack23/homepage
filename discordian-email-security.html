@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Security: Phishing, Spoofing, and Your CEO Needs iTunes Cards | Hack23 Discordian Blog</title>
+    <meta name="description" content="Email is insecure by design. Five email threats. SPF/DKIM/DMARC. Nothing is true, everything is permitted.">
+    <link rel="canonical" href="https://www.hack23.com/discordian-email-security.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Email Security: Phishing, Spoofing, and Your CEO Needs iTunes Cards</h1>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. That email is fake."</em></p>
+
+            <h2>�� The Problem: Email Is Insecure By Design</h2>
+            
+            <p>Email was designed in 1971 for trustworthy academics. <strong>It's 2025 and email still has no built-in security.</strong> SMTP allows sender spoofing. Authentication is optional. Encryption is rare.</p>
+            
+            <p>Your CEO doesn't need iTunes gift cards. That's not your CEO. Email is the primary attack vector because it works.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> Your CEO doesn't need iTunes cards. That's not your CEO. Email sender addresses are trivially spoofed. Verify unusual requests out of band.
+            </div>
+
+            <h2>🎣 The Five Email Threats</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Phishing</h3>
+                    <p><strong>Click this link to verify your account.</strong></p>
+                    <p>Fake emails impersonating legitimate services. Credential theft. Malware delivery. Happens constantly.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Spear Phishing</h3>
+                    <p><strong>Targeted attacks using personal information.</strong></p>
+                    <p>Researched attacks against specific individuals. More convincing. Higher success rate.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Business Email Compromise</h3>
+                    <p><strong>CEO wants wire transfer ASAP.</strong></p>
+                    <p>Impersonating executives. Requesting wire transfers. Millions lost annually. Verify out of band.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Malware Delivery</h3>
+                    <p><strong>Invoice.pdf.exe attached.</strong></p>
+                    <p>Malicious attachments. Macro-enabled documents. Ransomware delivery. Don't open suspicious attachments.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Email Spoofing</h3>
+                    <p><strong>From: ceo@yourcompany.com (but not really)</strong></p>
+                    <p>SMTP allows forged sender addresses. SPF/DKIM/DMARC help but aren't universal. Verify suspicious emails.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Email authentication (SPF/DKIM/DMARC) is optional. Most domains don't configure it. Your domain probably doesn't either. Check now.
+            </div>
+
+            <h2>🛡️ Email Security Controls</h2>
+            
+            <ul>
+                <li><strong>SPF</strong> - Sender Policy Framework: Which servers can send email for your domain</li>
+                <li><strong>DKIM</strong> - DomainKeys Identified Mail: Cryptographic signature on emails</li>
+                <li><strong>DMARC</strong> - Domain-based Message Authentication: Policy for handling authentication failures</li>
+                <li><strong>Anti-spam filters</strong> - Block known spam and phishing</li>
+                <li><strong>Link scanning</strong> - Check URLs before users click</li>
+                <li><strong>Attachment sandboxing</strong> - Execute attachments in isolated environment</li>
+                <li><strong>User training</strong> - Teach users to recognize phishing</li>
+            </ul>
+
+            <h2>📋 What Hack23 Actually Does</h2>
+            
+            <p>Our email security config is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+            
+            <ul>
+                <li><strong>SPF/DKIM/DMARC configured</strong> - Reject unauthenticated emails</li>
+                <li><strong>Advanced threat protection</strong> - Link scanning, attachment sandboxing</li>
+                <li><strong>Phishing simulations</strong> - Monthly tests with immediate training</li>
+                <li><strong>External email warnings</strong> - Banner on emails from outside organization</li>
+                <li><strong>Out-of-band verification</strong> - Wire transfer requests verified by phone</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Email will never be secure. It's fundamentally broken. Layer controls to compensate. Train users. Verify unusual requests. Accept that phishing will succeed sometimes.
+            </div>
+
+            <h2>🎯 Conclusion: Verify Before Clicking</h2>
+            
+            <p>Email is the primary attack vector. <strong>Phishing works because it exploits trust.</strong></p>
+            
+            <p>Configure SPF/DKIM/DMARC. Use advanced threat protection. Train users. Verify unusual requests. Or find out that your CFO wired $500K to attackers because an email looked legitimate.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially urgent emails from executives requesting immediate wire transfers."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+    </footer>
+</body>
+</html>

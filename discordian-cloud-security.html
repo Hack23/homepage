@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Security: Someone Else's Computer | Hack23 Discordian Blog</title>
+    <meta name="description" content="Shared responsibility model. Five cloud security pillars. Configuration is your problem. Nothing is true, everything is permitted.">
+    <link rel="canonical" href="https://www.hack23.com/discordian-cloud-security.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Cloud Security: Someone Else's Computer</h1>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. The cloud is just someone else's computer."</em></p>
+
+            <h2>☁️ The Problem: Shared Responsibility Confusion</h2>
+            
+            <p>The cloud is just someone else's computer. AWS secures the infrastructure. <strong>You secure everything else.</strong> This is called "shared responsibility" and most people get it wrong.</p>
+            
+            <p>AWS protects the hypervisor. You protect your S3 bucket permissions. They secure physical data centers. You secure your IAM policies. They patch infrastructure. You patch your applications.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> The cloud is just someone else's computer. Act accordingly. They secure infrastructure. You secure configuration. Misconfiguration is your breach, not theirs.
+            </div>
+
+            <h2>🛡️ The Five Cloud Security Pillars</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Identity & Access Management</h3>
+                    <p><strong>Who can do what?</strong></p>
+                    <p>Least privilege IAM policies. MFA for all humans. Service accounts with specific permissions. No root account usage.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Network Security</h3>
+                    <p><strong>Control traffic flow.</strong></p>
+                    <p>Security groups, NACLs, VPCs. Default deny. Segment environments. No public S3 buckets (unless intentional).</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Data Protection</h3>
+                    <p><strong>Encrypt everything.</strong></p>
+                    <p>Encryption at rest, encryption in transit. KMS for key management. Backup with encryption. Delete with verification.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Logging & Monitoring</h3>
+                    <p><strong>See what's happening.</strong></p>
+                    <p>CloudTrail for API calls. CloudWatch for metrics. Config for compliance. GuardDuty for threats.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Compliance & Governance</h3>
+                    <p><strong>Policy as code.</strong></p>
+                    <p>Infrastructure as code. Automated compliance checks. Tag everything. Audit regularly.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Public S3 buckets are the new unpatched servers—obvious, inexcusable, and still everywhere. Configuration errors cause more breaches than infrastructure failures.
+            </div>
+
+            <h2>📋 What Hack23 Actually Does</h2>
+            
+            <p>Our cloud security practices are public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+            
+            <ul>
+                <li><strong>Infrastructure as Code</strong> - CloudFormation, auditable, versioned</li>
+                <li><strong>Least privilege IAM</strong> - Specific permissions, no wildcards</li>
+                <li><strong>Encryption everywhere</strong> - At rest, in transit, with KMS</li>
+                <li><strong>Logging centralized</strong> - CloudTrail, Config, GuardDuty enabled</li>
+                <li><strong>Automated compliance</strong> - Config rules, Security Hub checks</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Cloud security is configuration management. The infrastructure is secure—your settings aren't. Automate configuration or accept drift. Drift is vulnerability.
+            </div>
+
+            <h2>🎯 Conclusion: Secure Your Config</h2>
+            
+            <p>Cloud providers secure infrastructure. <strong>You secure configuration.</strong> Shared responsibility means you're responsible for most breaches.</p>
+            
+            <p>Encrypt data. Control access. Log everything. Automate compliance. Or find out that your public S3 bucket leaked customer data and "but it's in the cloud" isn't a defense.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially S3 bucket policies that allow public read access."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+    </footer>
+</body>
+</html>

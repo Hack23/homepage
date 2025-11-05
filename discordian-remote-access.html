@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Access: VPNs and the Death of the Office | Hack23 Discordian Blog</title>
+    <meta name="description" content="Remote work is permanent. Five remote access controls. Zero trust for remote users. Nothing is true, everything is permitted.">
+    <link rel="canonical" href="https://www.hack23.com/discordian-remote-access.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Remote Access: VPNs and the Death of the Office</h1>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. The office is optional."</em></p>
+
+            <h2>🏠 The Problem: Remote Work Is Permanent</h2>
+            
+            <p>Remote work isn't temporary. The office is dead—or at least optional. <strong>Security models built on physical perimeters don't work when everyone works from home.</strong></p>
+            
+            <p>VPNs don't make traffic secure—encryption does. VPNs just move the trust boundary. Zero trust for remote users or accept that compromised home networks compromise corporate access.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> VPNs don't make traffic secure—encryption does. VPNs just move the trust boundary. Zero trust for remote users or accept remote compromises.
+            </div>
+
+            <h2>🔐 The Five Remote Access Controls</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Multi-Factor Authentication</h3>
+                    <p><strong>Passwords alone aren't enough.</strong></p>
+                    <p>MFA for all remote access. No exceptions. Phished passwords are useless without second factor.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Device Management</h3>
+                    <p><strong>Managed devices only.</strong></p>
+                    <p>MDM/EDR on all devices. Enforce encryption, updates, antivirus. No unmanaged device access.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Zero Trust Access</h3>
+                    <p><strong>Verify every request.</strong></p>
+                    <p>No implicit trust based on network. Verify user, device, context for each access. Trust nothing.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. VPN When Necessary</h3>
+                    <p><strong>VPN for legacy systems.</strong></p>
+                    <p>Modern systems use zero trust. Legacy systems need VPN. Split tunnel for performance. Monitor all connections.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Monitoring & Logging</h3>
+                    <p><strong>See who accesses what.</strong></p>
+                    <p>Log all remote access. Monitor for anomalies. Alert on suspicious patterns. Detection requires visibility.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Remote access from coffee shop WiFi on unmanaged devices is asking to be breached. Require managed devices with MFA or accept compromises.
+            </div>
+
+            <h2>📋 What Hack23 Actually Does</h2>
+            
+            <p>Our remote access policy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+            
+            <ul>
+                <li><strong>MFA required</strong> - All remote access requires multi-factor authentication</li>
+                <li><strong>Managed devices only</strong> - MDM enrollment required for corporate access</li>
+                <li><strong>Zero trust architecture</strong> - Verify every request, trust nothing</li>
+                <li><strong>VPN for legacy systems</strong> - Modern apps use zero trust, legacy uses VPN</li>
+                <li><strong>Continuous monitoring</strong> - Log all access, alert on anomalies</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> The office perimeter is dead. Remote work is permanent. Security models that assume users are inside a trusted network are obsolete. Adapt or breach.
+            </div>
+
+            <h2>🎯 Conclusion: Zero Trust or Zero Security</h2>
+            
+            <p>Remote work is permanent. <strong>Security models built on physical perimeters don't work.</strong></p>
+            
+            <p>Require MFA. Manage devices. Verify every request. Monitor access. Or accept that remote users are unverified, unmanaged, and unmonitored.</p>
+            
+            <p>The office is optional. Security isn't.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially whether your VPN from 2015 provides actual security."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+    </footer>
+</body>
+</html>
