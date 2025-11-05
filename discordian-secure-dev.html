@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Development: Code Without Backdoors (On Purpose) | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Security isn't a feature you add at the end—it's architecture. Every line of code is a potential vulnerability.">
+<meta name="keywords" content="secure development, SDLC, secure coding, think for yourself, question authority, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<link rel="canonical" href="https://hack23.com/discordian-secure-dev.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Secure Development: Code Without Backdoors (On Purpose)",
+  "description": "Secure development lifecycle and practices for code without intentional or accidental backdoors",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB"
+  },
+  "datePublished": "2025-11-05",
+  "inLanguage": "en"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Secure Development Policy</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">💻 Secure Development: Code Without Backdoors (On Purpose)</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">Security Isn't a Feature—It's Architecture</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping code with SQL injection in 2025—that's just lazy.</p>
+      
+      <p><em>Think for yourself. Question authority.</em> Especially the authority that says "we'll add security later."</p>
+      
+      <p>Security isn't something you bolt on after writing vulnerable code. It's <strong>architectural</strong>. It's design. It's every line you write.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Every line of code is a potential vulnerability. Every dependency is trust you can't verify.</em></p>
+      
+      <p>Here's how we build code without backdoors—on purpose. Full methodology in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">public Secure Development Policy</a>:</p>
+    </section>
+
+    <section id="five-practices">
+      <h2 class="panel-caption">The Five Practices of Not Shipping Vulns</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Threat Model First</h3>
+          <p>Design with adversaries in mind. What can go wrong? What are we doing about it? Answer before writing code, not after.</p>
+          <p class="hidden-wisdom"><em>Code written without threat modeling is just bug creation with optimism.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Secure by Default</h3>
+          <p>Default configurations should be secure. Users shouldn't have to know what flags make things safe. Safe should be the default.</p>
+          <p class="hidden-wisdom"><em>If secure configuration requires reading docs, most deployments are insecure.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Least Privilege</h3>
+          <p>Every process, every user, every component—minimum necessary permissions. Privilege escalation is harder when you start with nothing.</p>
+          <p class="hidden-wisdom"><em>Root by default is convenience for attackers, not users.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Input Validation</h3>
+          <p>Trust nothing from users, APIs, databases, files. Validate, sanitize, escape. SQL injection isn't clever—it's inexcusable.</p>
+          <p class="hidden-wisdom"><em>All input is hostile until proven otherwise. User input is especially hostile.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Output Encoding</h3>
+          <p>XSS happens because output isn't encoded. Context-aware escaping. HTML entity encoding. It's not hard—it's discipline.</p>
+          <p class="hidden-wisdom"><em>XSS in 2025 means you didn't use your framework's built-in protections.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sdlc">
+      <h2 class="panel-caption">Secure SDLC: Security at Every Stage</h2>
+      
+      <p>Security integrated throughout development, not bolted on at the end:</p>
+      
+      <ul>
+        <li><strong>Design</strong> — Threat modeling, security requirements, architecture review</li>
+        <li><strong>Development</strong> — Secure coding standards, linters, IDE security plugins</li>
+        <li><strong>Testing</strong> — Unit tests for security properties, SAST, DAST, dependency scanning</li>
+        <li><strong>Review</strong> — Security-focused code review, pen testing, bug bounties</li>
+        <li><strong>Deployment</strong> — Secure configuration, secrets management, least privilege</li>
+        <li><strong>Operations</strong> — Monitoring, logging, incident response, patching</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Security after deployment is incident response. Security during development is prevention.</em></p>
+    </section>
+
+    <section id="tools">
+      <h2 class="panel-caption">Tools: Automate What You Can</h2>
+      
+      <p>Humans make mistakes. Computers don't get tired. Automate security checks:</p>
+      
+      <ul>
+        <li><strong>Static Analysis (SAST)</strong> — SonarQube, CodeQL, Semgrep. Find vulns in source code before runtime.</li>
+        <li><strong>Dynamic Analysis (DAST)</strong> — OWASP ZAP, Burp Suite. Test running applications for vulns.</li>
+        <li><strong>Dependency Scanning</strong> — Dependabot, Snyk, OWASP Dependency-Check. Find known vulns in libraries.</li>
+        <li><strong>Secret Scanning</strong> — GitGuardian, TruffleHog. Prevent credentials in repos.</li>
+        <li><strong>Container Scanning</strong> — Trivy, Clair. Scan images for vulns before deployment.</li>
+      </ul>
+      
+      <p>Tools aren't perfect, but they catch the obvious stuff humans miss at 2am.</p>
+      
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Automated tools find known vulns. Code review finds design flaws. You need both.</em></p>
+    </section>
+
+    <section id="dependencies">
+      <h2 class="panel-caption">Dependency Hell: Trust You Can't Verify</h2>
+      
+      <p>Modern applications are mostly dependencies. Every dependency is trust you can't fully verify:</p>
+      
+      <ul>
+        <li><strong>Vet Dependencies</strong> — Check maintainer reputation, update frequency, known vulns</li>
+        <li><strong>Pin Versions</strong> — Exact versions, not ranges. Reproducible builds.</li>
+        <li><strong>Monitor for Vulns</strong> — Automated scanning, CVE monitoring, patch fast</li>
+        <li><strong>Minimize Dependencies</strong> — Every library is attack surface. Do you really need it?</li>
+        <li><strong>Supply Chain Security</strong> — SBOM, signed artifacts, provenance tracking</li>
+      </ul>
+      
+      <p><strong>Operation Mindfuck the supply chain attackers:</strong> Minimize dependencies, pin versions, scan everything, patch fast.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: The most secure code is code you didn't write. The most vulnerable code is code someone else wrote that you blindly trust.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Secure Coding Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping known vulns—that's malpractice.</p>
+      
+      <p>Secure development is discipline, not magic. Threat model. Validate input. Encode output. Scan dependencies. Test security properties. It's not hard—it's habit.</p>
+      
+      <p><strong>Think for yourself.</strong> Don't blindly trust frameworks, libraries, or "best practices." Verify. Test. Break your own code before attackers do.</p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! Question everything—especially code that hasn't been threat modeled."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-threat-modeling.html">Threat Modeling</a> — Know thy enemy (they already know you)</li>
+        <li><a href="discordian-vuln-mgmt.html">Vulnerability Management</a> — Patch or perish</li>
+        <li><a href="discordian-open-source.html">Open Source Policy</a> — Code you can actually read</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+
+</body>
+</html>

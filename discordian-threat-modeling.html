@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Threat Modeling: Know Thy Enemy (They Already Know You) | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Assume attackers with infinite resources exist—because they do. Your threat model should include nation-states, because theirs includes you.">
+<meta name="keywords" content="threat modeling, STRIDE, security architecture, think for yourself, question authority, nation-state threats, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<link rel="canonical" href="https://hack23.com/discordian-threat-modeling.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Threat Modeling: Know Thy Enemy (They Already Know You)",
+  "description": "Threat modeling for systems that assume nation-state adversaries exist",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB"
+  },
+  "datePublished": "2025-11-05",
+  "inLanguage": "en"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Threat Modeling</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">🎯 Threat Modeling: Know Thy Enemy (They Already Know You)</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">Your Threat Model Should Include Nation-States</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Especially to adversaries with three-letter agency budgets.</p>
+      
+      <p><em>Think for yourself. Question authority.</em> Then model what happens when authority wants your data.</p>
+      
+      <p>Threat modeling isn't paranoia—it's <strong>realistic risk assessment</strong>. Assume attackers with infinite resources exist, because <em>they do</em>. They have APTs, zero-days, supply chain access, and legal compulsion powers.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Your threat model should include nation-states. Because theirs includes you.</em></p>
+      
+      <p>Let's build threat models that acknowledge reality. Here's our approach, based on <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md">documented methodology</a>:</p>
+    </section>
+
+    <section id="five-questions">
+      <h2 class="panel-caption">The Five Questions Every Threat Model Answers</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. What Are We Building?</h3>
+          <p>System architecture, data flows, trust boundaries. Map it. Document it. You can't threat model what you don't understand.</p>
+          <p class="hidden-wisdom"><em>If you can't draw your system architecture, you can't secure it.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. What Can Go Wrong?</h3>
+          <p>Use STRIDE: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege. Systematic threat enumeration.</p>
+          <p class="hidden-wisdom"><em>The threat you don't consider is the one that kills you.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. What Are We Doing About It?</h3>
+          <p>Controls, mitigations, compensating measures. For each threat: Accept, Mitigate, Transfer, or Avoid. Document your choices.</p>
+          <p class="hidden-wisdom"><em>Unmitigated threats aren't risks—they're eventual incidents.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Did It Work?</h3>
+          <p>Test your mitigations. Pen tests, red teams, bug bounties. Assumptions kill. Verification saves.</p>
+          <p class="hidden-wisdom"><em>Untested security is security theater with extra steps.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. What Did We Miss?</h3>
+          <p>Iterate. New features = new threats. Changing environment = changing risks. Threat modeling is continuous, not one-time.</p>
+          <p class="hidden-wisdom"><em>The threat model you did two years ago is now historical fiction.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stride">
+      <h2 class="panel-caption">STRIDE: Systematic Threat Enumeration</h2>
+      
+      <p>Microsoft's STRIDE framework—actually useful, surprisingly:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Threat Type</th>
+            <th>Security Property</th>
+            <th>Example Attack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Spoofing</strong></td>
+            <td>Authentication</td>
+            <td>Attacker impersonates legitimate user or system</td>
+          </tr>
+          <tr>
+            <td><strong>Tampering</strong></td>
+            <td>Integrity</td>
+            <td>Data or code modified without authorization</td>
+          </tr>
+          <tr>
+            <td><strong>Repudiation</strong></td>
+            <td>Non-repudiation</td>
+            <td>User denies action, no way to prove otherwise</td>
+          </tr>
+          <tr>
+            <td><strong>Information Disclosure</strong></td>
+            <td>Confidentiality</td>
+            <td>Data exposed to unauthorized parties</td>
+          </tr>
+          <tr>
+            <td><strong>Denial of Service</strong></td>
+            <td>Availability</td>
+            <td>System made unavailable to legitimate users</td>
+          </tr>
+          <tr>
+            <td><strong>Elevation of Privilege</strong></td>
+            <td>Authorization</td>
+            <td>User gains capabilities they shouldn't have</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>Walk through each component, each data flow, each trust boundary. Apply STRIDE. Document threats. Prioritize. Mitigate.</p>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: STRIDE is a checklist, not gospel. But it beats guessing.</em></p>
+    </section>
+
+    <section id="adversaries">
+      <h2 class="panel-caption">Know Thy Enemy: Adversary Modeling</h2>
+      
+      <p>Different adversaries, different capabilities, different motivations:</p>
+      
+      <ul>
+        <li><strong>Script Kiddies</strong> — Low skill, automated tools, mass scans. Defend with basics.</li>
+        <li><strong>Cybercriminals</strong> — Financially motivated, targeted, patient. Ransomware, exfiltration, fraud.</li>
+        <li><strong>Insiders</strong> — Already have access. Your biggest threat that security teams ignore.</li>
+        <li><strong>Competitors</strong> — Corporate espionage. They want your IP, your customers, your secrets.</li>
+        <li><strong>Nation-States</strong> — Infinite resources, zero-days, supply chain access, legal compulsion. If they want in, they're in.</li>
+      </ul>
+      
+      <p><strong>Your threat model should include the worst case</strong>—nation-state adversaries—because that sets your defensive baseline. If you can defend against APTs, script kiddies are noise.</p>
+      
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: If your threat model doesn't include nation-states, you're threat modeling for 1995.</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: Assume Breach, Design Resilience</h2>
+      
+      <p>At Hack23, our threat modeling assumes the worst:</p>
+      
+      <ul>
+        <li><strong>Assume Breach</strong> — Adversaries are already in. Design for containment, not just prevention.</li>
+        <li><strong>Zero Trust Architecture</strong> — Trust nothing. Verify everything. No implicit trust.</li>
+        <li><strong>Defense in Depth</strong> — Multiple layers. No single point of failure.</li>
+        <li><strong>Minimal Attack Surface</strong> — Less code, fewer dependencies, simpler architecture. Simple survives.</li>
+        <li><strong>Continuous Monitoring</strong> — Detection, not just prevention. Assume they're in; find them fast.</li>
+        <li><strong>Incident Response</strong> — Plan for compromise. Playbooks, not panic.</li>
+      </ul>
+      
+      <p>Full methodology in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md">public Threat Modeling documentation</a>—because security through obscurity is incompetence.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Threat Modeling Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Especially to adversaries with APT-level capabilities.</p>
+      
+      <p>Threat modeling isn't paranoia—it's <strong>realistic planning</strong>. The threat you don't model is the one that breaches you.</p>
+      
+      <p><strong>Think for yourself.</strong> Your threat model is unique. Don't copy-paste someone else's threats. Model your actual adversaries, not generic FUD.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. Every system is attackable. Your job is making attacks expensive enough they go elsewhere.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! Question everything—especially any security design that doesn't threat model nation-states."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-secure-dev.html">Secure Development Policy</a> — Code without backdoors (on purpose)</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — When (not if) shit hits the fan</li>
+        <li><a href="discordian-network-security.html">Network Security Policy</a> — The perimeter is dead</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+
+</body>
+</html>
