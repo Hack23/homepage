@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cryptography Policy: The Uncomfortable Truth About Approved Algorithms | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Why do nation-states approve certain encryption algorithms? A cynical examination of cryptography policy, backdoors, and what we do about it.">
+<meta name="keywords" content="cryptography policy, approved algorithms, crypto backdoors, dual ec drbg, government surveillance, encryption policy, cryptographic standards, nation state capabilities, ISMS crypto policy, transparent security">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Cryptography Policy: The Uncomfortable Truth About Approved Algorithms">
+<meta property="og:description" content="A cynical examination of government-approved cryptography and what secure organizations actually do.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-crypto.html">
+<meta property="og:image" content="https://hack23.com/blog.png">
+<link rel="canonical" href="https://hack23.com/discordian-crypto.html">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cryptography Policy: The Uncomfortable Truth About Approved Algorithms",
+  "alternativeHeadline": "Why Government-Approved Crypto Should Make You Nervous",
+  "description": "An examination of cryptography policy, government-approved algorithms, and the uncomfortable questions about backdoors and surveillance capabilities.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.png",
+    "width": 800,
+    "height": 600
+  },
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert",
+    "sameAs": [
+      "https://www.linkedin.com/in/jamessorling/",
+      "https://github.com/Hack23"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+    }
+  },
+  "datePublished": "2025-11-05",
+  "dateModified": "2025-11-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-crypto.html"
+  },
+  "keywords": "cryptography policy, approved algorithms, crypto backdoors, encryption standards",
+  "articleSection": "Information Security"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Discordian Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md" title="Our Crypto Policy">ISMS Crypto Policy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">🔐 Cryptography Policy: The Uncomfortable Truth About Approved Algorithms</h1>
+
+    <section id="introduction">
+      <h2 class="panel-caption">The Five Questions Nobody Wants to Answer</h2>
+      
+      <p>Let's talk about the elephant in the room: <strong>government-approved cryptography</strong>.</p>
+      
+      <p>Every organization's cryptography policy starts the same way: <em>"We use industry-standard, government-approved encryption algorithms..."</em></p>
+      
+      <p>But here are the five questions you should be asking:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Who Approves These Algorithms?</h3>
+          <p>Intelligence agencies. The same people running <strong>global surveillance programs</strong> and employing the world's best cryptanalysts.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. What's Their Motivation?</h3>
+          <p>To intercept communications. Their mission is <strong>signals intelligence</strong>—breaking encryption is literally their job.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Can They Break What They Approve?</h3>
+          <p>We don't know. That's the <strong>uncomfortable truth</strong>. But history suggests skepticism is warranted.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Would They Tell Us If They Could?</h3>
+          <p><strong>No.</strong> National security doctrine requires keeping capabilities secret. See: Dual_EC_DRBG, Crypto AG.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. What Do We Do About It?</h3>
+          <p>Use approved algorithms <em>properly</em>, layer defenses, and don't assume encryption alone protects you.</p>
+        </div>
+      </div>
+      
+      <p><em>The Law of Fives never lies.</em> There are always five uncomfortable questions about cryptography policy.</p>
+    </section>
+
+    <section id="history">
+      <h2 class="panel-caption">A Brief History of "Trust Us"</h2>
+      
+      <h3>📖 The Greatest Hits</h3>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>Dual_EC_DRBG (2006-2013)</h3>
+          <p>NSA-designed random number generator standardized by NIST. Turned out to have a <strong>mathematical backdoor</strong> that allowed NSA to predict "random" numbers and break encryption.</p>
+          <p><em>Status:</em> Withdrawn after Snowden revelations. But it was "approved" for 7 years.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>Crypto AG (1970-2018)</h3>
+          <p>Swiss encryption company secretly owned by CIA and BND. Sold deliberately weakened encryption to governments worldwide for <strong>50 years</strong>.</p>
+          <p><em>Impact:</em> Entire countries used compromised "secure" communications for decades.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>Export Restrictions (1990s)</h3>
+          <p>US classified strong encryption as <strong>munitions</strong> to prevent export. Limited available crypto to 40-bit keys—easily breakable even then.</p>
+          <p><em>Purpose:</em> Ensure US intelligence could break most global encryption.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>Clipper Chip (1993)</h3>
+          <p>NSA-designed encryption chip with built-in <strong>law enforcement backdoor</strong>. Abandoned after public outcry—but shows intent.</p>
+          <p><em>Lesson:</em> When they can't backdoor standards, they try to backdoor implementations.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>NIST Post-Quantum Standards (2024)</h3>
+          <p>New quantum-resistant algorithms being standardized. Will quantum computers break current crypto? <strong>NSA says yes</strong>—they're already storing encrypted data for future decryption.</p>
+          <p><em>Question:</em> Can we trust the same agencies to approve quantum-resistant standards?</p>
+        </div>
+      </div>
+      
+      <p>See the pattern? <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em></p>
+    </section>
+
+    <section id="approved-algorithms">
+      <h2 class="panel-caption">The "Approved" Algorithms List</h2>
+      
+      <p>Here's what most cryptography policies recommend (including ours). Are they secure? <em>Probably—if implemented correctly.</em> Can nation-states break them? <em>We don't know—and they won't tell us.</em></p>
+      
+      <h3>🔐 Symmetric Encryption</h3>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Algorithm</th>
+            <th>Key Size</th>
+            <th>Status</th>
+            <th>Cynical Take</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AES-256</strong></td>
+            <td>256-bit</td>
+            <td>✓ Approved</td>
+            <td>Math looks solid. Implementation vulnerabilities? Unknown.</td>
+          </tr>
+          <tr>
+            <td><strong>AES-128</strong></td>
+            <td>128-bit</td>
+            <td>✓ Approved</td>
+            <td>Probably fine for most uses. Quantum-vulnerable eventually.</td>
+          </tr>
+          <tr>
+            <td><strong>ChaCha20</strong></td>
+            <td>256-bit</td>
+            <td>✓ Approved</td>
+            <td>Not NSA-designed—might actually be trustworthy?</td>
+          </tr>
+          <tr>
+            <td><strong>3DES</strong></td>
+            <td>168-bit</td>
+            <td>⚠️ Legacy</td>
+            <td>Deprecated. Don't use. NSA can probably break it.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>🔑 Asymmetric Encryption</h3>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Algorithm</th>
+            <th>Key Size</th>
+            <th>Status</th>
+            <th>Cynical Take</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>RSA-4096</strong></td>
+            <td>4096-bit</td>
+            <td>✓ Approved</td>
+            <td>Computationally hard—for now. Store now, decrypt later.</td>
+          </tr>
+          <tr>
+            <td><strong>RSA-2048</strong></td>
+            <td>2048-bit</td>
+            <td>✓ Approved</td>
+            <td>Minimum acceptable. Quantum computers will break this.</td>
+          </tr>
+          <tr>
+            <td><strong>ECDSA (P-256)</strong></td>
+            <td>256-bit</td>
+            <td>✓ Approved</td>
+            <td>NSA-recommended curves. Should we trust those parameters?</td>
+          </tr>
+          <tr>
+            <td><strong>Ed25519</strong></td>
+            <td>256-bit</td>
+            <td>✓ Approved</td>
+            <td>Non-NSA curve. Possibly more trustworthy than NIST curves.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>🔨 Hashing Algorithms</h3>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Algorithm</th>
+            <th>Output Size</th>
+            <th>Status</th>
+            <th>Cynical Take</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SHA-256</strong></td>
+            <td>256-bit</td>
+            <td>✓ Approved</td>
+            <td>NSA-designed. No known breaks—but they had a head start.</td>
+          </tr>
+          <tr>
+            <td><strong>SHA-512</strong></td>
+            <td>512-bit</td>
+            <td>✓ Approved</td>
+            <td>Stronger variant. Same trust questions.</td>
+          </tr>
+          <tr>
+            <td><strong>SHA-1</strong></td>
+            <td>160-bit</td>
+            <td>❌ Broken</td>
+            <td>Deprecated. Google broke it publicly. NSA probably broke it earlier.</td>
+          </tr>
+          <tr>
+            <td><strong>MD5</strong></td>
+            <td>128-bit</td>
+            <td>❌ Broken</td>
+            <td>Completely broken. Don't use. Ever.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="what-we-do">
+      <h2 class="panel-caption">What We Actually Do: Our Cryptography Policy</h2>
+      
+      <p>Given this uncomfortable reality, here's <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">our public cryptography policy</a>:</p>
+      
+      <h3>🎯 Five-Sided Defense Strategy</h3>
+      
+      <div class="cards">
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Use Modern Approved Algorithms</h3>
+          <p><strong>AES-256, RSA-4096, SHA-256</strong> with proper implementation. Not because we trust them blindly—but because breaking them is <em>computationally expensive</em>.</p>
+          <p><em>Rationale:</em> Make surveillance expensive. Force them to use their best capabilities.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Prefer Non-NSA Alternatives</h3>
+          <p>When available: <strong>ChaCha20, Ed25519, Argon2</strong>. Algorithms not designed by intelligence agencies may be more trustworthy.</p>
+          <p><em>Rationale:</em> Diversify cryptographic dependencies.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Implementation Matters More Than Algorithm</h3>
+          <p>Perfect crypto with bad implementation = useless. Use <strong>proven libraries</strong> (OpenSSL, libsodium, Go crypto). Don't roll your own.</p>
+          <p><em>Rationale:</em> Most breaks are implementation flaws, not algorithmic.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Defense in Depth</h3>
+          <p><strong>Never rely on encryption alone.</strong> Layer: encryption + access control + monitoring + key rotation + audit logging.</p>
+          <p><em>Rationale:</em> Assume crypto can be broken. Have other controls.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Transparency + Auditability</h3>
+          <p>Public cryptography policy. Open-source tools when possible. <strong>Verify, don't trust.</strong></p>
+          <p><em>Rationale:</em> Transparency enables scrutiny—the only real accountability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="key-management">
+      <h2 class="panel-caption">Key Management: Where Everything Falls Apart</h2>
+      
+      <p>Here's the dirty secret: <strong>algorithm choice matters less than key management</strong>.</p>
+      
+      <p>Perfect encryption is useless if:</p>
+      
+      <ul>
+        <li>Keys are stored in plaintext configuration files</li>
+        <li>Keys are never rotated</li>
+        <li>Keys are shared insecurely</li>
+        <li>Keys are accessible to too many people/systems</li>
+        <li>Key generation uses weak random number generators</li>
+      </ul>
+      
+      <p>This is where organizations fail. Not because NSA backdoored AES—but because they <strong>left the keys in a text file in their S3 bucket</strong>.</p>
+      
+      <h3>🔑 Our Key Management Principles</h3>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>Hardware Security Modules (HSMs)</h3>
+          <p>Use <strong>AWS KMS, Azure Key Vault, or dedicated HSMs</strong> for key storage. Keys never leave the secure boundary.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>Automated Key Rotation</h3>
+          <p>Rotate keys regularly: <strong>annually for master keys, quarterly for operational keys</strong>. Limit blast radius of compromise.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>Principle of Least Privilege</h3>
+          <p>Only systems/people that <strong>absolutely need</strong> key access get it. Use IAM policies, not shared credentials.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>Audit Logging</h3>
+          <p><strong>Log every key use.</strong> Detect anomalous access patterns. Enable forensics after compromise.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>Secure Key Generation</h3>
+          <p>Use <strong>cryptographically secure RNGs</strong>. Never use predictable seeds. Test entropy sources.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-model">
+      <h2 class="panel-caption">Realistic Threat Modeling</h2>
+      
+      <p>Let's be honest about threat models:</p>
+      
+      <h3>👥 Who Are You Protecting Against?</h3>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Adversary</th>
+            <th>Capabilities</th>
+            <th>Can Approved Crypto Protect?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Opportunistic Hackers</strong></td>
+            <td>Automated scanning, known exploits</td>
+            <td>✓ Yes—basic encryption blocks them</td>
+          </tr>
+          <tr>
+            <td><strong>Organized Cybercrime</strong></td>
+            <td>Ransomware, targeted attacks, some 0-days</td>
+            <td>✓ Yes—proper implementation sufficient</td>
+          </tr>
+          <tr>
+            <td><strong>Corporate Espionage</strong></td>
+            <td>Social engineering, insider threats, supply chain</td>
+            <td>⚠️ Maybe—depends on implementation</td>
+          </tr>
+          <tr>
+            <td><strong>Nation-State APTs</strong></td>
+            <td>0-days, supply chain compromise, legal compulsion</td>
+            <td>❌ Probably not—they have other vectors</td>
+          </tr>
+          <tr>
+            <td><strong>Five Eyes SIGINT</strong></td>
+            <td>Mass surveillance, backdoors, crypto analysis, quantum?</td>
+            <td>❌ Unknown—assume they can if motivated</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>The Uncomfortable Truth:</strong> Modern approved cryptography <em>probably</em> protects you from most adversaries. But against nation-states with full-spectrum capabilities? <strong>Assume breach.</strong></p>
+      
+      <p>Design for <em>detection and response</em>, not perfect prevention.</p>
+    </section>
+
+    <section id="quantum-future">
+      <h2 class="panel-caption">The Quantum Future: Store Now, Decrypt Later</h2>
+      
+      <p>Here's why nation-states approve current algorithms even if they can't break them yet: <strong>quantum computers</strong>.</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔮 The Harvest Now, Decrypt Later Strategy</h3>
+          <p>Intelligence agencies are <strong>storing encrypted traffic now</strong> for future decryption when quantum computers break RSA/ECC.</p>
+          <p><em>Impact:</em> Today's "secure" communications may be readable in 10-20 years.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Post-Quantum Cryptography</h3>
+          <p>NIST is standardizing quantum-resistant algorithms. But guess who's involved? <strong>The same agencies.</strong></p>
+          <p><em>Question:</em> Should we trust the new standards more than the old ones?</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>⏰ Timeline Estimates</h3>
+          <p>Cryptographically-relevant quantum computers: <strong>10-30 years</strong> (publicly). Nation-states may have them sooner.</p>
+          <p><em>Action:</em> Start planning post-quantum migration now.</p>
+        </div>
+      </div>
+      
+      <p><strong>Our Approach:</strong> Monitor NIST post-quantum standards. Test implementations. Prepare for hybrid classical/quantum crypto. But remain <em>skeptical</em> about "approved" quantum-resistant algorithms.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">The Bottom Line: Use Crypto, But Don't Trust It Blindly</h2>
+      
+      <p>So what do we do with this uncomfortable knowledge?</p>
+      
+      <ol>
+        <li><strong>Use approved algorithms properly</strong>—they're computationally expensive to break</li>
+        <li><strong>Prefer non-NSA alternatives</strong> when available and proven</li>
+        <li><strong>Focus on implementation and key management</strong>—more important than algorithm choice</li>
+        <li><strong>Layer defenses</strong>—never rely on encryption alone</li>
+        <li><strong>Assume nation-states can break your crypto if sufficiently motivated</strong></li>
+        <li><strong>Design for detection and response</strong>, not imaginary perfect security</li>
+        <li><strong>Be transparent</strong>—publish your cryptography policy for scrutiny</li>
+      </ol>
+      
+      <p><strong>All hail Eris!</strong> The truth is uncomfortable, but it's better than false security.</p>
+      
+      <p><em>View our complete <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy on GitHub</a>—because transparency beats security through obscurity.</em></p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related Resources</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Our Cryptography Policy</h3>
+          <p>Full technical details of our encryption standards, key management, and implementation requirements.</p>
+          <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md" title="Cryptography Policy">Read Policy →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🍎 Discordian Manifesto</h3>
+          <p>Return to the main manifesto exploring nation-state surveillance capabilities.</p>
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Manifesto">Read Manifesto →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔓 Public ISMS</h3>
+          <p>All our security policies, procedures, and frameworks—transparent and auditable.</p>
+          <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Hack23 Public ISMS">Explore ISMS →</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; James Pether Sörling 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+    <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+    <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md" title="Cryptography Policy">Crypto Policy</a>
+  </p>
+</footer>
+
+</body>
+</html>

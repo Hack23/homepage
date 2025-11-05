@@ -1376,3 +1376,290 @@ footer {
   --availability-color: #8be9fd;
   --font-accent: "Orbitron", sans-serif;
 }
+
+/* ==================================================
+   DISCORDIAN BLOG STYLING
+   ================================================== */
+
+/* ROI Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0.25rem;
+}
+
+.badge-exceptional {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+.badge-high {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.badge-moderate {
+  background: linear-gradient(135deg, #4ecdc4, #44a8a0);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(78, 205, 196, 0.4);
+}
+
+.badge-basic {
+  background: linear-gradient(135deg, #95afc0, #778ca3);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(149, 175, 192, 0.4);
+}
+
+.badge-minimal {
+  background: linear-gradient(135deg, #b7b7b7, #999999);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(183, 183, 183, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-exceptional {
+    background: rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+  }
+  
+  .badge-high {
+    background: rgba(255, 107, 107, 0.3);
+    color: #ff8e8e;
+    border: 1px solid #ff6b6b;
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.5);
+  }
+  
+  .badge-moderate {
+    background: rgba(78, 205, 196, 0.3);
+    color: #4ecdc4;
+    border: 1px solid #4ecdc4;
+    box-shadow: 0 0 12px rgba(78, 205, 196, 0.5);
+  }
+  
+  .badge-basic {
+    background: rgba(149, 175, 192, 0.3);
+    color: #95afc0;
+    border: 1px solid #95afc0;
+    box-shadow: 0 0 12px rgba(149, 175, 192, 0.5);
+  }
+  
+  .badge-minimal {
+    background: rgba(183, 183, 183, 0.3);
+    color: #b7b7b7;
+    border: 1px solid #b7b7b7;
+    box-shadow: 0 0 12px rgba(183, 183, 183, 0.5);
+  }
+}
+
+/* Data Table Styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.data-table thead {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: #fff;
+}
+
+.data-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(0, 102, 51, 0.05);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .total-row {
+  font-weight: 700;
+  background: rgba(0, 102, 51, 0.1);
+  border-top: 2px solid var(--primary-color);
+}
+
+.data-table strong {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .data-table thead {
+    background: linear-gradient(135deg, rgba(0, 204, 102, 0.3), rgba(0, 255, 136, 0.2));
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+  }
+  
+  .data-table tbody tr:hover {
+    background: rgba(0, 204, 102, 0.1);
+  }
+  
+  .data-table .total-row {
+    background: rgba(0, 204, 102, 0.2);
+    border-top: 2px solid var(--primary-color);
+  }
+  
+  .data-table strong {
+    color: var(--primary-light);
+  }
+}
+
+/* ROI Table Row Styling */
+.roi-exceptional {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.roi-high {
+  background: rgba(255, 107, 107, 0.05);
+}
+
+.roi-moderate {
+  background: rgba(78, 205, 196, 0.05);
+}
+
+.roi-basic {
+  background: rgba(149, 175, 192, 0.05);
+}
+
+.roi-minimal {
+  background: rgba(183, 183, 183, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .roi-exceptional {
+    background: rgba(255, 215, 0, 0.1);
+  }
+  
+  .roi-high {
+    background: rgba(255, 107, 107, 0.1);
+  }
+  
+  .roi-moderate {
+    background: rgba(78, 205, 196, 0.1);
+  }
+  
+  .roi-basic {
+    background: rgba(149, 175, 192, 0.1);
+  }
+  
+  .roi-minimal {
+    background: rgba(183, 183, 183, 0.1);
+  }
+}
+
+/* Value Metrics Display */
+.value-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.value-metric {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-metric:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px var(--card-shadow);
+}
+
+.value-metric h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--header-color);
+  margin: 0.5rem 0;
+  font-family: var(--font-mono);
+}
+
+.metric-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .value-metric {
+    background: linear-gradient(135deg, rgba(0, 28, 37, 0.95), rgba(0, 26, 26, 0.98));
+    border: 1px solid rgba(0, 204, 102, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 204, 102, 0.2);
+  }
+  
+  .value-metric:hover {
+    box-shadow: 0 8px 24px rgba(0, 204, 102, 0.4);
+  }
+  
+  .metric-value {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 204, 102, 0.5);
+  }
+}
+
+/* Signature styling for blog posts */
+.signature {
+  font-style: italic;
+  text-align: right;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Responsive tables for mobile */
+@media (max-width: 768px) {
+  .data-table {
+    font-size: 0.85rem;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
+  
+  .value-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+  }
+}
