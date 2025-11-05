@@ -50,6 +50,33 @@ Our approach to cybersecurity consulting is built on a foundation of transparent
 
 ---
 
+### 🍎 Discordian Cybersecurity Insights
+
+Explore information security, ISMS policies, and cybersecurity best practices through the unique **Discordian lens** inspired by the *Illuminatus!* trilogy. **"Think for yourself, question authority."**
+
+<table>
+  <tr>
+    <td width="100%">
+      <div align="center">
+        <h3>📖 Security Blog: 30+ Posts</h3>
+        <p>Everything You Know About Security Is a Lie — Nation-state capabilities, approved crypto paradox, and Chapel Perilous initiation. Complete ISMS coverage with radical transparency.</p>
+        <a href="https://www.hack23.com/blog.html">
+          <img src="https://img.shields.io/badge/Blog-Discordian_Security-FF6B35?style=for-the-badge&logo=blogger&logoColor=white" alt="Discordian Security Blog">
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+**Featured Content:**
+- 🎭 **[Discordian Manifesto](https://hack23.com/discordian-cybersecurity.html)** - Everything You Know About Security Is a Lie
+- 📚 **Complete ISMS Coverage** - All 30 posts link directly to [ISMS-PUBLIC repository](https://github.com/Hack23/ISMS-PUBLIC)
+- 🍎 **Illuminatus! Style** - FNORD detection, Chapel Perilous references, 23 FNORD 5 signatures
+
+*All hail Eris! All hail Discordia!* 🍎
+
+---
+
 
 ## Table of Contents
 
