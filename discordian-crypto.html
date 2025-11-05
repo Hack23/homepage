@@ -445,46 +445,52 @@
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>🔮 The Harvest Now, Decrypt Later Strategy</h3>
-          <p>Intelligence agencies are <strong>storing encrypted traffic now</strong> for future decryption when quantum computers break RSA/ECC.</p>
-          <p><em>Impact:</em> Today's "secure" communications may be readable in 10-20 years.</p>
+          <p>Intelligence agencies are <strong>storing encrypted traffic now</strong> for future decryption when quantum computers break RSA/ECC. Your secrets today are their plaintext tomorrow.</p>
+          <p><em>Impact:</em> Today's "secure" communications may be readable in the future. Plan accordingly.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: If you're encrypting something that matters in 20 years, quantum computers are already a problem—you just don't know it yet.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>📊 Post-Quantum Cryptography</h3>
-          <p>NIST is standardizing quantum-resistant algorithms. But guess who's involved? <strong>The same agencies.</strong></p>
-          <p><em>Question:</em> Should we trust the new standards more than the old ones?</p>
+          <p>NIST is standardizing quantum-resistant algorithms. But guess who's involved in the standardization? <strong>The same agencies that brought you Dual_EC_DRBG.</strong></p>
+          <p><em>Question:</em> Should we trust the new standards more than the old ones? History suggests caution.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Fool me once, shame on you. Fool me with the same trick twice, shame on me.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>⏰ Timeline Estimates</h3>
-          <p>Cryptographically-relevant quantum computers: <strong>10-30 years</strong> (publicly). Nation-states may have them sooner.</p>
-          <p><em>Action:</em> Start planning post-quantum migration now.</p>
+          <p>Cryptographically-relevant quantum computers: <strong>coming eventually</strong> (publicly). Nation-states may have them sooner—or may want you to think they do.</p>
+          <p><em>Action:</em> Start planning post-quantum migration now, but don't panic. Yet.</p>
         </div>
       </div>
       
-      <p><strong>Our Approach:</strong> Monitor NIST post-quantum standards. Test implementations. Prepare for hybrid classical/quantum crypto. But remain <em>skeptical</em> about "approved" quantum-resistant algorithms.</p>
+      <p><strong>Our Approach:</strong> Monitor NIST post-quantum standards. Test implementations. Prepare for hybrid classical/quantum crypto. But remain <em>appropriately skeptical</em> about "approved" quantum-resistant algorithms, because we've seen this movie before.</p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">The Bottom Line: Use Crypto, But Don't Trust It Blindly</h2>
+      <h2 class="panel-caption">The Bottom Line: Use Crypto, But Don't Be Naive About It</h2>
       
-      <p>So what do we do with this uncomfortable knowledge?</p>
+      <p>So what do we do with this uncomfortable knowledge? Do we give up and go live in a cave? No—we act like adults who understand trade-offs:</p>
       
       <ol>
-        <li><strong>Use approved algorithms properly</strong>—they're computationally expensive to break</li>
-        <li><strong>Prefer non-NSA alternatives</strong> when available and proven</li>
-        <li><strong>Focus on implementation and key management</strong>—more important than algorithm choice</li>
-        <li><strong>Layer defenses</strong>—never rely on encryption alone</li>
-        <li><strong>Assume nation-states can break your crypto if sufficiently motivated</strong></li>
-        <li><strong>Design for detection and response</strong>, not imaginary perfect security</li>
-        <li><strong>Be transparent</strong>—publish your cryptography policy for scrutiny</li>
+        <li><strong>Use approved algorithms properly</strong>—they're genuinely hard to break (just not impossible for well-funded adversaries)</li>
+        <li><strong>Prefer non-NSA alternatives when available</strong>—ChaCha20, Ed25519, and other non-intelligence-agency designs when you can</li>
+        <li><strong>Focus on implementation and key management</strong>—perfect crypto with terrible key management is useless crypto</li>
+        <li><strong>Layer your defenses</strong>—never rely on encryption alone, because it's one tool in a toolbox, not a magic wand</li>
+        <li><strong>Assume capable adversaries can compromise your systems</strong>—design for detection and response, not imaginary perfect prevention</li>
+        <li><strong>Be transparent about your crypto policy</strong>—publish it, let people audit it, accept the scrutiny</li>
+        <li><strong>Remember the Law of Fives</strong>—there are always five ways they can get around your defenses, and these are just the ones you know about</li>
       </ol>
       
-      <p><strong>All hail Eris!</strong> The truth is uncomfortable, but it's better than false security.</p>
+      <p><strong>All hail Eris!</strong> The truth is uncomfortable, but it's better than false security sold by vendors who've never been targeted by a nation-state.</p>
       
-      <p><em>View our complete <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy on GitHub</a>—because transparency beats security through obscurity.</em></p>
+      <p class="hidden-wisdom"><em>Final Hidden Wisdom: The goal isn't perfect security—that's impossible. The goal is making surveillance expensive enough that they have to care specifically about YOU. Most of us aren't that interesting.</em></p>
+      
+      <p><em>View our complete <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy on GitHub</a>—because transparency beats security through obscurity, and we practice what we preach.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br><br><em>"Crypto AG was a thing. Think about that."</em></p>
     </section>
 
     <section id="related">

@@ -223,42 +223,47 @@
       <div class="cards">
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>1. Over-Classification</h3>
-          <p><strong>Symptom:</strong> Everything marked "Confidential" or higher.</p>
-          <p><strong>Problem:</strong> When everything is sensitive, nothing is. People ignore classifications and share freely anyway.</p>
+          <h3>1. Over-Classification (Security Theater)</h3>
+          <p><strong>Symptom:</strong> Everything marked "Confidential" or higher, including the lunch menu.</p>
+          <p><strong>Problem:</strong> When everything is sensitive, nothing is. People ignore classifications and share freely anyway because they need to get work done.</p>
           <p><strong>Fix:</strong> Default to Internal. Upgrade only when specific impact justifies it.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: If your coffee machine manual is classified, you're not doing security—you're doing paranoia theater.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>2. Under-Classification</h3>
-          <p><strong>Symptom:</strong> Customer data marked "Internal," credentials in wikis.</p>
-          <p><strong>Problem:</strong> Actual sensitive data gets leaked because nobody treats it carefully.</p>
-          <p><strong>Fix:</strong> Classify based on <em>worst-case impact</em>, not convenience.</p>
+          <h3>2. Under-Classification (Negligence)</h3>
+          <p><strong>Symptom:</strong> Customer data marked "Internal," credentials pasted in wikis, secrets in Slack.</p>
+          <p><strong>Problem:</strong> Actual sensitive data gets leaked because nobody treats it carefully enough.</p>
+          <p><strong>Fix:</strong> Classify based on <em>worst-case impact</em>, not what's convenient for sharing.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: "It's fine, it's just internal" are famous last words before a breach.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>3. Ignoring Availability</h3>
-          <p><strong>Symptom:</strong> Focus only on confidentiality, ignore uptime requirements.</p>
-          <p><strong>Problem:</strong> Critical systems have inadequate backups and recovery plans.</p>
-          <p><strong>Fix:</strong> Classify availability separately. Some data is "Public" for confidentiality but "Secret" for availability.</p>
+          <h3>3. Ignoring Availability (The Forgotten Dimension)</h3>
+          <p><strong>Symptom:</strong> Focus only on confidentiality, ignore uptime requirements until systems are down.</p>
+          <p><strong>Problem:</strong> Critical systems have inadequate backups and recovery plans. You discover this during the outage.</p>
+          <p><strong>Fix:</strong> Classify availability separately. Your public website needs high availability even if confidentiality is "Public."</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Uptime isn't sexy, but neither is explaining to customers why they can't access your service.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>4. Ignoring Integrity</h3>
-          <p><strong>Symptom:</strong> Anyone can modify critical data, no audit logs.</p>
-          <p><strong>Problem:</strong> Data corruption, incorrect decisions, compliance violations.</p>
-          <p><strong>Fix:</strong> Classify integrity separately. Financial data needs high integrity even if not highly confidential.</p>
+          <h3>4. Ignoring Integrity (Silent Corruption)</h3>
+          <p><strong>Symptom:</strong> Anyone can modify critical data, no audit logs, no version control.</p>
+          <p><strong>Problem:</strong> Data corruption leads to incorrect decisions, compliance violations, and expensive mistakes.</p>
+          <p><strong>Fix:</strong> Classify integrity separately. Financial data needs high integrity even if it's not particularly confidential internally.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Wrong data is worse than no data—at least with no data you know you don't know.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>5. Static Classification</h3>
-          <p><strong>Symptom:</strong> Classification set once, never reviewed.</p>
-          <p><strong>Problem:</strong> Data sensitivity changes over time. Old projects become public, new features become competitive secrets.</p>
-          <p><strong>Fix:</strong> Review classifications annually. Downgrade when appropriate—enable innovation.</p>
+          <h3>5. Static Classification (Set and Forget)</h3>
+          <p><strong>Symptom:</strong> Classification set once during project kickoff, never reviewed again.</p>
+          <p><strong>Problem:</strong> Data sensitivity changes. Old projects become public, new features become secrets, and your classifications are outdated.</p>
+          <p><strong>Fix:</strong> Review classifications regularly. Downgrade when appropriate—security that blocks innovation is just expensive bureaucracy.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Classification isn't permanent—it's risk management, and risk changes over time.</em></p>
         </div>
       </div>
     </section>
@@ -383,21 +388,23 @@
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">The Bottom Line: Classify Based on Risk, Not Fear</h2>
+      <h2 class="panel-caption">The Bottom Line: Classify Based on Reality, Not Fear or Laziness</h2>
       
       <ol>
-        <li><strong>Use five levels:</strong> Public, Internal, Confidential, Secret, Extreme</li>
-        <li><strong>Consider CIA Triad:</strong> Classify confidentiality, integrity, and availability separately</li>
-        <li><strong>Base on impact:</strong> What actually happens if compromised? Not vague sensitivity.</li>
-        <li><strong>Enable business:</strong> Good classification enables innovation, doesn't block it</li>
-        <li><strong>Be transparent:</strong> Publish your framework—accountability through visibility</li>
+        <li><strong>Use exactly five levels</strong>—Public, Internal, Confidential, Secret, Extreme (the Law of Fives demands it)</li>
+        <li><strong>Consider the CIA Triad separately</strong>—a single piece of data can have different classifications for confidentiality, integrity, and availability</li>
+        <li><strong>Base classifications on actual impact</strong>—what happens if it's compromised, not vague feelings of "sensitivity"</li>
+        <li><strong>Enable business, don't block it</strong>—security that prevents work from happening is just expensive obstruction</li>
+        <li><strong>Be radically transparent</strong>—publish your framework, let people audit it, accept the scrutiny</li>
       </ol>
       
-      <p>Classification done right is <strong>security that enables business value</strong>. Classification done wrong is either useless paranoia or negligent exposure.</p>
+      <p>Classification done right is <strong>security that enables business value</strong>—teams can work with appropriate data without excessive restrictions. Classification done wrong is either useless paranoia that labels everything secret, or negligent exposure that classifies nothing.</p>
       
-      <p><strong>All hail Eris!</strong> And remember: <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em> Don't let classification become bureaucratic theater.</p>
+      <p><strong>All hail Eris!</strong> And remember: <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em> Don't let classification become bureaucratic theater where everything is "Confidential" just to be safe.</p>
       
-      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br>Product Owner, Hack23 AB</p>
+      <p class="hidden-wisdom"><em>Final Hidden Wisdom: The coffee machine manual is not classified. If you think it is, you've already lost the plot.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br>Product Owner, Hack23 AB<br><br><em>"Think for yourself, schmuck!"</em></p>
     </section>
 
     <section id="related">
