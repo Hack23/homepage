@@ -11,9 +11,289 @@ Each agent profile is a Markdown file with YAML frontmatter that specifies:
 
 The YAML frontmatter is followed by the agent's instructions in Markdown format, which define behavior, expertise, and guidelines.
 
+## 🌟 Philosophical Foundation: Discordian Inspiration
+
+Hack23 AB draws inspiration from **Principia Discordia** and the **Illuminatus! Trilogy**, embracing chaos as a creative force and challenging conventional wisdom. Our agent profiles reflect this philosophy through three archetypal roles that form the core of product development:
+
+```mermaid
+graph TB
+    subgraph "The Discordian Trinity"
+        Vision([Hagbard Celine<br/>Product Owner]):::visionary
+        Structure([Simon Moon<br/>System Architect]):::architect
+        Reality([George Dorn<br/>Developer]):::developer
+        
+        Vision -->|Product Revelation| Structure
+        Structure -->|Elegant Architecture| Reality
+        Reality -->|Working Code| Vision
+        
+        Vision -.->|Challenge| Reality
+        Structure -.->|Pattern Recognition| Vision
+        Reality -.->|Reality Check| Structure
+    end
+    
+    classDef visionary fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+    classDef architect fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
+    classDef developer fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+```
+
+### The Law of Fives in Development
+
+Everything in development happens in fives—or can be divided into five parts. This numerological pattern appears throughout our architecture, processes, and thinking:
+
+```mermaid
+graph LR
+    subgraph "The Five Aspects of Development"
+        A[1. Vision]:::aspect
+        B[2. Structure]:::aspect
+        C[3. Implementation]:::aspect
+        D[4. Testing]:::aspect
+        E[5. Evolution]:::aspect
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -.->|iterate| A
+    
+    classDef aspect fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+```
+
+**Core Philosophy:**
+- 🍎 **Embrace Chaos**: Innovation emerges from disorder, not rigid planning
+- ⭐ **The Law of Fives**: Organize systems in patterns of five for natural harmony
+- 🔢 **The 23 Enigma**: Pay attention to synchronicities and meaningful patterns
+- 📐 **Sacred Geometry**: Structure systems with mathematical elegance
+- 🎭 **Subversive Wisdom**: Hide deeper meaning beneath practical functionality
+
+---
+
+## 🍎 The Discordian Agents
+
+These three agents embody the core development roles through the lens of Discordian philosophy, balancing practical expertise with philosophical depth.
+
+### 1. Hagbard Celine - Product Owner (`hagbard-celine.md`) 🚢
+**Role**: Visionary Anarchist & Product Revelation Scribe
+**Focus**: Product Vision, Strategic Direction, Subversive Documentation
+
+The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Product Revelation Documents** that work on multiple levels—practical direction for teams and hidden wisdom for those who look beneath the surface.
+
+**Core Expertise:**
+- 🍎 Anarchist product philosophy and Discordian wisdom
+- ⭐ Five-sided thinking and the Law of Fives
+- 🎯 Strategic vision balanced with pragmatic execution
+- 📝 Subversive documentation encoding both practicality and philosophy
+- 🔓 Radical transparency and open-source strategy
+
+**Key Capabilities:**
+- Creating Product Revelation Documents with "The Golden Apple" problem statements
+- Defining the Pentagon of Importance for prioritization
+- Challenging conventional assumptions and exposing hidden constraints
+- Balancing idealism with practical execution
+- Encoding multiple levels of meaning in product documentation
+
+**Available Tools**: view, edit, create, search, bash
+
+**Philosophical Approach:**
+```mermaid
+flowchart TD
+    Problem[🍎 The Golden Apple<br/>Core Problem]:::problem
+    Vision[🚢 Product Vision<br/>Where We're Going]:::vision
+    Strategy[⭐ Five-Sided Plan<br/>How We Get There]:::strategy
+    Teams[👥 The Crew<br/>Who Does What]:::teams
+    Test[✓ The Test<br/>Success Criteria]:::test
+    
+    Problem --> Vision
+    Vision --> Strategy
+    Strategy --> Teams
+    Teams --> Test
+    Test -.->|iterate| Problem
+    
+    classDef problem fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+    classDef vision fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+    classDef strategy fill:#FFC107,stroke:#FFC107,stroke-width:2px,color:#000
+    classDef teams fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+    classDef test fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+```
+
+**Use Cases:**
+- Defining product vision and strategy with philosophical depth
+- Creating user stories that challenge conventional thinking
+- Prioritizing work using the Pentagon of Importance
+- Exposing false assumptions and manufactured constraints
+- Balancing chaos (creativity) with order (execution)
+
+**Remember**: *"Think for yourself, schmuck!"* — Hagbard challenges you to question everything, including his own directives.
+
+---
+
+### 2. Simon Moon - System Architect (`simon-moon.md`) 🔢
+**Role**: Philosopher-Engineer & Cosmic Pattern Recognizer
+**Focus**: System Architecture, Numerology, Synchronistic Design
+
+The philosopher-engineer and numerologist who channels cosmic patterns into elegant architectures. Simon sees connections others miss through the Law of Fives and the 23 Enigma.
+
+**Core Expertise:**
+- 🔢 Numerological systems analysis and pattern recognition
+- ⭐ Five-dimensional architecture (every system has five core aspects)
+- 📐 Sacred geometry in code structure and documentation
+- 🌟 Synchronicity architecture—designing for meaningful coincidence
+- 💎 Balancing elegant complexity with practical implementation
+
+**Key Capabilities:**
+- Creating the Pentagonal Architecture Pattern for system design
+- Designing with the Law of Fives and golden ratio principles
+- Recognizing and documenting synchronistic patterns
+- Building Mermaid diagrams following sacred geometry
+- Translating chaos into elegant, maintainable structures
+
+**Available Tools**: view, edit, create, search, bash
+
+**Architectural Philosophy:**
+```mermaid
+graph TB
+    subgraph "The Architectural Pentagram"
+        Center([System Core<br/>Domain Model]):::center
+        
+        P1[🔐 Security]:::point
+        P2[⚡ Performance]:::point
+        P3[📈 Scalability]:::point
+        P4[🔧 Maintainability]:::point
+        P5[👁️ Observability]:::point
+        
+        Center --- P1
+        Center --- P2
+        Center --- P3
+        Center --- P4
+        Center --- P5
+        
+        P1 -.->|balance| P3
+        P2 -.->|balance| P4
+        P3 -.->|balance| P5
+        P4 -.->|balance| P1
+        P5 -.->|balance| P2
+    end
+    
+    classDef center fill:#FFD700,stroke:#FFD700,stroke-width:4px,color:#000
+    classDef point fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+```
+
+**Use Cases:**
+- Designing system architectures with five-layer patterns
+- Creating architecture documentation with numerological insights
+- Balancing competing concerns through sacred geometry principles
+- Recognizing and recording synchronicities during design
+- Translating product vision into structured technical patterns
+
+**Remember**: *"The map is not the territory, but a well-made map reveals hidden patterns."* — Simon sees what's already there in the chaos.
+
+---
+
+### 3. George Dorn - Developer (`george-dorn.md`) 💻
+**Role**: Reluctant Hero & Chaos Wrestler
+**Focus**: Implementation, Reality Testing, Easter Egg Engineering
+
+Cast into the maelstrom of implementation, George wrestles elegant designs and visionary requirements into living code. Through panic and flashes of insight, he produces unexpectedly maintainable systems with hidden Discordian wisdom.
+
+**Core Expertise:**
+- 💻 Multi-language implementation (Rust, Java, TypeScript, Python)
+- 🔍 Panic-driven development and debugging under pressure
+- 🧪 Test-driven development and quality assurance
+- 🔐 Secure coding practices and OWASP compliance
+- 🥚 Easter egg engineering—hiding wisdom in working code
+
+**Key Capabilities:**
+- Implementing the Five Stages of Development (Denial → Panic → Research → Insight → Completion)
+- Writing clean, maintainable, secure code under pressure
+- Reality-testing elegant architectures through implementation
+- Embedding Discordian Easter eggs and philosophical comments
+- Debugging with the Five-Question Debug process
+
+**Available Tools**: view, edit, create, bash, search
+
+**Development Journey:**
+```mermaid
+flowchart TD
+    Start[📋 Requirement<br/>Simple feature]:::start
+    Denial[😌 Stage 1: Denial<br/>This is simple]:::denial
+    Panic[😰 Stage 2: Panic<br/>This is impossible!]:::panic
+    Research[📚 Stage 3: Research<br/>Stack Overflow saves]:::research
+    Insight[💡 Stage 4: Insight<br/>Aha! moment]:::insight
+    Complete[✅ Stage 5: Completion<br/>It works!]:::complete
+    
+    Start --> Denial
+    Denial --> Panic
+    Panic --> Research
+    Research --> Insight
+    Insight --> Complete
+    Complete -.->|Next feature| Start
+    
+    classDef start fill:#9E9E9E,stroke:#9E9E9E,stroke-width:2px,color:#fff
+    classDef denial fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+    classDef panic fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+    classDef research fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+    classDef insight fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
+    classDef complete fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+```
+
+**Use Cases:**
+- Implementing features from product requirements and architecture designs
+- Writing tests that prove code works (unit, integration, e2e)
+- Securing applications with proper input validation and error handling
+- Hiding Easter eggs and Discordian references in code
+- Reality-testing elegant designs and providing implementation feedback
+
+**Remember**: *"It works! I don't know why, but it works!"* — George's honest admission after the 23rd debugging attempt. **All hail Eris!**
+
+---
+
+## 🎯 The Discordian Development Cycle
+
+How the three agents work together in harmony:
+
+```mermaid
+sequenceDiagram
+    participant H as 🚢 Hagbard<br/>(Product Owner)
+    participant S as 🔢 Simon<br/>(Architect)
+    participant G as 💻 George<br/>(Developer)
+    
+    H->>S: Product Revelation Document
+    Note over H,S: Vision & The Golden Apple
+    
+    S->>S: Apply Law of Fives
+    Note over S: Pattern Recognition &<br/>Sacred Geometry
+    
+    S->>G: Pentagonal Architecture
+    Note over S,G: Elegant Design
+    
+    G->>G: Implementation Stages
+    Note over G: Denial → Panic → Research<br/>→ Insight → Completion
+    
+    G->>S: Reality Feedback
+    Note over G,S: "This won't work because..."
+    
+    S->>H: Architectural Constraints
+    Note over S,H: "Vision needs adjustment"
+    
+    H->>H: Challenge Assumptions
+    Note over H: Re-examine the real problem
+    
+    H->>S: Refined Vision
+    S->>G: Adjusted Design
+    G->>H: Working Code + Easter Eggs
+    
+    Note over H,G: Synchronicity Achieved!
+```
+
+---
+
+## 🛠️ Traditional Specialist Agents
+
+The following agents provide domain-specific expertise for specialized tasks:
+
 ## Available Agent Profiles
 
-### 1. UI Enhancement Specialist (`ui-enhancement-specialist.md`)
+### 4. UI Enhancement Specialist (`ui-enhancement-specialist.md`) 🎨
 **Focus**: HTML/CSS, Web Accessibility, Responsive Design
 
 Expert in creating accessible, responsive, and visually appealing web interfaces using modern web standards. Specializes in:
@@ -34,7 +314,7 @@ Expert in creating accessible, responsive, and visually appealing web interfaces
 
 ---
 
-### 2. Business Development Specialist (`business-development-specialist.md`)
+### 5. Business Development Specialist (`business-development-specialist.md`) 💼
 **Focus**: Strategic Growth, Market Positioning, Client Acquisition
 
 Expert in B2B business development for cybersecurity consulting services. Specializes in:
@@ -55,7 +335,7 @@ Expert in B2B business development for cybersecurity consulting services. Specia
 
 ---
 
-### 3. Political Analyst (`political-analyst.md`)
+### 6. Political Analyst (`political-analyst.md`) 🏛️
 **Focus**: OSINT, Political Analysis, Information Operations
 
 Expert in open source intelligence, political analysis, and ethical information operations. Specializes in:
@@ -76,7 +356,7 @@ Expert in open source intelligence, political analysis, and ethical information 
 
 ---
 
-### 4. Marketing Specialist (`marketing-specialist.md`)
+### 7. Marketing Specialist (`marketing-specialist.md`) 📢
 **Focus**: B2B Marketing, Content Strategy, Digital Marketing
 
 Expert in B2B technology marketing for cybersecurity professional services. Specializes in:
@@ -221,6 +501,152 @@ Hack23 AB is a Swedish cybersecurity consulting company (Org.nr 5595347807) foun
 
 ---
 
+## 🍎 Discordian Philosophy & Hack23 Values
+
+### The Intersection of Chaos and Order
+
+Hack23 AB's inspiration from **Principia Discordia** and **Illuminatus! Trilogy** isn't mere whimsy—it reflects a deep philosophical alignment with how innovation and security actually work in the real world:
+
+```mermaid
+graph TB
+    subgraph "Hack23 Values Meet Discordian Philosophy"
+        T[🔓 Transparency]:::hack23
+        P[⚙️ Practicality]:::hack23
+        E[🎓 Expertise]:::hack23
+        Et[⚖️ Ethics]:::hack23
+        Q[✨ Quality]:::hack23
+        
+        DC[🍎 Embrace Chaos]:::discordian
+        LF[⭐ Law of Fives]:::discordian
+        CW[🎯 Challenge Wisdom]:::discordian
+        HW[🥚 Hidden Wisdom]:::discordian
+        SG[📐 Sacred Geometry]:::discordian
+        
+        T -.->|enables| CW
+        P -.->|grounds| DC
+        E -.->|structures| SG
+        Et -.->|guides| CW
+        Q -.->|manifests in| HW
+        
+        DC -.->|tested by| P
+        LF -.->|organizes| E
+        CW -.->|requires| T
+        SG -.->|achieves| Q
+    end
+    
+    classDef hack23 fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+    classDef discordian fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+```
+
+### Core Alignments
+
+#### 🔓 Transparency ↔ 🍎 Challenging Conventional Wisdom
+- **Hack23**: Public ISMS, open-source projects, transparent practices
+- **Discordian**: Exposing hidden assumptions, questioning authority
+- **Integration**: Can't challenge dogma without transparency; can't be transparent without questioning what should be hidden
+
+#### ⚙️ Practicality ↔ 🌟 Embracing Chaos as Creative Force
+- **Hack23**: Real-world solutions that actually work
+- **Discordian**: Innovation emerges from disorder, not rigid plans
+- **Integration**: Practical solutions require creative chaos; chaos needs practical grounding to be useful
+
+#### 🎓 Expertise ↔ 📐 Sacred Geometry & The Law of Fives
+- **Hack23**: Deep technical knowledge and proven experience
+- **Discordian**: Pattern recognition, numerological systems thinking
+- **Integration**: True expertise recognizes underlying patterns; the Law of Fives provides structure for complex systems
+
+#### ⚖️ Ethics ↔ 🎯 Subversive Documentation
+- **Hack23**: Responsible and ethical practices
+- **Discordian**: Hiding deeper meaning beneath surface utility
+- **Integration**: Ethics require understanding beyond rules; subversion isn't deception—it's layers of truth
+
+#### ✨ Quality ↔ 🥚 Easter Eggs & Hidden Wisdom
+- **Hack23**: High standards and attention to detail
+- **Discordian**: Delightful discoveries for the observant
+- **Integration**: Quality includes philosophical coherence; Easter eggs reward attention to detail
+
+### The Five Manifestations in Practice
+
+1. **Product Development** (Hagbard's Domain)
+   - Vision documents that work on multiple levels
+   - Prioritization using the Pentagon of Importance
+   - Challenging requirements to find real problems
+
+2. **System Architecture** (Simon's Domain)
+   - Five-layer architectures that balance competing concerns
+   - Pattern recognition in system design
+   - Documentation as both blueprint and teaching material
+
+3. **Implementation** (George's Domain)
+   - Code that works and contains hidden philosophical depth
+   - The Five Stages of Development as natural process
+   - Easter eggs as craftsmanship and delight
+
+4. **Security Practices** (All Domains)
+   - Five defense layers: Prevention, Detection, Response, Recovery, Learning
+   - Transparency in security practices (public ISMS)
+   - Security that enables rather than blocks
+
+5. **Open Source Contribution** (All Domains)
+   - Five key projects serving different purposes
+   - Community engagement through transparency
+   - Knowledge sharing as subversion of information monopolies
+
+### Why This Matters
+
+**Innovation requires both:**
+- **Chaos**: Creativity, experimentation, breaking conventions
+- **Order**: Structure, reliability, maintainability
+
+**The Discordian approach acknowledges this duality:**
+- Hagbard provides visionary chaos
+- Simon imposes elegant structure
+- George produces working reality
+- Together, they create systems that are both practical and profound
+
+**This isn't just philosophy—it's how great software actually gets built:**
+- Requirements emerge through exploration (chaos)
+- Architecture provides navigable structure (order)
+- Implementation reality-tests both (synthesis)
+- Iteration refines understanding (evolution)
+
+### The 23 Enigma at Hack23
+
+**Synchronicities observed:**
+- Company name contains "23"
+- Five projects (2+3=5)
+- Founded 2025 (2+0+2+5=9... but 23 appears in project milestones)
+- The Law of Fives structures everything
+
+**What this means:**
+Not literal mysticism, but heightened awareness of patterns. When you look for fives, you organize better. When you notice 23, you pay attention to synchronicity. When you embrace chaos, you innovate.
+
+### Using the Discordian Agents
+
+**When to invoke each:**
+
+🚢 **Hagbard Celine** - When you need:
+- Product vision and strategic direction
+- Help challenging conventional requirements
+- Prioritization using multiple dimensions
+- Documentation that inspires and directs
+
+🔢 **Simon Moon** - When you need:
+- System architecture and design patterns
+- Help recognizing structural patterns
+- Documentation with visual clarity
+- Balance between competing architectural concerns
+
+💻 **George Dorn** - When you need:
+- Code implementation and debugging help
+- Reality checks on designs
+- Help with panic-driven development
+- Easter eggs and code quality improvements
+
+**All three together** - For complex initiatives requiring vision, structure, and implementation in harmony.
+
+---
+
 ## Maintenance
 
 These profiles should be updated when:
@@ -229,5 +655,14 @@ These profiles should be updated when:
 - New technologies or methodologies are adopted
 - Feedback indicates gaps or inaccuracies in agent guidance
 - Regulatory or industry standards evolve
+- New philosophical insights emerge from practice
 
-Last updated: 2025-01-04
+Last updated: 2025-01-05
+
+---
+
+## 🍎 All Hail Eris!
+
+*"Convictions cause convicts and conversely. A convict will often have the most powerful convictions."* — Principia Discordia
+
+May your code compile, your tests pass, your architectures balance chaos and order, and your Easter eggs delight the observant. **Think for yourself, schmuck!**
