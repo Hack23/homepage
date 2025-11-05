@@ -1644,6 +1644,26 @@ footer {
   color: var(--text-secondary);
 }
 
+/* Hidden wisdom styling - Discordian Easter eggs */
+.hidden-wisdom {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 102, 51, 0.05);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hidden-wisdom {
+    background: rgba(0, 204, 102, 0.1);
+    border-left-color: var(--primary-color);
+    color: var(--primary-light);
+  }
+}
+
 /* Responsive tables for mobile */
 @media (max-width: 768px) {
   .data-table {

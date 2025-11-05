@@ -86,103 +86,117 @@
     <section id="manifesto-intro">
       <h2 class="panel-caption">The Five-Sided Truth They Don't Want You to Know</h2>
       
-      <p><strong>All hail Eris!</strong> Welcome to the only honest cybersecurity blog you'll read today. While everyone else is selling you on "military-grade encryption" and "government-approved standards," we're here to tell you the truth: <em>if your government approved it, your government can break it.</em></p>
+      <p><strong>All hail Eris!</strong> Welcome to the only honest cybersecurity blog you'll read today. While everyone else is selling you on "military-grade encryption" and "government-approved standards," we're here to whisper the uncomfortable truth: <em>if your government approved it, your government can break it.</em></p>
       
-      <p>This isn't conspiracy theory—it's <strong>capability theory</strong>. Nation-states possess full-spectrum cyber capabilities including:</p>
+      <p>This isn't conspiracy theory—it's <strong>capability theory</strong>. Or as I prefer to call it: <em>fnord</em>. You can't unsee it once you notice the pattern.</p>
+      
+      <p>Nation-states possess full-spectrum cyber capabilities, and they've invested more in breaking your security than you've invested in building it. Let's count the ways:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>1. SIGINT & Mass Surveillance</h3>
-          <p>They intercept everything. <em>Everything.</em> Your encrypted traffic? Already stored in a data center somewhere, waiting for quantum computers to crack it retrospectively.</p>
+          <p>They intercept everything. <em>Everything.</em> Your encrypted traffic? Already archived in a data center somewhere, waiting patiently for the technology to crack it. They're not worried about breaking it today—they've got <em>time</em>.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: The most dangerous secrets aren't the ones they keep from you—they're the ones you think you're keeping from them.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>2. Cryptographic Backdoors</h3>
-          <p>Why would intelligence agencies allow truly unbreakable encryption to become standard? Every "approved" algorithm has been vetted by people whose job is to <em>break things.</em></p>
+          <p>Why would intelligence agencies allow truly unbreakable encryption to become standard? They wouldn't. Every "approved" algorithm has been blessed by people whose actual job description is "break things professionally."</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: When the locksmith also runs the burglary ring, trust becomes an interesting concept.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. Supply Chain Compromise</h3>
-          <p>Hardware backdoors. Firmware implants. Pre-compromised certificates. If they can't break the math, they'll break the implementation—or just buy the company.</p>
+          <p>Hardware backdoors. Firmware implants. Pre-compromised certificates. If they can't break the math, they'll break the implementation—or just buy the company that makes it. The supply chain is an attack surface disguised as capitalism.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Your security is only as strong as the most compromised link in a chain you don't control.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>4. Legal Compulsion</h3>
-          <p>National Security Letters. FISA Courts. Gag orders. Tech companies can be legally forced to compromise their systems and forbidden from telling you.</p>
+          <p>National Security Letters. FISA Courts. Gag orders. Tech companies can be legally forced to compromise their systems and <em>forbidden from telling you about it</em>. It's not paranoia if they're actually doing it.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: The law exists to maintain order—not necessarily your privacy.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. Advanced Persistent Threats</h3>
-          <p>Nation-state actors with unlimited budgets, zero-day exploits you've never heard of, and the patience to wait years for the right moment.</p>
+          <p>Nation-state actors with budgets that dwarf your security spending, zero-day exploits you've never heard of, and the patience of a spider waiting years for the perfect moment. They're called "persistent" for a reason.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: The best attack is the one you never notice happened.</em></p>
         </div>
       </div>
       
-      <p><em>The Law of Fives never fails.</em> There are always five ways nation-states can compromise your security, and these are just the ones we know about.</p>
+      <p><em>The Law of Fives never fails.</em> There are always five ways nation-states can compromise your security, and these are just the ones we're allowed to know about. The sixth way? They'll tell you it doesn't exist.</p>
     </section>
 
     <section id="approved-crypto">
       <h2 class="panel-caption">The "Approved Algorithms" Paradox</h2>
       
-      <p>Let's talk about government-approved cryptography. You know what's interesting? The same organizations that:</p>
+      <p>Let's talk about government-approved cryptography. You know what's <em>deliciously</em> ironic? The same organizations that:</p>
       
       <ul>
-        <li>Run global surveillance programs</li>
-        <li>Employ the world's best cryptanalysts</li>
-        <li>Have budgets in the billions for signals intelligence</li>
-        <li>Legally compromise tech companies</li>
-        <li>Intercept hardware in transit to install backdoors</li>
+        <li>Run global surveillance programs (that they denied existed until someone leaked proof)</li>
+        <li>Employ the world's best cryptanalysts (to break things, not to protect yours)</li>
+        <li>Have budgets measured in billions for signals intelligence (your budget: not that)</li>
+        <li>Legally compromise tech companies (with gag orders so they can't warn you)</li>
+        <li>Intercept hardware in transit to install backdoors (yes, really, documented fact)</li>
       </ul>
       
       <p>...are the <em>same organizations</em> that certify which encryption algorithms are "safe" for everyone to use.</p>
       
-      <p><strong>Isn't that convenient?</strong></p>
+      <p><strong>Feel safer yet?</strong></p>
       
-      <p>This isn't to say modern cryptography is worthless—breaking AES-256 with a proper implementation and key management is <em>computationally infeasible</em> (for now). But here's the thing: they don't need to break the algorithm when they can:</p>
+      <p>Now, I'm not saying modern cryptography is worthless. Breaking properly-implemented strong encryption is genuinely difficult—that's math, not marketing. But here's the beautiful part: <em>they don't need to break the algorithm when they can:</em></p>
       
       <ol>
-        <li><strong>Compromise the implementation</strong> (Dual_EC_DRBG, anyone?)</li>
-        <li><strong>Steal the keys</strong> (via legal access, supply chain, or exploitation)</li>
-        <li><strong>Attack the endpoints</strong> (your device is the weak link, not the math)</li>
-        <li><strong>Exploit the metadata</strong> (they don't need content when they know who talks to whom, when, and how often)</li>
-        <li><strong>Wait for quantum computing</strong> (store now, decrypt later)</li>
+        <li><strong>Compromise the implementation</strong> — Remember Dual_EC_DRBG? The NSA-designed random number generator with a built-in backdoor that got standardized anyway? Good times.</li>
+        <li><strong>Steal the keys</strong> — Via legal access, supply chain compromise, or good old-fashioned exploitation. Why pick the lock when you can swipe the key?</li>
+        <li><strong>Attack the endpoints</strong> — Your device is the weak link, not the math. They don't need to break AES when they can just own your computer.</li>
+        <li><strong>Exploit the metadata</strong> — They don't need to read your messages when they know who you talk to, when, how often, and from where. Pattern analysis is surveillance.</li>
+        <li><strong>Wait for quantum computing</strong> — Store now, decrypt later. Your secrets today are their plain text tomorrow.</li>
       </ol>
       
-      <p>See? The Law of Fives strikes again. There are always five ways around your "secure" encryption.</p>
+      <p>See? The Law of Fives strikes again. There are always five ways around your "secure" encryption. The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</p>
+      
+      <p class="hidden-wisdom"><em>Hidden Wisdom: The strongest encryption in the world is useless if you're not defending the entire system. And you're not. Nobody is.</em></p>
     </section>
 
     <section id="transparency-solution">
       <h2 class="panel-caption">The Discordian Solution: Radical Transparency</h2>
       
-      <p>So what do we do? Give up? Use rot13 and hope for the best?</p>
+      <p>So what do we do? Give up? Use rot13 and hope for the best? Wrap our servers in tinfoil?</p>
       
-      <p><strong>No.</strong> We embrace transparency as the real security mechanism.</p>
+      <p><strong>No.</strong> We embrace the chaos. We make transparency the security mechanism.</p>
       
-      <p>At Hack23, we practice <strong>radical transparency</strong> through our <a href="https://github.com/Hack23/ISMS-PUBLIC">Public ISMS</a>. Why?</p>
+      <p>At Hack23, we practice <strong>radical transparency</strong> through our <a href="https://github.com/Hack23/ISMS-PUBLIC">Public ISMS</a>. Because if you can't hide from them (and you can't), you might as well show everyone <em>how</em> you're not hiding.</p>
       
       <div class="cards">
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>Trust Through Verification</h3>
-          <p>Don't trust our security practices—<em>verify them.</em> Our policies, procedures, and frameworks are public. You can see exactly how we handle security.</p>
+          <p>Don't trust our security practices—<em>verify them.</em> Our policies, procedures, and frameworks are public. You can audit us yourself. No NDAs. No security through obscurity. No bullshit.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Security through obscurity is just incompetence with a nicer name.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>No Security Theater</h3>
-          <p>We don't pretend nation-states can't compromise systems. We design for resilience, detection, and recovery—not for imaginary perfect security.</p>
+          <p>We don't pretend nation-states can't compromise systems. We design for resilience, detection, and recovery—not for imaginary perfect security. Because perfect security is a lie told by vendors and believed by nobody who's actually been breached.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: The question isn't "if" you'll be compromised, it's "when" and "will you notice?"</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>Business Value Over Buzzwords</h3>
-          <p>Security investments should deliver <strong>measurable ROI</strong>: reduced breach costs, operational efficiency, customer trust, and competitive advantage.</p>
+          <p>Security investments should deliver <strong>real returns</strong>—not just check compliance boxes. Reduced breach costs, operational efficiency, customer trust, competitive advantage. If you can't measure the value, you're just performing security theater.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Security that doesn't enable business is just expensive paranoia.</em></p>
         </div>
       </div>
+      
+      <p>The beautiful irony? Transparency actually <em>improves</em> security. When everyone can see your processes, they can spot the flaws. When you can't hide behind "proprietary security," you have to actually <em>be</em> secure. It's accountability dressed up as anarchy.</p>
     </section>
 
     <section id="isms-blog-entries">
@@ -220,15 +234,15 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>📊 <a href="discordian-business-value.html">Security Investment ROI</a></h3>
-          <p>The real business value of security—measurable returns, not fear-driven spending. 100-200% ROI through six value dimensions.</p>
+          <p>The real business value of security—measurable returns, not fear-driven spending. Because if you can't explain the value, you're just performing security theater.</p>
         </div>
       </div>
     </section>
 
     <section id="business-value-preview">
-      <h2 class="panel-caption">The Business Case: Security That Pays For Itself</h2>
+      <h2 class="panel-caption">The Business Case: Security That Actually Pays For Itself</h2>
       
-      <p>Forget the FUD. Let's talk about <strong>real business value</strong>:</p>
+      <p>Forget the FUD. Let's talk about <strong>real business value</strong>—not scare tactics:</p>
       
       <table class="data-table">
         <thead>
@@ -236,77 +250,81 @@
             <th>ROI Level</th>
             <th>Risk Reduction</th>
             <th>Breach Prevention</th>
-            <th>CAPEX ROI</th>
+            <th>Business Impact</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Exceptional</strong></td>
-            <td>90%+</td>
-            <td>$10M+ savings</td>
-            <td>500%+</td>
+            <td>Substantial</td>
+            <td>Major breach costs avoided</td>
+            <td>Strong positive returns</td>
           </tr>
           <tr>
             <td><strong>High</strong></td>
-            <td>80-90%</td>
-            <td>$4-10M savings</td>
-            <td>300-500%</td>
+            <td>Significant</td>
+            <td>Notable savings from prevention</td>
+            <td>Solid returns</td>
           </tr>
           <tr>
             <td><strong>Moderate</strong></td>
-            <td>60-80%</td>
-            <td>$1-4M savings</td>
-            <td>150-300%</td>
+            <td>Meaningful</td>
+            <td>Reasonable cost avoidance</td>
+            <td>Positive returns</td>
           </tr>
           <tr>
             <td><strong>Basic</strong></td>
-            <td>40-60%</td>
-            <td>$0.5-1M savings</td>
-            <td>50-150%</td>
+            <td>Some improvement</td>
+            <td>Limited savings</td>
+            <td>Break-even to modest returns</td>
           </tr>
           <tr>
             <td><strong>Minimal</strong></td>
-            <td>&lt;40%</td>
-            <td>&lt;$0.5M savings</td>
-            <td>&lt;50%</td>
+            <td>Marginal</td>
+            <td>Minimal impact</td>
+            <td>Questionable value</td>
           </tr>
         </tbody>
       </table>
       
-      <p>Security investments should deliver <strong>positive ROI</strong> through:</p>
+      <p>Security investments should deliver <strong>real business value</strong>, not just theoretical protection:</p>
       
       <ul>
-        <li>🤝 <strong>Trust Enhancement (86%)</strong> — Customer and partner confidence</li>
-        <li>⚙️ <strong>Operational Efficiency (36%)</strong> — Reliable systems reduce friction</li>
-        <li>💡 <strong>Innovation Enablement (63%)</strong> — Secure platforms enable new capabilities</li>
-        <li>📊 <strong>Decision Quality (54%)</strong> — Better data integrity improves decisions</li>
-        <li>🏆 <strong>Competitive Advantage (45%)</strong> — Security as market differentiator</li>
-        <li>🛡️ <strong>Risk Reduction (72%)</strong> — Fewer disruptions, lower breach costs</li>
+        <li>🤝 <strong>Trust Enhancement</strong> — Customer and partner confidence that translates to revenue</li>
+        <li>⚙️ <strong>Operational Efficiency</strong> — Reliable systems that don't waste your team's time</li>
+        <li>💡 <strong>Innovation Enablement</strong> — Secure platforms that enable new capabilities instead of blocking them</li>
+        <li>📊 <strong>Decision Quality</strong> — Data integrity you can actually rely on for decisions</li>
+        <li>🏆 <strong>Competitive Advantage</strong> — Security as market differentiator (when done right, not just claimed)</li>
+        <li>🛡️ <strong>Risk Reduction</strong> — Fewer oh-shit moments at 3am</li>
       </ul>
       
-      <p><em>Balanced security investments deliver operational stability, data reliability, and reasonable protection that enable business growth.</em></p>
+      <p><em>Balanced security investments deliver operational stability, data reliability, and reasonable protection that enable business growth—not paranoid lockdown that prevents it.</em></p>
+      
+      <p class="hidden-wisdom"><em>Hidden Wisdom: Security that prevents business from functioning is just expensive failure with a nicer name.</em></p>
       
       <p><a href="discordian-business-value.html">Read the full business value analysis →</a></p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">The Truth Shall Set You Free (Sort Of)</h2>
+      <h2 class="panel-caption">The Truth Shall Set You Free (Maybe—No Guarantees)</h2>
       
-      <p>Here's what we've learned from the Law of Fives:</p>
+      <p>Here's what we've learned from the Law of Fives (and you can't unlearn it now, sorry):</p>
       
       <ol>
-        <li><strong>No crypto is truly secure</strong> from nation-state adversaries with full-spectrum capabilities</li>
-        <li><strong>Government-approved algorithms</strong> are approved by people whose job is breaking things</li>
-        <li><strong>Transparency beats obscurity</strong> because trust requires verification, not faith</li>
-        <li><strong>Real security is resilience</strong>—not imaginary perfect protection</li>
-        <li><strong>Security investments should deliver measurable ROI</strong>—not just fear-driven spending</li>
+        <li><strong>No crypto is truly secure</strong> from nation-state adversaries with full-spectrum capabilities and unlimited patience</li>
+        <li><strong>Government-approved algorithms</strong> are approved by people whose actual job description is "professional thing-breakers"</li>
+        <li><strong>Transparency beats obscurity</strong> because trust requires verification, not blind faith in vendor promises</li>
+        <li><strong>Real security is resilience</strong>—not imaginary perfect protection sold by consultants who've never been breached</li>
+        <li><strong>Security investments should deliver actual value</strong>—not just check compliance boxes and pray</li>
       </ol>
       
-      <p><strong>All hail Eris!</strong> Embrace the chaos. Question the approved narratives. Build security that <em>actually works</em> in the real threat landscape.</p>
+      <p><strong>All hail Eris!</strong> Embrace the chaos. Question the approved narratives. Build security that <em>actually works</em> in the real threat landscape, not the fantasy one from vendor slide decks.</p>
       
-      <p>And remember: <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em> Don't let compliance theater replace actual security thinking.</p>
+      <p>And always remember: <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em> Don't let compliance theater replace actual security thinking. Don't let fear-mongering replace risk assessment. And for Eris's sake, don't trust anyone who says they can make you "unhackable."</p>
       
-      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br>Product Owner, Hack23 AB</p>
+      <p class="hidden-wisdom"><em>Final Hidden Wisdom: The only truly secure system is one that's turned off, buried in concrete, and guarded by armed dolphins. Everything else is risk management and hope.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br>Product Owner, Hack23 AB<br><br><em>"Think for yourself, schmuck!"</em></p>
     </section>
 
     <section id="related">
