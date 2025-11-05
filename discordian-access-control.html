@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Control: Who Gets In and Why Trust Is a Bug | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Zero trust isn't paranoia—it's reality. Question authority over access. Think for yourself about least privilege.">
+<meta name="keywords" content="access control, zero trust, least privilege, question authority, radical transparency, identity management, authentication">
+<link rel="canonical" href="https://hack23.com/discordian-access-control.html">
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="discordian-cybersecurity.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">ISMS Access Control</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🔐 Access Control: Trust No One (Including Yourself)</h1>
+    <section id="introduction">
+      <h2 class="panel-caption">Why "Trust but Verify" Is Half Wrong</h2>
+      <p><strong>Think for yourself.</strong> The phrase "trust but verify" is security dogma. Here's the truth: <strong>Just verify.</strong></p>
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except access without authentication, authorization, and audit logging.</p>
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> is public because access control through obscurity is like hiding keys under the doormat.</p>
+      <p class="hidden-wisdom"><em>Illumination: Trust is a vulnerability. Verification is a control. Choose controls over vulnerabilities.</em></p>
+    </section>
+    <section id="zero-trust">
+      <h2 class="panel-caption">Zero Trust: Not Paranoia, Just Mathematics</h2>
+      <p>"Zero trust" sounds paranoid. It's not. It's <strong>acknowledging reality</strong>:</p>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>1. Verify Every Request</h3>
+          <p>No implicit trust. No "you're on the VPN so you're good." <strong>Every access request gets challenged.</strong> Always.</p>
+          <p class="hidden-wisdom"><em>Illumination: The network perimeter dissolved in 2010. Anyone still trusting it is LARPing security.</em></p>
+        </div>
+        <div class="card integrity-card">
+          <h3>2. Least Privilege Always</h3>
+          <p>Minimum access required. Time-limited when possible. <strong>Revoke by default.</strong> Privilege creep is how admins become attackers.</p>
+          <p class="hidden-wisdom"><em>Illumination: Admin access is like root access to reality. Use sudo, not stay logged in as god.</em></p>
+        </div>
+        <div class="card availability-card">
+          <h3>3. Assume Breach</h3>
+          <p>Design like attackers are already inside. Because they probably are. <strong>Limit blast radius.</strong> Segment. Isolate. Monitor.</p>
+          <p class="hidden-wisdom"><em>Illumination: If you can't detect malicious admin activity, you don't have security—you have hope.</em></p>
+        </div>
+        <div class="card confidentiality-card">
+          <h3>4. Log Everything</h3>
+          <p>Who accessed what, when, from where. <strong>Audit trails or it didn't happen.</strong> Logs you don't review are data hoarding, not security.</p>
+          <p class="hidden-wisdom"><em>Illumination: Logging without alerting is like having security cameras that nobody watches.</em></p>
+        </div>
+        <div class="card integrity-card">
+          <h3>5. Encrypt in Transit</h3>
+          <p>Network is hostile. Always. <strong>TLS everything.</strong> VPNs aren't trust—they're encrypted untrust over untrusted networks.</p>
+          <p class="hidden-wisdom"><em>Illumination: Cleartext on the wire is cleartext in the database after the breach. Plan accordingly.</em></p>
+        </div>
+      </div>
+    </section>
+    <section id="authentication">
+      <h2 class="panel-caption">The Five Factors of Not Getting Pwned</h2>
+      <p><strong>Multi-factor authentication isn't optional.</strong> Passwords alone are security theater. The Law of Fives demands:</p>
+      <ul>
+        <li><strong>Something you know</strong> (password) — Easily stolen, phished, guessed</li>
+        <li><strong>Something you have</strong> (hardware token) — Better, but losable</li>
+        <li><strong>Something you are</strong> (biometric) — Can't change if compromised</li>
+        <li><strong>Somewhere you are</strong> (geolocation) — IP addresses lie</li>
+        <li><strong>Something you do</strong> (behavior patterns) — ML-based, fallible but useful</li>
+      </ul>
+      <p><strong>Use at least two factors.</strong> Three is better. One is negligence.</p>
+    </section>
+    <section id="conclusion">
+      <h2 class="panel-caption">Access Control Is Authority Control</h2>
+      <p><strong>Think for yourself. Question authority.</strong> Especially authority to access sensitive data.</p>
+      <p><strong>All hail Eris!</strong> Chaos teaches: trust enables betrayal. Verification prevents surprises.</p>
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy on GitHub</a>. Public. Auditable. Zero bullshit.</p>
+      <p class="hidden-wisdom"><strong>FINAL ILLUMINATION:</strong> <em>The most dangerous access is the access you forgot exists. Review permissions. Revoke liberally. Trust nothing.</em></p>
+      <p class="signature">— Hagbard Celine<br><br><em>"Trust is a vulnerability masquerading as a feature."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+<footer>
+  <p>&copy; James Pether Sörling 2008-2025 | Hack23 AB | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+</body>
+</html>

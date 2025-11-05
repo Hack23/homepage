@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Security: The Perimeter Is Dead, Long Live the Perimeter | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Think for yourself about network security. The perimeter dissolved in 2010. Question authority over firewall dogma. Assume breach, design accordingly.">
+<meta name="keywords" content="network security, zero trust network, firewall, perimeter security, assume breach, network segmentation">
+<link rel="canonical" href="https://hack23.com/discordian-network-security.html">
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="discordian-cybersecurity.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">ISMS Network Policy</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🌐 Network Security: The Perimeter Is a Lie</h1>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Castle-and-Moat Security Died With Mobile Devices</h2>
+      
+      <p><strong>Think for yourself.</strong> Network security used to be simple: hard shell, soft interior. Firewall keeps bad guys out, everything inside is trusted.</p>
+      
+      <p><strong>That model is dead.</strong> Has been for years. But consultants keep selling it because it's easy to explain to executives who don't understand technology.</p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including attackers already inside your "secure" network. Plan for it.</p>
+      
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy</a> is public because network security through obscurity assumes attackers can't run port scans.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination: If your security model assumes attackers are outside, your security model is from 1995. Update it or get pwned.</em></p>
+    </section>
+
+    <section id="perimeter-myth">
+      <h2 class="panel-caption">Why the Network Perimeter Is Fantasy</h2>
+      
+      <p><strong>Question authority</strong> that still talks about "inside" and "outside" networks:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Mobile Devices Roam</h3>
+          <p>Laptop leaves the office? It's "outside." Comes back? It's "inside" again. <strong>With whatever malware it picked up.</strong> VPN doesn't make devices trustworthy—it just encrypts their attacks.</p>
+          <p class="hidden-wisdom"><em>Illumination: Every device that crosses the perimeter is a potential Trojan horse. The Greeks taught this lesson 3000 years ago.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Cloud Services Are "Outside"</h3>
+          <p>Office 365? AWS? GitHub? <strong>All outside your perimeter.</strong> Yet essential to business. The perimeter doesn't include what you actually use.</p>
+          <p class="hidden-wisdom"><em>Illumination: Defending a perimeter that doesn't include your data is LARPing security.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Insider Threats Exist</h3>
+          <p>Malicious insiders. Compromised accounts. Social engineering. <strong>Threat is already inside.</strong> Your firewall doesn't stop Susan in accounting from clicking phishing links.</p>
+          <p class="hidden-wisdom"><em>Illumination: The call is coming from inside the house. It always was.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Supply Chain Compromises</h3>
+          <p>Trusted vendor gets hacked. Pushes malicious update. <strong>Through your firewall.</strong> Because you trust signed updates from "inside" the perimeter. SolarWinds, anyone?</p>
+          <p class="hidden-wisdom"><em>Illumination: Trust is how supply chain attacks work. Zero trust is how they get detected.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. APTs Are Patient</h3>
+          <p>Advanced Persistent Threats don't bang on your firewall. They <strong>live inside for months</strong>. Quietly. The perimeter didn't save you—you're already compromised and don't know it.</p>
+          <p class="hidden-wisdom"><em>Illumination: The average dwell time for breaches is measured in months. Your perimeter failed months ago.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="zero-trust-network">
+      <h2 class="panel-caption">Zero Trust: Verify Everything, Trust Nothing</h2>
+      
+      <p><strong>Zero trust networking</strong> isn't paranoia. It's accepting reality and designing accordingly:</p>
+      
+      <ul>
+        <li><strong>Authenticate every request</strong> — Location on network doesn't grant trust. Verify identity, device health, context every time.</li>
+        <li><strong>Authorize least privilege</strong> — Just because you're authenticated doesn't mean you get access to everything. Minimum required, time-limited when possible.</li>
+        <li><strong>Encrypt everything in transit</strong> — Internal network isn't trusted. TLS everywhere. mTLS for service-to-service.</li>
+        <li><strong>Microsegment the network</strong> — Lateral movement is how breaches spread. Segment. Isolate. Contain blast radius.</li>
+        <li><strong>Monitor all traffic</strong> — Log everything. Alert on anomalies. Assume breach means detecting it fast, not preventing it perfectly.</li>
+      </ul>
+      
+      <p><strong>All hail Eris!</strong> Chaos teaches: trust enables betrayal. Verification prevents surprises.</p>
+    </section>
+
+    <section id="firewall-reality">
+      <h2 class="panel-caption">Firewalls: Necessary But Insufficient</h2>
+      
+      <p><strong>Firewalls aren't useless.</strong> They're just not sufficient:</p>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>✅ Firewalls Block Port Scans</h3>
+          <p>Deny-by-default is good. Reducing attack surface is good. Basic perimeter defense is <em>necessary</em>.</p>
+        </div>
+        
+        <div class="card">
+          <h3>❌ Firewalls Don't Stop Malware</h3>
+          <p>Malware uses allowed ports (80/443). Encrypted in TLS. Your firewall sees encrypted traffic and says "looks fine to me."</p>
+        </div>
+        
+        <div class="card">
+          <h3>✅ Firewalls Provide Defense in Depth</h3>
+          <p>Layer in a security stack. One control among many. <strong>Not</strong> the only control.</p>
+        </div>
+        
+        <div class="card">
+          <h3>❌ Firewalls Create False Confidence</h3>
+          <p>"We have a firewall, we're secure!" No. You have <em>one</em> control. You need twenty more.</p>
+        </div>
+      </div>
+      
+      <p><strong>Think for yourself.</strong> Firewalls are tools, not magic force fields. Use them. Don't worship them.</p>
+    </section>
+
+    <section id="segmentation">
+      <h2 class="panel-caption">Network Segmentation: Limit the Blast Radius</h2>
+      
+      <p><strong>Assume breach.</strong> Design so that when (not if) attackers get in, they can't move laterally:</p>
+      
+      <ul>
+        <li><strong>VLANs for different functions</strong> — Development, staging, production in different network segments</li>
+        <li><strong>Firewall rules between segments</strong> — Default deny. Explicit allow only what's needed.</li>
+        <li><strong>Jump boxes for admin access</strong> — No direct SSH/RDP to production. Through a logged, monitored, hardened jump host.</li>
+        <li><strong>Service mesh for microservices</strong> — mTLS between services. Network policy enforcement at pod level.</li>
+        <li><strong>Database in separate subnet</strong> — Application tier can reach it. Nothing else can. Principle of least privilege at network layer.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> <em>Flat networks are how one compromised WordPress blog becomes a full domain admin compromise. Segment or suffer.</em></p>
+    </section>
+
+    <section id="monitoring">
+      <h2 class="panel-caption">Network Monitoring: Seeing the Invisible</h2>
+      
+      <p><strong>Can't defend what you can't see.</strong> Network monitoring isn't optional:</p>
+      
+      <ul>
+        <li><strong>Flow logs</strong> — Who's talking to who, when, how much. Baseline normal, alert on anomalies.</li>
+        <li><strong>IDS/IPS</strong> — Intrusion detection. Not prevention (that's usually brittle), but detection and alerting.</li>
+        <li><strong>DNS monitoring</strong> — Exfiltration often uses DNS tunneling. Monitor queries for anomalies.</li>
+        <li><strong>TLS inspection (carefully)</strong> — Decrypt at perimeter, inspect, re-encrypt. Privacy implications, but blind spots kill.</li>
+        <li><strong>SIEM integration</strong> — Network logs into security monitoring. Correlate with other signals.</li>
+      </ul>
+      
+      <p><strong>Question authority:</strong> If your network team says "we can't monitor that," ask why. Usually it's "we don't want to" not "we can't."</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Network Security Is About Containment, Not Prevention</h2>
+      
+      <p><strong>Nothing is true.</strong> The perimeter isn't real. "Inside" isn't trusted. Firewalls aren't magic.</p>
+      
+      <p><strong>Everything is permitted.</strong> Including designing networks that assume breach and minimize damage.</p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy on GitHub</a>. Zero trust. Segmented. Monitored.</p>
+      
+      <p class="hidden-wisdom"><strong>FINAL ILLUMINATION:</strong> <em>The security-industrial complex sells firewalls and perimeter defense because they're easy to sell. "Buy this box, you're secure!" Reality: Network security is architecture, monitoring, and accepting that perfect prevention is impossible. Design for containment. Plan for detection. Respond with speed.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br><br><em>"The perimeter is dead. Long live the perimeter-less architecture."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+<footer>
+  <p>&copy; James Pether Sörling 2008-2025 | Hack23 AB | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Source Policy: Code You Can Actually Read | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Question authority over proprietary code. Think for yourself about open source security. Radical transparency in software development.">
+<meta name="keywords" content="open source policy, open source security, radical transparency, code review, think for yourself, question proprietary software">
+<link rel="canonical" href="https://hack23.com/discordian-open-source.html">
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="discordian-cybersecurity.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">ISMS Open Source</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🔓 Open Source Policy: Trust Through Transparency</h1>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Why Proprietary Code Is an Unauditable Black Box</h2>
+      
+      <p><strong>Think for yourself.</strong> When vendors say "trust our security," what they mean is "don't look at our code."</p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including actually reading the source code of software that processes your data.</p>
+      
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">Open Source Policy</a> is public because open source security is <em>verifiable</em> security. Proprietary security is <strong>security through hope</strong>.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination: "Trust me" is what every con artist says. "Verify yourself" is what engineers say. Choose engineers.</em></p>
+    </section>
+
+    <section id="why-open-source">
+      <h2 class="panel-caption">The Five Reasons Open Source Isn't Naive</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Many Eyes Make Shallow Bugs</h3>
+          <p><strong>Linus's Law.</strong> More reviewers find more vulnerabilities. Proprietary code gets reviewed by the vendor's team. Open source gets reviewed by <em>the entire internet</em>. Which finds more bugs?</p>
+          <p class="hidden-wisdom"><em>Illumination: Bugs in proprietary code stay secret until exploited. Bugs in open source get fixed publicly. Choose public fixes over secret exploits.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. No Backdoors By Accident</h3>
+          <p>Intentional backdoors are hard to hide in public code. Accidental vulnerabilities get caught faster. <strong>Transparency prevents both.</strong> Proprietary code could have either and you'd never know.</p>
+          <p class="hidden-wisdom"><em>Illumination: The NSA can compel vendors to add backdoors and stay silent (documented). They can't compel the entire open source community. Choose uncensorable code.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Vendor Lock-In Is a Security Risk</h3>
+          <p>Proprietary vendor goes bankrupt? Stops supporting your version? Raises prices 10x? <strong>You're screwed.</strong> Open source? Fork it. Maintain it yourself. Hire someone to fix it. Options are security.</p>
+          <p class="hidden-wisdom"><em>Illumination: Dependence on a single vendor is a single point of failure. Diversification applies to software too.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Security Through Obscurity Is Dead</h3>
+          <p><strong>Question authority</strong> that claims "keeping the code secret makes it secure." That's not security—that's hoping attackers are too lazy to reverse engineer. They're not lazy.</p>
+          <p class="hidden-wisdom"><em>Illumination: Attackers have your proprietary binaries. They have decompilers. They have patience. Your "secret" code isn't secret to them.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Compliance Requires Auditability</h3>
+          <p>How do you audit code you can't see? You don't. You <strong>trust vendor claims</strong>. That's not compliance—that's faith-based security. Open source? Audit it yourself. Or hire auditors who can.</p>
+          <p class="hidden-wisdom"><em>Illumination: "Independently audited" proprietary software means "audited by people who signed NDAs and can't tell you what they found." That's marketing, not security.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-approach">
+      <h2 class="panel-caption">Operation Mindfuck: Everything Open by Default</h2>
+      
+      <p><strong>Radical transparency</strong> means publishing everything unless there's a <em>specific</em> reason not to:</p>
+      
+      <ul>
+        <li><strong>All tools we build</strong> — On GitHub. Public. Forkable. <a href="https://github.com/Hack23">github.com/Hack23</a></li>
+        <li><strong>All libraries we use</strong> — Open source only. If it's proprietary, we don't depend on it for security-critical functions.</li>
+        <li><strong>All configurations</strong> — Infrastructure as code. Public templates. Secrets redacted, structure visible.</li>
+        <li><strong>All policies</strong> — Including this one. Because security policies you can't audit are just vendor promises.</li>
+        <li><strong>All documentation</strong> — Setup guides. Architecture decisions. Incident post-mortems (sanitized). Learn from our mistakes.</li>
+      </ul>
+      
+      <p><strong>All hail Eris!</strong> Chaos teaches: hiding your code doesn't prevent attacks—it prevents defense.</p>
+      
+      <p class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> <em>The security-industrial complex hates open source because you can't sell expensive "proprietary threat intelligence" about vulnerabilities everyone can already see. Transparency destroys their business model. That's why we do it.</em></p>
+    </section>
+
+    <section id="not-naive">
+      <h2 class="panel-caption">Open Source Isn't Security Theater</h2>
+      
+      <p><strong>Question everything</strong>—including our position. Open source isn't magic pixie dust that makes code secure. It's <em>necessary</em> but not <em>sufficient</em>:</p>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>❌ Open Source ≠ Secure</h3>
+          <p>Bad code is bad code whether you can read it or not. Open source enables auditing—it doesn't guarantee anyone actually audited it.</p>
+        </div>
+        
+        <div class="card">
+          <h3>✅ Open Source = Auditable</h3>
+          <p>Which is the first step to secure. You can't fix vulnerabilities you can't see. You can't see proprietary code.</p>
+        </div>
+        
+        <div class="card">
+          <h3>❌ "Many Eyes" Is Hope</h3>
+          <p>Just being open doesn't mean experts reviewed it. Heartbleed lived in OpenSSL for years. Open source isn't immune to bugs.</p>
+        </div>
+        
+        <div class="card">
+          <h3>✅ "Many Eyes" Is Opportunity</h3>
+          <p>Opportunity for review that doesn't exist with proprietary code. Heartbleed got <em>fixed</em> publicly once found. How many Heartbleeds are hiding in proprietary TLS implementations?</p>
+        </div>
+      </div>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including acknowledging that open source has challenges. But proprietary code has <em>worse</em> challenges—and they're unfixable by design.</p>
+    </section>
+
+    <section id="license-choice">
+      <h2 class="panel-caption">License Choice: Freedom Requires Structure</h2>
+      
+      <p>Not all "open source" is equal. License choice matters:</p>
+      
+      <ul>
+        <li><strong>GPL/AGPL</strong> — Copyleft. Modifications must stay open. Prevents proprietary capture. Use when you want code to stay free.</li>
+        <li><strong>Apache/MIT</strong> — Permissive. Can be incorporated into proprietary software. Use when you want maximum adoption.</li>
+        <li><strong>Dual licensing</strong> — Open for community, paid for commercial. Sustainable model. Use when you need to eat.</li>
+      </ul>
+      
+      <p><strong>Think for yourself</strong> about which license serves your goals. Don't cargo cult "everyone uses MIT." Question why.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Transparency as Resistance</h2>
+      
+      <p><strong>Question authority.</strong> Especially authority that insists code must be secret to be secure.</p>
+      
+      <p>Open source isn't perfect. But it's <strong>auditable</strong>. Verifiable. Forkable. Unfucked-with-able by single vendors or three-letter agencies.</p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">Open Source Policy on GitHub</a>. Public. Auditable. Practice what we preach.</p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>The question isn't "Is open source secure?" The question is "How do you audit security in software you can't see?" The answer: You don't. You trust. And trust is a vulnerability.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br><br><em>"Code you can't audit is code you can't trust."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+<footer>
+  <p>&copy; James Pether Sörling 2008-2025 | Hack23 AB | <a href="https://github.com/Hack23">GitHub</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+</body>
+</html>

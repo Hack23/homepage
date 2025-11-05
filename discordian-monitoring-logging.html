@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring & Logging: If a Tree Falls and Nobody Logs It... | Hack23 Discordian Blog</title>
+    <meta name="description" content="Detection requires visibility. Five monitoring categories, log everything but review intelligently. Nothing is true, everything is permitted.">
+    <link rel="canonical" href="https://www.hack23.com/discordian-monitoring-logging.html">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Monitoring & Logging: If a Tree Falls and Nobody Logs It...">
+    <meta property="og:description" content="Detection requires visibility. Radical Discordian examination of security monitoring and logging strategies.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.hack23.com/discordian-monitoring-logging.html">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Monitoring & Logging: If a Tree Falls and Nobody Logs It...",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine"
+      },
+      "datePublished": "2025-11-05",
+      "description": "Detection requires visibility. Five monitoring categories, log everything but review intelligently.",
+      "keywords": "security monitoring, logging, SIEM, detection, incident response, ISMS"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Monitoring & Logging: If a Tree Falls and Nobody Logs It...</h1>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. But log everything anyway."</em></p>
+
+            <h2>🔍 The Problem: Security Events Nobody Sees</h2>
+            
+            <p>If a tree falls in the forest and nobody logs it, <strong>it still fell</strong>. But you'll never prove it. You'll never know when. You'll never know why. And when the auditor asks, you'll look stupid.</p>
+            
+            <p>Detection requires visibility. Visibility requires logging. Logging requires storage. Storage requires money. Money requires justification. And around we go.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> If a tree falls in the forest and nobody logs it, it still fell. But you'll never prove it. Log everything. Review intelligently.
+            </div>
+
+            <h2>📊 The Five Categories of "What to Watch"</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Authentication Events</h3>
+                    <p><strong>Who's trying to get in?</strong></p>
+                    <p>Logins, failures, lockouts, privilege escalations. If someone's trying to become root at 3 AM, that's worth knowing.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Authorization Events</h3>
+                    <p><strong>Who's accessing what?</strong></p>
+                    <p>File access, permission changes, access denials. When your intern tries to read the CEO's email, notice.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. System Events</h3>
+                    <p><strong>What's the infrastructure doing?</strong></p>
+                    <p>Service starts/stops, configuration changes, resource exhaustion. Servers don't reboot themselves (usually).</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Network Events</h3>
+                    <p><strong>What's flowing where?</strong></p>
+                    <p>Traffic patterns, blocked connections, anomalies. 50GB outbound to Romania at midnight? Interesting.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Application Events</h3>
+                    <p><strong>What are your apps actually doing?</strong></p>
+                    <p>Transactions, errors, security events. SQL injection attempts show up here if you're logging properly.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> The log you didn't think to collect is the one that would have shown the breach. Log everything. Storage is cheaper than incident response.
+            </div>
+
+            <h2>⚖️ The Logging Triad: Collect, Retain, Review</h2>
+            
+            <h3>Collect Everything (Almost)</h3>
+            <p>Log authentication, authorization, configuration changes, security events, and errors. Don't log passwords or credit cards—that's just creating new problems.</p>
+            
+            <h3>Retain Intelligently</h3>
+            <p>Hot storage: 30-90 days for investigation. Cold storage: 1-7 years for compliance. Forever storage: Not a thing unless you hate money.</p>
+            
+            <h3>Review Actually</h3>
+            <p>SIEM systems that nobody monitors are expensive screensavers. Alerts that nobody responds to train attackers that they're invisible.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> A SIEM that generates 10,000 alerts per day is an untuned SIEM. Signal requires noise reduction. Tune or drown.
+            </div>
+
+            <h2>🚨 Detection vs. Prevention: Both Required</h2>
+            
+            <p>Prevention is ideal. Detection is necessary. You can't prevent everything—budget, complexity, and reality intervene. But you can detect everything if you log it.</p>
+            
+            <p><strong>Prevention:</strong> Stop attacks before they succeed.<br>
+            <strong>Detection:</strong> Notice attacks while they're happening.<br>
+            <strong>Response:</strong> Stop attacks after they start.<br>
+            <strong>Recovery:</strong> Fix what broke.</p>
+            
+            <p>You need all four. Prevention alone is optimism. Detection alone is archaeology. Choose balance.</p>
+
+            <h2>📋 What Hack23 Actually Does</h2>
+            
+            <p>Our monitoring and logging strategy is public (of course): <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+            
+            <ul>
+                <li><strong>Centralized logging</strong> - CloudWatch, Splunk, or similar SIEM</li>
+                <li><strong>Log retention</strong> - 90 days hot, 1 year cold, 7 years compliance</li>
+                <li><strong>Alerting</strong> - Security events, authentication failures, config changes</li>
+                <li><strong>Regular review</strong> - Weekly for anomalies, daily for critical alerts</li>
+                <li><strong>Incident correlation</strong> - Link logs to incident response timelines</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> If you're not reviewing logs, you're just collecting evidence for the attacker's trial. Detective controls require detection. Detection requires looking.
+            </div>
+
+            <h2>🎯 Conclusion: See to Believe</h2>
+            
+            <p>You can't defend what you can't see. You can't see what you don't log. You can't log what you don't configure. And you can't respond to what you don't review.</p>
+            
+            <p><strong>Monitoring and logging aren't optional—they're foundational.</strong> Prevention fails. Detection catches failure. Response limits damage. This is the cycle.</p>
+            
+            <p>Log everything. Review intelligently. Respond quickly. Or find out the hard way that the breach happened six months ago and you never noticed.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially logs that show 'no suspicious activity' when you know there should be."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your logs contain both truth and noise. Both are real. Neither is complete. Nothing is true. Everything is permitted—but logged.</small></p>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+    </footer>
+</body>
+</html>

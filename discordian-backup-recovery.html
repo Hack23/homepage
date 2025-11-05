@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backup & Recovery: Restore or Regret | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Assume breach. Assume ransomware. Assume disaster. A backup you haven't tested is Schrödinger's backup.">
+<meta name="keywords" content="backup recovery, disaster recovery, RTO RPO, 3-2-1 rule, think for yourself, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<link rel="canonical" href="https://hack23.com/discordian-backup-recovery.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Backup & Recovery: Restore or Regret",
+  "description": "Backup and recovery strategy for surviving breaches, ransomware, and disasters",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB"
+  },
+  "datePublished": "2025-11-05",
+  "inLanguage": "en"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Backup & Recovery</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">💾 Backup & Recovery: Restore or Regret</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">Assume Breach. Assume Ransomware. Assume Disaster.</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except depending on backups you've never tested—that's faith, not security.</p>
+      
+      <p><em>Think for yourself. Question authority.</em> Especially the authority that says "backups are fine, we never need to test them."</p>
+      
+      <p>Breaches happen. Ransomware happens. Disasters happen. Hardware fails. Humans make mistakes. Your data <em>will</em> be lost unless you plan otherwise.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: A backup you haven't tested is Schrödinger's backup—both working and broken until observed.</em></p>
+      
+      <p>Here's how we survive the inevitable. Full strategy in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">public Backup & Recovery Policy</a>:</p>
+    </section>
+
+    <section id="five-rules">
+      <h2 class="panel-caption">The Five Rules of Not Losing Everything</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. The 3-2-1 Rule</h3>
+          <p><strong>3</strong> copies of data, on <strong>2</strong> different media types, with <strong>1</strong> offsite. Redundancy isn't paranoia—it's survival.</p>
+          <p class="hidden-wisdom"><em>One backup is no backup. Two backups is barely a backup. Three is the minimum.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Test Restores</h3>
+          <p>Backups you haven't tested are just unverified hope. Test restores regularly. Full restores, not just file-level. Know your recovery time.</p>
+          <p class="hidden-wisdom"><em>You don't have a backup strategy. You have a restore strategy. Or you have nothing.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Immutable Backups</h3>
+          <p>Ransomware encrypts backups too. Use immutable storage, air-gapped systems, write-once media. Protect backups from the breach.</p>
+          <p class="hidden-wisdom"><em>If ransomware can reach your backups, you don't have backups—you have additional victims.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Encryption</h3>
+          <p>Backups contain everything. Encrypt them. Key management matters. Lose the keys, lose the data. Protect keys like they're the data itself.</p>
+          <p class="hidden-wisdom"><em>Unencrypted backups are just data breaches waiting for physical access.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Document Everything</h3>
+          <p>Disaster recovery isn't the time to figure out procedures. Document: What to backup, how to restore, who has access, where keys are.</p>
+          <p class="hidden-wisdom"><em>Tribal knowledge doesn't survive disasters. Documentation might.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rto-rpo">
+      <h2 class="panel-caption">RTO vs RPO: How Fast vs How Much</h2>
+      
+      <p>Two critical metrics for recovery planning:</p>
+      
+      <ul>
+        <li><strong>Recovery Time Objective (RTO)</strong> — How long can you be down? How fast must you restore? Minutes? Hours? Days? Define it. Architect for it.</li>
+        <li><strong>Recovery Point Objective (RPO)</strong> — How much data can you afford to lose? Last backup was when? How often do you backup? Match RPO to business needs.</li>
+      </ul>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>System Criticality</th>
+            <th>RTO Example</th>
+            <th>RPO Example</th>
+            <th>Backup Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Critical</strong></td>
+            <td>&lt; 1 hour</td>
+            <td>&lt; 15 minutes</td>
+            <td>Continuous replication</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>High</strong></td>
+            <td>4 hours</td>
+            <td>1 hour</td>
+            <td>Hourly backups</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Moderate</strong></td>
+            <td>24 hours</td>
+            <td>24 hours</td>
+            <td>Daily backups</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>Low</strong></td>
+            <td>1 week</td>
+            <td>1 week</td>
+            <td>Weekly backups</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Faster RTO/RPO = more expensive.</strong> Align with business needs, not paranoid ideals.</p>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: RTO/RPO are business decisions dressed as technical requirements. Ask business how much downtime costs.</em></p>
+    </section>
+
+    <section id="ransomware">
+      <h2 class="panel-caption">Ransomware: When Backups Are Your Only Hope</h2>
+      
+      <p>Ransomware is <em>when</em>, not <em>if</em>. Your backup strategy is your ransomware strategy:</p>
+      
+      <ul>
+        <li><strong>Immutable Backups</strong> — Ransomware can't encrypt what it can't modify. Air-gapped, write-once, versioned.</li>
+        <li><strong>Offsite Backups</strong> — Ransomware spreads. Lateral movement. If backups are on the network, they're at risk.</li>
+        <li><strong>Test Restores</strong> — Can you actually restore from backup? Under pressure? In disaster mode? Test. Now.</li>
+        <li><strong>Incident Response</strong> — Backup restoration is part of IR. Have playbook. Know who does what.</li>
+        <li><strong>Don't Pay</strong> — Paying ransomware funds criminals and doesn't guarantee decryption. Restore from backup instead.</li>
+      </ul>
+      
+      <p><strong>Operation Mindfuck the ransomware gangs:</strong> Make backups so good paying ransom is obviously stupid.</p>
+      
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Ransomware gangs research targets. They know who has backups. Be the target that does.</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: 3-2-1, Tested, Immutable</h2>
+      
+      <p>At Hack23, backups are survival, not afterthought:</p>
+      
+      <ul>
+        <li><strong>3-2-1 Rule</strong> — Three copies, two media types, one offsite. Religiously enforced.</li>
+        <li><strong>Daily Backups</strong> — Automated, verified, monitored. Alerts on failures.</li>
+        <li><strong>Monthly Test Restores</strong> — Full recovery tests. Documented. Timed.</li>
+        <li><strong>Immutable Storage</strong> — Backups can't be modified or deleted for retention period. Ransomware-proof.</li>
+        <li><strong>Encrypted Backups</strong> — AES-256, keys in separate secure system. No plaintext backups.</li>
+        <li><strong>Version Retention</strong> — 30 days daily, 12 months monthly, 7 years annual. GDPR-compliant.</li>
+      </ul>
+      
+      <p>Full details in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">public Backup & Recovery Policy</a>—including our test restore results.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Backup Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except depending on untested backups during a ransomware incident—that's panic, not planning.</p>
+      
+      <p>Disasters happen. Breaches happen. Ransomware happens. Hardware fails. Backups are your recovery. Test them or regret it.</p>
+      
+      <p><strong>Think for yourself.</strong> Don't assume backups work. Test. Verify. Document. Because 3am during a disaster isn't when you want to discover backups are corrupted.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. Your backups are Schrödinger's cat—alive and dead until you test. When was the last time you checked?</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! Question everything—especially backup strategies that have never been tested."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — When (not if) shit hits the fan</li>
+        <li><a href="discordian-vuln-mgmt.html">Vulnerability Management</a> — Patch or perish</li>
+        <li><a href="discordian-network-security.html">Network Security Policy</a> — The perimeter is dead</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
+
+</body>
+</html>

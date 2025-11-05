@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Recovery: Plan B When Everything Burns | Hack23 Discordian Blog</title>
+    <meta name="description" content="RTO/RPO for infrastructure. Five disaster scenarios. Failover testing. Nothing is true, everything is permitted.">
+    <link rel="canonical" href="https://www.hack23.com/discordian-disaster-recovery.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Disaster Recovery: Plan B When Everything Burns</h1>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Everything can also fail."</em></p>
+
+            <h2>🔥 The Problem: Everything Fails Eventually</h2>
+            
+            <p>Data centers catch fire. Cloud regions go down. Ransomware encrypts everything. Disasters happen. <strong>Plan recovery or accept permanent failure.</strong></p>
+            
+            <p>Disaster recovery is Plan B. When primary systems fail, DR gets you running again. RTO is how fast. RPO is how much data you lose. Both cost money.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> Disaster recovery plans that haven't been tested are just optimistic fiction. Test failover quarterly or find out during actual disaster that it doesn't work.
+            </div>
+
+            <h2>⚡ The Five Disaster Scenarios</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Infrastructure Failure</h3>
+                    <p><strong>Servers die. Data centers fail.</strong></p>
+                    <p>Multi-AZ deployment. Auto-scaling. Load balancers. Redundancy isn't optional—it's minimum viable.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Regional Outage</h3>
+                    <p><strong>Entire AWS region goes down.</strong></p>
+                    <p>Multi-region deployment. DNS failover. Data replication. Rare but catastrophic.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Ransomware</h3>
+                    <p><strong>Everything encrypted by attackers.</strong></p>
+                    <p>Immutable backups. Offline storage. Restore capability. Don't pay ransoms—restore from backup.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Data Corruption</h3>
+                    <p><strong>Bad data propagates through systems.</strong></p>
+                    <p>Point-in-time recovery. Versioned backups. Data validation. Corruption spreads if undetected.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Accidental Deletion</h3>
+                    <p><strong>Humans delete production database.</strong></p>
+                    <p>Soft deletes. Trash/recycle periods. Confirmation for destructive operations. Humans make mistakes.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> The disaster you didn't plan for is the one that happens. Plan for multiple scenarios or accept that unplanned disasters cause unplanned outages.
+            </div>
+
+            <h2>📋 What Hack23 Actually Does</h2>
+            
+            <p>Our disaster recovery strategy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+            
+            <ul>
+                <li><strong>Multi-AZ deployment</strong> - Infrastructure in multiple availability zones</li>
+                <li><strong>Automated failover</strong> - Load balancers, auto-scaling, health checks</li>
+                <li><strong>Backup strategy</strong> - Daily backups, immutable storage, encrypted</li>
+                <li><strong>Quarterly DR tests</strong> - Failover testing, restore validation</li>
+                <li><strong>RTO/RPO defined</strong> - 4 hours RTO, 1 hour RPO for production</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Disaster recovery without testing is faith-based computing. Test failover regularly or discover during actual disaster that your plan was fiction.
+            </div>
+
+            <h2>🎯 Conclusion: Test or Regret</h2>
+            
+            <p>Disasters happen. Infrastructure fails. <strong>Plan recovery or accept permanent failure.</strong></p>
+            
+            <p>Define RTO/RPO. Build redundancy. Test failover. Or find out during actual disaster that your DR plan was theoretical.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially DR plans that have never been tested."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
+    </footer>
+</body>
+</html>

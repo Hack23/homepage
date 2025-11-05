@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Five Levels of Actually Giving a Damn: Think For Yourself: Classification Beyond Compliance Theater | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Data classification based on real risk, not paranoid fantasies. The five levels of security classification and what they actually mean.">
+<meta name="keywords" content="data classification, information classification, security classification framework, ISMS classification, CIA triad classification, confidentiality levels, integrity levels, availability levels, classification policy">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="The Five Levels of Actually Giving a Damn: Think For Yourself: Classification Beyond Compliance Theater">
+<meta property="og:description" content="Data classification based on real risk—the five levels and what they actually mean.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-classification.html">
+<meta property="og:image" content="https://hack23.com/blog.png">
+<link rel="canonical" href="https://hack23.com/discordian-classification.html">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Five Levels of Actually Giving a Damn: Think For Yourself: Classification Beyond Compliance Theater",
+  "alternativeHeadline": "The Five Levels of Data Classification and What They Actually Mean",
+  "description": "A practical examination of data classification frameworks, avoiding both paranoia and negligence to enable business value.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.png",
+    "width": 800,
+    "height": 600
+  },
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert",
+    "sameAs": [
+      "https://www.linkedin.com/in/jamessorling/",
+      "https://github.com/Hack23"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+    }
+  },
+  "datePublished": "2025-11-05",
+  "dateModified": "2025-11-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-classification.html"
+  },
+  "keywords": "data classification, security classification, ISMS framework, CIA triad",
+  "articleSection": "Information Security"
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Discordian Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" title="Our Classification Framework">ISMS Classification</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">🏷️ The Five Levels of Actually Giving a Damn: Think For Yourself: Classification Beyond Compliance Theater</h1>
+
+    <section id="introduction">
+      <h2 class="panel-caption">The Five-Level Problem With Most Classification Systems</h2>
+      
+      <p>Most organizations approach data classification with one of two extremes:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>Extreme 1: Everything Is Secret</h3>
+          <p><em>"This email about lunch plans? CONFIDENTIAL. The office wifi password? TOP SECRET. The coffee machine manual? CLASSIFIED."</em></p>
+          <p><strong>Result:</strong> Security theater. Nobody takes classification seriously because everything is "sensitive."</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>Extreme 2: Nothing Is Sensitive</h3>
+          <p><em>"Our customer database? Just data. Financial records? Public anyway. Source code? Who cares?"</em></p>
+          <p><strong>Result:</strong> Security negligence. When everything is unclassified, actual sensitive data gets leaked.</p>
+        </div>
+      </div>
+      
+      <p>Both approaches fail. The first creates <strong>information hoarding</strong> that destroys productivity. The second creates <strong>information leakage</strong> that destroys trust.</p>
+      
+      <p>We need a <em>balanced</em> classification framework based on <strong>actual risk</strong>, not fear or laziness.</p>
+    </section>
+
+    <section id="five-levels">
+      <h2 class="panel-caption">The Five Levels: From Public to Extreme</h2>
+      
+      <p>The Law of Fives demands exactly five classification levels. Not three (too simple), not seven (too complex). <strong>Five.</strong></p>
+      
+      <p>Each level is defined by the <strong>impact</strong> of unauthorized disclosure, modification, or unavailability. Not by vague feelings or organizational politics.</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Impact If Compromised</th>
+            <th>Examples</th>
+            <th>Default Access</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-minimal">
+            <td><strong>1. Public</strong></td>
+            <td>No impact—already public</td>
+            <td>Marketing materials, published policies, public documentation</td>
+            <td>Everyone (including external)</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>2. Internal</strong></td>
+            <td>Minor inconvenience</td>
+            <td>Internal procedures, team documentation, non-sensitive metrics</td>
+            <td>All employees</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>3. Confidential</strong></td>
+            <td>Moderate business impact</td>
+            <td>Business strategies, financial forecasts, customer lists</td>
+            <td>Need-to-know basis</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>4. Secret</strong></td>
+            <td>Serious business harm</td>
+            <td>Customer data, financial records, strategic plans, source code</td>
+            <td>Specific roles only</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>5. Extreme</strong></td>
+            <td>Existential threat</td>
+            <td>Credentials, encryption keys, security vulnerabilities, legal cases</td>
+            <td>Minimal access, time-limited</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><em>Note how "Extreme" is reserved for actual existential threats—not arbitrary sensitivity. Most data should be Internal or Confidential.</em></p>
+    </section>
+
+    <section id="cia-triad">
+      <h2 class="panel-caption">The CIA Triad: Three Dimensions of Classification</h2>
+      
+      <p>Classification isn't just about <em>confidentiality</em>. The CIA Triad demands we consider all three dimensions:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔒 Confidentiality</h3>
+          <p><strong>Question:</strong> What happens if unauthorized people see this data?</p>
+          <p><strong>Impact Levels:</strong></p>
+          <ul>
+            <li><strong>Public:</strong> No impact—already public</li>
+            <li><strong>Internal:</strong> Minor embarrassment, no competitive harm</li>
+            <li><strong>Confidential:</strong> Competitive disadvantage, customer concern</li>
+            <li><strong>Secret:</strong> Regulatory violations, significant financial loss</li>
+            <li><strong>Extreme:</strong> Company-ending breach, criminal liability</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>✓ Integrity</h3>
+          <p><strong>Question:</strong> What happens if this data is modified incorrectly?</p>
+          <p><strong>Impact Levels:</strong></p>
+          <ul>
+            <li><strong>Public:</strong> Minor correction needed</li>
+            <li><strong>Internal:</strong> Work disruption, rework required</li>
+            <li><strong>Confidential:</strong> Incorrect business decisions</li>
+            <li><strong>Secret:</strong> Compliance violations, financial reporting errors</li>
+            <li><strong>Extreme:</strong> System compromise, legal liability</li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⏱️ Availability</h3>
+          <p><strong>Question:</strong> What happens if we can't access this data?</p>
+          <p><strong>Impact Levels:</strong></p>
+          <ul>
+            <li><strong>Public:</strong> Minor inconvenience</li>
+            <li><strong>Internal:</strong> Productivity loss, can work around</li>
+            <li><strong>Confidential:</strong> Business operations disrupted</li>
+            <li><strong>Secret:</strong> Revenue loss, customer impact</li>
+            <li><strong>Extreme:</strong> Business cannot function, emergency situation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p><strong>Key Insight:</strong> Data can have <em>different</em> classifications for each CIA dimension. Your marketing website might be:</p>
+      
+      <ul>
+        <li><strong>Confidentiality:</strong> Public (already visible to everyone)</li>
+        <li><strong>Integrity:</strong> Confidential (unauthorized changes would damage brand)</li>
+        <li><strong>Availability:</strong> Secret (downtime directly costs revenue)</li>
+      </ul>
+      
+      <p>See our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">full Classification Framework</a> for detailed examples.</p>
+    </section>
+
+    <section id="common-mistakes">
+      <h2 class="panel-caption">Five Common Classification Mistakes</h2>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Over-Classification (Security Theater)</h3>
+          <p><strong>Symptom:</strong> Everything marked "Confidential" or higher, including the lunch menu.</p>
+          <p><strong>Problem:</strong> When everything is sensitive, nothing is. People ignore classifications and share freely anyway because they need to get work done.</p>
+          <p><strong>Fix:</strong> Default to Internal. Upgrade only when specific impact justifies it.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: If your coffee machine manual is classified, you're not doing security—you're doing paranoia theater.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Under-Classification (Negligence)</h3>
+          <p><strong>Symptom:</strong> Customer data marked "Internal," credentials pasted in wikis, secrets in Slack.</p>
+          <p><strong>Problem:</strong> Actual sensitive data gets leaked because nobody treats it carefully enough.</p>
+          <p><strong>Fix:</strong> Classify based on <em>worst-case impact</em>, not what's convenient for sharing.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: "It's fine, it's just internal" are famous last words before a breach.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Ignoring Availability (The Forgotten Dimension)</h3>
+          <p><strong>Symptom:</strong> Focus only on confidentiality, ignore uptime requirements until systems are down.</p>
+          <p><strong>Problem:</strong> Critical systems have inadequate backups and recovery plans. You discover this during the outage.</p>
+          <p><strong>Fix:</strong> Classify availability separately. Your public website needs high availability even if confidentiality is "Public."</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Uptime isn't sexy, but neither is explaining to customers why they can't access your service.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Ignoring Integrity (Silent Corruption)</h3>
+          <p><strong>Symptom:</strong> Anyone can modify critical data, no audit logs, no version control.</p>
+          <p><strong>Problem:</strong> Data corruption leads to incorrect decisions, compliance violations, and expensive mistakes.</p>
+          <p><strong>Fix:</strong> Classify integrity separately. Financial data needs high integrity even if it's not particularly confidential internally.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Wrong data is worse than no data—at least with no data you know you don't know.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Static Classification (Set and Forget)</h3>
+          <p><strong>Symptom:</strong> Classification set once during project kickoff, never reviewed again.</p>
+          <p><strong>Problem:</strong> Data sensitivity changes. Old projects become public, new features become secrets, and your classifications are outdated.</p>
+          <p><strong>Fix:</strong> Review classifications regularly. Downgrade when appropriate—security that blocks innovation is just expensive bureaucracy.</p>
+          <p class="hidden-wisdom"><em>Hidden Wisdom: Classification isn't permanent—it's risk management, and risk changes over time.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="handling-requirements">
+      <h2 class="panel-caption">Handling Requirements: What Each Level Actually Means</h2>
+      
+      <p>Classification without handling requirements is useless. Here's what each level means <em>in practice</em>:</p>
+      
+      <h3>🌐 Public (Level 1)</h3>
+      <ul>
+        <li><strong>Storage:</strong> Anywhere, including public repositories</li>
+        <li><strong>Transmission:</strong> Unencrypted is acceptable (but HTTPS preferred)</li>
+        <li><strong>Access:</strong> No restrictions</li>
+        <li><strong>Disposal:</strong> Normal deletion</li>
+        <li><strong>Example:</strong> This blog post, marketing materials, published policies</li>
+      </ul>
+      
+      <h3>📁 Internal (Level 2)</h3>
+      <ul>
+        <li><strong>Storage:</strong> Company systems only, basic access controls</li>
+        <li><strong>Transmission:</strong> HTTPS/TLS required</li>
+        <li><strong>Access:</strong> All employees by default</li>
+        <li><strong>Disposal:</strong> Normal deletion (no special requirements)</li>
+        <li><strong>Example:</strong> Team documentation, internal procedures, meeting notes</li>
+      </ul>
+      
+      <h3>🔐 Confidential (Level 3)</h3>
+      <ul>
+        <li><strong>Storage:</strong> Encrypted at rest, access controls required</li>
+        <li><strong>Transmission:</strong> TLS 1.2+ with strong ciphers</li>
+        <li><strong>Access:</strong> Need-to-know basis, role-based access control</li>
+        <li><strong>Disposal:</strong> Secure deletion, overwrite data</li>
+        <li><strong>Example:</strong> Business strategies, customer lists, financial forecasts</li>
+      </ul>
+      
+      <h3>🔒 Secret (Level 4)</h3>
+      <ul>
+        <li><strong>Storage:</strong> Encrypted at rest, HSM/Key Vault for keys</li>
+        <li><strong>Transmission:</strong> TLS 1.3, mutual authentication where possible</li>
+        <li><strong>Access:</strong> Specific roles only, MFA required, audit logging</li>
+        <li><strong>Disposal:</strong> Cryptographic erasure, physical destruction of media</li>
+        <li><strong>Example:</strong> Customer data (GDPR), financial records, source code, strategic plans</li>
+      </ul>
+      
+      <h3>⚡ Extreme (Level 5)</h3>
+      <ul>
+        <li><strong>Storage:</strong> HSM only, hardware-backed encryption, air-gapped where appropriate</li>
+        <li><strong>Transmission:</strong> End-to-end encryption, out-of-band key exchange</li>
+        <li><strong>Access:</strong> Minimal personnel, time-limited access, continuous monitoring</li>
+        <li><strong>Disposal:</strong> HSM key destruction, physical media destruction with certificate</li>
+        <li><strong>Example:</strong> Master encryption keys, root credentials, active security vulnerabilities</li>
+      </ul>
+    </section>
+
+    <section id="business-impact">
+      <h2 class="panel-caption">The Business Case: Classification Enables Value</h2>
+      
+      <p>Good classification isn't just security compliance—it <strong>enables business value</strong>:</p>
+      
+      <div class="cards">
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💡 Innovation Enablement</h3>
+          <p>Clear classification lets teams work with appropriate data without excessive restrictions. Public and Internal data can flow freely—enabling collaboration.</p>
+          <p><strong>Value:</strong> Faster development, better collaboration, reduced friction.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🤝 Customer Trust</h3>
+          <p>Demonstrable data classification shows customers you take their data seriously. It's not theater—it's <em>verifiable</em> protection.</p>
+          <p><strong>Value:</strong> Competitive advantage, customer confidence, easier sales.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>⚖️ Compliance Efficiency</h3>
+          <p>GDPR, HIPAA, SOC2 all require data classification. Having it means compliance is <em>documentation</em>, not investigation.</p>
+          <p><strong>Value:</strong> Faster certifications, reduced audit costs, lower compliance overhead.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ Focused Security Spending</h3>
+          <p>Invest security resources where they matter. Extreme protection for Extreme data. Basic controls for Internal data.</p>
+          <p><strong>Value:</strong> Better security ROI, reduced waste, appropriate risk management.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Informed Decisions</h3>
+          <p>Clear classification enables better risk decisions. Teams know the impact of data loss and can make appropriate tradeoffs.</p>
+          <p><strong>Value:</strong> Better risk management, informed tradeoffs, strategic clarity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="transparency">
+      <h2 class="panel-caption">Our Approach: Transparent Classification</h2>
+      
+      <p>At Hack23, our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework is public</a>. Why?</p>
+      
+      <ol>
+        <li><strong>Accountability:</strong> You can verify we follow our own rules</li>
+        <li><strong>Trust:</strong> No security through obscurity—our process is open to scrutiny</li>
+        <li><strong>Education:</strong> Others can learn from and improve our approach</li>
+        <li><strong>Compliance:</strong> Auditors and customers can see our classification methodology</li>
+        <li><strong>Efficiency:</strong> Clear rules mean faster decisions and less guesswork</li>
+      </ol>
+      
+      <p>Our classification decisions are based on <strong>measurable impact</strong>, not organizational politics or vague feelings. Each classification includes:</p>
+      
+      <ul>
+        <li><strong>Impact Assessment:</strong> What happens if confidentiality/integrity/availability is compromised?</li>
+        <li><strong>Handling Requirements:</strong> Specific technical and procedural controls</li>
+        <li><strong>Access Policies:</strong> Who needs access and why?</li>
+        <li><strong>Review Schedule:</strong> When to reassess classification</li>
+      </ul>
+      
+      <p>See the <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">full framework</a> for detailed examples and templates.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">The Bottom Line: Classify Based on Reality, Not Fear or Laziness</h2>
+      
+      <ol>
+        <li><strong>Use exactly five levels</strong>—Public, Internal, Confidential, Secret, Extreme (the Law of Fives demands it)</li>
+        <li><strong>Consider the CIA Triad separately</strong>—a single piece of data can have different classifications for confidentiality, integrity, and availability</li>
+        <li><strong>Base classifications on actual impact</strong>—what happens if it's compromised, not vague feelings of "sensitivity"</li>
+        <li><strong>Enable business, don't block it</strong>—security that prevents work from happening is just expensive obstruction</li>
+        <li><strong>Be radically transparent</strong>—publish your framework, let people audit it, accept the scrutiny</li>
+      </ol>
+      
+      <p>Classification done right is <strong>security that enables business value</strong>—teams can work with appropriate data without excessive restrictions. Classification done wrong is either useless paranoia that labels everything secret, or negligent exposure that classifies nothing.</p>
+      
+      <p><strong>All hail Eris!</strong> And remember: <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em> Don't let classification become bureaucratic theater where everything is "Confidential" just to be safe.</p>
+      
+      <p class="hidden-wisdom"><em>Final Hidden Wisdom: The coffee machine manual is not classified. If you think it is, you've already lost the plot.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br>Product Owner, Hack23 AB<br><br><em>"Think for yourself, schmuck!"</em></p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related Resources</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🏷️ Our Classification Framework</h3>
+          <p>Full technical details of our five-level classification system with examples and templates.</p>
+          <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" title="Classification Framework">Read Framework →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🍎 Discordian Manifesto</h3>
+          <p>Return to the main manifesto exploring nation-state surveillance capabilities.</p>
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Manifesto">Read Manifesto →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔓 Public ISMS</h3>
+          <p>All our security policies, procedures, and frameworks—transparent and auditable.</p>
+          <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Hack23 Public ISMS">Explore ISMS →</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; James Pether Sörling 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+    <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+    <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" title="Classification Framework">Classification Framework</a>
+  </p>
+</footer>
+
+</body>
+</html>
