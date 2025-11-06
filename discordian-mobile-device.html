@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Device Management: BYOD Means Bring Your Own Disaster | Hack23 Discordian Blog</title>
-    <meta name="description" content="Mobile devices bypass perimeters. Five MDM controls, containerization. Nothing is true, everything is permitted.">
+    <meta name="description" content="Single-person company mobile strategy: MFA mandatory (TOTP, hardware tokens), full device encryption, AWS Identity Center SSO. No corporate MDM—personal devices with strong access controls. Session timeouts 1-24 hours depending on classification.">
     <meta name="keywords" content="mobile device management, MDM, BYOD, mobile security, ISMS, discordian security">
     <meta name="robots" content="index, follow">
     <meta name="author" content="James Pether Sörling">
@@ -41,7 +41,7 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-mobile-device.html"
       },
-      "description": "Mobile devices bypass perimeters. Five MDM controls, containerization strategies.",
+      "description": "Mobile devices bypass perimeters. Single-person company approach: MFA mandatory (100% coverage), full device encryption, AWS Identity Center SSO, session timeouts by classification (1-24 hours). No corporate MDM for one-person operation.",
       "keywords": "mobile device management, MDM, BYOD, mobile security, ISMS",
       "articleSection": "Information Security"
     }
@@ -63,83 +63,154 @@
             
             <p class="subtitle"><em>"Nothing is true. Everything is permitted. Your phone bypasses the firewall."</em></p>
 
-            <h2>📱 The Problem: Phones Are Computers</h2>
+            <h2>📱 The Problem: Phones Are Computers (And You Carry Them Everywhere)</h2>
             
-            <p>Mobile devices bypass perimeters. They roam networks. They install apps. They get lost. They get stolen. They access company email and then visit malicious websites.</p>
+            <p>Mobile devices bypass perimeters. They roam networks. They install apps. They get lost. They get stolen. They access company email and then visit malicious websites. <strong>Every phone is a potential breach vector.</strong> <strong>FNORD—and you sleep next to it, unlock it with your face, and trust it with your darkest secrets.</strong></p>
             
-            <p><strong>BYOD means "Bring Your Own Disaster."</strong> Personal phones accessing corporate data. Unmanaged devices on corporate networks. Shadow IT in everyone's pocket.</p>
+            <p><strong>BYOD means "Bring Your Own Disaster."</strong> Personal phones accessing corporate data. Unmanaged devices on corporate networks. Shadow IT in everyone's pocket. <strong>Are you paranoid enough? Because that TikTok app is reading your clipboard right now.</strong></p>
+            
+            <p>At Hack23, mobile device management reflects reality: <strong>single-person Swedish company with no employees.</strong> No corporate MDM deployment. No containerization platform. No fleet management. Just strong access controls, mandatory MFA, full device encryption, and systematic session management. <strong>Nothing is true—especially the myth that you need enterprise MDM to secure one person's devices.</strong></p>
+            
+            <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> demonstrates mobile security through authentication and authorization rather than device management—because you can't deploy MDM for one person. What you CAN do: enforce MFA everywhere, encrypt everything, timeout sessions appropriately. <strong>Everything is permitted—except accessing financial systems from an unencrypted device. That's just stupid.</strong></p>
             
             <div class="hidden-wisdom">
-                <strong>ILLUMINATION:</strong> BYOD means "Bring Your Own Disaster." Manage it or suffer it. Unmanaged mobile devices are uncontrolled corporate access.
+                <strong>ILLUMINATION:</strong> BYOD means "Bring Your Own Disaster"—unless you enforce strong authentication and encryption. For single-person companies, device management IS access control. Manage authentication, enforce encryption, timeout sessions. Corporate MDM is overkill when you're the only employee. <strong>FNORD—but that doesn't mean you can skip encryption. Paranoia is self-care for psychonauts.</strong>
             </div>
 
-            <h2>🛡️ The Five MDM Controls</h2>
+            <h2>🛡️ The Five Mobile Security Controls (Single-Person Edition)</h2>
             
             <div class="value-grid">
                 <div class="value-card">
-                    <h3>1. Device Enrollment</h3>
-                    <p><strong>Register before access.</strong></p>
-                    <p>No corporate access without MDM enrollment. Inventory all devices. Know what's connecting.</p>
+                    <h3>1. Multi-Factor Authentication</h3>
+                    <p><strong>MFA mandatory everywhere—100% coverage.</strong></p>
+                    <p>TOTP for development platforms. Hardware tokens for banking. Platform MFA for cloud services. AWS Identity Center with SSO.</p>
+                    <p class="hidden-wisdom"><em>Evidence: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> specifies MFA requirements by asset classification.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>2. Policy Enforcement</h3>
-                    <p><strong>Require passcodes, encryption, updates.</strong></p>
-                    <p>Enforce minimum security settings. Block jailbroken devices. Require OS updates.</p>
+                    <h3>2. Device Encryption</h3>
+                    <p><strong>Full disk encryption mandatory—no exceptions.</strong></p>
+                    <p>iOS native encryption, Android encryption, laptop FDE (AES-256). Lock screens with 15-minute timeout. Strong passphrases, not PINs.</p>
+                    <p class="hidden-wisdom"><em>Per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Physical Security Policy</a>—stolen devices must be encrypted.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>3. App Management</h3>
-                    <p><strong>Control what apps can access what data.</strong></p>
-                    <p>Whitelist approved apps. Blacklist dangerous apps. Containerize corporate data.</p>
+                    <h3>3. Session Management</h3>
+                    <p><strong>Timeout sessions by classification.</strong></p>
+                    <p>Financial systems: 1 hour. Development pipeline: 8 hours. Marketing platforms: 7 days. Automatic session termination enforced.</p>
+                    <p class="hidden-wisdom"><em>Classification-driven timeouts per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">CIA+ framework</a>.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>4. Remote Wipe</h3>
-                    <p><strong>Lost device? Delete corporate data.</strong></p>
-                    <p>Selective wipe removes corporate data. Full wipe resets device. Both are necessary capabilities.</p>
+                    <h3>4. Remote Wipe Capability</h3>
+                    <p><strong>Device lost? Wipe remotely.</strong></p>
+                    <p>iOS Find My iPhone with remote wipe. Android Device Manager with remote wipe. Immediate action on device loss report.</p>
+                    <p class="hidden-wisdom"><em>Single-person company: Self-service remote wipe. No IT department to call—you ARE the IT department.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>5. Monitoring</h3>
-                    <p><strong>Track compliance, detect anomalies.</strong></p>
-                    <p>Monitor for policy violations. Detect compromised devices. Alert on suspicious behavior.</p>
+                    <h3>5. Access Review</h3>
+                    <p><strong>Regular review of device access.</strong></p>
+                    <p>Monthly for financial systems. Quarterly for development. Annual for marketing. Remove unnecessary permissions and apps.</p>
+                    <p class="hidden-wisdom"><em>Self-audit: Review your own device permissions quarterly. Remove what you don't need. Minimal attack surface.</em></p>
                 </div>
             </div>
 
             <div class="hidden-wisdom">
-                <strong>CHAOS ILLUMINATION:</strong> Mobile devices are computers that bypass your firewall, install untrusted apps, and get left in taxis. Manage them or accept constant breaches.
+                <strong>CHAOS ILLUMINATION:</strong> Mobile devices are computers that bypass your firewall, install untrusted apps, and get left in taxis. For single-person companies, "management" means strong authentication + encryption + session controls. Corporate MDM is overkill. Strong access control is essential.
             </div>
 
             <h2>📋 What Hack23 Actually Does</h2>
             
-            <p>Our MDM strategy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a><br>
-            <small><em>Note: Mobile device management controls are covered in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" target="_blank">Access Control Policy</a>. No standalone mobile device management policy exists – controls integrated into access management framework.</em></small></p>
+            <p>Our mobile device strategy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" target="_blank">Access Control Policy</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">Physical Security Policy</a></p>
             
-            <ul>
-                <li><strong>MDM enrollment required</strong> - No enrollment, no corporate email</li>
-                <li><strong>Containerization</strong> - Corporate data in managed container</li>
-                <li><strong>Policy enforcement</strong> - Passcode, encryption, OS updates required</li>
-                <li><strong>App whitelisting</strong> - Approved apps only for corporate data</li>
-                <li><strong>Remote wipe capability</strong> - Lost/stolen devices wiped immediately</li>
-            </ul>
-
-            <div class="hidden-wisdom">
-                <strong>META-ILLUMINATION:</strong> Perfect mobile security is corporate-owned devices with full control. Reality is BYOD with containerization. Compromise or deny access.
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 100% MFA Coverage</h3>
+                    <p><strong>Every System, Every Time:</strong></p>
+                    <ul>
+                        <li><strong>Financial systems:</strong> Hardware token + SMS backup, 1-hour timeout</li>
+                        <li><strong>Development platforms:</strong> TOTP + SSH keys, 8-hour timeout</li>
+                        <li><strong>Cloud services:</strong> AWS Identity Center SSO + MFA, 4-24 hour timeout</li>
+                        <li><strong>Marketing platforms:</strong> Platform MFA, 7-day timeout</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md#mfa-implementation-matrix">View MFA Matrix →</a></p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Full Device Encryption</h3>
+                    <p><strong>All Devices, All Storage:</strong></p>
+                    <ul>
+                        <li><strong>Mobile devices:</strong> iOS/Android native encryption enabled</li>
+                        <li><strong>Laptops:</strong> AES-256 FDE (FileVault/BitLocker/LUKS)</li>
+                        <li><strong>External storage:</strong> Encrypted volumes (VeraCrypt) for business data</li>
+                        <li><strong>Lock screens:</strong> 15-minute timeout, strong passphrase mandatory</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">View Physical Security Policy →</a></p>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>⏰ Classification-Driven Timeouts</h3>
+                    <p><strong>Session Management by Risk:</strong></p>
+                    <ul>
+                        <li><strong>Very High (Financial):</strong> 1 hour, monthly review</li>
+                        <li><strong>High (Development):</strong> 8 hours, quarterly review</li>
+                        <li><strong>Medium (Email/Docs):</strong> 24 hours, semi-annual review</li>
+                        <li><strong>Public (Marketing):</strong> 7 days, annual review</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">View Classification Framework →</a></p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗑️ Remote Wipe Ready</h3>
+                    <p><strong>Lost Device Protocol:</strong></p>
+                    <ul>
+                        <li><strong>iOS:</strong> Find My iPhone with remote wipe capability</li>
+                        <li><strong>Android:</strong> Device Manager with factory reset</li>
+                        <li><strong>Laptops:</strong> Remote wipe capability planned for future MDM deployment; currently manual retrieval and FDE protection only</li>
+                        <li><strong>Response time:</strong> Immediate upon loss detection</li>
+                    </ul>
+                    <p class="hidden-wisdom"><em>Single-person company: You are the incident responder. Set up remote wipe BEFORE device loss.</em></p>
+                </div>
             </div>
+            
+            <p><strong>Why No Corporate MDM?</strong></p>
+            <ul>
+                <li>🏢 <strong>Single-person company:</strong> No employees to manage, CEO/Founder only</li>
+                <li>💰 <strong>Cost vs. Benefit:</strong> MDM platform costs more than manual device management for one person</li>
+                <li>🔐 <strong>Alternative Controls:</strong> MFA 100%, FDE 100%, session timeouts enforced</li>
+                <li>☁️ <strong>Cloud-Native:</strong> AWS Identity Center provides SSO/MFA without MDM</li>
+            </ul>
+            
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Perfect mobile security is corporate-owned devices with full MDM control. Reality for single-person companies is personal devices with strong authentication. Compromise: MFA everywhere (100%), encryption everywhere (100%), session management by classification. Not perfect—but systematic and honest about limitations.</div>
 
-            <h2>🎯 Conclusion: Manage or Suffer</h2>
+            <h2>🎯 Conclusion: Manage Through Authentication, Not Enrollment</h2>
             
-            <p>Mobile devices aren't going away. BYOD isn't optional. <strong>Manage devices or accept that unmanaged devices are accessing corporate systems.</strong></p>
+            <p><strong>Mobile devices aren't going away. BYOD isn't optional for single-person companies. <strong>But you don't need corporate MDM to secure one person's devices.</strong> FNORD—you just need to be paranoid enough to actually do it.</strong></p>
             
-            <p>MDM isn't perfect control—it's risk reduction. Enforce minimum security. Containerize corporate data. Enable remote wipe. Or find out the hard way when devices get compromised.</p>
+            <p>What you DO need (for psychonauts navigating digital Chapel Perilous):</p>
+            <ul>
+                <li>✅ <strong>MFA everywhere:</strong> 100% coverage—no exceptions for any system (because your password is already on pastebin)</li>
+                <li>✅ <strong>Device encryption:</strong> Full disk encryption on all devices—phones, laptops, external storage (paranoia is rational when attackers exist)</li>
+                <li>✅ <strong>Session management:</strong> Timeouts by classification—1 hour for financial, 8 hours for development (because forgotten sessions are found sessions)</li>
+                <li>✅ <strong>Remote wipe:</strong> Capability configured before device loss (optimism is setting up recovery after disaster)</li>
+                <li>⚠️ <strong>Regular review:</strong> Self-audit device permissions quarterly (trust nothing, verify everything, delete aggressively)</li>
+            </ul>
+            
+            <p><strong>Hack23's mobile security demonstrates cybersecurity consulting pragmatism:</strong> Deploy controls that match organizational reality. For single-person companies, that means strong authentication and encryption over complex device management platforms. Systematic, not theatrical. <strong>Are you paranoid enough to enforce this on yourself? Most people aren't. That's why most people get breached.</strong></p>
             
             <p class="signature">
                 <strong>All hail Eris! All hail Discordia!</strong><br>
-                <em>"Think for yourself, schmuck! Question everything—especially that app your employee just installed that requests all permissions."</em><br>
+                <em>"Think for yourself, schmuck! Question everything—especially that app you just installed that requests all permissions. And yes, you need MFA on that too. <strong>Nothing is true. Everything is permitted. Your unencrypted phone permits everything to everyone.</strong>"</em><br>
                 🍎 23 FNORD 5<br>
                 — Hagbard Celine, Captain of the <em>Leif Erikson</em>
             </p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your mobile device is either systematically secured or conveniently vulnerable. Both require discipline. Only one survives theft at Starbucks. <strong>Nothing is true—except the data breach report you'll file if that phone wasn't encrypted. FNORD—are you paranoid enough yet?</strong></small></p>
         </article>
     </main>
 
