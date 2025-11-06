@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Secure Development: Code Without Backdoors (On Purpose) | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Security isn't a feature you add at the end—it's architecture. Every line of code is a potential vulnerability.">
-<meta name="keywords" content="secure development, SDLC, secure coding, think for yourself, question authority, hack23 ISMS">
+<meta name="description" content="STRIDE threat modeling + 80% test coverage + SLSA 3 attestations + OpenSSF 7.0+ scorecard. Security architecture documentation, automated testing pipelines, and public evidence badges. DevSecOps as competitive advantage.">
+<meta name="keywords" content="secure development, DevSecOps, STRIDE threat modeling, SLSA 3, OpenSSF Scorecard, unit testing, E2E testing, SBOM, hack23 ISMS">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
 <meta property="og:title" content="Secure Development: Code Without Backdoors (On Purpose)">
-<meta property="og:description" content="Security isn't a feature you add at the end—it's architecture. Every line of code is a potential vulnerability.">
+<meta property="og:description" content="STRIDE threat modeling + 80% test coverage + SLSA 3 attestations + OpenSSF 7.0+ scorecard. Security architecture documentation, automated testing pipelines, and public evidence badges.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/discordian-secure-dev.html">
 <meta property="og:image" content="https://hack23.com/blog.png">
@@ -20,8 +20,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Secure Development: Code Without Backdoors (On Purpose)",
-  "description": "Secure development lifecycle and practices for code without intentional or accidental backdoors",
+  "headline": "Secure Development: DevSecOps as Competitive Advantage",
+  "description": "How Hack23 weaponizes security-by-design with STRIDE threat modeling, 80% test coverage, SLSA 3 attestations, and public security evidence for DevSecOps excellence",
   "author": {
     "@type": "Person",
     "name": "James Pether Sörling",
@@ -68,125 +68,272 @@
     <h1 class="header">💻 Secure Development: Code Without Backdoors (On Purpose)</h1>
 
     <section id="intro">
-      <h2 class="panel-caption">Security Isn't a Feature—It's Architecture</h2>
+      <h2 class="panel-caption">Security-by-Design: DevSecOps as Competitive Advantage</h2>
       
-      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping code with SQL injection in 2025—that's just lazy.</p>
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping code without threat models—that's just gambling with someone else's data.</p>
       
-      <p><em>Think for yourself. Question authority.</em> Especially the authority that says "we'll add security later."</p>
+      <p><em>Think for yourself. Question authority.</em> Especially the authority that says "security slows us down." Our security-by-design <em>is</em> our velocity.</p>
       
-      <p>Security isn't something you bolt on after writing vulnerable code. It's <strong>architectural</strong>. It's design. It's every line you write.</p>
+      <p>At Hack23, security isn't bolted on—<strong>it's architected in from commit one</strong>. STRIDE threat modeling before code, 80% test coverage minimum, SLSA 3 build attestations, OpenSSF Scorecard 7.0+ targets. Every repository includes SECURITY_ARCHITECTURE.md, THREAT_MODEL.md, comprehensive test plans, and automated CI/CD security gates. This isn't overhead—it's systematic operational excellence creating measurable competitive advantages.</p>
       
-      <p class="hidden-wisdom"><em>ILLUMINATION: Every line of code is a potential vulnerability. Every dependency is trust you can't verify.</em></p>
+      <p class="hidden-wisdom"><em>ILLUMINATION: Most companies write code first, add security later, ship vulnerabilities always. We threat model first, test continuously, ship evidence publicly.</em></p>
       
-      <p>Here's how we build code without backdoors—on purpose. Full methodology in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">public Secure Development Policy</a>:</p>
+      <p>Our approach combines bleeding-edge development velocity (daily dependency updates, auto-merge on green) with enterprise-grade security controls (mandatory threat models, 80% coverage, SLSA attestations). This demonstrates our cybersecurity consulting expertise through living proof—not promises. Full technical implementation in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">public Secure Development Policy</a>.</p>
     </section>
 
     <section id="five-practices">
-      <h2 class="panel-caption">The Five Practices of Not Shipping Vulns</h2>
+      <h2 class="panel-caption">The Five Pillars of Security-by-Design</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. Threat Model First</h3>
-          <p>Design with adversaries in mind. What can go wrong? What are we doing about it? Answer before writing code, not after.</p>
-          <p class="hidden-wisdom"><em>Code written without threat modeling is just bug creation with optimism.</em></p>
+          <h3>1. 🎯 Mandatory Threat Modeling</h3>
+          <p><strong>STRIDE before code.</strong> Every project requires THREAT_MODEL.md with comprehensive analysis: STRIDE framework application, MITRE ATT&CK integration, attack tree development, quantitative risk assessment. CIA scored OpenSSF 7.2—public threat models are proof of systematic security thinking, not checkbox compliance.</p>
+          <p class="hidden-wisdom"><em>Code without threat models is just vulnerability creation with optimism and a budget.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. Secure by Default</h3>
-          <p>Default configurations should be secure. Users shouldn't have to know what flags make things safe. Safe should be the default.</p>
-          <p class="hidden-wisdom"><em>If secure configuration requires reading docs, most deployments are insecure.</em></p>
+          <h3>2. 📊 80% Test Coverage Minimum</h3>
+          <p>Comprehensive testing isn't optional. <strong>Minimum 80% line coverage, 70% branch coverage.</strong> Public JaCoCo/Jest/Vitest reports, automated execution on every commit, historical trend tracking. CIA and Black Trigram maintain live coverage dashboards—transparency over promises, evidence over claims.</p>
+          <p class="hidden-wisdom"><em>If you can't measure it, you can't secure it. If you won't publish it, you're hiding something.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. Least Privilege</h3>
-          <p>Every process, every user, every component—minimum necessary permissions. Privilege escalation is harder when you start with nothing.</p>
-          <p class="hidden-wisdom"><em>Root by default is convenience for attackers, not users.</em></p>
+          <h3>3. 🔐 SLSA 3 Build Attestations</h3>
+          <p>Supply chain security through verifiable provenance. SLSA 3 attestations, signed artifacts, automated SBOM generation, immutable build evidence. Every release includes cryptographic proof of what was built, by whom, from what source. Trust but verify—we provide the verification data.</p>
+          <p class="hidden-wisdom"><em>Unsigned artifacts are promises. Signed attestations are proof. We deal in proof.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. Input Validation</h3>
-          <p>Trust nothing from users, APIs, databases, files. Validate, sanitize, escape. SQL injection isn't clever—it's inexcusable.</p>
-          <p class="hidden-wisdom"><em>All input is hostile until proven otherwise. User input is especially hostile.</em></p>
+          <h3>4. 🏗️ Security Architecture Documentation</h3>
+          <p>Living documentation, not stale PDFs. Every repository: SECURITY_ARCHITECTURE.md (current state), FUTURE_SECURITY_ARCHITECTURE.md (roadmap), WORKFLOWS.md (CI/CD automation). Mermaid diagrams, evidence links, AWS Well-Architected alignment. Documentation as code means it stays current or CI fails.</p>
+          <p class="hidden-wisdom"><em>Outdated documentation is worse than no documentation. Automated verification beats manual promises.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. Output Encoding</h3>
-          <p>XSS happens because output isn't encoded. Context-aware escaping. HTML entity encoding. It's not hard—it's discipline.</p>
-          <p class="hidden-wisdom"><em>XSS in 2025 means you didn't use your framework's built-in protections.</em></p>
+          <h3>5. 🤖 Automated Security Gates</h3>
+          <p>Humans make mistakes at 2am. Computers don't. SAST (SonarCloud), SCA (Dependabot/FOSSA), DAST (OWASP ZAP), secret scanning, CodeQL—all automated, all blocking on critical findings. OpenSSF Scorecard 7.0+ targets with public badges. Security gates aren't bureaucracy—they're systematic excellence at scale.</p>
+          <p class="hidden-wisdom"><em>Manual review is necessary but insufficient. Automated gates catch the obvious stuff humans miss when exhausted.</em></p>
         </div>
       </div>
     </section>
 
     <section id="sdlc">
-      <h2 class="panel-caption">Secure SDLC: Security at Every Stage</h2>
+      <h2 class="panel-caption">Secure SDLC: Classification-Driven Security Integration</h2>
       
-      <p>Security integrated throughout development, not bolted on at the end:</p>
+      <p>Security integrated throughout development using our <a href="discordian-classification.html">CIA+ classification framework</a>:</p>
       
-      <ul>
-        <li><strong>Design</strong> — Threat modeling, security requirements, architecture review</li>
-        <li><strong>Development</strong> — Secure coding standards, linters, IDE security plugins</li>
-        <li><strong>Testing</strong> — Unit tests for security properties, SAST, DAST, dependency scanning</li>
-        <li><strong>Review</strong> — Security-focused code review, pen testing, bug bounties</li>
-        <li><strong>Deployment</strong> — Secure configuration, secrets management, least privilege</li>
-        <li><strong>Operations</strong> — Monitoring, logging, incident response, patching</li>
-      </ul>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📋 Phase 1: Planning & Design</h3>
+          <ul>
+            <li><strong>Project Classification:</strong> CIA triad, RTO/RPO, business impact analysis per Classification Framework</li>
+            <li><strong>Threat Modeling:</strong> STRIDE framework + MITRE ATT&CK integration mandatory for all projects</li>
+            <li><strong>Security Architecture:</strong> SECURITY_ARCHITECTURE.md with Mermaid diagrams before first commit</li>
+            <li><strong>Cost-Benefit Analysis:</strong> Security investments aligned with classification ROI</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💻 Phase 2: Development</h3>
+          <ul>
+            <li><strong>Secure Coding Standards:</strong> OWASP Top 10 + language-specific best practices</li>
+            <li><strong>Code Review:</strong> Security-focused peer review for critical components (classification-based)</li>
+            <li><strong>Secret Management:</strong> No hardcoded credentials—AWS Secrets Manager with systematic rotation</li>
+            <li><strong>Test-Driven Security:</strong> Unit tests for security properties, 80% coverage minimum</li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧪 Phase 3: Security Testing</h3>
+          <ul>
+            <li><strong>SAST:</strong> SonarCloud integration on every commit with classification-appropriate quality gates</li>
+            <li><strong>SCA:</strong> Automated dependency scanning with SBOM generation (SLSA 3)</li>
+            <li><strong>DAST:</strong> OWASP ZAP scanning in staging environments based on classification levels</li>
+            <li><strong>Secret Scanning:</strong> Continuous monitoring for exposed credentials with SLA-based remediation</li>
+          </ul>
+        </div>
+      </div>
       
-      <p class="hidden-wisdom"><em>META-ILLUMINATION: Security after deployment is incident response. Security during development is prevention.</em></p>
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Security after deployment is incident response. Security during design is competitive advantage.</em></p>
     </section>
 
     <section id="tools">
-      <h2 class="panel-caption">Tools: Automate What You Can</h2>
+      <h2 class="panel-caption">Automated Security Excellence: Public Evidence Portfolio</h2>
       
-      <p>Humans make mistakes. Computers don't get tired. Automate security checks:</p>
+      <p>Systematic DevSecOps automation with public verification—transparency over promises:</p>
       
-      <ul>
-        <li><strong>Static Analysis (SAST)</strong> — SonarQube, CodeQL, Semgrep. Find vulns in source code before runtime.</li>
-        <li><strong>Dynamic Analysis (DAST)</strong> — OWASP ZAP, Burp Suite. Test running applications for vulns.</li>
-        <li><strong>Dependency Scanning</strong> — Dependabot, Snyk, OWASP Dependency-Check. Find known vulns in libraries.</li>
-        <li><strong>Secret Scanning</strong> — GitGuardian, TruffleHog. Prevent credentials in repos.</li>
-        <li><strong>Container Scanning</strong> — Trivy, Clair. Scan images for vulns before deployment.</li>
-      </ul>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Citizen Intelligence Agency</h3>
+          <p><strong>Democratic transparency platform with comprehensive security controls</strong></p>
+          <ul>
+            <li><strong>OpenSSF Scorecard:</strong> 7.2/10 — supply chain security excellence</li>
+            <li><strong>Test Coverage:</strong> <a href="https://hack23.github.io/cia/jacoco/">JaCoCo Results</a> | <a href="https://hack23.github.io/cia/surefire.html">Unit Tests</a> | <a href="https://github.com/Hack23/cia/blob/master/UnitTestPlan.md">Test Plan</a></li>
+            <li><strong>E2E Testing:</strong> <a href="https://github.com/Hack23/cia/blob/master/E2ETestPlan.md">E2E Plan</a> with integration coverage</li>
+            <li><strong>Threat Model:</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE Analysis</a> + Attack Trees + Risk Quantification</li>
+            <li><strong>Security Architecture:</strong> <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Current</a> | <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future</a></li>
+            <li><strong>Supply Chain:</strong> <a href="https://github.com/Hack23/cia/attestations">SLSA 3 Attestations</a> | <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License</a></li>
+            <li><strong>CI/CD:</strong> <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Automated Workflows</a></li>
+            <li><strong>Code Quality:</strong> <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">SonarCloud Dashboard</a></li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🎮 Black Trigram</h3>
+          <p><strong>Educational gaming platform with specialized security analysis</strong></p>
+          <ul>
+            <li><strong>OpenSSF Scorecard:</strong> Continuous improvement targeting 7.0+</li>
+            <li><strong>Test Coverage:</strong> <a href="https://blacktrigram.com/test-results/">Jest Coverage</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md">Test Plan</a></li>
+            <li><strong>E2E Testing:</strong> <a href="https://blacktrigram.com/cypress/mochawesome/">Cypress Results</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md">E2E Plan</a></li>
+            <li><strong>Threat Model:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md">Gaming-Specific Security Analysis</a></li>
+            <li><strong>Security Architecture:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md">Current</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md">Future</a></li>
+            <li><strong>Performance:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md">Lighthouse 90+ Scores</a></li>
+            <li><strong>Supply Chain:</strong> <a href="https://github.com/Hack23/blacktrigram/attestations">SLSA 3 Attestations</a></li>
+            <li><strong>Code Quality:</strong> <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram">SonarCloud Dashboard</a></li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 CIA Compliance Manager</h3>
+          <p><strong>Security assessment platform with comprehensive validation</strong></p>
+          <ul>
+            <li><strong>OpenSSF Scorecard:</strong> Supply chain security best practices</li>
+            <li><strong>Test Coverage:</strong> <a href="https://hack23.github.io/cia-compliance-manager/test-results/">Vitest Coverage</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/UnitTestPlan.md">Test Plan</a></li>
+            <li><strong>E2E Testing:</strong> <a href="https://hack23.github.io/cia-compliance-manager/cypress/mochawesome/">Cypress Results</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/E2ETestPlan.md">E2E Plan</a></li>
+            <li><strong>Threat Model:</strong> <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md">Risk Assessment + Control Mapping</a></li>
+            <li><strong>Security Architecture:</strong> <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md">Current</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_SECURITY_ARCHITECTURE.md">Future</a></li>
+            <li><strong>Performance:</strong> <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/performance-testing.md">Lighthouse 95+ Scores</a></li>
+            <li><strong>Supply Chain:</strong> <a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA 3 Attestations</a></li>
+            <li><strong>Code Quality:</strong> <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia-compliance-manager">SonarCloud Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
       
-      <p>Tools aren't perfect, but they catch the obvious stuff humans miss at 2am.</p>
+      <p><strong>Public evidence portfolio demonstrates:</strong> We don't just talk about DevSecOps—we implement it systematically, measure it continuously, and publish results transparently. Every badge is a live link to verifiable evidence.</p>
       
-      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Automated tools find known vulns. Code review finds design flaws. You need both.</em></p>
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Most companies hide their security posture. We publish ours. Transparency builds trust. Trust builds business.</em></p>
     </section>
 
     <section id="dependencies">
-      <h2 class="panel-caption">Dependency Hell: Trust You Can't Verify</h2>
+      <h2 class="panel-caption">Testing Excellence: 80% Coverage + E2E Validation</h2>
       
-      <p>Modern applications are mostly dependencies. Every dependency is trust you can't fully verify:</p>
+      <p><strong>Comprehensive testing isn't optional—it's competitive advantage:</strong></p>
       
-      <ul>
-        <li><strong>Vet Dependencies</strong> — Check maintainer reputation, update frequency, known vulns</li>
-        <li><strong>Pin Versions</strong> — Exact versions, not ranges. Reproducible builds.</li>
-        <li><strong>Monitor for Vulns</strong> — Automated scanning, CVE monitoring, patch fast</li>
-        <li><strong>Minimize Dependencies</strong> — Every library is attack surface. Do you really need it?</li>
-        <li><strong>Supply Chain Security</strong> — SBOM, signed artifacts, provenance tracking</li>
-      </ul>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Unit Test Requirements</h3>
+          <ul>
+            <li><strong>Coverage Thresholds:</strong> Minimum 80% line coverage, 70% branch coverage</li>
+            <li><strong>Automated Execution:</strong> Tests run on every commit and pull request</li>
+            <li><strong>Trend Analysis:</strong> Historical coverage tracking, regression prevention</li>
+            <li><strong>Documentation:</strong> Comprehensive UnitTestPlan.md for each repository</li>
+            <li><strong>Public Reporting:</strong> JaCoCo, Jest, Vitest results publicly accessible</li>
+          </ul>
+          <p class="hidden-wisdom"><em>If you can't test it, you can't secure it. If you won't publish results, you're hiding failures.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🌐 E2E Testing Strategy</h3>
+          <ul>
+            <li><strong>Critical Path Coverage:</strong> All user journeys and business workflows tested</li>
+            <li><strong>Test Plan Documentation:</strong> Comprehensive E2ETestPlan.md for each project</li>
+            <li><strong>Public Results:</strong> Mochawesome reports accessible for transparency</li>
+            <li><strong>Browser Testing:</strong> Validation across major browser platforms</li>
+            <li><strong>Performance Assertions:</strong> Response time validation within E2E tests</li>
+          </ul>
+          <p class="hidden-wisdom"><em>Unit tests prove components work. E2E tests prove systems work. You need both or you're lying to yourself.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⚡ Performance Testing</h3>
+          <ul>
+            <li><strong>Lighthouse Audits:</strong> Automated performance, accessibility, SEO scoring</li>
+            <li><strong>Load Testing:</strong> K6 performance validation under expected and peak traffic</li>
+            <li><strong>Performance Budgets:</strong> Defined thresholds for page load times and resources</li>
+            <li><strong>Real User Monitoring:</strong> Production performance tracking and alerting</li>
+            <li><strong>Documentation:</strong> performance-testing.md with benchmarks and analysis</li>
+          </ul>
+          <p class="hidden-wisdom"><em>Security at the cost of usability is security nobody uses. Fast and secure beats slow and secure.</em></p>
+        </div>
+      </div>
       
-      <p><strong>Operation Mindfuck the supply chain attackers:</strong> Minimize dependencies, pin versions, scan everything, patch fast.</p>
+      <p><strong>Evidence over promises:</strong> Every project maintains living test documentation with public results. We don't claim 80% coverage—we link to JaCoCo reports proving it.</p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain Security: SLSA 3 + SBOM + EU CRA Compliance</h2>
       
-      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: The most secure code is code you didn't write. The most vulnerable code is code someone else wrote that you blindly trust.</em></p>
+      <p><strong>Modern applications are 90% dependencies—supply chain security is existential:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📦 SLSA 3 Build Attestations</h3>
+          <ul>
+            <li><strong>Build Provenance:</strong> Cryptographic proof of what was built, by whom, from what source</li>
+            <li><strong>Signed Artifacts:</strong> All releases include digital signatures for integrity verification</li>
+            <li><strong>SBOM Generation:</strong> Automated Software Bill of Materials for every build</li>
+            <li><strong>Public Attestations:</strong> <a href="https://github.com/Hack23/cia/attestations">CIA</a> | <a href="https://github.com/Hack23/blacktrigram/attestations">Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/attestations">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔍 OpenSSF Scorecard Excellence</h3>
+          <ul>
+            <li><strong>CIA Target:</strong> 7.2/10 achieved—continuous improvement towards 8.0+</li>
+            <li><strong>Comprehensive Checks:</strong> Branch protection, dependency updates, SAST, dangerous workflows, code review</li>
+            <li><strong>Public Dashboards:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA Scorecard</a></li>
+            <li><strong>CII Best Practices:</strong> <a href="https://bestpractices.coreinfrastructure.org/projects/770">CIA Badge</a> | <a href="https://bestpractices.coreinfrastructure.org/projects/10777">Black Trigram Badge</a></li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ EU Cyber Resilience Act (CRA) Readiness</h3>
+          <ul>
+            <li><strong>Annex I § 1.1:</strong> Secure by Design architecture documentation (SECURITY_ARCHITECTURE.md)</li>
+            <li><strong>Annex I § 1.2:</strong> Security testing integration (SAST, SCA, DAST workflows)</li>
+            <li><strong>Annex I § 2.1:</strong> Vulnerability management with documented SLAs</li>
+            <li><strong>Annex I § 2.3:</strong> SBOM generation for all releases</li>
+            <li><strong>CRA Assessments:</strong> <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CIA</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md">Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/CRA-ASSESSMENT.md">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <p><strong>Operation Mindfuck the supply chain attackers:</strong> SLSA 3 attestations mean we can prove what we shipped. OpenSSF 7.0+ means we followed best practices. EU CRA compliance means we documented it all publicly. Transparency weaponized as competitive advantage.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: Trust without verification is faith. We provide verification data. Signed, time-stamped, immutable, public.</em></p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">Welcome to Chapel Perilous: Secure Coding Edition</h2>
+      <h2 class="panel-caption">Welcome to Chapel Perilous: DevSecOps Edition</h2>
       
-      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping known vulns—that's malpractice.</p>
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except shipping code without threat models, tests, or attestations—that's malpractice disguised as agility.</p>
       
-      <p>Secure development is discipline, not magic. Threat model. Validate input. Encode output. Scan dependencies. Test security properties. It's not hard—it's habit.</p>
+      <p>Secure development at Hack23 isn't checkbox compliance—it's <strong>systematic operational excellence creating measurable competitive advantages</strong>. STRIDE threat modeling before code. 80% test coverage minimum. SLSA 3 attestations. OpenSSF 7.0+ targets. Public security architecture documentation. Automated CI/CD gates blocking critical findings.</p>
       
-      <p><strong>Think for yourself.</strong> Don't blindly trust frameworks, libraries, or "best practices." Verify. Test. Break your own code before attackers do.</p>
+      <p><strong>This isn't security slowing us down—it's security enabling velocity.</strong> Daily dependency updates because we trust our test suites. Auto-merge on green because we trust our security gates. Bleeding-edge releases because we have comprehensive safety controls.</p>
+      
+      <p><strong>Think for yourself.</strong> Don't blindly trust frameworks, libraries, or "industry best practices." Our OpenSSF 7.2 score isn't bragging—it's evidence of systematic implementation. Our public threat models aren't marketing—they're proof we thought it through.</p>
       
       <p><strong>All hail Eris! All hail Discordia!</strong></p>
       
-      <p><em>"Think for yourself, schmuck! Question everything—especially code that hasn't been threat modeled."</em></p>
+      <p><em>"Security-by-design isn't overhead—it's how you prove you're not gambling with someone else's data, schmuck!"</em></p>
       
       <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
     </section>
