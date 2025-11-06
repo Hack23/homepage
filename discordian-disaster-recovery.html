@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Recovery: Plan B When Everything Burns | Hack23 Discordian Blog</title>
-    <meta name="description" content="RTO/RPO for infrastructure. Five disaster scenarios. Failover testing. Nothing is true, everything is permitted.">
-    <meta name="keywords" content="disaster recovery, DR, ISMS, RTO, RPO, failover, backup, discordian security">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="James Pether Sörling">
-    <meta property="og:title" content="Disaster Recovery: Plan B When Everything Burns">
-    <meta property="og:description" content="RTO/RPO for infrastructure. Five disaster scenarios. Failover testing.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://hack23.com/discordian-disaster-recovery.html">
-    <meta property="og:image" content="https://hack23.com/blog.png">
-    <link rel="canonical" href="https://hack23.com/discordian-disaster-recovery.html">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disaster Recovery: AWS-Native Resilience with Chaos Engineering | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="AWS Resilience Hub + Fault Injection Service + automated chaos engineering. <5min RTO for critical systems, monthly FIS experiments, immutable cross-region backups. Evidence-based disaster recovery.">
+<meta name="keywords" content="disaster recovery, AWS Resilience Hub, Fault Injection Service, chaos engineering, RTO RPO, AWS Backup, immutable backups, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Disaster Recovery: AWS-Native Resilience with Chaos Engineering">
+<meta property="og:description" content="AWS Resilience Hub + Fault Injection Service for <5min RTO critical systems. Monthly chaos experiments prove recovery capabilities with auditable evidence.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-disaster-recovery.html">
+<meta property="og:image" content="https://hack23.com/blog.png">
+<link rel="canonical" href="https://hack23.com/discordian-disaster-recovery.html">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Disaster Recovery: Plan B When Everything Burns",
-  "description": "RTO/RPO for infrastructure. Five disaster scenarios. Failover testing. Nothing is true, everything is permitted.",
+  "headline": "Disaster Recovery: AWS-Native Resilience with Chaos Engineering",
+  "description": "How Hack23 implements evidence-based disaster recovery using AWS Resilience Hub, Fault Injection Service, and automated chaos engineering for <5min RTO on critical systems",
   "author": {
     "@type": "Person",
     "name": "James Pether Sörling",
@@ -42,108 +42,240 @@
     "@type": "WebPage",
     "@id": "https://hack23.com/discordian-disaster-recovery.html"
   },
-  "keywords": "disaster recovery, DR, RTO, RPO, ISMS",
-  "articleSection": "Information Security"
+  "keywords": "disaster recovery, AWS Resilience Hub, chaos engineering, FIS, RTO RPO",
+  "articleSection": "Information Security",
+  "inLanguage": "en"
 }
 </script>
 </head>
+
 <body>
-    <header>
-        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="discordian-cybersecurity.html">Manifesto</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
 
-    <main>
-        <article>
-            <h1>Disaster Recovery: Plan B When Everything Burns</h1>
-            
-            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Everything can also fail."</em></p>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Disaster Recovery: AWS-Native Resilience with Chaos Engineering</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md" title="Public DR Plan">ISMS DR</a>
+  </div>
+</header>
 
-            <h2>🔥 The Problem: Everything Fails Eventually</h2>
-            
-            <p>Data centers catch fire. Cloud regions go down. Ransomware encrypts everything. Disasters happen. <strong>Plan recovery or accept permanent failure.</strong></p>
-            
-            <p>Disaster recovery is Plan B. When primary systems fail, DR gets you running again. RTO is how fast. RPO is how much data you lose. Both cost money.</p>
-            
-            <div class="hidden-wisdom">
-                <strong>ILLUMINATION:</strong> Disaster recovery plans that haven't been tested are just optimistic fiction. Test failover quarterly or find out during actual disaster that it doesn't work.
-            </div>
+<main>
+  <article>
+    <h1 class="header">🆘 Disaster Recovery: Evidence-Based Resilience Through Chaos</h1>
 
-            <h2>⚡ The Five Disaster Scenarios</h2>
-            
-            <div class="value-grid">
-                <div class="value-card">
-                    <h3>1. Infrastructure Failure</h3>
-                    <p><strong>Servers die. Data centers fail.</strong></p>
-                    <p>Multi-AZ deployment. Auto-scaling. Load balancers. Redundancy isn't optional—it's minimum viable.</p>
-                </div>
+    <section id="intro">
+      <h2 class="panel-caption">AWS-Native Recovery: When (Not If) Everything Burns</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including complete infrastructure failure. The question isn't "if"—it's "when" and "how fast can you recover?"</p>
+      
+      <p><em>Think for yourself. Question authority.</em> Question disaster recovery plans that have never been tested. Question "backup strategies" without actual restore validation. Question RTO/RPO targets without chaos engineering proof.</p>
+      
+      <p>At Hack23, disaster recovery isn't hypothetical documentation—it's <strong>continuously validated through automated chaos engineering</strong> using AWS Fault Injection Service (FIS). We don't trust our recovery capabilities. <strong>We prove them monthly with deliberate infrastructure failures.</strong> Critical systems: &lt;5 min RTO. High priority: &lt;1 hr RTO. All validated through AWS Resilience Hub deployment gating and FIS experiment evidence.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Untested DR plans are fiction dressed as policy. We inject chaos monthly—terminating databases, breaking networks, deleting volumes—to prove our recovery automation works. Evidence over hope.</em></p>
+      
+      <p>Our approach combines AWS-native resilience tooling (Resilience Hub, FIS, Backup) with systematic chaos engineering and automated recovery validation. This demonstrates cybersecurity consulting expertise through measurable recovery capabilities with auditable proof. Full technical details in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md">public Disaster Recovery Plan</a>.</p>
+    </section>
 
-                <div class="value-card">
-                    <h3>2. Regional Outage</h3>
-                    <p><strong>Entire AWS region goes down.</strong></p>
-                    <p>Multi-region deployment. DNS failover. Data replication. Rare but catastrophic.</p>
-                </div>
+    <section id="five-tiers">
+      <h2 class="panel-caption">The Five-Tier Recovery Architecture: Classification-Driven RTO/RPO</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔴 Mission Critical (5-60 min RTO)</h3>
+          <p><strong>API Gateway, Lambda, DynamoDB.</strong> Automated multi-AZ failover, real-time replication, 1-15 min RPO. 100% Resilience Hub compliance required for production deployment. Monthly FIS experiments validate recovery automation.</p>
+          <p><strong>Evidence:</strong> <a href="https://github.com/Hack23/cia">CIA project</a> with multi-AZ Lambda + DynamoDB, automated health checks, cross-region DNS failover.</p>
+          <p class="hidden-wisdom"><em>Critical systems fail fast or recover fast. No middle ground.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🟠 High Priority (1-4 hr RTO)</h3>
+          <p><strong>RDS, S3, CloudFront.</strong> Cross-region replication, automated backups, hourly snapshots (1-4 hr RPO). 95% Resilience Hub compliance. Quarterly FIS validation of failover procedures.</p>
+          <p><strong>Implementation:</strong> RDS read replicas across AZs, S3 Cross-Region Replication, CloudFront multi-origin with automatic failover.</p>
+          <p class="hidden-wisdom"><em>High priority means high automation. Manual recovery steps are failure points.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🟡 Standard (4-24 hr RTO)</h3>
+          <p><strong>DNS, monitoring, alarms.</strong> Daily backups (4-24 hr RPO), documented recovery procedures, 90% Resilience Hub compliance. Semi-annual recovery validation.</p>
+          <p><strong>Approach:</strong> Route 53 health checks, CloudWatch dashboards with automated failover, backup plan with 24hr retention.</p>
+          <p class="hidden-wisdom"><em>Standard doesn't mean ignored. Just means acceptable recovery window is measured in hours, not minutes.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🧪 AWS Fault Injection Service</h3>
+          <p><strong>Monthly chaos experiments prove recovery.</strong> Terminate EC2 instances, corrupt databases, break network connections, inject API errors. FIS experiments with SSM automation validate RTO/RPO claims with auditable evidence.</p>
+          <p><strong>Experiments:</strong> Database disaster (RDS termination), API unavailability (100% error injection), network partition (VPC connectivity loss), storage outage (EBS unavailability).</p>
+          <p class="hidden-wisdom"><em>We don't hope our DR works. We deliberately break things monthly to prove it.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. ☁️ AWS Backup + Immutable Vaults</h3>
+          <p><strong>Cross-region immutable backups.</strong> Automated backup orchestration, point-in-time recovery, ransomware protection through vault lock. Backup Audit Manager provides compliance evidence.</p>
+          <p><strong>Configuration:</strong> Central backup plans, cross-region replication to separate AWS account, vault lock prevents deletion, automated restore validation.</p>
+        </div>
+      </div>
+    </section>
 
-                <div class="value-card">
-                    <h3>3. Ransomware</h3>
-                    <p><strong>Everything encrypted by attackers.</strong></p>
-                    <p>Immutable backups. Offline storage. Restore capability. Don't pay ransoms—restore from backup.</p>
-                </div>
+    <section id="rto-matrix">
+      <h2 class="panel-caption">Resilience Hub Policy Matrix: Classification-Driven Recovery</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>RTO Target</th>
+            <th>RPO Target</th>
+            <th>Services</th>
+            <th>Resilience Hub Gate</th>
+            <th>FIS Validation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🔴 Mission Critical</strong></td>
+            <td><strong>5-60 min</strong></td>
+            <td><strong>1-15 min</strong></td>
+            <td>API Gateway, Lambda, DynamoDB</td>
+            <td>100% compliance required</td>
+            <td>Monthly chaos experiments</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🟠 High Priority</strong></td>
+            <td><strong>1-4 hours</strong></td>
+            <td><strong>1-4 hours</strong></td>
+            <td>RDS, S3, CloudFront</td>
+            <td>95% compliance required</td>
+            <td>Quarterly failover tests</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🟡 Standard</strong></td>
+            <td><strong>4-24 hours</strong></td>
+            <td><strong>4-24 hours</strong></td>
+            <td>DNS, monitoring, alarms</td>
+            <td>90% compliance required</td>
+            <td>Semi-annual validation</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Deployment Gating:</strong> AWS Resilience Hub assesses application resilience before production deployment. Applications failing RTO/RPO compliance thresholds are blocked from deployment until resilience requirements are met. This ensures disaster recovery capabilities are architectural requirements, not operational afterthoughts.</p>
+      
+      <p class="hidden-wisdom"><em>GATE ILLUMINATION: Deployment gates enforce resilience at build time. Fix architecture before production, not after outages.</em></p>
+    </section>
 
-                <div class="value-card">
-                    <h3>4. Data Corruption</h3>
-                    <p><strong>Bad data propagates through systems.</strong></p>
-                    <p>Point-in-time recovery. Versioned backups. Data validation. Corruption spreads if undetected.</p>
-                </div>
+    <section id="chaos-experiments">
+      <h2 class="panel-caption">Monthly Chaos Engineering: FIS Experiment Portfolio</h2>
+      
+      <p><strong>We don't trust—we verify.</strong> Monthly FIS experiments deliberately inject failures to validate recovery automation:</p>
+      
+      <p><strong>🔴 Critical System Experiments (Monthly):</strong></p>
+      <ul>
+        <li><strong>Database Disaster:</strong> RDS primary instance termination → validates automatic failover to read replica &lt; 5 min</li>
+        <li><strong>API Unavailability:</strong> 100% Lambda error rate injection → validates circuit breaker activation and graceful degradation</li>
+        <li><strong>Network Partition:</strong> VPC subnet isolation → validates cross-AZ redundancy and connection retry logic</li>
+        <li><strong>Regional Impairment:</strong> DNS resolution failure → validates Route 53 health check failover to backup region</li>
+      </ul>
+      
+      <p><strong>🟠 High Priority Experiments (Quarterly):</strong></p>
+      <ul>
+        <li><strong>Storage Outage:</strong> EBS volume unavailability → validates backup volume mount and data recovery</li>
+        <li><strong>CDN Degradation:</strong> CloudFront cache invalidation → validates origin server direct access</li>
+        <li><strong>Compute Failure:</strong> EC2 instance termination → validates Auto Scaling group replacement</li>
+      </ul>
+      
+      <p><strong>Evidence Collection:</strong> Every FIS experiment generates timestamped logs (CloudWatch, VPC Flow Logs, RDS events, Route 53 health checks). Experiment artifacts prove actual recovery time vs. RTO target. Failures trigger incident response and architectural remediation.</p>
+      
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Chaos engineering in production proves resilience. Chaos engineering only in staging proves nothing about production.</em></p>
+    </section>
 
-                <div class="value-card">
-                    <h3>5. Accidental Deletion</h3>
-                    <p><strong>Humans delete production database.</strong></p>
-                    <p>Soft deletes. Trash/recycle periods. Confirmation for destructive operations. Humans make mistakes.</p>
-                </div>
-            </div>
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: Automated Recovery Through AWS-Native Tooling</h2>
+      
+      <p>At Hack23, disaster recovery is systematic implementation leveraging AWS managed services:</p>
+      
+      <p><strong>🔰 AWS Resilience Hub Policy Enforcement:</strong></p>
+      <ul>
+        <li><strong>Resilience Policies:</strong> Define RTO/RPO requirements per application tier mapped to <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a>.</li>
+        <li><strong>Application Assessment:</strong> Continuous resilience analysis identifies gaps, missing redundancy, single points of failure.</li>
+        <li><strong>Deployment Gating:</strong> Production releases require "GREEN" Resilience Hub assessment status.</li>
+        <li><strong>Evidence Documentation:</strong> Audit trail of resilience assessments, remediation actions, compliance validation.</li>
+      </ul>
+      
+      <p><strong>🧪 AWS Fault Injection Service Integration:</strong></p>
+      <ul>
+        <li><strong>Experiment Templates:</strong> Pre-configured chaos scenarios (instance termination, API throttling, network blackhole).</li>
+        <li><strong>SSM Automation:</strong> FIS experiments trigger AWS Systems Manager documents for complex failure scenarios.</li>
+        <li><strong>Safeguards:</strong> CloudWatch alarm integration stops experiments if critical thresholds breached.</li>
+        <li><strong>Validation:</strong> Automated verification of recovery time vs. RTO target with pass/fail criteria.</li>
+      </ul>
+      
+      <p><strong>💾 AWS Backup Orchestration:</strong></p>
+      <ul>
+        <li><strong>Central Backup Plans:</strong> Automated scheduling (hourly/daily/weekly) per data classification tier.</li>
+        <li><strong>Immutable Vaults:</strong> Vault lock prevents backup deletion for ransomware protection. Cross-region replication to separate AWS account.</li>
+        <li><strong>Point-in-Time Recovery:</strong> Continuous backups enable restoration to any point within retention window.</li>
+        <li><strong>Backup Audit Manager:</strong> Compliance reporting validates backup coverage, retention policies, restore testing.</li>
+      </ul>
+      
+      <p><strong>☁️ Multi-Region Resilience Architecture:</strong></p>
+      <ul>
+        <li><strong>Route 53 Health Checks:</strong> Automated DNS failover when primary region health checks fail.</li>
+        <li><strong>Multi-AZ Deployment:</strong> Lambda, RDS, DynamoDB deployed across availability zones for automatic failover.</li>
+        <li><strong>S3 Cross-Region Replication:</strong> Critical data replicated asynchronously for regional disaster recovery.</li>
+        <li><strong>CloudFormation StackSets:</strong> Infrastructure-as-code deployed identically across regions for consistent recovery.</li>
+      </ul>
+      
+      <p>Full technical implementation including FIS experiment templates, SSM automation documents, and Resilience Hub policies in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md">public Disaster Recovery Plan</a>.</p>
+    </section>
 
-            <div class="hidden-wisdom">
-                <strong>CHAOS ILLUMINATION:</strong> The disaster you didn't plan for is the one that happens. Plan for multiple scenarios or accept that unplanned disasters cause unplanned outages.
-            </div>
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Chaos As Resilience Strategy</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including your infrastructure completely failing. The only question is whether you've proven you can recover.</p>
+      
+      <p>Most organizations write disaster recovery plans, file them in SharePoint, and hope they never need them. They talk about RTO/RPO targets. They mention "high availability." They claim "redundant architecture." None of it is tested. None of it is proven. It's aspirational documentation disguised as operational capability.</p>
+      
+      <p>We weaponize chaos. <strong>Monthly FIS experiments</strong> deliberately terminate databases, inject API errors, break network connections. <strong>AWS Resilience Hub gates</strong> block production deployments that don't meet RTO/RPO requirements. <strong>Immutable cross-region backups</strong> protect against ransomware. This isn't theory—it's continuously validated operational resilience.</p>
+      
+      <p><strong>Think for yourself.</strong> Question DR plans never tested. Question RTO targets without automation to meet them. Question "disaster recovery" that's really "disaster hope." (Spoiler: Hope isn't a strategy.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through provable recovery capabilities. &lt;5 min RTO for critical systems with monthly chaos validation. Resilience Hub deployment gating. Public DR documentation with FIS experiment evidence. This isn't DR theater—it's operational proof.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue hoping your untested DR plan works. Or you can deliberately break your infrastructure monthly to prove your recovery automation works. Your systems. Your choice. Choose evidence over hope.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! Untested disaster recovery is disaster theater. We inject chaos monthly to prove recovery works."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
 
-            <h2>📋 What Hack23 Actually Does</h2>
-            
-            <p>Our disaster recovery strategy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md" target="_blank">Disaster Recovery Plan</a></p>
-            
-            <ul>
-                <li><strong>Multi-AZ deployment</strong> - Infrastructure in multiple availability zones</li>
-                <li><strong>Automated failover</strong> - Load balancers, auto-scaling, health checks</li>
-                <li><strong>Backup strategy</strong> - Daily backups, immutable storage, encrypted</li>
-                <li><strong>Quarterly DR tests</strong> - Failover testing, restore validation</li>
-                <li><strong>RTO/RPO defined</strong> - 4 hours RTO, 1 hour RPO for production</li>
-            </ul>
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-business-continuity.html">Business Continuity Plan</a> — When everything fails at once</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — Classification-driven response SLAs</li>
+        <li><a href="discordian-backup-recovery.html">Backup Recovery Policy</a> — Immutable backups that actually restore</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
 
-            <div class="hidden-wisdom">
-                <strong>META-ILLUMINATION:</strong> Disaster recovery without testing is faith-based computing. Test failover regularly or discover during actual disaster that your plan was fiction.
-            </div>
+  </article>
+</main>
 
-            <h2>🎯 Conclusion: Test or Regret</h2>
-            
-            <p>Disasters happen. Infrastructure fails. <strong>Plan recovery or accept permanent failure.</strong></p>
-            
-            <p>Define RTO/RPO. Build redundancy. Test failover. Or find out during actual disaster that your DR plan was theoretical.</p>
-            
-            <p class="signature">
-                <strong>All hail Eris! All hail Discordia!</strong><br>
-                <em>"Think for yourself, schmuck! Question everything—especially DR plans that have never been tested."</em><br>
-                🍎 23 FNORD 5<br>
-                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
-            </p>
-        </article>
-    </main>
+<footer>
+  <p>&copy; 2025 Hack23 AB. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+</footer>
 
-    <footer>
-        <p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p>
-    </footer>
 </body>
 </html>
