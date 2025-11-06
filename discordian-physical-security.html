@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Security: Locks, Guards, and Clever Social Engineering | Hack23 Discordian Blog</title>
-    <meta name="description" content="Physical access = game over. Five layers of defense: perimeter, building, floor, room, asset. Don't hold doors. Don't plug in found USBs.">
+    <meta name="description" content="Home office physical security for single-person Swedish company: Full disk encryption (AES-256), laptop cable locks, WPA3 Wi-Fi, device lock screens mandatory. Cloud-native means no servers—protection focused on endpoints and media. Social engineering awareness critical.">
     <meta name="keywords" content="physical security, ISMS, social engineering, access control, badge systems, perimeter security, discordian security">
     <meta name="robots" content="index, follow">
     <meta name="author" content="James Pether Sörling">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Physical Security: Locks, Guards, and Clever Social Engineering",
-  "description": "Physical access = game over. Five layers of defense: perimeter, building, floor, room, asset. Don't hold doors. Don't plug in found USBs.",
+  "description": "Physical access = game over. Five layers of defense adapted for home office: residential perimeter, dedicated workspace, device protection (FDE AES-256), media security, environmental monitoring. Single-person company, cloud-native infrastructure.",
   "author": {
     "@type": "Person",
     "name": "James Pether Sörling",
@@ -58,29 +58,91 @@
             <p class="subtitle"><em>"Nothing is true. Everything is permitted. Physical access = game over."</em></p>
             <h2>🏰 The Problem: Physical Access Bypasses Everything</h2>
             <p>Physical access = game over. <strong>All your crypto is irrelevant when someone walks out with the server.</strong> Firewalls don't stop tailgating. Encryption doesn't stop USB keyloggers. Physical security is foundational—without it, everything else fails.</p>
-            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Social engineering bypasses your firewall by walking through the door with a smile. Physical security requires physical vigilance.</div>
-            <h2>🛡️ The Five Layers of Physical Security</h2>
+            
+            <p>At Hack23, physical security adapts to reality: <strong>single-person Swedish company, home office environment, cloud-native infrastructure.</strong> No corporate office. No server rooms. No badge systems. Just devices that need protection and a workspace that needs security.</p>
+            
+            <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Physical Security Policy</a> demonstrates how systematic physical protection works in distributed environments—because cybersecurity consulting expertise includes understanding that cloud-native doesn't eliminate physical risk.</p>
+            
+            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Social engineering bypasses your firewall by walking through the door with a smile. In home office environments, social engineering means fake delivery drivers, shoulder surfing at cafes, and "borrowed" devices. Physical security requires physical vigilance—adapted for remote work reality.</div>
+            <h2>🛡️ The Five Layers of Physical Security (Home Office Edition)</h2>
             <div class="value-grid">
-                <div class="value-card"><h3>1. Perimeter</h3><p><strong>Fences, gates, monitoring.</strong></p><p>First defense layer. Deters casual intruders. Won't stop determined attackers.</p></div>
-                <div class="value-card"><h3>2. Building</h3><p><strong>Locked doors, guards, cameras.</strong></p><p>Access control at building entry. Badge systems. Security guards. Visitor logs.</p></div>
-                <div class="value-card"><h3>3. Floor</h3><p><strong>Department access controls.</strong></p><p>Not everyone needs access everywhere. Segment by floor, department, role.</p></div>
-                <div class="value-card"><h3>4. Room</h3><p><strong>Server rooms, network closets.</strong></p><p>Critical infrastructure in restricted areas. Biometric access. Logging. Monitoring.</p></div>
-                <div class="value-card"><h3>5. Asset</h3><p><strong>Cable locks, encryption, tracking.</strong></p><p>Secure individual assets. Laptop locks. Full disk encryption. Asset tracking.</p></div>
+                <div class="value-card"><h3>1. Perimeter (Residential)</h3><p><strong>Home building access control.</strong></p><p>Residential locks, alarm system, security awareness. Deters casual intruders. Won't stop determined attackers but raises difficulty level.</p><p class="hidden-wisdom"><em>Reality: You don't control residential perimeter like corporate office. Focus defense-in-depth on layers you do control.</em></p></div>
+                
+                <div class="value-card"><h3>2. Workspace (Dedicated Office)</h3><p><strong>Separated work area, door lock optional.</strong></p><p>Dedicated home office workspace. Physical separation from living areas where practical. Minimize non-work traffic through office space.</p><p class="hidden-wisdom"><em>Single-person company: More about creating security mindset than access control. Visitors rare—when present, escort mandatory.</em></p></div>
+                
+                <div class="value-card"><h3>3. Device Protection</h3><p><strong>Full disk encryption mandatory, cable locks optional.</strong></p><p>All computing devices: AES-256 FDE per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a>. Lock screens after 15 min idle. Strong passphrases (not PINs). Cable locks for stationary equipment in high-risk scenarios.</p><p class="hidden-wisdom"><em>Cloud-native infrastructure means endpoints are the crown jewels. Encrypt everything. Lock everything. Trust nothing.</em></p></div>
+                
+                <div class="value-card"><h3>4. Media Security</h3><p><strong>External storage encrypted, secure disposal.</strong></p><p>External hard drives: Full encryption required. USB drives: Encrypted for business data. Backup media: Secured in locked storage. Disposal: Secure wipe or physical destruction.</p><p class="hidden-wisdom"><em>No tape backups in datacenter—just removable media that needs same protection as primary storage.</em></p></div>
+                
+                <div class="value-card"><h3>5. Environmental Controls</h3><p><strong>Fire, water, power protection.</strong></p><p>Smoke detectors in workspace. Fire extinguisher accessible. Surge protectors for equipment. Climate awareness (avoid overheating). Power backup (UPS) for critical work sessions.</p><p class="hidden-wisdom"><em>Home office means residential environmental protection. No HVAC monitoring or halon systems—just common sense fire safety.</em></p></div>
             </div>
             <h2>📋 What Hack23 Actually Does</h2>
-            <p>Our physical security is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a><br>
-            <small><em>Note: A standalone Physical Security Policy is recommended for complete coverage. Currently, physical security controls are addressed in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" target="_blank">Information Security Policy</a> and operational procedures.</em></small></p>
+            <p>Our physical security is public: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">ISMS-PUBLIC Physical Security Policy</a></p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Device Encryption (100% Implemented)</h3>
+                    <p><strong>Full Disk Encryption:</strong> AES-256 on all computing devices per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a></p>
+                    <p><strong>Mobile Devices:</strong> iOS/Android native encryption enabled, remote wipe capability configured</p>
+                    <p><strong>External Storage:</strong> Encrypted external drives (VeraCrypt/BitLocker) for business data</p>
+                    <p><strong>Lock Screens:</strong> 15-minute idle timeout, strong passphrase mandatory</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏠 Workspace Security (Home Office)</h3>
+                    <p><strong>Dedicated Office:</strong> Separated workspace with door (lockable where practical)</p>
+                    <p><strong>Wi-Fi Security:</strong> WPA3 encryption, strong password, SSID hidden, guest network separated</p>
+                    <p><strong>Smart Devices:</strong> IoT on separate VLAN where possible, default credentials changed, regular updates</p>
+                    <p><strong>Visitor Protocol:</strong> Rare visitors escorted, screens locked before visitor entry</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗑️ Secure Disposal</h3>
+                    <p><strong>Hard Drives:</strong> Secure wipe (DBAN/equivalent) or physical destruction before disposal</p>
+                    <p><strong>Documents:</strong> Shredding for sensitive paper documents (minimal—mostly digital)</p>
+                    <p><strong>Devices:</strong> Factory reset after secure wipe, remove all business data</p>
+                    <p><strong>USB Drives:</strong> Secure format and physical destruction for high-sensitivity media</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⚠️ Environmental Protection</h3>
+                    <p><strong>Fire Safety:</strong> Smoke detectors operational, fire extinguisher accessible</p>
+                    <p><strong>Power Protection:</strong> Surge protectors for all equipment, UPS for critical sessions</p>
+                    <p><strong>Climate:</strong> Equipment ventilation, avoid overheating, no liquid near devices</p>
+                    <p><strong>Backups:</strong> Encrypted external backups stored securely, AWS Backup for cloud resources</p>
+                </div>
+            </div>
+            
+            <p><strong>Organizational Context:</strong></p>
             <ul>
-                <li><strong>Badge access</strong> - All offices require badge entry, logged</li>
-                <li><strong>Visitor management</strong> - Sign-in, escort, logging</li>
-                <li><strong>Server room access</strong> - Restricted to authorized personnel only</li>
-                <li><strong>Asset encryption</strong> - Full disk encryption on all devices</li>
-                <li><strong>Security awareness</strong> - Train staff not to tailgate, hold doors</li>
+                <li>🏢 <strong>Single-Person Company:</strong> CEO/Founder only employee, no staff access control needed</li>
+                <li>☁️ <strong>Cloud-Native:</strong> No physical servers, no datacenter, no server room security</li>
+                <li>🏠 <strong>Home Office:</strong> Residential environment, adapted physical security controls</li>
+                <li>📱 <strong>Device-Centric:</strong> Endpoints are the attack surface—encrypt everything</li>
             </ul>
-            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Physical security is social engineering defense. Teach staff to challenge unknown people. Don't hold doors. Don't plug in found USBs. Vigilance is control.</div>
-            <h2>🎯 Conclusion: Guard the Physical</h2>
-            <p>Physical access = game over. <strong>Lock doors. Challenge unknowns. Don't hold doors.</strong> Layer security from perimeter to asset. Or find out that your impenetrable network was bypassed by someone walking in with confidence.</p>
-            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"Think for yourself, schmuck! Question everything—especially strangers walking confidently through your office."</em><br>🍎 23 FNORD 5<br>— Hagbard Celine</p>
+            
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Perfect physical security is impossible in home environments. Systematic physical security is mandatory. The difference is honest implementation adapted to reality vs. copying corporate datacenter policies. We do former—device encryption 100%, workspace separation practical, social engineering awareness operational.</div>
+            <h2>🎯 Conclusion: Guard the Physical (Even From Home)</h2>
+            <p>Physical access = game over. <strong>Lock screens. Encrypt devices. Secure workspace.</strong> Layer security from residential perimeter to device encryption. Or find out that your impenetrable cloud infrastructure was bypassed by someone stealing your laptop from a cafe.</p>
+            
+            <p><strong>Home office physical security reality:</strong></p>
+            <ul>
+                <li>✅ <strong>Device Encryption:</strong> 100% implemented—AES-256 FDE on all devices</li>
+                <li>✅ <strong>Lock Screens:</strong> 15-min timeout mandatory, strong passphrases enforced</li>
+                <li>✅ <strong>Wi-Fi Security:</strong> WPA3 encryption, separate guest network, IoT segmentation</li>
+                <li>✅ <strong>Secure Disposal:</strong> Wipe or destroy—no exceptions for retired devices</li>
+                <li>⚠️ <strong>Social Engineering:</strong> Awareness training (self), visitor protocols operational</li>
+            </ul>
+            
+            <p><strong>Cloud-native doesn't eliminate physical risk—it concentrates it on endpoints.</strong> Our physical security policy demonstrates how systematic protection adapts to distributed work environments while maintaining security excellence.</p>
+            
+            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"Think for yourself, schmuck! Question everything—especially strangers offering to help with your laptop at Starbucks."</em><br>🍎 23 FNORD 5<br>— Hagbard Celine, Captain of the <em>Leif Erikson</em></p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your physical security is either systematic or theatrical. Both require effort. Only one provides actual protection. Nothing is true—except the theft report you'll file if you don't encrypt that device.</small></p>
         </article>
     </main>
     <footer><p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p></footer>
