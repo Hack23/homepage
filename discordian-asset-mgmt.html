@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset Management: You Can't Protect What You Don't Know You Have | Hack23 Discordian Blog</title>
-    <meta name="description" content="Shadow IT, forgotten servers, and unpatched vulnerabilities from 2015. Inventory hardware, software, data, people, services—or protect nothing effectively.">
-    <meta name="keywords" content="asset management, ISMS, shadow IT, hardware inventory, software inventory, data classification, discordian security">
+    <title>Asset Management: AWS Config Automated Discovery + Annual Reviews | Hack23</title>
+    <meta name="description" content="AWS Config automated inventory + GitHub API repository tracking + quarterly access reviews. Classification-driven priorities. Annual register review (next: 2026-11-05).">
+    <meta name="keywords" content="asset management, AWS Config, asset inventory, CMDB, classification framework, hack23 ISMS">
     <meta name="robots" content="index, follow">
     <meta name="author" content="James Pether Sörling">
-    <meta property="og:title" content="Asset Management: You Can't Protect What You Don't Know You Have">
-    <meta property="og:description" content="Shadow IT, forgotten servers, and unpatched vulnerabilities from 2015. Asset inventory is security foundation.">
+    <meta property="og:title" content="Asset Management: AWS Config Automated Discovery">
+    <meta property="og:description" content="AWS Config automated inventory + quarterly reviews + classification-driven asset management.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://hack23.com/discordian-asset-mgmt.html">
     <meta property="og:image" content="https://hack23.com/blog.png">
@@ -20,8 +20,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Asset Management: You Can't Protect What You Don't Know You Have",
-  "description": "Shadow IT, forgotten servers, and unpatched vulnerabilities from 2015. Inventory hardware, software, data, people, services—or protect nothing effectively.",
+  "headline": "Asset Management: AWS Config Automated Discovery + Annual Reviews",
+  "description": "How Hack23 implements systematic asset management through AWS Config automated discovery, GitHub repository inventory, quarterly access reviews, and classification-driven priorities demonstrating operational excellence",
   "author": {
     "@type": "Person",
     "name": "James Pether Sörling",
@@ -37,51 +37,175 @@
     }
   },
   "datePublished": "2025-11-05",
-  "dateModified": "2025-11-05",
+  "dateModified": "2025-11-06",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://hack23.com/discordian-asset-mgmt.html"
   },
-  "keywords": "asset management, shadow IT, inventory, ISMS",
-  "articleSection": "Information Security"
+  "keywords": "asset management, AWS Config, asset inventory, classification, ISMS",
+  "articleSection": "Information Security",
+  "inLanguage": "en"
 }
 </script>
 </head>
 <body>
     <header>
-        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
-        <nav><a href="index.html">Home</a> <a href="discordian-cybersecurity.html">Manifesto</a> <a href="blog.html">Blog</a></nav>
+        <div class="logo-container">
+            <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+        </div>
+        <h1>Discordian Cybersecurity</h1>
+        <div class="app-link">
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">ISMS Asset Register</a>
+        </div>
     </header>
     <main>
         <article>
-            <h1>Asset Management: You Can't Protect What You Don't Know You Have</h1>
-            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Shadow IT is shadow vulnerability."</em></p>
-            <h2>📦 The Problem: Unknown Assets Are Unprotected Assets</h2>
-            <p>You can't protect what you don't know you have. <strong>The server you forgot about is the one running an unpatched vulnerability from 2015.</strong> Shadow IT, BYOD, forgotten test servers—attack surface you don't track. Asset inventory is security foundation.</p>
-            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> The server you forgot about is the one running an unpatched vulnerability from 2015. Asset inventory prevents forgotten vulnerabilities.</div>
-            <h2>🛡️ The Five Asset Categories</h2>
-            <div class="value-grid">
-                <div class="value-card"><h3>1. Hardware</h3><p><strong>Servers, laptops, network equipment.</strong></p><p>Track locations, owners, configurations. Hardware inventory enables patching, replacement, disposal.</p></div>
-                <div class="value-card"><h3>2. Software</h3><p><strong>Applications, licenses, versions.</strong></p><p>What's installed? What's licensed? What's end-of-life? Software inventory enables vulnerability management.</p></div>
-                <div class="value-card"><h3>3. Data</h3><p><strong>Databases, files, backups.</strong></p><p>Where is sensitive data? Who owns it? How classified? Data inventory enables protection.</p></div>
-                <div class="value-card"><h3>4. People</h3><p><strong>Employees, contractors, vendors.</strong></p><p>Who has access? What permissions? Still employed? People inventory enables access control.</p></div>
-                <div class="value-card"><h3>5. Services</h3><p><strong>Cloud services, SaaS, APIs.</strong></p><p>What services in use? Who authorized? What data shared? Service inventory prevents shadow IT.</p></div>
-            </div>
-            <h2>📋 What Hack23 Actually Does</h2>
-            <p>Our asset management is public: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md" target="_blank">Asset Register</a></p>
-            <ul>
-                <li><strong>Hardware inventory</strong> - All devices tracked, tagged, monitored</li>
-                <li><strong>Software inventory</strong> - Automated scanning for installed software</li>
-                <li><strong>Data classification</strong> - Sensitive data inventoried, classified</li>
-                <li><strong>Access reviews</strong> - Quarterly review of who has what access</li>
-                <li><strong>Service catalog</strong> - Approved cloud services, shadow IT monitoring</li>
-            </ul>
-            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Asset management isn't bureaucracy—it's knowing what to protect. Inventory everything or protect nothing effectively.</div>
-            <h2>🎯 Conclusion: Know Your Assets</h2>
-            <p>You can't protect what you don't know you have. <strong>Inventory hardware, software, data, people, services.</strong> Update continuously. Or find out that forgotten assets were exploited assets.</p>
-            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"Think for yourself, schmuck! Question everything—especially whether that test server from 2019 is still running unpatched."</em><br>🍎 23 FNORD 5<br>— Hagbard Celine</p>
+            <h1 class="header">💻 Asset Management: Comprehensive Inventory Through AWS Config</h1>
+            
+            <section id="intro">
+                <h2 class="panel-caption">You Can't Protect What You Don't Know You Have: AWS Config + Annual Reviews</h2>
+                
+                <p><strong>Nothing is true. Everything is permitted.</strong> Except forgetting assets exist—shadow IT is shadow vulnerability. AWS Config automated inventory, annual review cycle (next: 2026-11-05).</p>
+                
+                <p><em>Think for yourself. Question authority.</em> Question why organizations accept unknown assets. We demonstrate systematic inventory through transparent documentation.</p>
+                
+                <p>At Hack23, asset management demonstrates cybersecurity consulting expertise through comprehensive implementation: <strong>AWS Config</strong> for cloud asset discovery, <strong>GitHub repository inventory</strong> for code assets, <strong>quarterly access reviews</strong> for dormant account detection, <strong>classification-driven priority</strong> per our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a>. Annual register review (Version 1.0, next: 2026-11-05).</p>
+                
+                <p class="hidden-wisdom"><em>ILLUMINATION: The server you forgot about is running unpatched vulnerabilities from 2015. Asset inventory prevents forgotten vulnerabilities. AWS Config automates discovery before manual spreadsheets become stale.</em></p>
+                
+                <p>Our approach combines automated discovery (AWS Config, GitHub API) with classification-driven management, proving systematic asset control scales from single-person operations to enterprise engagements. Full technical implementation in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">public Asset Register</a>.</p>
+            </section>
+            
+            <section id="five-categories">
+                <h2 class="panel-caption">The Five Asset Categories: Comprehensive Coverage Matrix</h2>
+                
+                <div class="cards">
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>1. ☁️ Cloud Infrastructure</h3>
+                        <p><strong>AWS Config automated discovery.</strong> EC2 instances, Lambda functions, S3 buckets, RDS databases, VPCs, security groups. AWS Config continuously monitors all cloud resources. CloudFormation IaC ensures version-controlled infrastructure. Multi-account organization with centralized logging.</p>
+                        <p class="hidden-wisdom"><em>AWS Config means real-time inventory, not annual spreadsheets that become stale weekly.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>2. 📝 Code & Repositories</h3>
+                        <p><strong>GitHub repository inventory.</strong> All source code tracked in GitHub organizations (Hack23). 40+ repositories including CIA, Black Trigram, CIA Compliance Manager. GitHub API provides automated repository discovery. SECURITY_ARCHITECTURE.md mandatory in all repos. Public ISMS repository demonstrating transparency.</p>
+                        <p class="hidden-wisdom"><em>Code repositories are assets. Abandoned repos are forgotten attack surfaces. Systematic inventory prevents repository sprawl.</em></p>
+                    </div>
+                    
+                    <div class="card availability-card">
+                        <div class="scanner-effect"></div>
+                        <h3>3. 👤 Identity & Access</h3>
+                        <p><strong>AWS Identity Center + GitHub access reviews.</strong> IAM users, roles, policies tracked via AWS Config. GitHub organization members inventoried. 90-day dormant account detection per <a href="discordian-access-control.html">Access Control Policy</a>. Quarterly access reviews ensure privilege hygiene.</p>
+                        <p class="hidden-wisdom"><em>People are assets. Departed employees with active access are vulnerabilities. Quarterly reviews prevent forgotten privileges.</em></p>
+                    </div>
+                    
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>4. 🏷️ Data Assets</h3>
+                        <p><strong>Classification-driven data inventory.</strong> Databases, S3 buckets, file storage classified per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a>. Extreme/Very High assets quarterly reviewed. Moderate assets semi-annually. Public assets annually. Classification drives protection controls.</p>
+                        <p class="hidden-wisdom"><em>Data classification enables appropriate protection. Unclassified data gets generic controls or no controls. Classification-driven inventory means risk-appropriate protection.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>5. 🤝 Third-Party Services</h3>
+                        <p><strong>SaaS inventory and vendor management.</strong> All third-party services documented in Asset Register. AWS (infrastructure), GitHub (code), SonarCloud (quality), Snyk (security), FOSSA (license). Vendor assessments per <a href="discordian-third-party.html">Third Party Management</a>. Annual reviews ensure continued compliance.</p>
+                        <p class="hidden-wisdom"><em>Third-party services are assets you don't control. Vendor inventory enables risk management. Shadow SaaS are shadow vulnerabilities.</em></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="implementation">
+                <h2 class="panel-caption">Our Approach: AWS Config + Annual Reviews + Classification Priority</h2>
+                
+                <p>At Hack23, asset management demonstrates systematic inventory through automated discovery and classification-driven reviews:</p>
+                
+                <p><strong>☁️ AWS Config Automated Discovery:</strong></p>
+                <ul>
+                    <li><strong>Continuous Monitoring:</strong> AWS Config tracks all cloud resources across multi-account organization</li>
+                    <li><strong>Resource Inventory:</strong> EC2, Lambda, S3, RDS, VPC, security groups, IAM automatically discovered</li>
+                    <li><strong>Configuration Changes:</strong> All infrastructure changes logged and tracked</li>
+                    <li><strong>Compliance Checks:</strong> AWS Config Rules enforce security standards</li>
+                </ul>
+                
+                <p><strong>📊 Asset Review Cycles:</strong></p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Asset Classification</th>
+                            <th>Review Frequency</th>
+                            <th>Return/Revocation SLA</th>
+                            <th>Verification Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="roi-exceptional">
+                            <td><strong>🔴 Extreme/Very High</strong></td>
+                            <td>Monthly</td>
+                            <td>&lt;24 hours</td>
+                            <td>AWS Config + manual validation</td>
+                        </tr>
+                        <tr class="roi-high">
+                            <td><strong>🟠 High</strong></td>
+                            <td>Quarterly</td>
+                            <td>&lt;3 days</td>
+                            <td>Quarterly access audits</td>
+                        </tr>
+                        <tr class="roi-moderate">
+                            <td><strong>🟡 Moderate</strong></td>
+                            <td>Semi-Annual</td>
+                            <td>&lt;7 days</td>
+                            <td>Semi-annual reviews</td>
+                        </tr>
+                        <tr class="roi-basic">
+                            <td><strong>🟢 Low/Public</strong></td>
+                            <td>Annual</td>
+                            <td>&lt;30 days</td>
+                            <td>Annual register updates</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>🔄 Annual Register Review:</strong></p>
+                <ul>
+                    <li><strong>Current Version:</strong> 1.0 (Effective: 2025-11-05)</li>
+                    <li><strong>Next Review:</strong> 2026-11-05 (12-month cycle)</li>
+                    <li><strong>Review Triggers:</strong> Annual cycle, AWS organization changes, significant asset additions, security incidents</li>
+                    <li><strong>Public Documentation:</strong> Complete <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Asset Register</a> on GitHub</li>
+                </ul>
+                
+                <p>Full technical implementation details in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">public Asset Register</a>—including AWS Config integration, GitHub inventory automation, classification-driven priorities, and termination procedures.</p>
+            </section>
+            
+            <section id="conclusion">
+                <h2 class="panel-caption">Welcome to Chapel Perilous: Asset Inventory Edition</h2>
+                
+                <p><strong>Nothing is true. Everything is permitted.</strong> Except unknown assets creating unknown vulnerabilities—that's not operational excellence, that's systematic blindness.</p>
+                
+                <p>Most organizations maintain spreadsheet asset registers updated quarterly (maybe). They discover forgotten test servers during breaches. They can't answer "what AWS resources do we have" without manual enumeration. They accept shadow IT because detection requires effort.</p>
+                
+                <p>We demonstrate systematic asset management: <strong>AWS Config</strong> automated discovery, <strong>GitHub API</strong> repository inventory, <strong>quarterly access reviews</strong> for dormant accounts, <strong>classification-driven priorities</strong> (monthly for extreme, quarterly for high), <strong>annual register reviews</strong> (next: 2026-11-05). Public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Asset Register</a> demonstrating transparency.</p>
+                
+                <p><strong>Think for yourself.</strong> Question organizations claiming "we know our assets" without automated discovery. Question annual reviews when cloud infrastructure changes daily. Question spreadsheet inventories when AWS Config provides real-time tracking. (Spoiler: Because systematic asset management requires automation investment, not manual effort that becomes stale.)</p>
+                
+                <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through verifiable asset management. AWS Config integration documented. Classification-driven review cycles transparent. Public asset register showing systematic approach. This isn't compliance checkbox—it's operational reality clients can audit before engagement.</p>
+                
+                <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. The server you forgot about is the one with unpatched Log4Shell. AWS Config means systematic discovery, not hopeful memory. Choose automated inventory over manual spreadsheets that become archaeological artifacts. Your vulnerability management depends on knowing what to patch.</em></p>
+                
+                <p><strong>All hail Eris! All hail Discordia!</strong></p>
+                
+                <p><em>"Think for yourself, schmuck! Question everything—especially whether that test EC2 instance from 2019 is still running with default credentials."</em></p>
+                
+                <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+            </section>
         </article>
     </main>
-    <footer><p>&copy; 2024 Hack23 AB. <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a></p></footer>
+    <footer>
+        <p>&copy; 2025 Hack23 AB. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. <a href="index.html">Home</a> | <a href="blog.html">Blog</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></p>
+    </footer>
 </body>
 </html>
