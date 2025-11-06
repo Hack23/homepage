@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Security: AWS Multi-Layer Defense Architecture | Hack23</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta name="description" content="AWS security-by-design: GuardDuty threat detection, Security Hub centralized monitoring, Config compliance automation, KMS encryption, VPC zero-trust segmentation. CloudFormation IaC, Route 53 DNS Firewall, WAF protection. 99.9% uptime through systematic AWS security controls.">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AWS security-by-design: GuardDuty, Security Hub, Config automation, KMS encryption, VPC segmentation. 99.9% uptime through systematic controls.">
     <meta name="keywords" content="AWS security, cloud security, GuardDuty, Security Hub, Config, KMS encryption, VPC security, CloudFormation IaC, shared responsibility model, hack23 ISMS">
     <meta name="robots" content="index, follow">
     <meta name="author" content="James Pether Sörling">
@@ -169,7 +169,13 @@
       
       <p><strong>AWS WAF (Web Application Firewall):</strong> Application-layer protection for CloudFront distributions and ALBs. Protects against OWASP Top 10 vulnerabilities (SQL injection, XSS, CSRF). Rate limiting to prevent DDoS attacks. Geo-blocking for known threat regions.</p>
       
-      <p><strong>WAF Rules Deployed:</strong> AWS Managed Rules (Core Rule Set, Known Bad Inputs, SQL Database Protection), Rate-based rules (100 requests/5 minutes per IP), Custom rules (block specific user agents, block malicious regex patterns), Geo-restriction rules (block high-risk countries with no business presence).</p>
+      <p><strong>WAF Rules Deployed:</strong></p>
+      <ul>
+        <li><strong>AWS Managed Rules:</strong> Core Rule Set, Known Bad Inputs, SQL Database Protection</li>
+        <li><strong>Rate-based rules:</strong> 100 requests/5 minutes per IP</li>
+        <li><strong>Custom rules:</strong> Block specific user agents, block malicious regex patterns</li>
+        <li><strong>Geo-restriction rules:</strong> Block high-risk countries with no business presence</li>
+      </ul>
       
       <p class="hidden-wisdom"><em>Perimeter defense isn't silver bullet—it's first line of defense. Most attacks still get through (WAF bypass, zero-day exploits). But blocking 95% of commodity attacks reduces noise for human analysis.</em></p>
     </section>
