@@ -63,54 +63,117 @@
   <article>
     <h1 class="header">🚨 Incident Response: Assume Breach, Plan Survival</h1>
     <section id="introduction">
-      <h2 class="panel-caption">It's Not "If"—It's "When" and "Are You Ready?"</h2>
-      <p><strong>Think for yourself.</strong> Security vendors sell "prevention." Reality teaches "detection and response."</p>
-      <p><strong>Nothing is true. Everything is permitted.</strong> Including attackers getting in. <em>Plan for it.</em></p>
-      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a> is public because incident response through obscurity means the attackers know your plan better than you do.</p>
-      <p class="hidden-wisdom"><em>Illumination: Perfect prevention is impossible. Adequate response is mandatory. Choose mandatory over impossible.</em></p>
+      <h2 class="panel-caption">Classification-Driven Response: When (Not If) Shit Hits the Fan</h2>
+      <p><strong>Think for yourself.</strong> Security vendors sell "prevention." Reality teaches "detection and response with measurable SLAs."</p>
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including attackers getting in. What matters is your response time: <strong>&lt;30 minutes for critical incidents, &lt;4 hours for resolution.</strong></p>
+      <p>At Hack23, incident response isn't hope—it's systematic execution using our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a> for impact assessment. Critical incidents (€10K+ daily loss, complete outage, criminal liability) trigger immediate CEO escalation and all-stakeholder communication within 30 minutes.</p>
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a> is public with specific SLAs, detection sources, and escalation procedures—because incident response through obscurity means attackers know your weaknesses better than you do.</p>
+      <p class="hidden-wisdom"><em>Illumination: Prevention is aspirational. Response is contractual. We respond to critical incidents in <30 minutes because that's what survival demands.</em></p>
     </section>
-    <section id="five-phases">
-      <h2 class="panel-caption">The Five Phases of Not Completely Fucking Up</h2>
-      <div class="cards">
-        <div class="card confidentiality-card">
-          <h3>1. Preparation (Before the Breach)</h3>
-          <p><strong>Practice.</strong> Test runbooks. Train responders. Build detection. <em>Hope is not a strategy.</em></p>
-          <p class="hidden-wisdom"><em>Illumination: Incident response plans you've never tested are fan fiction.</em></p>
-        </div>
-        <div class="card integrity-card">
-          <h3>2. Detection (Shit Is Happening)</h3>
-          <p><strong>Know when you're under attack.</strong> Logs. Alerts. Anomaly detection. The average dwell time is months. Be faster.</p>
-          <p class="hidden-wisdom"><em>Illumination: Breaches you don't detect are breaches attackers exploit fully.</em></p>
-        </div>
-        <div class="card availability-card">
-          <h3>3. Containment (Stop the Bleeding)</h3>
-          <p><strong>Isolate compromised systems.</strong> Cut network access. Limit blast radius. <em>Fast containment beats perfect forensics.</em></p>
-          <p class="hidden-wisdom"><em>Illumination: Forensic perfection while data exfiltrates is professional negligence.</em></p>
-        </div>
-        <div class="card confidentiality-card">
-          <h3>4. Eradication (Kill the Attacker's Access)</h3>
-          <p><strong>Remove malware. Patch vulnerabilities. Rotate credentials.</strong> All of them. Assume everything is compromised.</p>
-          <p class="hidden-wisdom"><em>Illumination: Killing one backdoor when three exist is security theater with extra steps.</em></p>
-        </div>
-        <div class="card integrity-card">
-          <h3>5. Recovery (Back to Normal, But Smarter)</h3>
-          <p><strong>Restore from clean backups. Verify integrity. Monitor harder.</strong> Post-incident review. Learn. Improve. Repeat.</p>
-          <p class="hidden-wisdom"><em>Illumination: Organizations that don't learn from incidents are destined to repeat them. Usually soon.</em></p>
-        </div>
-      </div>
+    <section id="classification-matrix">
+      <h2 class="panel-caption">The Four-Level Incident Classification: Because Not All Breaches Are Equal</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Impact</th>
+            <th>Response Time</th>
+            <th>Resolution Target</th>
+            <th>Escalation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🔴 Critical</strong></td>
+            <td>€10K+ daily loss, complete outage, criminal liability</td>
+            <td><strong>&lt;30 minutes</strong></td>
+            <td><strong>&lt;4 hours</strong></td>
+            <td>Immediate CEO + all stakeholders</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🟠 High</strong></td>
+            <td>€5-10K daily loss, major degradation, significant fines</td>
+            <td><strong>&lt;1 hour</strong></td>
+            <td><strong>&lt;24 hours</strong></td>
+            <td>&lt;1 hour CEO + key stakeholders</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🟡 Medium</strong></td>
+            <td>€1-5K daily loss, partial impact, minor penalties</td>
+            <td><strong>&lt;4 hours</strong></td>
+            <td><strong>&lt;72 hours</strong></td>
+            <td>&lt;4 hours internal only</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>🟢 Low</strong></td>
+            <td>&lt;€1K daily loss, minor inconvenience</td>
+            <td><strong>&lt;24 hours</strong></td>
+            <td><strong>&lt;1 week</strong></td>
+            <td>Daily reporting, documentation</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Classification drives everything:</strong> Response speed, resource allocation, stakeholder communication, and resolution priority. A critical incident affecting availability (complete CIA platform outage) gets 30-minute response because that's what our Classification Framework business impact analysis demands.</p>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Classification isn't bureaucracy—it's triage. When everything is critical, nothing is. When critical means €10K+ daily loss, everyone moves fast.</em></p>
     </section>
-    <section id="when-to-panic">
-      <h2 class="panel-caption">When to Panic vs When to Execute</h2>
-      <p><strong>Don't panic:</strong> Panicking wastes time. Execute the plan you practiced.</p>
-      <p><strong>Do panic:</strong> If you have no plan. Then panic, then write a plan, then practice it.</p>
-      <p><strong>Question authority:</strong> Including your own assumptions during incidents. Verify everything. Trust nothing. Especially "it's probably fine."</p>
+    
+    <section id="detection-sources">
+      <h2 class="panel-caption">Multi-Layer Detection: AWS Native + External + Human Intelligence</h2>
+      
+      <p><strong>AWS Native Detection (Automated):</strong></p>
+      <ul>
+        <li><strong>Security Hub:</strong> Centralized security findings aggregation across all AWS services</li>
+        <li><strong>GuardDuty:</strong> Threat detection for malicious activity, crypto-mining, compromised credentials</li>
+        <li><strong>Config:</strong> Configuration compliance monitoring with automated drift detection</li>
+        <li><strong>CloudWatch:</strong> Performance anomaly detection and threshold-based alerting</li>
+        <li><strong>Detective:</strong> Investigation and root cause analysis with visual timeline</li>
+      </ul>
+      
+      <p><strong>External Detection Sources:</strong></p>
+      <ul>
+        <li><strong>GitHub Security:</strong> Code vulnerability scanning, Dependabot alerts, secret scanning</li>
+        <li><strong>SonarCloud:</strong> Quality gate failures indicating security degradation</li>
+        <li><strong>Supplier Notifications:</strong> Third-party security alerts per Third Party Management policy</li>
+      </ul>
+      
+      <p><strong>Manual Discovery:</strong></p>
+      <ul>
+        <li><strong>User Reports:</strong> Employees, consultants, community members reporting anomalies</li>
+        <li><strong>External Intelligence:</strong> Security researchers, CVE disclosures, industry warnings</li>
+      </ul>
+      
+      <p><strong>Detection target for critical incidents: &lt;15 minutes.</strong> Because dwell time is the enemy. The faster you detect, the less damage attackers inflict.</p>
+      
+      <p class="hidden-wisdom"><em>DETECTION ILLUMINATION: Breaches you don't detect in 15 minutes become data exfiltration campaigns. Breaches you don't detect in 24 hours become ransomware incidents.</em></p>
     </section>
     <section id="conclusion">
-      <h2 class="panel-caption">Incident Response Is Reality-Based Security</h2>
-      <p><strong>All hail Eris!</strong> Chaos comes for everyone. Preparation decides if you survive.</p>
-      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a>. Public. Tested. Reality-based.</p>
-      <p class="hidden-wisdom"><strong>FINAL ILLUMINATION:</strong> <em>The best incident response is the one you practiced last month. The worst is the one you're reading during the incident.</em></p>
-      <p class="signature">— Hagbard Celine<br><br><em>"Assume breach. Plan survival. Practice both."</em><br><br>🍎 23 FNORD 5</p>
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Incident Response Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including the inevitability of security incidents. What separates professionals from amateurs is response speed.</p>
+      
+      <p>Most organizations discover breaches months after initial compromise (average dwell time: 207 days per 2023 data). We detect critical incidents in <strong>&lt;15 minutes</strong>, respond in <strong>&lt;30 minutes</strong>, and resolve in <strong>&lt;4 hours</strong>. Not because we're paranoid—because we're prepared.</p>
+      
+      <p><strong>Our incident response framework:</strong></p>
+      <ul>
+        <li><strong>Classification-Driven:</strong> Four-level severity tied to business impact (€ daily loss, operational impact, regulatory risk)</li>
+        <li><strong>Multi-Layer Detection:</strong> AWS Security Hub + GuardDuty + Config + CloudWatch + GitHub + external intelligence</li>
+        <li><strong>Automated Escalation:</strong> Critical incidents trigger CEO notification within 30 minutes automatically</li>
+        <li><strong>Transparent Communication:</strong> All stakeholders informed based on classification level</li>
+        <li><strong>Measured Response:</strong> SLAs for detection, response, resolution, and post-incident review</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Question authority—including the assumption that "it won't happen to us." It will. The only question is whether you'll detect it in 15 minutes or 207 days.</p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>You are now in Chapel Perilous. Incident response plans untested are incident response failures guaranteed. We test quarterly. We measure response times. We learn from every incident. Because survival requires systematic preparation, not hopeful improvisation.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a> with complete runbooks, escalation procedures, and post-incident review templates. Public. Tested. Reality-based. With specific SLAs we actually meet.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Assume breach. Measure response. Practice survival. Repeat until excellent."</em><br><br>🍎 23 FNORD 5</p>
     </section>
   </article>
 </main>
