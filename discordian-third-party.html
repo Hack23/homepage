@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Third-Party Management: Trust Your Vendors? (LOL) | Hack23 Discordian Blog</title>
-    <meta name="description" content="Porter's Five Forces supplier analysis, 4-tier strategic classification (€10K+ critical threshold), evidence-based assessments documented in SUPPLIER.md. CIA+ classification, OpenSSF Scorecard, annual reviews.">
-    <meta name="keywords" content="third-party management, vendor security, ISMS, supply chain risk, SOC 2, DPA, Porter Five Forces, OpenSSF Scorecard, supplier classification">
+    <meta name="description" content="Porter's Five Forces supplier analysis, 4-tier classification (€10K+ critical threshold), CIA+ security assessment, documented in SUPPLIER.md.">
+    <meta name="keywords" content="third-party management, vendor security, ISMS, supply chain risk, SOC 2, DPA, Porter's Five Forces, OpenSSF Scorecard, supplier classification">
     <meta name="robots" content="index, follow">
     <meta name="author" content="James Pether Sörling">
     <meta property="og:title" content="Third-Party Management: Trust Your Vendors? (LOL)">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Third-Party Management: Trust Your Vendors? (LOL)",
-  "description": "Porter's Five Forces supplier analysis, 4-tier strategic classification, evidence-based assessments documented in SUPPLIER.md. CIA+ classification, OpenSSF Scorecard integration.",
+  "description": "Porter's Five Forces supplier analysis, 4-tier classification (€10K+ critical threshold), CIA+ security assessment, documented in SUPPLIER.md.",
   "author": {
     "@type": "Person",
     "name": "James Pether Sörling",
@@ -42,7 +42,7 @@
     "@type": "WebPage",
     "@id": "https://hack23.com/discordian-third-party.html"
   },
-  "keywords": "third-party management, vendor security, supply chain, ISMS, Porter Five Forces, OpenSSF",
+  "keywords": "third-party management, vendor security, supply chain, ISMS, Porter's Five Forces, OpenSSF",
   "articleSection": "Information Security"
 }
 </script>
@@ -61,7 +61,7 @@
             
             <p>Your vendors' security is your security. <strong>Their breach is your breach.</strong> Target breached through HVAC vendor (2013). Equifax breached through Apache Struts (2017). SolarWinds breach compromised thousands through supply chain (2020). Your most secure system is compromised through the vendor you forgot to audit.</p>
             
-            <p><strong>At Hack23, third-party management isn't vendor relations—it's evidence-based risk intelligence.</strong> Every supplier documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a> with Porter's Five Forces analysis, strategic classification tied to <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Classification Framework</a> business impact thresholds (€10K+ = Tier 1 Critical), and CIA+ security classification.</p>
+            <p><strong>At Hack23, third-party management isn't vendor relations—it's evidence-based risk intelligence.</strong> Every supplier documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank" aria-label="View supplier documentation in SUPPLIER.md">SUPPLIER.md</a> with Porter's Five Forces analysis, strategic classification tied to <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Classification Framework</a> business impact thresholds (€10K+ = Tier 1 Critical), and CIA+ security classification.</p>
             
             <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Your most secure system is compromised through the vendor you forgot to audit. Third-party risk is supply chain risk is your risk. Porter's Five Forces isn't business school theory—it's systematic supplier dependency analysis. Switching costs > €10K/month? That's Tier 1 mission-critical requiring CEO oversight.</div>
             <h2>🛡️ The Evidence-Based Vendor Management Framework</h2>
@@ -134,10 +134,10 @@
                     <ul>
                         <li><strong>Confidentiality:</strong> 1-6 scale (Public → Extreme) based on data sensitivity handled by supplier</li>
                         <li><strong>Integrity:</strong> 1-5 scale (Minimal → Critical) based on data modification impact</li>
-                        <li><strong>Availability:</strong> 1-5 scale (Best Effort → Mission Critical) based on RTO/RPO requirements</li>
+                        <li><strong>Availability:</strong> 1-5 scale (Best Effort → Mission Critical) based on RTO (Recovery Time Objective) / RPO (Recovery Point Objective) requirements</li>
                         <li><strong>Business Impact:</strong> €10K+ daily loss = Mission Critical, drives tier classification</li>
                     </ul>
-                    <p><strong>Example:</strong> AWS handles Very High confidentiality (customer data), Critical integrity (platform reliability), Mission Critical availability (RTO <5min) = Tier 1.</p>
+                    <p><strong>Example:</strong> AWS handles Very High confidentiality (customer data), Critical integrity (platform reliability), Mission Critical availability (RTO &lt;5 min) = Tier 1.</p>
                 </div>
 
                 <div class="value-card">
@@ -177,7 +177,7 @@
                 </div>
             </div>
             
-            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Trust your vendors? Maybe. Verify your vendors? Always. Document your vendors? Mandatory. Porter's Five Forces analysis reveals supplier power dynamics—high switching costs mean vendor lock-in means strategic risk. CIA+ classification reveals data protection requirements—Very High confidentiality means DPA required means audit rights essential. Evidence-based management beats gut feeling vendor selection.</div>
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Trust your vendors? Maybe. Verify your vendors? Always. Document your vendors? Mandatory. Porter's Five Forces analysis reveals supplier power dynamics—high switching costs mean vendor lock-in means strategic risk. CIA+ classification reveals data protection requirements—Very High confidentiality means DPA (Data Processing Agreement) required means audit rights essential. Evidence-based management beats gut feeling vendor selection.</div>
             
             <h2>🎯 Supply Chain Security Integration</h2>
             
@@ -188,12 +188,12 @@
                     <h3>🔍 Dependency Security</h3>
                     <p><strong>Open source supply chain risk management:</strong></p>
                     <ul>
-                        <li><strong>OpenSSF Scorecard:</strong> Automated supplier security maturity assessment (threshold >5.0 relaxed score)</li>
+                        <li><strong>OpenSSF Scorecard:</strong> Automated supplier security maturity assessment (threshold &gt;5.0 out of 10, <a href="https://github.com/ossf/scorecard" target="_blank" rel="noopener" aria-label="OpenSSF Scorecard documentation">relaxed score allows more dependencies</a>)</li>
                         <li><strong>Dependabot:</strong> Daily vulnerability scanning, auto-merge on green tests per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md" target="_blank">Vulnerability Management</a></li>
                         <li><strong>FOSSA License Compliance:</strong> Automated license scanning, policy enforcement, IP risk management</li>
                         <li><strong>GitHub Dependency Review:</strong> Automated CVE checking, supply chain security validation on every PR</li>
                     </ul>
-                    <p><strong>Target:</strong> <4 hour critical patch response, latest stable releases, comprehensive automated testing.</p>
+                    <p><strong>Target:</strong> &lt;4-hour critical patch response, latest stable releases, comprehensive automated testing.</p>
                 </div>
 
                 <div class="value-card">
@@ -226,7 +226,7 @@
                     <ul>
                         <li><strong>Detection:</strong> Supplier notifications, security advisories, monitoring alerts, community intelligence</li>
                         <li><strong>Classification:</strong> Tier 1 supplier breach = automatic critical incident (€10K+ potential impact)</li>
-                        <li><strong>Response SLA:</strong> <30 minutes for critical supplier incidents, CEO escalation, stakeholder communication</li>
+                        <li><strong>Response SLA:</strong> &lt;30 minutes for critical supplier incidents, CEO escalation, stakeholder communication</li>
                         <li><strong>Coordination:</strong> Joint response with supplier, data impact assessment, customer notification per DPA</li>
                     </ul>
                     <p><strong>Contractual:</strong> 24-hour breach notification for Tier 1, 48-hour for Tier 2, incident coordination procedures.</p>
