@@ -86,116 +86,116 @@
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🌐 Perimeter Defense: The Outer Pentacle</h3>
-          <p><strong>CloudFlare DDoS protection.</strong> 5 Gbps baseline, elastic to 5 Tbps. Not because we expect Tbps attacks—because planning for pentagonal scaling (5^3 = 125 growth factor) provides comfortable margins.</p>
-          <p><strong>WAF rules in five categories:</strong> SQL injection patterns, XSS attempts, path traversal, credential stuffing, API abuse. Each category tuned independently. Alert on 5 failed attempts in 5 minutes—synchronistic thresholds that balance security with usability.</p>
-          <p><strong>Geographic distribution:</strong> CloudFront edge locations across 5 continents. Europe (primary), North America, Asia, South America, Oceania. Africa planned for year 5 of roadmap—completing the global pentacle.</p>
-          <p class="hidden-wisdom"><em>Perimeter defense that blocks legitimate users fails its mission. Perimeter defense that lets attackers through fails harder. Balance through the golden ratio: 61.8% security strictness, 38.2% user convenience.</em></p>
+          <h3>1. 🌐 Perimeter Defense: Network Security</h3>
+          <p><strong>AWS Shield and WAF.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>, AWS Shield provides DDoS protection at network and transport layers, while AWS WAF guards against OWASP Top 10 vulnerabilities with managed rule sets.</p>
+          <p><strong>Multi-layered network segmentation:</strong> Three-zone architecture with public subnets (internet-facing), private app subnets (application tier), and private DB subnets (data tier). NAT Gateways provide secure outbound connectivity. VPC Flow Logs enable comprehensive traffic monitoring.</p>
+          <p><strong>Application Load Balancer (ALB):</strong> Distributes traffic with TLS termination. Security Groups and Network ACLs provide layered stateful and stateless filtering. VPC Endpoints enable private AWS service access without internet exposure.</p>
+          <p class="hidden-wisdom"><em>Perimeter defense that blocks legitimate users fails its mission. Perimeter defense that lets attackers through fails harder. The balance emerges through measured thresholds informed by actual attack patterns.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. 🚪 Application Gateway: Identity Verification</h3>
-          <p><strong>Spring Security managing authentication.</strong> Five auth levels: anonymous (read-only public data), authenticated (vote tracking), verified (bookmarks/notes), analyst (advanced queries), admin (system management).</p>
-          <p><strong>Session management:</strong> JWT tokens valid for 23 minutes. Not arbitrary—testing showed 20 minutes = frequent re-auth annoyance, 25 minutes = security window too wide, 23 = sweet spot. The number revealing itself through user behavior analysis.</p>
-          <p><strong>OAuth2 integration with five providers:</strong> GitHub, Google, Microsoft, LinkedIn, BankID (Swedish e-identity). Users choose their trust anchor. We don't mandate.</p>
-          <p><strong>Rate limiting:</strong> 5 requests/second per anonymous IP, 23 requests/second per authenticated user, 115 requests/second for verified analysts (5 × 23). Synchronistic thresholds that emerged from production load patterns.</p>
+          <h3>2. 🚪 Application Gateway: Authentication & Authorization</h3>
+          <p><strong>Spring Security framework.</strong> The authentication architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implements three security tiers: Anonymous (read-only public data access), User (authenticated access with bookmarking and tracking), and Admin (system management with elevated privileges).</p>
+          <p><strong>Multi-Factor Authentication:</strong> Google Authenticator OTP integration for enhanced security. Brute force protection via login blocking with configurable thresholds per IP, session, and user.</p>
+          <p><strong>Method-level security:</strong> @Secured annotations enforce role-based access control at the service layer. Complete session invalidation on logout with comprehensive audit logging via ApplicationSession tracking.</p>
+          <p><strong>Session management:</strong> Spring Security handles session lifecycle with secure session cookies, CSRF protection, and session fixation prevention. Every user interaction logged through ApplicationActionEvent for security analysis.</p>
           <p class="hidden-wisdom"><em>Authentication without authorization is security theater. Authorization without authentication is chaos. Both required. Both enforced. Both audited.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 🛡️ Business Logic Validation: The Sacred Rules</h3>
-          <p><strong>Input validation at five checkpoints:</strong> syntactic (well-formed?), semantic (meaningful?), business (allowed?), temporal (current?), referential (consistent?).</p>
-          <p><strong>Example - politician vote recording:</strong></p>
+          <h3>3. 🛡️ Business Logic Validation: Input Validation</h3>
+          <p><strong>Spring Security and ORM parameterization.</strong> The application layer validates input at multiple stages: client-side validation, server-side validation in controllers, service-layer business rules enforcement, and ORM-level constraints.</p>
+          <p><strong>Example - data integrity protection:</strong></p>
           <ul>
-            <li>Syntactic: Vote ID matches UUID pattern</li>
-            <li>Semantic: Vote value in {yes, no, abstain, absent, refrain}</li>
-            <li>Business: Politician active during vote date</li>
-            <li>Temporal: Vote date not future, not before parliament formation</li>
-            <li>Referential: Vote links to existing proposal and session</li>
+            <li>Parameterized queries via JPA/Hibernate prevent SQL injection</li>
+            <li>Input sanitization through Spring validation framework</li>
+            <li>Business rule enforcement via service layer @Secured methods</li>
+            <li>Data consistency checks through database constraints</li>
+            <li>Comprehensive audit trails via Javers versioning</li>
           </ul>
-          <p><strong>Fail any checkpoint = rejection.</strong> Pass all five = acceptance. Boolean AND across five gates. Simple. Effective. Auditable.</p>
-          <p><strong>STRIDE threat mitigations:</strong> Spoofing (JWT signatures), Tampering (checksums), Repudiation (audit logs), Information Disclosure (encryption), Denial of Service (rate limits), Elevation of Privilege (least-privilege model). Six STRIDE categories mapped to five defensive layers via overlapping concerns—DoS handled primarily at perimeter, secondarily at gateway.</p>
-          <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. Why? They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
+          <p><strong>STRIDE threat mitigations documented in <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (authentication), Tampering (parameterized queries + Javers auditing), Repudiation (immutable audit logs), Information Disclosure (network isolation + encryption), Denial of Service (WAF rate limiting), Elevation of Privilege (method-level @Secured annotations).</p>
+          <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Data Protection: Encryption at Rest</h3>
-          <p><strong>PostgreSQL with transparent data encryption.</strong> Five encryption scopes: personal identifiers (emails, IPs), authentication credentials (hashed, salted), user-generated content (notes, bookmarks), cached query results (session-specific), backup archives (AES-256).</p>
-          <p><strong>Key rotation schedule:</strong> Every 23 days for session keys, every 115 days (5 × 23) for database encryption keys, annually for backup encryption keys. Fibonacci-adjacent intervals balancing security refresh with operational stability.</p>
-          <p><strong>Data classification:</strong> Public (parliament votes - 99% of data), Internal (user preferences), Confidential (authentication tokens), Restricted (admin keys), Secret (encryption master keys). Five levels matching our architectural layers.</p>
-          <p><strong>GDPR compliance:</strong> Right to access, right to erasure, right to portability, right to rectification, right to restrict processing. Five rights, five implementation strategies, documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#gdpr-compliance">SECURITY_ARCHITECTURE.md</a>.</p>
+          <h3>4. 🔒 Data Protection: Encryption & Key Management</h3>
+          <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for databases, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
+          <p><strong>Secrets management:</strong> AWS Secrets Manager handles database credentials, API keys, and service accounts with automated rotation. Secure credential storage with just-in-time delivery to services.</p>
+          <p><strong>Data classification system:</strong> Information categorized by sensitivity with appropriate protection controls. Minimal personal data collection (user accounts only). PostgreSQL SSL configuration enforces encrypted connections.</p>
+          <p><strong>Javers auditing:</strong> Every data change tracked with author attribution, complete change history, and temporal data access. Property-level tracking provides before/after snapshots for compliance and forensics.</p>
           <p class="hidden-wisdom"><em>Encryption that can't be decrypted when needed is expensive data destruction. Encryption that decrypts too easily is expensive obfuscation. Balance through key management discipline.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Monitoring & Alerting: The All-Seeing Eye</h3>
-          <p><strong>Five observation channels:</strong> Application logs (what), System metrics (how much), Distributed traces (where), Security events (who/when), Audit records (compliance).</p>
-          <p><strong>Log aggregation:</strong> Elasticsearch cluster with 5-node minimum. Primary + 4 replicas. Data retention: 23 days hot storage, 115 days warm storage (compressed), 2 years cold storage (archived). Retention periods matching attack investigation windows.</p>
-          <p><strong>Alert thresholds:</strong> P1 (immediate) - authentication system down, data breach detected. P2 (5 minutes) - elevated error rates, suspicious access patterns. P3 (30 minutes) - capacity warnings, configuration drift. P4 (2 hours) - performance degradation. P5 (daily) - trend analysis, vulnerability scanning results.</p>
-          <p><strong>Incident response:</strong> Detection (automated), Analysis (5-minute target), Containment (15-minute target), Eradication (1-hour target), Recovery (4-hour target), Lessons Learned (documented within 5 days). The five-phase cycle documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#incident-response">SECURITY_ARCHITECTURE.md</a>.</p>
+          <h3>5. 👁️ Monitoring & Detection: Security Intelligence</h3>
+          <p><strong>AWS security services integration.</strong> The monitoring architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) combines multiple AWS services for comprehensive threat detection.</p>
+          <p><strong>GuardDuty threat intelligence:</strong> Machine learning-based detection across CloudTrail logs, VPC Flow Logs, and DNS logs. Enhanced protection for EKS, Lambda, RDS, S3, and EC2 with malware scanning.</p>
+          <p><strong>Security Hub aggregation:</strong> Centralized security findings from GuardDuty, Inspector, IAM Access Analyzer, and AWS Config. Automated evaluation against AWS Foundational Security Best Practices and CIS Benchmarks.</p>
+          <p><strong>Application monitoring:</strong> ApplicationSession tracking logs all user sessions. ApplicationActionEvent captures every user interaction. Javers auditing provides complete data change history with author attribution.</p>
+          <p><strong>Incident response workflow:</strong> EventBridge rules trigger Step Functions for automated containment. Security events generate CloudWatch alarms. Complete audit trail supports forensic investigation and compliance reporting.</p>
           <p class="hidden-wisdom"><em>Monitoring that doesn't inform action is surveillance without purpose. Monitoring that enables rapid response is defensive intelligence. Know the difference.</em></p>
         </div>
       </div>
     </section>
 
     <section id="threat-model">
-      <h2 class="panel-caption">STRIDE Threat Model: The 23 Attack Scenarios</h2>
+      <h2 class="panel-caption">STRIDE Threat Model: Systematic Risk Analysis</h2>
       
-      <p><strong>We documented 23 critical attack scenarios.</strong> Not by design. By exhaustive STRIDE analysis that kept producing... 23 scenarios. I stopped after 23 because adding more became redundant—variations on existing themes.</p>
+      <p><strong>Comprehensive threat modeling using STRIDE framework.</strong> The <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> documents systematic threat analysis across all architecture elements, integrating STRIDE categorization with MITRE ATT&CK mapping for advanced threat intelligence.</p>
       
-      <p><strong>Read the full threat model:</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> contains attack trees, probability assessments, impact analysis, and mitigations for all 23 scenarios.</p>
+      <p><strong>Priority threat scenarios documented:</strong> Web Application Compromise, Supply Chain Dependency Attack, Administrative Credential Compromise, Database Exfiltration, Import Pipeline Data Poisoning, and Distributed Denial of Service. Each scenario includes likelihood assessment, impact analysis (C/I/A), control implementation, and residual risk evaluation.</p>
       
-      <p><strong>The five highest-impact scenarios:</strong></p>
+      <p><strong>Key documented threats include:</strong></p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>🎯 Scenario 5: SQL Injection via Search</h3>
-          <p><strong>Attack:</strong> Malicious SQL in politician name search. <strong>Mitigation:</strong> Parameterized queries (100% coverage enforced by static analysis), input sanitization, least-privilege database account. <strong>Probability after mitigation:</strong> 0.01% (requires five simultaneous control failures).</p>
+          <h3>🎯 Web Application Compromise</h3>
+          <p><strong>Attack Vector:</strong> Exploitation of application vulnerabilities to manipulate political data integrity. <strong>Mitigations:</strong> WAF protection, input validation via ORM parameterization, defense-in-depth across network/application/data layers. <strong>Residual Risk:</strong> Low after comprehensive controls.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>🔓 Scenario 11: Session Hijacking</h3>
-          <p><strong>Attack:</strong> Steal JWT token, impersonate user. <strong>Mitigation:</strong> Short session lifetime (23 min), secure cookie flags, IP+User-Agent binding, token refresh rotation. <strong>Probability after mitigation:</strong> 0.5% (requires network-level attack window under 23 minutes).</p>
+          <h3>🔓 Supply Chain Attack</h3>
+          <p><strong>Attack Vector:</strong> Compromised dependencies introducing malicious code or vulnerabilities. <strong>Mitigations:</strong> SBOM generation, SLSA Level 3 provenance, Dependabot automation, OpenSSF Scorecard monitoring. <strong>Residual Risk:</strong> Low with continuous verification.</p>
         </div>
         
         <div class="card availability-card">
-          <h3>⚡ Scenario 15: DDoS Amplification</h3>
-          <p><strong>Attack:</strong> Abuse expensive queries to overwhelm database. <strong>Mitigation:</strong> Query complexity limits, response caching, rate limiting, CDN absorption, auto-scaling. <strong>Probability after mitigation:</strong> 2% (requires distributed coordination across 5+ attack sources).</p>
+          <h3>⚡ Denial of Service</h3>
+          <p><strong>Attack Vector:</strong> L7 flood attacks, resource exhaustion, or request amplification. <strong>Mitigations:</strong> AWS WAF rate limits, auto-scaling planned, CloudWatch monitoring, multi-AZ architecture future roadmap. <strong>Residual Risk:</strong> Medium pending HA implementation.</p>
         </div>
         
         <div class="card confidentiality-card">
-          <h3>🔑 Scenario 19: Privilege Escalation</h3>
-          <p><strong>Attack:</strong> Modify request to gain admin access. <strong>Mitigation:</strong> Role-based access control (immutable after auth), server-side enforcement, audit logging, privilege verification at five checkpoints. <strong>Probability after mitigation:</strong> 0.1% (requires defeating multi-layer authorization).</p>
+          <h3>🔑 Credential Compromise</h3>
+          <p><strong>Attack Vector:</strong> Credential stuffing, brute force, or phishing targeting admin accounts. <strong>Mitigations:</strong> Login throttling, strong password policy, IP rate limiting, MFA via Google Authenticator. <strong>Residual Risk:</strong> Low-Medium with enhanced monitoring.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>🗂️ Scenario 23: Data Poisoning</h3>
-          <p><strong>Attack:</strong> Submit fake parliament data. <strong>Mitigation:</strong> Source verification (Riksdag API cryptographic signatures), data consistency checks, anomaly detection, manual review queue for outliers. <strong>Probability after mitigation:</strong> 1% (requires compromising upstream Riksdag systems).</p>
+          <h3>🗂️ Data Integrity Attack</h3>
+          <p><strong>Attack Vector:</strong> Manipulation of political data through compromised import pipelines or database access. <strong>Mitigations:</strong> Source verification from Riksdag API, schema validation, Javers auditing with immutable trails, duplicate detection. <strong>Residual Risk:</strong> Low with multi-layer validation.</p>
         </div>
       </div>
       
-      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes: probability, impact, cost of mitigation, residual risk. We document all four dimensions.</em></p>
+      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: The Five Verification Layers</h2>
+      <h2 class="panel-caption">Supply Chain Security: Build Integrity & Provenance</h2>
       
-      <p><strong>Open source project = hundreds of dependencies.</strong> Each dependency is a trust decision. We verify trust at five levels:</p>
+      <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
       
       <ol>
-        <li><strong>FOSSA license scanning:</strong> Automated dependency analysis. Only approved open-source licenses. Alert on copyleft violations, commercial licenses, unknown licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public badge</a> shows real-time compliance.</li>
+        <li><strong>FOSSA license compliance:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public compliance badge</a> provides real-time verification of license adherence.</li>
         
-        <li><strong>Snyk vulnerability scanning:</strong> Daily checks for CVEs in dependencies. Auto-PR for security updates. <strong>SLA: Critical CVE patches within 24 hours.</strong> High severity within 5 days. Medium within 23 days. The numbers again.</li>
+        <li><strong>Dependabot automation:</strong> GitHub-native security updates with automatic PR generation for vulnerable dependencies. Configured in <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> for continuous monitoring across all ecosystems.</li>
         
-        <li><strong>Dependabot version monitoring:</strong> GitHub-native dependency updates. Reviews 5 outdated dependencies per week (prioritized by risk × usage). Systematic rather than reactive.</li>
+        <li><strong>CodeQL security scanning:</strong> Automated SAST integrated into CI/CD pipeline. Identifies vulnerabilities in code and dependencies before deployment. Results visible in <a href="https://github.com/Hack23/cia/security/code-scanning">Security tab</a>.</li>
         
-        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation that artifacts came from our source. Tamper-proof supply chain. View <a href="https://github.com/Hack23/cia/attestations">our attestations</a>—public evidence of build integrity.</li>
+        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build integrity and supply chain security.</li>
         
-        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, token permissions, code review, SAST integration, vulnerability disclosure. Automated evidence of security hygiene.</li>
+        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and vulnerability disclosure. Automated third-party validation of security hygiene.</li>
       </ol>
       
       <p><strong>The 23rd dependency insight:</strong> When we inventory dependencies, critical path always includes 23-25 packages (varies by release). Why? Pareto principle in action—20% of dependencies (23 out of ~120 total) provide 80% of functionality. The natural clustering revealing itself.</p>
