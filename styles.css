@@ -379,7 +379,7 @@
 
 /* Base styles - Premium Design */
 * {
-  transition-property: color, background-color, border-color, box-shadow, transform;
+  transition-property: color, background-color, border-color, box-shadow;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -654,7 +654,7 @@ header {
   padding: var(--spacing-xl);
   background: var(--card-bg);
   box-shadow: 0 2px 8px var(--card-shadow), 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -667,12 +667,13 @@ header {
   right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--premium-gradient-start), var(--premium-gradient-end));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover::before {
-  opacity: 1;
+  transform: scaleX(1);
 }
 
 .card h3 {
@@ -883,6 +884,60 @@ section:hover {
     background: rgba(0, 28, 37, 0.5);
     border-color: rgba(0, 204, 102, 0.2);
   }
+}
+
+/* Value Proposition Section Styles */
+.value-prop-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.header-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+/* Value Proposition Card Variants */
+.card-transparency {
+  background: linear-gradient(135deg, rgba(0, 71, 171, 0.05), rgba(0, 102, 204, 0.02));
+  border-left: 4px solid #0066CC;
+}
+
+.card-expertise {
+  background: linear-gradient(135deg, rgba(0, 200, 83, 0.05), rgba(0, 200, 83, 0.02));
+  border-left: 4px solid #00C853;
+}
+
+.card-innovation {
+  background: linear-gradient(135deg, rgba(123, 44, 191, 0.05), rgba(123, 44, 191, 0.02));
+  border-left: 4px solid #7B2CBF;
+}
+
+.card-practical {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.05), rgba(255, 152, 0, 0.02));
+  border-left: 4px solid #FF9800;
+}
+
+.card-measurable {
+  background: linear-gradient(135deg, rgba(23, 162, 184, 0.05), rgba(23, 162, 184, 0.02));
+  border-left: 4px solid #17A2B8;
+}
+
+.card-nordic {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(220, 53, 69, 0.02));
+  border-left: 4px solid #DC3545;
+}
+
+/* List styles for value proposition cards */
+.value-list {
+  margin: 0;
+  padding-left: var(--spacing-lg);
 }
 
 /* Button */
