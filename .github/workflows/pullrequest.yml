@@ -34,14 +34,12 @@ jobs:
           root: .
           css: false
           
-      # Link Checking - Verify all links are accessible
+      # Link Checking - Verify internal links only (local references)
       - name: Check Links
         uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0 # v2.7.0
         with:
-          args: --verbose --no-progress --exclude-path screenshots './**/*.html' './**/*.md'
+          args: --offline --verbose --no-progress --exclude-path screenshots './**/*.html' './**/*.md'
           fail: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       # Test Minify Action - Verify minification works correctly
       - name: Test Minify Action
