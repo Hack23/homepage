@@ -106,7 +106,7 @@ jobs:
           done
 
           # Set cache headers for image files (1 year cache for static images)
-          # Note: Excluding screenshots/ directory for performance (655+ files, CloudFront handles caching)
+          # Note: Excluding screenshots/ directory for performance (large number of files, CloudFront handles caching)
           echo "🖼️  Setting cache headers for image files (excluding screenshots)..."
           for img_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(webp|png|jpg|jpeg|gif|svg|ico)" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$img_file" ]; then
@@ -181,7 +181,7 @@ jobs:
           done
 
           echo "✅ Cache headers configuration completed for all asset types"
-          echo "ℹ️  Screenshots directory excluded for performance (CloudFront handles caching)"
+          echo "ℹ️  Screenshots directory excluded for performance (CloudFront uses S3 default headers)"
 
       # Invalidate CloudFront cache to ensure latest content is served
       - name: Invalidate CloudFront
