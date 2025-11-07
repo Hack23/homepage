@@ -923,10 +923,12 @@ section:hover {
   flex-direction: column;
   gap: var(--spacing-xs);
   padding: var(--spacing-md);
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: var(--border-radius);
   border-left: 3px solid var(--primary-light);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-left-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .business-line:hover {
