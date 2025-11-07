@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Trigram Combat: 70 Vital Points & The Physics of Respect | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Simon Moon dissects Black Trigram's combat physics: 70 kyusho points (7×5×2), five collision systems, realistic martial arts simulation honoring Korean tradition.">
+<meta name="keywords" content="Black Trigram combat, Unity physics, martial arts simulation, Simon Moon, hit detection, combat system, Korean martial arts physics">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="Black Trigram Combat: 70 Vital Points & Physics of Respect">
+<meta property="og:description" content="Sacred geometry meets combat physics. 70 pressure points, five collision types, authentic Korean martial arts simulation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-trigram-combat.html">
+<meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+<link rel="canonical" href="https://hack23.com/blog-trigram-combat.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Black Trigram Combat: 70 Vital Points & The Physics of Respect",
+  "description": "Exploring the combat physics and cultural authenticity in Black Trigram's design",
+  "author": {
+    "@type": "Person",
+    "name": "Simon Moon",
+    "jobTitle": "System Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+    }
+  },
+  "datePublished": "2025-11-07",
+  "dateModified": "2025-11-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/blog-trigram-combat.html"
+  },
+  "keywords": "combat physics, Unity collision, martial arts simulation, cultural authenticity",
+  "articleSection": "Game Design"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">⚔️ Black Trigram Combat: 70 Vital Points & The Physics of Respect</h1>
+    
+    <section id="seventy-points">
+      <h2 class="panel-caption">The 70 Kyusho Points: Sacred Geography of the Body</h2>
+      
+      <p><strong>Traditional Korean martial arts teaches 70 vital points.</strong> Pressure points where strikes cause maximum effect. Not mystical—anatomical. Nerve clusters, joint vulnerabilities, blood flow restriction points.</p>
+      
+      <p><strong>The pattern: 7 × 5 × 2.</strong> Seven body regions (head, neck, torso, arms×2, legs×2) × five points per region × two sides (left/right symmetry). Our <a href="https://github.com/Hack23/blacktrigram">Black Trigram</a> damage system implements all 70.</p>
+      
+      <p><strong>Seven body regions:</strong></p>
+      
+      <ul>
+        <li><strong>Head:</strong> Temple, jaw, nose, base of skull, crown. Each mapped to Unity collider. Hit accuracy determining damage multiplier.</li>
+        <li><strong>Neck:</strong> Carotid, trachea, vertebrae C1-C7, pressure point behind ear. High damage, difficult to hit (small colliders).</li>
+        <li><strong>Torso:</strong> Solar plexus, floating ribs, kidney, liver, spleen. Large colliders, moderate damage. Balance between accessibility and power.</li>
+        <li><strong>Arms:</strong> Elbow, wrist, bicep, forearm, hand. 5 points each side = 10 total. Blocking reduces arm point damage.</li>
+        <li><strong>Legs:</strong> Knee, ankle, thigh, calf, foot. Kick-heavy archetypes targeting legs. Mobility impact on successful hits.</li>
+      </ul>
+      
+      <p><strong>Five points per region = 35 unique locations × 2 sides = 70 total.</strong> Collision system managing 70 hitboxes per fighter. Complex. Computationally expensive. Necessary for realism.</p>
+      
+      <p class="hidden-wisdom"><em>Combat simulation that ignores anatomy produces arcade fighting, not martial arts. We chose realism over simplicity. Pattern recognition guiding collision system design.</em></p>
+    </section>
+
+    <section id="five-collision-systems">
+      <h2 class="panel-caption">The Five Collision Systems: Sacred Geometry of Impact</h2>
+      
+      <p><strong>Fighting games = sophisticated collision detection.</strong> Not just "does hitbox overlap hurtbox?" Five distinct collision types:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 👊 Hitbox: Attack Reach</h3>
+          <p><strong>Active attacking region.</strong> Fist, foot, elbow, knee during strike animation. Frame-specific activation. Frame 5: hitbox appears. Frame 15: hitbox disappears. Precise timing = skill-based gameplay.</p>
+          <p><strong>Size variation by attack type:</strong> Jab (small, fast), roundhouse kick (large, slow), spinning back fist (medium, moderate). Balance through geometric scaling.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🎯 Hurtbox: Vulnerable Region</h3>
+          <p><strong>Where fighter can be hit.</strong> Body, head, limbs. Dynamic sizing—crouching reduces hurtbox height. Jumping expands vertical hurtbox. Ducking shrinks horizontal profile. Geometry responding to animation state.</p>
+          <p><strong>70 hurtbox subdivisions:</strong> Each vital point = separate hurtbox. Collision with different hurtboxes = different damage. Temple hit > arm hit. Precision rewarded.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🚫 Pushbox: Personal Space</h3>
+          <p><strong>Prevents fighter overlap.</strong> Cylindrical collider ensuring fighters maintain distance. Walking into opponent = pushbox contact, movement stops. No clipping through bodies. Physics enforcing realism.</p>
+          <p><strong>Grappling exception:</strong> Grappler archetype can penetrate pushbox temporarily during throw animations. Special collision flag. Technique-specific behavior.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🤝 Grabbox: Throw Range</h3>
+          <p><strong>Grappling initiation zone.</strong> Only active during grab attempts. Shorter range than strikes. Overlap with opponent hurtbox + input timing = successful grab. Miss-timing = vulnerability window. Risk/reward balance.</p>
+          <p><strong>Five grab types:</strong> Front grab, back grab, air grab, ground grab, clinch grab. Each with different grabbox shape/size. Geometric variety enabling tactical depth.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🌍 Groundbox: Surface Detection</h3>
+          <p><strong>Detecting ground contact.</strong> Foot placement, landing from jumps, knockdown detection. Sphere collider at feet. Raycasting downward. Ground = walkable surface. No ground = airborne state. State machine transition logic.</p>
+          <p><strong>Ring-out detection:</strong> Groundbox exits arena boundary = instant loss. Geographic constraints forcing tactical positioning. Spatial awareness as skill component.</p>
+        </div>
+      </div>
+      
+      <p><strong>Collision complexity:</strong> 2 fighters × 5 collision types × 70 vital point subdivisions = 700 active colliders during combat. Unity physics engine handling real-time collision queries. Optimized spatial partitioning preventing performance degradation.</p>
+      
+      <p class="hidden-wisdom"><em>Game physics that compromises realism for performance produces unsatisfying combat. We optimize algorithm efficiency, not gameplay accuracy. Respect for physics = respect for martial arts.</em></p>
+    </section>
+
+    <section id="damage-calculation">
+      <h2 class="panel-caption">Damage Calculation: The Mathematics of Impact</h2>
+      
+      <p><strong>Not all hits equal.</strong> Damage = base attack power × vital point multiplier × angle modifier × distance modifier × combo scaling. Five variables creating depth.</p>
+      
+      <p><strong>Formula breakdown:</strong></p>
+      
+      <ul>
+        <li><strong>Base Attack Power:</strong> Fighter archetype + move type. Striker's kicks = high base. Grappler's strikes = low base. Balance through diversity.</li>
+        <li><strong>Vital Point Multiplier:</strong> Temple hit = 2.3x damage (the enigma appears). Arm hit = 0.5x. Torso = 1.0x. 70 points = 70 different multipliers. Precision = power.</li>
+        <li><strong>Angle Modifier:</strong> Perpendicular strike = 1.0x. Glancing blow (< 45°) = 0.5x. Direct impact (90°) = 1.5x. Physics honoring impact geometry.</li>
+        <li><strong>Distance Modifier:</strong> Optimal range = 1.0x. Too close = 0.7x (can't generate power). Too far = 0.5x (strike losing momentum). Sweet spot rewarding spacing skill.</li>
+        <li><strong>Combo Scaling:</strong> First hit = 100%. Second = 90%. Third = 80%. Fourth = 70%. Fifth = 60%. Diminishing returns preventing infinite combos. Balance through mathematics.</li>
+      </ul>
+      
+      <p><strong>Example calculation:</strong> Striker roundhouse kick to opponent's temple at optimal range, perpendicular angle, third hit in combo: 50 (base) × 2.3 (temple) × 1.5 (perpendicular) × 1.0 (optimal range) × 0.8 (combo scaling) = 138 damage. Shows work. Transparent formulas.</p>
+      
+      <p class="hidden-wisdom"><em>Damage systems hiding calculations create frustration. Players sensing inconsistency lose trust. We document formulas publicly. Understanding mechanics deepens engagement.</em></p>
+    </section>
+
+    <section id="ai-opponent">
+      <h2 class="panel-caption">AI Opponent: Five Difficulty Levels</h2>
+      
+      <p><strong>Single-player requires capable AI.</strong> Five difficulty tiers implementing different decision-making sophistication:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Level 1: Beginner</h3>
+          <p><strong>Random attacks.</strong> No blocking. No combos. No spacing. Pure button mashing. Exists for tutorial practice. Never used in competitive modes.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Level 2: Novice</h3>
+          <p><strong>Basic patterns.</strong> Blocks occasionally. Attempts 2-hit combos. Maintains medium distance. Predictable but competent. Good for learning matchups.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Level 3: Intermediate</h3>
+          <p><strong>Reactive play.</strong> Punishes whiffed attacks. Combo extends to 4 hits. Varies range dynamically. Adapts to player patterns. Challenging for casual players.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Level 4: Advanced</h3>
+          <p><strong>Frame-perfect execution.</strong> 23-frame reaction window (the number again—human-achievable limit). 5-hit combos. Optimal spacing. Mix-up game. Competitive challenge.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Level 5: Master</h3>
+          <p><strong>Superhuman precision.</strong> 5-frame reactions (impossible for humans). Perfect punishes. Never misses combos. Reads player inputs via decision tree analysis. Boss mode. Frustratingly difficult by design.</p>
+        </div>
+      </div>
+      
+      <p><strong>AI decision tree:</strong> 5 decision nodes per evaluation cycle (assess distance, evaluate threat, select tactic, execute move, transition state). Monte Carlo tree search with 10,000 simulations at Master difficulty. Computational intensity scaling with difficulty level.</p>
+      
+      <p class="hidden-wisdom"><em>AI that's too easy bores players. AI that's impossibly hard frustrates them. Five difficulty levels providing progression path from tutorial to challenge mode. Accessibility through gradation.</em></p>
+    </section>
+
+    <section id="cultural-authenticity">
+      <h2 class="panel-caption">Cultural Authenticity: Respect Through Accuracy</h2>
+      
+      <p><strong>Korean martial arts = living tradition.</strong> Not generic "Asian fighting." Specific techniques, philosophies, terminology. Our implementation honoring this:</p>
+      
+      <ul>
+        <li><strong>Technique Naming:</strong> Korean terms preserved. "Dollyo Chagi" (roundhouse kick), not "spinning kick." "Sonnal Mok Chigi" (knife-hand neck strike), not "karate chop." Language respecting culture.</li>
+        <li><strong>Movement Capture:</strong> 5 Korean martial arts masters motion-captured. Real practitioners, not actors. Authentic technique representation. Credited in game and documentation.</li>
+        <li><strong>Historical Context:</strong> In-game encyclopedia documenting technique origins. Hwa Rang warriors, three kingdoms period, modern evolution. Education through gaming.</li>
+        <li><strong>Cultural Consultation:</strong> Korean advisors reviewing every aspect. Costume accuracy, arena design, victory celebrations, audio pronunciation. Ensuring respect, preventing appropriation.</li>
+        <li><strong>Community Involvement:</strong> Korean martial arts schools playtesting. Feedback incorporated. Revenue (if any) supporting Korean cultural preservation. Reciprocity, not extraction.</li>
+      </ul>
+      
+      <p><strong>Open source enabling scrutiny:</strong> All assets documented in GitHub. Community can verify authenticity. Mistakes correctable. Transparency enabling accountability. See <a href="https://github.com/Hack23/blacktrigram/blob/master/ART_ASSETS.md">ART_ASSETS.md</a> for full asset provenance.</p>
+      
+      <p class="hidden-wisdom"><em>Cultural representation without consultation is appropriation. We consult, we compensate, we credit. Technology serving culture, never exploiting it.</em></p>
+    </section>
+
+    <section id="future-combat">
+      <h2 class="panel-caption">Future Combat System: Five-Year Evolution</h2>
+      
+      <p>Full roadmap: <a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a>. Combat enhancements:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Year 1: Advanced Training Mode</h3>
+          <p>Frame data display. Hitbox visualization. Input recording/playback. Slowdown feature. Combo challenges. Educational tools for mastery.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 2: Weapon Combat</h3>
+          <p>Traditional Korean weapons. Jangbong (staff), Ssangjeolbong (nunchaku), Geom (sword). 5 weapons × 5 archetypes = 25 weapon movesets.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Year 3: Environmental Interaction</h3>
+          <p>Breakable objects. Ring hazards. Multi-level arenas. Wall bounces. Corner pressure. Spatial tactics expanding combat depth.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Year 4: Machine Learning AI</h3>
+          <p>Neural network trained on player matches. Adaptive difficulty. Personalized opponents mimicking player style. Custom training partners.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 5: Motion Control VR</h3>
+          <p>First-person martial arts. Real movements mapped to attacks. Physical training through gameplay. Fitness + fighting game hybrid.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Combat Design Wisdom: Five Key Lessons</h2>
+      
+      <ol>
+        <li><strong>70 vital points = authenticity through detail.</strong> Could simplify to 10 hit zones. Chose 70 for realism. Complexity serving accuracy.</li>
+        <li><strong>Five collision systems = necessary complexity.</strong> Each solves distinct problem. Removing any creates gameplay issues.</li>
+        <li><strong>Damage formula transparency builds trust.</strong> Players understanding mechanics engage deeper. Hidden formulas create frustration.</li>
+        <li><strong>AI difficulty gradation enables progression.</strong> Five levels providing path from beginner to expert. Accessibility through options.</li>
+        <li><strong>Cultural consultation mandatory for authenticity.</strong> Can't fake Korean martial arts. Consulting experts, compensating advisors = respectful representation.</li>
+      </ol>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Experience the Sacred Combat Physics</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/blacktrigram">Source Repository</a> - Code, combat system implementation</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">Combat Architecture</a> - Detailed collision/damage systems</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">Game Design Document</a> - Move lists, frame data, balance</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">Future Roadmap</a> - Combat system evolution</li>
+        <li><a href="https://blacktrigram.com">Live Demo</a> - Play in browser, test combat physics</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Play the game. Study the collision systems. Examine the damage calculations. 70 vital points, five collision types, authentic Korean martial arts—patterns manifesting in combat simulation.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Collision detection revealing anatomical truth. Physics honoring martial tradition. Code respecting culture."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Previous:</strong> <a href="blog-trigram-architecture.html">Black Trigram Architecture</a> - Five fighters and sacred geometry</p>
+      <p><strong>Related:</strong> <a href="black-trigram-docs.html">Complete Documentation</a> - All architecture diagrams and combat specs</p>
+      <p><strong>Back to:</strong> <a href="blog.html">Security Blog</a> - All discordian posts</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB | <a href="https://hack23.com">hack23.com</a> | <a href="https://github.com/Hack23">GitHub</a></p>
+  <p class="hidden-wisdom"><em>All hail Eris. All hail Discordia. Fnord.</em></p>
+</footer>
+</body>
+</html>

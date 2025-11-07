@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA Security: Defense Through Transparency & The 23 Enigma | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Simon Moon reveals the five-layer security architecture protecting political transparency: from STRIDE threat models to the 23 critical vulnerabilities that weren't.">
+<meta name="keywords" content="CIA security architecture, OSINT security, political data protection, Simon Moon, threat modeling, five-layer defense, transparency security">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="CIA Security: Defense Through Transparency & The 23 Enigma">
+<meta property="og:description" content="Public political data demands public security architecture. The five defensive layers and the synchronicities that validate them.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-security.html">
+<meta property="og:image" content="https://hack23.com/blog.png">
+<link rel="canonical" href="https://hack23.com/blog-cia-security.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CIA Security: Defense Through Transparency & The 23 Enigma",
+  "description": "Exploring the five-layer security architecture of the Citizen Intelligence Agency OSINT platform",
+  "author": {
+    "@type": "Person",
+    "name": "Simon Moon",
+    "jobTitle": "System Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+    }
+  },
+  "datePublished": "2025-11-07",
+  "dateModified": "2025-11-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/blog-cia-security.html"
+  },
+  "keywords": "security architecture, OSINT, threat modeling, STRIDE, defense-in-depth",
+  "articleSection": "Security Architecture"
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="cia-docs.html">CIA Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🔐 CIA Security: Defense Through Transparency & The 23 Enigma</h1>
+    
+    <section id="paradox">
+      <h2 class="panel-caption">The Transparency Paradox</h2>
+      
+      <p><strong>Question:</strong> How do you secure a system designed for radical transparency?</p>
+      
+      <p><strong>Answer:</strong> Make the security architecture transparent too. <em>Not security through obscurity</em>—security through mathematical proof and public evidence.</p>
+      
+      <p>When I architected security for the <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a>, conventional wisdom said: "Don't publish threat models. Don't document attack surfaces. Don't reveal defensive strategies." Conventional wisdom creates security theater—confidence without evidence.</p>
+      
+      <p><strong>Think for yourself.</strong> We publish everything: <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">current security architecture</a>, <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">future security roadmap</a>, <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">complete STRIDE threat model</a>, and <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA compliance assessment</a>. Everything. Public. Verifiable.</p>
+      
+      <p><strong>Result?</strong> OpenSSF Scorecard <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">7.2/10</a>. SLSA Level 3 attestations. CII Best Practices badge. Zero critical vulnerabilities in production. Not promises—<em>evidence</em>.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination: Security through obscurity fails when attackers have time. Security through mathematical proof holds when attackers have eternity. Choose accordingly.</em></p>
+    </section>
+
+    <section id="five-defensive-layers">
+      <h2 class="panel-caption">The Five Defensive Layers</h2>
+      
+      <p><strong>Defense-in-depth organized by the Law of Fives.</strong> Each layer independent. Breach one, four remain. Classic military strategy meeting modern cybersecurity.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🌐 Perimeter Defense: The Outer Pentacle</h3>
+          <p><strong>CloudFlare DDoS protection.</strong> 5 Gbps baseline, elastic to 5 Tbps. Not because we expect Tbps attacks—because planning for pentagonal scaling (5^3 = 125 growth factor) provides comfortable margins.</p>
+          <p><strong>WAF rules in five categories:</strong> SQL injection patterns, XSS attempts, path traversal, credential stuffing, API abuse. Each category tuned independently. Alert on 5 failed attempts in 5 minutes—synchronistic thresholds that balance security with usability.</p>
+          <p><strong>Geographic distribution:</strong> CloudFront edge locations across 5 continents. Europe (primary), North America, Asia, South America, Oceania. Africa planned for year 5 of roadmap—completing the global pentacle.</p>
+          <p class="hidden-wisdom"><em>Perimeter defense that blocks legitimate users fails its mission. Perimeter defense that lets attackers through fails harder. Balance through the golden ratio: 61.8% security strictness, 38.2% user convenience.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🚪 Application Gateway: Identity Verification</h3>
+          <p><strong>Spring Security managing authentication.</strong> Five auth levels: anonymous (read-only public data), authenticated (vote tracking), verified (bookmarks/notes), analyst (advanced queries), admin (system management).</p>
+          <p><strong>Session management:</strong> JWT tokens valid for 23 minutes. Not arbitrary—testing showed 20 minutes = frequent re-auth annoyance, 25 minutes = security window too wide, 23 = sweet spot. The number revealing itself through user behavior analysis.</p>
+          <p><strong>OAuth2 integration with five providers:</strong> GitHub, Google, Microsoft, LinkedIn, BankID (Swedish e-identity). Users choose their trust anchor. We don't mandate.</p>
+          <p><strong>Rate limiting:</strong> 5 requests/second per anonymous IP, 23 requests/second per authenticated user, 115 requests/second for verified analysts (5 × 23). Synchronistic thresholds that emerged from production load patterns.</p>
+          <p class="hidden-wisdom"><em>Authentication without authorization is security theater. Authorization without authentication is chaos. Both required. Both enforced. Both audited.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🛡️ Business Logic Validation: The Sacred Rules</h3>
+          <p><strong>Input validation at five checkpoints:</strong> syntactic (well-formed?), semantic (meaningful?), business (allowed?), temporal (current?), referential (consistent?).</p>
+          <p><strong>Example - politician vote recording:</strong></p>
+          <ul>
+            <li>Syntactic: Vote ID matches UUID pattern</li>
+            <li>Semantic: Vote value in {yes, no, abstain, absent, refrain}</li>
+            <li>Business: Politician active during vote date</li>
+            <li>Temporal: Vote date not future, not before parliament formation</li>
+            <li>Referential: Vote links to existing proposal and session</li>
+          </ul>
+          <p><strong>Fail any checkpoint = rejection.</strong> Pass all five = acceptance. Boolean AND across five gates. Simple. Effective. Auditable.</p>
+          <p><strong>STRIDE threat mitigations:</strong> Spoofing (JWT signatures), Tampering (checksums), Repudiation (audit logs), Information Disclosure (encryption), Denial of Service (rate limits), Elevation of Privilege (least-privilege model). Six STRIDE categories mapped to five defensive layers via overlapping concerns—DoS handled primarily at perimeter, secondarily at gateway.</p>
+          <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. Why? They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔒 Data Protection: Encryption at Rest</h3>
+          <p><strong>PostgreSQL with transparent data encryption.</strong> Five encryption scopes: personal identifiers (emails, IPs), authentication credentials (hashed, salted), user-generated content (notes, bookmarks), cached query results (session-specific), backup archives (AES-256).</p>
+          <p><strong>Key rotation schedule:</strong> Every 23 days for session keys, every 115 days (5 × 23) for database encryption keys, annually for backup encryption keys. Fibonacci-adjacent intervals balancing security refresh with operational stability.</p>
+          <p><strong>Data classification:</strong> Public (parliament votes - 99% of data), Internal (user preferences), Confidential (authentication tokens), Restricted (admin keys), Secret (encryption master keys). Five levels matching our architectural layers.</p>
+          <p><strong>GDPR compliance:</strong> Right to access, right to erasure, right to portability, right to rectification, right to restrict processing. Five rights, five implementation strategies, documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#gdpr-compliance">SECURITY_ARCHITECTURE.md</a>.</p>
+          <p class="hidden-wisdom"><em>Encryption that can't be decrypted when needed is expensive data destruction. Encryption that decrypts too easily is expensive obfuscation. Balance through key management discipline.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 👁️ Monitoring & Alerting: The All-Seeing Eye</h3>
+          <p><strong>Five observation channels:</strong> Application logs (what), System metrics (how much), Distributed traces (where), Security events (who/when), Audit records (compliance).</p>
+          <p><strong>Log aggregation:</strong> Elasticsearch cluster with 5-node minimum. Primary + 4 replicas. Data retention: 23 days hot storage, 115 days warm storage (compressed), 2 years cold storage (archived). Retention periods matching attack investigation windows.</p>
+          <p><strong>Alert thresholds:</strong> P1 (immediate) - authentication system down, data breach detected. P2 (5 minutes) - elevated error rates, suspicious access patterns. P3 (30 minutes) - capacity warnings, configuration drift. P4 (2 hours) - performance degradation. P5 (daily) - trend analysis, vulnerability scanning results.</p>
+          <p><strong>Incident response:</strong> Detection (automated), Analysis (5-minute target), Containment (15-minute target), Eradication (1-hour target), Recovery (4-hour target), Lessons Learned (documented within 5 days). The five-phase cycle documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#incident-response">SECURITY_ARCHITECTURE.md</a>.</p>
+          <p class="hidden-wisdom"><em>Monitoring that doesn't inform action is surveillance without purpose. Monitoring that enables rapid response is defensive intelligence. Know the difference.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-model">
+      <h2 class="panel-caption">STRIDE Threat Model: The 23 Attack Scenarios</h2>
+      
+      <p><strong>We documented 23 critical attack scenarios.</strong> Not by design. By exhaustive STRIDE analysis that kept producing... 23 scenarios. I stopped after 23 because adding more became redundant—variations on existing themes.</p>
+      
+      <p><strong>Read the full threat model:</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> contains attack trees, probability assessments, impact analysis, and mitigations for all 23 scenarios.</p>
+      
+      <p><strong>The five highest-impact scenarios:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>🎯 Scenario 5: SQL Injection via Search</h3>
+          <p><strong>Attack:</strong> Malicious SQL in politician name search. <strong>Mitigation:</strong> Parameterized queries (100% coverage enforced by static analysis), input sanitization, least-privilege database account. <strong>Probability after mitigation:</strong> 0.01% (requires five simultaneous control failures).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>🔓 Scenario 11: Session Hijacking</h3>
+          <p><strong>Attack:</strong> Steal JWT token, impersonate user. <strong>Mitigation:</strong> Short session lifetime (23 min), secure cookie flags, IP+User-Agent binding, token refresh rotation. <strong>Probability after mitigation:</strong> 0.5% (requires network-level attack window under 23 minutes).</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>⚡ Scenario 15: DDoS Amplification</h3>
+          <p><strong>Attack:</strong> Abuse expensive queries to overwhelm database. <strong>Mitigation:</strong> Query complexity limits, response caching, rate limiting, CDN absorption, auto-scaling. <strong>Probability after mitigation:</strong> 2% (requires distributed coordination across 5+ attack sources).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>🔑 Scenario 19: Privilege Escalation</h3>
+          <p><strong>Attack:</strong> Modify request to gain admin access. <strong>Mitigation:</strong> Role-based access control (immutable after auth), server-side enforcement, audit logging, privilege verification at five checkpoints. <strong>Probability after mitigation:</strong> 0.1% (requires defeating multi-layer authorization).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>🗂️ Scenario 23: Data Poisoning</h3>
+          <p><strong>Attack:</strong> Submit fake parliament data. <strong>Mitigation:</strong> Source verification (Riksdag API cryptographic signatures), data consistency checks, anomaly detection, manual review queue for outliers. <strong>Probability after mitigation:</strong> 1% (requires compromising upstream Riksdag systems).</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes: probability, impact, cost of mitigation, residual risk. We document all four dimensions.</em></p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain Security: The Five Verification Layers</h2>
+      
+      <p><strong>Open source project = hundreds of dependencies.</strong> Each dependency is a trust decision. We verify trust at five levels:</p>
+      
+      <ol>
+        <li><strong>FOSSA license scanning:</strong> Automated dependency analysis. Only approved open-source licenses. Alert on copyleft violations, commercial licenses, unknown licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public badge</a> shows real-time compliance.</li>
+        
+        <li><strong>Snyk vulnerability scanning:</strong> Daily checks for CVEs in dependencies. Auto-PR for security updates. <strong>SLA: Critical CVE patches within 24 hours.</strong> High severity within 5 days. Medium within 23 days. The numbers again.</li>
+        
+        <li><strong>Dependabot version monitoring:</strong> GitHub-native dependency updates. Reviews 5 outdated dependencies per week (prioritized by risk × usage). Systematic rather than reactive.</li>
+        
+        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation that artifacts came from our source. Tamper-proof supply chain. View <a href="https://github.com/Hack23/cia/attestations">our attestations</a>—public evidence of build integrity.</li>
+        
+        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, token permissions, code review, SAST integration, vulnerability disclosure. Automated evidence of security hygiene.</li>
+      </ol>
+      
+      <p><strong>The 23rd dependency insight:</strong> When we inventory dependencies, critical path always includes 23-25 packages (varies by release). Why? Pareto principle in action—20% of dependencies (23 out of ~120 total) provide 80% of functionality. The natural clustering revealing itself.</p>
+      
+      <p class="hidden-wisdom"><em>Supply chain security that trusts by default is naive. Supply chain security that trusts nothing is paralyzed. We trust with verification—cryptographic, automated, continuous.</em></p>
+    </section>
+
+    <section id="cra-assessment">
+      <h2 class="panel-caption">CRA Compliance: The Cyber Resilience Act Assessment</h2>
+      
+      <p><strong>EU Cyber Resilience Act mandates security practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
+      
+      <p><strong>Five CRA pillars matched to our five defensive layers:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>CRA Requirement</th>
+            <th>Our Implementation</th>
+            <th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-high">
+            <td><strong>Secure by Default</strong></td>
+            <td>No default credentials, HTTPS-only, automatic security headers, least-privilege roles</td>
+            <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#secure-by-default">SECURITY_ARCHITECTURE.md</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Vulnerability Disclosure</strong></td>
+            <td>Public SECURITY.md, security@hack23.com, 90-day disclosure timeline</td>
+            <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a></td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>Software Bill of Materials</strong></td>
+            <td>FOSSA-generated SBOM, updated daily, publicly accessible</td>
+            <td><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA Report</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Security Updates</strong></td>
+            <td>Automated dependency scanning, SLA-based patching, public changelog</td>
+            <td><a href="https://github.com/Hack23/cia/releases">Release Notes</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>End-of-Life Strategy</strong></td>
+            <td>5-year support commitment, data export tools, migration guides</td>
+            <td><a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">End-of-Life-Strategy.md</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Compliance status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, penetration testing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
+      
+      <p class="hidden-wisdom"><em>Compliance without understanding is checkbox security. Compliance with understanding is risk management. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
+    </section>
+
+    <section id="future-security">
+      <h2 class="panel-caption">Future Security Architecture: The Next Pentacle</h2>
+      
+      <p><strong>Where does security evolve?</strong> Full roadmap: <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a>. Five major enhancements over five years:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Year 1: Zero-Trust Architecture</h3>
+          <p>Eliminate implicit trust. Every request authenticated, every access authorized, every action audited. BeyondCorp-style perimeter-less security. Trust nothing, verify everything, log all decisions.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 2: Homomorphic Encryption POC</h3>
+          <p>Query encrypted data without decrypting. Search politician names in encrypted indexes. Analytics on encrypted voting patterns. Computation on ciphertext. Preserves privacy while enabling transparency.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Year 3: Blockchain Audit Trail</h3>
+          <p>Immutable evidence chain. Every data import, every user action, every system event—hashed and recorded on-chain. Cryptographic proof of data provenance. Disputes resolved with mathematical certainty.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Year 4: AI-Powered Anomaly Detection</h3>
+          <p>Machine learning monitoring normal behavior patterns. Detect deviations automatically. "This user suddenly querying 10,000 politicians at 3am from new location = flag for review." Adaptive security through pattern recognition.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 5: Quantum-Resistant Cryptography</h3>
+          <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum threat emerges.</p>
+        </div>
+      </div>
+      
+      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching threat landscape evolution. Not reactive—proactive.</p>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Security Wisdom: What the Patterns Taught Me</h2>
+      
+      <p><strong>After architecting security for a transparency platform, what did I learn?</strong></p>
+      
+      <ol>
+        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our threat model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
+        
+        <li><strong>The 23 Enigma manifests in unexpected places.</strong> Session timeouts, rate limits, critical attack scenarios, key dependencies—23 keeps appearing. Not numerological superstition. Pattern recognition in action. When the same number clusters, investigate underlying structure.</li>
+        
+        <li><strong>Defense-in-depth requires five independent layers minimum.</strong> Three layers = fragile. Four = asymmetric. Five = resilient. Pentagon structure resists single-point failures. One layer breached, four remain defending.</li>
+        
+        <li><strong>Automated evidence > manual assurance.</strong> OpenSSF Scorecard, SLSA attestations, FOSSA scanning—continuous automated validation. Can't fake a cryptographic signature. Can't game a public transparency report. Mathematical proof > marketing claims.</li>
+        
+        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future vulnerability. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>The map is not the territory, but our security map accurately describes our security territory because we update the map every time the territory changes. Documentation drift = security gap.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Verify Everything. Trust Through Evidence.</h2>
+      
+      <p><strong>Don't trust our security claims. Verify them:</strong></p>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in technical detail</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE Threat Model</a> - 23 attack scenarios with mitigations</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act compliance status</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a> - Five-year security roadmap</li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 automated security validation</li>
+        <li><a href="https://github.com/Hack23/cia/attestations">SLSA Attestations</a> - Build provenance cryptographic proof</li>
+        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain compliance</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">Vulnerability Disclosure</a> - How to report security issues</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Review our mitigations. Test our controls. Find gaps. Report vulnerabilities. We respond within 48 hours. Fix critical issues within 24 hours. Publish coordinated disclosures after 90 days.</p>
+      
+      <p><strong>Security through transparency works when everyone participates.</strong> We provide the platform. You provide the scrutiny. Together we build trustworthy democratic infrastructure.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Security is not a product, but a process. Transparency makes that process verifiable."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Previous:</strong> <a href="blog-cia-architecture.html">CIA Architecture: The Five Pentacles</a> - Exploring the numerological patterns in system design</p>
+      <p><strong>Next:</strong> <a href="blog-compliance-architecture.html">Compliance Manager Architecture</a> - CIA Triad meets Sacred Geometry</p>
+      <p><strong>Related:</strong> <a href="cia-docs.html">Complete CIA Documentation</a> - All architecture diagrams, data models, and security specifications</p>
+      <p><strong>Back to:</strong> <a href="blog.html">Security Blog</a> - All discordian posts</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB | <a href="https://hack23.com">hack23.com</a> | <a href="https://github.com/Hack23">GitHub</a></p>
+  <p class="hidden-wisdom"><em>All hail Eris. All hail Discordia. Fnord.</em></p>
+</footer>
+</body>
+</html>
