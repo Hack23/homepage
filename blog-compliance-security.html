@@ -101,102 +101,102 @@
     </section>
 
     <section id="five-defensive-layers">
-      <h2 class="panel-caption">The Five Defensive Layers: STRIDE Mapped</h2>
+      <h2 class="panel-caption">Client-Side Security Architecture: Defense Through Simplicity</h2>
       
-      <p><strong>Each layer addresses specific STRIDE threats.</strong> Overlap intentional—defense-in-depth requires redundancy. Full threat model: <a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>.</p>
+      <p><strong>Each security layer addresses specific threat categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based threats.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>1. 🌐 Content Security Policy: Injection Defense</h3>
-          <p><strong>STRIDE threats:</strong> Tampering (XSS injection), Information Disclosure (data exfiltration via XSS).</p>
-          <p><strong>CSP directives enforced:</strong> default-src 'self', script-src 'self' 'unsafe-inline', style-src 'self' 'unsafe-inline', img-src 'self' data: https:, connect-src 'self'. Five directive categories protecting five resource types.</p>
-          <p><strong>Evidence:</strong> View CSP headers at <a href="https://hack23.github.io/cia-compliance-manager">live site</a> via browser DevTools Network tab. Public verification.</p>
-          <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails security. Balance through minimum necessary directives.</em></p>
+          <p><strong>Threats mitigated:</strong> Cross-site scripting (XSS), data exfiltration via injected scripts, unauthorized resource loading.</p>
+          <p><strong>CSP directives:</strong> Restrictive policy limiting script sources, style sources, and connection endpoints. Configuration deployed via GitHub Pages headers.</p>
+          <p><strong>React framework protection:</strong> Automatic XSS prevention through JSX escaping, DOM manipulation sanitization, and controlled prop rendering.</p>
+          <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails security. Balance through minimum necessary directives based on actual application requirements.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>2. 🔐 Subresource Integrity: Dependency Trust</h3>
-          <p><strong>STRIDE threat:</strong> Tampering (compromised CDN serving malicious library versions).</p>
-          <p><strong>SRI implementation:</strong> All external scripts loaded with cryptographic hash validation. React, ReactDOM, Radix UI components—each version locked with SHA-384 hash.</p>
-          <p><strong>Automated scanning:</strong> Dependabot, FOSSA, Snyk. <strong>SLA: Critical CVE patches within 24 hours.</strong> Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA dashboard</a>.</p>
+          <p><strong>Threat mitigated:</strong> Compromised CDN serving malicious library versions, supply chain attacks on external dependencies.</p>
+          <p><strong>SRI implementation:</strong> Cryptographic hash validation for external resources. Dependency integrity verification at build time.</p>
+          <p><strong>Supply chain verification:</strong> Dependabot automation for security updates, FOSSA license compliance scanning. Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA dashboard</a>.</p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. 🛡️ Type Safety: Runtime Error Prevention</h3>
-          <p><strong>STRIDE threats:</strong> Tampering (malformed data), Denial of Service (type confusion crashes).</p>
-          <p><strong>TypeScript strict mode:</strong> noImplicitAny, strictNullChecks, strictFunctionTypes, noUnusedLocals/Parameters, noImplicitReturns. Five strict flags enforcing type discipline.</p>
-          <p><strong>Coverage: 100% type coverage.</strong> Zero `any` types in production code. Build breaks on type errors.</p>
+          <p><strong>Threats mitigated:</strong> Type confusion vulnerabilities, runtime errors causing denial of service, malformed data processing.</p>
+          <p><strong>TypeScript strict mode:</strong> Comprehensive type checking with noImplicitAny, strictNullChecks, strictFunctionTypes compilation flags. Type errors block builds.</p>
+          <p><strong>Build-time validation:</strong> ESLint static analysis, TypeScript compiler checks, Vite build optimization with tree-shaking removing unused code.</p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Data Encryption: IndexedDB Protection</h3>
-          <p><strong>STRIDE threat:</strong> Information Disclosure (local storage compromise).</p>
-          <p><strong>Current: Browser-level encryption.</strong> IndexedDB within browser sandbox. OS full-disk encryption + browser profile encryption.</p>
-          <p><strong>Future (Year 2):</strong> Client-side encryption with SubtleCrypto API. AES-256-GCM. Zero-knowledge architecture.</p>
+          <h3>4. 🔒 Data Protection: Browser Storage Security</h3>
+          <p><strong>Threat mitigated:</strong> Local storage compromise, unauthorized data access from malicious extensions or co-located attacks.</p>
+          <p><strong>Current implementation:</strong> IndexedDB within browser sandbox. Relies on OS-level disk encryption and browser profile security for data-at-rest protection.</p>
+          <p><strong>Future enhancement:</strong> Client-side encryption using SubtleCrypto API for additional zero-knowledge protection layer independent of OS security.</p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Integrity Monitoring: Automated Validation</h3>
-          <p><strong>STRIDE threats:</strong> Repudiation, Tampering.</p>
-          <p><strong>Mechanisms:</strong> Immutable data patterns (Immer), checksum validation (SHA-256), version tracking, property-based testing, SLSA Level 3 attestations.</p>
-          <p><strong>Coverage: 85% code coverage.</strong> QuickCheck-style fuzzing with 10,000 test cases per function.</p>
+          <h3>5. 👁️ Build Integrity: Supply Chain Assurance</h3>
+          <p><strong>Threats mitigated:</strong> Compromised build pipeline, tampered artifacts, unauthorized code injection.</p>
+          <p><strong>Mechanisms:</strong> Automated CI/CD through GitHub Actions, SLSA Level 3 provenance attestations, immutable build artifacts, cryptographic signing of releases.</p>
+          <p><strong>Validation:</strong> OpenSSF Scorecard monitoring (check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a>), dependency review workflow, CodeQL security scanning.</p>
         </div>
       </div>
     </section>
 
     <section id="threat-scenarios">
-      <h2 class="panel-caption">The 30 Threat Scenarios: Clustered by Fives</h2>
+      <h2 class="panel-caption">Client-Side Threat Considerations</h2>
       
-      <p><strong>STRIDE analysis: 30 attack scenarios.</strong> Pattern: 6 STRIDE categories × 5 attack vectors = 30. Full analysis: <a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>.</p>
+      <p><strong>Client-side architecture shifts threat focus</strong> from server-side attacks to browser-based vulnerabilities, DOM manipulation risks, and local storage security.</p>
       
-      <p><strong>Five highest-priority scenarios:</strong></p>
+      <p><strong>Key security considerations for compliance tools:</strong></p>
       
       <ul>
-        <li><strong>Scenario 5: XSS via Assessment Notes</strong> - Mitigated by DOMPurify + React escaping + CSP. Probability: < 0.1%.</li>
-        <li><strong>Scenario 11: OAuth Token Theft</strong> - Future: httpOnly cookies + 23-min tokens + refresh rotation.</li>
-        <li><strong>Scenario 15: Memory Exhaustion</strong> - Mitigated by pagination + virtual scrolling + Web Workers. Probability: 5%.</li>
-        <li><strong>Scenario 23: Framework Definition Tampering</strong> - Mitigated by SRI + JSON schema + Git audit. Probability: < 1%.</li>
-        <li><strong>Scenario 27: IndexedDB Exfiltration</strong> - Future: Client-side encryption preventing clear-text access.</li>
+        <li><strong>XSS Prevention:</strong> React framework provides automatic escaping. Additional DOMPurify sanitization for user-generated assessment notes. CSP headers enforce restrictive script policies.</li>
+        <li><strong>Data Confidentiality:</strong> Browser sandbox isolation plus OS-level encryption. Future roadmap includes client-side encryption for additional zero-knowledge protection.</li>
+        <li><strong>Supply Chain Security:</strong> SRI validation for external dependencies. Automated Dependabot updates. SLSA Level 3 build attestations provide provenance assurance.</li>
+        <li><strong>Storage Security:</strong> IndexedDB access restricted to same-origin. No server-side data transmission eliminates network interception risks.</li>
+        <li><strong>Build Pipeline Integrity:</strong> GitHub Actions automation with security scanning. CodeQL SAST analysis. Dependency review blocking vulnerable packages.</li>
       </ul>
       
-      <p class="hidden-wisdom"><em>Threat modeling that ranks by likelihood × impact, prioritizes by cost/benefit, documents residual risk honestly = real security engineering.</em></p>
+      <p class="hidden-wisdom"><em>Threat modeling that honestly documents residual risk and architectural tradeoffs enables informed security decisions. Transparency about limitations builds trust more than marketing perfect security.</em></p>
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Five-Layer Verification</h2>
+      <h2 class="panel-caption">Supply Chain Security: Dependency Management</h2>
       
-      <p><strong>npm dependencies = trust decisions.</strong> How do we verify?</p>
+      <p><strong>npm dependencies represent trust decisions.</strong> How verification works:</p>
       
       <ol>
-        <li><strong>FOSSA License Scanning:</strong> MIT/Apache-2.0/BSD only. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Public badge</a>.</li>
-        <li><strong>Snyk + npm audit:</strong> Daily CVE checks. 24-hour SLA for critical patches.</li>
-        <li><strong>Dependency Review:</strong> GitHub Actions blocking vulnerable dependencies.</li>
-        <li><strong>SLSA Level 3:</strong> Cryptographic build provenance. <a href="https://github.com/Hack23/cia-compliance-manager/attestations">Public attestations</a>.</li>
-        <li><strong>OpenSSF Scorecard:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">7.4/10</a> continuous validation.</li>
+        <li><strong>License Compliance:</strong> FOSSA scanning ensures MIT/Apache-2.0/BSD compatibility. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Public compliance badge</a> provides transparency.</li>
+        <li><strong>Vulnerability Scanning:</strong> Dependabot automation generates security update PRs. GitHub dependency review workflow blocks vulnerable package introductions.</li>
+        <li><strong>Build Provenance:</strong> SLSA Level 3 attestations provide cryptographic evidence linking artifacts to source. View <a href="https://github.com/Hack23/cia-compliance-manager/attestations">public attestations</a>.</li>
+        <li><strong>Continuous Validation:</strong> OpenSSF Scorecard measures security practices. Check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a> for branch protection, code review, and dependency update evidence.</li>
+        <li><strong>Static Analysis:</strong> CodeQL security scanning integrated into CI/CD. ESLint rules enforce secure coding patterns.</li>
       </ol>
       
-      <p><strong>Critical path: 23-25 packages.</strong> Pareto: 20% of dependencies, 80% of functionality. The number appears again.</p>
+      <p><strong>Dependency minimization strategy:</strong> Prefer platform APIs over libraries where practical. React core provides substantial functionality reducing external dependency requirements.</p>
     </section>
 
     <section id="future-security">
-      <h2 class="panel-caption">Future Security: Five-Year Roadmap</h2>
+      <h2 class="panel-caption">Security Roadmap: Progressive Enhancement</h2>
       
-      <p>Full roadmap: <a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a>.</p>
+      <p><strong>Security evolution planned through progressive enhancement</strong> maintaining backward compatibility while adding defense layers.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>Year 1: OAuth + Social Login</h3>
-          <p>GitHub/Google/Microsoft auth. 23-minute JWT tokens. Multi-device sync.</p>
+          <h3>Phase 1: Enhanced Authentication</h3>
+          <p>Optional OAuth integration for multi-device sync. GitHub/Google/Microsoft identity providers. Session management with secure token handling.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>Year 2: Client-Side Encryption</h3>
-          <p>SubtleCrypto AES-256-GCM. Zero-knowledge architecture.</p>
+          <h3>Phase 2: Client-Side Encryption</h3>
+          <p>SubtleCrypto API integration for zero-knowledge architecture. AES-GCM encryption of assessment data. User-controlled encryption keys never transmitted.</p>
         </div>
         
         <div class="card availability-card">

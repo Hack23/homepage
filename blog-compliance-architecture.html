@@ -65,15 +65,15 @@
     <section id="trinity-pentacle">
       <h2 class="panel-caption">When Three Becomes Five Becomes Fifteen</h2>
       
-      <p><strong>The CIA Triad: Confidentiality, Integrity, Availability.</strong> Three pillars of information security since the 1970s. Fundamental. Immutable. Complete.</p>
+      <p><strong>The CIA Triad: Confidentiality, Integrity, Availability.</strong> Three foundational principles of information security. Understanding how organizations mature across these dimensions requires structured progression levels.</p>
       
-      <p><strong>Or so conventional wisdom claimed.</strong> Until I architected the <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> and discovered: three principles × five maturity levels = fifteen control points. The trinity revealed as pentacle in disguise.</p>
+      <p><strong>The <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> maps these principles to implementation maturity.</strong> As documented in <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/control-mapping.md">control-mapping.md</a>, each CIA principle has four progressive security levels: Basic, Moderate, High, and Very High. Each level mapped to industry-standard controls from NIST SP 800-53 Rev. 5, NIST CSF 2.0, and ISO/IEC 27001:2022.</p>
       
-      <p>Think for yourself. Everyone knows "CIA" = Confidentiality + Integrity + Availability. But <em>how many levels of confidentiality?</em> How many integrity states? How many availability tiers? The answer: five each. Always five. The Law of Fives hiding within the trinity.</p>
+      <p>Think for yourself. Security isn't binary (secure vs. insecure). It's a maturity spectrum where organizations progress through capability levels based on risk tolerance, regulatory requirements, and business context.</p>
       
-      <p><strong>Synchronistic discovery:</strong> Designing the maturity model, I initially sketched four levels (none, basic, intermediate, advanced). Felt incomplete. Added fifth level (optimized). Suddenly coherent. Then realized: NIST Cybersecurity Framework uses five functions (Identify, Protect, Detect, Respond, Recover). ISO 27001 uses five process categories. CMMI uses five maturity levels. <em>The pattern was always there.</em></p>
+      <p><strong>Framework integration:</strong> The tool bridges the CIA Triad (conceptual foundation) with implementation frameworks (NIST, ISO, CIS). This mapping enables organizations to translate abstract security principles into concrete technical controls with traceable compliance evidence.</p>
       
-      <p class="hidden-wisdom"><em>Illumination: Sacred numbers don't impose structure—they reveal structure already present. The CIA Triad contains fifteen sub-principles because information security problems naturally cluster into 3×5 patterns.</em></p>
+      <p class="hidden-wisdom"><em>Illumination: Security maturity models reveal structure already present in organizational capability evolution. The CIA Triad's progression through maturity levels reflects how security programs naturally develop over time.</em></p>
     </section>
 
     <section id="five-architectural-layers">
@@ -138,66 +138,77 @@
     </section>
 
     <section id="cia-triad-decomposition">
-      <h2 class="panel-caption">CIA Triad Decomposed: The 3×5 Control Matrix</h2>
+      <h2 class="panel-caption">CIA Triad Decomposed: Progressive Security Maturity</h2>
       
-      <p><strong>Each CIA principle has five maturity levels.</strong> This isn't arbitrary—it maps to real-world security capability evolution.</p>
+      <p><strong>Each CIA principle progresses through four security levels.</strong> As documented in <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/control-mapping.md">control-mapping.md</a>, this four-level maturity model maps to industry-standard frameworks:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>🔒 Confidentiality: The Five Levels</h3>
+          <h3>🔒 Confidentiality Maturity Levels</h3>
+          <p><strong>From control-mapping.md, each level mapped to NIST 800-53, NIST CSF 2.0, and ISO 27001:</strong></p>
           <ol>
-            <li><strong>Level 1 - None:</strong> No access controls. Public data. No encryption. No classification.</li>
-            <li><strong>Level 2 - Basic:</strong> Simple authentication. Basic authorization. Encryption at rest. Public/private classification.</li>
-            <li><strong>Level 3 - Managed:</strong> Role-based access control. MFA optional. Encryption in transit + at rest. Three-tier classification (public/internal/confidential).</li>
-            <li><strong>Level 4 - Defined:</strong> Attribute-based access control. MFA mandatory for sensitive data. Key rotation. Five-tier classification.</li>
-            <li><strong>Level 5 - Optimized:</strong> Zero-trust architecture. Dynamic access policies. Homomorphic encryption POC. Automated classification. Context-aware access.</li>
+            <li><strong>Basic Level:</strong> Public data handling with basic HTTPS, simple authentication, minimal access controls (AC-3, IA-5 Basic, PR.IM-1, A.9.4.1)</li>
+            <li><strong>Moderate Level:</strong> Restricted data with strong encryption at rest and in transit, role-based access control, security monitoring (SC-28, SC-8, AC-2, SI-4, PR.DS-1/2, A.10.1.1, A.13.2.3)</li>
+            <li><strong>High Level:</strong> Confidential data with multi-factor authentication, advanced encryption, SIEM solutions, DLP controls, PAM (IA-2(1), SC-13, SI-4(2), AC-6, PR.IM-3, A.9.4.2, A.8.2.3)</li>
+            <li><strong>Very High Level:</strong> Secret data with quantum-resistant algorithms, hardware security modules, air-gapped systems, advanced threat detection, physical security, secure facilities (SC-13 Enhanced, SC-12(3), SC-7(5), PE-3, PE-18, PR.PS, A.10.1.2, A.11.1.3)</li>
           </ol>
-          <p><strong>Current CIA Compliance Manager:</strong> Level 3. Client-side storage (Level 2), optional GitHub OAuth (Level 2), no encryption (browser security only). Future roadmap: Level 4 by year 2, Level 5 by year 5.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>🛡️ Integrity: The Five Levels</h3>
+          <h3>🛡️ Integrity Maturity Levels</h3>
           <ol>
-            <li><strong>Level 1 - None:</strong> No validation. No checksums. No audit logs. Data can be corrupted undetected.</li>
-            <li><strong>Level 2 - Basic:</strong> Input validation. Client-side checksums. Basic error handling. Manual verification.</li>
-            <li><strong>Level 3 - Managed:</strong> Schema validation. Cryptographic hashes. Audit logging. Automated integrity checks daily.</li>
-            <li><strong>Level 4 - Defined:</strong> Digital signatures. Tamper-evident logs. Real-time integrity monitoring. Automated anomaly detection.</li>
-            <li><strong>Level 5 - Optimized:</strong> Blockchain audit trail. Cryptographic proof of data lineage. Zero-knowledge proofs. Formal verification.</li>
+            <li><strong>Basic Level:</strong> Manual validation, basic access logs, simple backup (SI-10 Basic, AU-2 Basic, CP-9 Basic, DE.CM-7, A.12.4.1)</li>
+            <li><strong>Moderate Level:</strong> Automated validation rules, audit logging, error detection, version control (SI-10(5), AU-12, SI-11, CM-3, PR.DS-6, A.14.2.8, A.12.1.2)</li>
+            <li><strong>High Level:</strong> Distributed ledger solutions, cryptographic verification, complete audit trails, blockchain engineers (SC-16, SC-13, AU-10, AT-3, PR.DS-8/6, A.14.1.3, A.12.4.4)</li>
+            <li><strong>Very High Level:</strong> Smart contract execution, automated governance, advanced cryptography, real-time compliance verification, regular code audits (SI-7, CM-3, SC-12, SA-11, PR.DS-6, A.14.2.8, A.10.1.2)</li>
           </ol>
-          <p><strong>Current CIA Compliance Manager:</strong> Level 3. TypeScript enforcing types (validation), IndexedDB transactions (atomicity), immutable data patterns (integrity through functional programming). Evidence: 85% test coverage including property-based tests validating invariants.</p>
         </div>
         
         <div class="card availability-card">
-          <h3>⚡ Availability: The Five Levels</h3>
+          <h3>⚡ Availability Maturity Levels</h3>
           <ol>
-            <li><strong>Level 1 - None:</strong> Single server. No backups. No monitoring. SPOF everywhere.</li>
-            <li><strong>Level 2 - Basic:</strong> Daily backups. Basic monitoring. Manual failover. RTO: days, RPO: 24 hours.</li>
-            <li><strong>Level 3 - Managed:</strong> Automated backups. CDN distribution. Health checks. RTO: hours, RPO: 1 hour.</li>
-            <li><strong>Level 4 - Defined:</strong> Multi-region deployment. Auto-scaling. Chaos engineering. RTO: minutes, RPO: 5 minutes.</li>
-            <li><strong>Level 5 - Optimized:</strong> Active-active multi-cloud. Zero-downtime deployments. Self-healing systems. RTO: seconds, RPO: real-time.</li>
+            <li><strong>Basic Level:</strong> Manual backup procedures, basic recovery documentation, SPOF identification (CP-9, CP-2, ID.BE-5, A.12.3.1, A.17.1.1, A.11.2.2)</li>
+            <li><strong>Moderate Level:</strong> Pilot light with automated recovery scripts, standby systems, limited redundancy, regular failover testing (CP-10, CP-6, SC-6, CP-4, PR.DS-4, RC.TE, A.17.2.1)</li>
+            <li><strong>High Level:</strong> Warm standby with partially active redundancy, real-time data replication, automated failover, 24/7 monitoring (CP-7(1), CP-9(5), CP-10(4), SI-4, DE.CM, A.17.1.2, A.12.4.1)</li>
+            <li><strong>Very High Level:</strong> Multi-site active/active deployment, global load balancing, zero data loss automatic failover, dedicated SRE, cross-region testing (CP-7(3), SC-5, CP-10(2), CP-2(2), CP-4(2), RC.RP-4, A.17.1.3)</li>
           </ol>
-          <p><strong>Current CIA Compliance Manager:</strong> Level 4. Static site on GitHub Pages (99.9% SLA), CloudFlare CDN (5-continent distribution), offline-first architecture (works without network), automated deployment (zero-downtime releases). Evidence: <a href="https://www.githubstatus.com/">GitHub uptime</a> + client-side resilience.</p>
         </div>
       </div>
       
-      <p><strong>The 3×5 Matrix visualization:</strong> View the full control mapping in <a href="https://github.com/Hack23/cia-compliance-manager/blob/master/docs/ARCHITECTURE.md">ARCHITECTURE.md</a>. Each cell contains specific controls, implementation status, evidence links. Transparency through documentation.</p>
+      <p><strong>Control mapping transparency:</strong> View complete NIST 800-53, NIST CSF 2.0, and ISO 27001 control mappings in <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/control-mapping.md">control-mapping.md</a>. Each level includes specific controls, implementation guidance, and framework references.</p>
       
-      <p class="hidden-wisdom"><em>Maturity models with 3 levels are too coarse. 7 levels are too granular. 5 levels balance precision with comprehensibility. Fibonacci teaching through practice.</em></p>
+      <p class="hidden-wisdom"><em>Maturity models with too few levels are too coarse for nuanced assessment. Too many levels create false precision. Four levels balance granularity with practical implementation guidance.</em></p>
     </section>
 
     <section id="framework-mappings">
-      <h2 class="panel-caption">The Five Frameworks: Universal Compliance</h2>
+      <h2 class="panel-caption">Framework Integration: Universal Control Mapping</h2>
       
-      <p><strong>Security compliance isn't framework-specific.</strong> NIST CSF, ISO 27001, CIS Controls, PCI-DSS, HIPAA—all variations on the same theme: protect CIA triad. Our tool maps them all.</p>
+      <p><strong>Security compliance transcends individual frameworks.</strong> The <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/control-mapping.md">control-mapping.md</a> demonstrates how the CIA Triad maps to three major industry-standard frameworks:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>1. NIST Cybersecurity Framework</h3>
-          <p><strong>Five functions perfectly matching our architecture:</strong> Identify (assessment), Protect (controls), Detect (monitoring), Respond (incident handling), Recover (business continuity). Synchronicity: NIST revealed the Law of Fives before we encoded it in software.</p>
-          <p><strong>Implementation maturity levels:</strong> Tier 1 (Partial) → Tier 4 (Adaptive). We map these to our 5-level scale, treating Tier 0 (None) as implicit. Result: 1-to-1 mapping between NIST tiers and our maturity model.</p>
+          <h3>1. NIST SP 800-53 Rev. 5</h3>
+          <p><strong>Security and Privacy Controls for Information Systems and Organizations.</strong> Comprehensive control catalog providing detailed security and privacy controls across 20 families. Each CIA maturity level mapped to specific 800-53 controls with enhancement levels.</p>
+          <p><strong>Examples:</strong> AC-3 (Access Enforcement), SC-28 (Protection of Information at Rest), CP-9 (System Backup), SI-10 (Information Input Validation). Complete mapping in control-mapping.md shows progression from basic to very high controls.</p>
         </div>
         
         <div class="card integrity-card">
+          <h3>2. NIST Cybersecurity Framework 2.0</h3>
+          <p><strong>Framework for Improving Critical Infrastructure Cybersecurity.</strong> Risk-based approach organized into six core functions: Govern, Identify, Protect, Detect, Respond, Recover. Outcome-focused rather than prescriptive.</p>
+          <p><strong>CIA Triad integration:</strong> Confidentiality maps to Protect.Data Security (PR.DS), Integrity maps to Protect.Data Security and Detect.Continuous Monitoring (DE.CM), Availability maps to Protect.Data Security and Recover.Recovery Planning (RC.RP).</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>3. ISO/IEC 27001:2022</h3>
+          <p><strong>Information Security Management Systems Requirements.</strong> International standard for ISMS with Annex A controls covering organizational, people, physical, and technological security. Certification-ready framework.</p>
+          <p><strong>Control alignment:</strong> A.9 (Access control), A.10 (Cryptography), A.12 (Operations security), A.14 (System acquisition and development), A.17 (Business continuity). Enables gap analysis for ISO 27001 certification readiness.</p>
+        </div>
+      </div>
+      
+      <p><strong>Multi-framework value:</strong> Organizations facing multiple compliance requirements can use the CIA Triad as a common foundation, then map to specific framework controls. Single implementation satisfying multiple regulatory requirements through systematic control mapping.</p>
+      
+      <p class="hidden-wisdom"><em>Framework compliance without understanding underlying principles creates checkbox security. Understanding CIA Triad principles enables framework-agnostic security thinking that adapts to new requirements.</em></p>
+    </section>
           <h3>2. ISO 27001:2022</h3>
           <p><strong>Annexes organized in our five-domain structure:</strong> Organizational (policies), People (training), Physical (premises), Technological (systems), Legal (compliance). Each annex mapped to CIA triad control points. Cross-reference table in <a href="https://github.com/Hack23/cia-compliance-manager/blob/master/control-mapping.md">control-mapping.md</a>.</p>
         </div>
