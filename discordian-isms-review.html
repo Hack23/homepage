@@ -91,7 +91,7 @@
           <div class="scanner-effect"></div>
           <h3>1. 📊 Continuous Monitoring (Real-Time)</h3>
           <p><strong>Daily automated security validation.</strong> OpenSSF Scorecard checks, SonarCloud quality gates, dependency vulnerability scanning (Dependabot daily 09:00 CET), AWS Security Hub findings, GuardDuty threat detection. Automated dashboards with threshold alerts.</p>
-          <p><strong>Triggers:</strong> Critical vulnerability detected → <4hr patch cycle. OpenSSF score drops below 7.0 → immediate investigation. SonarCloud gate fails → block deployment.</p>
+          <p><strong>Triggers:</strong> Critical vulnerability detected → &lt;4hr patch cycle. OpenSSF score drops below 7.0 → immediate investigation. SonarCloud gate fails → block deployment.</p>
           <p class="hidden-wisdom"><em>Continuous monitoring enables rapid response—but only if thresholds trigger action, not just alerts.</em></p>
         </div>
         
@@ -146,7 +146,7 @@
             <td><strong>Supply Chain Security</strong></td>
             <td>OpenSSF Scorecard, SLSA Level, dependency freshness</td>
             <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA: 7.2</a>, SLSA 3, latest stable</td>
-            <td>≥7.0, SLSA 3, <4hr critical patches</td>
+            <td>≥7.0, SLSA 3, &lt;4hr critical patches</td>
           </tr>
           <tr class="roi-high">
             <td><strong>Code Quality & Security</strong></td>
@@ -157,31 +157,31 @@
           <tr class="roi-high">
             <td><strong>Vulnerability Management</strong></td>
             <td>Critical patch latency, vulnerability aging, scan coverage</td>
-            <td><4hr critical, 0 aged >30 days, 100% coverage</td>
-            <td><4hr critical, <8hr high, 0 aged >30d</td>
+            <td>&lt;4hr critical, 0 aged >30 days, 100% coverage</td>
+            <td>&lt;4hr critical, &lt;8hr high, 0 aged >30d</td>
           </tr>
           <tr class="roi-moderate">
             <td><strong>Resilience Validation</strong></td>
             <td>FIS experiment success rate, RTO compliance, RPO compliance</td>
-            <td>Monthly experiments, <5min critical RTO</td>
+            <td>Monthly experiments, &lt;5min critical RTO</td>
             <td>100% experiments pass, meet RTO/RPO targets</td>
           </tr>
           <tr class="roi-moderate">
             <td><strong>Incident Response</strong></td>
             <td>Mean time to detect (MTTD), mean time to respond (MTTR), incidents</td>
-            <td><30min critical MTTD, <4hr critical MTTR</td>
+            <td>&lt;30min critical MTTD, &lt;4hr critical MTTR</td>
             <td>Meet classification SLAs, trend down incidents</td>
           </tr>
           <tr class="roi-low">
             <td><strong>Security Awareness</strong></td>
             <td>Phishing simulation click rate, training completion, report time</td>
-            <td><5% click rate, 100% completion</td>
-            <td><5% click, 100% completion, <1hr report</td>
+            <td>&lt;5% click rate, 100% completion</td>
+            <td>&lt;5% click, 100% completion, &lt;1hr report</td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>Metrics Drive Action:</strong> Not vanity metrics—actionable KPIs with thresholds triggering improvement. OpenSSF <7.0? Investigate dependencies. Test coverage <80%? Add tests before merging. Patch latency >4hr critical? Escalate to CEO. Metrics without action are just dashboards.</p>
+      <p><strong>Metrics Drive Action:</strong> Not vanity metrics—actionable KPIs with thresholds triggering improvement. OpenSSF &lt;7.0? Investigate dependencies. Test coverage &lt;80%? Add tests before merging. Patch latency >4hr critical? Escalate to CEO. Metrics without action are just dashboards.</p>
       
       <p class="hidden-wisdom"><em>METRICS ILLUMINATION: Track what matters, ignore vanity. Number of policies doesn't matter—control effectiveness matters. Lines of security documentation don't matter—measurable security outcomes matter.</em></p>
     </section>
