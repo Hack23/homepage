@@ -83,7 +83,7 @@ jobs:
         run: |
           # Set cache headers for CSS files (1 year cache for versioned assets)
           echo "🎨 Setting cache headers for CSS files..."
-          for css_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.css" | awk '{print $4}'); do
+          for css_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.css" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$css_file" ]; then
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$css_file s3://${{ env.S3_BUCKET_NAME }}/$css_file \
                 --metadata-directive REPLACE \
@@ -95,7 +95,7 @@ jobs:
 
           # Set cache headers for JavaScript files (1 year cache for versioned assets)
           echo "⚡ Setting cache headers for JavaScript files..."
-          for js_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.js" | awk '{print $4}'); do
+          for js_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.js" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$js_file" ]; then
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$js_file s3://${{ env.S3_BUCKET_NAME }}/$js_file \
                 --metadata-directive REPLACE \
@@ -106,8 +106,9 @@ jobs:
           done
 
           # Set cache headers for image files (1 year cache for static images)
-          echo "🖼️  Setting cache headers for image files..."
-          for img_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(webp|png|jpg|jpeg|gif|svg|ico)" | awk '{print $4}'); do
+          # Note: Excluding screenshots/ directory for performance (large number of files, CloudFront handles caching)
+          echo "🖼️  Setting cache headers for image files (excluding screenshots)..."
+          for img_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(webp|png|jpg|jpeg|gif|svg|ico)" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$img_file" ]; then
               # Determine content type based on file extension
               case "$img_file" in
@@ -129,7 +130,7 @@ jobs:
 
           # Set cache headers for HTML files (short cache - 1 hour for dynamic content)
           echo "📄 Setting cache headers for HTML files..."
-          for html_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.html" | awk '{print $4}'); do
+          for html_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep "\.html" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$html_file" ]; then
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$html_file s3://${{ env.S3_BUCKET_NAME }}/$html_file \
                 --metadata-directive REPLACE \
@@ -141,7 +142,7 @@ jobs:
 
           # Set cache headers for metadata files (medium cache - 1 day)
           echo "📋 Setting cache headers for metadata files..."
-          for meta_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(xml|json|txt)" | awk '{print $4}'); do
+          for meta_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(xml|json|txt)" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$meta_file" ]; then
               # Determine content type based on file extension
               case "$meta_file" in
@@ -160,7 +161,7 @@ jobs:
 
           # Set cache headers for font files (1 year cache)
           echo "🔤 Setting cache headers for font files..."
-          for font_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(woff|woff2|ttf|eot|otf)" | awk '{print $4}'); do
+          for font_file in $(aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/ --recursive | grep -E "\.(woff|woff2|ttf|eot|otf)" | awk '{print $4}' | grep -v "^screenshots/"); do
             if [ -n "$font_file" ]; then
               # Determine content type based on file extension
               case "$font_file" in
@@ -180,6 +181,7 @@ jobs:
           done
 
           echo "✅ Cache headers configuration completed for all asset types"
+          echo "ℹ️  Screenshots directory excluded for performance (CloudFront uses S3 default headers)"
 
       # Invalidate CloudFront cache to ensure latest content is served
       - name: Invalidate CloudFront
