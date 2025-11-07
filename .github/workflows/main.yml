@@ -117,6 +117,7 @@ jobs:
                 *.gif) content_type="image/gif" ;;
                 *.svg) content_type="image/svg+xml" ;;
                 *.ico) content_type="image/x-icon" ;;
+                *) content_type="application/octet-stream" ;;
               esac
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$img_file s3://${{ env.S3_BUCKET_NAME }}/$img_file \
                 --metadata-directive REPLACE \
@@ -147,6 +148,7 @@ jobs:
                 *.xml) content_type="application/xml" ;;
                 *.json) content_type="application/json" ;;
                 *.txt) content_type="text/plain" ;;
+                *) content_type="text/plain" ;;
               esac
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$meta_file s3://${{ env.S3_BUCKET_NAME }}/$meta_file \
                 --metadata-directive REPLACE \
@@ -167,6 +169,7 @@ jobs:
                 *.ttf) content_type="font/ttf" ;;
                 *.eot) content_type="application/vnd.ms-fontobject" ;;
                 *.otf) content_type="font/otf" ;;
+                *) content_type="application/octet-stream" ;;
               esac
               aws s3 cp s3://${{ env.S3_BUCKET_NAME }}/$font_file s3://${{ env.S3_BUCKET_NAME }}/$font_file \
                 --metadata-directive REPLACE \
@@ -185,17 +188,19 @@ jobs:
           CloudFrontDistId=$(aws cloudformation describe-stacks \
             --stack-name ${{ env.CLOUDFRONT_STACK_NAME }} \
             --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue" \
-            --output text)
+            --output text 2>/dev/null || echo "")
           
           if [ -z "$CloudFrontDistId" ]; then
             echo "⚠️  Warning: CloudFront distribution ID not found in stack outputs"
-            echo "Attempting to find distribution by origin..."
+            echo "Attempting to find distribution by S3 origin domain..."
+            # Get S3 bucket domain name
+            S3_DOMAIN="${{ env.S3_BUCKET_NAME }}.s3.amazonaws.com"
             CloudFrontDistId=$(aws cloudfront list-distributions \
-              --query "DistributionList.Items[?Origins.Items[?DomainName.contains(@, '${{ env.S3_BUCKET_NAME }}')]].Id" \
-              --output text | awk '{print $1}')
+              --query "DistributionList.Items[?Origins.Items[?contains(DomainName, '${{ env.S3_BUCKET_NAME }}')]].Id | [0]" \
+              --output text 2>/dev/null || echo "")
           fi
           
-          if [ -z "$CloudFrontDistId" ]; then
+          if [ -z "$CloudFrontDistId" ] || [ "$CloudFrontDistId" = "None" ]; then
             echo "❌ Error: Could not discover CloudFront distribution ID"
             exit 1
           fi
