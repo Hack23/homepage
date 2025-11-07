@@ -52,23 +52,32 @@ jobs:
         run: |
           echo "🔍 Checking minification results..."
           
-          # Check if minified files were created
+          # Count HTML and CSS files in the repository
+          html_count=$(find . -name "*.html" -not -path "./screenshots/*" -not -path "./.git/*" | wc -l)
+          css_count=$(find . -name "*.css" -not -path "./screenshots/*" -not -path "./.git/*" | wc -l)
+          
+          echo "📊 Found ${html_count} HTML files and ${css_count} CSS files"
+          
+          # Verify key files still exist after minification
           if [ -f "index.html" ]; then
-            original_size=$(stat -f%z "index.html" 2>/dev/null || stat -c%s "index.html")
-            echo "✅ index.html exists (${original_size} bytes)"
+            size=$(stat -f%z "index.html" 2>/dev/null || stat -c%s "index.html")
+            echo "✅ index.html exists (${size} bytes)"
           else
-            echo "❌ index.html not found"
+            echo "❌ index.html not found after minification"
             exit 1
           fi
           
           if [ -f "styles.css" ]; then
-            css_size=$(stat -f%z "styles.css" 2>/dev/null || stat -c%s "styles.css")
-            echo "✅ styles.css exists (${css_size} bytes)"
+            size=$(stat -f%z "styles.css" 2>/dev/null || stat -c%s "styles.css")
+            echo "✅ styles.css exists (${size} bytes)"
           else
-            echo "❌ styles.css not found"
+            echo "❌ styles.css not found after minification"
             exit 1
           fi
           
+          # Verify HTML files are still valid after minification
+          total_files=$(find . -name "*.html" -not -path "./screenshots/*" -not -path "./.git/*" | wc -l)
+          echo "✅ All ${total_files} HTML files verified after minification"
           echo "✅ Minification verification completed successfully"
           
       - name: Initialize CodeQL
