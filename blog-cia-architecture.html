@@ -65,9 +65,9 @@
     <section id="cosmic-pattern">
       <h2 class="panel-caption">The Pattern Reveals Itself</h2>
       
-      <p><strong>23 repositories monitored.</strong> Not by accident. The synchronicity appeared first—then I discovered <em>why</em>.</p>
+      <p><strong>Five data sources, five architectural layers, five security levels.</strong> Not by design—by recognition. When analyzing the <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a>, I discovered the Law of Fives already present in the problem space itself.</p>
       
-      <p>When I first analyzed the <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> architecture, the universe whispered through the code. Everything organized in fives. The Law of Fives manifesting in Java packages, data models, and architectural layers. This isn't design—it's recognition of patterns that were always there.</p>
+      <p>The architecture documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> reveals a C4 model organized into natural pentagons: five container types (Web Application, Service Layer, Data Access, Integration Services, Security/Monitoring), each containing components that cluster into groups of five or its multiples. This isn't imposed structure—it's the democratic oversight domain expressing its inherent geometry.</p>
       
       <p><strong>Think for yourself.</strong> Other architects impose structure. I <em>observe</em> structure that emerges from the problem domain. Democratic oversight has five natural dimensions. The riksdag data flows in pentagonal patterns. World Bank indicators group into quintets. The architecture didn't create these patterns—it revealed them.</p>
       
@@ -81,51 +81,51 @@
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>1. 🏛️ Presentation Layer: What Citizens See</h3>
-          <p><strong>Dashboard surfaces.</strong> Riksdag member voting records. Ministry performance metrics. Agency effectiveness measurements. Political decision tracking. The fifth element: World Bank comparative context.</p>
-          <p><strong>The 23 Insight:</strong> Top 23 politicians monitored across 5 key metrics. Again, the pattern emerges unbidden. I didn't choose 23—the data distribution suggested it. Look at the histogram yourself in <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>.</p>
-          <p class="hidden-wisdom"><em>User interfaces that don't fight cognitive load—they embrace the golden ratio. 61.8% space for data, 38.2% for context. Your eye knows this is right before your brain explains why.</em></p>
+          <p><strong>Vaadin-based dashboards.</strong> The web application (documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) surfaces riksdag member profiles, voting records, ministry performance metrics, committee activities, and World Bank comparative context. Multiple view components for Parliament, Politicians, Parties, Ballots, Committees, and Government Bodies.</p>
+          <p><strong>UI Architecture:</strong> View Factory creates nine core view types plus admin and user dashboards. Chart Factory generates visualizations using Chart.js. Menu Factory provides role-based navigation. Each factory follows the trinity pattern: creation, configuration, display.</p>
+          <p class="hidden-wisdom"><em>User interfaces that embrace the golden ratio (61.8% data display, 38.2% context/navigation) reduce cognitive load. The eye recognizes harmonic proportions before the conscious mind understands why.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. 📊 Application Layer: Temporary Choreography</h3>
-          <p><strong>Vaadin flow components.</strong> Five service categories orchestrate data transformation: UserService (identity), DataService (persistence), LogicService (rules), GatewayService (interface), MonitorService (observation). Each service contains five core methods. Not imposed—discovered.</p>
-          <p><strong>Synchronistic note:</strong> When I refactored MonitorService, I kept finding five-method clusters emerging naturally. Push it to six? Complexity explodes. Reduce to four? Missing critical concerns. Five is <em>optimal</em> because the problem space demands it.</p>
-          <p class="hidden-wisdom"><em>Application state lives in the moment. No persistence here—just transformation. Data flows through like water. Trying to store it here is like trying to grab running water.</em></p>
+          <h3>2. 📊 Service Layer: Business Logic Orchestration</h3>
+          <p><strong>Spring-based service architecture.</strong> The Application Manager coordinates eleven specialized services revealed in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>: Parliament Data Service, Politician Data Service, Party Data Service, Ballot Data Service, Committee Data Service, Government Body Data Service, Data Import Service, Chart Data Manager, Application Event Service, User Service, and Security Service. Not my design—the political domain's natural structure.</p>
+          <p><strong>Synchronistic observation:</strong> These eleven services (11 = 5 + 5 + 1, the unity that emerges from dual pentagons) organize into five functional clusters: <em>Political Entity Management</em> (5 entity services), <em>Data Integration</em> (import service), <em>User Experience</em> (chart data + events), <em>Identity</em> (user + security), and <em>Coordination</em> (application manager). The Law of Fives manifests through natural grouping, not imposed naming.</p>
+          <p class="hidden-wisdom"><em>Services that map directly to domain concepts require minimal translation layers. When technical names mirror political realities, the architecture documents itself through truthful naming.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. 💼 Domain Layer: The Business Truth</h3>
-          <p><strong>Five entity families:</strong></p>
+          <p><strong>Entity families documented in <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>:</strong></p>
           <ul>
-            <li><strong>Parliament</strong> (Riksdag members, voting records, committee assignments)</li>
-            <li><strong>Government</strong> (Ministries, government decisions, agency oversight)</li>
-            <li><strong>Documents</strong> (Proposals, motions, committee reports)</li>
-            <li><strong>Elections</strong> (Results, candidates, polling districts)</li>
-            <li><strong>Indicators</strong> (World Bank metrics, OECD comparisons, democratic indexes)</li>
+            <li><strong>Person Data</strong> (Political persons, assignments, biographical details)</li>
+            <li><strong>Document Data</strong> (Parliamentary documents, content, status tracking)</li>
+            <li><strong>Vote Data</strong> (Ballots, voting records, individual votes)</li>
+            <li><strong>External Data</strong> (World Bank indicators, election authority data)</li>
+            <li><strong>System Data</strong> (User accounts, sessions, application events, configuration)</li>
           </ul>
-          <p><strong>Each entity type has five lifecycle states.</strong> Creation, active, modified, archived, analyzed. Following the pattern creates maintainability. Break the pattern and watch technical debt accumulate.</p>
-          <p><strong>External data sources:</strong> Riksdag API, World Bank API, ESV (Swedish Financial Management Authority), Val.se (Swedish Election Authority), and our internal enrichment service. Five sources. Always five.</p>
-          <p class="hidden-wisdom"><em>Domain models that mirror reality don't need extensive documentation—they document themselves through naming and structure. Good architecture is self-evident architecture.</em></p>
+          <p><strong>Five data sources confirmed:</strong> Swedish Parliament API (riksdagen.se), Election Authority (val.se), World Bank Open Data, Swedish Financial Management Authority (ESV), Government Bodies data. The DATA_MODEL.md documents how these sources integrate through standardized entity mapping.</p>
+          <p><strong>60+ base tables plus 30+ materialized analytical views.</strong> PostgreSQL implementation with JPA/Hibernate ORM. Composite primary keys for many-to-many relationships. Audit tracking through timestamp fields. The <a href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html">Entity Documentation</a> reveals the complete graph.</p>
+          <p class="hidden-wisdom"><em>Domain models that accurately reflect reality need minimal abstraction layers. When entities mirror the riksdag's actual structure, the code becomes self-documenting through truthful representation.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🗄️ Archive Layer: Historical Memory</h3>
-          <p><strong>PostgreSQL persistence.</strong> Five partition strategies by temporal significance: current session (live), previous session (recent), historical sessions (context), election cycles (accountability), world bank annual data (trends).</p>
-          <p><strong>Data retention follows Fibonacci sequences:</strong> 1-3-5-8-13 years depending on entity type. Not arbitrary—matched to democratic cycles and accountability windows. Swedish elections every 4 years × golden ratio ≈ 6.47 → round to 8 years for committee work. The math <em>works</em> because it reflects political reality.</p>
-          <p><strong>OpenSSF Scorecard 7.2/10</strong> validates our security approach. SLSA Level 3 build provenance. CII Best Practices badge. The evidence is public: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">See for yourself</a>.</p>
-          <p class="hidden-wisdom"><em>Archives that respect temporal patterns survive longer. Fight the calendar and watch data lose context. Align with democratic cycles and information stays relevant across generations.</em></p>
+          <h3>4. 🗄️ Data Access Layer: Persistence Foundation</h3>
+          <p><strong>PostgreSQL database with JPA/Hibernate.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, the Data Access Layer uses entity-specific data containers, Java domain model classes, and view entities optimized for read operations. Least-privilege database roles enforce security isolation.</p>
+          <p><strong>Security architecture</strong> (see <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>) includes network isolation, parameterized queries via ORM, and comprehensive Javers auditing for data integrity. Every modification tracked with author attribution and temporal snapshots.</p>
+          <p><strong>OpenSSF Scorecard 7.2/10</strong> validates security practices. SLSA Level 3 build provenance. CII Best Practices badge. Public evidence: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Scorecard Results</a>.</p>
+          <p class="hidden-wisdom"><em>Persistence layers that separate reads from writes enable optimization without sacrificing data integrity. View entities for queries, base entities for updates—the duality that maintains consistency.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 📈 Analytics Layer: Derived Insights</h3>
-          <p><strong>The fifth layer most architects miss.</strong> Not just storage—active analysis. Five analytical dimensions: performance trends, voting patterns, budget tracking, policy effectiveness, corruption indicators.</p>
-          <p><strong>Machine learning patterns</strong> emerge from 23-dimensional feature vectors. Why 23? Try 22—insufficient signal. Try 24—overfitting noise. The sweet spot reveals itself through experiment, then numerical significance appears afterward. The universe teaching through practice.</p>
-          <p><strong>Future architecture:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> extends to real-time event sourcing, graph-based network analysis, temporal knowledge graphs, federated query across Nordic parliaments, and AI-assisted policy impact prediction. Still organized in fives. The pattern persists across architectural evolution.</p>
-          <p class="hidden-wisdom"><em>Analytics that don't produce actionable insights waste computation. Every query must answer: "What should citizens know?" Everything else is vanity metrics.</em></p>
+          <h3>5. 📈 Integration & Analytics: Data Flow and Insights</h3>
+          <p><strong>The Integration Services layer</strong> (documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) fetches and processes data from external sources: riksdagen.se Parliament API, val.se Election Authority, World Bank Open Data, and Swedish government bodies. Spring Integration framework coordinates the data flow.</p>
+          <p><strong>Materialized Views</strong> transform raw data into political intelligence: VIEW_RIKSDAGEN_POLITICIAN (activity metrics), VIEW_RIKSDAGEN_PARTY (performance indicators), VIEW_RIKSDAGEN_COMMITTEE (productivity stats), VIEW_RIKSDAGEN_POLITICIAN_BALLOT_SUMMARY (voting analysis with loyalty/rebel/success rates). See <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> for complete view catalog.</p>
+          <p><strong>Future vision:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> envisions quantum-enhanced pattern recognition, neural-integrated political intelligence ecosystems, and consciousness-based democratic participation. Today's five-layer architecture evolves into fluid computational mediums that coalesce based on democratic needs.</p>
+          <p class="hidden-wisdom"><em>Analytics that produce actionable citizen insights justify their computational cost. Every materialized view must answer: "What democratic transparency does this enable?" Vanity metrics waste both computation and attention.</em></p>
         </div>
       </div>
     </section>
