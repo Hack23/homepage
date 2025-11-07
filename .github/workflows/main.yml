@@ -193,11 +193,11 @@ jobs:
           if [ -z "$CloudFrontDistId" ]; then
             echo "⚠️  Warning: CloudFront distribution ID not found in stack outputs"
             echo "Attempting to find distribution by S3 origin domain..."
-            # Get S3 bucket domain name
-            S3_DOMAIN="${{ env.S3_BUCKET_NAME }}.s3.amazonaws.com"
+            # List all distributions and filter by S3 bucket origin
             CloudFrontDistId=$(aws cloudfront list-distributions \
-              --query "DistributionList.Items[?Origins.Items[?contains(DomainName, '${{ env.S3_BUCKET_NAME }}')]].Id | [0]" \
-              --output text 2>/dev/null || echo "")
+              --output json 2>/dev/null | \
+              jq -r ".DistributionList.Items[] | select(.Origins.Items[].DomainName | contains(\"${{ env.S3_BUCKET_NAME }}\")) | .Id" | \
+              head -n 1 || echo "")
           fi
           
           if [ -z "$CloudFrontDistId" ] || [ "$CloudFrontDistId" = "None" ]; then
