@@ -534,7 +534,8 @@ header {
   width: 80px;
   height: 80px;
   border-radius: var(--border-radius-lg);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(0, 71, 171, 0.15);
 }
 
@@ -588,7 +589,10 @@ header {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 4px rgba(0, 71, 171, 0.2);
   border: 1px solid transparent;
 }
@@ -654,7 +658,9 @@ header {
   padding: var(--spacing-xl);
   background: var(--card-bg);
   box-shadow: 0 2px 8px var(--card-shadow), 0 1px 3px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -857,7 +863,7 @@ ul li::before {
 ul li a {
   display: inline-block;
   padding: var(--spacing-xs) 0;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 /* Section Styling - Premium */
@@ -1019,7 +1025,9 @@ section:hover {
   background: var(--button-bg);
   color: var(--button-text);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
 }
 
 .btn:hover {
