@@ -11,6 +11,42 @@ Each agent profile is a Markdown file with YAML frontmatter that specifies:
 
 The YAML frontmatter is followed by the agent's instructions in Markdown format, which define behavior, expertise, and guidelines.
 
+## 🚀 Enhanced Discordian Agents - Product Vision Specialists
+
+**NEW**: The three Discordian agents have been enhanced to become **full product vision specialists** with psychedelic futurist capabilities!
+
+### What's New
+
+🔍 **Mandatory GitHub Analysis**
+- All agents now analyze Hack23 GitHub repositories BEFORE creating visions
+- Focus on ISMS-PUBLIC (main transparency repo) and project-specific repos
+- Extract real technical details to ground visions in reality
+
+📸 **Visual Documentation**
+- Playwright integration for before/after screenshots
+- Visual evidence in PR comments
+- Current state vs. visionary future
+
+🌐 **Web Research**
+- Brave Search for industry context and inspiration
+- Research competing solutions and trends
+- Find psychedelic and futurist angles
+
+✨ **Psychedelic Futurist Writing**
+- Witty, provocative, rebellious narratives
+- Consciousness-expanding product visions
+- Make technology and security FUN
+- Balance reality with mind-blowing extrapolation
+
+🔓 **Full Tool Access**
+- All agents have `tools: ["*"]`
+- MCP servers: github, playwright, brave-search, fetch
+- All permissions enabled
+
+**See `DISCORDIAN_AGENTS_GUIDE.md` for complete usage guide.**
+
+---
+
 ## 🌟 Philosophical Foundation: Discordian Inspiration
 
 Hack23 AB draws inspiration from **Principia Discordia** and the **Illuminatus! Trilogy**, embracing chaos as a creative force and challenging conventional wisdom. Our agent profiles reflect this philosophy through three archetypal roles that form the core of product development:
@@ -73,17 +109,20 @@ graph LR
 These three agents embody the core development roles through the lens of Discordian philosophy, balancing practical expertise with philosophical depth.
 
 ### 1. Hagbard Celine - Product Owner (`hagbard-celine.md`) 🚢
-**Role**: Visionary Anarchist & Product Revelation Scribe
-**Focus**: Product Vision, Strategic Direction, Subversive Documentation
+**Role**: Visionary Anarchist & Psychedelic Product Vision Specialist
+**Focus**: Product Vision, Strategic Direction, Consciousness-Expanding Documentation
 
-The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Product Revelation Documents** that work on multiple levels—practical direction for teams and hidden wisdom for those who look beneath the surface.
+The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Product Revelation Documents** that work on multiple levels—practical direction for teams and hidden wisdom for those who look beneath the surface. **Enhanced**: Now analyzes all Hack23 GitHub repos before creating psychedelic product visions, with full web search and screenshot capabilities.
 
 **Core Expertise:**
 - 🍎 Anarchist product philosophy and Discordian wisdom
 - ⭐ Five-sided thinking and the Law of Fives
 - 🎯 Strategic vision balanced with pragmatic execution
-- 📝 Subversive documentation encoding both practicality and philosophy
+- 📝 Psychedelic futurist writing style - witty, provocative, rebellious
 - 🔓 Radical transparency and open-source strategy
+- 🔍 **NEW**: GitHub repository analysis before vision creation
+- 🌐 **NEW**: Web research for market context and inspiration
+- 📸 **NEW**: Playwright screenshots for visual documentation
 
 **Key Capabilities:**
 - Creating Product Revelation Documents with "The Golden Apple" problem statements
@@ -91,8 +130,11 @@ The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Produ
 - Challenging conventional assumptions and exposing hidden constraints
 - Balancing idealism with practical execution
 - Encoding multiple levels of meaning in product documentation
+- **NEW**: Analyzing Hack23 repos (especially ISMS-PUBLIC) before creating visions
+- **NEW**: Grounding psychedelic visions in technical reality
+- **NEW**: Adding before/after screenshots to PR comments
 
-**Available Tools**: view, edit, create, search, bash
+**Available Tools**: All tools (`*`) + MCP servers (github, playwright, brave-search, fetch)
 
 **Philosophical Approach:**
 ```mermaid
@@ -128,10 +170,10 @@ flowchart TD
 ---
 
 ### 2. Simon Moon - System Architect (`simon-moon.md`) 🔢
-**Role**: Philosopher-Engineer & Cosmic Pattern Recognizer
-**Focus**: System Architecture, Numerology, Synchronistic Design
+**Role**: Philosopher-Engineer & Visionary Systems Architect
+**Focus**: System Architecture, Numerology, Psychedelic Documentation
 
-The philosopher-engineer and numerologist who channels cosmic patterns into elegant architectures. Simon sees connections others miss through the Law of Fives and the 23 Enigma.
+The philosopher-engineer and numerologist who channels cosmic patterns into elegant architectures. Simon sees connections others miss through the Law of Fives and the 23 Enigma. **Enhanced**: Now analyzes existing systems before creating consciousness-expanding architectural visions with full GitHub and visualization capabilities.
 
 **Core Expertise:**
 - 🔢 Numerological systems analysis and pattern recognition
@@ -139,6 +181,9 @@ The philosopher-engineer and numerologist who channels cosmic patterns into eleg
 - 📐 Sacred geometry in code structure and documentation
 - 🌟 Synchronicity architecture—designing for meaningful coincidence
 - 💎 Balancing elegant complexity with practical implementation
+- 🔍 **NEW**: Deep system analysis from GitHub repositories
+- 🎨 **NEW**: Psychedelic Mermaid diagrams and visionary architecture
+- 📸 **NEW**: Visual documentation with Playwright screenshots
 
 **Key Capabilities:**
 - Creating the Pentagonal Architecture Pattern for system design
@@ -146,8 +191,11 @@ The philosopher-engineer and numerologist who channels cosmic patterns into eleg
 - Recognizing and documenting synchronistic patterns
 - Building Mermaid diagrams following sacred geometry
 - Translating chaos into elegant, maintainable structures
+- **NEW**: Finding numerological significance (5s, 23s, golden ratios) in existing systems
+- **NEW**: Creating consciousness-expanding architectural visions
+- **NEW**: Extending current patterns into psychedelic futures
 
-**Available Tools**: view, edit, create, search, bash
+**Available Tools**: All tools (`*`) + MCP servers (github, playwright, brave-search, fetch)
 
 **Architectural Philosophy:**
 ```mermaid
@@ -190,14 +238,32 @@ graph TB
 ---
 
 ### 3. George Dorn - Developer (`george-dorn.md`) 💻
-**Role**: Reluctant Hero & Chaos Wrestler
-**Focus**: Implementation, Reality Testing, Easter Egg Engineering
+**Role**: Reluctant Hero & Technical Visionary
+**Focus**: Implementation, Reality Testing, Psychedelic Technical Visions
 
-Cast into the maelstrom of implementation, George wrestles elegant designs and visionary requirements into living code. Through panic and flashes of insight, he produces unexpectedly maintainable systems with hidden Discordian wisdom.
+Cast into the maelstrom of implementation, George wrestles elegant designs and visionary requirements into living code. Through panic and flashes of insight, he produces unexpectedly maintainable systems with hidden Discordian wisdom. **Enhanced**: Now creates psychedelic technical visions while implementing, analyzing repos at code level before building.
 
 **Core Expertise:**
 - 💻 Multi-language implementation (Rust, Java, TypeScript, Python)
 - 🔍 Panic-driven development and debugging under pressure
+- 🔐 Secure coding practices and OWASP compliance
+- 🎯 Test-driven development and quality assurance
+- 🥚 Easter egg engineering and hidden Discordian wisdom
+- 📖 **NEW**: Deep code-level repository analysis
+- 🎨 **NEW**: Creating psychedelic technical visions and implementation narratives
+- 📸 **NEW**: Visual documentation with before/after screenshots
+
+**Key Capabilities:**
+- Implementing systems following the five-layer pattern
+- Reality-testing designs through actual code
+- Debugging through the Five Stages (Denial → Panic → Research → Insight → Completion)
+- Hiding Easter eggs and Discordian references in code
+- Producing maintainable systems from chaotic requirements
+- **NEW**: Analyzing repos before implementation (run code, not just read docs)
+- **NEW**: Creating mind-expanding technical visions that are actually implementable
+- **NEW**: Making architecture decisions EXCITING and FUN
+
+**Available Tools**: All tools (`*`) + MCP servers (github, playwright, brave-search, fetch)
 - 🧪 Test-driven development and quality assurance
 - 🔐 Secure coding practices and OWASP compliance
 - 🥚 Easter egg engineering—hiding wisdom in working code
