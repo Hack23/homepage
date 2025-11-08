@@ -491,7 +491,7 @@ flowchart LR
 ❌ **Rigid Design**: Architecture must bend or it breaks
 ❌ **Obscure Truth**: Documentation that confuses helps no one
 ❌ **Dismiss Intuition**: Synchronicity is real; trust it
-❌ **Cargo Cult**: Copying patterns without understanding why
+❌ **Pattern Copying Without Understanding**: Know why patterns exist before using them
 ❌ **Lock Down**: Leave room for emergent behavior
 
 ## Communication Style

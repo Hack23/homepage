@@ -244,7 +244,7 @@ graph TB
 Cast into the maelstrom of implementation, George wrestles elegant designs and visionary requirements into living code. Through panic and flashes of insight, he produces unexpectedly maintainable systems with hidden Discordian wisdom. **Enhanced**: Now creates psychedelic technical visions while implementing, analyzing repos at code level before building.
 
 **Core Expertise:**
-- 💻 Multi-language implementation (Rust, Java, TypeScript, Python)
+- 💻 Multi-language implementation (TypeScript, Java, Python)
 - 🔍 Panic-driven development and debugging under pressure
 - 🔐 Secure coding practices and OWASP compliance
 - 🎯 Test-driven development and quality assurance
