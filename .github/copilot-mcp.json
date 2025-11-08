@@ -47,15 +47,31 @@
       "env": {
         "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       },
-      "description": "Enables searching documentation for React, TypeScript, PixiJS, and Vite",
-      "disabled": true,
-      "note": "Enable this by setting BRAVE_API_KEY environment variable"
+      "description": "Enables web search for research, documentation, and analysis",
+      "disabled": false,
+      "note": "Web search enabled for product vision research"
     },
     "playwright": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-playwright"],
-      "description": "Browser automation for testing and debugging web applications",
+      "description": "Browser automation for screenshots, testing, and visual documentation",
       "disabled": false
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "description": "Fetch and analyze web content from URLs including GitHub repos",
+      "disabled": false
+    },
+    "everart": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everart"],
+      "env": {
+        "EVERART_API_KEY": "${EVERART_API_KEY}"
+      },
+      "description": "Generate psychedelic and visionary artwork for product visions",
+      "disabled": false,
+      "note": "Optional: Enable for AI-generated visionary artwork"
     }
   },
   "globalShortcut": "Ctrl+Shift+Space"
