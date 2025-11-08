@@ -144,7 +144,6 @@ mvn clean install           # Java/Maven projects
 # Run existing tests
 npm test  # TypeScript projects
 mvn test  # Java projects
-mvn test
 
 # Use it as a user would
 # Document what actually works
