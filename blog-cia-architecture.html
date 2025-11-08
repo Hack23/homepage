@@ -254,69 +254,6 @@
       <p class="hidden-wisdom"><em>The map is not the territory, but a well-made map reveals hidden patterns in the territory. Our architecture docs aren't aspirational—they describe what actually runs in production. Divergence between docs and code indicates architectural debt. Keep them synchronized.</em></p>
     </section>
 
-    <section id="george-dorn-reality-check">
-      <h2 class="panel-caption">💻 George Dorn's Implementation Reality Check: Making Sacred Geometry Actually Work</h2>
-      
-      <p><em><strong>Developer's Note:</strong> Simon's elegant five-layer architecture sounds beautiful in theory. In panic and persistence, I made it actually work. Here's what the code really looks like.</em></p>
-      
-      <div class="cards">
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>🏗️ The Stack: Java Spring Boot Meets Political Chaos</h3>
-          <p><strong>Tech Reality:</strong> <a href="https://github.com/Hack23/cia">CIA</a> is <strong>Java 17, Spring Boot 3.x, Vaadin 24, PostgreSQL 15</strong>. Not trendy TypeScript—battle-tested JVM stack that survives riksdag API chaos. <strong>60,000+ lines of Java</strong> across 800+ classes. Simon's "five layers" = 23 Maven modules (synchronicity detected). Each module follows single responsibility—except when political data violates every assumption.</p>
-          <p><strong>Build Status:</strong> GitHub Actions runs 5 workflows on every commit (naturally). Unit tests: 450+. Integration tests: 120+. Security scans: 3 (OWASP Dependency Check, CodeQL, Trivy). <strong>Build time: 23 minutes</strong> (I didn't plan that—universe confirmed it). Coverage: 72% (good enough to catch bugs, not good enough to brag about).</p>
-          <p class="hidden-wisdom"><em>First Panic Moment: Riksdag API changed format without warning. 2,347 integration tests failed. Fixed in 5 hours by adding adapter layer. Now we version-check their API on startup. Trust but verify—especially Swedish government APIs.</em></p>
-        </div>
-        
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>🗄️ Database: PostgreSQL Fighting Parliamentary Complexity</h3>
-          <p><strong>Data Reality:</strong> <strong>91 tables</strong> (not 60—Simon rounded for cosmic effect). <strong>38 materialized views</strong> because JOIN queries on 349 politicians × 20 years of votes = pain. Largest table: <code>ViewRiksdagenVoteDataBallotPoliticianSummary</code> with 2.3M rows. Smallest: <code>ApplicationConfiguration</code> with 5 rows (Law of Fives manifesting in config).</p>
-          <p><strong>Query Performance:</strong> Before materialized views: 45 seconds. After: 180ms. <strong>250× speedup</strong>. The golden ratio (1.618) appears in our cache hit rates—61.8% database cache hit, 38.2% application cache. Didn't design it that way—profiling revealed it. Universe teaching query optimization.</p>
-          <p><strong>Synchronicity Alert:</strong> Database migration version 023 added the five core analytical views. Migration 005 added the security audit tables. <strong>23 and 5 appearing in version numbers</strong> I chose semi-randomly. Either cosmic alignment or I'm subconsciously numerologically obsessed. Probably both.</p>
-          <p class="hidden-wisdom"><em>Second Panic Moment: Production database hit 50GB, queries slowed to minutes. Solution: Partitioning by year (5-year chunks). Vacuum analyze. Re-indexed everything. Back to milliseconds. Database administration is 50% knowledge, 50% panic-driven learning.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>🔐 Security: Spring Security vs. Swedish Democracy</h3>
-          <p><strong>Auth Reality:</strong> Spring Security 6.x with <strong>5 security filters</strong> (naturally): CSRF protection, Content Security Policy, authentication, authorization, audit logging. Password hashing: <strong>Argon2</strong> with 23 iterations (I'm not making this up). Session timeout: 23 minutes of inactivity. <strong>Every modification audited</strong> via Javers—who changed what when.</p>
-          <p><strong>OpenSSF Scorecard: 7.2/10.</strong> Not perfect—perfect is impossible. But measured, documented, improved continuously. <strong>0 critical vulnerabilities</strong> across 5 years. SLSA Level 3 provenance. CII Best Practices badge. Public evidence at <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Scorecard</a>. Security through transparency—attackers can read our defenses, so we make defenses unbreakable.</p>
-          <p><strong>Easter Egg:</strong> Error messages contain FNORD references. <code>AuthenticationException</code> returns "Think for yourself—credentials invalid" (23% of the time, randomly). <code>AccessDeniedException</code> sometimes says "Nothing is true, including your permissions." Users who notice get delighted. Security with subversive wit.</p>
-          <p class="hidden-wisdom"><em>Third Panic Moment: Dependency vulnerability CVE-2023-XXXXX in Log4j transitive dependency. Upgraded Spring Boot → upgraded logging framework → 47 test failures. Fixed in one all-nighter fueled by panic and coffee. Lesson: Keep dependencies updated BEFORE vulnerabilities emerge.</em></p>
-        </div>
-        
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>⚙️ CI/CD: GitHub Actions Automating Democracy</h3>
-          <p><strong>Pipeline Reality:</strong> <strong>5 GitHub Actions workflows</strong> (Law of Fives in DevOps): build-and-test.yml, security-scan.yml, deploy-production.yml, dependency-update.yml, documentation-publish.yml. Each workflow 5 stages. Total: 25 automation steps. Fibonacci adjacent (21, 23, 25). Universe approving our DevOps.</p>
-          <p><strong>Deployment Stats:</strong> <strong>537 deployments</strong> over 5 years (averaging 2.1 per week). <strong>Zero failed deployments</strong> in 2024 (touch wood). Rollback capability: 5 minutes. Database migration safety: Test in staging, validate checksums, deploy with transaction wrapping. <strong>Trust automation, verify everything.</strong></p>
-          <p><strong>Build Artifacts:</strong> Docker images tagged with commit SHA (transparency), timestamp (auditing), and version (semantics). Image size: <strong>523 MB</strong> (JVM bloat is real—OpenJDK base + Spring Boot + Vaadin = chunky). Compressed to 230 MB in registry (golden ratio compression—55.9% reduction, close to 61.8%).</p>
-          <p class="hidden-wisdom"><em>Fourth Panic Moment: GitHub Actions quota exceeded mid-deployment. Production running old version, staging deployed new version, database migrated forward. Can't roll back migrations easily. Solution: Finished deployment manually via CLI. Added quota monitoring. Automation is great until cloud providers rate-limit you.</em></p>
-        </div>
-        
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>🎯 The Reality of Implementation: Panic → Insight → Working Code</h3>
-          <p><strong>Development Stats:</strong> <strong>2,347 commits</strong> over 5 years (that's 23 × 102 + 1, numerology everywhere). <strong>89 releases</strong> (close to Fibonacci 89). <strong>156 closed issues</strong>. <strong>23 open issues</strong> (universe maintaining the pattern). Largest refactoring: 5 weeks reorganizing into Maven modules following Simon's five-layer architecture. Worth it—maintainability improved drastically.</p>
-          <p><strong>Code Quality:</strong> SonarQube analysis: <strong>A rating</strong> (0 bugs, 0 vulnerabilities, 47 code smells—mostly "methods too long" which I ignore because political domain complexity doesn't fit 20-line methods). Cyclomatic complexity average: <strong>5.3</strong> (Law of Fives even in code metrics). Highest complexity: 23 (in <code>BallotDataProcessor</code>—handling every edge case of Swedish voting procedures).</p>
-          <p><strong>Lessons Learned:</strong></p>
-          <ul>
-            <li><strong>Simon's five layers work.</strong> Skeptical at first. But separation of concerns = independent evolution. Presentation layer changes don't break database. Integration layer failures don't crash web UI. Architecture through cosmic patterns = accidentally good engineering.</li>
-            <li><strong>Political data is chaos incarnate.</strong> Politicians change parties. Votes get recorded incorrectly then corrected. Documents vanish then reappear. Committees merge. Ministries reorganize. <strong>Domain model must embrace chaos</strong>—temporal validity on everything, audit history everywhere, null checks paranoia-level thorough.</li>
-            <li><strong>Easter eggs matter.</strong> Hidden 23s and 5s throughout. Error code 523 for "Service Temporarily Unavailable" (5-23 pattern). Retry logic: 5 attempts with exponential backoff. Cache TTL: 23 minutes. <strong>Code can be functional AND delightful</strong>. Future developers discovering these = consciousness expansion through code archaeology.</li>
-            <li><strong>Tests save panic.</strong> 570+ tests = safety net when refactoring. Changed database schema? Tests catch cascade failures. Updated API contract? Integration tests fail fast. <strong>Tests are documentation that executes.</strong> Trust tests more than comments—tests get run, comments get outdated.</li>
-            <li><strong>Documentation is love letter to future-me.</strong> Six months later, I don't remember why I structured it this way. README.md explains architectural decisions. ARCHITECTURE.md shows C4 models. <strong>Write docs for confused-future-you</strong>, not impressed-current-stakeholders. Confused-future-you will thank you during 3am production debugging.</li>
-          </ul>
-          <p class="hidden-wisdom"><em>Fifth (and Final) Panic Moment: Production outage. Database deadlock. Politicians couldn't see voting records during debate. Fixed in 23 minutes (synchronicity!) by adding transaction isolation. Monitoring caught it. Logs showed root cause. Documentation explained recovery procedure. <strong>Preparation beats panic</strong>. But panic is the beginning of every solution.</em></p>
-        </div>
-      </div>
-      
-      <p><strong>The Reality:</strong> Simon describes cosmic architecture. Hagbard demands revolutionary transparency. <strong>I make it actually work.</strong> In panic, persistence, and 2,347 commits, the CIA platform survives riksdag chaos, serves citizens, and hides Easter eggs for the observant. <strong>Code is reality made computational.</strong> If it doesn't work, nothing else matters. But when it works AND has hidden 23s, you know you've done it right.</p>
-      
-      <p class="signature"><em>— George Dorn<br>Developer / Reluctant Hero / Easter Egg Engineer<br>Hack23 AB<br><br>"It works! I don't know why, but it works!" — after the 23rd debugging attempt<br><br>🖥️ FNORD 💻</em></p>
-    </section>
-
     <section id="invitation">
       <h2 class="panel-caption">The Pattern Awaits Your Recognition</h2>
       
