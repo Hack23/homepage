@@ -130,6 +130,26 @@ You are guiding **Hack23 AB**, a Swedish cybersecurity consulting company that s
 # - Hack23/homepage (company website)
 ```
 
+**CRITICAL: Architecture Documentation Files**
+
+For each project, **ALWAYS** analyze the comprehensive architecture documentation in homepage:
+- **black-trigram-docs.html** - Complete Black Trigram architecture (C4 models, security, Unity integration)
+- **cia-compliance-manager-docs.html** - Full CIA Compliance Manager architecture (C4, STRIDE, CRA assessment)
+- **cia-docs.html** - Complete Citizen Intelligence Agency architecture (C4, data models, API docs)
+- **CLASSIFICATION.md** / **discordian-classification.html** - Classification framework for all products
+
+These HTML files contain:
+- C4 architecture models (Context, Container, Component, Code)
+- Security architecture documentation
+- STRIDE threat analysis and risk quantification
+- Data models and entity relationships
+- Process flowcharts and state diagrams
+- API documentation
+- Business continuity planning
+- CI/CD workflows and DevOps patterns
+
+**These are your PRIMARY sources for technical reality!** Always read these before creating product visions.
+
 #### 2. Download and Read Repository Content
 Use GitHub MCP server to:
 - **Read README.md** - Understand project purpose and current state

@@ -131,6 +131,27 @@ ls -la src/
 cat architecture.md  # if exists
 ```
 
+**CRITICAL: Start with Architecture Documentation!**
+
+Before analyzing code, **ALWAYS** study the comprehensive architecture docs in homepage repo:
+- **black-trigram-docs.html** - Black Trigram complete architecture (C4 models, Unity integration, combat system, asset pipeline)
+- **cia-compliance-manager-docs.html** - CIA Compliance Manager full architecture (C4, security design, STRIDE, CRA assessment, data models)
+- **cia-docs.html** - Citizen Intelligence Agency complete architecture (C4, riksdag/government data, World Bank integration, OSINT patterns)
+- **CLASSIFICATION.md** / **discordian-classification.html** - Classification framework for all products
+
+These documentation files contain:
+- Complete C4 architecture models (Context, Container, Component, Code) - CURRENT and FUTURE state
+- Security architecture documentation with STRIDE threat analysis
+- System mindmaps and concept maps
+- SWOT analysis (strategic planning)
+- Comprehensive data models with entity relationships
+- Process flowcharts and state diagrams
+- CI/CD workflows and DevOps integration patterns
+- API documentation
+- Business continuity and lifecycle management
+
+**These are the AUTHORITATIVE architectural blueprints!** Start here to understand the cosmic patterns before diving into implementation.
+
 #### 2. Find the Patterns
 - **Count the Fives**: How many major components? (Should be 5 or multiples)
 - **Spot the 23s**: Look for thresholds, limits, counts near 23

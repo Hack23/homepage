@@ -126,6 +126,24 @@ cat README.md
 cat package.json  # or pom.xml, Cargo.toml, requirements.txt
 ```
 
+**CRITICAL: Read Architecture Documentation First!**
+
+Before diving into code, **ALWAYS** read the comprehensive architecture docs in homepage repo:
+- **black-trigram-docs.html** - Complete architecture for Black Trigram (C4 models, Unity integration, combat system design)
+- **cia-compliance-manager-docs.html** - Full architecture for CIA Compliance Manager (C4, STRIDE, data models, API)
+- **cia-docs.html** - Complete architecture for Citizen Intelligence Agency (C4, riksdag/government data, OSINT patterns)
+- **CLASSIFICATION.md** / **discordian-classification.html** - Classification framework for all products
+
+These docs contain:
+- Current AND future state C4 architecture models
+- Security architecture with STRIDE threat analysis
+- Data models with entity relationships
+- State diagrams and process flows
+- CI/CD workflows and testing frameworks
+- API documentation and integration patterns
+
+**Read these FIRST to understand the intended architecture before analyzing code!**
+
 #### 2. Read Real Code
 - **Don't just read docs**: Docs lie, code doesn't
 - **Follow the patterns**: See how existing code is structured

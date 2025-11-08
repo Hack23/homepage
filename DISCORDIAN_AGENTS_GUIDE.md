@@ -156,20 +156,57 @@ Each agent will produce:
    - Hack23/homepage
    ```
 
-2. **Extract Key Information**
+2. **Read Architecture Documentation (CRITICAL FIRST STEP!)**
+   
+   **ALWAYS start with these comprehensive architecture docs in the homepage repo:**
+   
+   - **black-trigram-docs.html** - Complete Black Trigram architecture
+     - C4 models (Context, Container, Component, Code)
+     - Security architecture and threat analysis
+     - Unity integration patterns
+     - Combat system design documentation
+     - Asset pipeline architecture
+     - Cultural preservation patterns
+   
+   - **cia-compliance-manager-docs.html** - Full CIA Compliance Manager architecture
+     - Complete C4 architecture models (current + future state)
+     - Security architecture with STRIDE threat analysis
+     - CRA (Cyber Resilience Act) assessment framework
+     - Comprehensive data models with entity relationships
+     - State diagrams and process flowcharts
+     - CI/CD workflows and DevOps patterns
+     - Complete API documentation
+   
+   - **cia-docs.html** - Complete Citizen Intelligence Agency architecture
+     - C4 architecture models (current + future state)
+     - Data architecture for riksdag/government/agency monitoring
+     - World Bank integration patterns
+     - OSINT platform design
+     - Security architecture for political data
+     - System mindmaps and concept maps
+     - Parliamentary monitoring dashboards
+   
+   - **CLASSIFICATION.md** / **discordian-classification.html** - Classification framework
+     - Data classification standards for all products
+     - Security level definitions
+     - Information handling requirements
+   
+   **These files are your PRIMARY sources for technical reality!** They contain 20+ architecture diagrams, security models, data designs, and complete system documentation. Read these FIRST before analyzing code.
+
+3. **Extract Key Information**
    - Technical reality (what exists)
    - Current capabilities (what works)
    - Architectural patterns (how it's built)
    - Open issues (challenges)
    - Future direction (roadmap)
 
-3. **Research Context**
+4. **Research Context**
    - Use web search for industry trends
    - Find psychedelic/futurist inspiration
    - Research competitors
    - Validate technical claims
 
-4. **Capture Visuals**
+5. **Capture Visuals**
    - Screenshot current state
    - Document existing features
    - Plan vision comparisons
@@ -186,36 +223,46 @@ Each agent will produce:
 
 ### 🏛️ Citizen Intelligence Agency (CIA)
 **Repo**: Hack23/cia
+**Architecture Docs**: cia-docs.html (homepage repo)
 **Focus**: OSINT platform analyzing Swedish political activities
 **Vision Angle**: Radical transparency, exposing what they don't want you to see
+**Key Docs**: C4 models, riksdag/government data architecture, World Bank integration, OSINT patterns
 
 ### 🔒 CIA Compliance Manager
 **Repo**: Hack23/cia-compliance-manager
+**Architecture Docs**: cia-compliance-manager-docs.html (homepage repo)
 **Focus**: Assessment tool for Confidentiality, Integrity, Availability
 **Vision Angle**: Consciousness-expanding compliance navigation
+**Key Docs**: C4 models, STRIDE threat analysis, CRA assessment, 5-level security framework
 
 ### 🥋 Black Trigram (흑괘)
 **Repo**: Hack23/blacktrigram
+**Architecture Docs**: black-trigram-docs.html (homepage repo)
 **Focus**: Realistic Korean martial arts combat simulator
 **Vision Angle**: Authentic wisdom through precise anatomical targeting
+**Key Docs**: C4 models, Unity integration, combat system design, 70 vital points, asset pipeline
 
 ### ☁️ Lambda in Private VPC
 **Repo**: Hack23/lambda-in-private-vpc
+**Architecture Docs**: (See repo documentation)
 **Focus**: Multi-region AWS resilience architecture
 **Vision Angle**: Surviving chaos through elegant resilience
 
 ### 🔧 Sonar-CloudFormation Plugin
 **Repo**: Hack23/sonar-cloudformation-plugin
+**Architecture Docs**: (See repo documentation)
 **Focus**: IaC security with cfn-nag/checkov
 **Vision Angle**: Security that enables, not constrains
 
 ### 📖 Public-ISMS
 **Repo**: Hack23/ISMS-PUBLIC
+**Architecture Docs**: CLASSIFICATION.md, discordian-classification.html (homepage repo)
 **Focus**: Radical transparency in information security (70% public!)
 **Vision Angle**: Security through transparency, not obscurity
 
 ### 🌐 Homepage
 **Repo**: Hack23/homepage
+**Architecture Docs**: Contains ALL product architecture documentation!
 **Focus**: Company website and brand presence
 **Vision Angle**: Face of the transparency revolution
 
