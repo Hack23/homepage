@@ -84,21 +84,22 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 2.  [🔑 Security Services](#-security-services)
 3.  [About James Pether Sörling](#about-james-pether-sörling)
 4.  [Press Coverage](#press-coverage)
-5.  [🍎 Discordian Cybersecurity Blog](#-discordian-cybersecurity-blog)
-6.  [Current Projects](#current-projects)
+5.  [📚 CIA Triad FAQ](#-cia-triad-faq)
+6.  [🍎 Discordian Cybersecurity Blog](#-discordian-cybersecurity-blog)
+7.  [Current Projects](#current-projects)
     1.  [Black Trigram](#black-trigram)
     2.  [CIA Compliance Manager](#cia-compliance-manager)
     3.  [Citizen Intelligence Agency](#citizen-intelligence-agency)
     4.  [Lambda in Private VPC](#lambda-in-private-vpc)
-7.  [Past Projects](#past-projects)
+8.  [Past Projects](#past-projects)
     1.  [Sonar-CloudFormation-Plugin](#sonar-cloudformation-plugin)
-8.  [Badges](#badges)
+9.  [Badges](#badges)
     1.  [Black Trigram Badges](#black-trigram-badges)
     2.  [CIA Compliance Manager Badges](#cia-compliance-manager-badges)
     3.  [Citizen Intelligence Agency Badges](#citizen-intelligence-agency-badges)
     4.  [Sonar-CloudFormation-Plugin Badges](#sonar-cloudformation-plugin-badges)
     5.  [Lambda in Private VPC Badges](#lambda-in-private-vpc-badges)
-9.  [🏷️ Project Classifications According to Hack23 Framework](#️-project-classifications-according-to-hack23-framework)
+10.  [🏷️ Project Classifications According to Hack23 Framework](#️-project-classifications-according-to-hack23-framework)
     1.  [📊 Homepage Project Classification](#-homepage-project-classification)
     2.  [🥋 Black Trigram Project Classification](#-black-trigram-project-classification)
     3.  [🛡️ CIA Compliance Manager Project Classification](#️-cia-compliance-manager-project-classification)
@@ -293,9 +294,22 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 - **Riksdag och Departement**: [CIA keeps track of parliament members](https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/)
 - **National Democratic Institute**: [Parliamentary Monitoring Organizations Survey](https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf)
 
+## 📚 CIA Triad FAQ
+
+Comprehensive FAQ covering CIA Triad implementation, data classification, compliance frameworks, security assessment tools, and best practices for information security management.
+
+**🎓 Learn the Fundamentals:** [https://hack23.com/cia-triad-faq.html](https://hack23.com/cia-triad-faq.html)
+
+The CIA Triad is a fundamental security model consisting of three core principles:
+- **Confidentiality**: Ensures sensitive information is accessible only to authorized individuals
+- **Integrity**: Guarantees data accuracy and trustworthiness throughout its lifecycle
+- **Availability**: Ensures information and systems are accessible when needed by authorized users
+
+This educational resource provides professional implementation guidance aligned with NIST, ISO 27001, and GDPR compliance standards.
+
 ## 🍎 Discordian Cybersecurity Blog
 
-**30+ blog posts** exploring information security, ISMS policies, and cybersecurity best practices through the unique Discordian lens inspired by the Illuminatus! trilogy. "Think for yourself, question authority."
+**50+ blog posts** exploring information security, ISMS policies, and cybersecurity best practices through the unique Discordian lens inspired by the Illuminatus! trilogy. "Think for yourself, question authority."
 
 **📖 Browse All Posts:** [https://hack23.com/blog.html](https://hack23.com/blog.html)
 
@@ -303,45 +317,100 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 
 🎭 **[Discordian Manifesto](https://hack23.com/discordian-cybersecurity.html)** - Everything You Know About Security Is a Lie: Nation-state capabilities, approved crypto paradox, and Chapel Perilous initiation
 
-📚 **Complete ISMS Coverage** - All 30 posts link directly to corresponding policies in our [ISMS-PUBLIC repository](https://github.com/Hack23/ISMS-PUBLIC), demonstrating radical transparency:
+📚 **Complete ISMS Coverage** - All posts link directly to corresponding policies in our [ISMS-PUBLIC repository](https://github.com/Hack23/ISMS-PUBLIC), demonstrating radical transparency
 
-**Foundation Policies:**
+🍎 **[Information Hoarding Destroys Data Integrity](https://hack23.com/blog-information-hoarding.html)** - How information hoarding undermines organizational knowledge integrity
+
+### Core Manifesto & Philosophy
+
+- [Everything You Know About Security Is a Lie](https://hack23.com/discordian-cybersecurity.html) - Nation-state capabilities, approved crypto paradox, Chapel Perilous initiation
+- [The Security-Industrial Complex](https://hack23.com/discordian-business-value.html) - How fear became a business model and "best practices" became vendor lock-in
+- [Question Authority: Crypto Approved By Spies](https://hack23.com/discordian-crypto.html) - Dual_EC_DRBG, Crypto AG, and why government approval should make you suspicious
+- [Think For Yourself: Classification](https://hack23.com/discordian-classification.html) - Classification beyond compliance theater—five levels of actually giving a damn
+
+### Simon Moon's Architecture Chronicles: Sacred Geometry in Code
+
+*System architect extraordinaire revealing hidden structures through the Law of Fives and sacred geometry*
+
+**CIA (Citizen Intelligence Agency) Series:**
+- [CIA Architecture: The Five Pentacles](https://hack23.com/blog-cia-architecture.html) - Five container types crystallized from the parliamentary domain
+- [CIA Security: Defense Through Transparency](https://hack23.com/blog-cia-security.html) - The transparency paradox solved through mathematical proof
+- [CIA Future Security: The Pentagon of Tomorrow](https://hack23.com/blog-cia-future-security.html) - Post-quantum cryptography and AI-augmented detection
+- [CIA Financial Strategy: $24.70/Day Democracy](https://hack23.com/blog-cia-financial-strategy.html) - Democracy costs through AWS optimization and golden ratio allocation
+- [CIA Workflows: Five-Stage CI/CD & State Machines](https://hack23.com/blog-cia-workflows.html) - Five GitHub Actions workflows orchestrating DevSecOps automation
+- [CIA Mindmaps: Conceptual Sacred Geometry](https://hack23.com/blog-cia-mindmaps.html) - Hierarchical thinking revealing natural organizational patterns
+
+**Compliance Manager Series:**
+- [Compliance Manager: CIA Triad Meets Sacred Geometry](https://hack23.com/blog-compliance-architecture.html) - Security capability maturation measured in levels
+- [Compliance Security: STRIDE Through Five Dimensions](https://hack23.com/blog-compliance-security.html) - Six STRIDE categories compress into five defensive requirements
+- [Compliance Future: Context-Aware Security & Adaptive Defense](https://hack23.com/blog-compliance-future.html) - Future architecture transcending static assessment
+
+**Black Trigram Series:**
+- [Black Trigram Architecture: Five Fighters, Sacred Geometry](https://hack23.com/blog-trigram-architecture.html) - Five fighter archetypes discovered in the combat domain
+- [Black Trigram Combat: 70 Vital Points & Physics of Respect](https://hack23.com/blog-trigram-combat.html) - Traditional Korean martial arts biomechanics
+- [Black Trigram Future: VR Martial Arts & Immersive Combat](https://hack23.com/blog-trigram-future.html) - Five-year evolution from 2D fighter to VR training platform
+- [Information Hoarding Destroys Data Integrity](https://hack23.com/blog-information-hoarding.html) - CIA Triad implementation challenges and solutions
+
+### George Dorn's Code Analysis: Repository Deep-Dives
+
+*Repository analysis based on actual cloned code—not documentation or assumptions*
+
+- [CIA Code Analysis](https://hack23.com/blog-george-dorn-cia-code.html) - Java 17, Spring Boot, PostgreSQL: 49 Maven modules, 1,372 Java files, 60+ DB tables
+- [Black Trigram Code Analysis](https://hack23.com/blog-george-dorn-trigram-code.html) - TypeScript 5.9, React 19, PixiJS 8: 132 files, 70 vital points system
+- [Compliance Manager Code Analysis](https://hack23.com/blog-george-dorn-compliance-code.html) - TypeScript 5.9, React 19, IndexedDB: 220 files, zero backend, 95% attack surface eliminated
+
+### Foundation Policies
+
 - [Information Security Policy](https://hack23.com/discordian-info-sec-policy.html) - The foundation of radical transparency
+- [ISMS Transparency Plan](https://hack23.com/discordian-isms-transparency.html) - Security through radical openness: 70% public, 30% redacted
 - [Access Control](https://hack23.com/discordian-access-control.html) - Trust no one (including yourself)
 - [Incident Response](https://hack23.com/discordian-incident-response.html) - When (not if) shit hits the fan
 
-**Development & Operations:**
+### Development & Operations
+
 - [Open Source Policy](https://hack23.com/discordian-open-source.html) - Trust through transparency
 - [Secure Development](https://hack23.com/discordian-secure-dev.html) - Code without backdoors (on purpose)
 - [Vulnerability Management](https://hack23.com/discordian-vuln-mgmt.html) - Patch or perish
 - [Threat Modeling](https://hack23.com/discordian-threat-modeling.html) - Know thy enemy (they already know you)
 - [Monitoring & Logging](https://hack23.com/discordian-monitoring-logging.html) - If a tree falls and nobody logs it...
 
-**Infrastructure & Access:**
+### Infrastructure & Access
+
 - [Network Security](https://hack23.com/discordian-network-security.html) - The perimeter is dead, long live the perimeter
 - [Physical Security](https://hack23.com/discordian-physical-security.html) - Locks, guards, and clever social engineering
 - [Asset Management](https://hack23.com/discordian-asset-mgmt.html) - You can't protect what you don't know you have
 - [Mobile Device Management](https://hack23.com/discordian-mobile-device.html) - BYOD means Bring Your Own Disaster
 - [Remote Access](https://hack23.com/discordian-remote-access.html) - VPNs and the death of the office
 
-**Business Continuity & Risk:**
+### Business Continuity & Risk
+
 - [Backup & Recovery](https://hack23.com/discordian-backup-recovery.html) - Restore or regret
 - [Business Continuity](https://hack23.com/discordian-business-continuity.html) - Survive the chaos
 - [Disaster Recovery](https://hack23.com/discordian-disaster-recovery.html) - Plan B when everything burns
 - [Risk Assessment](https://hack23.com/discordian-risk-assessment.html) - Calculating what you can't prevent
+- [Risk Register](https://hack23.com/discordian-risk-register.html) - Living document of what keeps you up at night
 - [Change Management](https://hack23.com/discordian-change-mgmt.html) - Move fast without breaking (everything)
 
-**Governance & Compliance:**
+### Governance & Compliance
+
+- [Compliance Checklist](https://hack23.com/discordian-compliance.html) - Theater vs. reality
+- [EU Cyber Resilience Act](https://hack23.com/discordian-cra.html) - Brussels regulates your toaster
+- [Security Metrics](https://hack23.com/discordian-security-metrics.html) - Measuring what actually matters
+- [Data Classification](https://hack23.com/discordian-data-classification.html) - Five levels of actually giving a damn
+- [Stakeholder Management](https://hack23.com/discordian-stakeholders.html) - Who cares about your security (and why)
+- [ISMS Strategic Review](https://hack23.com/discordian-isms-review.html) - Keeping security frameworks relevant
 - [Privacy Policy](https://hack23.com/discordian-privacy.html) - Surveillance capitalism meets anarchist data protection
 - [Data Protection](https://hack23.com/discordian-data-protection.html) - GDPR wants to know your location
 - [Third-Party Management](https://hack23.com/discordian-third-party.html) - Trust your vendors? (LOL)
 - [Acceptable Use Policy](https://hack23.com/discordian-acceptable-use.html) - Don't do stupid shit on company systems
 - [Security Awareness Training](https://hack23.com/discordian-security-training.html) - Teaching humans not to click shit
 
-**Emerging Technologies:**
+### Emerging Technologies
+
+- [AI Policy](https://hack23.com/discordian-ai-policy.html) - Teaching machines not to hallucinate secrets
+- [OWASP LLM Security](https://hack23.com/discordian-llm-security.html) - Training AI not to hallucinate your secrets
 - [Cloud Security](https://hack23.com/discordian-cloud-security.html) - Someone else's computer
 - [Email Security](https://hack23.com/discordian-email-security.html) - Your CEO doesn't need iTunes cards
-- [OWASP LLM Security](https://hack23.com/discordian-llm-security.html) - Training AI not to hallucinate your secrets
 
 *All posts maintain radical Illuminatus! trilogy style with "Think for yourself, question authority," FNORD detection, Chapel Perilous references, and 23 FNORD 5 signatures throughout.* 🍎
 
