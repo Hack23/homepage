@@ -349,7 +349,6 @@ This educational resource provides professional implementation guidance aligned 
 - [Black Trigram Architecture: Five Fighters, Sacred Geometry](https://hack23.com/blog-trigram-architecture.html) - Five fighter archetypes discovered in the combat domain
 - [Black Trigram Combat: 70 Vital Points & Physics of Respect](https://hack23.com/blog-trigram-combat.html) - Traditional Korean martial arts biomechanics
 - [Black Trigram Future: VR Martial Arts & Immersive Combat](https://hack23.com/blog-trigram-future.html) - Five-year evolution from 2D fighter to VR training platform
-- [Information Hoarding Destroys Data Integrity](https://hack23.com/blog-information-hoarding.html) - CIA Triad implementation challenges and solutions
 
 ### George Dorn's Code Analysis: Repository Deep-Dives
 
