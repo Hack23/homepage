@@ -32,6 +32,17 @@ At Hack23 AB, we believe that true security comes through transparency and demon
       </div>
     </td>
   </tr>
+  <tr>
+    <td colspan="2">
+      <div align="center">
+        <h3>🗺️ ISMS Reference Guide</h3>
+        <p>Blog-to-Policy Mapping: Precise references from all homepage blog posts to ISMS policies</p>
+        <a href="ISMS_REFERENCE_GUIDE.md">
+          <img src="https://img.shields.io/badge/Reference-Guide-28A745?style=for-the-badge&logo=map&logoColor=white" alt="ISMS Reference Guide">
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 
 ### 🏆 Security Through Transparency
