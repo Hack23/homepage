@@ -6,7 +6,7 @@
 <title>Security Blog | Hack23 Cybersecurity Insights & ISMS Policies</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Explore cybersecurity through the Discordian lens: 50 blog posts exposing security theater, surveillance states, and approved crypto paradoxes. Plus Simon Moon's 13 Architecture Chronicles revealing sacred geometry in code. Think for yourself. Question authority. FNORD. Are you paranoid enough?">
-<meta name="keywords" content="cybersecurity blog, information security, ISMS policies, CIA triad, security best practices, discordian security, hack23 blog">
+<meta name="keywords" content="cybersecurity blog, information security, ISMS policies, CIA triad, security best practices, discordian security, hack23 blog, ISO 27001, GDPR compliance, NIS2, DevSecOps, AWS security, CISSP, security architecture, cloud security, compliance automation, zero trust, access control, encryption policy, incident response, vulnerability management, risk assessment, threat modeling, secure development, OWASP LLM security, backup recovery, disaster recovery, business continuity, change management, asset management, network security, email security, physical security, mobile device security, remote access security, monitoring logging, security metrics, security training, third party risk, ISMS review, ISMS transparency, data classification, data protection, privacy policy, acceptable use policy, cryptography policy, EU Cyber Resilience Act, CRA compliance, supply chain security, SLSA compliance, container security, serverless security, security culture, transparency through security, public ISMS Sweden, open source security, OSINT methodology, political transparency, parliamentary monitoring, Swedish government analysis, Simon Moon architecture, Law of Fives, sacred geometry in code, numerological patterns, five-layer architecture, discordian philosophy, question authority, nation-state surveillance, crypto backdoors, security theater, Chapel Perilous, fnord, operation mindfuck, illuminatus trilogy, radical transparency">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
 <meta property="og:title" content="Security Blog | Hack23 Cybersecurity Insights">
@@ -14,30 +14,175 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hack23.com/blog.html">
 <meta property="og:image" content="https://hack23.com/blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Hack23 Security Blog">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Security Blog | Hack23 Cybersecurity Insights & ISMS Policies">
+<meta name="twitter:description" content="50 blog posts on cybersecurity, ISMS policies, and CIA Triad through the Discordian lens. Plus 13 Architecture Chronicles by Simon Moon.">
+<meta name="twitter:image" content="https://hack23.com/blog.png">
+<meta name="twitter:image:alt" content="Hack23 Security Blog - Think for Yourself, Question Authority">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
 <link rel="canonical" href="https://hack23.com/blog.html">
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Hack23 Security Blog",
-  "description": "Cybersecurity insights, CIA Triad implementation, and complete ISMS policy coverage through the Discordian lens",
-  "url": "https://hack23.com/blog.html",
-  "author": {
-    "@type": "Person",
-    "name": "James Pether Sörling",
-    "url": "https://hack23.com",
-    "jobTitle": "CEO / Cybersecurity Expert"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Hack23 AB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://hack23.com/blog.html#blog",
+      "name": "Hack23 Security Blog",
+      "headline": "Security Blog | Cybersecurity Insights & ISMS Policies",
+      "description": "Comprehensive cybersecurity blog featuring 55 posts covering ISMS policies, CIA Triad implementation, security architecture, and Discordian security philosophy. Includes 39 ISMS policy posts and 16 architecture chronicles by Simon Moon revealing sacred geometry in code.",
+      "url": "https://hack23.com/blog.html",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.png",
+        "width": 1200,
+        "height": 630
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "@id": "https://hack23.com/#james-pether-sorling",
+          "name": "James Pether Sörling",
+          "url": "https://hack23.com",
+          "jobTitle": "CEO / Cybersecurity Expert",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Hack23 AB"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/jamessorling/",
+            "https://github.com/Hack23"
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": "Simon Moon",
+          "jobTitle": "System Architect",
+          "description": "Reveals numerological patterns and sacred geometry in system architecture"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Information Security Management Systems",
+          "description": "Complete ISMS policy coverage including ISO 27001, access control, encryption, incident response"
+        },
+        {
+          "@type": "Thing",
+          "name": "CIA Triad",
+          "description": "Confidentiality, Integrity, Availability principles and implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Discordian Cybersecurity",
+          "description": "Security philosophy questioning authority, exposing security theater, and promoting radical transparency"
+        },
+        {
+          "@type": "Thing",
+          "name": "Security Architecture",
+          "description": "System design patterns, sacred geometry in code, five-layer architectures"
+        }
+      ],
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "The Discordian Cybersecurity Manifesto",
+          "url": "https://hack23.com/discordian-cybersecurity.html",
+          "datePublished": "2025-11-05"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Access Control: Zero Trust Through Identity-Centric Security",
+          "url": "https://hack23.com/discordian-access-control.html",
+          "datePublished": "2025-11-05"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ISMS Strategic Review: Continuous Improvement",
+          "url": "https://hack23.com/discordian-isms-review.html",
+          "datePublished": "2025-11-05"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ISMS Transparency: Security Through Radical Openness",
+          "url": "https://hack23.com/discordian-isms-transparency.html",
+          "datePublished": "2025-11-05"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "CIA Architecture: The Five Pentacles of Political Transparency",
+          "url": "https://hack23.com/blog-cia-architecture.html",
+          "datePublished": "2025-11-07"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Compliance Manager: CIA Triad Meets Sacred Geometry",
+          "url": "https://hack23.com/blog-compliance-architecture.html",
+          "datePublished": "2025-11-07"
+        }
+      ],
+      "numberOfItems": 55,
+      "keywords": "cybersecurity, ISMS, ISO 27001, CIA Triad, DevSecOps, AWS security, zero trust, compliance automation, discordian philosophy, security architecture, OWASP, GDPR, NIS2"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security Blog",
+          "item": "https://hack23.com/blog.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/blog.html#webpage",
+      "url": "https://hack23.com/blog.html",
+      "name": "Security Blog | Hack23 Cybersecurity Insights & ISMS Policies",
+      "description": "55 blog posts covering cybersecurity, ISMS policies, CIA Triad, and security architecture through the Discordian lens",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://hack23.com/#website"
+      },
+      "about": { "@id": "https://hack23.com/blog.html#blog" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.png"
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-09",
+      "breadcrumb": { "@id": "https://hack23.com/blog.html#breadcrumb" }
     }
-  }
+  ]
 }
 </script>
 </head>
