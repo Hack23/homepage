@@ -287,7 +287,7 @@ curl -I "https://raw.githubusercontent.com/Hack23/ISMS-PUBLIC/main/Acceptable_Us
 
 | Blog Post | ISMS Links | Status | Last Verified |
 |-----------|-----------|--------|---------------|
-| discordian-email-security.html | 2 policies | ✅ Verified | 2025-11-10 |
+| discordian-email-security.html | 3 references | ✅ Verified | 2025-11-10 |
 | discordian-cloud-security.html | 3 policies | ✅ Verified | 2025-11-10 |
 | discordian-physical-security.html | 3 policies | ✅ Verified | 2025-11-10 |
 | discordian-acceptable-use.html | 2 policies | ✅ Verified | 2025-11-10 |
