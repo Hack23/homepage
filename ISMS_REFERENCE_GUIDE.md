@@ -8,7 +8,7 @@
 
 *Transparency through precise documentation*
 
-![Owner](https://img.shields.io/badge/Owner-James_Pether_Sörling-blue?style=flat-square) ![Version](https://img.shields.io/badge/Version-1.0-green?style=flat-square) ![Effective](https://img.shields.io/badge/Effective-2025--11--10-orange?style=flat-square) ![Review](https://img.shields.io/badge/Review_Cycle-Quarterly-purple?style=flat-square)
+![Document owner: James Pether Sörling](https://img.shields.io/badge/Owner-James_Pether_Sörling-blue?style=flat-square) ![Version 1.0](https://img.shields.io/badge/Version-1.0-green?style=flat-square) ![Effective date: 2025-11-10](https://img.shields.io/badge/Effective-2025--11--10-orange?style=flat-square) ![Review cycle: Quarterly](https://img.shields.io/badge/Review_Cycle-Quarterly-purple?style=flat-square)
 
 📄 Document | 🔐 Security Policy | 🌐 Public | ⚡ Living Document
 
@@ -226,8 +226,8 @@ All ISMS policy links are verified through:
 # Verify all ISMS-PUBLIC links in blog files
 grep -r "github.com/Hack23/ISMS-PUBLIC" *.html | wc -l
 
-# Check for broken anchors (requires network access)
-curl -I "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md#-email-security-architecture"
+# Check for anchor existence by searching for the heading in the raw Markdown file
+curl -s "https://raw.githubusercontent.com/Hack23/ISMS-PUBLIC/main/Network_Security_Policy.md" | grep -i "^##.*Email Security Architecture"
 
 # Validate policy file existence
 curl -I "https://raw.githubusercontent.com/Hack23/ISMS-PUBLIC/main/Acceptable_Use_Policy.md"
