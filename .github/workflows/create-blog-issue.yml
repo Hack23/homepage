@@ -1,0 +1,93 @@
+name: Create Blog.html Issue
+
+on:
+  schedule:
+    # Run daily at 9 AM UTC (10 AM CET / 11 AM CEST)
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create Blog Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Generate issue title with date
+          ISSUE_DATE=$(date +"%Y-%m-%d")
+          ISSUE_TITLE="🍎 Blog.html Enhancement - ${ISSUE_DATE}"
+          
+          # Create issue body with Discordian theme
+          ISSUE_BODY=$(cat << 'EOF'
+          ## 🍎 THE GOLDEN APPLE OF BLOG ENLIGHTENMENT
+          
+          **Captain's Log, Stardate $(date +"%Y.%m.%d")**
+          
+          ### 📋 Mission Brief
+          
+          Time to enhance the security blog at `blog.html` - our primary vessel for spreading Discordian cybersecurity wisdom to the masses.
+          
+          ### 🎯 Objective
+          
+          Review and improve blog.html content, structure, or functionality. The blog is the face of Hack23's radical transparency and Discordian security philosophy.
+          
+          ### ✅ Acceptance Criteria
+          
+          - [ ] Review blog.html for accuracy and completeness
+          - [ ] Verify all links are functional (especially to ISMS-PUBLIC and architecture docs)
+          - [ ] Check that all blog post categories are properly represented
+          - [ ] Ensure Discordian elements (🍎, FNORD references, Law of Fives) are preserved
+          - [ ] Validate responsive design and accessibility
+          - [ ] Update metadata if needed (description, keywords, schema.org)
+          
+          ### 🛠️ Implementation Guidance
+          
+          **Files to Review:**
+          - `blog.html` - Main blog index page
+          - Related blog post HTML files (blog-*.html)
+          - `styles.css` - Styling consistency
+          
+          **Key Areas to Check:**
+          1. **Content Accuracy**: All blog posts properly linked and categorized
+          2. **ISMS References**: Links to public ISMS policies are current
+          3. **Discordian Theme**: Philosophical elements intact (Hagbard quotes, etc.)
+          4. **SEO/Metadata**: Schema.org, Open Graph, Twitter Cards up to date
+          5. **Visual Design**: Screenshots, images optimized and loading properly
+          
+          ### 🍎 Hidden Wisdom
+          
+          Remember: The blog isn't just documentation - it's consciousness expansion through cybersecurity. Each post should challenge assumptions, question authority, and make security **fun**.
+          
+          *"Think for yourself, schmuck!"* — Hagbard Celine, Captain of the Leif Erikson
+          
+          ### 🔗 Related Resources
+          
+          - [Blog Page](https://hack23.com/blog.html)
+          - [ISMS-PUBLIC Repository](https://github.com/Hack23/ISMS-PUBLIC)
+          - [ISMS Reference Guide](../ISMS_REFERENCE_GUIDE.md)
+          - [Hagbard Celine Agent](../.github/agents/hagbard-celine.md)
+          
+          ---
+          
+          **All hail Eris! All hail Discordia!** 🍎
+          
+          *23 FNORD 5*
+          EOF
+          )
+          
+          # Create the issue and assign to repository owner
+          gh issue create \
+            --title "$ISSUE_TITLE" \
+            --body "$ISSUE_BODY" \
+            --label "blog,enhancement,discordian" \
+            --assignee "pethers"
+          
+          echo "✅ Issue created successfully: $ISSUE_TITLE"
