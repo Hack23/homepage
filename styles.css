@@ -506,6 +506,125 @@ a:hover {
   }
 }
 
+/* ==================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================================== */
+
+/* Skip to content link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0 0 var(--border-radius) 0;
+  z-index: 10000;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Focus indicators for keyboard navigation - WCAG 2.1 AA compliant */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+@media (prefers-color-scheme: dark) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(0, 204, 102, 0.3);
+  }
+}
+
+/* Enhanced focus for interactive elements in navigation */
+.app-link a:focus-visible,
+nav a:focus-visible,
+header a:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(0, 102, 51, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-link a:focus-visible,
+  nav a:focus-visible,
+  header a:focus-visible {
+    outline-color: var(--primary-light);
+    box-shadow: 0 0 0 5px rgba(0, 204, 102, 0.3);
+  }
+}
+
+/* Focus indicators for cards */
+.card:focus-within {
+  box-shadow: 0 0 0 3px var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card:focus-within {
+    box-shadow: 0 0 0 3px var(--primary-light);
+    border-color: var(--primary-light);
+  }
+}
+
+/* Remove default focus outline but keep for keyboard users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure sufficient contrast for text - WCAG AA 4.5:1 minimum */
+.text-muted {
+  color: #555555; /* 4.54:1 contrast ratio on white */
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-muted {
+    color: #aaaaaa; /* 5.32:1 contrast ratio on dark background */
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
 /* Header and navigation - Premium Design */
 header {
   position: relative;
