@@ -80,19 +80,22 @@
 </script>
 </head>
 <body>
-    <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
   <div class="logo-container">
     <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
   <h2>Security Metrics: Measuring What Actually Matters</h2>
-  <div class="app-link">
+  <nav class="app-link" role="navigation" aria-label="Main navigation">
     <a href="index.html" title="Back to Home">Home</a>
     <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
     <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md" title="Security Metrics">ISMS</a>
-  </div>
-</header>
+  </nav>
+    </header>
 
-    <main>
+    <main id="main-content" role="main">
         <article>
             <h2>📊 Security Metrics: Measuring What Actually Matters</h2>
             
@@ -266,7 +269,8 @@
         </article>
     </main>
 
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
@@ -289,6 +293,7 @@
         <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
         <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
       </p>
+        </nav>
     </footer>
 </body>
 </html>

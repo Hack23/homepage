@@ -86,7 +86,10 @@
 </script>
 </head>
 <body>
-    <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
         <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
         <nav>
             <a href="index.html">Home</a>
@@ -95,7 +98,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <article>
             <h1 class="header">🤖 AI Policy: Teaching Machines Not To Hallucinate Your Secrets (Spoiler: They Will Anyway)</h1>
             
@@ -250,7 +253,8 @@
         </article>
     </main>
 
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
@@ -273,6 +277,7 @@
         <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
         <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
       </p>
+        </nav>
     </footer>
 </body>
 </html>

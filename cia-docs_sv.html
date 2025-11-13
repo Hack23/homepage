@@ -182,7 +182,10 @@
     </script>
 </head>
   <body>
-    <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
       <div class="logo-container">
         <img
           src="https://cia.sourceforge.io/cia-logo.png"
@@ -273,7 +276,7 @@
           />
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="Main navigation">
         <a
           href="index_sv.html"
           title="Gå till Hem"
@@ -293,10 +296,10 @@
         >
           GitHub-Repository
         </a>
-      </div>
+      </nav>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
       <section id="overview">
         <h2>Projektöversikt</h2>
         <p>
@@ -1126,7 +1129,8 @@ sudo dpkg -i cia-dist-deb-${VERSION}.all.deb
 
     </main>
     
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Företags LinkedIn</a> |
@@ -1139,6 +1143,7 @@ sudo dpkg -i cia-dist-deb-${VERSION}.all.deb
         <a href="cia-docs.html" title="Engelsk dokumentation">Engelsk Dokumentation</a> |
         <a href="cia-docs_sv.html" title="Svensk dokumentation">Svensk Dokumentation</a>
       </p>
+        </nav>
     </footer>
   </body>
 </html>

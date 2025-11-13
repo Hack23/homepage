@@ -86,7 +86,10 @@
     </script>
 </head>
   <body>
-    <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
       <div class="logo-container">
         <img src="https://cia.sourceforge.io/cia-logo.png" alt="Citizen Intelligence Agency Logotyp" class="logo" />
       </div>
@@ -115,14 +118,14 @@
           <img src="https://img.shields.io/github/license/Hack23/cia.svg" alt="Licens" />
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="Main navigation">
         <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
         <a href="cia-docs_sv.html" title="Visa omfattande dokumentation och arkitektur">📖 Dokumentation</a>
         <a href="cia-compliance-manager-features_sv.html" title="Visa Compliance Manager Funktioner">Compliance Manager Funktioner</a>
         <a href="https://github.com/Hack23/cia" class="btn" title="Visa GitHub Repository">GitHub Repository</a>
-      </div>
+      </nav>
     </header>
-    <main>
+    <main id="main-content" role="main">
       <section id="features" class="feature-section">
         <h2>Plattform för Politisk Transparens med Öppen Källkod</h2>
         <p><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency (CIA) projektet</a> är en volontärdriven plattform med öppen källkod fokuserad på politisk transparens i Sverige. Plattformen täcker <strong>riksdagen</strong> (parliament), <strong>regeringen</strong> (government ministries), <strong>myndigheter</strong> (government agencies), och <strong>globala indikatorer från Världsbanken</strong> (World Bank country indicators). Detta dokument visar skärmbilder som illustrerar avancerade dashboards, kritiska poängtavlor och detaljerade analyser som belyser politiskt beslutsfattande, resursallokering och styrningsresultat i Sveriges demokratiska institutioner.</p>
@@ -618,7 +621,8 @@
       });
     </script>
     
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Företags LinkedIn</a> |
@@ -631,6 +635,7 @@
         <a href="cia-docs.html" title="Engelsk dokumentation">Engelsk Dokumentation</a> |
         <a href="cia-docs_sv.html" title="Svensk dokumentation">Svensk Dokumentation</a>
       </p>
+        </nav>
     </footer>
   </body>
 </html>

@@ -98,7 +98,10 @@
     </script>
   </head>
   <body>
-    <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
       <div class="logo-container">
         <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="CIA Compliance Manager Logotyp" class="logo" width="80" height="80" />
       </div>
@@ -130,14 +133,14 @@
           <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security" />
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="Main navigation">
         <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
         <a href="cia-compliance-manager-docs_sv.html" title="Visa omfattande dokumentation och arkitektur">📖 Dokumentation</a>
         <a href="cia-features_sv.html" title="Visa Medborgarunderrättelsebyråns Funktioner">Medborgarunderrättelsebyråns Funktioner</a>
         <a href="https://hack23.github.io/cia-compliance-manager/" class="btn" title="Prova CIA Compliance Manager-applikationen">Prova Nu!</a>
-      </div>
+      </nav>
     </header>
-    <main>
+    <main id="main-content" role="main">
       <section id="features-overview">
         <h2>Plattformsöversikt</h2>
         <p>CIA Compliance Manager är utformad för att hjälpa organisationer att bedöma, implementera och hantera säkerhetskontroller över CIA-triaden (Konfidentialitet, Integritet och Tillgänglighet). Denna omfattande plattform tillhandahåller verktyg för att utvärdera säkerhetsläget, mäta efterlevnad mot regulatoriska ramverk, analysera affärspåverkan av säkerhetsimplementationer, och uppskatta implementationskostnader för att stödja säkerhetsinvesteringsbeslut.</p>
@@ -471,7 +474,8 @@
         </div>
       </section>
     </main>
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Företags LinkedIn</a> |
@@ -484,6 +488,7 @@
         <a href="cia-compliance-manager-docs.html" title="Engelsk dokumentation">Engelsk Dokumentation</a> |
         <a href="cia-compliance-manager-docs_sv.html" title="Svensk dokumentation">Svensk Dokumentation</a>
       </p>
+        </nav>
     </footer>
   </body>
 </html>

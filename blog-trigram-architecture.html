@@ -76,18 +76,21 @@
 </script>
 </head>
 <body>
-<header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header role="banner">
   <div class="logo-container">
     <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
   <h1>Discordian Cybersecurity</h1>
-  <div class="app-link">
+  <nav class="app-link" role="navigation" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
     <a href="black-trigram-docs.html">Black Trigram Docs</a>
-  </div>
-</header>
-<main>
+  </nav>
+    </header>
+<main id="main-content" role="main">
   <article>
     <h1 class="header">🥋 Black Trigram Architecture: Five Fighters, Sacred Geometry in Combat</h1>
     
@@ -301,7 +304,8 @@
   </article>
 </main>
 
-    <footer>
+    <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
@@ -311,6 +315,7 @@
         <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
         <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
       </p>
+        </nav>
     </footer>
 </body>
 </html>

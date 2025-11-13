@@ -133,21 +133,24 @@
   </script>
 </head>
 <body>
-  <header>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
     <div class="logo-container">
       <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80" />
     </div>
     <h1>CIA Triad: Frequently Asked Questions</h1>
     <p>Comprehensive guide to Confidentiality, Integrity, and Availability in information security</p>
-        <div class="app-link">
+        <nav class="app-link" role="navigation" aria-label="Main navigation">
       <a href="index.html" title="Back to Home">Home</a>
       <a href="cia-compliance-manager-features.html" title="CIA Compliance Manager Features">CIA Compliance Manager</a>
       <a href="blog.html" title="Security Blog">Security Blog</a>
       <a href="cia-docs.html" title="CIA Documentation">📖 CIA Platform Docs</a>
-    </div>
-  </header>
+    </nav>
+    </header>
 
-  <main>
+  <main id="main-content" role="main">
     <section id="introduction">
       <h2>Understanding the CIA Triad</h2>
       <p>The CIA Triad is the foundation of modern information security, providing a framework for evaluating and implementing security measures across organizations of all sizes. This FAQ answers common questions about its principles, implementation, and best practices.</p>
@@ -298,7 +301,8 @@
     </section>
   </main>
 
-        <footer>
+        <footer role="contentinfo">
+        <nav aria-label="Footer navigation">
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
@@ -308,6 +312,7 @@
         <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
         <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
       </p>
+        </nav>
     </footer>
 </body>
 </html>
