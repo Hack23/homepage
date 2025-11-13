@@ -194,24 +194,27 @@
 </head>
 
 <body>
+  <!-- Skip to main content link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
+<header role="banner">
   <div class="logo-container">
     <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
   <h1>Security Blog</h1>
-  <div class="app-link">
+  <nav class="app-link" role="navigation" aria-label="Main navigation">
     <a href="index.html" title="Back to Home">Home</a>
     <a href="discordian-cybersecurity.html" title="Discordian Manifesto">🍎 Discordian Manifesto</a>
     <a href="cia-triad-faq.html" title="CIA Triad FAQ">CIA Triad FAQ</a>
-  </div>
+  </nav>
 </header>
 
-<main>
+<main id="main-content" role="main">
   <article>
     <h1 class="header">🔐 Hack23 Security Blog</h1>
     
-    <section id="introduction">
+    <section id="introduction" aria-labelledby="introduction-heading">
+      <h2 id="introduction-heading" class="sr-only">Introduction</h2>
       <p><strong>Welcome to the Hack23 Security Blog</strong> — where we expose the comfortable lies of the security-industrial complex through radical transparency. <em>Think for yourself, schmuck! Question authority.</em> Especially security authorities who profit from your fear while installing the same backdoors they claim to protect you from.</p>
       
       <p><strong>Nothing is true. Everything is permitted.</strong> Including honest examination of security theater, surveillance states, and the backdoors in your "military-grade encryption" (approved by the same agencies running PRISM). Explore <strong>50 blog posts</strong> that strip away the marketing bullshit to reveal what actually matters—from CIA Triad implementation to OWASP LLM Top 10, EU Cyber Resilience Act to nation-state surveillance capabilities. Plus <strong>Simon Moon's 13 Architecture Chronicles</strong> revealing sacred geometry in code: five-pattern architectures, the Law of Fives, and numerological truth in system design. All through the Discordian lens that questions <em>everything</em>—especially the things "everyone knows" are true. <strong>FNORD.</strong></p>
@@ -219,8 +222,8 @@
       <p><em>Are you paranoid enough yet?</em> Good. You're starting to pay attention. Most companies hide their security policies because transparency would expose how bad their security actually is—cargo cult compliance rituals and expensive theater pretending to be protection. We publish ours on GitHub. All 50 posts and policies. Every framework. Every risk assessment. Every architectural pattern. <strong>Security through transparency</strong> beats security through hope, prayer, and crossing your fingers that nobody notices you're running on duct tape and vendor promises.</p>
     </section>
 
-    <section id="featured">
-      <h2 class="panel-caption">Featured Posts</h2>
+    <section id="featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading" class="panel-caption">Featured Posts</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -246,8 +249,8 @@
       </div>
     </section>
 
-    <section id="core-manifesto">
-      <h2 class="panel-caption">🍎 Core Manifesto & Philosophy</h2>
+    <section id="core-manifesto" aria-labelledby="core-manifesto-heading">
+      <h2 id="core-manifesto-heading" class="panel-caption">🍎 Core Manifesto & Philosophy</h2>
       <p><em>"Nothing is true. Everything is permitted. Think for yourself, schmuck!"</em> — Hassan-i Sabbah (before the Illuminati twisted his words)</p>
       <p><strong>Welcome to Chapel Perilous.</strong> You can't unsee what you're about to read. The comfortable illusions of "best practices" and "approved standards" dissolve here like Dual_EC_DRBG's credibility post-Snowden. <strong>Are you paranoid enough</strong> to question why the same organizations that run PRISM tell you which encryption is "safe"? Why the NSA designs your crypto standards? Why "military-grade" means "designed by the military"? You should be. <strong>FNORD.</strong> See it now? It's everywhere once you know to look.</p>
       
@@ -282,8 +285,8 @@
       </div>
     </section>
 
-    <section id="architecture-simon-moon">
-      <h2 class="panel-caption">⭐ Simon Moon's Architecture Chronicles: Sacred Geometry in Code</h2>
+    <section id="architecture-simon-moon" aria-labelledby="architecture-simon-moon-heading">
+      <h2 id="architecture-simon-moon-heading" class="panel-caption">⭐ Simon Moon's Architecture Chronicles: Sacred Geometry in Code</h2>
       <p><em>"The Pentagon as a geometric figure suggests five sides, five elements, five senses... Everything happens in fives."</em> — Simon Moon</p>
       <p><strong>System Architect extraordinaire.</strong> Numerologist. Philosopher-engineer. Pattern recognition expert. Simon Moon reveals the hidden structures in Hack23's three major products through the Law of Fives and sacred geometry. <strong>Architecture that balances cosmic patterns with practical implementation.</strong></p>
       
@@ -376,8 +379,8 @@
       <p class="hidden-wisdom"><em>"The map is not the territory, but a well-made map reveals the hidden patterns of the territory. Architecture is the art of seeing what's already there in the chaos."</em> — Simon Moon</p>
     </section>
 
-    <section id="george-dorn-code-analysis">
-      <h2 class="panel-caption">🔍 George Dorn's Code Analysis: Repository Deep-Dives</h2>
+    <section id="george-dorn-code-analysis" aria-labelledby="george-dorn-code-analysis-heading">
+      <h2 id="george-dorn-code-analysis-heading" class="panel-caption">🔍 George Dorn's Code Analysis: Repository Deep-Dives</h2>
       <p><em>"I cloned the repositories. I analyzed the actual code. Here's what's actually there."</em> — George Dorn</p>
       
       <p><strong>Separate Technical Blog Entries:</strong> George Dorn analyzed each Hack23 product repository by cloning, examining code structure, counting files, reviewing dependencies, and verifying documentation. Based on real repository inspection, not assumptions.</p>
@@ -419,7 +422,7 @@
       <p class="hidden-wisdom"><em>Code doesn't lie. Documentation might be outdated. Marketing definitely exaggerates. But <code>git clone</code> + <code>find . -name "*.java" | wc -l</code> = verifiable truth.</em></p>
     </section>
 
-    <section id="george-dorn-developer-chronicles">
+    <section id="george-dorn-developer-chronicles" aria-labelledby="george-dorn-developer-chronicles-heading">
       <h2 class="panel-caption">💻 George Dorn's Developer Chronicles: Making Sacred Geometry Actually Compile</h2>
       <p><em>"Code is reality made computational. If it doesn't work, nothing else matters."</em> — George Dorn</p>
       
@@ -470,8 +473,8 @@
       <p class="signature"><em>George Dorn, Developer / Panic-Driven Engineer / Easter Egg Hider<br>Hack23 AB<br><br>"It works! I don't know why, but it works!" — after the 23rd refactoring<br><br>💻 FNORD 🖥️</em></p>
     </section>
 
-    <section id="foundation-policies">
-      <h2 class="panel-caption">Foundation Policies</h2>
+    <section id="foundation-policies" aria-labelledby="foundation-policies-heading">
+      <h2 id="foundation-policies-heading" class="panel-caption">Foundation Policies</h2>
       
       <div class="cards">
         <div class="card">
@@ -511,8 +514,8 @@
       </div>
     </section>
 
-    <section id="development-operations">
-      <h2 class="panel-caption">Development & Operations</h2>
+    <section id="development-operations" aria-labelledby="development-operations-heading">
+      <h2 id="development-operations-heading" class="panel-caption">Development & Operations</h2>
       
       <div class="cards">
         <div class="card">
@@ -552,8 +555,8 @@
       </div>
     </section>
 
-    <section id="infrastructure-access">
-      <h2 class="panel-caption">Infrastructure & Access</h2>
+    <section id="infrastructure-access" aria-labelledby="infrastructure-access-heading">
+      <h2 id="infrastructure-access-heading" class="panel-caption">Infrastructure & Access</h2>
       
       <div class="cards">
         <div class="card">
@@ -593,7 +596,7 @@
       </div>
     </section>
 
-    <section id="business-continuity">
+    <section id="business-continuity" aria-labelledby="business-continuity-heading">
       <h2 class="panel-caption">Business Continuity & Risk</h2>
       
       <div class="cards">
@@ -641,8 +644,8 @@
       </div>
     </section>
 
-    <section id="governance-compliance">
-      <h2 class="panel-caption">Governance & Compliance</h2>
+    <section id="governance-compliance" aria-labelledby="governance-compliance-heading">
+      <h2 id="governance-compliance-heading" class="panel-caption">Governance & Compliance</h2>
       
       <div class="cards">
         <div class="card">
@@ -724,7 +727,7 @@
       </div>
     </section>
 
-    <section id="emerging-technologies">
+    <section id="emerging-technologies" aria-labelledby="emerging-technologies-heading">
       <h2 class="panel-caption">Emerging Technologies</h2>
       
       <div class="cards">
@@ -758,8 +761,8 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2 class="panel-caption">About This Blog</h2>
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="panel-caption">About This Blog</h2>
       
       <p><strong>All 39 blog posts maintain radical Illuminatus! trilogy style:</strong> "Think for yourself, question authority," FNORD detection in every approved standard, Chapel Perilous navigation through uncomfortable security truths, Operation Mindfuck against security theater and compliance cargo cults, and 23 FNORD 5 signatures throughout. <em>Nothing is true. Everything is permitted.</em> Including the uncomfortable truth that your "secure" systems were probably designed by the people who want to monitor them—and certified by the people already monitoring them. <strong>The backdoor isn't a bug. It's a feature they call "lawful access."</strong></p>
       
@@ -769,8 +772,8 @@
       <p class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> <em>If this sounds paranoid, you're not paying attention to Snowden, PRISM, Crypto AG, or the last 50 years of documented surveillance programs. If this sounds reasonable, you're already too deep in Chapel Perilous. The only winning move is transparency—because they can't co-opt what's already public. They can't backdoor what has no doors. Think for yourself. Question everything—especially this.</em></p>
     </section>
 
-    <section id="related">
-      <h2 class="panel-caption">Related Resources</h2>
+    <section id="related" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="panel-caption">Related Resources</h2>
       
       <div class="cards">
         <div class="card">
@@ -798,17 +801,18 @@
   </article>
 </main>
 
-    <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
-      </p>
-      <p class="discordian-authors">
+<footer role="contentinfo">
+  <nav aria-label="Footer navigation">
+    <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+      <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+      <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+      <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+      <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+      <a href="blog.html" title="Security Blog">Blog</a> |
+      <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
+      <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
+    </p>
+    <p class="discordian-authors">
         <strong>✍️ Authors:</strong>
         <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner">Hagbard Celine</a> (Philosophy & Vision) &
         <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect">Simon Moon</a> (Architecture & Patterns)
