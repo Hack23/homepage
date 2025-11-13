@@ -434,7 +434,10 @@
 	</script>
 </head>	
 <body>
-	<header>
+	<!-- Skip to main content link for keyboard navigation -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	
+	<header role="banner">
       <div class="logo-container">
         <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 AB - Premium Cybersecurity Consulting Sweden" class="logo" width="80" height="80">
       </div>
@@ -483,16 +486,16 @@
           <img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenHub Profile">
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="Main navigation">
         <a href="black-trigram-features.html" title="View Black Trigram Features">🥋 Black Trigram Game</a>
         <a href="cia-compliance-manager-features.html" title="View Compliance Manager Features">🔒 CIA Compliance Manager</a>
         <a href="cia-features.html" title="View Citizen Intelligence Agency Features">🔍 Citizen Intelligence Agency</a>
         <a href="blog.html" title="Security Blog & Discordian Cybersecurity">🍎 Security Blog</a>
         <a href="https://www.linkedin.com/company/hack23/" class="btn" title="Follow on LinkedIn">Follow Company</a>
-      </div>
+      </nav>
     </header>
 
-	<main>
+	<main id="main-content" role="main">
     <!-- Premium Value Proposition Section -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Why Choose Hack23 AB?</h2>
@@ -586,8 +589,8 @@
     </section>
 
  
-    <section id="security-services">
-      <h2>🔑 Security Services</h2>
+    <section id="security-services" aria-labelledby="security-services-heading">
+      <h2 id="security-services-heading">🔑 Security Services</h2>
       <p>Professional cybersecurity consulting services delivered remotely or in-person in Gothenburg. Drawing from over three decades of experience in software development and security architecture, we deliver practical security solutions that integrate seamlessly into your development processes without hindering innovation.</p>
       
       <div class="service-info" style="background: rgba(0, 102, 51, 0.1); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
@@ -893,8 +896,8 @@
 
     
    <!-- Black Trigram Section - Enhanced -->
-    <section id="black-trigram">
-      <h2>🔥 Black Trigram (흑괘) - Flagship Project</h2>
+    <section id="black-trigram" aria-labelledby="black-trigram-heading">
+      <h2 id="black-trigram-heading">🔥 Black Trigram (흑괘) - Flagship Project</h2>
       <div class="card black-trigram-card" style="border: 2px solid #ff6b35; background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));">
         <div class="scanner-effect"></div>
         <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
@@ -971,8 +974,8 @@
       </div>
     </section>
 
-    <section id="projects">
-        <h2>Current Projects</h2>
+    <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Current Projects</h2>
         
         <div class="cards">
           <div class="card confidentiality-card">
@@ -1091,8 +1094,8 @@
         </div>
       </section>
 
-      <section id="about-developer">
-        <h2>💼 CEO James Pether Sörling</h2>
+      <section id="about-developer" aria-labelledby="about-developer-heading">
+        <h2 id="about-developer-heading">💼 CEO James Pether Sörling</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -1173,8 +1176,8 @@
         </div>
       </section>
 
-      <section id="talks-presentations">
-        <h2>🎤 Technical Talks & Presentations</h2>
+      <section id="talks-presentations" aria-labelledby="talks-presentations-heading">
+        <h2 id="talks-presentations-heading">🎤 Technical Talks & Presentations</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -1192,8 +1195,8 @@
         </div>
       </section>
       
-      <section id="press-coverage">
-        <h2>Press Coverage</h2>
+      <section id="press-coverage" aria-labelledby="press-coverage-heading">
+        <h2 id="press-coverage-heading">Press Coverage</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -1218,8 +1221,8 @@
         </div>
       </section>
 
-      <section id="past-projects">
-        <h2>Past Projects</h2>
+      <section id="past-projects" aria-labelledby="past-projects-heading">
+        <h2 id="past-projects-heading">Past Projects</h2>
         <div class="cards">
           <div class="card availability-card">
             <div class="scanner-effect"></div>
@@ -1255,16 +1258,18 @@
       </section>
     </main>
 	
-    <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
-      </p>
+    <footer role="contentinfo">
+      <nav aria-label="Footer navigation">
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+          <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+          <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+          <a href="blog.html" title="Security Blog">Blog</a> |
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
+          <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
+        </p>
+      </nav>
     </footer>
 </body>
 </html>
