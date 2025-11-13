@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Security Headers -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests;">
+	<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta http-equiv="X-Frame-Options" content="DENY">
+	<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
     <title>Mobile Device Management: BYOD Means Bring Your Own Disaster | Hack23 Discordian Blog</title>
     <meta name="description" content="Single-person company mobile strategy: MFA mandatory (TOTP, hardware tokens), full device encryption, AWS Identity Center SSO. No corporate MDM—personal devices with strong access controls. Session timeouts 1-24 hours depending on classification.">
     <meta name="keywords" content="mobile device management, MDM, BYOD, mobile security, ISMS, discordian security">
