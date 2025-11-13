@@ -1,30 +1,136 @@
-[ 
+[
   {
     "path": "/*",
     "timings": [
       {
         "metric": "interactive",
-        "budget": 7500
+        "budget": 5000
       },
       {
         "metric": "first-contentful-paint",
-        "budget": 5000
+        "budget": 2000
+      },
+      {
+        "metric": "largest-contentful-paint",
+        "budget": 2500
+      },
+      {
+        "metric": "speed-index",
+        "budget": 3500
+      },
+      {
+        "metric": "cumulative-layout-shift",
+        "budget": 0.1
+      },
+      {
+        "metric": "max-potential-fid",
+        "budget": 130
       }
     ],
     "resourceSizes": [
       {
+        "resourceType": "document",
+        "budget": 100000
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 60000
+      },
+      {
+        "resourceType": "image",
+        "budget": 200000
+      },
+      {
+        "resourceType": "font",
+        "budget": 100000
+      },
+      {
         "resourceType": "script",
-        "budget": 1000
+        "budget": 50000
+      },
+      {
+        "resourceType": "third-party",
+        "budget": 150000
       },
       {
         "resourceType": "total",
-        "budget": 10000000
+        "budget": 500000
       }
     ],
     "resourceCounts": [
       {
+        "resourceType": "script",
+        "budget": 5
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 3
+      },
+      {
+        "resourceType": "image",
+        "budget": 15
+      },
+      {
+        "resourceType": "font",
+        "budget": 6
+      },
+      {
         "resourceType": "third-party",
-        "budget": 1000
+        "budget": 10
+      },
+      {
+        "resourceType": "total",
+        "budget": 40
+      }
+    ]
+  },
+  {
+    "path": "/blog*.html",
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 6000
+      },
+      {
+        "metric": "largest-contentful-paint",
+        "budget": 3000
+      }
+    ],
+    "resourceSizes": [
+      {
+        "resourceType": "document",
+        "budget": 150000
+      },
+      {
+        "resourceType": "image",
+        "budget": 300000
+      },
+      {
+        "resourceType": "total",
+        "budget": 600000
+      }
+    ]
+  },
+  {
+    "path": "/index*.html",
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 4000
+      },
+      {
+        "metric": "first-contentful-paint",
+        "budget": 1500
+      },
+      {
+        "metric": "largest-contentful-paint",
+        "budget": 2000
+      }
+    ],
+    "resourceSizes": [
+      {
+        "resourceType": "total",
+        "budget": 400000
       }
     ]
   }
