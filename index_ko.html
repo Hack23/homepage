@@ -74,7 +74,10 @@
 	</script>
 </head>
 <body>
-	<header>
+	<!-- 키보드 탐색을 위한 메인 콘텐츠로 건너뛰기 링크 -->
+	<a href="#main-content" class="skip-link">메인 콘텐츠로 건너뛰기</a>
+	
+	<header role="banner">
       <div class="logo-container">
         <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 AB - 프리미엄 사이버보안 컨설팅 스웨덴" class="logo" width="80" height="80">
       </div>
@@ -123,16 +126,16 @@
           <img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenHub 프로필">
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="메인 네비게이션">
         <a href="black-trigram-features.html" title="Black Trigram 기능 보기">🥋 Black Trigram 게임</a>
         <a href="cia-compliance-manager-features.html" title="CIA Compliance Manager 기능 보기">🔒 CIA Compliance Manager</a>
         <a href="cia-features.html" title="시민 정보기관 기능 보기">🔍 시민 정보기관</a>
         <a href="blog.html" title="보안 블로그 & Discordian 사이버보안">🍎 보안 블로그</a>
         <a href="https://www.linkedin.com/company/hack23/" class="btn" title="LinkedIn에서 팔로우">회사 팔로우</a>
-      </div>
+      </nav>
     </header>
 
-	<main>
+	<main id="main-content" role="main">
     <!-- 프리미엄 가치 제안 섹션 -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Hack23 AB를 선택해야 하는 이유는?</h2>
@@ -226,8 +229,8 @@
     </section>
 
 <!-- Black Trigram Section -->
-<section id="black-trigram">
-  <h2>🔥 Black Trigram (흑괘) - 플래그십 프로젝트</h2>
+<section id="black-trigram" aria-labelledby="black-trigram-heading">
+  <h2 id="black-trigram-heading">🔥 Black Trigram (흑괘) - 플래그십 프로젝트</h2>
   <div class="card black-trigram-card" style="border: 2px solid #ff6b35; background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));">
     <div class="scanner-effect"></div>
     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
@@ -301,8 +304,8 @@
   </div>
 </section>
 
-<section id="security-services">
-  <h2>🔑 보안 서비스</h2>
+<section id="security-services" aria-labelledby="security-services-heading">
+  <h2 id="security-services-heading">🔑 보안 서비스</h2>
   <p>예테보리에서 원격 또는 현장으로 제공되는 전문 사이버보안 컨설팅 서비스. 소프트웨어 개발 및 보안 아키텍처에서 30년 이상의 경험을 바탕으로 혁신을 방해하지 않으면서 개발 프로세스에 원활하게 통합되는 실용적인 보안 솔루션을 제공합니다.</p>
   
   <div class="service-info" style="background: rgba(0, 102, 51, 0.1); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
@@ -593,8 +596,8 @@
 </section>
 		
 
-      <section id="projects">
-        <h2>현재 프로젝트</h2>
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">현재 프로젝트</h2>
         
         <div class="cards">
           <div class="card confidentiality-card">
@@ -710,8 +713,8 @@
         </div>
       </section>
 
-      <section id="about-developer">
-        <h2>💼 CEO James Pether Sörling</h2>
+      <section id="about-developer" aria-labelledby="about-developer-heading">
+        <h2 id="about-developer-heading">💼 CEO James Pether Sörling</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -811,8 +814,8 @@
         </div>
       </section>
       
-      <section id="press-coverage">
-        <h2>언론 보도</h2>
+      <section id="press-coverage" aria-labelledby="press-coverage-heading">
+        <h2 id="press-coverage-heading">언론 보도</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -837,8 +840,8 @@
         </div>
       </section>
 
-      <section id="past-projects">
-        <h2>과거 프로젝트</h2>
+      <section id="past-projects" aria-labelledby="past-projects-heading">
+        <h2 id="past-projects-heading">과거 프로젝트</h2>
         <div class="cards">
           <div class="card availability-card">
             <div class="scanner-effect"></div>
@@ -873,17 +876,19 @@
         </div>
       </section>
     </main>	
-        <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="https://hack23.com/index.html" lang="en">English version</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
-      </p>
+        <footer role="contentinfo">
+      <nav aria-label="푸터 네비게이션">
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+          <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+          <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+          <a href="blog.html" title="Security Blog">Blog</a> |
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
+          <a href="https://hack23.com/index.html" lang="en">English version</a> |
+          <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
+        </p>
+      </nav>
     </footer>
 </body>
 </html>

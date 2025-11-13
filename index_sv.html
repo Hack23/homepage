@@ -322,7 +322,10 @@
 	</script>
 </head>
 <body>
-	<header>
+	<!-- Hoppa till huvudinnehåll för tangentbordsnavigering -->
+	<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
+	
+	<header role="banner">
       <div class="logo-container">
         <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 AB - Premium Cybersäkerhetskonsulting Sverige" class="logo" width="80" height="80">
       </div>
@@ -371,16 +374,16 @@
           <img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenHub Profil">
         </a>
       </div>
-      <div class="app-link">
+      <nav class="app-link" role="navigation" aria-label="Huvudnavigering">
         <a href="black-trigram-features.html" title="Visa Black Trigram Funktioner">🥋 Black Trigram Spel</a>
         <a href="cia-compliance-manager-features_sv.html" title="Visa CIA Compliance Manager funktioner">🔒 CIA Compliance Manager</a>
         <a href="cia-features_sv.html" title="Visa Citizen Intelligence Agency funktioner">🔍 Citizen Intelligence Agency</a>
         <a href="blog.html" title="Säkerhetsblogg & Discordian Cybersäkerhet">🍎 Säkerhetsblogg</a>
         <a href="https://www.linkedin.com/company/hack23/" class="btn" title="Följ på LinkedIn">Följ Företaget</a>
-      </div>
+      </nav>
     </header>
 
-	<main>
+	<main id="main-content" role="main">
     <!-- Premium Värdeförslag Sektion -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Varför Välja Hack23 AB?</h2>
@@ -765,8 +768,8 @@
       </section>
 
 <!-- Black Trigram Section - Enhanced -->
-<section id="black-trigram">
-  <h2>🔥 Black Trigram (흑괘) - Flaggskeppsprojekt</h2>
+<section id="black-trigram" aria-labelledby="black-trigram-heading">
+  <h2 id="black-trigram-heading">🔥 Black Trigram (흑괘) - Flaggskeppsprojekt</h2>
   <div class="card black-trigram-card" style="border: 2px solid #ff6b35; background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));">
     <div class="scanner-effect"></div>
     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
@@ -842,8 +845,8 @@
 
 
 
-		<section id="projects">
-        <h2>Aktuella Projekt</h2>
+		<section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Aktuella Projekt</h2>
         
         <div class="cards">
           <div class="card confidentiality-card">
@@ -946,8 +949,8 @@
 
 
 
-      <section id="about-ceo">
-        <h2>💼 VD James Pether Sörling</h2>
+      <section id="about-ceo" aria-labelledby="about-ceo-heading">
+        <h2 id="about-ceo-heading">💼 VD James Pether Sörling</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -1047,8 +1050,8 @@
         </div>
       </section>
 
-      <section id="press-coverage">
-        <h2>Presstäckning</h2>
+      <section id="press-coverage" aria-labelledby="press-coverage-heading">
+        <h2 id="press-coverage-heading">Presstäckning</h2>
         <div class="cards">
           <div class="card">
             <div class="scanner-effect"></div>
@@ -1073,16 +1076,18 @@
         </div>
       </section>
     </main>	
-        <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="https://hack23.com/index.html" lang="en">English version</a>
-      </p>
+        <footer role="contentinfo">
+      <nav aria-label="Sidfotsnavigering">
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+          <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+          <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+          <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+          <a href="blog.html" title="Security Blog">Blog</a> |
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
+          <a href="https://hack23.com/index.html" lang="en">English version</a>
+        </p>
+      </nav>
     </footer>	
 </body>
 </html>
