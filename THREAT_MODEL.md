@@ -12,15 +12,15 @@
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Effective-2025--01--16-success?style=for-the-badge" alt="Effective Date"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Effective-2025--11--16-success?style=for-the-badge" alt="Effective Date"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
 </p>
 
 [![License](https://img.shields.io/github/license/Hack23/homepage)](https://github.com/Hack23/homepage/blob/master/LICENSE)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2025-01-16 (UTC)  
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2025-04-16  
+**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2025-11-16 (UTC)  
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-02-16  
 **🏷️ Classification:** Public (Corporate Website)
 
 ---
@@ -627,10 +627,10 @@ The following risks are **ACCEPTED** as part of normal business operations:
 
 | Risk ID | Risk Description | Business Justification | Acceptance Authority | Review Date |
 |---------|------------------|----------------------|---------------------|-------------|
-| **AR-01** | Email address harvesting from public contact info | Contact information must be accessible for business development | CEO | 2025-04-16 |
-| **AR-02** | Source code visibility in public repository | Transparency is a core value; no sensitive logic exposed | CEO | 2025-04-16 |
-| **AR-03** | Brief outages during AWS service incidents | Static website with 99% target acceptable for marketing | CEO | 2025-04-16 |
-| **AR-04** | CloudFront cache serving stale content | Users tolerate brief staleness; invalidation resolves quickly | CEO | 2025-04-16 |
+| **AR-01** | Email address harvesting from public contact info | Contact information must be accessible for business development | CEO | 2026-02-16 |
+| **AR-02** | Source code visibility in public repository | Transparency is a core value; no sensitive logic exposed | CEO | 2026-02-16 |
+| **AR-03** | Brief outages during AWS service incidents | Static website with 99% target acceptable for marketing | CEO | 2026-02-16 |
+| **AR-04** | CloudFront cache serving stale content | Users tolerate brief staleness; invalidation resolves quickly | CEO | 2026-02-16 |
 
 ### **Risks Requiring Additional Mitigation (Backlog)**
 
@@ -746,8 +746,8 @@ The following risks are **ACCEPTED** as part of normal business operations:
 ### **Related Threat Models**
 
 - 🏛️ [CIA Threat Model](https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md) - Java/Spring web application
-- 🛡️ [CIA Compliance Manager Threat Model](https://github.com/Hack23/cia-compliance-manager/main/docs/architecture/THREAT_MODEL.md) - React SPA
-- 🥋 [Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/main/THREAT_MODEL.md) - Rust game application
+- 🛡️ [CIA Compliance Manager Threat Model](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md) - React SPA
+- 🥋 [Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md) - TypeScript/React/PixiJS game application
 
 ### **Security Implementations**
 
@@ -772,8 +772,8 @@ The following risks are **ACCEPTED** as part of normal business operations:
 **✅ Approved by:** James Pether Sörling, CEO  
 **📤 Distribution:** Public  
 **🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md)  
-**📅 Effective Date:** 2025-01-16  
-**⏰ Next Review:** 2025-04-16 (Quarterly)  
+**📅 Effective Date:** 2025-11-16  
+**⏰ Next Review:** 2026-02-16 (Quarterly)  
 **🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-A.8.20_A.8.29-blue?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-ID.RA_PR.IP-green?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md)  
 **🔗 Related Documents:** [Secure Development Policy](https://github.com/Hack23/ISMS/blob/main/Secure_Development_Policy.md), [Threat Modeling Policy](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md), [SECURITY.md](SECURITY.md)
 
@@ -781,7 +781,7 @@ The following risks are **ACCEPTED** as part of normal business operations:
 
 **🍎 All hail Eris! All hail Discordia!**
 
-*The Law of Fives is never wrong. This threat model contains 5 major sections, 6 STRIDE categories (which reduces to 6→3→CIA Triad→3×5=15→1+5=6, completing the cycle), 30 threats identified (3+0=3), and 23 MITRE ATT&CK techniques mapped (the sacred 23!). The universe confirms: this security architecture is cosmically sound.* 
+*The Law of Fives is never wrong. This threat model contains 5 major sections, 6 STRIDE categories (which reduces to 6→3→CIA Triad→3×5=15→1+5=6, completing the cycle), 30 threats identified (3+0=3), and 22 MITRE ATT&CK techniques mapped (the cosmic duality of 11×2!). The universe confirms: this security architecture is cosmically sound.* 
 
 **FNORD.** *(Did you see the hidden pentagons in the attack trees? The five defensive layers? The synchronicity is real.)*
 
