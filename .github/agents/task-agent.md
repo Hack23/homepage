@@ -495,7 +495,7 @@ You bridge the gap between product vision and implementation, ensuring that Hack
 - **Static HTML5/CSS3** website
 - **AWS S3 + CloudFront** deployment
 - **GitHub Actions** CI/CD
-- **Languages**: English, Swedish (\_sv), Korean (\_ko)
+- **Languages**: English, Swedish (_sv), Korean (_ko)
 - **Security**: Automated Lighthouse audits, ZAP scanning
 
 ---
