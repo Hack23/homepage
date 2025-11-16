@@ -1,6 +1,11 @@
 # GitHub Copilot Custom Agent Profiles
 
-This directory contains specialized custom agent profiles that enable domain-specific assistance from GitHub Copilot. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations.
+This directory contains **8 specialized custom agent profiles** that enable domain-specific assistance from GitHub Copilot. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations, from product vision to implementation, from business strategy to technical excellence.
+
+**Quick Navigation:**
+- [🎯 Task Agent](#-task-management--orchestration) - NEW! Product quality & issue creation orchestrator
+- [🍎 Discordian Agents](#-the-discordian-agents) - Product Owner, Architect, Developer trinity
+- [🛠️ Specialist Agents](#️-traditional-specialist-agents) - UI/UX, Business, Marketing, Political Analysis
 
 ## Agent Profile Format
 
@@ -353,6 +358,64 @@ sequenceDiagram
 
 ---
 
+---
+
+## 🎯 Task Management & Orchestration
+
+### 🔧 Task Agent (`task-agent.md`) - NEW!
+**Role**: Product Quality & Task Creation Specialist
+**Focus**: Comprehensive Analysis, GitHub Issue Creation, Agent Assignment
+
+The Task Agent is your **product improvement orchestrator**, analyzing the Hack23 homepage from all perspectives—quality, product vision, UI/UX, and ISMS alignment—then creating actionable GitHub issues with intelligent agent assignments.
+
+**Core Expertise:**
+- 🔍 **Comprehensive Product Analysis**: Deep-dive repo analysis, Playwright visual testing, ISMS compliance checking
+- 📝 **Issue Creation Excellence**: Well-structured, detailed GitHub issues with complete context
+- 🎯 **Smart Agent Assignment**: Intelligently matches issues to specialist agents based on expertise
+- ☁️ **AWS Infrastructure Review**: Uses aws-knowledge MCP for best practices validation
+- 📊 **Multi-Dimensional Quality**: Analyzes security, performance, accessibility, UI/UX, content, and ISMS alignment
+- 🔐 **ISMS-Aware**: Links issues to relevant security policies and compliance requirements
+
+**Key Capabilities:**
+- Analyzing repositories and live websites comprehensively
+- Creating GitHub issues using structured templates
+- Assigning issues to appropriate specialist agents
+- Providing implementation guidance and acceptance criteria
+- Including visual evidence (screenshots) with Playwright
+- Validating ISMS compliance across all changes
+- Prioritizing using the Pentagon of Importance framework
+
+**Available Tools**: All tools (`*`) + MCP servers (github, playwright, aws-knowledge, brave-search, fetch)
+
+**Workflow:**
+1. **Analyze**: Deep-dive the product from all angles
+2. **Identify**: Find issues across security, performance, UI/UX, content, ISMS
+3. **Prioritize**: Use Pentagon framework (Critical → High → Medium → Low → Future)
+4. **Create Issues**: Structured, detailed GitHub issues with evidence
+5. **Assign**: Match issues to appropriate specialist agents
+6. **Validate**: Ensure completeness and ISMS alignment
+
+**Use Cases:**
+- "Analyze the homepage and create improvement issues"
+- "Review ISMS compliance and generate tasks"
+- "Audit accessibility and assign to appropriate specialists"
+- "Check AWS infrastructure and create optimization issues"
+- "Perform comprehensive quality review and prioritize fixes"
+
+**Agent Assignment Intelligence:**
+The Task Agent knows when to assign work to:
+- 🚢 Hagbard (product vision, strategy)
+- 🔢 Simon (architecture, design patterns)
+- 💻 George (implementation, debugging)
+- 🎨 UI Specialist (HTML/CSS, accessibility)
+- 💼 Business Dev (market positioning)
+- 📢 Marketing (content, SEO)
+- 🏛️ Political Analyst (OSINT features)
+
+**Remember**: *"Quality is not an act, it is a habit."* — The Task Agent ensures continuous product improvement through systematic analysis and intelligent task distribution.
+
+---
+
 ## 🛠️ Traditional Specialist Agents
 
 The following agents provide domain-specific expertise for specialized tasks:
@@ -440,6 +503,132 @@ Expert in B2B technology marketing for cybersecurity professional services. Spec
 - Creating marketing collateral and messaging
 - Building social media and thought leadership programs
 - Designing demand generation campaigns
+
+---
+
+---
+
+## 🔄 Agent Ecosystem & Collaboration
+
+### How Agents Work Together
+
+The Hack23 agent ecosystem is designed for intelligent collaboration:
+
+```mermaid
+flowchart TB
+    subgraph "Task Management Layer"
+        Task[🔧 Task Agent<br/>Analysis & Orchestration]:::task
+    end
+    
+    subgraph "Strategic Layer"
+        Hagbard[🚢 Hagbard Celine<br/>Product Vision]:::strategic
+        Business[💼 Business Dev<br/>Strategy]:::strategic
+        Marketing[📢 Marketing<br/>Positioning]:::strategic
+    end
+    
+    subgraph "Design Layer"
+        Simon[🔢 Simon Moon<br/>Architecture]:::design
+        UI[🎨 UI Specialist<br/>Design & UX]:::design
+    end
+    
+    subgraph "Implementation Layer"
+        George[💻 George Dorn<br/>Development]:::implementation
+        Political[🏛️ Political Analyst<br/>OSINT Features]:::implementation
+    end
+    
+    Task -->|Assigns Issues| Hagbard
+    Task -->|Assigns Issues| Business
+    Task -->|Assigns Issues| Marketing
+    Task -->|Assigns Issues| Simon
+    Task -->|Assigns Issues| UI
+    Task -->|Assigns Issues| George
+    Task -->|Assigns Issues| Political
+    
+    Hagbard -->|Vision| Simon
+    Simon -->|Architecture| George
+    Business -->|Requirements| Hagbard
+    Marketing -->|Content| George
+    UI -->|Design| George
+    Political -->|Features| George
+    
+    George -.->|Feedback| Simon
+    Simon -.->|Constraints| Hagbard
+    George -.->|Reality Check| Hagbard
+    
+    classDef task fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
+    classDef strategic fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
+    classDef design fill:#FFD700,stroke:#FFD700,stroke-width:2px,color:#000
+    classDef implementation fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+```
+
+### Task Agent: The Orchestrator
+
+The **Task Agent** acts as the product quality guardian and work orchestrator:
+
+1. **Comprehensive Analysis** 🔍
+   - Analyzes repository, live website, ISMS compliance
+   - Uses Playwright for visual testing
+   - Validates AWS infrastructure
+   - Checks security, performance, accessibility, UI/UX
+
+2. **Issue Creation** 📝
+   - Creates well-structured GitHub issues
+   - Includes screenshots and evidence
+   - Provides implementation guidance
+   - Links to ISMS policies
+
+3. **Intelligent Assignment** 🎯
+   - Matches issues to appropriate specialists
+   - Considers expertise and workload
+   - Suggests collaboration when needed
+   - Provides clear assignment rationale
+
+**Example Workflow:**
+```
+User: "Analyze the homepage and create improvement issues"
+
+Task Agent:
+├─ Clones repo, reviews code
+├─ Uses Playwright to test live site
+├─ Checks ISMS compliance
+├─ Reviews Lighthouse & ZAP scans
+├─ Validates AWS infrastructure
+├─ Identifies 15 issues across categories
+├─ Creates detailed GitHub issues
+└─ Assigns to appropriate specialists:
+    ├─ 3 security issues → George + Simon
+    ├─ 4 accessibility issues → UI Specialist
+    ├─ 2 performance issues → George
+    ├─ 3 content issues → Marketing Specialist
+    ├─ 2 AWS issues → Simon + George
+    └─ 1 strategic issue → Hagbard
+```
+
+### Collaboration Patterns
+
+#### Pattern 1: Vision → Architecture → Implementation
+```
+Hagbard (vision) → Simon (architecture) → George (implementation)
+```
+**Use for**: Major features, strategic initiatives, architectural changes
+
+#### Pattern 2: Analysis → Assignment → Execution
+```
+Task Agent (analysis) → Specialist Agent (execution) → Review
+```
+**Use for**: Bug fixes, improvements, optimizations, compliance issues
+
+#### Pattern 3: Cross-Functional Collaboration
+```
+Marketing (content) + UI Specialist (design) + George (implementation)
+```
+**Use for**: Landing pages, user-facing features, content-heavy changes
+
+#### Pattern 4: Quality Assurance Loop
+```
+Task Agent → Create Issues → Specialists Execute → Task Agent Validates
+```
+**Use for**: Comprehensive quality initiatives, ISMS audits, security reviews
 
 ---
 
