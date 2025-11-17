@@ -107,9 +107,9 @@ jobs:
             
             # Count passed and failed links in a single jq invocation
             read passed failed < <(jq -r '
-              ([.links[] | select(.state == "OK")] | length),
-              ([.links[] | select(.state != "OK")] | length)
-            ' internal-links-report.json 2>/dev/null || echo "0 0")
+              [([.links[] | select(.state == "OK")] | length),
+               ([.links[] | select(.state != "OK")] | length)] | @tsv
+            ' internal-links-report.json 2>/dev/null || echo "0	0")
             
             echo ""
             echo "✅ Passed: $passed links"
@@ -136,9 +136,9 @@ jobs:
             
             # Count passed and failed links in a single jq invocation
             read passed failed < <(jq -r '
-              ([.links[] | select(.state == "OK")] | length),
-              ([.links[] | select(.state != "OK")] | length)
-            ' external-links-report.json 2>/dev/null || echo "0 0")
+              [([.links[] | select(.state == "OK")] | length),
+               ([.links[] | select(.state != "OK")] | length)] | @tsv
+            ' external-links-report.json 2>/dev/null || echo "0	0")
             
             echo ""
             echo "✅ Passed: $passed links"
