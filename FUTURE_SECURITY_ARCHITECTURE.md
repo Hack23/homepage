@@ -174,8 +174,9 @@ Integrate axe-core accessibility testing into CI/CD pipeline.
 **GitHub Actions Integration:**
 
 ```yaml
+# Note: In production, use SHA-pinned versions, e.g., @<SHA_HASH> # v2.5.0
 - name: Accessibility Testing
-  uses: dequelabs/axe-action@v2.5.0
+  uses: dequelabs/axe-action@v2.5.0  # Example - use SHA-pinned version in production
   with:
     urls: |
       https://hack23.com/
@@ -441,6 +442,7 @@ Implement automated penetration testing with nuclei templates.
 
 ```yaml
 # .github/workflows/pentest.yml
+# Note: In production, use SHA-pinned versions for supply chain security
 name: Automated Penetration Test
 on:
   schedule:
@@ -452,14 +454,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Nuclei Scan
-        uses: projectdiscovery/nuclei-action@main
+        uses: projectdiscovery/nuclei-action@main  # Example - use SHA-pinned version in production
         with:
           target: https://hack23.com/
           templates: vulnerabilities,exposures,misconfiguration
           severity: critical,high,medium
           
       - name: Upload Results
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v2  # Example - use SHA-pinned version in production
         with:
           sarif_file: nuclei-results.sarif
 ```

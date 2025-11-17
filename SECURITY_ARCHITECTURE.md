@@ -60,7 +60,7 @@ The Hack23 AB corporate homepage serves as a **public-facing transparency platfo
 | **Hosting** | AWS S3 (Private Bucket) | Static content storage with versioning |
 | **CDN** | AWS CloudFront | Global content delivery, DDoS protection |
 | **CI/CD** | GitHub Actions | Automated deployment with security scanning |
-| **External Resources** | Google Fonts CDN | Performance optimization, SRI (planned) |
+| **External Resources** | Google Fonts CDN | Performance optimization; SRI (planned) |
 
 ### System Classification
 
@@ -604,7 +604,7 @@ Permissions: Least privilege (S3 + CloudFront only)
 
 ```yaml
 - name: Harden Runner
-  uses: step-security/harden-runner@v2.13.2
+  uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
   with:
     egress-policy: block  # Deny-by-default networking
     allowed-endpoints: >  # Explicit allowlist (65+ endpoints)
@@ -645,7 +645,7 @@ Permissions: Least privilege (S3 + CloudFront only)
 
 ```mermaid
 flowchart TB
-    A[Git Push to master] --> B[Harden Runner Activated]
+    A[Git Push to master] --> B[Harden Runner activated]
     B --> C[Code Checkout]
     C --> D[AWS OIDC Authentication]
     D --> E[Minify HTML/CSS/JS]
