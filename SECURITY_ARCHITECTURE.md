@@ -66,15 +66,25 @@ The Hack23 AB corporate homepage serves as a **public-facing transparency platfo
 
 Per [Hack23 ISMS Classification Framework](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md):
 
+**🎯 Project Classification:**
+- **Type:** [![Frontend Apps](https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#project-type-classifications)
+- **Process:** [![Marketing](https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#project-type-classifications)
+
+**🔒 Security Classification:**
+
 | Dimension | Level | Rationale |
 |-----------|-------|-----------|
-| **🔐 Confidentiality** | [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) | Public corporate website, no sensitive data |
-| **🔒 Integrity** | [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) | Reputation-critical but tolerates brief defacement |
-| **⚡ Availability** | [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels) | Marketing site, 99% SLA target acceptable |
+| **🔐 Confidentiality** | [![Public](https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) | Public corporate website, no sensitive data |
+| **🔒 Integrity** | [![Low](https://img.shields.io/badge/Integrity-Low-lightgreen?style=for-the-badge&logo=check-circle&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) | Reputation-critical but tolerates brief defacement |
+| **⚡ Availability** | [![Standard](https://img.shields.io/badge/Availability-Standard-lightgreen?style=for-the-badge&logo=server&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels) | Marketing site, 99% SLA target acceptable |
 
-**Recovery Objectives:**
-- **RPO (Recovery Point Objective):** Daily (Git version control)
-- **RTO (Recovery Time Objective):** >72 hours (scheduled recovery acceptable)
+**⏱️ Business Continuity:**
+- **RTO:** [![Standard (>72hrs)](https://img.shields.io/badge/RTO-Standard_(>72hrs)-lightgrey?style=for-the-badge&logo=clock&logoColor=black)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#rto-classifications)
+- **RPO:** [![Extended (>24hrs)](https://img.shields.io/badge/RPO-Extended_(>24hrs)-lightgrey?style=for-the-badge&logo=database&logoColor=black)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#rpo-classifications)
+
+**Detailed Recovery Objectives:**
+- **RPO (Recovery Point Objective):** Extended - Daily backups via Git version control acceptable
+- **RTO (Recovery Time Objective):** Standard - Scheduled recovery within 72 hours acceptable
 
 ---
 
@@ -294,7 +304,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 ```html
 <!-- Google Fonts with SRI (planned) -->
 <link rel="stylesheet" 
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
       integrity="sha384-HASH_VALUE_HERE"
       crossorigin="anonymous">
 ```
@@ -332,7 +342,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
    - Budget file: budget.json
 
 4. Dependency Scanning
-   - Dependabot: Weekly scans
+   - Dependabot: Daily scans
    - GitHub Advanced Security
    - Automatic PRs for updates
 ```
@@ -344,7 +354,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 ### Dependabot Configuration
 
 **Automated Dependency Updates:**
-- ✅ **Weekly scans** for npm, GitHub Actions, Docker dependencies
+- ✅ **Daily scans** for GitHub Actions dependencies
 - ✅ **Automatic PRs** for security updates
 - ✅ **Grouping strategy** for non-breaking updates
 - ✅ **Security advisory integration** via GitHub Security Advisories
@@ -635,7 +645,7 @@ Permissions: Least privilege (S3 + CloudFront only)
 ```
 
 **Dependabot for Actions:**
-- ✅ Weekly dependency updates
+- ✅ Daily dependency updates
 - ✅ Automatic PR creation
 - ✅ Security advisory integration
 
@@ -719,7 +729,7 @@ flowchart TB
 | **Security by Design** | Static HTML, minimal attack surface | ✅ Compliant |
 | **Vulnerability Disclosure** | SECURITY.md, coordinated disclosure | ✅ Compliant |
 | **Security Updates** | Dependabot, automated scanning | ✅ Compliant |
-| **SBOM Generation** | Planned for dependencies | ⚠️ Partial (future enhancement) |
+| **SBOM Generation** | Not applicable - static content only | ✅ Compliant (N/A) |
 | **Incident Response** | Documented procedures | ✅ Compliant |
 
 **ISMS Policy Mapping:**

@@ -66,11 +66,11 @@ Add SRI hashes to all external resources (Google Fonts) to prevent supply chain 
 
 ```html
 <!-- Current (without SRI) -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" 
       rel="stylesheet">
 
 <!-- Future (with SRI) -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
       integrity="sha384-GENERATED_HASH_HERE"
       crossorigin="anonymous">
@@ -649,7 +649,7 @@ This future security architecture roadmap demonstrates Hack23 AB's commitment to
 
 **Next Steps:**
 1. Prioritize Q4 2025 enhancements for immediate implementation
-2. Allocate budget for AWS WAF and Security Hub (Q1 2026)
+2. Begin SRI implementation for external resources (Q4 2025)
 3. Schedule quarterly security architecture reviews
 4. Track implementation progress via GitHub Projects
 5. Update this document quarterly with progress and new plans
