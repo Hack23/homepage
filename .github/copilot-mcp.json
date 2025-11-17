@@ -11,8 +11,8 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
-        "GITHUB_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
+        "GITHUB_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}"
         "GITHUB_OWNER": "Hack23",
         "GITHUB_REPO": "homepage"
       },
@@ -26,10 +26,6 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-   "aws-knowledge": {
-      "command": "npx",
-      "args": ["-y", "fastmcp", "run", "https://knowledge-mcp.global.api.aws"]
-    },    
     "git": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/workspaces/homepage"],
@@ -48,31 +44,15 @@
       "env": {
         "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       },
-      "description": "Enables web search for research, documentation, and analysis",
-      "disabled": false,
-      "note": "Web search enabled for product vision research"
+      "description": "Enables searching documentation for React, TypeScript, PixiJS, and Vite",
+      "disabled": true,
+      "note": "Enable this by setting BRAVE_API_KEY environment variable"
     },
     "playwright": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-playwright"],
-      "description": "Browser automation for screenshots, testing, and visual documentation",
+      "description": "Browser automation for testing and debugging web applications",
       "disabled": false
-    },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"],
-      "description": "Fetch and analyze web content from URLs including GitHub repos",
-      "disabled": false
-    },
-    "everart": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-everart"],
-      "env": {
-        "EVERART_API_KEY": "${EVERART_API_KEY}"
-      },
-      "description": "Generate psychedelic and visionary artwork for product visions",
-      "disabled": false,
-      "note": "Optional: Enable for AI-generated visionary artwork"
     }
   },
   "globalShortcut": "Ctrl+Shift+Space"
