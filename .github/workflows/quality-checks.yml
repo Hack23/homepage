@@ -100,11 +100,11 @@ jobs:
           echo ""
           echo "📊 Internal Link Check Results:"
           if [ -f internal-links-report.json ]; then
-            cat internal-links-report.json | head -100
+            head -100 internal-links-report.json
             
             # Count passed and failed links
-            passed=$(cat internal-links-report.json | jq -r '.links[] | select(.state == "OK")' 2>/dev/null | wc -l || echo "0")
-            failed=$(cat internal-links-report.json | jq -r '.links[] | select(.state != "OK")' 2>/dev/null | wc -l || echo "0")
+            passed=$(jq -r '.links[] | select(.state == "OK")' internal-links-report.json 2>/dev/null | wc -l || echo "0")
+            failed=$(jq -r '.links[] | select(.state != "OK")' internal-links-report.json 2>/dev/null | wc -l || echo "0")
             
             echo ""
             echo "✅ Passed: $passed links"
@@ -127,11 +127,11 @@ jobs:
           echo ""
           echo "📊 External Link Check Results:"
           if [ -f external-links-report.json ]; then
-            cat external-links-report.json | head -100
+            head -100 external-links-report.json
             
             # Count passed and failed links
-            passed=$(cat external-links-report.json | jq -r '.links[] | select(.state == "OK")' 2>/dev/null | wc -l || echo "0")
-            failed=$(cat external-links-report.json | jq -r '.links[] | select(.state != "OK")' 2>/dev/null | wc -l || echo "0")
+            passed=$(jq -r '.links[] | select(.state == "OK")' external-links-report.json 2>/dev/null | wc -l || echo "0")
+            failed=$(jq -r '.links[] | select(.state != "OK")' external-links-report.json 2>/dev/null | wc -l || echo "0")
             
             echo ""
             echo "✅ Passed: $passed links"
