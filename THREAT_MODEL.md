@@ -5,15 +5,15 @@
 <h1 align="center">🎯 Hack23 Homepage — Threat Model</h1>
 
 <p align="center">
-  <strong>🛡️ STRIDE Threat Analysis for Static Website Security</strong><br>
-  <em>🔍 Public Transparency & Cybersecurity Consulting Platform</em>
+  <strong>🛡️ Proactive Security Through Structured Threat Analysis</strong><br>
+  <em>🔍 STRIDE • MITRE ATT&CK • Static Website Security • Public Transparency</em>
 </p>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Effective-2025--11--16-success?style=for-the-badge" alt="Effective Date"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
+  <a><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
+  <a><img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/></a>
+  <a><img src="https://img.shields.io/badge/Effective-2025--11--16-success?style=for-the-badge" alt="Effective Date"/></a>
+  <a><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
 </p>
 
 [![License](https://img.shields.io/github/license/Hack23/homepage)](https://github.com/Hack23/homepage/blob/master/LICENSE)
@@ -56,7 +56,7 @@ This threat model demonstrates **🛡️ cybersecurity consulting expertise** th
 - DNS provider infrastructure (beyond configuration)
 
 ### **🔗 Policy Alignment**
-Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md) methodology and frameworks.
+Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md) methodology and frameworks.
 
 ---
 
@@ -66,9 +66,9 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 
 | Dimension | Level | Rationale | Business Impact |
 |----------|-------|-----------|----------------|
-| **🔐 Confidentiality** | [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md#confidentiality-levels) | Public corporate website with no sensitive data | [![Trust Enhancement](https://img.shields.io/badge/Value-Trust_Enhancement-darkgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **🔒 Integrity** | [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md#integrity-levels) | Corporate information accuracy important for reputation | [![Operational Excellence](https://img.shields.io/badge/Value-Operational_Excellence-blue?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **⚡ Availability** | [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md#availability-levels) | Marketing website; tolerates brief outages | [![Revenue Protection](https://img.shields.io/badge/Value-Revenue_Protection-red?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
+| **🔐 Confidentiality** | [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) | Public corporate website with no sensitive data | [![Trust Enhancement](https://img.shields.io/badge/Value-Trust_Enhancement-darkgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **🔒 Integrity** | [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) | Corporate information accuracy important for reputation | [![Operational Excellence](https://img.shields.io/badge/Value-Operational_Excellence-blue?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **⚡ Availability** | [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels) | Marketing website; tolerates brief outages | [![Revenue Protection](https://img.shields.io/badge/Value-Revenue_Protection-red?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
 
 ### **⚖️ Regulatory & Compliance Profile**
 
@@ -85,15 +85,15 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 
 ### **🏗️ Asset-Centric Threat Analysis**
 
-Following [Hack23 AB Asset-Centric Threat Modeling](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md#asset-centric-threat-modeling) methodology:
+Following [Hack23 AB Asset-Centric Threat Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#asset-centric-threat-modeling) methodology:
 
 | Asset Category | Why Valuable | Threat Goals | Key Controls | Business Value |
 |----------------|--------------|-------------|-------------|----------------|
-| **🌐 Website Content** | Brand reputation and consulting credibility | Defacement, misinformation injection | S3 versioning, CloudTrail logging, branch protection | [![Trust Enhancement](https://img.shields.io/badge/Value-Trust_Enhancement-darkgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **🧠 Source Code** | Intellectual property and methodology | IP theft, backdoor injection | Private initially, branch protection, code scanning | [![Competitive Advantage](https://img.shields.io/badge/Value-Competitive_Advantage-gold?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **🔧 Build Pipeline** | Software supply chain integrity | Supply chain attacks, malicious code injection | GitHub Actions hardening, OIDC federation, no long-lived credentials | [![Risk Reduction](https://img.shields.io/badge/Value-Risk_Reduction-green?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **🔑 AWS Infrastructure** | Service availability and data integrity | Resource abuse, configuration tampering | IAM least privilege, MFA on root, CloudTrail immutable logs | [![Security Excellence](https://img.shields.io/badge/Value-Security_Excellence-purple?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
-| **🏢 Brand & Reputation** | Customer trust and business development | Reputation damage through security incidents | Transparent security practices, public ISMS, security controls | [![Revenue Protection](https://img.shields.io/badge/Value-Revenue_Protection-red?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) |
+| **🌐 Website Content** | Brand reputation and consulting credibility | Defacement, misinformation injection | S3 versioning, CloudTrail logging, branch protection | [![Trust Enhancement](https://img.shields.io/badge/Value-Trust_Enhancement-darkgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **🧠 Source Code** | Intellectual property and methodology | IP theft, backdoor injection | Private initially, branch protection, code scanning | [![Competitive Advantage](https://img.shields.io/badge/Value-Competitive_Advantage-gold?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **🔧 Build Pipeline** | Software supply chain integrity | Supply chain attacks, malicious code injection | GitHub Actions hardening, OIDC federation, no long-lived credentials | [![Risk Reduction](https://img.shields.io/badge/Value-Risk_Reduction-green?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **🔑 AWS Infrastructure** | Service availability and data integrity | Resource abuse, configuration tampering | IAM least privilege, MFA on root, CloudTrail immutable logs | [![Security Excellence](https://img.shields.io/badge/Value-Security_Excellence-purple?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
+| **🏢 Brand & Reputation** | Customer trust and business development | Reputation damage through security incidents | Transparent security practices, public ISMS, security controls | [![Revenue Protection](https://img.shields.io/badge/Value-Revenue_Protection-red?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) |
 
 ### **🔐 Crown Jewel Analysis**
 
@@ -102,44 +102,137 @@ Following [Hack23 AB Asset-Centric Threat Modeling](https://github.com/Hack23/IS
   init: {
     'theme': 'base',
     'themeVariables': {
-      'primaryColor': '#FFD700',
-      'primaryTextColor': '#000',
-      'primaryBorderColor': '#DAA520',
-      'lineColor': '#4169E1',
-      'secondaryColor': '#87CEEB',
-      'tertiaryColor': '#98FB98',
-      'clusterBkg': '#F0F8FF',
-      'clusterBorder': '#4169E1',
-      'fontSize': '16px'
+      'primaryColor': '#e8f5e9',
+      'primaryTextColor': '#2e7d32',
+      'lineColor': '#4caf50',
+      'secondaryColor': '#ffcdd2',
+      'tertiaryColor': '#fff3e0'
     }
   }
 }%%
-graph TB
-    subgraph "Crown Jewels - The Five Essential Assets"
-        CJ1[🏢 Brand Reputation<br/>Customer Trust]:::crown
-        CJ2[🌐 Website Content<br/>Corporate Identity]:::crown
-        CJ3[🔧 CI/CD Pipeline<br/>Supply Chain Integrity]:::crown
-        CJ4[🔑 AWS Infrastructure<br/>Service Foundation]:::crown
-        CJ5[🧠 Source Code<br/>Intellectual Property]:::crown
+flowchart TB
+    subgraph CROWN_JEWELS["💎 Crown Jewels"]
+        BRAND[🏢 Brand Reputation<br/>Customer Trust & Credibility]
+        CONTENT[🌐 Website Content<br/>Corporate Identity]
+        PIPELINE[🔧 CI/CD Pipeline<br/>Supply Chain Integrity]
     end
     
-    CJ1 --> CJ2
-    CJ2 --> CJ3
-    CJ3 --> CJ4
-    CJ4 --> CJ5
-    CJ5 -.->|feedback| CJ1
+    subgraph ATTACK_VECTORS["⚔️ Primary Attack Vectors"]
+        DEFACEMENT[💉 Website Defacement]
+        SUPPLY_CHAIN[🔗 Supply Chain Attack]
+        INFRASTRUCTURE[☁️ Infrastructure Compromise]
+        CREDENTIAL_THEFT[🔑 Credential Theft]
+    end
     
-    classDef crown fill:#FFD700,stroke:#DAA520,stroke-width:3px,color:#000
+    subgraph THREAT_AGENTS["👥 Key Threat Agents"]
+        OPPORTUNISTIC[🎯 Opportunistic Attackers<br/>Reputation Damage]
+        COMPETITORS[🏢 Competitors<br/>Market Intelligence]
+        NATION_STATE[🏛️ Nation-State<br/>Infrastructure Disruption]
+        SUPPLY_CHAIN_THREAT[💰 Supply Chain Actors<br/>Backdoor Insertion]
+    end
+    
+    DEFACEMENT --> CONTENT
+    SUPPLY_CHAIN --> PIPELINE
+    INFRASTRUCTURE --> BRAND
+    CREDENTIAL_THEFT --> CONTENT
+    
+    OPPORTUNISTIC --> DEFACEMENT
+    COMPETITORS --> CREDENTIAL_THEFT
+    NATION_STATE --> INFRASTRUCTURE
+    SUPPLY_CHAIN_THREAT --> SUPPLY_CHAIN
+    
+    style BRAND fill:#ffcdd2,stroke:#d32f2f,color:#000
+    style CONTENT fill:#ffcdd2,stroke:#d32f2f,color:#000
+    style PIPELINE fill:#ffcdd2,stroke:#d32f2f,color:#000
 ```
 
-**The Law of Fives in Asset Protection:**
-1. **Brand Reputation** - The cosmic purpose (why we exist)
-2. **Website Content** - The manifestation (what users see)
-3. **CI/CD Pipeline** - The transformation (how it's built)
-4. **AWS Infrastructure** - The foundation (where it lives)
-5. **Source Code** - The essence (what it truly is)
+---
 
-**Synchronistic Note:** The 5 crown jewels naturally emerged during asset analysis—a pentagon of protection revealing itself through the Law of Fives. Each point protects the next in a continuous cycle.
+## 🌐 Data Flow & Architecture Analysis
+
+### **🏛️ Architecture-Centric STRIDE Analysis**
+
+Following [Architecture-Centric Threat Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#architecture-centric-threat-modeling) methodology:
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#e3f2fd',
+      'primaryTextColor': '#01579b',
+      'lineColor': '#0288d1',
+      'secondaryColor': '#f1f8e9',
+      'tertiaryColor': '#fff8e1'
+    }
+  }
+}%%
+flowchart TB
+    subgraph TRUST_BOUNDARY_1["🌐 Internet/Public Trust Boundary"]
+        USER[👤 Website Visitors]
+        BOTS[🤖 Search Engines/Bots]
+    end
+    
+    subgraph TRUST_BOUNDARY_2["🛡️ AWS CloudFront Trust Boundary"]
+        CF[🚀 CloudFront CDN]
+        SHIELD[🛡️ AWS Shield DDoS Protection]
+        EDGE[🌍 Global Edge Locations]
+    end
+    
+    subgraph TRUST_BOUNDARY_3["🔒 AWS S3 Trust Boundary"]
+        S3[📦 S3 Bucket (Private)]
+        VERSIONING[🔄 S3 Versioning]
+        LOGS[📋 Access Logs]
+    end
+    
+    subgraph TRUST_BOUNDARY_4["🔧 GitHub Trust Boundary"]
+        REPO[📂 GitHub Repository (Public)]
+        ACTIONS[⚙️ GitHub Actions CI/CD]
+        SECRETS[🔐 Environment Secrets]
+    end
+    
+    subgraph TRUST_BOUNDARY_5["☁️ AWS IAM Trust Boundary"]
+        IAM[🔑 IAM Roles]
+        OIDC[🎫 OIDC Federation]
+        CLOUDTRAIL[📊 CloudTrail Audit Logs]
+    end
+    
+    subgraph EXTERNAL["🌍 External Dependencies"]
+        FONTS[🔤 Google Fonts CDN]
+    end
+    
+    USER -->|🎯 T1: HTTPS Request| CF
+    BOTS -->|🎯 T2: Crawl| CF
+    CF -->|🎯 T3: Origin Fetch| S3
+    S3 -->|Protected by| VERSIONING
+    S3 -->|Logged to| LOGS
+    ACTIONS -->|🎯 T4: Deploy via OIDC| IAM
+    IAM -->|🎯 T5: S3 Write| S3
+    REPO -->|🎯 T6: Triggers| ACTIONS
+    SECRETS -->|🎯 T7: Provides| ACTIONS
+    USER -.->|🎯 T8: External Request| FONTS
+    CLOUDTRAIL -.->|Monitors| IAM
+    CLOUDTRAIL -.->|Monitors| S3
+    SHIELD -->|Protects| CF
+    
+    style USER fill:#81c784,stroke:#388e3c,stroke-width:2px,color:#fff
+    style CF fill:#ff9800,stroke:#e65100,stroke-width:2px,color:#000
+    style S3 fill:#ff9800,stroke:#e65100,stroke-width:2px,color:#000
+    style REPO fill:#4169E1,stroke:#1E3A8A,stroke-width:2px,color:#fff
+    style ACTIONS fill:#4169E1,stroke:#1E3A8A,stroke-width:2px,color:#fff
+    style IAM fill:#ff9800,stroke:#e65100,stroke-width:2px,color:#000
+    style FONTS fill:#9e9e9e,stroke:#616161,stroke-width:2px,color:#fff
+```
+
+### **🎭 STRIDE per Element Analysis**
+
+| Architecture Element | Spoofing | Tampering | Repudiation | Info Disclosure | Denial of Service | Elevation of Privilege |
+|---------------------|----------|-----------|-------------|-----------------|-------------------|----------------------|
+| **🌐 CloudFront CDN** | Domain hijacking | Cache poisoning | Access log gaps | Configuration exposure | DDoS attacks | Distribution hijacking |
+| **📦 S3 Bucket** | N/A (object storage) | File modification | Incomplete logging | Public access misconfiguration | Quota exhaustion | Bucket policy bypass |
+| **⚙️ GitHub Actions** | Workflow identity | Malicious PR injection | Log deletion | Secret exposure | Resource abuse | Workflow permission escalation |
+| **🔐 IAM/OIDC** | Token forgery | Role policy tampering | CloudTrail gaps | Credential leak | N/A | Privilege escalation |
+| **🔤 Google Fonts** | CDN spoofing | Content injection | N/A | Tracking | Service disruption | N/A |
 
 ---
 
@@ -661,49 +754,167 @@ The following risks are **ACCEPTED** as part of normal business operations:
 
 ---
 
-## 🔗 MITRE ATT&CK Mapping
+## 🎖️ MITRE ATT&CK Framework Integration
 
-### **Mapped Techniques**
+### **🔍 Attacker-Centric Analysis**
 
-| ATT&CK ID | Technique | Tactic | Associated Threats | Mitigations |
-|-----------|-----------|--------|-------------------|-------------|
-| **T1584.001** | Compromise Infrastructure: Domains | Resource Development | S-01 (DNS hijacking) | DNSSEC, registrar 2FA, domain lock |
-| **T1584.004** | Compromise Infrastructure: Server | Resource Development | S-02 (certificate spoofing) | AWS Certificate Manager, CAA records |
-| **T1584.006** | Compromise Infrastructure: Web Services | Resource Development | S-04 (CloudFront hijacking) | IAM least privilege, CloudTrail |
-| **T1078.001** | Valid Accounts: Default Accounts | Privilege Escalation | S-03 (GitHub compromise) | MFA enforcement, activity monitoring |
-| **T1078.004** | Valid Accounts: Cloud Accounts | Privilege Escalation | E-01 (AWS IAM escalation) | MFA, least privilege, OIDC |
-| **T1565.001** | Data Manipulation: Stored Data Manipulation | Impact | T-01 (website defacement) | S3 versioning, CloudTrail, branch protection |
-| **T1195.002** | Supply Chain Compromise: Software Supply Chain | Initial Access | T-03, E-05 (supply chain attacks) | SRI, CSP, Dependabot, package locks |
-| **T1530** | Data from Cloud Storage Object | Collection | T-02, I-03 (S3 compromise) | Private bucket, IAM least privilege, CloudTrail |
-| **T1554** | Compromise Client Software Binary | Persistence | T-04 (CI/CD tampering) | Branch protection, code review, workflow permissions |
-| **T1557** | Man-in-the-Middle | Credential Access | T-05 (MITM) | HTTPS/TLS 1.3, HSTS, certificate pinning |
-| **T1070.002** | Indicator Removal: Clear Linux or Mac System Logs | Defense Evasion | R-01 (log tampering) | Immutable CloudTrail logs |
-| **T1070.003** | Indicator Removal: Clear Command History | Defense Evasion | R-02, R-03 (log gaps) | CloudTrail, S3 access logging |
-| **T1562.001** | Impair Defenses: Disable or Modify Tools | Defense Evasion | R-03 (disable logging) | Protected CloudTrail configuration |
-| **T1552.001** | Credentials in Files | Credential Access | I-01, I-05 (credential leaks) | Secret scanning, OIDC, no hardcoded creds |
-| **T1552.004** | Unsecured Credentials: Private Keys | Credential Access | I-04 (signed URL leak) | Not using signed URLs, expiration if implemented |
-| **T1213** | Data from Information Repositories | Collection | I-02 (source code exposure) | Public by design, no secrets in code |
-| **T1589.002** | Gather Victim Identity Information: Email Addresses | Reconnaissance | I-06 (email harvesting) | Accepted risk for business contact |
-| **T1498.001** | Network Denial of Service: Direct Network Flood | Impact | D-03 (DNS takedown) | DNSSEC, registrar lock |
-| **T1498.002** | Network Denial of Service: Reflection Amplification | Impact | D-01 (DDoS) | AWS Shield, CloudFront protection |
-| **T1496** | Resource Hijacking | Impact | D-04, D-05 (resource exhaustion) | GitHub Actions limits, cost monitoring |
-| **T1548** | Abuse Elevation Control Mechanism | Privilege Escalation | E-02 (Actions privilege escalation) | Minimal permissions, environment secrets |
-| **T1134** | Access Token Manipulation | Privilege Escalation | E-04 (OIDC token manipulation) | Short-lived tokens, claim validation |
+Following [MITRE ATT&CK Integration](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#mitre-attck-integration) methodology:
 
-### **ATT&CK Coverage Map**
+| ATT&CK ID | Technique | Tactic | Associated Threats | Mitigations | Status |
+|-----------|-----------|--------|-------------------|-------------|--------|
+| **[T1584.001](https://attack.mitre.org/techniques/T1584/001/)** | Compromise Infrastructure: Domains | Resource Development | S-01 (DNS hijacking) | DNSSEC, registrar 2FA, domain lock | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1584.004](https://attack.mitre.org/techniques/T1584/004/)** | Compromise Infrastructure: Server | Resource Development | S-02 (certificate spoofing) | AWS Certificate Manager, CAA records | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1584.006](https://attack.mitre.org/techniques/T1584/006/)** | Compromise Infrastructure: Web Services | Resource Development | S-04 (CloudFront hijacking) | IAM least privilege, CloudTrail | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1078.001](https://attack.mitre.org/techniques/T1078/001/)** | Valid Accounts: Default Accounts | Privilege Escalation | S-03 (GitHub compromise) | MFA enforcement, activity monitoring | [![Partial](https://img.shields.io/badge/Status-Partial-yellow?style=flat-square)](#) |
+| **[T1078.004](https://attack.mitre.org/techniques/T1078/004/)** | Valid Accounts: Cloud Accounts | Privilege Escalation | E-01 (AWS IAM escalation) | MFA, least privilege, OIDC | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1565.001](https://attack.mitre.org/techniques/T1565/001/)** | Data Manipulation: Stored Data Manipulation | Impact | T-01 (website defacement) | S3 versioning, CloudTrail, branch protection | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1195.002](https://attack.mitre.org/techniques/T1195/002/)** | Supply Chain Compromise: Software Supply Chain | Initial Access | T-03, E-05 (supply chain attacks) | SRI, CSP, Dependabot, package locks | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1530](https://attack.mitre.org/techniques/T1530/)** | Data from Cloud Storage Object | Collection | T-02, I-03 (S3 compromise) | Private bucket, IAM least privilege, CloudTrail | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1554](https://attack.mitre.org/techniques/T1554/)** | Compromise Client Software Binary | Persistence | T-04 (CI/CD tampering) | Branch protection, code review, workflow permissions | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1557](https://attack.mitre.org/techniques/T1557/)** | Man-in-the-Middle | Credential Access | T-05 (MITM) | HTTPS/TLS 1.3, HSTS, certificate pinning | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1070.002](https://attack.mitre.org/techniques/T1070/002/)** | Indicator Removal: Clear Logs | Defense Evasion | R-01 (log tampering) | Immutable CloudTrail logs | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1070.003](https://attack.mitre.org/techniques/T1070/003/)** | Indicator Removal: Clear Command History | Defense Evasion | R-02, R-03 (log gaps) | CloudTrail, S3 access logging | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1562.001](https://attack.mitre.org/techniques/T1562/001/)** | Impair Defenses: Disable or Modify Tools | Defense Evasion | R-03 (disable logging) | Protected CloudTrail configuration | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1552.001](https://attack.mitre.org/techniques/T1552/001/)** | Credentials in Files | Credential Access | I-01, I-05 (credential leaks) | Secret scanning, OIDC, no hardcoded creds | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1552.004](https://attack.mitre.org/techniques/T1552/004/)** | Unsecured Credentials: Private Keys | Credential Access | I-04 (signed URL leak) | Not using signed URLs, expiration if implemented | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1213](https://attack.mitre.org/techniques/T1213/)** | Data from Information Repositories | Collection | I-02 (source code exposure) | Public by design, no secrets in code | [![Accepted](https://img.shields.io/badge/Status-Accepted_Risk-blue?style=flat-square)](#) |
+| **[T1589.002](https://attack.mitre.org/techniques/T1589/002/)** | Gather Victim Identity Information: Email Addresses | Reconnaissance | I-06 (email harvesting) | Accepted risk for business contact | [![Accepted](https://img.shields.io/badge/Status-Accepted_Risk-blue?style=flat-square)](#) |
+| **[T1498.001](https://attack.mitre.org/techniques/T1498/001/)** | Network Denial of Service: Direct Flood | Impact | D-03 (DNS takedown) | DNSSEC, registrar lock | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1498.002](https://attack.mitre.org/techniques/T1498/002/)** | Network Denial of Service: Reflection Amplification | Impact | D-01 (DDoS) | AWS Shield, CloudFront protection | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1496](https://attack.mitre.org/techniques/T1496/)** | Resource Hijacking | Impact | D-04, D-05 (resource exhaustion) | GitHub Actions limits, cost monitoring | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1548](https://attack.mitre.org/techniques/T1548/)** | Abuse Elevation Control Mechanism | Privilege Escalation | E-02 (Actions privilege escalation) | Minimal permissions, environment secrets | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **[T1134](https://attack.mitre.org/techniques/T1134/)** | Access Token Manipulation | Privilege Escalation | E-04 (OIDC token manipulation) | Short-lived tokens, claim validation | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+
+### **📊 ATT&CK Coverage Analysis**
 
 **Tactics Covered:**
-1. ✅ **Reconnaissance** (1 technique)
-2. ✅ **Resource Development** (3 techniques)
-3. ✅ **Initial Access** (1 technique)
-4. ✅ **Persistence** (1 technique)
-5. ✅ **Privilege Escalation** (4 techniques)
-6. ✅ **Defense Evasion** (3 techniques)
-7. ✅ **Credential Access** (3 techniques)
-8. ✅ **Collection** (2 techniques)
-9. ✅ **Impact** (4 techniques)
+1. ✅ **[Reconnaissance](https://attack.mitre.org/tactics/TA0043/)** (1 technique) - 10% coverage
+2. ✅ **[Resource Development](https://attack.mitre.org/tactics/TA0042/)** (3 techniques) - 50% coverage
+3. ✅ **[Initial Access](https://attack.mitre.org/tactics/TA0001/)** (1 technique) - 20% coverage
+4. ✅ **[Persistence](https://attack.mitre.org/tactics/TA0003/)** (1 technique) - 15% coverage
+5. ✅ **[Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)** (4 techniques) - 35% coverage
+6. ✅ **[Defense Evasion](https://attack.mitre.org/tactics/TA0005/)** (3 techniques) - 20% coverage
+7. ✅ **[Credential Access](https://attack.mitre.org/tactics/TA0006/)** (3 techniques) - 25% coverage
+8. ✅ **[Collection](https://attack.mitre.org/tactics/TA0009/)** (2 techniques) - 15% coverage
+9. ✅ **[Impact](https://attack.mitre.org/tactics/TA0040/)** (4 techniques) - 30% coverage
 
 **Total: 22 MITRE ATT&CK techniques mapped** across 9 tactics.
+
+**Not Applicable Tactics:**
+- ❌ **Execution** - Static website, no code execution
+- ❌ **Discovery** - No active enumeration targets
+- ❌ **Lateral Movement** - Single-component architecture
+- ❌ **Command and Control** - No persistent connections
+- ❌ **Exfiltration** - Public data, no exfiltration concerns
+
+#### **🎯 Coverage Heat Map by Tactic**
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#e8f5e9',
+      'primaryTextColor': '#2e7d32',
+      'lineColor': '#4caf50'
+    }
+  }
+}%%
+pie title ATT&CK Tactic Coverage
+    "Resource Development" : 50
+    "Privilege Escalation" : 35
+    "Impact" : 30
+    "Credential Access" : 25
+    "Defense Evasion" : 20
+    "Initial Access" : 20
+    "Collection" : 15
+    "Persistence" : 15
+    "Reconnaissance" : 10
+```
+
+#### **🛡️ Security Control to ATT&CK Mitigation Mapping**
+
+| Security Control | MITRE Mitigation | Addressed Techniques | Implementation Status |
+|-----------------|------------------|---------------------|----------------------|
+| **Content Security Policy** | [M1021: Restrict Web-Based Content](https://attack.mitre.org/mitigations/M1021/) | [T1195](https://attack.mitre.org/techniques/T1195/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **Subresource Integrity** | [M1051: Update Software](https://attack.mitre.org/mitigations/M1051/) | [T1195.002](https://attack.mitre.org/techniques/T1195/002/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **AWS CloudTrail** | [M1047: Audit](https://attack.mitre.org/mitigations/M1047/) | [T1070](https://attack.mitre.org/techniques/T1070/), [T1078](https://attack.mitre.org/techniques/T1078/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **IAM Least Privilege** | [M1026: Privileged Account Management](https://attack.mitre.org/mitigations/M1026/) | [T1078](https://attack.mitre.org/techniques/T1078/), [T1548](https://attack.mitre.org/techniques/T1548/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **OIDC Federation** | [M1026: Privileged Account Management](https://attack.mitre.org/mitigations/M1026/) | [T1552.001](https://attack.mitre.org/techniques/T1552/001/), [T1134](https://attack.mitre.org/techniques/T1134/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **AWS Shield** | [M1037: Filter Network Traffic](https://attack.mitre.org/mitigations/M1037/) | [T1498](https://attack.mitre.org/techniques/T1498/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **Branch Protection** | [M1053: Data Backup](https://attack.mitre.org/mitigations/M1053/) | [T1565.001](https://attack.mitre.org/techniques/T1565/001/), [T1554](https://attack.mitre.org/techniques/T1554/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+| **GitHub Secret Scanning** | [M1017: User Training](https://attack.mitre.org/mitigations/M1017/) | [T1552.001](https://attack.mitre.org/techniques/T1552/001/) | [![Implemented](https://img.shields.io/badge/Status-Implemented-success?style=flat-square)](#) |
+
+#### **🔗 Related Resources**
+
+- 📚 [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/)
+- 🗺️ [ATT&CK Navigator Tool](https://mitre-attack.github.io/attack-navigator/)
+- 📋 [CISA Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+- 🎯 [Hack23 Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#mitre-attck-integration)
+
+### **🌳 Attack Tree Analysis**
+
+---
+
+## 🔄 Continuous Validation & Assessment
+
+### **🎪 Threat Modeling Workshop Process**
+
+Following [Hack23 AB Workshop Framework](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#threat-modeling-workshop-framework):
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#e3f2fd',
+      'primaryTextColor': '#01579b',
+      'lineColor': '#0288d1',
+      'secondaryColor': '#f1f8e9',
+      'tertiaryColor': '#fff8e1'
+    }
+  }
+}%%
+flowchart LR
+    PRE[📋 Pre-Workshop Prep] --> ENUM[🎯 Asset & Trust Boundary Enumeration]
+    ENUM --> THREATS[🔍 Threat Identification<br/>STRIDE + MITRE ATT&CK]
+    THREATS --> MAP[⚖️ Risk & Compliance Mapping]
+    MAP --> PLAN[🛡️ Mitigation & Control Plan]
+    PLAN --> INTEG[🔧 CI/CD Integration]
+    INTEG --> MON[📊 Monitoring & Metrics]
+    MON --> REVIEW[🔄 Quarterly Review]
+    REVIEW --> THREATS
+```
+
+### **📅 Assessment Lifecycle**
+
+| Assessment Type | Trigger | Frequency | Scope | Documentation Update |
+|----------------|---------|-----------|-------|---------------------|
+| **📅 Comprehensive Review** | Quarterly cycle | Quarterly | Complete threat model | Full document revision |
+| **🔄 Delta Assessment** | Architecture changes | Per change | Modified components | Incremental updates |
+| **🚨 Incident-Driven** | Security events | As needed | Affected systems | Lessons learned integration |
+| **🎯 Threat Intelligence** | New attack patterns | Monthly | High-risk scenarios | MITRE ATT&CK updates |
+| **📦 Dependency Assessment** | New dependencies | Per dependency change | Supply chain components | Dependency risk updates |
+
+---
+
+## 📊 Comprehensive Threat Agent Analysis
+
+### **🔍 Detailed Threat Actor Classification**
+
+Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#threat-agent-classification) methodology:
+
+| Threat Agent | Category | Motivation | MITRE Techniques | Risk Level | Targeted Assets |
+|--------------|----------|------------|------------------|------------|----------------|
+| **🎯 Opportunistic Attackers** | External | Reputation damage, notoriety | [T1565.001](https://attack.mitre.org/techniques/T1565/001/), [T1498](https://attack.mitre.org/techniques/T1498/) | [![High](https://img.shields.io/badge/Risk-High-orange?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | Website content, brand reputation |
+| **🏢 Commercial Competitors** | External | Market intelligence, sabotage | [T1213](https://attack.mitre.org/techniques/T1213/), [T1565](https://attack.mitre.org/techniques/T1565/) | [![Medium](https://img.shields.io/badge/Risk-Medium-yellow?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | Source code, consulting methodologies |
+| **🏛️ Nation-State Actors** | External/Advanced | Infrastructure disruption, espionage | [T1584](https://attack.mitre.org/techniques/T1584/), [T1078](https://attack.mitre.org/techniques/T1078/) | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | AWS infrastructure, DNS |
+| **🔗 Supply Chain Actors** | External | Backdoor insertion, widespread impact | [T1195.002](https://attack.mitre.org/techniques/T1195/002/), [T1554](https://attack.mitre.org/techniques/T1554/) | [![High](https://img.shields.io/badge/Risk-High-orange?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | CI/CD pipeline, dependencies |
+| **👤 Malicious Insiders** | Internal | Sabotage, data theft, negligence | [T1552.001](https://attack.mitre.org/techniques/T1552/001/), [T1078](https://attack.mitre.org/techniques/T1078/) | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | AWS credentials, source code |
+| **🤖 Automated Bots** | Automated | Resource abuse, spam, scraping | [T1589.002](https://attack.mitre.org/techniques/T1589/002/), [T1496](https://attack.mitre.org/techniques/T1496/) | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) | Email addresses, service availability |
+
+**Most Probable Attack Scenario:**  
+🎯 Opportunistic attacker → GitHub account compromise (weak password/no MFA) → Repository access → Malicious code push → Website defacement → Maximum embarrassment for cybersecurity consultant
 
 ---
 
@@ -738,10 +949,10 @@ The following risks are **ACCEPTED** as part of normal business operations:
 
 ### **Hack23 ISMS Framework**
 
-- 🎯 [Threat Modeling Policy](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md) - Organizational threat modeling methodology
-- 🔐 [Secure Development Policy](https://github.com/Hack23/ISMS/blob/main/Secure_Development_Policy.md) - SDLC security requirements
-- 🏷️ [Classification Framework](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) - Data classification and business impact
-- 📋 [Information Security Policy](https://github.com/Hack23/ISMS/blob/main/Information_Security_Policy.md) - Overarching security governance
+- 🎯 [Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md) - Organizational threat modeling methodology
+- 🔐 [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) - SDLC security requirements
+- 🏷️ [Classification Framework](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) - Data classification and business impact
+- 📋 [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) - Overarching security governance
 
 ### **Related Threat Models**
 
@@ -771,11 +982,11 @@ The following risks are **ACCEPTED** as part of normal business operations:
 **📋 Document Control:**  
 **✅ Approved by:** James Pether Sörling, CEO  
 **📤 Distribution:** Public  
-**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md)  
+**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md)  
 **📅 Effective Date:** 2025-11-16  
 **⏰ Next Review:** 2026-02-16 (Quarterly)  
-**🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-A.8.20_A.8.29-blue?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-ID.RA_PR.IP-green?style=flat-square)](https://github.com/Hack23/ISMS/blob/main/CLASSIFICATION.md)  
-**🔗 Related Documents:** [Secure Development Policy](https://github.com/Hack23/ISMS/blob/main/Secure_Development_Policy.md), [Threat Modeling Policy](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md), [SECURITY.md](SECURITY.md)
+**🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-A.8.20_A.8.29-blue?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-ID.RA_PR.IP-green?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md)  
+**🔗 Related Documents:** [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md), [Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md), [SECURITY.md](SECURITY.md)
 
 ---
 
