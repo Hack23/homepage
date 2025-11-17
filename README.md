@@ -6,6 +6,7 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 [![Scorecard supply-chain security](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml)
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
+[![Quality Checks](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml)
 
 ## 🔐 Commitment to Transparency and Security
 
@@ -88,6 +89,42 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 
 ---
 
+## 🔍 Quality Assurance
+
+This repository implements comprehensive automated quality checks to ensure code quality and prevent regressions:
+
+### Automated Checks
+
+- **HTML Validation**: All 74 HTML files are automatically validated using HTMLHint on every push and pull request
+- **Link Checking**: Internal and external links are checked using Linkinator to prevent broken links
+- **Security Scanning**: ZAP (Zed Attack Proxy) performs security vulnerability scanning on the deployed site
+- **Performance Audits**: Lighthouse audits monitor performance, accessibility, and SEO metrics
+- **Supply Chain Security**: OpenSSF Scorecard and Dependabot monitor dependencies and security best practices
+
+### Running Quality Checks Locally
+
+```bash
+# Install tools
+npm install -g htmlhint linkinator
+
+# Validate HTML files
+htmlhint *.html
+
+# Check internal links (requires local server)
+python3 -m http.server 8080 &
+linkinator http://localhost:8080/ --recurse --skip "^(?!http://localhost:8080)"
+
+# Check external links (sample)
+linkinator https://hack23.com/ --timeout 30000
+```
+
+### Quality Reports
+
+Quality check reports are available as artifacts in the [Quality Checks workflow](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml):
+- `htmlhint-report`: HTML validation results for all 74 files
+- `link-checker-reports`: Internal and external link checking results
+
+---
 
 ## Table of Contents
 
