@@ -577,10 +577,9 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
-    # Auto-merge for patch updates
-    auto-merge:
-      - update-type: "security:patch"
-      - update-type: "semver:patch"
+    # Note: Dependabot does NOT support an 'auto-merge' field in this config.
+    # To enable auto-merge for Dependabot PRs, use GitHub's branch protection rules
+    # or enable auto-merge via the GitHub UI/API for pull requests.
     reviewers:
       - "Hack23"
 ```
@@ -647,22 +646,22 @@ jobs:
   sbom:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
       
       - name: Generate SBOM
-        uses: anchore/sbom-action@v0
+        uses: anchore/sbom-action@d94f46e13c6c62f59525ac9a1e147a99dc0b9bf5 # v0.17.0
         with:
           format: cyclonedx-json
           output-file: sbom.json
       
       - name: Upload SBOM
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
         with:
           name: sbom
           path: sbom.json
       
       - name: Publish to GitHub Releases
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # v2.0.8
         with:
           files: sbom.json
           tag_name: sbom-${{ github.sha }}

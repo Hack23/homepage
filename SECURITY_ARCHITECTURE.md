@@ -60,7 +60,7 @@ The Hack23 AB corporate homepage serves as a **public-facing transparency platfo
 | **Hosting** | AWS S3 (Private Bucket) | Static content storage with versioning |
 | **CDN** | AWS CloudFront | Global content delivery, DDoS protection |
 | **CI/CD** | GitHub Actions | Automated deployment with security scanning |
-| **External Resources** | Google Fonts CDN | Performance optimization with SRI |
+| **External Resources** | Google Fonts CDN | Performance optimization, SRI (planned) |
 
 ### System Classification
 
