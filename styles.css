@@ -721,10 +721,21 @@ header {
   line-height: 1.5;
 }
 
+.card a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 71, 171, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
   border-color: rgba(0, 71, 171, 0.25);
+}
+
+.card:focus-within {
+  border-color: rgba(0, 71, 171, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 71, 171, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1058,6 +1069,11 @@ section:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
