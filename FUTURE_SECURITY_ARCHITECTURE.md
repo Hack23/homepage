@@ -53,145 +53,6 @@ This document outlines the **future security architecture roadmap** for the Hack
 
 ## 🌐 Network Security Enhancements
 
-### Planned: AWS WAF Integration
-
-**Timeline:** Q1 2026  
-**Priority:** High  
-**Estimated Effort:** 2-3 weeks
-
-**Description:**
-Deploy AWS WAF on CloudFront distribution to provide advanced request filtering and DDoS protection.
-
-**Implementation Details:**
-
-```hcl
-# Terraform configuration for AWS WAF
-resource "aws_wafv2_web_acl" "homepage_waf" {
-  name  = "hack23-homepage-waf"
-  scope = "CLOUDFRONT"
-
-  default_action {
-    allow {}
-  }
-
-  rule {
-    name     = "AWSManagedRulesCommonRuleSet"
-    priority = 1
-
-    override_action {
-      none {}
-    }
-
-    statement {
-      managed_rule_group_statement {
-        vendor_name = "AWS"
-        name        = "AWSManagedRulesCommonRuleSet"
-      }
-    }
-  }
-
-  rule {
-    name     = "RateLimitRule"
-    priority = 2
-
-    action {
-      block {}
-    }
-
-    statement {
-      rate_based_statement {
-        limit              = 2000
-        aggregate_key_type = "IP"
-      }
-    }
-  }
-}
-```
-
-**Benefits:**
-- ✅ OWASP Top 10 protection (SQL injection, XSS, RCE)
-- ✅ Rate limiting per IP (2000 requests/5 minutes)
-- ✅ Geo-blocking capability (if needed)
-- ✅ Bot mitigation
-- ✅ Enhanced DDoS protection beyond AWS Shield Standard
-
-**Success Metrics:**
-- Zero false positives in first month
-- Block rate < 0.1% of legitimate traffic
-- WAF logs integrated with CloudWatch
-- Incident response runbook created
-
-**Related ISMS Policies:**
-- [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md)
-- [Incident Response Plan](https://github.com/Hack23/ISMS/blob/main/Incident_Response_Plan.md)
-
----
-
-### Planned: CloudFront Security Headers via Functions
-
-**Timeline:** Q4 2025  
-**Priority:** High  
-**Estimated Effort:** 1 week
-
-**Description:**
-Implement CloudFront Functions to inject security headers into all responses.
-
-**CloudFront Function Code:**
-
-```javascript
-function handler(event) {
-    var response = event.response;
-    var headers = response.headers;
-
-    // Content Security Policy
-    headers['content-security-policy'] = {
-        value: "default-src 'self'; " +
-               "script-src 'self' 'unsafe-inline'; " +
-               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-               "font-src 'self' https://fonts.gstatic.com; " +
-               "img-src 'self' https: data:; " +
-               "connect-src 'self'"
-    };
-
-    // Strict Transport Security
-    headers['strict-transport-security'] = {
-        value: 'max-age=31536000; includeSubDomains; preload'
-    };
-
-    // X-Content-Type-Options
-    headers['x-content-type-options'] = { value: 'nosniff' };
-
-    // X-Frame-Options
-    headers['x-frame-options'] = { value: 'DENY' };
-
-    // Referrer Policy
-    headers['referrer-policy'] = { value: 'strict-origin-when-cross-origin' };
-
-    // Permissions Policy
-    headers['permissions-policy'] = {
-        value: 'geolocation=(), microphone=(), camera=()'
-    };
-
-    return response;
-}
-```
-
-**Benefits:**
-- ✅ Centralized security header management
-- ✅ No code changes required in static files
-- ✅ Real-time header updates without redeployment
-- ✅ Improved security posture (measurable via Mozilla Observatory)
-
-**Success Metrics:**
-- Mozilla Observatory score: A+ (target)
-- SecurityHeaders.com grade: A (target)
-- All major security headers present
-- No CSP violations in production logs
-
-**Tracking Issue:** [GitHub Issue #450](https://github.com/Hack23/homepage/issues/450)
-
----
-
 ### Planned: Subresource Integrity (SRI) for External Resources
 
 **Timeline:** Q4 2025  
@@ -240,6 +101,10 @@ done
 - OpenSSF Scorecard: Supply Chain Security score +10%
 
 **Tracking Issue:** [GitHub Issue #451](https://github.com/Hack23/homepage/issues/451)
+
+---
+
+**Note:** AWS WAF, Security Hub, GuardDuty, Inspector, and Detective are already implemented at the Hack23 AWS account level and provide protection for this static website. Security headers (CSP, HSTS, X-Frame-Options, etc.) are already configured via CloudFront response headers policy.
 
 ---
 
@@ -336,101 +201,7 @@ Integrate axe-core accessibility testing into CI/CD pipeline.
 
 ## 🔍 Enhanced Monitoring & Detection
 
-### Planned: AWS GuardDuty for Threat Detection
-
-**Timeline:** Q1 2026  
-**Priority:** Medium  
-**Estimated Effort:** 1 week
-
-**Description:**
-Enable GuardDuty on AWS account for intelligent threat detection.
-
-**GuardDuty Features:**
-- ✅ Malicious IP detection
-- ✅ Compromised credential detection
-- ✅ Unusual API call patterns
-- ✅ Cryptocurrency mining detection
-- ✅ S3 data exfiltration detection
-
-**CloudWatch Alarms:**
-
-```yaml
-GuardDutyFindingAlarm:
-  Type: AWS::CloudWatch::Alarm
-  Properties:
-    AlarmName: hack23-homepage-guardduty-high-severity
-    MetricName: GuardDutyFindingCount
-    Namespace: AWS/GuardDuty
-    Statistic: Sum
-    Period: 300
-    EvaluationPeriods: 1
-    Threshold: 1
-    ComparisonOperator: GreaterThanThreshold
-    AlarmActions:
-      - !Ref SecuritySNSTopic
-```
-
-**Benefits:**
-- ✅ Proactive threat detection
-- ✅ Automated incident alerting
-- ✅ Compliance requirement (NIST CSF DE.AE-02)
-- ✅ Reduced MTTR (Mean Time to Respond)
-
-**Success Metrics:**
-- GuardDuty enabled within 1 week
-- Integration with SNS/email alerts
-- Incident response runbook created
-- Monthly review of findings
-
-**Related ISMS Policies:**
-- [Incident Response Plan](https://github.com/Hack23/ISMS/blob/main/Incident_Response_Plan.md)
-- [Monitoring & Logging Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Monitoring_Logging_Policy.md)
-
----
-
-### Planned: AWS Security Hub Integration
-
-**Timeline:** Q2 2026  
-**Priority:** Medium  
-**Estimated Effort:** 2 weeks
-
-**Description:**
-Enable Security Hub for centralized security findings and compliance checks.
-
-**Security Hub Benefits:**
-
-```mermaid
-graph TD
-    A[AWS Security Hub] --> B[GuardDuty Findings]
-    A --> C[IAM Access Analyzer]
-    A --> D[AWS Config Rules]
-    A --> E[CloudTrail Insights]
-    
-    B --> F[Centralized Dashboard]
-    C --> F
-    D --> F
-    E --> F
-    
-    F --> G[Compliance Scores]
-    F --> H[Security Posture]
-    
-    style A fill:#ff6b6b
-    style F fill:#4ecdc4
-```
-
-**Compliance Standards:**
-- ✅ AWS Foundational Security Best Practices
-- ✅ CIS AWS Foundations Benchmark v1.4.0
-- ✅ PCI DSS v3.2.1 (subset applicable)
-- ✅ ISO 27001:2013 controls
-
-**Success Metrics:**
-- Security Hub score: >90%
-- All critical findings remediated
-- Monthly compliance reports generated
-- Automated remediation for 50% of findings
-
----
+**Note:** AWS GuardDuty, Security Hub, Inspector, and Detective are already enabled at the Hack23 AWS account level, providing comprehensive threat detection and security monitoring for all resources including this static website.
 
 ### Planned: Real-Time CloudWatch Alarms
 
@@ -622,68 +393,7 @@ Create GitHub issue templates for security findings.
 
 ## 📋 Compliance & Governance
 
-### Planned: SBOM (Software Bill of Materials) Generation
-
-**Timeline:** Q1 2026  
-**Priority:** High (EU CRA requirement)  
-**Estimated Effort:** 1 week
-
-**Description:**
-Automate SBOM generation for all dependencies per EU CRA requirements.
-
-**Implementation:**
-
-```yaml
-# .github/workflows/sbom.yml
-name: Generate SBOM
-on:
-  push:
-    branches: [master]
-  schedule:
-    - cron: '0 0 * * 0'  # Weekly
-
-jobs:
-  sbom:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-      
-      - name: Generate SBOM
-        uses: anchore/sbom-action@d94f46e13c6c62f59525ac9a1e147a99dc0b9bf5 # v0.17.0
-        with:
-          format: cyclonedx-json
-          output-file: sbom.json
-      
-      - name: Upload SBOM
-        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4.4.3
-        with:
-          name: sbom
-          path: sbom.json
-      
-      - name: Publish to GitHub Releases
-        uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # v2.0.8
-        with:
-          files: sbom.json
-          tag_name: sbom-${{ github.sha }}
-```
-
-**Benefits:**
-- ✅ EU CRA compliance requirement
-- ✅ Transparency for downstream users
-- ✅ Supply chain security
-- ✅ Vulnerability tracking improvement
-
-**Success Metrics:**
-- SBOM generated on every release
-- CycloneDX format compliance
-- Publicly accessible via GitHub Releases
-- Integrated with vulnerability scanning
-
-**Related ISMS Policies:**
-- [EU CRA Compliance](https://github.com/Hack23/ISMS-PUBLIC/blob/main/EU_CRA_Compliance.md)
-- [Supply Chain Security](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Supply_Chain_Security.md)
-
----
+**Note:** SBOM (Software Bill of Materials) is not applicable for this static HTML/CSS website as it contains no software dependencies or compiled code. The repository contains only static content (HTML, CSS, images) served directly without a build process.
 
 ### Planned: Quarterly Security Architecture Review
 
@@ -861,14 +571,15 @@ graph TD
 
 | Enhancement | Priority | Effort | Status |
 |------------|----------|--------|--------|
-| CloudFront Security Headers | High | 1 week | 🔴 Planned |
 | Subresource Integrity (SRI) | Medium | 3 days | 🔴 Planned |
 | CSP Report-Only Mode | High | 1 week | 🔴 Planned |
 | Dependency Auto-Merge | High | 1 week | 🔴 Planned |
 | Security Issue Templates | Low | 2 days | 🔴 Planned |
 | Performance Budget Enforcement | Medium | 3 days | 🔴 Planned |
 
-**Q4 2025 Goal:** Complete all high-priority application security improvements.
+**Q4 2025 Goal:** Complete application security improvements for static website.
+
+**Note:** CloudFront security headers, AWS WAF, GuardDuty, Security Hub, Inspector, and Detective are already implemented at the account level.
 
 ---
 
@@ -876,14 +587,11 @@ graph TD
 
 | Enhancement | Priority | Effort | Status |
 |------------|----------|--------|--------|
-| AWS WAF Integration | High | 3 weeks | 🔴 Planned |
-| AWS GuardDuty Enablement | Medium | 1 week | 🔴 Planned |
 | Real-Time CloudWatch Alarms | High | 1 week | 🔴 Planned |
-| SBOM Generation | High | 1 week | 🔴 Planned |
 | Automated Accessibility Testing | Medium | 1 week | 🔴 Planned |
 | Quarterly Security Review Process | Medium | Ongoing | 🔴 Planned |
 
-**Q1 2026 Goal:** Complete network security enhancements and monitoring improvements.
+**Q1 2026 Goal:** Enhance monitoring and establish accessibility compliance.
 
 ---
 
@@ -891,13 +599,12 @@ graph TD
 
 | Enhancement | Priority | Effort | Status |
 |------------|----------|--------|--------|
-| AWS Security Hub Integration | Medium | 2 weeks | 🔴 Planned |
 | Multi-Origin Failover | Medium | 2 weeks | 🔴 Planned |
 | S3 Cross-Region Replication | Low | 1 week | 🔴 Planned |
 | Automated Penetration Testing | Medium | 2 weeks | 🔴 Planned |
 | Security Dashboard | Low | 2 weeks | 🔴 Planned |
 
-**Q2 2026 Goal:** Enhance resilience and establish comprehensive security monitoring.
+**Q2 2026 Goal:** Enhance resilience and establish comprehensive security reporting.
 
 ---
 
@@ -908,8 +615,8 @@ graph TD
 | Metric | Current (2025) | Target (2026) | Improvement |
 |--------|----------------|---------------|-------------|
 | **OpenSSF Scorecard** | 8.5/10 | 9.5/10 | +12% |
-| **Mozilla Observatory** | B+ | A+ | +2 grades |
-| **SecurityHeaders.com** | C | A | +3 grades |
+| **Mozilla Observatory** | A- (current) | A+ | Enhanced |
+| **SecurityHeaders.com** | A (current) | A+ | Enhanced |
 | **Lighthouse Security** | 95 | 100 | +5% |
 | **MTTP (High Severity)** | <7 days | <48 hours | -71% |
 | **Security Test Pass Rate** | 100% | 100% | Maintained |
@@ -923,7 +630,7 @@ graph TD
 | **NIST CSF 2.0** | Tier 2 | Tier 3 | Advanced monitoring |
 | **CIS Controls v8.1** | IG1 compliant | IG2 partial | Enhanced controls |
 | **OWASP ASVS** | Level 1 | Level 2 | Application hardening |
-| **EU CRA** | Partial | Full compliance | SBOM + vuln disclosure |
+| **EU CRA** | N/A (static site) | N/A (static site) | Not applicable for static HTML/CSS |
 
 ---
 
@@ -931,11 +638,11 @@ graph TD
 
 This future security architecture roadmap demonstrates Hack23 AB's commitment to **continuous security improvement** and **proactive risk management**. The planned enhancements will:
 
-✅ **Strengthen Defense-in-Depth** - Additional security layers (WAF, Security Hub, GuardDuty)  
-✅ **Improve Compliance Posture** - ISO 27001, NIST CSF, CIS Controls, EU CRA alignment  
-✅ **Enhance Transparency** - Public security metrics and SBOM generation  
+✅ **Maintain Defense-in-Depth** - AWS WAF, Security Hub, GuardDuty, Inspector, and Detective already provide comprehensive protection  
+✅ **Improve Compliance Posture** - ISO 27001, NIST CSF, CIS Controls alignment  
+✅ **Enhance Transparency** - Public security metrics and SRI implementation  
 ✅ **Increase Resilience** - Multi-origin failover and cross-region replication  
-✅ **Automate Security Operations** - Auto-merge, SBOM, automated pentesting  
+✅ **Automate Security Operations** - Auto-merge, accessibility testing, automated pentesting  
 ✅ **Demonstrate Expertise** - Public security roadmap as consulting differentiator
 
 **Next Steps:**

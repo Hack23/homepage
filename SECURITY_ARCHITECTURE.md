@@ -93,13 +93,13 @@ C4Context
     System(github, "GitHub Actions CI/CD", "Automated deployment<br/>Security scanning (ZAP, Lighthouse)")
   }
   
-  System_Ext(fonts, "Google Fonts CDN", "External font resources<br/>SRI verification")
+  System_Ext(fonts, "Google Fonts CDN", "External font resources<br/>SRI (planned)")
   System_Ext(shields, "Shields.io", "Security badges")
-  System_Ext(aws_services, "AWS Security Services", "CloudTrail, IAM, GuardDuty")
+  System_Ext(aws_services, "AWS Security Services", "CloudTrail, IAM, Security Hub, GuardDuty")
   
   Rel(visitor, cloudfront, "HTTPS requests", "TLS 1.3")
   Rel(cloudfront, s3, "Origin fetch", "Private access only")
-  Rel(visitor, fonts, "Font requests", "HTTPS with SRI")
+  Rel(visitor, fonts, "Font requests", "HTTPS (SRI planned)")
   Rel(admin, github, "Git push", "Triggers deployment")
   Rel(github, s3, "Deploy content", "OIDC authentication")
   Rel(github, aws_services, "Audit logs", "CloudTrail")
@@ -117,7 +117,7 @@ C4Container
   
   Container_Boundary(cdn, "Content Delivery Network") {
     Container(edge, "CloudFront Edge Locations", "AWS CloudFront", "Caches content globally<br/>TLS termination")
-    Container(waf, "AWS WAF (Planned)", "AWS WAF", "Rate limiting<br/>OWASP rule sets")
+    Container(waf, "AWS WAF", "AWS WAF", "Rate limiting<br/>OWASP rule sets<br/>Account-level protection")
   }
   
   Container_Boundary(origin, "Origin Infrastructure") {
@@ -135,7 +135,8 @@ C4Container
   Container_Boundary(security, "Security & Monitoring") {
     Container(cloudtrail, "CloudTrail", "AWS", "Immutable audit logs")
     Container(iam, "IAM Roles", "AWS", "OIDC-based access<br/>Least privilege")
-    Container(guardduty, "GuardDuty (Account)", "AWS", "Threat detection")
+    Container(guardduty, "GuardDuty", "AWS", "Threat detection<br/>Account-level")
+    Container(securityhub, "Security Hub", "AWS", "Centralized findings<br/>Account-level")
   }
   
   Rel(visitor, edge, "HTTPS/TLS 1.3", "GET requests")
@@ -238,9 +239,10 @@ S3 Bucket: amazon-cloudfront-secure-static-site-s3bucketroot-14oliw5cmta06
 | Security Feature | Implementation | Benefit |
 |-----------------|----------------|---------|
 | **TLS 1.3 Support** | Enabled on CloudFront distribution | Modern encryption, forward secrecy |
-| **HSTS Header** | Planned via CloudFront Functions | Force HTTPS, prevent downgrade attacks |
+| **Security Headers** | Configured via CloudFront response headers policy | CSP, HSTS, X-Frame-Options protection |
 | **Origin Access Control (OAC)** | S3 bucket private, OAC policy | S3 bucket not publicly accessible |
 | **DDoS Protection** | AWS Shield Standard (included) | Automatic layer 3/4 protection |
+| **WAF Protection** | AWS WAF at account level | OWASP rule sets, rate limiting |
 | **Geo-Restrictions** | None (global access) | Transparency platform for all regions |
 | **Custom Error Pages** | User-friendly 404/403 | Security through obscurity avoidance |
 
@@ -259,7 +261,7 @@ Access-Control-Allow-Origin: https://hack23.com
 
 ### HTTP Security Headers
 
-**Planned Security Headers** (via CloudFront Functions):
+**Implemented Security Headers** (via CloudFront response headers policy):
 
 ```http
 Content-Security-Policy: default-src 'self'; 
@@ -280,9 +282,10 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 - [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) - CDN and TLS requirements
 - [Cryptography Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md) - TLS 1.3 standards
 
-**Implementation Tracking:**
-- [GitHub Issue #450](https://github.com/Hack23/homepage/issues/450) - CSP Implementation
-- [GitHub Issue #451](https://github.com/Hack23/homepage/issues/451) - SRI Implementation
+**Implementation Evidence:**
+- CloudFront response headers policy configured at account level
+- WAF rules applied via AWS WAF Web ACL
+- Security headers verified via security scanning tools
 
 ### Subresource Integrity (SRI)
 
@@ -436,7 +439,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 | **Origin Failover** | Planned secondary origin | Automatic failover on origin errors |
 | **Health Checks** | CloudFront automatic | Detection of origin failures |
 | **DDoS Protection** | AWS Shield Standard | Always-on protection against attacks |
-| **Rate Limiting** | AWS WAF (planned) | Protection against abuse |
+| **Rate Limiting** | AWS WAF at account level | Protection against abuse |
 
 ### S3 Durability & Availability
 
@@ -569,6 +572,24 @@ Permissions: Least privilege (S3 + CloudFront only)
 - ✅ Multi-region trail enabled
 - ✅ Immutable log storage (S3 Object Lock planned)
 
+### AWS Account-Level Security Services
+
+**Implemented Security Services:**
+
+| Service | Purpose | Implementation | Benefit |
+|---------|---------|----------------|---------|
+| **AWS GuardDuty** | Threat detection | Enabled at account level | Intelligent threat detection across all resources |
+| **AWS Security Hub** | Centralized security findings | Enabled at account level | Aggregates findings from GuardDuty, Config, and other services |
+| **AWS Inspector** | Vulnerability assessment | Enabled at account level | Automated security assessments for EC2 and container workloads |
+| **Amazon Detective** | Security investigation | Enabled at account level | Analyze and investigate potential security issues |
+
+**Benefits:**
+- ✅ Continuous security monitoring across all AWS resources
+- ✅ Automated threat detection and alerting
+- ✅ Centralized security posture management
+- ✅ Compliance framework alignment (CIS AWS Foundations, PCI DSS)
+- ✅ Integration with SIEM and incident response workflows
+
 **ISMS Policy Mapping:**
 - [Cloud Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cloud_Security_Policy.md) - AWS security controls
 - [Access Control Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md) - IAM requirements
@@ -672,7 +693,7 @@ flowchart TB
 | **A.5.1 - Information Security Policy** | Public ISMS repository | [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) |
 | **A.8.9 - Configuration Management** | Infrastructure as Code, documented architecture | This document (SECURITY_ARCHITECTURE.md) |
 | **A.8.16 - Monitoring** | CloudTrail, GitHub Actions, ZAP scanning | [Monitoring & Logging Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Monitoring_Logging_Policy.md) |
-| **A.8.23 - Web Filtering** | Planned CSP, WAF rules | [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) |
+| **A.8.23 - Web Filtering** | Implemented CSP and WAF rules | [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) |
 | **A.8.28 - Secure Coding** | Static site, no code execution | [Secure Development Policy](https://github.com/Hack23/ISMS/blob/main/Secure_Development_Policy.md) |
 
 ### GDPR Compliance
@@ -764,7 +785,7 @@ graph TB
 graph TD
     subgraph "Layer 1: Perimeter"
         L1A[CloudFront CDN] --> L1B[AWS Shield DDoS]
-        L1B --> L1C[AWS WAF Planned]
+        L1B --> L1C[AWS WAF - Account Level]
     end
     
     subgraph "Layer 2: Network"
@@ -810,7 +831,7 @@ graph TD
 
 | Threat Category | Prevention | Detection | Response | Recovery |
 |----------------|-----------|-----------|----------|----------|
-| **DDoS Attack** | AWS Shield, CloudFront | CloudWatch alarms | Auto-scaling, WAF rules | Origin failover |
+| **DDoS Attack** | AWS Shield, CloudFront, WAF | CloudWatch alarms | Auto-scaling, WAF rules | Origin failover |
 | **Content Tampering** | S3 versioning, Git | CloudTrail, file integrity | Rollback deployment | Re-deploy from Git |
 | **Supply Chain Attack** | SHA-pinned actions, SRI | Dependabot, OSSF Scorecard | Remove compromised dep | Update dependencies |
 | **CDN Compromise** | SRI for external resources | Monitoring, alerts | Switch to self-hosted | Migrate to backup CDN |
