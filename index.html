@@ -195,7 +195,8 @@
 	        { "@id": "https://blacktrigram.com/#blacktrigram" },
 	        { "@id": "https://hack23.com/#cia-compliance-manager" },
 	        { "@id": "https://hack23.com/#citizen-intelligence-agency" }
-	      ]
+	      ],
+	      "makesOffer": { "@id": "https://hack23.com/#cybersecurity-consulting" }
 	    },
 	    {
 	      "@type": "WebSite",
@@ -351,6 +352,92 @@
 	      "sameAs": ["https://cia.sourceforge.io/"]
 	    },
 	    {
+	      "@type": "Service",
+	      "@id": "https://hack23.com/#cybersecurity-consulting",
+	      "serviceType": "Cybersecurity Consulting",
+	      "provider": { "@id": "https://hack23.com/#org" },
+	      "areaServed": [
+	        {
+	          "@type": "Country",
+	          "name": "Sweden"
+	        },
+	        {
+	          "@type": "Place",
+	          "name": "Nordic Region"
+	        },
+	        {
+	          "@type": "Place",
+	          "name": "Europe"
+	        }
+	      ],
+	      "hasOfferCatalog": {
+	        "@type": "OfferCatalog",
+	        "name": "Cybersecurity Services",
+	        "itemListElement": [
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Security Architecture & Strategy",
+	              "description": "Enterprise security architecture design, risk assessment and management, security strategy development, and governance framework design"
+	            }
+	          },
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Cloud Security & DevSecOps",
+	              "description": "AWS security assessment and architecture, DevSecOps integration, infrastructure as code security, container and serverless security"
+	            }
+	          },
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Secure Development & Code Quality",
+	              "description": "Secure SDLC implementation, CI/CD security integration, code quality and security analysis, supply chain security with SLSA Level 3 compliance"
+	            }
+	          },
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Compliance & Regulatory",
+	              "description": "GDPR, NIS2, ISO 27001 implementation, ISMS design and implementation, AI governance, and audit preparation"
+	            }
+	          },
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Open Source Security",
+	              "description": "OSPO establishment and management, vulnerability management, security tool development, and community engagement"
+	            }
+	          },
+	          {
+	            "@type": "Offer",
+	            "itemOffered": {
+	              "@type": "Service",
+	              "name": "Security Culture & Training",
+	              "description": "Security awareness programs, developer security training, leadership security briefings, and incident response training"
+	            }
+	          }
+	        ]
+	      }
+	    },
+	    {
+	      "@type": "BreadcrumbList",
+	      "@id": "https://hack23.com/#breadcrumb",
+	      "itemListElement": [
+	        {
+	          "@type": "ListItem",
+	          "position": 1,
+	          "name": "Home",
+	          "item": "https://hack23.com/"
+	        }
+	      ]
+	    },
+	    {
 	      "@type": "WebPage",
 	      "@id": "https://hack23.com/#homepage",
 	      "url": "https://hack23.com/",
@@ -361,7 +448,10 @@
 	        "@type": "ImageObject",
 	        "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
 	      },
-	      "inLanguage": "en"
+	      "inLanguage": "en",
+	      "breadcrumb": { "@id": "https://hack23.com/#breadcrumb" },
+	      "datePublished": "2025-01-01",
+	      "dateModified": "2025-11-17"
 	    }
 	  ]
 	}
