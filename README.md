@@ -6,6 +6,7 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 [![Scorecard supply-chain security](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/scorecards.yml)
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
+[![Quality Checks](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml)
 
 ## 🔐 Commitment to Transparency and Security
 

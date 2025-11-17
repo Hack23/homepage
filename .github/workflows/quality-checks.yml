@@ -1,0 +1,171 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  html-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcb5dd907a8 # v5.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: '20'
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Validate HTML
+        run: |
+          echo "🔍 Validating HTML files with HTMLHint..."
+          echo ""
+          
+          # Run HTMLHint on all HTML files and capture results
+          if htmlhint *.html > htmlhint-report.txt 2>&1; then
+            echo "✅ All HTML files passed validation"
+            cat htmlhint-report.txt
+          else
+            echo "⚠️ HTML validation found issues:"
+            cat htmlhint-report.txt
+            echo ""
+            echo "📊 Validation completed with warnings/errors"
+            # Don't fail the build on HTML validation issues initially
+            # exit 1
+          fi
+          
+      - name: Upload HTMLHint Report
+        if: always()
+        uses: actions/upload-artifact@ea165f478b4cd5b2043c9668e9eb6d14f616dc00 # v4.5.0
+        with:
+          name: htmlhint-report
+          path: htmlhint-report.txt
+          retention-days: 30
+
+  link-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcb5dd907a8 # v5.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: '20'
+
+      - name: Install linkinator
+        run: npm install -g linkinator
+
+      - name: Check internal links (static files)
+        run: |
+          echo "🔍 Starting local HTTP server for internal link checking..."
+          python3 -m http.server 8080 &
+          SERVER_PID=$!
+          echo "Server PID: $SERVER_PID"
+          
+          # Wait for server to start
+          sleep 5
+          
+          echo ""
+          echo "🔗 Checking internal links on localhost..."
+          
+          # Check links on localhost
+          linkinator http://localhost:8080/ \
+            --recurse \
+            --skip "^(?!http://localhost:8080)" \
+            --format json > internal-links-report.json || true
+          
+          # Kill server
+          kill $SERVER_PID 2>/dev/null || true
+          
+          # Parse and display results
+          echo ""
+          echo "📊 Internal Link Check Results:"
+          if [ -f internal-links-report.json ]; then
+            cat internal-links-report.json | head -100
+            
+            # Count passed and failed links
+            passed=$(cat internal-links-report.json | jq -r '.links[] | select(.state == "OK")' 2>/dev/null | wc -l || echo "0")
+            failed=$(cat internal-links-report.json | jq -r '.links[] | select(.state != "OK")' 2>/dev/null | wc -l || echo "0")
+            
+            echo ""
+            echo "✅ Passed: $passed links"
+            echo "❌ Failed: $failed links"
+          fi
+          
+      - name: Check external links (sample pages)
+        run: |
+          echo ""
+          echo "🌐 Checking external links on deployed site (sample check)..."
+          echo "Note: Only checking main index page to avoid rate limiting"
+          
+          # Check external links on deployed site (less frequently)
+          # Only check key pages to avoid rate limiting
+          linkinator https://hack23.com/ \
+            --skip "(fonts\.googleapis\.com|fonts\.gstatic\.com|github\.com)" \
+            --timeout 30000 \
+            --format json > external-links-report.json || true
+          
+          echo ""
+          echo "📊 External Link Check Results:"
+          if [ -f external-links-report.json ]; then
+            cat external-links-report.json | head -100
+            
+            # Count passed and failed links
+            passed=$(cat external-links-report.json | jq -r '.links[] | select(.state == "OK")' 2>/dev/null | wc -l || echo "0")
+            failed=$(cat external-links-report.json | jq -r '.links[] | select(.state != "OK")' 2>/dev/null | wc -l || echo "0")
+            
+            echo ""
+            echo "✅ Passed: $passed links"
+            echo "❌ Failed: $failed links"
+            echo ""
+            echo "ℹ️ Note: External link checking is limited to avoid rate limiting"
+          fi
+
+      - name: Upload Link Check Reports
+        if: always()
+        uses: actions/upload-artifact@ea165f478b4cd5b2043c9668e9eb6d14f616dc00 # v4.5.0
+        with:
+          name: link-checker-reports
+          path: |
+            internal-links-report.json
+            external-links-report.json
+          retention-days: 30
+
+  summary:
+    runs-on: ubuntu-latest
+    needs: [html-validation, link-checker]
+    if: always()
+    steps:
+      - name: Quality Check Summary
+        run: |
+          echo "=========================================="
+          echo "   Quality Checks Completed"
+          echo "=========================================="
+          echo ""
+          echo "✅ HTML validation completed"
+          echo "✅ Link checking completed"
+          echo ""
+          echo "📊 Check artifacts for detailed reports:"
+          echo "   - htmlhint-report"
+          echo "   - link-checker-reports"
+          echo ""
+          echo "=========================================="
