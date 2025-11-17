@@ -74,6 +74,9 @@ jobs:
       - name: Install linkinator
         run: npm install -g linkinator
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Check internal links (static files)
         run: |
           echo "🔍 Starting local HTTP server for internal link checking..."
@@ -100,7 +103,7 @@ jobs:
           echo ""
           echo "📊 Internal Link Check Results:"
           if [ -f internal-links-report.json ]; then
-            head -100 internal-links-report.json
+            jq '.links[0:10]' internal-links-report.json
             
             # Count passed and failed links
             passed=$(jq -r '.links[] | select(.state == "OK")' internal-links-report.json 2>/dev/null | wc -l || echo "0")
@@ -127,7 +130,7 @@ jobs:
           echo ""
           echo "📊 External Link Check Results:"
           if [ -f external-links-report.json ]; then
-            head -100 external-links-report.json
+            jq '.links[0:10]' external-links-report.json
             
             # Count passed and failed links
             passed=$(jq -r '.links[] | select(.state == "OK")' external-links-report.json 2>/dev/null | wc -l || echo "0")
