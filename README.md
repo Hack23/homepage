@@ -89,6 +89,42 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 
 ---
 
+## 🔍 Quality Assurance
+
+This repository implements comprehensive automated quality checks to ensure code quality and prevent regressions:
+
+### Automated Checks
+
+- **HTML Validation**: All 74 HTML files are automatically validated using HTMLHint on every push and pull request
+- **Link Checking**: Internal and external links are checked using Linkinator to prevent broken links
+- **Security Scanning**: ZAP (Zed Attack Proxy) performs security vulnerability scanning on the deployed site
+- **Performance Audits**: Lighthouse audits monitor performance, accessibility, and SEO metrics
+- **Supply Chain Security**: OpenSSF Scorecard and Dependabot monitor dependencies and security best practices
+
+### Running Quality Checks Locally
+
+```bash
+# Install tools
+npm install -g htmlhint linkinator
+
+# Validate HTML files
+htmlhint *.html
+
+# Check internal links (requires local server)
+python3 -m http.server 8080 &
+linkinator http://localhost:8080/ --recurse --skip "^(?!http://localhost:8080)"
+
+# Check external links (sample)
+linkinator https://hack23.com/ --timeout 30000
+```
+
+### Quality Reports
+
+Quality check reports are available as artifacts in the [Quality Checks workflow](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml):
+- `htmlhint-report`: HTML validation results for all 74 files
+- `link-checker-reports`: Internal and external link checking results
+
+---
 
 ## Table of Contents
 
