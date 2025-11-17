@@ -19,7 +19,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcb5dd907a8 # v5.0.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - name: Setup Node.js
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
@@ -64,7 +64,7 @@ jobs:
           egress-policy: audit
 
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcb5dd907a8 # v5.0.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - name: Setup Node.js
         uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
@@ -105,9 +105,11 @@ jobs:
           if [ -f internal-links-report.json ]; then
             jq '.links[0:10]' internal-links-report.json
             
-            # Count passed and failed links
-            passed=$(jq -r '.links[] | select(.state == "OK")' internal-links-report.json 2>/dev/null | wc -l || echo "0")
-            failed=$(jq -r '.links[] | select(.state != "OK")' internal-links-report.json 2>/dev/null | wc -l || echo "0")
+            # Count passed and failed links in a single jq invocation
+            read passed failed < <(jq -r '
+              ([.links[] | select(.state == "OK")] | length),
+              ([.links[] | select(.state != "OK")] | length)
+            ' internal-links-report.json 2>/dev/null || echo "0 0")
             
             echo ""
             echo "✅ Passed: $passed links"
@@ -132,9 +134,11 @@ jobs:
           if [ -f external-links-report.json ]; then
             jq '.links[0:10]' external-links-report.json
             
-            # Count passed and failed links
-            passed=$(jq -r '.links[] | select(.state == "OK")' external-links-report.json 2>/dev/null | wc -l || echo "0")
-            failed=$(jq -r '.links[] | select(.state != "OK")' external-links-report.json 2>/dev/null | wc -l || echo "0")
+            # Count passed and failed links in a single jq invocation
+            read passed failed < <(jq -r '
+              ([.links[] | select(.state == "OK")] | length),
+              ([.links[] | select(.state != "OK")] | length)
+            ' external-links-report.json 2>/dev/null || echo "0 0")
             
             echo ""
             echo "✅ Passed: $passed links"
