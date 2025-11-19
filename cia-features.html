@@ -151,6 +151,72 @@
       ]
     }
     </script>
+    
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Citizen Intelligence Agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Citizen Intelligence Agency (CIA) is an open-source intelligence platform for political transparency in Sweden. It monitors Swedish parliamentary activity with comprehensive data-driven insights, analytics, dashboard visualizations, and accountability metrics. The platform tracks politician behavior, voting records, party activities, government documents, and parliamentary decisions to provide citizens with transparent access to political information. Built as a volunteer-driven initiative, it applies advanced data analysis methodologies to democratic oversight and governance evaluation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What political data does Citizen Intelligence Agency track?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Citizen Intelligence Agency tracks comprehensive Swedish political data including: Individual politician activity (voting records, speeches, committee work, parliamentary questions); Political party activities and performance metrics; Government bills, motions, and legislative proposals; Committee meetings and decisions; Election results and campaign data; Parliamentary voting patterns and alliances; Document publication and government transparency; Minister and government member activities; Budget proposals and financial decisions; and Political influence networks and relationships. The platform aggregates this data from official Swedish government sources including the Riksdag (parliament) and government agencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the data collected and verified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Citizen Intelligence Agency collects data exclusively from official Swedish government sources to ensure accuracy and reliability. The platform uses automated data collection from the Swedish Parliament's open data APIs, government document databases, and official public records. All data is sourced from authoritative government systems, eliminating manual entry errors and bias. The platform includes data validation processes to ensure consistency and accuracy. Since the data comes directly from official government sources, it reflects the same information available to journalists, researchers, and government officials. The open-source nature allows community verification and transparency in data processing methodologies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who uses the Citizen Intelligence Agency platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The platform serves diverse users interested in Swedish political transparency: Journalists and media professionals researching political stories and fact-checking; Researchers and academics studying Swedish politics, voting behavior, and governance; Political activists and engaged citizens monitoring their representatives; Voters seeking to understand politician track records before elections; Civil society organizations tracking policy issues and advocacy outcomes; Students learning about Swedish democratic processes; International observers studying Scandinavian political systems; and Opposition parties and political analysts evaluating government performance. The platform democratizes access to political data that was previously difficult to analyze systematically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the political data updated in real-time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The platform updates data regularly based on the availability of information from official government sources. Parliamentary voting records, speeches, and official documents are updated as they become available from the Swedish Riksdag's systems, typically within hours to days of official publication. Some data like committee meetings and government decisions may have slight delays based on official publication schedules. The platform prioritizes accuracy over real-time updates, ensuring all data is properly validated and processed before display. Users can see the last update timestamp for each dataset. While not instantaneous, the update frequency is sufficient for meaningful political monitoring and analysis of ongoing parliamentary activities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I navigate and use the platform effectively?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Navigating Citizen Intelligence Agency is designed to be intuitive with multiple entry points: Start with the Dashboard Overview to see high-level political activity metrics and trends. Use the Politician Search to find specific representatives and view their complete activity profiles including votes, speeches, and committee work. Browse by Political Party to compare party performance and see voting patterns. Filter by Policy Area or Committee to track specific issues like healthcare, education, or environment. Use the Timeline View to see chronological political developments. Access the Document Library to search government publications and legislative proposals. The Advanced Analytics section provides data visualization tools for deeper analysis. Each view includes export options for researchers and built-in sharing for social media engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Citizen Intelligence Agency only for Sweden or available for other countries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Citizen Intelligence Agency is currently focused exclusively on Swedish politics and the Swedish Parliament (Riksdag). The platform is optimized for Swedish political structures, data sources, and parliamentary procedures. However, as an open-source project, the underlying technology and methodologies could be adapted for other countries with similar open data availability. The codebase is available on GitHub, allowing developers in other countries to fork the project and customize it for their national political systems. The key requirement is access to structured government data APIs and official public records. The project has been featured in international studies on parliamentary monitoring as a model for democratic transparency platforms. While expansion to other Nordic countries is conceptually possible, it would require significant development effort and access to equivalent data sources."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
   <body>
   <!-- Breadcrumb Navigation -->
@@ -656,6 +722,181 @@
         </ul>
         <p>The CIA project is a volunteer-driven, open-source initiative applying advanced data analysis methodologies to democratic oversight. By leveraging sophisticated data visualization and analytical frameworks, the platform democratizes access to political performance assessment and governance evaluation.</p>
       </section>
+      
+      <!-- FAQ Section with Accordion UI -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Common questions about Citizen Intelligence Agency's political transparency platform, data sources, and analytical capabilities.</p>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-1">
+            What is Citizen Intelligence Agency?
+          </h3>
+          <div id="faq-answer-1" class="faq-answer" role="region">
+            <p>Citizen Intelligence Agency (CIA) is an open-source intelligence platform for political transparency in Sweden, monitoring Swedish parliamentary activity with comprehensive data-driven insights.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li><strong>Political Monitoring:</strong> Track politician behavior, voting records, and committee work</li>
+              <li><strong>Party Analytics:</strong> Monitor political party activities and performance metrics</li>
+              <li><strong>Legislative Tracking:</strong> Follow government bills, motions, and policy proposals</li>
+              <li><strong>Transparency Dashboard:</strong> Visualize parliamentary activity and accountability metrics</li>
+              <li><strong>Open Data:</strong> All data sourced from official Swedish government APIs</li>
+            </ul>
+            <p>Built as a volunteer-driven initiative, it applies advanced data analysis methodologies to democratic oversight and governance evaluation.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-2">
+            What political data does Citizen Intelligence Agency track?
+          </h3>
+          <div id="faq-answer-2" class="faq-answer" role="region">
+            <p>Citizen Intelligence Agency tracks comprehensive Swedish political data from official sources:</p>
+            <p><strong>Individual Politician Data:</strong></p>
+            <ul>
+              <li>Voting records on all parliamentary decisions</li>
+              <li>Speeches and parliamentary questions</li>
+              <li>Committee work and assignments</li>
+              <li>Attendance and participation metrics</li>
+            </ul>
+            <p><strong>Political Party Activities:</strong></p>
+            <ul>
+              <li>Party performance and voting patterns</li>
+              <li>Coalition behavior and alliances</li>
+              <li>Policy positions and priorities</li>
+              <li>Election results and campaign data</li>
+            </ul>
+            <p><strong>Legislative & Government Data:</strong></p>
+            <ul>
+              <li>Government bills and legislative proposals</li>
+              <li>Committee meetings and decisions</li>
+              <li>Document publications and transparency metrics</li>
+              <li>Budget proposals and financial decisions</li>
+              <li>Minister and government member activities</li>
+            </ul>
+            <p>All data is aggregated from official Swedish government sources including the Riksdag (parliament) and government agencies.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-3">
+            How is the data collected and verified?
+          </h3>
+          <div id="faq-answer-3" class="faq-answer" role="region">
+            <p>Citizen Intelligence Agency maintains data integrity through rigorous sourcing and validation:</p>
+            <p><strong>Data Sources:</strong></p>
+            <ul>
+              <li><strong>Official APIs:</strong> Automated collection from Swedish Parliament's open data APIs</li>
+              <li><strong>Government Databases:</strong> Direct access to official document repositories</li>
+              <li><strong>Public Records:</strong> Authorized government information systems</li>
+              <li><strong>No Manual Entry:</strong> Eliminates human bias and entry errors</li>
+            </ul>
+            <p><strong>Validation Process:</strong></p>
+            <ul>
+              <li>Data consistency checks across multiple sources</li>
+              <li>Automated validation against official records</li>
+              <li>Community verification through open-source transparency</li>
+              <li>Same data available to journalists and government officials</li>
+            </ul>
+            <p>The open-source nature allows anyone to review data processing methodologies and verify accuracy, ensuring transparency in both the data and the analysis.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-4">
+            Who uses the Citizen Intelligence Agency platform?
+          </h3>
+          <div id="faq-answer-4" class="faq-answer" role="region">
+            <p>The platform serves diverse users interested in Swedish political transparency:</p>
+            <ul>
+              <li><strong>Journalists & Media:</strong> Research political stories, fact-check claims, analyze voting patterns</li>
+              <li><strong>Researchers & Academics:</strong> Study Swedish politics, voting behavior, and democratic processes</li>
+              <li><strong>Engaged Citizens:</strong> Monitor elected representatives and hold them accountable</li>
+              <li><strong>Voters:</strong> Understand politician track records before elections</li>
+              <li><strong>Civil Society Organizations:</strong> Track policy issues and advocacy outcomes</li>
+              <li><strong>Students:</strong> Learn about Swedish parliamentary democracy in action</li>
+              <li><strong>International Observers:</strong> Study Scandinavian political systems and transparency</li>
+              <li><strong>Political Analysts:</strong> Evaluate government performance and opposition strategies</li>
+            </ul>
+            <p>The platform democratizes access to political data that was previously difficult to analyze systematically, enabling data-driven political engagement.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-5">
+            Is the political data updated in real-time?
+          </h3>
+          <div id="faq-answer-5" class="faq-answer" role="region">
+            <p>The platform updates data regularly based on official government publication schedules:</p>
+            <p><strong>Update Frequency:</strong></p>
+            <ul>
+              <li><strong>Parliamentary Votes:</strong> Updated within hours to days of official publication</li>
+              <li><strong>Speeches & Documents:</strong> Available as published by the Riksdag</li>
+              <li><strong>Committee Meetings:</strong> Updated based on official meeting records</li>
+              <li><strong>Government Decisions:</strong> Published according to official schedules</li>
+            </ul>
+            <p><strong>Priority & Accuracy:</strong></p>
+            <ul>
+              <li>Accuracy prioritized over instantaneous updates</li>
+              <li>All data validated before display</li>
+              <li>Last update timestamps visible for each dataset</li>
+              <li>Sufficient frequency for meaningful political monitoring</li>
+            </ul>
+            <p>While not instantaneous, the update schedule enables effective tracking of ongoing parliamentary activities and political developments.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-6">
+            How do I navigate and use the platform effectively?
+          </h3>
+          <div id="faq-answer-6" class="faq-answer" role="region">
+            <p>Citizen Intelligence Agency offers multiple intuitive navigation paths:</p>
+            <p><strong>Main Entry Points:</strong></p>
+            <ul>
+              <li><strong>Dashboard Overview:</strong> High-level political activity metrics and trends</li>
+              <li><strong>Politician Search:</strong> Find representatives and view complete activity profiles</li>
+              <li><strong>Political Party Browser:</strong> Compare party performance and voting patterns</li>
+              <li><strong>Policy Area Filter:</strong> Track specific issues (healthcare, education, environment)</li>
+              <li><strong>Committee View:</strong> Monitor committee work and specialized topics</li>
+              <li><strong>Timeline:</strong> Chronological view of political developments</li>
+              <li><strong>Document Library:</strong> Search government publications and proposals</li>
+            </ul>
+            <p><strong>Advanced Features:</strong></p>
+            <ul>
+              <li>Data visualization tools for deeper analysis</li>
+              <li>Export options for researchers and journalists</li>
+              <li>Social media sharing for engagement</li>
+              <li>Customizable alerts for tracked topics</li>
+            </ul>
+            <p>For detailed guidance, see the <a href="cia-docs.html">platform documentation</a>.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-7">
+            Is Citizen Intelligence Agency only for Sweden or available for other countries?
+          </h3>
+          <div id="faq-answer-7" class="faq-answer" role="region">
+            <p>Citizen Intelligence Agency is currently focused exclusively on Swedish politics:</p>
+            <p><strong>Current Scope:</strong></p>
+            <ul>
+              <li>Optimized for Swedish political structures and parliamentary procedures</li>
+              <li>Integrated with Swedish government data APIs and systems</li>
+              <li>Tailored to Riksdag (Swedish Parliament) operations</li>
+              <li>Swedish language support for official documents</li>
+            </ul>
+            <p><strong>Open Source Potential:</strong></p>
+            <ul>
+              <li><strong>Adaptable Codebase:</strong> Available on <a href="https://github.com/Hack23/cia" target="_blank">GitHub</a> for other countries</li>
+              <li><strong>Methodology Transfer:</strong> Technology can be adapted to other democracies</li>
+              <li><strong>Requirements:</strong> Similar open data availability and government APIs</li>
+              <li><strong>International Recognition:</strong> Featured in studies on parliamentary monitoring</li>
+            </ul>
+            <p>While Nordic country expansion is conceptually possible, it requires significant development and equivalent data access. The platform serves as a model for democratic transparency initiatives worldwide.</p>
+          </div>
+        </div>
+      </section>
     </main>
     
     <div class="fullscreen-overlay" id="imageOverlay">
@@ -695,6 +936,57 @@
           document.body.style.overflow = 'auto';
         });
       });
+    </script>
+    
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // Initialize FAQ accordion functionality
+        function initFAQ() {
+          const faqItems = document.querySelectorAll('.faq-item');
+          
+          faqItems.forEach(function(item) {
+            const question = item.querySelector('h3');
+            
+            if (!question) return;
+            
+            // Click event
+            question.addEventListener('click', function() {
+              toggleFAQ(item);
+            });
+            
+            // Keyboard event (Enter or Space)
+            question.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFAQ(item);
+              }
+            });
+          });
+        }
+        
+        function toggleFAQ(item) {
+          const question = item.querySelector('h3');
+          const isActive = item.classList.contains('active');
+          
+          // Toggle active state
+          item.classList.toggle('active');
+          
+          // Update ARIA attributes
+          if (question) {
+            question.setAttribute('aria-expanded', !isActive);
+          }
+        }
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initFAQ);
+        } else {
+          initFAQ();
+        }
+      })();
     </script>
     
         <footer>
