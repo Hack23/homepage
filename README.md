@@ -659,3 +659,73 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 [![Substitute Threat](https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#porters-five-forces)
 [![Rivalry](https://img.shields.io/badge/Rivalry-Disadvantage-red?style=flat-square&logo=trophy&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#porters-five-forces)
 
+---
+
+## 📚 Related Documents
+
+### 🏛️ Hack23 ISMS Framework
+
+**Primary ISMS Documentation:**
+- [🔐 Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) - Overarching security governance framework
+- [🏷️ Classification Framework](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md) - Business impact analysis and CIA triad classification
+- [🌐 ISMS Transparency Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md) - Public disclosure strategy and transparency commitment
+- [📝 Style Guide](https://github.com/Hack23/ISMS-PUBLIC/blob/main/STYLE_GUIDE.md) - ISMS documentation standards and formatting guidelines
+- [📊 Security Metrics](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md) - KPI and performance measurement framework
+
+**Core Security Policies:**
+- [🛠️ Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) - SDLC security requirements and architecture documentation
+- [🌐 Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) - Cloud-native perimeter protection, WAF, CDN security
+- [🔍 Vulnerability Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md) - Security testing, scanning, and remediation procedures
+- [🎯 Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md) - STRIDE analysis and MITRE ATT&CK framework integration
+- [🔑 Access Control Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md) - Zero-trust IAM and authentication standards
+- [🔒 Cryptography Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md) - TLS 1.3, encryption at rest, key management
+
+**Operational Security:**
+- [🚨 Incident Response Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md) - Security incident management and coordinated disclosure
+- [📝 Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md) - Risk-controlled change processes and deployment gates
+- [🤝 Third Party Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md) - Supplier security risk management
+
+**Compliance & Governance:**
+- [✅ Compliance Checklist](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) - ISO 27001, NIST CSF 2.0, CIS Controls alignment
+- [📉 Risk Register](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md) - Enterprise risk tracking and treatment
+
+### 📋 Repository Documentation
+
+**Security Architecture:**
+- [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md) - Homepage security architecture and controls implementation
+- [THREAT_MODEL.md](THREAT_MODEL.md) - STRIDE threat analysis, MITRE ATT&CK mapping, and risk quantification
+- [FUTURE_SECURITY_ARCHITECTURE.md](FUTURE_SECURITY_ARCHITECTURE.md) - Security enhancement roadmap and planned improvements
+- [CLASSIFICATION.md](CLASSIFICATION.md) - Homepage business impact classification and CIA triad assessment
+- [SECURITY.md](SECURITY.md) - Vulnerability disclosure policy and coordinated disclosure procedures
+
+**Reference Guides:**
+- [ISMS_REFERENCE_GUIDE.md](ISMS_REFERENCE_GUIDE.md) - Blog-to-policy mapping for all 30+ security blog posts
+
+**CI/CD & Quality:**
+- [.github/workflows/main.yml](.github/workflows/main.yml) - Deployment workflow with ZAP and Lighthouse scanning
+- [.github/workflows/scorecards.yml](.github/workflows/scorecards.yml) - OpenSSF Scorecard supply chain security
+- [.github/workflows/quality-checks.yml](.github/workflows/quality-checks.yml) - HTML validation and link checking
+
+### 🏗️ Reference Implementations
+
+**Hack23 Security Architecture Examples:**
+- [🏛️ CIA Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) - Java/Spring Boot enterprise web application architecture
+- [🎮 Black Trigram Security Architecture](https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md) - React/Firebase gaming platform security
+- [📊 CIA Compliance Manager Security Architecture](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md) - React/Supabase compliance platform architecture
+
+**Threat Model References:**
+- [🏛️ CIA Threat Model](https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md) - STRIDE analysis for enterprise web applications
+- [🎮 Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md) - Gaming-specific security threat analysis
+- [📊 CIA Compliance Manager Threat Model](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md) - Client-side SPA security threats
+
+---
+
+**📋 Document Control:**  
+**✅ Approved by:** James Pether Sörling, CEO  
+**📤 Distribution:** Public  
+**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)  
+**📅 Effective Date:** 2025-11-17  
+**⏰ Next Review:** 2026-02-17 (Quarterly)  
+**🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-2022_Aligned-blue?style=flat-square&logo=iso&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-2.0_Aligned-green?style=flat-square&logo=nist&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![CIS Controls](https://img.shields.io/badge/CIS_Controls-v8.1_Aligned-orange?style=flat-square&logo=cisecurity&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![AWS Well-Architected](https://img.shields.io/badge/AWS-Well_Architected-orange?style=flat-square&logo=amazon-aws&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md)  
+**🔗 Related Documents:** [ISMS Transparency Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md), [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md), [Security Architecture](SECURITY_ARCHITECTURE.md), [Threat Model](THREAT_MODEL.md)
+

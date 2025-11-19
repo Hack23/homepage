@@ -302,15 +302,17 @@ curl -I "https://raw.githubusercontent.com/Hack23/ISMS-PUBLIC/main/Acceptable_Us
 
 ## 📋 **Document Control**
 
-**Approved by:** James Pether Sörling, CEO / Cybersecurity Expert  
-**Distribution:** Public  
-**Classification:** [![Public](https://img.shields.io/badge/Classification-Public-success?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md)
+**✅ Approved by:** James Pether Sörling, CEO  
+**📤 Distribution:** Public  
+**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels)
 
-**Effective Date:** 2025-11-10  
-**Next Review:** 2026-02-10 (Quarterly)
+**📅 Effective Date:** 2025-11-10  
+**⏰ Next Review:** 2026-02-10 (Quarterly)
 
-**Framework Compliance:**  
-[![ISO 27001:2022](https://img.shields.io/badge/ISO_27001-2022-blue?style=flat-square)](#) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-2.0-blue?style=flat-square)](#) [![CIS Controls v8.1](https://img.shields.io/badge/CIS_Controls-v8.1-blue?style=flat-square)](#)
+**🎯 Framework Compliance:**  
+[![ISO 27001](https://img.shields.io/badge/ISO_27001-2022_Aligned-blue?style=flat-square&logo=iso&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-2.0_Aligned-green?style=flat-square&logo=nist&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![CIS Controls](https://img.shields.io/badge/CIS_Controls-v8.1_Aligned-orange?style=flat-square&logo=cisecurity&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md)
+
+**🔗 Related Documents:** [ISMS Transparency Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md), [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md), [Style Guide](https://github.com/Hack23/ISMS-PUBLIC/blob/main/STYLE_GUIDE.md)
 
 ---
 

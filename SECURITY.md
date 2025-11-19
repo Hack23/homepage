@@ -49,3 +49,36 @@ Upon receipt of a vulnerability report, our team will:
 We appreciate your effort in helping us maintain a secure and reliable project. If your report results in a confirmed security fix, we will recognize your contribution in the release notes and/or a public acknowledgment, unless you request to remain anonymous.
 
 Thank you for helping us keep the project project and its users safe.
+
+---
+
+## 📚 Related Documents
+
+### 🏛️ Hack23 ISMS Framework
+
+**Security Policies:**
+- [🔐 Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) - Overarching security governance framework
+- [🔍 Vulnerability Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md) - Security testing, remediation, and disclosure procedures
+- [🚨 Incident Response Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md) - Security incident management and coordinated disclosure
+- [🛠️ Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) - SDLC security requirements
+
+**Repository Security Documentation:**
+- [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md) - Homepage security architecture and controls
+- [THREAT_MODEL.md](THREAT_MODEL.md) - STRIDE threat analysis and risk assessment
+- [README.md](README.md) - Project overview and security posture
+
+**Reference Implementations:**
+- [🏛️ CIA Security Policy](https://github.com/Hack23/cia/blob/master/SECURITY.md) - Enterprise application disclosure policy
+- [🎮 Black Trigram Security Policy](https://github.com/Hack23/blacktrigram/blob/main/SECURITY.md) - Gaming platform disclosure policy
+- [📊 CIA Compliance Manager Security Policy](https://github.com/Hack23/cia-compliance-manager/blob/main/SECURITY.md) - SPA disclosure policy
+
+---
+
+**📋 Document Control:**  
+**✅ Approved by:** James Pether Sörling, CEO  
+**📤 Distribution:** Public  
+**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels)  
+**📅 Effective Date:** 2025-11-17  
+**⏰ Next Review:** 2026-11-17 (Annual)  
+**🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-A.5.25_Vulnerability_Disclosure-blue?style=flat-square&logo=iso&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md)  
+**🔗 Related Documents:** [Vulnerability Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md), [Incident Response Plan](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md)
