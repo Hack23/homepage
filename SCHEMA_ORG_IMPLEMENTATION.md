@@ -3,31 +3,60 @@
 ## Overview
 This document summarizes the comprehensive Schema.org structured data enhancements implemented across the Hack23 AB website to improve SEO, enable rich snippets in search results, and provide better semantic understanding for search engines.
 
-## Implementation Date
-November 17, 2025
+## Implementation Dates
+- **Initial Implementation:** November 17, 2025
+- **Multilingual Service Enhancement:** November 19, 2025
 
 ## Files Modified
 
-### 1. index.html (Homepage)
-**New Schemas Added:**
-- **Service schema** (`@type: Service`) - Comprehensive cybersecurity consulting services offering
-  - 6 service categories with detailed descriptions
-  - Linked to Organization via `makesOffer` property
-  - Geographic service areas (Sweden, Nordic Region, Europe)
-- **BreadcrumbList schema** - Navigation hierarchy for homepage
-- **Enhanced WebPage schema** - Added `datePublished` and `dateModified` properties
+### 1. index.html (English Homepage)
+**Enhanced Service Schemas (November 19, 2025):**
+- **6 Individual Service entities** - Each service is now a full-fledged entity with unique @id
+  - Security Architecture & Strategy (`#service-security-architecture`)
+  - Cloud Security & DevSecOps (`#service-cloud-security`)
+  - Secure Development & Code Quality (`#service-secure-development`)
+  - Compliance & Regulatory (`#service-compliance`)
+  - Open Source Security (`#service-opensource-security`)
+  - Security Culture & Training (`#service-security-culture`)
+  
+**Service Properties Added:**
+- `serviceType` - Service category name
+- `name` - Full service name
+- `description` - Comprehensive description with key features
+- `provider` - Link to Organization entity
+- `areaServed` - Geographic coverage (Sweden, Nordic Region, Europe)
+- `availableLanguage` - English and Swedish
+- `serviceOutput` - Expected deliverables
 
-**Existing Schemas Enhanced:**
-- Organization schema now includes `makesOffer` reference
+**Organization Schema Enhanced:**
+- `makesOffer` - Now references all 6 individual services (previously single OfferCatalog)
+
+**Existing Schemas:**
+- BreadcrumbList schema - Navigation hierarchy
+- Enhanced WebPage schema with dates
 - All product schemas (VideoGame, SoftwareApplication, WebApplication) retained
 
-**Service Offerings Structured:**
-1. Security Architecture & Strategy
-2. Cloud Security & DevSecOps
-3. Secure Development & Code Quality
-4. Compliance & Regulatory
-5. Open Source Security
-6. Security Culture & Training
+### 2. index_sv.html (Swedish Homepage) - NEW
+**Service Schemas Added (November 19, 2025):**
+- **6 Individual Service entities** with Swedish translations
+  - All service names, types, and descriptions translated to Swedish
+  - Geographic areas localized (Sverige, Norden, Europa)
+  - Available languages: Svenska, Engelska
+  - Same @id values as English version for consistency
+
+**Organization Schema Enhanced:**
+- Added `makesOffer` property referencing all 6 services
+
+### 3. index_ko.html (Korean Homepage) - NEW
+**Service Schemas Added (November 19, 2025):**
+- **6 Individual Service entities** with Korean translations
+  - All service names, types, and descriptions translated to Korean
+  - Geographic areas localized (스웨덴, 북유럽, 유럽)
+  - Available languages: 한국어, 영어, 스웨덴어
+  - Same @id values as English version for consistency
+
+**Organization Schema Enhanced:**
+- Added `makesOffer` property referencing all 6 services
 
 ### 2. blog.html (Security Blog)
 **Enhanced Schemas:**
@@ -96,15 +125,15 @@ November 17, 2025
 ### Primary Schemas
 | Schema Type | Usage | Pages |
 |------------|-------|-------|
-| **Service** | Cybersecurity consulting services | index.html |
+| **Service** | Cybersecurity consulting services (6 entities) | index.html, index_sv.html, index_ko.html |
 | **BreadcrumbList** | Navigation hierarchy | index.html, blog.html, black-trigram-features.html, cia-compliance-manager-features.html, cia-features.html |
 | **WebPage** | Page-level metadata with dates | All major pages |
 | **BlogPosting + Article** | Dual-type for blog posts | blog.html (8 posts) |
-| **VideoGame** | Black Trigram game | index.html, black-trigram-features.html |
-| **SoftwareApplication** | CIA Compliance Manager | index.html, cia-compliance-manager-features.html |
-| **WebApplication** | Citizen Intelligence Agency | index.html, cia-features.html |
-| **FAQPage** | CIA Triad FAQ, Homepage FAQ | cia-triad-faq.html, index.html |
-| **Organization** | Company information | index.html |
+| **VideoGame** | Black Trigram game | index.html, index_sv.html, index_ko.html, black-trigram-features.html |
+| **SoftwareApplication** | CIA Compliance Manager | index.html, index_sv.html, index_ko.html, cia-compliance-manager-features.html |
+| **WebApplication** | Citizen Intelligence Agency | index.html, index_sv.html, index_ko.html, cia-features.html |
+| **FAQPage** | CIA Triad FAQ, Homepage FAQ | cia-triad-faq.html, index.html, index_sv.html, index_ko.html |
+| **Organization** | Company information | index.html, index_sv.html, index_ko.html |
 | **Blog** | Blog listing metadata | blog.html |
 
 ### Schema Properties Enhanced
@@ -116,7 +145,33 @@ November 17, 2025
 - **keywords** - Enhanced for better topic understanding
 - **breadcrumb** - Navigation context for all pages
 - **image** - Visual content for rich snippets
-- **makesOffer** - Links organization to services
+- **makesOffer** - Links organization to 6 individual services (upgraded from single OfferCatalog)
+- **serviceType** - Service category identification
+- **areaServed** - Geographic service coverage
+- **availableLanguage** - Language availability per service
+- **serviceOutput** - Expected deliverables for each service
+
+## Multilingual Implementation
+
+### Language Coverage
+- **English (index.html)** - Primary version with full structured data
+- **Swedish (index_sv.html)** - Complete translation of all schemas
+- **Korean (index_ko.html)** - Complete translation of all schemas
+
+### Consistency Approach
+- **Identical @id values** across all language versions for entity identification
+- **Localized content** - All text properties translated appropriately
+- **Geographic areas** - Translated to match local language (Sweden/Sverige/스웨덴)
+- **Language specification** - Each version declares its available languages
+- **Service offerings** - All 6 services fully translated and localized
+
+### Translation Quality
+| Element | English | Swedish | Korean |
+|---------|---------|---------|--------|
+| Service Names | ✓ Original | ✓ Translated | ✓ Translated |
+| Descriptions | ✓ Full | ✓ Full | ✓ Full |
+| Geographic Areas | Sweden, Nordic, Europe | Sverige, Norden, Europa | 스웨덴, 북유럽, 유럽 |
+| Available Languages | English, Swedish | Svenska, Engelska | 한국어, 영어, 스웨덴어 |
 
 ## Technical Implementation Details
 
@@ -138,7 +193,28 @@ Using `@id` for proper entity linking:
 - Organization: `"@id": "https://hack23.com/#org"`
 - WebSite: `"@id": "https://hack23.com/#website"`
 - Products: Unique IDs for each application
+- Services: Individual IDs for each service (e.g., `#service-security-architecture`)
 - Pages: URL-based IDs with anchors
+
+### Service Schema Structure
+Each service is now a full entity with comprehensive properties:
+```json
+{
+  "@type": "Service",
+  "@id": "https://hack23.com/#service-security-architecture",
+  "serviceType": "Security Architecture & Strategy",
+  "name": "Security Architecture & Strategy",
+  "description": "Enterprise security architecture design...",
+  "provider": { "@id": "https://hack23.com/#org" },
+  "areaServed": [
+    { "@type": "Country", "name": "Sweden" },
+    { "@type": "Place", "name": "Nordic Region" },
+    { "@type": "Place", "name": "Europe" }
+  ],
+  "availableLanguage": ["English", "Swedish"],
+  "serviceOutput": "Security architecture documentation..."
+}
+```
 
 ### Dual-Type Schemas
 Blog posts use both BlogPosting and Article types for maximum compatibility:
@@ -152,8 +228,10 @@ Blog posts use both BlogPosting and Article types for maximum compatibility:
 ## Validation Results
 
 ### JSON-LD Validation ✓
-All files validated successfully:
-- ✓ index.html - Valid JSON-LD with 8 entities
+All files validated successfully (November 19, 2025):
+- ✓ index.html - Valid JSON-LD with 13 entities (including 6 Service entities)
+- ✓ index_sv.html - Valid JSON-LD with 13 entities (including 6 Service entities)
+- ✓ index_ko.html - Valid JSON-LD with 13 entities (including 6 Service entities)
 - ✓ blog.html - Valid JSON-LD with 3 entities
 - ✓ black-trigram-features.html - Valid JSON-LD with 3 entities
 - ✓ cia-compliance-manager-features.html - Valid JSON-LD with 3 entities
@@ -161,25 +239,46 @@ All files validated successfully:
 - ✓ cia-triad-faq.html - Valid JSON-LD with FAQPage
 
 ### Schema Completeness
-- [x] Service schema for consulting services
+- [x] Service schema for all 6 consulting services (all 3 languages)
+- [x] Organization makesOffer linking to all 6 services (all 3 languages)
+- [x] Geographic service areas (Sweden, Nordic Region, Europe)
+- [x] Available languages specified per service
+- [x] Service output descriptions included
 - [x] BreadcrumbList on all major pages
 - [x] WebPage metadata with publication dates
 - [x] Enhanced product schemas with dates
 - [x] Blog posts with Article type properties
 - [x] All JSON-LD syntax valid
+- [x] Multilingual consistency across EN/SV/KO
+
+### Multilingual Validation
+- ✓ All 6 services present in English version
+- ✓ All 6 services present in Swedish version  
+- ✓ All 6 services present in Korean version
+- ✓ Identical @id values across languages for entity linking
+- ✓ Complete translations of service names and descriptions
+- ✓ Localized geographic area names
+- ✓ Appropriate language declarations per version
 
 ## SEO Benefits
 
 ### Rich Snippet Eligibility
-1. **Service Rich Results** - Cybersecurity consulting services can appear with detailed information
-2. **FAQ Rich Results** - CIA Triad FAQ eligible for expandable Q&A in search results
-3. **Breadcrumbs** - Navigation path display in search results
-4. **Article Rich Results** - Blog posts eligible for enhanced display with author, date, images
-5. **Product Information** - Software applications can display with features, screenshots, pricing
+1. **Service Rich Results** - All 6 cybersecurity consulting services can appear with detailed information in search results
+   - Individual service pages for each offering
+   - Geographic targeting for Sweden, Nordic Region, and Europe
+   - Language-specific results for English, Swedish, and Korean searches
+2. **Local Business Discovery** - Enhanced Organization schema with service offerings improves local search visibility
+3. **Multilingual SEO** - Proper hreflang support through consistent @id values across language versions
+4. **FAQ Rich Results** - CIA Triad FAQ eligible for expandable Q&A in search results
+5. **Breadcrumbs** - Navigation path display in search results
+6. **Article Rich Results** - Blog posts eligible for enhanced display with author, date, images
+7. **Product Information** - Software applications can display with features, screenshots, pricing
 
 ### Search Engine Understanding
-- **Entity Recognition** - Clear identification of organization, products, services, people
-- **Content Relationships** - Proper linking between pages, authors, and topics
+- **Entity Recognition** - Clear identification of organization, 6 services, products, people
+- **Content Relationships** - Proper linking between organization and services via makesOffer
+- **Geographic Targeting** - Explicit service areas for better local search performance
+- **Language Targeting** - Multilingual content properly declared for international SEO
 - **Temporal Context** - Publication and modification dates for freshness signals
 - **Topical Authority** - Detailed "teaches" and "about" properties establish expertise
 
@@ -196,22 +295,38 @@ All files validated successfully:
 1. **Content Updates**
    - Update `dateModified` when page content changes significantly
    - Add new blog posts to the `blogPost` array in blog.html
-   - Keep service offerings current in Service schema
+   - Keep service offerings current in all 3 language versions (EN/SV/KO)
+   - Maintain translation consistency when updating service descriptions
 
-2. **New Pages**
+2. **New Services**
+   - Add new Service entity to @graph in all 3 homepage versions
+   - Create unique @id for the service
+   - Translate all properties (name, description, serviceType) to Swedish and Korean
+   - Add reference to Organization's makesOffer array in all versions
+
+3. **New Pages**
    - Add BreadcrumbList to all new major pages
    - Include WebPage schema with proper dates
    - Use @graph structure for organization
+   - Consider multilingual versions from the start
 
-3. **Product Updates**
+4. **Product Updates**
    - Update version numbers in SoftwareApplication schemas
    - Add new features to `featureList` arrays
    - Update screenshots when available
+   - Sync changes across all language versions
 
-4. **Organizational Changes**
+5. **Organizational Changes**
    - Update Organization schema for new certifications, services
    - Update founder/employee information as needed
    - Keep contact information current
+   - Ensure changes are reflected in all language versions
+
+6. **Multilingual Updates**
+   - Always update all 3 language versions together (EN/SV/KO)
+   - Maintain identical @id values across languages
+   - Verify translations are accurate and culturally appropriate
+   - Test each language version independently
 
 ### Validation Tools
 
@@ -270,6 +385,9 @@ For questions about this implementation:
 
 ---
 
-**Implementation completed:** November 17, 2025  
+**Initial Implementation:** November 17, 2025  
+**Multilingual Service Enhancement:** November 19, 2025  
 **Validator:** All JSON-LD validated successfully  
+**Languages:** English, Swedish, Korean  
+**Service Coverage:** 6 individual Service entities per language  
 **Status:** Production-ready ✓
