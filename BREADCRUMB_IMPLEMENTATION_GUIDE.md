@@ -207,7 +207,6 @@ Examples: `cia-triad-faq.html`, `cia-triad-faq_sv.html`
 ```html
 <nav aria-label="Breadcrumb">
   <ol class="breadcrumb">
-    <ol class="breadcrumb">
     <li class="breadcrumb-item">
       <a href="/">Home</a>
     </li>
