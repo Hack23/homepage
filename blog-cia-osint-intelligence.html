@@ -114,6 +114,40 @@
         }
       ]
     }
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OSINT and why is it important for political transparency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OSINT (Open Source Intelligence) is the collection and analysis of publicly available information to create actionable intelligence. For political transparency, OSINT enables citizens to monitor government activities, track legislative processes, analyze voting patterns, and hold representatives accountable using publicly accessible data from parliamentary records, official documents, and government databases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 45 rules for watching the watchers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 45 rules for watching the watchers are comprehensive OSINT methodologies for monitoring political activities, including: data collection from official sources, pattern recognition across voting records, relationship mapping between politicians and policies, temporal analysis of legislative changes, and transparency verification. These rules guide ethical intelligence gathering to ensure democratic accountability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does CIA implement OSINT for Swedish parliamentary monitoring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizen Intelligence Agency implements OSINT by automatically collecting data from Swedish parliamentary APIs, riksdag.se, and official government databases. The system tracks voting records, committee assignments, legislative proposals, and political affiliations, then analyzes patterns to reveal accountability metrics, decision-making processes, and political network relationships."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What ethical considerations apply to political OSINT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Political OSINT must balance transparency with privacy: only collect publicly available information, respect data protection laws (GDPR), focus on public officials' governmental actions rather than private lives, ensure accuracy and context in reporting, and maintain clear methodology documentation. The goal is democratic accountability, not harassment or manipulation."
+      }
+    }
   ]
 }
 </script>
@@ -599,8 +633,122 @@
         </div>
       </div>
     </section>
+    
+    <!-- FAQ Section with Accordion UI -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Common questions about OSINT, political intelligence gathering, and the 45 rules for watching the watchers.</p>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+          What is OSINT and why is it important for political transparency?
+        </h3>
+        <div id="faq-answer-1" class="faq-answer" role="region">
+          <p>OSINT (Open Source Intelligence) is the collection and analysis of publicly available information to create actionable intelligence. For political transparency, OSINT enables citizens to:</p>
+          <ul>
+            <li><strong>Monitor Government:</strong> Track activities and decisions in real-time</li>
+            <li><strong>Analyze Patterns:</strong> Identify voting trends and legislative priorities</li>
+            <li><strong>Ensure Accountability:</strong> Hold representatives responsible for their actions</li>
+            <li><strong>Access Democracy:</strong> Use publicly available data to understand governance</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+          What are the 45 rules for watching the watchers?
+        </h3>
+        <div id="faq-answer-2" class="faq-answer" role="region">
+          <p>The 45 rules for watching the watchers are comprehensive OSINT methodologies for monitoring political activities, including:</p>
+          <ul>
+            <li><strong>Data Collection:</strong> Systematic gathering from official sources and databases</li>
+            <li><strong>Pattern Recognition:</strong> Analyzing voting records and legislative behavior</li>
+            <li><strong>Relationship Mapping:</strong> Tracking connections between politicians, policies, and parties</li>
+            <li><strong>Temporal Analysis:</strong> Monitoring changes and trends over time</li>
+            <li><strong>Transparency Verification:</strong> Ensuring accuracy and completeness of public records</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+          How does CIA implement OSINT for Swedish parliamentary monitoring?
+        </h3>
+        <div id="faq-answer-3" class="faq-answer" role="region">
+          <p>Citizen Intelligence Agency implements OSINT through automated data collection and analysis:</p>
+          <ul>
+            <li><strong>Data Sources:</strong> Swedish parliamentary APIs, riksdag.se, official government databases</li>
+            <li><strong>Tracking:</strong> Voting records, committee assignments, legislative proposals, political affiliations</li>
+            <li><strong>Analysis:</strong> Pattern recognition, accountability metrics, decision-making processes</li>
+            <li><strong>Visualization:</strong> Network relationships, temporal trends, comparative analytics</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+          What ethical considerations apply to political OSINT?
+        </h3>
+        <div id="faq-answer-4" class="faq-answer" role="region">
+          <p>Political OSINT requires careful ethical balance between transparency and privacy:</p>
+          <ul>
+            <li><strong>Public Information Only:</strong> Collect only publicly available governmental data</li>
+            <li><strong>Legal Compliance:</strong> Respect data protection laws (GDPR) and privacy regulations</li>
+            <li><strong>Public vs Private:</strong> Focus on officials' governmental actions, not private lives</li>
+            <li><strong>Accuracy:</strong> Ensure data correctness and provide proper context</li>
+            <li><strong>Methodology:</strong> Document and disclose collection and analysis methods</li>
+            <li><strong>Purpose:</strong> Aim for democratic accountability, not harassment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </article>
 </main>
+
+<!-- FAQ Accordion JavaScript -->
+<script>
+  (function() {
+    'use strict';
+    
+    function initFAQ() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('h3');
+        
+        if (!question) return;
+        
+        question.addEventListener('click', function() {
+          toggleFAQ(item);
+        });
+        
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFAQ(item);
+          }
+        });
+      });
+    }
+    
+    function toggleFAQ(item) {
+      const question = item.querySelector('h3');
+      const isActive = item.classList.contains('active');
+      
+      item.classList.toggle('active');
+      
+      if (question) {
+        question.setAttribute('aria-expanded', !isActive);
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+      initFAQ();
+    }
+  })();
+</script>
 
 <footer>
   <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |

@@ -173,6 +173,72 @@
       ]
     }
     </script>
+    
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CIA Compliance Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA Compliance Manager is a professional open-source information security compliance platform that evaluates Confidentiality, Integrity, and Availability (CIA Triad). It provides enterprise-grade automated compliance mapping to NIST, ISO 27001, GDPR, HIPAA, SOC2, and CRA frameworks with sophisticated threat modeling, business impact analysis, and real-time control effectiveness tracking. Built for organizations requiring advanced cybersecurity governance, it combines automated assessment with practical security guidance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which compliance frameworks does CIA Compliance Manager support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA Compliance Manager provides automated compliance mapping to multiple major frameworks: NIST Cybersecurity Framework and NIST 800-53 controls; ISO 27001 Information Security Management; GDPR (General Data Protection Regulation) requirements; HIPAA (Health Insurance Portability and Accountability Act) for healthcare; SOC 2 (Service Organization Control) for service providers; PCI DSS for payment card security; NIS2 Directive for critical infrastructure; and CRA (Cyber Resilience Act) for product security. The platform automatically maps your security controls to relevant framework requirements, making compliance reporting efficient and comprehensive."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does automated compliance mapping work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The automated compliance mapping feature analyzes your implemented security controls and automatically matches them to requirements across multiple frameworks. When you document a security control in the platform, it identifies which NIST controls, ISO 27001 requirements, GDPR articles, and other framework elements are satisfied. This eliminates manual cross-referencing and ensures comprehensive coverage. The system generates compliance reports showing your organization's status against each framework, identifies gaps, and prioritizes remediation efforts based on risk and business impact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is business impact analysis in CIA Compliance Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business Impact Analysis (BIA) in CIA Compliance Manager quantifies how security risks affect your business operations and objectives. The platform evaluates the potential impact of security incidents on confidentiality, integrity, and availability across different business functions. It calculates financial impact, operational disruption, compliance violations, and reputational damage. The BIA feature helps prioritize security investments by showing which assets and controls have the highest business value, enabling risk-based decision making and demonstrating security ROI to stakeholders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does threat modeling work in the platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA Compliance Manager integrates STRIDE threat modeling methodology (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) to systematically identify security threats. The platform guides you through analyzing your systems and data flows to identify potential threats in each STRIDE category. It then maps these threats to relevant security controls and compliance requirements. The threat modeling feature includes risk visualization dashboards, threat-to-control mapping, and prioritized mitigation recommendations based on likelihood and impact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CIA Compliance Manager suitable for small businesses or only enterprises?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA Compliance Manager is designed to scale from small businesses to large enterprises. Small and medium businesses benefit from the guided assessment process, automated compliance mapping, and cost-effective open-source model without expensive licensing. The platform helps smaller organizations achieve compliance without dedicated security teams. Enterprises benefit from advanced features like sophisticated threat modeling, multi-framework compliance, integration capabilities, and comprehensive reporting. The open-source nature means organizations of any size can customize the platform to their specific needs and budget constraints."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started with CIA Compliance Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Getting started with CIA Compliance Manager is straightforward: First, access the web-based application at hack23.github.io/cia-compliance-manager/ - no installation required. Begin with the guided CIA Triad assessment to evaluate your current security posture across Confidentiality, Integrity, and Availability. Document your existing security controls using the intuitive interface. The platform automatically maps your controls to compliance frameworks and generates gap analysis reports. Review the threat modeling recommendations and prioritize improvements based on business impact. The platform includes comprehensive documentation, and the GitHub repository provides additional resources for advanced customization and integration."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
   <!-- Breadcrumb Navigation -->
@@ -559,7 +625,227 @@
           <a href="https://github.com/Hack23/cia-compliance-manager" class="btn secondary-btn" title="View the GitHub Repository">GitHub Repository</a>
         </div>
       </section>
+      
+      <!-- FAQ Section with Accordion UI -->
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Common questions about CIA Compliance Manager features, compliance frameworks, and security assessment capabilities.</p>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+            What is CIA Compliance Manager?
+          </h3>
+          <div id="faq-answer-1" class="faq-answer" role="region">
+            <p>CIA Compliance Manager is a professional open-source information security compliance platform that evaluates Confidentiality, Integrity, and Availability (CIA Triad).</p>
+            <p><strong>Core Capabilities:</strong></p>
+            <ul>
+              <li><strong>Automated Assessment:</strong> Comprehensive evaluation of security controls across all three CIA domains</li>
+              <li><strong>Compliance Mapping:</strong> Automatic mapping to NIST, ISO 27001, GDPR, HIPAA, SOC2, and CRA frameworks</li>
+              <li><strong>Threat Modeling:</strong> Integrated STRIDE analysis and risk visualization</li>
+              <li><strong>Business Impact Analysis:</strong> Quantify security risks and their business impact</li>
+              <li><strong>Evidence Collection:</strong> Automated documentation for audits and compliance reporting</li>
+            </ul>
+            <p>Built for organizations requiring advanced cybersecurity governance, it combines automated assessment with practical security guidance.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+            Which compliance frameworks does CIA Compliance Manager support?
+          </h3>
+          <div id="faq-answer-2" class="faq-answer" role="region">
+            <p>CIA Compliance Manager provides automated compliance mapping to multiple major frameworks:</p>
+            <ul>
+              <li><strong>NIST:</strong> Cybersecurity Framework and NIST 800-53 controls</li>
+              <li><strong>ISO 27001:</strong> Information Security Management System requirements</li>
+              <li><strong>GDPR:</strong> General Data Protection Regulation for personal data</li>
+              <li><strong>HIPAA:</strong> Health Insurance Portability and Accountability Act for healthcare</li>
+              <li><strong>SOC 2:</strong> Service Organization Control for service providers</li>
+              <li><strong>PCI DSS:</strong> Payment Card Industry Data Security Standard</li>
+              <li><strong>NIS2:</strong> Network and Information Security Directive for critical infrastructure</li>
+              <li><strong>CRA:</strong> Cyber Resilience Act for product security</li>
+            </ul>
+            <p>The platform automatically maps your security controls to relevant framework requirements, making compliance reporting efficient and comprehensive. This eliminates manual cross-referencing and ensures you don't miss critical requirements.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+            How does automated compliance mapping work?
+          </h3>
+          <div id="faq-answer-3" class="faq-answer" role="region">
+            <p>The automated compliance mapping feature analyzes your implemented security controls and automatically matches them to requirements across multiple frameworks:</p>
+            <p><strong>How it works:</strong></p>
+            <ol>
+              <li><strong>Document Controls:</strong> Enter your security controls using the intuitive interface</li>
+              <li><strong>Automatic Analysis:</strong> The system identifies which framework requirements each control satisfies</li>
+              <li><strong>Multi-Framework Coverage:</strong> See how one control maps to NIST, ISO 27001, GDPR, and other frameworks simultaneously</li>
+              <li><strong>Gap Identification:</strong> Instantly identify missing controls and compliance gaps</li>
+              <li><strong>Priority Recommendations:</strong> Get prioritized remediation guidance based on risk and business impact</li>
+            </ol>
+            <p><strong>Benefits:</strong></p>
+            <ul>
+              <li>Eliminates manual cross-referencing of framework requirements</li>
+              <li>Ensures comprehensive coverage across all relevant standards</li>
+              <li>Generates compliance reports showing your status against each framework</li>
+              <li>Saves hundreds of hours in compliance documentation and audit preparation</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+            What is business impact analysis in CIA Compliance Manager?
+          </h3>
+          <div id="faq-answer-4" class="faq-answer" role="region">
+            <p>Business Impact Analysis (BIA) in CIA Compliance Manager quantifies how security risks affect your business operations and objectives:</p>
+            <p><strong>What it evaluates:</strong></p>
+            <ul>
+              <li><strong>Financial Impact:</strong> Calculate potential costs of security incidents (data breaches, downtime, recovery)</li>
+              <li><strong>Operational Disruption:</strong> Assess impact on business processes and service delivery</li>
+              <li><strong>Compliance Violations:</strong> Identify regulatory penalties and legal consequences</li>
+              <li><strong>Reputational Damage:</strong> Evaluate customer trust and brand impact</li>
+              <li><strong>Recovery Time:</strong> Determine maximum tolerable downtime and recovery objectives</li>
+            </ul>
+            <p><strong>Key Benefits:</strong></p>
+            <ul>
+              <li>Prioritize security investments based on actual business value</li>
+              <li>Demonstrate security ROI to executives and stakeholders</li>
+              <li>Make risk-based decisions with quantifiable data</li>
+              <li>Align security controls with business objectives</li>
+              <li>Justify security budgets with business impact evidence</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-5">
+            How does threat modeling work in the platform?
+          </h3>
+          <div id="faq-answer-5" class="faq-answer" role="region">
+            <p>CIA Compliance Manager integrates STRIDE threat modeling methodology to systematically identify and mitigate security threats:</p>
+            <p><strong>STRIDE Categories:</strong></p>
+            <ul>
+              <li><strong>Spoofing:</strong> Identity impersonation and authentication bypass threats</li>
+              <li><strong>Tampering:</strong> Unauthorized modification of data or systems</li>
+              <li><strong>Repudiation:</strong> Denial of actions without audit trail</li>
+              <li><strong>Information Disclosure:</strong> Unauthorized access to sensitive data</li>
+              <li><strong>Denial of Service:</strong> Availability disruption and resource exhaustion</li>
+              <li><strong>Elevation of Privilege:</strong> Unauthorized access to higher permissions</li>
+            </ul>
+            <p><strong>Platform Features:</strong></p>
+            <ul>
+              <li>Guided threat identification for systems and data flows</li>
+              <li>Automatic mapping of threats to security controls</li>
+              <li>Risk visualization dashboards showing threat landscape</li>
+              <li>Prioritized mitigation recommendations based on likelihood and impact</li>
+              <li>Integration with compliance requirements for comprehensive coverage</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-6">
+            Is CIA Compliance Manager suitable for small businesses or only enterprises?
+          </h3>
+          <div id="faq-answer-6" class="faq-answer" role="region">
+            <p>CIA Compliance Manager is designed to scale from small businesses to large enterprises, with benefits for organizations of all sizes:</p>
+            <p><strong>For Small & Medium Businesses:</strong></p>
+            <ul>
+              <li><strong>Cost-Effective:</strong> Open-source model eliminates expensive licensing fees</li>
+              <li><strong>Guided Process:</strong> Step-by-step assessment helps organizations without dedicated security teams</li>
+              <li><strong>Automated Compliance:</strong> Achieve ISO 27001, GDPR, or SOC 2 compliance without consultants</li>
+              <li><strong>Educational:</strong> Learn security best practices while improving your posture</li>
+              <li><strong>Scalable:</strong> Start simple and add complexity as you grow</li>
+            </ul>
+            <p><strong>For Enterprises:</strong></p>
+            <ul>
+              <li><strong>Sophisticated Features:</strong> Advanced threat modeling and multi-framework compliance</li>
+              <li><strong>Integration Capabilities:</strong> Connect with existing security tools and workflows</li>
+              <li><strong>Comprehensive Reporting:</strong> Executive dashboards and audit-ready documentation</li>
+              <li><strong>Customization:</strong> Adapt the platform to specific industry requirements</li>
+              <li><strong>Open Source:</strong> Full transparency and control over your compliance platform</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-7">
+            How do I get started with CIA Compliance Manager?
+          </h3>
+          <div id="faq-answer-7" class="faq-answer" role="region">
+            <p>Getting started with CIA Compliance Manager is straightforward with these steps:</p>
+            <p><strong>Quick Start Guide:</strong></p>
+            <ol>
+              <li><strong>Access the Platform:</strong> Visit <a href="https://hack23.github.io/cia-compliance-manager/" target="_blank">hack23.github.io/cia-compliance-manager/</a> - no installation required, fully web-based</li>
+              <li><strong>CIA Triad Assessment:</strong> Begin with the guided assessment to evaluate your current security posture across Confidentiality, Integrity, and Availability</li>
+              <li><strong>Document Controls:</strong> Use the intuitive interface to document your existing security controls and policies</li>
+              <li><strong>Review Gap Analysis:</strong> The platform automatically identifies gaps in your compliance coverage and security controls</li>
+              <li><strong>Threat Modeling:</strong> Work through the STRIDE threat analysis for your systems and data flows</li>
+              <li><strong>Prioritize Improvements:</strong> Review business impact analysis to prioritize security investments</li>
+              <li><strong>Generate Reports:</strong> Create compliance reports for audits, stakeholders, or internal review</li>
+            </ol>
+            <p><strong>Additional Resources:</strong></p>
+            <ul>
+              <li><a href="cia-compliance-manager-docs.html" target="_blank">Comprehensive Documentation</a> with user guides and tutorials</li>
+              <li><a href="https://github.com/Hack23/cia-compliance-manager" target="_blank">GitHub Repository</a> for advanced customization and integration</li>
+              <li>Example assessments and templates to accelerate your implementation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
+    
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // Initialize FAQ accordion functionality
+        function initFAQ() {
+          const faqItems = document.querySelectorAll('.faq-item');
+          
+          faqItems.forEach(function(item) {
+            const question = item.querySelector('h3');
+            
+            if (!question) return;
+            
+            // Click event
+            question.addEventListener('click', function() {
+              toggleFAQ(item);
+            });
+            
+            // Keyboard event (Enter or Space)
+            question.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFAQ(item);
+              }
+            });
+          });
+        }
+        
+        function toggleFAQ(item) {
+          const question = item.querySelector('h3');
+          const isActive = item.classList.contains('active');
+          
+          // Toggle active state
+          item.classList.toggle('active');
+          
+          // Update ARIA attributes
+          if (question) {
+            question.setAttribute('aria-expanded', !isActive);
+          }
+        }
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initFAQ);
+        } else {
+          initFAQ();
+        }
+      })();
+    </script>
         <footer>
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |

@@ -100,6 +100,40 @@
         }
       ]
     }
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is compliance architecture and why is it important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compliance architecture is the systematic design and implementation of security controls, policies, and processes that ensure adherence to regulatory frameworks (ISO 27001, GDPR, NIS2, CRA) and industry standards. It's important because it provides a structured approach to managing security requirements, automating compliance validation, and maintaining consistent security posture across an organization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does CIA Compliance Manager implement compliance architecture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CIA Compliance Manager implements compliance architecture by evaluating the CIA Triad (Confidentiality, Integrity, Availability) across all systems and automatically mapping controls to multiple regulatory frameworks. It provides business impact analysis, threat modeling (STRIDE), automated evidence collection, and continuous compliance monitoring, enabling organizations to maintain alignment with ISO 27001, GDPR, HIPAA, SOC2, and other frameworks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What compliance frameworks does the architecture support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The compliance architecture supports: ISO 27001 (information security), NIST Cybersecurity Framework, GDPR (data protection), HIPAA (healthcare), SOC2 (service organizations), PCI DSS (payment cards), NIS2 (network and information systems), CRA (Cyber Resilience Act), and OWASP security standards. The architecture enables automatic mapping of controls across multiple frameworks simultaneously."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can organizations benefit from automated compliance architecture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organizations benefit through: reduced manual audit workload (automated evidence collection), faster compliance achievement (clear control mapping), lower compliance costs (elimination of redundant work), improved security posture (continuous validation), and better risk management (automated threat modeling and business impact analysis). The architecture scales from startups to enterprises, adapting to organizational complexity."
+      }
+    }
   ]
 }
 </script>
@@ -404,8 +438,128 @@
       <p><strong>Related:</strong> <a href="cia-compliance-manager-docs.html">Complete Documentation</a> - All architecture diagrams, framework mappings, and technical specifications</p>
       <p><strong>Back to:</strong> <a href="blog.html">Security Blog</a> - All discordian posts</p>
     </section>
+    
+    <!-- FAQ Section with Accordion UI -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Common questions about compliance architecture, framework mappings, and automated compliance management.</p>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+          What is compliance architecture and why is it important?
+        </h3>
+        <div id="faq-answer-1" class="faq-answer" role="region">
+          <p>Compliance architecture is the systematic design and implementation of security controls, policies, and processes that ensure adherence to regulatory frameworks and industry standards. It provides:</p>
+          <ul>
+            <li><strong>Structured Approach:</strong> Organized method for managing security requirements</li>
+            <li><strong>Automated Validation:</strong> Continuous compliance checking and monitoring</li>
+            <li><strong>Consistent Security:</strong> Unified security posture across the organization</li>
+            <li><strong>Framework Alignment:</strong> Support for ISO 27001, GDPR, NIS2, CRA, and more</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+          How does CIA Compliance Manager implement compliance architecture?
+        </h3>
+        <div id="faq-answer-2" class="faq-answer" role="region">
+          <p>CIA Compliance Manager implements a comprehensive compliance architecture by:</p>
+          <ul>
+            <li><strong>CIA Triad Evaluation:</strong> Assessing Confidentiality, Integrity, and Availability across all systems</li>
+            <li><strong>Automatic Framework Mapping:</strong> Mapping controls to ISO 27001, GDPR, HIPAA, SOC2, and other frameworks</li>
+            <li><strong>Business Impact Analysis:</strong> Quantifying security risks and their business consequences</li>
+            <li><strong>Threat Modeling:</strong> STRIDE analysis for systematic threat identification</li>
+            <li><strong>Evidence Collection:</strong> Automated documentation for audits and compliance reporting</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+          What compliance frameworks does the architecture support?
+        </h3>
+        <div id="faq-answer-3" class="faq-answer" role="region">
+          <p>The compliance architecture supports multiple frameworks with automatic control mapping:</p>
+          <ul>
+            <li><strong>ISO 27001:</strong> Information security management systems</li>
+            <li><strong>NIST CSF:</strong> Cybersecurity Framework for critical infrastructure</li>
+            <li><strong>GDPR:</strong> Data protection and privacy regulation</li>
+            <li><strong>HIPAA:</strong> Healthcare information protection</li>
+            <li><strong>SOC2:</strong> Service organization controls</li>
+            <li><strong>PCI DSS:</strong> Payment card industry security</li>
+            <li><strong>NIS2:</strong> Network and information systems directive</li>
+            <li><strong>CRA:</strong> Cyber Resilience Act requirements</li>
+            <li><strong>OWASP:</strong> Application security standards</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+          How can organizations benefit from automated compliance architecture?
+        </h3>
+        <div id="faq-answer-4" class="faq-answer" role="region">
+          <p>Organizations gain significant benefits from automated compliance architecture:</p>
+          <ul>
+            <li><strong>Reduced Manual Work:</strong> Automated evidence collection eliminates repetitive audit tasks</li>
+            <li><strong>Faster Compliance:</strong> Clear control mapping accelerates certification processes</li>
+            <li><strong>Lower Costs:</strong> Elimination of redundant compliance efforts across frameworks</li>
+            <li><strong>Improved Security:</strong> Continuous validation maintains security posture</li>
+            <li><strong>Better Risk Management:</strong> Automated threat modeling and impact analysis</li>
+            <li><strong>Scalability:</strong> Architecture adapts from startups to enterprises</li>
+          </ul>
+          <p>The architecture scales with organizational complexity while maintaining compliance integrity.</p>
+        </div>
+      </div>
+    </section>
   </article>
 </main>
+
+<!-- FAQ Accordion JavaScript -->
+<script>
+  (function() {
+    'use strict';
+    
+    function initFAQ() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('h3');
+        
+        if (!question) return;
+        
+        question.addEventListener('click', function() {
+          toggleFAQ(item);
+        });
+        
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFAQ(item);
+          }
+        });
+      });
+    }
+    
+    function toggleFAQ(item) {
+      const question = item.querySelector('h3');
+      const isActive = item.classList.contains('active');
+      
+      item.classList.toggle('active');
+      
+      if (question) {
+        question.setAttribute('aria-expanded', !isActive);
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+      initFAQ();
+    }
+  })();
+</script>
 
     <footer>
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
