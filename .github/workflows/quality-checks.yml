@@ -26,6 +26,15 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache npm global packages
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-global-htmlhint-${{ hashFiles('.github/workflows/quality-checks.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-global-htmlhint-
+            ${{ runner.os }}-npm-global-
+
       - name: Install HTMLHint
         run: npm install -g htmlhint
 
@@ -71,8 +80,28 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache npm global packages
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-global-linkinator-${{ hashFiles('.github/workflows/quality-checks.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-global-linkinator-
+            ${{ runner.os }}-npm-global-
+
       - name: Install linkinator
         run: npm install -g linkinator
+
+      - name: Cache apt packages
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: |
+            /var/cache/apt/archives
+            /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-jq-${{ hashFiles('.github/workflows/quality-checks.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-jq-
+            ${{ runner.os }}-apt-
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
