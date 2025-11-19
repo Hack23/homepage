@@ -20,6 +20,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -66,7 +69,11 @@
         "@type": "VideoGame",
         "name": "Black Trigram",
         "applicationCategory": "Game",
-        "genre": ["Fighting", "Educational", "Sports"],
+        "genre": [
+          "Fighting",
+          "Educational",
+          "Sports"
+        ],
         "gamePlatform": "Cross-platform",
         "description": "Authentic Korean martial arts educational combat game featuring traditional techniques and cultural respect.",
         "offers": {
@@ -165,10 +172,51 @@
           "description": "Fighter archetype implementation patterns"
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/black-trigram-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Black Trigram",
+          "item": "https://hack23.com/black-trigram-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram Docs",
+          "item": "https://hack23.com/black-trigram-docs.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body class="theme-black-trigram">
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/black-trigram-features.html">Black Trigram</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Black Trigram Docs
+      </li>
+    </ol>
+  </nav>
+
     <header>
         <div class="logo-container">
             <img src="https://blacktrigram.com/black-trigram-256.png" alt="Black Trigram Logo" class="logo" width="80" height="80" />

@@ -27,54 +27,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Disaster Recovery: AWS-Native Resilience with Chaos Engineering",
-  "description": "Complete technical disaster recovery implementation using AWS-native tooling: FIS chaos experiments with SSM automation, Route 53 multi-region failover, DynamoDB point-in-time recovery, immutable backup vaults, CloudFormation infrastructure-as-code, automated restore validation, and realistic disaster testing under Murphy's Law conditions (3 AM, degraded network, missing personnel, corrupted backups). Covering five disaster scenarios with evidence-based recovery procedures.",
-  "author": {
-    "@type": "Person",
-    "name": "James Pether S\u00f6rling",
-    "url": "https://hack23.com",
-    "jobTitle": "CEO / Cybersecurity Expert",
-    "sameAs": [
-      "https://www.linkedin.com/in/jamessorling/",
-      "https://github.com/Hack23"
-    ]
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Hack23 AB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
-    }
-  },
-  "datePublished": "2025-11-05",
-  "dateModified": "2025-11-05",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://hack23.com/discordian-disaster-recovery.html"
-  },
-  "keywords": "disaster recovery, AWS Resilience Hub, chaos engineering, FIS, RTO RPO, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, backup validation, realistic disaster testing",
-  "articleSection": "Information Security",
-  "inLanguage": "en",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://hack23.com/blog.png",
-    "width": 1200,
-    "height": 630
-  },
-  "wordCount": 3500,
-  "articleBody": "Nothing is true. Everything is permitted. Including—especially—complete infrastructure failure, entire cloud regions burning, and vendors who promised \"five nines\" explaining why \"nines don't count during maintenance windows.\" This comprehensive technical guide covers five disaster scenarios (datacenter failure, cyberattack, accidental deletion, data corruption, catastrophic loss), AWS Systems Manager automation documents for automated recovery, FIS chaos experiment CloudFormation templates, Route 53 health check-driven multi-region failover, DynamoDB point-in-time recovery procedures, immutable backup vault configuration, automated restore validation with Lambda functions, evidence collection pipelines, and realistic disaster testing under Murphy's Law conditions. Complete with code examples, CloudFormation templates, and Python automation scripts...",
-  "isPartOf": {
-    "@type": "Blog",
-    "@id": "https://hack23.com/blog.html#blog",
-    "name": "Hack23 Security Blog"
-  },
-  "about": [
+  "@graph": [
     {
-      "@type": "Thing",
-      "name": "ISMS Policy",
-      "description": "Information Security Management System policy implementation"
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Disaster Recovery: AWS-Native Resilience with Chaos Engineering",
+      "description": "Complete technical disaster recovery implementation using AWS-native tooling: FIS chaos experiments with SSM automation, Route 53 multi-region failover, DynamoDB point-in-time recovery, immutable backup vaults, CloudFormation infrastructure-as-code, automated restore validation, and realistic disaster testing under Murphy's Law conditions (3 AM, degraded network, missing personnel, corrupted backups). Covering five disaster scenarios with evidence-based recovery procedures.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-disaster-recovery.html"
+      },
+      "keywords": "disaster recovery, AWS Resilience Hub, chaos engineering, FIS, RTO RPO, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, backup validation, realistic disaster testing",
+      "articleSection": "Information Security",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.png",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 3500,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—complete infrastructure failure, entire cloud regions burning, and vendors who promised \"five nines\" explaining why \"nines don't count during maintenance windows.\" This comprehensive technical guide covers five disaster scenarios (datacenter failure, cyberattack, accidental deletion, data corruption, catastrophic loss), AWS Systems Manager automation documents for automated recovery, FIS chaos experiment CloudFormation templates, Route 53 health check-driven multi-region failover, DynamoDB point-in-time recovery procedures, immutable backup vault configuration, automated restore validation with Lambda functions, evidence collection pipelines, and realistic disaster testing under Murphy's Law conditions. Complete with code examples, CloudFormation templates, and Python automation scripts...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-disaster-recovery.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ISMS Policies",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Disaster Recovery",
+          "item": "https://hack23.com/discordian-disaster-recovery.html"
+        }
+      ]
     }
   ]
 }
@@ -82,6 +111,21 @@
 </head>
 
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">ISMS Policies</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Disaster Recovery
+      </li>
+    </ol>
+  </nav>
+
 
 <header>
   <div class="logo-container">

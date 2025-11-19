@@ -27,59 +27,88 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Email Security: SPF/DKIM/DMARC + Hardware MFA",
-  "description": "How Hack23 implements email security with Gmail Workspace, SPF/DKIM/DMARC enforcement, hardware 2FA, and mandatory phishing training",
-  "author": {
-    "@type": "Person",
-    "name": "James Pether S\u00f6rling",
-    "url": "https://hack23.com",
-    "jobTitle": "CEO / Cybersecurity Expert",
-    "sameAs": [
-      "https://www.linkedin.com/in/jamessorling/",
-      "https://github.com/Hack23"
-    ]
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Hack23 AB",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
-    }
-  },
-  "datePublished": "2025-11-05",
-  "dateModified": "2025-11-05",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://hack23.com/discordian-email-security.html"
-  },
-  "keywords": "email security, SPF, DKIM, DMARC, phishing, Gmail, MFA",
-  "articleSection": "Information Security",
-  "inLanguage": "en",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://hack23.com/blog.png",
-    "width": 1200,
-    "height": 630
-  },
-  "wordCount": 1508,
-  "articleBody": "Nothing is true. Everything is permitted. Including\u2014especially\u2014email sender addresses. SMTP was specified in RFC 821 in 1982 for trusted academics who believed everyone was honest. Forty-three years l...",
-  "isPartOf": {
-    "@type": "Blog",
-    "@id": "https://hack23.com/blog.html#blog",
-    "name": "Hack23 Security Blog"
-  },
-  "about": [
+  "@graph": [
     {
-      "@type": "Thing",
-      "name": "ISMS Policy",
-      "description": "Information Security Management System policy implementation"
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Email Security: SPF/DKIM/DMARC + Hardware MFA",
+      "description": "How Hack23 implements email security with Gmail Workspace, SPF/DKIM/DMARC enforcement, hardware 2FA, and mandatory phishing training",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.github.io/cia-compliance-manager/icon-192.png"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-email-security.html"
+      },
+      "keywords": "email security, SPF, DKIM, DMARC, phishing, Gmail, MFA",
+      "articleSection": "Information Security",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.png",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1508,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—email sender addresses. SMTP was specified in RFC 821 in 1982 for trusted academics who believed everyone was honest. Forty-three years l...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Security",
+          "description": "OWASP LLM Top 10 and AI model security"
+        }
+      ]
     },
     {
-      "@type": "Thing",
-      "name": "AI Security",
-      "description": "OWASP LLM Top 10 and AI model security"
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-email-security.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ISMS Policies",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Email Security",
+          "item": "https://hack23.com/discordian-email-security.html"
+        }
+      ]
     }
   ]
 }
@@ -87,6 +116,21 @@
 </head>
 
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">ISMS Policies</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Email Security
+      </li>
+    </ol>
+  </nav>
+
 
 <header>
   <div class="logo-container">

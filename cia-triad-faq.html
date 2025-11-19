@@ -29,110 +29,150 @@
   
   <!-- FAQ Schema.org structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "name": "CIA Triad FAQ: Confidentiality, Integrity & Availability in Information Security",
-    "description": "Comprehensive FAQ covering CIA Triad implementation, data classification, compliance frameworks, security assessment tools, and best practices for information security management.",
-    "url": "https://hack23.com/cia-triad-faq.html",
-    "inLanguage": "en",
-    "datePublished": "2025-01-01",
-    "dateModified": "2025-09-23",
-    "author": {
-      "@type": "Person",
-      "name": "James Pether Sörling",
-      "url": "https://hack23.com",
-      "jobTitle": "Cybersecurity Expert"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "CIA Triad FAQ: Confidentiality, Integrity & Availability in Information Security",
+      "description": "Comprehensive FAQ covering CIA Triad implementation, data classification, compliance frameworks, security assessment tools, and best practices for information security management.",
+      "url": "https://hack23.com/cia-triad-faq.html",
+      "inLanguage": "en",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-09-23",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "Cybersecurity Expert"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "CIA Triad",
+          "description": "Information security model focusing on Confidentiality, Integrity, and Availability"
+        },
+        {
+          "@type": "Thing",
+          "name": "Information Security Management",
+          "description": "Systematic approach to managing sensitive company information"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "IT Professionals",
+          "Security Officers",
+          "Students",
+          "Business Managers"
+        ]
+      },
+      "teaches": [
+        "CIA Triad Principles",
+        "Data Classification Strategies",
+        "Compliance Framework Implementation",
+        "Security Assessment Methodologies"
+      ],
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the CIA Triad in information security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CIA Triad is a fundamental security model consisting of three core principles: Confidentiality, Integrity, and Availability. Confidentiality ensures sensitive information is accessible only to authorized individuals. Integrity guarantees data accuracy and trustworthiness throughout its lifecycle. Availability ensures information and systems are accessible when needed by authorized users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does data classification relate to the CIA Triad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Data classification is directly linked to the CIA Triad by helping organizations determine appropriate security controls based on data sensitivity. By classifying data (e.g., public, internal, confidential, restricted), organizations can apply proportionate confidentiality measures, integrity verification methods, and availability requirements to different types of information based on their importance and sensitivity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the CIA Triad implemented in compliance frameworks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CIA Triad forms the foundation of major compliance frameworks. NIST frameworks incorporate CIA principles through controls addressing each aspect. ISO 27001 structures its control objectives around protecting CIA elements. GDPR emphasizes confidentiality and integrity of personal data. PCI DSS focuses on cardholder data security across all three dimensions. Organizations typically map their CIA-based controls to specific framework requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tools can help with CIA Triad security assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Several tools assist with CIA Triad security assessment: 1) CIA Compliance Manager - provides comprehensive assessment of security controls across all three domains, 2) Vulnerability scanners - identify weaknesses affecting confidentiality and integrity, 3) Availability monitoring tools - track system uptime and performance, 4) Data classification tools - help categorize information for appropriate protection, 5) Risk assessment platforms - evaluate threats to each CIA component."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you balance the three elements of the CIA Triad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Balancing the CIA Triad involves: 1) Risk assessment to identify the relative importance of each element for specific systems/data, 2) Implementing appropriate controls based on data classification, 3) Using the principle of least privilege for access control, 4) Implementing defense in depth strategies, 5) Regular security assessment and testing across all three domains, 6) Creating policies that acknowledge tradeoffs between the elements, and 7) Adjusting controls based on changing business needs and threat landscape."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common threats to each element of the CIA Triad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common threats to Confidentiality include data breaches, unauthorized access, eavesdropping, and social engineering. Integrity threats include unauthorized modifications, man-in-the-middle attacks, improper access controls, and data corruption. Availability threats include DDoS attacks, hardware failures, natural disasters, power outages, and resource exhaustion. A comprehensive security program must address threats to all three elements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you measure effectiveness of CIA Triad implementation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effectiveness of CIA Triad implementation can be measured through: 1) Security metrics specific to each element (e.g., number of data breaches for confidentiality, data corruption incidents for integrity, uptime percentage for availability), 2) Regular security assessments against frameworks like NIST or ISO 27001, 3) Penetration testing results, 4) Incident response effectiveness, 5) Recovery time objectives (RTOs) and recovery point objectives (RPOs), and 6) Business impact analysis outcomes."
+          }
+        }
+      ]
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Hack23 AB",
-      "url": "https://hack23.com"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "CIA Triad",
-        "description": "Information security model focusing on Confidentiality, Integrity, and Availability"
-      },
-      {
-        "@type": "Thing",
-        "name": "Information Security Management",
-        "description": "Systematic approach to managing sensitive company information"
-      }
-    ],
-    "audience": {
-      "@type": "Audience",
-      "audienceType": ["IT Professionals", "Security Officers", "Students", "Business Managers"]
-    },
-    "teaches": [
-      "CIA Triad Principles",
-      "Data Classification Strategies",
-      "Compliance Framework Implementation",
-      "Security Assessment Methodologies"
-    ],
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the CIA Triad in information security?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The CIA Triad is a fundamental security model consisting of three core principles: Confidentiality, Integrity, and Availability. Confidentiality ensures sensitive information is accessible only to authorized individuals. Integrity guarantees data accuracy and trustworthiness throughout its lifecycle. Availability ensures information and systems are accessible when needed by authorized users."
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-triad-faq.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CIA Triad FAQ",
+          "item": "https://hack23.com/cia-triad-faq.html"
         }
-      },
-      {
-        "@type": "Question",
-        "name": "How does data classification relate to the CIA Triad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Data classification is directly linked to the CIA Triad by helping organizations determine appropriate security controls based on data sensitivity. By classifying data (e.g., public, internal, confidential, restricted), organizations can apply proportionate confidentiality measures, integrity verification methods, and availability requirements to different types of information based on their importance and sensitivity."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is the CIA Triad implemented in compliance frameworks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The CIA Triad forms the foundation of major compliance frameworks. NIST frameworks incorporate CIA principles through controls addressing each aspect. ISO 27001 structures its control objectives around protecting CIA elements. GDPR emphasizes confidentiality and integrity of personal data. PCI DSS focuses on cardholder data security across all three dimensions. Organizations typically map their CIA-based controls to specific framework requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What tools can help with CIA Triad security assessment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Several tools assist with CIA Triad security assessment: 1) CIA Compliance Manager - provides comprehensive assessment of security controls across all three domains, 2) Vulnerability scanners - identify weaknesses affecting confidentiality and integrity, 3) Availability monitoring tools - track system uptime and performance, 4) Data classification tools - help categorize information for appropriate protection, 5) Risk assessment platforms - evaluate threats to each CIA component."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you balance the three elements of the CIA Triad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Balancing the CIA Triad involves: 1) Risk assessment to identify the relative importance of each element for specific systems/data, 2) Implementing appropriate controls based on data classification, 3) Using the principle of least privilege for access control, 4) Implementing defense in depth strategies, 5) Regular security assessment and testing across all three domains, 6) Creating policies that acknowledge tradeoffs between the elements, and 7) Adjusting controls based on changing business needs and threat landscape."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are common threats to each element of the CIA Triad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Common threats to Confidentiality include data breaches, unauthorized access, eavesdropping, and social engineering. Integrity threats include unauthorized modifications, man-in-the-middle attacks, improper access controls, and data corruption. Availability threats include DDoS attacks, hardware failures, natural disasters, power outages, and resource exhaustion. A comprehensive security program must address threats to all three elements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do you measure effectiveness of CIA Triad implementation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Effectiveness of CIA Triad implementation can be measured through: 1) Security metrics specific to each element (e.g., number of data breaches for confidentiality, data corruption incidents for integrity, uptime percentage for availability), 2) Regular security assessments against frameworks like NIST or ISO 27001, 3) Penetration testing results, 4) Incident response effectiveness, 5) Recovery time objectives (RTOs) and recovery point objectives (RPOs), and 6) Business impact analysis outcomes."
-        }
-      }
-    ]
-  }
-  </script>
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA Triad FAQ
+      </li>
+    </ol>
+  </nav>
+
   <header>
     <div class="logo-container">
       <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logo" class="logo" width="80" height="80" />

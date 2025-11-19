@@ -30,6 +30,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -178,10 +181,51 @@
           "description": "Landsindikatordataarkitektur och visualisering"
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-docs_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Medborgarunderrättelse",
+          "item": "https://hack23.com/cia-features_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Citizen Intelligence Agency Arkitekturdokumentation",
+          "item": "https://hack23.com/cia-docs_sv.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
   <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features_sv.html">Medborgarunderrättelse</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Citizen Intelligence Agency Arkitekturdokumentation
+      </li>
+    </ol>
+  </nav>
+
     <header>
       <div class="logo-container">
         <img

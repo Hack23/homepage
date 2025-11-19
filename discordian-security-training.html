@@ -26,44 +26,88 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Security Awareness Training: Teaching Humans Not to Click Shit",
-  "author": {
-    "@type": "Person",
-    "name": "Hagbard Celine"
-  },
-  "datePublished": "2025-11-05",
-  "description": "Onboarding + quarterly + monthly phishing (5-10% click rate) + incident-triggered + role-specific. Continuous education, not annual theater.",
-  "keywords": "security awareness, training, phishing, social engineering, human factor, ISMS, role-specific training, continuous education",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://hack23.com/blog.png",
-    "width": 1200,
-    "height": 630
-  },
-  "wordCount": 1884,
-  "isPartOf": {
-    "@type": "Blog",
-    "@id": "https://hack23.com/blog.html#blog",
-    "name": "Hack23 Security Blog"
-  },
-  "inLanguage": "en",
-  "about": [
+  "@graph": [
     {
-      "@type": "Thing",
-      "name": "ISMS Policy",
-      "description": "Information Security Management System policy implementation"
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Security Awareness Training: Teaching Humans Not to Click Shit",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine"
+      },
+      "datePublished": "2025-11-05",
+      "description": "Onboarding + quarterly + monthly phishing (5-10% click rate) + incident-triggered + role-specific. Continuous education, not annual theater.",
+      "keywords": "security awareness, training, phishing, social engineering, human factor, ISMS, role-specific training, continuous education",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.png",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1884,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "en",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Security",
+          "description": "OWASP LLM Top 10 and AI model security"
+        }
+      ]
     },
     {
-      "@type": "Thing",
-      "name": "AI Security",
-      "description": "OWASP LLM Top 10 and AI model security"
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-security-training.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ISMS Policies",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security Awareness Training",
+          "item": "https://hack23.com/discordian-security-training.html"
+        }
+      ]
     }
   ]
 }
 </script>
 </head>
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">ISMS Policies</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Security Awareness Training
+      </li>
+    </ol>
+  </nav>
+
     <header>
         <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
         <nav>

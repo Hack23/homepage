@@ -30,71 +30,106 @@
   
   <!-- FAQ Schema.org structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Vad är CIA-triaden inom informationssäkerhet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CIA-triaden är en fundamental säkerhetsmodell bestående av tre kärnprinciper: Konfidentialitet, Integritet och Tillgänglighet. Konfidentialitet säkerställer att känslig information endast är tillgänglig för behöriga individer. Integritet garanterar datanoggrannhet och pålitlighet genom hela dess livscykel. Tillgänglighet säkerställer att information och system är åtkomliga när de behövs av behöriga användare."
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vad är CIA-triaden inom informationssäkerhet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-triaden är en fundamental säkerhetsmodell bestående av tre kärnprinciper: Konfidentialitet, Integritet och Tillgänglighet. Konfidentialitet säkerställer att känslig information endast är tillgänglig för behöriga individer. Integritet garanterar datanoggrannhet och pålitlighet genom hela dess livscykel. Tillgänglighet säkerställer att information och system är åtkomliga när de behövs av behöriga användare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur relaterar dataklassificering till CIA-triaden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dataklassificering är direkt kopplad till CIA-triaden genom att hjälpa organisationer att bestämma lämpliga säkerhetskontroller baserat på datakänslighet. Genom att klassificera data (t.ex. offentlig, intern, konfidentiell, begränsad) kan organisationer tillämpa proportionerliga konfidentialitetsåtgärder, integritetsverifieringsmetoder och tillgänglighetskrav på olika typer av information baserat på deras betydelse och känslighet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur implementeras CIA-triaden i efterlevnadsramverk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-triaden utgör grunden för större efterlevnadsramverk. NIST-ramverken inkorporerar CIA-principer genom kontroller som adresserar varje aspekt. ISO 27001 strukturerar sina kontrollmål kring att skydda CIA-element. GDPR betonar konfidentialitet och integritet för personuppgifter. PCI DSS fokuserar på kortinnehavardatasäkerhet över alla tre dimensionerna. Organisationer mappar normalt sina CIA-baserade kontroller till specifika ramverkskrav."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilka verktyg kan hjälpa till med CIA-triad säkerhetsbedömning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flera verktyg hjälper till med CIA-triad säkerhetsbedömning: 1) CIA Compliance Manager - ger omfattande bedömning av säkerhetskontroller över alla tre domäner, 2) Sårbarhetsscannrar - identifierar svagheter som påverkar konfidentialitet och integritet, 3) Tillgänglighetsövervakningsverktyg - spårar systemets drifttid och prestanda, 4) Dataklassificeringsverktyg - hjälper till att kategorisera information för lämpligt skydd, 5) Riskbedömningsplattformar - utvärderar hot mot varje CIA-komponent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur balanserar man de tre elementen i CIA-triaden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Att balansera CIA-triaden innebär: 1) Riskbedömning för att identifiera den relativa betydelsen av varje element för specifika system/data, 2) Implementera lämpliga kontroller baserat på dataklassificering, 3) Använda principen om minsta privilegium för åtkomstkontroll, 4) Implementera försvar på djupet strategier, 5) Regelbunden säkerhetsbedömning och testning över alla tre domäner, 6) Skapa policyer som erkänner avvägningar mellan elementen, och 7) Justera kontroller baserat på föränderliga affärsbehov och hotbild."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vilka är vanliga hot mot varje element av CIA-triaden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vanliga hot mot Konfidentialitet inkluderar dataintrång, obehörig åtkomst, avlyssning och social engineering. Integritetshot inkluderar obehöriga ändringar, man-in-the-middle-attacker, felaktiga åtkomstkontroller och datakorruption. Tillgänglighetshot inkluderar DDoS-attacker, hårdvarufel, naturkatastrofer, strömavbrott och resursutmattning. Ett omfattande säkerhetsprogram måste hantera hot mot alla tre element."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hur mäter man effektiviteten av CIA-triad implementering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effektiviteten av CIA-triad implementering kan mätas genom: 1) Säkerhetsmetrik specifik för varje element (t.ex. antal dataintrång för konfidentialitet, datakorruptionsincidenter för integritet, drifttidsprocent för tillgänglighet), 2) Regelbundna säkerhetsbedömningar mot ramverk som NIST eller ISO 27001, 3) Penetrationstestresultat, 4) Incidenthanteringseffektivitet, 5) Recovery time objectives (RTOs) och recovery point objectives (RPOs), och 6) Utfall från affärspåverkansanalys."
+          }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur relaterar dataklassificering till CIA-triaden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dataklassificering är direkt kopplad till CIA-triaden genom att hjälpa organisationer att bestämma lämpliga säkerhetskontroller baserat på datakänslighet. Genom att klassificera data (t.ex. offentlig, intern, konfidentiell, begränsad) kan organisationer tillämpa proportionerliga konfidentialitetsåtgärder, integritetsverifieringsmetoder och tillgänglighetskrav på olika typer av information baserat på deras betydelse och känslighet."
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-triad-faq_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CIA-Triad FAQ",
+          "item": "https://hack23.com/cia-triad-faq_sv.html"
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur implementeras CIA-triaden i efterlevnadsramverk?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CIA-triaden utgör grunden för större efterlevnadsramverk. NIST-ramverken inkorporerar CIA-principer genom kontroller som adresserar varje aspekt. ISO 27001 strukturerar sina kontrollmål kring att skydda CIA-element. GDPR betonar konfidentialitet och integritet för personuppgifter. PCI DSS fokuserar på kortinnehavardatasäkerhet över alla tre dimensionerna. Organisationer mappar normalt sina CIA-baserade kontroller till specifika ramverkskrav."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vilka verktyg kan hjälpa till med CIA-triad säkerhetsbedömning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Flera verktyg hjälper till med CIA-triad säkerhetsbedömning: 1) CIA Compliance Manager - ger omfattande bedömning av säkerhetskontroller över alla tre domäner, 2) Sårbarhetsscannrar - identifierar svagheter som påverkar konfidentialitet och integritet, 3) Tillgänglighetsövervakningsverktyg - spårar systemets drifttid och prestanda, 4) Dataklassificeringsverktyg - hjälper till att kategorisera information för lämpligt skydd, 5) Riskbedömningsplattformar - utvärderar hot mot varje CIA-komponent."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur balanserar man de tre elementen i CIA-triaden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Att balansera CIA-triaden innebär: 1) Riskbedömning för att identifiera den relativa betydelsen av varje element för specifika system/data, 2) Implementera lämpliga kontroller baserat på dataklassificering, 3) Använda principen om minsta privilegium för åtkomstkontroll, 4) Implementera försvar på djupet strategier, 5) Regelbunden säkerhetsbedömning och testning över alla tre domäner, 6) Skapa policyer som erkänner avvägningar mellan elementen, och 7) Justera kontroller baserat på föränderliga affärsbehov och hotbild."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vilka är vanliga hot mot varje element av CIA-triaden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Vanliga hot mot Konfidentialitet inkluderar dataintrång, obehörig åtkomst, avlyssning och social engineering. Integritetshot inkluderar obehöriga ändringar, man-in-the-middle-attacker, felaktiga åtkomstkontroller och datakorruption. Tillgänglighetshot inkluderar DDoS-attacker, hårdvarufel, naturkatastrofer, strömavbrott och resursutmattning. Ett omfattande säkerhetsprogram måste hantera hot mot alla tre element."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur mäter man effektiviteten av CIA-triad implementering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Effektiviteten av CIA-triad implementering kan mätas genom: 1) Säkerhetsmetrik specifik för varje element (t.ex. antal dataintrång för konfidentialitet, datakorruptionsincidenter för integritet, drifttidsprocent för tillgänglighet), 2) Regelbundna säkerhetsbedömningar mot ramverk som NIST eller ISO 27001, 3) Penetrationstestresultat, 4) Incidenthanteringseffektivitet, 5) Recovery time objectives (RTOs) och recovery point objectives (RPOs), och 6) Utfall från affärspåverkansanalys."
-        }
-      }
-    ]
-  }
-  </script>
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA-Triad FAQ
+      </li>
+    </ol>
+  </nav>
+
   <header>
     <div class="logo-container">
       <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 Logotyp" class="logo" width="80" height="80" />

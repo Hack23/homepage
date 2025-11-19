@@ -30,6 +30,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -71,7 +74,7 @@
           "name": "Security Architects & CISOs"
         },
         {
-          "@type": "ProfessionalAudience", 
+          "@type": "ProfessionalAudience",
           "audienceType": "Solution Architect",
           "name": "Solution & Cloud Architects"
         },
@@ -179,10 +182,51 @@
           "description": "Complete API reference for all components and functions"
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-compliance-manager-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CIA Compliance Manager",
+          "item": "https://hack23.com/cia-compliance-manager-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA Compliance Manager Architecture Documentation",
+          "item": "https://hack23.com/cia-compliance-manager-docs.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
   <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-compliance-manager-features.html">CIA Compliance Manager</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA Compliance Manager Architecture Documentation
+      </li>
+    </ol>
+  </nav>
+
     <header>
       <div class="logo-container">
         <img
