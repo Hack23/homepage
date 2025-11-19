@@ -20,6 +20,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -70,7 +73,11 @@
         "name": "흑괘",
         "alternateName": "Black Trigram",
         "applicationCategory": "Game",
-        "genre": ["격투", "교육", "문화"],
+        "genre": [
+          "격투",
+          "교육",
+          "문화"
+        ],
         "gamePlatform": "크로스 플랫폼",
         "description": "전통 기술과 문화적 존중을 특징으로 하는 정통 한국 무술 교육 전투 게임.",
         "offers": {
@@ -169,10 +176,51 @@
           "description": "파이터 원형 구현 패턴"
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/black-trigram-docs_ko.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/index_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블랙 트리그램",
+          "item": "https://hack23.com/black-trigram-features_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "흑괘 문서",
+          "item": "https://hack23.com/black-trigram-docs_ko.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body class="theme-black-trigram">
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_ko.html">홈</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/black-trigram-features_ko.html">블랙 트리그램</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        흑괘 문서
+      </li>
+    </ol>
+  </nav>
+
     <header>
         <div class="logo-container">
             <img src="https://blacktrigram.com/black-trigram-256.png" alt="흑괘 로고" class="logo" width="80" height="80" />

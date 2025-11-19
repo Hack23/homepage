@@ -30,6 +30,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
@@ -177,10 +180,51 @@
           "description": "Country indicator data architecture and visualization"
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Citizen Intelligence Agency",
+          "item": "https://hack23.com/cia-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Citizen Intelligence Agency Architecture Documentation",
+          "item": "https://hack23.com/cia-docs.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
   <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">Citizen Intelligence Agency</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Citizen Intelligence Agency Architecture Documentation
+      </li>
+    </ol>
+  </nav>
+
     <header>
       <div class="logo-container">
         <img

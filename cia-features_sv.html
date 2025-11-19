@@ -34,6 +34,9 @@
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -61,7 +64,12 @@
       "permissions": "Skrivskyddad åtkomst till offentliga svenska regeringsdata",
       "audience": {
         "@type": "Audience",
-        "audienceType": ["Medborgare", "Journalister", "Forskare", "Policyanalytiker"]
+        "audienceType": [
+          "Medborgare",
+          "Journalister",
+          "Forskare",
+          "Policyanalytiker"
+        ]
       },
       "teaches": [
         "Parlamentarisk Processförståelse",
@@ -82,10 +90,42 @@
         "availability": "https://schema.org/OnlineOnly",
         "category": "Öppen Källkodsprogramvara"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-features_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Citizen Intelligence Agency Funktioner",
+          "item": "https://hack23.com/cia-features_sv.html"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
   <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Citizen Intelligence Agency Funktioner
+      </li>
+    </ol>
+  </nav>
+
     <header>
       <div class="logo-container">
         <img src="https://cia.sourceforge.io/cia-logo.png" alt="Citizen Intelligence Agency Logotyp" class="logo" />
