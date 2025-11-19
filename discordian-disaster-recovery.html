@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Disaster Recovery: AWS-Native Resilience with Chaos Engineering | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Technical DR implementation: AWS FIS chaos experiments, SSM automation documents, Route 53 multi-region failover, DynamoDB PITR, immutable backup vaults, CloudFormation infrastructure-as-code, automated restore validation, realistic disaster testing (3 AM, degraded network, missing personnel). &lt;5min RTO with monthly validation. Evidence-based resilience through applied paranoia.">
+<meta name="description" content="Technical DR implementation: AWS FIS chaos experiments, SSM automation documents, Route 53 multi-region failover, DynamoDB PITR, immutable backup vaults, CloudFormation infrastructure-as-code, automated restore validation, realistic disaster testing (3 AM, degraded network, missing personnel). <5min RTO with monthly validation. Evidence-based resilience through applied paranoia.">
 <meta name="keywords" content="disaster recovery, AWS Resilience Hub, Fault Injection Service, chaos engineering, RTO RPO, AWS Backup, immutable backups, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, multi-region recovery, backup validation, restore testing, disaster recovery testing, realistic DR testing, evidence collection, hack23 ISMS">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
@@ -324,16 +324,14 @@
       RecoverDynamodbTablePITR:  
         ActionId: aws:ssm:start-automation-execution
         Parameters:
-          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}::document/
-            AWSResilienceHub-RestoreDynamoDBTableToPointInTimeSOP_2020-04-01'
+          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}::document/AWSResilienceHub-RestoreDynamoDBTableToPointInTimeSOP_2020-04-01'
           documentParameters: !Sub |
             {
               "DynamoDBTableSourceName":"global-table",
               "DynamoDBTableTargetName":"global-table-pitr",
               "RecoveryPointDateTime":"${RecoveryPointDateTime}",
               "CopyAllProperties": true,
-              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/
-                AWSResilienceHub-RestoreDDBTblFromPointInTimeSOPAssumeRole"
+              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/AWSResilienceHub-RestoreDDBTblFromPointInTimeSOPAssumeRole"
             }
           maxDuration: "PT30M"
     Description: Restore DynamoDB to specific point in time
@@ -379,20 +377,17 @@
         ActionId: aws:ssm:start-automation-execution
         Description: Deny API Gateway Lambda access via IAM policy
         Parameters:
-          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:
-            document/FISAPI-IamAttachDetach'
+          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:document/FISAPI-IamAttachDetach'
           documentParameters: !Sub |
             {
               "TargetResourceDenyPolicyArn":"${AwsFisApiPolicyDenyApiRoleLambda}", 
               "Duration": "${FaultInjectionExperimentDuration}", 
               "TargetApplicationRoleName":"${ApiRole}", 
-              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/
-                FISAPI-SSM-Automation-Role"
+              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/FISAPI-SSM-Automation-Role"
             }
           maxDuration: "PT8M"
     Description: Test API resilience via Lambda access denial
-    RoleArn: !Sub 'arn:aws:iam::${AWS::AccountId}:role/
-      FISAPI-FIS-Injection-ExperimentRole'
+    RoleArn: !Sub 'arn:aws:iam::${AWS::AccountId}:role/FISAPI-FIS-Injection-ExperimentRole'
     StopConditions:
       - Source: none
     Tags: 
@@ -431,7 +426,7 @@ DeliveryApiRoute53RecordSetGroup:
       - Name: "api.hack23.com."
         Type: A
         SetIdentifier: apizone1a
-        HealthCheckId: !Ref HealthCheckId
+        HealthCheckId: !Ref HealthCheckApi
         Weight: '50'
         AliasTarget:
           HostedZoneId: !Ref RestApiDomainNameRegionalHostedZoneId
@@ -512,7 +507,11 @@ def validate_backup(event, context):
       
       <p><strong>Automated Evidence Pipeline:</strong></p>
       
-      <pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9em;"><code>def collect_disaster_recovery_evidence(event, context):
+      <pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9em;"><code>import json
+import boto3
+from datetime import datetime
+
+def collect_disaster_recovery_evidence(event, context):
     fis = boto3.client('fis')
     ssm = boto3.client('ssm')
     backup = boto3.client('backup')
