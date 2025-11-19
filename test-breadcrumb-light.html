@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breadcrumb Light Mode - Hack23</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: light !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Breadcrumb Component - Light Mode</h1>
+    <p>Professional breadcrumb navigation with WCAG 2.1 AA compliance</p>
+  </header>
+
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Features
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Two-Level Breadcrumb</h2>
+  <p>Simple breadcrumb trail showing navigation hierarchy.</p>
+
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">Citizen Intelligence Agency</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Features
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Three-Level Breadcrumb</h2>
+  <p>Deeper navigation hierarchy with three levels.</p>
+
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html#cia">CIA Articles</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Architecture Deep Dive
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Accessibility Features</h2>
+  <ul>
+    <li><strong>WCAG 2.1 AA Compliant:</strong> Color contrast ratios meet standards</li>
+    <li><strong>Keyboard Accessible:</strong> Full tab navigation support</li>
+    <li><strong>Screen Reader Friendly:</strong> Semantic HTML with ARIA labels</li>
+    <li><strong>Responsive Design:</strong> Works on all device sizes</li>
+  </ul>
+</body>
+</html>
