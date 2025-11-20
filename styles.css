@@ -1284,7 +1284,8 @@ footer {
 /* Documentation tables */
 .documentation-map,
 .data-sources-table,
-.runtime-table {
+.runtime-table,
+.pricing-table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
@@ -1299,7 +1300,9 @@ footer {
 .data-sources-table th,
 .data-sources-table td,
 .runtime-table th,
-.runtime-table td {
+.runtime-table td,
+.pricing-table th,
+.pricing-table td {
   padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--section-border);
@@ -1307,7 +1310,8 @@ footer {
 
 .documentation-map th,
 .data-sources-table th,
-.runtime-table th {
+.runtime-table th,
+.pricing-table th {
   background: var(--primary-color);
   color: white;
   font-weight: 600;
@@ -1318,13 +1322,15 @@ footer {
 
 .documentation-map tbody tr:last-child td,
 .data-sources-table tbody tr:last-child td,
-.runtime-table tbody tr:last-child td {
+.runtime-table tbody tr:last-child td,
+.pricing-table tbody tr:last-child td {
   border-bottom: none;
 }
 
 .documentation-map tbody tr:hover,
 .data-sources-table tbody tr:hover,
-.runtime-table tbody tr:hover {
+.runtime-table tbody tr:hover,
+.pricing-table tbody tr:hover {
   background: var(--bg-color);
 }
 
