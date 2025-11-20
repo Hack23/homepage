@@ -104,6 +104,169 @@
           "item": "https://hack23.com/discordian-change-mgmt.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Automated Change Management with Security Gates",
+      "description": "Step-by-step guide to implementing CEO-managed automated change control with security gates, SLSA Level 3 attestation, and classification-driven approval workflows",
+      "image": "https://hack23.com/blog.png",
+      "totalTime": "PT6H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "GitHub Actions for CI/CD"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "SonarCloud for code quality"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "CodeQL for security scanning"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "SLSA provenance generation"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Dependabot for dependency updates"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Change Management Policy",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define Change Classification Tiers",
+          "text": "Establish three-tier classification system based on business impact",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Standard Changes: Routine updates with automated approval (dependency patches, documentation). Target: <24 hours"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Normal Changes: Feature additions, architectural modifications. CEO review + automated gates. Target: <72 hours"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Emergency Changes: Critical security patches, production outages. Immediate CEO approval + post-implementation review. Target: <4 hours"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Implement Automated Security Gates",
+          "text": "Set up automated quality and security checks that must pass before any deployment",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "SonarCloud: Code quality, code smells, security hotspots"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "CodeQL: Security vulnerability scanning"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Unit Tests: >80% coverage requirement"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Integration Tests: All critical paths validated"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Dependency Scanning: No known high/critical vulnerabilities"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Configure CEO-Managed Deployment",
+          "text": "For normal and emergency changes, require CEO approval before production deployment. CEO reviews test results, security scan findings, and impact assessment",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Single-person company means CEO owns all production changes - no delegation of critical decisions"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable SLSA Level 3 Build Attestation",
+          "text": "Generate cryptographically signed build provenance for all releases. Include source repository, build platform, dependencies, and build steps in attestation",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "SLSA attestation provides verifiable supply chain security and build reproducibility"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Implement Automated Dependency Updates",
+          "text": "Use Dependabot for automated dependency scanning and updates. Classify dependency patches as standard changes with automated approval if security gates pass",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Weekly Dependabot checks keep dependencies current without manual intervention"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Create Rollback Procedures",
+          "text": "Document and automate rollback procedures for all change types. Ensure rollback can be executed in <1 hour for critical systems",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Rollback capability is part of the change - if you can't roll back, you can't deploy"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Establish Post-Implementation Review",
+          "text": "Conduct post-implementation review for emergency and normal changes within 48 hours. Document lessons learned and update procedures",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Emergency changes require retrospective analysis to prevent future emergencies"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Monitor Change Success Rates",
+          "text": "Track metrics: change success rate, rollback frequency, time to production, and security gate failure rates. Target: >95% first-time success rate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Conduct Semi-Annual Policy Review",
+          "text": "Review change management policy twice annually. Update based on incident patterns, new tools, or regulatory changes. Version control policy documents"
+        }
+      ]
     }
   ]
 }

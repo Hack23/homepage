@@ -109,6 +109,169 @@
           "item": "https://hack23.com/discordian-cloud-security.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement AWS Multi-Layer Cloud Security",
+      "description": "Step-by-step guide to implementing comprehensive cloud security using AWS GuardDuty, Security Hub, Config, KMS encryption, and VPC segmentation",
+      "image": "https://hack23.com/blog.png",
+      "totalTime": "PT4H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "100"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Config"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS KMS"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS WAF"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudTrail"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Network Security Policy",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enable AWS GuardDuty",
+          "text": "Activate AWS GuardDuty for intelligent threat detection across your AWS accounts. Enable automated threat monitoring and configure alerts for suspicious activity",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "GuardDuty analyzes VPC Flow Logs, CloudTrail events, and DNS logs to detect threats"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Configure AWS Security Hub",
+          "text": "Set up Security Hub as your centralized security and compliance view. Enable all security standards (AWS Foundational Security Best Practices, CIS AWS Foundations Benchmark, PCI DSS)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Security Hub aggregates findings from GuardDuty, Inspector, Macie, and Config"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implement AWS Config Rules",
+          "text": "Enable AWS Config to continuously assess, audit, and evaluate AWS resource configurations. Set up automated compliance rules for security best practices",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Config provides configuration history and change tracking for compliance audits"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Deploy VPC Security Architecture",
+          "text": "Create VPC segmentation with public, private, and isolated subnets. Configure Security Groups as stateful firewalls and Network ACLs for subnet-level filtering",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Public subnet: Internet-facing resources with minimal exposure"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Private subnet: Application servers with no direct internet access"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Isolated subnet: Databases with strict access controls"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Enable KMS Encryption",
+          "text": "Use AWS KMS to encrypt data at rest for all services (S3, EBS, RDS). Implement customer-managed keys with rotation policies and access controls",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Enable automatic key rotation for customer-managed KMS keys (365-day cycle)"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Configure AWS WAF",
+          "text": "Deploy AWS WAF to protect web applications from common web exploits. Create custom rules for SQL injection, XSS, and rate limiting",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Use AWS Managed Rules as a baseline, then customize for your applications"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Enable Comprehensive Logging",
+          "text": "Activate CloudTrail for API logging, VPC Flow Logs for network traffic, and S3 access logging. Centralize logs in a secure logging account",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Enable log file validation in CloudTrail to detect tampering"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Implement S3 Bucket Security",
+          "text": "Block public access on all S3 buckets by default. Enable versioning, encryption, and MFA Delete. Use bucket policies with least privilege",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Misconfigured S3 buckets are the leading cause of cloud data breaches"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Set Up Automated Remediation",
+          "text": "Configure AWS Config rules with automated remediation actions. Use Systems Manager Automation to fix non-compliant resources automatically"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Monitor and Review",
+          "text": "Review Security Hub findings daily. Conduct quarterly architecture reviews and semi-annual policy updates. Target 99.9% uptime through systematic controls"
+        }
+      ]
     }
   ]
 }
