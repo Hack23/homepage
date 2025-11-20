@@ -6,10 +6,18 @@ This document summarizes the comprehensive Schema.org structured data enhancemen
 ## Implementation Dates
 - **Initial Implementation:** November 17, 2025
 - **Multilingual Service Enhancement:** November 19, 2025
+- **LocalBusiness Schema Enhancement:** November 20, 2025
 
 ## Files Modified
 
 ### 1. index.html (English Homepage)
+**LocalBusiness Schema Enhancement (November 20, 2025):**
+- **Dual-Type Schema** - Changed from `"Organization"` to `["Organization", "ProfessionalService"]`
+- **openingHoursSpecification** - Added appointment-only hours (Monday-Friday, "By appointment only")
+- **Expanded areaServed** - Added 4 new countries: United States, United Kingdom, Israel, Canada (8 total regions)
+- **Geographic coordinates** - Already present (Gothenburg: 57.7089, 11.9746)
+- **PostalAddress** - Already present with proper schema
+
 **Enhanced Service Schemas (November 19, 2025):**
 - **6 Individual Service entities** - Each service is now a full-fledged entity with unique @id
   - Security Architecture & Strategy (`#service-security-architecture`)
@@ -37,6 +45,11 @@ This document summarizes the comprehensive Schema.org structured data enhancemen
 - All product schemas (VideoGame, SoftwareApplication, WebApplication) retained
 
 ### 2. index_sv.html (Swedish Homepage) - NEW
+**LocalBusiness Schema Enhancement (November 20, 2025):**
+- **Dual-Type Schema** - Changed from `"Organization"` to `["Organization", "ProfessionalService"]`
+- **openingHoursSpecification** - Added "Endast efter överenskommelse" (By appointment only in Swedish)
+- **Expanded areaServed** - Added USA, Storbritannien, Israel, Kanada (8 total regions with Swedish translations)
+
 **Service Schemas Added (November 19, 2025):**
 - **6 Individual Service entities** with Swedish translations
   - All service names, types, and descriptions translated to Swedish
@@ -48,6 +61,12 @@ This document summarizes the comprehensive Schema.org structured data enhancemen
 - Added `makesOffer` property referencing all 6 services
 
 ### 3. index_ko.html (Korean Homepage) - NEW
+**LocalBusiness Schema Enhancement (November 20, 2025):**
+- **Dual-Type Schema** - Changed from `"Organization"` to `["Organization", "ProfessionalService"]`
+- **openingHoursSpecification** - Added "예약제로만 운영" (By appointment only in Korean)
+- **Expanded areaServed** - Added 미국, 영국, 이스라엘, 캐나다 (8 total regions with Korean translations)
+
+**Service Schemas Added (November 19, 2025):**
 **Service Schemas Added (November 19, 2025):**
 - **6 Individual Service entities** with Korean translations
   - All service names, types, and descriptions translated to Korean
@@ -125,6 +144,7 @@ This document summarizes the comprehensive Schema.org structured data enhancemen
 ### Primary Schemas
 | Schema Type | Usage | Pages |
 |------------|-------|-------|
+| **ProfessionalService + Organization** | Dual-type for local business SEO (November 20, 2025) | index.html, index_sv.html, index_ko.html |
 | **Service** | Cybersecurity consulting services (6 entities) | index.html, index_sv.html, index_ko.html |
 | **BreadcrumbList** | Navigation hierarchy | index.html, blog.html, black-trigram-features.html, cia-compliance-manager-features.html, cia-features.html |
 | **WebPage** | Page-level metadata with dates | All major pages |
@@ -133,10 +153,12 @@ This document summarizes the comprehensive Schema.org structured data enhancemen
 | **SoftwareApplication** | CIA Compliance Manager | index.html, index_sv.html, index_ko.html, cia-compliance-manager-features.html |
 | **WebApplication** | Citizen Intelligence Agency | index.html, index_sv.html, index_ko.html, cia-features.html |
 | **FAQPage** | CIA Triad FAQ, Homepage FAQ | cia-triad-faq.html, index.html, index_sv.html, index_ko.html |
-| **Organization** | Company information | index.html, index_sv.html, index_ko.html |
 | **Blog** | Blog listing metadata | blog.html |
 
 ### Schema Properties Enhanced
+- **@type dual-typing** - Organization + ProfessionalService for LocalBusiness SEO (November 20, 2025)
+- **openingHoursSpecification** - Added appointment-only business hours (November 20, 2025)
+- **areaServed expansion** - Added 4 new countries for international service coverage (November 20, 2025)
 - **datePublished** - Added to all product schemas and pages
 - **dateModified** - Added to show content freshness
 - **author** - Enhanced with detailed person schemas
@@ -263,11 +285,16 @@ All files validated successfully (November 19, 2025):
 ## SEO Benefits
 
 ### Rich Snippet Eligibility
-1. **Service Rich Results** - All 6 cybersecurity consulting services can appear with detailed information in search results
+1. **LocalBusiness Rich Results** (November 20, 2025) - Enhanced local SEO visibility
+   - ProfessionalService type enables Google Business Profile integration
+   - Geographic coordinates for accurate location display on Google Maps
+   - Opening hours specification shows "By appointment only"
+   - Service area covers 8 regions: Gothenburg, Sweden, Nordic Region, Europe, United States, United Kingdom, Israel, Canada
+   - Better ranking for local searches like "cybersecurity consulting Gothenburg"
+2. **Service Rich Results** - All 6 cybersecurity consulting services can appear with detailed information in search results
    - Individual service pages for each offering
    - Geographic targeting for Sweden, Nordic Region, and Europe
    - Language-specific results for English, Swedish, and Korean searches
-2. **Local Business Discovery** - Enhanced Organization schema with service offerings improves local search visibility
 3. **Multilingual SEO** - Proper hreflang support through consistent @id values across language versions
 4. **FAQ Rich Results** - CIA Triad FAQ eligible for expandable Q&A in search results
 5. **Breadcrumbs** - Navigation path display in search results
