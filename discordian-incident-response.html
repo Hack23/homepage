@@ -104,6 +104,158 @@
           "item": "https://hack23.com/discordian-incident-response.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement an Incident Response Plan",
+      "description": "Step-by-step guide to creating and executing an incident response plan with <30 minute detection and <4 hour resolution for critical incidents",
+      "image": "https://hack23.com/blog.png",
+      "totalTime": "PT5H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "SIEM (Security Information and Event Management)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Incident tracking system"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Communication platform for crisis management"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Forensics investigation tools"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Incident Response Plan Template",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Classification Framework",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define Incident Classification Criteria",
+          "text": "Establish classification levels based on business impact: Critical (€10K+ daily loss, complete outage), High, Medium, and Low. Define specific RTO targets for each level",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Critical incidents: <30 minutes detection, <4 hours resolution"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "High incidents: <2 hours detection, <24 hours resolution"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Medium incidents: <8 hours detection, <72 hours resolution"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Low incidents: <24 hours detection, <1 week resolution"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Prepare Detection and Monitoring",
+          "text": "Set up comprehensive monitoring using SIEM, IDS/IPS, CloudTrail, GuardDuty, and Security Hub. Configure alerts for anomalous activity and security events",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Prevention fails. Response persists. Focus on detection speed over prevention promises"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Establish Incident Response Team",
+          "text": "Define roles and responsibilities: Incident Commander, Security Analyst, Communications Lead, Technical Lead. For single-person organizations, define escalation to external resources",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Critical incidents trigger immediate CEO escalation and all-stakeholder communication within 30 minutes"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Implement Phase 1: Detection and Triage",
+          "text": "Monitor for security events continuously. When an incident is detected, quickly classify its severity based on impact assessment and activate appropriate response procedures"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Implement Phase 2: Containment",
+          "text": "Isolate affected systems to prevent spread. For critical incidents, disconnect from network if necessary. Preserve evidence for forensic analysis",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Short-term containment: Quick isolation. Long-term containment: Patching and system rebuilding"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Implement Phase 3: Eradication",
+          "text": "Remove the threat from the environment. Identify and close the attack vector. Remove malware, backdoors, and unauthorized access",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Don't rush eradication - incomplete removal means re-compromise"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Implement Phase 4: Recovery",
+          "text": "Restore systems to normal operation. Verify systems are clean. Monitor closely for signs of re-compromise. Gradually restore services based on business priority"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Implement Phase 5: Post-Incident Review",
+          "text": "Conduct blameless post-mortem within 48 hours. Document timeline, actions taken, lessons learned. Update incident response procedures based on findings",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Failures are learning opportunities, not cover-ups. Transparency enables improvement"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Practice Through Tabletop Exercises",
+          "text": "Conduct quarterly incident response drills. Test communication procedures, technical skills, and decision-making under pressure. Update procedures based on exercise outcomes"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Document and Communicate",
+          "text": "Maintain detailed incident logs. Communicate with stakeholders at appropriate levels. For critical incidents, provide status updates every 2 hours minimum"
+        }
+      ]
     }
   ]
 }

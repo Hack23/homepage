@@ -104,6 +104,191 @@
           "item": "https://hack23.com/discordian-network-security.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Zero Trust Network Security in AWS",
+      "description": "Step-by-step guide to implementing zero trust network architecture using CloudFront, WAF, GuardDuty, Security Hub, and multi-region resilience",
+      "image": "https://hack23.com/blog.png",
+      "totalTime": "PT5H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "150"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudFront"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS WAF (Web Application Firewall)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Shield (DDoS Protection)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "VPC Flow Logs"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Route 53 with DNSSEC"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Network Security Policy",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Abandon Traditional Perimeter Thinking",
+          "text": "Acknowledge that the network perimeter is dead. Design for breach - assume attackers are already inside or will get inside",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "The perimeter dissolved in 2010 with cloud computing and remote work. Stop pretending otherwise"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Deploy CloudFront with WAF",
+          "text": "Set up AWS CloudFront as your content delivery network with AWS WAF attached for DDoS protection and web application security",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Configure WAF rules for SQL injection, XSS, and rate limiting"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Enable AWS Shield Standard (automatic) or Shield Advanced for enhanced DDoS protection"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Set up geo-blocking if needed for compliance requirements"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implement Multi-Region Architecture",
+          "text": "Deploy resources across multiple AWS regions for resilience. Use eu-west-1 (Ireland) as primary and eu-central-1 (Frankfurt) for redundancy",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Multi-region protects against regional outages and provides lower latency for users"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable VPC Flow Logs",
+          "text": "Activate VPC Flow Logs to capture network traffic metadata. Log all accepted and rejected traffic for security analysis",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Flow logs enable forensic analysis and anomaly detection without impacting performance"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Configure GuardDuty",
+          "text": "Enable AWS GuardDuty for intelligent threat detection. Configure findings to route to Security Hub for centralized monitoring",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "GuardDuty analyzes VPC Flow Logs, CloudTrail events, and DNS logs"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Set up SNS notifications for high and critical severity findings"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Implement Network Segmentation",
+          "text": "Create isolated network segments using VPCs and subnets. Use Security Groups and NACLs for microsegmentation",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Public subnet: Internet-facing load balancers only"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Private subnet: Application servers with no direct internet access"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Isolated subnet: Databases with strict access controls"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Enable DNSSEC on Route 53",
+          "text": "Configure DNSSEC signing on Route 53 hosted zones to prevent DNS spoofing and cache poisoning attacks",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "DNSSEC provides cryptographic authentication of DNS responses"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Enforce TLS 1.2+ Only",
+          "text": "Configure CloudFront and ALB to require TLS 1.2 or higher. Disable older protocols (SSL, TLS 1.0, TLS 1.1)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Older TLS versions have known vulnerabilities. Modern browsers support TLS 1.2+"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Implement Network Monitoring",
+          "text": "Set up comprehensive monitoring using Security Hub, GuardDuty findings, VPC Flow Logs analysis, and CloudWatch alarms",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Visibility is critical for zero trust - you can't protect what you can't see"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Review and Update Policy",
+          "text": "Conduct semi-annual reviews of network security architecture. Update based on new threats, AWS service updates, or incident learnings"
+        }
+      ]
     }
   ]
 }
