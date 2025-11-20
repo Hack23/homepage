@@ -182,6 +182,165 @@
       ]
     },
     {
+      "@type": "HowTo",
+      "name": "How to Deploy and Use Citizen Intelligence Agency",
+      "description": "Step-by-step guide to deploy the CIA platform on AWS or Debian/Ubuntu and start monitoring Swedish political data",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "totalTime": "PT45M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS Account (for CloudFormation deployment)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Debian/Ubuntu 24.4+ (for local deployment)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "OpenJDK 21"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "PostgreSQL 16"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "CloudFormation template",
+          "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "CIA Debian Package",
+          "url": "https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToSection",
+          "name": "AWS CloudFormation Deployment",
+          "position": 1,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Download CloudFormation Template",
+              "text": "Download the CloudFormation stack file from the GitHub repository",
+              "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Create CloudFormation Stack",
+              "text": "Create a new stack in the AWS CloudFormation console"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Upload and Configure",
+              "text": "Upload the template file and configure parameters for your deployment"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Launch Stack",
+              "text": "Acknowledge IAM resource creation and launch the stack"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Access Application",
+              "text": "Access the application via the URL in the stack outputs"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "Debian/Ubuntu Local Installation",
+          "position": 2,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Install Prerequisites",
+              "text": "Install OpenJDK 21, PostgreSQL 16, and pgaudit using apt-get",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Configure PostgreSQL",
+              "text": "Configure PostgreSQL database according to the configuration guide",
+              "url": "https://github.com/Hack23/cia#postgresql-16-configuration-guide"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Create Database and User",
+              "text": "Create the CIA database and user with appropriate permissions",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo su - postgres"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "psql"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE USER eris WITH password 'discord';"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE DATABASE cia_dev;"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Download and Install Package",
+              "text": "Download the Debian package from GitHub releases and install it",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo dpkg -i cia-dist-deb-2025.1.2.all.deb"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Access the Platform",
+              "text": "Access the CIA platform at https://localhost:28443/cia/",
+              "url": "https://localhost:28443/cia/"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "@id": "https://hack23.com/cia-docs.html#breadcrumb",
       "itemListElement": [

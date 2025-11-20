@@ -104,6 +104,152 @@
           "item": "https://hack23.com/discordian-backup-recovery.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Classification-Driven Backup and Recovery",
+      "description": "Step-by-step guide to implementing the 3-2-1 backup rule with AWS S3, Glacier Deep Archive, and classification-driven RTO/RPO targets",
+      "image": "https://hack23.com/blog.png",
+      "totalTime": "PT3H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "50"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS S3"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Glacier Deep Archive"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Backup automation tools"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Monitoring and alerting system"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Backup & Recovery Policy Template",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Classification Framework",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Implement the 3-2-1 Backup Rule",
+          "text": "Create 3 copies of your data on 2 different media types with 1 copy offsite. Use AWS S3 for primary backups and Glacier Deep Archive for long-term offsite storage",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "One backup is no backup. Two is barely a backup. Three is the minimum for survival"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Define Classification-Driven RTO/RPO Targets",
+          "text": "Set Recovery Time Objective (RTO) and Recovery Point Objective (RPO) based on data classification levels",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Critical systems: <1 hour RTO, <15 minutes RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "High priority: <4 hours RTO, <1 hour RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Medium priority: <24 hours RTO, <4 hours RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Low priority: <72 hours RTO, <24 hours RPO"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Configure Immutable Backups",
+          "text": "Use AWS S3 Object Lock or Glacier Vault Lock to create immutable backups that ransomware cannot encrypt. Enable versioning and MFA Delete",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "If ransomware can reach your backups, you don't have backups - you have additional victims"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable Backup Encryption",
+          "text": "Encrypt all backups using AWS KMS or customer-managed keys. Implement secure key management and protect encryption keys separately from backup data",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Unencrypted backups are just data breaches waiting for physical access"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Set Up Automated Backup Monitoring",
+          "text": "Configure real-time monitoring to track backup success rates. Target 99.9% success rate and trigger alerts when success rate drops below 99%",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Monitoring without alerting is security theater - backups fail silently without monitoring"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Schedule Quarterly Recovery Tests",
+          "text": "Test full system restores quarterly, not just file-level recoveries. Document recovery times and identify gaps in procedures",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "A backup you haven't tested is Schrödinger's backup - both working and broken until disaster strikes"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Document Recovery Procedures",
+          "text": "Create comprehensive documentation covering what to backup, how to restore, who has access, where encryption keys are stored, and step-by-step recovery procedures",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Disaster recovery isn't the time to figure out procedures - tribal knowledge doesn't survive disasters"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Conduct Annual Policy Review",
+          "text": "Review and update backup policies annually or when triggered by incidents, technology changes, or regulatory requirements"
+        }
+      ]
     }
   ]
 }
