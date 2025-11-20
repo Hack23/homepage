@@ -43,7 +43,7 @@
 	  "@context": "https://schema.org",
 	  "@graph": [
 	    {
-	      "@type": "Organization",
+	      "@type": ["Organization", "ProfessionalService"],
 	      "@id": "https://hack23.com/#org",
 	      "url": "https://hack23.com",
 	      "logo": "https://hack23.github.io/cia-compliance-manager/icon-192.png",
@@ -103,6 +103,22 @@
 	        {
 	          "@type": "Place",
 	          "name": "Europa"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "USA"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Storbritannien"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Israel"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Kanada"
 	        }
 	      ],
 	      "hasCredential": [
@@ -154,6 +170,21 @@
 	        "latitude": "57.7089",
 	        "longitude": "11.9746"
 	      },
+	      "openingHoursSpecification": [
+	        {
+	          "@type": "OpeningHoursSpecification",
+	          "dayOfWeek": [
+	            "Monday",
+	            "Tuesday",
+	            "Wednesday",
+	            "Thursday",
+	            "Friday"
+	          ],
+	          "opens": "00:00",
+	          "closes": "00:00",
+	          "description": "Endast efter överenskommelse"
+	        }
+	      ],
 	      "contactPoint": {
 	        "@type": "ContactPoint",
 	        "contactType": "Kundtjänst",
