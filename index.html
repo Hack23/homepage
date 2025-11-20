@@ -53,7 +53,7 @@
 	  "@context": "https://schema.org",
 	  "@graph": [
 	    {
-	      "@type": "Organization",
+	      "@type": ["Organization", "ProfessionalService"],
 	      "@id": "https://hack23.com/#org",
 	      "url": "https://hack23.com/",
 	      "logo": "https://hack23.github.io/cia-compliance-manager/icon-192.png",
@@ -113,6 +113,22 @@
 	        {
 	          "@type": "Place",
 	          "name": "Europe"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "United States"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "United Kingdom"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Israel"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Canada"
 	        }
 	      ],
 	      "hasCredential": [
@@ -164,6 +180,21 @@
 	        "latitude": "57.7089",
 	        "longitude": "11.9746"
 	      },
+	      "openingHoursSpecification": [
+	        {
+	          "@type": "OpeningHoursSpecification",
+	          "dayOfWeek": [
+	            "Monday",
+	            "Tuesday",
+	            "Wednesday",
+	            "Thursday",
+	            "Friday"
+	          ],
+	          "opens": "00:00",
+	          "closes": "00:00",
+	          "description": "By appointment only"
+	        }
+	      ],
 	      "contactPoint": {
 	        "@type": "ContactPoint",
 	        "contactType": "Customer Service",
