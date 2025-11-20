@@ -2323,3 +2323,379 @@ footer {
     font-weight: 700;
   }
 }
+
+/* ==================================================
+   SWEDISH ELECTION 2026 STYLES
+   ================================================== */
+
+/* Election Countdown */
+.election-countdown {
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+}
+
+.election-countdown h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.election-countdown #countdown {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+/* Hero Stats Grid */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.hero-stats .stat {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.hero-stats .stat .number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-stats .stat .label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Coalition Stability */
+.coalition-stability {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.coalition-stability h3 {
+  color: var(--header-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.stability-info {
+  margin-top: var(--spacing-md);
+}
+
+.stability-info p {
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-color);
+  border-left: 3px solid var(--warning-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.stability-info p strong {
+  color: var(--primary-color);
+}
+
+/* Risk Rules Breakdown */
+.risk-rules-breakdown {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.risk-rules-breakdown h3 {
+  color: var(--header-color);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.risk-rules-breakdown h3:first-child {
+  margin-top: 0;
+}
+
+.risk-rules-breakdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.risk-rules-breakdown li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--section-border);
+}
+
+.risk-rules-breakdown li:last-child {
+  border-bottom: none;
+}
+
+.risk-rules-breakdown li strong {
+  color: var(--primary-color);
+}
+
+/* Election Timeline Phases */
+.timeline-phases {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.timeline-phases .phase {
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.timeline-phases .phase h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline-phases .phase ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-phases .phase li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.timeline-phases .phase li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Coalition Scenarios */
+.scenarios {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.scenarios .scenario {
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.scenarios .scenario h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.scenarios .scenario-summary {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--bg-color);
+  border-left: 3px solid var(--info-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.scenarios .scenario ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scenarios .scenario li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--section-border);
+}
+
+.scenarios .scenario li:last-child {
+  border-bottom: none;
+}
+
+.scenarios .scenario li strong {
+  color: var(--primary-color);
+}
+
+/* Pilot Program Application */
+.pilot-application {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-lg);
+}
+
+.pilot-application h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.pilot-application ol {
+  padding-left: var(--spacing-xl);
+}
+
+.pilot-application li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.pilot-application p {
+  margin-top: var(--spacing-md);
+}
+
+.pilot-application p strong {
+  color: var(--primary-color);
+}
+
+/* Pilot Program Pricing Cards */
+.card .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: var(--spacing-md) 0;
+}
+
+.card .duration {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.card .target {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--section-border);
+  color: var(--text-secondary);
+}
+
+.card .slots {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* Technical Specifications */
+.tech-specs {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.tech-specs .spec-category {
+  padding: var(--spacing-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.tech-specs .spec-category h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.tech-specs .spec-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-specs .spec-category li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--section-border);
+}
+
+.tech-specs .spec-category li:last-child {
+  border-bottom: none;
+}
+
+.tech-specs .spec-category li strong {
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 150px;
+}
+
+/* Resources List */
+.resources {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+
+.resources h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.resources li {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+.resources a {
+  display: block;
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+.resources a:hover {
+  color: var(--link-hover);
+}
+
+.resources a::before {
+  content: "📄 ";
+  margin-right: var(--spacing-xs);
+}
+
+/* Responsive Design for Election Pages */
+@media (max-width: 768px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .hero-stats .stat .number {
+    font-size: 2rem;
+  }
+  
+  .election-countdown h2 {
+    font-size: 1.4rem;
+  }
+  
+  .tech-specs .spec-category li strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
