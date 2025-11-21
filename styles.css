@@ -2705,3 +2705,151 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==================================================
+   COMPARISON TABLE (Why Hack23 Page)
+   ================================================== */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.comparison-table thead {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+}
+
+.comparison-table th {
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+.comparison-table th:first-child {
+  width: 25%;
+}
+
+.comparison-table th:nth-child(2),
+.comparison-table th:nth-child(3) {
+  width: 37.5%;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--card-border);
+  transition: background-color 0.2s ease;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: var(--badge-bg);
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.comparison-table td:first-child,
+.comparison-table th[scope="row"] {
+  font-weight: 600;
+  color: var(--header-color);
+  background-color: var(--badge-bg);
+}
+
+.comparison-table td.positive {
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.comparison-table td.negative {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.comparison-table td.warning {
+  color: var(--warning-color);
+  font-weight: 500;
+}
+
+.comparison-table td.neutral {
+  color: var(--info-color);
+  font-weight: 500;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+/* Responsive comparison table */
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .comparison-table th {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table {
+    font-size: 0.75rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .comparison-table th {
+    font-size: 0.85rem;
+  }
+}
+
+/* CTA buttons styling */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.cta-buttons .btn {
+  flex: 0 1 auto;
+  min-width: 200px;
+}
+
+.cta-text {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: var(--badge-bg);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
