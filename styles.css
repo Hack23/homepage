@@ -2853,3 +2853,505 @@ footer {
     width: 100%;
   }
 }
+
+/* ==================================================
+   LEAD MAGNET STYLES
+   ================================================== */
+
+/* Lead Magnet Hero Section */
+.lead-magnet-hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  padding: 3rem 2rem;
+  margin: 0 0 3rem 0;
+  border-radius: var(--border-radius-lg);
+}
+
+.lead-magnet-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.lead-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.checklist-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefit-card h3 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-card li:last-child {
+  border-bottom: none;
+}
+
+/* Lead Magnet Form Section */
+.lead-magnet-form-section {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.form-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.required {
+  color: var(--danger-color);
+  font-weight: bold;
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group select {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: var(--font-main);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 51, 0.1);
+}
+
+.checkbox-group {
+  flex-direction: row;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.cta-button:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 51, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  font-size: 1.5rem;
+}
+
+.privacy-notice {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--badge-bg);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--success-color);
+}
+
+.privacy-notice p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.privacy-notice strong {
+  color: var(--text-color);
+}
+
+.privacy-notice a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.gdpr-notice {
+  font-size: 0.85rem !important;
+  font-style: italic;
+  text-align: center;
+  color: var(--success-color) !important;
+}
+
+/* Checklist Preview Section */
+.checklist-preview {
+  padding: 3rem 2rem;
+}
+
+.checklist-preview h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.preview-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.preview-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transform: translateY(-4px);
+}
+
+.preview-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.preview-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Social Proof Section */
+.social-proof {
+  background: var(--bg-color);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  border-radius: var(--border-radius-lg);
+}
+
+.social-proof h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.credential-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+}
+
+.credential-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.credential-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credential-card li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.credential-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  color: white;
+  border-radius: var(--border-radius-lg);
+  margin: 3rem 0;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-button-large {
+  display: inline-block;
+  background: white;
+  color: var(--primary-color);
+  padding: 1.25rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Blog Post CTA Section - Compact version for blog content */
+.blog-cta {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  color: white;
+  border-radius: var(--border-radius-lg);
+  margin: 2rem 0;
+}
+
+.blog-cta h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.blog-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.blog-cta strong {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.blog-cta-button {
+  display: inline-block;
+  background: white;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Additional Resources Section */
+.additional-resources {
+  padding: 3rem 2rem;
+}
+
+.additional-resources h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resource-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.resource-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.resource-card h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.resource-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.resource-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for lead magnet */
+@media (max-width: 768px) {
+  .lead-magnet-content h2 {
+    font-size: 2rem;
+  }
+  
+  .lead-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .checklist-benefits {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-section p {
+    font-size: 1rem;
+  }
+  
+  .cta-button-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lead-magnet-hero {
+    padding: 2rem 1rem;
+  }
+  
+  .lead-magnet-form-section {
+    padding: 2rem 1rem;
+  }
+  
+  .form-container {
+    padding: 0;
+  }
+}
+
+/* Dark mode adjustments for lead magnet */
+@media (prefers-color-scheme: dark) {
+  .benefit-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  .privacy-notice {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="text"],
+  .form-group select {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+}
