@@ -3590,7 +3590,6 @@ footer {
 
 .badge-showcase summary::after {
   content: '▼';
-  float: right;
   font-size: 0.8rem;
   transition: transform 0.3s ease;
   color: var(--primary-color);
@@ -3619,6 +3618,12 @@ footer {
   margin-top: 1.5rem;
 }
 
+.badge-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .badge-category {
   padding: 1rem;
   border: 1px solid var(--border-color);
@@ -3626,7 +3631,8 @@ footer {
   background: var(--bg-color);
 }
 
-.badge-category h4 {
+.badge-category h4,
+.badge-category h5 {
   margin-top: 0;
   margin-bottom: 0.75rem;
   color: var(--primary-color);
@@ -3695,8 +3701,13 @@ footer {
     background: var(--card-bg);
   }
   
-  .badge-showcase summary h3 {
+  .badge-showcase summary h3,
+  .badge-showcase summary h4 {
     color: var(--primary-light);
+  }
+  
+  .badge-showcase summary p {
+    color: var(--text-secondary);
   }
   
   .badge-showcase summary::after {
@@ -3712,7 +3723,8 @@ footer {
     border-color: var(--border-color);
   }
   
-  .badge-category h4 {
+  .badge-category h4,
+  .badge-category h5 {
     color: var(--primary-light);
   }
 }
