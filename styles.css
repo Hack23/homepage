@@ -3567,8 +3567,13 @@ footer {
   min-height: 48px;
   min-width: 48px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
+}
+
+.badge-showcase summary > div {
+  flex: 1;
 }
 
 .badge-showcase summary::-webkit-details-marker {
