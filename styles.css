@@ -3355,3 +3355,188 @@ footer {
     border-color: var(--border-color);
   }
 }
+
+/* ==================================================
+   HERO SECTION OPTIMIZATIONS
+   ================================================== */
+
+/* Details/Summary for collapsible content */
+.header-intro-details,
+.badge-section {
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-intro-details summary,
+.badge-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  transition: all 0.3s ease;
+  user-select: none;
+  background: transparent;
+}
+
+.header-intro-details summary:hover,
+.badge-section summary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 102, 51, 0.2);
+}
+
+.header-intro-details summary:focus-visible,
+.badge-section summary:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.header-intro-details[open] summary,
+.badge-section[open] summary {
+  margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-intro-details summary,
+  .badge-section summary {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+  }
+  
+  .header-intro-details summary:hover,
+  .badge-section summary:hover {
+    background: rgba(0, 204, 102, 0.2);
+    color: var(--primary-light);
+    box-shadow: 0 0 12px rgba(0, 204, 102, 0.3);
+  }
+}
+
+/* Hero CTA buttons */
+.hero-tagline {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: var(--spacing-lg) auto;
+  max-width: 800px;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: var(--spacing-md) auto var(--spacing-xl);
+  max-width: 700px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+}
+
+.btn-primary-large,
+.btn-secondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 48px;
+  min-width: 48px;
+  line-height: 1.5;
+}
+
+.btn-primary-large {
+  background: var(--button-bg);
+  color: var(--button-text);
+  box-shadow: 0 4px 12px rgba(0, 119, 68, 0.3);
+  border: none;
+}
+
+.btn-primary-large:hover {
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 119, 68, 0.4);
+  text-decoration: none;
+}
+
+.btn-primary-large:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn-primary-large {
+    background: linear-gradient(135deg, rgba(0, 204, 102, 0.3), rgba(0, 136, 68, 0.5));
+    border: 1px solid var(--primary-light);
+    color: var(--primary-light);
+  }
+  
+  .btn-primary-large:hover {
+    background: linear-gradient(135deg, rgba(0, 204, 102, 0.5), rgba(0, 136, 68, 0.7));
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.4);
+  }
+  
+  .btn-secondary {
+    border-color: var(--primary-light);
+    color: var(--primary-light);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(0, 204, 102, 0.2);
+    color: var(--primary-light);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .btn-primary-large,
+  .btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
