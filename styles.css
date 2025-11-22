@@ -3417,7 +3417,13 @@ footer {
   }
 }
 
-/* Hero CTA buttons */
+/* Hero CTA buttons 
+ * Note: These styles are partially duplicated inline in index*.html files
+ * for critical rendering path optimization (FCP < 1.5s). The inline version
+ * includes only essential properties needed for initial render. This external
+ * CSS provides the complete styling including min-height/min-width for
+ * accessibility and line-height for consistent spacing.
+ */
 .hero-tagline {
   font-size: 1.25rem;
   line-height: 1.6;
@@ -3461,7 +3467,7 @@ footer {
   background: var(--button-bg);
   color: var(--button-text);
   box-shadow: 0 4px 12px rgba(0, 119, 68, 0.3);
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn-primary-large:hover {
@@ -3524,7 +3530,7 @@ footer {
   }
   
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   .btn-primary-large,
