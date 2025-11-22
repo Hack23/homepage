@@ -26,6 +26,8 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://hack23.com/services_ko.html">
 	<meta property="og:image" content="https://hack23.github.io/cia-compliance-manager/icon-192.png">
+	<meta property="og:image:width" content="192">
+	<meta property="og:image:height" content="192">
 	<meta property="og:site_name" content="Hack23 AB - 사이버보안 서비스">
 	<meta property="og:locale" content="ko_KR">
 	<meta property="og:locale:alternate" content="en_US">
@@ -53,28 +55,109 @@
 	<script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
-	  "@type": "WebPage",
-	  "name": "사이버보안 서비스",
-	  "description": "기업을 위한 전문 사이버보안 서비스",
-	  "url": "https://hack23.com/services_ko.html",
-	  "inLanguage": "ko",
-	  "breadcrumb": {
-	    "@type": "BreadcrumbList",
-	    "itemListElement": [
-	      {
-	        "@type": "ListItem",
-	        "position": 1,
-	        "name": "홈",
-	        "item": "https://hack23.com/index_ko.html"
+	  "@graph": [
+	    {
+	      "@type": ["Organization", "ProfessionalService"],
+	      "@id": "https://hack23.com/#org",
+	      "name": "Hack23 AB",
+	      "url": "https://hack23.com/",
+	      "logo": "https://hack23.github.io/cia-compliance-manager/icon-192.png",
+	      "description": "예테보리에서 원격 또는 현장으로 제공되는 전문 사이버보안 컨설팅 서비스.",
+	      "address": {
+	        "@type": "PostalAddress",
+	        "addressLocality": "예테보리",
+	        "addressCountry": "SE"
 	      },
-	      {
-	        "@type": "ListItem",
-	        "position": 2,
-	        "name": "서비스",
-	        "item": "https://hack23.com/services_ko.html"
+	      "areaServed": {
+	        "@type": "Country",
+	        "name": "스웨덴"
+	      },
+	      "makesOffer": [
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-security-architecture",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "보안 아키텍처 및 전략",
+	            "description": "비즈니스 목표에 맞춘 기업 보안 프레임워크, 위험 평가 및 거버넌스."
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-cloud-security",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "클라우드 보안 및 DevSecOps",
+	            "description": "AWS 보안 평가, Infrastructure as Code 보안, CI/CD 통합."
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-secure-development",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "안전한 개발 및 코드 품질",
+	            "description": "안전한 SDLC 구현, CI/CD 보안 통합, 공급망 보안."
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-compliance",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "규정 준수 및 규제",
+	            "description": "GDPR, NIS2, ISO 27001 구현, ISMS 설계, AI 거버넌스."
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-opensource-security",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "오픈 소스 보안",
+	            "description": "OSPO 설립, 취약점 관리, 보안 도구 개발."
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "@id": "https://hack23.com/services_ko.html#service-security-culture",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "보안 문화 및 교육",
+	            "description": "보안 인식 프로그램, 개발자 교육, 사고 대응 교육."
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "@type": "WebPage",
+	      "@id": "https://hack23.com/services_ko.html#webpage",
+	      "url": "https://hack23.com/services_ko.html",
+	      "name": "사이버보안 서비스",
+	      "description": "기업을 위한 전문 사이버보안 서비스",
+	      "isPartOf": {
+	        "@type": "WebSite",
+	        "@id": "https://hack23.com/#website"
+	      },
+	      "breadcrumb": {
+	        "@type": "BreadcrumbList",
+	        "itemListElement": [
+	          {
+	            "@type": "ListItem",
+	            "position": 1,
+	            "name": "홈",
+	            "item": "https://hack23.com/index_ko.html"
+	          },
+	          {
+	            "@type": "ListItem",
+	            "position": 2,
+	            "name": "서비스",
+	            "item": "https://hack23.com/services_ko.html"
+	          }
+	        ]
 	      }
-	    ]
-	  }
+	    }
+	  ]
 	}
 	</script>
 </head>
@@ -88,9 +171,9 @@
 				<li aria-current="page" style="color: var(--text-color);">서비스</li>
 			</ol>
 		</nav>
-		
+	
 <section id="security-services">
-  <h2>🔑 보안 서비스</h2>
+  <h1>🔑 보안 서비스</h1>
   <p>예테보리에서 원격 또는 현장으로 제공되는 전문 사이버보안 컨설팅 서비스. 소프트웨어 개발 및 보안 아키텍처에서 30년 이상의 경험을 바탕으로 혁신을 방해하지 않으면서 개발 프로세스에 원활하게 통합되는 실용적인 보안 솔루션을 제공합니다.</p>
   
   <div class="service-info" style="background: rgba(0, 102, 51, 0.1); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
