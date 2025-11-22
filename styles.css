@@ -3419,10 +3419,10 @@ footer {
 
 /* Hero CTA buttons 
  * Note: These styles are partially duplicated inline in index*.html files
- * for critical rendering path optimization (FCP < 1.5s). The inline version
- * includes only essential properties needed for initial render. This external
- * CSS provides the complete styling including min-height/min-width for
- * accessibility and line-height for consistent spacing.
+ * for critical rendering path optimization (FCP < 1.5s). Both the inline and
+ * external CSS include min-height/min-width for WCAG 2.1 AA compliance (44×44px
+ * touch targets) during the entire page load cycle. This external CSS provides
+ * additional styling enhancements like line-height for consistent spacing.
  */
 .hero-tagline {
   font-size: 1.25rem;
