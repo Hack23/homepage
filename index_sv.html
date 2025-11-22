@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cybersäkerhet Sverige | Öppen ISMS | Hack23</title>
+<!-- Preload critical resources -->
+<link rel="preload" href="styles.css" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" as="style">
+
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="alternate" hreflang="en" href="https://hack23.com/">
 	<link rel="alternate" hreflang="sv" href="https://hack23.com/index_sv.html">
@@ -526,7 +530,7 @@
 <body>
 	<header>
       <div class="logo-container">
-        <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 AB - Premium Cybersäkerhetskonsulting Sverige" class="logo" width="80" height="80">
+        <img src="https://hack23.github.io/cia-compliance-manager/icon-192.png" alt="Hack23 AB - Premium Cybersäkerhetskonsulting Sverige" class="logo" width="80" height="80" fetchpriority="high">
       </div>
       <h1>Hack23 AB <span class="header-subtitle">Premium Cybersäkerhetskonsulting | Sveriges Enda Offentliga ISMS</span></h1>
       
@@ -558,19 +562,19 @@
       </div>
       <div class="badges">
         <a href="https://hack23.com" title="Officiell Webbplats">
-          <img src="https://img.shields.io/badge/Webbplats-hack23.com-00cc66?style=for-the-badge&logo=firefox&logoColor=white" alt="Webbplats">
+          <img src="https://img.shields.io/badge/Webbplats-hack23.com-00cc66?style=for-the-badge&logo=firefox&logoColor=white" alt="Webbplats" width="200" height="20" loading="lazy">
         </a>
         <a href="https://github.com/Hack23" title="GitHub Profil">
-          <img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Hack23">
+          <img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Hack23" width="158" height="28" loading="lazy">
         </a>
         <a href="https://www.linkedin.com/company/hack23/" title="LinkedIn Företagssida">
-          <img src="https://img.shields.io/badge/LinkedIn-Företag-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Företag">
+          <img src="https://img.shields.io/badge/LinkedIn-Företag-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Företag" width="186" height="28" loading="lazy">
         </a>
         <a href="https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I" title="Företagsregistrering - Allabolag.se">
-          <img src="https://img.shields.io/badge/Org.nr-5595347807-blue?style=for-the-badge" alt="Svensk Företagsregistrering">
+          <img src="https://img.shields.io/badge/Org.nr-5595347807-blue?style=for-the-badge" alt="Svensk Företagsregistrering" width="203" height="28" loading="lazy">
         </a>
         <a href="https://www.openhub.net/accounts/pether" title="OpenHub Profil">
-          <img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenHub Profil">
+          <img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="OpenHub Profil" width="170" height="28" loading="lazy">
         </a>
       </div>
       <div class="app-link">
@@ -662,14 +666,14 @@
             <h3>📋 Offentligt ISMS-Repository</h3>
             <p style="max-width:320px;margin:0 auto;">Levande dokumentation: policys, redigerade register, resiliens & utvecklingssäkerhet (≈70% publikt / 30% ansvarsfullt redigerat).</p>
             <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Öppna publikt ISMS-repository (policys, redigerade register)">
-              <img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=for-the-badge&logo=github&logoColor=white" alt="ISMS Publikt Repository">
+              <img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=for-the-badge&logo=github&logoColor=white" alt="ISMS Publikt Repository" width="200" height="20" loading="lazy">
             </a>
           </td>
           <td style="width:50%; text-align:center; padding:1rem; vertical-align:top;">
             <h3>🔒 Informationssäkerhetspolicy</h3>
             <p style="max-width:320px;margin:0 auto;">Kärnpolicy: syfte, omfattning, principer (Security by Design, Transparens, Kontinuerlig förbättring, Affärsvärde), roller & dokumentkarta.</p>
             <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Läs informationssäkerhetspolicyn">
-              <img src="https://img.shields.io/badge/Security-Policy-DC143C?style=for-the-badge&logo=shield&logoColor=white" alt="Informationssäkerhetspolicy">
+              <img src="https://img.shields.io/badge/Security-Policy-DC143C?style=for-the-badge&logo=shield&logoColor=white" alt="Informationssäkerhetspolicy" width="200" height="20" loading="lazy">
             </a>
           </td>
         </tr>
@@ -706,34 +710,34 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Företags-ISMS styrningsramverk & strategiska principer">
-                  <img src="https://img.shields.io/badge/Policy-Information_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy">
+                  <img src="https://img.shields.io/badge/Policy-Information_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md" title="Kvantitativt riskbedömningsramverk">
-                  <img src="https://img.shields.io/badge/Policy-Risk_Assessment-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Risk Assessment Methodology">
+                  <img src="https://img.shields.io/badge/Policy-Risk_Assessment-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Risk Assessment Methodology" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md" title="Säkerhetsstyrning KPI:er & mätramverk">
-                  <img src="https://img.shields.io/badge/Policy-Security_Metrics-FF4500?style=flat-square&logo=chartline&logoColor=white" alt="Security Metrics">
+                  <img src="https://img.shields.io/badge/Policy-Security_Metrics-FF4500?style=flat-square&logo=chartline&logoColor=white" alt="Security Metrics" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>🔧 Implementeringsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md" title="CIA-plattformens säkerhetsarkitektur med C4-modeller">
-                  <img src="https://img.shields.io/badge/Docs-Security_Architecture-0066CC?style=flat-square&logo=readme&logoColor=white" alt="Security Architecture">
+                  <img src="https://img.shields.io/badge/Docs-Security_Architecture-0066CC?style=flat-square&logo=readme&logoColor=white" alt="Security Architecture" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md" title="MITRE ATT&CK & STRIDE hotanalys">
-                  <img src="https://img.shields.io/badge/Docs-Threat_Model-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Threat Model">
+                  <img src="https://img.shields.io/badge/Docs-Threat_Model-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Threat Model" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" title="Kvantifierad riskhantering med behandlingsspårning">
-                  <img src="https://img.shields.io/badge/Docs-Risk_Register-4682B4?style=flat-square&logo=readme&logoColor=white" alt="Risk Register">
+                  <img src="https://img.shields.io/badge/Docs-Risk_Register-4682B4?style=flat-square&logo=readme&logoColor=white" alt="Risk Register" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>📊 Ramverksbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" title="Omfattande klassificeringsramverk (BIA, CIA, RTO/RPO, projekttyper)">
-                  <img src="https://img.shields.io/badge/Framework-Classification_System-6A1B9A?style=flat-square&logo=sitemap&logoColor=white" alt="Classification Framework">
+                  <img src="https://img.shields.io/badge/Framework-Classification_System-6A1B9A?style=flat-square&logo=sitemap&logoColor=white" alt="Classification Framework" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md" title="Företagstillgångsinventering med riskkontroller">
-                  <img src="https://img.shields.io/badge/Framework-Asset_Management-7B1FA2?style=flat-square&logo=database&logoColor=white" alt="Asset Management">
+                  <img src="https://img.shields.io/badge/Framework-Asset_Management-7B1FA2?style=flat-square&logo=database&logoColor=white" alt="Asset Management" width="200" height="20" loading="lazy">
                 </a>
               </div>
             </div>
@@ -754,31 +758,31 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md" title="Zero-Trust nätverksarkitektur med DNSSEC & e-postsäkerhet">
-                  <img src="https://img.shields.io/badge/Policy-Network_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Network Security Policy">
+                  <img src="https://img.shields.io/badge/Policy-Network_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Network Security Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md" title="Företagskrypteringsstandarder (AES-256, TLS 1.3, AWS KMS)">
-                  <img src="https://img.shields.io/badge/Policy-Cryptography-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Cryptography Policy">
+                  <img src="https://img.shields.io/badge/Policy-Cryptography-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Cryptography Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md" title="AWS-baserad teknisk motståndskraft">
-                  <img src="https://img.shields.io/badge/Policy-Disaster_Recovery-FF4500?style=flat-square&logo=shield&logoColor=white" alt="Disaster Recovery Plan">
+                  <img src="https://img.shields.io/badge/Policy-Disaster_Recovery-FF4500?style=flat-square&logo=shield&logoColor=white" alt="Disaster Recovery Plan" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" title="Zero-Trust identitetsramverk med MFA">
-                  <img src="https://img.shields.io/badge/Policy-Access_Control-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Access Control Policy">
+                  <img src="https://img.shields.io/badge/Policy-Access_Control-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Access Control Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md" title="Dataskydd & säkerhetskopieringsstrategi">
-                  <img src="https://img.shields.io/badge/Policy-Backup_Recovery-FF6347?style=flat-square&logo=database&logoColor=white" alt="Backup Recovery Policy">
+                  <img src="https://img.shields.io/badge/Policy-Backup_Recovery-FF6347?style=flat-square&logo=database&logoColor=white" alt="Backup Recovery Policy" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>🔧 Implementeringsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md" title="CI/CD säkerhetsautomatisering">
-                  <img src="https://img.shields.io/badge/Docs-CI/CD_Workflows-0066CC?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD Workflows">
+                  <img src="https://img.shields.io/badge/Docs-CI/CD_Workflows-0066CC?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD Workflows" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md" title="Molnfinansiell & säkerhetsplanering">
-                  <img src="https://img.shields.io/badge/Docs-Financial_Security_Plan-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Financial Security Plan">
+                  <img src="https://img.shields.io/badge/Docs-Financial_Security_Plan-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Financial Security Plan" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md" title="AWS-baserad affärskontinuitet & operativ motståndskraft">
-                  <img src="https://img.shields.io/badge/Docs-Business_Continuity-4682B4?style=flat-square&logo=refresh&logoColor=white" alt="Business Continuity Plan">
+                  <img src="https://img.shields.io/badge/Docs-Business_Continuity-4682B4?style=flat-square&logo=refresh&logoColor=white" alt="Business Continuity Plan" width="200" height="20" loading="lazy">
                 </a>
               </div>
             </div>
@@ -798,28 +802,28 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md" title="DevSecOps-ramverk med säkerhetsintegrerad SDLC">
-                  <img src="https://img.shields.io/badge/Policy-Secure_Development-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Secure Development Policy">
+                  <img src="https://img.shields.io/badge/Policy-Secure_Development-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Secure Development Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md" title="Systematisk säkerhetstestning & åtgärder">
-                  <img src="https://img.shields.io/badge/Policy-Vulnerability_Mgmt-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Vulnerability Management">
+                  <img src="https://img.shields.io/badge/Policy-Vulnerability_Mgmt-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Vulnerability Management" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md" title="Säker förändringskontroll & releasehantering">
-                  <img src="https://img.shields.io/badge/Policy-Change_Management-FF4500?style=flat-square&logo=git&logoColor=white" alt="Change Management">
+                  <img src="https://img.shields.io/badge/Policy-Change_Management-FF4500?style=flat-square&logo=git&logoColor=white" alt="Change Management" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>🔧 Implementeringsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md" title="CI/CD-automatisering med GitHub Actions">
-                  <img src="https://img.shields.io/badge/Docs-CI/CD_Workflows-0066CC?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD Workflows">
+                  <img src="https://img.shields.io/badge/Docs-CI/CD_Workflows-0066CC?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD Workflows" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia/attestations" title="Leveranskedjesäkerhet med SLSA nivå 3">
-                  <img src="https://img.shields.io/badge/SLSA-Level_3-1E90FF?style=flat-square&logo=github&logoColor=white" alt="SLSA Level 3 Attestations">
+                  <img src="https://img.shields.io/badge/SLSA-Level_3-1E90FF?style=flat-square&logo=github&logoColor=white" alt="SLSA Level 3 Attestations" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/WORKFLOWS.md" title="Black Trigram CI/CD pipeline & testning">
-                  <img src="https://img.shields.io/badge/BlackTrigram-Workflows-4682B4?style=flat-square&logo=githubactions&logoColor=white" alt="Black Trigram Workflows">
+                  <img src="https://img.shields.io/badge/BlackTrigram-Workflows-4682B4?style=flat-square&logo=githubactions&logoColor=white" alt="Black Trigram Workflows" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" title="Live OpenSSF säkerhetsscorecard-mätvärden">
-                  <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard" style="height: 20px; vertical-align: middle;">
+                  <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy" style="height: 20px; vertical-align: middle;">
                 </a>
               </div>
             </div>
@@ -842,34 +846,34 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Omfattande ISMS-ramverk">
-                  <img src="https://img.shields.io/badge/Policy-Information_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy">
+                  <img src="https://img.shields.io/badge/Policy-Information_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md" title="EU AI Act efterlevnad & riskhantering">
-                  <img src="https://img.shields.io/badge/Policy-AI_Governance-FF6347?style=flat-square&logo=openai&logoColor=white" alt="AI Governance Policy">
+                  <img src="https://img.shields.io/badge/Policy-AI_Governance-FF6347?style=flat-square&logo=openai&logoColor=white" alt="AI Governance Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md" title="Informationsskydd & GDPR-efterlevnad">
-                  <img src="https://img.shields.io/badge/Policy-Data_Classification-FF4500?style=flat-square&logo=shield&logoColor=white" alt="Data Classification Policy">
+                  <img src="https://img.shields.io/badge/Policy-Data_Classification-FF4500?style=flat-square&logo=shield&logoColor=white" alt="Data Classification Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CRA_Conformity_Assessment_Process.md" title="EU Cyber Resilience Act överensstämmelsesbedömning">
-                  <img src="https://img.shields.io/badge/Policy-CRA_Process-DC143C?style=flat-square&logo=checkmarx&logoColor=white" alt="CRA Conformity Assessment">
+                  <img src="https://img.shields.io/badge/Policy-CRA_Process-DC143C?style=flat-square&logo=checkmarx&logoColor=white" alt="CRA Conformity Assessment" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>🔧 Implementeringsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Transparent offentlig ISMS med 93 ISO-kontroller">
-                  <img src="https://img.shields.io/badge/Repo-ISMS_PUBLIC-0066CC?style=flat-square&logo=github&logoColor=white" alt="Public ISMS Repository">
+                  <img src="https://img.shields.io/badge/Repo-ISMS_PUBLIC-0066CC?style=flat-square&logo=github&logoColor=white" alt="Public ISMS Repository" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md" title="ISO 27001/NIST CSF/CIS Controls mappning">
-                  <img src="https://img.shields.io/badge/Docs-ISO_27001/NIST/CIS-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="ISO 27001/NIST/CIS Compliance">
+                  <img src="https://img.shields.io/badge/Docs-ISO_27001/NIST/CIS-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="ISO 27001/NIST/CIS Compliance" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md" title="EU Cyber Resilience Act-bedömning">
-                  <img src="https://img.shields.io/badge/CRA-CIA_Assessment-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CRA Assessment">
+                  <img src="https://img.shields.io/badge/CRA-CIA_Assessment-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CRA Assessment" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md" title="Black Trigram CRA-bedömning">
-                  <img src="https://img.shields.io/badge/CRA-Black_Trigram-3A7A8A?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram CRA">
+                  <img src="https://img.shields.io/badge/CRA-Black_Trigram-3A7A8A?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram CRA" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/CRA-ASSESSMENT.md" title="CIA Compliance Manager CRA-bedömning">
-                  <img src="https://img.shields.io/badge/CRA-CIA_CM-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CM CRA">
+                  <img src="https://img.shields.io/badge/CRA-CIA_CM-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CM CRA" width="200" height="20" loading="lazy">
                 </a>
               </div>
             </div>
@@ -889,25 +893,25 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md" title="OSPO-styrning">
-                  <img src="https://img.shields.io/badge/Policy-Open_Source-DC143C?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="Open Source Policy">
+                  <img src="https://img.shields.io/badge/Policy-Open_Source-DC143C?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="Open Source Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md" title="Leverantörsrisk & hantering av öppen källkod-beroenden">
-                  <img src="https://img.shields.io/badge/Policy-Third_Party_Mgmt-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Third Party Management">
+                  <img src="https://img.shields.io/badge/Policy-Third_Party_Mgmt-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Third Party Management" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" title="Leveranskedjesäkerhet & leverantörsbedömning">
-                  <img src="https://img.shields.io/badge/Policy-Supplier_Security-FF4500?style=flat-square&logo=handshake&logoColor=white" alt="Supplier Security">
+                  <img src="https://img.shields.io/badge/Policy-Supplier_Security-FF4500?style=flat-square&logo=handshake&logoColor=white" alt="Supplier Security" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>🔧 Implementeringsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md" title="Black Trigram STRIDE hotmodell">
-                  <img src="https://img.shields.io/badge/Black_Trigram-Threat_Model-0066CC?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram Threat Model">
+                  <img src="https://img.shields.io/badge/Black_Trigram-Threat_Model-0066CC?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram Threat Model" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md" title="Black Trigram säkerhetsdesign">
-                  <img src="https://img.shields.io/badge/Black_Trigram-Security_Arch-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram Security Architecture">
+                  <img src="https://img.shields.io/badge/Black_Trigram-Security_Arch-1E90FF?style=flat-square&logo=readme&logoColor=white" alt="Black Trigram Security Architecture" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md" title="CIA CM säkerhetsarkitektur">
-                  <img src="https://img.shields.io/badge/CIA_CM-Security_Architecture-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CM Security Architecture">
+                  <img src="https://img.shields.io/badge/CIA_CM-Security_Architecture-4682B4?style=flat-square&logo=readme&logoColor=white" alt="CIA CM Security Architecture" width="200" height="20" loading="lazy">
                 </a>
               </div>
             </div>
@@ -927,28 +931,28 @@
               <p style="margin-bottom: 0.5rem;"><strong>📚 Policybevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="ISMS-styrning & säkerhetskulturensramverk">
-                  <img src="https://img.shields.io/badge/Policy-Info_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy">
+                  <img src="https://img.shields.io/badge/Policy-Info_Security-DC143C?style=flat-square&logo=shield&logoColor=white" alt="Information Security Policy" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md" title="Incidenthantering & utbildningsprocedurer">
-                  <img src="https://img.shields.io/badge/Policy-Incident_Response-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Incident Response Plan">
+                  <img src="https://img.shields.io/badge/Policy-Incident_Response-FF6347?style=flat-square&logo=shield&logoColor=white" alt="Incident Response Plan" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/External_Stakeholder_Registry.md" title="Intressentengagemang & kommunikation">
-                  <img src="https://img.shields.io/badge/Policy-Stakeholder_Engagement-FF4500?style=flat-square&logo=people&logoColor=white" alt="External Stakeholder Registry">
+                  <img src="https://img.shields.io/badge/Policy-Stakeholder_Engagement-FF4500?style=flat-square&logo=people&logoColor=white" alt="External Stakeholder Registry" width="200" height="20" loading="lazy">
                 </a>
               </div>
               <p style="margin-bottom: 0.5rem;"><strong>📚 Innehållsbevis:</strong></p>
               <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
                 <a href="https://github.com/Hack23/talks" title="Tekniska presentationer & säkerhetsföreläsningar">
-                  <img src="https://img.shields.io/badge/Repo-Technical_Talks-0066CC?style=flat-square&logo=github&logoColor=white" alt="Technical Talks">
+                  <img src="https://img.shields.io/badge/Repo-Technical_Talks-0066CC?style=flat-square&logo=github&logoColor=white" alt="Technical Talks" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://hack23.com/blog.html" title="Säkerhetsinsikter & bästa praxis blogg">
-                  <img src="https://img.shields.io/badge/Blog-Security_Insights-1E90FF?style=flat-square&logo=rss&logoColor=white" alt="Security Blog">
+                  <img src="https://img.shields.io/badge/Blog-Security_Insights-1E90FF?style=flat-square&logo=rss&logoColor=white" alt="Security Blog" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md" title="Riskbedömningsutbildning & metodik">
-                  <img src="https://img.shields.io/badge/Training-Risk_Assessment-4682B4?style=flat-square&logo=shield&logoColor=white" alt="Risk Assessment Training">
+                  <img src="https://img.shields.io/badge/Training-Risk_Assessment-4682B4?style=flat-square&logo=shield&logoColor=white" alt="Risk Assessment Training" width="200" height="20" loading="lazy">
                 </a>
                 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md" title="Säkerhetstransparens & öppen kommunikation">
-                  <img src="https://img.shields.io/badge/Framework-Transparency_Plan-3A7A8A?style=flat-square&logo=eye&logoColor=white" alt="ISMS Transparency Plan">
+                  <img src="https://img.shields.io/badge/Framework-Transparency_Plan-3A7A8A?style=flat-square&logo=eye&logoColor=white" alt="ISMS Transparency Plan" width="200" height="20" loading="lazy">
                 </a>
               </div>
             </div>
@@ -993,13 +997,13 @@
 
     <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
       <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub Release">
-        <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub Release">
+        <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub Release" width="200" height="20" loading="lazy">
       </a>
       <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="License">
-        <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="License">
+        <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="License" width="200" height="20" loading="lazy">
       </a>
       <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
-        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard">
+        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
       </a>
       <a href="https://bestpractices.coreinfrastructure.org/projects/10777" title="CII Best Practices">
         <img src="https://bestpractices.coreinfrastructure.org/projects/10777/badge" alt="CII Best Practices">
@@ -1055,16 +1059,16 @@
             <p>En omfattande plattform för säkerhetsbedömning inom CIA-triaden: Konfidentialitet, Integritet och Tillgänglighet.</p>
             <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
               <a href="https://github.com/Hack23/cia-compliance-manager/releases" title="GitHub Release">
-                <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager" alt="GitHub Release">
+                <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager" alt="GitHub Release" width="200" height="20" loading="lazy">
               </a>
               <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/LICENSE" title="License">
-                <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="License">
+                <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="License" width="200" height="20" loading="lazy">
               </a>
               <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield" title="FOSSA Status">
                 <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield" alt="FOSSA Status">
               </a>
               <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
               </a>
               <a href="https://bestpractices.coreinfrastructure.org/projects/10365" title="CII Best Practices">
                 <img src="https://bestpractices.coreinfrastructure.org/projects/10365/badge" alt="CII Best Practices">
@@ -1093,13 +1097,13 @@
             <p>En underrättelseplattform med öppen källkod för politisk transparens i Sverige, som ger insikter om styrning och ansvarsmetriker.</p>
             <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
               <a href="https://github.com/Hack23/cia/releases" title="GitHub Release">
-                <img src="https://img.shields.io/github/v/release/Hack23/cia" alt="GitHub Release">
+                <img src="https://img.shields.io/github/v/release/Hack23/cia" alt="GitHub Release" width="200" height="20" loading="lazy">
               </a>
               <a href="https://bestpractices.coreinfrastructure.org/projects/770" title="CII Best Practices">
                 <img src="https://bestpractices.coreinfrastructure.org/projects/770/badge" alt="CII Best Practices">
               </a>
               <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
               </a>
               <a href="https://slsa.dev/spec/v1.0/levels" title="SLSA Nivå 3">
                 <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3">
@@ -1111,7 +1115,7 @@
                 <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating" alt="Security Rating">
               </a>
               <a href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt" title="Licens">
-                <img src="https://img.shields.io/github/license/Hack23/cia.svg" alt="Licens">
+                <img src="https://img.shields.io/github/license/Hack23/cia.svg" alt="Licens" width="200" height="20" loading="lazy">
               </a>
             </div>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
@@ -1128,10 +1132,10 @@
             <p>En multiregional aktiv/aktiv webbplats som utnyttjar Resilience Hub policy-efterlevnad och runbooks för snabb återhämtning från fel och hög tillgänglighet.</p>
             <div class="badges" style="margin: 0.5rem 0; justify-content: flex-start;">
               <a href="https://github.com/Hack23/lambda-in-private-vpc/blob/main/LICENSE.md" title="Licens">
-                <img src="https://img.shields.io/github/license/Hack23/lambda-in-private-vpc.svg" alt="Licens">
+                <img src="https://img.shields.io/github/license/Hack23/lambda-in-private-vpc.svg" alt="Licens" width="200" height="20" loading="lazy">
               </a>
               <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/lambda-in-private-vpc" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/lambda-in-private-vpc/badge" alt="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/lambda-in-private-vpc/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
               </a>
               <a href="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml" title="Verifiera och Distribuera">
                 <img src="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml/badge.svg" alt="Verify and Deploy">
