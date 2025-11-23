@@ -1301,21 +1301,29 @@
           });
         }
         
-        // Back to top button
+        // Back to top button with throttled scroll handler
         const backToTop = document.querySelector('.back-to-top');
         
         if (backToTop) {
+          let ticking = false;
+          
           window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-              backToTop.style.display = 'block';
-              backToTop.style.opacity = '1';
-            } else {
-              backToTop.style.opacity = '0';
-              setTimeout(function() {
-                if (window.pageYOffset <= 300) {
-                  backToTop.style.display = 'none';
+            if (!ticking) {
+              window.requestAnimationFrame(function() {
+                if (window.scrollY > 300) {
+                  backToTop.style.display = 'block';
+                  backToTop.style.opacity = '1';
+                } else {
+                  backToTop.style.opacity = '0';
+                  setTimeout(function() {
+                    if (window.scrollY <= 300) {
+                      backToTop.style.display = 'none';
+                    }
+                  }, 300);
                 }
-              }, 300);
+                ticking = false;
+              });
+              ticking = true;
             }
           });
           
