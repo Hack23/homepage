@@ -135,7 +135,7 @@
 			</div>
 		</section>
 
-		<section class="lead-magnet-form-section">
+		<section class="lead-magnet-form-section" id="download-section">
 			<div class="form-container">
 				<h2>Download Your Free Checklist Now</h2>
 				<p class="form-intro">In line with our radical transparency philosophy, we provide direct access to valuable security resources. No email signup required.</p>
@@ -230,7 +230,7 @@
 		<section class="cta-section">
 			<h2>🚀 Ready to Assess Your Security Posture?</h2>
 			<p>Download the free checklist now and start identifying gaps in your security program. Get actionable insights in minutes.</p>
-			<a href="#checklist-form" class="cta-button-large">Get Your Free Checklist</a>
+			<a href="#download-section" class="cta-button-large">Get Your Free Checklist</a>
 		</section>
 
 		<section class="additional-resources">
@@ -270,11 +270,11 @@
 	<script>
 	// Smooth scroll to download section
 	document.addEventListener('DOMContentLoaded', function() {
-		const ctaLinks = document.querySelectorAll('a[href="#checklist-form"]');
+		const ctaLinks = document.querySelectorAll('a[href="#download-section"]');
 		ctaLinks.forEach(link => {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
-				const downloadSection = document.querySelector('.lead-magnet-form-section');
+				const downloadSection = document.getElementById('download-section');
 				if (downloadSection) {
 					downloadSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				}
