@@ -795,6 +795,8 @@ header {
   align-items: center;
   background: linear-gradient(135deg, rgba(0, 71, 171, 0.02), rgba(0, 102, 204, 0.01));
   border-radius: var(--border-radius-lg);
+  min-height: 400px; /* Reserve space to reduce CLS */
+  contain: layout; /* Optimize layout performance */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -990,6 +992,8 @@ header {
 .card img {
   border-radius: 10px;
   margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .card a {
@@ -1020,7 +1024,7 @@ header {
 }
 
 .btn-action-primary {
-  background: #ff6b35;
+  background: #D84315;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -1030,7 +1034,7 @@ header {
 }
 
 .btn-action-primary:hover {
-  background: #ff5722;
+  background: #BF360C;
   transform: translateY(-2px);
   text-decoration: none;
 }
@@ -1098,12 +1102,13 @@ header {
 }
 
 .cert-badge-aws {
-  background: #FF9900;
+  background: #CC7A00;
+  color: white;
 }
 
 /* YouTube/Podcast action buttons */
 .btn-youtube {
-  background: #FF0000;
+  background: #CC0000;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -1113,7 +1118,7 @@ header {
 }
 
 .btn-youtube:hover {
-  background: #cc0000;
+  background: #990000;
   transform: translateY(-2px);
   text-decoration: none;
 }
@@ -3940,6 +3945,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   margin: var(--spacing-xl) 0;
+  min-height: 56px; /* Reserve space to reduce CLS */
 }
 
 .btn-primary-large,

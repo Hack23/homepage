@@ -54,6 +54,8 @@
 			margin-bottom: var(--spacing-xl);
 			padding: var(--spacing-xl) var(--spacing-lg);
 			border-radius: var(--border-radius-lg);
+			min-height: 400px; /* Reserve space to reduce CLS */
+			contain: layout; /* Optimize layout performance */
 		}
 		
 		h1 {
@@ -95,6 +97,7 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			margin: var(--spacing-xl) 0;
+			min-height: 56px; /* Reserve space to reduce CLS */
 		}
 		
 		.btn-primary-large,
@@ -152,11 +155,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
-	
-	<!-- Preload critical font (Inter 400) -->
-	<link rel="preload" as="font" type="font/woff2" 
-	      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" 
-	      crossorigin>
 	
 	<!-- Defer non-critical CSS -->
 	<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -940,7 +938,7 @@
 				<span></span>
 			</button>
 			<ul class="nav-menu">
-				<li><a href="#value-proposition">Why Hack23</a></li>
+				<li><a href="why-hack23.html">Why Hack23</a></li>
 				<li><a href="#security-services">Services</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="blog.html">Blog</a></li>
@@ -1264,7 +1262,7 @@
       <div class="cards">
         <div class="card card-red">
           <div class="scanner-effect"></div>
-          <img src="black-trigram-140.webp" alt="Black Trigram" width="80" height="80">
+          <img src="black-trigram-140.webp" alt="Black Trigram" width="140" height="94">
           <h3>🥋 Black Trigram</h3>
           <p>Precision combat simulator with 70 vital points system, 5 archetypes, and authentic Korean martial arts techniques.</p>
           <div class="card-actions">
