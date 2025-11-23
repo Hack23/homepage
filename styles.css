@@ -721,14 +721,6 @@ a:hover {
     gap: 0;
   }
   
-  @media (prefers-color-scheme: dark) {
-    .nav-menu {
-      background: rgba(0, 26, 26, 0.98);
-      border-bottom: 2px solid var(--primary-color);
-      box-shadow: 0 4px 12px rgba(0, 204, 102, 0.2);
-    }
-  }
-  
   .nav-menu.open {
     display: flex;
   }
@@ -758,6 +750,17 @@ a:hover {
     width: 45px;
     height: 45px;
     font-size: 1.25rem;
+  }
+}
+
+/* Dark mode styles for mobile menu */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .nav-menu {
+    background: rgba(0, 26, 26, 0.98);
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 204, 102, 0.2);
+  }
+}
   }
 }
 

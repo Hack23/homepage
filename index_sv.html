@@ -1623,69 +1623,79 @@
       (function() {
         'use strict';
         
-        // Mobile menu toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (navToggle && navMenu) {
-          navToggle.addEventListener('click', function() {
-            const isOpen = navMenu.classList.toggle('open');
-            this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-          });
-        }
-        
-        // Back to top button with throttled scroll handler
-        const backToTop = document.querySelector('.back-to-top');
-        
-        if (backToTop) {
-          let ticking = false;
+        // Initialize navigation and back-to-top functionality
+        function initNavigation() {
+          // Mobile menu toggle
+          const navToggle = document.querySelector('.nav-toggle');
+          const navMenu = document.querySelector('.nav-menu');
           
-          window.addEventListener('scroll', function() {
-            if (!ticking) {
-              window.requestAnimationFrame(function() {
-                if (window.scrollY > 300) {
-                  backToTop.style.display = 'block';
-                  backToTop.style.opacity = '1';
-                } else {
-                  backToTop.style.opacity = '0';
-                  setTimeout(function() {
-                    if (window.scrollY <= 300) {
-                      backToTop.style.display = 'none';
+          if (navToggle && navMenu) {
+            navToggle.addEventListener('click', function() {
+              const isOpen = navMenu.classList.toggle('open');
+              this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+          }
+          
+          // Back to top button with throttled scroll handler
+          const backToTop = document.querySelector('.back-to-top');
+          
+          if (backToTop) {
+            let ticking = false;
+            
+            window.addEventListener('scroll', function() {
+              if (!ticking) {
+                window.requestAnimationFrame(function() {
+                  if (window.scrollY > 300) {
+                    backToTop.style.display = 'block';
+                    backToTop.style.opacity = '1';
+                  } else {
+                    backToTop.style.opacity = '0';
+                    setTimeout(function() {
+                      if (window.scrollY <= 300) {
+                        backToTop.style.display = 'none';
+                      }
+                    }, 300);
+                  }
+                  ticking = false;
+                });
+                ticking = true;
+              }
+            });
+            
+            backToTop.addEventListener('click', function() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          }
+          
+          // Smooth scroll for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+              const href = this.getAttribute('href');
+              if (href && href !== '#') {
+                const target = document.querySelector(href);
+                if (target) {
+                  e.preventDefault();
+                  target.scrollIntoView({ behavior: 'smooth' });
+                  
+                  // Close mobile menu if open
+                  if (navMenu && navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                    if (navToggle) {
+                      navToggle.setAttribute('aria-expanded', 'false');
                     }
-                  }, 300);
-                }
-                ticking = false;
-              });
-              ticking = true;
-            }
-          });
-          
-          backToTop.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        }
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-          anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href && href !== '#') {
-              const target = document.querySelector(href);
-              if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-                
-                // Close mobile menu if open
-                if (navMenu && navMenu.classList.contains('open')) {
-                  navMenu.classList.remove('open');
-                  if (navToggle) {
-                    navToggle.setAttribute('aria-expanded', 'false');
                   }
                 }
               }
-            }
+            });
           });
-        });
+        }
+        
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initNavigation);
+        } else {
+          initNavigation();
+        }
       })();
     </script>
     
