@@ -4050,7 +4050,12 @@ footer {
   }
   
   /* Touch Targets - Minimum 44×44px (WCAG 2.1 AAA) */
-  a:not(.nav-logo):not(.breadcrumb-item a) {
+  /* Apply to specific interactive elements to avoid disrupting inline text links */
+  .btn a,
+  .card a,
+  .app-link a,
+  .hero-cta a,
+  nav a:not(.nav-logo):not(.breadcrumb-item a) {
     min-height: 44px;
     min-width: 44px;
     display: inline-flex;
@@ -4074,14 +4079,15 @@ footer {
     min-width: 48px;
   }
   
-  /* Navigation touch targets */
-  .nav-menu li {
-    padding: 16px 0; /* Larger touch targets */
-  }
-  
+  /* Navigation touch targets - preserve existing border styling */
   .nav-menu a {
     min-height: 44px;
-    padding: 12px 16px;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-menu li:last-child a {
+    border-bottom: none;
   }
   
   /* Card optimizations */
@@ -4147,11 +4153,6 @@ footer {
     height: auto;
   }
   
-  .key-badges {
-    flex-direction: column;
-    align-items: center;
-  }
-  
   /* FAQ Mobile - Enhanced touch targets */
   .faq-item summary,
   details summary {
@@ -4186,16 +4187,6 @@ footer {
   .hero-subtitle {
     font-size: 1rem;
     padding: 0 var(--spacing-sm);
-  }
-  
-  /* Badge grid - Single column */
-  .badge-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-  
-  .badge-category {
-    padding: var(--spacing-md);
   }
   
   /* Breadcrumb touch targets */
@@ -4261,7 +4252,7 @@ footer {
   }
   
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   /* Reduce spacing further on very small screens */
@@ -4338,21 +4329,18 @@ footer {
   }
 }
 
-/* Ensure touch targets on all devices */
-@media (hover: none) and (pointer: coarse) {
-  /* This targets touch devices specifically */
-  a,
+/* Ensure touch targets on mobile touch devices only (combined with viewport width) */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+  /* This targets mobile touch devices specifically, avoiding large touch screens */
   button,
   summary,
-  .btn,
-  .nav-menu a {
+  .btn {
     min-height: 48px;
     min-width: 48px;
     padding: 12px 16px;
   }
   
   /* Add spacing between interactive elements */
-  a + a,
   button + button {
     margin-left: 8px;
   }
