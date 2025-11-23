@@ -20,8 +20,8 @@
 
 	<nav aria-label="Breadcrumb">
 		<ol class="breadcrumb">
-			<li><a href="index_ko.html">홈</a></li>
-			<li aria-current="page">사이트맵</li>
+			<li class="breadcrumb-item"><a href="index_ko.html">홈</a></li>
+			<li class="breadcrumb-item" aria-current="page">사이트맵</li>
 		</ol>
 	</nav>
 
@@ -254,7 +254,7 @@
 			</section>
 		</div>
 
-		<section style="margin-top: 2rem; padding: 1.5rem; background-color: var(--card-bg); border-radius: var(--border-radius-lg); border: 1px solid var(--border-color);">
+		<section class="site-statistics">
 			<h2>📊 사이트 통계</h2>
 			<ul>
 				<li><strong>총 페이지:</strong> 101개 HTML 페이지</li>
@@ -267,7 +267,8 @@
 		</section>
 	</main>
 
-	<button id="backToTop" aria-label="맨 위로">
+	<!-- Back to Top Button -->
+	<button class="back-to-top" aria-label="맨 위로" style="display: none; opacity: 0;">
 		↑
 	</button>
 	
@@ -285,18 +286,38 @@
 	</footer>
 
 	<script>
-		// Back to top button
-		const backToTopButton = document.getElementById('backToTop');
-		window.addEventListener('scroll', () => {
-			if (window.scrollY > 300) {
-				backToTopButton.style.display = 'block';
-			} else {
-				backToTopButton.style.display = 'none';
+		// Initialize back-to-top button with throttled scroll handler
+		(function() {
+			const backToTop = document.querySelector('.back-to-top');
+			
+			if (backToTop) {
+				let ticking = false;
+				
+				window.addEventListener('scroll', function() {
+					if (!ticking) {
+						window.requestAnimationFrame(function() {
+							if (window.scrollY > 300) {
+								backToTop.style.display = 'block';
+								backToTop.style.opacity = '1';
+							} else {
+								backToTop.style.opacity = '0';
+								setTimeout(function() {
+									if (window.scrollY <= 300) {
+										backToTop.style.display = 'none';
+									}
+								}, 300);
+							}
+							ticking = false;
+						});
+						ticking = true;
+					}
+				});
+				
+				backToTop.addEventListener('click', function() {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				});
 			}
-		});
-		backToTopButton.addEventListener('click', () => {
-			window.scrollTo({ top: 0, behavior: 'smooth' });
-		});
+		})();
 	</script>
 </body>
 </html>
