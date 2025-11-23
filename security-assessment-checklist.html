@@ -138,58 +138,23 @@
 		<section class="lead-magnet-form-section">
 			<div class="form-container">
 				<h2>Download Your Free Checklist Now</h2>
-				<p class="form-intro">Get instant access to the comprehensive security assessment guide. No spam, just valuable security insights.</p>
+				<p class="form-intro">In line with our radical transparency philosophy, we provide direct access to valuable security resources. No email signup required.</p>
 				
-				<form action="https://formspree.io/f/mbjvkwqz" method="POST" class="lead-capture-form" id="checklist-form">
-					<input type="hidden" name="_subject" value="Security Checklist Download Request">
-					<input type="hidden" name="_next" value="https://hack23.com/security-assessment-checklist.pdf">
-					<input type="hidden" name="_template" value="table">
-					
-					<div class="form-group">
-						<label for="email">Work Email Address <span class="required">*</span></label>
-						<input type="email" id="email" name="email" required placeholder="yourname@company.com" aria-required="true">
-					</div>
-					
-					<div class="form-group">
-						<label for="name">Full Name <span class="required">*</span></label>
-						<input type="text" id="name" name="name" required placeholder="John Smith" aria-required="true">
-					</div>
-					
-					<div class="form-group">
-						<label for="company">Company Name (Optional)</label>
-						<input type="text" id="company" name="company" placeholder="Your Organization">
-					</div>
-					
-					<div class="form-group">
-						<label for="role">Your Role (Optional)</label>
-						<select id="role" name="role">
-							<option value="">-- Select Your Role --</option>
-							<option value="CISO">CISO / Chief Security Officer</option>
-							<option value="Security Manager">Security Manager / Team Lead</option>
-							<option value="IT Director">IT Director / CTO</option>
-							<option value="Compliance Officer">Compliance Officer</option>
-							<option value="DevOps Engineer">DevOps / Platform Engineer</option>
-							<option value="Developer">Software Developer</option>
-							<option value="Consultant">Security Consultant</option>
-							<option value="Other">Other</option>
-						</select>
-					</div>
-					
-					<div class="form-group checkbox-group">
-						<label>
-							<input type="checkbox" name="subscribe" value="yes">
-							Yes, I'd like to receive occasional security insights and updates from Hack23 (you can unsubscribe anytime)
-						</label>
-					</div>
-					
-					<button type="submit" class="cta-button">
+				<div class="direct-download-section">
+					<a href="security-assessment-checklist.pdf" class="cta-button-large download-button" download title="Download Security Assessment Checklist PDF">
 						<span class="button-icon">📥</span> Download Free Checklist (PDF)
-					</button>
-				</form>
+					</a>
+					
+					<div class="download-info">
+						<p><strong>✓ Instant Access</strong> - No email required</p>
+						<p><strong>✓ Open Resource</strong> - Build trust through transparency</p>
+						<p><strong>✓ PDF Format</strong> - 95-point comprehensive assessment guide</p>
+					</div>
+				</div>
 				
 				<div class="privacy-notice">
-					<p>🔒 <strong>We respect your privacy.</strong> Your email will only be used to send the checklist and occasional security insights (if you opt-in). We never share your information with third parties. See our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md" title="Privacy Policy">Privacy Policy</a> for details.</p>
-					<p class="gdpr-notice">✓ GDPR Compliant | ✓ No Spam | ✓ Unsubscribe Anytime</p>
+					<p>🔒 <strong>Radical Transparency.</strong> We believe in building trust through openly sharing valuable resources, not collecting email addresses. This checklist represents real expertise from our public ISMS implementation. See our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md" title="Privacy Policy">Privacy Policy</a> for our commitment to transparency.</p>
+					<p class="transparency-note">✓ No Signup Required | ✓ No Tracking | ✓ Open Access</p>
 				</div>
 			</div>
 		</section>
@@ -303,33 +268,18 @@
 	</footer>
 
 	<script>
-	// Smooth scroll to form
+	// Smooth scroll to download section
 	document.addEventListener('DOMContentLoaded', function() {
 		const ctaLinks = document.querySelectorAll('a[href="#checklist-form"]');
 		ctaLinks.forEach(link => {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
-				const form = document.getElementById('checklist-form');
-				if (form) {
-					form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					// Focus on first input for accessibility
-					setTimeout(() => {
-						const emailInput = document.getElementById('email');
-						if (emailInput) emailInput.focus();
-					}, 500);
+				const downloadSection = document.querySelector('.lead-magnet-form-section');
+				if (downloadSection) {
+					downloadSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				}
 			});
 		});
-
-		// Form submission handling
-		const form = document.getElementById('checklist-form');
-		if (form) {
-			form.addEventListener('submit', function(e) {
-				// Allow Formspree to handle the submission
-				// The _next parameter will redirect to the PDF
-				console.log('Form submitted - redirecting to PDF download');
-			});
-		}
 	});
 	</script>
 </body>
