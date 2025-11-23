@@ -4035,3 +4035,332 @@ footer {
     color: var(--primary-light);
   }
 }
+
+/* ==================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS OPTIMIZATIONS
+   Optimized for touch targets, typography, and layout
+   Target: WCAG 2.1 AAA (44×44px touch targets)
+   ================================================== */
+
+/* Mobile Base Styles (320px-768px) */
+@media (max-width: 768px) {
+  /* Ensure body prevents horizontal scroll */
+  body {
+    padding: var(--spacing-md);
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all children respect container width */
+  * {
+    max-width: 100%;
+  }
+  
+  /* Typography - Optimized for mobile readability */
+  h1 {
+    font-size: 2rem; /* Down from 2.5rem */
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* Down from 2rem */
+    line-height: 1.3;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* Down from 1.5rem */
+    line-height: 1.4;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  p {
+    font-size: 1rem; /* 16px minimum - prevents zoom on iOS */
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  /* Touch Targets - Minimum 44×44px (WCAG 2.1 AAA) */
+  a:not(.nav-logo):not(.breadcrumb-item a) {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+  
+  /* Enhanced button spacing for touch */
+  .btn,
+  .cta-button {
+    font-size: 1rem; /* Never below 16px */
+    padding: 14px 24px; /* Larger touch target */
+    margin: 8px 0; /* Prevent accidental taps */
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Navigation touch targets */
+  .nav-menu li {
+    padding: 16px 0; /* Larger touch targets */
+  }
+  
+  .nav-menu a {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+  
+  /* Card optimizations */
+  .card {
+    padding: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .card a {
+    padding: 0.75rem 1rem;
+    min-height: 48px;
+    margin-top: var(--spacing-md);
+  }
+  
+  /* Section padding reduction for mobile */
+  section {
+    padding: 2rem 1rem; /* Reduced from larger desktop padding */
+  }
+  
+  header {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  /* Images - Prevent overflow */
+  img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Badge responsive stacking */
+  .badges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .badges img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .key-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* FAQ Mobile - Enhanced touch targets */
+  .faq-item summary,
+  details summary {
+    font-size: 1rem;
+    padding: 1rem;
+    min-height: 44px;
+  }
+  
+  /* Table Responsive - Horizontal scroll */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  
+  /* App links - Better touch spacing */
+  .app-link {
+    gap: var(--spacing-md);
+  }
+  
+  .app-link a {
+    padding: 1rem 1.5rem;
+    min-height: 48px;
+  }
+  
+  /* Hero section optimizations */
+  .hero-tagline {
+    font-size: 1.1rem;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* Business lines - Single column on mobile */
+  .business-lines {
+    gap: var(--spacing-md);
+  }
+  
+  .business-line {
+    padding: var(--spacing-md);
+  }
+  
+  /* Badge grid - Single column */
+  .badge-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .badge-category {
+    padding: var(--spacing-md);
+  }
+  
+  /* Breadcrumb touch targets */
+  .breadcrumb-item a {
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
+  }
+  
+  /* Navigation toggle - Ensure proper size */
+  .nav-toggle {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+  }
+  
+  /* Back to top button - Proper touch target */
+  .back-to-top {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  
+  /* Details/summary elements - Enhanced touch */
+  details {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  details summary {
+    padding: 1rem;
+    min-height: 48px;
+  }
+  
+  /* Lists - Better spacing */
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Small Mobile Devices (320px-480px) */
+@media (max-width: 480px) {
+  /* Further typography reduction */
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  /* Reduce spacing further on very small screens */
+  section {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  body {
+    padding: var(--spacing-sm);
+  }
+  
+  header {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+  
+  /* Buttons remain touch-friendly but can be full width */
+  .btn,
+  .btn-primary-large,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Stack everything on very small screens */
+  .hero-cta {
+    width: 100%;
+  }
+  
+  /* Logo size reduction */
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  
+  /* Smaller badges on very small screens */
+  .badges img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet Landscape Optimization (768px-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Optimize for tablet landscape */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .badge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ensure touch targets on all devices */
+@media (hover: none) and (pointer: coarse) {
+  /* This targets touch devices specifically */
+  a,
+  button,
+  summary,
+  .btn,
+  .nav-menu a {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 16px;
+  }
+  
+  /* Add spacing between interactive elements */
+  a + a,
+  button + button {
+    margin-left: 8px;
+  }
+}
