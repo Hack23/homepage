@@ -54,8 +54,10 @@
 			margin-bottom: var(--spacing-xl);
 			padding: var(--spacing-xl) var(--spacing-lg);
 			border-radius: var(--border-radius-lg);
-			min-height: 400px; /* Reserve space to reduce CLS */
-			contain: layout; /* Optimize layout performance */
+			/* Reserve minimum space for header content to reduce Cumulative Layout Shift (CLS) */
+			min-height: 400px;
+			/* Optimize layout performance by creating a new containing block */
+			contain: layout;
 		}
 		
 		h1 {
@@ -97,7 +99,8 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			margin: var(--spacing-xl) 0;
-			min-height: 56px; /* Reserve space to reduce CLS */
+			/* Reserve space for CTA buttons to reduce Cumulative Layout Shift (CLS) */
+			min-height: 56px;
 		}
 		
 		.btn-primary-large,
@@ -1262,7 +1265,7 @@
       <div class="cards">
         <div class="card card-red">
           <div class="scanner-effect"></div>
-          <img src="black-trigram-140.webp" alt="Black Trigram" width="140" height="94">
+          <img src="black-trigram-140.webp" alt="Black Trigram" width="140" height="94" style="max-width: 100%; height: auto;">
           <h3>🥋 Black Trigram</h3>
           <p>Precision combat simulator with 70 vital points system, 5 archetypes, and authentic Korean martial arts techniques.</p>
           <div class="card-actions">
