@@ -4000,19 +4000,21 @@ footer {
 @media (max-width: 768px) {
   /* Ensure body prevents horizontal scroll */
   body {
-    padding: var(--spacing-md);
     overflow-x: hidden;
   }
   
-  /* Header and main horizontal padding */
+  /* Header and main horizontal padding for mobile */
   header,
   main {
     padding-left: 1rem;
     padding-right: 1rem;
   }
   
-  /* Ensure all children respect container width */
-  * {
+  /* Ensure media elements respect container width */
+  img,
+  video,
+  iframe,
+  table {
     max-width: 100%;
   }
   
@@ -4185,15 +4187,6 @@ footer {
   .hero-subtitle {
     font-size: 1rem;
     padding: 0 var(--spacing-sm);
-  }
-  
-  /* Business lines - Single column on mobile */
-  .business-lines {
-    gap: var(--spacing-md);
-  }
-  
-  .business-line {
-    padding: var(--spacing-md);
   }
   
   /* Badge grid - Single column */
