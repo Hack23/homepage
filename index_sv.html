@@ -1448,10 +1448,10 @@
         <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Vanliga frågor om Hack23:s cybersäkerhetstjänster, offentliga ISMS och tillvägagångssätt för säkerhetskonsultation.</p>
         
         <div class="faq-controls">
-          <button type="button" class="faq-control-btn" onclick="document.querySelectorAll('.faq-item').forEach(d => d.open = true)" aria-label="Expandera alla FAQ-objekt">
+          <button type="button" class="faq-control-btn" id="faq-expand-all" aria-label="Expandera alla FAQ-objekt">
             Expandera Alla
           </button>
-          <button type="button" class="faq-control-btn" onclick="document.querySelectorAll('.faq-item').forEach(d => d.open = false)" aria-label="Kollapsa alla FAQ-objekt">
+          <button type="button" class="faq-control-btn" id="faq-collapse-all" aria-label="Kollapsa alla FAQ-objekt">
             Kollapsa Alla
           </button>
         </div>
@@ -1640,6 +1640,29 @@
         }
       ]
     }
+    </script>
+    
+    <!-- FAQ Controls JavaScript -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // FAQ Expand/Collapse All Controls
+        const expandBtn = document.getElementById('faq-expand-all');
+        const collapseBtn = document.getElementById('faq-collapse-all');
+        
+        if (expandBtn) {
+          expandBtn.addEventListener('click', function() {
+            document.querySelectorAll('.faq-item').forEach(d => d.open = true);
+          });
+        }
+        
+        if (collapseBtn) {
+          collapseBtn.addEventListener('click', function() {
+            document.querySelectorAll('.faq-item').forEach(d => d.open = false);
+          });
+        }
+      })();
     </script>
     
     

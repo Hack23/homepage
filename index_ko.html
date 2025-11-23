@@ -1115,10 +1115,10 @@
         <p style="margin-bottom: var(--spacing-xl); color: var(--text-secondary);">Hack23의 사이버보안 서비스, 공개 ISMS 및 보안 컨설팅 접근 방식에 대한 일반적인 질문.</p>
         
         <div class="faq-controls">
-          <button type="button" class="faq-control-btn" onclick="document.querySelectorAll('.faq-item').forEach(d => d.open = true)" aria-label="모든 FAQ 항목 확장">
+          <button type="button" class="faq-control-btn" id="faq-expand-all" aria-label="모든 FAQ 항목 확장">
             모두 펼치기
           </button>
-          <button type="button" class="faq-control-btn" onclick="document.querySelectorAll('.faq-item').forEach(d => d.open = false)" aria-label="모든 FAQ 항목 축소">
+          <button type="button" class="faq-control-btn" id="faq-collapse-all" aria-label="모든 FAQ 항목 축소">
             모두 접기
           </button>
         </div>
@@ -1307,6 +1307,29 @@
         }
       ]
     }
+    </script>
+    
+    <!-- FAQ Controls JavaScript -->
+    <script>
+      (function() {
+        'use strict';
+        
+        // FAQ Expand/Collapse All Controls
+        const expandBtn = document.getElementById('faq-expand-all');
+        const collapseBtn = document.getElementById('faq-collapse-all');
+        
+        if (expandBtn) {
+          expandBtn.addEventListener('click', function() {
+            document.querySelectorAll('.faq-item').forEach(d => d.open = true);
+          });
+        }
+        
+        if (collapseBtn) {
+          collapseBtn.addEventListener('click', function() {
+            document.querySelectorAll('.faq-item').forEach(d => d.open = false);
+          });
+        }
+      })();
     </script>
     
     
