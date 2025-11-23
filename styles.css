@@ -1383,53 +1383,7 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .business-lines {
-    grid-template-columns: 1fr;
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
-  }
-
-  header,
-  main {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .app-version {
-    display: block;
-    margin-top: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .app-link {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .app-link a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .badges {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* Note: Mobile responsive styles consolidated in comprehensive section at end of file */
 
 /* Animation keyframes */
 @keyframes pulse {
@@ -4050,6 +4004,13 @@ footer {
     overflow-x: hidden;
   }
   
+  /* Header and main horizontal padding */
+  header,
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
   /* Ensure all children respect container width */
   * {
     max-width: 100%;
@@ -4126,11 +4087,34 @@ footer {
     padding: 1.5rem;
     margin-bottom: var(--spacing-md);
   }
-  
+
   .card a {
     padding: 0.75rem 1rem;
     min-height: 48px;
     margin-top: var(--spacing-md);
+  }
+  
+  /* Cards grid - single column */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Business lines - single column */
+  .business-lines {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  .business-line {
+    padding: var(--spacing-md);
+  }
+  
+  /* App version display */
+  .app-version {
+    display: block;
+    margin-top: 0.5rem;
   }
   
   /* Section padding reduction for mobile */
@@ -4326,9 +4310,25 @@ footer {
   }
   
   /* Smaller badges on very small screens */
+  .badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .badges img {
     max-width: 100%;
     height: auto;
+  }
+  
+  /* App links full width */
+  .app-link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-link a {
+    width: 100%;
+    text-align: center;
   }
 }
 
