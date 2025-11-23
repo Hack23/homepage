@@ -2497,7 +2497,6 @@ footer {
 /* FAQ Answer Content */
 .faq-answer {
   padding: 0 var(--spacing-lg) var(--spacing-lg);
-  animation: fadeIn 0.3s ease-in;
 }
 
 @keyframes fadeIn {
@@ -2552,6 +2551,29 @@ footer {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
   border-radius: var(--border-radius-sm);
+}
+
+/* Reduced Motion Support - Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .faq-control-btn:hover,
+  .faq-control-btn:active {
+    transform: none;
+  }
+  
+  .faq-item summary::after {
+    transition: none;
+  }
+  
+  .faq-answer {
+    animation: none;
+  }
+}
+
+/* Respect user motion preferences for fade-in animation */
+@media (prefers-reduced-motion: no-preference) {
+  .faq-answer {
+    animation: fadeIn 0.3s ease-in;
+  }
 }
 
 /* Dark Mode Adjustments */
