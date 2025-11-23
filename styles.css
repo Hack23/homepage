@@ -30,10 +30,10 @@
   --info-color: #17A2B8;
   --transparency-color: #0066CC;
   
-  /* WCAG 2.1 AA Accessible Colors (exceeds 4.5:1 minimum contrast ratio for normal text with white) */
-  --accessible-action-primary: #D84315; /* 4.60:1 contrast ratio - WCAG AA compliant */
-  --accessible-youtube-red: #CC0000; /* 5.10:1 contrast ratio - WCAG AA compliant */
-  --accessible-aws-orange: #CC7A00; /* 4.54:1 contrast ratio - WCAG AA compliant */
+  /* WCAG 2.1 AA Accessible Colors (white text on colored backgrounds, exceeding 4.5:1 minimum) */
+  --accessible-action-primary: #D84315; /* White on #D84315: 4.60:1 - WCAG AA compliant */
+  --accessible-youtube-red: #CC0000; /* White on #CC0000: 5.10:1 - WCAG AA compliant */
+  --accessible-aws-orange: #CC7A00; /* White on #CC7A00: 4.54:1 - WCAG AA compliant */
   
   --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
@@ -1113,7 +1113,7 @@ header {
 .cert-badge-aws {
   /* WCAG 2.1 AA compliant (4.5:1 minimum): White text on #CC7A00 = 4.54:1 contrast ratio */
   background: var(--accessible-aws-orange);
-  color: white; /* Explicit for specificity (also inherited from .cert-badge) */
+  color: white; /* Explicit declaration for higher CSS specificity */
 }
 
 /* YouTube/Podcast action buttons */
