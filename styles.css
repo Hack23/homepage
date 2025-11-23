@@ -4321,3 +4321,131 @@ footer {
     margin-left: 8px;
   }
 }
+
+/* ==================================================
+   SITEMAP PAGE STYLES
+   ================================================== */
+
+/* Sitemap Grid Layout */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Sitemap Section Cards */
+.sitemap-section {
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 4px var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sitemap-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+/* Sitemap Section Headers */
+.sitemap-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Sitemap Lists */
+.sitemap-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Nested Lists */
+.sitemap-section ul ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 2px solid var(--border-color);
+}
+
+/* List Items */
+.sitemap-section li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Strong Tags for Section Titles */
+.sitemap-section strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Links */
+.sitemap-section a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  display: inline-block;
+}
+
+.sitemap-section a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+.sitemap-section a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive Sitemap Grid */
+@media (max-width: 768px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .sitemap-section {
+    padding: 1.25rem;
+  }
+  
+  .sitemap-section ul ul {
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Site Statistics Section */
+.site-statistics {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.site-statistics h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.site-statistics ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.site-statistics li {
+  margin: 0.5rem 0;
+}
