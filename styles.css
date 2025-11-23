@@ -4293,15 +4293,9 @@ footer {
     height: 64px;
   }
   
-  /* Smaller badges on very small screens */
+  /* Center badges on very small screens for better visual balance */
   .badges {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .badges img {
-    max-width: 100%;
-    height: auto;
+    align-items: center; /* Override flex-start from 768px for centered appearance */
   }
   
   /* App links full width */
