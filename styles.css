@@ -3567,33 +3567,35 @@ footer {
   min-height: 48px;
   min-width: 48px;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.badge-showcase summary > div {
-  flex: 1;
+  gap: 0.5rem 1rem;
+  position: relative;
+  padding-right: 2.5rem;
 }
 
 .badge-showcase summary::-webkit-details-marker {
   display: none;
 }
 
-.badge-showcase summary h3 {
+.badge-showcase summary h3,
+.badge-showcase summary h4 {
+  flex: 0 0 100%;
   margin: 0;
   color: var(--primary-color);
+}
+
+.badge-showcase summary h3 {
   font-size: 1.25rem;
 }
 
 .badge-showcase summary h4 {
-  margin: 0;
-  color: var(--primary-color);
   font-size: 1.1rem;
 }
 
 .badge-showcase summary p {
-  margin: 0.25rem 0 0 0;
+  flex: 0 0 100%;
+  margin: 0;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
@@ -3603,7 +3605,9 @@ footer {
   font-size: 0.8rem;
   transition: transform 0.3s ease;
   color: var(--primary-color);
-  margin-left: auto;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
 }
 
 .badge-showcase[open] summary::after {
