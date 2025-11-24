@@ -54,6 +54,10 @@
 			margin-bottom: var(--spacing-xl);
 			padding: var(--spacing-xl) var(--spacing-lg);
 			border-radius: var(--border-radius-lg);
+			/* Reserve minimum space for header content to reduce Cumulative Layout Shift (CLS) */
+			min-height: 400px;
+			/* Optimize layout performance by creating a new containing block */
+			contain: layout;
 		}
 		
 		h1 {
@@ -95,6 +99,8 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			margin: var(--spacing-xl) 0;
+			/* Reserve space for CTA buttons to reduce Cumulative Layout Shift (CLS) */
+			min-height: 56px;
 		}
 		
 		.btn-primary-large,
@@ -152,11 +158,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
-	
-	<!-- Preload critical font (Inter 400) -->
-	<link rel="preload" as="font" type="font/woff2" 
-	      href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" 
-	      crossorigin>
 	
 	<!-- Defer non-critical CSS -->
 	<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -652,7 +653,7 @@
 	      "url": "https://github.com/Hack23/cia",
 	      "downloadUrl": "https://github.com/Hack23/cia/releases",
 	      "codeRepository": "https://github.com/Hack23/cia",
-	      "image": "https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/src/main/webapp/VAADIN/themes/cia/cia-logo.png",
+	      "image": "cia-logo.png",
 	      "screenshot": "https://hack23.com/cia-icon-140.webp",
 	      "license": "https://www.apache.org/licenses/LICENSE-2.0",
 	      "description": "Open-source intelligence and political transparency platform providing data-driven governance insights, parliamentary monitoring, democratic accountability metrics, and real-time political analysis for Swedish democracy.",
@@ -940,7 +941,7 @@
 				<span></span>
 			</button>
 			<ul class="nav-menu">
-				<li><a href="#value-proposition">Why Hack23</a></li>
+				<li><a href="why-hack23.html">Why Hack23</a></li>
 				<li><a href="#security-services">Services</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="blog.html">Blog</a></li>
@@ -1264,7 +1265,7 @@
       <div class="cards">
         <div class="card card-red">
           <div class="scanner-effect"></div>
-          <img src="black-trigram-140.webp" alt="Black Trigram" width="80" height="80">
+          <img src="black-trigram-140.webp" alt="Black Trigram" width="140" height="94" style="max-width: 100%; height: auto;">
           <h3>🥋 Black Trigram</h3>
           <p>Precision combat simulator with 70 vital points system, 5 archetypes, and authentic Korean martial arts techniques.</p>
           <div class="card-actions">
@@ -1286,7 +1287,7 @@
         
         <div class="card card-green">
           <div class="scanner-effect"></div>
-          <img src="https://raw.githubusercontent.com/Hack23/cia/refs/heads/master/citizen-intelligence-agency/src/main/webapp/VAADIN/themes/cia/cia-logo.png" alt="CIA Project" width="80" height="80">
+          <img src="cia-logo.png" alt="CIA Project" width="80" height="80">
           <h3>🔍 Citizen Intelligence Agency</h3>
           <p>Swedish political transparency OSINT platform with parliamentary monitoring and accountability metrics.</p>
           <div class="card-actions">
