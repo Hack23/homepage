@@ -327,12 +327,12 @@
 			<a href="index_ko.html" class="nav-logo" aria-label="Hack23 AB 홈">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="내비게이션 메뉴 토글" aria-expanded="false">
+			<button class="nav-toggle" aria-label="내비게이션 메뉴 열기" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
+			<ul class="nav-menu" id="nav-menu" aria-label="내비게이션 메뉴" aria-hidden="true">
 				<li><a href="#value-proposition">Hack23 소개</a></li>
 				<li><a href="#security-services">서비스</a></li>
 				<li><a href="#projects">프로젝트</a></li>
@@ -1360,10 +1360,83 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Get focusable elements for focus trapping
+            const getFocusableElements = function() {
+              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            };
+            
+            // Close menu handler
+            const closeMenu = function() {
+              navMenu.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', '내비게이션 메뉴 열기');
+              navMenu.setAttribute('aria-hidden', 'true');
+              document.body.style.overflow = '';
+            };
+            
+            // Combined keydown handler for Escape key and focus trapping
+            const keydownHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Escape key closes menu
+                if (e.key === 'Escape') {
+                  closeMenu();
+                  navToggle.focus(); // Return focus to toggle button
+                }
+                
+                // Tab key for focus trapping
+                if (e.key === 'Tab') {
+                  const focusableElements = getFocusableElements();
+                  const firstFocusable = focusableElements[0];
+                  const lastFocusable = focusableElements[focusableElements.length - 1];
+                  
+                  if (e.shiftKey && document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                  }
+                }
+              }
+            };
+            
+            // Click outside handler
+            const clickHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Close if click is on backdrop/padding, or completely outside menu and toggle
+                if (
+                  e.target === navMenu ||
+                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
+                ) {
+                  closeMenu();
+                }
+              }
+            };
+            
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              // Update aria-label dynamically for screen readers
+              this.setAttribute('aria-label', isOpen ? '내비게이션 메뉴 닫기' : '내비게이션 메뉴 열기');
+              navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+              
+              // Prevent body scroll when menu is open
+              if (isOpen) {
+                document.body.style.overflow = 'hidden';
+                // Focus first menu item for keyboard users
+                const focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                  focusableElements[0].focus();
+                }
+              } else {
+                document.body.style.overflow = '';
+              }
             });
+            
+            // Add event listeners
+            document.addEventListener('keydown', keydownHandler);
+            document.addEventListener('click', clickHandler);
           }
           
           // Back to top button with throttled scroll handler
@@ -1409,10 +1482,7 @@
                   
                   // Close mobile menu if open
                   if (navMenu && navMenu.classList.contains('open')) {
-                    navMenu.classList.remove('open');
-                    if (navToggle) {
-                      navToggle.setAttribute('aria-expanded', 'false');
-                    }
+                    closeMenu();
                   }
                 }
               }

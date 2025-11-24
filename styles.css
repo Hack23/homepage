@@ -616,22 +616,34 @@ a:hover {
   outline-offset: 2px;
 }
 
-/* Mobile Menu Toggle Button */
+/* Mobile Menu Toggle Button - WCAG 2.1 AA compliant (44x44px minimum touch target) */
 .nav-toggle {
   display: none;
   flex-direction: column;
   gap: 4px;
   background: transparent;
-  border: none;
+  border: 2px solid var(--primary-color);
   cursor: pointer;
-  padding: 0.5rem;
+  /* WCAG 2.1 AA: Minimum 44x44px touch target */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-sm);
   z-index: 1001;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(0, 102, 51, 0.05);
+  border-color: var(--primary-light);
 }
 
 .nav-toggle span {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 24px;
+  height: 2px;
   background: var(--primary-color);
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -642,12 +654,12 @@ a:hover {
 }
 
 .nav-toggle:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 4px;
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
   border-radius: var(--border-radius-sm);
 }
 
-/* Mobile Menu Toggle Animation */
+/* Mobile Menu Toggle Animation - Transform to X when open */
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -713,31 +725,78 @@ a:hover {
     display: flex;
   }
   
+  /* Mobile navigation menu - slides in from right */
   .nav-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--card-bg);
+    box-shadow: -2px 0 12px var(--card-shadow);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    transition: right 0.3s ease;
+    z-index: 1002; /* Above sticky-nav (1000) and nav-toggle (1001) */
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--bg-color);
-    border-bottom: 2px solid var(--primary-color);
-    box-shadow: 0 4px 12px var(--card-shadow);
-    padding: 1rem;
     gap: 0;
   }
   
+  /* Show menu when open */
   .nav-menu.open {
-    display: flex;
+    right: 0;
+  }
+  
+  /* Backdrop overlay when menu is open */
+  .nav-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .nav-menu.open::before {
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .nav-menu li {
     width: 100%;
+    margin-bottom: var(--spacing-md);
   }
   
+  /* WCAG 2.1 AA: Minimum 44x44px touch targets for all links */
   .nav-menu a {
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    font-size: 1.125rem;
+    /* Ensure minimum 44px height for touch targets */
+    min-height: 44px;
     border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .nav-menu a:hover {
+    background-color: rgba(0, 102, 51, 0.05);
+  }
+  
+  .nav-menu a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: -3px;
+  }
+  
+  .nav-menu li:last-child {
+    margin-bottom: 0;
   }
   
   .nav-menu li:last-child a {
@@ -745,16 +804,20 @@ a:hover {
   }
   
   .nav-menu .btn-nav {
-    margin-top: 0.5rem;
+    margin-top: var(--spacing-md);
     text-align: center;
+    justify-content: center;
     border-bottom: none;
+    /* Ensure proper touch target */
+    min-height: 48px;
   }
   
   .back-to-top {
     bottom: 1rem;
     right: 1rem;
-    width: 45px;
-    height: 45px;
+    /* Ensure WCAG 2.1 AA touch target (44x44px minimum) */
+    width: 48px;
+    height: 48px;
     font-size: 1.25rem;
   }
 }
@@ -763,8 +826,15 @@ a:hover {
 @media (max-width: 768px) and (prefers-color-scheme: dark) {
   .nav-menu {
     background: rgba(0, 26, 26, 0.98);
-    border-bottom: 2px solid var(--primary-color);
-    box-shadow: 0 4px 12px rgba(0, 204, 102, 0.2);
+    box-shadow: -2px 0 12px rgba(0, 204, 102, 0.2);
+  }
+  
+  .nav-toggle {
+    border-color: var(--primary-color);
+  }
+  
+  .nav-toggle:hover {
+    background: rgba(0, 204, 102, 0.1);
   }
 }
   }
