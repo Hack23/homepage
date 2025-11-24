@@ -1760,23 +1760,6 @@
               return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
             };
             
-            // Focus trap handler
-            const trapFocus = function(e) {
-              if (e.key === 'Tab' && navMenu.classList.contains('open')) {
-                const focusableElements = getFocusableElements();
-                const firstFocusable = focusableElements[0];
-                const lastFocusable = focusableElements[focusableElements.length - 1];
-                
-                if (e.shiftKey && document.activeElement === firstFocusable) {
-                  e.preventDefault();
-                  lastFocusable.focus();
-                } else if (!e.shiftKey && document.activeElement === lastFocusable) {
-                  e.preventDefault();
-                  firstFocusable.focus();
-                }
-              }
-            };
-            
             // Close menu handler
             const closeMenu = function() {
               navMenu.classList.remove('open');
@@ -1786,11 +1769,29 @@
               document.body.style.overflow = '';
             };
             
-            // Escape key handler
+            // Combined keydown handler for Escape key and focus trapping
             const keydownHandler = function(e) {
-              if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-                closeMenu();
-                navToggle.focus(); // Return focus to toggle button
+              if (navMenu.classList.contains('open')) {
+                // Escape key closes menu
+                if (e.key === 'Escape') {
+                  closeMenu();
+                  navToggle.focus(); // Return focus to toggle button
+                }
+                
+                // Tab key for focus trapping
+                if (e.key === 'Tab') {
+                  const focusableElements = getFocusableElements();
+                  const firstFocusable = focusableElements[0];
+                  const lastFocusable = focusableElements[focusableElements.length - 1];
+                  
+                  if (e.shiftKey && document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                  }
+                }
               }
             };
             
@@ -1826,7 +1827,6 @@
             
             // Add event listeners
             document.addEventListener('keydown', keydownHandler);
-            document.addEventListener('keydown', trapFocus);
             document.addEventListener('click', clickHandler);
           }
           
