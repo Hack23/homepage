@@ -943,12 +943,12 @@
 			<a href="index.html" class="nav-logo" aria-label="Hack23 AB Home">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
+			<ul class="nav-menu" id="nav-menu">
 				<li><a href="why-hack23.html">Why Hack23</a></li>
 				<li><a href="#security-services">Services</a></li>
 				<li><a href="#projects">Projects</a></li>
@@ -1755,9 +1755,42 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              // Update aria-label dynamically for screen readers
+              this.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+              
+              // Prevent body scroll when menu is open
+              if (isOpen) {
+                document.body.style.overflow = 'hidden';
+              } else {
+                document.body.style.overflow = '';
+              }
+            });
+            
+            // Close menu on Escape key
+            document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Open navigation menu');
+                document.body.style.overflow = '';
+                navToggle.focus(); // Return focus to toggle button
+              }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+              if (navMenu.classList.contains('open') && 
+                  !navToggle.contains(e.target) && 
+                  !navMenu.contains(e.target)) {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Open navigation menu');
+                document.body.style.overflow = '';
+              }
             });
           }
           
@@ -1807,6 +1840,8 @@
                     navMenu.classList.remove('open');
                     if (navToggle) {
                       navToggle.setAttribute('aria-expanded', 'false');
+                      navToggle.setAttribute('aria-label', 'Open navigation menu');
+                      document.body.style.overflow = '';
                     }
                   }
                 }
