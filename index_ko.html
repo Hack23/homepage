@@ -332,7 +332,7 @@
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu" id="nav-menu" role="dialog" aria-modal="true" aria-label="내비게이션 메뉴" aria-hidden="true">
+			<ul class="nav-menu" id="nav-menu" aria-label="내비게이션 메뉴" aria-hidden="true">
 				<li><a href="#value-proposition">Hack23 소개</a></li>
 				<li><a href="#security-services">서비스</a></li>
 				<li><a href="#projects">프로젝트</a></li>
@@ -1403,10 +1403,10 @@
             // Click outside handler
             const clickHandler = function(e) {
               if (navMenu.classList.contains('open')) {
-                // Close if click is directly on navMenu (backdrop area), or outside toggle and not on interactive elements
+                // Close if click is on backdrop/padding, or completely outside menu and toggle
                 if (
                   e.target === navMenu ||
-                  (!navToggle.contains(e.target) && !e.target.closest('a, button'))
+                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
                 ) {
                   closeMenu();
                 }
