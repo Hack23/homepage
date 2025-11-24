@@ -696,12 +696,12 @@
 			<a href="index_sv.html" class="nav-logo" aria-label="Hack23 AB Hem">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Växla navigeringsmeny" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Öppna navigeringsmeny" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
+			<ul class="nav-menu" id="nav-menu">
 				<li><a href="#value-proposition">Varför Hack23</a></li>
 				<li><a href="#security-services">Tjänster</a></li>
 				<li><a href="#projects">Projekt</a></li>
@@ -1693,9 +1693,42 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              // Update aria-label dynamically for screen readers
+              this.setAttribute('aria-label', isOpen ? 'Stäng navigeringsmeny' : 'Öppna navigeringsmeny');
+              
+              // Prevent body scroll when menu is open
+              if (isOpen) {
+                document.body.style.overflow = 'hidden';
+              } else {
+                document.body.style.overflow = '';
+              }
+            });
+            
+            // Close menu on Escape key
+            document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Öppna navigeringsmeny');
+                document.body.style.overflow = '';
+                navToggle.focus(); // Return focus to toggle button
+              }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+              if (navMenu.classList.contains('open') && 
+                  !navToggle.contains(e.target) && 
+                  !navMenu.contains(e.target)) {
+                navMenu.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Öppna navigeringsmeny');
+                document.body.style.overflow = '';
+              }
             });
           }
           
@@ -1745,6 +1778,8 @@
                     navMenu.classList.remove('open');
                     if (navToggle) {
                       navToggle.setAttribute('aria-expanded', 'false');
+                      navToggle.setAttribute('aria-label', 'Öppna navigeringsmeny');
+                      document.body.style.overflow = '';
                     }
                   }
                 }
