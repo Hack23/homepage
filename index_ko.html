@@ -1402,10 +1402,14 @@
             
             // Click outside handler
             const clickHandler = function(e) {
-              if (navMenu.classList.contains('open') && 
-                  !navToggle.contains(e.target) && 
-                  !navMenu.contains(e.target)) {
-                closeMenu();
+              if (navMenu.classList.contains('open')) {
+                // Close if click is directly on navMenu (backdrop area), or outside toggle and not on interactive elements
+                if (
+                  e.target === navMenu ||
+                  (!navToggle.contains(e.target) && !e.target.closest('a, button'))
+                ) {
+                  closeMenu();
+                }
               }
             };
             
@@ -1478,13 +1482,7 @@
                   
                   // Close mobile menu if open
                   if (navMenu && navMenu.classList.contains('open')) {
-                    navMenu.classList.remove('open');
-                    if (navToggle) {
-                      navToggle.setAttribute('aria-expanded', 'false');
-                      navToggle.setAttribute('aria-label', '내비게이션 메뉴 열기');
-                      navMenu.setAttribute('aria-hidden', 'true');
-                      document.body.style.overflow = '';
-                    }
+                    closeMenu();
                   }
                 }
               }
