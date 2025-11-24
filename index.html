@@ -948,7 +948,7 @@
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu" id="nav-menu">
+			<ul class="nav-menu" id="nav-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
 				<li><a href="why-hack23.html">Why Hack23</a></li>
 				<li><a href="#security-services">Services</a></li>
 				<li><a href="#projects">Projects</a></li>
@@ -1755,43 +1755,79 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Get focusable elements for focus trapping
+            const getFocusableElements = function() {
+              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            };
+            
+            // Focus trap handler
+            const trapFocus = function(e) {
+              if (e.key === 'Tab' && navMenu.classList.contains('open')) {
+                const focusableElements = getFocusableElements();
+                const firstFocusable = focusableElements[0];
+                const lastFocusable = focusableElements[focusableElements.length - 1];
+                
+                if (e.shiftKey && document.activeElement === firstFocusable) {
+                  e.preventDefault();
+                  lastFocusable.focus();
+                } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                  e.preventDefault();
+                  firstFocusable.focus();
+                }
+              }
+            };
+            
+            // Close menu handler
+            const closeMenu = function() {
+              navMenu.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', 'Open navigation menu');
+              navMenu.setAttribute('aria-hidden', 'true');
+              document.body.style.overflow = '';
+            };
+            
+            // Escape key handler
+            const keydownHandler = function(e) {
+              if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                closeMenu();
+                navToggle.focus(); // Return focus to toggle button
+              }
+            };
+            
+            // Click outside handler
+            const clickHandler = function(e) {
+              if (navMenu.classList.contains('open') && 
+                  !navToggle.contains(e.target) && 
+                  !navMenu.contains(e.target)) {
+                closeMenu();
+              }
+            };
+            
             // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
               // Update aria-label dynamically for screen readers
               this.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+              navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
               
               // Prevent body scroll when menu is open
               if (isOpen) {
                 document.body.style.overflow = 'hidden';
+                // Focus first menu item for keyboard users
+                const focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                  focusableElements[0].focus();
+                }
               } else {
                 document.body.style.overflow = '';
               }
             });
             
-            // Close menu on Escape key
-            document.addEventListener('keydown', function(e) {
-              if (e.key === 'Escape' && navMenu.classList.contains('open')) {
-                navMenu.classList.remove('open');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navToggle.setAttribute('aria-label', 'Open navigation menu');
-                document.body.style.overflow = '';
-                navToggle.focus(); // Return focus to toggle button
-              }
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-              if (navMenu.classList.contains('open') && 
-                  !navToggle.contains(e.target) && 
-                  !navMenu.contains(e.target)) {
-                navMenu.classList.remove('open');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navToggle.setAttribute('aria-label', 'Open navigation menu');
-                document.body.style.overflow = '';
-              }
-            });
+            // Add event listeners
+            document.addEventListener('keydown', keydownHandler);
+            document.addEventListener('keydown', trapFocus);
+            document.addEventListener('click', clickHandler);
           }
           
           // Back to top button with throttled scroll handler
@@ -1841,6 +1877,7 @@
                     if (navToggle) {
                       navToggle.setAttribute('aria-expanded', 'false');
                       navToggle.setAttribute('aria-label', 'Open navigation menu');
+                      navMenu.setAttribute('aria-hidden', 'true');
                       document.body.style.overflow = '';
                     }
                   }

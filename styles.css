@@ -737,7 +737,7 @@ a:hover {
     box-shadow: -2px 0 12px var(--card-shadow);
     padding: var(--spacing-2xl) var(--spacing-lg);
     transition: right 0.3s ease;
-    z-index: 999;
+    z-index: 1002; /* Above sticky-nav (1000) and nav-toggle (1001) */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -750,7 +750,7 @@ a:hover {
   }
   
   /* Backdrop overlay when menu is open */
-  .nav-menu.open::before {
+  .nav-menu::before {
     content: '';
     position: fixed;
     top: 0;
@@ -759,12 +759,14 @@ a:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
-    animation: fadeIn 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
   }
   
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  .nav-menu.open::before {
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .nav-menu li {
