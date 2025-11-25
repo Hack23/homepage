@@ -1864,8 +1864,9 @@
                   errorMessages.forEach(function(msg) {
                     msg.textContent = '';
                   });
-                  [nameInput, emailInput, subjectInput, messageInput].forEach(function(input) {
-                    input.removeAttribute('aria-invalid');
+                  var invalidFields = contactForm.querySelectorAll('[aria-invalid="true"]');
+                  invalidFields.forEach(function(field) {
+                    field.removeAttribute('aria-invalid');
                   });
                   
                   errorMessage.style.display = 'none';
