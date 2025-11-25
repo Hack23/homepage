@@ -1,4 +1,45 @@
 /* Base variables with combined light/dark mode support - Professional Cyberpunk Theme */
+/* ==================================================
+   CROSS-BROWSER COMPATIBILITY NOTES
+   ================================================== */
+/* This CSS file includes vendor prefixes and fallbacks for maximum browser compatibility:
+ * 
+ * 1. Vendor Prefixes:
+ *    - -webkit-* for Safari, Chrome, Edge (Chromium)
+ *    - -moz-* for Firefox (where needed)
+ *    - -ms-* for older Edge and IE11 (deprecated but included for legacy support)
+ * 
+ * 2. Focus-Visible Fallback:
+ *    - Uses @supports to detect :focus-visible support
+ *    - Falls back to :focus for Safari < 15.4
+ * 
+ * 3. Flexbox with Vendor Prefixes:
+ *    - Includes -webkit-box (Safari 6.1+)
+ *    - Includes -webkit-flex (Safari 8+)
+ *    - Includes -ms-flexbox (IE 10)
+ *    - Modern flex syntax for all other browsers
+ * 
+ * 4. Grid with Flexbox Fallback:
+ *    - Flexbox layout as base (universally supported)
+ *    - @supports (display: grid) for modern browsers
+ *    - Ensures content is accessible even without Grid support
+ * 
+ * 5. Appearance Property:
+ *    - -webkit-appearance for Safari/Chrome form controls
+ *    - -moz-appearance for Firefox
+ *    - appearance for standards-compliant browsers
+ * 
+ * 6. Backdrop Filter:
+ *    - -webkit-backdrop-filter for Safari
+ *    - backdrop-filter for other modern browsers
+ * 
+ * Browser Support Priority:
+ * - Chrome/Edge (Chromium): 65% of users - Full support
+ * - Safari (iOS/macOS): 20% of users - Full support with vendor prefixes
+ * - Firefox: 5% of users - Full support
+ * - Other browsers: 10% of users - Graceful degradation
+ */
+
 :root {
   /* Light Mode - Professional Cyberpunk Green */
   --primary-color: #006633;
@@ -619,6 +660,7 @@ a:hover {
 
 /* ==================================================
    KEYBOARD NAVIGATION & FOCUS INDICATORS (WCAG 2.1 AA)
+   Cross-browser compatibility with focus-visible fallback
    ================================================== */
 
 /* Skip to Main Content Link - visible only when focused */
@@ -636,52 +678,107 @@ a:hover {
   transition: top 0.2s ease;
 }
 
-.skip-link:focus-visible {
-  top: 0;
-  outline: 3px solid var(--accent-color);
-  outline-offset: 2px;
+/* Focus-visible with progressive enhancement for Safari < 15.4 */
+@supports selector(:focus-visible) {
+  /* Modern browsers with :focus-visible support */
+  .skip-link:focus-visible {
+    top: 0;
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Universal Focus Indicator - WCAG 2.1 AA compliant (3:1 contrast ratio) */
+  *:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Enhanced link focus with background highlight */
+  a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+    background-color: rgba(0, 102, 51, 0.1);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Button focus with enhanced visibility and shadow */
+  button:focus-visible,
+  .btn:focus-visible,
+  .btn-primary-large:focus-visible,
+  .btn-secondary:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
+  
+  /* Form control focus indicators */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+  }
+  
+  /* Checkbox and radio button focus */
+  input[type="checkbox"]:focus-visible,
+  input[type="radio"]:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
 }
 
-/* Universal Focus Indicator - WCAG 2.1 AA compliant (3:1 contrast ratio) */
-*:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Enhanced link focus with background highlight */
-a:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 4px;
-  background-color: rgba(0, 102, 51, 0.1);
-  border-radius: var(--border-radius-sm);
-}
-
-/* Button focus with enhanced visibility and shadow */
-button:focus-visible,
-.btn:focus-visible,
-.btn-primary-large:focus-visible,
-.btn-secondary:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
-}
-
-/* Form control focus indicators */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
-}
-
-/* Checkbox and radio button focus */
-input[type="checkbox"]:focus-visible,
-input[type="radio"]:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+@supports not selector(:focus-visible) {
+  /* Fallback for Safari < 15.4 and older browsers - use :focus */
+  .skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Universal Focus Indicator fallback */
+  *:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Enhanced link focus fallback */
+  a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+    background-color: rgba(0, 102, 51, 0.1);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Button focus fallback */
+  button:focus,
+  .btn:focus,
+  .btn-primary-large:focus,
+  .btn-secondary:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
+  
+  /* Form control focus fallback */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+  }
+  
+  /* Checkbox and radio button focus fallback */
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
 }
 
 /* Dark mode focus indicators */
@@ -721,6 +818,7 @@ input[type="radio"]:focus-visible {
 
 /* ==================================================
    STICKY NAVIGATION
+   Cross-browser compatibility with vendor prefixes
    ================================================== */
 
 /* Sticky Navigation Bar */
@@ -731,8 +829,9 @@ input[type="radio"]:focus-visible {
   background: var(--bg-color);
   border-bottom: 2px solid var(--primary-color);
   box-shadow: 0 2px 10px var(--card-shadow);
-  backdrop-filter: blur(10px);
+  /* Backdrop filter with vendor prefixes for Safari */
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -771,11 +870,17 @@ input[type="radio"]:focus-visible {
 }
 
 .nav-menu {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1123,10 +1228,18 @@ header {
 }
 
 .badges {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.5rem 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1140,9 +1253,17 @@ header {
 }
 
 .app-link {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: var(--spacing-md);
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: var(--spacing-xl);
 }
@@ -1211,7 +1332,7 @@ header {
   }
 }
 
-/* Cards - Premium Design */
+/* Cards - Premium Design with Grid fallback for older browsers */
 .subsection-title {
   font-size: 1.5rem;
   color: var(--text-secondary);
@@ -1220,16 +1341,61 @@ header {
   font-weight: 600;
 }
 
+/* Flexbox fallback for browsers without Grid support */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-2xl);
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cards > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  max-width: 400px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+    /* Reset flexbox properties */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .cards > * {
+    /* Reset flex properties for grid */
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    max-width: none;
+    min-width: 0;
+  }
 }
 
 .card {
@@ -3886,6 +4052,10 @@ footer {
   font-size: 1rem;
   font-family: var(--font-main);
   transition: border-color 0.3s ease;
+  /* Remove default browser styling - Safari/WebKit compatibility */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form-group input[type="email"]:focus-visible,
@@ -4407,9 +4577,17 @@ footer {
 }
 
 .hero-cta {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: var(--spacing-md);
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: var(--spacing-xl) 0;
   /* Reserve space for CTA buttons to reduce Cumulative Layout Shift (CLS) */
@@ -4597,16 +4775,55 @@ footer {
 }
 
 .badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Flexbox fallback for older browsers */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
+.badge-grid > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .badge-grid > * {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    min-width: 0;
+  }
+}
+
 .badge-grid--compact {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
+}
+
+@supports (display: grid) {
+  .badge-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .badge-grid--compact > * {
+    min-width: 200px;
+  }
 }
 
 .badge-category {
@@ -4627,10 +4844,20 @@ footer {
 }
 
 .badge-category .badges {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -4646,15 +4873,29 @@ footer {
 
 /* Key badges - visible above the fold */
 .key-badges {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin: 1.5rem 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .key-badges--start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 1rem 0;
 }
@@ -5061,12 +5302,42 @@ footer {
    SITEMAP PAGE STYLES
    ================================================== */
 
-/* Sitemap Grid Layout */
+/* Sitemap Grid Layout - with Flexbox fallback */
 .sitemap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Flexbox fallback for older browsers */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem 0;
+}
+
+.sitemap-grid > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .sitemap-grid > * {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    min-width: 0;
+  }
 }
 
 /* Sitemap Section Cards */
@@ -5255,7 +5526,7 @@ footer {
   margin-left: 0.25rem;
 }
 
-/* Form Inputs */
+/* Form Inputs - Cross-browser compatibility with vendor prefixes */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"],
@@ -5271,6 +5542,10 @@ footer {
   background-color: var(--card-bg);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   line-height: var(--line-height-normal);
+  /* Remove default browser styling - Safari/WebKit compatibility */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .contact-form textarea {
