@@ -1758,13 +1758,13 @@
           </div>
           
           <!-- Success Message (hidden by default) -->
-          <div id="form-success-message" class="success-message" role="alert" style="display: none;">
+          <div id="form-success-message" class="success-message" role="alert" tabindex="-1" style="display: none;">
             <strong>✅ Message sent successfully!</strong>
             <p>Thank you for contacting us. We'll get back to you within 1-2 business days.</p>
           </div>
           
           <!-- Form Error Message (hidden by default) -->
-          <div id="form-error-message" class="error-message-box" role="alert" style="display: none;">
+          <div id="form-error-message" class="error-message-box" role="alert" tabindex="-1" style="display: none;">
             <strong>⚠️ Submission Error</strong>
             <p>Sorry, there was an error submitting the form. Please try again or contact us directly at <a href="mailto:info@hack23.com">info@hack23.com</a>.</p>
           </div>
@@ -2142,7 +2142,7 @@
           function validateEmail() {
             const value = emailInput.value.trim();
             const errorElement = document.getElementById('contact-email-error');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             
             if (!value) {
               errorElement.textContent = 'Please enter your email address';
@@ -2264,6 +2264,16 @@
                   
                   // Reset form
                   contactForm.reset();
+                  
+                  // Clear all error messages and remove aria-invalid attributes
+                  var errorMessages = contactForm.querySelectorAll('.error-message');
+                  errorMessages.forEach(function(msg) {
+                    msg.textContent = '';
+                  });
+                  var invalidFields = contactForm.querySelectorAll('[aria-invalid="true"]');
+                  invalidFields.forEach(function(field) {
+                    field.removeAttribute('aria-invalid');
+                  });
                   
                   // Hide error message if visible
                   errorMessage.style.display = 'none';

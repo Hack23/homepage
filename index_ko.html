@@ -1362,13 +1362,13 @@
           </div>
           
           <!-- 성공 메시지 (기본적으로 숨김) -->
-          <div id="form-success-message-ko" class="success-message" role="alert" style="display: none;">
+          <div id="form-success-message-ko" class="success-message" role="alert" tabindex="-1" style="display: none;">
             <strong>✅ 메시지가 전송되었습니다!</strong>
             <p>문의해 주셔서 감사합니다. 1-2 영업일 내에 답변해 드리겠습니다.</p>
           </div>
           
           <!-- 양식 오류 메시지 (기본적으로 숨김) -->
-          <div id="form-error-message-ko" class="error-message-box" role="alert" style="display: none;">
+          <div id="form-error-message-ko" class="error-message-box" role="alert" tabindex="-1" style="display: none;">
             <strong>⚠️ 제출 오류</strong>
             <p>양식을 제출하는 동안 오류가 발생했습니다. 다시 시도하거나 <a href="mailto:info@hack23.com">info@hack23.com</a>으로 직접 문의해 주세요.</p>
           </div>
@@ -1744,7 +1744,7 @@
           function validateEmail() {
             const value = emailInput.value.trim();
             const errorElement = document.getElementById('contact-email-error-ko');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             
             if (!value) {
               errorElement.textContent = '이메일 주소를 입력해주세요';
@@ -1858,6 +1858,16 @@
                   successMessage.style.display = 'block';
                   successMessage.focus();
                   contactForm.reset();
+                  
+                  // Clear all error messages and remove aria-invalid attributes
+                  var errorMessages = contactForm.querySelectorAll('.error-message');
+                  errorMessages.forEach(function(msg) {
+                    msg.textContent = '';
+                  });
+                  [nameInput, emailInput, subjectInput, messageInput].forEach(function(input) {
+                    input.removeAttribute('aria-invalid');
+                  });
+                  
                   errorMessage.style.display = 'none';
                   successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   

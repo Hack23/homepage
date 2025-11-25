@@ -1695,13 +1695,13 @@
           </div>
           
           <!-- Framgångsmeddelande (dolt som standard) -->
-          <div id="form-success-message-sv" class="success-message" role="alert" style="display: none;">
+          <div id="form-success-message-sv" class="success-message" role="alert" tabindex="-1" style="display: none;">
             <strong>✅ Meddelandet har skickats!</strong>
             <p>Tack för att du kontaktade oss. Vi återkommer inom 1-2 arbetsdagar.</p>
           </div>
           
           <!-- Felmeddelande för formulär (dolt som standard) -->
-          <div id="form-error-message-sv" class="error-message-box" role="alert" style="display: none;">
+          <div id="form-error-message-sv" class="error-message-box" role="alert" tabindex="-1" style="display: none;">
             <strong>⚠️ Sändningsfel</strong>
             <p>Tyvärr uppstod ett fel när formuläret skickades. Försök igen eller kontakta oss direkt på <a href="mailto:info@hack23.com">info@hack23.com</a>.</p>
           </div>
@@ -2077,7 +2077,7 @@
           function validateEmail() {
             const value = emailInput.value.trim();
             const errorElement = document.getElementById('contact-email-error-sv');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             
             if (!value) {
               errorElement.textContent = 'Vänligen ange din e-postadress';
@@ -2191,6 +2191,18 @@
                   successMessage.style.display = 'block';
                   successMessage.focus();
                   contactForm.reset();
+                  
+                  // Clear all field-level error messages
+                  var errorMessages = contactForm.querySelectorAll('.error-message');
+                  errorMessages.forEach(function(msg) {
+                    msg.textContent = '';
+                  });
+                  // Remove aria-invalid from all form fields
+                  var invalidFields = contactForm.querySelectorAll('[aria-invalid="true"]');
+                  invalidFields.forEach(function(field) {
+                    field.removeAttribute('aria-invalid');
+                  });
+                  
                   errorMessage.style.display = 'none';
                   successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   
