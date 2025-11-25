@@ -89,6 +89,317 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 
 ---
 
+## 🗺️ Site Map Overview
+
+Hack23.com is a static, multi-language HTML/CSS site deployed to AWS S3 + CloudFront.  
+For the **authoritative, always up-to-date sitemap**, use the live page:
+
+- **🔗 Live Sitemap:** https://hack23.com/sitemap.html  
+
+The sections below mirror the structure of [`sitemap.html`](https://hack23.com/sitemap.html) with **direct, HTTPS links** and **icons aligned with the ISMS Style Guide**.
+
+---
+
+### 🏠 Home & Company
+
+**Mission, values, company details, and CIA Triad foundations.**
+
+- 🏠 **Homepage:** https://hack23.com/index.html  
+- 🧭 **Why Hack23?:** https://hack23.com/why-hack23.html  
+- 🔐 **CIA Triad FAQ (Confidentiality, Integrity, Availability):**  
+  https://hack23.com/cia-triad-faq.html  
+
+---
+
+### 🔑 Security Services
+
+Professional cybersecurity consulting focused on **security architecture, cloud security, DevSecOps, and compliance** — with evidence-based practices and public ISMS.
+
+- 🔑 **All Services (overview):** https://hack23.com/services.html  
+  - 🏗️ **Security Architecture & Strategy:**  
+    https://hack23.com/services.html#security-architecture  
+  - ☁️ **Cloud Security & DevSecOps:**  
+    https://hack23.com/services.html#cloud-security  
+  - 📋 **Compliance & Regulatory:**  
+    https://hack23.com/services.html#compliance  
+- 🧾 **Security Assessment Checklist:**  
+  https://hack23.com/security-assessment-checklist.html  
+
+---
+
+### 🚀 Projects (Open-Source & Reference Implementations)
+
+Open-source and reference projects used as **live demonstrations of secure architecture, transparency, and practical security**.
+
+#### 🎮 Black Trigram (Security-Aware Game)
+
+Realistic 2D precision combat simulator based on traditional Korean martial arts, used as a **security-aware game and educational platform**.
+
+- 🎮 **Overview:** https://hack23.com/black-trigram.html  
+- ⭐ **Features:** https://hack23.com/black-trigram-features.html  
+- 📚 **Documentation:** https://hack23.com/black-trigram-docs.html  
+
+#### 🏛️ Citizen Intelligence Agency (CIA)
+
+Open-source parliamentary monitoring and OSINT platform analyzing Swedish politics.
+
+- 🏛️ **Overview:** https://hack23.com/cia-project.html  
+- ⭐ **Features:** https://hack23.com/cia-features.html  
+- 📚 **Documentation:** https://hack23.com/cia-docs.html  
+
+#### 📋 CIA Compliance Manager
+
+Browser-based compliance and CIA-triad assessment tool with no backend, focused on **risk, impact, and framework mapping**.
+
+- 📋 **Overview:** https://hack23.com/compliance-manager.html  
+- ⭐ **Features:** https://hack23.com/cia-compliance-manager-features.html  
+- 📚 **Documentation:** https://hack23.com/cia-compliance-manager-docs.html  
+
+---
+
+### 🍎 Discordian Cybersecurity Blog & Insights
+
+All blog content is centrally indexed here:
+
+- 📚 **All Blog Posts:** https://hack23.com/blog.html  
+
+The blog blends **ISMS-aligned policies** with a **Discordian, Illuminatus!-style narrative**, making complex security concepts accessible while still professionally mapped to the public ISMS.
+
+#### 🎭 Core Manifesto & Philosophy
+
+- 🎭 **Discordian Cybersecurity Manifesto:**  
+  https://hack23.com/discordian-cybersecurity.html  
+
+Representative themes (see `blog.html` for the full list and latest updates):
+
+- 🧠 **Everything You Know About Security Is a Lie**  
+- 🏛️ **The Security-Industrial Complex**  
+- 🔒 **Question Authority: Crypto Approved By Spies**  
+- 🏷️ **Think For Yourself: Classification & Data Handling**  
+
+#### 🏛️ CIA Project Series
+
+Architecture, security, and financial/operational views of the **Citizen Intelligence Agency** platform:
+
+- 🏗️ **CIA Architecture:** https://hack23.com/blog-cia-architecture.html  
+- 🛡️ **CIA Security (Defense Through Transparency):**  
+  https://hack23.com/blog-cia-security.html  
+- 🔄 **CIA Workflows (CI/CD & State Machines):**  
+  https://hack23.com/blog-cia-workflows.html  
+- 🧠 **CIA Mindmaps (Conceptual Sacred Geometry):**  
+  https://hack23.com/blog-cia-mindmaps.html  
+- 🔍 **CIA OSINT Intelligence:**  
+  https://hack23.com/blog-cia-osint-intelligence.html  
+- 🔮 **CIA Future Security (Post-quantum & AI):**  
+  https://hack23.com/blog-cia-future-security.html  
+- 💰 **CIA Financial Strategy – “$24.70/Day Democracy”:**  
+  https://hack23.com/blog-cia-financial-strategy.html  
+- 🌍 **CIA Business Case – Global News:**  
+  https://hack23.com/blog-cia-business-case-global-news.html  
+- 📰 **CIA Swedish Media Election 2026:**  
+  https://hack23.com/blog-cia-swedish-media-election-2026.html  
+- 📢 **CIA Alternative Media Discordian 2026:**  
+  https://hack23.com/blog-cia-alternative-media-discordian-2026.html  
+
+#### 🎮 Black Trigram Series
+
+Deep dives into the **architecture, biomechanics, and future roadmap** of Black Trigram:
+
+- 🏗️ **Architecture:** https://hack23.com/blog-trigram-architecture.html  
+- 🥋 **Combat & Vital Points:**  
+  https://hack23.com/blog-trigram-combat.html  
+- 🔮 **Future (VR & Immersive Training):**  
+  https://hack23.com/blog-trigram-future.html  
+
+#### 📋 Compliance Manager Series
+
+Applies the **CIA triad, STRIDE, and adaptive defense** to real-world compliance tooling:
+
+- 🏗️ **Compliance Architecture:**  
+  https://hack23.com/blog-compliance-architecture.html  
+- 🛡️ **Compliance Security (STRIDE Through Five Dimensions):**  
+  https://hack23.com/blog-compliance-security.html  
+- 🔮 **Compliance Future (Context-Aware Defense):**  
+  https://hack23.com/blog-compliance-future.html  
+
+#### 🧪 Code Analysis: “George Dorn” Series
+
+Evidence-based code reviews based on the **actual cloned repositories**, not just documentation:
+
+- 📊 **CIA Code Analysis:**  
+  https://hack23.com/blog-george-dorn-cia-code.html  
+- 📊 **Compliance Manager Code Analysis:**  
+  https://hack23.com/blog-george-dorn-compliance-code.html  
+- 📊 **Black Trigram Code Analysis:**  
+  https://hack23.com/blog-george-dorn-trigram-code.html  
+
+#### 🧠 Thought Leadership & Election Analysis
+
+- 🧬 **Automated Convergence (Security, Cloud, DevSecOps):**  
+  https://hack23.com/blog-automated-convergence.html  
+- 🧠 **Information Hoarding Destroys Data Integrity:**  
+  https://hack23.com/blog-information-hoarding.html  
+- 🛡️ **Public ISMS Benefits:**  
+  https://hack23.com/blog-public-isms-benefits.html  
+- 🗳️ **Swedish Election 2026 – Data-Driven Analysis:**  
+  https://hack23.com/swedish-election-2026.html  
+
+For the **full and current list of posts**, see:  
+👉 https://hack23.com/blog.html  
+
+---
+
+### 🛡️ ISMS & Security Policies (Public ISMS)
+
+The “Discordian” documents on hack23.com mirror and explain the **formal ISMS-PUBLIC repository** in a more narrative, accessible style.  
+Key entry points:
+
+- 🔐 **Information Security Policy:**  
+  https://hack23.com/discordian-info-sec-policy.html  
+- 🌐 **ISMS Transparency (What is Public vs. Redacted):**  
+  https://hack23.com/discordian-isms-transparency.html  
+- 🔄 **ISMS Review & Continuous Improvement:**  
+  https://hack23.com/discordian-isms-review.html  
+- 📋 **Compliance Overview:**  
+  https://hack23.com/discordian-compliance.html  
+- 🧭 **Compliance Frameworks (ISO 27001, NIST, CIS, etc.):**  
+  https://hack23.com/discordian-compliance-frameworks.html  
+
+Representative domains (see [`sitemap.html`](https://hack23.com/sitemap.html) for the complete tree):
+
+- 📉 **Risk Management:**  
+  https://hack23.com/discordian-risk-assessment.html  
+  https://hack23.com/discordian-risk-register.html  
+  https://hack23.com/discordian-threat-modeling.html  
+
+- 🔑 **Access & Identity:**  
+  https://hack23.com/discordian-access-control.html  
+  https://hack23.com/discordian-remote-access.html  
+  https://hack23.com/discordian-acceptable-use.html  
+
+- 🏷️ **Data Protection & Classification:**  
+  https://hack23.com/discordian-data-protection.html  
+  https://hack23.com/discordian-data-classification.html  
+  https://hack23.com/discordian-classification.html  
+  https://hack23.com/discordian-privacy.html  
+  https://hack23.com/discordian-crypto.html  
+
+- 🌐 **Technical Security:**  
+  https://hack23.com/discordian-network-security.html  
+  https://hack23.com/discordian-cloud-security.html  
+  https://hack23.com/discordian-email-security.html  
+  https://hack23.com/discordian-mobile-device.html  
+  https://hack23.com/discordian-vuln-mgmt.html  
+
+- 🛠️ **Development & AI:**  
+  https://hack23.com/discordian-secure-dev.html  
+  https://hack23.com/discordian-ai-policy.html  
+  https://hack23.com/discordian-llm-security.html  
+  https://hack23.com/discordian-open-source.html  
+
+- ⚙️ **Operations:**  
+  https://hack23.com/discordian-change-mgmt.html  
+  https://hack23.com/discordian-asset-mgmt.html  
+  https://hack23.com/discordian-monitoring-logging.html  
+  https://hack23.com/discordian-backup-recovery.html  
+
+- 🔄 **Business Continuity & Incident Response:**  
+  https://hack23.com/discordian-business-continuity.html  
+  https://hack23.com/discordian-disaster-recovery.html  
+  https://hack23.com/discordian-incident-response.html  
+
+- 🏛️ **Governance & Stakeholders:**  
+  https://hack23.com/discordian-security-strategy.html  
+  https://hack23.com/discordian-security-metrics.html  
+  https://hack23.com/discordian-security-training.html  
+  https://hack23.com/discordian-stakeholders.html  
+  https://hack23.com/discordian-business-value.html  
+
+- 🤝 **Third Party & Supply Chain:**  
+  https://hack23.com/discordian-third-party.html  
+  https://hack23.com/discordian-supplier-reality.html  
+
+- 🏢 **Physical & Facilities:**  
+  https://hack23.com/discordian-physical-security.html  
+
+- ⚖️ **Regulatory (e.g., EU Cyber Resilience Act):**  
+  https://hack23.com/discordian-cra.html  
+  https://hack23.com/discordian-cra-conformity.html  
+
+For the **canonical policy set and machine-verifiable versions**, see the public ISMS repository:  
+🔓 https://github.com/Hack23/ISMS-PUBLIC  
+
+---
+
+### 🌐 Languages (Internationalization)
+
+Hack23.com supports multiple languages, following the `_sv` / `_ko` conventions and language-specific sitemap pages.
+
+#### 🇬🇧 English (default)
+
+- 🗺️ **Sitemap (EN):** https://hack23.com/sitemap.html  
+
+#### 🇸🇪 Swedish
+
+- 🏠 **Homepage (SV):** https://hack23.com/index_sv.html  
+- 🗺️ **Sitemap (SV):** https://hack23.com/sitemap_sv.html  
+- 🔑 **Services (SV):** https://hack23.com/services_sv.html  
+- 🧭 **Why Hack23 (SV):** https://hack23.com/why-hack23_sv.html  
+- 🔐 **CIA Triad FAQ (SV):** https://hack23.com/cia-triad-faq_sv.html  
+- 🏛️ **CIA Features / Docs (SV):**  
+  https://hack23.com/cia-features_sv.html  
+  https://hack23.com/cia-docs_sv.html  
+- 📋 **CIA Compliance Manager Features / Docs (SV):**  
+  https://hack23.com/cia-compliance-manager-features_sv.html  
+  https://hack23.com/cia-compliance-manager-docs_sv.html  
+- 📚 **Selected Blog Translations (SV):**  
+  https://hack23.com/blog-public-isms-benefits_sv.html  
+  https://hack23.com/blog-cia-swedish-media-election-2026_sv.html  
+  https://hack23.com/swedish-election-2026_sv.html  
+
+#### 🇰🇷 Korean
+
+- 🏠 **Homepage (KO):** https://hack23.com/index_ko.html  
+- 🗺️ **Sitemap (KO):** https://hack23.com/sitemap_ko.html  
+- 🔑 **Services (KO):** https://hack23.com/services_ko.html  
+- 🎮 **Black Trigram Features / Docs (KO):**  
+  https://hack23.com/black-trigram-features_ko.html  
+  https://hack23.com/black-trigram-docs_ko.html  
+
+#### 🇳🇱 Dutch
+
+- 🗺️ **Sitemap (NL):** https://hack23.com/sitemap_nl.html  
+
+#### 🇩🇪 German
+
+- 🗺️ **Sitemap (DE):** https://hack23.com/sitemap_de.html  
+
+#### 🇫🇷 French
+
+- 🗺️ **Sitemap (FR):** https://hack23.com/sitemap_fr.html  
+
+#### 🇯🇵 Japanese
+
+- 🗺️ **Sitemap (JA):** https://hack23.com/sitemap_ja.html  
+
+#### 🇨🇳 Chinese
+
+- 🗺️ **Sitemap (ZH):** https://hack23.com/sitemap_zh.html  
+
+---
+
+### 🔧 Technical Resources
+
+Technical endpoints and repositories powering the public site:
+
+- 🗺️ **XML Sitemap (for crawlers):** https://hack23.com/sitemap.xml  
+- 🤖 **robots.txt:** https://hack23.com/robots.txt  
+
+**GitHub Repositories:**
+
+- 🔓 **Public ISMS:** https://github.com/Hack23/ISMS-PUBLIC  
+- 🖥️ **Homepage Source:** https://github.com/Hack23/homepage  
+
 ## 🔍 Quality Assurance
 
 This repository implements comprehensive automated quality checks to ensure code quality and prevent regressions:

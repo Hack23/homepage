@@ -11,10 +11,10 @@
 		:root {
 			--primary-color: #006633;
 			--primary-light: #007744;
-			--accent-color: #00C853;
+			--accent-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
 			--bg-color: #f8f9fa;
 			--text-color: #1a1a1a;
-			--text-secondary: #555555;
+			--text-secondary: #4a4a4a; /* WCAG 2.1 AA: 8.86:1 contrast on white (improved from #555555 at 7.46:1) */
 			--button-bg: #007744;
 			--button-text: #fff;
 			--spacing-md: 1rem;
@@ -158,6 +158,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
+	
+	<!-- Preload LCP hero image for faster above-the-fold rendering -->
+	<link rel="preload" href="cia-icon-140.webp" as="image" type="image/webp" fetchpriority="high">
 	
 	<!-- Defer non-critical CSS -->
 	<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -937,18 +940,21 @@
 	</script>
 </head>	
 <body>
+	<!-- Skip to Main Content Link for Keyboard Navigation -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	
 	<!-- Sticky Navigation Bar -->
 	<nav class="sticky-nav" role="navigation" aria-label="Main navigation">
 		<div class="nav-container">
 			<a href="index.html" class="nav-logo" aria-label="Hack23 AB Home">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
+			<ul class="nav-menu" id="nav-menu" aria-label="Navigation menu" aria-hidden="true">
 				<li><a href="why-hack23.html">Why Hack23</a></li>
 				<li><a href="#security-services">Services</a></li>
 				<li><a href="#projects">Projects</a></li>
@@ -1121,7 +1127,7 @@
       </div>
     </header>
 
-	<main>
+	<main id="main-content">
     <!-- Premium Value Proposition Section -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Why Choose Hack23 AB?</h2>
@@ -1755,10 +1761,83 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Get focusable elements for focus trapping
+            const getFocusableElements = function() {
+              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            };
+            
+            // Close menu handler
+            const closeMenu = function() {
+              navMenu.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', 'Open navigation menu');
+              navMenu.setAttribute('aria-hidden', 'true');
+              document.body.style.overflow = '';
+            };
+            
+            // Combined keydown handler for Escape key and focus trapping
+            const keydownHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Escape key closes menu
+                if (e.key === 'Escape') {
+                  closeMenu();
+                  navToggle.focus(); // Return focus to toggle button
+                }
+                
+                // Tab key for focus trapping
+                if (e.key === 'Tab') {
+                  const focusableElements = getFocusableElements();
+                  const firstFocusable = focusableElements[0];
+                  const lastFocusable = focusableElements[focusableElements.length - 1];
+                  
+                  if (e.shiftKey && document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                  }
+                }
+              }
+            };
+            
+            // Click outside handler
+            const clickHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Close if click is on backdrop/padding, or completely outside menu and toggle
+                if (
+                  e.target === navMenu ||
+                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
+                ) {
+                  closeMenu();
+                }
+              }
+            };
+            
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              // Update aria-label dynamically for screen readers
+              this.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+              navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+              
+              // Prevent body scroll when menu is open
+              if (isOpen) {
+                document.body.style.overflow = 'hidden';
+                // Focus first menu item for keyboard users
+                const focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                  focusableElements[0].focus();
+                }
+              } else {
+                document.body.style.overflow = '';
+              }
             });
+            
+            // Add event listeners
+            document.addEventListener('keydown', keydownHandler);
+            document.addEventListener('click', clickHandler);
           }
           
           // Back to top button with throttled scroll handler
@@ -1804,10 +1883,7 @@
                   
                   // Close mobile menu if open
                   if (navMenu && navMenu.classList.contains('open')) {
-                    navMenu.classList.remove('open');
-                    if (navToggle) {
-                      navToggle.setAttribute('aria-expanded', 'false');
-                    }
+                    closeMenu();
                   }
                 }
               }
@@ -1829,17 +1905,75 @@
 		↑
 	</button>
 	
-    <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="sitemap.html" title="Site Map">Site Map</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
-      </p>
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a>
+        </p>
+      </div>
     </footer>
 </body>
 </html>

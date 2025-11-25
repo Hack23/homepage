@@ -4,11 +4,11 @@
   --primary-color: #006633;
   --primary-light: #007744;
   --primary-dark: #004422;
-  --accent-color: #00C853;
+  --accent-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
   --bg-color: #f8f9fa;
   --card-bg: #ffffff;
   --text-color: #1a1a1a;
-  --text-secondary: #4a4a4a; /* Improved contrast ratio for WCAG 2.1 AA compliance (7.5:1) */
+  --text-secondary: #4a4a4a; /* WCAG 2.1 AA: 8.86:1 contrast on white (improved from #555555 at 7.46:1) */
   --header-color: #006633;
   --border-color: rgba(0, 102, 51, 0.15);
   --card-border: #dee2e6;
@@ -20,14 +20,14 @@
   --section-border: #e9ecef;
   --badge-bg: #f8f9fa;
   --confidentiality-color: #7B2CBF;
-  --integrity-color: #00C853;
+  --integrity-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
   --availability-color: #007744;
   --premium-gradient-start: #006633;
   --premium-gradient-end: #007744;
-  --success-color: #00C853;
-  --warning-color: #FF9800;
-  --danger-color: #DC3545;
-  --info-color: #17A2B8;
+  --success-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
+  --warning-color: #B35A00; /* WCAG 2.1 AA: 4.80:1 contrast on white (was #FF9800 at 2.16:1) */
+  --danger-color: #DC3545; /* WCAG 2.1 AA: 4.53:1 contrast on white ✅ */
+  --info-color: #117a8b; /* WCAG 2.1 AA: 5.02:1 contrast on white (was #17A2B8 at 3.04:1) */
   --transparency-color: #0066CC;
   
   /* WCAG 2.1 AA Accessible Colors (white text on colored backgrounds, exceeding 4.5:1 minimum) */
@@ -67,8 +67,8 @@
     --card-shadow: rgba(0, 204, 102, 0.2);
     --link-color: #58a6ff;
     --link-hover: #79b8ff;
-    --button-bg: #2188ff;
-    --button-text: #e0e0e0;
+    --button-bg: #1a6fd9; /* WCAG 2.1 AA: Darkened for better contrast with white text (4.86:1) */
+    --button-text: #ffffff; /* WCAG 2.1 AA: Changed from #e0e0e0 for better contrast (4.86:1 on #1a6fd9) */
     --section-border: #444;
     --badge-bg: #333;
     --confidentiality-color: #bd93f9;
@@ -513,6 +513,108 @@ a:hover {
 }
 
 /* ==================================================
+   KEYBOARD NAVIGATION & FOCUS INDICATORS (WCAG 2.1 AA)
+   ================================================== */
+
+/* Skip to Main Content Link - visible only when focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: 0 0 var(--border-radius) 0;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Universal Focus Indicator - WCAG 2.1 AA compliant (3:1 contrast ratio) */
+*:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Enhanced link focus with background highlight */
+a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+  background-color: rgba(0, 102, 51, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+
+/* Button focus with enhanced visibility and shadow */
+button:focus-visible,
+.btn:focus-visible,
+.btn-primary-large:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+}
+
+/* Form control focus indicators */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+}
+
+/* Checkbox and radio button focus */
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+}
+
+/* Dark mode focus indicators */
+@media (prefers-color-scheme: dark) {
+  .skip-link {
+    color: var(--bg-color);
+  }
+  
+  .skip-link:focus-visible {
+    outline-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(0, 204, 102, 0.5);
+  }
+  
+  *:focus-visible {
+    outline-color: var(--primary-color);
+  }
+  
+  a:focus-visible {
+    background-color: rgba(0, 204, 102, 0.15);
+    outline-color: var(--primary-color);
+  }
+  
+  button:focus-visible,
+  .btn:focus-visible {
+    outline-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(0, 204, 102, 0.3);
+  }
+  
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 204, 102, 0.2);
+  }
+}
+
+/* ==================================================
    STICKY NAVIGATION
    ================================================== */
 
@@ -558,7 +660,7 @@ a:hover {
 }
 
 .nav-logo:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 4px;
   border-radius: var(--border-radius-sm);
 }
@@ -591,9 +693,10 @@ a:hover {
 }
 
 .nav-menu a:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 4px;
   border-radius: var(--border-radius-sm);
+  background-color: rgba(0, 102, 51, 0.1);
 }
 
 .nav-menu .btn-nav {
@@ -612,26 +715,39 @@ a:hover {
 }
 
 .nav-menu .btn-nav:focus-visible {
-  outline: 2px solid var(--primary-light);
+  outline: 3px solid var(--primary-light);
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 119, 68, 0.2);
 }
 
-/* Mobile Menu Toggle Button */
+/* Mobile Menu Toggle Button - WCAG 2.1 AA compliant (44x44px minimum touch target) */
 .nav-toggle {
   display: none;
   flex-direction: column;
   gap: 4px;
   background: transparent;
-  border: none;
+  border: 2px solid var(--primary-color);
   cursor: pointer;
-  padding: 0.5rem;
+  /* WCAG 2.1 AA: Minimum 44x44px touch target */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-sm);
   z-index: 1001;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(0, 102, 51, 0.05);
+  border-color: var(--primary-light);
 }
 
 .nav-toggle span {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 24px;
+  height: 2px;
   background: var(--primary-color);
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -642,12 +758,12 @@ a:hover {
 }
 
 .nav-toggle:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 4px;
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
   border-radius: var(--border-radius-sm);
 }
 
-/* Mobile Menu Toggle Animation */
+/* Mobile Menu Toggle Animation - Transform to X when open */
 .nav-toggle[aria-expanded="true"] span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -687,8 +803,9 @@ a:hover {
 }
 
 .back-to-top:focus-visible {
-  outline: 2px solid var(--primary-light);
+  outline: 3px solid var(--primary-light);
   outline-offset: 4px;
+  box-shadow: 0 0 0 4px rgba(0, 119, 68, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -713,31 +830,78 @@ a:hover {
     display: flex;
   }
   
+  /* Mobile navigation menu - slides in from right */
   .nav-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--card-bg);
+    box-shadow: -2px 0 12px var(--card-shadow);
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    transition: right 0.3s ease;
+    z-index: 1002; /* Above sticky-nav (1000) and nav-toggle (1001) */
+    overflow-y: auto;
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--bg-color);
-    border-bottom: 2px solid var(--primary-color);
-    box-shadow: 0 4px 12px var(--card-shadow);
-    padding: 1rem;
     gap: 0;
   }
   
+  /* Show menu when open */
   .nav-menu.open {
-    display: flex;
+    right: 0;
+  }
+  
+  /* Backdrop overlay when menu is open */
+  .nav-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .nav-menu.open::before {
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .nav-menu li {
     width: 100%;
+    margin-bottom: var(--spacing-md);
   }
   
+  /* WCAG 2.1 AA: Minimum 44x44px touch targets for all links */
   .nav-menu a {
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    font-size: 1.125rem;
+    /* Ensure minimum 44px height for touch targets */
+    min-height: 44px;
     border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .nav-menu a:hover {
+    background-color: rgba(0, 102, 51, 0.05);
+  }
+  
+  .nav-menu a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: -3px;
+  }
+  
+  .nav-menu li:last-child {
+    margin-bottom: 0;
   }
   
   .nav-menu li:last-child a {
@@ -745,16 +909,20 @@ a:hover {
   }
   
   .nav-menu .btn-nav {
-    margin-top: 0.5rem;
+    margin-top: var(--spacing-md);
     text-align: center;
+    justify-content: center;
     border-bottom: none;
+    /* Ensure proper touch target */
+    min-height: 48px;
   }
   
   .back-to-top {
     bottom: 1rem;
     right: 1rem;
-    width: 45px;
-    height: 45px;
+    /* Ensure WCAG 2.1 AA touch target (44x44px minimum) */
+    width: 48px;
+    height: 48px;
     font-size: 1.25rem;
   }
 }
@@ -763,8 +931,15 @@ a:hover {
 @media (max-width: 768px) and (prefers-color-scheme: dark) {
   .nav-menu {
     background: rgba(0, 26, 26, 0.98);
-    border-bottom: 2px solid var(--primary-color);
-    box-shadow: 0 4px 12px rgba(0, 204, 102, 0.2);
+    box-shadow: -2px 0 12px rgba(0, 204, 102, 0.2);
+  }
+  
+  .nav-toggle {
+    border-color: var(--primary-color);
+  }
+  
+  .nav-toggle:hover {
+    background: rgba(0, 204, 102, 0.1);
   }
 }
   }
@@ -1015,9 +1190,10 @@ header {
 }
 
 .card a:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 2px;
   border-radius: 4px;
+  background-color: rgba(0, 102, 51, 0.1);
 }
 
 .card ul {
@@ -1548,19 +1724,144 @@ table[role="presentation"] p {
   }
 }
 
-/* Footer */
+/* Footer - Enhanced Structure with Navigation */
 footer {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--section-border);
-  text-align: center;
+  background-color: var(--card-bg);
+  border-top: 2px solid var(--primary-color);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
   color: var(--text-secondary);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-2xl);
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Ensure 5-column layout on larger screens */
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.footer-column h2,
+.footer-column h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+
+.footer-column h2 {
+  font-size: 1.25rem;
+}
+
+.footer-column p {
+  margin: var(--spacing-sm) 0;
+  line-height: 1.6;
   font-size: 0.9rem;
 }
 
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-column a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-column a:hover {
+  color: var(--primary-color);
+  transform: translateX(3px);
+}
+
+.footer-column a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.footer-bottom p {
+  margin: var(--spacing-sm) 0;
+  line-height: 1.6;
+}
+
+.footer-bottom a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.footer-bottom a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Dark mode footer adjustments */
 @media (prefers-color-scheme: dark) {
-  footer {
+  .footer-column h2,
+  .footer-column h3 {
+    color: var(--primary-light);
+  }
+  
+  .footer-column a:hover {
+    color: var(--primary-light);
+  }
+  
+  .footer-bottom {
     border-top: 1px solid rgba(0, 204, 102, 0.3);
+  }
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 767px) {
+  footer {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .footer-column h2,
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+  
+  .footer-bottom {
+    font-size: 0.8rem;
   }
 }
 
@@ -2445,9 +2746,10 @@ footer {
 
 /* Focus state for keyboard navigation (WCAG 2.1 AA) */
 .breadcrumb-item a:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 2px;
   background-color: rgba(0, 102, 51, 0.1);
+  border-radius: var(--border-radius-sm);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2572,8 +2874,9 @@ footer {
 }
 
 .faq-control-btn:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
 }
 
 /* FAQ Item - Native Details/Summary */
@@ -2706,9 +3009,10 @@ footer {
 }
 
 .faq-answer a:focus-visible {
-  outline: 2px solid var(--primary-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 2px;
   border-radius: var(--border-radius-sm);
+  background-color: rgba(0, 102, 51, 0.1);
 }
 
 /* Reduced Motion Support - Accessibility */
@@ -3463,12 +3767,13 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-.form-group input[type="email"]:focus,
-.form-group input[type="text"]:focus,
-.form-group select:focus {
-  outline: none;
+.form-group input[type="email"]:focus-visible,
+.form-group input[type="text"]:focus-visible,
+.form-group select:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(0, 102, 51, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.15);
 }
 
 .checkbox-group {

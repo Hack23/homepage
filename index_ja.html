@@ -11,10 +11,10 @@
 		:root {
 			--primary-color: #006633;
 			--primary-light: #007744;
-			--accent-color: #00C853;
+			--accent-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
 			--bg-color: #f8f9fa;
 			--text-color: #1a1a1a;
-			--text-secondary: #555555;
+			--text-secondary: #4a4a4a; /* WCAG 2.1 AA: 8.86:1 contrast on white (improved from #555555 at 7.46:1) */
 			--button-bg: #007744;
 			--button-text: #fff;
 			--spacing-md: 1rem;
@@ -158,6 +158,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
+	
+	<!-- Preload LCP hero image for faster above-the-fold rendering -->
+	<link rel="preload" href="cia-icon-140.webp" as="image" type="image/webp" fetchpriority="high">
 	
 	<!-- Defer non-critical CSS -->
 	<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -937,6 +940,9 @@
 	</script>
 </head>	
 <body>
+	<!-- キーボードナビゲーション用のメインコンテンツへのスキップリンク -->
+	<a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+	
 	<!-- Sticky Navigation Bar -->
 	<nav class="sticky-nav" role="navigation" aria-label="Main navigation">
 		<div class="nav-container">
@@ -1121,7 +1127,7 @@
       </div>
     </header>
 
-	<main>
+	<main id="main-content">
     <!-- Premium Value Proposition Section -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Why Choose Hack23 AB?</h2>

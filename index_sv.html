@@ -11,10 +11,10 @@
 		:root {
 			--primary-color: #006633;
 			--primary-light: #007744;
-			--accent-color: #00C853;
+			--accent-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
 			--bg-color: #f8f9fa;
 			--text-color: #1a1a1a;
-			--text-secondary: #555555;
+			--text-secondary: #4a4a4a; /* WCAG 2.1 AA: 8.86:1 contrast on white (improved from #555555 at 7.46:1) */
 			--button-bg: #007744;
 			--button-text: #fff;
 			--spacing-md: 1rem;
@@ -152,6 +152,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
+	
+	<!-- Preload LCP hero image for faster above-the-fold rendering -->
+	<link rel="preload" href="cia-icon-140.webp" as="image" type="image/webp" fetchpriority="high">
 	
 	<!-- Preload critical font (Inter 400) -->
 	
@@ -690,18 +693,21 @@
 	</script>
 </head>
 <body>
+	<!-- Hoppa till huvudinnehåll länk för tangentbordsnavigering -->
+	<a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
+	
 	<!-- Sticky Navigation Bar -->
 	<nav class="sticky-nav" role="navigation" aria-label="Huvudnavigering">
 		<div class="nav-container">
 			<a href="index_sv.html" class="nav-logo" aria-label="Hack23 AB Hem">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Växla navigeringsmeny" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Öppna navigeringsmeny" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
+			<ul class="nav-menu" id="nav-menu" aria-label="Navigeringsmeny" aria-hidden="true">
 				<li><a href="#value-proposition">Varför Hack23</a></li>
 				<li><a href="#security-services">Tjänster</a></li>
 				<li><a href="#projects">Projekt</a></li>
@@ -874,7 +880,7 @@
       </div>
     </header>
 
-	<main>
+	<main id="main-content">
     <!-- Premium Värdeförslag Sektion -->
     <section id="value-proposition" aria-labelledby="value-prop-heading">
       <h2 id="value-prop-heading">🌟 Varför Välja Hack23 AB?</h2>
@@ -1693,10 +1699,83 @@
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
+            // Get focusable elements for focus trapping
+            const getFocusableElements = function() {
+              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            };
+            
+            // Close menu handler
+            const closeMenu = function() {
+              navMenu.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', 'Öppna navigeringsmeny');
+              navMenu.setAttribute('aria-hidden', 'true');
+              document.body.style.overflow = '';
+            };
+            
+            // Combined keydown handler for Escape key and focus trapping
+            const keydownHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Escape key closes menu
+                if (e.key === 'Escape') {
+                  closeMenu();
+                  navToggle.focus(); // Return focus to toggle button
+                }
+                
+                // Tab key for focus trapping
+                if (e.key === 'Tab') {
+                  const focusableElements = getFocusableElements();
+                  const firstFocusable = focusableElements[0];
+                  const lastFocusable = focusableElements[focusableElements.length - 1];
+                  
+                  if (e.shiftKey && document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                  }
+                }
+              }
+            };
+            
+            // Click outside handler
+            const clickHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Close if click is on backdrop/padding, or completely outside menu and toggle
+                if (
+                  e.target === navMenu ||
+                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
+                ) {
+                  closeMenu();
+                }
+              }
+            };
+            
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              // Update aria-label dynamically for screen readers
+              this.setAttribute('aria-label', isOpen ? 'Stäng navigeringsmeny' : 'Öppna navigeringsmeny');
+              navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+              
+              // Prevent body scroll when menu is open
+              if (isOpen) {
+                document.body.style.overflow = 'hidden';
+                // Focus first menu item for keyboard users
+                const focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                  focusableElements[0].focus();
+                }
+              } else {
+                document.body.style.overflow = '';
+              }
             });
+            
+            // Add event listeners
+            document.addEventListener('keydown', keydownHandler);
+            document.addEventListener('click', clickHandler);
           }
           
           // Back to top button with throttled scroll handler
@@ -1742,10 +1821,7 @@
                   
                   // Close mobile menu if open
                   if (navMenu && navMenu.classList.contains('open')) {
-                    navMenu.classList.remove('open');
-                    if (navToggle) {
-                      navToggle.setAttribute('aria-expanded', 'false');
-                    }
+                    closeMenu();
                   }
                 }
               }
@@ -1767,17 +1843,75 @@
 		↑
 	</button>
     
-        <footer>
-      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="sitemap_sv.html" title="Webbplatskarta">Webbplatskarta</a> |
-        <a href="https://hack23.com/index.html" lang="en">English version</a>
-      </p>
+        <footer role="contentinfo" aria-label="Webbplatsfot">
+      <div class="footer-container">
+        
+        <!-- Företagsinformation -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulting<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Tjänster -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsulting</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Produkter -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resurser -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian-blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Öppen ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Företag -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a>
+        </p>
+      </div>
     </footer>	
 </body>
 </html>
