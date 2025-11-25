@@ -43,7 +43,7 @@
   --border-radius-sm: 4px;
   --border-radius-lg: 12px;
   
-  /* Typography Scale (1.25 modular scale) */
+  /* Typography Scale (mixed ratios for visual balance) */
   --font-size-base: 1rem; /* 16px */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-lg: 1.125rem; /* 18px */
@@ -53,7 +53,7 @@
   --font-size-4xl: 2.25rem; /* 36px */
   --font-size-5xl: 3rem; /* 48px */
   
-  /* Heading Sizes (1.25 modular scale) */
+  /* Heading Sizes (approximately 1.25 ratio, optimized for readability) */
   --h1-size: 2.5rem; /* 40px */
   --h2-size: 2rem; /* 32px */
   --h3-size: 1.625rem; /* 26px */
@@ -499,7 +499,6 @@ h6 {
   color: var(--header-color);
   font-family: var(--font-accent);
   line-height: var(--line-height-tight);
-  margin-top: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -516,6 +515,7 @@ h6 {
 h1 {
   font-size: var(--h1-size);
   font-weight: 600;
+  margin-top: 0;
   margin-bottom: var(--spacing-xl);
   letter-spacing: -0.02em; /* Tighter tracking for large text */
 }
@@ -562,20 +562,7 @@ h6 {
 
 /* Body Text with Optimal Readability */
 p {
-  line-height: var(--line-height-relaxed); /* 1.75 for better readability */
   margin-bottom: var(--spacing-md);
-}
-
-/* Lists with Better Spacing */
-ul,
-ol {
-  margin-bottom: var(--spacing-xl);
-  padding-left: var(--spacing-xl);
-}
-
-li {
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--spacing-sm);
 }
 
 a {
@@ -1578,7 +1565,6 @@ ul li a {
 
 /* Section Styling - Premium with Enhanced Spacing & Visual Grouping */
 section {
-  margin-bottom: var(--spacing-4xl); /* 96px between major sections */
   padding: var(--spacing-2xl) var(--spacing-xl);
   background: rgba(255, 255, 255, 0.5);
   border-radius: var(--border-radius-lg);
@@ -1590,7 +1576,7 @@ section {
 section:not(:first-of-type) {
   border-top: 1px solid var(--section-border);
   padding-top: var(--spacing-3xl);
-  margin-top: var(--spacing-3xl);
+  margin-top: var(--spacing-4xl); /* 96px between major sections */
 }
 
 section:hover {
