@@ -100,7 +100,7 @@ The website now uses a comprehensive, SEO-optimized footer with improved navigat
 - **Language Links**: Clear language switching in footer bottom
 
 ### Responsive Design
-- **Desktop (768px+)**: 5-column grid layout
+- **Desktop (1024px+)**: 5-column grid layout
 - **Mobile (<768px)**: Single column stacked layout
 - **Touch-Friendly**: Adequate spacing for mobile interaction
 
@@ -115,10 +115,15 @@ The footer uses the following CSS classes (defined in `styles.css`):
 ### Responsive Behavior
 
 ```css
-/* Desktop: 5-column grid */
-@media (min-width: 768px) {
+/* Base: Flexible grid */
+.footer-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Desktop: Fixed 5-column grid */
+@media (min-width: 1024px) {
   .footer-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
