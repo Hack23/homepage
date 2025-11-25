@@ -443,7 +443,7 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.7;
+  line-height: 1.75; /* Improved from 1.7 for optimal readability */
   color: var(--text-color);
   background-color: var(--bg-color);
   max-width: 1200px;
@@ -452,6 +452,7 @@ body {
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
+  font-weight: 400; /* Explicit regular weight for body text */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -514,34 +515,39 @@ h6 {
 
 h1 {
   font-size: var(--h1-size);
-  font-weight: 600;
+  font-weight: 600; /* Semi-bold for primary headings */
   margin-top: 0;
   margin-bottom: var(--spacing-xl);
   letter-spacing: -0.02em; /* Tighter tracking for large text */
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h2 {
   font-size: var(--h2-size);
-  font-weight: 600;
+  font-weight: 600; /* Semi-bold for secondary headings */
   margin-bottom: var(--spacing-lg);
   margin-top: var(--spacing-3xl); /* Clear section separation */
   padding-bottom: var(--spacing-md);
   border-bottom: 2px solid var(--section-border);
+  letter-spacing: -0.02em; /* Tighter tracking for large text */
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h3 {
   font-size: var(--h3-size);
-  font-weight: 500;
+  font-weight: 500; /* Medium weight for tertiary headings */
   margin-bottom: var(--spacing-md);
   margin-top: var(--spacing-2xl);
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h4 {
   font-size: var(--h4-size);
-  font-weight: 500;
+  font-weight: 500; /* Medium weight for quaternary headings */
   color: var(--text-color);
   margin-bottom: var(--spacing-md);
   margin-top: var(--spacing-xl);
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h5 {
@@ -561,8 +567,15 @@ h6 {
 }
 
 /* Body Text with Optimal Readability */
-p {
-  margin-bottom: var(--spacing-md);
+p, li {
+  margin-bottom: 1.5rem; /* Enhanced paragraph spacing (was var(--spacing-md) = 1rem) */
+  max-width: 70ch; /* Optimal line length for body text readability */
+  line-height: 1.75; /* Optimal readability for body text */
+}
+
+/* Strong emphasis with enhanced font weight */
+strong, b {
+  font-weight: 600; /* Semi-bold for emphasis (improved from default 700) */
 }
 
 a {
@@ -1532,10 +1545,11 @@ ul {
 }
 
 ul li {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1.5rem; /* Enhanced spacing (was var(--spacing-md) = 1rem) */
   position: relative;
   padding-left: var(--spacing-lg);
-  line-height: 1.7;
+  line-height: 1.75; /* Improved from 1.7 for optimal readability */
+  max-width: 70ch; /* Optimal line length for body text readability */
 }
 
 ul li::before {
