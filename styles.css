@@ -1379,12 +1379,6 @@ header {
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
-    /* Reset flexbox properties */
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
   }
   
   .cards > * {
@@ -4160,7 +4154,10 @@ footer {
   font-size: 1rem;
   font-family: var(--font-main);
   transition: border-color 0.3s ease;
-  /* Remove default browser styling - Safari/WebKit compatibility */
+  /* Remove default browser styling for consistent cross-browser appearance
+   * Necessary for Safari/WebKit (rounded corners, shadows on iOS) and
+   * Firefox (dropdown arrows, focus rings). Improves visual consistency
+   * while maintaining accessibility through explicit border/focus styles. */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -5650,7 +5647,10 @@ footer {
   background-color: var(--card-bg);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   line-height: var(--line-height-normal);
-  /* Remove default browser styling - Safari/WebKit compatibility */
+  /* Remove default browser styling for consistent cross-browser appearance
+   * Necessary for Safari/WebKit (rounded corners, shadows on iOS) and
+   * Firefox (dropdown arrows, focus rings). Improves visual consistency
+   * while maintaining accessibility through explicit border/focus styles. */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
