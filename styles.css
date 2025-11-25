@@ -1663,6 +1663,17 @@ header {
   }
 
   /* Scanner animation effect for active cards */
+  /* Scanner animation with vendor prefix for Safari */
+  @-webkit-keyframes scanner {
+    0%,
+    100% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+  }
+  
   @keyframes scanner {
     0%,
     100% {
@@ -1691,6 +1702,7 @@ header {
     );
     pointer-events: none;
     background-size: 300% 300%;
+    -webkit-animation: scanner 3s ease infinite;
     animation: scanner 3s ease infinite;
     z-index: 1;
     border-radius: inherit;
@@ -2155,7 +2167,19 @@ footer {
 /* Responsive adjustments */
 /* Note: Mobile responsive styles consolidated in comprehensive section at end of file */
 
-/* Animation keyframes */
+/* Animation keyframes with vendor prefixes for Safari */
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
@@ -2165,6 +2189,72 @@ footer {
   }
   100% {
     box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0.99;
+  }
+  5% {
+    opacity: 0.96;
+  }
+  10% {
+    opacity: 0.97;
+  }
+  15% {
+    opacity: 0.99;
+  }
+  20% {
+    opacity: 0.94;
+  }
+  25% {
+    opacity: 0.98;
+  }
+  30% {
+    opacity: 0.97;
+  }
+  35% {
+    opacity: 0.99;
+  }
+  40% {
+    opacity: 0.98;
+  }
+  45% {
+    opacity: 0.97;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  55% {
+    opacity: 0.98;
+  }
+  60% {
+    opacity: 0.97;
+  }
+  65% {
+    opacity: 0.99;
+  }
+  70% {
+    opacity: 0.96;
+  }
+  75% {
+    opacity: 0.99;
+  }
+  80% {
+    opacity: 0.98;
+  }
+  85% {
+    opacity: 0.99;
+  }
+  90% {
+    opacity: 0.96;
+  }
+  95% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -2236,10 +2326,12 @@ footer {
 
 @media (prefers-color-scheme: dark) {
   .logo {
+    -webkit-animation: pulse 4s infinite;
     animation: pulse 4s infinite;
   }
 
   main {
+    -webkit-animation: flicker 10s infinite;
     animation: flicker 10s infinite;
   }
 }
@@ -3247,13 +3339,28 @@ footer {
   padding: 0 var(--spacing-lg) var(--spacing-lg);
 }
 
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -3321,6 +3428,7 @@ footer {
 /* Respect user motion preferences for fade-in animation */
 @media (prefers-reduced-motion: no-preference) {
   .faq-answer {
+    -webkit-animation: fadeIn 0.3s ease-in;
     animation: fadeIn 0.3s ease-in;
   }
 }
