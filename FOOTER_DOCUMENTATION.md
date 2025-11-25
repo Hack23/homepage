@@ -31,10 +31,10 @@ The website now uses a comprehensive, SEO-optimized footer with improved navigat
       <h3>Services</h3>
       <ul>
         <li><a href="services.html">Security Consulting</a></li>
-        <li><a href="services.html#service-security-architecture">Security Architecture</a></li>
-        <li><a href="services.html#service-cloud-security">Cloud Security</a></li>
-        <li><a href="services.html#service-secure-development">DevSecOps Integration</a></li>
-        <li><a href="services.html#service-compliance">Compliance & ISMS</a></li>
+        <li><a href="services.html">Security Architecture</a></li>
+        <li><a href="services.html">Cloud Security</a></li>
+        <li><a href="services.html">DevSecOps Integration</a></li>
+        <li><a href="services.html">Compliance & ISMS</a></li>
       </ul>
     </div>
     
