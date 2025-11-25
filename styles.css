@@ -1741,6 +1741,13 @@ footer {
   margin: 0 auto var(--spacing-2xl);
 }
 
+/* Ensure 5-column layout on larger screens */
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 .footer-column h2,
 .footer-column h3 {
   font-size: 1.125rem;
