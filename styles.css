@@ -4,11 +4,11 @@
   --primary-color: #006633;
   --primary-light: #007744;
   --primary-dark: #004422;
-  --accent-color: #00C853;
+  --accent-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
   --bg-color: #f8f9fa;
   --card-bg: #ffffff;
   --text-color: #1a1a1a;
-  --text-secondary: #4a4a4a; /* Improved contrast ratio for WCAG 2.1 AA compliance (7.5:1) */
+  --text-secondary: #4a4a4a; /* WCAG 2.1 AA: 8.86:1 contrast on white (improved from #555555 at 7.46:1) */
   --header-color: #006633;
   --border-color: rgba(0, 102, 51, 0.15);
   --card-border: #dee2e6;
@@ -20,14 +20,14 @@
   --section-border: #e9ecef;
   --badge-bg: #f8f9fa;
   --confidentiality-color: #7B2CBF;
-  --integrity-color: #00C853;
+  --integrity-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
   --availability-color: #007744;
   --premium-gradient-start: #006633;
   --premium-gradient-end: #007744;
-  --success-color: #00C853;
-  --warning-color: #FF9800;
-  --danger-color: #DC3545;
-  --info-color: #17A2B8;
+  --success-color: #008838; /* WCAG 2.1 AA: 4.59:1 contrast on white (was #00C853 at 2.24:1) */
+  --warning-color: #B35A00; /* WCAG 2.1 AA: 4.80:1 contrast on white (was #FF9800 at 2.16:1) */
+  --danger-color: #DC3545; /* WCAG 2.1 AA: 4.53:1 contrast on white ✅ */
+  --info-color: #117a8b; /* WCAG 2.1 AA: 5.02:1 contrast on white (was #17A2B8 at 3.04:1) */
   --transparency-color: #0066CC;
   
   /* WCAG 2.1 AA Accessible Colors (white text on colored backgrounds, exceeding 4.5:1 minimum) */
@@ -67,8 +67,8 @@
     --card-shadow: rgba(0, 204, 102, 0.2);
     --link-color: #58a6ff;
     --link-hover: #79b8ff;
-    --button-bg: #2188ff;
-    --button-text: #e0e0e0;
+    --button-bg: #1a6fd9; /* WCAG 2.1 AA: Darkened for better contrast with white text (4.86:1) */
+    --button-text: #ffffff; /* WCAG 2.1 AA: Changed from #e0e0e0 for better contrast (4.86:1 on #1a6fd9) */
     --section-border: #444;
     --badge-bg: #333;
     --confidentiality-color: #bd93f9;
