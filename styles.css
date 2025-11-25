@@ -490,6 +490,33 @@ body {
   }
 }
 
+/* ==================================================
+   IMAGE OPTIMIZATION & LAZY LOADING
+   Comprehensive image handling for performance and CLS prevention
+   ================================================== */
+
+/* Base image styles - Responsive and CLS prevention */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Modern aspect-ratio support for CLS prevention */
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Picture element support */
+picture {
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
 /* Typography - Premium Hierarchy */
 h1,
 h2,
@@ -1255,11 +1282,17 @@ header {
   line-height: 1.6;
 }
 
-.card img {
+.card img,
+.card picture img {
   border-radius: 10px;
   margin-bottom: 1rem;
   max-width: 100%;
   height: auto;
+}
+
+.card picture {
+  display: block;
+  margin-bottom: 0;
 }
 
 .card a {
