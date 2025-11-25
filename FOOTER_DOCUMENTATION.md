@@ -156,7 +156,7 @@ The footer uses the following CSS classes (defined in `styles.css`):
 - LinkedIn links (company and CEO)
 
 ### Column 2: Services
-Links to main services page and specific service sections:
+Links to main services page:
 - Security Consulting
 - Security Architecture
 - Cloud Security
