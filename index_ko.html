@@ -1366,6 +1366,12 @@
             <strong>✅ 메시지가 전송되었습니다!</strong>
             <p>문의해 주셔서 감사합니다. 1-2 영업일 내에 답변해 드리겠습니다.</p>
           </div>
+          
+          <!-- 양식 오류 메시지 (기본적으로 숨김) -->
+          <div id="form-error-message-ko" class="error-message-box" role="alert" style="display: none;">
+            <strong>⚠️ 제출 오류</strong>
+            <p>양식을 제출하는 동안 오류가 발생했습니다. 다시 시도하거나 <a href="mailto:info@hack23.com">info@hack23.com</a>으로 직접 문의해 주세요.</p>
+          </div>
         </form>
         
         <!-- 대체 연락 방법 -->
@@ -1714,6 +1720,7 @@
           const subjectInput = document.getElementById('contact-subject-ko');
           const messageInput = document.getElementById('contact-message-ko');
           const successMessage = document.getElementById('form-success-message-ko');
+          const errorMessage = document.getElementById('form-error-message-ko');
           
           function validateName() {
             const value = nameInput.value.trim();
@@ -1851,6 +1858,7 @@
                   successMessage.style.display = 'block';
                   successMessage.focus();
                   contactForm.reset();
+                  errorMessage.style.display = 'none';
                   successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   
                   setTimeout(function() {
@@ -1861,7 +1869,9 @@
                 }
               })
               .catch(function(error) {
-                alert('양식을 제출하는 동안 오류가 발생했습니다. 다시 시도하거나 info@hack23.com으로 직접 문의해 주세요');
+                errorMessage.style.display = 'block';
+                errorMessage.focus();
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 console.error('양식 제출 오류:', error);
               });
             } else {

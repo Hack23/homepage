@@ -1699,6 +1699,12 @@
             <strong>✅ Meddelandet har skickats!</strong>
             <p>Tack för att du kontaktade oss. Vi återkommer inom 1-2 arbetsdagar.</p>
           </div>
+          
+          <!-- Felmeddelande för formulär (dolt som standard) -->
+          <div id="form-error-message-sv" class="error-message-box" role="alert" style="display: none;">
+            <strong>⚠️ Sändningsfel</strong>
+            <p>Tyvärr uppstod ett fel när formuläret skickades. Försök igen eller kontakta oss direkt på <a href="mailto:info@hack23.com">info@hack23.com</a>.</p>
+          </div>
         </form>
         
         <!-- Alternativa kontaktmetoder -->
@@ -2047,6 +2053,7 @@
           const subjectInput = document.getElementById('contact-subject-sv');
           const messageInput = document.getElementById('contact-message-sv');
           const successMessage = document.getElementById('form-success-message-sv');
+          const errorMessage = document.getElementById('form-error-message-sv');
           
           function validateName() {
             const value = nameInput.value.trim();
@@ -2184,6 +2191,7 @@
                   successMessage.style.display = 'block';
                   successMessage.focus();
                   contactForm.reset();
+                  errorMessage.style.display = 'none';
                   successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   
                   setTimeout(function() {
@@ -2194,7 +2202,9 @@
                 }
               })
               .catch(function(error) {
-                alert('Tyvärr uppstod ett fel när formuläret skickades. Försök igen eller kontakta oss direkt på info@hack23.com');
+                errorMessage.style.display = 'block';
+                errorMessage.focus();
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 console.error('Formulärsändningsfel:', error);
               });
             } else {

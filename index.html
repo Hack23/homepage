@@ -1762,6 +1762,12 @@
             <strong>✅ Message sent successfully!</strong>
             <p>Thank you for contacting us. We'll get back to you within 1-2 business days.</p>
           </div>
+          
+          <!-- Form Error Message (hidden by default) -->
+          <div id="form-error-message" class="error-message-box" role="alert" style="display: none;">
+            <strong>⚠️ Submission Error</strong>
+            <p>Sorry, there was an error submitting the form. Please try again or contact us directly at <a href="mailto:info@hack23.com">info@hack23.com</a>.</p>
+          </div>
         </form>
         
         <!-- Alternative Contact Methods -->
@@ -2111,6 +2117,7 @@
           const subjectInput = document.getElementById('contact-subject');
           const messageInput = document.getElementById('contact-message');
           const successMessage = document.getElementById('form-success-message');
+          const errorMessage = document.getElementById('form-error-message');
           
           // Validation functions
           function validateName() {
@@ -2258,6 +2265,9 @@
                   // Reset form
                   contactForm.reset();
                   
+                  // Hide error message if visible
+                  errorMessage.style.display = 'none';
+                  
                   // Scroll to success message
                   successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   
@@ -2270,7 +2280,10 @@
                 }
               })
               .catch(function(error) {
-                alert('Sorry, there was an error submitting the form. Please try again or contact us directly at info@hack23.com');
+                // Show error message in accessible way
+                errorMessage.style.display = 'block';
+                errorMessage.focus();
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 console.error('Form submission error:', error);
               });
             } else {
