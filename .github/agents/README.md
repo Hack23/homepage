@@ -16,6 +16,164 @@ Each agent profile is a Markdown file with YAML frontmatter that specifies:
 
 The YAML frontmatter is followed by the agent's instructions in Markdown format, which define behavior, expertise, and guidelines.
 
+## 📋 Agent Configuration & Environment
+
+All agents are configured to read these key files at the start of every session to understand their environment:
+
+### Configuration Files
+
+```mermaid
+graph TB
+    subgraph "Agent Configuration Sources"
+        Setup[📝 copilot-setup-steps.yml<br/>Workflow & Environment]:::config
+        MCP[🔧 copilot-mcp.json<br/>MCP Servers & Tools]:::config
+        Context[📖 README.md<br/>Project Context]:::config
+    end
+    
+    subgraph "Configuration Content"
+        Setup --> Env[Environment Variables<br/>Permissions<br/>Prerequisites]:::content
+        MCP --> Tools[GitHub MCP<br/>Filesystem<br/>Git<br/>Memory<br/>Sequential Thinking<br/>Playwright<br/>Brave Search]:::content
+        Context --> Info[Company Background<br/>Technology Stack<br/>Security Posture<br/>Project Classifications]:::content
+    end
+    
+    subgraph "Agent Understanding"
+        Env --> Agent[🤖 Agent Context]:::agent
+        Tools --> Agent
+        Info --> Agent
+    end
+    
+    classDef config fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+    classDef content fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+    classDef agent fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
+```
+
+#### 1. `.github/workflows/copilot-setup-steps.yml`
+- **Environment Variables**: `GITHUB_TOKEN`, `GITHUB_PERSONAL_ACCESS_TOKEN`
+- **Permissions**: Full list of GitHub permissions (contents, actions, attestations, checks, deployments, issues, models, discussions, pages, pull-requests, security-events, statuses)
+- **Setup Steps**: Checkout action and any prerequisites
+- **Automation Context**: How the workflow executes
+
+#### 2. `.github/copilot-mcp.json`
+- **MCP Server Configurations**: 
+  - `github` - Repository access and operations
+  - `filesystem` - File system operations in workspace
+  - `git` - Git operations and history
+  - `memory` - Conversation context preservation
+  - `sequential-thinking` - Complex reasoning support
+  - `playwright` - Browser automation for testing
+  - `brave-search` - Web search capabilities (optional)
+- **Tool Capabilities**: What each MCP server provides
+- **Environment Settings**: Token references and configurations
+
+##### MCP Server Architecture
+
+```mermaid
+graph TB
+    subgraph "MCP Server Ecosystem"
+        subgraph "Core Services"
+            GitHub[🐙 GitHub MCP<br/>Repository Operations]:::core
+            FS[📁 Filesystem MCP<br/>File Operations]:::core
+            Git[🔀 Git MCP<br/>Version Control]:::core
+        end
+        
+        subgraph "Intelligence Services"
+            Memory[🧠 Memory MCP<br/>Context Preservation]:::intel
+            Think[💭 Sequential Thinking<br/>Complex Reasoning]:::intel
+        end
+        
+        subgraph "Automation Services"
+            Play[🎭 Playwright MCP<br/>Browser Automation]:::auto
+            Search[🔍 Brave Search MCP<br/>Web Research]:::auto
+        end
+    end
+    
+    Agent[🤖 Copilot Agent]:::agent
+    
+    Agent --> GitHub
+    Agent --> FS
+    Agent --> Git
+    Agent --> Memory
+    Agent --> Think
+    Agent --> Play
+    Agent --> Search
+    
+    GitHub -.->|Secrets| Token[🔐 GITHUB_TOKEN]:::secret
+    Search -.->|Optional| API[🔑 BRAVE_API_KEY]:::secret
+    
+    classDef core fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+    classDef intel fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+    classDef auto fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+    classDef agent fill:#4CAF50,stroke:#4CAF50,stroke-width:3px,color:#fff
+    classDef secret fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
+```
+
+**MCP Server Purposes:**
+- **🐙 GitHub**: Repository access, issue/PR management, workflow operations
+- **📁 Filesystem**: Read/write files in workspace, directory navigation
+- **🔀 Git**: Version control operations, commit history, branch management
+- **🧠 Memory**: Maintain conversation context across agent sessions
+- **💭 Sequential Thinking**: Break down complex problems into reasoning steps
+- **🎭 Playwright**: Browser automation for UI testing and screenshots
+- **🔍 Brave Search**: Web search for research and context (optional, requires API key)
+
+#### 3. `README.md` (Repository Root)
+- **Company Context**: Hack23 AB background and values
+- **Project Overview**: Homepage structure and purpose
+- **Technology Stack**: HTML5/CSS3, AWS S3/CloudFront, GitHub Actions
+- **Security Framework**: ISMS alignment, classification, threat model
+- **Quality Standards**: Testing, validation, accessibility requirements
+
+### Why This Matters
+
+By reading these files first, agents:
+- ✅ Understand available tools and capabilities
+- ✅ Know the security and permission context
+- ✅ Grasp project goals and constraints
+- ✅ Align work with Hack23 values and standards
+- ✅ Make informed decisions based on complete context
+
+### Workflow Permissions Structure
+
+The `copilot-setup-steps.yml` workflow defines comprehensive GitHub permissions following the principle of least privilege:
+
+```mermaid
+graph TB
+    subgraph "GitHub Workflow Permissions"
+        subgraph "Read Permissions"
+            R1[📖 contents: read]:::read
+            R2[🔄 actions: read]:::read
+            R3[✓ attestations: read]:::read
+            R4[✅ checks: read]:::read
+            R5[🚀 deployments: read]:::read
+            R6[🎯 models: read]:::read
+            R7[💬 discussions: read]:::read
+            R8[📄 pages: read]:::read
+            R9[🔒 security-events: read]:::read
+            R10[📊 statuses: read]:::read
+        end
+        
+        subgraph "Write Permissions"
+            W1[📝 issues: write]:::write
+            W2[🔀 pull-requests: write]:::write
+        end
+    end
+    
+    Workflow[⚙️ Copilot Workflow]:::workflow
+    
+    Workflow --> R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10
+    Workflow --> W1 & W2
+    
+    classDef read fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+    classDef write fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+    classDef workflow fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+```
+
+**Key Characteristics:**
+- **Read-Only Access**: Most permissions are read-only for security
+- **Selective Write Access**: Only issues and pull-requests have write permissions
+- **Copilot Isolation**: Copilot receives its own token for operations
+- **Least Privilege**: Minimal permissions needed for agent functionality
+
 ## 🚀 Enhanced Discordian Agents - Product Vision Specialists
 
 **NEW**: The three Discordian agents have been enhanced to become **full product vision specialists** with psychedelic futurist capabilities!
@@ -912,7 +1070,7 @@ These profiles should be updated when:
 - Regulatory or industry standards evolve
 - New philosophical insights emerge from practice
 
-Last updated: 2025-01-05
+Last updated: 2025-11-26
 
 ---
 
