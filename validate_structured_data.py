@@ -48,7 +48,8 @@ class StructuredDataValidator:
     
     def extract_json_ld(self, html_content: str) -> List[Dict]:
         """Extract all JSON-LD structured data from HTML."""
-        pattern = r'<script\s+type=["\']\s*application/ld\+json\s*["\']>\s*(\{.*?\})\s*</script>'
+        # Use a more robust pattern that captures content between script tags
+        pattern = r'<script\s+type=["\']\s*application/ld\+json\s*["\']>\s*(.*?)\s*</script>'
         matches = re.findall(pattern, html_content, re.DOTALL | re.IGNORECASE)
         
         json_objects = []
@@ -145,7 +146,8 @@ class StructuredDataValidator:
         """Check hreflang implementation for multilingual pages."""
         issues = []
         
-        hreflang_pattern = r'<link\s+rel=["\']alternate["\']\s+hreflang=["\'](.*?)["\']\s+href=["\'](.*?)["\']'
+        # More flexible pattern that matches attributes in any order
+        hreflang_pattern = r'<link\s+[^>]*rel=["\']alternate["\'][^>]*hreflang=["\'](.*?)["\'][^>]*href=["\'](.*?)["\'][^>]*>'
         matches = re.findall(hreflang_pattern, html_content, re.IGNORECASE)
         
         if file_path.name.startswith('index'):
@@ -172,15 +174,17 @@ class StructuredDataValidator:
             else:
                 # Check positions are sequential
                 positions = []
-                for item in items:
+                for i, item in enumerate(items):
                     if 'position' in item:
                         positions.append(item['position'])
                     if 'name' not in item:
                         issues.append("BreadcrumbList item missing 'name'")
-                    if 'item' not in item and item != items[-1]:  # Last item can omit 'item'
+                    # Last item can omit 'item' URL
+                    if 'item' not in item and i != len(items) - 1:
                         issues.append("BreadcrumbList item missing 'item' URL")
                 
-                if positions != list(range(1, len(positions) + 1)):
+                # Check if positions are sequential starting from 1
+                if not all(pos == i for i, pos in enumerate(positions, 1)):
                     issues.append(f"BreadcrumbList positions not sequential: {positions}")
         
         return issues
