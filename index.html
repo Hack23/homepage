@@ -951,12 +951,12 @@
 				<span></span>
 			</button>
 			<ul class="nav-menu" id="nav-menu" aria-label="Navigation menu" aria-hidden="true">
-				<li><a href="why-hack23.html">Why Hack23</a></li>
-				<li><a href="#security-services">Services</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="#faq">FAQ</a></li>
-				<li><a href="#contact" class="btn-nav">Contact</a></li>
+				<li><a href="why-hack23.html" tabindex="-1">Why Hack23</a></li>
+				<li><a href="#security-services" tabindex="-1">Services</a></li>
+				<li><a href="#projects" tabindex="-1">Projects</a></li>
+				<li><a href="blog.html" tabindex="-1">Blog</a></li>
+				<li><a href="#faq" tabindex="-1">FAQ</a></li>
+				<li><a href="#contact" class="btn-nav" tabindex="-1">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -1325,7 +1325,7 @@
             <div class="scanner-effect"></div>
             <h3>Company Leadership &amp; Security Expert</h3>
             <figure>
-              <img src="jamespethersorling150.webp" alt="James Pether Sörling, CEO of Hack23 AB" class="profile-image" loading="lazy">
+              <img src="jamespethersorling150.webp" alt="James Pether Sörling, CEO of Hack23 AB" class="profile-image" loading="lazy" width="150" height="150">
             </figure>
             <p>CEO/Founder of Hack23 AB, James brings over 30 years of information technology experience, specializing in security architecture, cloud security, and compliance. Professional certifications include CISSP, CISM, AWS Security Specialty, and AWS Solutions Architect Professional.</p>
             
@@ -1877,6 +1877,12 @@
               // Update aria-label dynamically for screen readers
               this.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
               navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+              
+              // Update tabindex for links to prevent focus when hidden
+              const menuLinks = navMenu.querySelectorAll('a');
+              menuLinks.forEach(link => {
+                link.setAttribute('tabindex', isOpen ? '0' : '-1');
+              });
               
               // Prevent body scroll when menu is open
               if (isOpen) {
