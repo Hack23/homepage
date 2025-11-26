@@ -1,9 +1,24 @@
 #!/usr/bin/env python3
 """
-Fix Duplicate FAQPage Schemas
+Fix Duplicate FAQPage Schemas - REFERENCE ONLY
+
+⚠️  NOTE: This script was used during the initial fix and is kept for reference only.
+⚠️  It is NOT part of the production codebase and should NOT be run again.
+⚠️  For ongoing validation, use: validate_structured_data.py
 
 This script removes duplicate FAQPage schemas from homepage files.
 It keeps the more comprehensive second FAQPage and removes the first one.
+
+Historical Context:
+- Used to fix duplicate FAQPage issues detected by Google Search Console
+- Fixed all 11 homepage language versions (index.html, index_sv.html, etc.)
+- Ran once on November 26, 2025
+- All fixes have been validated and committed
+
+CodeQL Alert (py/redos):
+- Line 23 contains a regex pattern that could cause exponential backtracking
+- This is acceptable for a one-time reference script
+- If reusing this pattern, consider using a simpler approach or atomic groups
 """
 
 import re
@@ -13,6 +28,8 @@ def fix_duplicate_faqpage(file_path: Path) -> bool:
     """
     Fix duplicate FAQPage in a file.
     Returns True if changes were made.
+    
+    ⚠️  WARNING: This function is for reference only. Do not run without review.
     """
     print(f"\nProcessing {file_path.name}...")
     
