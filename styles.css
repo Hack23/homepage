@@ -1,4 +1,45 @@
 /* Base variables with combined light/dark mode support - Professional Cyberpunk Theme */
+/* ==================================================
+   CROSS-BROWSER COMPATIBILITY NOTES
+   ================================================== */
+/* This CSS file includes vendor prefixes and fallbacks for maximum browser compatibility:
+ * 
+ * 1. Vendor Prefixes:
+ *    - -webkit-* for Safari, Chrome, Edge (Chromium)
+ *    - -moz-* for Firefox (where needed)
+ *    - -ms-* for older Edge and IE11 (deprecated but included for legacy support)
+ * 
+ * 2. Focus-Visible Fallback:
+ *    - Uses @supports to detect :focus-visible support
+ *    - Falls back to :focus for Safari < 15.4
+ * 
+ * 3. Flexbox with Vendor Prefixes:
+ *    - Includes -webkit-box (Safari 6.1+)
+ *    - Includes -webkit-flex (Safari 8+)
+ *    - Includes -ms-flexbox (IE 10)
+ *    - Modern flex syntax for all other browsers
+ * 
+ * 4. Grid with Flexbox Fallback:
+ *    - Flexbox layout as base (universally supported)
+ *    - @supports (display: grid) for modern browsers
+ *    - Ensures content is accessible even without Grid support
+ * 
+ * 5. Appearance Property:
+ *    - -webkit-appearance for Safari/Chrome form controls
+ *    - -moz-appearance for Firefox
+ *    - appearance for standards-compliant browsers
+ * 
+ * 6. Backdrop Filter:
+ *    - -webkit-backdrop-filter for Safari
+ *    - backdrop-filter for other modern browsers
+ * 
+ * Browser Support Priority:
+ * - Chrome/Edge (Chromium): 65% of users - Full support
+ * - Safari (iOS/macOS): 20% of users - Full support with vendor prefixes
+ * - Firefox: 5% of users - Full support
+ * - Other browsers: 10% of users - Graceful degradation
+ */
+
 :root {
   /* Light Mode - Professional Cyberpunk Green */
   --primary-color: #006633;
@@ -42,12 +83,41 @@
   --border-radius: 8px;
   --border-radius-sm: 4px;
   --border-radius-lg: 12px;
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
+  
+  /* Typography Scale (mixed ratios for visual balance) */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+  
+  /* Heading Sizes (approximately 1.25 ratio, optimized for readability) */
+  --h1-size: 2.5rem; /* 40px */
+  --h2-size: 2rem; /* 32px */
+  --h3-size: 1.625rem; /* 26px */
+  --h4-size: 1.25rem; /* 20px */
+  --h5-size: 1.125rem; /* 18px */
+  --h6-size: 1rem; /* 16px */
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* Spacing Scale (consistent rhythm) */
+  --spacing-0: 0;
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+  --spacing-4xl: 6rem; /* 96px */
 }
 
 /* Dark Mode - Ingress Inspired Theme */
@@ -75,6 +145,21 @@
     --integrity-color: #50fa7b;
     --availability-color: #8be9fd;
     --font-accent: "Orbitron", sans-serif;
+  }
+}
+
+/* Responsive Typography (scale down on mobile) */
+@media (max-width: 767px) {
+  :root {
+    --h1-size: 2rem; /* 32px on mobile */
+    --h2-size: 1.625rem; /* 26px on mobile */
+    --h3-size: 1.375rem; /* 22px on mobile */
+    --h4-size: 1.125rem; /* 18px on mobile */
+    --h5-size: 1rem; /* 16px on mobile */
+    --spacing-xl: 1.5rem; /* 24px on mobile */
+    --spacing-2xl: 2rem; /* 32px on mobile */
+    --spacing-3xl: 2.5rem; /* 40px on mobile */
+    --spacing-4xl: 3rem; /* 48px on mobile */
   }
 }
 
@@ -399,7 +484,7 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.7;
+  line-height: 1.75; /* Improved from 1.7 for optimal readability */
   color: var(--text-color);
   background-color: var(--bg-color);
   max-width: 1200px;
@@ -408,6 +493,7 @@ body {
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
+  font-weight: 400; /* Explicit regular weight for body text */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -445,14 +531,38 @@ body {
   }
 }
 
+/* ==================================================
+   IMAGE OPTIMIZATION & LAZY LOADING
+   Comprehensive image handling for performance and CLS prevention
+   ================================================== */
+
+/* Base image styles - Responsive and CLS prevention */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Picture element support */
+picture {
+  display: block;
+}
+
+picture img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Typography - Premium Hierarchy */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   color: var(--header-color);
   font-family: var(--font-accent);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  line-height: var(--line-height-tight);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -467,32 +577,68 @@ h3 {
 }
 
 h1 {
+  font-size: var(--h1-size);
+  font-weight: 600; /* Semi-bold for primary headings */
   margin-top: 0;
-  font-size: 2.5rem;
-  line-height: 1.2;
+  margin-bottom: var(--spacing-xl);
+  letter-spacing: -0.02em; /* Tighter tracking for large text */
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h2 {
-  margin-top: var(--spacing-2xl);
+  font-size: var(--h2-size);
+  font-weight: 600; /* Semi-bold for secondary headings */
   margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-3xl); /* Clear section separation */
   padding-bottom: var(--spacing-md);
   border-bottom: 2px solid var(--section-border);
-  font-size: 2rem;
-  line-height: 1.3;
+  letter-spacing: -0.02em; /* Tighter tracking for large text */
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--h3-size);
+  font-weight: 500; /* Medium weight for tertiary headings */
   margin-bottom: var(--spacing-md);
-  line-height: 1.4;
+  margin-top: var(--spacing-2xl);
+  max-width: 40ch; /* Optimal line length for headings */
 }
 
 h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--h4-size);
+  font-weight: 500; /* Medium weight for quaternary headings */
   color: var(--text-color);
-  margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  max-width: 40ch; /* Optimal line length for headings */
+}
+
+h5 {
+  font-size: var(--h5-size);
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+h6 {
+  font-size: var(--h6-size);
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+/* Body Text with Optimal Readability */
+p {
+  margin-bottom: var(--spacing-lg); /* Enhanced paragraph spacing (was var(--spacing-md) = 1rem) */
+  max-width: 70ch; /* Optimal line length for body text readability */
+  line-height: 1.75; /* Optimal readability for body text */
+}
+
+/* Strong emphasis with enhanced font weight */
+strong, b {
+  font-weight: 600; /* Semi-bold for subtle emphasis (lighter than default 700) */
 }
 
 a {
@@ -514,6 +660,7 @@ a:hover {
 
 /* ==================================================
    KEYBOARD NAVIGATION & FOCUS INDICATORS (WCAG 2.1 AA)
+   Cross-browser compatibility with focus-visible fallback
    ================================================== */
 
 /* Skip to Main Content Link - visible only when focused */
@@ -531,52 +678,107 @@ a:hover {
   transition: top 0.2s ease;
 }
 
-.skip-link:focus-visible {
-  top: 0;
-  outline: 3px solid var(--accent-color);
-  outline-offset: 2px;
+/* Focus-visible with progressive enhancement for Safari < 15.4 */
+@supports selector(:focus-visible) {
+  /* Modern browsers with :focus-visible support */
+  .skip-link:focus-visible {
+    top: 0;
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Universal Focus Indicator - WCAG 2.1 AA compliant (3:1 contrast ratio) */
+  *:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Enhanced link focus with background highlight */
+  a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+    background-color: rgba(0, 102, 51, 0.1);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Button focus with enhanced visibility and shadow */
+  button:focus-visible,
+  .btn:focus-visible,
+  .btn-primary-large:focus-visible,
+  .btn-secondary:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
+  
+  /* Form control focus indicators */
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+  }
+  
+  /* Checkbox and radio button focus */
+  input[type="checkbox"]:focus-visible,
+  input[type="radio"]:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
 }
 
-/* Universal Focus Indicator - WCAG 2.1 AA compliant (3:1 contrast ratio) */
-*:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-/* Enhanced link focus with background highlight */
-a:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 4px;
-  background-color: rgba(0, 102, 51, 0.1);
-  border-radius: var(--border-radius-sm);
-}
-
-/* Button focus with enhanced visibility and shadow */
-button:focus-visible,
-.btn:focus-visible,
-.btn-primary-large:focus-visible,
-.btn-secondary:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
-}
-
-/* Form control focus indicators */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
-}
-
-/* Checkbox and radio button focus */
-input[type="checkbox"]:focus-visible,
-input[type="radio"]:focus-visible {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+@supports not selector(:focus-visible) {
+  /* Fallback for Safari < 15.4 and older browsers - use :focus */
+  .skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Universal Focus Indicator fallback */
+  *:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Enhanced link focus fallback */
+  a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+    background-color: rgba(0, 102, 51, 0.1);
+    border-radius: var(--border-radius-sm);
+  }
+  
+  /* Button focus fallback */
+  button:focus,
+  .btn:focus,
+  .btn-primary-large:focus,
+  .btn-secondary:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
+  
+  /* Form control focus fallback */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+  }
+  
+  /* Checkbox and radio button focus fallback */
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.2);
+  }
 }
 
 /* Dark mode focus indicators */
@@ -616,6 +818,7 @@ input[type="radio"]:focus-visible {
 
 /* ==================================================
    STICKY NAVIGATION
+   Cross-browser compatibility with vendor prefixes
    ================================================== */
 
 /* Sticky Navigation Bar */
@@ -626,8 +829,9 @@ input[type="radio"]:focus-visible {
   background: var(--bg-color);
   border-bottom: 2px solid var(--primary-color);
   box-shadow: 0 2px 10px var(--card-shadow);
-  backdrop-filter: blur(10px);
+  /* Backdrop filter with vendor prefixes for Safari */
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -666,11 +870,17 @@ input[type="radio"]:focus-visible {
 }
 
 .nav-menu {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1018,10 +1228,18 @@ header {
 }
 
 .badges {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.5rem 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1035,9 +1253,17 @@ header {
 }
 
 .app-link {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: var(--spacing-md);
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: var(--spacing-xl);
 }
@@ -1106,7 +1332,7 @@ header {
   }
 }
 
-/* Cards - Premium Design */
+/* Cards - Premium Design with Grid fallback for older browsers */
 .subsection-title {
   font-size: 1.5rem;
   color: var(--text-secondary);
@@ -1115,16 +1341,55 @@ header {
   font-weight: 600;
 }
 
+/* Flexbox fallback for browsers without Grid support */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-2xl);
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cards > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  max-width: 400px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  }
+  
+  .cards > * {
+    /* Reset flex properties for grid */
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    max-width: none;
+    min-width: 0;
+  }
 }
 
 .card {
@@ -1172,11 +1437,16 @@ header {
   line-height: 1.6;
 }
 
-.card img {
+.card img,
+.card picture img {
   border-radius: 10px;
   margin-bottom: 1rem;
   max-width: 100%;
   height: auto;
+}
+
+.card picture {
+  display: block;
 }
 
 .card a {
@@ -1387,6 +1657,17 @@ header {
   }
 
   /* Scanner animation effect for active cards */
+  /* Scanner animation with vendor prefix for Safari */
+  @-webkit-keyframes scanner {
+    0%,
+    100% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+  }
+  
   @keyframes scanner {
     0%,
     100% {
@@ -1415,6 +1696,7 @@ header {
     );
     pointer-events: none;
     background-size: 300% 300%;
+    -webkit-animation: scanner 3s ease infinite;
     animation: scanner 3s ease infinite;
     z-index: 1;
     border-radius: inherit;
@@ -1462,10 +1744,11 @@ ul {
 }
 
 ul li {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg); /* Enhanced spacing (was var(--spacing-md) = 1rem) */
   position: relative;
   padding-left: var(--spacing-lg);
-  line-height: 1.7;
+  line-height: 1.75; /* Improved from 1.7 for optimal readability */
+  max-width: 70ch; /* Optimal line length for body text readability */
 }
 
 ul li::before {
@@ -1493,14 +1776,20 @@ ul li a {
   transition: color 0.2s ease;
 }
 
-/* Section Styling - Premium */
+/* Section Styling - Premium with Enhanced Spacing & Visual Grouping */
 section {
-  margin-bottom: var(--spacing-2xl);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-2xl) var(--spacing-xl);
   background: rgba(255, 255, 255, 0.5);
   border-radius: var(--border-radius-lg);
   border: 1px solid transparent;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add subtle visual separation for sections */
+section:not(:first-of-type) {
+  border-top: 1px solid var(--section-border);
+  padding-top: var(--spacing-3xl);
+  margin-top: var(--spacing-4xl); /* 96px between major sections */
 }
 
 section:hover {
@@ -1516,6 +1805,10 @@ section:hover {
   section:hover {
     background: rgba(0, 28, 37, 0.5);
     border-color: rgba(0, 204, 102, 0.2);
+  }
+  
+  section:not(:first-of-type) {
+    border-top-color: rgba(0, 204, 102, 0.2);
   }
 }
 
@@ -1868,7 +2161,19 @@ footer {
 /* Responsive adjustments */
 /* Note: Mobile responsive styles consolidated in comprehensive section at end of file */
 
-/* Animation keyframes */
+/* Animation keyframes with vendor prefixes for Safari */
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
@@ -1878,6 +2183,72 @@ footer {
   }
   100% {
     box-shadow: 0 0 5px rgba(0, 204, 102, 0.5);
+  }
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0.99;
+  }
+  5% {
+    opacity: 0.96;
+  }
+  10% {
+    opacity: 0.97;
+  }
+  15% {
+    opacity: 0.99;
+  }
+  20% {
+    opacity: 0.94;
+  }
+  25% {
+    opacity: 0.98;
+  }
+  30% {
+    opacity: 0.97;
+  }
+  35% {
+    opacity: 0.99;
+  }
+  40% {
+    opacity: 0.98;
+  }
+  45% {
+    opacity: 0.97;
+  }
+  50% {
+    opacity: 0.99;
+  }
+  55% {
+    opacity: 0.98;
+  }
+  60% {
+    opacity: 0.97;
+  }
+  65% {
+    opacity: 0.99;
+  }
+  70% {
+    opacity: 0.96;
+  }
+  75% {
+    opacity: 0.99;
+  }
+  80% {
+    opacity: 0.98;
+  }
+  85% {
+    opacity: 0.99;
+  }
+  90% {
+    opacity: 0.96;
+  }
+  95% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1949,10 +2320,12 @@ footer {
 
 @media (prefers-color-scheme: dark) {
   .logo {
+    -webkit-animation: pulse 4s infinite;
     animation: pulse 4s infinite;
   }
 
   main {
+    -webkit-animation: flicker 10s infinite;
     animation: flicker 10s infinite;
   }
 }
@@ -2960,13 +3333,28 @@ footer {
   padding: 0 var(--spacing-lg) var(--spacing-lg);
 }
 
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
   from {
     opacity: 0;
+    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -3034,6 +3422,7 @@ footer {
 /* Respect user motion preferences for fade-in animation */
 @media (prefers-reduced-motion: no-preference) {
   .faq-answer {
+    -webkit-animation: fadeIn 0.3s ease-in;
     animation: fadeIn 0.3s ease-in;
   }
 }
@@ -3765,6 +4154,13 @@ footer {
   font-size: 1rem;
   font-family: var(--font-main);
   transition: border-color 0.3s ease;
+  /* Remove default browser styling for consistent cross-browser appearance
+   * Necessary for Safari/WebKit (rounded corners, shadows on iOS) and
+   * Firefox (dropdown arrows, focus rings). Improves visual consistency
+   * while maintaining accessibility through explicit border/focus styles. */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .form-group input[type="email"]:focus-visible,
@@ -3823,6 +4219,36 @@ footer {
 
 .button-icon {
   font-size: 1.5rem;
+}
+
+/* CTA Container with Generous Whitespace */
+.cta-container {
+  margin: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl);
+  text-align: center;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.cta-container h2,
+.cta-container h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-container p {
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-lg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .cta-container {
+    border-color: var(--primary-light);
+    background: rgba(0, 28, 37, 0.5);
+    box-shadow: 0 0 20px rgba(0, 204, 102, 0.2);
+  }
 }
 
 .privacy-notice {
@@ -4256,9 +4682,17 @@ footer {
 }
 
 .hero-cta {
+  display: -webkit-box; /* Old Safari */
+  display: -webkit-flex; /* Safari 8 */
+  display: -ms-flexbox; /* IE 10 */
   display: flex;
   gap: var(--spacing-md);
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: var(--spacing-xl) 0;
   /* Reserve space for CTA buttons to reduce Cumulative Layout Shift (CLS) */
@@ -4446,16 +4880,55 @@ footer {
 }
 
 .badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Flexbox fallback for older browsers */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
+.badge-grid > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .badge-grid > * {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    min-width: 0;
+  }
+}
+
 .badge-grid--compact {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
+}
+
+@supports (display: grid) {
+  .badge-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .badge-grid--compact > * {
+    min-width: 200px;
+  }
 }
 
 .badge-category {
@@ -4476,10 +4949,20 @@ footer {
 }
 
 .badge-category .badges {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -4495,15 +4978,29 @@ footer {
 
 /* Key badges - visible above the fold */
 .key-badges {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin: 1.5rem 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .key-badges--start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 1rem 0;
 }
@@ -4910,12 +5407,42 @@ footer {
    SITEMAP PAGE STYLES
    ================================================== */
 
-/* Sitemap Grid Layout */
+/* Sitemap Grid Layout - with Flexbox fallback */
 .sitemap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Flexbox fallback for older browsers */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem 0;
+}
+
+.sitemap-grid > * {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 280px;
+  -ms-flex: 1 1 280px;
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+
+/* Grid layout for modern browsers */
+@supports (display: grid) {
+  .sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .sitemap-grid > * {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    min-width: 0;
+  }
 }
 
 /* Sitemap Section Cards */
@@ -5041,4 +5568,319 @@ footer {
 
 .site-statistics li {
   margin: 0.5rem 0;
+}
+
+/* ==================================================
+   CONTACT FORM STYLES
+   ================================================== */
+
+/* Contact Section */
+.contact-section {
+  margin: var(--spacing-4xl) 0;
+  padding: var(--spacing-2xl);
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.contact-section h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--h2-size);
+}
+
+.contact-section > p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Form Labels */
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
+  font-size: var(--font-size-base);
+}
+
+/* Required and Optional Indicators */
+.required-indicator {
+  color: var(--danger-color);
+  font-weight: 700;
+  margin-left: 0.125rem;
+}
+
+.optional-indicator {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: var(--font-size-sm);
+  margin-left: 0.25rem;
+}
+
+/* Form Inputs - Cross-browser compatibility with vendor prefixes */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  min-height: 44px; /* WCAG 2.1 AA touch target size */
+  padding: var(--spacing-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  line-height: var(--line-height-normal);
+  /* Remove default browser styling for consistent cross-browser appearance
+   * Necessary for Safari/WebKit (rounded corners, shadows on iOS) and
+   * Firefox (dropdown arrows, focus rings). Improves visual consistency
+   * while maintaining accessibility through explicit border/focus styles. */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Input Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Input Focus State - Visible Focus Indicator */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 51, 0.1);
+}
+
+/* Input Hover State */
+.contact-form input:hover:not(:focus),
+.contact-form textarea:hover:not(:focus) {
+  border-color: var(--primary-light);
+}
+
+/* Input Invalid State (only show when user has interacted) */
+.contact-form input:invalid:not(:placeholder-shown):not(:focus),
+.contact-form textarea:invalid:not(:placeholder-shown):not(:focus) {
+  border-color: var(--danger-color);
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+/* Error Message */
+.error-message {
+  display: none;
+  color: var(--danger-color);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.error-message:not(:empty) {
+  display: block;
+}
+
+/* Field Help Text */
+.field-help {
+  display: block;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.form-actions .btn-primary-large {
+  min-width: 200px;
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.form-privacy-note {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-privacy-note a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.form-privacy-note a:hover {
+  color: var(--link-hover);
+}
+
+/* Success Message */
+.success-message {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background-color: rgba(0, 136, 56, 0.1);
+  border: 2px solid var(--success-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.success-message strong {
+  color: var(--success-color);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+}
+
+.success-message p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Error Message Box */
+.error-message-box {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 2px solid var(--danger-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.error-message-box strong {
+  color: var(--danger-color);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+}
+
+.error-message-box p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.error-message-box a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.error-message-box a:hover {
+  color: var(--link-hover);
+}
+
+/* Alternative Contact Methods */
+.contact-alternatives {
+  margin-top: var(--spacing-3xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--section-border);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-alternatives h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--h3-size);
+}
+
+.contact-alternatives ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-alternatives li {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
+}
+
+.contact-alternatives strong {
+  color: var(--text-color);
+  display: inline-block;
+  min-width: 100px;
+}
+
+.contact-alternatives a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-alternatives a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.contact-alternatives a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .form-actions .btn-primary-large {
+    width: 100%;
+  }
+  
+  .contact-alternatives strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .contact-form input:invalid:not(:placeholder-shown):not(:focus),
+  .contact-form textarea:invalid:not(:placeholder-shown):not(:focus) {
+    background-color: rgba(220, 53, 69, 0.1);
+  }
+  
+  .success-message {
+    background-color: rgba(80, 250, 123, 0.1);
+  }
 }
