@@ -126,7 +126,7 @@ All three files passed automated validation:
 **index_sv.html (Swedish):**
 - ✅ Valid JSON-LD syntax
 - ✅ 12 questions with proper structure
-- ✅ Most answers 50-150 words (1 at 47 words)
+- ✅ All answers 50-150 words (Q10 expanded to meet minimum)
 - ✅ Proper @type declarations
 - ✅ Valid @id reference
 
