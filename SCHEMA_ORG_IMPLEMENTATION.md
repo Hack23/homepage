@@ -442,7 +442,7 @@ Each HowTo schema includes:
 - `estimatedCost`: Implementation cost in EUR (€8,000 to €30,000)
 - `supply`: Required documentation/templates (HowToSupply items)
 - `tool`: Required tools/standards (HowToTool items)
-- `step`: Detailed step-by-step instructions (7-9 steps per guide)
+- `step`: Detailed step-by-step instructions (8-9 steps per guide)
   - Each step includes: `@type: "HowToStep"`, `name`, `text` (detailed instructions), `url` (deep link to relevant section)
 
 ### Files Modified (12 Implementation Guides)
