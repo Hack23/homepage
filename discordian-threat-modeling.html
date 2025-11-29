@@ -104,6 +104,110 @@
           "item": "https://hack23.com/discordian-threat-modeling.html"
         }
       ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Perform STRIDE Threat Modeling for Security Architecture",
+      "description": "Complete guide to systematic threat modeling using STRIDE methodology with MITRE ATT&CK integration and nation-state adversary profiling for enterprise systems",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "P14D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "8000"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "STRIDE Threat Modeling Template"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "MITRE ATT&CK Navigator"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Threat Actor Profiling Worksheet"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Data Flow Diagram Templates"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Microsoft Threat Modeling Tool"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "MITRE ATT&CK Framework"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "STRIDE Methodology"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "OWASP Threat Dragon"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Define System Architecture and Boundaries",
+          "text": "Document system architecture including: components (web servers, databases, APIs, microservices), trust boundaries (internet-facing, internal networks, privileged zones), data flows (user requests, API calls, database queries, external integrations), entry points (public endpoints, admin interfaces, API gateways). Create data flow diagrams showing components, boundaries, and data movement. Identify assets requiring protection: customer data, authentication credentials, business logic, intellectual property.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#intro"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Apply STRIDE Framework to Identify Threats",
+          "text": "Systematically analyze system using STRIDE categories: (S)poofing - authentication bypass, credential theft, session hijacking. (T)ampering - data modification, code injection, configuration changes. (R)epudiation - log manipulation, transaction denial. (I)nformation Disclosure - data exposure, side-channel attacks, verbose errors. (D)enial of Service - resource exhaustion, algorithmic complexity attacks. (E)levation of Privilege - authorization bypass, privilege escalation, insecure defaults. Document specific threats for each STRIDE category per system component.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#stride-framework"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Profile Threat Actors and Capabilities",
+          "text": "Identify relevant threat actors based on asset value and system exposure: Nation-state adversaries (unlimited resources, advanced persistent threats, zero-day exploits), Organized cybercrime (sophisticated tools, financial motivation, ransomware operations), Insider threats (authorized access, knowledge of systems, intentional or accidental compromise), Hacktivists (ideological motivation, DDoS attacks, data leaks), Script kiddies (automated tools, opportunistic attacks, known vulnerabilities). Document threat actor TTPs (Tactics, Techniques, Procedures) using MITRE ATT&CK framework.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#adversaries"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Map Threats to MITRE ATT&CK Techniques",
+          "text": "Link identified STRIDE threats to MITRE ATT&CK techniques: Initial Access (T1190 exploit public-facing application, T1078 valid accounts), Execution (T1059 command injection, T1203 exploitation for client execution), Persistence (T1136 create account, T1098 account manipulation), Privilege Escalation (T1068 exploitation for privilege escalation, T1548 abuse elevation control), Defense Evasion (T1070 indicator removal, T1562 impair defenses), Credential Access (T1110 brute force, T1003 credential dumping), Discovery (T1083 file discovery, T1046 network service scanning), Lateral Movement (T1021 remote services), Collection (T1005 data from local system), Exfiltration (T1041 exfiltration over C2), Impact (T1486 data encrypted for impact).",
+          "url": "https://hack23.com/discordian-threat-modeling.html#ai-ml-atlas"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Assess Threat Likelihood and Impact",
+          "text": "Evaluate each identified threat using risk assessment: Likelihood assessment - consider threat actor capability, attack surface exposure, existing controls, historical precedent. Use scale: Very Low (1), Low (2), Medium (3), High (4), Very High (5). Impact assessment - evaluate confidentiality impact, integrity impact, availability impact, reputational damage, regulatory consequences. Use same 1-5 scale. Calculate risk score: Risk = Likelihood × Impact. Prioritize threats: Critical (20-25), High (15-19), Medium (10-14), Low (5-9), Very Low (1-4).",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Design Security Controls and Mitigations",
+          "text": "For each significant threat (Medium risk or higher), design appropriate security controls: Preventive controls (authentication, authorization, input validation, encryption), Detective controls (logging, monitoring, intrusion detection, anomaly detection), Corrective controls (incident response, backup restoration, failover mechanisms), Deterrent controls (legal agreements, warnings, audit trails). Document control effectiveness: Eliminated (threat completely prevented), Mitigated (threat likelihood/impact significantly reduced), Accepted (residual risk within risk appetite), Transferred (insurance, outsourcing). Map controls to STRIDE mitigation strategies.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Document Threat Model and Publish",
+          "text": "Create comprehensive threat model documentation including: executive summary (key findings, critical risks, recommended actions), system overview (architecture diagrams, components, trust boundaries), threat catalog (all identified STRIDE threats with MITRE ATT&CK mapping), risk assessment (likelihood, impact, risk scores), security controls (preventive, detective, corrective measures), residual risks (accepted risks with justification). Publish threat model in GitHub repository for transparency and accountability. Include THREAT_MODEL.md in project root with links to supporting documentation.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Integrate Threat Modeling into SDLC",
+          "text": "Establish threat modeling as continuous practice: Initial threat model during design phase before development begins. Update threat model when architecture changes, new features added, or security incidents occur. Review threat model quarterly for emerging threats and evolving attack techniques. Integrate threat modeling into security review gates: design review requires threat model, code review validates control implementation, security testing verifies mitigation effectiveness. Train development teams on STRIDE methodology and secure design principles.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#conclusion"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Monitor for Emerging Threats and Update Model",
+          "text": "Maintain threat model currency through continuous monitoring: Subscribe to security advisories (CISA, NIST, vendor notifications), monitor MITRE ATT&CK updates for new techniques, track industry security incidents for emerging attack patterns, analyze internal security events and near-misses. Update threat model when: new vulnerabilities discovered in components, new threat actors emerge targeting industry, new attack techniques observed in wild, regulatory requirements change, business context shifts (new data types, expanded user base). Document threat model changes in version control with rationale.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#conclusion"
+        }
+      ]
     }
   ]
 }
