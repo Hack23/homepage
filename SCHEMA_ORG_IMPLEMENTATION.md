@@ -492,7 +492,7 @@ Each HowTo schema includes:
 - **Steps**: 8 systematic risk assessment steps
 - **Duration**: P30D (1 month)
 - **Cost**: €12,000
-- **Focus**: Systematic risk methodology with ALE (SLE × ARO), threat actor profiling, Monte Carlo simulation
+- **Focus**: Eight-step systematic risk methodology with ALE (SLE × ARO), threat actor profiling, Monte Carlo simulation
 - **Tools**: ISO 27005, NIST RMF, Monte Carlo simulation software, FAIR Risk Quantification
 - **Supply**: Asset register template, risk assessment matrix, ALE calculation spreadsheet, threat actor worksheet
 - **Key Steps**: Identify assets/threats/vulnerabilities, analyze likelihood/impact quantitatively, evaluate against risk appetite, treat with strategic options, continuous monitoring, threat actor profiling, ALE calculations, Monte Carlo simulation
@@ -535,7 +535,7 @@ Each HowTo schema includes:
 ### Validation
 All HowTo schemas validated with:
 - ✅ Required fields present (`name`, `description`, `step`)
-- ✅ Minimum 7 steps per guide (exceeds Google's 2-step minimum)
+- ✅ Minimum 8 steps per guide (exceeds Google's 2-step minimum)
 - ✅ Each step includes `name`, `text`, and `url` properties
 - ✅ Structured data follows Schema.org HowTo specification
 - ✅ Ready for Google Rich Results Test validation

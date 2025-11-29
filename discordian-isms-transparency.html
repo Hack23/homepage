@@ -155,54 +155,63 @@
       "step": [
         {
           "@type": "HowToStep",
+          "position": 1,
           "name": "Establish Transparency Principles",
           "text": "Define five core transparency principles: (1) Default to public - start with assumption all policies are public unless specific operational security justifies confidentiality. (2) Redact specifics, not frameworks - publish policy frameworks while redacting operational details like IP addresses, credentials, vendor names. (3) Trust through verification - allow external validation of security claims through documented evidence. (4) Accountability through visibility - public policies create accountability to stated security commitments. (5) Continuous improvement through feedback - community review identifies gaps and enhancement opportunities.",
           "url": "https://hack23.com/discordian-isms-transparency.html#five-transparency-principles"
         },
         {
           "@type": "HowToStep",
+          "position": 2,
           "name": "Create Public/Private Classification Matrix",
           "text": "Establish clear criteria for what stays public (70%) versus what remains confidential (30%). Public documentation includes: security policy frameworks, control objectives, implementation approaches, risk assessment methodology, compliance mappings, security architecture documentation. Confidential documentation includes: specific IP addresses and network topology, authentication credentials and API keys, vendor contracts and pricing, individual employee PII, active incident details, penetration test results with exploit details.",
           "url": "https://hack23.com/discordian-isms-transparency.html#public-private-matrix"
         },
         {
           "@type": "HowToStep",
+          "position": 3,
           "name": "Set Up Public GitHub ISMS Repository",
           "text": "Create public GitHub repository for ISMS documentation (example: github.com/YourOrg/ISMS-PUBLIC). Establish repository structure: root-level policies (Information_Security_Policy.md, Access_Control_Policy.md, etc.), subdirectories for supporting documentation (templates, checklists, procedures), README.md explaining transparency approach and navigation. Configure version control for policy change tracking and audit trail.",
           "url": "https://hack23.com/discordian-isms-transparency.html#implementation"
         },
         {
           "@type": "HowToStep",
+          "position": 4,
           "name": "Document Core ISMS Policies Publicly",
           "text": "Publish 40+ core ISMS policies in Markdown format on GitHub including: Information Security Policy (foundation), Access Control Policy, Secure Development Policy, Network Security Policy, Vulnerability Management, Threat Modeling, Incident Response Plan, Risk Assessment Methodology, Business Continuity Plan, Compliance Checklist. Each policy includes objectives, scope, roles/responsibilities, implementation requirements, compliance mapping, and references to supporting documentation.",
           "url": "https://hack23.com/discordian-isms-transparency.html#implementation"
         },
         {
           "@type": "HowToStep",
+          "position": 5,
           "name": "Apply Systematic Redaction for Operational Security",
           "text": "Review each policy document and apply consistent redaction: Replace specific IP addresses with [REDACTED: Internal IP range]. Replace vendor names with [REDACTED: Enterprise SIEM vendor]. Replace employee names with role titles. Replace specific passwords/keys with [REDACTED: 32-character key]. Replace pricing with [REDACTED: Commercial terms]. Maintain enough detail for external validation while protecting operational security.",
           "url": "https://hack23.com/discordian-isms-transparency.html#public-private-matrix"
         },
         {
           "@type": "HowToStep",
+          "position": 6,
           "name": "Link Public Website to GitHub ISMS Documentation",
           "text": "Create bidirectional links between public website blog posts and GitHub ISMS policies. Each security blog post includes 'ISMS Policy Reference' section linking to corresponding GitHub policy. Each GitHub policy includes 'Website Reference' linking to explanatory blog content. Establish ISMS Reference Guide mapping all blog posts to policies for easy navigation.",
           "url": "https://hack23.com/discordian-isms-transparency.html#implementation"
         },
         {
           "@type": "HowToStep",
+          "position": 7,
           "name": "Publish Transparency Plan and Classification Guide",
           "text": "Document and publish ISMS Transparency Plan explaining: philosophy behind radical transparency approach, criteria for public vs confidential classification, redaction methodology, change management process for public policies, feedback and community engagement approach. Include Classification Guide showing examples of public vs confidential information categories.",
           "url": "https://hack23.com/discordian-isms-transparency.html#implementation"
         },
         {
           "@type": "HowToStep",
+          "position": 8,
           "name": "Enable Community Feedback and Continuous Improvement",
           "text": "Configure GitHub repository for community engagement: enable Issues for questions and suggestions, enable Discussions for community feedback, establish pull request process for external contributions (reviewed before merge), publish changelog documenting policy updates and rationale. Respond to community feedback transparently, implementing improvements and documenting rationale for decisions.",
           "url": "https://hack23.com/discordian-isms-transparency.html#conclusion"
         },
         {
           "@type": "HowToStep",
+          "position": 9,
           "name": "Maintain and Update Public ISMS",
           "text": "Establish quarterly review cycle for public ISMS documentation. Update policies based on: regulatory changes (GDPR, NIS2, ISO 27001 updates), security incidents and lessons learned, community feedback and enhancement suggestions, technology changes and architecture updates. Document all changes in GitHub commit history providing transparent audit trail of ISMS evolution.",
           "url": "https://hack23.com/discordian-isms-transparency.html#conclusion"
