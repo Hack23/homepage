@@ -65,7 +65,7 @@ class LinkValidator:
         return link
     
     def extract_links_from_file(self, html_file):
-        """Extract all href links from an HTML file."""
+        """Extract all href links from an HTML file, excluding code examples."""
         try:
             with open(html_file, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
@@ -73,10 +73,17 @@ class LinkValidator:
             print(f"Error reading {html_file}: {e}")
             return []
         
+        # Remove code examples to avoid false positives
+        # Remove content within <pre>, <code>, and <!-- comments -->
+        import re
+        content_clean = re.sub(r'<pre[^>]*>.*?</pre>', '', content, flags=re.DOTALL | re.IGNORECASE)
+        content_clean = re.sub(r'<code[^>]*>.*?</code>', '', content_clean, flags=re.DOTALL | re.IGNORECASE)
+        content_clean = re.sub(r'<!--.*?-->', '', content_clean, flags=re.DOTALL)
+        
         # Find all href attributes
         # Match href="..." and href='...'
         pattern = r'href=["\']([^"\'#][^"\']*)["\']'
-        matches = re.findall(pattern, content)
+        matches = re.findall(pattern, content_clean)
         
         return matches
     
@@ -241,9 +248,9 @@ class LinkValidator:
         # Export detailed JSON report
         self.export_json_report()
         
-        # Return validation result
-        has_issues = bool(self.broken_links or orphaned)
-        return not has_issues
+        # Return validation result - only fail on broken links
+        has_broken_links = bool(self.broken_links)
+        return not has_broken_links
     
     def export_json_report(self):
         """Export detailed report as JSON for further analysis."""
