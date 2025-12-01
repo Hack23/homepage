@@ -5,7 +5,6 @@ Validates ALL internal links across 145+ HTML files in 14 languages
 """
 import re
 import sys
-import glob
 from pathlib import Path
 from collections import defaultdict
 from urllib.parse import urlparse, unquote
@@ -74,18 +73,18 @@ class LinkValidator:
             print(f"Error reading {html_file}: {e}")
             return []
         
-        # Remove code examples to avoid false positives
-        # Remove content within <pre>, <code>, and <!-- comments -->
-        content_clean = re.sub(r'<pre[^>]*>.*?</pre>', '', content, flags=re.DOTALL | re.IGNORECASE)
-        content_clean = re.sub(r'<code[^>]*>.*?</code>', '', content_clean, flags=re.DOTALL | re.IGNORECASE)
-        content_clean = re.sub(r'<!--.*?-->', '', content_clean, flags=re.DOTALL)
+        # Remove code examples and comments to avoid false positives
+        # Combined pattern for better performance
+        exclusion_pattern = r'<pre[^>]*>.*?</pre>|<code[^>]*>.*?</code>|<!--.*?-->'
+        content_clean = re.sub(exclusion_pattern, '', content, flags=re.DOTALL | re.IGNORECASE)
         
-        # Find all href attributes
-        # Match href="..." and href='...'
-        pattern = r'href=["\']([^"\']+)["\']'
+        # Find all href attributes with improved pattern
+        # Handles both single and double quotes
+        pattern = r'href=(["\'])([^\1]*?)\1'
         matches = re.findall(pattern, content_clean)
         
-        return matches
+        # Extract just the URL part (second group)
+        return [match[1] for match in matches]
     
     def validate_links(self):
         """Main validation logic - extract and validate all links."""
