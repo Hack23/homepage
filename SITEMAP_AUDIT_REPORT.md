@@ -124,9 +124,8 @@ The `sitemap.xml` is in excellent condition with only minor updates needed:
 7. **No broken links:** All sitemap URLs correspond to existing files
 
 ### ⚠️ Recommendations (Optional Enhancements)
-1. **Update lastmod to 2025-12-01:** Reflect current audit date
-2. **Consider translating more content:** Expand services/blog to more languages
-3. **Add image sitemaps:** Currently using image schema but no image entries
+1. **Consider translating more content:** Expand services/blog to more languages
+2. **Add image sitemaps:** Currently using image schema but no image entries
 
 ## 🔗 Related Documentation
 
