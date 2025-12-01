@@ -4,6 +4,7 @@ Comprehensive Internal Link Validator for Hack23 Homepage
 Validates ALL internal links across 145+ HTML files in 14 languages
 """
 import re
+import sys
 import glob
 from pathlib import Path
 from collections import defaultdict
@@ -75,14 +76,13 @@ class LinkValidator:
         
         # Remove code examples to avoid false positives
         # Remove content within <pre>, <code>, and <!-- comments -->
-        import re
         content_clean = re.sub(r'<pre[^>]*>.*?</pre>', '', content, flags=re.DOTALL | re.IGNORECASE)
         content_clean = re.sub(r'<code[^>]*>.*?</code>', '', content_clean, flags=re.DOTALL | re.IGNORECASE)
         content_clean = re.sub(r'<!--.*?-->', '', content_clean, flags=re.DOTALL)
         
         # Find all href attributes
         # Match href="..." and href='...'
-        pattern = r'href=["\']([^"\'#][^"\']*)["\']'
+        pattern = r'href=["\']([^"\']+)["\']'
         matches = re.findall(pattern, content_clean)
         
         return matches
@@ -300,4 +300,4 @@ def main():
         return 1
 
 if __name__ == '__main__':
-    exit(main())
+    sys.exit(main())
