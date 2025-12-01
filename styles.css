@@ -3369,6 +3369,19 @@ footer {
   margin-bottom: 0;
 }
 
+/* FAQ Section Heading */
+#faq h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* FAQ Content Container */
+.faq-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* FAQ Answer Lists */
 .faq-answer ul,
 .faq-answer ol {
   margin: var(--spacing-md) 0;
@@ -3379,6 +3392,15 @@ footer {
 
 .faq-answer li {
   margin-bottom: var(--spacing-sm);
+}
+
+.faq-answer ul ul,
+.faq-answer ol ul,
+.faq-answer ul ol,
+.faq-answer ol ol {
+  margin-top: var(--spacing-sm);
+  padding-left: var(--spacing-lg);
+}
 }
 
 .faq-answer strong {
@@ -5498,6 +5520,17 @@ footer {
 .sitemap-section li {
   margin: 0.5rem 0;
   line-height: 1.6;
+}
+
+/* Link Descriptions */
+.sitemap-section .link-description {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* Strong Tags for Section Titles */
