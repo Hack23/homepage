@@ -65,7 +65,7 @@ class LinkValidator:
         return link
     
     def extract_links_from_file(self, html_file):
-        """Extract all href links from an HTML file, excluding code examples."""
+        """Extract all href links from an HTML file, excluding code examples and metadata."""
         try:
             with open(html_file, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
@@ -73,9 +73,10 @@ class LinkValidator:
             print(f"Error reading {html_file}: {e}")
             return []
         
-        # Remove code examples and comments to avoid false positives
+        # Remove code examples, comments, and <head> section to avoid false positives
+        # The <head> section contains hreflang and other metadata links that shouldn't be validated
         # Combined pattern for better performance
-        exclusion_pattern = r'<pre[^>]*>.*?</pre>|<code[^>]*>.*?</code>|<!--.*?-->'
+        exclusion_pattern = r'<head[^>]*>.*?</head>|<pre[^>]*>.*?</pre>|<code[^>]*>.*?</code>|<!--.*?-->'
         content_clean = re.sub(exclusion_pattern, '', content, flags=re.DOTALL | re.IGNORECASE)
         
         # Find all href attributes with improved pattern
