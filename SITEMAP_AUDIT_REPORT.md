@@ -153,7 +153,7 @@ The `sitemap.xml` is exceptionally well-maintained and requires only a minor las
 - **Realistic change frequencies** based on actual content patterns
 - **Current metadata** with recent lastmod dates
 
-**Recommended Action:** Update lastmod dates to 2025-12-01 and deploy for Google Search Console validation.
+**Recommended Action:** Lastmod dates have been updated to 2025-12-01. Deploy for Google Search Console validation.
 
 ---
 
