@@ -48,18 +48,46 @@
 	<script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
-	  "@type": "Service",
-	  "serviceType": "Cybersecurity Consulting for Cannabis Industry",
-	  "provider": {
-	    "@type": "Organization",
-	    "name": "Hack23 AB",
-	    "url": "https://hack23.com/"
-	  },
-	  "areaServed": {
-	    "@type": "Country",
-	    "name": ["Sweden", "European Union", "North America"]
-	  },
-	  "description": "Enterprise cybersecurity services for the cannabis industry including security architecture, data protection, payment security, and compliance frameworks."
+	  "@graph": [
+	    {
+	      "@type": "Service",
+	      "serviceType": "Cybersecurity Consulting for Cannabis Industry",
+	      "provider": {
+	        "@type": "Organization",
+	        "name": "Hack23 AB",
+	        "url": "https://hack23.com/"
+	      },
+	      "areaServed": {
+	        "@type": "Country",
+	        "name": ["Sweden", "European Union", "North America"]
+	      },
+	      "description": "Enterprise cybersecurity services for the cannabis industry including security architecture, data protection, payment security, and compliance frameworks."
+	    },
+	    {
+	      "@type": "BreadcrumbList",
+	      "@id": "https://hack23.com/industries-cannabis-security.html#breadcrumb",
+	      "itemListElement": [
+	        {
+	          "@type": "ListItem",
+	          "position": 1,
+	          "name": "Home",
+	          "item": "https://hack23.com/"
+	        },
+	        {
+	          "@type": "ListItem",
+	          "position": 2,
+	          "name": "Services",
+	          "item": "https://hack23.com/services.html"
+	        },
+	        {
+	          "@type": "ListItem",
+	          "position": 3,
+	          "name": "Cannabis Industry",
+	          "item": "https://hack23.com/industries-cannabis-security.html"
+	        }
+	      ]
+	    }
+	  ]
 	}
 	</script>
 </head>

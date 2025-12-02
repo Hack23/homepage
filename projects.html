@@ -34,44 +34,66 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Open Source Security Projects",
-      "description": "Portfolio of open source security projects demonstrating best practices in security, compliance, and transparency",
-      "url": "https://hack23.com/projects.html",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "url": "https://hack23.com"
-      },
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "SoftwareApplication",
-            "position": 1,
-            "name": "Black Trigram",
-            "url": "https://hack23.com/black-trigram.html",
-            "applicationCategory": "GameApplication",
-            "description": "Precision combat simulator with 70 vital points system"
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "name": "Open Source Security Projects",
+          "description": "Portfolio of open source security projects demonstrating best practices in security, compliance, and transparency",
+          "url": "https://hack23.com/projects.html",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hack23 AB",
+            "url": "https://hack23.com"
           },
-          {
-            "@type": "SoftwareApplication",
-            "position": 2,
-            "name": "CIA Compliance Manager",
-            "url": "https://hack23.com/compliance-manager.html",
-            "applicationCategory": "SecurityApplication",
-            "description": "Security assessment platform with compliance mapping"
-          },
-          {
-            "@type": "SoftwareApplication",
-            "position": 3,
-            "name": "Citizen Intelligence Agency",
-            "url": "https://hack23.com/cia-project.html",
-            "applicationCategory": "WebApplication",
-            "description": "Swedish political transparency OSINT platform"
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "SoftwareApplication",
+                "position": 1,
+                "name": "Black Trigram",
+                "url": "https://hack23.com/black-trigram.html",
+                "applicationCategory": "GameApplication",
+                "description": "Precision combat simulator with 70 vital points system"
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 2,
+                "name": "CIA Compliance Manager",
+                "url": "https://hack23.com/compliance-manager.html",
+                "applicationCategory": "SecurityApplication",
+                "description": "Security assessment platform with compliance mapping"
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 3,
+                "name": "Citizen Intelligence Agency",
+                "url": "https://hack23.com/cia-project.html",
+                "applicationCategory": "WebApplication",
+                "description": "Swedish political transparency OSINT platform"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/projects.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://hack23.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://hack23.com/projects.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
