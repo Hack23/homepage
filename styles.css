@@ -6183,3 +6183,270 @@ footer {
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
+
+/* Project-specific utility classes */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-logo {
+  border-radius: 10px;
+}
+
+.project-logo-rounded {
+  border-radius: var(--border-radius);
+}
+
+.project-title {
+  margin: 0;
+}
+
+.project-subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+.project-features-list {
+  columns: 2;
+  column-gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.project-badges {
+  margin: 1rem 0;
+  gap: 0.3rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-trigram {
+  background: #ff6b35;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-trigram:hover {
+  background: #e05a28;
+  transform: translateY(-2px);
+}
+
+.btn-compliance {
+  background: #0366d6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-compliance:hover {
+  background: #0256b8;
+  transform: translateY(-2px);
+}
+
+/* Table utilities */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.comparison-table thead tr {
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.comparison-table th {
+  padding: 1rem;
+  text-align: left;
+}
+
+.comparison-table th.text-center {
+  text-align: center;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table td {
+  padding: 1rem;
+}
+
+.comparison-table td.text-center {
+  text-align: center;
+}
+
+/* Korean/Swedish index table styles */
+.index-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.index-table-cell {
+  width: 50%;
+  text-align: center;
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.index-section-img {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Card border colors */
+.card-trigram {
+  border: 2px solid #ff6b35;
+}
+
+/* Additional flex utilities */
+.flex-gap-075 {
+  gap: 0.75rem;
+}
+
+/* Margin utilities additions */
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Code block styling */
+.code-block {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+}
+
+/* White card variants */
+.white-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.white-card-sm {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+/* Text size variants */
+.text-base-lg {
+  font-size: 1rem;
+}
+
+.text-lg-125 {
+  font-size: 1.125rem;
+}
+
+.text-xl-125 {
+  font-size: 1.25rem;
+}
+
+/* List utilities */
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Badge utilities */
+.badge-error {
+  background: #FF0000;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge-warning-sm {
+  background: #FF9900;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+/* Spacing variants */
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Grid variants */
+.grid-auto-fit-300 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Flex variants */
+.flex-center {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-center-my-2 {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Typography variants */
+.text-italic {
+  font-style: italic;
+}
+
+.text-note {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Generic margin helpers */
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
