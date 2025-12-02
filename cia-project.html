@@ -34,30 +34,58 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Citizen Intelligence Agency",
-      "applicationCategory": "WebApplication",
-      "description": "Open-source intelligence (OSINT) platform for political transparency in Sweden. Monitors parliamentary activity, voting records, and political behavior with data-driven insights and accountability metrics.",
-      "url": "https://hack23.com/cia-project.html",
-      "image": "cia-logo.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "url": "https://hack23.com"
-      },
-      "creator": {
-        "@type": "Person",
-        "name": "James Pether Sörling"
-      },
-      "operatingSystem": "Web Browser",
-      "applicationSubCategory": "Civic Technology",
-      "featureList": [
-        "Parliamentary Monitoring",
-        "Voting Records Analysis",
-        "Political Analytics",
-        "Data Visualization",
-        "Accountability Metrics",
-        "Open Data Integration"
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Citizen Intelligence Agency",
+          "applicationCategory": "WebApplication",
+          "description": "Open-source intelligence (OSINT) platform for political transparency in Sweden. Monitors parliamentary activity, voting records, and political behavior with data-driven insights and accountability metrics.",
+          "url": "https://hack23.com/cia-project.html",
+          "image": "cia-logo.png",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hack23 AB",
+            "url": "https://hack23.com"
+          },
+          "creator": {
+            "@type": "Person",
+            "name": "James Pether Sörling"
+          },
+          "operatingSystem": "Web Browser",
+          "applicationSubCategory": "Civic Technology",
+          "featureList": [
+            "Parliamentary Monitoring",
+            "Voting Records Analysis",
+            "Political Analytics",
+            "Data Visualization",
+            "Accountability Metrics",
+            "Open Data Integration"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/cia-project.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://hack23.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://hack23.com/projects.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Citizen Intelligence Agency",
+              "item": "https://hack23.com/cia-project.html"
+            }
+          ]
+        }
       ]
     }
     </script>
