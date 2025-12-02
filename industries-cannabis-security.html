@@ -48,18 +48,46 @@
 	<script type="application/ld+json">
 	{
 	  "@context": "https://schema.org",
-	  "@type": "Service",
-	  "serviceType": "Cybersecurity Consulting for Cannabis Industry",
-	  "provider": {
-	    "@type": "Organization",
-	    "name": "Hack23 AB",
-	    "url": "https://hack23.com/"
-	  },
-	  "areaServed": {
-	    "@type": "Country",
-	    "name": ["Sweden", "European Union", "North America"]
-	  },
-	  "description": "Enterprise cybersecurity services for the cannabis industry including security architecture, data protection, payment security, and compliance frameworks."
+	  "@graph": [
+	    {
+	      "@type": "Service",
+	      "serviceType": "Cybersecurity Consulting for Cannabis Industry",
+	      "provider": {
+	        "@type": "Organization",
+	        "name": "Hack23 AB",
+	        "url": "https://hack23.com/"
+	      },
+	      "areaServed": {
+	        "@type": "Country",
+	        "name": ["Sweden", "European Union", "North America"]
+	      },
+	      "description": "Enterprise cybersecurity services for the cannabis industry including security architecture, data protection, payment security, and compliance frameworks."
+	    },
+	    {
+	      "@type": "BreadcrumbList",
+	      "@id": "https://hack23.com/industries-cannabis-security.html#breadcrumb",
+	      "itemListElement": [
+	        {
+	          "@type": "ListItem",
+	          "position": 1,
+	          "name": "Home",
+	          "item": "https://hack23.com/"
+	        },
+	        {
+	          "@type": "ListItem",
+	          "position": 2,
+	          "name": "Services",
+	          "item": "https://hack23.com/services.html"
+	        },
+	        {
+	          "@type": "ListItem",
+	          "position": 3,
+	          "name": "Cannabis Industry",
+	          "item": "https://hack23.com/industries-cannabis-security.html"
+	        }
+	      ]
+	    }
+	  ]
 	}
 	</script>
 </head>
@@ -99,8 +127,8 @@
 
 	<main>
 		<section class="hero-section" style="padding: 4rem 0; text-align: center; background: linear-gradient(135deg, rgba(0, 102, 51, 0.05), rgba(0, 119, 68, 0.05));">
-			<div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-				<h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--header-color);">🌿 Cybersecurity for Cannabis Industry</h1>
+			<div class="p-2">
+				<h1>🌿 Cybersecurity for Cannabis Industry</h1>
 				<p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2rem;">
 					Enterprise-grade security architecture and information security expertise for the rapidly growing legal cannabis market
 				</p>
@@ -136,7 +164,7 @@
 						<li><strong>Security Strategy Development:</strong> Align security initiatives with business growth and operational requirements</li>
 						<li><strong>Governance Framework:</strong> Establish security policies, procedures, and awareness programs</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> Cannabis businesses needing strategic security leadership as they scale operations</p>
+					<p class="mt-1"><strong>Ideal for:</strong> Cannabis businesses needing strategic security leadership as they scale operations</p>
 				</div>
 
 				<div class="card integrity-card">
@@ -149,7 +177,7 @@
 						<li><strong>Encryption:</strong> Data protection at rest and in transit using industry-standard cryptography</li>
 						<li><strong>Privacy by Design:</strong> Build privacy considerations into systems from the ground up</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> Medical cannabis operations and dispensaries handling sensitive customer information</p>
+					<p class="mt-1"><strong>Ideal for:</strong> Medical cannabis operations and dispensaries handling sensitive customer information</p>
 				</div>
 
 				<div class="card availability-card">
@@ -162,7 +190,7 @@
 						<li><strong>Fraud Prevention:</strong> Implement controls to detect and prevent payment fraud and chargebacks</li>
 						<li><strong>Network Segmentation:</strong> Isolate payment systems from other business networks</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> Dispensaries and retailers processing high-volume transactions</p>
+					<p class="mt-1"><strong>Ideal for:</strong> Dispensaries and retailers processing high-volume transactions</p>
 				</div>
 			</div>
 
@@ -177,7 +205,7 @@
 						<li><strong>Network Security:</strong> Firewall configuration, VPN setup, and intrusion detection</li>
 						<li><strong>Backup & Recovery:</strong> Business continuity and disaster recovery planning</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> Cannabis tech companies, seed-to-sale platforms, and multi-location operations</p>
+					<p class="mt-1"><strong>Ideal for:</strong> Cannabis tech companies, seed-to-sale platforms, and multi-location operations</p>
 				</div>
 
 				<div class="card">
@@ -190,7 +218,7 @@
 						<li><strong>Physical Security Integration:</strong> Coordinate cyber and physical security controls (access control, surveillance)</li>
 						<li><strong>Supply Chain Security:</strong> Secure data flows from cultivation through distribution</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> Cultivation facilities, processors, and vertically integrated cannabis operations</p>
+					<p class="mt-1"><strong>Ideal for:</strong> Cultivation facilities, processors, and vertically integrated cannabis operations</p>
 				</div>
 
 				<div class="card">
@@ -203,7 +231,7 @@
 						<li><strong>Data Breach Response:</strong> Procedures for notification, investigation, and remediation</li>
 						<li><strong>Business Continuity:</strong> Ensure operations continue during and after security incidents</li>
 					</ul>
-					<p style="margin-top: 1rem;"><strong>Ideal for:</strong> All cannabis businesses—prevention is cheaper than recovery</p>
+					<p class="mt-1"><strong>Ideal for:</strong> All cannabis businesses—prevention is cheaper than recovery</p>
 				</div>
 			</div>
 
@@ -211,33 +239,33 @@
 				<h2>⚠️ Important Disclaimer</h2>
 				<p style="margin-bottom: 1rem;"><strong>Cybersecurity Expertise, Not Regulatory Compliance Advice:</strong></p>
 				<p>Hack23 provides general cybersecurity consulting, security architecture, and information security services applicable to all industries, including the growing cannabis sector. We do <strong>not</strong> claim expertise in cannabis-specific regulations, licensing requirements, or industry-specific compliance frameworks.</p>
-				<p style="margin-top: 1rem;">For guidance on:</p>
+				<p class="mt-1">For guidance on:</p>
 				<ul style="margin-top: 0.5rem;">
 					<li>Cannabis licensing and regulatory compliance (Metrc, BioTrackTHC, state/provincial regulations)</li>
 					<li>Industry-specific legal requirements and reporting obligations</li>
 					<li>Cannabis business licensing and operational compliance</li>
 				</ul>
-				<p style="margin-top: 1rem;"><strong>Please consult with legal counsel and regulatory compliance specialists familiar with your jurisdiction.</strong></p>
-				<p style="margin-top: 1rem;">We focus on core information security principles that apply universally: confidentiality, integrity, availability, risk management, access control, encryption, incident response, and security architecture.</p>
+				<p class="mt-1"><strong>Please consult with legal counsel and regulatory compliance specialists familiar with your jurisdiction.</strong></p>
+				<p class="mt-1">We focus on core information security principles that apply universally: confidentiality, integrity, availability, risk management, access control, encryption, incident response, and security architecture.</p>
 			</div>
 
 			<h2>Why Cannabis Businesses Choose Hack23</h2>
 			<div style="background: rgba(0, 102, 51, 0.05); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
 				<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1rem;">
 					<div>
-						<h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🎯 Practical Security Approach</h3>
+						<h3 class="text-xl-125 mb-05">🎯 Practical Security Approach</h3>
 						<p>30+ years of hands-on experience means we understand real-world operations. We provide implementable solutions that enhance security without disrupting business operations.</p>
 					</div>
 					<div>
-						<h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🔓 Transparent Methodology</h3>
+						<h3 class="text-xl-125 mb-05">🔓 Transparent Methodology</h3>
 						<p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS</a> demonstrates our security practices. You can review our frameworks before engaging our services.</p>
 					</div>
 					<div>
-						<h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🏆 Proven Certifications</h3>
+						<h3 class="text-xl-125 mb-05">🏆 Proven Certifications</h3>
 						<p>CISSP, CISM, and AWS Security Specialty certifications backed by enterprise-level implementation experience across multiple industries.</p>
 					</div>
 					<div>
-						<h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">🚀 Growth-Focused Security</h3>
+						<h3 class="text-xl-125 mb-05">🚀 Growth-Focused Security</h3>
 						<p>Security that scales with your business. We help cannabis companies build security foundations that support rapid growth and expansion.</p>
 					</div>
 				</div>
@@ -246,32 +274,32 @@
 			<h2>Frequently Asked Questions</h2>
 			<div style="margin-top: 2rem;">
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Do you have experience with cannabis businesses?</h3>
+					<h3 class="text-lg-125 mb-05">Do you have experience with cannabis businesses?</h3>
 					<p>We provide general cybersecurity consulting applicable to all industries, including the rapidly growing cannabis sector. Our expertise is in information security, security architecture, and enterprise security—not cannabis-specific regulations. Many security challenges facing cannabis businesses (payment security, data protection, access control, incident response) are universal across high-value, regulated industries.</p>
 				</div>
 
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Can you help with regulatory compliance?</h3>
+					<h3 class="text-lg-125 mb-05">Can you help with regulatory compliance?</h3>
 					<p>We can help establish security frameworks and controls that support compliance efforts (access control, data protection, audit logging, incident response). However, we do not provide guidance on cannabis-specific regulations or licensing requirements. For regulatory compliance advice specific to the cannabis industry, consult with specialized legal counsel familiar with your jurisdiction.</p>
 				</div>
 
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">What's the biggest security risk for cannabis businesses?</h3>
+					<h3 class="text-lg-125 mb-05">What's the biggest security risk for cannabis businesses?</h3>
 					<p>Cannabis businesses face similar risks to other high-value retail operations: ransomware attacks, payment fraud, data breaches, and insider threats. The combination of valuable inventory, cash operations, and sensitive customer data makes security particularly critical. Strong access controls, network segmentation, and incident response capabilities are essential.</p>
 				</div>
 
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Do you provide services remotely or on-site?</h3>
+					<h3 class="text-lg-125 mb-05">Do you provide services remotely or on-site?</h3>
 					<p>We provide both remote consulting and on-site services in the Gothenburg region. Many security assessments, architecture reviews, and compliance framework development can be conducted remotely. Physical security assessments and facility-specific work typically require on-site visits.</p>
 				</div>
 
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">How much do your services cost?</h3>
+					<h3 class="text-lg-125 mb-05">How much do your services cost?</h3>
 					<p>Pricing depends on scope and complexity. A comprehensive security assessment for a dispensary or cultivation facility typically ranges from €15,000-€40,000. Ongoing advisory retainers and implementation support are available. Contact us for a detailed proposal based on your specific needs.</p>
 				</div>
 
 				<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--card-border);">
-					<h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">What about physical security integration?</h3>
+					<h3 class="text-lg-125 mb-05">What about physical security integration?</h3>
 					<p>While our primary focus is cybersecurity, we understand the importance of integrating physical and cyber security controls. We can assess how surveillance systems, access control, and alarm systems integrate with your IT infrastructure, ensuring proper network segmentation and secure configuration of security technology.</p>
 				</div>
 			</div>
@@ -286,8 +314,8 @@
 					Contact Us on LinkedIn →
 				</a>
 				<p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">
-					<a href="services.html" style="color: var(--link-color);">← View All Services</a> | 
-					<a href="index.html" style="color: var(--link-color);">Back to Homepage</a>
+					<a href="services.html" class="text-link">← View All Services</a> | 
+					<a href="index.html" class="text-link">Back to Homepage</a>
 				</p>
 			</div>
 
