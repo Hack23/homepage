@@ -564,18 +564,21 @@ All HowTo schemas validated with:
 ### Schema.org Type Coverage
 All major Schema.org types specified in the implementation requirements are now covered:
 
-| Schema Type | Count | Pages |
-|-------------|-------|-------|
-| Organization/ProfessionalService | 674/60 | All homepage variants, services pages |
-| WebSite | 118 | All homepage variants |
-| Service | 354 | Services pages (14 language variants × 6 services) |
-| FAQPage | 79 | Homepage, services, cia-triad-faq |
-| BreadcrumbList | 324 | All major pages |
-| BlogPosting/Article | 534/400 | All blog posts |
-| HowTo | 30 | Implementation guides (discordian-*) |
-| SoftwareApplication | 52 | CIA Compliance Manager pages |
-| VideoGame | 38 | Black Trigram pages |
-| WebApplication | 32 | Citizen Intelligence Agency pages |
+| Schema Type | Count | Pages Covered |
+|-------------|-------|---------------|
+| BreadcrumbList | 141 | All major pages |
+| Service | 85 | Services pages (all language variants) |
+| BlogPosting | 71 | All blog posts |
+| Organization | 49 | Homepage variants, key product/navigation pages |
+| FAQPage | 45 | Homepage, services, cia-triad-faq |
+| ProfessionalService | 35 | Homepage variants, services pages |
+| WebSite | 28 | All homepage variants |
+| SoftwareApplication | 18 | CIA Compliance Manager pages |
+| VideoGame | 17 | Black Trigram pages |
+| WebApplication | 16 | Citizen Intelligence Agency pages |
+| HowTo | 15 | Implementation guides (discordian-*) |
+
+**Note:** Counts represent individual schema type instances across all pages. Many pages use multiple schema types via @graph structures.
 
 ### Acceptance Criteria Status
 - ✅ Implement Organization schema on all pages
