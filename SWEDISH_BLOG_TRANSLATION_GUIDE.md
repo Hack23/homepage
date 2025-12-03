@@ -33,7 +33,7 @@ This guide documents the process for creating Swedish translations of the 9 CIA 
 | Member of Parliament | Riksdagsledamot | Use plural: riksdagsledamöter |
 | Committee | Utskott | Parliamentary committee |
 | Ministry | Departement | Government department |
-| Government Agency | Myndighet / Myndighet sstyrelse | Context dependent |
+| Government Agency | Myndighet / Myndighetsstyrelse | Context dependent |
 | Parliamentary Monitoring | Parlamentarisk övervakning | |
 | Political Transparency | Politisk öppenhet | |
 | OSINT | Öppen källkodsintelligens / OSINT | Both acceptable |
