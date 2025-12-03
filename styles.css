@@ -1336,9 +1336,11 @@ header {
 .subsection-title {
   font-size: 1.5rem;
   color: var(--text-secondary);
-  margin-top: var(--spacing-2xl);
-  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-3xl); /* Increased from 2xl for better section separation */
+  margin-bottom: var(--spacing-xl); /* Increased from lg for better breathing room */
   font-weight: 600;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--border-color); /* Add subtle separator line */
 }
 
 /* Flexbox fallback for browsers without Grid support */
@@ -1350,8 +1352,8 @@ header {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-xl); /* Increased from lg for better card separation */
+  margin-bottom: var(--spacing-3xl); /* Increased from 2xl for better section breathing room */
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
@@ -1395,7 +1397,7 @@ header {
 .card {
   border: 1px solid var(--card-border);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-2xl); /* Increased from xl for more generous internal spacing */
   background: var(--card-bg);
   box-shadow: 0 2px 8px var(--card-shadow), 0 1px 3px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -1403,6 +1405,7 @@ header {
               border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  min-height: 180px; /* Ensure consistent minimum card height */
 }
 
 .card::before {
@@ -2342,10 +2345,13 @@ footer {
 .panel-caption {
   background-color: var(--primary-light);
   color: #FFF;
-  padding: 1rem;
+  padding: var(--spacing-xl) var(--spacing-lg); /* Enhanced padding for better prominence */
   text-align: center;
-  border-radius: 6px;
-  margin: 2rem 0;
+  border-radius: var(--border-radius-lg); /* Use consistent border radius */
+  margin: var(--spacing-3xl) 0 var(--spacing-xl) 0; /* More space above, balanced below */
+  font-size: var(--h2-size); /* Larger font for better hierarchy */
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 102, 51, 0.15); /* Subtle shadow for depth */
 }
 
 .overview-panel-level {
@@ -6450,3 +6456,136 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* ==================================================
+   BLOG PAGE SPECIFIC IMPROVEMENTS
+   ================================================== */
+
+/* Enhanced spacing for blog sections */
+article > section {
+  margin-bottom: var(--spacing-4xl); /* Large spacing between major sections */
+}
+
+/* Improved introduction section spacing */
+#introduction {
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Better paragraph spacing within blog content */
+article section p {
+  margin-bottom: var(--spacing-xl); /* More breathing room between paragraphs */
+}
+
+/* Signature and hidden wisdom styling */
+.signature {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.hidden-wisdom {
+  background: linear-gradient(135deg, rgba(0, 102, 51, 0.05), rgba(0, 102, 51, 0.02));
+  border-left: 4px solid var(--primary-color);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+  border-radius: var(--border-radius);
+  font-style: italic;
+}
+
+/* Discordian authors footer section */
+.discordian-authors,
+.discordian-implementation {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.discordian-authors strong,
+.discordian-implementation strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Responsive spacing adjustments for mobile */
+@media (max-width: 768px) {
+  article > section {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .panel-caption {
+    font-size: var(--h3-size);
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .hidden-wisdom {
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+  }
+}
+
+/* Performance optimization: Reduce motion for scanner effects */
+@media (prefers-reduced-motion: reduce) {
+  .scanner-effect {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  
+  .card:hover .scanner-effect {
+    opacity: 0 !important;
+  }
+}
+
+
+/* Discordian Agents Footer Section (Blog-specific) */
+.footer-discordian {
+  background: linear-gradient(135deg, rgba(0, 102, 51, 0.05), rgba(0, 102, 51, 0.02));
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.footer-discordian .discordian-authors,
+.footer-discordian .discordian-implementation {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-discordian .discordian-implementation {
+  margin-bottom: 0;
+}
+
+.footer-discordian a {
+  color: var(--link-color);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-discordian a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer-discordian {
+    background: linear-gradient(135deg, rgba(0, 204, 102, 0.08), rgba(0, 204, 102, 0.03));
+    border-color: rgba(0, 204, 102, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-discordian {
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: left;
+  }
+}
+
