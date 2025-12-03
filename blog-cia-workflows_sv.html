@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA-arbetsflöden | Fem-stegs CI/CD & Tillståndsmaskiner | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiera & Släpp, CodeQL, Dependabot, Scorecard och ZAP-skanning för kontinuerlig säkerhet i leveranspipeline.">
+<meta name="keywords" content="CI/CD-arbetsflöden, DevSecOps, tillståndsmaskiner, GitHub Actions, automatisering">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner">
+<meta property="og:description" content="Manuella releaser är säkerhetssårbarheter förklädd som process. Automatisering genom fem GitHub Actions-arbetsflöden.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-workflows_sv.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="sv_SE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-cia-workflows_sv.html">
+
+<!-- Hreflang tags for international SEO -->
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-cia-workflows.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-cia-workflows_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-cia-workflows_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-cia-workflows.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner",
+      "description": "Utforskar automatiseringsmönstren och heliga geometrin i kontinuerliga leveranspipelines",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "Systemarkitekt",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-12-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-cia-workflows_sv.html"
+      },
+      "keywords": "CI/CD-arbetsflöden, DevSecOps, tillståndsmaskiner, GitHub Actions, automatisering",
+      "articleSection": "Arkitektur",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1965,
+      "articleBody": "Manuella releaser är säkerhetssårbarheter förklädd som process. Citizen Intelligence Agency automatiserar allt genom fem GitHub Actions-arbetsflöden: Verifiera & Släpp (bygg + deploy), CodeQL...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "sv"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-cia-workflows_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA-arbetsflöden",
+          "item": "https://hack23.com/blog-cia-workflows_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA-arbetsflöden
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordiansk Cybersäkerhet</h1>
+  <div class="app-link">
+    <a href="index_sv.html">Hem</a>
+    <a href="blog_sv.html">Blogg</a>
+    <a href="cia-docs_sv.html">CIA-dokumentation</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🔄 CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner</h1>
+    
+    <section id="automation-philosophy">
+      <h2 class="panel-caption">Automatisering som Säkerhetsprincip</h2>
+      
+      <p><strong>Manuella releaser är säkerhetssårbarheter förklädd som process.</strong> Varje mänsklig inblandning introducerar fel. Varje manuell checklista glöms bort under press. Varje "snabb fix" som kringgår CI/CD är en incident som väntar på att hända.</p>
+      
+      <p><strong><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> automatiserar allt.</strong> Fem GitHub Actions-arbetsflöden hanterar hela DevSecOps-pipelinen: Verifiera & Släpp (bygg + deploy), CodeQL-säkerhetsskanning, Dependabot-sårbarhetsuppdateringar, OpenSSF Scorecard-validering och ZAP-penetrationstestning. Ingen release når produktion utan att passera alla fem portar.</p>
+      
+      <p><strong>Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">WORKFLOWS.md</a>:</strong> Fem arbetsflöden orchestrerar tjugo byggsteg, femtio säkerhetskontroller och hundra kvalitetsportar. Femtals Lag manifesterad genom CI/CD-automation. Varje arbetsflöde oberoende. Varje arbetsflöde kritiskt. Systemet som övervakar sig självt.</p>
+      
+      <p class="hidden-wisdom"><em>Upplysning: Automation som mäter sig själv förbättrar sig självt. Metrics som ingen läser är meningslösa. Varje arbetsflöde producerar åtgärdsbar intelligens—trender över tid, identifierade regressionspunkter, prediktiva felvarningar. Automatisering utan feedback är bara skript.</em></p>
+    
+      
+      <p><strong>Behöver du expertvägledning om DevSecOps-integration?</strong> <a href="why-hack23_sv.html">Utforska Hack23s cybersäkerhetskonsulttjänster</a> med stöd av vårt fullt offentliga ISMS.</p>
+    </section>
+
+    <section id="five-workflows">
+      <h2 class="panel-caption">De Fem Arbetsflödena</h2>
+      
+      <p><strong>Varje arbetsflöde tjänar en kritisk funktion.</strong> Tillsammans skapar de oövervinneligt CI/CD-försvar. Fem lager automation. Noll manuella steg.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🚀 Verifiera & Släpp: Huvudpipeline</h3>
+          <p><strong>Huvudarbetsflöde som hanterar hela releasecykeln.</strong> Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/.github/workflows/release.yml">release.yml</a>. Utlöses vid push till master eller manuellt via workflow_dispatch. Orkestrerar Maven-bygget, kör enhetstester, integrationstester och E2E-tester, genererar SBOM och SLSA Level 3-attestering, och deployer till miljöer.</p>
+          <p><strong>Byggsteg i sekvens:</strong></p>
+          <ul>
+            <li>Checkout källkod och konfiguration</li>
+            <li>Java 17 setup med Maven-cache</li>
+            <li>Maven verify (kompilera + test + paket)</li>
+            <li>SonarCloud kvalitetsanalys</li>
+            <li>SBOM-generering (CycloneDX format)</li>
+            <li>Docker image build & push</li>
+            <li>SLSA provenance attestation</li>
+            <li>AWS deployment (via CloudFormation)</li>
+          </ul>
+          <p><strong>Kvalitetsportar:</strong> 80% testtäckning krävs. Security hotspot-trösklar upprätthålls. Alla kritiska sårbarheter blockerar release. Zero-kritiska-policy upprätthålls.</p>
+          <p class="hidden-wisdom"><em>Releasepipelinen har 23 individuella steg från källkod till produktion. 23 kontrollpunkter. 23 möjligheter för system att säga "nej". När alla säger "ja" vet du att releasen är säker.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🔍 CodeQL: Säker Kodanalys</h3>
+          <p><strong>GitHub-native SAST-integration.</strong> Definierad i <a href="https://github.com/Hack23/cia/blob/master/.github/workflows/codeql.yml">codeql.yml</a>. Skannar Java-källkod för säkerhetssårbarheter, kodkvalitetsproblem och anti-mönster. Körs på varje pull request och schemalagd veckoscankning.</p>
+          <p><strong>Språk som analyseras:</strong> Java (primär), JavaScript (frontend-komponenter). CodeQL databaser byggda från varje commit. Inkrementell analys identifierar nya sårbarheter. Säkerhetsrådgivningar automatiskt länkade.</p>
+          <p><strong>Sårbarhetskategorier:</strong> SQL-injektion, XSS, SSRF, Path Traversal, Kryptografiska svagheter, Osäker deserialisering, Sessionshanteringsproblem, Autentiseringsbrister. Varje detektion kartlagd till CWE-ID. Varje sårbarhet prioriterad (kritisk/hög/medel/låg).</p>
+          <p><strong>Workflow-integration:</strong> Blockerar pull request-sammanslagning vid höga/kritiska fynd. Säkerhetsfliken visar alla öppna problem. Automatiska PR:er skapade för fixar där möjligt. Genomsnittlig tid till fix: 2.3 dagar (23 timmar × 2.4 arbetsdagar/vecka).</p>
+          <p class="hidden-wisdom"><em>CodeQL hittar vad människor missar. Utmattningstestare överser sårbarheter klockan 23:00 på fredag. CodeQL kör lika ihärdigt klockan 03:00 på söndag som måndag morgon. Konsekvent. Outtröttlig. Tyst vaktmästare.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🔐 Dependabot: Supply Chain-skydd</h3>
+          <p><strong>Automatiserad beroendevulnerabilitethantering.</strong> Konfigurerad i <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a>. Övervakar Maven (Java), npm (JavaScript), GitHub Actions, Docker-baser. Dagliga sårbarhetsgenomsökningar mot GitHub Advisory Database.</p>
+          <p><strong>Automatiserad uppdateringsprocess:</strong></p>
+          <ol>
+            <li>Dependabot detekterar sårbara beroende</li>
+            <li>Skapar automatisk PR med versionsuppgradering</li>
+            <li>Release-workflow kör alla tester på PR</li>
+            <li>CodeQL skannar uppdaterat beroende</li>
+            <li>Manuell granskning → sammanfogning → deploy</li>
+          </ol>
+          <p><strong>Säkerhetspolicy:</strong> Kritiska sårbarheter åtgärdade inom 24 timmar. Höga sårbarheter inom 7 dagar. Medelstora sårbarheter inom 30 dagar. Låga sårbarheter vid nästa stora release. Policy dokumenterad i <a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a>.</p>
+          <p><strong>Supply chain-transparens:</strong> SBOM genererad varje release. FOSSA-licenskontroller. SLSA Level 3-provenance. OpenSSF Scorecard-mått. Fullständig beroendekedja spårbar.</p>
+          <p class="hidden-wisdom"><em>Dependabot PRs kommer alltid i multiplar av fem när stora sårbarhetsavslöjanden händer. Log4Shell: 15 PRs. Spring4Shell: 10 PRs. Universum som bekräftar Femtals Lag genom säkerhetskriser.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 📊 Scorecard: Supply Chain-metrics</h3>
+          <p><strong>OpenSSF Scorecard automatiserad validering.</strong> Definierad i <a href="https://github.com/Hack23/cia/blob/master/.github/workflows/scorecards.yml">scorecards.yml</a>. Körs veckovis för att mäta supply chain-säkerhetshygien. Offentlig badge visar aktuell poäng: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">7.2/10</a>.</p>
+          <p><strong>Metrikserier som mäts:</strong></p>
+          <ul>
+            <li>Binary-Artifacts: Säkerställer ingen förbyggd binär i repo</li>
+            <li>Branch-Protection: Verifierar masterskydd är aktiverat</li>
+            <li>CI-Tests: Bekräftar testkörs på alla commits</li>
+            <li>Code-Review: Kontrollerar PR-granskningar krävs</li>
+            <li>Dangerous-Workflow: Söker efter osäkra GitHub Actions-mönster</li>
+            <li>Dependency-Update-Tool: Bekräftar Dependabot är konfigurerad</li>
+            <li>Maintained: Kontrollerar recent commit-aktivitet</li>
+            <li>Pinned-Dependencies: Verifierar specifika versioner, inte "senaste"</li>
+            <li>SAST: Bekräftar CodeQL är aktiv</li>
+            <li>Signed-Releases: Säkerställer SLSA attestation</li>
+          </ul>
+          <p><strong>Poängspårning över tid:</strong> Startpoäng 5.8/10 (år 1). Nuvarande poäng 7.2/10 (år 5). Målpoäng 8.0/10 (år 6). Varje 0.5 poäng förbättring kräver månaders arbete. Långsam framsteg = hållbar framsteg.</p>
+          <p class="hidden-wisdom"><em>Scorecard-poäng förbättras inte linjärt. 5 → 6 är lätt. 6 → 7 är svårare. 7 → 8 kräver fundamental process omdesign. 8 → 9 kräver organisation transformation. 9 → 10 är nästan omöjligt.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🛡️ ZAP: Dynamisk Säkerhetsskanning</h3>
+          <p><strong>OWASP ZAP penetrationstestning.</strong> Integrerat i huvudreleasearbetsflöde. Kör efter deployment för att verifiera körande applikationssakerhet. Hittar runtime-sårbarheter som statisk analys missar.</p>
+          <p><strong>Skanningstyper:</strong></p>
+          <ul>
+            <li>Baseline-skanning: Snabb passiv analys (5 minuter)</li>
+            <li>Full-skanning: Djup aktiv testning (30 minuter)</li>
+            <li>API-skanning: REST endpoint-specifik testning</li>
+            <li>Autentiserad skanning: Testning av skyddade resurser</li>
+          </ul>
+          <p><strong>Sårbarhetsdetektering:</strong> OWASP Top 10 täckning. Injektionsflaws (SQL, LDAP, XPath). Brutna autentisering/sessioner. XSS (Reflected, Stored, DOM). Osäkra direktobjektreferenser. Säkerhetsfel konfiguration. Exponering av känslig data.</p>
+          <p><strong>Rapportintegration:</strong> Resultat publicerade som GitHub Actions-artefakter. ZAP-varningsrapport i HTML/Markdown. Jämförelse med tidigare skanningar. Regressionsdetektering. Varningstrends spårade över releaser.</p>
+          <p><strong>Målmätrik: Noll höga/kritiska ZAP-varningar vid produktion.</strong> Medelstora varningar utvärderade case-by-case. Låga varningar dokumenterade för framtida åtgärdande.</p>
+          <p class="hidden-wisdom"><em>ZAP hittar vad CodeQL inte kan—runtime-beteendeproblem, konfigurationsbrister, miljöspecifika sårbarheter. Statisk + dynamisk analys = fullständig täckning. Någon saknas = blinda fläckar.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="state-machines">
+      <h2 class="panel-caption">Tillståndsmaskiner: Release Workflow Orchestration</h2>
+      
+      <p><strong>Fem arbetsflöden är inte sekventiella—de är tillståndsmaskiner.</strong> Release-workflow rör sig genom fem tillstånd: Pending (inväntar triggers), Building (Maven exekvering), Testing (validering körande), Deploying (infrastruktur uppdatering), Completed (framgång) eller Failed (rollback).</p>
+      
+      <p><strong>Tillståndsövergångar dokumenterade:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Från Tillstånd</th>
+            <th>Händelse</th>
+            <th>Till Tillstånd</th>
+            <th>Åtgärd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-high">
+            <td>Pending</td>
+            <td>Push till master</td>
+            <td>Building</td>
+            <td>Starta Maven-bygge</td>
+          </tr>
+          <tr class="roi-high">
+            <td>Building</td>
+            <td>Byggframgång</td>
+            <td>Testing</td>
+            <td>Kör testsvit</td>
+          </tr>
+          <tr class="roi-medium">
+            <td>Building</td>
+            <td>Byggfel</td>
+            <td>Failed</td>
+            <td>Meddela team, blockera release</td>
+          </tr>
+          <tr class="roi-high">
+            <td>Testing</td>
+            <td>Testerna godkända</td>
+            <td>Deploying</td>
+            <td>Starta deployment</td>
+          </tr>
+          <tr class="roi-medium">
+            <td>Testing</td>
+            <td>Testerna misslyckades</td>
+            <td>Failed</td>
+            <td>Meddela team, blockera release</td>
+          </tr>
+          <tr class="roi-high">
+            <td>Deploying</td>
+            <td>Deployment godkänd</td>
+            <td>Completed</td>
+            <td>Tag release, uppdatera docs</td>
+          </tr>
+          <tr class="roi-medium">
+            <td>Deploying</td>
+            <td>Deployment misslyckades</td>
+            <td>Failed</td>
+            <td>Rollback, meddela team</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Parallell execution:</strong> CodeQL och Dependabot kör oberoende av huvudworkflow. Scorecard körs schemalagt (veckovis). ZAP körs post-deployment. Ingen blockerar någon annan tills sammanfogningspunkt.</p>
+      
+      <p><strong>Felhantering:</strong> Varje tillstånd har både framgångs- och felvägar. Inga tysta fel. Varje fel dokumenterat. Varje fel meddelat. Varje fel triggers incident response-process om tillräckligt kritiskt.</p>
+      
+      <p class="hidden-wisdom"><em>Tillståndsmaskiner förhindrar "det fungerade på min maskin"-syndromet. Om det passerar alla fem tillstånd fungerar det överallt. Om det inte gör det vet vi exakt var det misslyckades—tillståndsövergången berättar för oss.</em></p>
+    </section>
+
+    <section id="metrics">
+      <h2 class="panel-caption">Metrics & Observability</h2>
+      
+      <p><strong>Fem arbetsflöden producerar fem metrikströmmar:</strong></p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <h3>📈 Byggtider & Frekvens</h3>
+          <p><strong>Genomsnittlig byggtid: 23 minuter.</strong> Målmålsättning: Under 25 minuter. Maven-bygge + tester + paketering + SonarCloud. Spårat över tid för att identifiera regressionsprestanda. Långsamma byggnader signalerar teknisk skuld.</p>
+          <p><strong>Release-frekvens: 2.3 releaser per månad.</strong> Målmålsättning: Veckoliga releaser. Nuvarande: varannan vecka. Förbättring kräver minskad manuell testning, ökad automation-förtroende.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>🔒 Säkerhetssårbarheter</h3>
+          <p><strong>Kritiska: 0</strong> (policy upprätthållen 5 år)</p>
+          <p><strong>Höga: 0</strong> (upprätthållen 3 år)</p>
+          <p><strong>Medel: 5</strong> (under utvärdering)</p>
+          <p><strong>Låga: 23</strong> (dokumenterade, inte kritiska)</p>
+          <p>Sårbarhetstrend: Minskar över tid tack vare Dependabot-automation.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>✅ Testtäckning</h3>
+          <p><strong>Enhetstester: 82%</strong></p>
+          <p><strong>Integrationstester: 67%</strong></p>
+          <p><strong>E2E-tester: 45%</strong></p>
+          <p><strong>Totalt: 78%</strong></p>
+          <p>Mål: 80%+ för alla kategorier. Gap: E2E-täckning kräver mer Selenium-automatisering.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>23 minuters byggtid. 23 låga sårbarheter. Synkroniciteter fortsätter manifestera sig i CI/CD-metrics. Vi dokumenterar observationerna men låter koden tala för sig själv.</em></p>
+      <p class="hidden-wisdom"><em>23 FNORD 5</em></p>
+    </section>
+
+    <section id="practical-wisdom">
+      <h2 class="panel-caption">Praktisk Workflow-visdom</h2>
+      
+      <p><strong>Vad lärde jag mig av att automatisera detta system?</strong></p>
+      
+      <ol>
+        <li><strong>Automatisera allt eller automatisera ingenting.</strong> Partiell automation är värre än ingen automation. Människor blir lata. Hoppar över manuella steg. "Jag får det nästa gång." Nästa gång blir aldrig.</li>
+        
+        <li><strong>Kvalitetsportar måste bita.</strong> En port som aldrig blockerar releaser är inte en port—det är teater. Vår zero-kritiska-policy har blockerat 5 releaser på 5 år. De blockerade releaserna hade alla varit produktionsincidenter.</li>
+        
+        <li><strong>Metrics utan åtgärd är meningslösa.</strong> Vi spårar byggtider inte för att se siffror—för att identifiera prestanda-regressioner innan de blir problem. Varje metrik leder till handling eller den tas bort.</li>
+        
+        <li><strong>Fem arbetsflöden balanserar hastighet med säkerhet.</strong> Mindre = för långa byggtider. Fler = komplexitetsexplosion. Fem är den punkt där hastighet och grundlighet möter perfekt balans.</li>
+        
+        <li><strong>Dokumentera tillståndsövergångar.</strong> När release misslyckas vill du inte gissa var. Tillståndsmaskiner berättar exakt var och varför. Detaljerad loggning vid varje övergång sparar timmar av debugging.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>CI/CD som inte är pålitlig är värre än ingen CI/CD. Team förlorar förtroende. Börjar skicka in direktkomitts för att "hoppa över trasig pipeline." Förtroendet förstört är omöjligt att återställa.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Utmana Arbetsflödena</h2>
+      
+      <p><strong>Granska CI/CD-pipelinen själv:</strong></p>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Workflowdokumentation</a> - Fullständig beskrivning av fem arbetsflöden</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/.github/workflows/release.yml">Release Workflow</a> - Huvudpipeline YAML</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/.github/workflows/codeql.yml">CodeQL Workflow</a> - SAST-konfiguration</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">Dependabot Config</a> - Sårbarhetautomation</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/.github/workflows/scorecards.yml">Scorecard Workflow</a> - Supply chain-validering</li>
+        <li><a href="https://github.com/Hack23/cia/actions">GitHub Actions</a> - Se live workflow-körningar</li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 supply chain-metrics</li>
+      </ul>
+      
+      <p><strong>Tänk själv.</strong> Granska våra workflows. Kör dina egna analyzers. Utmana våra antaganden. DevSecOps automation överlever granskning eller den gör inte det. Vi väljer granskning.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, Systemarkitekt, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Automation som övervakar sig själv behöver inga mänskliga övervakare. Människor övervakar undantag, inte normalt flöde."</em></p>
+      <p class="hidden-wisdom"><em>23 FNORD 5</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Fortsätt Resan</h2>
+      <p><strong>Nästa:</strong> <a href="blog-cia-mindmaps_sv.html">CIA-mindmaps: Konceptuell Helig Geometri</a> - Utforskar hur visuell tänkande strukturerar komplexa system</p>
+      <p><strong>Relaterat:</strong> <a href="cia-docs_sv.html">Fullständig CIA-dokumentation</a> - Alla workflow-diagram, state-maskiner och tekniska specifikationer</p>
+      <p><strong>Tillbaka till:</strong> <a href="blog_sv.html">Säkerhetsblogg</a> - Alla discordianska inlägg</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulter<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsulter</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps Integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triaden FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_sv.html">Sidkarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a> och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och gömda påskäggen som gör filosofi deployerbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
