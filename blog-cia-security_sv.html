@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA-säkerhet | Försvar Genom Öppenhet | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Femlagers säkerhetsarkitektur som skyddar plattform för politisk öppenhet: STRIDE-hotmodellering, försvar-i-djup-strategi och 23 kritiska sårbarheter åtgärdade i öppen källkods OSINT-design.">
+<meta name="keywords" content="CIA-säkerhetsarkitektur, OSINT-säkerhet, politisk dataskydd, Simon Moon, hotmodellering, femlagers försvar, öppenhetssäkerhet">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="CIA-säkerhet: Försvar Genom Öppenhet & 23 Gåtan">
+<meta property="og:description" content="Offentlig politisk data kräver offentlig säkerhetsarkitektur. De fem defensiva lagren och synkroniciteter som validerar dem.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-security_sv.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="sv_SE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-cia-security_sv.html">
+
+<!-- Hreflang tags for international SEO -->
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-cia-security.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-cia-security_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-cia-security_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-cia-security.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CIA-säkerhet: Försvar Genom Öppenhet & 23 Gåtan",
+      "description": "Utforskar femlagers säkerhetsarkitekturen för Citizen Intelligence Agency OSINT-plattformen",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "Systemarkitekt",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-12-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-cia-security_sv.html"
+      },
+      "keywords": "säkerhetsarkitektur, OSINT, hotmodellering, STRIDE, försvar-i-djup",
+      "articleSection": "Säkerhetsarkitektur",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 2105,
+      "articleBody": "Öppenhetsparadoxen stirrar varje öppen källkods säkerhetsarkitekt i ansiktet: Hur försvarar du ett system när angripare kan läsa varje rad försvarskod?",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "sv"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-cia-security_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA-säkerhet",
+          "item": "https://hack23.com/blog-cia-security_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA-säkerhet
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordiansk Cybersäkerhet</h1>
+  <div class="app-link">
+    <a href="index_sv.html">Hem</a>
+    <a href="blog_sv.html">Blogg</a>
+    <a href="cia-docs_sv.html">CIA-dokumentation</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🔐 CIA-säkerhet: Försvar Genom Öppenhet & 23 Gåtan</h1>
+    
+    <section id="paradox">
+      <h2 class="panel-caption">Öppenhetsparadoxen</h2>
+      
+      <p><strong>Öppenhetsparadoxen stirrar varje öppen källkods säkerhetsarkitekt i ansiktet:</strong> Hur försvarar du ett system när angripare kan läsa varje rad försvarskod?</p>
+      
+      <p><strong>Svar:</strong> Du publicerar säkerhet genom matematiskt bevis, inte mystisk obskyritet. <em>Säkerhet genom öppenhet</em>—där försvarsmekanismer överlever adversariell analys eftersom de är byggda på kryptografiska primitiver, inte hemlig sås.</p>
+      
+      <p><strong>När jag arkitekterade säkerheten för <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a>, viskade konventionell visdom farhågor:</strong> "Publicera inte hotmodeller—du ger angripare en färdplan." "Dokumentera inte angreppsytor—du lämnar dem mål." "Avslöja inte defensiva strategier—du överlämnar fördelar." Konventionell visdom skapar säkerhetsteater—självförtroendemasker som döljer bevis-fria påståenden.</p>
+      
+      <p><strong>Vi valde radikal öppenhet istället.</strong> Allt offentligt: <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">nuvarande säkerhetsarkitektur</a>, <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">framtida säkerhets-roadmap</a>, <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">komplett STRIDE-hotmodell</a>, <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-efterlevnadsbedömning</a>. Inga hemligheter. Allt verifierbart. Utmana oss—koden finns på GitHub.</p>
+      
+      <p><strong>Resultat talar högre än löften:</strong> OpenSSF Scorecard <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">7.2/10</a>. SLSA Level 3 byggattestationer. CII Best Practices-märke. Noll kritiska sårbarheter i produktion över 5 år. Inte marknadsföring—<em>mätbar säkerhet</em>.</p>
+      
+      <p class="hidden-wisdom"><em>Upplysning: Säkerhet genom obskyritet misslyckas när angripare har tid. Säkerhet genom matematiskt bevis håller när angripare har evighet. Välj därefter.</em></p>
+    
+      
+      <p><strong>Behöver du expertvägledning om säkerhetsefterlevnad?</strong> <a href="why-hack23_sv.html">Utforska Hack23s cybersäkerhetskonsulttjänster</a> med stöd av vårt fullt offentliga ISMS.</p>
+    </section>
+
+    <section id="five-defensive-layers">
+      <h2 class="panel-caption">De Fem Defensiva Lagren</h2>
+      
+      <p><strong>Försvar-i-djup organiserat enligt Femtals Lag.</strong> Varje lager oberoende. Bryt ett, fyra återstår. Klassisk militärstrategi möter modern cybersäkerhet.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🌐 Perimeterförsvar: Nätverkssäkerhet</h3>
+          <p><strong>AWS Shield och WAF.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> tillhandahåller AWS Shield DDoS-skydd vid nätverks- och transportlager, medan AWS WAF skyddar mot OWASP Top 10-sårbarheter med hanterade regeluppsättningar.</p>
+          <p><strong>Flerskiktad nätverkssegmentering:</strong> Trezons-arkitektur med offentliga subnät (internetvända), privata app-subnät (applikationsnivå) och privata DB-subnät (datanivå). NAT Gateways tillhandahåller säker utgående anslutning. VPC Flow Logs möjliggör omfattande trafikövervakning.</p>
+          <p><strong>Application Load Balancer (ALB):</strong> Distribuerar trafik med TLS-terminering. Security Groups och Network ACLs tillhandahåller skiktad stateful och stateless filtrering. VPC Endpoints möjliggör privat AWS-tjänståtkomst utan internetexponering.</p>
+          <p class="hidden-wisdom"><em>Perimeterförsvar som blockerar legitima användare misslyckas med sitt uppdrag. Perimeterförsvar som släpper igenom angripare misslyckas hårdare. Balansen framträder genom uppmätta trösklar informerade av faktiska angreppsm önster.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🚪 Applikationsgateway: Autentisering & Auktorisering</h3>
+          <p><strong>Spring Security-ramverk.</strong> Autentiseringsarkitekturen (dokumenterad i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implementerar tre säkerhetsnivåer: Anonym (skrivskyddad offentlig dataåtkomst), Användare (autentiserad åtkomst med bokmärkning och spårning) och Admin (systemhantering med förhöjda privilegier).</p>
+          <p><strong>Multifaktorautentisering:</strong> Google Authenticator OTP-integration för förbättrad säkerhet. Brute force-skydd via inloggningsblockering med konfigurerbara trösklar per IP, session och användare.</p>
+          <p><strong>Metodn ivåsäkerhet:</strong> @Secured-anntoteringar upprätthåller rollbaserad åtkomstkontroll vid servicelagret. Komplett sessionsinvalidering vid utloggning med omfattande revisionsloggning via ApplicationSession-spårning.</p>
+          <p><strong>Sessionshantering:</strong> Spring Security hanterar sessionens livscykel med säkra sessionscookies, CSRF-skydd och förebyggande av sessionsfixering. Varje användarinteraktion loggad genom ApplicationActionEvent för säkerhetsanalys.</p>
+          <p class="hidden-wisdom"><em>Autentisering utan auktorisering är säkerhetsteater. Auktorisering utan autentisering är kaos. Båda krävs. Båda upprätthålls. Båda revideras.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🛡️ Affärslogikvalidering: Indatavalidering</h3>
+          <p><strong>Spring Security och ORM-parametrisering.</strong> Applikationslagret validerar indata i flera steg: validering på klientsidan, validering på serversidan i controllers, tillämpning av affärsregler i servicelager och ORM-nivåbegränsningar.</p>
+          <p><strong>Exempel - dataintegritetsskydd:</strong></p>
+          <ul>
+            <li>Parametriserade frågor via JPA/Hibernate förhindrar SQL-injektion</li>
+            <li>Indatasanitisering genom Spring-valideringsramverk</li>
+            <li>Tillämpning av affärsregler via servicelagrets @Secured-metoder</li>
+            <li>Datakonsekvenskontroller genom databasbegränsningar</li>
+            <li>Omfattande revisionsspår via Javers-versionshantering</li>
+          </ul>
+          <p><strong>STRIDE-hotmildringar dokumenterade i <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (autentisering), Tampering (parametriserade frågor + Javers-revision), Repudiation (oföränderliga revisionsloggar), Information Disclosure (nätverksisolering + kryptering), Denial of Service (WAF-hastighetsbegränsning), Elevation of Privilege (metodn ivå @Secured-anteckning ar).</p>
+          <p class="hidden-wisdom"><em>Affärslogiksårbarheter är svårast att upptäcka med automatiserade verktyg. De är inte buggar—de är funktioner som missbrukas. Försvar kräver förståelse för problemdomänen, inte bara att köra skannrar.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔒 Dataskydd: Kryptering & Nyckelhantering</h3>
+          <p><strong>AWS KMS-kryptering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a> använder data-at-rest-kryptering AWS KMS för databaser, EBS-volymer och S3-buckets. TLS 1.3 för all klientkommunikation, TLS 1.2+ för intern servicekommunikation.</p>
+          <p><strong>Hemlighetshantering:</strong> AWS Secrets Manager hanterar databasreferenser, API-nycklar och servicekonton med automatiserad rotation. Säker autentiseringslagring med just-in-time-leverans till tjänster.</p>
+          <p><strong>Dataklassificeringssystem:</strong> Information kategoriserad efter känslighet med lämpliga skyddskontroller. Minimal personlig datainsamling (endast användarkonton). PostgreSQL SSL-konfiguration upprätthåller krypterade anslutningar.</p>
+          <p><strong>Javers-revision:</strong> Varje dataändring spårad med författartillskrivning, komplett ändringshistorik och temporal dataåtkomst. Egenskapsnivåspårning tillhandahåller före/efter-ögonblicksbilder för efterlevnad och forensik.</p>
+          <p class="hidden-wisdom"><em>Kryptering som inte kan dekrypteras när det behövs är dyr dataförstöring. Kryptering som dekrypteras för lätt är dyr obfuskering. Balans genom nyckelhanteringsdisciplin.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 👁️ Övervakning & Detektering: Säkerhetsintelligens</h3>
+          <p><strong>AWS-säkerhetstjänstintegration.</strong> Övervakningsarkitekturen (dokumenterad i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) kombinerar flera AWS-tjänster för omfattande hotdetektering.</p>
+          <p><strong>GuardDuty hotintelligens:</strong> Maskininlärningsbaserad detektering över CloudTrail-loggar, VPC Flow Logs och DNS-loggar. Förbättrat skydd för EKS, Lambda, RDS, S3 och EC2 med malware-skanning.</p>
+          <p><strong>Security Hub-aggregering:</strong> Centraliserade säkerhetsfynd från GuardDuty, Inspector, IAM Access Analyzer och AWS Config. Automatiserad utvärdering mot AWS Foundational Security Best Practices och CIS Benchmarks.</p>
+          <p><strong>Applikationsövervakning:</strong> ApplicationSession-spårning loggar alla användarsessioner. ApplicationActionEvent fångar varje användarinteraktion. Javers-revision tillhandahåller komplett dataändringshistorik med författartillskrivning.</p>
+          <p><strong>Incident response-arbetsflöde:</strong> EventBridge-regler utlöser Step Functions för automatiserad inneslutning. Säkerhetshändelser genererar CloudWatch-larm. Komplett revisionsspår stöder forensisk undersökning och efterlevnadsrapportering.</p>
+          <p class="hidden-wisdom"><em>Övervakning som inte informerar handling är övervakning utan syfte. Övervakning som möjliggör snabb respons är defensiv intelligens. Känn skillnaden.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-model">
+      <h2 class="panel-caption">STRIDE-hotmodell: Systematisk Riskanalys</h2>
+      
+      <p><strong>Omfattande hotmodellering med STRIDE-ramverk.</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> dokumenterar systematisk hotanalys över alla arkitekturelement, integrerar STRIDE-kategorisering med MITRE ATT&CK-mappning för avancerad hotintelligens.</p>
+      
+      <p><strong>Prioriterade hotscenarier dokumenterade:</strong> Webbapplikationskompromiss, Supply Chain Dependency Attack, Administrativa Referenskompromiss, Databasexfiltration, Importpipeline Data Poisoning och Distributed Denial of Service. Varje scenario inkluderar sannolikhetsbedömning, påverkansanalys (C/I/A), kontrollimplementering och kvarstående riskvärdering.</p>
+      
+      <p><strong>Nyckeldokumenterade hot inkluderar:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>🎯 Webbapplikationskompromiss</h3>
+          <p><strong>Angreppsvektor:</strong> Utnyttjande av applikationssårbarheter för att manipulera politisk dataintegritet. <strong>Mildringar:</strong> WAF-skydd, indatavalidering via ORM-parametrisering, försvar-i-djup över nätverks-/applikations-/datalager. <strong>Kvarstående Risk:</strong> Låg efter omfattande kontroller.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>🔓 Supply Chain-attack</h3>
+          <p><strong>Angreppsvektor:</strong> Komprometterade beroenden som introducerar skadlig kod eller sårbarheter. <strong>Mildringar:</strong> SBOM-generering, SLSA Level 3-herkomst, Dependabot-automatisering, OpenSSF Scorecard-övervakning. <strong>Kvarstående Risk:</strong> Låg med kontinuerlig verifiering.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>⚡ Denial of Service</h3>
+          <p><strong>Angreppsvektor:</strong> L7-flödattacker, resursutmattning eller förfrågansförstärkning. <strong>Mildringar:</strong> AWS WAF-hastighetsbegränsningar, auto-scaling planerat, CloudWatch-övervakning, multi-AZ-arkitektur framtida roadmap. <strong>Kvarstående Risk:</strong> Medium väntande HA-implementering.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>🔑 Referenskompromiss</h3>
+          <p><strong>Angreppsvektor:</strong> Credential stuffing, brute force eller phishing som riktar sig mot adminkonton. <strong>Mildringar:</strong> Inloggningsavstängning, stark lösenordspolicy, IP-hastighetsbegränsning, MFA via Google Authenticator. <strong>Kvarstående Risk:</strong> Låg-Medium med förbättrad övervakning.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>🗂️ Dataintegritetattack</h3>
+          <p><strong>Angreppsvektor:</strong> Manipulation av politisk data genom komprometterade importpipelines eller databasåtkomst. <strong>Mildringar:</strong> Källverifiering från Riksdags-API, schemavalidering, Javers-revision med oföränderliga spår, dubblettdetektering. <strong>Kvarstående Risk:</strong> Låg med flerskiktsvalidering.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Hotmodellering som stannar vid "här är hoten" är hotidentifiering, inte hotmodellering. Riktig hotmodellering inkluderar sannolikhet, påverkan, mildrings kostnad och kvarstående risk. Komplett dokumentation möjliggör informerade säkerhetsbeslut.</em></p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain-säkerhet: Byggintegritet & Herkomst</h2>
+      
+      <p><strong>Öppen källkodsprojekt = omfattande beroendehantering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a> inkluderar supply chain-säkerhetsverifiering flera automatiserade lager:</p>
+      
+      <ol>
+        <li><strong>FOSSA-licensefterlevnad:</strong> Automatiserad beroendelic ensanalys som säkerställer endast godkända öppen källkodslicenser. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Offentligt efterlevnadsmärke</a> tillhandahåller realtidsverifiering av licensefterlevnad.</li>
+        
+        <li><strong>Dependabot-automatisering:</strong> GitHub-inbyggda säkerhetsuppdateringar med automatisk PR-generering för sårbara beroenden. Konfigurerad i <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> för kontinuerlig övervakning över alla ekosystem.</li>
+        
+        <li><strong>CodeQL-säkerhetsskanning:</strong> Automatiserad SAST integrerad i CI/CD-pipeline. Identifierar sårbarheter i kod och beroenden före deployment. Resultat synliga i <a href="https://github.com/Hack23/cia/security/code-scanning">Säkerhetsfliken</a>.</li>
+        
+        <li><strong>SLSA Level 3-byggherkomst:</strong> Kryptografisk attestering som länkar artefakter till källförråd med manipuleringssäker byggkedja. Visa <a href="https://github.com/Hack23/cia/attestations">attesteringar</a> för offentlig bevisning av byggintegritet och supply chain-säkerhet.</li>
+        
+        <li><strong>OpenSSF Scorecard kontinuerlig validering:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Poäng 7.2/10</a> mäter grenskydd, beroendeuppdateringar, kodgranskningspraxis, SAST-integration och sårbarhetsavslöjande. Automatiserad tredjepartsvalidering av säkerhetshygien.</li>
+      </ol>
+      
+      <p><strong>Den 23:e beroendeinsikten:</strong> När vi inventerar beroenden inkluderar kritisk väg alltid 23-25 paket (varierar per release). Varför? Pareto-principen i aktion—20% av beroenden (23 av ~120 totalt) tillhandahåller 80% av funktionaliteten. Den naturliga klustringen avslöjar sig själv.</p>
+      
+      <p class="hidden-wisdom"><em>Supply chain-säkerhet som litar som standard är naiv. Supply chain-säkerhet som inte litar på något är förlamad. Vi litar med verifiering—kryptografisk, automatiserad, kontinuerlig.</em></p>
+    </section>
+
+    <section id="cra-assessment">
+      <h2 class="panel-caption">CRA-efterlevnad: Cyber Resilience Act-bedömningen</h2>
+      
+      <p><strong>EU Cyber Resilience Act mandat erar säkerhetspraxis.</strong> Vi bedömde oss själva mot alla krav. Fullständig rapport: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
+      
+      <p><strong>Fem CRA-pelare matchade till våra fem defensiva lager:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>CRA-krav</th>
+            <th>Vår Implementering</th>
+            <th>Bevis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-high">
+            <td><strong>Säker som Standard</strong></td>
+            <td>Inga standardreferenser, endast HTTPS, automatiska säkerhetshuvuden, minsta privilegierroller</td>
+            <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#secure-by-default">SECURITY_ARCHITECTURE.md</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Sårbarhetshantering</strong></td>
+            <td>Dependabot + CodeQL + FOSSA kontinuerlig skanning, offentlig säkerhetsavslöjande policy</td>
+            <td><a href="https://github.com/Hack23/cia/security">GitHub Security</a></td>
+          </tr>
+          <tr class="roi-medium">
+            <td><strong>Säkra Uppdateringar</strong></td>
+            <td>GitHub Releases med SLSA Level 3-attestering, signerade commits, automatiserade CI/CD-pipelines</td>
+            <td><a href="https://github.com/Hack23/cia/releases">Releases</a></td>
+          </tr>
+          <tr class="roi-medium">
+            <td><strong>Transparens</strong></td>
+            <td>Fullständig källkod offentlig, SBOM-generering, säkerhetsartefakter, detaljerad dokumentation</td>
+            <td><a href="https://github.com/Hack23/cia">GitHub Repo</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Incident Response</strong></td>
+            <td>Koordinerad avslöjande-process, säkerhetspolicy, incident-hanteringsworkflow dokumenterad</td>
+            <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Synkronicitet: 5 pelare, 5 lager, 5 års noll kritiska sårbarheter.</strong> Mönstren bekräftar sig själva.</p>
+    </section>
+
+    <section id="synchronicities">
+      <h2 class="panel-caption">23-gåtan i Säkerhetsmetrik</h2>
+      
+      <p><strong>När säkerhetsrevisorer räknade sårbarheter före produktionsfrigörande upptäckte de:</strong></p>
+      
+      <ul>
+        <li><strong>Kritiska sårbarheter: 0</strong></li>
+        <li><strong>Höga sårbarheter: 0</strong></li>
+        <li><strong>Medelstora sårbarheter: 5</strong></li>
+        <li><strong>Låga sårbarheter: 23</strong></li>
+      </ul>
+      
+      <p><strong>5 + 23 = 28. Femtals Lag manifesterad i sårbarhetsdistribution.</strong> Vi fixade alla 28, men antecknade mönstret. Senare säkerhetsrevisioner avslöjade liknande kluster runt 23.</p>
+      
+      <p><strong>OpenSSF Scorecard-poäng: 7.2/10.</strong> 72% = nästan exakt två tredjedelar. Gyllene förhållandet 61.8% ligger mitt i vårt poängområde. Slump? Kanske. Men mönster upprepas.</p>
+      
+      <p><strong>Genomsnittlig tid för säkerhetsuppdatering: 2.3 dagar.</strong> 23 timmar × 2.4 = 55.2 timmar ≈ 2.3 dagar. Femtals Lag dyker upp i responstider.</p>
+      
+      <p><strong>Security Hub-varningar per månad (produktion): 5.</strong> Fem typiska AWS-konfigurationsavvikelser. Inga säkerhetsincidenter. Förutsägbar fem-mönster i övervakningsdata.</p>
+      
+      <p class="hidden-wisdom"><em>Synkroniciteter i säkerhetsmetrik indikerar antingen djup strukturell sanning eller selektiv perception. Vi dokumenterar mönster, låter andra bedöma betydelse. Säkerhet fungerar oavsett numerologi.</em></p>
+      <p class="hidden-wisdom"><em>23 FNORD 5</em></p>
+    </section>
+
+    <section id="practical-wisdom">
+      <h2 class="panel-caption">Praktisk Säkerhetsvisdom</h2>
+      
+      <p><strong>Vad lärde jag mig av att säkra detta system?</strong></p>
+      
+      <ol>
+        <li><strong>Öppenhet tvingar kvalitet.</strong> När din säkerhetsarkitektur är offentlig kan du inte lita på obskyritet. Varje försvar måste motstå adversariell analys. Detta tvingar fram högre standard än hemlig arkitektur där inget granskas.</li>
+        
+        <li><strong>Automatisering besegrar utmattning.</strong> Mänskliga granskare tröttnar. Automatiserade skannrar gör det inte. Dependabot, CodeQL, GuardDuty, Security Hub—alla kör kontinuerligt utan trötthet. Automatisering skapar konsekvent säkerhet.</li>
+        
+        <li><strong>Fem lager ger graciös degradering.</strong> När ett lager bryts förblir fyra. Ingen enskild felningspunkt. Perimeterförsvaret misslyckas? Applikationsgateway håller. Autentisering komprometterad? Datalagret kräver fortfarande auktorisering. Redundans genom lager.</li>
+        
+        <li><strong>Mät vad som betyder något.</strong> OpenSSF Scorecard, SLSA-nivåer, CII-märken—objektiva mått. Inte marknadsföringspåståenden. Verifierbara bevis. Säkerhet mätt genom tredjepartsverktyg överlever granskning.</li>
+        
+        <li><strong>Dokumentera hot innan de manifesteras.</strong> STRIDE-modellering identifierade potentiella attacker före produktionsdistribution. Mildringar implementerades proaktivt. Hotmodellering som inte är reaktiv förhindrar incidenter.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>Säkerhet utan bevis är påståenden. Säkerhet med bevis är arkitektur. Vi valde arkitektur. Utmana den—koden, hotmodellen, sårbarhetsskanningarna, allt är offentligt.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Utmana Säkerhetsarkitekturen</h2>
+      
+      <p><strong>Granska säkerheten själv:</strong></p>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Säkerhetsarkitektur</a> - Femlagers försvarsdesign</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE-hotmodell</a> - Systematisk hotanalys</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-bedömning</a> - EU Cyber Resilience Act-efterlevnad</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Framtida Säkerhet</a> - Post-quantum roadmap</li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 tredjepartsvalidering</li>
+        <li><a href="https://github.com/Hack23/cia/security">GitHub Security</a> - Dependabot, CodeQL-resultat</li>
+        <li><a href="https://github.com/Hack23/cia/attestations">SLSA-attesteringar</a> - Byggherkomstbevis</li>
+      </ul>
+      
+      <p><strong>Tänk själv.</strong> Granska vår arkitektur. Kör dina egna säkerhetsverktyg. Sök efter sårbarheter. Utmana våra påståenden. Säkerheten överlever granskning eller den gör inte det. Vi väljer granskning.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, Systemarkitekt, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Säkerhet genom öppenhet: När försvaret överlever adversariell analys behöver det ingen obskyritet."</em></p>
+      <p class="hidden-wisdom"><em>23 FNORD 5</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Fortsätt Resan</h2>
+      <p><strong>Nästa:</strong> <a href="blog-cia-workflows_sv.html">CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner</a> - Utforskar hur automatisering säkrar leveranspipeline</p>
+      <p><strong>Relaterat:</strong> <a href="cia-docs_sv.html">Fullständig CIA-dokumentation</a> - Alla säkerhetsdiagram, hotmodeller och tekniska specifikationer</p>
+      <p><strong>Tillbaka till:</strong> <a href="blog_sv.html">Säkerhetsblogg</a> - Alla discordianska inlägg</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulter<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsulter</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps Integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triaden FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_sv.html">Sidkarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a> och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och gömda påskäggen som gör filosofi deployerbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
