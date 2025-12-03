@@ -172,7 +172,7 @@
           <p><strong>AWS Shield och WAF.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> tillhandahåller AWS Shield DDoS-skydd vid nätverks- och transportlager, medan AWS WAF skyddar mot OWASP Top 10-sårbarheter med hanterade regeluppsättningar.</p>
           <p><strong>Flerskiktad nätverkssegmentering:</strong> Trezons-arkitektur med offentliga subnät (internetvända), privata app-subnät (applikationsnivå) och privata DB-subnät (datanivå). NAT Gateways tillhandahåller säker utgående anslutning. VPC Flow Logs möjliggör omfattande trafikövervakning.</p>
           <p><strong>Application Load Balancer (ALB):</strong> Distribuerar trafik med TLS-terminering. Security Groups och Network ACLs tillhandahåller skiktad stateful och stateless filtrering. VPC Endpoints möjliggör privat AWS-tjänståtkomst utan internetexponering.</p>
-          <p class="hidden-wisdom"><em>Perimeterförsvar som blockerar legitima användare misslyckas med sitt uppdrag. Perimeterförsvar som släpper igenom angripare misslyckas hårdare. Balansen framträder genom uppmätta trösklar informerade av faktiska angreppsm önster.</em></p>
+          <p class="hidden-wisdom"><em>Perimeterförsvar som blockerar legitima användare misslyckas med sitt uppdrag. Perimeterförsvar som släpper igenom angripare misslyckas hårdare. Balansen framträder genom uppmätta trösklar informerade av faktiska angreppsmönster.</em></p>
         </div>
         
         <div class="card integrity-card">
@@ -197,7 +197,7 @@
             <li>Datakonsekvenskontroller genom databasbegränsningar</li>
             <li>Omfattande revisionsspår via Javers-versionshantering</li>
           </ul>
-          <p><strong>STRIDE-hotmildringar dokumenterade i <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (autentisering), Tampering (parametriserade frågor + Javers-revision), Repudiation (oföränderliga revisionsloggar), Information Disclosure (nätverksisolering + kryptering), Denial of Service (WAF-hastighetsbegränsning), Elevation of Privilege (metodn ivå @Secured-anteckning ar).</p>
+          <p><strong>STRIDE-hotmildringar dokumenterade i <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (autentisering), Tampering (parametriserade frågor + Javers-revision), Repudiation (oföränderliga revisionsloggar), Information Disclosure (nätverksisolering + kryptering), Denial of Service (WAF-hastighetsbegränsning), Elevation of Privilege (Metodnivåsäkerhet och @Secured-anteckningar).</p>
           <p class="hidden-wisdom"><em>Affärslogiksårbarheter är svårast att upptäcka med automatiserade verktyg. De är inte buggar—de är funktioner som missbrukas. Försvar kräver förståelse för problemdomänen, inte bara att köra skannrar.</em></p>
         </div>
         
@@ -269,7 +269,7 @@
       <p><strong>Öppen källkodsprojekt = omfattande beroendehantering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a> inkluderar supply chain-säkerhetsverifiering flera automatiserade lager:</p>
       
       <ol>
-        <li><strong>FOSSA-licensefterlevnad:</strong> Automatiserad beroendelic ensanalys som säkerställer endast godkända öppen källkodslicenser. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Offentligt efterlevnadsmärke</a> tillhandahåller realtidsverifiering av licensefterlevnad.</li>
+        <li><strong>FOSSA-licensefterlevnad:</strong> Automatiserad beroendelicensanalys som säkerställer endast godkända öppen källkodslicenser. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Offentligt efterlevnadsmärke</a> tillhandahåller realtidsverifiering av licensefterlevnad.</li>
         
         <li><strong>Dependabot-automatisering:</strong> GitHub-inbyggda säkerhetsuppdateringar med automatisk PR-generering för sårbara beroenden. Konfigurerad i <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> för kontinuerlig övervakning över alla ekosystem.</li>
         
