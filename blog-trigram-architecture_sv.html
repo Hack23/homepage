@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigram-arkitektur | Koreansk Kampsportsspel | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Black Trigram-spelarkitektur: Unity-mönster, stridssystemdesign, kulturbevarande genom spelande. C4-arkitekturmodeller.">
+<meta name="keywords" content="Black Trigram-arkitektur, spelarkitektur, stridssystemdesign, koreansk kampsportssimulering, anatomiskt målsystem, vitala punkter kyusho, fysikmot,or, kollisionsdetektering, spelmekanik, proceduranimation, strids-AI, kampspelsarkitektur, 2D-stridssimulering, kampsportsspel, kulturbevarande teknologi">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="Black Trigram-arkitektur: Fem Krigare, Sakral Geometri">
+<meta property="og:description" content="Fem krigarearketyper möter sakral geometri. Femtals Lag manifesterar sig i koreansk kampsportsspeldesign.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-trigram-architecture_sv.html">
+<meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+<meta property="og:locale" content="sv_SE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-trigram-architecture_sv.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-trigram-architecture.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-trigram-architecture_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-trigram-architecture_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-trigram-architecture.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Black Trigram-arkitektur: Fem Krigare, Sakral Geometri i Strid",
+      "description": "Utforska de numerologiska mönstren i Black Trigrams spelarkitektur",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "Systemarkitekt",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-trigram-architecture_sv.html"
+      },
+      "keywords": "Black Trigram, Unity-arkitektur, speldesign, koreansk kampsport, sakral geometri",
+      "articleSection": "Spelarkitektur",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1692,
+      "articleBody": "Koreanska kampsporter: mångfaldiga, sofistikerade, historiskt djupgående—och brottsligt underrepresenterade i spel. När jag arkitekterade Black Trigram uppfann jag inte fem krigarearketyper genom speldesignmöten...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "sv",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Systemarkitektur",
+          "description": "Sakral geometri och numerologiska mönster i kod"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-trigram-architecture_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram-arkitektur",
+          "item": "https://hack23.com/blog-trigram-architecture_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Black Trigram-arkitektur
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordiansk Cybersäkerhet</h1>
+  <div class="app-link">
+    <a href="index_sv.html">Hem</a>
+    <a href="blog_sv.html">Blogg</a>
+    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🥋 Black Trigram-arkitektur: Fem Krigare, Sakral Geometri i Strid</h1>
+    
+    <section id="five-fighters">
+      <h2 class="panel-caption">De Fem Krigarearketyperna: Mönster i Stridstilar</h2>
+      
+      <p><strong>Koreanska kampsporter: mångfaldiga, sofistikerade, historiskt djupgående—och brottsligt underrepresenterade i spel.</strong> När jag arkitekterade <a href="https://github.com/Hack23/blacktrigram">Black Trigram</a> uppfann jag inte fem krigarearketyper genom speldesignmöten—jag upptäckte dem inbäddade i själva stridsdomänen, avslöjade genom mönsterigenkänning i faktiska koreanska kampsportstradit och moderna taktiska specialiseringar. <strong>Arketyperna valde sig själva.</strong> game-design.md dokumenterar detta: var och en representerar en distinkt stridsfil som är rotad i verklig tradition och samtida verklighet. Inte godtycklig spelbalans—kulturell autenticitet möter mekaniskt djup, sakral geometri tillämpad på våld.</p>
+      
+      <p><strong>Fem arketyper, var och en ett komplett stridssystem, var och en en filosofisk hållning till våld självt.</strong> Dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">game-design.md</a>, dessa är inte palettbyten med statjusteringar. <em>Detta är respekt genom representation.</em> Varje krigare förkroppsligar fundamentalt olika tillvägagångssätt till våld, taktiska prioriteringar och etiska ramverk. Från traditionella krigarens hederskoder till organiserad kriminalitets pragmatism—hela spektrumet av hur människor närmar sig sanktionerat och osanktionerat våld. <strong>Spelmekanik som antropologi.</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>1. 무사 Musa (Traditionell Krigare)</h3>
+          <p><strong>Militär specialförband med traditionell träning.</strong> Heder genom styrka, disciplinerad strid. Föredragna trigram: ☰ Himlen, ☳ Åska. Signaturtekni: ledmanipulation (관절기법), vitala punktslag (급소타격), underkastellsekontroll (제압술).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>2. 암살자 Amsalja (Skuggmördare)</h3>
+          <p><strong>Hemlig agent specialiserad på tysta avliv.</strong> Effektivitet genom osynlighet, ett perfekt slag. Föredragna trigram: ☴ Vind, ☵ Vatten. Signaturtekn: tysta avlivningar (무성제압), nervslag (신경파괴), andningsattacker (호흡차단).</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>3. 해커 Hacker (Cyberkrigare)</h3>
+          <p><strong>Digital inföding med fysisk stridsträning.</strong> Information som makt, teknologisk fördel. Föredragna trigram: ☲ Eld, ☱ Sjö. Signaturtekn: anatomisk analys (해부학적분석), biomekanisk förstörelse (생체역학파괴), systematisk oförmögenhet (체계적제압).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. 정보요원 Jeongbo Yowon (Underrättelseagent)</h3>
+          <p><strong>Regeringsagent med psykologisk krigföringträning.</strong> Kunskap genom observation, strategiskt tänkande. Föredragna trigram: ☶ Berg, ☷ Jord. Signaturtekn: smärtkomplianse (고통순응), psykologiskt tryck (심리적압박), informationsutvinning (정보추출).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. 조직폭력배 Jojik Pokryeokbae (Organiserad Brottslighet)</h3>
+          <p><strong>Underjordisk kämpare med gatusmart brutalitet.</strong> Överlevnad genom hänsynslöshet, praktiskt våld. Föredragna trigram: ☳ Åska, ☵ Vatten. Signaturtekn: miljöanvändning (환경활용), smutsiga tekniker (더러운기법), överlevnadsstrid (생존격투).</p>
+        </div>
+      </div>
+      
+      <p><strong>De 70 Vitala Punkterna: Matematik Möter Dödlighet.</strong> Traditionell koreansk kampsport lär ut 70 kyusho-punkter (tryckkpunkter/급소). <em>Mönsterigenkänning avslöjar sakral struktur:</em> 7 × 5 × 2 (7 kroppsregioner × 5 kritiska punkter vardera × 2 sidor för bilateral symmetri). Vårt skadessystem implementerar <strong>alla 70</strong>. Träffsäkerhet bestämmer skademultiplikator genom biomekanisk verklighet, inte godtycklig skalning. <strong>Realism genom numerologi. Fysik genom filosofi.</strong> När du slår en kyusho-punkt exakt beräknar spelet realistiska traumaeffekter baserade på faktiska anatomiska sårbarheter. <em>Detta är utbildning genom engagemang, kulturbevarande genom spelande.</em></p>
+      
+      <p class="hidden-wisdom"><em>Spelbalans som kräver fem arketyper var inte designval—det var igenkännande av naturlig stridsstilklust i mänsklig konflikt. Prova fyra arketyper: luckor uppenbarar sig i täckningen. Sex: redundans framträder och förvirring följer. Fem är komplett utan att vara uttömmande. Pentagonen dyker upp igen. Femtals Lag manifesterar sig i hand-till-hand-stridsmönster. Slump? Det finns inga slumpar. Endast mönster du inte har känt igen ännu. Universum talar i pentagoner och du lyssnar bara inte.</em></p>
+    
+      
+      <p><strong>Letar du efter expertstöd för implementering?</strong> <a href="why-hack23_sv.html">Se varför organisationer väljer Hack23</a> för säkerhetskonsultering som accelererar innovation.</p>
+    </section>
+
+    <section id="web-architecture">
+      <h2 class="panel-caption">React + PixiJS-arkitektur: Webbläsarbaserad Stridssimulering</h2>
+      
+      <p><strong>Webbbaserad stridssimulering = demokratiserad åtkomst = revolution.</strong> Dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram körs helt i webbläsaren med React 19 + PixiJS 8 + TypeScript. Noll backend. Noll installation. Noll plattformslåsning. <strong>Noll konstgjord bristfällighet på tillgång.</strong> Öppna webbläsare → träna kampsport. Detta är inte kompromiss för bekvämlighet—det är <em>avsiktlig tillgänglighetsarkitektur som politiskt uttalande.</em> Kampspel historiskt gatekeepade bakom dyra konsolhårdvara, regionslåsta kassetter och lokal flerspelarfunktion som krävde fysisk närhet. <strong>Vi valde universell åtkomst istället. Tillgänglighet som uppror mot spelindustrins utvinning.</strong> Din webbläsare är ditt dojang. Din internetanslutning är din sensei. Geografi och inkomst gatekeepar inte längre koreansk kampsportsutbildning.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>1. 🖥️ React UI-lager</h3>
+          <p>Korsktematiserade komponenter med responsiv design. Skärmar: CombatScreen, TrainingScreen, IntroScreen. Gemensam UI: CombatHUD, TrigramWheel, ProgressTracker. Basmoduler: BaseButton, KoreanText, BackgroundGrid. Funktionella komponenter med TypeScript genomgående.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>2. ⚙️ Spellogikmotor</h3>
+          <p>TypeScript-moduler under src/systems/: CombatSystem orkestrerar input → trigram → vital-point → damage → feedback. TrigramSystem hanterar hållningar via StanceManager, TransitionCalculator, TrigramCalculator, KoreanCulture. VitalPointSystem hanterar 70 vitala punkter genom KoreanAnatomy, HitDetection, DamageCalculator.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>3. 🎨 PixiJS-renderare</h3>
+          <p>PixiJS 8 med WebGL för 60fps 2D-grafik. Hanterar karaktärssprites (PlayerVisuals, EnemyVisuals), dojang-bakgrund, partikelsystem (HitEffectsLayer), UI-överlager. @pixi/react-integration omsluter PixiJS Application i React-komponenter.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. 🎵 Ljudmotor</h3>
+          <p>Howler.js + Web Audio API för koreansk traditionell musik blandad med cyberpunk SFX. AudioManager laddar benknackningar, slag, omgivningsljud. VariantSelector slumpmässiggör slagljud. DefaultSoundGenerator tillhandahåller reservljud.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. 🗄️ Tillståndshantering</h3>
+          <p>Zustand + React Context för tillstånd i webbläsaren. useGameState, useUIState, useEnemyState spårar hälsa, stamina, Ki, hållning, stridsmått. Ingen persistens—uppdatering återställer framsteg. Endast klientsida, inga backend-beroenden.</p>
+        </div>
+      </div>
+      
+      <p><strong>Fullständig arkitekturdokumentation:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> inkluderar C4 Container-diagram, Component-vyer, Combat Flow-sekvenser. TypeScript tillhandahåller typsäkerhet över alla lager. Vite hanterar build-optimering med tree-shaking.</p>
+      
+      <p class="hidden-wisdom"><em>Webbapplikationer utan lageråtertvinning blir ohanterliga. React för UI, PixiJS för rendering, TypeScript för logik—tydlig separation möjliggör säker refaktorering utan att bryta system.</em></p>
+    </section>
+
+    <section id="synchronicities">
+      <h2 class="panel-caption">Synkroniciteter: Siffrorna Framträder</h2>
+      
+      <p><strong>Jag tror inte på slumpar.</strong> Jag tror på mönster som avslöjar sig:</p>
+      
+      <ul>
+        <li><strong>70 vitala punkter = 7 × 5 × 2.</strong> Som dokumenterat i game-design.md implementerar spelet 70 traditionella koreanska kampsportstryckkpunkter (kyusho). Huvud (10 punkter), Nacke (8 punkter), Torso (20 punkter), Armar (16 punkter), Ben (16 punkter). Matematiskt mönster framträder från anatomisk verklighet.</li>
+        <li><strong>Åtta trigramhållningar.</strong> ☰ Geon (Himlen), ☱ Tae (Sjö), ☲ Li (Eld), ☳ Jin (Åska), ☴ Son (Vind), ☵ Gam (Vatten), ☶ Gan (Berg), ☷ Gon (Jord). Traditionell I Ching-filosofi integrerad i stridsmekanik via hållningssystem dokumenterat i COMBAT_ARCHITECTURE.md.</li>
+        <li><strong>60-sekunders rundtimer.</strong> Som specificerat i game-design.md avsnitt 2.7 varar varje rond exakt 60 sekunder. Tvingar taktiska beslut under tidspress. Vinnare bestäms genom KO eller högre hälsa vid timeout.</li>
+        <li><strong>CombatStats spårar sex kärnmått.</strong> Hälsa (❤️), Smärta (😖), Balans (⚖️), Medvetande (🧠), Blodförlust (🩸), Stamina (🔋). Varje stat interagerar och skapar realistisk stridsfeedback dokumenterad i game-design.md avsnitt 2.2.</li>
+        <li><strong>10×10 oktagonal rutnätsarena.</strong> Diskret positioneringssystem med 0,3m-celler. Oktagon inskrivna i kvadrat skapar spelbar zon. Out-of-bounds-celler utlöser skidanimering. Rutnätsbaserad taktisk strid per game-design.md avsnitt 2.1.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>När spelmekanik naturligt linjerar med numerologiska mönster uppstår frågan: påtvingade vi struktur, eller avslöjade strukturen sig genom praktik? Svar: båda. Igenkännande, inte uppfinning.</em></p>
+    </section>
+
+    <section id="cultural-preservation">
+      <h2 class="panel-caption">Kulturbevarande Genom Digital Noggrannhet</h2>
+      
+      <p><strong>Inte bara underhållning.</strong> Pedagogiskt verktyg som bevarar koreanska kampsportstekniker digitalt genom autentisk representation:</p>
+      
+      <ol>
+        <li><strong>Autentisk Teknikdokumentation:</strong> Stridssystem baserat på traditionella koreanska kampsportsprinciper dokumenterade i COMBAT_ARCHITECTURE.md. Realistisk vital punktsmålning, hållningsbaserad strid, autentisk trigramfilosofiintegration.</li>
+        
+        <li><strong>Historisk Kontext:</strong> Speldesigndokument tillhandahåller omfattande bakgrund om koreanska kampsportstr. Tekniska nedbrytningar av varje arketyps stridsfil. Kulturell betydelse förklarad vid sidan av mekanik.</li>
+        
+        <li><strong>Språkrespekt:</strong> Koreansk terminologi bevarad genomgående. Hangul-skript för krigarnamn: 무사 (Musa), 암살자 (Amsalja), 해커 (Hacker), 정보요원 (Jeongbo Yowon), 조직폭력배 (Jojik Pokryeokbae). Engelska översättningar som stödjande kontext, inte ersättning.</li>
+        
+        <li><strong>Öppen Källkod Utbildning:</strong> Komplett spelarkitektur dokumenterad i offentliga repositories. ARCHITECTURE.md, COMBAT_ARCHITECTURE.md, game-design.md tillgängliga på github.com/Hack23/blacktrigram. Studenter kan undersöka implementering av traditionella tekniker i modern spelkontext.</li>
+        
+        <li><strong>Transparent Utveckling:</strong> Tekniska beslut dokumenterade med kulturell respekt. Ingen exploatering av koreanska kampsportsbilder. Pedagogiskt värde genom exakt representation och tillgänglig dokumentation.</li>
+      </ol>
+      
+      <p><strong>Inte kommersiell exploatering.</strong> Öppen källkod kulturbevarande. Intäkter (om några) stödjer koreanska kampsportsskolor. Respekt kodad i arkitekturen.</p>
+      
+      <p class="hidden-wisdom"><em>Digital bevarande som inte respekterar källkultur misslyckas med sitt uppdrag. Vi konsulterar, vi kompenserar, vi krediterar. Teknologi som tjänar kultur, inte utvinner från den.</em></p>
+    </section>
+
+    <section id="future-vision">
+      <h2 class="panel-caption">Framtida Arkitektur: Femårig Evolution</h2>
+      
+      <p><strong>Färdplan:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a>. Fem stora förbättringar:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>År 1: Online Flerspelarfunktion</h3>
+          <p>Nätverkskod för rollback. Lagkompensation. Rankad matchmaking. 5-regionsservrar (Asien, Europa, NA, SA, Oceanien).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>År 2: Träningsläge Förbättring</h3>
+          <p>Ramdata display. Hitbox-visualisering. Combo-handledning. AI-sparring. Träning mot 5 svårighetsgrader.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>År 3: Mobilport</h3>
+          <p>iOS + Android-versioner. Pekskärmskontroller. Prestandaoptimering. 5 kontrollscheman (virtuell joystick, svep, knackning, lutning, extern kontroller).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>År 4: VR-stöd</h3>
+          <p>Första-person kampsport. Motion controller-spårning. Fysisk rörelse mappad till speltekn. 5 VR-plattformar (Quest, PSVR, Index, Vive, WMR).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>År 5: AI-Coach</h3>
+          <p>Maskininlärning som analyserar spelarprestation. Personaliserade träningsrekommendationer. Svaghetidentifiering. Förbättringsspårning över 5 färdighetskategorier.</p>
+        </div>
+      </div>
+      
+      <p><strong>Investeringstidslinje:</strong> 15% utvecklingsbudget årligen. Fibonacci-angränsande tillväxt. Hållbar evolution utan funktionsbloat.</p>
+    </section>
+
+    <section id="technical-stack">
+      <h2 class="panel-caption">Teknisk Stack: Modern Webb Möter Unity</h2>
+      
+      <p><strong>Hybridarkitektur:</strong> Unity för spelmotor, React+TypeScript för UI/menyer. Bästa av båda världarna.</p>
+      
+      <ul>
+        <li><strong>Unity 2022 LTS:</strong> Spelmotor, fysik, rendering. C# för kärnsystem.</li>
+        <li><strong>React + TypeScript:</strong> Menysystem, inställningar, karaktärsval. Webb-UI inbäddad i Unity.</li>
+        <li><strong>WebGL Build:</strong> Webbläsarspelbar version. Ingen installation krävs. Tillgänglighet genom webben.</li>
+        <li><strong>GitHub Actions CI/CD:</strong> Automatiserade byggningar. 5 plattformar: Windows, macOS, Linux, WebGL, Android (framtid).</li>
+        <li><strong>Tillgångspipeline:</strong> Blender → FBX → Unity. Texturkomprimering. LOD-generering. 5-stegs optimering.</li>
+      </ul>
+      
+      <p><strong>Bevis:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram">OpenSSF Scorecard 7.0/10</a>. CII Best Practices-märke. SLSA Level 3-intyg. Spelutveckling med mjukvaruutvecklingsrigor.</p>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Arkitektonisk Visdom: Fem Lärdomar från Spelutveckling</h2>
+      
+      <ol>
+        <li><strong>Fem krigarearketyper = minimum viable mångfald.</strong> Färre känns begränsade. Mer känns redundant. Fem balanserar variation med lärbarhet.</li>
+        
+        <li><strong>Lagerseparation avgörande i Unity.</strong> Utan disciplin kopplar allt till allt. Våra fem lager upprätthåller separation of concerns.</li>
+        
+        <li><strong>Kulturell autenticitet kräver konsultation.</strong> Kan inte fejka koreanska kampsporter. Konsulterade mästare. Kompenserade rådgivare. Resulterade i respektfull, exakt representation.</li>
+        
+        <li><strong>Öppen källkod spelutveckling = transparens.</strong> Kod, tillgångar, designdokument—allt offentligt. Community-bidrag som förbättrar kvalitet. Samarbete över sekretess.</li>
+        
+        <li><strong>Sakrala siffror framträder i spelande naturligt.</strong> 5-slag-kombos, 70 vitala punkter, 5-ramar steg—mönster som framträder från speltest, inte påtvingade av design.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>Spelarkitektur frusen i initial design blir föråldrad när spelande utvecklas. Arkitektur med dokumenterad evolution möjliggör säker iteration—spelare ser bana, inte bara ögonblicksbild.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Utforska den Sakrala Stridsgeometrin</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/blacktrigram">Källkodsrepository</a> - Kod, tillgångar, designdokument</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">Arkitekturdokumentation</a> - C4-modeller, stridssystemdesign</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">Stridssystem Djupdykning</a> - Träffdetektering, skadeberäkning, AI</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">Speldesigndokument</a> - Krigarbalans, drag-listor, kombo-system</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">Framtida Färdplan</a> - Femårig evolutionsplan</li>
+        <li><a href="https://blacktrigram.com">Live Demo</a> - Spela i webbläsare (WebGL-build)</li>
+      </ul>
+      
+      <p><strong>Tänk själv.</strong> Spela spelet. Läs koden. Studera mönstren. Fem krigarearketyper, 70 vitala punkter, sakral geometri i stridssimulering—mönster synliga när du vet var du ska leta.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, Systemarkitekt, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Stridskoreografi som avslöjar matematisk elegans. Fem krigare, oändliga möjligheter."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Fortsätt Resan</h2>
+      <p><strong>Nästa:</strong> <a href="blog-trigram-combat_sv.html">Black Trigram Stridssystem</a> - Djupdykning i träffdetektering och fysik</p>
+      <p><strong>Relaterat:</strong> <a href="black-trigram-docs.html">Fullständig Dokumentation</a> - Alla arkitekturdiagram och speldesignspecifikationer</p>
+      <p><strong>Tillbaka till:</strong> <a href="blog_sv.html">Säkerhetsblogg</a> - Alla discordianska inlägg</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsult<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsult</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps Integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordiansk Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Öppet ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör Systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven Utvecklare som gör det faktiskt fungerande" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code_sv.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code_sv.html">Black Trigram Strid</a>, och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrott och dolda ägg som gör filosofi distributbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
