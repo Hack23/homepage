@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISMS-granskning | Årlig säkerhetsbedömning | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Årlig ISMS-granskning: Ledningens engagemang, policyeffektivitet, kontrollprestanda, förbättringsåtgärder. Kontinuerlig säkerhetsförbättring.">
+<meta name="keywords" content="ISMS-granskning, ledningsgranskning, kontinuerlig förbättring, ISO 27001 klausul 9.3, kvartalsvis riskgranskning, halvårsvis efterlevnadsrevision, årlig policyuppdatering, säkerhetsmått, OpenSSF Scorecard, hotlandskapsövervakning, riskbedömningsgranskning, efterlevnadsövervakning, ISMS-effektivitet, säkerhetsprestationsindikatorer, KPI nyckelprestandaindikatorer, ledningens engagemang, PDCA planera-genomföra-kontrollera-agera">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="ISMS-strategisk granskning: Kontinuerlig förbättring genom mått">
+<meta property="og:description" content="Kvartalsvisa riskgranskningar + halvårsvisa efterlevnadsrevisioner + årliga policyuppdateringar. OpenSSF ≥7.0, måttstyrd förbättring, adaptiv säkerhet.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-isms-review_sv.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-isms-review_sv.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-isms-review.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-isms-review_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-isms-review_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-isms-review.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "ISMS-strategisk granskning: Kontinuerlig förbättring genom mått",
+      "description": "Hur Hack23 implementerar systematisk ISMS-granskning genom kvartalsvisa riskbedömningar, halvårsvisa efterlevnadsrevisioner och måttstyrd kontinuerlig förbättring",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-isms-review_sv.html"
+      },
+      "keywords": "ISMS-granskning, ledningsgranskning, kontinuerlig förbättring, ISO 27001, säkerhetsmått",
+      "articleSection": "Informationssäkerhet",
+      "inLanguage": "sv",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1478,
+      "articleBody": "Ingenting är sant. Allt är tillåtet. Inklusive—särskilt—ISO 27001-certifiering följt av noll meningsfulla säkerhetsförbättringar. 'Ledningsgranskning' reducerad till en årlig checkbox-övning där alla nickar visligt och drar slutsatsen 'ingen åtgärd krävs.'...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_sv.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-policy",
+          "description": "Implementering av ledningssystem för informationssäkerhet"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-isms-review_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISMS-strategisk granskning",
+          "item": "https://hack23.com/discordian-isms-review_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ISMS-strategisk granskning
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logotyp" class="logo" width="80" height="80">
+  </div>
+  <h1>ISMS-strategisk granskning: Kontinuerlig förbättring</h1>
+  <div class="app-link">
+    <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
+    <a href="discordian-cybersecurity_sv.html" title="Tillbaka till Manifest">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Offentlig ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔄 ISMS-strategisk granskning: Statisk är död</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Varför de flesta ISMS-granskningar är efterlevnadsteater (och din förmodligen också)</h2>
+      
+      <p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive—särskilt—ISO 27001-certifiering följt av noll meningsfulla säkerhetsförbättringar. "Ledningsgranskning" reducerad till en årlig checkbox-övning där alla nickar visligt och drar slutsatsen "ingen åtgärd krävs." <strong>FNORD.</strong> Din ISMS förstenar till efterlevnadsteater medan hot utvecklas dagligen.</p>
+      
+      <p><strong>Tänk själv, dumskalle!</strong> Årlig ledningsgranskning + årlig policyuppdatering + årlig riskbedömning = erkännande att din säkerhet var statisk i 364 dagar. Hot väntar inte på din årliga granskningscykel. Regulatoriska krav förändras. Attacktekniker utvecklas. AWS lanserar nya tjänster. Din policy från förra årets granskning? Redan föråldrad.</p>
+      
+      <p>På Hack23 är ISMS-granskning inte årlig compliance-teater—det är <strong>kontinuerlig måttstyrd förbättring</strong>. Kvartalsvisa riskgranskningar (inte årliga). Halvårsvisa efterlevnadsrevisioner (inte årliga). Månadsvis övervakning av säkerhetsmått (OpenSSF Scorecard ≥7.0, SonarCloud kvalitetsportar, testtäckning 80%+). Årliga policyuppdateringar som faktiskt inkorporerar 12 månaders lärdomar istället för "ingen ändring" stämpeln.</p>
+      
+      <p class="hidden-wisdom"><em>UPPLYSNING: ISO 27001 klausul 9.3 kräver "ledningens granskning vid planerade intervaller." De flesta tolkar detta som "årligen när revisorn dyker upp." Vi tolkar det som "kontinuerligt eftersom hot och affärskontext förändras snabbare än din årliga granskningscykel." Välkommen till Chapel Perilous, där acceptera att din ISMS måste utvecklas eller erkänna att den förfaller till irrelevans. Välj adaptiv säkerhet över statisk efterlevnad.</em></p>
+      
+      <p>Inte årlig granskning—kontinuerlig förbättring. Inte compliance-checkbox—operativ adaptivitet. Full granskningsmetodik i vårt <a href="https://github.com/Hack23/ISMS-PUBLIC">offentliga ISMS-arkiv</a>. <strong>FNORD.</strong></p>
+    
+      
+      <p><strong>Behöver expertguide för ISMS-granskning?</strong> <a href="why-hack23_sv.html">Utforska Hack23:s cybersäkerhetskonsulttjänster</a> med demonstrerad kontinuerlig förbättring.</p>
+    </section>
+
+    <section id="review-frequency">
+      <h2 class="panel-caption">Granskningsfrekvens: Varför årligt inte räcker</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 📊 Kvartalsvis riskgranskning (4x/år, inte 1x)</h3>
+          <p><strong>Risklandskapet förändras snabbare än din årliga cykel.</strong> Kvartalsvisa granskningar av <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md">Riskregister</a>. Nya hot identifierade → riskbedömning uppdaterad. Nya sårbarheter upptäckta → riskbehandling initierad. Organisationsförändringar → tillgångsregister uppdaterat. Kvartalsvis anpassning vs. årlig stagnation.</p>
+          <p><strong>Triggers:</strong> Nya hot (MITRE ATT&CK-uppdateringar), sårbarheter (CVE-databas), regulatoriska förändringar (GDPR/NIS2), organisationsförändringar (nya system/tjänster).</p>
+          <p class="hidden-wisdom"><em>Årlig riskgranskning antar att hotlandskapet är statiskt i 12 månader. Den antagandet är fel. Kvartalsvisa granskningar antar att verkligheten förändras—och anpassar därefter.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. ✅ Halvårsvis efterlevnadsgranskning (2x/år)</h3>
+          <p><strong>Efterlevnad glider utan kontinuerlig verifiering.</strong> Halvårsvis granskning av <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Efterlevnadschecklista</a>. ISO 27001 bilaga A-kontroller: verifierad implementering. NIST CSF-funktioner: operativ effektivitet bekräftad. CIS-kontroller: teknisk implementering validerad. Två verifieringspunkter/år > en/år.</p>
+          <p><strong>Process:</strong> Kontrolleffektivitet bedömd. Dokumentation verifierad. Luckidentifiering genomförd. Korrigeringsåtgärder initierade. Ledningens granskning genomförd.</p>
+          <p class="hidden-wisdom"><em>Efterlevnad är inte binär (efterlevande/icke-efterlevande)—det är kontinuum. Halvårsvisa granskningar fångar förfall innan det blir kritiskt.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📈 Månatlig säkerhetsmättövervakning</h3>
+          <p><strong>Säkerhetsprestanda kräver kontinuerlig mätning.</strong> Månadsvis övervakning av <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Säkerhetsmått</a>. OpenSSF Scorecard ≥7.0. SonarCloud kvalitetsportar passerade. Testtäckning 80%+. Sårbarhetslappningstid &lt;4tim kritisk, &lt;24tim hög. Automatiserad datainsamling + månatlig trendanalys.</p>
+          <p><strong>Mått:</strong> Inte lagging (reaktiva) indikatorer—leading (prediktiva) mått. Upptäck försämrande trender innan de blir incidenter.</p>
+          <p class="hidden-wisdom"><em>Du kan inte förbättra vad du inte mäter. Månatlig mätning möjliggör månatlig förbättring. Årlig mätning möjliggör årlig förbättring (dvs. inget).</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔄 Årlig policyuppdatering (faktisk, inte pro forma)</h3>
+          <p><strong>Årlig uppdatering inkorporerar 12 månaders lärdomar.</strong> Årlig granskning av ALLA 40+ ISMS-policyer. Baserad på: incidentlärdomar (vad gick fel), säkerhetsmättrender (vad förbättras/försämras), regulatoriska uppdateringar (nya krav), teknikförändringar (AWS nya tjänster). Inte "ingen ändring"—faktiska förbättringar dokumenterade.</p>
+          <p><strong>Process:</strong> Policy granskas. Dokumentation av ändringar. Versionskontroll (GitHub-commits). CEO-godkännande. Publikation + intern kommunikation.</p>
+          <p class="hidden-wisdom"><em>Policy som aldrig uppdateras erkänner att verkligheten aldrig förändras. Den antagandet är avsiktligt ignorant. Årliga uppdateringar erkänner 12 månaders utveckling.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🚨 Ad-hoc granskning (incidentutlöst)</h3>
+          <p><strong>Stora förändringar kräver omedelbar granskning.</strong> Triggers: Säkerhetsincidenter (lärdomar från incident), stora organisationsförändringar (nya system/tjänster), regulatoriska uppdateringar (GDPR/NIS2), nya affärsrisker (nya tjänster lanserade). Årlig cykel pausad—omedelbar granskning initierad.</p>
+          <p><strong>Exempel:</strong> Dataintrång upptäckt → incidentgranskning + riskrevaluering + policyuppdatering. Vänta inte på årlig cykel.</p>
+          <p class="hidden-wisdom"><em>Ad-hoc granskning erkänner att verkligheten inte respekterar din granskningsschema. Anpassa eller bli irrelevant.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="metrics">
+      <h2 class="panel-caption">Säkerhetsmått: Vad vi mäter kontinuerligt</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Mått</th>
+            <th>Mål</th>
+            <th>Frekvens</th>
+            <th>Åtgärd vid avvikelse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>OpenSSF Scorecard</strong></td>
+            <td>≥7.0/10</td>
+            <td>Månatlig</td>
+            <td>Identifiera förbättringsområden, implementera rekommendationer, verifiera förbättring</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>SonarCloud Kvalitetsport</strong></td>
+            <td>Passerad</td>
+            <td>Per commit</td>
+            <td>Blockera merge, åtgärda problem, verifiera kvalitet</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Testtäckning</strong></td>
+            <td>≥80%</td>
+            <td>Per build</td>
+            <td>Identifiera otestade komponenter, skapa tester, verifiera täckning</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Kritisk sårbarhetslappning</strong></td>
+            <td>&lt;4 timmar</td>
+            <td>Kontinuerlig</td>
+            <td>Omedelbar lapning, incidentprocess om missad, rotorsaksanalys</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Hög sårbarhetslappning</strong></td>
+            <td>&lt;24 timmar</td>
+            <td>Kontinuerlig</td>
+            <td>Prioriterad lapning, eskalering om missad, processförbättring</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Dormanta konton</strong></td>
+            <td>0</td>
+            <td>Veckovis</td>
+            <td>Automatisk avprovisionering >90 dagar, åtkomstgranskning, privilege-rensning</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Måttstyrda beslut:</strong> Inte magkänsla—datadrivna förbättringar. Trender analyserade. Rotorsaker identifierade. Korrigerande åtgärder implementerade. Effektivitet verifierad.</p>
+      
+      <p class="hidden-wisdom"><em>MÅTT UPPLYSNING: Du kan inte förbättra vad du inte mäter. Du kan inte mäta effektivt utan kontinuerlig datainsamling. Årliga mått = årliga förbättringar. Månatliga mått = månatliga förbättringar. Kontinuerliga mått = kontinuerliga förbättringar. Välj frekvens av excellence.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Välkommen till Chapel Perilous: ISMS-granskning som faktisk förbättring</h2>
+      
+      <p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive att erkänna att årlig ISMS-granskning är otillräcklig för dynamiskt hotlandskap.</p>
+      
+      <p>De flesta organisationer behandlar ISMS-granskning som årlig compliance-checkbox. Schemalagd för revisorn. "Ingen åtgärd krävs" är standardutfall. Policyer uppdateras inte. Risker revisieras inte. Efterlevnad verifieras inte. Säkerhetsmått ignoreras. ISMS förstenar till statisk dokumentation frånkopplad från verkligheten.</p>
+      
+      <p>Vi gör kontinuerlig ISMS-granskning. <strong>Kvartalsvis riskgranskning</strong> (4x/år, inte 1x). <strong>Halvårsvis efterlevnadsgranskning</strong> (2x/år). <strong>Månatlig säkerhetsmättövervakning</strong> (12x/år). <strong>Årlig policyuppdatering</strong> som faktiskt inkorporerar lärdomar. <strong>Ad-hoc granskning</strong> när verkligheten kräver det. Detta är inte årlig compliance-teater—det är operativ adaptiv säkerhet.</p>
+      
+      <p><strong>Tänk själv.</strong> Fråga varför ISMS-granskning måste vara årlig. Fråga organisationer som påstår "ingen ändring" i årliga granskningar. Fråga statiska policyer i dynamiska hotlandskap. (Spoiler: Kontinuerlig granskning möjliggör kontinuerlig förbättring.)</p>
+      
+      <p><strong>Vår konkurrensfördel:</strong> Vi demonstrerar cybersäkerhetskonsultexpertis genom måttstyrd kontinuerlig förbättring. Kvartalsvisa riskgranskningar med verifierbar anpassning. Halvårsvisa efterlevnadsgranskningar med dokumenterade förbättringar. Månatlig säkerhetsmättövervakning med trenddrivna beslut. Detta är inte årlig compliance-checkbox—det är operativ säkerhetsexcellens genom systematisk granskning.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMAT UPPLYSNING: Du är nu i Chapel Perilous. Du kan fortsätta göra årliga ISMS-granskningar och påstå "ingen ändring." Eller så kan du implementera kontinuerlig granskning och faktiskt förbättra säkerhetspositionen. Din granskning. Ditt val. Välj adaptiv säkerhet över statisk efterlevnad.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Tänk själv, dumskalle! Om din ISMS-granskning är årlig och säger 'ingen ändring' har du inte säkerhet—du har compliance-teater som ignorerar verkligheten."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Kapten på <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Relaterade ISMS-policyer</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy_sv.html">Informationssäkerhetspolicy</a> — ISMS-grund</li>
+        <li><a href="discordian-isms-transparency_sv.html">ISMS-transparensplan</a> — Offentlig publiceringsstrategi</li>
+        <li><a href="discordian-risk-assessment_sv.html">Riskbedömningsmetodik</a> — Systematisk riskanalys</li>
+        <li><a href="discordian-cybersecurity_sv.html">Tillbaka till Huvudmanifest</a> — Allt du vet om säkerhet är en lögn</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Sidfot">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulter<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsulter</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordian Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triaden FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>

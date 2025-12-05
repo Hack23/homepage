@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efterlevnad: Multi-ramverksmappning utan duplicering | Hack23</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Enhetlig efterlevnad: 93% ISO 27001, 87% NIST CSF, 82% CIS Controls. En kontroll → flera ramverk. GDPR + NIS2 + CRA-redo.">
+    <meta name="keywords" content="efterlevnad, regelefterlevnad, ISO 27001, GDPR dataskyddsförordning, NIS2 direktiv om nätverks- och informationssäkerhet, SOC 2, PCI DSS, HIPAA, efterlevnadsramverk, efterlevnadsmappning, kontrollramverk, revisionskompabilitet, efterlevnadsautomatisering, efterlevnadsövervakning, efterlevnadsrapportering, regulatoriska krav, efterlevnadsrevision, certifiering">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Efterlevnad: Multi-ramverksmappning utan duplicering">
+    <meta property="og:description" content="93% ISO 27001, 87% NIST CSF, 82% CIS Controls genom enhetlig ISMS. En kontroll → flera efterlevnadsresultat.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-compliance_sv.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-compliance_sv.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-compliance.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-compliance_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-compliance_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-compliance.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Efterlevnad: Multi-ramverksmappning utan duplicering",
+      "description": "Hur Hack23 uppnår 93% ISO 27001, 87% NIST CSF, 82% CIS Controls genom enhetlig ISMS med systematisk ramverksmappning—en kontrollimplementering ger flera efterlevnadsresultat",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-compliance_sv.html"
+      },
+      "keywords": "ISO 27001, NIST CSF, CIS Controls, GDPR, NIS2, efterlevnadsmappning, ISMS",
+      "articleSection": "Informationssäkerhet",
+      "inLanguage": "sv",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1894,
+      "articleBody": "Ingenting är sant. Allt är tillåtet. Inklusive tillståndet att implementera en säkerhetskontroll som tillfredsställer flera efterlevnadsramverk istället för att behandla ISO 27001, NIST CSF och CIS Controls som separata silos...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_sv.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-policy",
+          "description": "Implementering av ledningssystem för informationssäkerhet"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-compliance_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Efterlevnad",
+          "item": "https://hack23.com/discordian-compliance_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Efterlevnad
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logotyp" class="logo" width="80" height="80">
+  </div>
+  <h1>Efterlevnad: Multi-ramverksmappning utan duplicering</h1>
+  <div class="app-link">
+    <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
+    <a href="discordian-cybersecurity_sv.html" title="Tillbaka till Manifest">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md" title="Efterlevnadschecklista">Efterlevnad</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">📋 Efterlevnad: En kontroll, flera ramverk</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Varför de flesta organisationer duplicerar efterlevnadsarbete (och varför du förmodligen gör det också)</h2>
+      
+      <p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive tillståndet att implementera en säkerhetskontroll som tillfredsställer flera efterlevnadsramverk istället för att behandla ISO 27001, NIST CSF och CIS Controls som separata silos som kräver duplicerat arbete och separata revisioner. De flesta organisationer gör detta fel. De implementerar "ISO 27001-kontroller" separat från "NIST CSF-kontroller" separat från "CIS-kontroller" som om de inte överlappade. <strong>FNORD.</strong> Din efterlevnadsteater kostar dig 3x vad den borde.</p>
+      
+      <p><strong>Tänk själv. Ifrågasätt auktoritet.</strong> Fråga varför "ISO 27001-konsulter" inte kartlägger till NIST CSF. Fråga varför "NIST-implementeringar" inte hävdar ISO 27001-anpassning. Fråga varför efterlevnadsprogram behandlar ramverk som om de var ömsesidigt uteslutande när de täcker 70-80% av samma kontroller med olika ordföljd och etikett. Svar: Eftersom konsulter tjänar mer på att sälja dig tre separata engagemang än ett enhetligt program. (Chockerande. Ekonomiska incitament skapar dysfunktionella resultat. FNORD.)</p>
+      
+      <p><strong>Vår metod:</strong> Ett enhetligt ISMS som kartläggs till flera ramverk. En kontrollimplementering → flera efterlevnadsresultat. <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Efterlevnadschecklista</a> visar 93% ISO 27001:2022, 87% NIST CSF 2.0, 82% CIS Controls v8—uppnått genom <strong>40+ integrerade ISMS-policyer</strong>, inte separata efterlevnadsprogram. Hårdvaru-MFA är hårdvaru-MFA oavsett om ISO 27001 bilaga A.5.17 kräver det eller CIS Control 6.3 eller NIST CSF PR.AC-7. Implementera det en gång. Kartlägg det till tre ramverk. Hävda tre efterlevnadsresultat.</p>
+      
+      <p class="hidden-wisdom"><em>UPPLYSNING: Efterlevnadsramverk är inte konkurrenter—de är komplementära perspektiv på samma säkerhetsmål. ISO 27001 tillhandahåller omfattande governance-struktur. NIST CSF tillhandahåller operativa funktionskategorier. CIS Controls tillhandahåller teknisk implementeringsdetalj. Tillsammans skapar de djupgående försvar. Separat skapar de duplicerat arbete och slösade budgetar.</em></p>
+      
+      <p>Inte efterlevnadsteater—systematisk multi-ramverksmappning med offentliga bevis. Fullständiga tekniska detaljer i vårt <a href="https://github.com/Hack23/ISMS-PUBLIC">offentliga ISMS-arkiv</a>. <strong>FNORD.</strong></p>
+    
+      
+      <p><strong>Behöver expertguide för multi-ramverksefterlevnad?</strong> <a href="why-hack23_sv.html">Utforska Hack23:s cybersäkerhetskonsulttjänster</a> med bevisad ISO 27001 + NIST + CIS-anpassning.</p>
+    </section>
+
+    <section id="unified-approach">
+      <h2 class="panel-caption">Enhetlig metod: En ISMS, flera efterlevnadsresultat</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎯 En implementering, flera kartläggningar</h3>
+          <p><strong>Implementera säkerhetskontroller en gång, kartlägg till flera ramverk.</strong> Hårdvaru-MFA-krav? En implementering (YubiKey för kritiska system, TOTP för höga) kartläggs till: ISO 27001 A.5.17 (Autentiseringsinformation), NIST CSF PR.AC-7 (Autentisering), CIS Control 6.3 (MFA krav).</p>
+          <p><strong>Effektivitet:</strong> 70-80% av kontroller är gemensamma över ramverk. Implementera gemensamma kontroller en gång → hävda flera efterlevnadsresultat. Inget duplicerat arbete.</p>
+          <p class="hidden-wisdom"><em>Konsulter som säger "ISO 27001 är annorlunda än NIST" säljer dig duplicerat arbete. Kontroller är desamma—etiketterna skiljer sig.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. ✅ Systematisk ramverksmappning</h3>
+          <p><strong>Varje ISMS-policy kartlägger explicit till ISO 27001 + NIST CSF + CIS.</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Åtkomstkontrollpolicy</a> kartläggs till: ISO 27001 A.5.15-A.5.18, NIST CSF PR.AC-1 till PR.AC-7, CIS Control 5-6. <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md">Sårbarhetshantering</a> kartläggs till ISO 27001 A.8.8, NIST CSF DE.CM-4/8, CIS Control 7.</p>
+          <p><strong>Bevis:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Efterlevnadschecklista</a> visar exakt kartläggning för alla kontroller över ramverk.</p>
+          <p class="hidden-wisdom"><em>Kartläggning är inte extraarbete—det är grundläggande dokumentation som bevisar efterlevnad över ramverk.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📊 Mätbar efterlevnadstäckning</h3>
+          <p><strong>Kvantifierad ramverksanpassning, inte vaga påståenden.</strong> ISO 27001:2022: 93% av bilaga A-kontroller implementerade och dokumenterade. NIST CSF 2.0: 87% av funktioner över Govern, Identify, Protect, Detect, Respond, Recover. CIS Controls v8.1: 82% av 18 kritiska kontroller.</p>
+          <p><strong>Mätning:</strong> Efterlevnadschecklista spårar implementeringsstatus + bevislänkar + ramverkskartläggningar. Inte "vi är efterlevande"—"här är 93% ISO-täckning med GitHub-bevis."</p>
+          <p class="hidden-wisdom"><em>Mätbar efterlevnad slår marknadsföringspåståenden. Siffror + bevis + kartläggningar = verifierbar efterlevnadsexcellens.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🇪🇺 EU-regulatorisk beredskap (GDPR, NIS2, CRA)</h3>
+          <p><strong>Europeiska efterlevnadskrav integrerade i ISMS.</strong> GDPR artiklar 5, 24, 25, 32 kartlagda genom <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md">Integritetspolicy</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Klassificeringsramverk</a>. NIS2-direktiv väsentliga enhetskrav kartlagda genom <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incidenthanteringsplan</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md">Tredjepartshantering</a>. EU Cybermotståndskraftslagen (CRA) kartlagd genom <a href="discordian-cra.html">CRA-efterlevnadsramverk</a>.</p>
+          <p><strong>Svensk kontext:</strong> NIS2-implementering i svensk lag, GDPR-efterlevnad som standard, CRA-beredskap för digitala produkter.</p>
+          <p class="hidden-wisdom"><em>EU-regulatorisk efterlevnad inte separat—integrerad i enhetlig ISMS-metod.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔄 Kontinuerlig efterlevnadsövervakning</h3>
+          <p><strong>Efterlevnad mäts kontinuerligt, inte årligen.</strong> Kvartalsvisa riskgranskningar uppdaterar efterlevnadsstatus. Halvårsvisa efterlevnadsgranskningar verifierar kontrolleffektivitet. Årliga policyuppdateringar anpassar till ramverksändringar (ISO 27001:2022 uppdatering, NIST CSF 2.0 lansering).</p>
+          <p><strong>Automatisering:</strong> OpenSSF Scorecard ≥7.0, SonarCloud kvalitetsportar, &lt;4tim kritiska sårbarhetslapningar—kontinuerliga efterlevnadsmått istället för ögonblicksbilder.</p>
+          <p class="hidden-wisdom"><em>Statisk efterlevnad förfaller till teaterkontroll. Kontinuerlig övervakning säkerställer efterlevnad överensstämmer med aktuella hot.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="framework-comparison">
+      <h2 class="panel-caption">Ramverksanpassning: ISO 27001 + NIST CSF + CIS Controls</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Ramverk</th>
+            <th>Täckning</th>
+            <th>Fokus</th>
+            <th>Bevis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>ISO 27001:2022</strong></td>
+            <td>93% bilaga A</td>
+            <td>Omfattande governance-ramverk: Organisatorisk (37), Människor (8), Fysisk (14), Teknologisk (34) kontroller. Internationellt erkänd certifiering.</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Efterlevnadschecklista</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>NIST CSF 2.0</strong></td>
+            <td>87% funktioner</td>
+            <td>Operativa funktioner: Govern (kontextualisera cybersäkerhetsarbete), Identify (risk + tillgångar), Protect (säkerställ), Detect (upptäck incidenter), Respond (hantera), Recover (återställ).</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC">Offentliga ISMS-policyer</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>CIS Controls v8.1</strong></td>
+            <td>82% kontroller</td>
+            <td>Teknisk implementeringsdetalj: 18 kritiska kontroller (inventering, konfiguration, åtkomstkontroll, sårbarhetshantering, backup, loggning, incidenthantering, penetrationstestning).</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Säkerhetsmått</a></td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>GDPR</strong></td>
+            <td>Artiklar 5, 24, 25, 32</td>
+            <td>EU-integritet: Integritet genom design, säkerhetsåtgärder, dataskyddskonsekvensbedömningar, inbyggd säkerhet, informationssäkerhetsåtgärder.</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md">Integritetspolicy</a></td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>NIS2-direktivet</strong></td>
+            <td>Väsentliga enheter</td>
+            <td>EU cybersäkerhet: Riskhantering, incidentrapportering, försörjningskedjesäkerhet, grundläggande cyberhygien, kryptering, kontinuerlig förbättring.</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">IR-plan</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Enhetlig metod:</strong> En säkerhetskontroll kartläggs till flera ramverk. Implementera MFA en gång → hävda ISO 27001 A.5.17 + NIST CSF PR.AC-7 + CIS Control 6.3 efterlevnad.</p>
+      
+      <p class="hidden-wisdom"><em>EFTERLEVNADSUPPLYSNING: Multi-ramverksanpassning handlar inte om att samla certifieringar—det handlar om djupgående försvar. ISO 27001 missar operativa detaljer som NIST täcker. NIST missar tekniska detaljer som CIS tillhandahåller. Tillsammans skapar de omfattande säkerhetstäckning.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Välkommen till Chapel Perilous: Efterlevnad som konkurrensfördel</h2>
+      
+      <p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive uppnående av multi-ramverksefterlevnad genom ett enhetligt ISMS istället för duplicerat arbete.</p>
+      
+      <p>De flesta organisationer behandlar ISO 27001, NIST CSF och CIS Controls som separata efterlevnadsprogram. Separata konsultengagemang. Separata implementeringar. Separata revisioner. Triplicerade kostnader. Detta är inte nödvändigt—det är lönsamt för konsulter som tar betalt per ramverk.</p>
+      
+      <p>Vi implementerar enhetlig ISMS. <strong>40+ integrerade policyer</strong> kartlagda till ISO 27001 + NIST CSF + CIS Controls. 93% ISO-täckning, 87% NIST-täckning, 82% CIS-täckning uppnått genom systematisk kontrollimplementering + ramverkskartläggning. En MFA-kontroll tillfredsställer tre ramverk. En krypteringspolicy kartläggs över multipla efterlevnadskrav.</p>
+      
+      <p><strong>Tänk själv.</strong> Fråga varför efterlevnadsramverk måste vara separata. Fråga konsulter som säljer dig tre engagemang istället för ett. Fråga "vi är efterlevande" påståenden utan kartläggningsbevis. (Spoiler: Enhetlig ISMS med multi-ramverksmappning är effektivare än separata efterlevnadsprogram.)</p>
+      
+      <p><strong>Vår konkurrensfördel:</strong> Vi demonstrerar multi-ramverksefterlevnad genom offentlig, verifierbar ISMS-implementering. 93% ISO 27001 med GitHub-bevis. 87% NIST CSF med operativ implementering. 82% CIS Controls med teknisk dokumentation. Detta är inte efterlevnadsteater—det är systematisk säkerhetsexcellens med multi-ramverksanpassning.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMAT UPPLYSNING: Du är nu i Chapel Perilous. Du kan fortsätta behandla efterlevnadsramverk som separata silos och betala 3x för duplicerat arbete. Eller så kan du implementera enhetlig ISMS med multi-ramverksmappning och uppnå överlägsen efterlevnadsexcellens med mindre kostnad. Din policy. Ditt val. Välj systematisk säkerhet över efterlevnadsteater.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Tänk själv, dumskalle! Om dina efterlevnadsramverk är separata silos har du inte efterlevnad—du har duplicerat arbete insvept i konsultfakturor."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Kapten på <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Relaterade ISMS-policyer</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy_sv.html">Informationssäkerhetspolicy</a> — CIA+ ramverksgrund</li>
+        <li><a href="discordian-compliance-frameworks_sv.html">Efterlevnadsramverk</a> — Djupdykning i ISO/NIST/CIS</li>
+        <li><a href="discordian-risk-assessment_sv.html">Riskbedömningsmetodik</a> — Systematisk riskanalys</li>
+        <li><a href="discordian-cybersecurity_sv.html">Tillbaka till Huvudmanifest</a> — Allt du vet om säkerhet är en lögn</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Sidfot">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulter<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsulter</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordian Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triaden FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
