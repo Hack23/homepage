@@ -1,3 +1,7 @@
+#!/bin/bash
+# Create Swedish translation for discordian-risk-register_sv.html
+
+cat > discordian-risk-register_sv.html << 'ENDOFFILE'
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -387,3 +391,7 @@
     </footer>
 </body>
 </html>
+ENDOFFILE
+
+echo "Created discordian-risk-register_sv.html"
+wc -l discordian-risk-register_sv.html
