@@ -271,4 +271,4 @@ After all 9 posts are complete:
 **Status:** 1/9 Complete (11%)  
 **Quality:** High (validated and committed)  
 **Next Milestone:** Complete blog-cia-security_sv.html (target: 2/9, 22%)  
-**Sitemap Update:** December 6, 2025 - All 42 Swedish blog and ISMS translations added to sitemap.xml with proper hreflang tags
+**Sitemap Update:** December 6, 2025 - All 44 Swedish blog and ISMS policy translations (26 blog posts + 18 ISMS policies) added to sitemap.xml with proper hreflang tags
