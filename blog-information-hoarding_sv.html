@@ -3,30 +3,463 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Information Hoarding - Kommer snart | Hack23</title>
+<title>Informationshamstring | Kunskapstransparens | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Information Hoarding - Kommer snart på svenska">
+<meta name="description" content="Bryta informationshamstring: Varför radikal transparens accelererar innovation. Öppen källkod kunskapsdelning som konkurrensfördel. CIA Triad integritetsprinciper i praktiken.">
+<meta name="keywords" content="CIA triad implementation, data integrity security, information security blog, access control strategies, cybersecurity best practices, organizational security, knowledge management security, information hoarding impacts, organizational security culture, data availability management, information governance, enterprise information security, organizational knowledge sharing, information silos prevention, data transparency strategies, security culture development, information access control policies, organizational cybersecurity maturity, knowledge management best practices, information security awareness, data classification strategies, information lifecycle management, security governance framework, organizational risk management, information security training, cybersecurity leadership, security policy implementation, information sharing protocols, organizational security metrics, security compliance management, information security audit, cybersecurity risk assessment, organizational threat modeling, information security incidents, security awareness programs, cybersecurity culture transformation, information security management systems, organizational security architecture, information protection strategies, security governance best practices, organizational cybersecurity strategy, information security policy development, security training programs, cybersecurity maturity assessment, organizational security posture, information security controls, security governance automation, cybersecurity organizational change, information security leadership, organizational security transformation">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Information Hoarding Destroys Data Integrity | Säkerhetsblogg">
+<meta property="og:description" content="Expertinsikter om hur informationshamstring underminerar CIA Triad-principer och organisatorisk säkerhet.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-information-hoarding_sv.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="sv_SE">
 <link rel="canonical" href="https://hack23.com/blog-information-hoarding_sv.html">
 <link rel="alternate" hreflang="en" href="https://hack23.com/blog-information-hoarding.html">
 <link rel="alternate" hreflang="sv" href="https://hack23.com/blog-information-hoarding_sv.html">
 <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-information-hoarding_sv.html">
 <link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-information-hoarding.html">
+
+<!-- Schema.org structured data for blog post -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Den Dolda Kostnaden av Informationshamstring: När Åtkomstrestriktioner Förstör Dataintegritet",
+      "alternativeHeadline": "Hur Fantommöten och E-posttrådar Underminerar CIA Triad-Principer",
+      "description": "How hoarding information in emails, personal drives and restricted channels undermines organizational knowledge integrity and forces people to work with incomplete information. Explores practical CIA Triad implementation challenges and solutions.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/images/clark-wilson-model.png",
+        "width": 800,
+        "height": 600
+      },
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-04-10",
+      "dateModified": "2025-09-23",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-information-hoarding_sv.html"
+      },
+      "keywords": "CIA Triad, dataintegritet, tillgänglighet, fantommöten, e-posttrådar, informationshamstring, kunskapshantering, organisatorisk säkerhet, informationssäkerhet bästa praxis",
+      "articleSection": "Information Security",
+      "wordCount": 1200,
+      "articleBody": "Information hoarding is a silent killer of organizational effectiveness. When critical knowledge gets trapped in email threads, personal drives, and exclusive meetings, it creates phantom meetings that consume resources without adding value...",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "CIA Triad",
+          "description": "Information security model focusing on Confidentiality, Integrity, and Availability"
+        },
+        {
+          "@type": "Thing",
+          "name": "Data Integrity",
+          "description": "Accuracy and consistency of data over its entire lifecycle"
+        },
+        {
+          "@type": "Thing",
+          "name": "Information Security Management",
+          "description": "Protection of information and information systems"
+        }
+      ],
+      "teaches": [
+        "CIA Triad Implementeraration Best Practices",
+        "Information Hoarding Prevention",
+        "Organizational Knowledge Management",
+        "Data Integrity Preservation Strategies"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "IT Professionals",
+          "Security Officers",
+          "Management",
+          "Policy Makers"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-information-hoarding_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Information/Cyber Säkerhetsblogg",
+          "item": "https://hack23.com/blog-information-hoarding_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
+
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Information/Cyber Säkerhetsblogg
+      </li>
+    </ol>
+  </nav>
+
+
 <header>
-<nav>
-<a href="index_sv.html">Hem</a>
-<a href="blog_sv.html">Blogg</a>
-<a href="services_sv.html">Tjänster</a>
-</nav>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Säkerhetsblogg</h1>
+  <div class="app-link">
+    <a href="index_sv.html" title="Back to Home">Hem</a>
+    <a href="discordian-cybersecurity.html" title="Discordiansk Blogg">🍎 Discordiansk Blogg</a>
+    <a href="cia-triad-faq.html" title="CIA Triad FAQ">CIA Triad FAQ</a>
+  </div>
 </header>
+
 <main>
-<h1>Information Hoarding</h1>
-<p>Denna sida är för närvarande under utveckling och kommer snart att finnas tillgänglig på svenska.</p>
-<p>För närvarande kan du läsa den <a href="blog-information-hoarding.html">engelska versionen</a>.</p>
+  <article>
+    <h1 class="header">Den Dolda Kostnaden av Informationshamstring: När Åtkomstrestriktioner Förstör Dataintegritet</h1>
+
+    <section id="introduction">
+      <h2 class="panel-caption">Integritets-Tillgänglighets Sambandet</h2>
+      
+      <p>Vi har alla upplevt det: Du försöker lösa ett problem när någon lättvindigt nämner, "Åh, vi fixade det förra året." Var är dokumentationen? "Den finns i min e-post någonstans." Eller värre: "Vi diskuterade det i ett möte med föregående teamledare."</p>
+      
+      <figure>
+        <img src="blog.webp" alt="CIA Triad showing the relationship between Confidentiality, Integrity, and Availability" width="600" height="400" loading="lazy">
+        <figcaption>CIA Triads bortglömda relation: Hur tillgänglighet direkt påverkar dataintegritet</figcaption>
+      </figure>
+      
+      <p>Detta är inte bara irriterande—det är ett fundamentalt sammanbrott av Tillgänglighet-principen i CIA triad som direkt skapar Integritetsfel. När information som borde vara tillgänglig för auktoriserade användare istället är fångad i personlig lagring, e-posttrådar och odokumenterade möten, förlorar organisationen sin förmåga att bibehålla dataintegritet över tid och team.</p>
+    
+      
+      <p><strong>Redo att bygga ett robust säkerhetsprogram?</strong> <a href="why-hack23.html">Upptäck Hack23:s konsultmetod</a> som behandlar säkerhet som möjliggörare, inte barriär.</p>
+    </section>
+
+    <section id="information-hiding">
+      <h2 class="panel-caption">Hur Information Döljs Från De Som Behöver Den</h2>
+      
+      <p>Fem vanliga mönster av informationsdöljning som förlama r organisationer. Var och en skapar en specifik typ av integritetsfel:</p>
+      
+      <ul>
+        <li><strong>Fantommöten:</strong> Kritiska beslut fattade i möten som inte har agenda, protokoll eller central dokumentation. Endast de som deltog vet vad som bestämdes.</li>
+        <li><strong>E-posttrådar som Kunskapsbaser:</strong> När nyckelinformation endast finns i e-postutbyten mellan ett fåtal utvalda personer, skapar konstgjort begränsad information.</li>
+        <li><strong>Personliga Lagringssilos:</strong> Information lagrad i personliga OneDrive-konton eller lokala enheter som blir helt otillgänglig när någon slutar.</li>
+        <li><strong>Överrestrikterade SharePoint-Sajter:</strong> Samarbetsytor med behörigheter satta så snävt att relevanta intressenter inte kan komma åt information de behöver.</li>
+        <li><strong>Skuggdokumentation:</strong> Dokumentation underhållen på inofficiella, begränsat åtkomliga platser snarare än i designerade repositorier.</li>
+      </ul>
+      
+    </section>
+
+    <section id="understanding-impact">
+      <h2 class="panel-caption">När Nytt Arbete Byggs På Ofullständig Kunskap</h2>
+      
+      <p>Informationsdöljning slösar inte bara tid—den korrupterar aktivt integriteten av nytt arbete. När människor fattar beslut utan tillgång till kritisk kontext och tidigare arbete, de:</p>
+      
+      <ul>
+        <li>Skapar <strong>motstridiga implementeringar</strong> som inte överensstämmer med befintliga system</li>
+        <li>Gör <strong>överflödiga lösningar</strong> som slösar resurser och skapar underhållsproblem</li>
+        <li>Implementerar <strong>motsägelsefulla policyer</strong> som skapar compliance-risker</li>
+        <li>Etablerar <strong>inkompatibla processer</strong> som inte kan integreras med befintliga arbetsflöden</li>
+        <li>Genererar <strong>inkonsekvent data</strong> som underminerar rapportering och analys</li>
+      </ul>
+      
+      <p>I varje fall komprometteras integriteten av organisatorisk kunskap och system direkt på grund av ett tillgänglighetsfel. Människor arbetar inte med dålig information—de arbetar med ofullständig information.</p>
+      
+      <figure>
+        <img src="https://hack23.com/blog.webp" alt="Clark-Wilson Model showing Separation of Duty and well-formed transactions" width="600" height="350" loading="lazy">
+        <figcaption>Clark-Wilson-Modellen: Bibehålla integritet kräver tillgång till fullständig information</figcaption>
+      </figure>
+    </section>
+
+    <section id="case-studies">
+      <h2 class="panel-caption">Verkliga Informationsdöljningskatastrofer</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>Det Osynliga Arkitekturbeslutet</h3>
+          <p>Ett arkitekturbeslut att standardisera på specifika molntjänster fattades i ett ledarskapssamtal utan dokumentation. Sex månader senare implementerade ett nytt team en lösning med inkompatibla teknologier, vilket skapade en fragmenterad arkitektur som krävde kostsam åtgärd. Ingen hade berättat för dem om standarden—den fanns bara i minnena hos de som var med på det ursprungliga samtalet.</p>
+          <p><strong>Integritetseffekt:</strong> Fragmenterade system med inkompatibla arkitekturer som inte kunde integreras utan betydande omarbete</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>E-posttrådens Kunskapsbas</h3>
+          <p>Critical customer requirements were discussed and refined solely through email exchanges between a product manager and three key stakeholders. When the product manager left the company, the development team built features based on incomplete documentation. The resulting product failed to meet actual customer needs because key details were locked in an email archive no one could access.</p>
+          <p><strong>Integritetseffekt:</strong> Product features built on partial requirements that didn't meet actual customer needs</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>The Personal OneDrive Documentation</h3>
+          <p>A security engineer documented detailed configuration requirements in Word documents kept on his personal OneDrive. He shared links with specific people when asked but maintained control of the master documents. When he changed roles, his replacement inherited systems with no documentation. Security configurations gradually drifted from requirements because no one knew what they should be.</p>
+          <p><strong>Integritetseffekt:</strong> Security configurations that slowly degraded due to lack of available documentation</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <h2 class="panel-caption">Breaking the Information Hoarding Cycle</h2>
+      
+      <p>To stop this integrity-destroying information hoarding, organizations need to implement structured availability practices:</p>
+      
+      <ol>
+        <li><strong>No Decisions Without Documentation:</strong> Etablerar a rule that decisions aren't final until documented in a shared, accessible location</li>
+        <li><strong>End Email Knowledge Bases:</strong> Set a policy that substantive information in emails must be transferred to proper documentation systems</li>
+        <li><strong>Eliminate Personal Storage for Business Information:</strong> Prohibit the use of personal accounts for storing work information</li>
+        <li><strong>Default Open Access Policies:</strong> Gör information available to all employees by default, restricting only when there's a specific reason</li>
+        <li><strong>Skapar Official Knowledge Repositories:</strong> Etablerar clear, well-structured systems where information should live</li>
+        <li><strong>Regular Knowledge Audits:</strong> Systematically look for "dark knowledge" that exists only in restricted locations and bring it into the light</li>
+      </ol>
+
+      <p>The most effective solution is cultural: make documentation and knowledge sharing part of everyone's job, not an afterthought. Information that authorized employees can't find might as well not exist—and the organization will pay the integrity price.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Information Needs to Flow to Those Who Need It</h2>
+      
+      <p>Every time someone hides information in personal storage, restricted channels, or undocumented meetings, they're creating future integrity problems. They're ensuring that decisions will be made with incomplete information, systems will be built without important context, and work will be duplicated unnecessarily.</p>
+      
+      <p>Information availability isn't just about system uptime—it's about ensuring organizational knowledge flows to everyone who legitimately needs it to do their jobs. Without this flow, data integrity inevitably suffers as people work in the dark.</p>
+      
+      <p>Remember: The best security policy in the world is worthless if it's stored in someone's personal email. The most brilliant architecture decision is useless if it's only shared in a meeting with no minutes. And the most carefully crafted standard is pointless if it's hidden in a SharePoint site no one can access.</p>
+      
+      <p>Stop information hoarding—your data integrity depends on it.</p>
+    </section>
+
+    <section id="discordian-blog">
+      <h2 class="panel-caption">🍎 Discordian Cybersecurity Blog - Complete ISMS Coverage</h2>
+      
+      <p><em>"Nothing is true. Everything is permitted. Think for yourself."</em> — A radical examination of security theater, surveillance states, and ISMS transparency through the lens of Illuminatus! trilogy philosophy.</p>
+      
+      <h3>Core Manifesto & Philosophy</h3>
+      <ul>
+        <li><a href="discordian-cybersecurity.html"><strong>Everything You Know About Security Is a Lie</strong></a> — Nation-state capabilities, approved crypto paradox, Chapel Perilous initiation</li>
+        <li><a href="discordian-business-value.html"><strong>The Security-Industrial Complex</strong></a> — How fear became a business model</li>
+        <li><a href="discordian-crypto.html"><strong>Question Authority: Crypto Approved By Spies</strong></a> — Dual_EC_DRBG, Crypto AG, and why government approval is suspicious</li>
+        <li><a href="discordian-classification.html"><strong>Think For Yourself: Classification Beyond Compliance Theater</strong></a> — Five levels of actually giving a damn</li>
+      </ul>
+      
+      <h3>Foundation Policies</h3>
+      <ul>
+        <li><a href="discordian-info-sec-policy.html"><strong>Information Säkerhetspolicy</strong></a> — The foundation of radical transparency</li>
+        <li><a href="discordian-access-control.html"><strong>Access Control</strong></a> — Trust no one (including yourself)</li>
+        <li><a href="discordian-incident-response.html"><strong>Incident Response</strong></a> — When (not if) shit hits the fan</li>
+      </ul>
+      
+      <h3>Development & Operations</h3>
+      <ul>
+        <li><a href="discordian-open-source.html"><strong>Open Source Policy</strong></a> — Trust through transparency</li>
+        <li><a href="discordian-secure-dev.html"><strong>Secure Development</strong></a> — Code without backdoors (on purpose)</li>
+        <li><a href="discordian-vuln-mgmt.html"><strong>Vulnerability Management</strong></a> — Patch or perish</li>
+        <li><a href="discordian-threat-modeling.html"><strong>Threat Modeling</strong></a> — Know thy enemy (they already know you)</li>
+        <li><a href="discordian-monitoring-logging.html"><strong>Monitoring & Logging</strong></a> — If a tree falls and nobody logs it...</li>
+      </ul>
+      
+      <h3>Infrastructure & Access</h3>
+      <ul>
+        <li><a href="discordian-network-security.html"><strong>Network Security</strong></a> — The perimeter is dead, long live the perimeter</li>
+        <li><a href="discordian-physical-security.html"><strong>Physical Security</strong></a> — Locks, guards, and clever social engineering</li>
+        <li><a href="discordian-asset-mgmt.html"><strong>Asset Management</strong></a> — You can't protect what you don't know you have</li>
+        <li><a href="discordian-mobile-device.html"><strong>Mobile Device Management</strong></a> — BYOD means Bring Your Own Disaster</li>
+        <li><a href="discordian-remote-access.html"><strong>Remote Access</strong></a> — VPNs and the death of the office</li>
+      </ul>
+      
+      <h3>Business Continuity & Risk</h3>
+      <ul>
+        <li><a href="discordian-backup-recovery.html"><strong>Backup & Recovery</strong></a> — Restore or regret</li>
+        <li><a href="discordian-business-continuity.html"><strong>Business Continuity</strong></a> — Survive the chaos</li>
+        <li><a href="discordian-disaster-recovery.html"><strong>Disaster Recovery</strong></a> — Plan B when everything burns</li>
+        <li><a href="discordian-risk-assessment.html"><strong>Risk Assessment</strong></a> — Calculating what you can't prevent</li>
+        <li><a href="discordian-change-mgmt.html"><strong>Change Management</strong></a> — Move fast without breaking (everything)</li>
+      </ul>
+      
+      <h3>Governance & Compliance</h3>
+      <ul>
+        <li><a href="discordian-privacy.html"><strong>Privacy Policy</strong></a> — Surveillance capitalism meets anarchist data protection</li>
+        <li><a href="discordian-data-protection.html"><strong>Data Protection</strong></a> — GDPR wants to know your location</li>
+        <li><a href="discordian-third-party.html"><strong>Third-Party Management</strong></a> — Trust your vendors? (LOL)</li>
+        <li><a href="discordian-acceptable-use.html"><strong>Acceptable Use Policy</strong></a> — Don't do stupid shit on company systems</li>
+        <li><a href="discordian-security-training.html"><strong>Security Awareness Training</strong></a> — Teaching humans not to click shit</li>
+      </ul>
+      
+      <h3>Emerging Technologies</h3>
+      <ul>
+        <li><a href="discordian-cloud-security.html"><strong>Molnsäkerhet</strong></a> — Someone else's computer</li>
+        <li><a href="discordian-email-security.html"><strong>Email Security</strong></a> — Your CEO doesn't need iTunes cards</li>
+        <li><a href="discordian-llm-security.html"><strong>OWASP LLM Security</strong></a> — Training AI not to hallucinate your secrets</li>
+      </ul>
+      
+      <p><strong>All 29 entries maintain radical Illuminatus! trilogy style:</strong> "Think for yourself, question authority," FNORD detection, Chapel Perilous, Operation Mindfuck, and 23 FNORD 5 signatures. Complete coverage of <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> policies with hidden wisdom throughout.</p>
+      
+      <p><em>All hail Eris! All hail Discordia! 🍎</em></p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related Resurser</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🍎 Discordian Cybersecurity Manifesto</h3>
+          <p>A cynical examination of nation-state surveillance, government-approved crypto, and why transparency beats security theater.</p>
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Manifesto">Read Manifesto →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>CIA Compliance Manager</h3>
+          <p>Our compliance tool helps ensure information availability to authorized users while maintaining appropriate security controls.</p>
+          <a href="cia-compliance-manager-features.html" title="Learn more about CIA Compliance Manager">Learn More</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>CIA Triad FAQ</h3>
+          <p>Explore the relationship between availability and integrity in the CIA Triad and how they support each other.</p>
+          <a href="cia-triad-faq.html" title="Read our CIA Triad FAQ">Read FAQ</a>
+        </div>
+      </div>
+    </section>
+  </article>
 </main>
-<footer>
-<p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna.</p>
-</footer>
+
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Företag Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsultation<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Tjänster Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services.html">Säkerhetskonsultation</a></li>
+            <li><a href="services.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services.html">Molnsäkerhet</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Produkter Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resurser Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogg</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publikt ISMS</a></li>
+            <li><a href="sitemap.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Företag Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeraration Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
