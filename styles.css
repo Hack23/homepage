@@ -6587,3 +6587,202 @@ article section p {
     text-align: left;
   }
 }
+
+/* ========================================
+   RTL (Right-to-Left) Language Support
+   For Arabic and Hebrew languages
+   ======================================== */
+
+/* Base RTL Direction */
+html[lang="ar"],
+html[lang="he"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Arabic Font Family */
+html[lang="ar"] {
+  font-family: 'Noto Sans Arabic', 'Tahoma', 'Arial', sans-serif;
+}
+
+/* Hebrew Font Family */
+html[lang="he"] {
+  font-family: 'Noto Sans Hebrew', 'Arial Hebrew', 'David', 'Arial', sans-serif;
+}
+
+/* RTL Body Adjustments */
+[lang="ar"] body,
+[lang="he"] body {
+  text-align: right;
+}
+
+/* RTL Navigation - Reverse flex direction */
+[lang="ar"] nav ul,
+[lang="he"] nav ul,
+[lang="ar"] .nav-menu,
+[lang="he"] .nav-menu,
+[lang="ar"] .sticky-nav ul,
+[lang="he"] .sticky-nav ul {
+  flex-direction: row-reverse;
+}
+
+/* RTL Navigation Items */
+[lang="ar"] nav li,
+[lang="he"] nav li {
+  text-align: right;
+}
+
+/* RTL Footer Alignment */
+[lang="ar"] footer,
+[lang="he"] footer {
+  text-align: right;
+  direction: rtl;
+}
+
+[lang="ar"] footer p,
+[lang="he"] footer p {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL Footer Links - Preserve separator spacing */
+[lang="ar"] footer a,
+[lang="he"] footer a {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* RTL Breadcrumb Navigation */
+[lang="ar"] .breadcrumb,
+[lang="he"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+[lang="ar"] .breadcrumb li::after,
+[lang="he"] .breadcrumb li::after {
+  content: "←";
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+[lang="ar"] .breadcrumb li:last-child::after,
+[lang="he"] .breadcrumb li:last-child::after {
+  content: "";
+}
+
+/* RTL Button Groups and CTA */
+[lang="ar"] .hero-cta,
+[lang="he"] .hero-cta,
+[lang="ar"] .app-link,
+[lang="he"] .app-link {
+  flex-direction: row-reverse;
+}
+
+/* RTL Cards and Grid Layouts */
+[lang="ar"] .cards,
+[lang="he"] .cards {
+  direction: rtl;
+}
+
+[lang="ar"] .card,
+[lang="he"] .card {
+  text-align: right;
+}
+
+/* RTL Lists */
+[lang="ar"] ul,
+[lang="he"] ul,
+[lang="ar"] ol,
+[lang="he"] ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* RTL FAQ Items */
+[lang="ar"] .faq-item,
+[lang="he"] .faq-item {
+  text-align: right;
+}
+
+/* RTL Tables */
+[lang="ar"] table,
+[lang="he"] table {
+  direction: rtl;
+}
+
+[lang="ar"] th,
+[lang="he"] th,
+[lang="ar"] td,
+[lang="he"] td {
+  text-align: right;
+}
+
+/* RTL Icon Adjustments - Mirror directional icons */
+[lang="ar"] .icon-arrow-right::before,
+[lang="he"] .icon-arrow-right::before {
+  content: "←";
+}
+
+[lang="ar"] .icon-arrow-left::before,
+[lang="he"] .icon-arrow-left::before {
+  content: "→";
+}
+
+/* RTL Forms */
+[lang="ar"] input,
+[lang="he"] input,
+[lang="ar"] textarea,
+[lang="he"] textarea,
+[lang="ar"] select,
+[lang="he"] select {
+  text-align: right;
+  direction: rtl;
+}
+
+/* RTL Checkbox and Radio Labels */
+[lang="ar"] input[type="checkbox"] + label,
+[lang="he"] input[type="checkbox"] + label,
+[lang="ar"] input[type="radio"] + label,
+[lang="he"] input[type="radio"] + label {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* Preserve LTR for Code and Technical Content */
+[lang="ar"] code,
+[lang="he"] code,
+[lang="ar"] pre,
+[lang="he"] pre,
+[lang="ar"] .code-block,
+[lang="he"] .code-block {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+/* Preserve LTR for URLs and Email Addresses */
+[lang="ar"] a[href^="http"],
+[lang="he"] a[href^="http"],
+[lang="ar"] a[href^="mailto"],
+[lang="he"] a[href^="mailto"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* RTL Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  [lang="ar"] .nav-menu,
+  [lang="he"] .nav-menu {
+    text-align: right;
+  }
+  
+  [lang="ar"] .nav-toggle,
+  [lang="he"] .nav-toggle {
+    right: auto;
+    left: 1rem;
+  }
+  
+  [lang="ar"] .footer-discordian,
+  [lang="he"] .footer-discordian {
+    text-align: right;
+  }
+}
