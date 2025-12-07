@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISO 27001:2022 vs 2013: Vad har förändrats? | Komplett Jämförelseguide | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Detaljerad jämförelse av ISO 27001:2022 vs 2013: 93 kontroller (ner från 114), nya molnsäkerhetskontroller, attributbaserad struktur och övergångsvägledning för svenska organisationer.">
+<meta name="keywords" content="ISO 27001:2022, ISO 27001:2013, ISO 27001 förändringar, Annex A kontroller, molnsäkerhetskontroller, hotintelligens, IKT-beredskap, ISO 27001 övergång, svenska företag, certifieringsuppdatering">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<link rel="canonical" href="https://hack23.com/iso-27001-2022-vs-2013_sv.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ISO 27001:2022 vs 2013: Vad har förändrats?",
+      "description": "Omfattande jämförelse av ISO 27001:2022 och 2013-versionerna: kontrolländringar, nya krav och övergångsvägledning för certifierade organisationer.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-12-01",
+      "dateModified": "2025-12-01",
+      "wordCount": 1200,
+      "inLanguage": "sv-SE"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/iso-27001-2022-vs-2013_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISO 27001:2022 vs 2013",
+          "item": "https://hack23.com/iso-27001-2022-vs-2013_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Hreflang tags for international SEO -->
+<link rel="alternate" hreflang="sv" href="https://hack23.com/iso-27001-2022-vs-2013_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/iso-27001-2022-vs-2013_sv.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/iso-27001-2022-vs-2013.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/iso-27001-2022-vs-2013.html">
+</head>
+
+<body>
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ISO 27001:2022 vs 2013
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logotyp" class="logo" width="80" height="80">
+  </div>
+  <h1>ISO 27001:2022 vs 2013: Vad har förändrats?</h1>
+  <p class="header-subtitle">Komplett Jämförelseguide för Organisationer som Övergår till den Nya Standarden</p>
+  <div class="app-link">
+    <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
+    <a href="blog_sv.html" title="Säkerhetsblogg">Blogg</a>
+    <a href="iso-27001-implementation-sweden_sv.html" title="Fullständig Implementeringsguide">Implementeringsguide</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    
+    <section id="overview">
+      <h2 class="panel-caption">📋 Översikt av Förändringar</h2>
+      
+      <p><strong>ISO/IEC 27001:2022 publicerades i oktober 2022 och ersätter 2013-versionen.</strong> Organisationer certifierade enligt ISO 27001:2013 har till oktober 2025 på sig att övergå till den nya standarden. Att förstå förändringarna är kritiskt för att planera din övergångsstrategi.</p>
+      
+      <div class="cards">
+        <div class="card success-card">
+          <h3>Sammanfattning av Nyckelförändringar</h3>
+          <ul>
+            <li><strong>93 kontroller (ner från 114):</strong> Konsoliderade för tydlighet och minskad dubblering</li>
+            <li><strong>4 teman (vs 14 domäner):</strong> Organisatoriska, Personer, Fysiska, Teknologiska</li>
+            <li><strong>10 nya kontroller:</strong> Täcker hotintelligens, molnsäkerhet, IKT-beredskap</li>
+            <li><strong>24 kontroller sammanslagna:</strong> Kombinerade överlappande krav</li>
+            <li><strong>58 kontroller uppdaterade:</strong> Förtydligat språk och krav</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="control-structure">
+      <h2 class="panel-caption">🏗️ Ny Kontrollstruktur</h2>
+      
+      <h3>Från 14 Domäner till 4 Teman</h3>
+      <p>ISO 27001:2013 organiserade kontroller i 14 domäner. 2022-versionen förenklar detta till 4 teman:</p>
+      
+      <div class="comparison-table">
+        <h4>2022 Struktur (4 Teman)</h4>
+        <ul>
+          <li><strong>Organisatoriska Kontroller (37):</strong> Policyer, roller, tillgångshantering, HR-säkerhet, leverantörshantering</li>
+          <li><strong>Personkontroller (8):</strong> Screening, anställningsvillkor, medvetenhet och utbildning</li>
+          <li><strong>Fysiska Kontroller (14):</strong> Säkra områden, utrustningssäkerhet, verktyg, avyttring</li>
+          <li><strong>Teknologiska Kontroller (34):</strong> Autentisering, kryptografi, nätverkssäkerhet, loggning</li>
+        </ul>
+      </div>
+      
+      <h3>Attributbaserad Kategorisering</h3>
+      <p>2022-versionen lägger till attribut för varje kontroll:</p>
+      <ul>
+        <li><strong>Kontrolltyp:</strong> Förebyggande, Upptäckande eller Korrigerande</li>
+        <li><strong>Informationssäkerhetsegenskaper:</strong> Konfidentialitet, Integritet, Tillgänglighet</li>
+        <li><strong>Cybersäkerhetskoncept:</strong> Identifiera, Skydda, Upptäcka, Reagera, Återhämta</li>
+        <li><strong>Operativa Förmågor:</strong> Styrning, Tillgångshantering, Skydd, etc.</li>
+        <li><strong>Säkerhetsdomäner:</strong> Styrning & Ekosystem, Skydd, Försvar, Motståndskraft</li>
+      </ul>
+    </section>
+
+    <section id="new-controls">
+      <h2 class="panel-caption">✨ 10 Nya Kontroller i 2022</h2>
+      
+      <div class="cards">
+        <div class="card info-card">
+          <h3>5.7 Hotintelligens</h3>
+          <p>Organisationer måste nu samla in och analysera hotintelligens som är relevant för deras informationssäkerhet. Detta formaliserar vad mogna organisationer redan gör informellt.</p>
+          <p><strong>Implementering:</strong> Prenumerera på hotflöden, övervaka säkerhetsbulletiner, spåra sårbarheter som påverkar din teknikstack.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>5.23 Informationssäkerhet för Molntjänster</h3>
+          <p>Explicita krav för att använda, förvärva och hantera molntjänster säkert. Adresserar molnspecifika risker.</p>
+          <p><strong>Implementering:</strong> Säkerhetsbedömningar av molnleverantörer, dokumentation av delad ansvarsmodell, granskningar av molnkonfiguration.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>5.30 IKT-beredskap för Verksamhetskontinuitet</h3>
+          <p>Säkerställer att IKT-system är redo att stödja verksamhetskontinuitetskrav. Stärker motståndskraftsfokus.</p>
+          <p><strong>Implementering:</strong> Testa katastrofåterställningsprocedurer, verifiera backup-återställning, säkerställ redundans.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.9 Konfigurationshantering</h3>
+          <p>Kräver dokumenterad konfigurationshantering för säkerhetsrelevanta system. Förhindrar konfigurationsdrift.</p>
+          <p><strong>Implementering:</strong> Infrastructure as Code, konfigurationsbaslinjer, ändringsspårning.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.10 Informationsradering</h3>
+          <p>Säkerställer att information raderas säkert när den inte längre behövs. Stödjer dataminimering.</p>
+          <p><strong>Implementering:</strong> Databevarandepolicyer, säkra raderingsprocedurer, verifieringsprocesser.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.11 Datamaskering</h3>
+          <p>Kräver maskering av känslig data där det är lämpligt. Stödjer integritet och testbehov.</p>
+          <p><strong>Implementering:</strong> Anonymisering för testdata, redigering i loggar, tokenisering där lämpligt.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.12 Förebyggande av Dataläckage</h3>
+          <p>Adresserar förebyggande av dataexfiltration och obehörigt röjande.</p>
+          <p><strong>Implementering:</strong> DLP-verktyg, utgående filtrering, USB-restriktioner, e-postkontroller.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.16 Övervakningsaktiviteter</h3>
+          <p>Formaliserar krav för övervakning av användar- och systemaktiviteter.</p>
+          <p><strong>Implementering:</strong> SIEM, loggaggregering, användarb eteendeanalys.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.23 Webbfiltrering</h3>
+          <p>Kräver webbfiltrering för att förhindra åtkomst till skadligt innehåll.</p>
+          <p><strong>Implementering:</strong> DNS-filtrering, proxyservrar, URL-kategorisering.</p>
+        </div>
+        
+        <div class="card info-card">
+          <h3>8.28 Säker Kodning</h3>
+          <p>Explicita krav för säkra kodningsprinciper i mjukvaruutveckling.</p>
+          <p><strong>Implementering:</strong> OWASP-riktlinjer, kodgranskningar, SAST/DAST, säkerhetsutbildning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="transition-guide">
+      <h2 class="panel-caption">🔄 Övergångsguide för Certifierade Organisationer</h2>
+      
+      <h3>Övergångstidslinje</h3>
+      <p><strong>Deadline: Oktober 2025</strong></p>
+      <ul>
+        <li><strong>Oktober 2022:</strong> ISO 27001:2022 publicerad</li>
+        <li><strong>Oktober 2023:</strong> 1-årig respitperiod slutar (nya revisioner använder 2022-versionen)</li>
+        <li><strong>Oktober 2025:</strong> 3-årig övergångsperiod slutar (alla certifikat måste vara 2022-kompatibla)</li>
+      </ul>
+      
+      <h3>Övergångssteg</h3>
+      <ol>
+        <li><strong>Gapanalys:</strong> Jämför nuvarande kontroller mot 2022 Annex A</li>
+        <li><strong>Uppdatera Tillämpligförklaring:</strong> Kartlägg 2013-kontroller till 2022-motsvarigheter</li>
+        <li><strong>Implementera Nya Kontroller:</strong> Adressera de 10 nya kraven</li>
+        <li><strong>Uppdatera Dokumentation:</strong> Revidera policyer för att referera till 2022-standarden</li>
+        <li><strong>Internrevision:</strong> Verifiera efterlevnad av nya krav</li>
+        <li><strong>Övergångsrevision:</strong> Certifieringsorgan bedömer 2022-efterlevnad</li>
+      </ol>
+      
+      <div class="warning-box">
+        <h4>Vanliga Övergångsutmaningar</h4>
+        <ul>
+          <li>Molnsäkerhetskontroller kan kräva nya leverantörsbedömningar</li>
+          <li>Hotintelligens kräver pågående prenumerationer/processer</li>
+          <li>Konfigurationshantering behöver automatisering</li>
+          <li>Förebyggande av dataläckage kan behöva nya verktyg</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="practical-advice">
+      <h2 class="panel-caption">💡 Praktiska Råd för Svenska Organisationer</h2>
+      
+      <h3>Vad De Flesta Organisationer Redan Har</h3>
+      <p>Goda nyheter: Många av de "nya" kontrollerna formaliserar befintliga bästa praxis:</p>
+      <ul>
+        <li>Hotintelligens → Övervakar redan CVE:er och säkerhetsnyheter</li>
+        <li>Molnsäkerhet → Använder redan AWS/Azure med viss säkerhet</li>
+        <li>Konfigurationshantering → Infrastructure as Code redan på plats</li>
+        <li>Övervakning → SIEM eller loggaggregering redan distribuerad</li>
+      </ul>
+      
+      <h3>Vad Som Behöver Arbetas På</h3>
+      <p>Kontroller som typiskt kräver ny implementering:</p>
+      <ul>
+        <li><strong>Formell hotintelligensprocess</strong> (inte bara ad-hoc-övervakning)</li>
+        <li><strong>Dokumenterade molnsäkerhetsbedömningar</strong> (inte bara användning av molntjänster)</li>
+        <li><strong>Förebyggande av dataläckage</strong> (kan behöva DLP-verktyg)</li>
+        <li><strong>Säkra kodningsstandarder</strong> (formaliserad SDLC-säkerhet)</li>
+      </ul>
+      
+      <h3>Kostnadspåverkan</h3>
+      <p>För svenska SME redan certifierade enligt 2013:</p>
+      <ul>
+        <li><strong>Intern insats:</strong> 40-80 timmar för gapanalys, dokumentationsuppdateringar, implementering</li>
+        <li><strong>Övergångsrevision:</strong> 20 000-50 000 SEK (kombineras ofta med övervakningsrevision)</li>
+        <li><strong>Nya verktyg:</strong> 10 000-30 000 SEK om DLP- eller övervakningsluckor finns</li>
+      </ul>
+      
+      <p class="cta-box"><strong>Behöver övergångsstöd?</strong> <a href="why-hack23_sv.html">Kontakta Hack23</a> för gapbedömning och övergångsplanering anpassad för svenska organisationer.</p>
+    </section>
+
+    <section id="resources">
+      <h2 class="panel-caption">📚 Resurser</h2>
+      
+      <ul>
+        <li><a href="iso-27001-implementation-sweden_sv.html">Komplett ISO 27001 Implementeringsguide</a> - Full implementeringskarta för svenska SME</li>
+        <li><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">ISO/IEC 27001:2022 Officiell Standard (ISO.org)</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23 Publikt ISMS</a> - Exempel på implementering i linje med 2022-standarden</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+    <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+    <a href="https://www.linkedin.com/company/hack23/">Företags-LinkedIn</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md">Säkerhetspolicy</a> |
+    <a href="blog_sv.html">Blogg</a> |
+    <a href="iso-27001-2022-vs-2013.html" lang="en">English version</a>
+  </p>
+</footer>
+
+</body>
+</html>
