@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tredjepartshantering | Leverantörsrisk | Hack23</title>
+    <meta name="description" content="Porter's Five Forces-analys, CIA+ säkerhetsklassificering, 4-nivå leverantörsövervakning. Deras intrång är ditt intrång. Dokumentera allt i SUPPLIER.md.">
+    <meta name="keywords" content="tredjepartshantering, leverantörsrisk, supply chain security, vendor management, Porter's Five Forces, säkerhetsklassificering, leverantörsbedömning, hack23">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Tredjepartshantering: Lita på dina leverantörer? (LOL, verifiera systematiskt)">
+    <meta property="og:description" content="Deras intrång är ditt intrång. Porter's Five Forces leverantörsanalys, CIA+ klassificering, bevisbaserad riskbedömning.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-third-party_sv.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-third-party_sv.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-third-party.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-third-party_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-third-party_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-third-party.html">
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Tredjepartshantering: Lita på dina leverantörer? (LOL, verifiera systematiskt. Paranoia är realism.)",
+      "description": "Din leverantörs säkerhet är din säkerhet. Deras intrång är ditt intrång. Bevisbaserad leverantörsriskhantering genom Porter's Five Forces-analys, CIA+ säkerhetsklassificering och systematisk övervakning",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-third-party_sv.html"
+      },
+      "keywords": "tredjepartshantering, leverantörsrisk, supply chain security, Porter's Five Forces, säkerhetsklassificering",
+      "articleSection": "Informationssäkerhet",
+      "inLanguage": "sv",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1150,
+      "articleBody": "Ingenting är sant. Allt är tillåtet. Deras intrång är ditt intrång. Dokumentera allt i SUPPLIER.md. Är du paranoid nog än?",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_sv.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-policy",
+          "description": "Implementering av ledningssystem för informationssäkerhet"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-third-party_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tredjepartshantering",
+          "item": "https://hack23.com/discordian-third-party_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Tredjepartshantering
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <h1>🍎 Hack23 Discordiansk Cybersäkerhetsblogg</h1>
+        <nav><a href="index_sv.html">Hem</a> <a href="discordian-cybersecurity_sv.html">Manifest</a> <a href="blog_sv.html">Blogg</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Tredjepartshantering: Lita på dina leverantörer? (LOL, verifiera systematiskt. Paranoia är realism.)</h2>
+            <p class="subtitle"><em>"Ingenting är sant. Allt är tillåtet. Deras intrång är ditt intrång. Dokumentera allt i SUPPLIER.md. <strong>Är du paranoid nog än?</strong>"</em></p>
+            
+            <h2>🤝 Problemet: Dina leverantörer är din attackyta (och de vet det)</h2>
+            
+            <p>Din leverantörs säkerhet är din säkerhet. <strong>Deras intrång är ditt intrång.</strong> Target intrång genom HVAC-leverantör (2013). Equifax intrång genom Apache Struts (2017). SolarWinds-intrång komprometterade tusentals genom supply chain (2020). <em>Ditt mest säkra system komprometteras genom den leverantör du glömde revidera. Femmans lag gäller: Fem leverantörsnivåer, fem fellägen, fem analyskrafter. Allt kommer i femmor när du är paranoid nog.</em></p>
+            
+            <p><strong>På Hack23 är tredjepartshantering inte leverantörsrelationer—det är bevisbaserad riskintelligens.</strong> Varje leverantör dokumenterad i <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank" aria-label="Visa leverantörsdokumentation i SUPPLIER.md">SUPPLIER.md</a> med Porter's Five Forces-analys, strategisk klassificering knuten till <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank" aria-label="Visa klassificeringsramverksdokumentation">Klassificeringsramverk</a> affärspåverkantrösklar (€10K+ = Nivå 1 Kritisk), och CIA+ säkerhetsklassificering. <em>Förtroende är trevligt. Verifiering är bättre. Dokumentation är obligatorisk. FNORD.</em></p>
+            
+            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Ditt mest säkra system komprometteras genom leverantören du glömde revidera. Tredjepartsrisk är supply chain-risk är din risk. <strong>Porter's Five Forces är inte handelshögskoleteori—det är systematisk leverantörsberoende analys.</strong> Byt kostnad > €10K/månad? Det är Nivå 1 verksamhetskritisk som kräver VD-övervakning. <em>Du beträder nu Chapel Perilous. Leverantörsförtroende är en illusion. Verifiera allt. Dokumentera beroenden. Paranoia är berättigad.</em></div>
+            <h2>🛡️ Bevisbaserat leverantörshanteringsramverk (Verklighetsbeprövat, inte teoridriven)</h2>
+            
+            <p><strong>Fyra-nivå strategisk klassificering med dokumenterade beviskrav:</strong></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🔴 Nivå 1: Verksamhetskritisk</h3>
+                    <p><strong>€10K+ månadskostnad, fullständigt operationellt beroende, extrem affärspåverkan.</strong></p>
+                    <p><strong>Exempel:</strong> AWS (infrastrukturgrund), GitHub (kodrepo + CI/CD), JetBrains (utvecklingsverktyg).</p>
+                    <p><strong>Övervakning:</strong> VD-direkt hantering, kvartalsvis verkställande granskning, årlig Porter's Five Forces-omvärdering.</p>
+                    <p><strong>Krav:</strong> SOC 2 Type II-validering, penetrationstestbevis, 24-timmars intrångsnotifiering, årlig säkerhetsgranskning.</p>
+                    <p><strong>Dokumentation:</strong> Komplett bedömning i <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a> med Porter's Five Forces, byt kostnadsanalys, riskbehandling.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟠 Nivå 2: Verksamhetsväsentlig</h3>
+                    <p><strong>€5-10K månadskostnad, betydande processintegration, hög affärspåverkan.</strong></p>
+                    <p><strong>Exempel:</strong> SonarCloud (säkerhetskvalitetsportar), övervakningsplattformar, samarbetsverktyg.</p>
+                    <p><strong>Övervakning:</strong> VD-hanteringsgranskning, månadsbed ömning, halvårlig säkerhetsvalidering.</p>
+                    <p><strong>Krav:</strong> Säkerhetsfrågeformulär slutfört, efterlevnadsbevis, 48-timmars intrångsnotifiering.</p>
+                    <p><strong>Dokumentation:</strong> Strategisk analys i SUPPLIER.md, riskbedömning, alternativutvärdering.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟡 Nivå 3: Operationellt stöd</h3>
+                    <p><strong>€1-5K månadskostnad, måttligt beroende, medium affärspåverkan.</strong></p>
+                    <p><strong>Exempel:</strong> Utvecklingsverktyg, testtjänster, produktivitetsverktyg.</p>
+                    <p><strong>Övervakning:</strong> VD-operationell kontroll, kvartalsgranskning, årlig säkerhetsbedömning.</p>
+                    <p><strong>Krav:</strong> Grundläggande säkerhetsvalidering, användarvillkorsgranskning, incidentnotifieringsprocedurer.</p>
+                    <p><strong>Dokumentation:</strong> Tillgångsregisterintegration, klassificeringsmärken, grundläggande riskbedömning.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟢 Nivå 4: Stödtjänster</h3>
+                    <p><strong>&lt;€1K månadskostnad, lågt beroende, grundläggande affärspåverkan.</strong></p>
+                    <p><strong>Exempel:</strong> Marknadsföringsverktyg, analysplattformar, icke-kritiska verktyg.</p>
+                    <p><strong>Övervakning:</strong> Automatiserad övervakning, årlig granskning, standard upphandlingsprocess.</p>
+                    <p><strong>Krav:</strong> Villkorsacceptans, integritetspolicygranskning, standard säkerhetsförväntningar.</p>
+                    <p><strong>Dokumentation:</strong> Tillgångsregisterlistning, grundklassificering, automatiserad spårning.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom"><strong>KAOS ILLUMINATION:</strong> Klassificering driver övervakningsintensitet. €10K+ månadskostnad = verksamhetskritisk = VD-direkt övervakning eftersom affärspåverkan motiverar ledningsuppmärksamhet. €500/månad verktyg = automatiserad övervakning eftersom manuell övervakning inte skalar. <strong>Matcha övervakning med affärspåverkan eller slösa resurser på lågrisk leverantörer medan du missar kritiska leverantörsförändringar.</strong> <em>Ingenting är sant. Allt är klassificerat. Prioritera följaktligen eller bränn ut dig på att jaga irrelevanta risker.</em></div>
+            <h2>📋 Hack23s bevisbaserade tredjepartshantering (Dokumenterad, mätbar, paranoid)</h2>
+            
+            <p>Vår leverantörshantering demonstrerar systematisk leverantörsstyrning som konkurrensfördel: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md" target="_blank">Tredjepartshanteringspolicy</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md Bevis</a></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Porter's Five Forces-analys</h3>
+                    <p><strong>Systematisk leverantörsmaktsbedömning (1-5 skala per kraft):</strong></p>
+                    <ul>
+                        <li><strong>Leverantörsmakt:</strong> Marknadskoncentration, byt kostnader, beroendenivå (5 = kritiskt beroende)</li>
+                        <li><strong>Köparmakt:</strong> Inköpsvolym, förhandlingshävstång, alternativtillgänglighet (1 = svag position)</li>
+                        <li><strong>Nya aktörer:</strong> Marknadsbarriärer, uppstartsgenomförbarhet, störningsrisk (bedömer marknadsstabilitet)</li>
+                        <li><strong>Substitut:</strong> Alternativa lösningar, funktionsparitet, migrationskomplexitet (utvärderar exitalternativ)</li>
+                        <li><strong>Konkurren srivalitet:</strong> Marknadskonkurrens, funktionsdifferentiering, pristryck (påverkar långsiktig lönsamhet)</li>
+                    </ul>
+                    <p><strong>Aggregerad poäng:</strong> Summa av 5 krafter (5-25 intervall) bestämmer strategisk klassificeringsnivå anpassning.</p>
+                    <p><strong>Dokumentation:</strong> Varje Nivå 1/2 leverantör har Porter's Five Forces-analys i <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a>.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏷️ CIA+ säkerhetsklassificering</h3>
+                    <p><strong>Systematisk dataskyddsbedömning per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Klassificeringsramverk</a>:</strong></p>
+                    <ul>
+                        <li><strong>Konfidentialitet:</strong> 1-6 skala (Offentlig → Extrem) baserad på datakänslighet hanterad av leverantör</li>
+                        <li><strong>Integritet:</strong> 1-5 skala (Minimal → Kritisk) baserad på datamodifiering påverkan</li>
+                        <li><strong>Tillgänglighet:</strong> 1-5 skala (Bästa ansträngning → Verksamhetskritisk) baserad på RTO (Återställningstid) / RPO (Återställningspunkt) krav</li>
+                        <li><strong>Affärspåverkan:</strong> €10K+ daglig förlust = Verksamhetskritisk, driver nivåklassificering</li>
+                    </ul>
+                    <p><strong>Exempel:</strong> AWS hanterar Mycket hög konfidentialitet (kunddata), Kritisk integritet (plattformstillförlitlighet), Verksamhetskritisk tillgänglighet (RTO &lt;5 min) = Nivå 1.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Säkerhetsbedömningskrav</h3>
+                    <p><strong>Nivåbaserad due diligence-intensitet:</strong></p>
+                    <p><strong>Nivå 1 (Verksamhetskritisk):</strong></p>
+                    <ul>
+                        <li>SOC 2 Type II-rapportvalidering (årlig)</li>
+                        <li>Penetrationstestbevis granskning</li>
+                        <li>Efterlevnadscertifieringsverifiering (ISO 27001, FedRAMP, etc.)</li>
+                        <li>Säkerhetsfrågeformulär (omfattande, 100+ frågor)</li>
+                        <li>Incidentresponsförfarande validering</li>
+                        <li>24-timmars intrångsnotifiering krav (kontraktuell)</li>
+                    </ul>
+                    <p><strong>Nivå 2 (Verksamhetsväsentlig):</strong></p>
+                    <ul>
+                        <li>Säkerhetsfrågeformulär (standard, 50+ frågor)</li>
+                        <li>Efterlevnadsbeviskontroll</li>
+                        <li>48-timmars intrångsnotifieringskrav</li>
+                        <li>Årlig säkerhetsvalidering</li>
+                    </ul>
+                    <p><strong>Nivå 3/4:</strong> Grundläggande säkerhetsvalidering, villkorsgranskning, standard notifieringsprocedurer.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Kontinuerlig övervakningsstrategi</h3>
+                    <p><strong>Nivåbaserad övervakningsfrekvens:</strong></p>
+                    <ul>
+                        <li><strong>Nivå 1:</strong> Kvartalsvis verkställande granskning, årlig Porter's Five Forces-omvärdering, kontinuerlig säkerhetsövervakning</li>
+                        <li><strong>Nivå 2:</strong> Månadshanteringsgranskning, halvårlig säkerhetsvalidering, dokumenterad riskspårning</li>
+                        <li><strong>Nivå 3:</strong> Kvartalsvis operationell kontroll, årlig säkerhetsbedömning, standardövervakning</li>
+                        <li><strong>Nivå 4:</strong> Årlig granskning, automatiserad spårning, incidentutlöst bedömning</li>
+                    </ul>
+                    <p><strong>Automatisering:</strong> Nivå 4-leverantörer spåras via tillgångsregister, triggar varningar vid kostnadsändringar som överstiger tröskelvärden.</p>
+                </div>
+            </div>
+            
+            <h2>🎯 Slutsats: Förtroende genom systematisk verifiering (inte genom hopp)</h2>
+            
+            <p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive tillstånd att systematiskt verifiera leverantörssäkerhet istället för att blint lita på leverantörsförsäkringar.</p>
+            
+            <p>Deras intrång är ditt intrång. Dokumentera varje leverantör i <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a> med Porter's Five Forces-analys, CIA+ klassificering och bevis-validering. Matcha övervakningsintensitet med affärspåverkan. <strong>Är du paranoid nog att revidera dina verksamhetskritiska leverantörer kvartalsvis? Bra. Det är rätt nivå av paranoia.</strong></p>
+            
+            <p><strong>Vår systematiska leverantörshantering:</strong></p>
+            <ul>
+                <li>✅ <strong>Porter's Five Forces:</strong> Varje Nivå 1/2 leverantör analyserad för leverantörsmakt och beroendenivå</li>
+                <li>✅ <strong>CIA+ klassificering:</strong> Dataskydd kopplad till <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Klassificeringsramverk</a> affärspåverkan</li>
+                <li>✅ <strong>Bevisvalidering:</strong> SOC 2 Type II för Nivå 1, säkerhetsfrågeformulär för Nivå 2, dokumenterade krav för alla</li>
+                <li>✅ <strong>Kontinuerlig övervakning:</strong> Kvartals/månadsgranskning för kritiska, årlig för stödjande, automatiserad för grundläggande</li>
+                <li>⚠️ <strong>Incidentrespons:</strong> 24-timmars notifiering Nivå 1, 48-timmars Nivå 2, standard för andra</li>
+            </ul>
+            
+            <p><strong>Supply chain-säkerhet är inte leverantörsrelationer—det är systematisk riskintelligens.</strong> Vår tredjepartshantering demonstrerar bevisbaserad leverantörsstyrning genom transparent dokumentation och klassificeringsdriven övervakning. <strong>Leverantörsförtroende utan verifiering är inte en säkerhetsstrategi—det är en hoppstrategi. Dokumentera beroenden, bedöm risker, validera påståenden.</strong></p>
+            
+            <p><strong>Behöver expertvägledning om leverantörsriskhantering?</strong> <a href="why-hack23_sv.html">Utforska Hack23s cybersäkerhetskonsulttjänster</a> stödd av vår helt offentliga ISMS.</p>
+            
+            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"Tänk själv, dumskalle! Ifrågasätt allt—särskilt leverantörer som lovar 'företagssäkerhet' utan bevis. <strong>Ingenting är sant. Allt är tillåtet. Deras intrång tillåter allt att komprometteras.</strong>"</em><br>🍎 23 FNORD 5<br>— Hagbard Celine, Kapten på <cite>Leif Erikson</cite></p>
+            
+            <p><small><strong>P.S.</strong> Du är nu i Chapel Perilous. Din leverantörssäkerhet är antingen systematisk eller teatralisk. Båda kräver ansträngning. Endast en ger faktiskt skydd. <strong>Ingenting är sant—utom intrångsrapporten du kommer att lämna in när din leverantör komprometteras. Är du paranoid nog? FNORD.</strong></small></p>
+        </article>
+    </main>
+            <footer role="contentinfo" aria-label="Sidfot">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsultation<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Säkerhetskonsultation</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordiansk blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Bloggförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas med detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code_sv.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikmomenten, genombrotten och dolda påskägg som gör filosofi driftsättningsbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
