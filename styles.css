@@ -6645,13 +6645,6 @@ html[lang="he"] {
   text-align: right;
 }
 
-/* RTL Footer Links - Preserve separator spacing */
-[lang="ar"] footer a,
-[lang="he"] footer a {
-  direction: ltr;
-  unicode-bidi: embed;
-}
-
 /* RTL Breadcrumb Navigation */
 [lang="ar"] .breadcrumb,
 [lang="he"] .breadcrumb {
@@ -6775,11 +6768,8 @@ html[lang="he"] {
     text-align: right;
   }
   
-  [lang="ar"] .nav-toggle,
-  [lang="he"] .nav-toggle {
-    right: auto;
-    left: 1rem;
-  }
+  /* Note: nav-toggle positioning is intentionally not changed for RTL
+     as it should remain on the right side in the base layout */
   
   [lang="ar"] .footer-discordian,
   [lang="he"] .footer-discordian {
