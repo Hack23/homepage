@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>Black Trigram (흑괘) | Koreansk Kampsportsspil | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/black-trigram.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/black-trigram_sv.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/black-trigram_da.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/black-trigram_fi.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/black-trigram_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/black-trigram_no.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/black-trigram_ko.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/black-trigram.html">
+    <link rel="canonical" href="https://hack23.com/black-trigram_da.html">
+    <meta name="description" content="Black Trigram: Precision combat simulator with 70 vital points, 5 archetypes, authentic Korean martial arts. Educational gaming with cultural preservation focus.">
+    <meta name="keywords" content="Black Trigram, Korean martial arts game, Taekkyeon, Hapkido, combat simulator, vital points, educational gaming, cultural preservation, Unity game">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Black Trigram | Korean Martial Arts Combat Game">
+    <meta property="og:description" content="Realistic 2D precision combat simulator featuring 70 vital points, 5 archetypes, and authentic Korean martial arts techniques.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/black-trigram.html">
+    <meta property="og:image" content="black-trigram-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://hack23.com/#org",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com/",
+          "logo": "cia-icon-140.webp",
+          "description": "Sweden's only cybersecurity consultancy with fully public ISMS framework on GitHub. Led by a team with 30 plus years of expertise in security architecture, DevSecOps, and ISO 27001 compliance.",
+          "foundingDate": "2025-01-01",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gothenburg",
+            "addressCountry": "SE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://www.linkedin.com/company/hack23/",
+            "availableLanguage": ["English", "Swedish"]
+          "sameAs": [
+            "https://github.com/Hack23",
+            "https://www.linkedin.com/company/hack23/"
+          ]
+        },
+          "@type": "VideoGame",
+          "@id": "https://blacktrigram.com/#blacktrigram",
+          "name": "Black Trigram",
+          "alternateName": ["흑괘", "Black Trigram Game"],
+          "description": "Realistic 2D precision combat simulator inspired by traditional Korean martial arts, featuring 70 anatomiske vitale punkter, 5 distinct fighter archetypes, and authentic combat techniques. Open source educational gaming project for cultural preservation.",
+          "genre": ["Fighting", "Educational", "Simulation", "Cultural"],
+          "gamePlatform": ["PC", "Cross-platform", "Web Browser"],
+          "operatingSystem": "Cross-platform",
+          "url": "https://blacktrigram.com",
+          "downloadUrl": "https://github.com/Hack23/blacktrigram/releases",
+          "softwareVersion": "latest",
+          "image": "https://hack23.com/black-trigram-140.webp",
+          "screenshot": "https://hack23.com/black-trigram-140.webp",
+          "applicationCategory": "GameApplication",
+          "applicationSubCategory": "Fighting Game",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "category": "Open Source Game"
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://hack23.com/#org",
+            "name": "Hack23 AB",
+            "url": "https://hack23.com",
+            "email": "info@hack23.com"
+          "creator": {
+            "@type": "Person",
+            "@id": "https://hack23.com/#james-pether-sorling",
+            "name": "James Pether Sörling",
+            "givenName": "James Pether",
+            "familyName": "Sörling",
+            "additionalName": "pethers",
+            "email": "pether@hack23.com",
+            "url": "https://www.linkedin.com/in/jamessorling/",
+            "sameAs": [
+              "https://github.com/Hack23",
+              "https://github.com/pethers",
+              "https://www.linkedin.com/in/jamessorling/",
+              "https://www.openhub.net/accounts/pether",
+              "https://slashdot.org/~pether",
+              "https://openprofile.dev/profile/pether"
+            ]
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          "programmingLanguage": ["C#"],
+          "softwareRequirements": "Unity Engine",
+          "codeRepository": "https://github.com/Hack23/blacktrigram",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "inLanguage": ["en", "ko"],
+          "featureList": [
+            "70 Anatomiske Vitale Punkter System",
+            "5 Kamptyper (Musa, Amsalja, Hacker, Jeongbo, Jojik)",
+            "Autentisk Koreansk Kampsport Techniques",
+            "Physics-Based Combat Simulation",
+            "Pædagogisk Gameplay",
+            "Kulturbevarelse Focus",
+            "Open Source Development",
+            "Cross-platform Deployment",
+            "SLSA Level 3 Supply Chain Security"
+          ],
+          "teaches": [
+            "Korean Martial Arts",
+            "Taekkyeon Techniques",
+            "Hapkido Joint Locks",
+            "Anatomical Vital Points",
+            "Korean Martial Philosophy",
+            "I Ching Principles"
+          "keywords": "Black Trigram, Korean martial arts game, Taekkyeon, Hapkido, combat simulator, vital points, educational gaming, cultural preservation, Unity game, C#, open source game",
+          "isAccessibleForFree": true,
+          "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/PlayGameAction",
+            "userInteractionCount": 100
+          "maintainer": {
+            "@id": "https://hack23.com/#org"
+          }
+          "@type": "FAQPage",
+          "@id": "https://hack23.com/black-trigram.html#faq",
+          "name": "Black Trigram Game FAQ",
+          "description": "Frequently asked questions about Black Trigram Korean martial arts combat game, features, platforms, and open source development.",
+          "url": "https://hack23.com/black-trigram.html",
+          "inLanguage": "da",
+          "datePublished": "2025-12-02",
+          "dateModified": "2025-12-02",
+            "url": "https://hack23.com"
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Er Black Trigram gratis at spille?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Black Trigram is completely free and open source. You can play directly in your browser at blacktrigram.com, download releases from GitHub, or build from source under the Apache 2.0 license. There are no in-app purchases, subscriptions, or hidden costs."
+              }
+            },
+              "name": "Hvilke platforme understøtter Black Trigram?",
+                "text": "Black Trigram is built with Unity and supports cross-platform deployment. You can play in modern web browsers (Chrome, Firefox, Safari, Edge), download for PC (Windows, macOS, Linux), or build for other platforms from source. The web version requires no installation and works on most devices."
+              "name": "Hvor realistisk er systemet med vitale punkter?",
+                "text": "The vital points system is based on traditional Korean martial arts knowledge, featuring 70 anatomical targeting points with unique properties affecting combat effectiveness. While designed for entertainment and education, the techniques draw from authentic Taekkyeon and Hapkido practices. The physics-based combat simulation provides realistic weight, momentum, and impact calculations."
+              "name": "Hvad er de 5 kamptyper?",
+                "text": "Black Trigram features 5 unique combat archetypes: Musa (무사) - the honorable warrior emphasizing discipline and direct combat; Amsalja (암살자) - the assassin focused on precision and vital point targeting; Hacker - the technical fighter using mønstergenkendelse; Jeongbo (정보원) - the intelligence operative skilled in deception; and Jojik (조직원) - the street-smart fighter with adaptive techniques."
+              "name": "Kan jeg bidrage til open source-projektet?",
+                "text": "Absolutely! Black Trigram welcomes contributions from the community. The project is hosted on GitHub at github.com/Hack23/blacktrigram. You can contribute code, report bugs, suggest features, improve documentation, or help with translations. The project follows security best practices including SLSA Level 3 supply chain security."
+              "name": "Hvilke kampsportsarter er med i spillet?",
+                "text": "Black Trigram authentically represents traditional Korean martial arts including Taekkyeon (traditional Korean footwork and kicking), Hapkido (joint locks and grappling techniques), and elements of traditional Korean martial philosophy based on I Ching principles. Every technique is researched and implemented with cultural authenticity and respect for the arts' heritage."
+              "name": "Hvilken pædagogisk værdi giver spillet?",
+                "text": "Beyond entertainment, Black Trigram serves as an educational platform for Korean martial arts and cultural heritage. Players learn traditional martial arts philosophy, anatomical targeting concepts, and Korean cultural context while playing. The game preserves and promotes Korean martial traditions through interactive digital media."
+              "name": "Hvordan sikrer Black Trigram bedste sikkerhedspraksis?",
+                "text": "As a Hack23 project, Black Trigram demonstrates enterprise-grade security practices including SLSA Level 3 supply chain security, OpenSSF Scorecard compliance, CII Best Practices certification, and SonarCloud quality gates. This ensures the game is built with the same security standards applied to professional software development."
+            }
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/black-trigram.html#breadcrumb",
+          "itemListElement": [
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Hjem",
+              "item": "https://hack23.com/"
+              "position": 2,
+              "name": "Projects",
+              "item": "https://hack23.com/projects.html"
+              "position": 3,
+              "name": "Black Trigram",
+              "item": "https://hack23.com/black-trigram.html"
+        }
+      ]
+    }
+    </script>
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/black-trigram_sv.html">
+</head>
+<body class="theme-black-trigram">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_sv.html">Hjem</a>
+            </li>
+                <a href="projects.html">Projects</a>
+            <li class="breadcrumb-item" aria-current="page">
+                Black Trigram
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_sv.html" title="Hjem">🏠 Hack23</a>
+            <a href="services_sv.html" title="Tjenester">Tjenester</a>
+            <a href="projects.html" title="Projects">Projects</a>
+            <a href="why-hack23.html" title="Why Hack23">Why Hack23</a>
+            <a href="blog_sv.html" title="Blog">Blog</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="black-trigram-hero" style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05)); border: 2px solid #ff6b35; border-radius: 12px; padding: 3rem 2rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <img src="black-trigram-140.webp" alt="Black Trigram Logo" width="120" height="120" style="border-radius: 15px; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);" loading="eager" decoding="sync">
+                <div>
+                    <h1 style="margin: 0; color: #ff6b35;">🔥 Black Trigram (흑괘)</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">어둠의 무예로 완벽한 일격을 추구하라</p>
+                    <p style="font-size: 1.1rem; margin: 0.5rem 0 0;"><em>"Master the dark arts through the pursuit of the perfect strike"</em></p>
+                </div>
+            </div>
+            <p class="lead">Realistic 2D precision combat simulator inspired by traditional Korean martial arts, focusing on precise anatomical targeting, authentic combat techniques, and detailed physics-based interactions.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://blacktrigram.com" title="Play Black Trigram" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);">🎮 Play Now</a>
+                <a href="https://github.com/Hack23/blacktrigram" title="GitHub Repository" class="btn-primary">📂 View on GitHub</a>
+                <a href="black-trigram-features_da.html" title="Game Funktioner" class="btn-primary">✨ Funktioner</a>
+                <a href="black-trigram-docs_da.html" title="Dokumentation" class="btn-primary">📚 Dokumentation</a>
+        </section>
+        
+        <!-- Nøglefunktioner -->
+        <section id="key-features">
+            <h2>🎯 Nøglefunktioner</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 70 Anatomiske Vitale Punkter</h3>
+                    <p>Strategic targeting system based on traditional Korean martial arts knowledge. Each vital point has unique properties affecting combat effectiveness, damage calculation, and opponent response.</p>
+                
+                    <h3>🥋 5 Unikke Kamptyper</h3>
+                    <p>Choose from Musa (Kriger), Amsalja (Lejemorder), Hacker (Teknisk Kæmper), Jeongbo (Efterretningsagent), and Jojik (Organiseret Kriminalitet). Each archetype offers distinct combat styles and strategic approaches.</p>
+                    <h3>🇰🇷 Autentisk Koreansk Kampsport</h3>
+                    <p>Featuring traditional Taekkyeon footwork, Hapkido joint locks, and Korean martial philosophy. Every technique is researched and implemented with cultural authenticity and respect.</p>
+                    <h3>⚡ Realistisk Kampfysik</h3>
+                    <p>Advanced trauma simulation and physics-based interactions. Combat feels responsive and realistic with proper weight, momentum, and impact calculations.</p>
+                    <h3>📚 Pædagogisk Gameplay</h3>
+                    <p>Learn traditional martial arts philosophy, anatomical targeting, and Korean cultural context while playing. Educational content integrated seamlessly into gameplay.</p>
+                    <h3>🎭 Kulturbevarelse</h3>
+                    <p>Deep integration of Korean martial arts philosophy, I Ching principles, and traditional combat wisdom. Preserving cultural heritage through interactive digital media.</p>
+        <!-- Kamptyper -->
+        <section id="archetypes">
+            <h2>⚔️ Kamptyper</h2>
+                <div class="card" style="border-left: 4px solid #8e44ad;">
+                    <h3>🛡️ Musa (무사) - Kriger</h3>
+                    <p><strong>Philosophy:</strong> Honor, discipline, and direct combat</p>
+                    <p>Traditionel krigerstil emphasizing ærefuld kamp, powerful strikes, and strong defensive techniques. Masters of frontal assault and tactical positioning.</p>
+                <div class="card" style="border-left: 4px solid #27ae60;">
+                    <h3>🗡️ Amsalja (암살자) - Lejemorder</h3>
+                    <p><strong>Philosophy:</strong> Precision, stealth, and efficiency</p>
+                    <p>Fokuseret på præcise slag to vital points, hurtige elimineringer, and strategic targeting. Experts in anatomical knowledge and lethal efficiency.</p>
+                <div class="card" style="border-left: 4px solid #2980b9;">
+                    <h3>💻 Hacker - Teknisk Kæmper</h3>
+                    <p><strong>Philosophy:</strong> Analysis, adaptation, and system exploitation</p>
+                    <p>Analytisk tilgang til kamp using mønstergenkendelse, systematic weaknesses, and strategic adaptations. Modern fusion of technology and martial arts.</p>
+                <div class="card" style="border-left: 4px solid #e74c3c;">
+                    <h3>🕵️ Jeongbo (정보원) - Efterretningsagent</h3>
+                    <p><strong>Philosophy:</strong> Information, deception, and control</p>
+                    <p>Taktisk kampstil emphasizing informationsfordel, psychological warfare, and strategic manipulation of opponents.</p>
+                <div class="card" style="border-left: 4px solid #f39c12;">
+                    <h3>🏢 Jojik (조직원) - Organiseret Kriminalitet</h3>
+                    <p><strong>Philosophy:</strong> Ruthlessness, adaptability, and survival</p>
+                    <p>Gadevidst kampstil blending traditional techniques with modern urban warfare. Practical, aggressive, and highly adaptive.</p>
+        <!-- Teknologistak -->
+        <section id="technology">
+            <h2>🛠️ Teknologistak</h2>
+                    <h3>🎮 Game Engine</h3>
+                    <p><strong>Unity Engine</strong> - Cross-platform 2D game development with advanced physics simulation and rendering capabilities.</p>
+                    <h3>💻 Programming</h3>
+                    <p><strong>C#</strong> - Modern, type-safe language with excellent Unity integration for game logic, AI systems, and combat mechanics.</p>
+                    <h3>🔒 Security</h3>
+                    <p><strong>SLSA Level 3</strong> - Supply chain security with build integrity, provenance attestation, and reproducible builds.</p>
+        <!-- Security & Quality Badges -->
+        <section id="security-quality">
+            <h2>🛡️ Security & Quality</h2>
+            <p>Black Trigram demonstrates enterprise-grade security practices and quality standards for open source game development.</p>
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub Releases">
+                    <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram?style=for-the-badge&logo=github" alt="GitHub Release" width="220" height="28" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="License">
+                    <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg?style=for-the-badge" alt="License" width="150" height="28" loading="lazy">
+                <a href="https://blacktrigram.com" title="Official Website">
+                    <img src="https://img.shields.io/website?url=https://blacktrigram.com&style=for-the-badge&logo=firefox" alt="Website" width="150" height="28" loading="lazy">
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
+                    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
+                <a href="https://bestpractices.coreinfrastructure.org/projects/10777" title="CII Best Practices">
+                    <img src="https://bestpractices.coreinfrastructure.org/projects/10777/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
+                <a href="https://github.com/Hack23/blacktrigram/attestations" title="SLSA Level 3">
+                    <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="200" height="20" loading="lazy">
+                <a href="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml" title="Scorecard Supply Chain">
+                    <img src="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard" width="220" height="20" loading="lazy">
+                <a href="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml" title="Test & Report">
+                    <img src="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml/badge.svg?branch=main" alt="Tests" width="220" height="20" loading="lazy">
+                <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Quality Gate">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=alert_status" alt="Quality Gate" width="200" height="20" loading="lazy">
+                <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Security Rating">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=security_rating" alt="Security" width="200" height="20" loading="lazy">
+                <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram" title="FOSSA Status">
+                    <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram.svg?type=shield" alt="FOSSA" width="200" height="20" loading="lazy">
+        <!-- Getting Started -->
+        <section id="getting-started">
+            <h2>🚀 Getting Started</h2>
+                    <h3>1️⃣ Play Online</h3>
+                    <p>Visit <a href="https://blacktrigram.com" title="Play Black Trigram">blacktrigram.com</a> to play directly in your browser. No installation required!</p>
+                    <a href="https://blacktrigram.com" title="Play Now" style="background: #ff6b35; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">🎮 Play Now</a>
+                    <h3>2️⃣ Ladda ner Release</h3>
+                    <p>Ladda ner the latest release from GitHub for offline play and the full desktop experience.</p>
+                    <a href="https://github.com/Hack23/blacktrigram/releases" title="Ladda ner Release" class="btn-primary d-inline-block mt-1">📥 Ladda ner</a>
+                    <h3>3️⃣ Build from Source</h3>
+                    <p>Clone the repository and build using Unity. Full source code available under Apache 2.0 license.</p>
+                    <a href="https://github.com/Hack23/blacktrigram" title="View Repository" class="btn-primary d-inline-block mt-1">📂 Repository</a>
+        <!-- Community & Resources -->
+        <section id="community">
+            <h2>👥 Community & Resources</h2>
+                    <h3>📺 YouTube Channel</h3>
+                    <p>Watch gameplay videos, development updates, and martial arts technique demonstrations.</p>
+                    <a href="https://www.youtube.com/channel/UCiGwB6sLC8rog_ZPAiXChAQ" title="YouTube Channel" style="background: #FF0000; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">▶️ YouTube</a>
+                    <h3>🎵 TikTok</h3>
+                    <p>Short-form content, combat techniques, and community highlights.</p>
+                    <a href="https://www.tiktok.com/@blacktrigram" title="TikTok" style="background: #000000; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">🎵 TikTok</a>
+                    <h3>📖 Dokumentation</h3>
+                    <p>Complete documentation including game mechanics, combat system details, and development guides.</p>
+                    <a href="black-trigram-docs_da.html" title="Dokumentation" class="btn-primary d-inline-block mt-1">📚 Docs</a>
+        <!-- Related Projects -->
+        <section id="related-projects">
+            <h2>🔗 Related Projects</h2>
+                    <h3>🔐 CIA Compliance Manager</h3>
+                    <p>Security assessment platform demonstrating enterprise security practices used in Black Trigram's development.</p>
+                    <a href="compliance-manager.html" title="CIA Compliance Manager">Läs mer →</a>
+                    <h3>🔍 Citizen Intelligence Agency</h3>
+                    <p>Political transparency platform showcasing open source development practices and data integrity.</p>
+                    <a href="cia-project.html" title="CIA Project">Läs mer →</a>
+        <!-- FAQ Section -->
+        <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">❓ Ofte Stillede Spørgsmål</h2>
+            <p class="faq-intro">Common questions about Black Trigram game, features, and development.</p>
+            <div class="faq-controls">
+                <button type="button" class="faq-control-btn" id="faq-expand-all" aria-label="Expand all FAQ items">
+                    Expand All
+                </button>
+                <button type="button" class="faq-control-btn" id="faq-collapse-all" aria-label="Collapse all FAQ items">
+                    Collapse All
+            <div class="faq-content">
+                <details class="faq-item">
+                    <summary>
+                        <h3>Er Black Trigram gratis at spille?</h3>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes, Black Trigram is completely free and open source. You can play directly in your browser at <a href="https://blacktrigram.com">blacktrigram.com</a>, download releases from GitHub, or build from source under the Apache 2.0 license. There are no in-app purchases, subscriptions, or hidden costs.</p>
+                    </div>
+                </details>
+                        <h3>Hvilke platforme understøtter Black Trigram?</h3>
+                        <p>Black Trigram is built with Unity and supports cross-platform deployment. You can play in modern web browsers (Chrome, Firefox, Safari, Edge), download for PC (Windows, macOS, Linux), or build for other platforms from source. The web version requires no installation and works on most devices.</p>
+                        <h3>Hvor realistisk er systemet med vitale punkter?</h3>
+                        <p>The vital points system is based on traditional Korean martial arts knowledge, featuring 70 anatomical targeting points with unique properties affecting combat effectiveness. While designed for entertainment and education, the techniques draw from authentic Taekkyeon and Hapkido practices. The physics-based combat simulation provides realistic weight, momentum, and impact calculations.</p>
+                        <h3>Hvad er de 5 kamptyper?</h3>
+                        <p>Black Trigram features 5 unique combat archetypes: <strong>Musa (무사)</strong> - the honorable warrior emphasizing discipline and direct combat; <strong>Amsalja (암살자)</strong> - the assassin focused on precision and vital point targeting; <strong>Hacker</strong> - the technical fighter using mønstergenkendelse; <strong>Jeongbo (정보원)</strong> - the intelligence operative skilled in deception; and <strong>Jojik (조직원)</strong> - the street-smart fighter with adaptive techniques.</p>
+                        <h3>Kan jeg bidrage til open source-projektet?</h3>
+                        <p>Absolutely! Black Trigram welcomes contributions from the community. The project is hosted on GitHub at <a href="https://github.com/Hack23/blacktrigram">github.com/Hack23/blacktrigram</a>. You can contribute code, report bugs, suggest features, improve documentation, or help with translations. The project follows security best practices including SLSA Level 3 supply chain security.</p>
+                        <h3>Hvilke kampsportsarter er med i spillet?</h3>
+                        <p>Black Trigram authentically represents traditional Korean martial arts including <strong>Taekkyeon</strong> (traditional Korean footwork and kicking), <strong>Hapkido</strong> (joint locks and grappling techniques), and elements of traditional Korean martial philosophy based on I Ching principles. Every technique is researched and implemented with cultural authenticity and respect for the arts' heritage.</p>
+                        <h3>Hvilken pædagogisk værdi giver spillet?</h3>
+                        <p>Beyond entertainment, Black Trigram serves as an educational platform for Korean martial arts and cultural heritage. Players learn traditional martial arts philosophy, anatomical targeting concepts, and Korean cultural context while playing. The game preserves and promotes Korean martial traditions through interactive digital media.</p>
+                        <h3>Hvordan sikrer Black Trigram bedste sikkerhedspraksis?</h3>
+                        <p>As a Hack23 project, Black Trigram demonstrates enterprise-grade security practices including SLSA Level 3 supply chain security, OpenSSF Scorecard compliance, CII Best Practices certification, and SonarCloud quality gates. This ensures the game is built with the same security standards applied to professional software development.</p>
+        <!-- FAQ Controls JavaScript -->
+        <script>
+            (function() {
+                'use strict';
+                const expandBtn = document.getElementById('faq-expand-all');
+                const collapseBtn = document.getElementById('faq-collapse-all');
+                if (expandBtn) {
+                    expandBtn.addEventListener('click', function() {
+                        document.querySelectorAll('.faq-item').forEach(d => d.open = true);
+                    });
+                }
+                if (collapseBtn) {
+                    collapseBtn.addEventListener('click', function() {
+                        document.querySelectorAll('.faq-item').forEach(d => d.open = false);
+            })();
+        </script>
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>🎮 Ready to Play?</h2>
+            <p>Experience authentic Korean martial arts combat with educational value and cultural preservation focus. Free and open source.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://blacktrigram.com" title="Play Black Trigram" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">🎮 Play Now</a>
+                <a href="https://github.com/Hack23/blacktrigram" title="GitHub Repository" class="cta-button">📂 View Source</a>
+                <a href="projects.html" title="All Projects" class="cta-button">← Back to Projects</a>
+    </main>
+    <footer>
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+            <a href="blog_sv.html" title="Security Blog">Blog</a> |
+            <a href="https://hack23.com/index_da.html" lang="da">Swedish version</a>
+        </p>
+    </footer>
+</body>
+</html>
