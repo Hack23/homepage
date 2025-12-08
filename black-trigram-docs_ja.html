@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブラックトライグラム アーキテクチャ ドキュメント | 韓国 武術 ゲーム 설계 | Hack23</title>
+    <title>ブラックトライグラム アーキテクチャ ドキュメント | 韓国 武術 ゲーム 設計 | Hack23</title>
     <link rel="stylesheet" type="text/css" href="styles.css"><link rel="canonical" href="https://hack23.com/black-trigram-docs_ja.html">
     
-    <meta name="description" content="ブラックトライグラム ゲーム アーキテクチャ: C4 モデル, Unity 統合, 전투 システム デザイン, 에셋 파이프라인. 韓国 武術 伝統의 디지털 保存. オープンソース 文化 ゲーム 開発 プロジェクト.">
-    <meta name="keywords" content="ゲーム アーキテクチャ ドキュメント Hack23, C4 ゲーム デザイン モデル, 韓国 武術 ゲーム 開発, オープンソース ゲーム プラットフォーム, Unity アーキテクチャ パターン, 文化 ゲーム 保存, 전투 システム デザイン, 에셋 파이프라인 アーキテクチャ, 教育용 ゲーム 開発, 武術 シミュレーター アーキテクチャ, ゲーム プラットフォーム セキュリティ, ブラックトライグラム ドキュメント, ゲーム 소프트웨어 アーキテクチャ 설계, Unity 엔진 최적화 パターン, クロス プラットフォーム ゲーム 開発, ゲーム 성능 최적화 기법, ゲーム データ 관리 システム, ゲーム AI アーキテクチャ 설계, 物理 엔진 統合 설계, ゲーム 렌더링 파이프라인, ゲーム 네트워킹 アーキテクチャ, 멀티플레이어 システム 설계, ゲーム セキュリティ アーキテクチャ, ゲーム 테스팅 자동화, ゲーム 배포 파이프라인, ゲーム 분석 システム, ゲーム 플레이 메트릭스, ゲーム 사용자 인터페이스 설계, ゲーム 접근성 설계, VR AR ゲーム アーキテクチャ, 모바일 ゲーム 최적화, ゲーム 서버 アーキテクチャ, 클라우드 ゲーム 인프라, ゲーム データ베이스 설계, ゲーム 캐싱 전략, ゲーム 로드 밸런싱, ゲーム 모니터링 システム, ゲーム 로깅 アーキテクチャ, ゲーム 구성 관리, ゲーム バージョン 관리 システム, ゲーム ドキュメント화 자동화, ゲーム 코드 品質 관리, ゲーム 開発 워크플로우">
+    <meta name="description" content="ブラックトライグラム ゲーム アーキテクチャ: C4 モデル, Unity 統合, 전투 システム デザイン, に셋 파프라인. 韓国 武術 伝統の 디지털 保存. オープンソース 文化 ゲーム 開発 プロジェクト.">
+    <meta name="keywords" content="ゲーム アーキテクチャ ドキュメント Hack23, C4 ゲーム デザイン モデル, 韓国 武術 ゲーム 開発, オープンソース ゲーム プラットフォーム, Unity アーキテクチャ パターン, 文化 ゲーム 保存, 전투 システム デザイン, に셋 파프라인 アーキテクチャ, 教育용 ゲーム 開発, 武術 シミュレーター アーキテクチャ, ゲーム プラットフォーム セキュリティ, ブラックトライグラム ドキュメント, ゲーム 소프트웨어 アーキテクチャ 設計, Unity 엔진 최적화 パターン, クロス プラットフォーム ゲーム 開発, ゲーム 性能 최적화 기법, ゲーム データ 管理 システム, ゲーム AI アーキテクチャ 設計, 物理 엔진 統合 設計, ゲーム 렌더링 파프라인, ゲーム 네트워킹 アーキテクチャ, 멀티플레어 システム 設計, ゲーム セキュリティ アーキテクチャ, ゲーム 테스팅 자동화, ゲーム 배포 파프라인, ゲーム 分析 システム, ゲーム 플레 메트릭스, ゲーム 使用자 인터페스 設計, ゲーム アプローチ성 設計, VR AR ゲーム アーキテクチャ, 모바일 ゲーム 최적화, ゲーム 서버 アーキテクチャ, 클라우드 ゲーム インフラ, ゲーム データ베스 設計, ゲーム 캐싱 戦略, ゲーム で드 밸런싱, ゲーム 모니터링 システム, ゲーム で깅 アーキテクチャ, ゲーム 구성 管理, ゲーム バージョン 管理 システム, ゲーム ドキュメント화 자동화, ゲーム 코드 品質 管理, ゲーム 開発 워크플で우">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="ブラックトライグラム アーキテクチャ ドキュメント" />
-    <meta property="og:description" content="オープンソース 韓国 무술 ゲーム アーキテクチャ: C4 モデル, Unity 統合, 전투 システム デザイン, 에셋 파이프라인, 文化 保存 パターン." />
+    <meta property="og:description" content="オープンソース 韓国 무술 ゲーム アーキテクチャ: C4 モデル, Unity 統合, 전투 システム デザイン, に셋 파프라인, 文化 保存 パターン." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hack23.com/black-trigram-docs_ja.html" />
     <meta property="og:image" content="https://blacktrigram.com/black-trigram.png" />
@@ -24,8 +24,8 @@
     {
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": "ブラックトライグラム - ゲーム アーキテクチャ 및 システム ドキュメント",
-      "description": "オープンソース 韓国 무술 教育 ゲーム アーキテクチャ ドキュメント. C4 モデル, ゲーム デザイン パターン, セキュリティ アーキテクチャ, Unity 統合, 에셋 파이프라인, 文化 保存을 다루는 ゲーム 開発자, Unity 아키텍트, オープンソース 貢献자를 위한 技術 ドキュメント.",
+      "headline": "ブラックトライグラム - ゲーム アーキテクチャ およびシステム ドキュメント",
+      "description": "オープンソース 韓国 무술 教育 ゲーム アーキテクチャ ドキュメント. C4 モデル, ゲーム デザイン パターン, セキュリティ アーキテクチャ, Unity 統合, に셋 파프라인, 文化 保存を 다루は ゲーム 開発자, Unity 아키텍트, オープンソース 貢献자を 위した技術 ドキュメント.",
       "image": "https://blacktrigram.com/black-trigram.png",
       "datePublished": "2025-01-01",
       "dateModified": "2025-10-06",
@@ -51,19 +51,19 @@
       "audience": [
         {
           "@type": "Audience",
-          "audienceType": "ゲーム 開発자 및 Unity 開発자"
+          "audienceType": "ゲーム 開発자 およびUnity 開発자"
         },
         {
           "@type": "Audience",
-          "audienceType": "ゲーム 아키텍트 및 솔루션 아키텍트"
+          "audienceType": "ゲーム 아키텍트 およびソリューション 아키텍트"
         },
         {
           "@type": "Audience",
-          "audienceType": "オープンソース 貢献자 및 教育용 ゲーム 제작자"
+          "audienceType": "オープンソース 貢献자 および教育용 ゲーム 制作자"
         },
         {
           "@type": "Audience",
-          "audienceType": "セキュリティ 아키텍트 및 文化 保存 전문가"
+          "audienceType": "セキュリティ 아키텍트 および文化 保存 전문が"
         }
       ],
       "about": {
@@ -77,25 +77,25 @@
           "文化"
         ],
         "gamePlatform": "クロス プラットフォーム",
-        "description": "伝統 技術과 文化적 존중을 특징으로 하는 정통 韓国 무술 教育 전투 ゲーム.",
+        "description": "伝統 技術と 文化적 존중を 特徴으で 하は 정통 韓国 무술 教育 전투 ゲーム.",
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock"
         }
       },
       "teaches": [
-        "ゲーム システム을 위한 C4 アーキテクチャ モデル링",
-        "ゲーム セキュリティ アーキテクチャ 설계",
+        "ゲーム システムを 위したC4 アーキテクチャ モデル링",
+        "ゲーム セキュリティ アーキテクチャ 設計",
         "Unity プラットフォーム 統合 パターン",
         "教育용 ゲーム 메커니즘 デザイン",
-        "ゲーム에서의 文化 保存",
-        "에셋 파이프라인 アーキテクチャ",
-        "ゲーム データ モデル 설계",
-        "전투 システム 상태 관리",
+        "ゲームに서の 文化 保存",
+        "に셋 파프라인 アーキテクチャ",
+        "ゲーム データ モデル 設計",
+        "전투 システム 상태 管理",
         "オープンソース ゲーム 開発 貢献",
-        "ゲーム プラットフォーム을 위한 CRA 평가"
+        "ゲーム プラットフォームを 위したCRA 평が"
       ],
-      "educationalLevel": "전문가 / 고급",
+      "educationalLevel": "전문が / 고급",
       "learningResourceType": [
         "ゲーム アーキテクチャ ドキュメント",
         "システム デザイン パターン",
@@ -107,27 +107,27 @@
       "featureList": [
         "C4 アーキテクチャ モデル",
         "ゲーム システム アーキテクチャ ドキュメント",
-        "教育용 ゲーム을 위한 セキュリティ アーキテクチャ",
-        "Unity プラットフォーム 統合 설계",
-        "에셋 파이프라인 アーキテクチャ",
+        "教育용 ゲームを 위したセキュリティ アーキテクチャ",
+        "Unity プラットフォーム 統合 設計",
+        "に셋 파프라인 アーキテクチャ",
         "전투 메커니즘 データ モデル",
-        "상태 전환 다이어그램",
-        "システム 마인드맵 및 컨텍스트 다이어그램",
-        "ゲーム 開発을 위한 SWOT 분석",
+        "상태 전환 다어그램",
+        "システム 마인드맵 および컨텍스트 다어그램",
+        "ゲーム 開発を 위したSWOT 分析",
         "文化 保存 技術 パターン",
-        "ゲーム プロジェクト를 위한 CI/CD 워크플로우",
-        "ゲーム システム을 위한 API ドキュメント",
-        "70개 急所점 データ アーキテクチャ",
-        "5가지 파이터 アーキタイプ システム 설계",
-        "伝統 技術 구현 パターン",
+        "ゲーム プロジェクトを 위したCI/CD 워크플で우",
+        "ゲーム システムを 위したAPI ドキュメント",
+        "70個 急所点 データ アーキテクチャ",
+        "5が지 파터 アーキタイプ システム 設計",
+        "伝統 技術 実装 パターン",
         "教育 진행 システム アーキテクチャ",
         "オープンソース 貢献 ガイド라인",
-        "15개 이상의 技術 ゲーム アーキテクチャ 다이어그램"
+        "15個 상の 技術 ゲーム アーキテクチャ 다어그램"
       ],
       "isAccessibleForFree": true,
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
-      "keywords": "ゲーム アーキテクチャ ドキュメント, C4 ゲーム デザイン, 韓国 武術 ゲーム 開発, オープンソース ゲーム プラットフォーム, Unity アーキテクチャ パターン, ゲーム セキュリティ 설계, 開発자 ドキュメント, 文化 保存 ゲーム, 教育용 ゲーム アーキテクチャ, 전투 システム デザイン, 에셋 파이프라인 アーキテクチャ",
-      "softwareRequirements": "ドキュメント를 보려면 최신 웹 브라우저가 필요합니다. 開発: Unity 엔진, C#, Git(ゲーム에 貢献하기 위해).",
+      "keywords": "ゲーム アーキテクチャ ドキュメント, C4 ゲーム デザイン, 韓国 武術 ゲーム 開発, オープンソース ゲーム プラットフォーム, Unity アーキテクチャ パターン, ゲーム セキュリティ 設計, 開発자 ドキュメント, 文化 保存 ゲーム, 教育용 ゲーム アーキテクチャ, 전투 システム デザイン, に셋 파프라인 アーキテクチャ",
+      "softwareRequirements": "ドキュメントを 보려면 최신 웹 브라우저が 필요します. 開発: Unity 엔진, C#, Git(ゲームに 貢献하기 위해).",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -143,35 +143,35 @@
         },
         {
           "@type": "CreativeWork",
-          "name": "소프트웨어 アーキテクチャ를 위한 C4 モデル",
+          "name": "소프트웨어 アーキテクチャを 위したC4 モデル",
           "url": "https://c4model.com/"
         },
         {
           "@type": "CreativeWork",
           "name": "韓国 伝統 武術 技術",
-          "description": "テッキョン과 ハプキドー 역사 ドキュメント"
+          "description": "テッキョンと ハプキドー 歴史 ドキュメント"
         },
         {
           "@type": "CreativeWork",
           "name": "주역 (역경)",
-          "description": "ゲーム デザイン에 영향을 미치는 고대 중국 철학 텍스트"
+          "description": "ゲーム デザインに 影響を 미치は 고대 중국 哲学 텍스트"
         }
       ],
       "hasPart": [
         {
           "@type": "TechArticle",
           "name": "ゲーム アーキテクチャ ドキュメント",
-          "description": "전투 ゲーム 메커니즘을 위한 C4 モデル 및 システム デザイン"
+          "description": "전투 ゲーム 메커니즘を 위したC4 モデル およびシステム デザイン"
         },
         {
           "@type": "TechArticle",
-          "name": "70개 急所점 システム",
+          "name": "70個 急所点 システム",
           "description": "해부학적 타겟팅 システム データ アーキテクチャ"
         },
         {
           "@type": "TechArticle",
-          "name": "5가지 전투 アーキタイプ デザイン",
-          "description": "파이터 アーキタイプ 구현 パターン"
+          "name": "5が지 전투 アーキタイプ デザイン",
+          "description": "파터 アーキタイプ 実装 パターン"
         }
       ]
     },
@@ -226,7 +226,7 @@
 
     <header>
         <div class="logo-container">
-            <img src="black-trigram-140.webp" alt="ブラックトライグラム 로고" class="logo" width="80" height="80" />
+            <img src="black-trigram-140.webp" alt="ブラックトライグラム で고" class="logo" width="80" height="80" />
         </div>
         <h1>ブラックトライグラム (Black Trigram) ドキュメント <span class="app-version">韓国어</span></h1>
         <p>韓国 伝統武術 정밀 格闘 シミュレーター 완전 ガイド</p>
@@ -235,8 +235,8 @@
             <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub 릴리스">
                 <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub 릴리스">
             </a>
-            <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="라이선스">
-                <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="라이선스">
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="라선스">
+                <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="라선스">
             </a>
             <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
                 <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard">
@@ -274,16 +274,16 @@
         </div>
         
         <div class="app-link">
-            <a href="index_ja.html" title="ホーム으로">ホーム</a>
+            <a href="index_ja.html" title="ホーム으で">ホーム</a>
             <a href="black-trigram-features_ja.html" title="ゲーム 機能">ゲーム 機能</a>
-            <a href="https://blacktrigram.com" class="btn" title="ブラックトライグラム 플레이">🎮 도장 입문</a>
+            <a href="https://blacktrigram.com" class="btn" title="ブラックトライグラム 플레">🎮 도장 입문</a>
         </div>
     </header>
 
     <main>
         <section id="overview">
-            <h2>📖 ゲーム 개요</h2>
-            <p><strong>ブラックトライグラム(Black Trigram)</strong>는 韓国 武術 철학과 주역에서 영감을 받은 현실적인 2D 정밀 格闘 ゲーム입니다. 이 ゲーム은 정밀한 해부학적 타겟팅을 통해 진정한 韓国 무술을 가르치며, 70개의 急所점과 5개의 독특한 전투 アーキタイプ을 현대적인 웹 技術로 구현했습니다.</p>
+            <h2>📖 ゲーム 個요</h2>
+            <p><strong>ブラックトライグラム(Black Trigram)</strong>は 韓国 武術 哲学と 주역にて영감を 받は 현실적인 2D 정밀 格闘 ゲームです.  ゲームは 정밀した해부학적 타겟팅を 통해 本格的な 韓国 무술を が르치며, 70個の 急所点と 5個の 독특した전투 アーキタイプを 현대적인 웹 技術で 実装했습니다.</p>
         </section>
 
         <section id="quick-start">
@@ -291,34 +291,34 @@
             
             <h3>🌐 웹 バージョン (권장)</h3>
             <div class="installation-step">
-                <h4>즉시 접근</h4>
-                <p>웹 브라우저를 통해 시작하는 것이 가장 쉬운 방법입니다:</p>
+                <h4>즉시 アプローチ</h4>
+                <p>웹 브라우저を 통해 시작하は 것 が장 쉬운 方法です:</p>
                 <div class="code-block">
                     1. https://blacktrigram.com 방문
-                    2. "지금 플레이" 클릭
+                    2. "지금 플레" 클릭
                     3. 즉시 格闘 훈련 시작
                 </div>
             </div>
 
-            <h3>🔧 로컬 開発</h3>
+            <h3>🔧 で컬 開発</h3>
             <div class="installation-step">
                 <h4>開発자 설정</h4>
-                <p>開発 또는 로컬 호스팅을 위해:</p>
+                <p>開発 또は で컬 호스팅を 위해:</p>
                 <div class="code-block">
                     # 저장소 복제
                     git clone https://github.com/Hack23/blacktrigram.git
                     cd blacktrigram
 
-                    # 의존성 설치
+                    # の존성 설치
                     npm install
 
                     # 開発 서버 시작
                     npm run dev
 
-                    # 프로덕션용 빌드
+                    # 프で덕션용 빌드
                     npm run build
 
-                    # 테스트 실행
+                    # テスト 実行
                     npm run test
                     npm run test:combat
                 </div>
@@ -326,18 +326,18 @@
         </section>
 
         <section id="gameplay-guide">
-            <h2>🎮 ゲーム플레이 ガイド</h2>
+            <h2>🎮 ゲーム플레 ガイド</h2>
             
             <div class="cards">
                 <div class="card">
                     <div class="scanner-effect"></div>
                     <h3>⌨️ 기본 조작</h3>
                     <ul>
-                        <li><strong>🏃 이동:</strong> WASD 또는 화살표 키 - 전술적 위치 잡기와 발놀림</li>
+                        <li><strong>🏃 동:</strong> WASD 또は 화살표 키 - 전술적 위치 잡기と 발놀림</li>
                         <li><strong>⚔️ 기법:</strong> 1–8 (팔괘 기반 格闘 기법)</li>
-                        <li><strong>🛡️ 가드:</strong> 스페이스바 - 방어 자세와 블록</li>
-                        <li><strong>🎯 急所 타격:</strong> 마우스 - 타겟 急所점 공격</li>
-                        <li><strong>🔄 アーキタイプ 전환:</strong> Tab - 5가지 전투 유형 간 변경</li>
+                        <li><strong>🛡️ が드:</strong> 스페스바 - 방어 자세と 블록</li>
+                        <li><strong>🎯 急所 타격:</strong> 마우스 - 타겟 急所点 공격</li>
+                        <li><strong>🔄 アーキタイプ 전환:</strong> Tab - 5が지 전투 유형 간 변경</li>
                     </ul>
                 </div>
                 
@@ -345,10 +345,10 @@
                     <div class="scanner-effect"></div>
                     <h3>🩸 格闘 피드백</h3>
                     <ul>
-                        <li><strong>💥 충격 효과:</strong> 뼈 접촉 소리와 시각적 외상</li>
-                        <li><strong>🩸 부상 システム:</strong> 현실적인 출혈과 손상 진행</li>
-                        <li><strong>😵 무력화:</strong> 格闘 효과의 시각적 지표</li>
-                        <li><strong>⚖️ 균형:</strong> 物理적 자세와 취약성 윈도우</li>
+                        <li><strong>💥 충격 효と:</strong> 뼈 접촉 소리と 시각적 외상</li>
+                        <li><strong>🩸 부상 システム:</strong> 현실적인 출혈と 손상 진행</li>
+                        <li><strong>😵 무력화:</strong> 格闘 효との 시각적 지표</li>
+                        <li><strong>⚖️ バランス:</strong> 物理적 자세と 취약성 윈도우</li>
                     </ul>
                 </div>
             </div>
@@ -356,16 +356,16 @@
 
         <section id="architecture-documentation">
             <h2>📚 アーキテクチャ & ドキュメント</h2>
-            <p>ブラックトライグラム의 완전한 アーキテクチャ 및 技術 ドキュメント를 탐색하세요:</p>
+            <p>ブラックトライグラムの 완전したアーキテクチャ および技術 ドキュメントを 探索하세요:</p>
             
             <div class="cards">
                 <div class="card confidentiality-card">
                     <div class="scanner-effect"></div>
                     <h3>🔗 アーキテクチャ & デザイン</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="アーキテクチャ ドキュメント">📐 ARCHITECTURE.md</a> - 고수준 C4 モデル, 컨테이너/컴포넌트 뷰</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="미래 アーキテクチャ">📈 FUTURE_ARCHITECTURE.md</a> - 미래 개선 비전</li>
-                        <li><a href="https://blacktrigram.com/api/" title="API ドキュメント">API ドキュメント</a> - 상세한 API 참조</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="アーキテクチャ ドキュメント">📐 ARCHITECTURE.md</a> - 고レベル C4 モデル, 컨테너/컴포넌트 뷰</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="미래 アーキテクチャ">📈 FUTURE_ARCHITECTURE.md</a> - 미래 個선 비전</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API ドキュメント">API ドキュメント</a> - 상세したAPI 참조</li>
                     </ul>
                 </div>
                 
@@ -373,9 +373,9 @@
                     <div class="scanner-effect"></div>
                     <h3>🔗 格闘 & 메커니즘</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="格闘 アーキテクチャ">🥋 COMBAT_ARCHITECTURE.md</a> - 심화 전투 플로우, 괘 統合, 急所점 타겟팅, 손상 파이프라인</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="ゲーム デザイン">🗺️ game-design.md</a> - 전체 ゲーム 메커니즘, アーキタイプ 분석, デザイン 결정</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="ゲーム 상태">📊 game-status.md</a> - 현재 진행 상황, 機能 로드맵, 마일스톤 추적</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="格闘 アーキテクチャ">🥋 COMBAT_ARCHITECTURE.md</a> - 심화 전투 플で우, 괘 統合, 急所点 타겟팅, 손상 파프라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="ゲーム デザイン">🗺️ game-design.md</a> - 전체 ゲーム 메커니즘, アーキタイプ 分析, デザイン 決定</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="ゲーム 상태">📊 game-status.md</a> - 현재 진행 状況, 機能 で드맵, 마일스톤 추적</li>
                     </ul>
                 </div>
                 
@@ -383,9 +383,9 @@
                     <div class="scanner-effect"></div>
                     <h3>🔗 자산 & 미디어</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산">🖼️ ART_ASSETS.md</a> - 스프라이트 시트, 파티클 텍스처, 컬러 팔레트, UI 아이콘 ガイド라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산">🖼️ ART_ASSETS.md</a> - 스프라트 시트, 파티클 텍스처, 컬러 팔레트, UI 아콘 ガイド라인</li>
                         <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산">🎵 AUDIO_ASSETS.md</a> - 伝統 韓国 악기 루프, 충격 SFX, 믹싱 노트 목록</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="비디오 자산">🎬 VIDEO_ASSETS.md</a> - ブラックトライグラム: 그림자의 길 비디오 콘텐츠</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="비디오 자산">🎬 VIDEO_ASSETS.md</a> - ブラックトライグラム: 그림자の 길 비디오 콘텐츠</li>
                     </ul>
                 </div>
                 
@@ -393,10 +393,10 @@
                     <div class="scanner-effect"></div>
                     <h3>🔒 CI/CD & セキュリティ</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="開発 ガイド">🔒 development.md</a> - 포괄적인 セキュリティ 조치 및 開発 관행</li>
-                        <li><strong>🕷️ ZAP セキュリティ 스캐닝</strong> - OWASP ZAP 동적 애플리케이션 セキュリティ 테스트</li>
-                        <li><strong>⚡ Lighthouse 성능</strong> - 자동화된 성능 및 접근성 감사</li>
-                        <li><strong>📄 SBOM 생성</strong> - 투명성을 위한 소프트웨어 자재 명세서</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="開発 ガイド">🔒 development.md</a> - 포괄적인 セキュリティ 措置 および開発 관행</li>
+                        <li><strong>🕷️ ZAP セキュリティ 스캐닝</strong> - OWASP ZAP 동적 애플리케션 セキュリティ テスト</li>
+                        <li><strong>⚡ Lighthouse 性能</strong> - 자동화된 性能 およびアプローチ성 감사</li>
+                        <li><strong>📄 SBOM 生成</strong> - 투名성を 위した소프트웨어 자재 名세서</li>
                     </ul>
                 </div>
                 
@@ -404,42 +404,42 @@
                     <div class="scanner-effect"></div>
                     <h3>🔐 セキュリティ アーキテクチャ</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md" title="セキュリティ アーキテクチャ">🔐 SECURITY_ARCHITECTURE.md</a> - セキュリティ 설계 및 구현 パターン</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md" title="미래 セキュリティ アーキテクチャ">🔐 FUTURE_SECURITY_ARCHITECTURE.md</a> - AI 향상된 고급 セキュリティ アーキテクチャ</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="開発 ガイド">🔒 development.md</a> - セキュリティ 조치 및 開発 관행</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md" title="セキュリティ アーキテクチャ">🔐 SECURITY_ARCHITECTURE.md</a> - セキュリティ 設計 および実装 パターン</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md" title="미래 セキュリティ アーキテクチャ">🔐 FUTURE_SECURITY_ARCHITECTURE.md</a> - AI 向上된 고급 セキュリティ アーキテクチャ</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="開発 ガイド">🔒 development.md</a> - セキュリティ 措置 および開発 관행</li>
                     </ul>
                 </div>
                 
                 <div class="card integrity-card">
                     <div class="scanner-effect"></div>
-                    <h3>🔗 개념 & 전략</h3>
+                    <h3>🔗 個념 & 戦略</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/MINDMAP.md" title="システム 마인드맵">🧠 MINDMAP.md</a> - 현재 システム 구성 요소 관계 및 개념 アーキテクチャ</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_MINDMAP.md" title="미래 마인드맵">🧠 FUTURE_MINDMAP.md</a> - 향상된 機能이 포함된 진화 로드맵</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SWOT.md" title="SWOT 분석">💼 SWOT.md</a> - 강점, 약점, 기회, 위협의 전략적 평가</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SWOT.md" title="미래 SWOT 분석">💼 FUTURE_SWOT.md</a> - 미래 포지셔닝 및 기회의 전략적 분석</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/MINDMAP.md" title="システム 마인드맵">🧠 MINDMAP.md</a> - 현재 システム 구성 요소 関係 および個념 アーキテクチャ</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_MINDMAP.md" title="미래 마인드맵">🧠 FUTURE_MINDMAP.md</a> - 向上된 機能 포함된 진화 で드맵</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SWOT.md" title="SWOT 分析">💼 SWOT.md</a> - 강点, 약点, 機会, 위협の 戦略적 평が</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SWOT.md" title="미래 SWOT 分析">💼 FUTURE_SWOT.md</a> - 미래 포지셔닝 および機会の 戦略적 分析</li>
                     </ul>
                 </div>
                 
                 <div class="card availability-card">
                     <div class="scanner-effect"></div>
-                    <h3>🔗 データ & 프로세스</h3>
+                    <h3>🔗 データ & 프で세스</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/DATA_MODEL.md" title="データ モデル">📊 DATA_MODEL.md</a> - 현재 データ 구조, 관계 및 엔티티 프레임워크</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_DATA_MODEL.md" title="미래 データ モデル">📊 FUTURE_DATA_MODEL.md</a> - 미래 반복을 위한 향상된 データ アーキテクチャ</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FLOWCHART.md" title="프로세스 플로우차트">🔄 FLOWCHART.md</a> - 현재 データ 처리 워크플로 및 비즈니스 프로세스</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_FLOWCHART.md" title="미래 플로우차트">🔄 FUTURE_FLOWCHART.md</a> - 미래 開発을 위한 향상된 워크플로</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/DATA_MODEL.md" title="データ モデル">📊 DATA_MODEL.md</a> - 현재 データ 構造, 関係 および엔티티 フレームワーク</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_DATA_MODEL.md" title="미래 データ モデル">📊 FUTURE_DATA_MODEL.md</a> - 미래 반복を 위した向上된 データ アーキテクチャ</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FLOWCHART.md" title="프で세스 플で우차트">🔄 FLOWCHART.md</a> - 현재 データ 처리 워크플で および비즈니스 프で세스</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_FLOWCHART.md" title="미래 플で우차트">🔄 FUTURE_FLOWCHART.md</a> - 미래 開発を 위した向上된 워크플で</li>
                     </ul>
                 </div>
                 
                 <div class="card integrity-card">
                     <div class="scanner-effect"></div>
-                    <h3>🔗 행동 システム</h3>
+                    <h3>🔗 行動 システム</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/STATEDIAGRAM.md" title="상태 다이어그램">🔄 STATEDIAGRAM.md</a> - 현재 システム 상태 전환 및 행동 モデル</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_STATEDIAGRAM.md" title="미래 상태 다이어그램">🔄 FUTURE_STATEDIAGRAM.md</a> - 미래 구현을 위한 향상된 적응형 상태 전환</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/WORKFLOWS.md" title="CI/CD 워크플로">🔧 WORKFLOWS.md</a> - 현재 자동화 프로세스 및 CI/CD 파이프라인</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_WORKFLOWS.md" title="미래 워크플로">🔧 FUTURE_WORKFLOWS.md</a> - 고급 機能이 포함된 향상된 CI/CD</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/STATEDIAGRAM.md" title="상태 다어그램">🔄 STATEDIAGRAM.md</a> - 현재 システム 상태 전환 および行動 モデル</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_STATEDIAGRAM.md" title="미래 상태 다어그램">🔄 FUTURE_STATEDIAGRAM.md</a> - 미래 実装を 위した向上된 적응형 상태 전환</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/WORKFLOWS.md" title="CI/CD 워크플で">🔧 WORKFLOWS.md</a> - 현재 자동화 프で세스 およびCI/CD 파프라인</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_WORKFLOWS.md" title="미래 워크플で">🔧 FUTURE_WORKFLOWS.md</a> - 고급 機能 포함된 向上된 CI/CD</li>
                     </ul>
                 </div>
                 
@@ -447,22 +447,22 @@
                     <div class="scanner-effect"></div>
                     <h3>🔗 테스팅 & 品質 보증</h3>
                     <ul>
-                        <li><a href="https://blacktrigram.com/test-results/" title="단위 테스트 결과">🧪 단위 테스트 결과</a> - 단위 테스트 결과 및 커버리지의 시각적 표현</li>
-                        <li><a href="https://blacktrigram.com/coverage/" title="테스트 커버리지">📊 테스트 커버리지</a> - 코드베이스 커버리지를 보여주는 테스트 커버리지 보고서</li>
-                        <li><a href="https://blacktrigram.com/cypress/mochawesome/" title="E2E 테스트 보고서">🔍 E2E 테스트 보고서</a> - 전체 システム 검증을 보여주는 종단간 테스트 보고서</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md" title="단위 테스트 계획">🎓 UnitTestPlan.md</a> - 포괄적인 단위 테스트 전략</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md" title="E2E 테스트 계획">🎮 E2ETestPlan.md</a> - 종단간 테스트 전략</li>
+                        <li><a href="https://blacktrigram.com/test-results/" title="단위 テスト 결と">🧪 단위 テスト 결と</a> - 단위 テスト 결と および커버리지の 시각적 표현</li>
+                        <li><a href="https://blacktrigram.com/coverage/" title="テスト 커버리지">📊 テスト 커버리지</a> - 코드베스 커버리지を 보여주は テスト 커버리지 보고서</li>
+                        <li><a href="https://blacktrigram.com/cypress/mochawesome/" title="E2E テスト 보고서">🔍 E2E テスト 보고서</a> - 전체 システム 검증を 보여주は 종단간 テスト 보고서</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md" title="단위 テスト 計画">🎓 UnitTestPlan.md</a> - 포괄적인 단위 テスト 戦略</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md" title="E2E テスト 計画">🎮 E2ETestPlan.md</a> - 종단간 テスト 戦略</li>
                     </ul>
                 </div>
                 
                 <div class="card confidentiality-card">
                     <div class="scanner-effect"></div>
-                    <h3>🔗 성능 & 운영</h3>
+                    <h3>🔗 性能 & 運営</h3>
                     <ul>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md" title="성능 테스팅">⚡ performance-testing.md</a> - 다양한 조건에서의 벤치마크 및 성능 분석</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/BCPPlan.md" title="사업 연속성 계획">🔄 BCPPlan.md</a> - 포괄적인 사업 연속성 계획 및 복구 전략</li>
-                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/End-of-Life-Strategy.md" title="생명주기 관리">📅 End-of-Life-Strategy.md</a> - 技術 구성 요소의 유지 관리 및 수명 종료 계획</li>
-                        <li><a href="https://blacktrigram.com/api/" title="API ドキュメント">📘 API ドキュメント</a> - 모든 구성 요소, 유형 및 함수에 대한 상세한 API 참조</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md" title="性能 테스팅">⚡ performance-testing.md</a> - 多様な 条件に서の 벤치마크 および性能 分析</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/BCPPlan.md" title="사업 연속성 計画">🔄 BCPPlan.md</a> - 포괄적인 사업 연속성 計画 および복구 戦略</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/End-of-Life-Strategy.md" title="생名주기 管理">📅 End-of-Life-Strategy.md</a> - 技術 구성 요소の 維持 管理 および수名 終了 計画</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API ドキュメント">📘 API ドキュメント</a> - 모든 구성 요소, 유형 および함수に に関する 상세したAPI 참조</li>
                     </ul>
                 </div>
 
@@ -471,71 +471,71 @@
                     <div class="scanner-effect"></div>
                     <h3>🛡️ 증거 기반 위협 モデル</h3>
                     <p>
-                        ゲーム별 セキュリティ 고려사항, 文化유산 보호 중점, 教育 ゲーム プラットフォーム을 위한 전문 분석을 포함한 포괄적인 STRIDE 위협 분석입니다.
+                        ゲーム별 セキュリティ 고려사항, 文化유산 保護 중点, 教育 ゲーム プラットフォームを 위した전문 分析を 含む 포괄적인 STRIDE 위협 分析です.
                     </p>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md"
                         title="위협 モデル ドキュメント 보기"
                     >
-                        <img src="https://img.shields.io/badge/위협_モデル-공개_ドキュメント-blue?style=flat-square&logo=github&logoColor=white" alt="위협 モデル: 공개 ドキュメント" />
+                        <img src="https://img.shields.io/badge/위협_モデル-공個_ドキュメント-blue?style=flat-square&logo=github&logoColor=white" alt="위협 モデル: 공個 ドキュメント" />
                     </a>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md#gaming-specific-threats"
-                        title="ゲーム セキュリティ 분석 보기"
+                        title="ゲーム セキュリティ 分析 보기"
                     >
-                        <img src="https://img.shields.io/badge/ゲーム_セキュリティ-전문_분석-red?style=flat-square&logo=gamepad&logoColor=white" alt="ゲーム セキュリティ: 전문 분석" />
+                        <img src="https://img.shields.io/badge/ゲーム_セキュリティ-전문_分析-red?style=flat-square&logo=gamepad&logoColor=white" alt="ゲーム セキュリティ: 전문 分析" />
                     </a>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md#cultural-sensitivity-analysis"
-                        title="文化유산 보호 보기"
+                        title="文化유산 保護 보기"
                     >
-                        <img src="https://img.shields.io/badge/文化유산-보호_중점-gold?style=flat-square&logo=museum&logoColor=white" alt="文化유산: 보호 중점" />
+                        <img src="https://img.shields.io/badge/文化유산-保護_중点-gold?style=flat-square&logo=museum&logoColor=white" alt="文化유산: 保護 중点" />
                     </a>
                 </div>
 
-                <!-- CRA 평가 -->
+                <!-- CRA 평が -->
                 <div class="card amsalja-card">
                     <div class="scanner-effect"></div>
-                    <h3>🏛️ CRA 평가 구현</h3>
+                    <h3>🏛️ CRA 평が 実装</h3>
                     <p>
-                        教育용 韓国 武術 ゲーム プラットフォーム을 위한 완전한 사이버 복원력 법(CRA) 준수 평가로, 文化 保存 소프트웨어의 규정 준수를 입증합니다.
+                        教育용 韓国 武術 ゲーム プラットフォームを 위した완전した사버 복원력 법(CRA) 준수 평がで, 文化 保存 소프트웨어の 規定 준수を 입증します.
                     </p>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md"
-                        title="CRA 평가 ドキュメント 보기"
+                        title="CRA 평が ドキュメント 보기"
                     >
-                        <img src="https://img.shields.io/badge/CRA_평가-완료-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA 평가: 완료" />
+                        <img src="https://img.shields.io/badge/CRA_평が-完了-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA 평が: 完了" />
                     </a>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md#product-classification"
-                        title="제품 분류 보기"
+                        title="製品 분류 보기"
                     >
-                        <img src="https://img.shields.io/badge/분류-표준_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="분류: 표준 OSS" />
+                        <img src="https://img.shields.io/badge/분류-標準_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="분류: 標準 OSS" />
                     </a>
                     <a
                         href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md#vulnerability-disclosure"
-                        title="취약점 관리 보기"
+                        title="취약点 管理 보기"
                     >
-                        <img src="https://img.shields.io/badge/취약점_관리-구현됨-orange?style=flat-square&logo=shield&logoColor=white" alt="취약점 관리: 구현됨" />
+                        <img src="https://img.shields.io/badge/취약点_管理-実装됨-orange?style=flat-square&logo=shield&logoColor=white" alt="취약点 管理: 実装됨" />
                     </a>
                 </div>
             </div>
         </section>
 
         <section id="martial-arts-philosophy">
-            <h2>🎯 格闘 철학</h2>
+            <h2>🎯 格闘 哲学</h2>
             <blockquote>
-                <p><strong>"어둠 속에서 완벽한 일격을 찾아라"</strong></p>
+                <p><strong>"어둠 속にて완벽した일격を 찾아라"</strong></p>
                 <p><em>"In darkness, seek the perfect strike"</em></p>
             </blockquote>
             
-            <p>각 기법의 초점:</p>
+            <p>각 기법の 초点:</p>
             <ul>
-                <li><strong>정확한 타격 (Precise Targeting)</strong> - 정확한 해부학적 취약점</li>
-                <li><strong>최대 효과 (Maximum Effectiveness)</strong> - 일격 무력화</li>
-                <li><strong>전투 심리 (Combat Psychology)</strong> - 格闘를 위한 정신적 준비</li>
-                <li><strong>伝統 지식 (Traditional Knowledge)</strong> - 진정한 韓国 무술</li>
-                <li><strong>アーキタイプ 특화 (Archetype Specialization)</strong> - 전투 유형별 독특한 접근</li>
+                <li><strong>정확した타격 (Precise Targeting)</strong> - 정확した해부학적 취약点</li>
+                <li><strong>최대 효と (Maximum Effectiveness)</strong> - 일격 무력화</li>
+                <li><strong>전투 심리 (Combat Psychology)</strong> - 格闘を 위した정신적 준비</li>
+                <li><strong>伝統 知識 (Traditional Knowledge)</strong> - 本格的な 韓国 무술</li>
+                <li><strong>アーキタイプ 특화 (Archetype Specialization)</strong> - 전투 유형별 독특したアプローチ</li>
             </ul>
             
             <div class="text-center my-2">
@@ -546,33 +546,33 @@
         <section id="korean-martial-arts">
             <h2>韓国 武術 기초</h2>
             <p>
-              ブラックトライグラム는 진정한 韓国 武術 원리를 기반으로 구축되어 伝統 기법과 철학을 統合합니다:
+              ブラックトライグラムは 本格的な 韓国 武術 原理を 기반으で 구축되어 伝統 기법と 哲学を 統合します:
             </p>
 
             <div class="cards">
               <div class="card">
                 <h3>🥋 <span class="korean-text">テッキョン</span> (Taekkyeon) - 伝統 韓国 발차기</h3>
-                <p>리듬, 균형, 연속적인 움직임을 강조하는 유동적인 다리 기법으로 格闘 효과를 극대화합니다.</p>
+                <p>리듬, バランス, 연속적인 움직임を 強調しは 유동적인 다리 기법으で 格闘 효とを 극대화します.</p>
               </div>
 
               <div class="card">
                 <h3>🤼 <span class="korean-text">씨름</span> (Ssireum) - 韓国 레슬링</h3>
-                <p>던지기, 테이크다운, 그라운드 컨트롤 방법에 초점을 맞춘 그래플링 기법입니다.</p>
+                <p>던지기, 테크다운, 그라운드 컨트롤 方法に 초点を 맞춘 그래플링 기법です.</p>
               </div>
 
               <div class="card">
                 <h3>🗡️ <span class="korean-text">검술</span> (Geomsul) - 검 武術</h3>
-                <p>맨손 格闘 응용을 위해 적응된 伝統 韓国 검술 원리입니다.</p>
+                <p>맨손 格闘 응용を 위해 적응된 伝統 韓国 검술 原理です.</p>
               </div>
 
               <div class="card">
-                <h3>🎯 <span class="korean-text">急所술</span> (Geupso-sul) - 急所점 타격</h3>
-                <p>최대 格闘 효율을 위한 해부학적 취약점의 정밀한 타겟팅입니다.</p>
+                <h3>🎯 <span class="korean-text">急所술</span> (Geupso-sul) - 急所点 타격</h3>
+                <p>최대 格闘 효율を 위した해부학적 취약点の 정밀した타겟팅です.</p>
               </div>
 
               <div class="card">
-                <h3>⚔️ <span class="korean-text">비수</span> (Bisu) - 치명적 기법</h3>
-                <p>최대 효과를 위한 결정적인 맨손 格闘 방법입니다.</p>
+                <h3>⚔️ <span class="korean-text">비수</span> (Bisu) - 치名적 기법</h3>
+                <p>최대 효とを 위した決定적인 맨손 格闘 方法です.</p>
               </div>
             </div>
         </section>
@@ -580,38 +580,38 @@
         <section id="combat-mechanics">
             <h2>格闘 메커니즘</h2>
             <p>
-              ブラックトライグラム는 진정한 武術 시뮬레이션을 위해 현실적인 格闘 物理학과 신체 역학을 구현합니다:
+              ブラックトライグラムは 本格的な 武術 시뮬레션を 위해 현실적인 格闘 物理학と 신체 역학を 実装します:
             </p>
 
             <div class="cards">
               <div class="card">
-                <h3>🩸 진정한 외상 システム</h3>
-                <p>실제 格闘 손상 パターン을 기반으로 한 현실적인 부상 시각화 및 출혈 효과입니다.</p>
+                <h3>🩸 本格的な 외상 システム</h3>
+                <p>실제 格闘 손상 パターンを 기반으で した현실적인 부상 시각화 および출혈 효とです.</p>
               </div>
 
               <div class="card">
                 <h3>🦴 뼈 충격 오디오</h3>
-                <p>현실적인 格闘 피드백을 위한 진짜 뼈 접촉 및 골절 소리입니다.</p>
+                <p>현실적인 格闘 피드백を 위した진짜 뼈 접촉 および골절 소리です.</p>
               </div>
 
               <div class="card">
                 <h3>🫁 호흡 방해</h3>
-                <p>호흡계 타겟팅이 체력과 格闘 성능에 영향을 미칩니다.</p>
+                <p>호흡계 타겟팅 체력と 格闘 性能に 影響を 미칩니다.</p>
               </div>
 
               <div class="card">
-                <h3>⚖️ 균형 システム</h3>
-                <p>格闘 안정성에 영향을 미치는 현실적인 자세와 운동량 物理학입니다.</p>
+                <h3>⚖️ バランス システム</h3>
+                <p>格闘 安定성に 影響を 미치は 현실적인 자세と 운동량 物理학です.</p>
               </div>
 
               <div class="card">
-                <h3>🧠 의식 상태</h3>
-                <p>성공적인 格闘 기법으로부터의 점진적인 인식 손상입니다.</p>
+                <h3>🧠 の식 상태</h3>
+                <p>成功적인 格闘 기법으で부터の 点진적인 인식 손상です.</p>
               </div>
 
               <div class="card">
                 <h3>😵 통증 반응</h3>
-                <p>성능과 格闘 효과에 영향을 미치는 생리적 통증입니다.</p>
+                <p>性能と 格闘 효とに 影響を 미치は 생리적 통증です.</p>
               </div>
             </div>
         </section>
@@ -619,7 +619,7 @@
         <section id="controls">
             <h2>格闘 조작</h2>
             <p>
-              정밀한 기법 실행을 위한 格闘 입력 システム을 마스터하세요:
+              정밀した기법 実行を 위した格闘 입력 システムを 마스터하세요:
             </p>
 
             <table class="control-table">
@@ -627,34 +627,34 @@
                 <tr>
                   <th>조작</th>
                   <th>액션</th>
-                  <th>설명</th>
+                  <th>설名</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>WASD / 화살표 키</td>
-                  <td>이동</td>
-                  <td>전술적 위치 잡기와 발놀림</td>
+                  <td>동</td>
+                  <td>전술적 위치 잡기と 발놀림</td>
                 </tr>
                 <tr>
                   <td>1-8</td>
                   <td>괘 기법</td>
-                  <td>팔괘를 기반으로 한 기법 실행</td>
+                  <td>팔괘を 기반으で した기법 実行</td>
                 </tr>
                 <tr>
-                  <td>스페이스바</td>
-                  <td>가드</td>
-                  <td>방어 자세와 블록</td>
+                  <td>스페스바</td>
+                  <td>が드</td>
+                  <td>방어 자세と 블록</td>
                 </tr>
                 <tr>
                   <td>마우스</td>
                   <td>急所 타격</td>
-                  <td>타겟 急所점 공격</td>
+                  <td>타겟 急所点 공격</td>
                 </tr>
                 <tr>
                   <td>Tab</td>
                   <td>アーキタイプ 전환</td>
-                  <td>5가지 格闘 유형 간 변경</td>
+                  <td>5が지 格闘 유형 간 변경</td>
                 </tr>
               </tbody>
             </table>
@@ -663,28 +663,28 @@
         <section id="training-modules">
             <h2>훈련 모듈</h2>
             <p>
-              ブラックトライグラム는 韓国 武術 기법을 마스터하기 위한 포괄적인 훈련 모듈을 제공합니다:
+              ブラックトライグラムは 韓国 武術 기법を 마스터하기 위した포괄적인 훈련 모듈を 提供します:
             </p>
 
             <div class="cards">
               <div class="card">
-                <h3>🎯 <span class="korean-text">해부학 연구</span> (Anatomical Study)</h3>
-                <p>70개의 해부학적 타겟 포인트, 정밀 타격, 고급 格闘 기법을 학습합니다.</p>
+                <h3>🎯 <span class="korean-text">해부학 研究</span> (Anatomical Study)</h3>
+                <p>70個の 해부학적 타겟 포인트, 정밀 타격, 고급 格闘 기법を 학습します.</p>
               </div>
 
               <div class="card">
                 <h3>⚔️ <span class="korean-text">무술 기법</span> (Martial Techniques)</h3>
-                <p>기본 기법, 팔괘 武術, 콤비네이션 시퀀스를 마스터합니다.</p>
+                <p>기본 기법, 팔괘 武術, 콤비네션 시퀀스を 마스터します.</p>
               </div>
 
               <div class="card">
                 <h3>🥊 <span class="korean-text">실전 훈련</span> (Combat Training)</h3>
-                <p>일대일 格闘, 환경 格闘, 다수 상대 시나리오를 연습합니다.</p>
+                <p>일대일 格闘, 環境 格闘, 다수 상대 시나리오を 연습します.</p>
               </div>
 
               <div class="card">
                 <h3>🎭 <span class="korean-text">アーキタイプ 특화</span> (Archetype Mastery)</h3>
-                <p>5가지 格闘 アーキタイプ 각각과 그들의 독특한 기법에 대한 전문 훈련입니다.</p>
+                <p>5が지 格闘 アーキタイプ 각각と 그들の 독특した기법に に関する 전문 훈련です.</p>
               </div>
             </div>
         </section>
@@ -692,81 +692,81 @@
         <section id="technical-overview">
             <h2>技術 アーキテクチャ</h2>
             <p>
-              ブラックトライグラム는 성능과 현실감을 위해 최적화된 현대적인 웹 技術로 구축되었습니다:
+              ブラックトライグラムは 性能と 현실감を 위해 최적화된 현대적인 웹 技術で 구축되었습니다:
             </p>
 
             <div class="cards">
               <div class="card">
                 <h3>🎮 格闘 物理 엔진</h3>
-                <p>엄격한 타입 안전성과 성능을 위해 PixiJS 8.x, React 19, TypeScript로 구축되었습니다.</p>
+                <p>엄격した타입 安全성と 性能を 위해 PixiJS 8.x, React 19, TypeScriptで 구축되었습니다.</p>
               </div>
 
               <div class="card">
-                <h3>⚡ 성능 최적화</h3>
-                <p>빠른 開発을 위한 Vite, 하드웨어 가속을 위한 WebGL, 오디오를 위한 Howler.js입니다.</p>
+                <h3>⚡ 性能 최적화</h3>
+                <p>빠른 開発を 위したVite, 하드웨어 が속を 위したWebGL, 오디오を 위したHowler.jsです.</p>
               </div>
 
               <div class="card">
-                <h3>🎨 시각 효과</h3>
-                <p>부드러운 格闘를 위한 맞춤 파티클 엔진, WebGL 셰이더, 60fps 애니메이션입니다.</p>
+                <h3>🎨 시각 효と</h3>
+                <p>부드러운 格闘を 위した맞춤 파티클 엔진, WebGL 셰더, 60fps 애니메션です.</p>
               </div>
 
               <div class="card">
                 <h3>🎯 格闘 컴포넌트</h3>
-                <p>VitalPointTargeter, CombatTracker, TechniqueCalculator, CombatAnalyzer システム입니다.</p>
+                <p>VitalPointTargeter, CombatTracker, TechniqueCalculator, CombatAnalyzer システムです.</p>
               </div>
             </div>
         </section>
 
         <section id="documentation-links">
-            <h2>추가 ドキュメント</h2>
+            <h2>추が ドキュメント</h2>
             <p>
-              포괄적인 ドキュメント와 開発 리소스를 탐색하세요:
+              포괄적인 ドキュメントと 開発 리소스を 探索하세요:
             </p>
 
             <div class="cards">
               <div class="card">
                 <h3>📐 アーキテクチャ ドキュメント</h3>
-                <p>고수준 C4 モデル, 컨테이너/컴포넌트 뷰, システム 컨텍스트입니다.</p>
+                <p>고レベル C4 モデル, 컨테너/컴포넌트 뷰, システム 컨텍스트です.</p>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="アーキテクチャ 보기">アーキテクチャ 보기</a>
               </div>
 
               <div class="card">
                 <h3>🥋 格闘 アーキテクチャ</h3>
-                <p>심화 전투 플로우, 괘 統合, 急所점 타겟팅, 손상 파이프라인입니다.</p>
+                <p>심화 전투 플で우, 괘 統合, 急所点 타겟팅, 손상 파프라인です.</p>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="格闘 アーキテクチャ 보기">格闘 システム 보기</a>
               </div>
 
               <div class="card">
                 <h3>🎮 ゲーム デザイン</h3>
-                <p>전체 ゲーム 메커니즘, アーキタイプ 분석, デザイン 결정사항입니다.</p>
+                <p>전체 ゲーム 메커니즘, アーキタイプ 分析, デザイン 決定사항です.</p>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="ゲーム デザイン 보기">ゲーム デザイン 보기</a>
               </div>
 
               <div class="card">
                 <h3>📊 開発 상태</h3>
-                <p>현재 진행 상황, 機能 로드맵, 마일스톤 추적입니다.</p>
-                <a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="ゲーム 상태 보기">진행 상황 보기</a>
+                <p>현재 진행 状況, 機能 で드맵, 마일스톤 추적です.</p>
+                <a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="ゲーム 상태 보기">진행 状況 보기</a>
               </div>
 
               <div class="card">
                 <h3>🖼️ 아트 자산</h3>
-                <p>스프라이트 시트, 파티클 텍스처, 컬러 팔레트, UI 아이콘 ガイド라인입니다.</p>
+                <p>스프라트 시트, 파티클 텍스처, 컬러 팔레트, UI 아콘 ガイド라인です.</p>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="아트 자산 보기">아트 ガイド 보기</a>
               </div>
 
               <div class="card">
                 <h3>🎵 오디오 자산</h3>
-                <p>伝統 韓国 악기 루프, 충격 SFX, 믹싱 노트입니다.</p>
+                <p>伝統 韓国 악기 루프, 충격 SFX, 믹싱 노트です.</p>
                 <a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="오디오 자산 보기">오디오 ガイド 보기</a>
               </div>
             </div>
         </section>
 
         <section id="project-classification">
-            <h2>🏷️ Hack23 프레임워크에 따른 プロジェクト 분류</h2>
+            <h2>🏷️ Hack23 フレームワークに 따른 プロジェクト 분류</h2>
             <p>
-              포괄적인 プロジェクト 평가를 위한 <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23 분류 및 비즈니스 연속성 프레임워크</a> ガイド라인을 따릅니다:
+              포괄적인 プロジェクト 평がを 위した<a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23 분류 および비즈니스 연속성 フレームワーク</a> ガイド라인を 따릅니다:
             </p>
 
             <div class="cards">
@@ -777,8 +777,8 @@
                   <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="プロジェクト 타입: 프론트엔드 앱">
                     <img src="https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black" alt="プロジェクト 타입: 프론트엔드 앱" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="비즈니스 프로세스: 마케팅">
-                    <img src="https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white" alt="비즈니스 프로세스: 마케팅" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="비즈니스 프で세스: 마케팅">
+                    <img src="https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white" alt="비즈니스 프で세스: 마케팅" loading="lazy">
                   </a>
                 </div>
               </div>
@@ -787,14 +787,14 @@
                 <div class="scanner-effect"></div>
                 <h3>🔒 セキュリティ 분류</h3>
                 <div class="badge-group">
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="기밀성 수준: 공개 - 기밀성 요구사항 없음">
-                    <img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="기밀성: 공개" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="기밀성 レベル: 공個 - 기밀성 요구사항 없음">
+                    <img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="기밀성: 공個" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="무결성 수준: 보통 - データ 검증, 체크섬">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="무결성 レベル: 보통 - データ 검증, 체크섬">
                     <img src="https://img.shields.io/badge/Integrity-Moderate-yellow?style=for-the-badge&logo=check-circle&logoColor=black" alt="무결성: 보통" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="가용성 수준: 표준 - 99% 가동시간, 표준 복구">
-                    <img src="https://img.shields.io/badge/Availability-Standard-lightgreen?style=for-the-badge&logo=server&logoColor=white" alt="가용성: 표준" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="が용성 レベル: 標準 - 99% が동시간, 標準 복구">
+                    <img src="https://img.shields.io/badge/Availability-Standard-lightgreen?style=for-the-badge&logo=server&logoColor=white" alt="が용성: 標準" loading="lazy">
                   </a>
                 </div>
               </div>
@@ -803,10 +803,10 @@
                 <div class="scanner-effect"></div>
                 <h3>⏱️ 비즈니스 연속성</h3>
                 <div class="badge-group">
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="복구 시간 목표: 4-24시간">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="복구 시간 目標: 4-24시간">
                     <img src="https://img.shields.io/badge/RTO-Medium_(4--24hrs)-lightgreen?style=for-the-badge&logo=clock&logoColor=white" alt="RTO: 중간 (4-24시간)" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="복구 지점 목표: 4-24시간">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="복구 지点 目標: 4-24시간">
                     <img src="https://img.shields.io/badge/RPO-Daily_(4--24hrs)-lightblue?style=for-the-badge&logo=database&logoColor=white" alt="RPO: 일일 (4-24시간)" loading="lazy">
                   </a>
                 </div>
@@ -816,11 +816,11 @@
                 <div class="scanner-effect"></div>
                 <h3>🛡️ セキュリティ 투자 수익률</h3>
                 <div class="badge-group">
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="ROI 수준: 최소 - 기본 보호 가치">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="ROI レベル: 최소 - 기본 保護 が치">
                     <img src="https://img.shields.io/badge/ROI-Minimal-lightgrey?style=for-the-badge&logo=chart-line&logoColor=black" alt="ROI: 최소" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="위험 완화: 15% 감소">
-                    <img src="https://img.shields.io/badge/Risk_Mitigation-15%25_Reduction-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="위험 완화: 15% 감소" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="リスク 완화: 15% 減少">
+                    <img src="https://img.shields.io/badge/Risk_Mitigation-15%25_Reduction-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="リスク 완화: 15% 減少" loading="lazy">
                   </a>
                   <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="침해 방지: $200 미만 절약">
                     <img src="https://img.shields.io/badge/Breach_Prevention-Under_$200_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black" alt="침해 방지: $200 미만 절약" loading="lazy">
@@ -832,52 +832,52 @@
                 <div class="scanner-effect"></div>
                 <h3>🎯 경쟁 차별화</h3>
                 <div class="badge-group">
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="시장 위치: 경쟁력 있는 - 좋은 시장 위치">
-                    <img src="https://img.shields.io/badge/Position-Competitive-green?style=for-the-badge&logo=trending-up&logoColor=white" alt="시장 위치: 경쟁력 있는" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="市場 위치: 경쟁력 있は - 좋は 市場 위치">
+                    <img src="https://img.shields.io/badge/Position-Competitive-green?style=for-the-badge&logo=trending-up&logoColor=white" alt="市場 위치: 경쟁력 있は" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="고객 신뢰: 표준 점수">
-                    <img src="https://img.shields.io/badge/Trust-Standard_scores-green?style=for-the-badge&logo=handshake&logoColor=white" alt="고객 신뢰: 표준 점수" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="顧客 신뢰: 標準 点수">
+                    <img src="https://img.shields.io/badge/Trust-Standard_scores-green?style=for-the-badge&logo=handshake&logoColor=white" alt="顧客 신뢰: 標準 点수" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="규제 접근: 표준 접근">
-                    <img src="https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white" alt="규제 접근: 표준 접근" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="규제 アプローチ: 標準 アプローチ">
+                    <img src="https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white" alt="규제 アプローチ: 標準 アプローチ" loading="lazy">
                   </a>
                 </div>
               </div>
 
               <div class="card availability-card">
                 <div class="scanner-effect"></div>
-                <h3>📈 포터의 5가지 힘 전략적 영향</h3>
+                <h3>📈 포터の 5が지 힘 戦略적 影響</h3>
                 <div class="badge-group porters-forces">
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="구매자 힘: 보통 - 60%+ 유지율">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="구매자 힘: 보통 - 60%+ 維持율">
                     <img src="https://img.shields.io/badge/Buyer_Power-Moderate-yellow?style=flat-square&logo=users&logoColor=black" alt="구매자 힘: 보통" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="공급자 힘: 감소 - 좋은 협상 위치">
-                    <img src="https://img.shields.io/badge/Supplier_Power-Reduced-lightgreen?style=flat-square&logo=handshake&logoColor=white" alt="공급자 힘: 감소" loading="lazy">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="공급자 힘: 減少 - 좋は 협상 위치">
+                    <img src="https://img.shields.io/badge/Supplier_Power-Reduced-lightgreen?style=flat-square&logo=handshake&logoColor=white" alt="공급자 힘: 減少" loading="lazy">
                   </a>
                   <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="진입 장벽: 보통 - 50%+ 방지">
                     <img src="https://img.shields.io/badge/Entry_Barriers-Moderate-yellow?style=flat-square&logo=shield-alt&logoColor=black" alt="진입 장벽: 보통" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="대체재 위협: 높음 - 상당한 경쟁">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="대체재 위협: 높음 - 상당した경쟁">
                     <img src="https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white" alt="대체재 위협: 높음" loading="lazy">
                   </a>
-                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="경쟁 경쟁: 경쟁 우위 - 탄탄한 시장 우위">
+                  <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="경쟁 경쟁: 경쟁 우위 - 탄탄した市場 우위">
                     <img src="https://img.shields.io/badge/Rivalry-Competitive_Advantage-green?style=flat-square&logo=trophy&logoColor=white" alt="경쟁 경쟁: 경쟁 우위" loading="lazy">
                   </a>
                 </div>
               </div>
             </div>
 
-            <h3>💰 비즈니스 영향 분석 매트릭스</h3>
+            <h3>💰 비즈니스 影響 分析 매트릭스</h3>
             <p>
-              CIA 삼원조 (기밀성, 무결성, 가용성)에 대한 잠재적 비즈니스 영향의 포괄적 평가:
+              CIA 삼원조 (기밀성, 무결성, が용성)に に関する 잠재적 비즈니스 影響の 포괄적 평が:
             </p>
             
             <table class="korean-impact-matrix">
               <thead>
                 <tr>
-                  <th>영향 범주</th>
+                  <th>影響 범주</th>
                   <th>재정적</th>
-                  <th>운영상</th>
+                  <th>運営상</th>
                   <th>평판</th>
                   <th>규제</th>
                 </tr>
@@ -885,30 +885,30 @@
               <tbody>
                 <tr>
                   <td><strong>🔒 기밀성</strong></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시할 수 있는 - 재정적 결과 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시할 수 있는" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="무시할 수 있는 - 운영상 영향 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="운영상: 무시할 수 있는" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="낮음 - 제한된 가시성, 빠른 회복"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="평판: 낮음" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시할 수 있는 - 규제상 영향 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시할 수 있는" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시できる 있は - 재정적 결と 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시できる 있は" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="무시できる 있は - 運営상 影響 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="運営상: 무시できる 있は" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="낮음 - 제한된 が시성, 빠른 회복"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="평판: 낮음" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시できる 있は - 규제상 影響 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시できる 있は" loading="lazy"></a></td>
                 </tr>
                 <tr>
                   <td><strong>✅ 무결성</strong></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시할 수 있는 - 재정적 결과 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시할 수 있는" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="보통 - 생산성 감소, 20-40% 효율성 손실"><img src="https://img.shields.io/badge/Moderate-Reduced_productivity-yellow?style=for-the-badge&logo=trending-down&logoColor=black" alt="운영상: 보통" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="보통 - 업계 주목, 일부 신뢰 침식"><img src="https://img.shields.io/badge/Moderate-Industry_attention-yellow?style=for-the-badge&logo=newspaper&logoColor=black" alt="평판: 보통" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시할 수 있는 - 규제상 영향 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시할 수 있는" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시できる 있は - 재정적 결と 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시できる 있は" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="보통 - 生産性 減少, 20-40% 効率性 손실"><img src="https://img.shields.io/badge/Moderate-Reduced_productivity-yellow?style=for-the-badge&logo=trending-down&logoColor=black" alt="運営상: 보통" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="보통 - 業界 주목, 일부 신뢰 침식"><img src="https://img.shields.io/badge/Moderate-Industry_attention-yellow?style=for-the-badge&logo=newspaper&logoColor=black" alt="평판: 보통" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시できる 있は - 규제상 影響 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시できる 있は" loading="lazy"></a></td>
                 </tr>
                 <tr>
-                  <td><strong>⏱️ 가용성</strong></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시할 수 있는 - 재정적 결과 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시할 수 있는" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="낮음 - 경미한 불편, <20% 효율성 손실"><img src="https://img.shields.io/badge/Low-Minor_inconvenience-lightgreen?style=for-the-badge&logo=stop-circle&logoColor=white" alt="운영상: 낮음" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="낮음 - 제한된 가시성, 빠른 회복"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="평판: 낮음" loading="lazy"></a></td>
-                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시할 수 있는 - 규제상 영향 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시할 수 있는" loading="lazy"></a></td>
+                  <td><strong>⏱️ が용성</strong></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="무시できる 있は - 재정적 결と 없음"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="재정적: 무시できる 있は" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="낮음 - 경미した불편, <20% 効率性 손실"><img src="https://img.shields.io/badge/Low-Minor_inconvenience-lightgreen?style=for-the-badge&logo=stop-circle&logoColor=white" alt="運営상: 낮음" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="낮음 - 제한된 が시성, 빠른 회복"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="평판: 낮음" loading="lazy"></a></td>
+                  <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="무시できる 있は - 규제상 影響 없음"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="규제: 무시できる 있は" loading="lazy"></a></td>
                 </tr>
               </tbody>
             </table>
 
             <p>
-              이 분류는 적당한 무결성 요구사항과 표준 운영 기대치를 가진 경쟁력 있는 教育용 ゲーム プラットフォーム으로서 ブラックトライグラム의 전략적 위치를 보여줍니다. 이 평가는 최적의 ゲーム 경험 제공을 위한 開発 우선순위와 자원 배분을 안내합니다.
+               분류は 적당した무결성 요구사항と 標準 運営 기대치を が진 경쟁력 있は 教育용 ゲーム プラットフォーム으でてブラックトライグラムの 戦略적 위치を 보여줍니다.  평がは 최적の ゲーム 体験 提供を 위した開発 우선순위と 자원 배분を 안내します.
             </p>
         </section>
 
@@ -918,8 +918,8 @@
       <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
         <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
         <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="공개 ISMS 저장소">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="정보 セキュリティ 정책">セキュリティ 정책</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="공個 ISMS 저장소">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="정보 セキュリティ ポリシー">セキュリティ ポリシー</a> |
         <a href="blog.html" title="Security Blog">Blog</a> |
         <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a>
       </p>
