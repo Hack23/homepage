@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CIA architecture documentation: C4 models, Swedish riksdag/government data design, World Bank integration patterns, OSINT architecture, comprehensive API documentation for developers."
+    />
+    <title>תיעוד ארכיטקטורת CIA | פלטפורמת OSINT | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    /><link rel="canonical" href="https://hack23.com/cia-docs.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Citizen Intelligence Agency Architecture תיעוד" />
+    <meta property="og:description" content="Open-source political transparency platform architecture: C4 models, data design for riksdag/government monitoring, World Bank integration, OSINT patterns, API documentation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hack23.com/cia-docs.html" />
+    <meta property="og:image" content="https://cia.sourceforge.io/cia-logo.png" />
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="political data architecture Hack23, C4 architecture OSINT platform, OSINT system design patterns, open source transparency platform, Swedish government data visualization, riksdag API documentation, parliamentary data integration, political intelligence architecture, transparency platform design, democratic accountability system, OSINT platform architecture Sweden, open data architecture design, Swedish parliament monitoring system, government data analysis tools, parliamentary decision flow tracking, political activity monitoring, public sector transparency, democratic accountability management, political performance analysis, parliament members voting analysis, ministries performance monitoring, agencies effectiveness measurement, public finance analysis, political corruption detection, lobbying transparency, public procurement monitoring, EU policy tracking, World Bank indicators integration, democratic development measurements, governance quality indicators, political risk assessment, election analysis forecasting, opinion polls analysis, media monitoring politics, social media political analysis, fake news detection system, disinformation countermeasures tools, journalism investigation tools, civic monitoring tools, citizen participation platform, e-democracy solutions, open data initiatives, transparency index measurements, anti-corruption technology, political data visualization, democracy KPI dashboard, parliamentary voting records, government accountability metrics, political transparency scoring, democratic oversight automation, civic engagement analytics, public sector performance measurement, government effectiveness indicators, political behavior analysis, policy impact assessment, legislative process tracking, political decision analytics, democratic institutions monitoring">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Citizen Intelligence Agency - Architecture & System תיעוד",
+      "description": "Technical documentation for developers, solution architects, cloud architects, and CIOs building political transparency platforms. Includes C4 architecture models, data architecture for riksdag/government/agency monitoring, World Bank integration patterns, security architecture, system mindmaps, SWOT analysis, data models with entity relationships, process flowcharts, state diagrams, CI/CD workflows, and API documentation. Open-source OSINT platform with transparent system design for democratic accountability.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-06",
+      "inLanguage": "he",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cia.sourceforge.io/cia-logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/cia-docs.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Citizen Intelligence Agency",
+        "applicationCategory": "AnalyticsApplication",
+        "applicationSubCategory": "Political Transparency Platform",
+        "operatingSystem": "Cross-platform"
+      },
+      "audience": [
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Developer",
+          "name": "Software Developers & Open Source Contributors"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Solution Architect",
+          "name": "Solution & Cloud Architects"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "IT Professional",
+          "name": "Chief Information Officers & IT Leaders"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Data Architect",
+          "name": "Data Architects & Analytics Professionals"
+        }
+      ],
+      "featureList": [
+        "Complete C4 Architecture Models (Current & Future State)",
+        "Political Data Architecture (Riksdag, Government, Agencies, World Bank)",
+        "Security Architecture for Political Data",
+        "System Mindmaps & Future Concept Maps",
+        "Strategic SWOT Analysis (Current & Future)",
+        "Comprehensive Data Models with Entity תיעוד",
+        "Process Flowcharts & State Diagrams",
+        "CI/CD Workflows & DevOps Integration",
+        "Complete API תיעוד",
+        "Parliamentary Monitoring Dashboards",
+        "Ministry & Government Agency Tracking",
+        "World Bank Country Indicators Integration",
+        "Political Decision Flow Analysis",
+        "Governance Metrics & Performance Rankings",
+        "Democratic Accountability Reporting",
+        "Open Source Contribution Guidelines",
+        "15+ Technical Diagrams & תיעוד Resources"
+      ],
+      "teaches": [
+        "C4 Architecture Modeling for Political Platforms",
+        "Political Data Architecture Design",
+        "OSINT System Integration Patterns",
+        "Government Data Visualization Techniques",
+        "Open Data API Integration (Riksdag, World Bank)",
+        "Democratic Accountability Metrics Design",
+        "Political Transparency Platform Architecture",
+        "System Data Modeling for Political Entities",
+        "CI/CD for Open Source Projects",
+        "Contributing to Open Source Political Tools"
+      ],
+      "educationalLevel": "Professional / Advanced",
+      "learningResourceType": [
+        "Architecture תיעוד",
+        "System Design Patterns",
+        "Data Architecture Guide",
+        "Technical Reference",
+        "API תיעוד",
+        "Open Source Contribution Guide"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": "political transparency architecture, C4 models, OSINT platform design, riksdag data architecture, government data visualization, open source development, solution architecture, cloud architecture, democratic accountability, open data integration, World Bank API, political analytics",
+      "softwareRequirements": "Modern web browser for documentation. Development: Java, JavaScript, PostgreSQL, Docker for contributing.",
+      "browserRequirements": "Requires JavaScript. Recommended: Chrome, Firefox, Safari, Edge (latest versions)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source תיעוד"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Swedish Riksdag Open Data API",
+          "url": "https://data.riksdagen.se/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "World Bank Open Data",
+          "url": "https://data.worldbank.org/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "C4 Model for Software Architecture",
+          "url": "https://c4model.com/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Open Source Intelligence (OSINT) Methodology",
+          "description": "Ethical OSINT practices for political transparency"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "TechArticle",
+          "name": "Political Data Architecture",
+          "description": "Data models for riksdag, government, and agency monitoring"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "OSINT Integration Patterns",
+          "description": "Open data API integration for democratic accountability"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "World Bank Indicators Integration",
+          "description": "Country indicator data architecture and visualization"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Deploy and Use Citizen Intelligence Agency",
+      "description": "Step-by-step guide to deploy the CIA platform on AWS or Debian/Ubuntu and start monitoring Swedish political data",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "totalTime": "PT45M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS Account (for CloudFormation deployment)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Debian/Ubuntu 24.04+ (for local deployment)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "OpenJDK 21"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "PostgreSQL 16"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "CloudFormation template",
+          "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "CIA Debian Package",
+          "url": "https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToSection",
+          "name": "AWS CloudFormation Deployment",
+          "position": 1,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Download CloudFormation Template",
+              "text": "Download the CloudFormation stack file from the GitHub repository",
+              "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Create CloudFormation Stack",
+              "text": "Create a new stack in the AWS CloudFormation console"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Upload and Configure",
+              "text": "Upload the template file and configure parameters for your deployment"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Launch Stack",
+              "text": "Acknowledge IAM resource creation and launch the stack"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Access Application",
+              "text": "Access the application via the URL in the stack outputs"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "Debian/Ubuntu Local Installation",
+          "position": 2,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Install Prerequisites",
+              "text": "Install OpenJDK 21, PostgreSQL 16, and pgaudit using apt-get",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Configure PostgreSQL",
+              "text": "Configure PostgreSQL database according to the configuration guide",
+              "url": "https://github.com/Hack23/cia#postgresql-16-configuration-guide"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Create Database and User",
+              "text": "Create the CIA database and user with appropriate permissions",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo su - postgres"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "psql"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE USER eris WITH password 'discord';"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE DATABASE cia_dev;"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Download and Install Package",
+              "text": "Download the Debian package from GitHub releases and install it",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo dpkg -i cia-dist-deb-2025.1.2.all.deb"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Access the Platform",
+              "text": "Access the CIA platform at https://localhost:28443/cia/",
+              "url": "https://localhost:28443/cia/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "בית",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Citizen Intelligence Agency",
+          "item": "https://hack23.com/cia-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Citizen Intelligence Agency Architecture תיעוד",
+          "item": "https://hack23.com/cia-docs.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+	<!-- Hreflang tags for international SEO -->
+	<link rel="alternate" hreflang="en" href="https://hack23.com/cia-features.html">
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/cia-features_ar.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/cia-features_he.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/cia-features_sv.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/cia-features.html">
+</head>
+  <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">בית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">Citizen Intelligence Agency</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Citizen Intelligence Agency Architecture תיעוד
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+      <div class="logo-container">
+        <img
+          src="https://cia.sourceforge.io/cia-logo.png"
+          alt="לוגו סוכנות מודיעין אזרחי"
+          class="logo"
+          width="80"
+          height="80"
+        />
+      </div>
+      <h1>
+        Citizen Intelligence Agency תיעוד
+        <span class="app-version">latest</span>
+      </h1>
+      <p>
+        Comprehensive documentation for the Citizen Intelligence Agency - an independent, volunteer-driven OSINT platform for political transparency in Sweden.
+      </p>
+      <div class="badges">
+        <a
+          href="https://github.com/Hack23/cia/releases"
+          title="GitHub Release"
+        >
+          <img
+            src="https://img.shields.io/github/v/release/Hack23/cia"
+            alt="GitHub Release"
+          />
+        </a>
+        <a
+          href="https://bestpractices.coreinfrastructure.org/projects/770"
+          title="CII Best Practices"
+        >
+          <img
+            src="https://bestpractices.coreinfrastructure.org/projects/770/badge"
+            alt="CII Best Practices"
+          />
+        </a>
+        <a
+          href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia"
+          title="OpenSSF Scorecard"
+        >
+          <img
+            src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge"
+            alt="OpenSSF Scorecard"
+          />
+        </a>
+        <a
+          href="https://slsa.dev/spec/v1.0/levels"
+          title="SLSA Level 3"
+        >
+          <img
+            src="https://slsa.dev/images/gh-badge-level3.svg"
+            alt="SLSA 3"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia/actions/workflows/release.yml"
+          title="Deploy Status"
+        >
+          <img
+            src="https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg"
+            alt="Verify & Release"
+          />
+        </a>
+        <a
+          href="https://sonarcloud.io/summary/new_code?id=Hack23_cia"
+          title="Quality Gate Status"
+        >
+          <img
+            src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=alert_status"
+            alt="Quality Gate Status"
+          />
+        </a>
+        <a
+          href="https://sonarcloud.io/summary/new_code?id=Hack23_cia"
+          title="Security Rating"
+        >
+          <img
+            src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating"
+            alt="Security Rating"
+          />
+        </a>
+        <a
+          href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt"
+          title="License"
+        >
+          <img
+            src="https://img.shields.io/github/license/Hack23/cia.svg"
+            alt="License"
+          />
+        </a>
+      </div>
+      <div class="app-link">
+        <a
+          href="index.html"
+          title="Go to בית"
+        >
+          בית
+        </a>
+        <a
+          href="cia-features.html"
+          title="View Project Features"
+        >
+          Project Features
+        </a>
+        <a
+          href="swedish-election-2026.html"
+          title="Swedish Election 2026 Intelligence Platform"
+        >
+          🗳️ Election 2026
+        </a>
+        <a
+          href="https://github.com/Hack23/cia"
+          class="btn"
+          title="View the GitHub repository"
+        >
+          מאגר GitHub
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Project Overview</h2>
+        <p>
+          The Citizen Intelligence Agency is a volunteer-driven, open-source intelligence (OSINT) project that provides 
+          comprehensive analysis of political activities in Sweden. Through advanced monitoring of key political 
+          figures and institutions, we deliver:
+        </p>
+        <ul>
+          <li>Financial performance metrics</li>
+          <li>Risk assessment analytics</li>
+          <li>Political trend analysis</li>
+          <li>Politician ranking system</li>
+          <li>Performance comparisons</li>
+          <li>Transparency insights</li>
+        </ul>
+        <p>
+          Our initiative remains strictly independent and non-partisan, focused on fostering informed decision-making 
+          and enhancing democratic engagement.
+        </p>
+      </section>
+
+      <section id="features">
+        <h2>Key Features</h2>
+        <p>
+          The Citizen Intelligence Agency provides a comprehensive set of features for political transparency and analysis:
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Interactive Dashboards</h3>
+            <p>
+              Real-time dashboards visualizing political activities, governance metrics, and institutional performance across 
+              Swedish political entities.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🏆 Political Scoreboard Systems</h3>
+            <p>
+              Quantitative assessments and rankings of political figures, parties, and institutions based on objective 
+              performance metrics.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📈 Critical Analytics Tools</h3>
+            <p>
+              Advanced data analysis capabilities providing insights into political trends, voting patterns, and governance 
+              effectiveness.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🔍 Transparency Metrics</h3>
+            <p>
+              Standardized measurements of transparency across government entities, highlighting areas of strength and 
+              opportunities for improvement.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>⚖️ Accountability Measures</h3>
+            <p>
+              Tools for tracking commitments, voting consistency, and alignment between political promises and policy 
+              implementation.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📱 Data-Driven Insights</h3>
+            <p>
+              Evidence-based assessments powered by open data sources to provide objective analyses of political 
+              performance.
+            </p>
+          </div>
+        </div>
+        <p>
+          Explore our <a href="https://hack23.com/cia-features.html">comprehensive feature set</a> for a detailed 
+          overview of available capabilities, including dashboard screenshots and functionality details.
+        </p>
+      </section>
+
+      <section id="data-sources">
+        <h2>Data Sources</h2>
+        <p>
+          Our analysis is powered by authoritative Swedish government and international data sources:
+        </p>
+        
+        <table class="data-sources-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🏛️ <a href="https://data.riksdagen.se/">Swedish Parliament Open Data</a></td>
+              <td>Parliamentary members, committees, and official documents</td>
+            </tr>
+            <tr>
+              <td>🗳️ <a href="https://www.val.se/">Swedish Election Authority</a></td>
+              <td>Election data, political parties, and voting results</td>
+            </tr>
+            <tr>
+              <td>🌍 <a href="https://data.worldbank.org/">World Bank Open Data</a></td>
+              <td>Global economic indicators and demographic data</td>
+            </tr>
+            <tr>
+              <td>💹 <a href="https://www.esv.se/">Swedish Financial Management Authority</a></td>
+              <td>Government finances and economic trends</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="runtime-environment">
+        <h2>Runtime Environment</h2>
+        
+        <table class="runtime-table">
+          <thead>
+            <tr>
+              <th>JDK Version</th>
+              <th>Status</th>
+              <th>Release Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-21-brightgreen.svg" alt="JDK-21"></td>
+              <td><span class="badge-success">Supported</span></td>
+              <td>LTS Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-22-orange.svg" alt="JDK-22"></td>
+              <td><span class="badge-warning">Compatible</span></td>
+              <td>Feature Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-23-orange.svg" alt="JDK-23"></td>
+              <td><span class="badge-warning">Compatible</span></td>
+              <td>Feature Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-24-orange.svg" alt="JDK-24"></td>
+              <td><span class="badge-warning">Compatible</span></td>
+              <td>Feature Release</td>
+            </tr>
+            <tr>
+              <td><img src="https://img.shields.io/badge/JDK-25-brightgreen.svg" alt="JDK-25"></td>
+              <td><span class="badge-success">Supported</span></td>
+              <td>LTS Release</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>For details on technology lifecycle management, see the <a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">End-of-Life Strategy</a>.</p>
+      </section>
+
+      <section id="architecture-documentation">
+        <h2>Architecture & תיעוד</h2>
+        <p>
+          Explore comprehensive architecture documentation, system diagrams, and technical resources for the Citizen Intelligence Agency project.
+        </p>
+
+        <div class="cards">
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Current Architecture</h3>
+            <p>
+              C4 model showing current system structure, containers, components, and relationships.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md"
+              title="View Current Architecture"
+            >
+              View Architecture
+            </a>
+          </div>
+
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ Future Architecture</h3>
+            <p>
+              C4 model showing future system structure and planned enhancements for the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md"
+              title="View Future Architecture"
+            >
+              View Future Architecture
+            </a>
+          </div>
+
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🔐 Security Architecture</h3>
+            <p>
+              Comprehensive security architecture design and implementation patterns for the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md"
+              title="View Security Architecture"
+            >
+              View Security Architecture
+            </a>
+          </div>
+
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🔐 Future Security Architecture</h3>
+            <p>
+              Advanced security architecture vision incorporating AI-enhanced security capabilities.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md"
+              title="View Future Security Architecture"
+            >
+              View Future Security Architecture
+            </a>
+          </div>
+
+          <div class="card concept-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 System Mindmaps</h3>
+            <p>
+              Current system component relationships and conceptual architecture visualized through mind mapping.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/MINDMAP.md"
+              title="View System Mindmaps"
+            >
+              View Mindmaps
+            </a>
+          </div>
+
+          <div class="card concept-card">
+            <div class="scanner-effect"></div>
+            <h3>🧠 Future Concept Maps</h3>
+            <p>
+              Evolution roadmap with AI-enhanced capabilities and future system expansion plans.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md"
+              title="View Future Mindmaps"
+            >
+              View Future Concepts
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 SWOT Analysis</h3>
+            <p>
+              Strategic assessment of the platform's strengths, weaknesses, opportunities, and threats.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/SWOT.md"
+              title="View SWOT Analysis"
+            >
+              View SWOT Analysis
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>💼 Future SWOT</h3>
+            <p>
+              Strategic analysis of future platform positioning and opportunities for development.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md"
+              title="View Future SWOT Analysis"
+            >
+              View Future SWOT
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Data Model</h3>
+            <p>
+              Current data structures, relationships, and entity frameworks used in the system.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md"
+              title="View Data Model"
+            >
+              View Data Model
+            </a>
+            <a
+              href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html"
+              title="View Entity תיעוד"
+            >
+              View Entity תיעוד
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 Future Data Model</h3>
+            <p>
+              Enhanced political data architecture planned for future system iterations.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md"
+              title="View Future Data Model"
+            >
+              View Future Data Architecture
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Process Flowcharts</h3>
+            <p>
+              Current data processing workflows and business process models used in the system.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FLOWCHART.md"
+              title="View Process Flowcharts"
+            >
+              View Flowcharts
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Future Flowcharts</h3>
+            <p>
+              Enhanced AI-driven workflows planned for future development of the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md"
+              title="View Future Flowcharts"
+            >
+              View Future Flows
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 State Diagrams</h3>
+            <p>
+              Current system state transitions and behavioral models of platform components.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md"
+              title="View State Diagrams"
+            >
+              View State Diagrams
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🔄 Future State Diagrams</h3>
+            <p>
+              Enhanced adaptive state transitions planned for future system implementation.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md"
+              title="View Future State Diagrams"
+            >
+              View Future States
+            </a>
+          </div>
+
+          <div class="card devops-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 CI/CD Workflows</h3>
+            <p>
+              Current automation processes and continuous integration/deployment pipelines.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md"
+              title="View CI/CD Workflows"
+            >
+              View CI/CD Workflows
+            </a>
+          </div>
+
+          <div class="card devops-card">
+            <div class="scanner-effect"></div>
+            <h3>🔧 Future Workflows</h3>
+            <p>
+              Enhanced CI/CD with machine learning capabilities planned for future development.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md"
+              title="View Future Workflows"
+            >
+              View Future DevOps
+            </a>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>📅 Lifecycle Management</h3>
+            <p>
+              Maintenance and end-of-life planning for the platform's technology components.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md"
+              title="View End-of-Life Strategy"
+            >
+              View EOL Strategy
+            </a>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>💰 Security Implementation</h3>
+            <p>
+              Cost and security implementation guidelines for safely deploying the platform.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md"
+              title="View Financial Security Plan"
+            >
+              View Security Plan
+            </a>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📊 API תיעוד</h3>
+            <p>
+              Detailed API reference and technical documentation for developers and integrators.
+            </p>
+            <a
+              href="https://hack23.github.io/cia/apidocs/index.html"
+              title="View API תיעוד"
+            >
+              View API Docs
+            </a>
+          </div>
+          
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>🖼️ Feature Showcase</h3>
+            <p>
+              Visual showcase of platform features, dashboards, and political analytics capabilities.
+            </p>
+            <a
+              href="https://hack23.com/cia-features.html"
+              title="View Feature Showcase"
+            >
+              View Feature Showcase
+            </a>
+          </div>
+
+          <!-- Threat Model -->
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🛡️ Evidence-Based Threat Model</h3>
+            <p>
+              Comprehensive STRIDE threat analysis with attack trees, risk quantification, and security control mapping demonstrating transparent security practices.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md"
+              title="View Threat Model תיעוד"
+            >
+              <img src="https://img.shields.io/badge/Threat_Model-Public_תיעוד-blue?style=flat-square&logo=github&logoColor=white" alt="Threat Model: Public תיעוד" />
+            </a>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md#stride-threat-analysis"
+              title="View STRIDE Analysis"
+            >
+              <img src="https://img.shields.io/badge/STRIDE-Complete_Analysis-green?style=flat-square&logo=security&logoColor=white" alt="STRIDE: Complete Analysis" />
+            </a>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md#attack-tree-analysis"
+              title="View Attack Trees"
+            >
+              <img src="https://img.shields.io/badge/Attack_Trees-Documented-orange?style=flat-square&logo=tree&logoColor=white" alt="Attack Trees: Documented" />
+            </a>
+          </div>
+
+          <!-- CRA Assessment -->
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>🏛️ CRA Assessment Implementation</h3>
+            <p>
+              Complete Cyber Resilience Act (CRA) compliance assessment for political transparency platform, demonstrating regulatory alignment for democratic transparency systems.
+            </p>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md"
+              title="View CRA Assessment תיעוד"
+            >
+              <img src="https://img.shields.io/badge/CRA_Assessment-Complete-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA Assessment: Complete" />
+            </a>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md#product-classification"
+              title="View Product Classification"
+            >
+              <img src="https://img.shields.io/badge/Classification-Standard_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="Classification: Standard OSS" />
+            </a>
+            <a
+              href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md#vulnerability-disclosure"
+              title="View Vulnerability Management"
+            >
+              <img src="https://img.shields.io/badge/Vulnerability_Management-Implemented-orange?style=flat-square&logo=shield&logoColor=white" alt="Vulnerability Management: Implemented" />
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="documentation-map">
+        <h2>תיעוד Map</h2>
+        <p>
+          This documentation map provides a comprehensive overview of all available documentation resources for the Citizen Intelligence Agency project:
+        </p>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>Focus</th>
+              <th>Description</th>
+              <th>תיעוד Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Architecture</strong></td>
+              <td>🏛️ Architecture</td>
+              <td>C4 model showing current system structure</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Architecture</strong></td>
+              <td>🏛️ Architecture</td>
+              <td>C4 model showing future system structure</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Security Architecture</strong></td>
+              <td>🔐 Security</td>
+              <td>Security architecture design and patterns</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Security Architecture</strong></td>
+              <td>🔐 Security</td>
+              <td>Future security architecture with AI enhancements</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Mindmaps</strong></td>
+              <td>🧠 Concept</td>
+              <td>Current system component relationships</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/MINDMAP.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Mindmaps</strong></td>
+              <td>🧠 Concept</td>
+              <td>Future capability evolution</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>SWOT Analysis</strong></td>
+              <td>💼 Business</td>
+              <td>Current strategic assessment</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/SWOT.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future SWOT Analysis</strong></td>
+              <td>💼 Business</td>
+              <td>Future strategic opportunities</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Data Model</strong></td>
+              <td>📊 Data</td>
+              <td>Current data structures and relationships</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Data Model</strong></td>
+              <td>📊 Data</td>
+              <td>Enhanced political data architecture</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Flowcharts</strong></td>
+              <td>🔄 Process</td>
+              <td>Current data processing workflows</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FLOWCHART.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Flowcharts</strong></td>
+              <td>🔄 Process</td>
+              <td>Enhanced AI-driven workflows</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>State Diagrams</strong></td>
+              <td>🔄 Behavior</td>
+              <td>Current system state transitions</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future State Diagrams</strong></td>
+              <td>🔄 Behavior</td>
+              <td>Enhanced adaptive state transitions</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>CI/CD Workflows</strong></td>
+              <td>🔧 DevOps</td>
+              <td>Current automation processes</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Future Workflows</strong></td>
+              <td>🔧 DevOps</td>
+              <td>Enhanced CI/CD with ML</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>End-of-Life Strategy</strong></td>
+              <td>📅 Lifecycle</td>
+              <td>Maintenance and EOL planning</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>Financial Security Plan</strong></td>
+              <td>💰 Security</td>
+              <td>Cost and security implementation</td>
+              <td><a href="https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md">View Source</a></td>
+            </tr>
+            <tr>
+              <td><strong>CIA Features</strong></td>
+              <td>🚀 Features</td>
+              <td>Platform features overview</td>
+              <td><a href="https://hack23.com/cia-features.html">View on hack23.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section id="deployment-options">
+        <h2>Deployment Options</h2>
+        
+        <h3>AWS CloudFormation Deployment</h3>
+        <p>
+          The Citizen Intelligence Agency can be deployed on AWS using our provided CloudFormation template:
+        </p>
+        <ol>
+          <li>Download the <a href="https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json">CloudFormation stack file</a></li>
+          <li>Create a new stack in the AWS CloudFormation console</li>
+          <li>Upload the template file and configure parameters</li>
+          <li>Acknowledge IAM resource creation and launch the stack</li>
+          <li>Access the application via the URL in the stack outputs</li>
+        </ol>
+        
+        <h3>Debian/Ubuntu Installation</h3>
+        <p>
+          For local or self-hosted deployment on Debian/Ubuntu 24.04+:
+        </p>
+        <ol>
+          <li>
+            Install prerequisites:
+            <pre><code>sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit</code></pre>
+          </li>
+          <li>Configure PostgreSQL as detailed in the <a href="https://github.com/Hack23/cia#postgresql-16-configuration-guide">PostgreSQL configuration guide</a>.</li>
+          <li>
+            Create database and user:
+            <pre><code>sudo su - postgres
+psql
+postgres=# CREATE USER eris WITH password 'discord';
+postgres=# CREATE DATABASE cia_dev;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;</code></pre>
+          </li>
+          <li>
+            Download and install the Debian package:
+            <pre><code>wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb
+sudo dpkg -i cia-dist-deb-2025.1.2.all.deb</code></pre>
+          </li>
+          <li>Access the server at <a href="https://localhost:28443/cia/">https://localhost:28443/cia/</a></li>
+        </ol>
+      </section>
+
+      <section id="project-classification">
+        <h2>🏷️ Project Classification According to Hack23 Framework</h2>
+        <p>
+          Following the <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23 Classification & Business Continuity Framework</a> guidelines for comprehensive project assessment:
+        </p>
+
+        <div class="cards">
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>🎯 Project Classification</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Project Type: Data Analytics Platform">
+                <img src="https://img.shields.io/badge/Type-Data_Analytics-orange?style=for-the-badge&logo=chart-line&logoColor=white" alt="Project Type: Data Analytics" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Business Process: Operations">
+                <img src="https://img.shields.io/badge/Process-Operations-brown?style=for-the-badge&logo=cogs&logoColor=white" alt="Business Process: Operations" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card architecture-card">
+            <div class="scanner-effect"></div>
+            <h3>🔒 Security Classification</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="Confidentiality Level: Public - No confidentiality requirements">
+                <img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="Confidentiality: Public" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="Integrity Level: High - Automated validation, digital signatures">
+                <img src="https://img.shields.io/badge/Integrity-High-orange?style=for-the-badge&logo=check-circle&logoColor=white" alt="Integrity: High" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="Availability Level: Moderate - 99.5% uptime, manual failover">
+                <img src="https://img.shields.io/badge/Availability-Moderate-yellow?style=for-the-badge&logo=server&logoColor=black" alt="Availability: Moderate" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card process-card">
+            <div class="scanner-effect"></div>
+            <h3>⏱️ Business Continuity</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="Recovery Time Objective: 1-4 hours">
+                <img src="https://img.shields.io/badge/RTO-High_(1--4hrs)-yellow?style=for-the-badge&logo=clock&logoColor=white" alt="RTO: High (1-4hrs)" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="Recovery Point Objective: 1-4 hours">
+                <img src="https://img.shields.io/badge/RPO-Hourly_(1--4hrs)-lightgreen?style=for-the-badge&logo=database&logoColor=white" alt="RPO: Hourly (1-4hrs)" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h3>🛡️ Security Investment Returns</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="ROI Level: Moderate - 60-80% risk reduction">
+                <img src="https://img.shields.io/badge/ROI-Moderate-yellow?style=for-the-badge&logo=chart-line&logoColor=black" alt="ROI: Moderate" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Risk Mitigation: 55% Reduction">
+                <img src="https://img.shields.io/badge/Risk_Mitigation-55%25_Reduction-yellow?style=for-the-badge&logo=shield&logoColor=black" alt="Risk Mitigation: 55% Reduction" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Breach Prevention: $5K Savings">
+                <img src="https://img.shields.io/badge/Breach_Prevention-$5K_Savings-yellow?style=for-the-badge&logo=lock&logoColor=black" alt="Breach Prevention: $5K Savings" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card concept-card">
+            <div class="scanner-effect"></div>
+            <h3>🎯 Competitive Differentiation</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Market Position: Market Leader - Clear market leader">
+                <img src="https://img.shields.io/badge/Position-Market_Leader-purple?style=for-the-badge&logo=crown&logoColor=white" alt="Market Position: Market Leader" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Customer Trust: Premium scores">
+                <img src="https://img.shields.io/badge/Trust-Premium_scores-purple?style=for-the-badge&logo=handshake&logoColor=white" alt="Customer Trust: Premium scores" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Regulatory Access: Full access">
+                <img src="https://img.shields.io/badge/Access-Full_access-purple?style=for-the-badge&logo=key&logoColor=white" alt="Regulatory Access: Full access" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card data-card">
+            <div class="scanner-effect"></div>
+            <h3>📈 Porter's Five Forces Strategic Impact</h3>
+            <div class="badge-group porters-forces">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Buyer Power: Minimal - 95%+ retention">
+                <img src="https://img.shields.io/badge/Buyer_Power-Minimal-success?style=flat-square&logo=users&logoColor=white" alt="Buyer Power: Minimal" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Supplier Power: Minimal - Strong negotiation position">
+                <img src="https://img.shields.io/badge/Supplier_Power-Minimal-success?style=flat-square&logo=handshake&logoColor=white" alt="Supplier Power: Minimal" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Entry Barriers: Very High - 90%+ prevention">
+                <img src="https://img.shields.io/badge/Entry_Barriers-Very_High-red?style=flat-square&logo=shield-alt&logoColor=white" alt="Entry Barriers: Very High" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Substitute Threat: Minimal - Strong protection">
+                <img src="https://img.shields.io/badge/Substitute_Threat-Minimal-success?style=flat-square&logo=shield&logoColor=white" alt="Substitute Threat: Minimal" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Competitive Rivalry: Dominant Advantage - Clear market leader">
+                <img src="https://img.shields.io/badge/Rivalry-Dominant_Advantage-darkblue?style=flat-square&logo=trophy&logoColor=white" alt="Competitive Rivalry: Dominant Advantage" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <h3>💰 Business Impact Analysis Matrix</h3>
+        <p>
+          Comprehensive assessment of potential business impacts across the CIA triad (Confidentiality, Integrity, Availability):
+        </p>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Impact Category</th>
+              <th>Financial</th>
+              <th>Operational</th>
+              <th>Reputational</th>
+              <th>Regulatory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🔒 Confidentiality</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="Negligible - No operational impact"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="Operational: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Low - Warnings, corrective actions"><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&logo=gavel&logoColor=white" alt="Regulatory: Low" loading="lazy"></a></td>
+            </tr>
+            <tr>
+              <td><strong>✅ Integrity</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="High - Major service degradation, 40-60% efficiency loss"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=trending-down&logoColor=white" alt="Operational: High" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="High - National coverage, significant trust erosion"><img src="https://img.shields.io/badge/High-National_coverage-orange?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: High" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Moderate - Minor penalties, documentation gaps"><img src="https://img.shields.io/badge/Moderate-Minor_penalties-yellow?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Moderate" loading="lazy"></a></td>
+            </tr>
+            <tr>
+              <td><strong>⏱️ Availability</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="High - Major service degradation, 40-60% efficiency loss"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=stop-circle&logoColor=white" alt="Operational: High" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Low - Warnings, corrective actions"><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&logo=gavel&logoColor=white" alt="Regulatory: Low" loading="lazy"></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          This classification demonstrates the platform's strategic value as a market-leading political transparency solution with high integrity requirements and strong competitive positioning. The assessment guides security investment priorities and business continuity planning for optimal resource allocation.
+        </p>
+      </section>
+
+      <section id="business-case">
+        <h2>💼 Business Case for News Organizations</h2>
+        
+        <h3>Overview: CIA for Media Intelligence</h3>
+        <p>
+          The Citizen Intelligence Agency provides news organizations with systematic political monitoring at scale, 
+          enabling data-driven journalism that was previously resource-prohibitive. With 45 behavioral risk rules 
+          across 5 analytical frameworks, CIA delivers comprehensive coverage of 349 Swedish politicians, 10,000+ annual votes, 
+          and 20,000+ documents. The platform combines real-time monitoring with 50 years of historical data from the 
+          Swedish Riksdag, providing unprecedented depth for political analysis. Our proven methodology and open-source 
+          transparency ensure reliability and trust—critical factors for news organizations staking their reputation 
+          on accurate reporting.
+        </p>
+
+        <h3>Intelligence Product Portfolio</h3>
+        
+        <h4>Political Intelligence API</h4>
+        <p>
+          RESTful API with OAuth 2.0 authentication and 99.5% uptime SLA. Access 349 politician profiles, 10,000+ annual votes, 
+          20,000+ documents through standardized endpoints. Real-time updates deliver voting results within minutes of parliamentary 
+          decisions, while daily risk assessments highlight emerging concerns. Rate limits scale with tier selection, and 
+          comprehensive documentation ensures rapid integration into existing newsroom workflows.
+        </p>
+
+        <h4>Advanced Analytics Platform</h4>
+        <p>
+          Interactive dashboards designed for non-technical users enable journalists to explore political data without programming 
+          knowledge. Custom report generation supports PDF, Excel, and PowerPoint formats for editorial meetings and publication. 
+          Automated alerting via email, SMS, and Slack ensures breaking news opportunities are never missed. Enterprise tier includes 
+          white-label branding options, allowing news organizations to present CIA intelligence under their own brand identity.
+        </p>
+
+        <h4>Risk Assessment Feed</h4>
+        <p>
+          45 behavioral rules analyze politician, party, committee, and ministry activities across four operational domains. 
+          Severity classification system (MINOR: 10-49, MAJOR: 50-99, CRITICAL: 100+) prioritizes investigative leads. 
+          Historical trend analysis reveals patterns over time, while predictive modeling forecasts coalition dynamics and policy shifts. 
+          Transparent methodology with all 45 rules publicly documented ensures editorial teams understand exactly what triggers alerts, 
+          supporting defensible journalism.
+        </p>
+
+        <h3>Pricing & Tier Structure</h3>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Tier</th>
+              <th>Monthly Price</th>
+              <th>Rate Limits</th>
+              <th>Features</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Developer</strong></td>
+              <td>€0</td>
+              <td>100 req/day</td>
+              <td>Basic endpoints, historical data</td>
+              <td>Students, independent journalists</td>
+            </tr>
+            <tr>
+              <td><strong>Professional</strong></td>
+              <td>€2,500</td>
+              <td>10,000 req/day</td>
+              <td>Full API, real-time updates</td>
+              <td>Journalists, small news organizations</td>
+            </tr>
+            <tr>
+              <td><strong>Enterprise</strong></td>
+              <td>€10,000</td>
+              <td>Unlimited</td>
+              <td>Custom endpoints, SLA 99.9%, white-label</td>
+              <td>Major news organizations, wire services</td>
+            </tr>
+            <tr>
+              <td><strong>Academic</strong></td>
+              <td>€1,500</td>
+              <td>5,000 req/day</td>
+              <td>Research access, bulk downloads</td>
+              <td>Universities, research institutions</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Additional Revenue Streams</h4>
+        <ul>
+          <li><strong>Overage charges</strong>: €0.10 per 1,000 requests beyond tier limits</li>
+          <li><strong>Custom development</strong>: €150-200/hour for bespoke integrations</li>
+          <li><strong>White-label platform</strong>: €100,000 setup + €20,000/year per organization</li>
+          <li><strong>Training workshops</strong>: €5,000/day for newsroom training</li>
+        </ul>
+
+        <h3>ROI Calculations for Media Organizations</h3>
+
+        <div class="cards">
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h4>Example 1: Reuters (Wire Service)</h4>
+            <p><strong>Annual Cost</strong>: €120,000 (Enterprise tier)</p>
+            <p><strong>Value Delivered</strong>:</p>
+            <ul>
+              <li>2,000+ automated wire stories (€60/story = €120,000)</li>
+              <li>Breaking news speed advantage (24-hour lead time = €200,000 competitive value)</li>
+              <li>Fact-checking efficiency: 2,000 hours saved/year (€50/hour = €100,000)</li>
+            </ul>
+            <p><strong>Total Value</strong>: €420,000 | <strong>ROI: 350%</strong></p>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h4>Example 2: The Economist (News Weekly)</h4>
+            <p><strong>Annual Cost</strong>: €120,000</p>
+            <p><strong>Value Delivered</strong>:</p>
+            <ul>
+              <li>500+ data-driven stories (€240/story = €120,000)</li>
+              <li>Enhanced subscriber retention (+500 subs × €150 = €75,000)</li>
+              <li>Fact-checking savings: 2,000 hours (€50/hour = €100,000)</li>
+            </ul>
+            <p><strong>Total Value</strong>: €295,000 | <strong>ROI: 246%</strong></p>
+          </div>
+
+          <div class="card business-card">
+            <div class="scanner-effect"></div>
+            <h4>Example 3: Svenska Dagbladet (Swedish Newspaper)</h4>
+            <p><strong>Annual Cost</strong>: €30,000 (Professional tier)</p>
+            <p><strong>Value Delivered</strong>:</p>
+            <ul>
+              <li>200+ election stories (€150/story = €30,000)</li>
+              <li>Coalition analysis exclusives (reader engagement = €20,000)</li>
+              <li>Fact-checking efficiency: 500 hours saved (€50/hour = €25,000)</li>
+            </ul>
+            <p><strong>Total Value</strong>: €75,000 | <strong>ROI: 250%</strong></p>
+          </div>
+        </div>
+
+        <h3>Use Cases by Media Organization Type</h3>
+
+        <h4>Global News Organizations (The Economist, FT, Reuters, Bloomberg, AP)</h4>
+        <ul>
+          <li>Comparative democracy analysis across nations</li>
+          <li>Political risk assessment for investment decisions</li>
+          <li>Automated parliamentary monitoring for 24/7 news wires</li>
+          <li>Coalition stability impact on financial markets</li>
+          <li>Systematic fact-checking infrastructure at scale</li>
+        </ul>
+
+        <h4>Swedish Mainstream Media (SVT, DN, SvD, Aftonbladet, Expressen)</h4>
+        <ul>
+          <li>Election 2026 comprehensive coverage</li>
+          <li>Automated MP scorecards for all 349 politicians</li>
+          <li>Coalition formation prediction models</li>
+          <li>Investigative story leads from pattern detection</li>
+          <li>Real-time election night monitoring dashboards</li>
+        </ul>
+
+        <h4>Alternative Media (Independent blogs, podcasts, non-profit news)</h4>
+        <ul>
+          <li>Challenge mainstream narratives with systematic data</li>
+          <li>Anti-establishment journalism with algorithmic accountability</li>
+          <li>Transparent methodology (all 45 rules publicly documented)</li>
+          <li>Non-profit discounts available (50% off Professional tier)</li>
+        </ul>
+
+        <h3>Swedish Election 2026 Pilot Program</h3>
+        
+        <div class="card architecture-card">
+          <div class="scanner-effect"></div>
+          <h4>Limited Slots: 10 Global + 5 Swedish Media Organizations</h4>
+          
+          <p><strong>Pilot Details:</strong></p>
+          <ul>
+            <li><strong>Duration</strong>: 3-6 months (July-September 2026 for global, April-September for Swedish)</li>
+            <li><strong>Price</strong>:
+              <ul>
+                <li>Global media: €7,500 total (75% discount, Enterprise tier features)</li>
+                <li>Swedish media: €5,000/month (50% discount, 6 months)</li>
+              </ul>
+            </li>
+            <li><strong>Features</strong>:
+              <ul>
+                <li>Full Enterprise API access</li>
+                <li>Swedish-specific risk rules and analytics</li>
+                <li>Dedicated integration support engineer</li>
+                <li>Custom dashboard configuration</li>
+                <li>White-label branding options</li>
+                <li>Real-time alerting system</li>
+                <li>Election night live monitoring</li>
+                <li>Post-election analysis workshop</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Application Requirements:</strong></p>
+          <ul>
+            <li>News organization with national/global reach</li>
+            <li>Dedicated data journalism or political team (2+ journalists)</li>
+            <li>Technical capability for API integration (or dashboard use)</li>
+            <li>Commitment to pilot evaluation period</li>
+            <li>Agreement to case study participation (anonymized option available)</li>
+          </ul>
+
+          <p><strong>Success Criteria:</strong></p>
+          <ul>
+            <li>Generate 50+ data-driven stories using CIA intelligence</li>
+            <li>Achieve 90%+ fact-checking accuracy on political claims</li>
+            <li>Demonstrate measurable time savings on political research</li>
+            <li>Provide feedback for platform improvement</li>
+          </ul>
+
+          <p><strong>How to Apply:</strong></p>
+          <ol>
+            <li>Visit: <a href="https://hack23.com/swedish-election-2026.html">https://hack23.com/swedish-election-2026.html</a></li>
+            <li>Email: <a href="mailto:pether@hack23.com">pether@hack23.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling, CEO</a></li>
+            <li>Include: Organization name, team size, use case description</li>
+          </ol>
+        </div>
+
+        <h3>Technical Integration Guide</h3>
+
+        <h4>API Integration Steps:</h4>
+        <ol>
+          <li>Register for API key (<a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a> or contact sales)</li>
+          <li>Review API documentation (OpenAPI/Swagger spec available)</li>
+          <li>Test with Developer tier (€0, 100 req/day)</li>
+          <li>Implement authentication (OAuth 2.0 recommended)</li>
+          <li>Build endpoints integration (REST/JSON, optional GraphQL)</li>
+          <li>Deploy to production environment</li>
+          <li>Monitor usage, upgrade tier as needed</li>
+        </ol>
+
+        <h4>Dashboard Access (No Coding Required):</h4>
+        <ol>
+          <li>Register for dashboard account</li>
+          <li>Configure organization branding (Enterprise/white-label only)</li>
+          <li>Set up alert rules and notifications</li>
+          <li>Create custom reports and visualizations</li>
+          <li>Train team on dashboard usage</li>
+          <li>Deploy to newsroom workflow</li>
+        </ol>
+
+        <h4>Support Options:</h4>
+        <ul>
+          <li>תיעוד: <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a> (comprehensive)</li>
+          <li>Email support: <a href="mailto:support@hack23.com">support@hack23.com</a> (Enterprise tier: &lt;24h response)</li>
+          <li>Integration consulting: €150-200/hour</li>
+          <li>Training workshops: €5,000/day on-site or virtual</li>
+        </ul>
+
+        <h3>Why CIA Over Competitors</h3>
+
+        <h4>Unique Differentiators:</h4>
+        <ul>
+          <li>✅ <strong>Radical Transparency</strong>: All 45 risk rules publicly documented, auditable</li>
+          <li>✅ <strong>Open Source</strong>: GitHub repository, community oversight, no vendor lock-in</li>
+          <li>✅ <strong>50 Years Historical Data</strong>: Swedish Riksdag API since 1971, unmatched depth</li>
+          <li>✅ <strong>Proven Methodology</strong>: Used in academic research, featured in Computer Sweden</li>
+          <li>✅ <strong>Replicable Framework</strong>: Methodology applicable to any parliamentary democracy</li>
+          <li>✅ <strong>Security-First</strong>: STRIDE threat modeling, MITRE ATT&amp;CK defenses, SLSA Level 3</li>
+          <li>✅ <strong>Non-Partisan</strong>: Objective behavioral analysis, no editorial bias</li>
+          <li>✅ <strong>Flexible Pricing</strong>: Developer tier free, non-profit discounts, academic rates</li>
+        </ul>
+
+        <h4>Competitor Comparison:</h4>
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>CIA</th>
+              <th>Traditional Research Services</th>
+              <th>Proprietary Political Data Vendors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Transparency</td>
+              <td>✅ All rules public</td>
+              <td>❌ Proprietary</td>
+              <td>❌ Black box</td>
+            </tr>
+            <tr>
+              <td>Open Source</td>
+              <td>✅ GitHub</td>
+              <td>❌ Closed</td>
+              <td>❌ Closed</td>
+            </tr>
+            <tr>
+              <td>Historical Depth</td>
+              <td>✅ 50+ years</td>
+              <td>⚠️ 10-20 years</td>
+              <td>⚠️ 5-15 years</td>
+            </tr>
+            <tr>
+              <td>API Access</td>
+              <td>✅ All tiers</td>
+              <td>❌ Enterprise only</td>
+              <td>✅ Most tiers</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>✅ €0-10K/mo</td>
+              <td>⚠️ €15K+/mo</td>
+              <td>⚠️ €20K+/mo</td>
+            </tr>
+            <tr>
+              <td>Replicability</td>
+              <td>✅ Any democracy</td>
+              <td>❌ Bespoke</td>
+              <td>❌ Single country</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Call-to-Action & Contact</h3>
+        
+        <div class="card business-card">
+          <div class="scanner-effect"></div>
+          <h4>Ready to Transform Political Journalism?</h4>
+          
+          <p><strong>Contact Information:</strong></p>
+          <ul>
+            <li>📧 <strong>Email</strong>: <a href="mailto:pether@hack23.com">pether@hack23.com</a></li>
+            <li>🔗 <strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/jamessorling/">Connect with James Pether Sörling, CEO</a></li>
+            <li>💻 <strong>GitHub</strong>: <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a></li>
+          </ul>
+
+          <p><strong>תיעוד Resources:</strong></p>
+          <ul>
+            <li>📄 <a href="https://github.com/Hack23/cia/blob/master/BUSINESS_PRODUCT_DOCUMENT.md">Business Case Document</a></li>
+            <li>📊 <a href="https://github.com/Hack23/cia/blob/master/DATA_ANALYSIS_INTOP_OSINT.md">OSINT Methodology</a></li>
+            <li>📋 <a href="https://github.com/Hack23/cia/blob/master/RISK_RULES_INTOP_OSINT.md">45 Risk Rules תיעוד</a></li>
+          </ul>
+
+          <p><strong>Swedish Election 2026 Pilot</strong>: Apply now for limited slots (10 global + 5 Swedish media organizations)</p>
+          
+          <p>
+            <a href="mailto:pether@hack23.com" class="btn" title="Contact for Media Partnership">
+              Contact for Media Partnership
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+    
+        <footer>
+      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+        <a href="blog.html" title="בלוג אבטחה">Blog</a> |
+        <a href="discordian-cybersecurity.html" title="בלוג אבטחת סייבר Discordian">🍎 Discordian Blog</a>
+      </p>
+      <p>
+        <a href="cia-docs.html" title="תיעוד באנגלית">English תיעוד</a> |
+        <a href="cia-docs_sv.html" title="תיעוד in Swedish">Swedish תיעוד</a>
+      </p>
+    </footer>
+  </body>
+</html>
