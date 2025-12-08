@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>وكالة استخبارات المواطنين | منصة الشفافية السياسية | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <link rel="alternate" hreflang="en" href="https://hack23.com/cia-project.html">
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/cia-project_ar.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/cia-project_he.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/cia-project_sv.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/cia-project.html">
+    <link rel="canonical" href="https://hack23.com/cia-project_ar.html">
+    
+    <meta name="description" content="وكالة استخبارات المواطنين: منصة الشفافية السياسية مفتوحة المصدر للسويد. مراقبة النشاط البرلماني وسجلات التصويت والمساءلة السياسية.">
+    <meta name="keywords" content="الشفافية السياسية, البرلمان السويدي, منصة الاستخبارات مفتوحة المصدر, مراقبة البرلمان, سجلات التصويت, مقاييس المساءلة, البيانات المفتوحة, التكنولوجيا المدنية">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="وكالة استخبارات المواطنين | منصة الشفافية السياسية">
+    <meta property="og:description" content="منصة الاستخبارات مفتوحة المصدر للشفافية السياسية في السويد. رؤى مبنية على البيانات حول النشاط البرلماني والمساءلة السياسية.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/cia-project_ar.html">
+    <meta property="og:image" content="cia-logo.png">
+    <meta property="og:site_name" content="Hack23 AB">
+    <meta property="og:locale" content="ar_AR">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://hack23.com/#org",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com/",
+          "logo": "cia-icon-140.webp",
+          "description": "شركة الأمن السيبراني الوحيدة في السويد مع إطار ISMS عام بالكامل على GitHub. يديرها فريق يتمتع بأكثر من 30 عامًا من الخبرة في هندسة الأمان و DevSecOps والامتثال لـ ISO 27001.",
+          "foundingDate": "2025-01-01",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gothenburg",
+            "addressCountry": "SE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://www.linkedin.com/company/hack23/",
+            "availableLanguage": ["English", "Swedish", "Arabic"]
+          },
+          "sameAs": [
+            "https://github.com/Hack23",
+            "https://www.linkedin.com/company/hack23/"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "وكالة استخبارات المواطنين",
+          "applicationCategory": "WebApplication",
+          "description": "منصة الاستخبارات مفتوحة المصدر (OSINT) للشفافية السياسية في السويد. تراقب النشاط البرلماني وسجلات التصويت والسلوك السياسي مع رؤى مبنية على البيانات ومقاييس المساءلة.",
+          "url": "https://hack23.com/cia-project_ar.html",
+          "image": "cia-logo.png",
+          "inLanguage": "ar",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hack23 AB",
+            "url": "https://hack23.com"
+          },
+          "creator": {
+            "@type": "Person",
+            "name": "James Pether Sörling"
+          },
+          "operatingSystem": "Web Browser",
+          "applicationSubCategory": "التكنولوجيا المدنية",
+          "featureList": [
+            "المراقبة البرلمانية",
+            "تحليل سجلات التصويت",
+            "التحليلات السياسية",
+            "تصور البيانات",
+            "مقاييس المساءلة",
+            "تكامل البيانات المفتوحة"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/cia-project_ar.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الصفحة الرئيسية",
+              "item": "https://hack23.com/index_ar.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "المشاريع",
+              "item": "https://hack23.com/projects.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "وكالة استخبارات المواطنين",
+              "item": "https://hack23.com/cia-project_ar.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_ar.html">الصفحة الرئيسية</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="projects.html">المشاريع</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                وكالة استخبارات المواطنين
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_ar.html" title="الصفحة الرئيسية">🏠 Hack23</a>
+            <a href="services_ar.html" title="الخدمات">الخدمات</a>
+            <a href="projects.html" title="المشاريع">المشاريع</a>
+            <a href="why-hack23.html" title="لماذا Hack23">لماذا Hack23</a>
+            <a href="blog_ar.html" title="المدونة">المدونة</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="cia-project-hero" class="integrity-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <picture>
+                    <source type="image/webp" srcset="cia-logo.webp">
+                    <img src="cia-logo.png" alt="CIA Logo" width="120" height="120" style="border-radius: 15px; box-shadow: 0 4px 12px rgba(0, 200, 83, 0.3);" loading="eager" decoding="sync">
+                </picture>
+                <div>
+                    <h1 class="m-0">🔍 وكالة استخبارات المواطنين</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">الشفافية السياسية من خلال البيانات المفتوحة</p>
+                </div>
+            </div>
+            <p class="lead">منصة الاستخبارات مفتوحة المصدر (OSINT) للشفافية السياسية في السويد. مراقبة النشاط البرلماني وسجلات التصويت والسلوك السياسي مع رؤى شاملة مبنية على البيانات ومقاييس المساءلة.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/cia" title="GitHub Repository" class="btn-primary" style="font-size: 1.1rem;">📂 عرض على GitHub</a>
+                <a href="cia-features_ar.html" title="الميزات" class="btn-primary">✨ الميزات</a>
+                <a href="cia-docs_ar.html" title="التوثيق" class="btn-primary">📚 التوثيق</a>
+                <a href="swedish-election-2026.html" title="الانتخابات 2026" class="btn-primary">🗳️ الانتخابات 2026</a>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section id="key-features">
+            <h2>🎯 الميزات الرئيسية</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ المراقبة البرلمانية</h3>
+                    <p>تتبع في الوقت الفعلي لنشاط الريكسداغ السويدي بما في ذلك المناقشات والمقترحات وعمل اللجان والعمليات التشريعية. تحليل شامل للبيانات التاريخية.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗳️ تحليل سجلات التصويت</h3>
+                    <p>تحليل مفصل لجميع الأصوات البرلمانية مع تتبع مواءمة الأحزاب وأنماط التصويت الفردية وتحليل التحالفات. الشفافية في صنع القرار الديمقراطي.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 التحليلات السياسية</h3>
+                    <p>رؤى مبنية على البيانات حول السلوك السياسي واستراتيجيات الأحزاب والاتجاهات التشريعية. تحليل إحصائي للأداء السياسي والمساءلة.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📈 تصور البيانات</h3>
+                    <p>لوحات معلومات تفاعلية ومخططات لاستكشاف البيانات السياسية. تمثيل مرئي لأنماط التصويت وسجلات الحضور والنشاط التشريعي.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>✅ مقاييس المساءلة</h3>
+                    <p>تتبع وعود السياسيين والحضور واتساق التصويت ومستويات النشاط. مقاييس موضوعية للأداء السياسي والمشاركة.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔓 تكامل البيانات المفتوحة</h3>
+                    <p>التكامل مع مصادر البيانات المفتوحة الرسمية للحكومة السويدية. تحديثات تلقائية ومزامنة في الوقت الفعلي مع الأنظمة البرلمانية.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission & Impact -->
+        <section id="mission">
+            <h2>🎯 المهمة والتأثير</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌟 الشفافية الديمقراطية</h3>
+                    <p>تمكين المواطنين من الوصول إلى المعلومات السياسية وبيانات المساءلة. جعل الديمقراطية أكثر شفافية ومتاحة للجميع.</p>
+                    <p><strong>التأثير:</strong> زيادة مشاركة المواطنين في العمليات الديمقراطية من خلال وصول أفضل إلى المعلومات السياسية.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 التقدير الصحفي</h3>
+                    <p>مميز في <strong>Computer Sweden</strong> و <strong>Riksdag och Departement</strong> للنهج المبتكر في الشفافية السياسية. معترف به من قبل المعهد الديمقراطي الوطني.</p>
+                    <p><strong>التأثير:</strong> وعي أوسع بأهمية مراقبة البرلمان والتكنولوجيا المدنية.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 السياسة القائمة على الأدلة</h3>
+                    <p>توفير بيانات موضوعية للباحثين والصحفيين والمواطنين لتحليل السلوك السياسي ومساءلة الممثلين.</p>
+                    <p><strong>التأثير:</strong> خطاب عام أكثر استنارة يعتمد على الحقائق بدلاً من الخطاب.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform Capabilities -->
+        <section id="capabilities">
+            <h2>⚙️ قدرات المنصة</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👤 ملفات السياسيين</h3>
+                    <p>ملفات شاملة لجميع أعضاء الريكسداغ بما في ذلك تاريخ التصويت والانتماء الحزبي وعضوية اللجان ومقاييس النشاط.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ تحليل الأحزاب</h3>
+                    <p>إحصائيات على مستوى الحزب وتحليل التحالفات. تتبع تماسك الحزب وانضباط التصويت والتموضع الاستراتيجي عبر القضايا.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 تتبع التشريعات</h3>
+                    <p>متابعة مشاريع القوانين والمقترحات خلال العملية التشريعية. تتبع التعديلات ومراجعات اللجان والتصويتات النهائية مع السياق التاريخي الكامل.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔎 البحث والاكتشاف</h3>
+                    <p>وظيفة بحث قوية عبر المناقشات والأصوات والوثائق. تصفية وتحليل البيانات حسب الموضوع أو التاريخ أو السياسي أو الحزب.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 التقارير المخصصة</h3>
+                    <p>إنشاء تقارير مخصصة لفترات زمنية محددة أو سياسيين أو قضايا محددة. تصدير البيانات للبحث والتحليل.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔔 التنبيهات والإشعارات</h3>
+                    <p>ابق على اطلاع حول سياسيين أو أحزاب أو قضايا محددة. تنبيهات تلقائية لنشاط التصويت والتغييرات التشريعية.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Stack -->
+        <section id="technology">
+            <h2>🛠️ حزمة التكنولوجيا</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>☕ الواجهة الخلفية</h3>
+                    <p><strong>Java, Spring Framework</strong> - واجهة خلفية على مستوى المؤسسة مع معالجة بيانات قوية وتكامل API ومنطق أعمال.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🖥️ الواجهة الأمامية</h3>
+                    <p><strong>Vaadin Framework</strong> - إطار عمل واجهة ويب حديثة لواجهات مستخدم غنية ومستجيبة مع بنية من جانب الخادم.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗄️ قاعدة البيانات</h3>
+                    <p><strong>PostgreSQL</strong> - قاعدة بيانات علائقية موثوقة للعلاقات المعقدة للبيانات السياسية والسجلات التاريخية.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 الأمن</h3>
+                    <p><strong>SLSA Level 3</strong> - أمان سلسلة التوريد وممارسات التطوير الآمنة ومراقبة الأمان المستمرة.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality -->
+        <section id="security-quality">
+            <h2>🛡️ الأمن والجودة</h2>
+            <p>تُظهر وكالة استخبارات المواطنين ممارسات الأمان على مستوى المؤسسة للتعامل مع البيانات السياسية الحساسة بسلامة وتوافر.</p>
+            
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                <a href="https://github.com/Hack23/cia/releases" title="GitHub Releases">
+                    <img src="https://img.shields.io/github/v/release/Hack23/cia?style=for-the-badge" alt="Release" width="180" height="28" loading="lazy">
+                </a>
+                <a href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt" title="License">
+                    <img src="https://img.shields.io/github/license/Hack23/cia.svg?style=for-the-badge" alt="License" width="150" height="28" loading="lazy">
+                </a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" title="OpenSSF Scorecard">
+                    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="Security Score" width="150" height="20" loading="lazy">
+                </a>
+                <a href="https://bestpractices.coreinfrastructure.org/projects/770" title="CII Best Practices">
+                    <img src="https://bestpractices.coreinfrastructure.org/projects/770/badge" alt="CII Badge" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://slsa.dev/spec/v1.0/levels" title="SLSA Level 3">
+                    <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/cia/actions/workflows/release.yml" title="Release Workflow">
+                    <img src="https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg?branch=master" alt="Release" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/cia/actions/workflows/scorecards.yml" title="Supply Chain Security">
+                    <img src="https://github.com/Hack23/cia/actions/workflows/scorecards.yml/badge.svg?branch=master" alt="Scorecard" width="220" height="20" loading="lazy">
+                </a>
+                <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Quality Gate">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=alert_status" alt="Quality" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Security Rating">
+                    <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&metric=security_rating" alt="Security" width="200" height="20" loading="lazy">
+                </a>
+            </div>
+        </section>
+        
+        <!-- Swedish Election 2026 -->
+        <section id="election-2026">
+            <h2>🗳️ الانتخابات السويدية 2026</h2>
+            <p>تركيز خاص على الانتخابات الوطنية السويدية القادمة 2026 مع قدرات محسنة للمراقبة والتحليل.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 تحليلات الانتخابات</h3>
+                    <p>تحليل شامل للاتجاهات الانتخابية ووعود الحملات والتموضع السياسي قبل انتخابات 2026.</p>
+                    <a href="swedish-election-2026.html" title="تغطية الانتخابات 2026" class="btn-primary d-inline-block mt-1">🗳️ عرض تغطية الانتخابات</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 تتبع المساءلة</h3>
+                    <p>تتبع كيف تفي الحكومة الحالية بوعود الحملة. مقارنة التزامات 2022 مع واقع 2026.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 التكامل الإعلامي</h3>
+                    <p>التكامل مع مصادر الإعلام السويدية للحصول على تغطية انتخابية شاملة وقدرات فحص الحقائق.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Press Coverage -->
+        <section id="press-coverage">
+            <h2>📰 التغطية الصحفية والاعتراف</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>💻 Computer Sweden</h3>
+                    <p><strong>"Tekniken som avslöjar politikerna"</strong></p>
+                    <p>مقال مميز يسلط الضوء على الاستخدام المبتكر للتكنولوجيا للكشف عن أنشطة السياسيين وتعزيز الشفافية في العمليات السياسية.</p>
+                    <a href="https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna" title="اقرأ المقال">اقرأ المقال ←</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Riksdag och Departement</h3>
+                    <p><strong>"CIA håller koll på riksdagsledamöterna"</strong></p>
+                    <p>منشور سويدي يناقش دور وكالة استخبارات المواطنين في مراقبة السياسيين وتعزيز المساءلة من خلال الاستخدام الاستراتيجي للتكنولوجيا.</p>
+                    <a href="https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/" title="اقرأ المقال">اقرأ المقال ←</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌍 المعهد الديمقراطي الوطني</h3>
+                    <p><strong>استطلاع منظمات مراقبة البرلمان</strong></p>
+                    <p>تقرير مسح شامل يعترف بأهمية منظمات مراقبة البرلمان في السويد، ويعترف بالمساهمات في العمليات الديمقراطية.</p>
+                    <a href="https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf" title="عرض التقرير">عرض التقرير ←</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Use Cases -->
+        <section id="use-cases">
+            <h2>💼 حالات الاستخدام</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👥 المواطنون والناخبون</h3>
+                    <p>اتخاذ قرارات تصويت مستنيرة بناءً على السلوك السياسي الفعلي وليس فقط وعود الحملة. تتبع نشاط ممثليك.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 الصحفيون والباحثون</h3>
+                    <p>الوصول إلى بيانات سياسية شاملة للصحافة الاستقصائية والبحث الأكاديمي. تقارير قائمة على الأدلة حول السلوك السياسي.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ منظمات المجتمع المدني</h3>
+                    <p>مراقبة مجالات سياسية محددة ومساءلة السياسيين. تتبع التقدم التشريعي في القضايا المهمة لمنظمتك.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 المعلمون والطلاب</h3>
+                    <p>أداة تعليمية للعلوم السياسية والتربية المدنية والعمليات الديمقراطية. بيانات من العالم الواقعي للدراسة الأكاديمية.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Projects -->
+        <section id="related-projects">
+            <h2>🔗 المشاريع ذات الصلة</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 مدير امتثال CIA</h3>
+                    <p>منصة تقييم الأمان التي توضح سلامة البيانات وممارسات الامتثال المستخدمة في منصة الشفافية السياسية.</p>
+                    <a href="compliance-manager.html" title="مدير الامتثال">اعرف المزيد ←</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥋 Black Trigram</h3>
+                    <p>مشروع ألعاب تعليمي يعرض ممارسات التطوير الآمنة ومنهجيات ضمان الجودة.</p>
+                    <a href="black-trigram.html" title="Black Trigram">اعرف المزيد ←</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 استكشف الشفافية السياسية</h2>
+            <p>الوصول إلى البيانات والتحليلات السياسية الشاملة للديمقراطية السويدية. منصة مفتوحة المصدر للمواطنة المستنيرة.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/cia" title="GitHub Repository" class="cta-button" style="font-size: 1.1rem;">📂 عرض على GitHub</a>
+                <a href="cia-features_ar.html" title="الميزات" class="cta-button">✨ الميزات</a>
+                <a href="projects.html" title="جميع المشاريع" class="cta-button">← العودة إلى المشاريع</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="مستودع ISMS العام">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="سياسة أمن المعلومات">سياسة الأمان</a> |
+            <a href="blog_ar.html" title="مدونة الأمان">المدونة</a> |
+            <a href="https://hack23.com/cia-project.html" lang="en">English version</a> |
+            <a href="https://hack23.com/cia-project_he.html" lang="he">עברית</a> |
+            <a href="https://hack23.com/cia-project_sv.html" lang="sv">Svenska</a>
+        </p>
+    </footer>
+</body>
+</html>
