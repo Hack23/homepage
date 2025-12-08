@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA Architecture | Political Transparency Platform | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Five Pentacles of Political Transparency: Citizen Intelligence Agency system architecture, data layers, democratic OSINT platform design patterns, riksdag monitoring system with C4 models and domain-driven design.">
+<meta name="keywords" content="CIA architecture, OSINT platform, political transparency system, Simon Moon, discordian architecture, riksdag data architecture, five-layer system design, Law of Fives, sacred geometry, C4 model, container architecture, domain-driven design, DDD, five pentacles, parliamentary monitoring system, system architecture patterns, architectural numerology, separation of concerns">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="CIA Architecture: The Five Pentacles of Political Transparency">
+<meta property="og:description" content="The universe reveals itself in patterns of five. Discover the sacred geometry behind open-source political intelligence.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-architecture_es.html">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-cia-architecture.html">
+	<!-- Hreflang tags for language alternatives -->
+	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-cia-architecture.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-cia-architecture_sv.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-cia-architecture.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CIA Architecture: The Five Pentacles of Political Transparency",
+      "description": "Exploring the numerological patterns and sacred geometry in Citizen Intelligence Agency's architecture",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "System Architect",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-cia-architecture.html"
+      },
+      "keywords": "CIA architecture, OSINT, political transparency, system design, numerology",
+      "articleSection": "Architecture",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 2044,
+      "articleBody": "When democracies hide in darkness, transparency becomes revolution. The Citizen Intelligence Agency isn't just software—it's a weapon against information asymmetry, where elected officials know everyt...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "es",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "System Architecture",
+          "description": "Sacred geometry and numerological patterns in code"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-cia-architecture.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA Architecture",
+          "item": "https://hack23.com/blog-cia-architecture.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA Architecture
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="cia-docs.html">CIA Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">⭐ CIA Architecture: The Five Pentacles of Political Transparency</h1>
+    
+    <section id="cosmic-pattern">
+      <h2 class="panel-caption">The Pattern Reveals Itself</h2>
+      
+      <p><strong>When democracies hide in darkness, transparency becomes revolution.</strong> The <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> isn't just software—it's a weapon against information asymmetry, where elected officials know everything about constituents while constituents know nothing about their representatives. <em>That asymmetry is power.</em> We reverse it. Architecture as political act. Code as democracy infrastructure.</p>
+      
+      <p><strong>The C4 model reveals five container types</strong> documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>: Web Application, Service Layer, Data Access, Integration Services, Security/Monitoring. This isn't accidental pentagonal structure—it's separation of concerns battle-tested against real parliamentary complexity, refined through 15 years of production use. <em>Architecture that survives contact with reality.</em> Clean layers enable evolution; rigid architectures calcify into technical debt monuments nobody maintains.</p>
+      
+      <p><strong>Domain-driven design as cosmic alignment:</strong> When code structure mirrors political reality exactly, translation overhead vanishes into elegant simplicity. Parliamentary oversight, political tracking, governmental bodies, external indicators, system management—these aren't arbitrary categories invented in meetings. They're how power <em>actually flows</em> through democratic institutions. Architecture reflecting truth requires less documentation than architecture imposing comfortable fiction. <strong>The map that matches the territory needs no legend.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Illumination: When the problem domain speaks in fives, listen with your whole being. Force it into fours or sixes and watch coherence collapse like security through obscurity under scrutiny. The CIA isn't <strong>designed</strong> with five layers through arbitrary choice—it <strong>exists</strong> in five layers through cosmic necessity. The universe revealing its preferred structure. Fight that and you fight entropy itself.</em></p>
+    
+      
+      <p><strong>Need expert guidance on security compliance?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+    </section>
+
+    <section id="five-data-layers">
+      <h2 class="panel-caption">The Five Sacred Data Layers</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🏛️ Presentation Layer: What Citizens See</h3>
+          <p><strong>Vaadin-based web application.</strong> The presentation layer (documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) provides views for Parliament overview, Politician profiles, Party analysis, Ballot tracking, Committee monitoring, Ministry oversight, Government Body analysis, Documents, and World Bank indicators. Role-based navigation with specialized admin and user dashboards.</p>
+          <p><strong>Visualization framework:</strong> Chart Factory integrates Chart.js for interactive political data visualization. View components render complex parliamentary data, voting records, and performance metrics through the Vaadin framework.</p>
+          <p class="hidden-wisdom"><em>User interfaces that embrace the golden ratio (61.8% data display, 38.2% context/navigation) reduce cognitive load. The eye recognizes harmonic proportions before the conscious mind understands why.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📊 Service Layer: Business Logic Orchestration</h3>
+          <p><strong>Spring-based service architecture.</strong> The Application Manager coordinates eleven specialized services revealed in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>: Parliament Data Service, Politician Data Service, Party Data Service, Ballot Data Service, Committee Data Service, Government Body Data Service, Data Import Service, Chart Data Manager, Application Event Service, User Service, and Security Service. Not my design—the political domain's natural structure.</p>
+          <p><strong>Synchronistic observation:</strong> These eleven services organize into five functional domains naturally: <em>Political Entity Management</em> (Parliament, Politician, Party, Ballot, Committee Data Services), <em>Government Bodies</em> (Government Body Data Service), <em>Data Integration</em> (Data Import Service), <em>User Experience</em> (Chart Data Manager, Application Event Service), and <em>System Coordination</em> (User Service, Security Service). The Law of Fives manifests through domain-driven organization, not imposed naming.</p>
+          <p class="hidden-wisdom"><em>Services that map directly to domain concepts require minimal translation layers. When technical names mirror political realities, the architecture documents itself through truthful naming.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 💼 Domain Layer: The Business Truth</h3>
+          <p><strong>Entity families documented in <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>:</strong></p>
+          <ul>
+            <li><strong>Person Data</strong> (Political persons, assignments, biographical details)</li>
+            <li><strong>Document Data</strong> (Parliamentary documents, content, status tracking)</li>
+            <li><strong>Vote Data</strong> (Ballots, voting records, individual votes)</li>
+            <li><strong>External Data</strong> (World Bank indicators, election authority data)</li>
+            <li><strong>System Data</strong> (User accounts, sessions, application events, configuration)</li>
+          </ul>
+          <p><strong>Five data sources confirmed:</strong> Swedish Parliament API (riksdagen.se), Election Authority (val.se), World Bank Open Data, Swedish Financial Management Authority (ESV), Government Bodies data. The DATA_MODEL.md documents how these sources integrate through standardized entity mapping.</p>
+          <p><strong>60+ base tables plus 30+ materialized analytical views.</strong> PostgreSQL implementation with JPA/Hibernate ORM. Composite primary keys for many-to-many relationships. Audit tracking through timestamp fields. The <a href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html">Entity Documentation</a> reveals the complete graph.</p>
+          <p class="hidden-wisdom"><em>Domain models that accurately reflect reality need minimal abstraction layers. When entities mirror the riksdag's actual structure, the code becomes self-documenting through truthful representation.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🗄️ Data Access Layer: Persistence Foundation</h3>
+          <p><strong>PostgreSQL database with JPA/Hibernate.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, the Data Access Layer uses entity-specific data containers, Java domain model classes, and view entities optimized for read operations. Least-privilege database roles enforce security isolation.</p>
+          <p><strong>Security architecture</strong> (see <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>) includes network isolation, parameterized queries via ORM, and comprehensive Javers auditing for data integrity. Every modification tracked with author attribution and temporal snapshots.</p>
+          <p><strong>OpenSSF Scorecard 7.2/10</strong> validates security practices. SLSA Level 3 build provenance. CII Best Practices badge. Public evidence: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Scorecard Results</a>.</p>
+          <p class="hidden-wisdom"><em>Persistence layers that separate reads from writes enable optimization without sacrificing data integrity. View entities for queries, base entities for updates—the duality that maintains consistency.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 📈 Integration & Analytics: Data Flow and Insights</h3>
+          <p><strong>The Integration Services layer</strong> (documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) fetches and processes data from external sources: riksdagen.se Parliament API, val.se Election Authority, World Bank Open Data, and Swedish government bodies. Spring Integration framework coordinates the data flow.</p>
+          <p><strong>Materialized Views</strong> transform raw data into political intelligence: VIEW_RIKSDAGEN_POLITICIAN (activity metrics), VIEW_RIKSDAGEN_PARTY (performance indicators), VIEW_RIKSDAGEN_COMMITTEE (productivity stats), VIEW_RIKSDAGEN_POLITICIAN_BALLOT_SUMMARY (voting analysis with loyalty/rebel/success rates). See <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> for complete view catalog.</p>
+          <p><strong>Future vision:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> envisions quantum-enhanced pattern recognition, neural-integrated political intelligence ecosystems, and consciousness-based democratic participation. Today's five-layer architecture evolves into fluid computational mediums that coalesce based on democratic needs.</p>
+          <p class="hidden-wisdom"><em>Analytics that produce actionable citizen insights justify their computational cost. Every materialized view must answer: "What democratic transparency does this enable?" Vanity metrics waste both computation and attention.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architectural-pentagram">
+      <h2 class="panel-caption">The Architectural Pentagram</h2>
+      
+      <p><strong>Every system balances five forces:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>🔐 Security</h3>
+          <p>Public data, yes. Open access, yes. But <em>authenticated writes</em> and audit logging. Defense-in-depth across five layers: network perimeter, application gateway, business logic validation, data encryption at rest, monitoring/alerting. See <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> for the full defensive pentacle.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>⚡ Performance</h3>
+          <p>Caching at five levels: browser (HTTP), CDN (geographic), application (object), database (query), analytics (materialized views). Each cache layer 61.8% faster than going to source. Golden ratio compounding.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>📈 Scalability</h3>
+          <p>Horizontal scaling in five tiers: static assets (infinite CDN), API gateway (elastic instances), service layer (Kubernetes pods), database read replicas (5 regions), analytics clusters (Spark executors). Currently single-region. Future: multi-region active-active.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>🛠️ Maintainability</h3>
+          <p>Documented in five artifact types: C4 architecture models, data entity diagrams, process flowcharts, state diagrams, API documentation. Every system component described at five levels of abstraction. Read <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> to see the full spectrum.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>👁️ Observability</h3>
+          <p>Five observability pillars: structured logs (what happened), metrics (how much), traces (where slow), alerts (what's wrong), dashboards (holistic view). <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">CI/CD workflows</a> validated continuously. Quality gates that actually gate.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Balance Principle: Optimize one pillar too much and others suffer. 200% performance at 20% security = vulnerability. 200% security at 20% usability = abandonment. The pentagram stays stable when forces balance.</em></p>
+    </section>
+
+    <section id="c4-models">
+      <h2 class="panel-caption">C4 Architecture: Five Views of Reality</h2>
+      
+      <p><strong>Context → Containers → Components → Code → Cloud.</strong> Five levels. Simon Brown's C4 naturally aligns with the Law of Fives. Coincidence? I think not.</p>
+      
+      <p><strong>System Context:</strong> CIA platform, Swedish Riksdag, Government registries, World Bank APIs, Citizens/Journalists. Five entities interacting. The minimal set that captures all essential relationships.</p>
+      
+      <p><strong>Container View:</strong> Web application, API gateway, Service layer, PostgreSQL database, Analytics engine. Five runtime containers. Deployment matches logical architecture.</p>
+      
+      <p><strong>Component Diagram:</strong> Each container breaks into five component families. Service layer = UserComponent, DataComponent, LogicComponent, GatewayComponent, MonitorComponent. Fractal patterns—fives all the way down.</p>
+      
+      <p><strong>Code Level:</strong> Five package structures per component. api, impl, model, util, test. Testing gets equal weight to implementation—not an afterthought.</p>
+      
+      <p><strong>Cloud Architecture:</strong> AWS deployment across five services: EC2 (compute), RDS (database), S3 (storage), CloudFront (delivery), CloudWatch (monitoring). Future: migrate to five-region multi-cloud (AWS us-east-1, eu-north-1, Azure westeurope, GCP europe-north1, on-prem backup).</p>
+      
+      <p class="hidden-wisdom"><em>Architecture diagrams are maps, not territory. But well-made maps reveal hidden patterns in the territory. Study <a href="https://github.com/Hack23/cia">the diagrams</a>, then look at the code—you'll see the patterns we documented actually exist.</em></p>
+    </section>
+
+    <section id="synchronicities">
+      <h2 class="panel-caption">Synchronicities Discovered During Design</h2>
+      
+      <p><strong>I don't believe in coincidences.</strong> I believe in patterns waiting to be recognized.</p>
+      
+      <ul>
+        <li><strong>Riksdag has 349 members.</strong> 349 = 23 × 15 + 4. Not perfect, but close enough to show the 23 pattern manifesting in Swedish democracy itself.</li>
+        <li><strong>Data refresh cycle: 115 minutes.</strong> Why? Riksdag API rate limits + processing time + golden ratio spacing = 115. Later discovered 115 = 5 × 23. The universe confirming our architecture.</li>
+        <li><strong>Database tables naturally grouped into 5 schemas.</strong> Didn't plan it. Refactored organically. Ended with exactly five: parliament, government, documents, elections, worldbank. Tried merging to four schemas—coupling increased. Five is correct.</li>
+        <li><strong>Monitoring dashboards:</strong> Built 5 core dashboards before stepping back and noticing. Politician performance, Ministry tracking, Document flow, Election analysis, Democratic indicators. Attempting a sixth dashboard revealed it was redundant—combination of the first five.</li>
+        <li><strong>Critical vulnerabilities found during security audit: 0.</strong> High vulnerabilities: 0. Medium: 5. Low: 23. The numbers announcing themselves. Fixed all 28, maintained the pattern in a different form.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>When synchronicities cluster around your architecture, you're either onto something profound or descending into numerological madness. The difference? Madness doesn't pass code review and doesn't ship features. Our architecture does both.</em></p>
+    </section>
+
+    <section id="future-vision">
+      <h2 class="panel-caption">The Future Pentacle: 5 Years Forward</h2>
+      
+      <p><strong>Where does the architecture evolve?</strong> Read <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> and <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a> for the complete vision. Here's the summary through the Law of Fives:</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <h3>1. Real-Time Event Sourcing</h3>
+          <p>Move from batch updates to event streams. Riksdag votes, ministry decisions, document publications—all flowing through Kafka topics in under 5 seconds. Five topic categories matching our five data domains. Event store retaining full history for temporal queries.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>2. Graph-Based Analysis</h3>
+          <p>Neo4j or similar for relationship mapping. Politicians → Parties → Committees → Votes → Policies → Outcomes. Five relationship types creating a knowledge graph. "Who influenced what?" queries answerable in milliseconds instead of hours.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>3. Federated Nordic Intelligence</h3>
+          <p>Expand beyond Sweden. Norway, Denmark, Finland, Iceland. Five Nordic parliaments. Federated queries across borders. Comparative analysis revealing which policies work where. Democratic transparency at the Nordic level.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. AI-Assisted Policy Prediction</h3>
+          <p>Machine learning models trained on 20 years of political data. Predict policy outcomes before implementation. Not prescriptive—descriptive. "Based on similar policies in similar contexts, here are five possible outcomes." Let citizens decide armed with data.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. Blockchain Audit Trail</h3>
+          <p>Immutable evidence of data provenance. When did we capture this vote? From which source? Hash recorded on-chain. Future disputes answerable with cryptographic proof. Transparency backed by mathematics, not trust.</p>
+        </div>
+      </div>
+      
+      <p><strong>Timeline:</strong> 1 year (event sourcing), 2 years (graph analysis), 3 years (Nordic federation), 4 years (AI prediction), 5 years (blockchain audit). Fibonacci-adjacent pacing—each stage builds on previous. No rushing. No shortcuts.</p>
+    </section>
+
+    <section id="practical-wisdom">
+      <h2 class="panel-caption">Practical Wisdom for Architects</h2>
+      
+      <p><strong>What did I learn building this system?</strong></p>
+      
+      <ol>
+        <li><strong>Listen to the problem domain.</strong> If your architecture fights the natural structure of the problem, you'll fight maintenance forever. Riksdag data <em>is</em> hierarchical. Accept it. Don't force it into flat tables then wonder why queries are complex.</li>
+        
+        <li><strong>Document synchronicities.</strong> When the same number keeps appearing, investigate why. Sometimes it's confirmation bias. Sometimes it's deep structure revealing itself. Learn to distinguish.</li>
+        
+        <li><strong>Five is robust.</strong> Three components = fragile. Four = awkward. Five = resilient. Lose one of five and the system degrades gracefully. Lose one of three and it collapses. The pentagram is structurally sound.</li>
+        
+        <li><strong>Balance over optimization.</strong> The best security with terrible UX serves no one. The fastest system that crashes daily disappoints users. The pentagram balances five concerns—no concern dominates.</li>
+        
+        <li><strong>Public architecture builds trust.</strong> Every diagram, every doc, every decision—public in our GitHub repo. Transparency isn't marketing. It's <a href="https://github.com/Hack23/cia">architectural reality</a>. You can read our code, understand our choices, and judge for yourself.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>The map is not the territory, but a well-made map reveals hidden patterns in the territory. Our architecture docs aren't aspirational—they describe what actually runs in production. Divergence between docs and code indicates architectural debt. Keep them synchronized.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">The Pattern Awaits Your Recognition</h2>
+      
+      <p><strong>Explore the architecture yourself:</strong></p>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia">Source Repository</a> - Read the code, study the patterns</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">Current Architecture</a> - C4 models, component diagrams, system context</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">Data Model</a> - Entity relationships, five-schema structure</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in detail</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">Future Architecture</a> - Where the five-year roadmap leads</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/MINDMAP.md">System Mindmap</a> - Visual representation of conceptual structure</li>
+        <li><a href="https://cia.sourceforge.io">Live Platform</a> - See the architecture in action</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Read our docs. Review our code. Run our analysis. The patterns are there whether you see them or not. But seeing them changes how you architect systems forever.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"The Pentagon as a geometric figure suggests five sides, five elements, five senses... Everything happens in fives."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Next:</strong> <a href="blog-cia-security.html">CIA Security Architecture: Defense Through Transparency</a> - Exploring how five security layers protect public political data</p>
+      <p><strong>Related:</strong> <a href="cia-docs.html">Complete CIA Documentation</a> - All architecture diagrams, data models, and technical specifications</p>
+      <p><strong>Back to:</strong> <a href="blog.html">Security Blog</a> - All discordian posts</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="es">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
