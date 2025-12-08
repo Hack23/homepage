@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIA-Kolmio UKK | Tietoturva | Hack23</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="description" content="CIA-kolmion perusteet: Luottamuksellisuus, Eheys, Saatavuus selitettynä. Ammattimainen NIST, ISO 27001, GDPR -opastus.">
+  <meta name="keywords" content="CIA-kolmio UKK Hack23, tietoturvan perusteet, luottamuksellisuus eheys saatavuus selitetty, NIST ISO 27001 toteutus, GDPR compliance opastus, kyberturvallisuusarviointi perusteet, tiedon luokittelustrategiat, tietoturvahallinta kehys, compliance toteutusopas, tietoturva parhaat käytännöt, turvallisuuskontrollit toteutus, CIA-kolmio koulutus, kyberturvallisuus koulutusmateriaalit, tietoturva UKK Suomi, turvallisuustietoisuus koulutus, CISO koulutus resurssit, turvallisuusammattilainen sertifiointi, ISO 27001 toteutusopas, GDPR tiedon luokittelu opas, NIS2 compliance koulutus, CRA cyber resilience koulutus, turvallisuusriskien hallinta koulutus, uhkamallinnuksen metodologia, haavoittuvuuksien hallinta parhaat käytännöt, incident response suunnitteluopas, liiketoiminnan jatkuvuus turvallisuussuunnittelu, tunkeutumistestaus perusteet, turvallisuusauditointi toteutus, salaus toteutusopas, pääsynhallinta strategiat, turvallisuusvalvonta parhaat käytännöt, turvallisuuspolitiikka kehitys, turvallisuuskulttuuri toteutus, työntekijöiden turvallisuuskoulutus, tietojenkalastelu tietoisuus koulutus, sosiaalinen manipulointi suojaus, turvallisuuspoikkeamien käsittely">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="James Pether Sörling">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="CIA-Kolmio UKK | Tietoturva Selitettynä">
+  <meta property="og:description" content="Opi CIA-kolmion perusteet: Luottamuksellisuus, Eheys, Saatavuus ammattimaisella opastuksella Hack23:lta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hack23.com/cia-triad-faq_fi.html">
+  <meta property="og:image" content="cia-icon-140.webp">
+  <meta property="og:site_name" content="Hack23 CIA Compliance Manager">
+  <meta property="og:locale" content="fi_FI">
+  
+  <link rel="canonical" href="https://hack23.com/cia-triad-faq_fi.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- FAQ Schema.org structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "CIA-Kolmio UKK: Luottamuksellisuus, Eheys & Saatavuus Tietoturvassa",
+      "description": "Kattava UKK CIA-kolmion toteutuksesta, tiedon luokittelusta, compliance-kehyksistä, turvallisuusarviointityökaluista ja tietoturvahallinnon parhaista käytännöistä.",
+      "url": "https://hack23.com/cia-triad-faq_fi.html",
+      "inLanguage": "fi",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-12-07",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "Kyberturvallisuusasiantuntija"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "CIA-Kolmio",
+          "description": "Tietoturvamalli keskittyen Luottamuksellisuuteen, Eheyteen ja Saatavuuteen"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tietoturvahallinto",
+          "description": "Järjestelmällinen lähestymistapa arkaluontoisten yritystietojen hallintaan"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "IT-Ammattilaiset",
+          "Turvallisuuspäälliköt",
+          "Opiskelijat",
+          "Yritysjohtajat"
+        ]
+      },
+      "teaches": [
+        "CIA-Kolmion Periaatteet",
+        "Tiedon Luokittelustrategiat",
+        "Compliance-Kehysten Toteutus",
+        "Turvallisuusarviointimenetelmät"
+      ],
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mikä on CIA-kolmio tietoturvassa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-kolmio on perustavanlaatuinen tietoturvamalli, joka koostuu kolmesta ydinperiaatteesta: Luottamuksellisuus, Eheys ja Saatavuus. Luottamuksellisuus varmistaa, että arkaluontoiset tiedot ovat käytettävissä vain valtuutetuille henkilöille. Eheys takaa tietojen tarkkuuden ja luotettavuuden koko niiden elinkaaren ajan. Saatavuus varmistaa, että tiedot ja järjestelmät ovat käytettävissä tarvittaessa valtuutetuille käyttäjille."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten tiedon luokittelu liittyy CIA-kolmioon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tiedon luokittelu liittyy suoraan CIA-kolmioon auttamalla organisaatioita määrittämään asianmukaiset turvallisuuskontrollit tiedon arkaluontoisuuden perusteella. Luokittelemalla tiedot (esim. julkinen, sisäinen, luottamuksellinen, rajoitettu) organisaatiot voivat soveltaa oikeasuhteisia luottamuksellisuustoimenpiteitä, eheyden varmistusmenetelmiä ja saatavuusvaatimuksia erityyppisiin tietoihin niiden tärkeyden ja arkaluontoisuuden mukaan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten CIA-kolmio toteutetaan compliance-kehyksissä?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-kolmio muodostaa perustan tärkeimmille compliance-kehyksille. NIST-kehykset sisällyttävät CIA-periaatteet kontrollien kautta, jotka käsittelevät jokaista osa-aluetta. ISO 27001 rakentaa kontrolliensa tavoitteet CIA-elementtien suojaamisen ympärille. GDPR korostaa henkilötietojen luottamuksellisuutta ja eheyttä. PCI DSS keskittyy kortinhaltijan tietojen turvallisuuteen kaikilla kolmella ulottuvuudella. Organisaatiot kartoittavat tyypillisesti CIA-pohjaiset kontrollinsa tiettyihin kehysvaatimuksiin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mitkä työkalut voivat auttaa CIA-kolmion turvallisuusarvioinnissa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Useita työkaluja auttaa CIA-kolmion turvallisuusarvioinnissa: 1) CIA Compliance Manager - tarjoaa kattavan arvioinnin turvallisuuskontroleista kaikilla kolmella alueella, 2) Haavoittuvuusskannerit - tunnistavat heikkouksia, jotka vaikuttavat luottamuksellisuuteen ja eheyteen, 3) Saatavuuden valvontatyökalut - seuraavat järjestelmän käyttöaikaa ja suorituskykyä, 4) Tiedon luokittelutyökalut - auttavat luokittelemaan tietoja asianmukaista suojaa varten, 5) Riskinarviointialustat - arvioivat uhkia kutakin CIA-komponenttia vastaan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten CIA-kolmion kolme elementtiä tasapainotetaan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-kolmion tasapainottaminen sisältää: 1) Riskiarvioinnin kunkin elementin suhteellisen tärkeyden tunnistamiseksi tietyille järjestelmille/tiedoille, 2) Asianmukaisten kontrollien toteuttamisen tiedon luokittelun perusteella, 3) Vähimpien oikeuksien periaatteen käyttämisen pääsynhallinnassa, 4) Syvyyssuojausstrategioiden toteuttamisen, 5) Säännöllisen turvallisuusarvioinnin ja testauksen kaikilla kolmella alueella, 6) Politiikkojen luomisen, jotka tunnustavat elementtien väliset kompromissit, ja 7) Kontrollien mukauttamisen muuttuvien liiketoimintatarpeiden ja uhkakuvan perusteella."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mitkä ovat yleisiä uhkia jokaiselle CIA-kolmion elementille?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yleisiä Luottamuksellisuuden uhkia ovat tietomurrot, luvaton pääsy, salakuuntelu ja sosiaalinen manipulointi. Eheyden uhkia ovat luvattomat muutokset, man-in-the-middle-hyökkäykset, virheelliset pääsynhallintakontrollit ja tietojen korruptoituminen. Saatavuuden uhkia ovat DDoS-hyökkäykset, laiteviat, luonnonkatastrofit, sähkökatkot ja resurssien ehtyminen. Kattavan tietoturva-ohjelman on käsiteltävä uhkia kaikille kolmelle elementille."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Miten CIA-kolmion toteutuksen tehokkuutta mitataan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIA-kolmion toteutuksen tehokkuutta voidaan mitata seuraavien kautta: 1) Kullekin elementille spesifit turvallisuusmittarit (esim. tietomurtojen määrä luottamuksellisuudelle, tietojen korruptoitumistapahtumat eheydelle, käyttöaikaprosentti saatavuudelle), 2) Säännölliset turvallisuusarvioinnit NIST:n tai ISO 27001:n kaltaisia kehyksiä vastaan, 3) Tunkeutumistestien tulokset, 4) Poikkeamien käsittelyn tehokkuus, 5) Palautumisaikojen tavoitteet (RTO) ja palautumispisteiden tavoitteet (RPO), ja 6) Liiketoimintavaikutusanalyysin tulokset."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-triad-faq_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CIA-Kolmio UKK",
+          "item": "https://hack23.com/cia-triad-faq_fi.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+	<!-- Hreflang tags for international SEO -->
+	<link rel="alternate" hreflang="en" href="https://hack23.com/cia-triad-faq.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/cia-triad-faq_sv.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/cia-triad-faq_da.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/cia-triad-faq_fi.html">
+	<link rel="alternate" hreflang="no" href="https://hack23.com/cia-triad-faq_no.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/cia-triad-faq_no.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/cia-triad-faq.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Navigointipolku">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Etusivu</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA-Kolmio UKK
+      </li>
+    </ol>
+  </nav>
+
+  <header>
+    <div class="logo-container">
+      <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80" />
+    </div>
+    <h1>CIA-Kolmio: Usein Kysytyt Kysymykset</h1>
+    <p>Kattava opas Luottamuksellisuuteen, Eheyteen ja Saatavuuteen tietoturvassa</p>
+        <div class="app-link">
+      <a href="index_fi.html" title="Takaisin Etusivulle">Etusivu</a>
+      <a href="cia-compliance-manager-features.html" title="CIA Compliance Manager Ominaisuudet">CIA Compliance Manager</a>
+      <a href="blog_fi.html" title="Turvallisuusblogi">Turvallisuusblogi</a>
+      <a href="cia-docs.html" title="CIA Dokumentaatio">📖 CIA Platform Docs</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>CIA-Kolmion Ymmärtäminen</h2>
+      <p>CIA-kolmio on modernin tietoturvan perusta ja tarjoaa kehyksen turvallisuustoimenpiteiden arvioimiseen ja toteuttamiseen kaiken kokoisten organisaatioiden välillä. Tämä UKK vastaa yleisiin kysymyksiin sen periaatteista, toteutuksesta ja parhaista käytännöistä.</p>
+    </section>
+
+    <section id="faq">
+      <div class="faq-item">
+        <h3>Mikä on CIA-kolmio tietoturvassa?</h3>
+        <div class="faq-answer">
+          <p>CIA-kolmio on perustavanlaatuinen tietoturvamalli, joka koostuu kolmesta ydinperiaatteesta:</p>
+          <ul>
+            <li><strong>Luottamuksellisuus:</strong> Varmistaa, että arkaluontoiset tiedot ovat käytettävissä vain valtuutetuille henkilöille</li>
+            <li><strong>Eheys:</strong> Takaa tietojen tarkkuuden ja luotettavuuden koko niiden elinkaaren ajan</li>
+            <li><strong>Saatavuus:</strong> Varmistaa, että tiedot ja järjestelmät ovat käytettävissä tarvittaessa valtuutetuille käyttäjille</li>
+          </ul>
+          <p>Nämä kolme periaatetta muodostavat perustan turvallisuuspolitiikkojen kehittämiselle, kontrollien valinnalle ja organisaation turvallisuustilanteen arvioimiselle.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Miten tiedon luokittelu liittyy CIA-kolmioon?</h3>
+        <div class="faq-answer">
+          <p>Tiedon luokittelu liittyy suoraan CIA-kolmioon auttamalla organisaatioita määrittämään asianmukaiset turvallisuuskontrollit tiedon arkaluontoisuuden perusteella:</p>
+          <ul>
+            <li><strong>Luottamuksellisuus:</strong> Luokittelutasot (esim. julkinen, sisäinen, luottamuksellinen, rajoitettu) määrittävät pääsynhallintakontrollit</li>
+            <li><strong>Eheys:</strong> Arkaluontoisemmat luokittelut saattavat vaatia tiukempaa validointia, tarkistussummia tai hyväksyntätyönkulkuja</li>
+            <li><strong>Saatavuus:</strong> Kriittiset tiedon luokittelut vaativat usein redundanssia ja korkeampia käyttöaikavaatimuksia</li>
+          </ul>
+          <p>Luokittelemalla tietoja organisaatiot voivat soveltaa oikeasuhteisia turvallisuuskontrolleja kaikilla CIA-kolmion kolmella ulottuvuudella.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Miten CIA-kolmio toteutetaan compliance-kehyksissä?</h3>
+        <div class="faq-answer">
+          <p>CIA-kolmio muodostaa perustan tärkeimmille compliance-kehyksille:</p>
+          <ul>
+            <li><strong>NIST-Kehykset:</strong> Sisällyttävät CIA-periaatteet kontrollien kautta, jotka käsittelevät jokaista osa-aluetta</li>
+            <li><strong>ISO 27001:</strong> Rakentaa kontrolliensa tavoitteet luottamuksellisuuden, eheyden ja saatavuuden suojaamisen ympärille</li>
+            <li><strong>GDPR:</strong> Korostaa henkilötietojen luottamuksellisuutta ja eheyttä</li>
+            <li><strong>PCI DSS:</strong> Keskittyy kortinhaltijan tietojen turvallisuuteen kaikilla kolmella ulottuvuudella</li>
+          </ul>
+          <p>Organisaatiot kartoittavat tyypillisesti CIA-pohjaiset kontrollinsa tiettyihin kehysvaatimuksiin compliance-ponnistelujen aikana.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Mitkä työkalut voivat auttaa CIA-kolmion turvallisuusarvioinnissa?</h3>
+        <div class="faq-answer">
+          <p>Useita työkaluja auttaa CIA-kolmion turvallisuusarvioinnissa:</p>
+          <ul>
+            <li><strong><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a>:</strong> Tarjoaa kattavan arvioinnin turvallisuuskontroleista kaikilla kolmella alueella</li>
+            <li><strong>Haavoittuvuusskannerit:</strong> Tunnistavat heikkouksia, jotka vaikuttavat luottamuksellisuuteen ja eheyteen</li>
+            <li><strong>Saatavuuden valvontatyökalut:</strong> Seuraavat järjestelmän käyttöaikaa ja suorituskykyä</li>
+            <li><strong>Tiedon luokittelutyökalut:</strong> Auttavat luokittelemaan tietoja asianmukaista suojaa varten</li>
+            <li><strong>Riskinarviointialustat:</strong> Arvioivat uhkia kutakin CIA-komponenttia vastaan</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Miten CIA-kolmion kolme elementtiä tasapainotetaan?</h3>
+        <div class="faq-answer">
+          <p>CIA-kolmion tasapainottaminen sisältää:</p>
+          <ol>
+            <li>Riskiarvioinnin kunkin elementin suhteellisen tärkeyden tunnistamiseksi tietyille järjestelmille/tiedoille</li>
+            <li>Asianmukaisten kontrollien toteuttamisen tiedon luokittelun perusteella</li>
+            <li>Vähimpien oikeuksien periaatteen käyttämisen pääsynhallinnassa</li>
+            <li>Syvyyssuojausstrategioiden toteuttamisen</li>
+            <li>Säännöllisen turvallisuusarvioinnin ja testauksen kaikilla kolmella alueella</li>
+            <li>Politiikkojen luomisen, jotka tunnustavat elementtien väliset kompromissit</li>
+            <li>Kontrollien mukauttamisen muuttuvien liiketoimintatarpeiden ja uhkakuvan perusteella</li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Mitkä ovat yleisiä uhkia jokaiselle CIA-kolmion elementille?</h3>
+        <div class="faq-answer">
+          <p><strong>Luottamuksellisuuden uhkia:</strong></p>
+          <ul>
+            <li>Tietomurrot</li>
+            <li>Luvaton pääsy</li>
+            <li>Salakuuntelu</li>
+            <li>Sosiaalinen manipulointi</li>
+          </ul>
+          
+          <p><strong>Eheyden uhkia:</strong></p>
+          <ul>
+            <li>Luvattomat muutokset</li>
+            <li>Man-in-the-middle-hyökkäykset</li>
+            <li>Virheelliset pääsynhallintakontrollit</li>
+            <li>Tietojen korruptoituminen</li>
+          </ul>
+          
+          <p><strong>Saatavuuden uhkia:</strong></p>
+          <ul>
+            <li>DDoS-hyökkäykset</li>
+            <li>Laiteviat</li>
+            <li>Luonnonkatastrofit</li>
+            <li>Sähkökatkot</li>
+            <li>Resurssien ehtyminen</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Miten CIA-kolmion toteutuksen tehokkuutta mitataan?</h3>
+        <div class="faq-answer">
+          <p>Tehokkuutta voidaan mitata seuraavien kautta:</p>
+          <ul>
+            <li><strong>Turvallisuusmittarit:</strong> Kullekin elementille spesifit (esim. tietomurtojen määrä luottamuksellisuudelle)</li>
+            <li><strong>Turvallisuusarvioinnit:</strong> Säännöllinen arviointi NIST:n tai ISO 27001:n kaltaisia kehyksiä vastaan</li>
+            <li><strong>Tunkeutumistestaus:</strong> Tulokset valvotuista turvallisuustesteistä</li>
+            <li><strong>Poikkeamien käsittely:</strong> Tehokkuus turvallisuuspoikkeamien käsittelyssä</li>
+            <li><strong>RTO:t ja RPO:t:</strong> Palautumisaikojen tavoitteet ja palautumispisteiden tavoitteet</li>
+            <li><strong>Liiketoimintavaikutusanalyysi:</strong> Turvallisuuskontrollien tehokkuuden ymmärtäminen suhteessa liiketoimintavaatimuksiin</li>
+          </ul>
+          <p><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a> tarjoaa vankat työkalut näiden mittareiden mittaamiseen ja seuraamiseen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="related-resources">
+      <h2>Liittyvät Resurssit</h2>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>CIA Compliance Manager</h3>
+          <p>Kattava turvallisuusarviointityökalumme CIA-kolmion tehokkuuden toteuttamiseen ja mittaamiseen.</p>
+          <a href="cia-compliance-manager-features.html">Lue Lisää</a>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>CIA-Kolmio Blogi</h3>
+          <p>Tutustu syvälliseen analyysimme CIA-kolmion elementtien tasapainottamisesta oikealla tiedon luokittelulla.</p>
+          <a href="blog_fi.html">Lue Blogi</a>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>Citizen Intelligence Agency</h3>
+          <p>Katso miten läpinäkyvyyden ja vastuullisuuden periaatteita sovelletaan poliittisessa valvonta-alustassamme.</p>
+          <a href="cia-features.html">Katso Ominaisuudet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+        <footer>
+      <p>&copy; 2008-2025 | Hack23 AB (Y-tunnus 5595347807) |
+        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+        <a href="https://www.linkedin.com/company/hack23/">Yrityksen LinkedIn</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Julkinen ISMS-repositorio">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Tietoturvapolitiikka">Tietoturvapolitiikka</a> |
+        <a href="blog_fi.html" title="Turvallisuusblogi">Blogi</a> |
+        <a href="discordian-cybersecurity.html" title="Discordian Kyberturvallisuusblogi">🍎 Discordian Blogi</a> |
+        <a href="sitemap_fi.html">Sivukartta</a> |
+        <a href="cia-triad-faq.html" lang="en">English version</a>
+      </p>
+    </footer>
+</body>
+</html>
