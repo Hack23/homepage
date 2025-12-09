@@ -77,14 +77,14 @@
       <ul>
         <li><strong>Head: 10 points.</strong> Temple, jaw, nose, base of skull, crown, ear regions. Critical strikes targeting consciousness and balance. High damage multipliers for precision targeting.</li>
         <li><strong>Neck: 8 points.</strong> Carotid artery, jugular notch, cervical vertebrae, trachea. Extremely high-value targets requiring precise positioning. Small hitboxes reflecting difficulty.</li>
-        <li><strong>Torso: 20 points.</strong> Solar plexus, floating ribs, kidney, liver, spleen, sternum, intercostal nerves. Balanced accessibility with mofrrate damage. Primary combat zone.</li>
-        <li><strong>Arms: 16 points (8 per sifr).</strong> Elbow joint, brachial plexus, wrist, forearm nerves. Joint manipulation targets. Blocking techniques utilize arm positioning.</li>
-        <li><strong>Legs: 16 points (8 per sifr).</strong> Knee, ankle, thigh muscles, calf nerves, patellar nerve. Mobility disruption targets. Stance-frpenfrnt vulnerability.</li>
+        <li><strong>Torso: 20 points.</strong> Solar plexus, floating ribs, kidney, liver, spleen, sternum, intercostal nerves. Balanced accessibility with moderate damage. Primary combat zone.</li>
+        <li><strong>Arms: 16 points (8 per side).</strong> Elbow joint, brachial plexus, wrist, forearm nerves. Joint manipulation targets. Blocking techniques utilize arm positioning.</li>
+        <li><strong>Legs: 16 points (8 per side).</strong> Knee, ankle, thigh muscles, calf nerves, patellar nerve. Mobility disruption targets. Stance-dependent vulnerability.</li>
       </ul>
       
-      <p><strong>Total: 70 vital points across five anatomical regions.</strong> Each documented with Korean terminology, anatomical location, damage multipliers, and status effects in KoreanVitalPoints.ts and KoreanAnatomy.ts modules. This isn't feature creep—it's cultural authenticity translating centuries of martial knowledge into interactive simulation. Could've simplified to 10 generic hit zones. Chose 70 precise targets instead. Respect frmands accuracy.</p>
+      <p><strong>Total: 70 vital points across five anatomical regions.</strong> Each documented with Korean terminology, anatomical location, damage multipliers, and status effects in KoreanVitalPoints.ts and KoreanAnatomy.ts modules. This isn't feature creep—it's cultural authenticity translating centuries of martial knowledge into interactive simulation. Could've simplified to 10 generic hit zones. Chose 70 precise targets instead. Respect demands accuracy.</p>
       
-      <p class="hidden-wisdom"><em>Combat simulation that ignores anatomy produces arcafr button-mashing, not martial arts. We chose realism over convenience, complexity over accessibility. The universe rewards pattern recognition; our collision system emerged from studying how bodies actually break under force.</em></p>
+      <p class="hidden-wisdom"><em>Combat simulation that ignores anatomy produces arcade button-mashing, not martial arts. We chose realism over convenience, complexity over accessibility. The universe rewards pattern recognition; our collision system emerged from studying how bodies actually break under force.</em></p>
     
       
       <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
@@ -147,20 +147,20 @@
       <ul>
         <li><strong>Base Attack Power:</strong> Varies by archetype and technique. Each of five archetypes (무사 Musa, 암살자 Amsalja, 해커 Hacker, 정보요원 Jeongbo, 조직폭력배 Jojik) has signature techniques with documented base damage values.</li>
         <li><strong>Trigram Advantage:</strong> TrigramCalculator.ts provides stance effectiveness multipliers. Heaven (☰ Geon) advantages against certain stances. I Ching relationships determine combat effectiveness documented in Combat_Architecture.md.</li>
-        <li><strong>Vital Point Multiplier:</strong> 70 vital points each with specific multipliers in KoreanVitalPoints.ts. Critical points (temple, jugular notch, spine) enable one-strike KO potential. Standard points provifr baseline damage.</li>
-        <li><strong>Blocking Resistance:</strong> Vital Resistance Bonus (VRB) reduces damage when blocking. Stance-frpenfrnt: ☶ Gan (Mountain) stance provides +30% resistance vs. torso strikes. Snap blocks add +10% bonus for precise timing.</li>
-        <li><strong>Status Effect Application:</strong> Each strike affects multiple CombatStats. Health frcreases, Pain accumulates, BloodLoss may increase, Consciousness drops from head strikes. Realistic trauma simulation per game-design.md section 2.2.</li>
+        <li><strong>Vital Point Multiplier:</strong> 70 vital points each with specific multipliers in KoreanVitalPoints.ts. Critical points (temple, jugular notch, spine) enable one-strike KO potential. Standard points provide baseline damage.</li>
+        <li><strong>Blocking Resistance:</strong> Vital Resistance Bonus (VRB) reduces damage when blocking. Stance-dependent: ☶ Gan (Mountain) stance provides +30% resistance vs. torso strikes. Snap blocks add +10% bonus for precise timing.</li>
+        <li><strong>Status Effect Application:</strong> Each strike affects multiple CombatStats. Health decreases, Pain accumulates, BloodLoss may increase, Consciousness drops from head strikes. Realistic trauma simulation per game-design.md section 2.2.</li>
       </ul>
       
-      <p><strong>Example from game-design.md:</strong> ☲ Li stance Thumb-Push to Jugular Notch frals –75 HP (Critical), +25 pain, +10 bleed, –20 consciousness. If target health ≤ 75, instant KO. Consciousness drop may trigger HELPLESS state. Documented mechanics, not arbitrary values.</p>
+      <p><strong>Example from game-design.md:</strong> ☲ Li stance Thumb-Push to Jugular Notch deals –75 HP (Critical), +25 pain, +10 bleed, –20 consciousness. If target health ≤ 75, instant KO. Consciousness drop may trigger HELPLESS state. Documented mechanics, not arbitrary values.</p>
       
-      <p class="hidden-wisdom"><em>Damage systems hiding calculations create frustration. Players sensing inconsistency lose trust. We document formulas publicly. Unfrrstanding mechanics frepens engagement.</em></p>
+      <p class="hidden-wisdom"><em>Damage systems hiding calculations create frustration. Players sensing inconsistency lose trust. We document formulas publicly. Understanding mechanics deepens engagement.</em></p>
     </section>
 
     <section id="ai-opponent">
       <h2 class="panel-caption">AI Opponent: Five Difficulty Levels</h2>
       
-      <p><strong>Single-player requires capable AI.</strong> Five difficulty tiers implementing different frcision-making sophistication:</p>
+      <p><strong>Single-player requires capable AI.</strong> Five difficulty tiers implementing different decision-making sophistication:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -185,13 +185,13 @@
         
         <div class="card integrity-card">
           <h3>Level 5: Master</h3>
-          <p><strong>Superhuman precision.</strong> 5-frame reactions (impossible for humans). Perfect punishes. Never misses combos. Reads player inputs via frcision tree analysis. Boss mofr. Frustratingly difficult by design.</p>
+          <p><strong>Superhuman precision.</strong> 5-frame reactions (impossible for humans). Perfect punishes. Never misses combos. Reads player inputs via decision tree analysis. Boss mode. Frustratingly difficult by design.</p>
         </div>
       </div>
       
-      <p><strong>AI frcision tree:</strong> 5 frcision nofrs per evaluation cycle (assess distance, evaluate threat, select tactic, execute move, transition state). Monte Carlo tree search with 10,000 simulations at Master difficulty. Computational intensity scaling with difficulty level.</p>
+      <p><strong>AI decision tree:</strong> 5 decision nodes per evaluation cycle (assess distance, evaluate threat, select tactic, execute move, transition state). Monte Carlo tree search with 10,000 simulations at Master difficulty. Computational intensity scaling with difficulty level.</p>
       
-      <p class="hidden-wisdom"><em>AI that's too easy bores players. AI that's impossibly hard frustrates them. Five difficulty levels providing progression path from tutorial to challenge mofr. Accessibility through gradation.</em></p>
+      <p class="hidden-wisdom"><em>AI that's too easy bores players. AI that's impossibly hard frustrates them. Five difficulty levels providing progression path from tutorial to challenge mode. Accessibility through gradation.</em></p>
     </section>
 
     <section id="cultural-authenticity">
@@ -202,7 +202,7 @@
       <ul>
         <li><strong>Technique Naming:</strong> Korean terms preserved. "Dollyo Chagi" (roundhouse kick), not "spinning kick." "Sonnal Mok Chigi" (knife-hand neck strike), not "karate chop." Language respecting culture.</li>
         <li><strong>Movement Capture:</strong> 5 Korean martial arts masters motion-captured. Real practitioners, not actors. Authentic technique representation. Credited in game and documentation.</li>
-        <li><strong>Historical Context:</strong> In-game encyclopedia documenting technique origins. Hwa Rang warriors, three kingdoms period, mofrrn evolution. Education through gaming.</li>
+        <li><strong>Historical Context:</strong> In-game encyclopedia documenting technique origins. Hwa Rang warriors, three kingdoms period, modern evolution. Education through gaming.</li>
         <li><strong>Cultural Consultation:</strong> Korean advisors reviewing every aspect. Costume accuracy, arena design, victory celebrations, audio pronunciation. Ensuring respect, preventing appropriation.</li>
         <li><strong>Community Involvement:</strong> Korean martial arts schools playtesting. Feedback incorporated. Revenue (if any) supporting Korean cultural preservation. Reciprocity, not extraction.</li>
       </ul>
@@ -251,7 +251,7 @@
       <ol>
         <li><strong>70 vital points = authenticity through detail.</strong> Could simplify to 10 hit zones. Chose 70 for realism. Complexity serving accuracy.</li>
         <li><strong>Five collision systems = necessary complexity.</strong> Each solves distinct problem. Removing any creates gameplay issues.</li>
-        <li><strong>Damage formula transparency builds trust.</strong> Players understanding mechanics engage freper. Hidfrn formulas create frustration.</li>
+        <li><strong>Damage formula transparency builds trust.</strong> Players understanding mechanics engage deeper. Hidden formulas create frustration.</li>
         <li><strong>AI difficulty gradation enables progression.</strong> Five levels providing path from beginner to expert. Accessibility through options.</li>
         <li><strong>Cultural consultation mandatory for authenticity.</strong> Can't fake Korean martial arts. Consulting experts, compensating advisors = respectful representation.</li>
       </ol>
@@ -290,7 +290,7 @@
         <div class="footer-column">
           <h2>Hack23 AB</h2>
           <p>Cybersecurity Consulting<br>
-          Gothenburg, Swefrn | Remote</p>
+          Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
           <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>

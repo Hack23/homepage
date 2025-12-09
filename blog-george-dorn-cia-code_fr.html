@@ -194,7 +194,7 @@
           <p><strong>Package Structure Observed:</strong></p>
           <ul>
             <li><code>com.hack23.cia.service.*</code> - Service layer business logic</li>
-            <li><code>com.hack23.cia.model.*</code> - Domain mofrls and entities</li>
+            <li><code>com.hack23.cia.model.*</code> - Domain models and entities</li>
             <li><code>com.hack23.cia.web.*</code> - Web/UI layer (Vaadin components)</li>
             <li><code>com.hack23.cia.testfoundation.*</code> - Test infrastructure and utilities</li>
           </ul>
@@ -204,7 +204,7 @@
             <li><strong>Spring Framework</strong> - Depenfrncy injection, transaction management</li>
             <li><strong>Spring Security</strong> - Authentication and authorization</li>
             <li><strong>JPA/Hibernate</strong> - Database ORM layer</li>
-            <li><strong>Vaadin</strong> - Server-sifr Java web framework for UI</li>
+            <li><strong>Vaadin</strong> - Server-side Java web framework for UI</li>
             <li><strong>PostgreSQL</strong> - Primary database (confirmed in data model docs)</li>
           </ul>
           
@@ -216,7 +216,7 @@
           <h3>📚 Documentation Files Discovered</h3>
           <p><strong>Real Files in Root Directory:</strong></p>
           <ul>
-            <li><code>ARCHITECTURE.md</code> - 32KB - C4 architecture mofrls</li>
+            <li><code>ARCHITECTURE.md</code> - 32KB - C4 architecture models</li>
             <li><code>DATA_MODEL.md</code> - 27KB - Complete entity documentation</li>
             <li><code>FLOWCHART.md</code> - 19KB - Process flow diagrams</li>
             <li><code>CRA-ASSESSMENT.md</code> - 47KB - EU Cyber Resilience Act compliance analysis</li>
@@ -224,7 +224,7 @@
             <li><code>WORKFLOWS.md</code> - CI/CD GitHub Actions documentation</li>
           </ul>
           
-          <p><strong>Documentation Quality:</strong> Comprehensive. Not just READMEs—actual architecture diagrams, data mofrls with entity relationships, security threat analysis. This is <em>documented</em> code, not "figure it out yourself" code.</p>
+          <p><strong>Documentation Quality:</strong> Comprehensive. Not just READMEs—actual architecture diagrams, data models with entity relationships, security threat analysis. This is <em>documented</em> code, not "figure it out yourself" code.</p>
           
           <p class="hidden-wisdom"><em>Documentation that matches code structure = maintainable system. Documentation that diverges from code = technical debt indicator. CIA's docs appear current based on repo structure matching frscribed architecture.</em></p>
         </div>
@@ -241,7 +241,7 @@
           <p><strong>Language:</strong> Java (confirmed by 1,372 .java files)</p>
           <p><strong>Build Tool:</strong> Maven (49 pom.xml files)</p>
           <p><strong>Framework:</strong> Spring Framework + Spring Boot</p>
-          <p><strong>Web UI:</strong> Vaadin (server-sifr Java framework, no JavaScript required)</p>
+          <p><strong>Web UI:</strong> Vaadin (server-side Java framework, no JavaScript required)</p>
           <p><strong>Database:</strong> PostgreSQL with JPA/Hibernate ORM</p>
           
           <p><strong>Why This Stack?</strong></p>
@@ -319,8 +319,8 @@
           <h3>⚠️ Complexity Challenges</h3>
           <ul>
             <li><strong>Maven Module Coordination:</strong> 49 modules = version management complexity. Depenfrncy changes ripple across modules.</li>
-            <li><strong>Vaadin Learning Curve:</strong> Server-sifr UI framework is unusual. Team members need Vaadin expertise, not just Java.</li>
-            <li><strong>PostgreSQL Schema Size:</strong> 90+ tables/views = complex data model. Unfrrstanding relationships requires DATA_MODEL.md study.</li>
+            <li><strong>Vaadin Learning Curve:</strong> Server-side UI framework is unusual. Team members need Vaadin expertise, not just Java.</li>
+            <li><strong>PostgreSQL Schema Size:</strong> 90+ tables/views = complex data model. Understanding relationships requires DATA_MODEL.md study.</li>
             <li><strong>Integration Brittleness:</strong> External APIs (Riksdag, World Bank) can change formats. Requires frfensive parsing and version detection.</li>
             <li><strong>Build Time:</strong> Multi-module Maven build likely takes 10-20+ minutes for full clean install. Iterative development needs incremental builds.</li>
           </ul>
@@ -431,7 +431,7 @@
         <li>✅ <strong>Open source transparency</strong> (all code public on GitHub)</li>
       </ul>
       
-      <p><strong>Developer Time Investment Required:</strong> Unfrrstanding this codebase = 40-80 hours minimum. It's not simple. But simplicity wasn't the goal—comprehensive political transparency was. Complexity is justified by problem domain complexity.</p>
+      <p><strong>Developer Time Investment Required:</strong> Understanding this codebase = 40-80 hours minimum. It's not simple. But simplicity wasn't the goal—comprehensive political transparency was. Complexity is justified by problem domain complexity.</p>
       
       <p><strong>Would I want to work on this codebase?</strong> Yes. Well-organized, documented, tested, and maintained. The kind of codebase where you can make changes confifrntly because the architecture supports it.</p>
       
@@ -447,7 +447,7 @@
           <h3>🔗 Repository & Documentation</h3>
           <ul>
             <li><a href="https://github.com/Hack23/cia">GitHub Repository</a> - Clone and analyze yourself</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4 mofrls and system design</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4 models and system design</li>
             <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Database schema documentation</li>
             <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Security patterns</li>
             <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Security metrics</li>
@@ -461,7 +461,7 @@
             <li><a href="cia-docs.html">CIA Product Documentation</a> - User-facing documentation</li>
             <li><a href="blog_fr.html">Hack23 Security Blog</a> - All blog entries</li>
             <li><a href="blog-george-dorn-trigram-code.html">Black Trigram Code-Analyse</a> - TypeScript/React game analysis</li>
-            <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Code-Analyse</a> - Client-sifr architecture</li>
+            <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Code-Analyse</a> - Client-side architecture</li>
           </ul>
         </div>
       </div>
@@ -478,7 +478,7 @@
         <div class="footer-column">
           <h2>Hack23 AB</h2>
           <p>Cybersecurity Consulting<br>
-          Gothenburg, Swefrn | Remote</p>
+          Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
           <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
