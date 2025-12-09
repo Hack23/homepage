@@ -18,8 +18,8 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": "5 Mistakes to Avoid During ISO 27001 Implementation",
-      "description": "Common pitfalls in ISO 27001 implementation and how to avoid them, based on real-world experience.",
+      "headline": "5 Fouten te Vermijden tijdens ISO 27001 Implementatie",
+      "description": "Veelvoorkomende valkuilen bij ISO 27001-implementatie en hoe deze te vermijden, gebaseerd op praktijkervaring.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
@@ -40,7 +40,7 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/iso-27001-implementation-mistakes.html#breadcrumb",
+      "@id": "https://hack23.com/iso-27001-implementation-mistakes_nl.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -115,267 +115,267 @@
     <section id="introduction">
       <h2 class="panel-caption">⚠️ Introductie</h2>
       
-      <p><strong>ISO 27001 implementation failures cost Nederlandse bedrijven time, money, and competitive advantage.</strong> Based on real implementations and audit observations, here are the 5 most common—and most damaging—mistakes organizations make, and how to avoid them.</p>
+      <p><strong>ISO 27001 implementatiefouten kosten Nederlandse bedrijven tijd, geld en concurrentievoordeel.</strong> Gebaseerd op echte implementaties en audit-observaties, zijn dit de 5 meest voorkomende—en meest schadelijke—fouten die organisaties maken, en hoe je ze kunt vermijden.</p>
       
-      <p>These aren't theoretical pitfalls. These are mistakes we've seen repeatedly cost organizations months of delays, tens of thousands of euros in rework, and failed audits. Learn from others' pain.</p>
+      <p>Dit zijn geen theoretische valkuilen. Dit zijn fouten die we herhaaldelijk hebben zien leiden tot maanden vertraging, tienduizenden euro's aan hercertificering en mislukte audits. Leer van de pijn van anderen.</p>
     </section>
 
     <section id="mistake-1">
-      <h2 class="panel-caption">❌ Mistake #1: Defining Scope Too Broadly</h2>
+      <h2 class="panel-caption">❌ Fout #1: De Scope Te Breed Definiëren</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>Organizations try to certify everything on day one.</strong> "Our scope is the entire company" sounds comprehensive. In reality, it's a recipe for failure. Broad scope means:</p>
+      <h3>Het Probleem</h3>
+      <p><strong>Organisaties proberen alles op dag één te certificeren.</strong> "Onze scope is het hele bedrijf" klinkt uitgebreid. In werkelijkheid is het een recept voor mislukking. Brede scope betekent:</p>
       <ul>
-        <li>More assets to inventory and classify</li>
-        <li>More risks to assess and treat</li>
-        <li>More controls to implement and document</li>
-        <li>More audit days (higher certification costs)</li>
-        <li>Longer implementation timeline (6-12 months vs. 3-4 months)</li>
+        <li>Meer assets om te inventariseren en classificeren</li>
+        <li>Meer risico's om te beoordelen en behandelen</li>
+        <li>Meer controls om te implementeren en documenteren</li>
+        <li>Meer auditdagen (hogere certificeringskosten)</li>
+        <li>Langere implementatietijdlijn (6-12 maanden vs. 3-4 maanden)</li>
       </ul>
       
-      <h3>Real Example</h3>
-      <p>A 50-person Swedish SaaS company initially scoped "all company operations including office facilities, HR systems, development, production, and sales." This meant:</p>
+      <h3>Echt Voorbeeld</h3>
+      <p>Een Zweeds SaaS-bedrijf met 50 werknemers heeft aanvankelijk "alle bedrijfsactiviteiten inclusief kantoorvoorzieningen, HR-systemen, ontwikkeling, productie en verkoop" als scope gedefinieerd. Dit betekende:</p>
       <ul>
-        <li>Physical security for 3 office locations</li>
-        <li>HR data protection requirements</li>
-        <li>Sales CRM security (low-value but high-effort)</li>
-        <li>Development and production (high-value, high-effort)</li>
+        <li>Fysieke beveiliging voor 3 kantoorlocaties</li>
+        <li>HR-gegevensbeschermingsvereisten</li>
+        <li>Sales CRM-beveiliging (lage waarde maar hoge inspanning)</li>
+        <li>Ontwikkeling en productie (hoge waarde, hoge inspanning)</li>
       </ul>
-      <p><strong>Result:</strong> 8 months to implement, €45,000 total cost, burned-out team.</p>
+      <p><strong>Resultaat:</strong> 8 maanden om te implementeren, €45.000 totale kosten, uitgeput team.</p>
       
-      <h3>The Solution</h3>
-      <p><strong>Start with minimal viable scope:</strong> Core IT operations directly related to your main service delivery. For SaaS companies:</p>
+      <h3>De Oplossing</h3>
+      <p><strong>Start met minimale haalbare scope:</strong> Kern IT-operaties direct gerelateerd aan uw belangrijkste serviceleveringen. Voor SaaS-bedrijven:</p>
       <ul>
-        <li>Production infrastructure (AWS/Azure environments)</li>
-        <li>Development systems directly feeding production</li>
-        <li>Core supporting services (authentication, monitoring, backup)</li>
-      </ul>
-      
-      <p><strong>Exclude initially:</strong></p>
-      <ul>
-        <li>Office facilities (handle separately or exclude)</li>
-        <li>HR systems (unless you're a HR tech company)</li>
-        <li>Sales/marketing systems (low risk, high documentation burden)</li>
+        <li>Productie-infrastructuur (AWS/Azure-omgevingen)</li>
+        <li>Ontwikkelsystemen die direct naar productie gaan</li>
+        <li>Kern ondersteunende services (authenticatie, monitoring, backup)</li>
       </ul>
       
-      <p><strong>Expand later:</strong> Add scope during surveillance audits once you've achieved initial certification and have operational experience with the ISMS.</p>
+      <p><strong>Initieel uitsluiten:</strong></p>
+      <ul>
+        <li>Kantoorvoorzieningen (behandel apart of sluit uit)</li>
+        <li>HR-systemen (tenzij u een HR-techbedrijf bent)</li>
+        <li>Sales/marketing systemen (laag risico, hoge documentatielast)</li>
+      </ul>
       
-      <p class="success-box"><strong>Impact:</strong> Same company rescoped to "AWS production infrastructure and related development systems." Implementation: 3 months, €28,000 cost, certification achieved on first audit attempt.</p>
+      <p><strong>Later uitbreiden:</strong> Voeg scope toe tijdens surveillance audits zodra u initiële certificering heeft behaald en operationele ervaring heeft met het ISMS.</p>
+      
+      <p class="success-box"><strong>Impact:</strong> Hetzelfde bedrijf heeft de scope opnieuw gedefinieerd naar "AWS productie-infrastructuur en gerelateerde ontwikkelsystemen." Implementatie: 3 maanden, €28.000 kosten, certificering behaald bij eerste auditpoging.</p>
     </section>
 
     <section id="mistake-2">
-      <h2 class="panel-caption">❌ Mistake #2: Creating Unreadable Documentation</h2>
+      <h2 class="panel-caption">❌ Fout #2: Onleesbare Documentatie Creëren</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>Organizations write policies FOR auditors instead of FOR staff.</strong> The result: 200-page policy documents nobody reads, complex procedures disconnected from reality, and "shelf-ware" that exists only for certification.</p>
+      <h3>Het Probleem</h3>
+      <p><strong>Organisaties schrijven beleid VOOR auditors in plaats van VOOR personeel.</strong> Het resultaat: 200-pagina beleidsdocumenten die niemand leest, complexe procedures los van de realiteit, en "plankware" dat alleen voor certificering bestaat.</p>
       
-      <h3>Warning Signs</h3>
+      <h3>Waarschuwingssignalen</h3>
       <ul>
-        <li>Information Security Policy is 50+ pages</li>
-        <li>Policies reference other policies that reference frameworks that reference standards</li>
-        <li>Staff can't explain policies in their own words</li>
-        <li>Procedures haven't been updated since certification</li>
-        <li>Controls described in documentation don't match actual practice</li>
+        <li>Informatiebeveiligingsbeleid is 50+ pagina's</li>
+        <li>Beleid verwijst naar ander beleid dat verwijst naar frameworks die verwijzen naar standaarden</li>
+        <li>Personeel kan beleid niet in eigen woorden uitleggen</li>
+        <li>Procedures zijn niet bijgewerkt sinds certificering</li>
+        <li>Controls beschreven in documentatie komen niet overeen met werkelijke praktijk</li>
       </ul>
       
-      <h3>The Solution</h3>
-      <p><strong>Write for practitioners, not compliance theater:</strong></p>
+      <h3>De Oplossing</h3>
+      <p><strong>Schrijf voor praktijkbeoefenaars, niet voor compliance theater:</strong></p>
       
       <ul>
-        <li><strong>Keep policies concise:</strong> 2-5 pages maximum per policy</li>
-        <li><strong>Use plain language:</strong> If junior developers can't understand it, it's too complex</li>
-        <li><strong>Document what you DO:</strong> Not what you wish you did or think you should do</li>
-        <li><strong>Integrate with workflows:</strong> Security procedures should fit existing processes, not create parallel compliance tracks</li>
-        <li><strong>Use examples:</strong> Show what good looks like, don't just mandate it</li>
+        <li><strong>Houd beleid beknopt:</strong> Maximaal 2-5 pagina's per beleid</li>
+        <li><strong>Gebruik eenvoudige taal:</strong> Als junior ontwikkelaars het niet begrijpen, is het te complex</li>
+        <li><strong>Documenteer wat u DOET:</strong> Niet wat u zou willen doen of denkt te moeten doen</li>
+        <li><strong>Integreer met workflows:</strong> Beveiligingsprocedures moeten passen bij bestaande processen, geen parallelle compliance-tracks creëren</li>
+        <li><strong>Gebruik voorbeelden:</strong> Laat zien hoe het goed eruit ziet, mandateer het niet alleen</li>
       </ul>
       
-      <p><strong>Example - Bad vs Good:</strong></p>
+      <p><strong>Voorbeeld - Slecht vs Goed:</strong></p>
       
       <div class="comparison-table">
-        <h4>❌ Bad (Compliance Theater)</h4>
-        <p><em>"Access to information assets shall be restricted to authorized personnel based on business need-to-know principles as determined by asset owners through formal authorization workflows documented in the access management system in accordance with the least privilege principle..."</em></p>
+        <h4>❌ Slecht (Compliance Theater)</h4>
+        <p><em>"Toegang tot informatieassets moet worden beperkt tot geautoriseerd personeel op basis van zakelijke need-to-know principes zoals bepaald door asset-eigenaren via formele autorisatieworkflows gedocumenteerd in het toegangsbeheersysteem in overeenstemming met het least privilege principe..."</em></p>
         
-        <h4>✅ Good (Practical Guidance)</h4>
-        <p><em>"Access Control: Use AWS IAM with MFA required. Developers get read-only production access. Only SREs get write access. Review permissions quarterly. See AWS-Access-Playbook.md for step-by-step setup."</em></p>
+        <h4>✅ Goed (Praktische Begeleiding)</h4>
+        <p><em>"Toegangscontrole: Gebruik AWS IAM met MFA vereist. Ontwikkelaars krijgen alleen-lezen productietoegang. Alleen SRE's krijgen schrijftoegang. Controleer permissies driemaandelijks. Zie AWS-Access-Playbook.md voor stapsgewijze setup."</em></p>
       </div>
       
-      <p><strong>Reference:</strong> See <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's public ISMS</a> for examples of concise, practical policies (2-5 pages each).</p>
+      <p><strong>Referentie:</strong> Zie <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's publieke ISMS</a> voor voorbeelden van beknopt, praktisch beleid (2-5 pagina's elk).</p>
     </section>
 
     <section id="mistake-3">
-      <h2 class="panel-caption">❌ Mistake #3: Skipping Proper Risk Assessment</h2>
+      <h2 class="panel-caption">❌ Fout #3: Deugdelijke Risicobeoordeling Overslaan</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>Organizations treat risk assessment as a checkbox exercise</strong> to get to "the real work" of implementing controls. Result: Implementing controls that don't address actual risks, missing critical threats, and wasting resources.</p>
+      <h3>Het Probleem</h3>
+      <p><strong>Organisaties behandelen risicobeoordeling als een checkboxoefening</strong> om te komen tot "het echte werk" van het implementeren van controls. Resultaat: Implementeren van controls die geen werkelijke risico's aanpakken, het missen van kritieke bedreigingen, en verspilling van middelen.</p>
       
-      <h3>Common Shortcuts (All Wrong)</h3>
+      <h3>Veelvoorkomende Shortcuts (Allemaal Fout)</h3>
       <ul>
-        <li>"We'll just implement all 93 Annex A controls"—waste of resources on irrelevant controls</li>
-        <li>"Let's copy risks from a template"—generic risks, not your risks</li>
-        <li>"Risk assessment takes too long"—then you'll implement wrong controls and fail audit</li>
-        <li>"We know our risks without formal assessment"—unstated assumptions ≠ risk management</li>
+        <li>"We implementeren gewoon alle 93 Annex A controls"—verspilling van middelen aan irrelevante controls</li>
+        <li>"Laten we risico's kopiëren uit een template"—generieke risico's, niet uw risico's</li>
+        <li>"Risicobeoordeling duurt te lang"—dan implementeert u verkeerde controls en zakt u voor de audit</li>
+        <li>"We kennen onze risico's zonder formele beoordeling"—onuitgesproken aannames ≠ risicobeheer</li>
       </ul>
       
-      <h3>The Solution</h3>
-      <p><strong>Invest 2-3 weeks in proper risk assessment:</strong></p>
+      <h3>De Oplossing</h3>
+      <p><strong>Investeer 2-3 weken in deugdelijke risicobeoordeling:</strong></p>
       
       <ol>
-        <li><strong>Asset Inventory (Week 1):</strong> What information and systems actually matter?
+        <li><strong>Asset Inventaris (Week 1):</strong> Welke informatie en systemen zijn werkelijk belangrijk?
           <ul>
-            <li>Information assets (customer data, source code, credentials, business plans)</li>
-            <li>System assets (production servers, development environments, CI/CD)</li>
-            <li>Dependencies (cloud providers, SaaS tools, third-party APIs)</li>
+            <li>Informatieassets (klantgegevens, broncode, credentials, bedrijfsplannen)</li>
+            <li>Systeemassets (productieservers, ontwikkelomgevingen, CI/CD)</li>
+            <li>Afhankelijkheden (cloud providers, SaaS tools, third-party API's)</li>
           </ul>
         </li>
         
-        <li><strong>Threat Identification (Week 2):</strong> What realistically threatens those assets?
+        <li><strong>Bedreigingsidentificatie (Week 2):</strong> Wat bedreigt die assets realistisch gezien?
           <ul>
-            <li>External threats (ransomware, DDoS, data breaches, supply chain attacks)</li>
-            <li>Internal threats (misconfigurations, human error, insider threats)</li>
-            <li>Environmental (AWS outages, data center issues)</li>
+            <li>Externe bedreigingen (ransomware, DDoS, datalekken, supply chain-aanvallen)</li>
+            <li>Interne bedreigingen (misconfiguraties, menselijke fouten, insider bedreigingen)</li>
+            <li>Omgeving (AWS-uitval, datacenterproblemen)</li>
           </ul>
         </li>
         
-        <li><strong>Risk Treatment (Week 3):</strong> Which controls actually reduce your risks?
+        <li><strong>Risicobehandeling (Week 3):</strong> Welke controls verminderen uw risico's daadwerkelijk?
           <ul>
-            <li>Don't implement controls "because Annex A says so"</li>
-            <li>Implement controls because they treat identified risks</li>
-            <li>Accept some low risks rather than over-controlling everything</li>
+            <li>Implementeer geen controls "omdat Annex A het zegt"</li>
+            <li>Implementeer controls omdat ze geïdentificeerde risico's behandelen</li>
+            <li>Accepteer sommige lage risico's in plaats van alles over te reguleren</li>
           </ul>
         </li>
       </ol>
       
-      <p class="info-box"><strong>Payoff:</strong> Proper risk assessment means implementing 50-70 relevant controls instead of forcing all 93. Saves 20-40 hours implementation time and produces defensible Statement of Applicability.</p>
+      <p class="info-box"><strong>Uitbetaling:</strong> Deugdelijke risicobeoordeling betekent het implementeren van 50-70 relevante controls in plaats van alle 93 forceren. Bespaart 20-40 uur implementatietijd en produceert een verdedigbare Statement of Applicability.</p>
     </section>
 
     <section id="mistake-4">
-      <h2 class="panel-caption">❌ Mistake #4: Weak Executive Support</h2>
+      <h2 class="panel-caption">❌ Fout #4: Zwakke Executive Ondersteuning</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>ISO 27001 is treated as an IT project, not a business initiative.</strong> When deadlines loom or budgets tighten, ISMS work gets deprioritized. Teams burn out fighting for resources. Implementation stalls.</p>
+      <h3>Het Probleem</h3>
+      <p><strong>ISO 27001 wordt behandeld als een IT-project, niet als een bedrijfsinitiatief.</strong> Wanneer deadlines naderen of budgetten krimpen, krijgt ISMS-werk lagere prioriteit. Teams raken uitgeput in de strijd om middelen. Implementatie loopt vast.</p>
       
-      <h3>Warning Signs of Weak Support</h3>
+      <h3>Waarschuwingssignalen van Zwakke Ondersteuning</h3>
       <ul>
-        <li>Security manager begging for budget/time</li>
-        <li>ISMS work done "when there's time" (i.e., never)</li>
-        <li>Management skips management review meetings</li>
-        <li>No consequences when teams ignore security procedures</li>
-        <li>Certification deadline slips repeatedly</li>
+        <li>Beveiligingsmanager die bedelt om budget/tijd</li>
+        <li>ISMS-werk gedaan "als er tijd is" (d.w.z. nooit)</li>
+        <li>Management slaat managementbeoordelingsvergaderingen over</li>
+        <li>Geen consequenties wanneer teams beveiligingsprocedures negeren</li>
+        <li>Certificeringsdeadline schuift herhaaldelijk op</li>
       </ul>
       
-      <h3>The Solution</h3>
-      <p><strong>Frame ISO 27001 as revenue enabler, not IT checkbox:</strong></p>
+      <h3>De Oplossing</h3>
+      <p><strong>Frame ISO 27001 als omzetversterker, niet als IT-checkbox:</strong></p>
       
       <ul>
         <li><strong>Business Case Focus:</strong>
           <ul>
-            <li>"Certification unblocks €500K enterprise deal" (not "we should be secure")</li>
-            <li>"Reduces sales cycle 30%" (not "best practices")</li>
-            <li>"Required for public sector RFPs" (not "compliance")</li>
+            <li>"Certificering ontgrendelt €500K enterprise deal" (niet "we moeten veilig zijn")</li>
+            <li>"Vermindert salescyclus met 30%" (niet "best practices")</li>
+            <li>"Vereist voor publieke sector RFP's" (niet "compliance")</li>
           </ul>
         </li>
         
         <li><strong>Executive Sponsorship:</strong>
           <ul>
-            <li>CEO or C-level owns certification goal publicly</li>
-            <li>Regular updates to board/management team</li>
-            <li>Protected budget and timeline</li>
-            <li>Consequences for non-participation</li>
+            <li>CEO of C-level bezit certificeringsdoel publiekelijk</li>
+            <li>Regelmatige updates aan raad van bestuur/managementteam</li>
+            <li>Beschermd budget en tijdlijn</li>
+            <li>Consequenties voor niet-deelname</li>
           </ul>
         </li>
         
-        <li><strong>Visible Commitment:</strong>
+        <li><strong>Zichtbare Toewijding:</strong>
           <ul>
-            <li>Management completes security training first</li>
-            <li>Executives attend key ISMS meetings</li>
-            <li>Security KPIs in company scorecards</li>
+            <li>Management voltooit eerst beveiligingstraining</li>
+            <li>Executives wonen belangrijke ISMS-vergaderingen bij</li>
+            <li>Beveiligings-KPI's in bedrijfsscorecards</li>
           </ul>
         </li>
       </ul>
       
-      <p class="warning-box"><strong>Reality Check:</strong> Without executive support, ISO 27001 implementation takes 2x longer and costs 1.5x more due to constant resource battles and deprioritization. Get commitment or don't start.</p>
+      <p class="warning-box"><strong>Reality Check:</strong> Zonder executive ondersteuning duurt ISO 27001 implementatie 2x langer en kost 1,5x meer vanwege constante middelenstrijd en het verlagen van prioriteit. Krijg toezegging of begin niet.</p>
     </section>
 
     <section id="mistake-5">
-      <h2 class="panel-caption">❌ Mistake #5: Treating Certification as Finish Line</h2>
+      <h2 class="panel-caption">❌ Fout #5: Certificering als Finish Behandelen</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>Organizations celebrate certification, then neglect ISMS maintenance.</strong> Result: Degraded controls, failed surveillance audits, and certificate suspension—wasting the entire initial investment.</p>
+      <h3>Het Probleem</h3>
+      <p><strong>Organisaties vieren certificering en verwaarlozen vervolgens ISMS-onderhoud.</strong> Resultaat: Gedegradeerde controls, mislukte surveillance audits en certificaatschorsing—verspilling van de hele initiële investering.</p>
       
-      <h3>Post-Certification Neglect Looks Like</h3>
+      <h3>Post-Certificering Verwaarlozing Ziet Eruit Als</h3>
       <ul>
-        <li>Policies not updated for 18+ months</li>
-        <li>Risk assessment not refreshed when systems change</li>
-        <li>Security awareness training skipped</li>
-        <li>Internal audits rushed or skipped</li>
-        <li>Management review becomes rubber-stamp meeting</li>
-        <li>New controls implemented without ISMS documentation</li>
+        <li>Beleid niet bijgewerkt gedurende 18+ maanden</li>
+        <li>Risicobeoordeling niet vernieuwd wanneer systemen veranderen</li>
+        <li>Beveiligingsawareness training overgeslagen</li>
+        <li>Interne audits gehaast of overgeslagen</li>
+        <li>Managementbeoordeling wordt stempelvergadering</li>
+        <li>Nieuwe controls geïmplementeerd zonder ISMS-documentatie</li>
       </ul>
       
-      <h3>The Solution</h3>
-      <p><strong>Plan for ongoing operations from day one:</strong></p>
+      <h3>De Oplossing</h3>
+      <p><strong>Plan vanaf dag één voor doorlopende operaties:</strong></p>
       
       <ul>
-        <li><strong>Assign Ongoing Responsibilities:</strong>
+        <li><strong>Wijs Doorlopende Verantwoordelijkheden Toe:</strong>
           <ul>
-            <li>ISMS Manager (5-10 hours/week): coordination, documentation</li>
-            <li>Control Owners: maintain evidence, report issues</li>
-            <li>Internal Auditor: quarterly checks</li>
+            <li>ISMS Manager (5-10 uur/week): coördinatie, documentatie</li>
+            <li>Control Eigenaren: onderhoud bewijs, rapporteer problemen</li>
+            <li>Interne Auditor: driemaandelijkse controles</li>
           </ul>
         </li>
         
-        <li><strong>Schedule Recurring Activities:</strong>
+        <li><strong>Plan Terugkerende Activiteiten:</strong>
           <ul>
-            <li>Quarterly: Risk register review, internal audits</li>
-            <li>Semi-Annual: Policy reviews, control effectiveness checks</li>
-            <li>Annual: Management review, security awareness training, surveillance audit</li>
+            <li>Driemaandelijks: Risicoregister review, interne audits</li>
+            <li>Halfjaarlijks: Beleidsevaluaties, controle effectiviteitscontroles</li>
+            <li>Jaarlijks: Managementbeoordeling, beveiligingsawareness training, surveillance audit</li>
           </ul>
         </li>
         
-        <li><strong>Automate Evidence Collection:</strong>
+        <li><strong>Automatiseer Bewijs Verzameling:</strong>
           <ul>
-            <li>Automated log collection (not manual screenshots)</li>
-            <li>Scheduled vulnerability scans</li>
-            <li>Training completion tracking</li>
-            <li>Access review reports</li>
+            <li>Geautomatiseerde logverzameling (geen handmatige screenshots)</li>
+            <li>Geplande kwetsbaarheidsscans</li>
+            <li>Training voltooiingstracking</li>
+            <li>Toegangsbeoordelingsrapporten</li>
           </ul>
         </li>
         
-        <li><strong>Integrate into Business Process:</strong>
+        <li><strong>Integreer in Bedrijfsproces:</strong>
           <ul>
-            <li>Security review in project planning</li>
+            <li>Beveiligingsevaluatie in projectplanning</li>
             <li>ISMS updates in change management</li>
-            <li>Risk assessment for new initiatives</li>
+            <li>Risicobeoordeling voor nieuwe initiatieven</li>
           </ul>
         </li>
       </ul>
       
-      <p><strong>Time Investment:</strong> 2-4 hours/week maintaining ISMS vs. months of remediation for failed surveillance audit.</p>
+      <p><strong>Tijd Investering:</strong> 2-4 uur/week ISMS onderhouden vs. maanden remediatie voor mislukte surveillance audit.</p>
       
-      <p><a href="iso-27001-implementation-sweden.html#common-challenges">→ See full implementation guide for post-certification maintenance strategies</a></p>
+      <p><a href="iso-27001-implementation-sweden.html#common-challenges">→ Zie volledige implementatiegids voor post-certificering onderhoudsstrategieën</a></p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">✅ Key Takeaways</h2>
+      <h2 class="panel-caption">✅ Belangrijkste Leerpunten</h2>
       
       <ol>
-        <li><strong>Scope Smart:</strong> Start narrow, expand later</li>
-        <li><strong>Write Practical Policies:</strong> For practitioners, not auditors</li>
-        <li><strong>Invest in Risk Assessment:</strong> Drives everything else</li>
-        <li><strong>Secure Executive Support:</strong> Frame as business enabler</li>
-        <li><strong>Plan for Maintenance:</strong> Certification is start, not finish</li>
+        <li><strong>Scope Slim:</strong> Begin smal, breid later uit</li>
+        <li><strong>Schrijf Praktisch Beleid:</strong> Voor praktijkbeoefenaars, niet voor auditors</li>
+        <li><strong>Investeer in Risicobeoordeling:</strong> Stuurt alles aan</li>
+        <li><strong>Beveilig Executive Ondersteuning:</strong> Frame als bedrijfsversterker</li>
+        <li><strong>Plan voor Onderhoud:</strong> Certificering is begin, niet einde</li>
       </ol>
       
-      <p class="cta-box"><strong>Avoid these mistakes:</strong> <a href="why-hack23.html">Get expert guidance from Hack23</a>. We've made these mistakes so you don't have to.</p>
+      <p class="cta-box"><strong>Vermijd deze fouten:</strong> <a href="why-hack23.html">Krijg deskundige begeleiding van Hack23</a>. Wij hebben deze fouten gemaakt zodat u dat niet hoeft te doen.</p>
     </section>
 
     <section id="resources">
-      <h2 class="panel-caption">📚 Related Resources</h2>
+      <h2 class="panel-caption">📚 Gerelateerde Bronnen</h2>
       
       <ul>
         <li><a href="iso-27001-implementation-sweden.html">Complete ISO 27001 Implementatiegids</a></li>
-        <li><a href="iso-27001-certification-costs-sweden.html">ISO 27001 Certification Costs</a></li>
-        <li><a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23 Public ISMS</a> - Example of concise, practical policies</li>
+        <li><a href="iso-27001-certification-costs-sweden.html">ISO 27001 Certificeringskosten</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23 Public ISMS</a> - Voorbeeld van beknopt, praktisch beleid</li>
       </ul>
     </section>
 
