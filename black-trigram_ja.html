@@ -13,8 +13,6 @@
     <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/black-trigram_ja.html">
     <link rel="alternate" hreflang="zh" href="https://hack23.com/black-trigram_zh.html">
     <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/black-trigram_zh.html">
-    <link rel="alternate" hreflang="ja" href="https://hack23.com/black-trigram_ja.html">
-    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/black-trigram_ja.html">
     <link rel="alternate" hreflang="sv" href="https://hack23.com/black-trigram_sv.html">
     <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/black-trigram_sv.html">
     <link rel="alternate" hreflang="x-default" href="https://hack23.com/black-trigram.html">
@@ -635,18 +633,18 @@
         <script>
             (function() {
                 'use strict';
-                const expandBtn =するcument.getElementById('faq-expand-all');
-                const collapseBtn =するcument.getElementById('faq-collapse-all');
+                const expandBtn = document.getElementById('faq-expand-all');
+                const collapseBtn = document.getElementById('faq-collapse-all');
                 
                 if (expandBtn) {
                     expandBtn.addEventListener('click', function() {
-                       するcument.querySelectorAll('.faq-item').forEach(d => d.open = true);
+                       document.querySelectorAll('.faq-item').forEach(d => d.open = true);
                     });
                 }
                 
                 if (collapseBtn) {
                     collapseBtn.addEventListener('click', function() {
-                       するcument.querySelectorAll('.faq-item').forEach(d => d.open = false);
+                       document.querySelectorAll('.faq-item').forEach(d => d.open = false);
                     });
                 }
             })();
