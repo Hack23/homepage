@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Sicherheit | STRIDE Threat Modeling | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="STRIDE threat modeling for compliance automation: Six threat categories, five defensive layers, thirty risk scenarios analyzed.">
+<meta name="keywords" content="STRIDE threat modeling, compliance security, React security, client-side security, Simon Moon, five-layer defense, security by design">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="Compliance Manager Sicherheit: STRIDE Through Five Dimensions">
+<meta property="og:description" content="Six STRIDE categories meet five defensive layers. The mathematics of secure compliance automation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-compliance-security_de.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Sicherheit Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-compliance-security_de.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Compliance Manager Sicherheit: STRIDE Through Five Dimensions",
+      "description": "Exploring STRIDE threat modeling and security architecture for CIA Compliance Manager",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "System Architect",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "dateVeröffentlicht": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-compliance-security_de.html"
+      },
+      "keywords": "STRIDE, threat modeling, React security, client-side security",
+      "articleSection": "Sicherheit",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1157,
+      "articleBody": "STRIDE threat modeling: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege. Microsoft's six-category taxonomy for systematic threat analysis. Industry-...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Sicherheit Blog"
+      },
+      "inLanguage": "de"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-compliance-security_de.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Compliance Manager Sicherheit",
+          "item": "https://hack23.com/blog-compliance-security_de.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-compliance-security_de.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-compliance-security_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-compliance-security_sv.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/blog-compliance-security_de.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-compliance-security_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-compliance-security_sv.html">
+	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-compliance-security_de.html">
+	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-compliance-security_de.html">
+	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-compliance-security_de.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-compliance-security_fr.html">
+	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-compliance-security_fr.html">
+	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-compliance-security_es.html">
+	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-compliance-security_es.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-compliance-security_de.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Compliance Manager Sicherheit
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_de.html">Home</a>
+    <a href="blog_de.html">Blog</a>
+    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🛡️ Compliance Manager Sicherheit: STRIDE Through Five Dimensions</h1>
+    
+    <section id="six-becomes-five">
+      <h2 class="panel-caption">When Six STRIDE Categories Meet Five Defensive Layers</h2>
+      
+      <p><strong>STRIDE threat modeling: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege.</strong> Microsoft's six-category taxonomy for systematic threat analysis. Industry-standard. Battle-tested. Comprehensive—allegedly.</p>
+      
+      <p><strong>Here's where numerology meets reality:</strong> Mapping STRIDE to the <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> architecture revealed six categories compressing into five defensive requirements. Denial of Service? Defeated by architectural simplicity (static hosting eliminates 90% of DoS attack surface). The remaining five threats align perfectly with five defensive layers. Coincidence? Or the universe revealing optimal security structure through constraint?</p>
+      
+      <p><strong>Challenge conventional security thinking:</strong> More threat categories don't guarantee comprehensive defense. Overlapping categories create false coverage confidence. Our five-layer defense addresses all six STRIDE threats because layers are <em>orthogonal</em>—each protecting fundamentally different attack surfaces. Pattern recognition enabling defensive efficiency over exhaustive categorization.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination: Six STRIDE categories mapping to five defenses reveals which threats share root causes. Spoofing + Elevation of Privilege both defeated by authentication. Tampering + Repudiation both defeated by integrity controls. Pattern recognition enabling defensive efficiency.</em></p>
+    
+      
+      <p><strong>Ready to implement ISO 27001 compliance?</strong> <a href="why-hack23.html">Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.</p>
+    </section>
+
+    <section id="client-side-advantage">
+      <h2 class="panel-caption">The Client-Side Sicherheit Advantage</h2>
+      
+      <p><strong>Conventional compliance tools: server-side SaaS.</strong> Users upload sensitive data. Vendor stores it. Vendor secures it. Vendor sells "enterprise security" as competitive advantage.</p>
+      
+      <p><strong>We chose differently.</strong> Client-side application. IndexedDB storage. No backend. Data never leaves user's browser. Attack surface: minimal. <strong>Why?</strong></p>
+      
+      <p><strong>Five advantages of client-side architecture for compliance:</strong></p>
+      
+      <ol>
+        <li><strong>Zero Server Vulnerabilities:</strong> No SQL injection (no SQL server). No RCE (no command execution). No SSRF (no server-side requests). No deE (no XML parsing). Entire OWASP Top 10 mostly irrelevant. Attack surface collapsed.</li>
+        
+        <li><strong>Data Sovereignty By Default:</strong> User data in user's browser on user's device under user's control. No "our privacy policy says..." marketing. Mathematical privacy through architecture. GDPR compliance automatic.</li>
+        
+        <li><strong>Offline Operation:</strong> Internet down? Compliance assessment continues. Network compromised? Sensitive data already local. Air-gapped environments? Install once, run forever. Resilience through independence.</li>
+        
+        <li><strong>Transparent Sicherheit:</strong> Client-side JavaScript means users can audit security. View source. Read the code. Verify cryptographic implementations. Trust through verification, not vendor promises.</li>
+        
+        <li><strong>Cost Reduction:</strong> No server costs = $0/month hosting. GitHub Pages free. CloudFlare free tier. Zero hosting fees enabling free open-source tool. Economic sustainability through architectural simplicity.</li>
+      </ol>
+      
+      <p><strong>Tradeoffs acknowledged:</strong> No server = no real-time collaboration (roadmap: peer-to-peer via WebRTC). No centralized backup (roadmap: encrypted cloud export). Client-side limits (roadmap: Web Workers for heavy computation). Honest tradeoff documentation > marketing spin.</p>
+      
+      <p class="hidden-wisdom"><em>Sicherheit architecture that eliminates entire attack classes beats security architecture defending against every attack in every class. Choose simplicity enabling security over complexity requiring security.</em></p>
+    </section>
+
+    <section id="five-defensive-layers">
+      <h2 class="panel-caption">Client-Side Sicherheit Architektur: Defense Through Simplicity</h2>
+      
+      <p><strong>Each security layer addresses specific threat categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based threats.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🌐 Content Sicherheit Policy: Injection Defense</h3>
+          <p><strong>Threats mitigated:</strong> Cross-site scripting (XSS), data exfiltration via injected scripts, unauthorized resource loading.</p>
+          <p><strong>CSP directives:</strong> Restrictive policy limiting script sources, style sources, and connection endpoints. Configuration deployed via GitHub Pages headers.</p>
+          <p><strong>React framework protection:</strong> Automatic XSS prevention through JSX escaping, DOM manipulation sanitization, and controlled prop rendering.</p>
+          <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails security. Balance through minimum necessary directives based on actual application requirements.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🔐 Subresource Integrity: Dependency Trust</h3>
+          <p><strong>Threat mitigated:</strong> Compromised CDN serving malicious library versions, supply chain attacks on external dependencies.</p>
+          <p><strong>SRI implementation:</strong> Cryptographic hash validation for external resources. Dependency integrity verification at build time.</p>
+          <p><strong>Supply chain verification:</strong> Dependabot automation for security updates, FOSSA license compliance scanning. Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA dashboard</a>.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🛡️ Type Safety: Runtime Error Prevention</h3>
+          <p><strong>Threats mitigated:</strong> Type confusion vulnerabilities, runtime errors causing denial of service, malformed data processing.</p>
+          <p><strong>TypeScript strict mode:</strong> Comprehensive type checking with noImplicitAny, strictNullChecks, strictFunctionTypes compilation flags. Type errors block builds.</p>
+          <p><strong>Build-time validation:</strong> ESLint static analysis, TypeScript compiler checks, Vite build optimization with tree-shaking removing unused code.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔒 Datenschutz: Browser Storage Sicherheit</h3>
+          <p><strong>Threat mitigated:</strong> Local storage compromise, unauthorized data access from malicious extensions or co-located attacks.</p>
+          <p><strong>Current implementation:</strong> IndexedDB within browser sandbox. Relies on OS-level disk encryption and browser profile security for data-at-rest protection.</p>
+          <p><strong>Zukunft enhancement:</strong> Client-side encryption using SubtleCrypto API for additional zero-knowledge protection layer independent of OS security.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 👁️ Build Integrity: Supply Chain Assurance</h3>
+          <p><strong>Threats mitigated:</strong> Compromised build pipeline, tampered artifacts, unauthorized code injection.</p>
+          <p><strong>Mechanisms:</strong> Automated CI/CD through GitHub Actions, SLSA Level 3 provenance attestations, immutable build artifacts, cryptographic signing of releases.</p>
+          <p><strong>Validation:</strong> OpenSSF Scorecard monitoring (check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a>), dependency review workflow, CodeQL security scanning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-scenarios">
+      <h2 class="panel-caption">Client-Side Threat Considerations</h2>
+      
+      <p><strong>Client-side architecture shifts threat focus</strong> from server-side attacks to browser-based vulnerabilities, DOM manipulation risks, and local storage security.</p>
+      
+      <p><strong>Key security considerations for compliance tools:</strong></p>
+      
+      <ul>
+        <li><strong>XSS Prevention:</strong> React framework provides automatic escaping. Additional DOMPurify sanitization for user-generated assessment notes. CSP headers enforce restrictive script policies.</li>
+        <li><strong>Data Confidentiality:</strong> Browser sandbox isolation plus OS-level encryption. Zukunft roadmap includes client-side encryption for additional zero-knowledge protection.</li>
+        <li><strong>Supply Chain Sicherheit:</strong> SRI validation for external dependencies. Automated Dependabot updates. SLSA Level 3 build attestations provide provenance assurance.</li>
+        <li><strong>Storage Sicherheit:</strong> IndexedDB access restricted to same-origin. No server-side data transmission eliminates network interception risks.</li>
+        <li><strong>Build Pipeline Integrity:</strong> GitHub Actions automation with security scanning. CodeQL SAST analysis. Dependency review blocking vulnerable packages.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>Threat modeling that honestly documents residual risk and architectural tradeoffs enables informed security decisions. Transparency about limitations builds trust more than marketing perfect security.</em></p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain Sicherheit: Dependency Management</h2>
+      
+      <p><strong>npm dependencies represent trust decisions.</strong> How verification works:</p>
+      
+      <ol>
+        <li><strong>License Compliance:</strong> FOSSA scanning ensures MIT/Apache-2.0/BSD compatibility. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Public compliance badge</a> provides transparency.</li>
+        <li><strong>Vulnerability Scanning:</strong> Dependabot automation generates security update PRs. GitHub dependency review workflow blocks vulnerable package introductions.</li>
+        <li><strong>Build Provenance:</strong> SLSA Level 3 attestations provide cryptographic evidence linking artifacts to source. View <a href="https://github.com/Hack23/cia-compliance-manager/attestations">public attestations</a>.</li>
+        <li><strong>Continuous Validation:</strong> OpenSSF Scorecard measures security practices. Check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a> for branch protection, code review, and dependency update evidence.</li>
+        <li><strong>Static Analysis:</strong> CodeQL security scanning integrated into CI/CD. ESLint rules enforce secure coding patterns.</li>
+      </ol>
+      
+      <p><strong>Dependency minimization strategy:</strong> Prefer platform APIs over libraries where practical. React core provides substantial functionality reducing external dependency requirements.</p>
+    </section>
+
+    <section id="future-security">
+      <h2 class="panel-caption">Sicherheit Roadmap: Progressive Enhancement</h2>
+      
+      <p><strong>Sicherheit evolution planned through progressive enhancement</strong> maintaining backward compatibility while adding defense layers.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Phase 1: Enhanced Authentication</h3>
+          <p>Optional OAuth integration for multi-device sync. GitHub/Google/Microsoft identity providers. Session management with secure token handling.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Phase 2: Client-Side Encryption</h3>
+          <p>SubtleCrypto API integration for zero-knowledge architecture. AES-GCM encryption of assessment data. User-controlled encryption keys never transmitted.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Year 3: Audit Logging</h3>
+          <p>Action log in IndexedDB. Merkle tree tamper-evidence.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Year 4: WebAuthn Biometric</h3>
+          <p>Touch ID, Face ID, Windows Hello. Phishing-resistant.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 5: Post-Quantum Crypto</h3>
+          <p>Lattice-based encryption. Quantum-resistant future-proofing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Sicherheit Wisdom: Five Key Lessons</h2>
+      
+      <ol>
+        <li><strong>Client-side = defensive advantage.</strong> No server = no server vulnerabilities.</li>
+        <li><strong>Six STRIDE categories → five defenses.</strong> Pattern recognition enabling focus.</li>
+        <li><strong>Type safety is security.</strong> Compile-time verification = pre-deployment bug elimination.</li>
+        <li><strong>Automated evidence > manual assurance.</strong> Cryptographic proof, not promises.</li>
+        <li><strong>Sicherheit roadmaps enable transparency.</strong> Show trajectory, not just snapshot.</li>
+      </ol>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Verify Our Sicherheit</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">STRIDE Threat Model</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Zukunft Sicherheit</a></li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">OpenSSF Scorecard 7.4/10</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA Attestations</a></li>
+        <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA Report</a></li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Client-side security is mathematical security—attack surface minimized through architectural constraint."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Previous:</strong> <a href="blog-compliance-architecture.html">Compliance Manager Architektur</a></p>
+      <p><strong>Next:</strong> <a href="blog-trigram-architecture.html">Black Trigram Architektur</a></p>
+      <p><strong>Back to:</strong> <a href="blog_de.html">Sicherheit Blog</a></p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services_de.html">Sicherheit Consulting</a></li>
+            <li><a href="services_de.html">Sicherheit Architektur</a></li>
+            <li><a href="services_de.html">Cloud Sicherheit</a></li>
+            <li><a href="services_de.html">DevSecOps Integration</a></li>
+            <li><a href="services_de.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog_de.html">Sicherheit Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Sicherheit_Policy.md" rel="noopener noreferrer" target="_blank">Sicherheit Policy</a></li>
+            <li><a href="SECURITY.md">Report Sicherheit Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Autors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architektur & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architektur</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_de.html" lang="de">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
