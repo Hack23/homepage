@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigram Combat System | Vital Points & Archetypes | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Combat system design: 70 vital points, 5 archetypes, authentic Korean martial arts techniques. Cultural preservation through gameplay.">
+<meta name="keywords" content="Black Trigram combat, Unity physics, martial arts simulation, Simon Moon, hit detection, combat system, Korean martial arts physics">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="Black Trigram Combat: 70 Vital Points & Physics of Respect">
+<meta property="og:description" content="Sacred geometry meets combat physics. 70 pressure points, five collision types, authentic Korean martial arts simulation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-trigram-combat_fr.html">
+<meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-trigram-combat_fr.html">
+	<!-- Hreflang tags for language alternatives -->
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-trigram-combat.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-trigram-combat_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-trigram-combat_sv.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-trigram-combat_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/blog-trigram-combat_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-trigram-combat_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-trigram-combat_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-trigram-combat_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/blog-trigram-combat_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-trigram-combat_es.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-trigram-combat.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Black Trigram Combat
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_fr.html">Home</a>
+    <a href="blog_fr.html">Blog</a>
+    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">⚔️ Black Trigram Combat: 70 Vital Points & The Physics of Respect</h1>
+    
+    <section id="seventy-points">
+      <h2 class="panel-caption">The 70 Kyusho Points: Sacred Geography of the Body</h2>
+      
+      <p><strong>Traditional Korean martial arts map 70 vital points on the human body.</strong> Not mysticism—biomechanics. Nerve clusters, joint articulation points, blood vessel compression zones. Pressure points where physics, anatomy, and centuries of combat experience converge. Every strike location documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/Combat_Architecture.md">Combat_Architecture.md</a> with anatomical precision that makes Western medicine manuals look superficial.</p>
+      
+      <p><strong>The anatomical distribution follows sacred geometry:</strong> Detailed in <a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">game-design.md</a>, these 70 points organize across five body regions—not by designer preference, but by how the Korean martial traditions actually categorize human vulnerability:</p>
+      
+      <ul>
+        <li><strong>Head: 10 points.</strong> Temple, jaw, nose, base of skull, crown, ear regions. Critical strikes targeting consciousness and balance. High damage multipliers for precision targeting.</li>
+        <li><strong>Neck: 8 points.</strong> Carotid artery, jugular notch, cervical vertebrae, trachea. Extremely high-value targets requiring precise positioning. Small hitboxes reflecting difficulty.</li>
+        <li><strong>Torso: 20 points.</strong> Solar plexus, floating ribs, kidney, liver, spleen, sternum, intercostal nerves. Balanced accessibility with moderate damage. Primary combat zone.</li>
+        <li><strong>Arms: 16 points (8 per side).</strong> Elbow joint, brachial plexus, wrist, forearm nerves. Joint manipulation targets. Blocking techniques utilize arm positioning.</li>
+        <li><strong>Legs: 16 points (8 per side).</strong> Knee, ankle, thigh muscles, calf nerves, patellar nerve. Mobility disruption targets. Stance-dependent vulnerability.</li>
+      </ul>
+      
+      <p><strong>Total: 70 vital points across five anatomical regions.</strong> Each documented with Korean terminology, anatomical location, damage multipliers, and status effects in KoreanVitalPoints.ts and KoreanAnatomy.ts modules. This isn't feature creep—it's cultural authenticity translating centuries of martial knowledge into interactive simulation. Could've simplified to 10 generic hit zones. Chose 70 precise targets instead. Respect demands accuracy.</p>
+      
+      <p class="hidden-wisdom"><em>Combat simulation that ignores anatomy produces arcade button-mashing, not martial arts. We chose realism over convenience, complexity over accessibility. The universe rewards pattern recognition; our collision system emerged from studying how bodies actually break under force.</em></p>
+    
+      
+      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+    </section>
+
+    <section id="combat-system">
+      <h2 class="panel-caption">Combat System Architecture: Hit Detection & Damage</h2>
+      
+      <p><strong>Web-based 2D combat = sophisticated hit detection.</strong> As documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/Combat_Architecture.md">Combat_Architecture.md</a>, the PixiJS-based combat system implements realistic vital point targeting:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎯 Hit Detection System</h3>
+          <p><strong>HitDetection.ts module.</strong> Checks collisions between attack hitboxes and character bounding boxes. Precise distance measurement between strike origin and target vital points. Accuracy determines damage multiplier application.</p>
+          <p><strong>Grid-based positioning:</strong> 10×10 octagonal arena with 0.3m cells enables discrete hit detection. Range calculations account for stance, limb reach, and target positioning.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 💥 Damage Calculator</h3>
+          <p><strong>DamageCalculator.ts implementation.</strong> Applies base damage × trigram advantage × vital-point multiplier. Each of 70 vital points has specific multiplier documented in KoreanVitalPoints.ts. Critical points (temple, jugular) can enable one-strike finishes.</p>
+          <p><strong>Status effects:</strong> Vital strikes affect CombatStats—health, pain, balance, consciousness, BloodLoss, stamina. Realistic trauma accumulation per game-design.md section 2.2.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. ☯️ Trigram Advantage System</h3>
+          <p><strong>TrigramCalculator.ts logic.</strong> Eight trigram stances (☰ Geon through ☷ Gon) each have effectiveness relationships. Heaven stance advantages against Lake stance. Thunder effective against Wind. I Ching philosophy encoded in combat mechanics.</p>
+          <p><strong>Stance modifiers:</strong> Each trigram provides stat bonuses—movement speed, reach, stability, damage. StanceManager.ts validates transitions and Ki/Stamina costs documented in game-design.md section 2.3.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🩸 Realistic Trauma System</h3>
+          <p><strong>Progressive damage accumulation.</strong> Pain builds toward balance state transitions (READY → SHAKEN → VULNERABLE → HELPLESS). BloodLoss causes continuous health drain. Consciousness drops trigger temporary incapacitation.</p>
+          <p><strong>Six interacting stats:</strong> Health (❤️), Pain (😖), Balance (⚖️), Consciousness (🧠), BloodLoss (🩸), Stamina (🔋) create realistic combat feedback documented in Combat_Architecture.md.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🎨 Visual Feedback System</h3>
+          <p><strong>PixiJS particle effects.</strong> Blood splatter, impact sparks, ki energy visualization via HitEffectsLayer.tsx. Damage numbers displayed with neon styling. Audio feedback through AudioManager.ts playing bone cracks, muscle impacts, traditional Korean instrument samples.</p>
+          <p><strong>Animation response:</strong> PlayerVisuals.tsx and EnemyVisuals.tsx trigger pain reactions, balance loss animations, unconsciousness collapses based on CombatStats state transitions.</p>
+        </div>
+      </div>
+      
+      <p><strong>Combat system complexity:</strong> TypeScript modules coordinate hit detection (HitDetection.ts), damage calculation (DamageCalculator.ts), vital point data (KoreanVitalPoints.ts, KoreanAnatomy.ts), and visual feedback (HitEffectsLayer.tsx). React + PixiJS architecture enables browser-based realistic combat.</p>
+      
+      <p class="hidden-wisdom"><em>Game physics that compromises realism for performance produces unsatisfying combat. We optimize algorithm efficiency, not gameplay accuracy. Respect for physics = respect for martial arts.</em></p>
+    </section>
+
+    <section id="damage-calculation">
+      <h2 class="panel-caption">Damage Calculation: The Mathematics of Impact</h2>
+      
+      <p><strong>Not all hits equal.</strong> As documented in game-design.md section 2.6, damage calculation applies multiple factors: base damage × trigram advantage × vital-point multiplier. Real combat physics encoded in TypeScript.</p>
+      
+      <p><strong>Damage formula components:</strong></p>
+      
+      <ul>
+        <li><strong>Base Attack Power:</strong> Varies by archetype and technique. Each of five archetypes (무사 Musa, 암살자 Amsalja, 해커 Hacker, 정보요원 Jeongbo, 조직폭력배 Jojik) has signature techniques with documented base damage values.</li>
+        <li><strong>Trigram Advantage:</strong> TrigramCalculator.ts provides stance effectiveness multipliers. Heaven (☰ Geon) advantages against certain stances. I Ching relationships determine combat effectiveness documented in Combat_Architecture.md.</li>
+        <li><strong>Vital Point Multiplier:</strong> 70 vital points each with specific multipliers in KoreanVitalPoints.ts. Critical points (temple, jugular notch, spine) enable one-strike KO potential. Standard points provide baseline damage.</li>
+        <li><strong>Blocking Resistance:</strong> Vital Resistance Bonus (VRB) reduces damage when blocking. Stance-dependent: ☶ Gan (Mountain) stance provides +30% resistance vs. torso strikes. Snap blocks add +10% bonus for precise timing.</li>
+        <li><strong>Status Effect Application:</strong> Each strike affects multiple CombatStats. Health decreases, Pain accumulates, BloodLoss may increase, Consciousness drops from head strikes. Realistic trauma simulation per game-design.md section 2.2.</li>
+      </ul>
+      
+      <p><strong>Example from game-design.md:</strong> ☲ Li stance Thumb-Push to Jugular Notch deals –75 HP (Critical), +25 pain, +10 bleed, –20 consciousness. If target health ≤ 75, instant KO. Consciousness drop may trigger HELPLESS state. Documented mechanics, not arbitrary values.</p>
+      
+      <p class="hidden-wisdom"><em>Damage systems hiding calculations create frustration. Players sensing inconsistency lose trust. We document formulas publicly. Understanding mechanics deepens engagement.</em></p>
+    </section>
+
+    <section id="ai-opponent">
+      <h2 class="panel-caption">AI Opponent: Five Difficulty Levels</h2>
+      
+      <p><strong>Single-player requires capable AI.</strong> Five difficulty tiers implementing different decision-making sophistication:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Level 1: Beginner</h3>
+          <p><strong>Random attacks.</strong> No blocking. No combos. No spacing. Pure button mashing. Exists for tutorial practice. Never used in competitive modes.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Level 2: Novice</h3>
+          <p><strong>Basic patterns.</strong> Blocks occasionally. Attempts 2-hit combos. Maintains medium distance. Predictable but competent. Good for learning matchups.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Level 3: Intermediate</h3>
+          <p><strong>Reactive play.</strong> Punishes whiffed attacks. Combo extends to 4 hits. Varies range dynamically. Adapts to player patterns. Challenging for casual players.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Level 4: Advanced</h3>
+          <p><strong>Frame-perfect execution.</strong> 23-frame reaction window (the number again—human-achievable limit). 5-hit combos. Optimal spacing. Mix-up game. Competitive challenge.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Level 5: Master</h3>
+          <p><strong>Superhuman precision.</strong> 5-frame reactions (impossible for humans). Perfect punishes. Never misses combos. Reads player inputs via decision tree analysis. Boss mode. Frustratingly difficult by design.</p>
+        </div>
+      </div>
+      
+      <p><strong>AI decision tree:</strong> 5 decision nodes per evaluation cycle (assess distance, evaluate threat, select tactic, execute move, transition state). Monte Carlo tree search with 10,000 simulations at Master difficulty. Computational intensity scaling with difficulty level.</p>
+      
+      <p class="hidden-wisdom"><em>AI that's too easy bores players. AI that's impossibly hard frustrates them. Five difficulty levels providing progression path from tutorial to challenge mode. Accessibility through gradation.</em></p>
+    </section>
+
+    <section id="cultural-authenticity">
+      <h2 class="panel-caption">Cultural Authenticity: Respect Through Accuracy</h2>
+      
+      <p><strong>Korean martial arts = living tradition.</strong> Not generic "Asian fighting." Specific techniques, philosophies, terminology. Our implementation honoring this:</p>
+      
+      <ul>
+        <li><strong>Technique Naming:</strong> Korean terms preserved. "Dollyo Chagi" (roundhouse kick), not "spinning kick." "Sonnal Mok Chigi" (knife-hand neck strike), not "karate chop." Language respecting culture.</li>
+        <li><strong>Movement Capture:</strong> 5 Korean martial arts masters motion-captured. Real practitioners, not actors. Authentic technique representation. Credited in game and documentation.</li>
+        <li><strong>Historical Context:</strong> In-game encyclopedia documenting technique origins. Hwa Rang warriors, three kingdoms period, modern evolution. Education through gaming.</li>
+        <li><strong>Cultural Consultation:</strong> Korean advisors reviewing every aspect. Costume accuracy, arena design, victory celebrations, audio pronunciation. Ensuring respect, preventing appropriation.</li>
+        <li><strong>Community Involvement:</strong> Korean martial arts schools playtesting. Feedback incorporated. Revenue (if any) supporting Korean cultural preservation. Reciprocity, not extraction.</li>
+      </ul>
+      
+      <p><strong>Open source enabling scrutiny:</strong> All assets documented in GitHub. Community can verify authenticity. Mistakes correctable. Transparency enabling accountability. See <a href="https://github.com/Hack23/blacktrigram/blob/master/ART_ASSETS.md">ART_ASSETS.md</a> for full asset provenance.</p>
+      
+      <p class="hidden-wisdom"><em>Cultural representation without consultation is appropriation. We consult, we compensate, we credit. Technology serving culture, never exploiting it.</em></p>
+    </section>
+
+    <section id="future-combat">
+      <h2 class="panel-caption">Avenir Combat System: Five-Year Evolution</h2>
+      
+      <p>Full roadmap: <a href="https://github.com/Hack23/blacktrigram/blob/master/Avenir_Architecture.md">Avenir_Architecture.md</a>. Combat enhancements:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Year 1: Advanced Training Mode</h3>
+          <p>Frame data display. Hitbox visualization. Input recording/playback. Slowdown feature. Combo challenges. Educational tools for mastery.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 2: Weapon Combat</h3>
+          <p>Traditional Korean weapons. Jangbong (staff), Ssangjeolbong (nunchaku), Geom (sword). 5 weapons × 5 archetypes = 25 weapon movesets.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Year 3: Environmental Interaction</h3>
+          <p>Breakable objects. Ring hazards. Multi-level arenas. Wall bounces. Corner pressure. Spatial tactics expanding combat depth.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Year 4: Machine Learning AI</h3>
+          <p>Neural network trained on player matches. Adaptive difficulty. Personalized opponents mimicking player style. Custom training partners.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 5: Motion Control VR</h3>
+          <p>First-person martial arts. Real movements mapped to attacks. Physical training through gameplay. Fitness + fighting game hybrid.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Combat Design Wisdom: Five Key Lessons</h2>
+      
+      <ol>
+        <li><strong>70 vital points = authenticity through detail.</strong> Could simplify to 10 hit zones. Chose 70 for realism. Complexity serving accuracy.</li>
+        <li><strong>Five collision systems = necessary complexity.</strong> Each solves distinct problem. Removing any creates gameplay issues.</li>
+        <li><strong>Damage formula transparency builds trust.</strong> Players understanding mechanics engage deeper. Hidden formulas create frustration.</li>
+        <li><strong>AI difficulty gradation enables progression.</strong> Five levels providing path from beginner to expert. Accessibility through options.</li>
+        <li><strong>Cultural consultation mandatory for authenticity.</strong> Can't fake Korean martial arts. Consulting experts, compensating advisors = respectful representation.</li>
+      </ol>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Experience the Sacred Combat Physics</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/blacktrigram">Source Repository</a> - Code, combat system implementation</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/Combat_Architecture.md">Combat Architecture</a> - Detailed collision/damage systems</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">Game Design Document</a> - Move lists, frame data, balance</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/Avenir_Architecture.md">Avenir Roadmap</a> - Combat system evolution</li>
+        <li><a href="https://blacktrigram.com">Live Demo</a> - Play in browser, test combat physics</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Play the game. Study the collision systems. Examine the damage calculations. 70 vital points, five collision types, authentic Korean martial arts—patterns manifesting in combat simulation.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Collision detection revealing anatomical truth. Physics honoring martial tradition. Code respecting culture."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Previous:</strong> <a href="blog-trigram-architecture.html">Black Trigram Architecture</a> - Five fighters and sacred geometry</p>
+      <p><strong>Related:</strong> <a href="black-trigram-docs.html">Complete Documentation</a> - All architecture diagrams and combat specs</p>
+      <p><strong>Back to:</strong> <a href="blog_fr.html">Security Blog</a> - All discordian posts</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog_fr.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Auteurs:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
