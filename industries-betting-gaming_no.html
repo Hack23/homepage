@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+	<title>Cybersikkerhet for Betting & Spilloperatører | ISO 27001 Compliance | Hack23</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preload" href="styles.css" as="style">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="canonical" href="https://hack23.com/industries-betting-gaming_no.html">
+	
+	<meta name="description" content="Spesialisert cybersikkerhet for online bettingoperatører: ISO 27001, MGA/UKGC/SGA compliance, DDoS-beskyttelse, svindelforebygging og betalingssikkerhet.">
+	<meta name="keywords" content="gaming cybersecurity, betting operator security, ISO 27001 gaming license, MGA compliance consultant, UKGC security requirements, SGA Swedish gaming, online casino security, DDoS protection betting, fraud prevention gaming, PCI DSS gambling, responsible gambling security, gaming license consultant Sweden">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="author" content="James Pether Sörling, CISSP, CISM">
+	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:title" content="Cybersecurity for Betting & Gaming Operators | Hack23">
+	<meta property="og:description" content="Expert security consulting for gaming operators: ISO 27001 certification, MGA/UKGC/SGA compliance, DDoS mitigation, fraud prevention, and payment security solutions.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://hack23.com/industries-betting-gaming.html">
+	<meta property="og:image" content="cia-icon-140.webp">
+	<meta property="og:site_name" content="Hack23 AB - Gaming Industry Cybersecurity">
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Cybersecurity for Betting & Gaming Operators">
+	<meta name="twitter:description" content="Specialized security consulting for gaming operators: ISO 27001, regulatory compliance, DDoS protection, fraud prevention.">
+	<meta name="twitter:image" content="cia-icon-140.webp">
+	<meta property="og:locale" content="nb_NO">
+	
+	<!-- Schema.org structured data -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@graph": [
+	    {
+	      "@type": ["Organization", "ProfessionalService"],
+	      "@id": "https://hack23.com/#org",
+	      "name": "Hack23 AB",
+	      "url": "https://hack23.com/",
+	      "logo": "cia-icon-140.webp",
+	      "description": "Specialized cybersecurity consulting for betting and gaming operators",
+	      "address": {
+	        "@type": "PostalAddress",
+	        "addressLocality": "Gothenburg",
+	        "addressCountry": "SE"
+	      },
+	      "areaServed": [
+	        {
+	          "@type": "Country",
+	          "name": "Sweden"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "Malta"
+	        },
+	        {
+	          "@type": "Country",
+	          "name": "United Kingdom"
+	        }
+	      ],
+	      "makesOffer": [
+	        {
+	          "@type": "Offer",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "ISO 27001 Implementation for Gaming Operators",
+	            "description": "Complete ISO 27001 certification support for MGA, UKGC, and SGA license applications"
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "Gaming License Security Compliance",
+	            "description": "Regulatory compliance consulting for Malta Gaming Authority, UK Gambling Commission, and Spelinspektionen"
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "DDoS Protection for Betting Platforms",
+	            "description": "DDoS mitigation strategy and implementation for high-traffic gaming platforms"
+	          }
+	        },
+	        {
+	          "@type": "Offer",
+	          "itemOffered": {
+	            "@type": "Service",
+	            "name": "Gaming Fraud Prevention",
+	            "description": "Fraud detection system design for bonus abuse, multi-accounting, and payment fraud"
+	          }
+	        }
+	      ]
+	    },
+	    {
+	      "@type": "WebPage",
+	      "@id": "https://hack23.com/industries-betting-gaming.html#webpage",
+	      "url": "https://hack23.com/industries-betting-gaming.html",
+	      "inLanguage": "nb",
+	      "name": "Cybersecurity for Betting & Gaming Operators",
+	      "description": "Specialized cybersecurity consulting for online betting and gaming operators",
+	      "breadcrumb": {
+	        "@type": "BreadcrumbList",
+	        "itemListElement": [
+	          {
+	            "@type": "ListItem",
+	            "position": 1,
+	            "name": "Home",
+	            "item": "https://hack23.com/"
+	          },
+	          {
+	            "@type": "ListItem",
+	            "position": 2,
+	            "name": "Services",
+	            "item": "https://hack23.com/services.html"
+	          },
+	          {
+	            "@type": "ListItem",
+	            "position": 3,
+	            "name": "Betting & Spillindustri",
+	            "item": "https://hack23.com/industries-betting-gaming.html"
+	          }
+	        ]
+	      }
+	    },
+	    {
+	      "@type": "FAQPage",
+	      "mainEntity": [
+	        {
+	          "@type": "Question",
+	          "name": "What security certifications do I need for an MGA license?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "ISO 27001 certification is mandatory for Malta Gaming Authority (MGA) license applications. Additionally, PCI DSS certification is required for payment processing. MGA-approved security auditors must conduct periodic security assessments. Investment typically ranges from €30,000-€60,000 total (consultant fees + certification costs). ROI includes license approval, enhanced customer trust, and reduced security incidents."
+	          }
+	        },
+	        {
+	          "@type": "Question",
+	          "name": "How long does ISO 27001 certification take for a gaming operator?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "Complete ISO 27001 certification typically takes 6-9 months for gaming operators: 3-4 months for ISMS implementation (gap analysis, policy development, controls implementation, staff training), 2-3 months for internal audits and remediation, and 1-2 months for certification audit by accredited body. Expedited timelines possible for license application deadlines."
+	          }
+	        },
+	        {
+	          "@type": "Question",
+	          "name": "What are the main cybersecurity threats to betting platforms?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "Primary threats include: DDoS attacks (gaming platforms are high-value targets during major sporting events), fraud (bonus abuse, multi-accounting, payment fraud, arbitrage betting), account takeover (credential stuffing, phishing), payment security breaches (PCI DSS violations), insider threats, and money laundering. Comprehensive security requires multi-layered defense: WAF, DDoS mitigation, fraud detection systems, secure payment processing, and continuous monitoring."
+	          }
+	        },
+	        {
+	          "@type": "Question",
+	          "name": "How much does DDoS protection cost for a betting platform?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "DDoS protection costs vary by traffic volume and attack sophistication: Basic cloud-based protection (CloudFlare, AWS Shield Standard) starts at €200-500/month. Enterprise DDoS mitigation (AWS Shield Advanced, Akamai, CloudFlare Enterprise) ranges €3,000-10,000/month depending on bandwidth requirements. Custom implementation includes consulting (€10,000-30,000), infrastructure upgrades, and 24/7 monitoring. ROI measured in prevented downtime during high-value events (major sporting events, tournaments)."
+	          }
+	        },
+	        {
+	          "@type": "Question",
+	          "name": "What fraud detection capabilities should a gaming operator implement?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "Essential fraud detection includes: Multi-accounting detection (device fingerprinting, behavioral analysis, IP/geolocation tracking), bonus abuse prevention (wagering pattern analysis, velocity checks), payment fraud detection (card testing prevention, chargeback monitoring), arbitrage betting detection (odds comparison across operators), and AML/KYC compliance (identity verification, source of funds checks). Modern systems use machine learning for anomaly detection and real-time risk scoring."
+	          }
+	        },
+	        {
+	          "@type": "Question",
+	          "name": "Do you provide ongoing security support after ISO 27001 certification?",
+	          "acceptedAnswer": {
+	            "@type": "Answer",
+	            "text": "Yes. Hack23 offers ongoing security support after ISO 27001 certification, including continuous ISMS maintenance, vulnerability management, incident response, and annual internal audits. We help you stay compliant with MGA, UKGC, and SGA requirements, adapt to regulatory changes, and respond to new threats. Support packages are tailored to your operational needs and risk profile."
+	          }
+	        }
+	      ]
+	    }
+	  ]
+	}
+	</script>	<link rel="alternate" hreflang="en" href="https://hack23.com/industries-betting-gaming.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/industries-betting-gaming_da.html">
+<link rel="alternate" hreflang="da-DK" href="https://hack23.com/industries-betting-gaming_da.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/industries-betting-gaming_fi.html">
+<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/industries-betting-gaming_fi.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/industries-betting-gaming_no.html">
+<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/industries-betting-gaming_no.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/industries-betting-gaming_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/industries-betting-gaming_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/industries-betting-gaming_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/industries-betting-gaming_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/industries-betting-gaming_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/industries-betting-gaming_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/industries-betting-gaming_es.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/industries-betting-gaming_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/industries-betting-gaming_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/industries-betting-gaming.html">
+</head>
+
+<body>
+	<!-- Breadcrumb Navigation -->
+	<nav aria-label="Breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="index.html">Hjem</a>
+			</li>
+			<li class="breadcrumb-item">
+				<a href="services.html">Tjenester</a>
+			</li>
+			<li class="breadcrumb-item" aria-current="page">
+				Betting & Spillindustri
+			</li>
+		</ol>
+	</nav>
+
+	<header>
+		<div class="logo-container">
+			<img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+		</div>
+		<h1>🎰 Cybersikkerhet for Betting & Spilloperatører</h1>
+		<p class="hero-tagline">
+			Spesialisert sikkerhetrådgivning for online betting- og spilloperatører: ISO 27001-sertifisering, myndighetoverholdelse, DDoS-beskyttelse og svindelforebygging
+		</p>
+		<div class="app-link">
+			<a href="index_no.html" title="Hjem">Hjem</a>
+			<a href="services_no.html" title="Tjenester">Tjenester</a>
+			<a href="industries-investment-fintech_no.html" title="Investment & FinTech">Investment & FinTech</a>
+		</div>
+	</header>
+
+	<main>
+		<section id="industry-overview">
+			<h2>🎯 The Gaming Industry Security Landscape</h2>
+			
+			<div class="cards">
+				<div class="card">
+					<h3>💰 Market Overview</h3>
+					<p><strong>€50B+ European Online Gaming Market</strong></p>
+					<ul>
+						<li>High profit margins justify premium security investment</li>
+						<li>Strict regulatory requirements across jurisdictions</li>
+						<li>24/7 operations requiring continuous security monitoring</li>
+						<li>High-value targets for cyber attacks (DDoS, fraud, APTs)</li>
+						<li>Mandatory security certifications for license approval</li>
+					</ul>
+				</div>
+
+				<div class="card confidentiality-card">
+					<h3>⚖️ Regulatory Compliance Requirements</h3>
+					<p><strong>Multi-Jurisdiction Licensing Complexity</strong></p>
+					<ul>
+						<li><strong>MGA (Malta):</strong> ISO 27001 mandatory, comprehensive security audits</li>
+						<li><strong>UKGC (United Kingdom):</strong> Stringent security and player protection standards</li>
+						<li><strong>SGA (Sweden):</strong> Spelinspektionen licensing requirements</li>
+						<li><strong>Curaçao:</strong> Gaming license with security assessment</li>
+						<li><strong>GDPR:</strong> Player data protection and privacy compliance</li>
+						<li><strong>PCI DSS:</strong> Payment card security for transaction processing</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="security-challenges">
+			<h2>🛡️ Gaming Industry Security Challenges</h2>
+			
+			<div class="cards">
+				<div class="card integrity-card">
+					<h3>🚨 DDoS Protection</h3>
+					<p><strong>Gaming platforms are high-value DDoS targets</strong></p>
+					<ul>
+						<li>Attacks during major sporting events (World Cup, Champions League)</li>
+						<li>Extortion attempts before high-revenue periods</li>
+						<li>Competitor attacks to gain market advantage</li>
+						<li>Multi-vector attacks (application + network layers)</li>
+					</ul>
+					<p><strong>Our Solution:</strong> AWS Shield Advanced, CloudFront WAF configuration, DDoS mitigation strategy, 24/7 monitoring, incident response planning</p>
+				</div>
+
+				<div class="card availability-card">
+					<h3>🕵️ Fraud Prevention</h3>
+					<p><strong>Multiple fraud vectors requiring comprehensive detection</strong></p>
+					<ul>
+						<li><strong>Bonus Abuse:</strong> Multi-accounting, arbitrage exploitation</li>
+						<li><strong>Payment Fraud:</strong> Stolen cards, chargeback fraud</li>
+						<li><strong>Account Takeover:</strong> Credential stuffing, phishing attacks</li>
+						<li><strong>Arbitrage Betting:</strong> Exploiting odds discrepancies</li>
+						<li><strong>Money Laundering:</strong> AML/KYC compliance violations</li>
+					</ul>
+					<p><strong>Our Solution:</strong> Fraud detection system design, machine learning anomaly detection, device fingerprinting, behavioral analysis, real-time risk scoring</p>
+				</div>
+
+				<div class="card confidentiality-card">
+					<h3>💳 Payment Security</h3>
+					<p><strong>PCI DSS compliance for payment processing</strong></p>
+					<ul>
+						<li>Secure payment gateway integration</li>
+						<li>Tokenization and encryption of card data</li>
+						<li>PCI DSS Level 1 compliance (>6M transactions/year)</li>
+						<li>Payment fraud monitoring and prevention</li>
+						<li>Chargeback management and dispute resolution</li>
+					</ul>
+					<p><strong>Our Solution:</strong> PCI DSS gap analysis, secure payment architecture, payment gateway security review, compliance documentation</p>
+				</div>
+
+				<div class="card integrity-card">
+					<h3>🔐 Player Data Protection</h3>
+					<p><strong>GDPR compliance and responsible gambling</strong></p>
+					<ul>
+						<li>Personal data protection (identity, financial, behavioral)</li>
+						<li>Consent management and privacy rights (GDPR Articles 15-22)</li>
+						<li>Responsible gambling data (self-exclusion, deposit limits)</li>
+						<li>Data breach notification (72-hour requirement)</li>
+						<li>Data retention and secure deletion</li>
+					</ul>
+					<p><strong>Our Solution:</strong> GDPR compliance assessment, data protection framework, privacy policy development, responsible gambling security measures</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="our-services">
+			<h2>🏆 Our Gaming Industry Services</h2>
+			
+			<div class="cards">
+				<div class="card">
+					<h3>1️⃣ ISO 27001 Implementation for Gaming Licenses</h3>
+					<p><strong>Complete certification support for license applications</strong></p>
+					<ul>
+						<li>Gap analysis against ISO 27001:2022 requirements</li>
+						<li>ISMS design tailored to gaming operations</li>
+						<li>Policy and procedure development (30+ security policies)</li>
+						<li>Risk assessment specific to gaming threats</li>
+						<li>Control implementation and evidence gathering</li>
+						<li>Internal audit preparation</li>
+						<li>Certification audit support (MGA-approved auditors)</li>
+					</ul>
+					<p><strong>Timeline:</strong> 6-9 months | <strong>Investment:</strong> €30,000-€60,000 total</p>
+					<p><strong>ROI:</strong> License approval, customer trust, reduced security incidents, competitive advantage</p>
+				</div>
+
+				<div class="card">
+					<h3>2️⃣ Security Architecture Review</h3>
+					<p><strong>Comprehensive security assessment of gaming platforms</strong></p>
+					<ul>
+						<li>Gaming platform security architecture review</li>
+						<li>Payment system security assessment</li>
+						<li>Cloud infrastructure security (AWS, Azure, GCP)</li>
+						<li>API security review (third-party integrations)</li>
+						<li>Database security and encryption</li>
+						<li>Network segmentation and access control</li>
+						<li>Security control maturity assessment</li>
+					</ul>
+					<p><strong>Deliverable:</strong> Detailed security architecture report with prioritized remediation roadmap</p>
+				</div>
+
+				<div class="card">
+					<h3>3️⃣ Penetration Testing & Vulnerability Assessment</h3>
+					<p><strong>Proactive security testing before attackers find vulnerabilities</strong></p>
+					<ul>
+						<li>Web application penetration testing (OWASP Top 10)</li>
+						<li>Mobile app security assessment (iOS/Android)</li>
+						<li>API security testing (authentication, authorization)</li>
+						<li>Infrastructure vulnerability scanning</li>
+						<li>Social engineering and phishing simulation</li>
+						<li>Red team exercises (advanced persistent threat simulation)</li>
+					</ul>
+					<p><strong>Compliance:</strong> Meets MGA, UKGC, and SGA security audit requirements</p>
+				</div>
+
+				<div class="card">
+					<h3>4️⃣ DDoS Mitigation Strategy</h3>
+					<p><strong>Protect revenue during high-traffic events</strong></p>
+					<ul>
+						<li>DDoS risk assessment and threat modeling</li>
+						<li>AWS Shield Advanced implementation</li>
+						<li>CloudFront + WAF configuration</li>
+						<li>Rate limiting and geo-blocking strategies</li>
+						<li>Incident response playbooks</li>
+						<li>24/7 monitoring and alerting</li>
+						<li>DDoS simulation testing</li>
+					</ul>
+					<p><strong>Result:</strong> 99.99% uptime during major sporting events, extortion prevention, revenue protection</p>
+				</div>
+
+				<div class="card">
+					<h3>5️⃣ Fraud Detection System Design</h3>
+					<p><strong>Multi-layered fraud prevention tailored to gaming</strong></p>
+					<ul>
+						<li>Fraud risk assessment and pattern analysis</li>
+						<li>Machine learning anomaly detection</li>
+						<li>Device fingerprinting and behavioral analysis</li>
+						<li>Real-time risk scoring and automated blocking</li>
+						<li>KYC/AML compliance integration</li>
+						<li>Bonus abuse and arbitrage detection</li>
+						<li>Chargeback fraud prevention</li>
+					</ul>
+					<p><strong>ROI:</strong> Typical fraud reduction: 60-80%, bonus abuse prevention: €100K-500K annually saved</p>
+				</div>
+
+				<div class="card">
+					<h3>6️⃣ Incident Response Planning</h3>
+					<p><strong>Be prepared when (not if) incidents occur</strong></p>
+					<ul>
+						<li>Gaming-specific incident response plan</li>
+						<li>Breach notification procedures (GDPR 72-hour requirement)</li>
+						<li>Regulatory reporting (MGA, UKGC, SGA notification)</li>
+						<li>Crisis communication planning</li>
+						<li>Forensic investigation procedures</li>
+						<li>Business continuity and disaster recovery</li>
+						<li>Incident response team training</li>
+					</ul>
+					<p><strong>Compliance:</strong> Meets GDPR Article 33/34, regulatory authority requirements</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="why-choose-us">
+			<h2>💡 Why Choose Hack23 for Gaming Security</h2>
+			
+			<div class="cards">
+				<div class="card confidentiality-card">
+					<h3>🎯 Gaming Industry Expertise</h3>
+					<ul>
+						<li>Deep understanding of MGA, UKGC, SGA regulatory requirements</li>
+						<li>Experience with gaming license application security audits</li>
+						<li>Knowledge of gaming-specific threats (DDoS, fraud, bonus abuse)</li>
+						<li>Understanding of payment processing security (PCI DSS)</li>
+						<li>Expertise in responsible gambling security measures</li>
+					</ul>
+				</div>
+
+				<div class="card integrity-card">
+					<h3>🏆 Proven Security Framework</h3>
+					<ul>
+						<li><strong>Public ISMS:</strong> 30+ security policies on GitHub (demonstrable expertise)</li>
+						<li><strong>ISO 27001 Experience:</strong> Complete ISMS implementation and certification support</li>
+						<li><strong>AWS Advanced:</strong> Cloud security architecture expertise</li>
+						<li><strong>Certifications:</strong> CISSP, CISM, AWS Security Specialty</li>
+						<li><strong>Transparency:</strong> Our security practices are publicly verifiable</li>
+					</ul>
+				</div>
+
+				<div class="card availability-card">
+					<h3>⚡ Practical, Business-Focused Approach</h3>
+					<ul>
+						<li>Security that enables business, not hinders innovation</li>
+						<li>Clear ROI on security investments</li>
+						<li>Risk-based prioritization (not checkbox compliance)</li>
+						<li>Remote or in-person consulting (Gothenburg-based)</li>
+						<li>Flexible engagement models (project, retainer, advisory)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="faq">
+			<h2>❓ Frequently Asked Questions</h2>
+			
+			<div class="faq-container">
+				<div class="faq-item">
+					<h3>Q: What security certifications do I need for an MGA license?</h3>
+					<p><strong>A:</strong> ISO 27001 certification is mandatory for Malta Gaming Authority (MGA) license applications. Additionally, PCI DSS certification is required for payment processing. MGA-approved security auditors must conduct periodic security assessments. Investment typically ranges from €30,000-€60,000 total (consultant fees + certification costs). ROI includes license approval, enhanced customer trust, and reduced security incidents.</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Q: How long does ISO 27001 certification take for a gaming operator?</h3>
+					<p><strong>A:</strong> Complete ISO 27001 certification typically takes 6-9 months for gaming operators:</p>
+					<ul>
+						<li>3-4 months: ISMS implementation (gap analysis, policy development, controls implementation, staff training)</li>
+						<li>2-3 months: Internal audits and remediation</li>
+						<li>1-2 months: Certification audit by accredited body</li>
+					</ul>
+					<p>Expedited timelines possible for urgent license application deadlines.</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Q: What are the main cybersecurity threats to betting platforms?</h3>
+					<p><strong>A:</strong> Primary threats include:</p>
+					<ul>
+						<li><strong>DDoS Attacks:</strong> Gaming platforms are high-value targets during major sporting events</li>
+						<li><strong>Fraud:</strong> Bonus abuse, multi-accounting, payment fraud, arbitrage betting</li>
+						<li><strong>Account Takeover:</strong> Credential stuffing, phishing</li>
+						<li><strong>Payment Security:</strong> PCI DSS violations, card fraud</li>
+						<li><strong>Insider Threats:</strong> Employee access abuse</li>
+						<li><strong>Money Laundering:</strong> AML/KYC compliance violations</li>
+					</ul>
+					<p>Comprehensive security requires multi-layered defense: WAF, DDoS mitigation, fraud detection systems, secure payment processing, and continuous monitoring.</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Q: How much does DDoS protection cost for a betting platform?</h3>
+					<p><strong>A:</strong> DDoS protection costs vary by traffic volume and attack sophistication:</p>
+					<ul>
+						<li><strong>Basic Protection:</strong> CloudFlare, AWS Shield Standard (€200-500/month)</li>
+						<li><strong>Enterprise Protection:</strong> AWS Shield Advanced, Akamai, CloudFlare Enterprise (€3,000-10,000/month)</li>
+						<li><strong>Implementation:</strong> Consulting, infrastructure upgrades, 24/7 monitoring (€10,000-30,000 one-time)</li>
+					</ul>
+					<p><strong>ROI:</strong> Prevented downtime during high-value events (major sporting events, tournaments) - single hour of downtime can cost €50,000-500,000 in lost revenue.</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Q: What fraud detection capabilities should a gaming operator implement?</h3>
+					<p><strong>A:</strong> Essential fraud detection includes:</p>
+					<ul>
+						<li><strong>Multi-accounting Detection:</strong> Device fingerprinting, behavioral analysis, IP/geolocation tracking</li>
+						<li><strong>Bonus Abuse Prevention:</strong> Wagering pattern analysis, velocity checks</li>
+						<li><strong>Payment Fraud Detection:</strong> Card testing prevention, chargeback monitoring</li>
+						<li><strong>Arbitrage Betting Detection:</strong> Odds comparison across operators</li>
+						<li><strong>AML/KYC Compliance:</strong> Identity verification, source of funds checks</li>
+					</ul>
+					<p>Modern systems use machine learning for anomaly detection and real-time risk scoring.</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Q: Do you provide ongoing security support after ISO 27001 certification?</h3>
+					<p><strong>A:</strong> Yes, we offer ongoing support options:</p>
+					<ul>
+						<li><strong>Annual ISMS Review:</strong> Continuous improvement and recertification preparation</li>
+						<li><strong>Security Retainer:</strong> On-demand security consulting (10-40 hours/month)</li>
+						<li><strong>Incident Response Support:</strong> 24/7 emergency response availability</li>
+						<li><strong>Compliance Updates:</strong> Regulatory changes (MGA, UKGC, SGA updates)</li>
+						<li><strong>Penetration Testing:</strong> Annual or quarterly security assessments</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+			<h2>🚀 Ready to Secure Your Gaming Operation?</h2>
+			
+			<div class="card">
+				<p><strong>Contact us for a free initial consultation to discuss your gaming security requirements.</strong></p>
+				
+				<div class="contact-info">
+					<p>📧 <strong>Email:</strong> Contact via LinkedIn</p>
+					<p>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jamessorling/" target="_blank" rel="noopener noreferrer">James Pether Sörling</a></p>
+					<p>🏢 <strong>Company:</strong> <a href="https://www.linkedin.com/company/hack23/" target="_blank" rel="noopener noreferrer">Hack23 AB on LinkedIn</a></p>
+					<p>📍 <strong>Location:</strong> Gothenburg, Sweden (Remote consulting available)</p>
+				</div>
+
+				<div class="hero-cta">
+					<a href="services.html" class="btn-primary-large">View All Services</a>
+					<a href="why-hack23.html" class="btn-secondary">Why Hack23?</a>
+					<a href="https://github.com/Hack23/ISMS-PUBLIC" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Public ISMS</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="related-content">
+			<h2>📚 Related Resources</h2>
+			
+			<div class="cards">
+				<div class="card">
+					<h3>🔐 Public ISMS</h3>
+					<p>Review our complete Information Security Management System on GitHub - demonstrating the security expertise we bring to gaming operators.</p>
+					<a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank" rel="noopener noreferrer">View ISMS Repository →</a>
+				</div>
+
+				<div class="card">
+					<h3>📋 ISO 27001 Compliance</h3>
+					<p>Comprehensive compliance checklist covering 93 ISO 27001:2022 controls with implementation guidance.</p>
+					<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md" target="_blank" rel="noopener noreferrer">View Compliance Checklist →</a>
+				</div>
+
+				<div class="card">
+					<h3>🛡️ Security Services</h3>
+					<p>Explore our complete range of cybersecurity consulting services across industries.</p>
+					<a href="services.html">All Security Services →</a>
+				</div>
+
+				<div class="card">
+					<h3>💼 Investment & FinTech</h3>
+					<p>Security consulting for investment firms, hedge funds, and FinTech companies.</p>
+					<a href="industries-investment-fintech_no.html">Investment & FinTech Security →</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2025 Hack23 AB (Org.nr 559534-7807). Alle rettigheter reservert.</p>
+		<p>Professional cybersecurity consulting services for betting and gaming operators.</p>
+		<div class="footer-links">
+			<a href="index.html">Hjem</a>
+			<a href="services.html">Tjenester</a>
+			<a href="why-hack23.html">Why Hack23</a>
+			<a href="blog.html">Blog</a>
+			<a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank" rel="noopener noreferrer">Public ISMS</a>
+		</div>
+	</footer>
+</body>
+</html>
