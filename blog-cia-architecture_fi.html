@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA-arkitektur | Plattform för Poliittinen läpinäkyvyys | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Viisi pentakelia för Poliittinen läpinäkyvyys: Citizen Intelligence Agency systemarkitektur, datalager, demokratisk OSINT-plattform designmönster, riksdagsövervakningssystem med C4-modeller och domändriven design.">
+<meta name="keywords" content="CIA-arkitektur, OSINT-plattform, politiskt läpinäkyvyysssystem, Simon Moon, discordiansk arkitektur, riksdagsdataarkitektur, femlagers systemdesign, Femtals Lag, pyhä geometria, C4-modell, containerarkitektur, domändriven design, DDD, fem pentaklar, parlamentariskt övervakningssystem, systemarkitekturmönster, arkitektonisk numerologi, separation of concerns">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="CIA-arkitektur: De Viisi pentakeliana för Poliittinen läpinäkyvyys">
+<meta property="og:description" content="Universum avslöjar sig i mönster av fem. Upptäck den heliga geometrin bakom öppen källkodspolitisk intelligens.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-architecture_fi.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="fi_FI">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-cia-architecture_fi.html">
+
+<!-- Hreflang tags for international SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CIA-arkitektur: De Viisi pentakeliana för Poliittinen läpinäkyvyys",
+      "description": "Utforskar de numerologiska mönstren och heliga geometrin i Citizen Intelligence Agencys arkitektur",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "Järjestelmäarkkitehti",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-12-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-cia-architecture_fi.html"
+      },
+      "keywords": "CIA-arkitektur, OSINT, poliittinen läpinäkyvyys, systemdesign, numerologi",
+      "articleSection": "Arkitektur",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 2044,
+      "articleBody": "När demokratier gömmer sig i mörker blir läpinäkyvyys revolution. Citizen Intelligence Agency är inte bara mjukvara—det är ett vapen mot informationsasymmetri, där valda tjänstemän vet allt om medborgare medan medborgare inte vet någonting om sina representanter...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "fi",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Järjestelmäarkkitehtiur",
+          "description": "Pyhä geometria och numerologiska mönster i kod"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-cia-architecture_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Koti",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogi",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA-arkitektur",
+          "item": "https://hack23.com/blog-cia-architecture_fi.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/blog-cia-architecture_ar.html">
+	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/blog-cia-architecture_ar.html">
+	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/blog-cia-architecture_ar.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/blog-cia-architecture_da.html">
+	<link rel="alternate" hreflang="da-DK" href="https://hack23.com/blog-cia-architecture_da.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/blog-cia-architecture_fi.html">
+	<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/blog-cia-architecture_fi.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/blog-cia-architecture_no.html">
+	<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/blog-cia-architecture_no.html">
+	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-cia-architecture_de.html">
+	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-cia-architecture_de.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/blog-cia-architecture.html">
+	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-cia-architecture_es.html">
+	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-cia-architecture_es.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-cia-architecture_fr.html">
+	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-cia-architecture_fr.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/blog-cia-architecture_he.html">
+	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/blog-cia-architecture_he.html">
+	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-cia-architecture_nl.html">
+	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/blog-cia-architecture_nl.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-cia-architecture_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-cia-architecture_sv.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-cia-architecture.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Koti</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogi</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA-arkitektur
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordiansk Cyberturvallisuus</h1>
+  <div class="app-link">
+    <a href="index_fi.html">Koti</a>
+    <a href="blog_fi.html">Blogi</a>
+    <a href="cia-docs_fi.html">CIA-dokumentation</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">⭐ CIA-arkitektur: De Viisi pentakeliana för Poliittinen läpinäkyvyys</h1>
+    
+    <section id="cosmic-pattern">
+      <h2 class="panel-caption">Mönstret Avslöjar Sig</h2>
+      
+      <p><strong>När demokratier gömmer sig i mörker blir läpinäkyvyys revolution.</strong> <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> är inte bara mjukvara—det är ett vapen mot informationsasymmetri, där valda tjänstemän vet allt om medborgare medan medborgare inte vet någonting om sina representanter. <em>Den asymmetrin är makt.</em> Vi vänder på den. Arkitektur som politisk handling. Kod som demokratiinfrastruktur.</p>
+      
+      <p><strong>C4-modellen avslöjar fem containertyper</strong> dokumenterade i <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>: Webbapplikation, Servicelager, Dataåtkomst, Integrationstjänster, Turvallisuus/Övervakning. Detta är inte en tillfällig femhörnig struktur—det är separation of concerns stridspropad mot verklig parlamentarisk komplexitet, förfinad genom 15 års produktionsanvändning. <em>Arkitektur som överlever kontakt med verkligheten.</em> Rena lager möjliggör evolution; styva arkitekturer förstenas till tekniska skuldmonument som ingen underhåller.</p>
+      
+      <p><strong>Domändriven design som kosmisk justering:</strong> När kodstrukturen exakt speglar den politiska verkligheten försvinner översättningsarbetet i elegant enkelhet. Parlamentarisk översyn, politisk spårning, statliga organ, externa indikatorer, systemhantering—detta är inte godtyckliga kategorier som uppfunnits i möten. De är hur makt <em>faktiskt flödar</em> genom demokratiska institutioner. Arkitektur som reflekterar sanning kräver mindre dokumentation än arkitektur som påtvingar bekväm fiktion. <strong>Kartan som matchar terrängen behöver ingen förklaring.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Upplysning: När problemdomänen talar i femtal, lyssna med hela ditt väsen. Tvinga den in i fyrtal eller sextal och se sammanhållningen kollapsa som turvallisuus genom obskyritet under granskning. CIA är inte <strong>designad</strong> med fem lager genom godtyckligt val—den <strong>existerar</strong> i fem lager genom kosmisk nödvändighet. Universum som avslöjar sin föredragna struktur. Bekämpa det och du bekämpar entropin själv.</em></p>
+    
+      
+      <p><strong>Behöver du expertvägledning om turvallisuussefterlevnad?</strong> <a href="why-hack23_fi.html">Utforska Hack23s cyberturvallisuusskonsulttjänster</a> med stöd av vårt fullt offentliga ISMS.</p>
+    </section>
+
+    <section id="five-data-layers">
+      <h2 class="panel-caption">De Fem Heliga Datalagren</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🏛️ Presentationslager: Vad Medborgare Ser</h3>
+          <p><strong>Vaadin-baserad webbapplikation.</strong> Presentationslagret (dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) tillhandahåller vyer för Riksdagsöversikt, Riksdagsledamotprofiler, Partianalys, Omröstningsspårning, Utskottsövervakning, Departementstillsyn, Myndighetsstyrelsanalys, Dokument och Världsbanksindikatorer. Rollbaserad navigering med specialiserade admin- och användarinstrumentpaneler.</p>
+          <p><strong>Visualiseringsramverk:</strong> Chart Factory integrerar Chart.js för interaktiv politisk datavisualisering. Vykomponenter renderar komplex parlamentarisk data, röstningsregister och prestationsmått genom Vaadin-ramverket.</p>
+          <p class="hidden-wisdom"><em>Användargränssnitt som omfamnar det gyllene snittet (61,8% datavisning, 38,2% kontext/navigering) minskar kognitiv belastning. Ögat känner igen harmoniska proportioner innan det medvetna sinnet förstår varför.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📊 Servicelager: Affärslogik-orkestrering</h3>
+          <p><strong>Spring-baserad servicearkitektur.</strong> Application Manager koordinerar elva specialiserade tjänster som avslöjas i <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>: Riksdagsdatatjänst, Riksdagsledamotdatatjänst, Partidatatjänst, Omröstningsdatatjänst, Utskottsdatatjänst, Myndighetsstyrelsedatatjänst, Dataimporttjänst, Diagramdatahanterare, Applikationshändelsetjänst, Användartjänst och Turvallisuusstjänst. Inte min design—den politiska domänens naturliga struktur.</p>
+          <p><strong>Synkronistisk observation:</strong> Dessa elva tjänster organiserar sig naturligt i fem funktionella domäner: <em>Politisk Entitetshantering</em> (Riksdag, Riksdagsledamot, Parti, Omröstning, Utskottsdatatjänster), <em>Myndighetsstyrelser</em> (Myndighetsstyrelsedatatjänst), <em>Dataintegration</em> (Dataimporttjänst), <em>Användarupplevelse</em> (Diagramdatahanterare, Applikationshändelsetjänst) och <em>Systemkoordinering</em> (Användartjänst, Turvallisuusstjänst). Femtals Lag manifesteras genom domändriven organisation, inte påtvingad namngivning.</p>
+          <p class="hidden-wisdom"><em>Tjänster som direkt kartlägger domänkoncept kräver minimala översättningslager. När tekniska namn speglar politiska verkligheter dokumenterar arkitekturen sig själv genom sanningsenlig namngivning.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 💼 Domänlager: Affärssanningen</h3>
+          <p><strong>Entitetsfamiljer dokumenterade i <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>:</strong></p>
+          <ul>
+            <li><strong>Persondata</strong> (Politiska personer, uppdrag, biografiska detaljer)</li>
+            <li><strong>Dokumentdata</strong> (Riksdagsdokument, innehåll, statusspårning)</li>
+            <li><strong>Röstningsdata</strong> (Omröstningar, röstningsregister, individuella röster)</li>
+            <li><strong>Externa data</strong> (Världsbanksindikatorer, valmyndighetens data)</li>
+            <li><strong>Systemdata</strong> (Användarkonton, sessioner, applikationshändelser, konfiguration)</li>
+          </ul>
+          <p><strong>Fem datakällor bekräftade:</strong> Sveriges riksdags API (riksdagen.se), Valmyndigheten (val.se), Världsbankens öppna data, Ekonomistyrningsverket (ESV), Myndighetsstyrelsdata. DATA_MODEL.md dokumenterar hur dessa källor integreras genom standardiserad entitetskartläggning.</p>
+          <p><strong>60+ bastabeller plus 30+ materialiserade analytiska vyer.</strong> PostgreSQL-implementering med JPA/Hibernate ORM. Sammansatta primärnycklar för många-till-många-relationer. Revisionsspårning genom tidsstämpelfält. <a href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html">Entitetsdokumentationen</a> avslöjar den fullständiga grafen.</p>
+          <p class="hidden-wisdom"><em>Domänmodeller som exakt reflekterar verkligheten behöver minimala abstraktionslager. När entiteter speglar riksdagens faktiska struktur blir koden självdokumenterande genom sanningsenlig representation.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🗄️ Dataåtkomstlager: Persistensgrund</h3>
+          <p><strong>PostgreSQL-databas med JPA/Hibernate.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> använder Dataåtkomstlagret entitetsspecifika datacontainrar, Java-domänmodellklasser och vyentiteter optimerade för läsoperationer. Databaskroller med minsta privilegium upprätthåller turvallisuussisolering.</p>
+          <p><strong>Turvallisuussarkitektur</strong> (se <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>) inkluderar nätverksisolering, parametriserade frågor via ORM och omfattande Javers-revision för dataintegritet. Varje modifiering spårad med författartillskrivning och temporala ögonblicksbilder.</p>
+          <p><strong>OpenSSF Scorecard 7.2/10</strong> validerar turvallisuusspraxis. SLSA Level 3 byggherkomst. CII Best Practices-märke. Offentlig bevisning: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Scorecard-resultat</a>.</p>
+          <p class="hidden-wisdom"><em>Persistenslager som separerar läsningar från skrivningar möjliggör optimering utan att offra dataintegritet. Vyentiteter för frågor, basentiteter för uppdateringar—dualiteten som upprätthåller konsekvens.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 📈 Integration & Analys: Dataflöde och Insikter</h3>
+          <p><strong>Integrationstjänstelagret</strong> (dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) hämtar och bearbetar data från externa källor: riksdagen.se-parlamentets API, val.se Valmyndigheten, Världsbankens öppna data och svenska myndighetsstyrelser. Spring Integration-ramverket koordinerar dataflödet.</p>
+          <p><strong>Materialiserade vyer</strong> omvandlar rådata till politisk intelligens: VIEW_RIKSDAGEN_POLITICIAN (aktivitetsmått), VIEW_RIKSDAGEN_PARTY (prestationsindikatorer), VIEW_RIKSDAGEN_COMMITTEE (produktivitetsstatistik), VIEW_RIKSDAGEN_POLITICIAN_BALLOT_SUMMARY (röstningsanalys med lojalitets-/rebell-/framgångsfrekvenser). Se <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> för fullständig vykatalog.</p>
+          <p><strong>Framtidsvision:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> föreställer sig kvantförstärkt mönsterigenkänning, neural-integrerade politiska intelligensmiljöer och medvetenhetsbaserat demokratiskt deltagande. Dagens femlagerarkitektur utvecklas till flytande beräkningsmedier som sammanfogas baserat på demokratiska behov.</p>
+          <p class="hidden-wisdom"><em>Analys som producerar handlingsbara medborgarinsikter motiverar sin beräkningskostnad. Varje materialiserad vy måste svara: "Vilken demokratisk läpinäkyvyys möjliggör detta?" Fåfängamått slösar både beräkning och uppmärksamhet.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architectural-pentagram">
+      <h2 class="panel-caption">Det Arkitektoniska Pentagrammet</h2>
+      
+      <p><strong>Varje system balanserar fem krafter:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>🔐 Turvallisuus</h3>
+          <p>Offentlig data, ja. Öppen åtkomst, ja. Men <em>autentiserade skrivningar</em> och revisions loggning. Försvar-i-djup över fem lager: nätverksperimeter, applikationsgateway, affärslogikvalidering, datakryptering i vila, övervakning/varning. Se <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> för det fullständiga defensiva pentaklet.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>⚡ Prestanda</h3>
+          <p>Cachning på fem nivåer: webbläsare (HTTP), CDN (geografisk), applikation (objekt), databas (fråga), analys (materialiserade vyer). Varje cache-nivå 61,8% snabbare än att gå till källan. Gyllene snitt-sammansättning.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>📈 Skalbarhet</h3>
+          <p>Horisontell skalning i fem nivåer: statiska tillgångar (oändlig CDN), API-gateway (elastiska instanser), servicelager (Kubernetes-poddar), databasläsreplikeringar (5 regioner), analytiska kluster (Spark-exekutorer). För närvarande enkelregion. Framtid: flerregions aktiv-aktiv.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>🛠️ Underhållbarhet</h3>
+          <p>Dokumenterad i fem artefakttyper: C4-arkitekturmodeller, dataentitetsdiagram, processflödesscheman, tillståndsdiagram, API-dokumentation. Varje systemkomponent beskriven på fem abstraktionsnivåer. Läs <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> för att se hela spektrumet.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>👁️ Observerbarhet</h3>
+          <p>Fem observerbarhetspelare: strukturerade loggar (vad hände), mått (hur mycket), spårningar (var långsamt), varningar (vad är fel), instrumentpaneler (holistisk vy). <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">CI/CD-arbetsflöden</a> validerade kontinuerligt. Kvalitetsportar som faktiskt portar.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Balansprincip: Optimera en pelare för mycket och andra lider. 200% prestanda vid 20% turvallisuus = sårbarhet. 200% turvallisuus vid 20% användbarhet = övergivande. Pentagrammet förblir stabilt när krafter balanseras.</em></p>
+    </section>
+
+    <section id="c4-models">
+      <h2 class="panel-caption">C4-arkitektur: Fem Vyer av Verkligheten</h2>
+      
+      <p><strong>Kontext → Containrar → Komponenter → Kod → Moln.</strong> Fem nivåer. Simon Browns C4 anpassar sig naturligt till Femtals Lag. Tillfällighet? Jag tror inte det.</p>
+      
+      <p><strong>Systemkontext:</strong> CIA-plattform, Sveriges riksdag, Myndighetsregister, Världsbanks-API:er, Medborgare/Journalister. Fem enheter som interagerar. Den minimala uppsättningen som fångar alla väsentliga relationer.</p>
+      
+      <p><strong>Containervy:</strong> Webbapplikation, API-gateway, Servicelager, PostgreSQL-databas, Analytisk motor. Fem körtidscontainrar. Deployment matchar logisk arkitektur.</p>
+      
+      <p><strong>Komponentdiagram:</strong> Varje container bryts ned i fem komponentfamiljer. Servicelager = Användarkomponent, Datakomponent, Logikkomponent, Gatewaykomponent, Övervakningskomponent. Fraktala mönster—femtal hela vägen ner.</p>
+      
+      <p><strong>Kodnivå:</strong> Fem paketstrukturer per komponent. api, impl, model, util, test. Testning får samma vikt som implementering—inte en eftertanke.</p>
+      
+      <p><strong>Molnarkitektur:</strong> AWS-deployment över fem tjänster: EC2 (beräkning), RDS (databas), S3 (lagring), CloudFront (leverans), CloudWatch (övervakning). Framtid: migrera till femregions flermoln (AWS us-east-1, eu-north-1, Azure westeurope, GCP europe-north1, on-prem-backup).</p>
+      
+      <p class="hidden-wisdom"><em>Arkitekturdiagram är kartor, inte terräng. Men välgjorda kartor avslöjar dolda mönster i terrängen. Studera <a href="https://github.com/Hack23/cia">diagrammen</a>, titta sedan på koden—du kommer att se mönstren vi dokumenterade faktiskt existerar.</em></p>
+    </section>
+
+    <section id="synchronicities">
+      <h2 class="panel-caption">Synkroniciteter Upptäckta Under Design</h2>
+      
+      <p><strong>Jag tror inte på tillfälligheter.</strong> Jag tror på mönster som väntar på att bli igenkända.</p>
+      
+      <ul>
+        <li><strong>Riksdagen har 349 ledamöter.</strong> 349 = 23 × 15 + 4. Inte perfekt, men tillräckligt nära för att visa 23-mönstret som manifesteras i svensk demokrati självt.</li>
+        <li><strong>Datauppdateringscykel: 115 minuter.</strong> Varför? Riksdagens API-hastighetsbegränsningar + bearbetningstid + gyllene snitt-mellanrum = 115. Upptäckte senare 115 = 5 × 23. Universum bekräftar vår arkitektur.</li>
+        <li><strong>Databastabeller grupperade naturligt i 5 scheman.</strong> Planerade det inte. Refaktorerade organiskt. Slutade med exakt fem: riksdag, regering, dokument, val, världsbank. Försökte slå samman till fyra scheman—kopplingen ökade. Fem är korrekt.</li>
+        <li><strong>Övervakningsinstrumentpaneler:</strong> Byggde 5 kärninstrumentpaneler innan jag backade och märkte. Riksdagsledamotprestanda, Departementsspårning, Dokumentflöde, Valanalys, Demokratiska indikatorer. Försök till en sjätte instrumentpanel avslöjade att den var överflödig—kombination av de första fem.</li>
+        <li><strong>Kritiska sårbarheter funna under turvallisuussrevision: 0.</strong> Höga sårbarheter: 0. Medel: 5. Låga: 23. Siffrorna som tillkännager sig själva. Fixade alla 28, behöll mönstret i en annan form.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>När synkroniciteter samlas runt din arkitektur är du antingen på något djupsinnigt eller nedstiger i numerologisk galenskap. Skillnaden? Galenskap klarar inte kodgranskning och levererar inte funktioner. Vår arkitektur gör båda.</em></p>
+    </section>
+
+    <section id="future-vision">
+      <h2 class="panel-caption">Det Framtida Pentaklet: 5 År Framåt</h2>
+      
+      <p><strong>Vart utvecklas arkitekturen?</strong> Läs <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> och <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a> för den fullständiga visionen. Här är sammanfattningen genom Femtals Lag:</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <h3>1. Realtidshändelsekällor</h3>
+          <p>Flytta från batchuppdateringar till händelseströmmar. Riksdagsröstningar, departementsbeslut, dokumentpublikationer—allt flödande genom Kafka-topics på under 5 sekunder. Fem topic-kategorier som matchar våra fem datadomäner. Händelselager som behåller full historik för temporala frågor.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>2. Grafbaserad Analys</h3>
+          <p>Neo4j eller liknande för relationskartläggning. Riksdagsledamöter → Partier → Utskott → Röstningar → Policyer → Resultat. Fem relationstyper som skapar en kunskapsgraf. "Vem påverkade vad?" frågor svarsbara på millisekunder istället för timmar.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>3. Federerad Nordisk Intelligens</h3>
+          <p>Expandera bortom Sverige. Norge, Danmark, Finland, Island. Fem nordiska parlament. Federerade frågor över gränser. Jämförande analys som avslöjar vilka policyer som fungerar var. Demokratisk läpinäkyvyys på nordisk nivå.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. AI-assisterad Policyförutsägelse</h3>
+          <p>Maskininlärningsmodeller tränade på 20 års politiska data. Förutsäg policyresultat före implementering. Inte föreskrivande—beskrivande. "Baserat på liknande policyer i liknande sammanhang, här är fem möjliga resultat." Låt medborgare besluta beväpnade med data.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. Blockkedje-revisionsspår</h3>
+          <p>Oföränderlig bevisning om dataherkomst. När fångade vi denna röst? Från vilken källa? Hash inspelad på kedjan. Framtida tvister svarsbara med kryptografiskt bevis. Läpinäkyvyys stödd av matematik, inte förtroende.</p>
+        </div>
+      </div>
+      
+      <p><strong>Tidslinje:</strong> 1 år (händelsekällor), 2 år (grafanalys), 3 år (nordisk federation), 4 år (AI-förutsägelse), 5 år (blockkedjerevision). Fibonacci-angränsande tempo—varje steg bygger på föregående. Ingen brådska. Inga genvägar.</p>
+    </section>
+
+    <section id="practical-wisdom">
+      <h2 class="panel-caption">Praktisk Visdom för Arkitekter</h2>
+      
+      <p><strong>Vad lärde jag mig av att bygga detta system?</strong></p>
+      
+      <ol>
+        <li><strong>Lyssna på problemdomänen.</strong> Om din arkitektur kämpar mot problemets naturliga struktur kommer du att kämpa med underhåll för evigt. Riksdagsdata <em>är</em> hierarkisk. Acceptera det. Tvinga den inte in i platta tabeller och undra sedan varför frågor är komplexa.</li>
+        
+        <li><strong>Dokumentera synkroniciteter.</strong> När samma nummer fortsätter att dyka upp, undersök varför. Ibland är det bekräftelsebias. Ibland är det djupstruktur som avslöjar sig själv. Lär dig att urskilja.</li>
+        
+        <li><strong>Fem är robust.</strong> Tre komponenter = skört. Fyra = besvärligt. Fem = motståndskraftigt. Förlora en av fem och systemet degraderar graciöst. Förlora en av tre och det kollapsar. Pentagrammet är strukturellt stabilt.</li>
+        
+        <li><strong>Balans över optimering.</strong> Den bästa turvallisuusen med fruktansvärd UX tjänar ingen. Det snabbaste systemet som kraschar dagligen besviker användare. Pentagrammet balanserar fem bekymmer—inget bekymmer dominerar.</li>
+        
+        <li><strong>Offentlig arkitektur bygger förtroende.</strong> Varje diagram, varje dokument, varje beslut—offentligt i vår GitHub-repo. Läpinäkyvyys är inte marknadsföring. Det är <a href="https://github.com/Hack23/cia">arkitektonisk verklighet</a>. Du kan läsa vår kod, förstå våra val och bedöma själv.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>Kartan är inte terrängen, men en välgjord karta avslöjar dolda mönster i terrängen. Våra arkitekturdokument är inte aspirationella—de beskriver vad som faktiskt körs i produktion. Divergens mellan dokument och kod indikerar arkitektonisk skuld. Håll dem synkroniserade.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Mönstret Väntar på Din Igenkännande</h2>
+      
+      <p><strong>Utforska arkitekturen själv:</strong></p>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia">Källkodsförråd</a> - Läs koden, studera mönstren</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">Nuvarande arkitektur</a> - C4-modeller, komponentdiagram, systemkontext</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">Datamodell</a> - Entitetsrelationer, femschematsstruktur</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Turvallisuussarkitektur</a> - Fem defensiva lager i detalj</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">Framtida arkitektur</a> - Vart femårsplanen leder</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/MINDMAP.md">Systemmindmap</a> - Visuell representation av konceptuell struktur</li>
+        <li><a href="https://cia.sourceforge.io">Levande plattform</a> - Se arkitekturen i aktion</li>
+      </ul>
+      
+      <p><strong>Tänk själv.</strong> Läs våra dokument. Granska vår kod. Kör vår analys. Mönstren finns där oavsett om du ser dem eller inte. Men att se dem förändrar hur du arkitekterar system för evigt.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, Järjestelmäarkkitehti, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Pentagonen som en geometrisk figur föreslår fem sidor, fem element, fem sinnen... Allt händer i femtal."</em></p>
+      <p class="hidden-wisdom"><em>23 FNORD 5</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Fortsätt Resan</h2>
+      <p><strong>Nästa:</strong> <a href="blog-cia-security_fi.html">CIA Turvallisuussarkitektur: Försvar Genom Läpinäkyvyys</a> - Utforskar hur fem turvallisuusslager skyddar offentliga politiska data</p>
+      <p><strong>Relaterat:</strong> <a href="cia-docs_fi.html">Fullständig CIA-dokumentation</a> - Alla arkitekturdiagram, datamodeller och tekniska specifikationer</p>
+      <p><strong>Tillbaka till:</strong> <a href="blog_fi.html">Turvallisuussblogg</a> - Alla discordianska inlägg</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cyberturvallisuusskonsulter<br>
+          Göteborg, Sverige | Distans</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_fi.html">Turvallisuusskonsulter</a></li>
+            <li><a href="services_fi.html">Turvallisuussarkitektur</a></li>
+            <li><a href="services_fi.html">Molnturvallisuus</a></li>
+            <li><a href="services_fi.html">DevSecOps Integration</a></li>
+            <li><a href="services_fi.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features_fi.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_fi.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_fi.html">Turvallisuussblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogi</a></li>
+            <li><a href="cia-triad-faq_fi.html">CIA-triaden FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_fi.html">Sidkarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_fi.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Turvallisuusspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera Turvallisuussproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_fi.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogiförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsverklighet:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a> och
+          <a href="blog_fi.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och gömda påskäggen som gör filosofi deployerbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

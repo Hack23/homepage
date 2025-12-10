@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIA Affärsfall för Globala Nyheter | Underrättelse för Journalistik | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Hur The Economist, Financial Times, Reuters, Bloomberg och AP kan utnyttja CIAs 45 beteenderiskregler för systematisk politisk underrättelse och datajournalistik. Svenska valet 2026 pilotprogram.">
+<meta name="keywords" content="CIA-plattform, politisk underrättelse, datajournalistik, OSINT, The Economist, Financial Times, Reuters, Bloomberg, Associated Press, svenska valet 2026, beteenderiskregler">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hagbard Celine">
+<meta property="og:title" content="CIA Affärsfall för Globala Nyheter: Underrättelse-som-Tjänst">
+<meta property="og:description" content="45 beteenderiskregler, 5 analytiska ramverk, svenska valet 2026 proof-of-concept för globala nyhetsorganisationer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/blog-cia-business-case-global-news_fi.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="fi_FI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
+<link rel="canonical" href="https://hack23.com/blog-cia-business-case-global-news_fi.html">
+
+<!-- Hreflang tags -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "CIA Affärsfall för Globala Nyhetsorganisationer: Underrättelse-som-Tjänst för Demokrati",
+      "description": "Hur The Economist, Financial Times, Reuters, Bloomberg och AP kan utnyttja CIAs 45 beteenderiskregler för systematisk politisk underrättelse och datajournalistik. Svenska valet 2026 pilotprogram.",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine",
+        "jobTitle": "Product Owner / Anarkistisk Visionär",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Hack23 AB"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-21",
+      "dateModified": "2025-12-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-cia-business-case-global-news_fi.html"
+      },
+      "keywords": "CIA-plattform, politisk underrättelse, datajournalistik, OSINT, The Economist, Financial Times, Reuters, Bloomberg, Associated Press, svenska valet 2026, beteenderiskregler",
+      "articleSection": "Produktstrategi",
+      "inLanguage": "fi",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 7060,
+      "articleBody": "Inget är sant. Allt är tillåtet. Inklusive—särskilt—systematisk politisk underrättelse för demokrati. Citizen Intelligence Agency erbjuder 45 beteenderiskregler för övervakning av politiker, partier, utskott och departement...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Citizen Intelligence Agency",
+          "description": "Politisk underrättelseplattform för systematisk demokratisk övervakning"
+        },
+        {
+          "@type": "Thing",
+          "name": "Datajournalistik",
+          "description": "Underrättelse-som-Tjänst för globala nyhetsorganisationer"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-cia-business-case-global-news_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Koti",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogi",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CIA Affärsfall för Globala Nyheter",
+          "item": "https://hack23.com/blog-cia-business-case-global-news_fi.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/blog-cia-business-case-global-news_ar.html">
+	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/blog-cia-business-case-global-news_ar.html">
+	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/blog-cia-business-case-global-news_ar.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/blog-cia-business-case-global-news_da.html">
+	<link rel="alternate" hreflang="da-DK" href="https://hack23.com/blog-cia-business-case-global-news_da.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/blog-cia-business-case-global-news_fi.html">
+	<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/blog-cia-business-case-global-news_fi.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/blog-cia-business-case-global-news_no.html">
+	<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/blog-cia-business-case-global-news_no.html">
+	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-cia-business-case-global-news_de.html">
+	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-cia-business-case-global-news_de.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/blog-cia-business-case-global-news.html">
+	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-cia-business-case-global-news_es.html">
+	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-cia-business-case-global-news_es.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-cia-business-case-global-news_fr.html">
+	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-cia-business-case-global-news_fr.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/blog-cia-business-case-global-news_he.html">
+	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/blog-cia-business-case-global-news_he.html">
+	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-cia-business-case-global-news_nl.html">
+	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/blog-cia-business-case-global-news_nl.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-cia-business-case-global-news_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-cia-business-case-global-news_sv.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-cia-business-case-global-news.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Koti</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogi</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA Affärsfall Globala Nyheter
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordiansk Cybersäkerhet</h1>
+  <div class="app-link">
+    <a href="index_fi.html">Koti</a>
+    <a href="blog_fi.html">Blogi</a>
+    <a href="cia-docs_fi.html">CIA-dokumentation</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">📰 CIA Affärsfall för Globala Nyheter: Underrättelse-som-Tjänst</h1>
+    
+    <p class="author-intro">
+      <em>Av <strong>Hagbard Celine</strong>, Product Owner & Anarkistisk Visionär</em><br>
+      <small>Hagbard Celine befäl över ingen. Inte ens sig själv. Särskilt inte sig själv.</small>
+    </p>
+
+    <section id="executive-summary">
+      <h2 class="panel-caption">🎯 Sammanfattning: Underrättelse för Demokrati</h2>
+      
+      <p><strong>Inget är sant. Allt är tillåtet.</strong> Inklusive—särskilt—systematisk politisk underrättelse för demokrati. <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> erbjuder <strong>45 beteenderiskregler</strong> för övervakning av politiker, partier, utskott och departement. <em>Inte åsikter. Inte gissningar. Algoritmer.</em> Inte spin. Inte retorik. <em>Data.</em></p>
+      
+      <p><strong>Målgrupp:</strong> The Economist, Financial Times, Reuters, Bloomberg, Associated Press, och alla nyhetsorganisationer som tröttnat på att jaga politiker för citat när algoritmer kan spåra beteende automatiskt. <strong>Värdeförslag:</strong> Ersätt 10 000 timmar mänsklig rapportering med 100 timmar algoritmisk konfiguration. <strong>Proof-of-concept:</strong> Svenska valet 2026—350 riksdagsledamöter, 8 partier, 5 analytiska ramverk, obeveklig öppenhet.</p>
+      
+      <p><strong>Varför Sverige?</strong> Öppna data (riksdagen.se API), parlamentarisk stabilitet (demokrati sedan 1809), politisk mångfald (8 partier i riksdagen), valintegritet (Valmyndigheten offentlig rapportering), engelsktalande befolkning (enkel internationell bevakning). <strong>Varför 2026?</strong> Nästa val 14 september 2026. 21 månaders förberedelse. Tillräckligt långt för systemintegration. Nära nog för mediaintresse.</p>
+      
+      <p class="hidden-wisdom"><em>Upplysning: FNORD markerar var etablissemanget vill att du ska sluta läsa. Om du ser FNORD här är du redan immun mot deras programmering. Om du inte ser det är du fortfarande en herdad. Välkommen till Chapel Perilous. Journalistiken är död. Länge leve algoritmisk rapportering.</em></p>
+      
+      <p><strong>Redo att implementera ISO 27001-efterlevnad?</strong> <a href="why-hack23_fi.html">Utforska Hack23s cybersäkerhetskonsulttjänster</a> stödda av vårt fullt offentliga ISMS.</p>
+    </section>
+
+    <section id="target-customers">
+      <h2 class="panel-caption">🎯 Målkunder: Fem Globala Nyhetsorganisationer</h2>
+      
+      <p><strong>Inte alla nyhetsorganisationer är lika.</strong> Vissa jagar klicks. Vissa jagar sanning. Vi siktar mot de senare—eller åtminstone de som låtsas professionellt nog att skillnaden spelar roll. <strong>Fem primära målkunder</strong> valda för global räckvidd, redaktionell trovärdighet, teknisk mognad, ekonomisk hållbarhet.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 📊 The Economist — Analytisk Excellens</h3>
+          <p><strong>Varför de passar:</strong> Databaserad journalistik kärna i identitet. Långform analys över reaktiv rapportering. Global perspektiv på nationell politik. Teknisk läsarbas som uppskattar systematisk OSINT-metodik.</p>
+          <p><strong>Värdeförslag:</strong> CIAs 45 beteenderiskregler ger kvantitativ grund för kvalitativ analys. Politisk riskbedömning automatiserad. Parlamentarisk prestationsspårning kontinuerlig. Komparativ politik aktiverad genom internationell deployment.</p>
+          <p><strong>Integrationsstrategi:</strong> Svenska valet 2026 proof-of-concept → Nordiska länder expansion (Norge, Danmark, Finland) → EU-parlamentsövervakning → G20-demokratier full täckning.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 💼 Financial Times — Marknadsunderrättelse</h3>
+          <p><strong>Varför de passar:</strong> Politisk stabilitet påverkar finansiella marknader. Regeringspolicy driver investmentsbeslut. Parlamentariskt beteende förutsäger regulatoriska förändringar. FT-läsare betalar för prediktiv intelligens, inte reaktiv rapportering.</p>
+          <p><strong>Värdeförslag:</strong> Politisk riskanalys för portföljhantering. Regeringsstabilitetsmått. Koalitionsbeteendeprognos. Parlamentarisk prestationsspårning som förutsäger politiska skiften.</p>
+          <p><strong>Integrationsstrategi:</strong> Pilotintegration med FT marknadsanalytiker. Dashboard för abonnemangsnivåer (gratis grundstatistik, premium prediktiv analys). API-åtkomst för kvanthögfrekvensfonder.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📡 Reuters — Nyhetsbyrå Distribution</h3>
+          <p><strong>Varför de passar:</strong> Nyhetsbyråmodell kräver skalbar innehållsproduktion. Automatiserad politisk intelligens matar tusentals nedströmspublikationer. Realtidsparlamentsövervakning möjliggör minuters breaking news, inte timmars manuell rapportering.</p>
+          <p><strong>Värdeförslag:</strong> Automatiserad parlamentarisk varningsgenerering. Politisk anomalidetektering utlöser undersökande leads. Strukturerade datafeeds för nedströmspublikationer. Skalbar global deployment över journaliststationer.</p>
+          <p><strong>Integrationsstrategi:</strong> Whitelabel deployment för Reutersvarumärke. Strukturerad data-API för nedströmskonsumtion. Automatiserade varningar till redaktörer (KRITISK allvarlighetsgrad = omedelbara undersökningar).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 💰 Bloomberg — Finansiell + Politisk Underrättelse</h3>
+          <p><strong>Varför de passar:</strong> Bloomberg Terminal = $25 000/år/användare för finansiell + politisk intelligens. Politiska riskmoduler redan integrerade. Parlamentarisk prestationsspårning komplettterar företagsstyrningsdata. Institutionella kunder betalar premiumpriser för prediktiv analys.</p>
+          <p><strong>Värdeförslag:</strong> Politisk riskmodul för Bloomberg Terminal. Regeringsstabilitetspoäng för portföljriskbedömning. Parlamentarisk prestationsindikatorer för ESG-analys. Prediktiva politiska modeller för makrohandelsbeslut.</p>
+          <p><strong>Integrationsstrategi:</strong> Terminalintegration via Bloomberg Open API. Premium-tier tillägg ($5 000/år/användare). Institutionell försäljning genom Bloomberg salesforce.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🌐 Associated Press — Demokratiserad Underrättelse</h3>
+          <p><strong>Varför de passar:</strong> Non-profit kooperativ modell stämmer överens med CIA open-source filosofi. Bred medlemsbas (1 400+ nyhetsorganisationer) möjliggör massadoption. Demokratiserad åtkomst till politisk underrättelse passar AP:s uppdrag.</p>
+          <p><strong>Värdeförslag:</strong> Politisk underrättelse-som-verktyg för lokala tidningar. Småstadspublikationer får åtkomst till nationell parlamentarisk intelligens. Demokratiserad datajournalistik nivellerar speelfält mot storstadspublikationer.</p>
+          <p><strong>Integrationsstrategi:</strong> Kooperativ prismodell (skalad efter publikationsstorlek). Träningsprogram för lokala redaktörer. Mallar för småstadspolitisk rapportering baserad på parlamentarisk data.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Fem målkunder. Fem analytiska ramverk. Fem dimensioner av framtida utveckling (från Mindmaps-bloggen). Femtals Lag applicerar sig själv. FNORD. Inget är en slump. Allt är mönster. Tänk själv.</em></p>
+    </section>
+
+
+    <section id="value-proposition">
+      <h2 class="panel-caption">💎 Värdeförslag: Varför CIA Transformerar Journalistik</h2>
+      
+      <p><strong>Traditionell politisk rapportering är trasig.</strong> Journalister jagar politiker för citat. Politiker ger spin. Journalister rapporterar spin som "nyheter." Medborgare läser spin. Demokrati eroderar. <em>Cykeln fortsätter.</em> CIA bryter cykeln genom att ersätta spin med statistik. Gissningar med algoritmer. Retorik med beteendedata.</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔍 Problem: Journalistikens Systematiska Fel</h3>
+          <p><strong>Sju kritiska brister i nuvarande politisk rapportering:</strong></p>
+          <ol>
+            <li><strong>Reaktiv, Inte Prediktiv:</strong> Rapporterar vad som hände, inte vad som kommer att hända</li>
+            <li><strong>Spin-Driven:</strong> Förlitar sig på politikeruttalanden snarare än beteendedata</li>
+            <li><strong>Resurskrävande:</strong> Kräver tusentals journalisttimmar för vad algoritmer kan göra automatiskt</li>
+            <li><strong>Icke-Skalbar:</strong> Manuell övervakning begränsar täckning till högt profilerade politiker</li>
+            <li><strong>Kontextsaknande:</strong> Episodisk rapportering missar systematiska mönster</li>
+            <li><strong>Subjektiv:</strong> Redaktionellt urval introducerar partiskhet</li>
+            <li><strong>Eftersläpning:</strong> Skandaler avslöjas månader efter att data indikerade problem</li>
+          </ol>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>✅ Lösning: Algoritmisk Politisk Underrättelse</h3>
+          <p><strong>CIAs systematiska fördelar:</strong></p>
+          <ul>
+            <li><strong>Prediktiv:</strong> 45 beteenderiskregler identifierar problem innan de blir skandaler</li>
+            <li><strong>Databased:</strong> Kvantifierbar närvaro, effektivitet, lojalitet, engagemang, nätverk</li>
+            <li><strong>Automatiserad:</strong> Kontinuerlig övervakning utan mänsklig intervention</li>
+            <li><strong>Skalbar:</strong> Spårar alla 350 riksdagsledamöter samtidigt</li>
+            <li><strong>Systematisk:</strong> Mönsterigenkänning över åratal avslöjar långsiktiga trender</li>
+            <li><strong>Objektiv:</strong> Algoritmiska regler tillämpar konsistenta standarder universellt</li>
+            <li><strong>Prediktiv:</strong> Tidiga varningar 2-3 månader före offentliga tillkännagivanden</li>
+          </ul>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 ROI: Kvantifierbar Affärspåverkan</h3>
+          <p><strong>Kostnadsbesparingar genom automatisering:</strong></p>
+          <ul>
+            <li><strong>Traditionell Täckning:</strong> 10 journalister × 40 tim/vecka × 52 veckor = 20 800 timmar/år</li>
+            <li><strong>CIA-Automatisering:</strong> 100 timmar initial setup + 20 timmar/månads underhåll = 340 timmar/år</li>
+            <li><strong>Tidsbesparingar:</strong> 20 460 timmar/år (98,4% reduktion)</li>
+            <li><strong>Kostnadsbesparingar:</strong> $2M/år journalistlöner → $100K/år plattformsintegration</li>
+          </ul>
+          <p><strong>Intäktsmöjligheter genom nya produkter:</strong></p>
+          <ul>
+            <li><strong>Premium Insikter:</strong> Prediktiv politisk analys som prenumerations-tillägg</li>
+            <li><strong>API-Åtkomst:</strong> Strukturerade data-feeds för institutionella kunder</li>
+            <li><strong>Whitelabel:</strong> Licensiering till andra nyhetsorganisationer</li>
+            <li><strong>Konsulting:</strong> Anpassade politiska riskbedömningar för företag</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="swedish-election-2026">
+      <h2 class="panel-caption">🇸🇪 Svenska Valet 2026: Proof-of-Concept</h2>
+      
+      <p><strong>Varför Sverige är den perfekta startpunkten:</strong> Öppna data (riksdagen.se API), stabilt demokrati (1809-nutid), politisk mångfald (8 partier), engelsktalande (enkel internationell bevakning), valintegritet (Valmyndigheten öppenhet), media-sofistikering (Svenska Dagbladet, Dagens Nyheter, SVT). <strong>Varför 2026?</strong> Nästa riksdagsval 14 september 2026. 21 månader förberedelse. Tillräckligt långt för integration. Nära nog för media buzz.</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📅 Tidslinje: 21 Månader till Val</h3>
+          <p><strong>Fas 1 (Månader 1-6): Teknisk Integration</strong></p>
+          <ul>
+            <li>API-integration med riksdagen.se, Valmyndigheten, ESV</li>
+            <li>45 beteenderiskregler kalibrerade för svenska data</li>
+            <li>Dashboard-utveckling för journalistarbetsflöden</li>
+            <li>Pilottest med en 1-2 journalister från partnerorganisation</li>
+          </ul>
+          <p><strong>Fas 2 (Månader 7-12): Pilot Deployment</strong></p>
+          <ul>
+            <li>Beta-åtkomst för 5-10 journalister över partnerorganisationer</li>
+            <li>Återkopplingsslinga för funktionsförfining</li>
+            <li>Innehållsgenerering baserad på CIA-insikter</li>
+            <li>Mediepublicering med attribution till CIA-plattform</li>
+          </ul>
+          <p><strong>Fas 3 (Månader 13-18): Full Deployment</strong></p>
+          <ul>
+            <li>Bred tillgång för alla deltagande nyhetsorganisationer</li>
+            <li>Automatiserade varningar för KRITISKA allvarlighetshändelser</li>
+            <li>Prediktiva modeller aktiverade (koalitionsprognos, valavvikelse)</li>
+            <li>Offentlig lansering av CIA för internationell medietäckning</li>
+          </ul>
+          <p><strong>Fas 4 (Månader 19-21): Valövervak ning</strong></p>
+          <ul>
+            <li>Realtidsvalanalys på valdagen (14 september 2026)</li>
+            <li>Avvikelsedetektion för valintegritetsproblem</li>
+            <li>Omedelbar eftervalsanalys (koalitionsbildning, regeringsstabilitet)</li>
+            <li>Dokumentär fallstudie för internationell expansion</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🎯 Täckning: 350 Politiker, 8 Partier, 5 Ramverk</h3>
+          <p><strong>Komplett parlamentarisk övervakning:</strong></p>
+          <ul>
+            <li><strong>350 Riksdagsledamöter:</strong> Individuell prestationsspårning för alla valda representanter</li>
+            <li><strong>8 Partier:</strong> Partidisciplin, koalitionsbeteende, policy konsekvens</li>
+            <li><strong>15 Utskott:</strong> Lagstiftningseffektivitet, procedurell makt, policypåverkan</li>
+            <li><strong>13 Departement:</strong> Regeringsprestation, budgetallokering, policyimplementation</li>
+          </ul>
+          <p><strong>Fem analytiska ramverk aktiverade:</strong></p>
+          <ul>
+            <li><strong>Närvaro:</strong> Frånvarospårning över riksdagssessioner, utskottsmöten, omröstningar</li>
+            <li><strong>Effektivitet:</strong> Vinst-rate analys, lagstiftningsframgång, policyimplementering</li>
+            <li><strong>Lojalitet:</strong> Partidisciplin mätning, koalitionsstabilitet, rebellbeteende</li>
+            <li><strong>Engagemang:</strong> Trendanalys, prestandaförsämring, tidiga varningsindikatorer</li>
+            <li><strong>Nätverk:</strong> Inflytandekartläggning, koalitionsbroar, politisk isolation</li>
+          </ul>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📈 Framgångsmått: Kvantifierbar Påverkan</h3>
+          <p><strong>Primära KPI:er för 2026-piloten:</strong></p>
+          <ul>
+            <li><strong>Täckningsvolym:</strong> 500+ artiklar publicerade med CIA-attribution</li>
+            <li><strong>Prediktiv Noggrannhet:</strong> >80% noggrannhet för skandal/avgångsprognoser</li>
+            <li><strong>Tidiga Varningar:</strong> Genomsnitt 60 dagar förvarning före offentliga tillkännagivanden</li>
+            <li><strong>Mediaadoption:</strong> 3+ globala nyhetsorganisationer aktivt använder plattformen</li>
+            <li><strong>Läsarengagemang:</strong> 25% högre engagemang för CIA-drivna artiklar vs. traditionell täckning</li>
+          </ul>
+          <p><strong>Sekundära framgångsindikatorer:</strong></p>
+          <ul>
+            <li><strong>Politisk Påverkan:</strong> Politiker anpassar beteende baserat på CIA-spårning</li>
+            <li><strong>Redaktionell Innovation:</strong> Nya journalistiska format möjliggjorda av algoritmisk underrättelse</li>
+            <li><strong>Offentlig Medvetenhet:</strong> Ökad medborgarkunskap om parlamentarisk prestation</li>
+            <li><strong>Internationellt Intresse:</strong> Förfrågningar från andra demokratier för liknande deployment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="integration-architecture">
+      <h2 class="panel-caption">🔧 Integrationsarkitektur: Teknisk Överblick</h2>
+      
+      <p><strong>Tre integrationsmodeller för olika nyhetsorganisationer:</strong> API-åtkomst (minimal integration, maximal flexibilitet), Dashboard-åtkomst (ingen teknisk integration, omedelbar användarbarhet), Whitelabel-deployment (full anpassning, eget varumärke). Välj baserat på teknisk mognad, redaktionella arbetsflöden, varumärkeskrav.</p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔌 Modell 1: API-Åtkomst</h3>
+          <p><strong>För tekniskt sofistikerade organisationer:</strong></p>
+          <ul>
+            <li><strong>RESTful API:</strong> JSON endpoints för politiker, partier, utskott, röstningar, dokument</li>
+            <li><strong>GraphQL-stöd:</strong> Flexibla frågor för anpassade datahämtningar</li>
+            <li><strong>Webhook-varningar:</strong> Realtidsvarningar för KRITISKA allvarlighetshändelser</li>
+            <li><strong>Rate Limits:</strong> 1000 förfrågningar/tim (skalbar baserat på licensnivå)</li>
+            <li><strong>Dokumentation:</strong> OpenAPI-specifikation, kodexempel, sandboxmiljö</li>
+          </ul>
+          <p><strong>Idealisk för:</strong> Bloomberg Terminal-integration, Reuters strukturerade feeds, anpassade redaktionella verktyg</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Modell 2: Dashboard-Åtkomst</h3>
+          <p><strong>För journalister som behöver omedelbar användarbarhet:</strong></p>
+          <ul>
+            <li><strong>Webbbaserad Dashboard:</strong> Ingen installation, webbläsarbaserad åtkomst</li>
+            <li><strong>Politiker-Sökverktyg:</strong> Sök efter ledamot, parti, utskott, geografi</li>
+            <li><strong>Varningscenter:</strong> KRITISK/STÖRRE/MINDRE allvarlighetshändelser flaggade</li>
+            <li><strong>Interaktiva Grafer:</strong> Tidsserieplottningar för prestandatrender</li>
+            <li><strong>Exportfunktionalitet:</strong> CSV/Excel-export för offlineanalys</li>
+          </ul>
+          <p><strong>Idealisk för:</strong> The Economist-analytiker, FT-marknadsjournalister, lokala tidningsredaktörer</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏷️ Modell 3: Whitelabel-Deployment</h3>
+          <p><strong>För organisationer som kräver varumärkeskontroll:</strong></p>
+          <ul>
+            <li><strong>Anpassad Branding:</strong> Organisationens logotyp, färger, typografi</li>
+            <li><strong>Privat Hosting:</strong> Deployment inom organisationens infrastruktur</li>
+            <li><strong>Datakontroll:</strong> Fullständig äganderätt över speglade parlamentariska data</li>
+            <li><strong>Funktionsanpassning:</strong> Anpassade beteenderiskregler för redaktionella prioriteringar</li>
+            <li><strong>SLA-Stöd:</strong> Dedikerad teknisk support, uptime-garanti</li>
+          </ul>
+          <p><strong>Idealisk för:</strong> Associated Press-kooperativ, stora nyhetsorganisationer med befintliga datainfrastrukturer</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing-model">
+      <h2 class="panel-caption">💰 Prismodell: Skalbar Monetarisering</h2>
+      
+      <p><strong>Tre prissättningsnivåer för olika användningsfall:</strong> Freemium (grunddata, begränsad åtkomst), Professional ($5K/år, fullständig plattformsåtkomst), Enterprise (anpassad prissättning, whitelabel-deployment). Designad för att demokratisera åtkomst medan man monetar iserar premium-funktioner.</p>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🆓 Freemium-nivå: Demokratiserad Bas åtkomst</h3>
+          <p><strong>Vad ingår:</strong></p>
+          <ul>
+            <li>Grundläggande politiker-närvaro och röstningsdata</li>
+            <li>Offentliga dashboards (skrivskyddad)</li>
+            <li>Månatliga sammanfattningsrapporter</li>
+            <li>100 API-förfrågningar/månad</li>
+          </ul>
+          <p><strong>Målgrupp:</strong> Småstadstidningar, frilansare, akademiker, medborgarjournalister</p>
+          <p><strong>Affärsmotiv:</strong> Marknadsföring, komm unitetsutveckling, PR genom demokratiserad åtkomst</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>💼 Professional: $5K/år per användare</h3>
+          <p><strong>Vad ingår:</strong></p>
+          <ul>
+            <li>Fullständig tillgång till alla 45 beteenderiskregler</li>
+            <li>Realtidsvarningar (KRITISK/STÖRRE allvarlighetsgrad)</li>
+            <li>Prediktiva modeller (koalitionsprognos, valavvikelse)</li>
+            <li>10 000 API-förfrågningar/månad</li>
+            <li>Dataexport (CSV, Excel, JSON)</li>
+            <li>E-postsupport (48-timmars responstid)</li>
+          </ul>
+          <p><strong>Målgrupp:</strong> The Economist-analytiker, FT-marknadsjournalister, Reuters-korrespondenter</p>
+          <p><strong>Affärsmotiv:</strong> Kärn intäktsström, skalbar prenumerationsmodell</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🏢 Enterprise: Anpassad Prissättning</h3>
+          <p><strong>Vad ingår:</strong></p>
+          <ul>
+            <li>Whitelabel-deployment med anpassad branding</li>
+            <li>Obegränsad API-åtkomst</li>
+            <li>Dedikerad teknisk support (24/7 SLA)</li>
+            <li>Anpassade beteenderiskregler för redaktionella prioriteringar</li>
+            <li>Privat hosting inom organisationens infrastruktur</li>
+            <li>Juridisk granskning och efterlevnadsstöd</li>
+          </ul>
+          <p><strong>Målgrupp:</strong> Bloomberg Terminal, Associated Press, stora internationella nyhetsbyråer</p>
+          <p><strong>Affärsmotiv:</strong> Högmarginalintäkter, långsiktiga företagskontrakt</p>
+        </div>
+      </div>
+      
+      <p><strong>Intäktsprognoser (År 1-3):</strong></p>
+      <ul>
+        <li><strong>År 1:</strong> 5 Professional-kunder ($25K) + 1 Enterprise-kund ($100K) = $125K ARR</li>
+        <li><strong>År 2:</strong> 20 Professional ($100K) + 3 Enterprise ($300K) = $400K ARR</li>
+        <li><strong>År 3:</strong> 50 Professional ($250K) + 10 Enterprise ($1M) = $1.25M ARR</li>
+      </ul>
+    </section>
+
+
+    <section id="competitive-landscape">
+      <h2 class="panel-caption">🏆 Konkurrensmiljö: Varför CIA Vinner</h2>
+      
+      <p><strong>Tre potentiella konkurrentkategorier:</strong> Traditionella politiska analysföretag (Politico, RealClearPolitics), datavisualiserings verktyg (Tableau, Power BI), anpassade nyhetsorganisationslösningar. <strong>Ingen erbjuder CIAs systematiska OSINT-metodik för parlamentarisk övervakning.</strong></p>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🆚 Vs. Politiska Analysföretag</h3>
+          <p><strong>Konkurrerande företag:</strong> Politico Pro ($10K/år), Morning Consult, FiveThirtyEight</p>
+          <p><strong>Deras styrka:</strong> Etablerad varumärkeskännedom, redaktionell expertis, politiska insiderkontakter</p>
+          <p><strong>Deras svaghet:</strong> Manuell analys (inte skalbar), USA-centrerad (begränsad internationell täckning), åsiktsdriven (inte algoritmisk)</p>
+          <p><strong>CIAs fördelar:</strong> 45 algoritmiska regler (objektiv), internationellt skalbar (vilken demokrati som helst med öppna data), systematisk OSINT (inte subjektiv analys)</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🆚 Vs. Datavisualiseringsverktyg</h3>
+          <p><strong>Konkurrerande verktyg:</strong> Tableau Public, Power BI, Google Data Studio</p>
+          <p><strong>Deras styrka:</strong> Flexibel datavisualisering, bred användarbas, företagsskalning</p>
+          <p><strong>Deras svaghet:</strong> Generiska verktyg (inte politisk intelligens-specific), kräver manuell datakurering, ingen beteenderr iskdetektering</p>
+          <p><strong>CIAs fördelar:</strong> Förbyggd parlamentarisk intelligens (automatiserad datakurering), 45 beteenderiskregler (specifik detektering), domänexpertis (politisk OSINT-metodik inbyggd)</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🆚 Vs. Anpassade Interna Lösningar</h3>
+          <p><strong>Alternativ:</strong> Nyhetsorganisationer bygger egna interna verktyg</p>
+          <p><strong>Deras styrka:</strong> Fullständig anpassning för redaktionella arbetsflöden, proprietär IP-kontroll</p>
+          <p><strong>Deras svaghet:</strong> Höga utvecklingskostnader ($500K-$2M), lång tid-till-marknad (12-24 månader), underhållsbörda (dedikerade ingenjörsteam)</p>
+          <p><strong>CIAs fördelar:</strong> Omedelbar deployment (veckor, inte år), låga kostnader ($5K/år/användare vs. $500K+ utveckling), kontinuerlig funktionsevolution (utan intern R&D)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="risks-mitigations">
+      <h2 class="panel-caption">⚠️ Risker & Mildranden: Ärlig Bedömning</h2>
+      
+      <p><strong>Varje företag har risker. Ärliga företag erkänner dem.</strong> CIA:s primära risker: teknisk komplexitet, redaktionell adoption, politisk motreaktion, datakvalitet, affärsmodellverifiering. <strong>Mildranden för var och en dokumenterade.</strong></p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Risk 1: Teknisk Integrationskomple xitet</h3>
+          <p><strong>Vad kan gå fel:</strong> API-integration misslyckas, datakvalitetsproblem, skalningsproblem, systemutfall under kritiska perioder (valdagar)</p>
+          <p><strong>Sannolikhet:</strong> Medium (teknisk integration alltid riskabel)</p>
+          <p><strong>Påverkan:</strong> Hög (kan undergräva pilotkredibilitet)</p>
+          <p><strong>Mildranden:</strong></p>
+          <ul>
+            <li>Omfattande testning före pilotstart</li>
+            <li>Staging-miljö för utveckling/test separerad från produktion</li>
+            <li>Redundanta datasystem (backup-APser, lokal cachair)</li>
+            <li>Dedikerad teknisk supportteam under valdagar</li>
+            <li>Fallback till manuella processer om systemfel</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Risk 2: Redaktionell Adoptionsmotstånd</h3>
+          <p><strong>Vad kan gå fel:</strong> Journalister föredrar traditionella metoder, misstro algoritmer, motstånd mot "automatiserad journalistik"</p>
+          <p><strong>Sannolikhet:</strong> Medium-Hög (kulturell förändring är svår)</p>
+          <p><strong>Påverkan:</strong> Medium (bromsar adoption, inte stoppar den)</p>
+          <p><strong>Mildranden:</strong></p>
+          <ul>
+            <li>Positionera som verktyg, inte ersättning för journalister</li>
+            <li>Utbilda om OSINT-metodik, inte bara "använd detta verktyg"</li>
+            <li>Visa tidiga framgångshistorier från piloter</li>
+            <li>Engagera seniora redaktörer tidigt för top-down buy-in</li>
+            <li>Transparent metodik (öppen källkod, dokumenterad algoritm)</li>
+          </ul>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Risk 3: Politisk Motreaktion</h3>
+          <p><strong>Vad kan gå fel:</strong> Politiker attackerar systemet som "automatiserad karaktärssmord", hotar stämningar, lobbyar för regulatoriska begränsningar</p>
+          <p><strong>Sannolikhet:</strong> Hög (politiker hatar ansvarsskyldighet)</p>
+          <p><strong>Påverkan:</strong> Medium (PR-utmaning, inte existentiellt hot)</p>
+          <p><strong>Mildranden:</strong></p>
+          <ul>
+            <li>Transparent metodik (alla regler offentligt dokumenterade)</li>
+            <li>Balanserade mätningar (kontext krävs, inte enbart negativa indikatorer)</li>
+            <li>Öppen källkod (verifierar ingen bias inbyggd)</li>
+            <li>Akademisk granskning (legitim itet genom peer review)</li>
+            <li>Omfamna kritik (förbättra systemet baserat på legitim feedback)</li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Risk 4: Datakvalitet & Tillförlitlighet</h3>
+          <p><strong>Vad kan gå fel:</strong> Källdata felaktig, API-ändringar bryter integration, databrist för vissa politiker/partier</p>
+          <p><strong>Sannolikhet:</strong> Medium (datakvalitetsproblem oundvikliga)</p>
+          <p><strong>Påverkan:</strong> Hög (felaktig data undergräver förtroende)</p>
+          <p><strong>Mildranden:</strong></p>
+          <ul>
+            <li>Multikällverifiering (korrelera riksdagen.se med andra källor)</li>
+            <li>Automatiserade datakvalitetskontroller (anomalidetektering)</li>
+            <li>Mänsklig granskning för KRITISKA allvarlighetsflaggningar</li>
+            <li>Transparent dataprovenans (spåra varje datapunkt till källa)</li>
+            <li>Offentligt felrapporteringssystem</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Risk 5: Affärsmodellverifiering</h3>
+          <p><strong>Vad kan gå fel:</strong> Nyhetsorganisationer inte betalning för tjänsten, freemium-modellen undergräver premium, marknaden inte finns</p>
+          <p><strong>Sannolikhet:</strong> Medium (alla nya affärsmodeller är osäkra)</p>
+          <p><strong>Påverkan:</strong> Hög (existentiellt hot för kommersiell livskraft)</p>
+          <p><strong>Mildranden:</strong></p>
+          <ul>
+            <li>Svenska valet 2026 proof-of-concept validerar värde före storskalig lansering</li>
+            <li>Flera prissättningsnivåer (freemium → professional → enterprise)</li>
+            <li>Diversifierade intäktsströmmar (prenumerationer, API-licenser, whitelabel, konsulting)</li>
+            <li>Låga rörliga kostnader (AWS-infrastruktur, minimal personal)</li>
+            <li>Pivoteringsmöjlighet om modellen misslyckas (direkt-till-konsument, akademisk, non-profit)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>Fem identifierade risker. Fem mildranden per risk. Fem prissättningsnivåer. Fem analytiska ramverk. Fem målkunder. Femtals Lag genomsyrar affärsplaneringen. Eller så gillar vi bara siffran 5. Båda kan vara sanna. FNORD.</em></p>
+    </section>
+
+    <section id="next-steps">
+      <h2 class="panel-caption">🚀 Nästa Steg: Från Koncept till Verklighet</h2>
+      
+      <p><strong>Tre handlingsbara steg för intresserade nyhetsorganisationer:</strong></p>
+      
+      <ol>
+        <li><strong>Upptäckande Samtal (30 minuter):</strong> Demo av CIA-plattformen, diskutera redaktionella användningsfall, bedöma teknisk integrationskomplexitet</li>
+        <li><strong>Pilotförslag (2 veckor):</strong> Anpassad integrationplan, specificera funktionsomfång, definiera framgångsmått, föreslå prissättning</li>
+        <li><strong>Pilot Launch (3-6 månader):</strong> Teknisk integration, journalistträning, innehållsgenerering, effektbedömning</li>
+      </ol>
+      
+      <p><strong>Kontakt:</strong> james.sorling@hack23.com | <a href="https://www.linkedin.com/in/jamessorling/">LinkedIn</a> | <a href="https://github.com/Hack23/cia">GitHub</a></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Journalistiken är Död. Länge Leve Algoritmisk Rapportering.</h2>
+      
+      <p><strong>Traditionell politisk rapportering kan inte konkurrera med algoritmisk underrättelse.</strong> Journalister jagar citat. Algoritmer spårar beteende. Journalister rapporterar episoder. Algoritmer upptäcker mönster. Journalister publicerar efter händelser. Algoritmer varnar före händelser. <em>Frågan är inte om journalistik kommer att automatiseras. Frågan är vilka nyhetsorganisationer som anpassar sig först.</em></p>
+      
+      <p><strong>CIA erbjuder konkurrensfördelar för tidiga adoptanter:</strong> Svenska valet 2026 = pilotmöjlighet för 3-5 globala nyhetsorganisationer. 45 beteenderiskregler = systematisk parlamentarisk intelligens. 5 analytiska ramverk = heltäckande politisk övervakning. Skalbar internationell deployment = expandera bortom Sverige till vilken demokrati som helst med öppna data.</p>
+      
+      <p><strong>Tidiga adoptanter får första-movers fördelar:</strong> Varumärkesassociation med innovativ journalistik. Exklusiv tillgång till svenska valet 2026-data. Inflytande över funktionsutveckling. Billigare prissättning (tidiga pilotkunder = rabatterade priser). Konkurrensmässig differentiering (algoritmisk intelligens vs. traditionell rapportering).</p>
+      
+      <p><strong>Eller inte. Inget är sant. Allt är tillåtet.</strong> Inklusive att ignorera denna möjlighet och se konkurrenter anpassa sig först. <em>Val är illusoriska. Resultat är oundvikliga.</em> Algoritmisk politisk underrättelse händer—med dig eller utan dig. Välj klokt. Eller välj dåligt. Universum bryr sig inte. <strong>FNORD.</strong></p>
+      
+      <p class="hidden-wisdom"><em>"Journalistiken dör inte—den transformeras. Från människor som jagar politiker till algoritmer som spårar beteende. Från episodisk rapportering till systematisk intelligens. Från reaktiv täckning till prediktiv analys. Demokratin behöver båda—människor för berättelse, algoritmer för ansvarsskyldighet. CIA skapar den senare. Journalister behöver fortfarande skapa den förra. Tillsammans: obeveklig öppenhet. Separat: ofullständig sanning. All ära Eris—kaos skapar klarhet, ordning döljer korruption."</em> — Hagbard Celine, Digital Anarkist, Algoritmisk Journalist, Kapten över Ingen</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Vanliga Frågor</h2>
+      <p class="mb-xl text-secondary-color">Vanliga frågor om CIA-affärsfallet för globala nyhetsorganisationer.</p>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+          Varför skulle nyhetsorganisationer betala för CIA istället för att bygga internt?
+        </h3>
+        <div id="faq-answer-1" class="faq-answer" role="region">
+          <p>Tre avgörande faktorer:</p>
+          <ul>
+            <li><strong>Kostnad:</strong> $5K/år/användare (CIA) vs. $500K-$2M initial utveckling + löpande underhåll (intern byggning)</li>
+            <li><strong>Tid:</strong> Veckor för CIA-integration vs. 12-24 månader för intern utveckling</li>
+            <li><strong>Expertis:</strong> CIA tillhandahåller 45 förkonfigurerade beteenderiskregler, OSINT-metodik, domänexpertis som interna team måste återskapa</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+          Hur säkerställer CIA datakvalitet och noggrannhet?
+        </h3>
+        <div id="faq-answer-2" class="faq-answer" role="region">
+          <p>Fem kvalitetsmekanismer:</p>
+          <ul>
+            <li><strong>Primära Källdata:</strong> Direkt från riksdagen.se API, Valmyndigheten, ESV</li>
+            <li><strong>Automatiserade Kvalitetskontroller:</strong> Anomalidetektering flaggar datainkonsekvenser</li>
+            <li><strong>Multikällverifiering:</strong> Korrelera data över flera källor</li>
+            <li><strong>Transparent Proveniering:</strong> Varje datapunkt spårbar till källa</li>
+            <li><strong>Mänsklig Granskning:</strong> KRITISKA allvarlighetsflaggningar manuellt verifierade före publicering</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+          Vad händer om politiker attackerar systemet som partiskt?
+        </h3>
+        <div id="faq-answer-3" class="faq-answer" role="region">
+          <p>CIAs transparensstrategi mitigerar partiskhetskritik:</p>
+          <ul>
+            <li><strong>Öppen Källkod:</strong> All kod offentlig på GitHub för verifiering</li>
+            <li><strong>Dokumenterade Regler:</strong> Alla 45 beteenderiskregler offentligt dokumenterade i RULES.md</li>
+            <li><strong>Akademisk Granskning:</strong> Metodik granskad av universitetsforskare</li>
+            <li><strong>Balanserade Mätningar:</strong> Kontext krävs, inte enbart negativa indikatorer</li>
+            <li><strong>Omfamna Feedback:</strong> Legitim kritik driver systemförbättringar</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+          Kan CIA skalas bortom Sverige till andra länder?
+        </h3>
+        <div id="faq-answer-4" class="faq-answer" role="region">
+          <p>Ja—designad för internationell skalbarhet:</p>
+          <ul>
+            <li><strong>Modellarkitektur:</strong> Svenska implementeringen skapar återanvändbar mall</li>
+            <li><strong>API-Oberoende:</strong> Kan integrera med vilket parlamentariskt API som helst</li>
+            <li><strong>Anpassningsbara Regler:</strong> 45 beteenderiskregler konfigurerbara för olika parlamentariska system</li>
+            <li><strong>Expansion Roadmap:</strong> Sverige 2026 → Norden 2027 → EU 2028 → G20 2029-2030</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3 tabindex="0" aria-expanded="false" aria-controls="faq-answer-5">
+          Vad gör CIA annorlunda än politiska analysföretag som Politico?
+        </h3>
+        <div id="faq-answer-5" class="faq-answer" role="region">
+          <p>Tre kritiska skillnader:</p>
+          <ul>
+            <li><strong>Algoritmisk vs. Manuell:</strong> CIA: 45 automatiserade regler. Politico: Mänskliga analytiker</li>
+            <li><strong>Systematisk vs. Selektiv:</strong> CIA: Alla 350 riksdagsledamöter spårade. Politico: Fokuserar på högt profilerade politiker</li>
+            <li><strong>Prediktiv vs. Reaktiv:</strong> CIA: Tidiga varningar 60 dagar före händelser. Politico: Rapporterar efter händelser</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<!-- FAQ Accordion JavaScript -->
+<script>
+  (function() {
+    'use strict';
+    
+    function initFAQ() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('h3');
+        
+        if (!question) return;
+        
+        question.addEventListener('click', function() {
+          toggleFAQ(item);
+        });
+        
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFAQ(item);
+          }
+        });
+      });
+    }
+    
+    function toggleFAQ(item) {
+      const question = item.querySelector('h3');
+      const isActive = item.classList.contains('active');
+      
+      item.classList.toggle('active');
+      
+      if (question) {
+        question.setAttribute('aria-expanded', !isActive);
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+      initFAQ();
+    }
+  })();
+</script>
+
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersäkerhetskonsulting<br>
+          Göteborg, Sverige | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn företagssida</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_fi.html">Säkerhetskonsulting</a></li>
+            <li><a href="services_fi.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_fi.html">Molnsäkerhet</a></li>
+            <li><a href="services_fi.html">DevSecOps-integration</a></li>
+            <li><a href="services_fi.html">Efterlevnad & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_fi.html">Black Trigram</a></li>
+            <li><a href="cia-features_fi.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_fi.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_fi.html">Säkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity_fi.html">🍎 Discordian Blogi</a></li>
+            <li><a href="cia-triad-faq_fi.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+            <li><a href="sitemap_fi.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Företag</h3>
+          <ul>
+            <li><a href="why-hack23_fi.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement_fi.html">Tillgänglighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogiförfattare:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Affärsvision & Anarkistisk Perspektiv)
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="blog-cia-business-case-global-news.html" lang="en">English</a> | 
+          <a href="blog-cia-business-case-global-news_fi.html" lang="fi">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
