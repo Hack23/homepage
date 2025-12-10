@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compliance Sicherheit | STRIDE Threat Modeling | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="STRIDE threat modeling for compliance automation: Six threat categories, five defensive layers, thirty risk scenarios analyzed.">
-<meta name="keywords" content="STRIDE threat modeling, compliance security, React security, client-side security, Simon Moon, five-layer defense, security by design">
+<meta name="description" content="CIA Compliance Manager: Enterprise Sicherheitsbewertungsplattform für Vertraulichkeit, Integrität, Verfügbarkeit mit NIST, ISO 27001, GDPR Compliance-Mapping.">
+<meta name="keywords" content="CIA-Dreieck-Bewertung, Sicherheitskonformität, NIST-Rahmenwerk, ISO 27001, DSGVO-Konformität, Bedrohungsmodellierung, STRIDE-Analyse, Compliance-Automatisierung">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
 <meta property="og:title" content="Compliance Manager Sicherheit: STRIDE Through Five Dimensions">
-<meta property="og:description" content="Six STRIDE categories meet five defensive layers. The mathematics of secure compliance automation.">
+<meta property="og:description" content="CIA Compliance Manager: Enterprise Sicherheitsbewertungsplattform für Vertraulichkeit, Integrität, Verfügbarkeit mit NIST, ISO 27001, GDPR Compliance-Mapping.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/blog-compliance-security_de.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
@@ -153,11 +153,11 @@
       
       <p><strong>STRIDE threat modeling: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege.</strong> Microsoft's six-category taxonomy for systematic threat analysis. Industry-standard. Battle-tested. Comprehensive—allegedly.</p>
       
-      <p><strong>Here's where numerology meets reality:</strong> Mapping STRIDE to the <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> architecture revealed six categories compressing into five defensive requirements. Denial of Service? Defeated by architectural simplicity (static hosting eliminates 90% of DoS attack surface). The remaining five threats align perfectly with five defensive layers. Coincidence? Or the universe revealing optimal security structure through constraint?</p>
+      <p><strong>Here's where numerology meets reality:</strong> Mapping STRIDE to the <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> architecture revealed six categories compressing into five defensive requirements. Denial of Service? Defeated by architectural simplicity (static hosting eliminates 90% of DoS attack surface). The remaining five threats align perfectly with five defensive layers. Coincidence? Or the universe revealing optimal Sicherheit structure through constraint?</p>
       
       <p><strong>Challenge conventional security thinking:</strong> More threat categories don't guarantee comprehensive defense. Overlapping categories create false coverage confidence. Our five-layer defense addresses all six STRIDE threats because layers are <em>orthogonal</em>—each protecting fundamentally different attack surfaces. Pattern recognition enabling defensive efficiency over exhaustive categorization.</p>
       
-      <p class="hidden-wisdom"><em>Illumination: Six STRIDE categories mapping to five defenses reveals which threats share root causes. Spoofing + Elevation of Privilege both defeated by authentication. Tampering + Repudiation both defeated by integrity controls. Pattern recognition enabling defensive efficiency.</em></p>
+      <p class="hidden-wisdom"><em>Illumination: Six STRIDE categories mapping to five defenses reveals which threats share root causes. Spoofing + Elevation of Privilege both defeated by authentication. Tampering + Repudiation both defeated by Integrität controls. Pattern recognition enabling defensive efficiency.</em></p>
     
       
       <p><strong>Ready to implement ISO 27001 compliance?</strong> <a href="why-hack23.html">Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.</p>
@@ -168,7 +168,7 @@
       
       <p><strong>Conventional compliance tools: server-side SaaS.</strong> Users upload sensitive data. Vendor stores it. Vendor secures it. Vendor sells "enterprise security" as competitive advantage.</p>
       
-      <p><strong>We chose differently.</strong> Client-side application. IndexedDB storage. No backend. Data never leaves user's browser. Attack surface: minimal. <strong>Why?</strong></p>
+      <p><strong>We chose differently.</strong> Client-side application. IndexedDB storage. No Backend. Data never leaves user's browser. Attack surface: minimal. <strong>Why?</strong></p>
       
       <p><strong>Five advantages of client-side architecture for compliance:</strong></p>
       
@@ -192,27 +192,27 @@
     <section id="five-defensive-layers">
       <h2 class="panel-caption">Client-Side Sicherheit Architektur: Defense Through Simplicity</h2>
       
-      <p><strong>Each security layer addresses specific threat categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based threats.</p>
+      <p><strong>Each Sicherheit layer addresses specific threat categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based threats.</p>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Vertraulichkeit-card">
           <div class="scanner-effect"></div>
           <h3>1. 🌐 Content Sicherheit Policy: Injection Defense</h3>
           <p><strong>Threats mitigated:</strong> Cross-site scripting (XSS), data exfiltration via injected scripts, unauthorized resource loading.</p>
           <p><strong>CSP directives:</strong> Restrictive policy limiting script sources, style sources, and connection endpoints. Configuration deployed via GitHub Pages headers.</p>
           <p><strong>React framework protection:</strong> Automatic XSS prevention through JSX escaping, DOM manipulation sanitization, and controlled prop rendering.</p>
-          <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails security. Balance through minimum necessary directives based on actual application requirements.</em></p>
+          <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails Sicherheit. Balance through minimum necessary directives based on actual application requirements.</em></p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integrität-card">
           <div class="scanner-effect"></div>
-          <h3>2. 🔐 Subresource Integrity: Dependency Trust</h3>
+          <h3>2. 🔐 Subresource Integrität: Dependency Trust</h3>
           <p><strong>Threat mitigated:</strong> Compromised CDN serving malicious library versions, supply chain attacks on external dependencies.</p>
           <p><strong>SRI implementation:</strong> Cryptographic hash validation for external resources. Dependency integrity verification at build time.</p>
           <p><strong>Supply chain verification:</strong> Dependabot automation for security updates, FOSSA license compliance scanning. Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA dashboard</a>.</p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Verfügbarkeit-card">
           <div class="scanner-effect"></div>
           <h3>3. 🛡️ Type Safety: Runtime Error Prevention</h3>
           <p><strong>Threats mitigated:</strong> Type confusion vulnerabilities, runtime errors causing denial of service, malformed data processing.</p>
@@ -220,15 +220,15 @@
           <p><strong>Build-time validation:</strong> ESLint static analysis, TypeScript compiler checks, Vite build optimization with tree-shaking removing unused code.</p>
         </div>
         
-        <div class="card confidentiality-card">
+        <div class="card Vertraulichkeit-card">
           <div class="scanner-effect"></div>
           <h3>4. 🔒 Datenschutz: Browser Storage Sicherheit</h3>
           <p><strong>Threat mitigated:</strong> Local storage compromise, unauthorized data access from malicious extensions or co-located attacks.</p>
-          <p><strong>Current implementation:</strong> IndexedDB within browser sandbox. Relies on OS-level disk encryption and browser profile security for data-at-rest protection.</p>
+          <p><strong>Current implementation:</strong> IndexedDB within browser sandbox. Relies on OS-level disk encryption and browser profile Sicherheit for data-at-rest protection.</p>
           <p><strong>Zukunft enhancement:</strong> Client-side encryption using SubtleCrypto API for additional zero-knowledge protection layer independent of OS security.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integrität-card">
           <div class="scanner-effect"></div>
           <h3>5. 👁️ Build Integrity: Supply Chain Assurance</h3>
           <p><strong>Threats mitigated:</strong> Compromised build pipeline, tampered artifacts, unauthorized code injection.</p>
@@ -247,7 +247,7 @@
       
       <ul>
         <li><strong>XSS Prevention:</strong> React framework provides automatic escaping. Additional DOMPurify sanitization for user-generated assessment notes. CSP headers enforce restrictive script policies.</li>
-        <li><strong>Data Confidentiality:</strong> Browser sandbox isolation plus OS-level encryption. Zukunft roadmap includes client-side encryption for additional zero-knowledge protection.</li>
+        <li><strong>Data Vertraulichkeit:</strong> Browser sandbox isolation plus OS-level encryption. Zukunft roadmap includes client-side encryption for additional zero-knowledge protection.</li>
         <li><strong>Supply Chain Sicherheit:</strong> SRI validation for external dependencies. Automated Dependabot updates. SLSA Level 3 build attestations provide provenance assurance.</li>
         <li><strong>Storage Sicherheit:</strong> IndexedDB access restricted to same-origin. No server-side data transmission eliminates network interception risks.</li>
         <li><strong>Build Pipeline Integrity:</strong> GitHub Actions automation with security scanning. CodeQL SAST analysis. Dependency review blocking vulnerable packages.</li>
@@ -263,7 +263,7 @@
       
       <ol>
         <li><strong>License Compliance:</strong> FOSSA scanning ensures MIT/Apache-2.0/BSD compatibility. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Public compliance badge</a> provides transparency.</li>
-        <li><strong>Vulnerability Scanning:</strong> Dependabot automation generates security update PRs. GitHub dependency review workflow blocks vulnerable package introductions.</li>
+        <li><strong>Vulnerability Scanning:</strong> Dependabot automation generates Sicherheit update PRs. GitHub dependency review workflow blocks vulnerable package introductions.</li>
         <li><strong>Build Provenance:</strong> SLSA Level 3 attestations provide cryptographic evidence linking artifacts to source. View <a href="https://github.com/Hack23/cia-compliance-manager/attestations">public attestations</a>.</li>
         <li><strong>Continuous Validation:</strong> OpenSSF Scorecard measures security practices. Check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a> for branch protection, code review, and dependency update evidence.</li>
         <li><strong>Static Analysis:</strong> CodeQL security scanning integrated into CI/CD. ESLint rules enforce secure coding patterns.</li>
@@ -278,27 +278,27 @@
       <p><strong>Sicherheit evolution planned through progressive enhancement</strong> maintaining backward compatibility while adding defense layers.</p>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Vertraulichkeit-card">
           <h3>Phase 1: Enhanced Authentication</h3>
           <p>Optional OAuth integration for multi-device sync. GitHub/Google/Microsoft identity providers. Session management with secure token handling.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integrität-card">
           <h3>Phase 2: Client-Side Encryption</h3>
           <p>SubtleCrypto API integration for zero-knowledge architecture. AES-GCM encryption of assessment data. User-controlled encryption keys never transmitted.</p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Verfügbarkeit-card">
           <h3>Year 3: Audit Logging</h3>
           <p>Action log in IndexedDB. Merkle tree tamper-evidence.</p>
         </div>
         
-        <div class="card confidentiality-card">
+        <div class="card Vertraulichkeit-card">
           <h3>Year 4: WebAuthn Biometric</h3>
           <p>Touch ID, Face ID, Windows Hello. Phishing-resistant.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integrität-card">
           <h3>Year 5: Post-Quantum Crypto</h3>
           <p>Lattice-based encryption. Quantum-resistant future-proofing.</p>
         </div>
@@ -311,7 +311,7 @@
       <ol>
         <li><strong>Client-side = defensive advantage.</strong> No server = no server vulnerabilities.</li>
         <li><strong>Six STRIDE categories → five defenses.</strong> Pattern recognition enabling focus.</li>
-        <li><strong>Type safety is security.</strong> Compile-time verification = pre-deployment bug elimination.</li>
+        <li><strong>Type safety is Sicherheit.</strong> Compile-time verification = pre-deployment bug elimination.</li>
         <li><strong>Automated evidence > manual assurance.</strong> Cryptographic proof, not promises.</li>
         <li><strong>Sicherheit roadmaps enable transparency.</strong> Show trajectory, not just snapshot.</li>
       </ol>
@@ -322,7 +322,7 @@
       
       <ul>
         <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">STRIDE Threat Model</a></li>
-        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Zukunft Sicherheit</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_Sicherheit_ARCHITECTURE.md">Zukunft Sicherheit</a></li>
         <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">OpenSSF Scorecard 7.4/10</a></li>
         <li><a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA Attestations</a></li>
         <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA Report</a></li>
@@ -356,7 +356,7 @@
         
         <!-- Services Column -->
         <div class="footer-column">
-          <h3>Services</h3>
+          <h3>Dienstleistungen</h3>
           <ul>
             <li><a href="services_de.html">Sicherheit Consulting</a></li>
             <li><a href="services_de.html">Sicherheit Architektur</a></li>
@@ -381,7 +381,7 @@
           <h3>Resources</h3>
           <ul>
             <li><a href="blog_de.html">Sicherheit Blog</a></li>
-            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="discordian-cyberSicherheit.html">🍎 Discordian Blog</a></li>
             <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
             <li><a href="sitemap.html">Sitemap</a></li>
