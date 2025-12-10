@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Black Trigram | Jeu d'Arts Martiaux Coréens | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"><link rel="canonical" href="https://hack23.com/black-trigram-docs_fr.html">
+    
+    <meta name="description" content="Architecture du jeu Black Trigram : modèles C4, intégration Unity, conception du système de combat. Préservation culturelle des arts martiaux coréens par le jeu.">
+    <meta name="keywords" content="game architecture documentation Hack23, C4 game design models, Korean martial arts game development, open source game platform, Unity architecture patterns, cultural game preservation, combat system design, asset pipeline architecture, educational game development, martial arts simulator architecture, gaming platform security, Black Trigram documentation, game software architecture design, Unity engine optimization patterns, cross-platform game development, game performance optimization techniques, game data management systems, game AI architecture design, physics engine integration design, game rendering pipeline, game networking architecture, multiplayer system design, game security architecture, game testing automation, game deployment pipeline, game analytics systems, gameplay metrics collection, game user interface design, game accessibility design, VR AR game architecture, mobile game optimization, game server architecture, cloud gaming infrastructure, game database design, game caching strategies, game load balancing, game monitoring systems, game logging architecture, game configuration management, game version control systems, game documentation automation, game code quality management, game development workflow, game engine architecture patterns, game scripting systems, game content management, game localization architecture, game monetization systems, game user authentication, game data privacy architecture, game compliance framework, game development best practices, game testing methodologies, game deployment strategies, game maintenance architecture">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Black Trigram | Jeu d'Arts Martiaux Coréens" />
+    <meta property="og:description" content="Simulateur de combat de précision 2D réaliste avec 70 points vitaux, 5 archétypes et techniques authentiques d'arts martiaux coréens." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hack23.com/black-trigram-docs.html" />
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://blacktrigram.com/black-trigram.png" />
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Black Trigram - Game Architecture & System Documentation",
+      "description": "Architecture documentation for open-source Korean martial arts educational game. C4 models, game design patterns, security architecture, Unity integration, asset pipeline, and cultural preservation technical documentation for game developers, Unity architects, and open source contributors.",
+      "image": "https://blacktrigram.com/black-trigram.png",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-06",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/black-trigram-docs.html"
+      },
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Game Developers & Unity Developers"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Game Architects & Solution Architects"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Open Source Contributors & Educational Game Creators"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Security Architects & Cultural Preservation Professionals"
+        }
+      ],
+      "about": {
+        "@type": "VideoGame",
+        "name": "Black Trigram",
+        "applicationCategory": "Game",
+          "inLanguage": "fr",
+        "genre": [
+          "Fighting",
+          "Educational",
+          "Sports"
+        ],
+        "gamePlatform": "Cross-platform",
+        "description": "Authentic Korean martial arts educational combat game featuring traditional techniques and cultural respect.",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      "teaches": [
+        "C4 Architecture Modeling for Game Systems",
+        "Game Security Architecture Design",
+        "Unity Platform Integration Patterns",
+        "Educational Game Mechanics Design",
+        "Cultural Preservation in Gaming",
+        "Asset Pipeline Architecture",
+        "Game Data Model Design",
+        "Combat System State Management",
+        "Open Source Game Development Contribution",
+        "CRA Assessment for Gaming Platforms"
+      ],
+      "educationalLevel": "Professional / Expert",
+      "learningResourceType": [
+        "Game Architecture Documentation",
+        "System Design Patterns",
+        "Technical Reference",
+        "Unity Integration Guide",
+        "Security Architecture Guide",
+        "Open Source Contribution Guide"
+      ],
+      "featureList": [
+        "C4 Architecture Models",
+        "Game System Architecture Documentation",
+        "Security Architecture for Educational Gaming",
+        "Unity Platform Integration Design",
+        "Asset Pipeline Architecture",
+        "Combat Mechanics Data Models",
+        "State Transition Diagrams",
+        "System Mindmaps & Context Diagrams",
+        "SWOT Analysis for Game Development",
+        "Cultural Preservation Technical Patterns",
+        "CI/CD Workflows for Game Projects",
+        "API Documentation for Game Systems",
+        "70 Vital Points Data Architecture",
+        "5 Fighter Archetypes System Design",
+        "Traditional Technique Implementation Patterns",
+        "Educational Progression System Architecture",
+        "Open Source Contribution Guidelines",
+        "15+ Technical Game Architecture Diagrams"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "keywords": "game architecture documentation, C4 game design, Korean martial arts game development, open source game platform, Unity architecture patterns, game security design, developer documentation, cultural game preservation, educational game architecture, combat system design, asset pipeline architecture, gaming platform security",
+      "softwareRequirements": "Modern web browser for documentation. Development: Unity Engine, C#, Git for contributing to the game.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source Game Documentation"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Unity Documentation",
+          "url": "https://docs.unity3d.com/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "C4 Model for Software Architecture",
+          "url": "https://c4model.com/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Traditional Korean Martial Arts Techniques",
+          "description": "Taekkyeon and Hapkido historical documentation"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "I Ching (Book of Changes)",
+          "description": "Ancient Chinese philosophical text influencing game design"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "TechArticle",
+          "name": "Game Architecture Documentation",
+          "description": "C4 models and system design for combat game mechanics"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "70 Vital Points System",
+          "description": "Anatomical targeting system data architecture"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "5 Combat Archetypes Design",
+          "description": "Fighter archetype implementation patterns"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Play Black Trigram - Korean Martial Arts Game",
+      "description": "Learn the game controls, combat mechanics, and strategies for Black Trigram's precision martial arts combat system",
+      "image": "black-trigram-140.webp",
+      "totalTime": "PT15M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Modern Web Browser (Chrome, Firefox, Safari, Edge)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Keyboard for controls"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Mouse for targeting"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Access the Game",
+          "text": "Navigate to blacktrigram.com and launch the game in your web browser",
+          "url": "https://blacktrigram.com"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Learn Basic Movement",
+          "text": "Use WASD or Arrow Keys to move your character. Practice tactical positioning and footwork",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Movement is crucial for positioning yourself for vital point strikes"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Master Combat Techniques",
+          "text": "Use number keys 1-8 to execute Bagua-based combat techniques. Each technique corresponds to a different martial arts move",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "The 8 techniques are based on the Bagua trigrams from I-Ching philosophy"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Use Defensive Stance",
+          "text": "Press Spacebar to enter a defensive guard stance for blocking attacks"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Target Vital Points",
+          "text": "Use the mouse to target one of 70 anatomical vital points on your opponent for maximum effectiveness",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Precise targeting of vital points is key to one-strike incapacitation"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Switch Combat Archetype",
+          "text": "Press Tab to switch between 5 different combat archetypes, each with unique fighting styles and strengths"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Practice Combat Philosophy",
+          "text": "Focus on precise targeting, maximum effectiveness with minimal techniques, and understanding combat psychology as taught in traditional Korean martial arts"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/black-trigram-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Black Trigram",
+          "item": "https://hack23.com/black-trigram-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram Docs",
+          "item": "https://hack23.com/black-trigram-docs.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+	<!-- Hreflang tags for international SEO -->	<link rel="alternate" hreflang="da" href="https://hack23.com/black-trigram-docs_da.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/black-trigram-docs_fr.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/black-trigram-docs_fi.html">
+	<link rel="alternate" hreflang="ja" href="https://hack23.com/black-trigram-docs_ja.html">
+	<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/black-trigram-docs_ja.html">
+	<link rel="alternate" hreflang="ko" href="https://hack23.com/black-trigram-docs_ko.html">
+	<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/black-trigram-docs_ko.html">
+	<link rel="alternate" hreflang="no" href="https://hack23.com/black-trigram-docs_no.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/black-trigram-docs_no.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/black-trigram-docs_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/black-trigram-docs_sv.html">
+	<link rel="alternate" hreflang="zh" href="https://hack23.com/black-trigram-docs_zh.html">
+	<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/black-trigram-docs_zh.html">
+	<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/black-trigram-docs_zh.html">
+	<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/black-trigram-docs_zh.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/black-trigram-docs_fr.html">
+</head>
+<body class="theme-black-trigram">
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/black-trigram-features.html">Black Trigram</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Black Trigram Docs
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <div class="logo-container">
+            <img src="black-trigram-140.webp" alt="Black Trigram Logo" class="logo" width="80" height="80" />
+        </div>
+        <h1>Black Trigram Documentation <span class="app-version">English</span></h1>
+        <p>Complete guide for Korean Traditional Martial Arts Precision Combat Simulator</p>
+        
+        <div class="badges">
+            <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub Release">
+                <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub Release">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="License">
+                <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="License">
+            </a>
+            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard">
+            </a>
+            <a href="https://bestpractices.coreinfrastructure.org/projects/10777" title="CII Best Practices">
+                <img src="https://bestpractices.coreinfrastructure.org/projects/10777/badge" alt="CII Best Practices">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/attestations" title="SLSA 3">
+                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml" title="Scorecard supply-chain security">
+                <img src="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard supply-chain security">
+            </a>
+            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml" title="Test & Report">
+                <img src="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml/badge.svg?branch=main" alt="Test & Report">
+            </a>
+            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Lines of Code">
+                <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=ncloc" alt="Lines of Code">
+            </a>
+            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Quality Gate Status">
+                <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=alert_status" alt="Quality Gate Status">
+            </a>
+            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Security Rating">
+                <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=security_rating" alt="Security Rating">
+            </a>
+            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Maintainability Rating">
+                <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=sqale_rating" alt="Maintainability Rating">
+            </a>
+            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Reliability Rating">
+                <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&metric=reliability_rating" alt="Reliability Rating">
+            </a>
+            <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram?ref=badge_shield" title="FOSSA Status">
+                <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram.svg?type=shield" alt="FOSSA Status">
+            </a>
+        </div>
+        
+        <div class="app-link">
+            <a href="index.html" title="Go to Home">Home</a>
+            <a href="black-trigram-features.html" title="View Game Features">Game Features</a>
+            <a href="https://blacktrigram.com" class="btn" title="Play Black Trigram">🎮 Enter Dojo</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>📖 Game Overview</h2>
+            <p><strong>Black Trigram</strong> is a realistic 2D precision combat game inspired by Korean martial arts philosophy and the I-Ching. The game teaches authentic Korean martial arts through precise anatomical targeting, featuring 70 vital points and 5 unique combat archetypes built with modern web technologies.</p>
+        </section>
+
+        <section id="gameplay-guide">
+            <h2>🎮 Gameplay Guide</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⌨️ Basic Controls</h3>
+                    <ul>
+                        <li><strong>🏃 Movement:</strong> WASD or Arrow Keys - Tactical positioning and footwork</li>
+                        <li><strong>⚔️ Techniques:</strong> 1–8 (Bagua-based combat techniques)</li>
+                        <li><strong>🛡️ Guard:</strong> Spacebar - Defensive stance and blocking</li>
+                        <li><strong>🎯 Vital Strikes:</strong> Mouse - Target vital point attacks</li>
+                        <li><strong>🔄 Archetype Switch:</strong> Tab - Change between 5 combat types</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🩸 Combat Feedback</h3>
+                    <ul>
+                        <li><strong>💥 Impact Effects:</strong> Bone contact sounds and visual trauma</li>
+                        <li><strong>🩸 Injury System:</strong> Realistic bleeding and damage progression</li>
+                        <li><strong>😵 Incapacitation:</strong> Visual indicators of combat effectiveness</li>
+                        <li><strong>⚖️ Balance:</strong> Physical stance and vulnerability windows</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture-documentation">
+            <h2>📚 Architecture & Documentation</h2>
+            <p>Explore Black Trigram's complete architecture and technical documentation:</p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Architecture & Design</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ARCHITECTURE.md" title="Architecture Documentation">📐 ARCHITECTURE.md</a> - High-level C4 model, container/component views</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_ARCHITECTURE.md" title="Future Architecture">📈 FUTURE_ARCHITECTURE.md</a> - Future improvement vision</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API Documentation">API Documentation</a> - Detailed API reference</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Combat & Mechanics</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/COMBAT_ARCHITECTURE.md" title="Combat Architecture">🥋 COMBAT_ARCHITECTURE.md</a> - In-depth battleflow, trigram integration, vital-point targeting, and damage pipeline</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-design.md" title="Game Design">🗺️ game-design.md</a> - Overall game mechanics, archetype breakdowns, and design decisions</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/game-status.md" title="Game Status">📊 game-status.md</a> - Current progress, feature roadmap, and milestone tracking</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Assets & Media</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/ART_ASSETS.md" title="Art Assets">🖼️ ART_ASSETS.md</a> - Guidelines for sprite sheets, particle textures, color palettes, and UI icons</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/AUDIO_ASSETS.md" title="Audio Assets">🎵 AUDIO_ASSETS.md</a> - List of traditional Korean instrument loops, impact SFX, and mixing notes</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/VIDEO_ASSETS.md" title="Video Assets">🎬 VIDEO_ASSETS.md</a> - Black Trigram: The Path of Shadows video content</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 CI/CD & Security</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="Development Guide">🔒 development.md</a> - Comprehensive security measures and development practices</li>
+                        <li><strong>🕷️ ZAP Security Scanning</strong> - OWASP ZAP dynamic application security testing</li>
+                        <li><strong>⚡ Lighthouse Performance</strong> - Automated performance and accessibility audits</li>
+                        <li><strong>⚡ Lighthouse Performance</strong> - Automated performance and accessibility audits</li>
+                        <li><strong>📄 SBOM Generation</strong> - Software Bill of Materials for transparency</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Security Architecture</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md" title="Security Architecture">🔐 SECURITY_ARCHITECTURE.md</a> - Security design and implementation patterns</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md" title="Future Security Architecture">🔐 FUTURE_SECURITY_ARCHITECTURE.md</a> - Advanced security architecture with AI enhancements</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/development.md" title="Development Guide">🔒 development.md</a> - Security measures and development practices</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Conceptual & Strategic</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/MINDMAP.md" title="System Mindmaps">🧠 MINDMAP.md</a> - Current system component relationships and conceptual architecture</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_MINDMAP.md" title="Future Mindmaps">🧠 FUTURE_MINDMAP.md</a> - Evolution roadmap with enhanced capabilities</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/SWOT.md" title="SWOT Analysis">💼 SWOT.md</a> - Strategic assessment of strengths, weaknesses, opportunities, and threats</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SWOT.md" title="Future SWOT Analysis">💼 FUTURE_SWOT.md</a> - Strategic analysis of future positioning and opportunities</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Data & Processes</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/DATA_MODEL.md" title="Data Model">📊 DATA_MODEL.md</a> - Current data structures, relationships, and entity frameworks</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_DATA_MODEL.md" title="Future Data Model">📊 FUTURE_DATA_MODEL.md</a> - Enhanced data architecture for future iterations</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FLOWCHART.md" title="Process Flowcharts">🔄 FLOWCHART.md</a> - Current data processing workflows and business processes</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_FLOWCHART.md" title="Future Flowcharts">🔄 FUTURE_FLOWCHART.md</a> - Enhanced workflows for future development</li>
+                    </ul>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Behavioral Systems</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/STATEDIAGRAM.md" title="State Diagrams">🔄 STATEDIAGRAM.md</a> - Current system state transitions and behavioral models</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_STATEDIAGRAM.md" title="Future State Diagrams">🔄 FUTURE_STATEDIAGRAM.md</a> - Enhanced adaptive state transitions for future implementation</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/WORKFLOWS.md" title="CI/CD Workflows">🔧 WORKFLOWS.md</a> - Current automation processes and CI/CD pipelines</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_WORKFLOWS.md" title="Future Workflows">🔧 FUTURE_WORKFLOWS.md</a> - Enhanced CI/CD with advanced capabilities</li>
+                    </ul>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Testing & Quality Assurance</h3>
+                    <ul>
+                        <li><a href="https://blacktrigram.com/test-results/" title="Unit Test Results">🧪 Unit Test Results</a> - Visual representation of unit test results and coverage</li>
+                        <li><a href="https://blacktrigram.com/coverage/" title="Test Coverage">📊 Test Coverage</a> - Test coverage reports showing codebase coverage</li>
+                        <li><a href="https://blacktrigram.com/cypress/mochawesome/" title="E2E Test Reports">🔍 E2E Test Reports</a> - End-to-end test reports showing full system validation</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md" title="Unit Test Plan">🎓 UnitTestPlan.md</a> - Comprehensive unit testing strategy</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md" title="E2E Test Plan">🎮 E2ETestPlan.md</a> - End-to-end testing strategy</li>
+                    </ul>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Performance & Operations</h3>
+                    <ul>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md" title="Performance Testing">⚡ performance-testing.md</a> - Benchmarks and performance analysis under various conditions</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/BCPPlan.md" title="Business Continuity Plan">🔄 BCPPlan.md</a> - Comprehensive business continuity planning and recovery strategies</li>
+                        <li><a href="https://github.com/Hack23/blacktrigram/blob/main/End-of-Life-Strategy.md" title="Lifecycle Management">📅 End-of-Life-Strategy.md</a> - Maintenance and end-of-life planning for technology components</li>
+                        <li><a href="https://blacktrigram.com/api/" title="API Documentation">📘 API Documentation</a> - Detailed API reference for all components, types, and functions</li>
+                    </ul>
+                </div>
+
+                <!-- Threat Model -->
+                <div class="card musa-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🛡️ Evidence-Based Threat Model</h3>
+                    <p>
+                        Comprehensive STRIDE threat analysis with gaming-specific security considerations, cultural heritage protection focus, and specialized analysis for educational gaming platforms.
+                    </p>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md"
+                        title="View Threat Model Documentation"
+                    >
+                        <img src="https://img.shields.io/badge/Threat_Model-Public_Documentation-blue?style=flat-square&logo=github&logoColor=white" alt="Threat Model: Public Documentation" />
+                    </a>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md#gaming-specific-threats"
+                        title="View Gaming Security Analysis"
+                    >
+                        <img src="https://img.shields.io/badge/Gaming_Security-Specialized_Analysis-red?style=flat-square&logo=gamepad&logoColor=white" alt="Gaming Security: Specialized Analysis" />
+                    </a>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md#cultural-sensitivity-analysis"
+                        title="View Cultural Heritage Protection"
+                    >
+                        <img src="https://img.shields.io/badge/Cultural_Heritage-Protection_Focus-gold?style=flat-square&logo=museum&logoColor=white" alt="Cultural Heritage: Protection Focus" />
+                    </a>
+                </div>
+
+                <!-- CRA Assessment -->
+                <div class="card amsalja-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ CRA Assessment Implementation</h3>
+                    <p>
+                        Complete Cyber Resilience Act (CRA) compliance assessment for educational Korean martial arts gaming platform, demonstrating regulatory alignment for cultural preservation software.
+                    </p>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md"
+                        title="View CRA Assessment Documentation"
+                    >
+                        <img src="https://img.shields.io/badge/CRA_Assessment-Complete-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA Assessment: Complete" />
+                    </a>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md#product-classification"
+                        title="View Product Classification"
+                    >
+                        <img src="https://img.shields.io/badge/Classification-Standard_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="Classification: Standard OSS" />
+                    </a>
+                    <a
+                        href="https://github.com/Hack23/blacktrigram/blob/main/CRA-ASSESSMENT.md#vulnerability-disclosure"
+                        title="View Vulnerability Management"
+                    >
+                        <img src="https://img.shields.io/badge/Vulnerability_Management-Implemented-orange?style=flat-square&logo=shield&logoColor=white" alt="Vulnerability Management: Implemented" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="martial-arts-philosophy">
+            <h2>🎯 Combat Philosophy</h2>
+            <blockquote>
+                <p><strong>"In darkness, seek the perfect strike"</strong></p>
+                <p><em>어둠 속에서 완벽한 일격을 찾아라</em></p>
+            </blockquote>
+            
+            <p>Each technique's focus:</p>
+            <ul>
+                <li><strong>Precise Targeting</strong> - Accurate anatomical vulnerabilities</li>
+                <li><strong>Maximum Effectiveness</strong> - One-strike incapacitation</li>
+                <li><strong>Combat Psychology</strong> - Mental preparation for combat</li>
+                <li><strong>Traditional Knowledge</strong> - Authentic Korean martial arts</li>
+                <li><strong>Archetype Specialization</strong> - Unique approaches per combat type</li>
+            </ul>
+            
+            <div class="text-center my-2">
+                <a href="https://blacktrigram.com" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem;">🎮 Enter the Dojang</a>
+            </div>
+        </section>
+
+        <section id="project-classification">
+            <h2>🏷️ Project Classification According to Hack23 Framework</h2>
+            <p>
+                Following the <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23 Classification & Business Continuity Framework</a> guidelines for comprehensive project assessment:
+            </p>
+
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 Project Classification</h3>
+                    <div class="badge-group">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Project Type: Frontend Apps">
+                            <img src="https://img.shields.io/badge/Type-Frontend_Apps-yellow?style=for-the-badge&logo=window-maximize&logoColor=black" alt="Project Type: Frontend Apps" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Business Process: Marketing">
+                            <img src="https://img.shields.io/badge/Process-Marketing-blueviolet?style=for-the-badge&logo=bullhorn&logoColor=white" alt="Business Process: Marketing" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Security Classification</h3>
+                    <div class="badge-group">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="Confidentiality Level: Public - No confidentiality requirements">
+                            <img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="Confidentiality: Public" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="Integrity Level: Moderate - Data validation, checksums">
+                            <img src="https://img.shields.io/badge/Integrity-Moderate-yellow?style=for-the-badge&logo=check-circle&logoColor=black" alt="Integrity: Moderate" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="Availability Level: Standard - 99% uptime, standard recovery">
+                            <img src="https://img.shields.io/badge/Availability-Standard-lightgreen?style=for-the-badge&logo=server&logoColor=white" alt="Availability: Standard" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>⏱️ Business Continuity</h3>
+                    <div class="badge-group">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="Recovery Time Objective: 4-24 hours">
+                            <img src="https://img.shields.io/badge/RTO-Medium_(4--24hrs)-lightgreen?style=for-the-badge&logo=clock&logoColor=white" alt="RTO: Medium (4-24hrs)" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="Recovery Point Objective: 4-24 hours">
+                            <img src="https://img.shields.io/badge/RPO-Daily_(4--24hrs)-lightblue?style=for-the-badge&logo=database&logoColor=white" alt="RPO: Daily (4-24hrs)" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🛡️ Security Investment Returns</h3>
+                    <div class="badge-group">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="ROI Level: Minimal - Basic protection value">
+                            <img src="https://img.shields.io/badge/ROI-Minimal-lightgrey?style=for-the-badge&logo=chart-line&logoColor=black" alt="ROI: Minimal" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Risk Mitigation: 15% Reduction">
+                            <img src="https://img.shields.io/badge/Risk_Mitigation-15%25_Reduction-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="Risk Mitigation: 15% Reduction" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Breach Prevention: Under $200 Savings">
+                            <img src="https://img.shields.io/badge/Breach_Prevention-Under_$200_Savings-lightgrey?style=for-the-badge&logo=lock&logoColor=black" alt="Breach Prevention: Under $200 Savings" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 Competitive Differentiation</h3>
+                    <div class="badge-group">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Market Position: Competitive - Good market position">
+                            <img src="https://img.shields.io/badge/Position-Competitive-green?style=for-the-badge&logo=trending-up&logoColor=white" alt="Market Position: Competitive" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Customer Trust: Standard scores">
+                            <img src="https://img.shields.io/badge/Trust-Standard_scores-green?style=for-the-badge&logo=handshake&logoColor=white" alt="Customer Trust: Standard scores" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Regulatory Access: Standard access">
+                            <img src="https://img.shields.io/badge/Access-Standard_access-green?style=for-the-badge&logo=key&logoColor=white" alt="Regulatory Access: Standard access" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📈 Porter's Five Forces Strategic Impact</h3>
+                    <div class="badge-group porters-forces">
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Buyer Power: Moderate - 60%+ retention">
+                            <img src="https://img.shields.io/badge/Buyer_Power-Moderate-yellow?style=flat-square&logo=users&logoColor=black" alt="Buyer Power: Moderate" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Supplier Power: Reduced - Good negotiation position">
+                            <img src="https://img.shields.io/badge/Supplier_Power-Reduced-lightgreen?style=flat-square&logo=handshake&logoColor=white" alt="Supplier Power: Reduced" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Entry Barriers: Moderate - 50%+ prevention">
+                            <img src="https://img.shields.io/badge/Entry_Barriers-Moderate-yellow?style=flat-square&logo=shield-alt&logoColor=black" alt="Entry Barriers: Moderate" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Substitute Threat: High - Significant competition">
+                            <img src="https://img.shields.io/badge/Substitute_Threat-High-orange?style=flat-square&logo=shield&logoColor=white" alt="Substitute Threat: High" loading="lazy">
+                        </a>
+                        <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Competitive Rivalry: Competitive Advantage - Solid market advantage">
+                            <img src="https://img.shields.io/badge/Rivalry-Competitive_Advantage-green?style=flat-square&logo=trophy&logoColor=white" alt="Competitive Rivalry: Competitive Advantage" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>💰 Business Impact Analysis Matrix</h3>
+            <p>
+                Comprehensive assessment of potential business impacts across the CIA triad (Confidentiality, Integrity, Availability):
+            </p>
+            
+            <table class="korean-impact-matrix">
+                <thead>
+                    <tr>
+                        <th>Impact Category</th>
+                        <th>Financial</th>
+                        <th>Operational</th>
+                        <th>Reputational</th>
+                        <th>Regulatory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>🔒 Confidentiality</strong></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="Negligible - No operational impact"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="Operational: Negligible" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Negligible - No regulatory implications"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Negligible" loading="lazy"></a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>✅ Integrity</strong></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="Moderate - Reduced productivity, 20-40% efficiency loss"><img src="https://img.shields.io/badge/Moderate-Reduced_productivity-yellow?style=for-the-badge&logo=trending-down&logoColor=black" alt="Operational: Moderate" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Moderate - Industry attention, some trust erosion"><img src="https://img.shields.io/badge/Moderate-Industry_attention-yellow?style=for-the-badge&logo=newspaper&logoColor=black" alt="Reputational: Moderate" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Negligible - No regulatory implications"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Negligible" loading="lazy"></a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>⏱️ Availability</strong></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="Low - Minor inconvenience, <20% efficiency loss"><img src="https://img.shields.io/badge/Low-Minor_inconvenience-lightgreen?style=for-the-badge&logo=stop-circle&logoColor=white" alt="Operational: Low" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+                        <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Negligible - No regulatory implications"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Negligible" loading="lazy"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                This classification demonstrates Black Trigram's strategic positioning as a competitive educational gaming platform with moderate integrity requirements and standard operational expectations. The assessment guides development priorities and resource allocation for optimal game experience delivery.
+            </p>
+        </section>
+
+    </main>
+    
+        <footer>
+      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+        <a href="blog.html" title="Security Blog">Blog</a> |
+        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a>
+      </p>
+      <p>
+        <a href="black-trigram-docs.html" title="English documentation" lang="fr">English Documentation</a> |
+        <a href="black-trigram-docs_ko.html" title="Korean documentation" lang="ko">한국어 문서</a>
+      </p>
+    </footer>
+</body>
+</html>
