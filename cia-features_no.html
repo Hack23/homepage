@@ -151,11 +151,11 @@
     }
     </script>
     
-    <!-- OSS Schema for SEO -->
+    <!-- FAQ Schema for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "OSSPage",
+      "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
@@ -747,7 +747,7 @@
         <p>The CIA project is a volunteer-driven, open-source initiative applying advanced data analysis methodologies to democratic oversight. By leveraging sophisticated datavisualisering og analytical frameworks, the platform democratizes access to political performance assessment og governance evaluation.</p>
       </section>
       
-      <!-- OSS Section med Accordion UI -->
+      <!-- FAQ Section with Accordion UI -->
       <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <p class="mb-xl text-secondary-color">Common questions about Citizen Intelligence Agency's political transparency platform, data sources, og analytical capabilities.</p>
@@ -962,13 +962,13 @@
       });
     </script>
     
-    <!-- OSS Accordion JavaScript -->
+    <!-- FAQ Accordion JavaScript -->
     <script>
       (function() {
         'use strict';
         
-        // Initialize OSS accordion functionality
-        function initOSS() {
+        // Initialize FAQ accordion functionality
+        function initFAQ() {
           const faqItems = document.querySelectorAll('.faq-item');
           
           faqItems.forEach(function(item) {
@@ -978,20 +978,20 @@
             
             // Click event
             question.addEventListener('click', function() {
-              toggleOSS(item);
+              toggleFAQ(item);
             });
             
             // Keyboard event (Enter or Space)
             question.addEventListener('keydown', function(e) {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                toggleOSS(item);
+                toggleFAQ(item);
               }
             });
           });
         }
         
-        function toggleOSS(item) {
+        function toggleFAQ(item) {
           const question = item.querySelector('h3');
           const isActive = item.classList.contains('active');
           
@@ -1008,7 +1008,7 @@
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', initOSS);
         } else {
-          initOSS();
+          initFAQ();
         }
       })();
     </script>
