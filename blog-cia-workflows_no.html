@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIA-arbeidsflyter | Fem-trinns CI/CD & Tilstandsmaskiner | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiera & Släpp, CodeQL, Dependabot, Scorecard och ZAP-skanning för kontinuerlig sikkerhet i leveranspipeline.">
+<meta name="description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiser & Slipp, CodeQL, Dependabot, Scorecard og ZAP-skanning for kontinuerlig sikkerhet i leveranspipeline.">
 <meta name="keywords" content="CI/CD-arbetsflöden, DevSecOps, tillståndsmaskiner, GitHub Actions, automatisering">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
@@ -69,7 +69,7 @@
         "height": 630
       },
       "wordCount": 1965,
-      "articleBody": "Manuella releaser är sikkerhetssårbarheter förklädd som process. Citizen Intelligence Agency automatiserar allt genom fem GitHub Actions-arbetsflöden: Verifiera & Släpp (bygg + deploy), CodeQL...",
+      "articleBody": "Manuella releaser är sikkerhetssårbarheter förklädd som process. Citizen Intelligence Agency automatiserar allt genom fem GitHub Actions-arbetsflöden: Verifiser & Slipp (bygg + deploy), CodeQL...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
@@ -164,7 +164,7 @@
       
       <p><strong>Manuella releaser är sikkerhetssårbarheter förklädd som process.</strong> Varje mänsklig inblandning introducerar fel. Varje manuell checklista glöms bort under press. Varje "snabb fix" som kringgår CI/CD är en incident som väntar på att hända.</p>
       
-      <p><strong><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> automatiserar allt.</strong> Fem GitHub Actions-arbetsflöden hanterar hela DevSecOps-pipelinen: Verifiera & Släpp (bygg + deploy), CodeQL-sikkerhetsskanning, Dependabot-sårbarhetsuppdateringar, OpenSSF Scorecard-validering och ZAP-penetrationstestning. Ingen release når produktion utan att passera alla fem portar.</p>
+      <p><strong><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> automatiserar allt.</strong> Fem GitHub Actions-arbetsflöden hanterar hela DevSecOps-pipelinen: Verifiser & Slipp (bygg + deploy), CodeQL-sikkerhetsskanning, Dependabot-sårbarhetsuppdateringar, OpenSSF Scorecard-validering och ZAP-penetrationstestning. Ingen release når produktion utan att passera alla fem portar.</p>
       
       <p><strong>Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">WORKFLOWS.md</a>:</strong> Fem arbetsflöden orchestrerar tjugo byggsteg, femtio sikkerhetskontroller och hundra kvalitetsportar. Femtals Lag manifesterad genom CI/CD-automation. Varje arbetsflöde oberoende. Varje arbetsflöde kritiskt. Systemet som övervakar sig självt.</p>
       
@@ -182,7 +182,7 @@
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🚀 Verifiera & Släpp: Huvudpipeline</h3>
+          <h3>1. 🚀 Verifiser & Slipp: Huvudpipeline</h3>
           <p><strong>Huvudarbetsflöde som hanterar hela releasecykeln.</strong> Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/.github/workflows/release.yml">release.yml</a>. Utlöses vid push till master eller manuellt via workflow_dispatch. Orkestrerar Maven-bygget, kör enhetstester, integrationstester och E2E-tester, genererar SBOM och SLSA Level 3-attestering, och deployer till miljöer.</p>
           <p><strong>Byggsteg i sekvens:</strong></p>
           <ul>
@@ -506,7 +506,6 @@
           <a href="index_no.html" lang="nb">Norsk</a> | 
           <a href="index_ko.html" lang="ko">한국어</a> | 
           <a href="index_fi.html" lang="fi">Suomi</a> | 
-          <a href="index_no.html" lang="no">Norsk</a>
         </p>
       </div>
     </footer>
