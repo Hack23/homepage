@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIA Code Analyse | Developer Reality Check | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Citizen Intelligence Agency codebase analysis: Java/Spring Boot, 49 Maven modules, real repository structure, production insights.">
-<meta name="keywords" content="CIA code analysis, Java Spring Boot, Maven multi-module, political data platform, OSINT implementation, George Dorn developer, Hack23 code review">
+<meta name="description" content="CIA Compliance Manager: Enterprise beveiligingsbeoordelingsplatform voor Vertrouwelijkheid, Integriteit, Beschikbaarheid met NIST, ISO 27001, GDPR compliance-mapping.">
+<meta name="keywords" content="BIV-classificatiebeoordeling, beveiligingscompliance, NIST-raamwerk, ISO 27001, AVG-naleving, threat modeling, STRIDE-analyse, compliance-automatisering">
 <meta name="robots" content="index, follow">
 <meta name="author" content="George Dorn">
 <meta property="og:title" content="George Dorn: CIA Code Analyse - Java Spring Boot Reality">
-<meta property="og:description" content="Developer deep-dive into Citizen Intelligence Agency's actual codebase: 49 Maven modules, PostgreSQL schema, Spring Boot architecture analyzed.">
+<meta property="og:description" content="CIA Compliance Manager: Enterprise beveiligingsbeoordelingsplatform voor Vertrouwelijkheid, Integriteit, Beschikbaarheid met NIST, ISO 27001, GDPR compliance-mapping.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/blog-george-dorn-cia-code_nl.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
@@ -160,14 +160,14 @@
       <p class="hidden-wisdom"><em>Think for yourself: Don't trust documentation—clone the repo and verify. Code doesn't lie.</em></p>
     
       
-      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cyberBeveiliging consulting.</p>
     </section>
 
     <section id="repository-structure">
       <h2 class="panel-caption">Repository Structure: 49 Maven Modules Fighting Political Chaos</h2>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Vertrouwelijkheid-card">
           <div class="scanner-effect"></div>
           <h3>🏗️ Maven Multi-Module Architecture</h3>
           <p><strong>Actual Count:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM files</strong></p>
@@ -185,7 +185,7 @@
           <p class="hidden-wisdom"><em>Modular architecture = independent deployment potential, but also coordination complexity. Each module can evolve independently—until integration tests discover you broke something three modules away.</em></p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integriteit-card">
           <div class="scanner-effect"></div>
           <h3>☕ Java Source Files</h3>
           <p><strong>Actual Count:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1,372 Java files</strong></p>
@@ -202,7 +202,7 @@
           <p><strong>Technologies Confirmed in POMs:</strong></p>
           <ul>
             <li><strong>Spring Framework</strong> - Dependency injection, transaction management</li>
-            <li><strong>Spring Security</strong> - Authentication and authorization</li>
+            <li><strong>Spring Beveiliging</strong> - Authentication and authorization</li>
             <li><strong>JPA/Hibernate</strong> - Database ORM layer</li>
             <li><strong>Vaadin</strong> - Server-side Java web framework for UI</li>
             <li><strong>PostgreSQL</strong> - Primary database (confirmed in data model docs)</li>
@@ -211,7 +211,7 @@
           <p class="hidden-wisdom"><em>1,372 Java files = significant codebase requiring disciplined architecture. Without modular separation, this would be unmaintainable. The 49-module structure keeps complexity contained.</em></p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Beschikbaarheid-card">
           <div class="scanner-effect"></div>
           <h3>📚 Documentation Files Discovered</h3>
           <p><strong>Real Files in Root Directory:</strong></p>
@@ -232,10 +232,10 @@
     </section>
 
     <section id="tech-stack-reality">
-      <h2 class="panel-caption">Technology Stack: What's Actually Running</h2>
+      <h2 class="panel-caption">Technologie Stack: What's Actually Running</h2>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Vertrouwelijkheid-card">
           <div class="scanner-effect"></div>
           <h3>🖥️ Core Platform</h3>
           <p><strong>Language:</strong> Java (confirmed by 1,372 .java files)</p>
@@ -247,13 +247,13 @@
           <p><strong>Why This Stack?</strong></p>
           <ul>
             <li><strong>Java:</strong> Type safety, mature ecosystem, enterprise stability</li>
-            <li><strong>Spring:</strong> Battle-tested dependency injection, transaction management, security</li>
+            <li><strong>Spring:</strong> Battle-tested dependency injection, transaction management, Beveiliging</li>
             <li><strong>Vaadin:</strong> Complex UI in Java without writing JavaScript—controversial but effective for data-heavy applications</li>
             <li><strong>PostgreSQL:</strong> Open source, ACID compliance, excellent for relational political data</li>
           </ul>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integriteit-card">
           <div class="scanner-effect"></div>
           <h3>🗄️ Data Layer Architecture</h3>
           <p><strong>Confirmed from DATA_MODEL.md:</strong></p>
@@ -277,16 +277,16 @@
           <p><strong>Integration Pattern:</strong> Spring Integration framework for ETL pipelines. Data fetched via REST APIs, transformed, persisted to PostgreSQL, then materialized views aggregate for analytics.</p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Beschikbaarheid-card">
           <div class="scanner-effect"></div>
-          <h3>🔐 Security Implementation</h3>
+          <h3>🔐 Beveiliging Implementation</h3>
           <p><strong>From SECURITY_ARCHITECTURE.md Analysis:</strong></p>
           <ul>
             <li><strong>Spring Security</strong> for authentication/authorization</li>
             <li><strong>Parameterized queries</strong> via JPA (SQL injection prevention)</li>
             <li><strong>Network isolation</strong> through firewall rules</li>
             <li><strong>Javers auditing</strong> for every data modification</li>
-            <li><strong>Role-based access control</strong> with least-privilege database roles</li>
+            <li><strong>Role-based access control</strong> with least-privilege Database roles</li>
           </ul>
           
           <p><strong>OpenSSF Scorecard:</strong> 7.2/10 (verified at <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">scorecard.dev</a>)</p>
@@ -302,19 +302,19 @@
       <h2 class="panel-caption">Developer Observations: What I Learned Analyzing the Code</h2>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Vertrouwelijkheid-card">
           <div class="scanner-effect"></div>
           <h3>✅ What Works Well</h3>
           <ul>
             <li><strong>Modular Architecture:</strong> 49 Maven modules = clean separation. Service layer doesn't know about web layer. Data access isolated. Good boundaries.</li>
-            <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
+            <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, Beveiliging_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
             <li><strong>Test Infrastructure:</strong> Dedicated <code>testfoundation</code> module for test utilities. Shared test infrastructure = consistent testing approach.</li>
             <li><strong>Domain-Driven Design:</strong> Separate model modules for external data, internal data, application data. Clear domain boundaries.</li>
             <li><strong>Automated Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Measurable quality metrics.</li>
           </ul>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integriteit-card">
           <div class="scanner-effect"></div>
           <h3>⚠️ Complexity Challenges</h3>
           <ul>
@@ -326,15 +326,15 @@
           </ul>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Beschikbaarheid-card">
           <div class="scanner-effect"></div>
           <h3>🎯 Developer Experience Insights</h3>
-          <p><strong>Getting Started:</strong></p>
+          <p><strong>Aan de Slag:</strong></p>
           <ol>
             <li><code>git clone https://github.com/Hack23/cia.git</code></li>
             <li><code>mvn clean install</code> (will take 15-20 minuten first time)</li>
             <li>Read ARCHITECTURE.md to understand module structure</li>
-            <li>Read DATA_MODEL.md to understand database schema</li>
+            <li>Read DATA_MODEL.md to understand Database schema</li>
             <li>Run <code>citizen-intelligence-agency</code> main application module</li>
           </ol>
           
@@ -382,7 +382,7 @@
           <tr>
             <td><strong>OpenSSF Scorecard</strong></td>
             <td>7.2/10</td>
-            <td>Solid security practices, continuously improving</td>
+            <td>Solid Beveiliging practices, continuously improving</td>
           </tr>
           <tr>
             <td><strong>Database Tables</strong></td>
@@ -424,7 +424,7 @@
         <li>✅ <strong>49-module Maven architecture</strong> enforcing separation of concerns</li>
         <li>✅ <strong>1,372 Java files</strong> implementing real business logic</li>
         <li>✅ <strong>Comprehensive documentation</strong> (ARCHITECTURE.md, DATA_MODEL.md, etc.)</li>
-        <li>✅ <strong>Security best practices</strong> (OpenSSF 7.2/10, SLSA Level 3)</li>
+        <li>✅ <strong>Beveiliging best practices</strong> (OpenSSF 7.2/10, SLSA Level 3)</li>
         <li>✅ <strong>Complex PostgreSQL schema</strong> (90+ tables/views)</li>
         <li>✅ <strong>Multiple external integrations</strong> (Riksdag, World Bank, Election Auteurity)</li>
         <li>✅ <strong>CI/CD automation</strong> (GitHub Actions workflows)</li>
@@ -449,7 +449,7 @@
             <li><a href="https://github.com/Hack23/cia">GitHub Repository</a> - Clone and analyze yourself</li>
             <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4 models and system design</li>
             <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Database schema documentation</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Security patterns</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/Beveiliging_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Security patterns</li>
             <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Security metrics</li>
           </ul>
         </div>
@@ -486,9 +486,9 @@
         
         <!-- Services Column -->
         <div class="footer-column">
-          <h3>Services</h3>
+          <h3>Diensten</h3>
           <ul>
-            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Beveiliging Consulting</a></li>
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
@@ -510,7 +510,7 @@
         <div class="footer-column">
           <h3>Resources</h3>
           <ul>
-            <li><a href="blog_nl.html">Security Blog</a></li>
+            <li><a href="blog_nl.html">Beveiliging Blog</a></li>
             <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
             <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>

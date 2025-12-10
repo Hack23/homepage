@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIA Security | Defense Through Transparency | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Five-layer security architecture protecting political transparency platform: STRIDE threat modeling, defense in depth strategy, and 23 critical vulnerabilities addressed in open source OSINT design.">
-<meta name="keywords" content="CIA security architecture, OSINT security, political data protection, Simon Moon, threat modeling, five-layer defense, transparency security">
+<meta name="description" content="CIA Compliance Manager: Plataforma de evaluación de seguridad empresarial para Confidencialidad, Integridad, Disponibilidad con mapeo de cumplimiento NIST, ISO 27001, GDPR.">
+<meta name="keywords" content="evaluación tríada CIA, cumplimiento de seguridad, marco NIST, ISO 27001, cumplimiento RGPD, modelado de amenazas, análisis STRIDE, automatización de cumplimiento">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
 <meta property="og:title" content="CIA Security: Defense Through Transparency & The 23 Enigma">
-<meta property="og:description" content="Public political data demands public security architecture. The five defensive layers and the synchronicities that validate them.">
+<meta property="og:description" content="CIA Compliance Manager: Plataforma de evaluación de seguridad empresarial para Confidencialidad, Integridad, Disponibilidad con mapeo de cumplimiento NIST, ISO 27001, GDPR.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/blog-cia-security_es.html">
 <meta property="og:locale" content="es_ES">
@@ -155,7 +155,7 @@
     <section id="paradox">
       <h2 class="panel-caption">The Transparency Paradox</h2>
       
-      <p><strong>The transparency paradox stares every open-source security architect in the face:</strong> How do you defend a system when attackers can read every line of defense code?</p>
+      <p><strong>The transparency paradox stares every open-source Seguridad architect in the face:</strong> How do you defend a system when attackers can read every line of defense code?</p>
       
       <p><strong>Answer:</strong> You publish security through mathematical proof, not mystical obscurity. <em>Security through transparency</em>—where defense mechanisms survive adversarial analysis because they're built on cryptographic primitives, not secret sauce.</p>
       
@@ -177,45 +177,45 @@
       <p><strong>Defense-in-depth organized by the Law of Fives.</strong> Each layer independent. Breach one, four remain. Classic military strategy meeting modern cybersecurity.</p>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🌐 Perimeter Defense: Network Security</h3>
+          <h3>1. 🌐 Perimeter Defense: Network Seguridad</h3>
           <p><strong>AWS Shield and WAF.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>, AWS Shield provides DDoS protection at network and transport layers, while AWS WAF guards against OWASP Top 10 vulnerabilities with managed rule sets.</p>
           <p><strong>Multi-layered network segmentation:</strong> Three-zone architecture with public subnets (internet-facing), private app subnets (application tier), and private DB subnets (data tier). NAT Gateways provide secure outbound connectivity. VPC Flow Logs enable comprehensive traffic monitoring.</p>
           <p><strong>Application Load Balancer (ALB):</strong> Distributes traffic with TLS termination. Security Groups and Network ACLs provide layered stateful and stateless filtering. VPC Endpoints enable private AWS service access without internet exposure.</p>
           <p class="hidden-wisdom"><em>Perimeter defense that blocks legitimate users fails its mission. Perimeter defense that lets attackers through fails harder. The balance emerges through measured thresholds informed by actual attack patterns.</em></p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integridad-card">
           <div class="scanner-effect"></div>
           <h3>2. 🚪 Application Gateway: Authentication & Authorization</h3>
-          <p><strong>Spring Security framework.</strong> The authentication architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implements three security tiers: Anonymous (read-only public data access), User (authenticated access with bookmarking and tracking), and Admin (system management with elevated privileges).</p>
+          <p><strong>Spring Seguridad framework.</strong> The authentication architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implements three security tiers: Anonymous (read-only public data access), User (authenticated access with bookmarking and tracking), and Admin (system management with elevated privileges).</p>
           <p><strong>Multi-Factor Authentication:</strong> Google Authenticator OTP integration for enhanced security. Brute force protection via login blocking with configurable thresholds per IP, session, and user.</p>
           <p><strong>Method-level security:</strong> @Secured annotations enforce role-based access control at the service layer. Complete session invalidation on logout with comprehensive audit logging via ApplicationSession tracking.</p>
           <p><strong>Session management:</strong> Spring Security handles session lifecycle with secure session cookies, CSRF protection, and session fixation prevention. Every user interaction logged through ApplicationActionEvent for security analysis.</p>
           <p class="hidden-wisdom"><em>Authentication without authorization is security theater. Authorization without authentication is chaos. Both required. Both enforced. Both audited.</em></p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Disponibilidad-card">
           <div class="scanner-effect"></div>
           <h3>3. 🛡️ Business Logic Validation: Input Validation</h3>
           <p><strong>Spring Security and ORM parameterization.</strong> The application layer validates input at multiple stages: client-side validation, server-side validation in controllers, service-layer business rules enforcement, and ORM-level constraints.</p>
-          <p><strong>Example - data integrity protection:</strong></p>
+          <p><strong>Example - data Integridad protection:</strong></p>
           <ul>
             <li>Parameterized queries via JPA/Hibernate prevent SQL injection</li>
             <li>Input sanitization through Spring validation framework</li>
             <li>Business rule enforcement via service layer @Secured methods</li>
-            <li>Data consistency checks through database constraints</li>
+            <li>Data consistency checks through Base de datos constraints</li>
             <li>Comprehensive audit trails via Javers versioning</li>
           </ul>
           <p><strong>STRIDE threat mitigations documented in <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (authentication), Tampering (parameterized queries + Javers auditing), Repudiation (immutable audit logs), Information Disclosure (network isolation + encryption), Denial of Service (WAF rate limiting), Elevation of Privilege (method-level @Secured annotations).</p>
           <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
         </div>
         
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <div class="scanner-effect"></div>
           <h3>4. 🔒 Data Protection: Encryption & Key Management</h3>
-          <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for databases, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
+          <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/Seguridad_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for Base de datoss, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
           <p><strong>Secrets management:</strong> AWS Secrets Manager handles database credentials, API keys, and service accounts with automated rotation. Secure credential storage with just-in-time delivery to services.</p>
           <p><strong>Data classification system:</strong> Information categorized by sensitivity with appropriate protection controls. Minimal personal data collection (user accounts only). PostgreSQL SSL configuration enforces encrypted connections.</p>
           <p><strong>Javers auditing:</strong> Every data change tracked with author attribution, complete change history, and temporal data access. Property-level tracking provides before/after snapshots for compliance and forensics.</p>
@@ -245,9 +245,9 @@
       <p><strong>Key documented threats include:</strong></p>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <h3>🎯 Web Application Compromise</h3>
-          <p><strong>Attack Vector:</strong> Exploitation of application vulnerabilities to manipulate political data integrity. <strong>Mitigations:</strong> WAF protection, input validation via ORM parameterization, defense-in-depth across network/application/data layers. <strong>Residual Risk:</strong> Low after comprehensive controls.</p>
+          <p><strong>Attack Vector:</strong> Exploitation of application vulnerabilities to manipulate political data Integridad. <strong>Mitigations:</strong> WAF protection, input validation via ORM parameterization, defense-in-depth across network/application/data layers. <strong>Residual Risk:</strong> Low after comprehensive controls.</p>
         </div>
         
         <div class="card integrity-card">
@@ -255,27 +255,27 @@
           <p><strong>Attack Vector:</strong> Compromised dependencies introducing malicious code or vulnerabilities. <strong>Mitigations:</strong> SBOM generation, SLSA Level 3 provenance, Dependabot automation, OpenSSF Scorecard monitoring. <strong>Residual Risk:</strong> Low with continuous verification.</p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Disponibilidad-card">
           <h3>⚡ Denial of Service</h3>
           <p><strong>Attack Vector:</strong> L7 flood attacks, resource exhaustion, or request amplification. <strong>Mitigations:</strong> AWS WAF rate limits, auto-scaling planned, CloudWatch monitoring, multi-AZ architecture future roadmap. <strong>Residual Risk:</strong> Medium pending HA implementation.</p>
         </div>
         
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <h3>🔑 Credential Compromise</h3>
           <p><strong>Attack Vector:</strong> Credential stuffing, brute force, or phishing targeting admin accounts. <strong>Mitigations:</strong> Login throttling, strong password policy, IP rate limiting, MFA via Google Authenticator. <strong>Residual Risk:</strong> Low-Medium with enhanced monitoring.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integridad-card">
           <h3>🗂️ Data Integrity Attack</h3>
-          <p><strong>Attack Vector:</strong> Manipulation of political data through compromised import pipelines or database access. <strong>Mitigations:</strong> Source verification from Riksdag API, schema validation, Javers auditing with immutable trails, duplicate detection. <strong>Residual Risk:</strong> Low with multi-layer validation.</p>
+          <p><strong>Attack Vector:</strong> Manipulation of political data through compromised import pipelines or Base de datos access. <strong>Mitigations:</strong> Source verification from Riksdag API, schema validation, Javers auditing with immutable trails, duplicate detection. <strong>Residual Risk:</strong> Low with multi-layer validation.</p>
         </div>
       </div>
       
-      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
+      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed Seguridad decisions.</em></p>
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Build Integrity & Provenance</h2>
+      <h2 class="panel-caption">Supply Chain Seguridad: Build Integridad & Provenance</h2>
       
       <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
       
@@ -299,7 +299,7 @@
     <section id="cra-assessment">
       <h2 class="panel-caption">CRA Compliance: The Cyber Resilience Act Assessment</h2>
       
-      <p><strong>EU Cyber Resilience Act mandates security practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
+      <p><strong>EU Cyber Resilience Act mandates Seguridad practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
       
       <p><strong>Five CRA pillars matched to our five defensive layers:</strong></p>
       
@@ -351,27 +351,27 @@
       <p><strong>Where does security evolve?</strong> Full roadmap: <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a>. Five major enhancements over five years:</p>
       
       <div class="cards">
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <h3>Year 1: Zero-Trust Architecture</h3>
           <p>Eliminate implicit trust. Every request authenticated, every access authorized, every action audited. BeyondCorp-style perimeter-less security. Trust nothing, verify everything, log all decisions.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integridad-card">
           <h3>Year 2: Homomorphic Encryption POC</h3>
           <p>Query encrypted data without decrypting. Search politician names in encrypted indexes. Analytics on encrypted voting patterns. Computation on ciphertext. Preserves privacy while enabling transparency.</p>
         </div>
         
-        <div class="card availability-card">
+        <div class="card Disponibilidad-card">
           <h3>Year 3: Blockchain Audit Trail</h3>
           <p>Immutable evidence chain. Every data import, every user action, every system event—hashed and recorded on-chain. Cryptographic proof of data provenance. Disputes resolved with mathematical certainty.</p>
         </div>
         
-        <div class="card confidentiality-card">
+        <div class="card Confidencialidad-card">
           <h3>Year 4: AI-Powered Anomaly Detection</h3>
-          <p>Machine learning monitoring normal behavior patterns. Detect deviations automatically. "This user suddenly querying 10,000 politicians at 3am from new location = flag for review." Adaptive security through pattern recognition.</p>
+          <p>Machine learning monitoring normal behavior patterns. Detect deviations automatically. "This user suddenly querying 10,000 politicians at 3am from new location = flag for review." Adaptive Seguridad through pattern recognition.</p>
         </div>
         
-        <div class="card integrity-card">
+        <div class="card Integridad-card">
           <h3>Year 5: Quantum-Resistant Cryptography</h3>
           <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum threat emerges.</p>
         </div>
@@ -381,7 +381,7 @@
     </section>
 
     <section id="lessons-learned">
-      <h2 class="panel-caption">Security Wisdom: What the Patterns Taught Me</h2>
+      <h2 class="panel-caption">Seguridad Wisdom: What the Patterns Taught Me</h2>
       
       <p><strong>After architecting security for a transparency platform, what did I learn?</strong></p>
       
@@ -403,7 +403,7 @@
     <section id="invitation">
       <h2 class="panel-caption">Verify Everything. Trust Through Evidence.</h2>
       
-      <p><strong>Don't trust our security claims. Verify them:</strong></p>
+      <p><strong>Don't trust our Seguridad claims. Verify them:</strong></p>
       
       <ul>
         <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in technical detail</li>
@@ -449,9 +449,9 @@
         
         <!-- Services Column -->
         <div class="footer-column">
-          <h3>Services</h3>
+          <h3>Servicios</h3>
           <ul>
-            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Seguridad Consulting</a></li>
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
@@ -473,7 +473,7 @@
         <div class="footer-column">
           <h3>Resources</h3>
           <ul>
-            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="blog.html">Seguridad Blog</a></li>
             <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
             <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
