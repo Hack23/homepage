@@ -2,7 +2,7 @@
 
 ## 📋 Executive Summary
 
-**Issue**: Hack23/homepage#[Issue Number]
+**Issue**: Hack23/homepage#4
 **Status**: Implementation Guide Complete - Professional Translation Required
 **Scope**: 12 HTML files (4 page types × 3 Nordic languages: DA/FI/NO)
 **Estimated Translation Effort**: 36-48 professional hours
@@ -413,7 +413,7 @@ Given the professional translation requirements, there are two pragmatic paths:
 **Document Control**:
 - **Created**: 2025-12-10
 - **Author**: GitHub Copilot Agent (UI Enhancement Specialist)
-- **Issue**: #[Issue Number] - Nordic Languages ISO 27001 Implementation Guides
+- **Issue**: #4 - Nordic Languages ISO 27001 Implementation Guides
 - **Status**: Implementation Guide Complete - Translation Required
 - **Priority**: High
 - **Dependencies**: Issue #702 (Core Pages)
