@@ -171,12 +171,12 @@
 - **Discordian Voice Validation:** 3 hours
 - **Cultural Adaptation Review:** 3 hours
 - **Technical QA:** 3 hours
-- **Subtotal QA:** 15 hours
+- **Subtotal QA:** 15-18 hours
 
 ### Total Project
-- **Total Hours:** 114-147 hours (99-132h translation + 15h QA)
+- **Total Hours:** 114-150 hours (99-132h translation + 15-18h QA)
 - **Minimum:** 114 hours × €50/hour = €5,700
-- **Maximum:** 147 hours × €65/hour = €9,555
+- **Maximum:** 150 hours × €65/hour = €9,750
 - **Realistic:** **€5,500-€7,500** (allowing for efficiencies)
 
 ## Recommended Next Steps

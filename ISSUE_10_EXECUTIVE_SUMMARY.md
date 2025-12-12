@@ -141,11 +141,14 @@
 | **Danish Translation** | 33-44h | €50-65/h | €1,650-€2,860 |
 | **Finnish Translation** | 33-44h | €50-65/h | €1,650-€2,860 |
 | **Norwegian Translation** | 33-44h | €50-65/h | €1,650-€2,860 |
+| **Subtotal Translation** | 99-132h | - | - |
 | **ISO 27001 Review** | 6-9h | €50-65/h | €300-€585 |
 | **Voice Validation** | 3h | €50-65/h | €150-€195 |
 | **Cultural Review** | 3h | €50-65/h | €150-€195 |
 | **Technical QA** | 3h | €50-65/h | €150-€195 |
-| **TOTAL** | **99-132h** | - | **€5,500-€7,500** |
+| **Subtotal QA** | 15-18h | - | - |
+| **TOTAL** | **114-150h** | - | **€5,700-€9,750** |
+| **Realistic (efficiencies)** | **~120h** | **~€50-60** | **€5,500-€7,500** |
 
 ### Rate Justification
 **Why €50-€65/hour (cybersecurity specialist):**
