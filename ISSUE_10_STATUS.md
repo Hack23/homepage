@@ -164,18 +164,20 @@
 - **Danish:** 33-44 hours (42 policies)
 - **Finnish:** 33-44 hours (42 policies)
 - **Norwegian:** 33-44 hours (42 policies)
-- **Subtotal:** 99-132 hours
+- **Subtotal Translation:** 99-132 hours
 
 ### Quality Assurance
 - **ISO 27001 Review:** 6-9 hours
 - **Discordian Voice Validation:** 3 hours
 - **Cultural Adaptation Review:** 3 hours
 - **Technical QA:** 3 hours
+- **Subtotal QA:** 15 hours
 
 ### Total Project
-- **Minimum:** 99 hours × €50/hour = €4,950
-- **Maximum:** 132 hours × €65/hour = €8,580
-- **Realistic:** **€5,500-€7,500**
+- **Total Hours:** 114-147 hours (99-132h translation + 15h QA)
+- **Minimum:** 114 hours × €50/hour = €5,700
+- **Maximum:** 147 hours × €65/hour = €9,555
+- **Realistic:** **€5,500-€7,500** (allowing for efficiencies)
 
 ## Recommended Next Steps
 

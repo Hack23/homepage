@@ -173,6 +173,7 @@ Examples:
 
 #### Hreflang Tags (17 total per file)
 ```html
+<!-- 17 hreflang tags: en, da, da-DK, fi, fi-FI, nb, nb-NO, nl, de, de-DE, fr, fr-FR, es, es-ES, sv, sv-SE, x-default -->
 <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-{policy}.html">
 <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-{policy}_da.html">
 <link rel="alternate" hreflang="da-DK" href="https://hack23.com/discordian-{policy}_da.html">
