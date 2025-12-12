@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="مدير امتثال CIA architecture: C4 models, STRIDE analysis, CRA assessment, data models, CI/CD workflows, API documentation."
+    />
+    <title>هندسة مدير امتثال CIA | التوثيق | Hack23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css"><link rel="canonical" href="https://hack23.com/cia-compliance-manager-docs_ar.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="هندسة مدير امتثال CIA التوثيق" />
+    <meta property="og:description" content="Open-source CIA triad platform architecture: C4 models, security design, STRIDE threat analysis, CRA assessment, data models, CI/CD workflows." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hack23.com/cia-compliance-manager-docs_ar.html" />
+    <meta property="og:image" content="cia-icon-140.webp" />
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="security architecture documentation Hack23, C4 architecture models CIA triad, STRIDE threat modeling automation, compliance architecture patterns, open source security platform docs, cloud security architecture CIA, CISO technical documentation, developer documentation security, compliance architecture design, CIA triad system design, security assessment architecture, automated compliance platform, NIST cybersecurity framework documentation, ISO 27001 architecture implementation, GDPR technical compliance design, CRA cyber resilience act assessment, business continuity planning security, API documentation security architecture, DevOps security pipeline design, cloud architecture security models, containerization security architecture, zero trust architecture documentation, security operations center design, incident response architecture, forensic analysis system design, vulnerability management architecture, penetration testing methodology, security training framework, security culture implementation, risk quantification models, security governance architecture, information security management system, security metrics KPI design, compliance gap analysis tools, security controls mapping automation, threat actor profiling architecture, security intelligence platform design, enterprise security architecture patterns, microservices security design, serverless security architecture, edge computing security models, AI security architecture patterns, quantum cryptography implementation, blockchain security architecture, IoT security platform design, mobile security architecture, network security segmentation design, identity access management architecture, privileged access management systems, data loss prevention architecture, encryption key management systems, security monitoring analytics platform, security orchestration automation response">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "مدير امتثال CIA - Architecture & Security التوثيق",
+      "description": "Technical documentation for security architects, solution architects, cloud architects, developers, and CISOs. Includes 20+ architecture diagrams: C4 models (current & future), security architecture patterns, STRIDE threat analysis with risk quantification, CRA compliance assessment, data models, state diagrams, CI/CD workflows, API documentation, and business continuity planning. Open-source CIA triad information security platform with transparent system design.",
+      "image": "cia-icon-140.webp",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-06",
+      "inLanguage": "ar",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/cia-compliance-manager-docs_ar.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "مدير امتثال CIA",
+        "applicationCategory": "SecurityApplication",
+        "applicationSubCategory": "الامتثال Automation Platform",
+        "operatingSystem": "Cross-platform"
+      },
+      "audience": [
+        {
+          "@type": "احترافيAudience",
+          "audienceType": "Security Architect",
+          "name": "Security Architects & CISOs"
+        },
+        {
+          "@type": "احترافيAudience",
+          "audienceType": "Solution Architect",
+          "name": "Solution & Cloud Architects"
+        },
+        {
+          "@type": "احترافيAudience",
+          "audienceType": "Developer",
+          "name": "Software Developers & DevOps Engineers"
+        },
+        {
+          "@type": "احترافيAudience",
+          "audienceType": "IT احترافي",
+          "name": "Chief Information Officers & Chief Information Security Officers"
+        }
+      ],
+      "featureList": [
+        "Complete C4 Architecture Models (Current & Future State)",
+        "Security Architecture التوثيق (Current & Future)",
+        "STRIDE Threat Analysis with Attack Trees",
+        "CRA Assessment Framework Implementation",
+        "Comprehensive Data Models & Entity Diagrams",
+        "State Diagrams & Process Flowcharts",
+        "SWOT Analysis (Strategic & Future Planning)",
+        "CI/CD Workflows & DevOps Integration Patterns",
+        "Unit/E2E/Performance Testing Frameworks",
+        "Business Continuity & Lifecycle Management",
+        "Complete API التوثيق",
+        "Financial Security Planning & Cost Models",
+        "Open Source Contribution Guidelines",
+        "20+ Technical Diagrams & التوثيق Resources",
+        "آلي جمع الأدلة",
+        "Continuous الامتثال Monitoring",
+        "ISO 27001 Control Mapping",
+        "NIST Framework Integration",
+        "GDPR الامتثال Reporting"
+      ],
+      "teaches": [
+        "C4 Architecture Modeling (Context, Container, Component, Code)",
+        "Security Architecture Design Patterns",
+        "STRIDE نمذجة التهديدات with Risk Quantification",
+        "CRA (Cyber Resilience Act) الامتثال Assessment",
+        "ثالوث CIA Implementation (السرية, النزاهة, التوافر)",
+        "System Data Modeling & Entity Relationships",
+        "State Transition Design & Process Flowcharts",
+        "CI/CD Pipeline Architecture",
+        "Business Continuity & Disaster Recovery Planning",
+        "Open Source Security Platform Architecture"
+      ],
+      "educationalLevel": "احترافي / Expert",
+      "learningResourceType": [
+        "Architecture التوثيق",
+        "System Design Patterns",
+        "Security Framework Guide",
+        "Technical Reference",
+        "API التوثيق",
+        "Threat Model Analysis",
+        "الامتثال Assessment Framework"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": "C4 architecture, security architecture, STRIDE threat modeling, CRA assessment, system design, cloud architecture, solution architecture, technical documentation, open source security, CIA triad, compliance framework, API documentation, DevOps, CISO resources",
+      "softwareRequirements": "Modern web browser for viewing documentation and diagrams. Development: TypeScript, React, Node.js for contributing.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source التوثيق"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "NIST Cybersecurity Framework",
+          "url": "https://www.nist.gov/cyberframework"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "ISO/IEC 27001 Information Security Management",
+          "url": "https://www.iso.org/isoiec-27001-information-security.html"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "STRIDE نمذجة التهديدات",
+          "url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "EU Cyber Resilience Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "TechArticle",
+          "name": "C4 Architecture Models",
+          "description": "Context, Container, Component, and Code level architecture diagrams"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "STRIDE Threat Analysis",
+          "description": "Comprehensive threat modeling with attack trees and risk quantification"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "API التوثيق",
+          "description": "Complete API reference for all components and functions"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Use مدير امتثال CIA for تقييم الأمان",
+      "description": "Step-by-step guide to assess your organization's security posture using the مدير امتثال CIA platform",
+      "image": "cia-icon-140.webp",
+      "totalTime": "PT30M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Modern Web Browser"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "مدير امتثال CIA Application",
+          "url": "https://hack23.github.io/cia-compliance-manager/"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Launch the Application",
+          "text": "Navigate to the مدير امتثال CIA web application",
+          "url": "https://hack23.github.io/cia-compliance-manager/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Assess السرية Level",
+          "text": "Evaluate your organization's confidentiality requirements and select the appropriate level (Public, Internal, Confidential, Restricted, Secret, Top Secret)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Consider data classification, access controls, and regulatory requirements when selecting your confidentiality level"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Assess النزاهة Level",
+          "text": "Determine your data integrity requirements and select the level (Basic, Moderate, High, Critical) based on validation needs and data accuracy importance",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "High integrity levels require automated validation, checksums, and digital signatures"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Assess التوافر Level",
+          "text": "Choose your required availability level (Basic, Standard, High, Critical) based on uptime requirements and recovery capabilities",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Consider your RTO (Recovery Time Objective) and RPO (Recovery Point Objective) when selecting availability level"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Review الامتثال Mapping",
+          "text": "Examine how your selected CIA levels map to compliance frameworks including NIST, ISO 27001, GDPR, HIPAA, SOC2, and PCI DSS",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "The platform automatically identifies relevant controls for each framework based on your CIA selections"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Analyze Business Impact",
+          "text": "Review the business impact analysis showing financial, operational, reputational, and regulatory implications of your security posture"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Estimate Implementation Costs",
+          "text": "Use the cost estimation feature to calculate CAPEX and OPEX for implementing your selected security controls"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Generate Reports",
+          "text": "Create comprehensive reports and visualizations showing your security assessment results, compliance status, and implementation roadmap"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-compliance-manager-docs_ar.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الصفحة الرئيسية",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "مدير امتثال CIA",
+          "item": "https://hack23.com/cia-compliance-manager-features_ar.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "هندسة مدير امتثال CIA التوثيق",
+          "item": "https://hack23.com/cia-compliance-manager-docs_ar.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+	<!-- Hreflang tags for international SEO --><link rel="alternate" hreflang="ar" href="https://hack23.com/cia-compliance-manager-docs_ar.html">
+	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/cia-compliance-manager-docs_ar.html">
+	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/cia-compliance-manager-docs_ar.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/cia-compliance-manager-docs.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/cia-compliance-manager-docs_he.html">
+	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/cia-compliance-manager-docs_he.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/cia-compliance-manager-docs_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/cia-compliance-manager-docs_sv.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/cia-compliance-manager-docs.html">
+</head>
+  <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">الصفحة الرئيسية</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-compliance-manager-features_ar.html">مدير امتثال CIA</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        هندسة مدير امتثال CIA التوثيق
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+      <div class="logo-container">
+        <img
+          src="cia-icon-140.webp"
+          alt="مدير امتثال CIA Logo"
+          class="logo"
+          width="80"
+          height="80"
+        />
+      </div>
+      <h1>
+        مدير امتثال CIA التوثيق
+        <span class="app-version">latest</span>
+      </h1>
+      <p>
+        Comprehensive documentation for the CIA (السرية, النزاهة,
+        التوافر) الامتثال Manager.
+      </p>
+      <div class="badges">
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/releases"
+          title="GitHub Release"
+        >
+          <img
+            src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager"
+            alt="GitHub Release"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/blob/main/LICENSE"
+          title="License"
+        >
+          <img
+            src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg"
+            alt="License"
+          />
+        </a>
+        <a
+          href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield"
+          title="FOSSA Status"
+        >
+          <img
+            src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield"
+            alt="FOSSA Status"
+          />
+        </a>
+        <a
+          href="https://bestpractices.coreinfrastructure.org/projects/10365"
+          title="CII Best Practices"
+        >
+          <img
+            src="https://bestpractices.coreinfrastructure.org/projects/10365/badge"
+            alt="CII Best Practices"
+          />
+        </a>
+        <a
+          href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager"
+          title="OpenSSF Scorecard"
+        >
+          <img
+            src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge"
+            alt="OpenSSF Scorecard"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/attestations"
+          title="SLSA Level 3"
+        >
+          <img
+            src="https://slsa.dev/images/gh-badge-level3.svg"
+            alt="SLSA 3"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml"
+          title="Deploy Status"
+        >
+          <img
+            src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg"
+            alt="Verify & Release"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml"
+          title="Scorecard Supply-Chain Security"
+        >
+          <img
+            src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main"
+            alt="Scorecard Supply-Chain Security"
+          />
+        </a>
+      </div>
+      <div class="app-link">
+        <a
+          href="index_ar.html"
+          title="Go to الصفحة الرئيسية"
+        >
+          الصفحة الرئيسية
+        </a>
+        <a
+          href="cia-compliance-manager-features_ar.html"
+          title="View Product الميزات"
+        >
+          Product الميزات
+        </a>
+        <a
+          href="https://hack23.github.io/cia-compliance-manager/"
+          title="Launch the مدير امتثال CIA application"
+        >
+          Launch Application
+        </a>
+        <a
+          href="https://github.com/Hack23/cia-compliance-manager"
+          class="btn"
+          title="View the GitHub repository"
+        >
+          GitHub Repository
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Project Overview</h2>
+        <p>
+          The مدير امتثال CIA is a comprehensive web application designed
+          to help organizations assess, implement, and manage security controls
+          across the CIA triad (السرية, النزاهة, التوافر). The
+          application enables users to evaluate security posture, measure
+          compliance against major frameworks, and analyze the business impacts
+          of security implementations.
+        </p>
+      </section>
+
+      <section id="features">
+        <h2>Key الميزات</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Security Level Assessment</h3>
+            <p>
+              Assess and configure security levels across السرية,
+              النزاهة, and التوافر dimensions.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>الامتثال Mapping</h3>
+            <p>
+              Map security controls to frameworks like NIST, ISO, GDPR, HIPAA,
+              SOC2, and PCI DSS.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>تحليل تأثير الأعمال</h3>
+            <p>
+              Analyze the financial, operational, and regulatory impacts of your
+              security measures.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Cost Estimation</h3>
+            <p>
+              Estimate CAPEX and OPEX for security implementations to support
+              ROI analysis and budget planning.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Interactive Visualizations</h3>
+            <p>
+              View security data and compliance status through intuitive
+              interactive charts and dashboards.
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>Implementation Guidance</h3>
+            <p>
+              Access detailed guidance on deploying and optimizing security
+              controls based on industry best practices and compliance
+              requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <h2 id="diagrams">Architecture & التوثيق</h2>
+      <p>
+        Explore the complete architectural and technical documentation for the
+        مدير امتثال CIA.
+      </p>
+
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Current Architecture</h3>
+          <p>
+            C4 model showing current system containers, components, and dynamics
+            of the مدير امتثال CIA.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/ARCHITECTURE.md"
+            title="View Current Architecture"
+          >
+            View Architecture
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Future Architecture</h3>
+          <p>
+            Vision for context-aware security posture management platform and
+            future system evolution.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_ARCHITECTURE.md"
+            title="View Future Architecture"
+          >
+            View Future Architecture
+          </a>
+        </div>
+
+        <!-- Behavior Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 State Diagrams</h3>
+          <p>
+            Security profile and compliance status state transitions for the
+            current system implementation.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/STATEDIAGRAM.md"
+            title="View State Diagrams"
+          >
+            View State Diagrams
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Future State Diagrams</h3>
+          <p>
+            Context-aware and adaptive security state transitions for future
+            platform versions.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_STATEDIAGRAM.md"
+            title="View Future State Diagrams"
+          >
+            View Future States
+          </a>
+        </div>
+
+        <!-- Process Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Process Flowcharts</h3>
+          <p>
+            Security assessment and compliance workflows for the current
+            implementation.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FLOWCHART.md"
+            title="View Process Flowcharts"
+          >
+            View Flowcharts
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Future Flowcharts</h3>
+          <p>
+            ML-enhanced and context-aware workflows planned for future releases.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_FLOWCHART.md"
+            title="View Future Flowcharts"
+          >
+            View Future Flows
+          </a>
+        </div>
+
+        <!-- Security Group -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Security Architecture</h3>
+          <p>
+            Comprehensive security architecture design and implementation patterns for the platform.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md"
+            title="View Security Architecture"
+          >
+            View Security Architecture
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Future Security Architecture</h3>
+          <p>
+            متقدم security architecture vision incorporating AI-enhanced security capabilities.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_SECURITY_ARCHITECTURE.md"
+            title="View Future Security Architecture"
+          >
+            View Future Security Architecture
+          </a>
+        </div>
+
+        <!-- Business Group -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 SWOT Analysis</h3>
+          <p>
+            Strategic strengths, weaknesses, opportunities, and threats for the
+            current platform.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SWOT.md"
+            title="View SWOT Analysis"
+          >
+            View SWOT Analysis
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 Future SWOT</h3>
+          <p>
+            Strategic analysis of context-aware security platform and market
+            positioning.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_SWOT.md"
+            title="View Future SWOT Analysis"
+          >
+            View Future SWOT
+          </a>
+        </div>
+
+        <!-- DevOps Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 CI/CD Workflows</h3>
+          <p>
+            Build, test, and deployment automation for the current application
+            architecture.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/WORKFLOWS.md"
+            title="View CI/CD Workflows"
+          >
+            View CI/CD Workflows
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 Future Workflows</h3>
+          <p>
+            متقدم CI/CD with ML and security automation planned for future
+            releases.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_WORKFLOWS.md"
+            title="View Future Workflows"
+          >
+            View Future DevOps
+          </a>
+        </div>
+
+        <!-- Conceptual Group -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧠 Concept Mindmaps</h3>
+          <p>
+            System structure and component relationships visualized through mind
+            mapping.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/MINDMAP.md"
+            title="View Mindmaps"
+          >
+            View Mindmaps
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧠 Future Concept Maps</h3>
+          <p>
+            Evolution roadmap and capability expansion plans for future
+            development.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_MINDMAP.md"
+            title="View Future Mindmaps"
+          >
+            View Future Concepts
+          </a>
+        </div>
+
+        <!-- Data Model -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Data Model</h3>
+          <p>
+            Current data architecture to support platform capabilities.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/DATA_MODEL.md"
+            title="View Data Model"
+          >
+            View Data Architecture
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Future Data Model</h3>
+          <p>
+            Enhanced context-aware data architecture to support future platform
+            capabilities.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/FUTURE_DATA_MODEL.md"
+            title="View Future Data Model"
+          >
+            View Data Architecture
+          </a>
+        </div>
+
+        <!-- Testing التوثيق -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧪 Unit Tests</h3>
+          <p>
+            Visual representation of unit test results and coverage of the
+            codebase.
+          </p>
+          <a
+            href="https://hack23.github.io/cia-compliance-manager/test-results/"
+            title="View Test Results"
+          >
+            Test Results
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/UnitTestPlan.md"
+            title="View Unit Test Plan"
+          >
+            Test Plan
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Test Coverage</h3>
+          <p>
+            Test coverage reports showing how much of the codebase is covered by
+            tests.
+          </p>
+          <a
+            href="https://hack23.github.io/cia-compliance-manager/coverage/index_ar.html"
+            title="View Code Coverage Report"
+          >
+            View Coverage Report
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔍 E2E System Tests</h3>
+          <p>End-to-end test reports showing full system validation results.</p>
+          <a
+            href="https://hack23.github.io/cia-compliance-manager/cypress/mochawesome/index_ar.html"
+            title="View E2E Test Report"
+          >
+            View Test Report
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/E2ETestPlan.md"
+            title="View E2E Test Plan"
+          >
+            E2E Plan
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⚡ Performance Tests</h3>
+          <p>
+            Benchmarks and performance analysis under various load conditions.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/performance-testing.md"
+            title="View Performance Testing Results"
+          >
+            View Performance Data
+          </a>
+        </div>
+
+        <!-- API التوثيق -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📘 API التوثيق</h3>
+          <p>
+            Detailed API reference for all components, types, and functions in
+            the application.
+          </p>
+          <a
+            href="https://hack23.github.io/cia-compliance-manager/api/"
+            title="View API التوثيق"
+          >
+            View API التوثيق
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Business Continuity</h3>
+          <p>
+            Comprehensive business continuity planning and recovery strategies
+            aligned with CIA principles.
+          </p>
+          <a
+            href="https://hack23.github.io/cia-compliance-manager/business-continuity.html"
+            title="View Business Continuity Plan"
+          >
+            View Plan
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/BCPPlan.md"
+            title="View Markdown Version"
+          >
+            View Chart and Mindmap version
+          </a>
+        </div>
+
+        <!-- Lifecycle Management -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📅 Lifecycle Management</h3>
+          <p>
+            Maintenance and end-of-life planning for the platform's technology components.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/End-of-Life-Strategy.md"
+            title="View End-of-Life Strategy"
+          >
+            View EOL Strategy
+          </a>
+        </div>
+
+        <!-- Financial Security Plan -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💰 Financial Security Plan</h3>
+          <p>
+            Cost and security implementation guidelines for safely deploying the platform.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/FinancialSecurityPlan.md"
+            title="View Financial Security Plan"
+          >
+            View Security Plan
+          </a>
+        </div>
+
+        <!-- Threat Model -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ Evidence-Based Threat Model</h3>
+          <p>
+            Comprehensive STRIDE threat analysis with attack trees, risk quantification, and security control mapping demonstrating transparent security practices.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md"
+            title="View Threat Model التوثيق"
+          >
+            <img src="https://img.shields.io/badge/Threat_Model-Public_التوثيق-blue?style=flat-square&logo=github&logoColor=white" alt="Threat Model: Public التوثيق" />
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md#stride-threat-analysis"
+            title="View STRIDE Analysis"
+          >
+            <img src="https://img.shields.io/badge/STRIDE-Complete_Analysis-green?style=flat-square&logo=security&logoColor=white" alt="STRIDE: Complete Analysis" />
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md#quantitative-risk-assessment"
+            title="View تقييم المخاطر"
+          >
+            <img src="https://img.shields.io/badge/Risk_Assessment-Quantified-purple?style=flat-square&logo=calculator&logoColor=white" alt="تقييم المخاطر: Quantified" />
+          </a>
+        </div>
+
+        <!-- CRA Assessment -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ CRA Assessment Implementation</h3>
+          <p>
+            Complete Cyber Resilience Act (CRA) compliance assessment for standard non-commercial open source software, demonstrating regulatory alignment.
+          </p>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/CRA-ASSESSMENT.md"
+            title="View CRA Assessment التوثيق"
+          >
+            <img src="https://img.shields.io/badge/CRA_Assessment-Complete-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA Assessment: Complete" />
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/CRA-ASSESSMENT.md#product-classification"
+            title="View Product Classification"
+          >
+            <img src="https://img.shields.io/badge/Classification-Standard_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="Classification: Standard OSS" />
+          </a>
+          <a
+            href="https://github.com/Hack23/cia-compliance-manager/blob/main/CRA-ASSESSMENT.md#vulnerability-disclosure"
+            title="View Vulnerability Management"
+          >
+            <img src="https://img.shields.io/badge/Vulnerability_Management-Implemented-orange?style=flat-square&logo=shield&logoColor=white" alt="Vulnerability Management: Implemented" />
+          </a>
+        </div>
+
+      </div>
+
+      <section id="project-classification">
+        <h2>🏷️ Project Classification According to Hack23 Framework</h2>
+        <p>
+          Following the <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23 Classification & Business Continuity Framework</a> guidelines for comprehensive project assessment:
+        </p>
+
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>🎯 Project Classification</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Project Type: الامتثال Platform">
+                <img src="https://img.shields.io/badge/Type-الامتثال_Platform-green?style=for-the-badge&logo=clipboard-check&logoColor=white" alt="Project Type: الامتثال Platform" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="Business Process: Legal">
+                <img src="https://img.shields.io/badge/Process-Legal-darkred?style=for-the-badge&logo=balance-scale&logoColor=white" alt="Business Process: Legal" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔒 Security Classification</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="السرية Level: Public - No confidentiality requirements">
+                <img src="https://img.shields.io/badge/السرية-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="السرية: Public" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="النزاهة Level: High - آلي validation, digital signatures">
+                <img src="https://img.shields.io/badge/النزاهة-High-orange?style=for-the-badge&logo=check-circle&logoColor=white" alt="النزاهة: High" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="التوافر Level: High - 99.9% uptime, automated failover">
+                <img src="https://img.shields.io/badge/التوافر-High-orange?style=for-the-badge&logo=server&logoColor=white" alt="التوافر: High" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>⏱️ Business Continuity</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="Recovery Time Objective: 1-4 hours">
+                <img src="https://img.shields.io/badge/RTO-High_(1--4hrs)-yellow?style=for-the-badge&logo=clock&logoColor=white" alt="RTO: High (1-4hrs)" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="Recovery Point Objective: 1-4 hours">
+                <img src="https://img.shields.io/badge/RPO-Hourly_(1--4hrs)-lightgreen?style=for-the-badge&logo=database&logoColor=white" alt="RPO: Hourly (1-4hrs)" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>🛡️ Security Investment Returns</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="ROI Level: Basic - 20-40% risk reduction">
+                <img src="https://img.shields.io/badge/ROI-Basic-orange?style=for-the-badge&logo=chart-line&logoColor=white" alt="ROI: Basic" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Risk Mitigation: 40% Reduction">
+                <img src="https://img.shields.io/badge/Risk_Mitigation-40%25_Reduction-orange?style=for-the-badge&logo=shield&logoColor=white" alt="Risk Mitigation: 40% Reduction" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns" title="Breach Prevention: $2K Savings">
+                <img src="https://img.shields.io/badge/Breach_Prevention-$2K_Savings-orange?style=for-the-badge&logo=lock&logoColor=white" alt="Breach Prevention: $2K Savings" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🎯 Competitive Differentiation</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Market Position: Premium Provider - Strong market position">
+                <img src="https://img.shields.io/badge/Position-Premium_Provider-blue?style=for-the-badge&logo=trending-up&logoColor=white" alt="Market Position: Premium Provider" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Customer Trust: High scores">
+                <img src="https://img.shields.io/badge/Trust-High_scores-blue?style=for-the-badge&logo=handshake&logoColor=white" alt="Customer Trust: High scores" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation" title="Regulatory Access: Major access">
+                <img src="https://img.shields.io/badge/Access-Major_access-blue?style=for-the-badge&logo=key&logoColor=white" alt="Regulatory Access: Major access" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>📈 Porter's Five Forces Strategic Impact</h3>
+            <div class="badge-group porters-forces">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Buyer Power: Reduced - 80%+ retention">
+                <img src="https://img.shields.io/badge/Buyer_Power-Reduced-lightgreen?style=flat-square&logo=users&logoColor=white" alt="Buyer Power: Reduced" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Supplier Power: Minimal - Strong negotiation position">
+                <img src="https://img.shields.io/badge/Supplier_Power-Minimal-success?style=flat-square&logo=handshake&logoColor=white" alt="Supplier Power: Minimal" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Entry Barriers: High - 70%+ prevention">
+                <img src="https://img.shields.io/badge/Entry_Barriers-High-orange?style=flat-square&logo=shield-alt&logoColor=white" alt="Entry Barriers: High" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Substitute Threat: Low - Good protection">
+                <img src="https://img.shields.io/badge/Substitute_Threat-Low-lightgreen?style=flat-square&logo=shield&logoColor=white" alt="Substitute Threat: Low" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces" title="Competitive Rivalry: Strong Advantage - Strong market position">
+                <img src="https://img.shields.io/badge/Rivalry-Strong_Advantage-blue?style=flat-square&logo=trophy&logoColor=white" alt="Competitive Rivalry: Strong Advantage" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <h3>💰 تحليل تأثير الأعمال Matrix</h3>
+        <p>
+          Comprehensive assessment of potential business impacts across the CIA triad (السرية, النزاهة, التوافر):
+        </p>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>Impact Category</th>
+              <th>Financial</th>
+              <th>Operational</th>
+              <th>Reputational</th>
+              <th>Regulatory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🔒 السرية</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="Negligible - No operational impact"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="Operational: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Negligible - No regulatory implications"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Negligible" loading="lazy"></a></td>
+            </tr>
+            <tr>
+              <td><strong>✅ النزاهة</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="High - Major service degradation, 40-60% efficiency loss"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=trending-down&logoColor=white" alt="Operational: High" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Moderate - Industry attention, some trust erosion"><img src="https://img.shields.io/badge/Moderate-Industry_attention-yellow?style=for-the-badge&logo=newspaper&logoColor=black" alt="Reputational: Moderate" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Low - Warnings, corrective actions"><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&logo=gavel&logoColor=white" alt="Regulatory: Low" loading="lazy"></a></td>
+            </tr>
+            <tr>
+              <td><strong>⏱️ التوافر</strong></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels" title="Negligible - No financial consequences"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="Financial: Negligible" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels" title="High - Major service degradation, 40-60% efficiency loss"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=stop-circle&logoColor=white" alt="Operational: High" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels" title="Low - Limited visibility, quick recovery"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="Reputational: Low" loading="lazy"></a></td>
+              <td><a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels" title="Negligible - No regulatory implications"><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="Regulatory: Negligible" loading="lazy"></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          This classification demonstrates the platform's strategic value as a premium compliance solution with high integrity and availability requirements. The assessment guides security investment priorities and business continuity planning for optimal resource allocation.
+        </p>
+      </section>
+    </main>
+    
+        <footer>
+      <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+        <a href="https://www.linkedin.com/company/hack23/">لينكد إن الشركة</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information سياسة الأمن">سياسة الأمن</a> |
+        <a href="blog_ar.html" title="Security المدونة">المدونة</a> |
+        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity المدونة">🍎 Discordian المدونة</a>
+      </p>
+      <p>
+        <a href="cia-compliance-manager-docs_ar.html" title="English documentation">English التوثيق</a> |
+        <a href="cia-compliance-manager-docs_sv.html" title="Swedish documentation">Swedish التوثيق</a>
+      </p>
+    </footer>
+  </body>
+</html>
