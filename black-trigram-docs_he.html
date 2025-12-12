@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תיעוד בלאק טריגרם | ארכיטקטורת משחק | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/black-trigram-docs_he.html">
+    
+    <meta name="description" content="תיעוד בלאק טריגרם: ארכיטקטורה C4, אינטגרציה Unity, מערכת קרב, אבטחה. תיעוד טכני למפתחים ולוחמים חינוכיים.">
+    <meta name="keywords" content="תיעוד משחק בלאק טריגרם, ארכיטקטורה C4, אינטגרציה Unity, פיתוח קוד פתוח, שרשרת אספקה מאובטחת, תיעוד טכני משחק, מדריך מפתחים, תיעוד מערכת קרב, תיעוד אומנויות לחימה">
+    
+    <meta property="og:title" content="תיעוד בלאק טריגרם">
+    <meta property="og:description" content="תיעוד טכני מקיף למשחק חינוכי: ארכיטקטורה C4, Unity, אבטחה, מערכת קרב.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/black-trigram-docs_he.html">
+    <meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="sv_SE">
+    <meta property="og:locale:alternate" content="ko_KR">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://hack23.com/black-trigram-docs_he.html",
+          "headline": "תיעוד טכני Black Trigram",
+          "description": "תיעוד טכני מקיף למשחק חינוכי Black Trigram המכסה ארכיטקטורה C4, אינטגרציה Unity, עיצוב מערכת קרב, והטמעת אבטחה.",
+          "inLanguage": "he",
+          "author": {
+            "@type": "Person",
+            "name": "James Pether Sörling"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hack23 AB",
+            "url": "https://hack23.com"
+          },
+          "about": {
+            "@type": "SoftwareApplication",
+            "name": "בלאק טריגרם",
+            "applicationCategory": "Game"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/black-trigram-docs_da.html">
+<link rel="alternate" hreflang="da-DK" href="https://hack23.com/black-trigram-docs_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/black-trigram-docs_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/black-trigram-docs_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/black-trigram-docs.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/black-trigram-docs_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/black-trigram-docs_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/black-trigram-docs_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/black-trigram-docs_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/black-trigram-docs_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/black-trigram-docs_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/black-trigram-docs_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/black-trigram-docs_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/black-trigram-docs_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/black-trigram-docs_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/black-trigram-docs_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/black-trigram-docs_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/black-trigram-docs_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/black-trigram-docs_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/black-trigram-docs_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/black-trigram-docs_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/black-trigram-docs_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/black-trigram-docs.html">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index_he.html" class="logo">
+                    <img src="cia-icon-140.webp" width="40" height="40" alt="Hack23 AB">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index_he.html">בית</a></li>
+                    <li><a href="services_he.html">שירותים</a></li>
+                    <li><a href="cia-project_he.html">CIA</a></li>
+                    <li><a href="black-trigram_he.html">Black Trigram</a></li>
+                    <li><a href="compliance-manager_he.html">Compliance Manager</a></li>
+                    <li><a href="discordian-info-sec-policy_he.html">ISMS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>תיעוד Black Trigram</h1>
+                <p class="hero-subtitle">ארכיטקטורה טכנית, הטמעה, ואבטחה</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>📚 סקירה כללית של התיעוד</h2>
+            <p>תיעוד מקיף עבור <strong>Black Trigram</strong>, סימולטור קרב חינוכי של אומנויות לחימה קוריאניות. כולל מידע טכני למפתחים, מעצבים משחקים, ומשתמשים.</p>
+
+            <h2>🏗️ ארכיטקטורה C4</h2>
+            <p>Black Trigram משתמש במודל ארכיטקטורה <strong>C4</strong> (Context, Containers, Components, Code) לתיעוד ברור ומובנה:</p>
+            <ul>
+                <li><strong>Context (הקשר)</strong>: סקירה כללית של המשחק במערכת אקולוגית רחבה יותר</li>
+                <li><strong>Containers (מכולות)</strong>: Unity game engine, מנוע פיזיקה, מערכת קרב</li>
+                <li><strong>Components (רכיבים)</strong>: מנהל נקודות חיוניות, מערכת ארכיטיפים, מנהל I Ching</li>
+                <li><strong>Code (קוד)</strong>: פרטי יישום כיתות ושיטות</li>
+            </ul>
+
+            <h2>🎮 אינטגרציה Unity</h2>
+            <p>המשחק נבנה עם <strong>Unity 2021.3 LTS</strong> ומשתמש בדפוסי עיצוב מודרניים:</p>
+            <ul>
+                <li><strong>ECS (Entity Component System)</strong>: ביצועים מיטביים</li>
+                <li><strong>PhysX</strong>: מנוע פיזיקה מדויק למכות אמיתיות</li>
+                <li><strong>ScriptableObjects</strong>: ניהול נתונים מודולרי</li>
+                <li><strong>State Machine</strong>: ניהול מצבי לוחם ואנימציות</li>
+            </ul>
+
+            <h2>⚔️ עיצוב מערכת הקרב</h2>
+            <p>מערכת קרב מתוחכמת המדמה טכניקות אומנויות לחימה אמיתיות:</p>
+            <ul>
+                <li><strong>מערכת 70 נקודות חיוניות</strong>: מיקום אנטומי מדויק</li>
+                <li><strong>חישוב נזק מבוסס פיזיקה</strong>: כוח, זווית, מסה</li>
+                <li><strong>5 ארכיטיפים ייחודיים</strong>: סגנונות קרב שונים</li>
+                <li><strong>אינטגרציה I Ching</strong>: עיתוי אסטרטגי ותזמון</li>
+            </ul>
+
+            <h2>🛡️ אבטחה והתמקדות בשרשרת האספקה</h2>
+            <p>Black Trigram מיישם אבטחה ברמה תעשייתית:</p>
+            <ul>
+                <li><strong>SLSA Level 3</strong>: הקשחה מלאה של שרשרת האספקה</li>
+                <li><strong>OpenSSF Scorecard</strong>: ניטור ביטחון מתמשך</li>
+                <li><strong>קוד מבוקר</strong>: סקירת עמיתים לכל PR</li>
+                <li><strong>בנייה אוטומטית</strong>: CI/CD עם GitHub Actions</li>
+            </ul>
+
+            <h2>👨‍💻 מדריך למפתחים</h2>
+            <p>מעוניין לתרום? הפרויקט קוד פתוח:</p>
+            <ul>
+                <li><strong>Repository</strong>: <a href="https://github.com/Hack23/Black-Trigram" target="_blank">GitHub</a></li>
+                <li><strong>License</strong>: קוד פתוח (בדוק את הרישיון)</li>
+                <li><strong>תרומה</strong>: PRs מוזמנים - עקוב אחר ההנחיות</li>
+                <li><strong>קהילה</strong>: הצטרף לדיונים ב-GitHub</li>
+            </ul>
+
+            <h2>🌏 שימור תרבות בעיצוב</h2>
+            <p>הערך החינוכי משולב בכל היבט עיצוני:</p>
+            <ul>
+                <li><strong>טכניקות אותנטיות</strong>: מבוסס על טאיקיון והפקידו אמיתיים</li>
+                <li><strong>מורשת תרבותית</strong>: הכרה והערכה למסורת קוריאנית</li>
+                <li><strong>פילוסופיה</strong>: משולב I Ching לעומק אסטרטגי</li>
+                <li><strong>חינוך</strong>: למד תוך כדי משחק</li>
+            </ul>
+        </section>
+
+        <section class="cta-section">
+            <h2>מוכן לבנות?</h2>
+            <p>חקור את הקוד, תרום לפרויקט, או פשוט למד מהתיעוד.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/Hack23/Black-Trigram" class="button primary" target="_blank" rel="noopener">ראה ב-GitHub</a>
+                <a href="black-trigram_he.html" class="button secondary">חזרה לסקירה</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hack23 AB</h3>
+                <p>יעוץ אבטחת סייבר עם ISMS ציבורי</p>
+            </div>
+            <div class="footer-section">
+                <h3>קישורים</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/hack23/">לינקד אין</a></li>
+                    <li><a href="https://github.com/Hack23">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hack23 AB. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+</html>
