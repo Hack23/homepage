@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وثائق بلاك تريغرام | هندسة الفنون القتالية الكورية | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/black-trigram-docs_ar.html">
+    
+    <meta name="description" content="وثائق هندسة لعبة بلاك تريغرام: نماذج C4، تكامل Unity، تصميم نظام القتال. الحفاظ على الثقافة الكورية من خلال الألعاب.">
+    <meta name="keywords" content="وثائق هندسة اللعبة، نماذج تصميم C4، تطوير لعبة فنون قتالية كورية، منصة ألعاب مفتوحة المصدر، أنماط هندسة Unity، الحفاظ على الثقافة في الألعاب، تصميم نظام القتال">
+    
+    <meta property="og:title" content="وثائق هندسة بلاك تريغرام">
+    <meta property="og:description" content="وثائق هندسة لعبة فنون قتالية كورية مفتوحة المصدر: نماذج C4، تكامل Unity، تصميم نظام القتال، أنماط الحفاظ على الثقافة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/black-trigram-docs_ar.html">
+    <meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="ar_EG">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "بلاك تريغرام - وثائق الهندسة والنظام",
+          "description": "وثائق الهندسة للعبة تعليمية مفتوحة المصدر للفنون القتالية الكورية. نماذج C4، أنماط تصميم الألعاب، هندسة الأمان، تكامل Unity، وثائق تقنية للحفاظ على الثقافة لمطوري الألعاب، مهندسي Unity، والمساهمين في المصادر المفتوحة.",
+          "image": "https://blacktrigram.com/black-trigram.png",
+          "datePublished": "2025-01-01",
+          "dateModified": "2025-10-06",
+          "inLanguage": "ar",
+          "author": {
+            "@type": "Person",
+            "name": "James Pether Sörling"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hack23 AB",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hack23.com/jamespethersorling150.webp"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://hack23.com/black-trigram-docs_ar.html"
+          },
+          "audience": [
+            {
+              "@type": "Audience",
+              "audienceType": "مطورو الألعاب ومطورو Unity"
+            },
+            {
+              "@type": "Audience",
+              "audienceType": "مهندسو الألعاب ومهندسو الحلول"
+            },
+            {
+              "@type": "Audience",
+              "audienceType": "المساهمون في المصادر المفتوحة ومنشئو الألعاب التعليمية"
+            }
+          ],
+          "about": {
+            "@type": "VideoGame",
+            "name": "بلاك تريغرام",
+            "applicationCategory": "لعبة",
+            "genre": [
+              "قتال",
+              "تعليمي",
+              "رياضي"
+            ],
+            "gamePlatform": "متعدد المنصات",
+            "description": "لعبة قتالية تعليمية أصيلة للفنون القتالية الكورية تتميز بتقنيات تقليدية واحترام ثقافي.",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          "teaches": [
+            "نمذجة هندسة C4 لأنظمة الألعاب",
+            "تصميم هندسة أمان الألعاب",
+            "أنماط تكامل منصة Unity",
+            "تصميم ميكانيكا الألعاب التعليمية",
+            "الحفاظ على الثقافة في الألعاب",
+            "هندسة خطوط أنابيب الأصول",
+            "تصميم نموذج بيانات اللعبة",
+            "إدارة حالة نظام القتال",
+            "المساهمة في تطوير الألعاب مفتوحة المصدر"
+          ],
+          "educationalLevel": "محترف / خبير",
+          "learningResourceType": [
+            "وثائق هندسة اللعبة",
+            "أنماط تصميم الأنظمة",
+            "مرجع تقني",
+            "دليل تكامل Unity",
+            "دليل هندسة الأمان"
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/black-trigram-docs_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/black-trigram-docs_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/black-trigram-docs_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/black-trigram-docs_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/black-trigram-docs.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/black-trigram-docs_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/black-trigram-docs_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/black-trigram-docs_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/black-trigram-docs_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/black-trigram-docs_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/black-trigram-docs_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/black-trigram-docs_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/black-trigram-docs_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/black-trigram-docs_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/black-trigram-docs_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/black-trigram-docs_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/black-trigram-docs_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/black-trigram-docs_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/black-trigram-docs_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/black-trigram-docs_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/black-trigram-docs_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/black-trigram-docs_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/black-trigram-docs_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/black-trigram-docs.html">
+</head>
+<body class="theme-black-trigram">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_ar.html">الرئيسية</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="projects.html">المشاريع</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="black-trigram_ar.html">بلاك تريغرام</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                الوثائق
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_ar.html" title="الرئيسية">🏠 Hack23</a>
+            <a href="services_ar.html" title="الخدمات">الخدمات</a>
+            <a href="projects.html" title="المشاريع">المشاريع</a>
+            <a href="why-hack23.html" title="لماذا Hack23">لماذا Hack23</a>
+            <a href="blog_ar.html" title="المدونة">المدونة</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="ISMS العام">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="docs-hero" style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05)); border: 2px solid #ff6b35; border-radius: 12px; padding: 3rem 2rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <img src="black-trigram-140.webp" alt="شعار بلاك تريغرام" width="120" height="120" style="border-radius: 15px; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);" loading="eager" decoding="sync">
+                <div>
+                    <h1 style="margin: 0; color: #ff6b35;">📚 وثائق بلاك تريغرام</h1>
+                    <p style="font-size: 1.2rem; margin: 0.5rem 0 0;">وثائق الهندسة والنظام</p>
+                </div>
+            </div>
+            <p class="lead">وثائق شاملة لهندسة بلاك تريغرام، تصميم النظام، وأنماط التنفيذ. للمطورين والمهندسين والمساهمين في المصادر المفتوحة.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/blacktrigram" title="مستودع GitHub" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">📂 مستودع GitHub</a>
+                <a href="black-trigram_ar.html" title="النظرة العامة" class="btn-primary">← العودة إلى النظرة العامة</a>
+                <a href="black-trigram-features_ar.html" title="المميزات" class="btn-primary">✨ المميزات</a>
+            </div>
+        </section>
+        
+        <!-- Architecture Overview -->
+        <section id="architecture">
+            <h2>🏗️ نظرة عامة على الهندسة</h2>
+            <p class="lead">بلاك تريغرام مصمم باستخدام مبادئ الهندسة الحديثة، مع التركيز على قابلية الصيانة والأمان والأداء.</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎮 محرك اللعبة</h3>
+                    <p><strong>المحرك:</strong> Unity (أحدث إصدار LTS)</p>
+                    <p><strong>اللغة:</strong> C# للمنطق الأساسي للعبة</p>
+                    <p><strong>الأنماط:</strong> ECS (Entity Component System)، State Machines، Observer Pattern</p>
+                    <p><strong>الفيزياء:</strong> محرك Unity مع أنظمة ضرر مخصصة</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 نموذج البيانات</h3>
+                    <p><strong>النقاط الحيوية:</strong> 70 موقعًا تشريحيًا مع خصائص</p>
+                    <p><strong>الأنماط القتالية:</strong> 5 أنماط مع تقنيات فريدة</p>
+                    <p><strong>تقنيات الفنون القتالية:</strong> تايكيون وهابكيدو مصنفة</p>
+                    <p><strong>إدارة الحالة:</strong> آلات الحالة المحدودة للقتال</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 هندسة الأمان</h3>
+                    <p><strong>SLSA Level 3:</strong> أمن سلسلة التوريد</p>
+                    <p><strong>CI/CD:</strong> GitHub Actions مع بوابات أمان</p>
+                    <p><strong>جودة الكود:</strong> SonarCloud، CodeQL</p>
+                    <p><strong>الاعتماديات:</strong> Dependabot، مراجعات أمان</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Combat System Design -->
+        <section id="combat-system">
+            <h2>⚔️ تصميم نظام القتال</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 نظام الاستهداف</h3>
+                    <p><strong>محرك الاستهداف:</strong> خوارزميات اكتشاف النقاط الحيوية بأشعة مخروطية</p>
+                    <p><strong>حساب الضرر:</strong> قائم على الموقع التشريحي والقوة والتوقيت</p>
+                    <p><strong>استجابة الضربة:</strong> آثار ديناميكية بناءً على النقطة الحيوية المستهدفة</p>
+                    <p><strong>أنظمة التغذية الراجعة:</strong> تأثيرات بصرية، ردود فعل لمسية، صوت</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥋 نظام التقنيات</h3>
+                    <p><strong>تايكيون:</strong> حركات سلسة، ركلات دائرية، كسح</p>
+                    <p><strong>هابكيدو:</strong> قفل المفاصل، مصارعة، نقاط ضغط</p>
+                    <p><strong>الهجمات المركبة:</strong> سلاسل تقنيات لضرر أعلى</p>
+                    <p><strong>كسر الدفاع:</strong> تقنيات متخصصة لاختراق الدفاع</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🤖 نظام الذكاء الاصطناعي</h3>
+                    <p><strong>أنماط السلوك:</strong> 5 شخصيات ذكاء اصطناعي فريدة</p>
+                    <p><strong>شجرة القرارات:</strong> تكتيكات قتالية ديناميكية</p>
+                    <p><strong>التعلم:</strong> يتكيف مع أسلوب لعب اللاعب</p>
+                    <p><strong>فلسفة I Ching:</strong> توقع الأنماط وصنع القرار</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Unity Integration -->
+        <section id="unity">
+            <h2>🔧 تكامل Unity</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📦 بنية المشروع</h3>
+                    <p><strong>Scripts/</strong> - منطق اللعبة بلغة C#</p>
+                    <p><strong>Assets/</strong> - الأصول البصرية والصوتية</p>
+                    <p><strong>Prefabs/</strong> - الشخصيات والأعداء القابلة لإعادة الاستخدام</p>
+                    <p><strong>Scenes/</strong> - بيئات اللعبة ومستويات المباراة</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⚙️ أنماط التطوير</h3>
+                    <p><strong>ScriptableObjects:</strong> تكوينات البيانات</p>
+                    <p><strong>Singleton Pattern:</strong> مديرو اللعبة</p>
+                    <p><strong>Observer Pattern:</strong> نظام الأحداث</p>
+                    <p><strong>Object Pooling:</strong> تحسين الأداء</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎨 خطوط أنابيب الأصول</h3>
+                    <p><strong>الرسوم:</strong> Sprites ثنائية الأبعاد، الرسوم المتحركة</p>
+                    <p><strong>الصوت:</strong> تأثيرات القتال، موسيقى تقليدية</p>
+                    <p><strong>التحسين:</strong> أطالس الأنسجة، ضغط الأصول</p>
+                    <p><strong>التوطين:</strong> ملفات ترجمة متعددة اللغات</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality -->
+        <section id="security">
+            <h2>🔒 الأمان والجودة</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🛡️ SLSA Level 3</h3>
+                    <p><strong>البناءات الآمنة:</strong> بيئة بناء معزولة</p>
+                    <p><strong>المصادقة:</strong> توقيعات البناء موقعة</p>
+                    <p><strong>الشفافية:</strong> سجلات البناء العامة</p>
+                    <p><strong>القابلية للتكرار:</strong> بناءات حتمية</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 جودة الكود</h3>
+                    <p><strong>SonarCloud:</strong> التحليل المستمر</p>
+                    <p><strong>CodeQL:</strong> فحص أمان الكود</p>
+                    <p><strong>التغطية:</strong> اختبارات الوحدة والتكامل</p>
+                    <p><strong>المراجعة:</strong> مراجعات الأقران المطلوبة</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🤝 المصادر المفتوحة</h3>
+                    <p><strong>الترخيص:</strong> Apache License 2.0</p>
+                    <p><strong>المساهمات:</strong> مرحب بها ومراجعة</p>
+                    <p><strong>الوثائق:</strong> شاملة ومحدثة</p>
+                    <p><strong>المجتمع:</strong> Discord، GitHub Discussions</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Development Workflow -->
+        <section id="workflow">
+            <h2>🔄 سير العمل التطويري</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 CI/CD Pipeline</h3>
+                    <p><strong>الالتزام:</strong> الفحوصات التلقائية، التنسيق</p>
+                    <p><strong>البناء:</strong> Unity Cloud Build</p>
+                    <p><strong>الاختبار:</strong> الوحدة، التكامل، اللعب</p>
+                    <p><strong>النشر:</strong> إصدارات GitHub، itch.io</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🧪 استراتيجية الاختبار</h3>
+                    <p><strong>اختبارات الوحدة:</strong> نظام القتال، النقاط الحيوية</p>
+                    <p><strong>اختبارات التكامل:</strong> تفاعلات الشخصيات</p>
+                    <p><strong>اختبارات اللعب:</strong> الميكانيكا، التوازن</p>
+                    <p><strong>اختبارات الأداء:</strong> معدل الإطارات، الذاكرة</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📖 التوثيق</h3>
+                    <p><strong>README:</strong> نظرة عامة على المشروع</p>
+                    <p><strong>وثائق API:</strong> مرجع الكود</p>
+                    <p><strong>أدلة:</strong> دليل المساهم</p>
+                    <p><strong>Wiki:</strong> أدلة التصميم، أفضل الممارسات</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cultural Preservation -->
+        <section id="cultural-preservation">
+            <h2>🏛️ الحفاظ على الثقافة في التصميم</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📚 الأصالة الثقافية</h3>
+                    <p>كل تقنية فنون قتالية مبحوثة من مصادر تاريخية. تم التشاور مع خبراء تايكيون وهابكيدو للدقة التقنية.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 القيمة التعليمية</h3>
+                    <p>تحتوي اللعبة على محتوى تعليمي حول تاريخ الفنون القتالية الكورية والفلسفة والسياق الثقافي. يتعلم اللاعبون أثناء اللعب.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌏 الوصول العالمي</h3>
+                    <p>دعم التوطين لعدة لغات. تُحفظ المصطلحات الكورية (الهانغل) مع الشروحات في كل لغة.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Getting Started -->
+        <section id="getting-started">
+            <h2>🚀 البدء</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📥 التثبيت</h3>
+                    <p><strong>المتطلبات:</strong> Unity 2022.3 LTS أو أحدث</p>
+                    <p><strong>الاستنساخ:</strong> <code>git clone https://github.com/Hack23/blacktrigram.git</code></p>
+                    <p><strong>الفتح:</strong> افتح المشروع في Unity Hub</p>
+                    <p><strong>البناء:</strong> <code>dotnet build</code></p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎮 تشغيل اللعبة</h3>
+                    <p><strong>الويب:</strong> <a href="https://blacktrigram.com">blacktrigram.com</a></p>
+                    <p><strong>محليًا:</strong> افتح في Unity واضغط على Play</p>
+                    <p><strong>البناء:</strong> File → Build Settings → Build</p>
+                    <p><strong>التنزيلات:</strong> <a href="https://github.com/Hack23/blacktrigram/releases">إصدارات GitHub</a></p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🤝 المساهمة</h3>
+                    <p><strong>القضايا:</strong> أبلغ عن الأخطاء، اقترح الميزات</p>
+                    <p><strong>طلبات السحب:</strong> إرشادات المساهمة على GitHub</p>
+                    <p><strong>الترجمة:</strong> ساعد في توطين اللعبة</p>
+                    <p><strong>المجتمع:</strong> انضم إلى Discord، GitHub Discussions</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>📂 استكشف الكود</h2>
+            <p>بلاك تريغرام مفتوح المصدر بالكامل. استكشف الكود، تعلم من التنفيذ، وساهم في المشروع.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/blacktrigram" title="مستودع GitHub" style="background: #ff6b35; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">📂 عرض على GitHub</a>
+                <a href="https://blacktrigram.com" title="العب اللعبة" class="cta-button">🎮 العب الآن</a>
+                <a href="black-trigram_ar.html" title="النظرة العامة" class="cta-button">← العودة إلى النظرة العامة</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/" rel="nofollow noreferrer noopener" target="_blank" title="James Pether Sörling LinkedIn Profile">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/" rel="nofollow noreferrer noopener" target="_blank" title="Hack23 Company LinkedIn">لينكد إن الشركة</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" rel="nofollow noreferrer noopener" target="_blank" title="Public ISMS Repository">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="nofollow noreferrer noopener" target="_blank" title="Information Security Policy">سياسة الأمن</a> |
+            <a href="blog_ar.html" rel="nofollow noreferrer" title="مدونة الأمن السيبراني">مدونة</a> |
+            <a href="sitemap_ar.html" rel="nofollow noreferrer" title="خريطة الموقع">خريطة الموقع</a> |
+            <a href="black-trigram-docs.html" rel="nofollow noreferrer" title="English Version">English version</a>
+        </p>
+    </footer>
+</body>
+</html>
