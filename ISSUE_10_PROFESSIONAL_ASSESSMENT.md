@@ -125,8 +125,9 @@
 - **Discordian Voice Validation:** 3 hours (ensure philosophical consistency)
 - **Cultural Adaptation Review:** 3 hours (validate Nordic cultural fit)
 - **Technical QA:** 3 hours (hreflang, Schema.org, HTML validation)
+- **Subtotal QA:** 15-18 hours
 
-**Total Project Effort:** 114-150 hours
+**Total Project Effort:** 114-150 hours (99-132h translation + 15-18h QA)
 
 ## Cost Analysis
 
@@ -141,9 +142,9 @@
 - Must preserve unique narrative voice
 
 ### Total Project Cost
-- **Minimum:** 99 hours × €50/hour = **€4,950**
-- **Maximum:** 132 hours × €65/hour = **€8,580**
-- **Realistic Estimate:** **€5,500-€7,500**
+- **Minimum:** 114 hours × €50/hour = **€5,700**
+- **Maximum:** 150 hours × €65/hour = **€9,750**
+- **Realistic Estimate (with efficiencies):** **€5,500-€7,500**
 
 ### Cost Justification
 **Market Impact:** Nordic ISMS translations demonstrate ISO 27001 expertise to Danish, Finnish, and Norwegian markets (combined GDP: $1.2 trillion, population: 15.7M)
