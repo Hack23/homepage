@@ -1,6 +1,6 @@
 # Issue #4 Executive Summary: ISO 27001 Asian Language Translations
 
-**Issue:** Hack23/homepage#XXX (Batch 4 of Parent Issue #687)  
+**Issue:** Batch 4 of Parent Issue Hack23/homepage#687  
 **Date:** 2025-12-12  
 **Status:** ⏸️ Professional Translation Required  
 **Priority:** Critical (ISO 27001 is primary service offering)

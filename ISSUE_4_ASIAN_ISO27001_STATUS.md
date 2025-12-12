@@ -1,6 +1,6 @@
 # Issue #4 (Batch 4): ISO 27001 Asian Language Translations - Status Report
 
-**Issue:** Hack23/homepage#XXX (Batch 4 of Parent Issue #687)  
+**Issue:** Batch 4 of Parent Issue Hack23/homepage#687  
 **Status:** 🟡 Professional Assessment Complete - Recommendation Provided  
 **Date:** 2025-12-12  
 **Agent:** UI Enhancement Specialist  

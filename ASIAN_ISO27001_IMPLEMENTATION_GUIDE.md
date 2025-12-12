@@ -1,6 +1,6 @@
 # Asian Market ISO 27001 Implementation Guide
 
-**Issue:** #XXX (Batch 4 of Parent Issue #687)  
+**Issue:** Batch 4 of Parent Issue Hack23/homepage#687  
 **Status:** Implementation Guide  
 **Created:** 2025-12-12  
 **Languages:** Japanese (JA), Chinese (ZH), Korean (KO)
@@ -506,5 +506,5 @@ Each translated file MUST include:
 **Document Control:**  
 **Created:** 2025-12-12  
 **Author:** GitHub Copilot (UI Enhancement Specialist)  
-**Purpose:** Implementation guidance for Issue #XXX (Batch 4 of Parent #687)  
+**Purpose:** Implementation guidance for Batch 4 of Parent Issue Hack23/homepage#687  
 **Next Steps:** Present options to user for professional translation vs. AI-assisted approach
