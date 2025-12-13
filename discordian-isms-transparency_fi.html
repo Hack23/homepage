@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISMS-läpinäkyvyys | 70% julkinen viitekehys | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="40+ julkista ISMS-käytäntöä GitHubissa. 70% julkista, 30% poistettuja toiminnallisia yksityiskohtia. Turvallisuus läpinäkyvyyden kautta, ei hämäryydellä.">
+<meta name="keywords" content="ISMS-läpinäkyvyys, julkinen ISMS, turvallisuus läpinäkyvyyden kautta, radikaali avoimuus, julkinen turvallisuusdokumentaatio, avoimet turvallisuuskäytännöt, GitHub ISMS, läpinäkyvät turvallisuuskäytännöt, vastuullisuus näkyvyyden kautta, avoimen lähdekoodin turvallisuus, turvallisuuden julkistaminen, läpinäkyvä riskienhallinta, julkinen vaatimustenmukaisuus, näkyvät turvallisuuskontrollit, luottamus avoimuuden kautta">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="ISMS-läpinäkyvyys: Turvallisuus radikaalin avoimuuden kautta">
+<meta property="og:description" content="40+ julkista ISMS-käytäntöä GitHubissa. 70% julkinen viitekehys, 30% poistettuja toiminnallisia yksityiskohtia. Luottamus todentamisen kautta.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-isms-transparency_fi.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="fi_FI">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Turvallisuusblogi">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-isms-transparency_fi.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-isms-transparency.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="da-DK" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-isms-transparency_da.html">
+<link rel="alternate" hreflang="da-DK" href="https://hack23.com/discordian-isms-transparency_da.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-isms-transparency_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-isms-transparency_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-isms-transparency_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-isms-transparency_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-isms-transparency_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-isms-transparency_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-isms-transparency_es.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-isms-transparency_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-isms-transparency_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-isms-transparency.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogiPosting",
+      "headline": "ISMS-läpinäkyvyys: Turvallisuus radikaalin avoimuuden kautta",
+      "description": "Kuinka Hack23 toteuttaa radikaalia ISMS-läpinäkyvyyttä 40+ julkisella käytännöllä GitHubissa osoittaen turvallisuusosaamista todennettavilla todisteilla",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "Toimitusjohtaja / Kyberturvallisuusasiantuntija",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-isms-transparency_fi.html"
+      },
+      "keywords": "ISMS-läpinäkyvyys, julkinen turvallisuus, avoin ISMS, GitHub-dokumentaatio",
+      "articleSection": "Tietoturvallisuus",
+      "inLanguage": "fi",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1603,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—making your entire Tietoturvallisuus Management System public while your competitors hide theirs behind NDAs and \"CONFIDENTIAL\" stamps...",
+      "isPartOf": {
+        "@type": "Blogi",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Turvallisuusblogi"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Tietoturvallisuus Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-isms-transparency_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Koti",
+          "item": "https://hack23.com/index_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogi",
+          "item": "https://hack23.com/blog_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISMS Transparency",
+          "item": "https://hack23.com/discordian-isms-transparency_fi.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement a Public ISMS with Radical Transparency",
+      "description": "Step-by-step guide to publishing 70% of your Tietoturvallisuus Management System on GitHub while maintaining 30% operational security - demonstrating security excellence through transparency for Swedish SMEs",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "P90D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "15000"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "ISMS Policy Templates"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "GitHub Public Repository"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Transparency Classification Matrix"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Redaction Guidelines"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "GitHub for version control and public documentation"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Markdown for policy documentation"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "ISO 27001:2022 Framework"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "ISMS Transparency Plan Template"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Establish Transparency Principles",
+          "text": "Define five core transparency principles: (1) Default to public - start with assumption all policies are public unless specific operational security justifies confidentiality. (2) Redact specifics, not frameworks - publish policy frameworks while redacting operational details like IP addresses, credentials, vendor names. (3) Trust through verification - allow external validation of security claims through documented evidence. (4) Accountability through visibility - public policies create accountability to stated security commitments. (5) Continuous improvement through feedback - community review identifies gaps and enhancement opportunities.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#five-transparency-principles"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Create Public/Private Classification Matrix",
+          "text": "Establish clear criteria for what stays public (70%) versus what remains confidential (30%). Public documentation includes: security policy frameworks, control objectives, implementation approaches, risk assessment methodology, compliance mappings, security architecture documentation. Confidential documentation includes: specific IP addresses and network topology, authentication credentials and API keys, vendor contracts and pricing, individual employee PII, active incident details, penetration test results with exploit details.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#public-private-matrix"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Set Up Public GitHub ISMS Repository",
+          "text": "Create public GitHub repository for ISMS documentation (example: github.com/YourOrg/ISMS-PUBLIC). Establish repository structure: root-level policies (Information_Security_Policy.md, Access_Control_Policy.md, etc.), subdirectories for supporting documentation (templates, checklists, procedures), README.md explaining transparency approach and navigation. Configure version control for policy change tracking and audit trail.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Document Core ISMS Policies Publicly",
+          "text": "Publish 40+ core ISMS policies in Markdown format on GitHub including: Tietoturvallisuus Policy (foundation), Access Control Policy, Secure Development Policy, Network Security Policy, Vulnerability Management, Threat Modeling, Incident Response Plan, Risk Assessment Methodology, Business Continuity Plan, Compliance Checklist. Each policy includes objectives, scope, roles/responsibilities, implementation requirements, compliance mapping, and references to supporting documentation.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Apply Systematic Redaction for Operational Security",
+          "text": "Review each policy document and apply consistent redaction: Replace specific IP addresses with [REDACTED: Internal IP range]. Replace vendor names with [REDACTED: Enterprise SIEM vendor]. Replace employee names with role titles. Replace specific passwords/keys with [REDACTED: 32-character key]. Replace pricing with [REDACTED: Commercial terms]. Maintain enough detail for external validation while protecting operational security.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#public-private-matrix"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Link Public Website to GitHub ISMS Documentation",
+          "text": "Create bidirectional links between public website blog posts and GitHub ISMS policies. Each security blog post includes 'ISMS Policy Reference' section linking to corresponding GitHub policy. Each GitHub policy includes 'Website Reference' linking to explanatory blog content. Establish ISMS Reference Guide mapping all blog posts to policies for easy navigation.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Publish Transparency Plan and Classification Guide",
+          "text": "Document and publish ISMS Transparency Plan explaining: philosophy behind radical transparency approach, criteria for public vs confidential classification, redaction methodology, change management process for public policies, feedback and community engagement approach. Include Classification Guide showing examples of public vs confidential information categories.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Enable Community Feedback and Continuous Improvement",
+          "text": "Configure GitHub repository for community engagement: enable Issues for questions and suggestions, enable Discussions for community feedback, establish pull request process for external contributions (reviewed before merge), publish changelog documenting policy updates and rationale. Respond to community feedback transparently, implementing improvements and documenting rationale for decisions.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#conclusion"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Maintain and Update Public ISMS",
+          "text": "Establish quarterly review cycle for public ISMS documentation. Update policies based on: regulatory changes (GDPR, NIS2, ISO 27001 updates), security incidents and lessons learned, community feedback and enhancement suggestions, technology changes and architecture updates. Document all changes in GitHub commit history providing transparent audit trail of ISMS evolution.",
+          "url": "https://hack23.com/discordian-isms-transparency_fi.html#conclusion"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-isms-transparency_fi.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-isms-transparency_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-isms-transparency_sv.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-isms-transparency_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-isms-transparency_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-isms-transparency_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-isms-transparency_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-isms-transparency_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-isms-transparency_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-isms-transparency_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-isms-transparency_es.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-isms-transparency_fi.html">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Koti</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogi</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ISMS Transparency
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>ISMS-läpinäkyvyys: Turvallisuus radikaalin avoimuuden kautta</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Koti">Koti</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS Repository</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔓 ISMS Transparency: Trust Through Verification</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Why We Publish Our Entire ISMS Publicly (And Why That Terrifies Competitors)</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—making your entire Tietoturvallisuus Management System public while your competitors hide theirs behind NDAs and "CONFIDENTIAL" stamps. Most "experts" say publishing your security policies is reckless. We say hiding them is suspicious. What are you hiding? <strong>FNORD.</strong></p>
+      
+      <p><em>Think for yourself. Question authority.</em> Question why security policies must be secret. Question vendors who say "trust us, we're secure" without showing you proof. Question security through obscurity in an era where attackers have nation-state budgets and your "secret" policies leak in every M&A due diligence anyway.</p>
+      
+      <p>At Hack23, we're paranoid enough to assume attackers <em>already know</em> our defenses—so we might as well get marketing value and peer review by publishing them. ISMS transparency isn't marketing—it's <strong>competitive advantage through verifiable security excellence</strong>.</p>
+      <p><a href="https://github.com/Hack23/ISMS-PUBLIC">40+ policies on GitHub</a>. Our ISMS is <strong>70% public framework, 30% redacted operational details</strong>. (The 30% isn't "our secret sauce"—it's credentials and specific supplier assessments that would bore you to tears.)</p>
+      <p>Customers verify our security before signing contracts by <em>reading our actual policies</em>, not vendor questionnaires filled with lies. Security researchers review our controls and suggest improvements because we're paranoid enough to want global peer review. Potential clients assess our expertise through actual implementation, not PowerPoint promises. <strong>We weaponize transparency.</strong></p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Welcome to Chapel Perilous, where you realize that if your security depends on attackers not knowing your defenses, you don't have security—you have wishful thinking wrapped in NDAs. Real security survives transparency. Weak security requires obscurity. Which do you have? Are you paranoid enough to let the world verify your security claims, or do you need to hide them?</em></p>
+      
+      <p>Our approach: default to public unless specific documented risk requires confidentiality (and "embarrassment" isn't a security risk). Demonstrate security maturity through evidence, not marketing promises. Accept vulnerability discovery through community review over false confidence through obscurity. Full transparency strategy in our public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md">ISMS Transparency Plan</a>. Yes, our transparency plan is also transparent. We're paranoid enough to want meta-review. <strong>FNORD.</strong></p>
+    
+      
+      <p><strong>Looking for expert implementation support?</strong> <a href="why-hack23.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+    </section>
+
+    <section id="five-transparency-principles">
+      <h2 class="panel-caption">The Five Principles of Radical ISMS Transparency</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔍 Default to Public</h3>
+          <p><strong>Policies, frameworks, procedures public unless specific risk.</strong> Tietoturvallisuus Policy? Public. Classification Framework? Public. Risk Assessment Methodology? Public. Threat Modeling approach? Public. If publishing creates specific exploitable vulnerability, redact that detail—publish the rest.</p>
+          <p><strong>Rationale:</strong> Security frameworks demonstrate expertise. Processes show maturity. Methodologies enable client confidence. Publishing proves we're not hiding incompetence behind "CONFIDENTIAL" markings.</p>
+          <p class="hidden-wisdom"><em>Security through obscurity assumes attackers are lazy. They're not. Transparency assumes attackers know your defenses—so build better defenses.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. ✅ Demonstrate, Don't Expose</h3>
+          <p><strong>Showcase security maturity without revealing exploitable secrets.</strong> Publish encryption standards (AES-256, RSA-4096)—not encryption keys. Publish backup strategy (immutable cross-region vaults)—not backup credentials. Publish MFA requirement (hardware tokens)—not recovery codes.</p>
+          <p><strong>Implementation:</strong> High-level architecture public, specific configurations redacted. Framework compliance public, audit findings private. Security metrics public, incident details confidential.</p>
+          <p class="hidden-wisdom"><em>The goal is proving security competence, not creating attack roadmap. Balance is "here's our defense strategy" vs. "here's exactly how to bypass it."</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📝 Redact, Don't Hide</h3>
+          <p><strong>Mixed documents get sanitized versions published.</strong> Risk Register: risk categories public, specific financial impacts redacted. Asset Register: asset types public, credentials/IPs confidential. Supplier assessments: methodology public, specific findings private.</p>
+          <p><strong>Process:</strong> Create internal complete version → create public copy → apply redactions ([REDACTED], [Generic Example]) → CEO review → publish to GitHub.</p>
+          <p class="hidden-wisdom"><em>Redaction enables partial transparency where full transparency creates risk. Don't let perfect (100% public) be enemy of good (70% public).</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🤝 Trust Through Verification</h3>
+          <p><strong>Customers verify security, don't trust claims.</strong> Sales call: "Is your data encrypted?" → "Yes, here's our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a> showing AES-256-GCM with AWS KMS." RFP security questionnaire? Link to relevant public ISMS policies. Due diligence? Here's 40+ policies demonstrating comprehensive ISMS.</p>
+          <p><strong>Competitive Edge:</strong> We answer security questions with evidence while competitors make promises. Customers trust verification over vendor claims.</p>
+          <p class="hidden-wisdom"><em>In security sales, "trust us" is what vendors without evidence say. "Here's the public GitHub repo" is what confidence looks like.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔄 Community Improvement</h3>
+          <p><strong>Public ISMS enables crowd-sourced security review.</strong> Security researchers worldwide can review our policies, identify gaps, suggest improvements. GitHub issues for policy feedback. Better than any paid consultant—because community reviewers have diverse expertise and no conflict of interest.</p>
+          <p><strong>Examples:</strong> Policy clarifications from practitioners, framework alignment suggestions, industry best practice updates, regulatory interpretation guidance.</p>
+          <p class="hidden-wisdom"><em>Open source security policy leverages global expertise. Proprietary security policy limited to internal knowledge and expensive consultants.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="public-private-matrix">
+      <h2 class="panel-caption">Public vs. Confidential: What We Publish and Why</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Document Category</th>
+            <th>Status</th>
+            <th>Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>📋 Core Security Policies (40+)</strong></td>
+            <td>✅ Public</td>
+            <td>Demonstrates comprehensive ISMS, enables client verification, showcases expertise</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🏷️ Classification Framework</strong></td>
+            <td>✅ Public</td>
+            <td>Methodology transparency, business impact categories, demonstrates risk-based approach</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>📊 Security Metrics Dashboard</strong></td>
+            <td>✅ Public</td>
+            <td>OpenSSF Scorecard, SonarCloud, test coverage—live evidence of security performance</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>📉 Risk Register</strong></td>
+            <td>⚠️ Redacted</td>
+            <td>Risk categories and methodology public, specific financial impacts and vulnerabilities confidential</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>💻 Asset Register</strong></td>
+            <td>⚠️ Redacted</td>
+            <td>Asset categories public (Cloud Services, SaaS), specific credentials/IPs/accounts confidential</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🚨 Incident Response Plan</strong></td>
+            <td>⚠️ Redacted</td>
+            <td>Process framework and classification SLAs public, specific contact details and escalation paths confidential</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🔗 Supplier Security Assessments</strong></td>
+            <td>⚠️ Redacted</td>
+            <td>Assessment methodology public, specific supplier scores and contracts confidential</td>
+          </tr>
+          <tr class="roi-low">
+            <td><strong>🏢 Business Plan & Financial Projections</strong></td>
+            <td>❌ Confidential</td>
+            <td>Strategic roadmap, revenue models, and financial projections are competitive information</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Publication Ratio:</strong> Approximately <strong>70% public framework</strong> (policies, methodologies, standards) with <strong>30% redacted operational details</strong> (credentials, specific vulnerabilities, financial data, supplier contracts). Balance demonstrates comprehensive ISMS while protecting genuinely sensitive operational information.</p>
+      
+      <p class="hidden-wisdom"><em>TRANSPARENCY ILLUMINATION: 70/30 ratio isn't arbitrary—it's maximum transparency while protecting competitive/operational secrets. Could go 80/20 or 60/40, but 70/30 hits sweet spot of "comprehensive ISMS demonstration" without "creating attack roadmap."</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: GitHub-Native Public ISMS Repository</h2>
+      
+      <p>At Hack23, ISMS transparency is systematic implementation through GitHub version control:</p>
+      
+      <p><strong>📚 Primary Documentation Repository:</strong></p>
+      <ul>
+        <li><strong>GitHub Public:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23/ISMS-PUBLIC</a> — Complete public ISMS documentation with 40+ markdown policies.</li>
+        <li><strong>Version Control:</strong> Git commit history shows policy evolution, change rationale, continuous improvement over time.</li>
+        <li><strong>Community Engagement:</strong> GitHub Issues for policy feedback, Pull Requests for improvement suggestions, Discussions for Q&A.</li>
+        <li><strong>Documentation Standards:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/STYLE_GUIDE.md">Style Guide</a> ensures consistency, readability, professional quality.</li>
+        <li><strong>License:</strong> Creative Commons Attribution (CC BY 4.0) enables others to learn from and adapt our approach.</li>
+      </ul>
+      
+      <p><strong>🔗 Corporate Website Integration:</strong></p>
+      <ul>
+        <li><strong>Discordian ISMS Blogi:</strong> 40+ blog posts (like this one) explain policies in accessible, provocative style.</li>
+        <li><strong>Direct Policy Links:</strong> Every blog post links to corresponding GitHub policy for technical details.</li>
+        <li><strong>Live Evidence Badges:</strong> OpenSSF Scorecard, SonarCloud quality gates, SLSA attestations—clickable verification.</li>
+        <li><strong>SEO Optimization:</strong> Each policy has dedicated page for discoverability via search engines.</li>
+      </ul>
+      
+      <p><strong>🛡️ Redaction Process for Mixed Documents:</strong></p>
+      <ul>
+        <li><strong>Step 1:</strong> Create complete internal version (source of truth, stored securely internally).</li>
+        <li><strong>Step 2:</strong> Create public copy for sanitization.</li>
+        <li><strong>Step 3:</strong> Apply redactions—replace sensitive data with [REDACTED], [Generic Example], [Representative Values].</li>
+        <li><strong>Step 4:</strong> CEO review ensures no sensitive information remains.</li>
+        <li><strong>Step 5:</strong> Publish to GitHub with commit message explaining redaction reasoning.</li>
+      </ul>
+      
+      <p><strong>📊 Transparency Metrics and Client Impact:</strong></p>
+      <ul>
+        <li><strong>Documents Published:</strong> 40+ policies with ongoing updates as ISMS evolves.</li>
+        <li><strong>Public/Confidential Ratio:</strong> 70% public framework, 30% redacted operational details.</li>
+        <li><strong>Client Engagement:</strong> Security questionnaires answered with policy links, due diligence accelerated by public documentation.</li>
+        <li><strong>Community Contribution:</strong> GitHub Issues, improvement suggestions, industry peer review.</li>
+        <li><strong>Competitive Differentiation:</strong> "Verify our security yourself" vs. competitors' "trust us" approach.</li>
+      </ul>
+      
+      <p><strong>🔄 Continuous Transparency Maintenance:</strong></p>
+      <ul>
+        <li><strong>Policy Updates:</strong> All changes committed to Git with clear commit messages explaining rationale.</li>
+        <li><strong>Redaction Reviews:</strong> Annual review of redacted content—can any be safely published now?</li>
+        <li><strong>Community Feedback:</strong> GitHub Issues monitored, valid suggestions incorporated with attribution.</li>
+        <li><strong>Consistency Checks:</strong> Cross-references between policies validated, broken links fixed, style guide compliance maintained.</li>
+      </ul>
+      
+      <p>Full transparency methodology documented in our public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md">ISMS Transparency Plan</a>.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Transparency As Competitive Weapon</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including publishing your entire ISMS on GitHub for competitors, customers, and attackers to read. Most organizations fear this. We weaponize it.</p>
+      
+      <p>Most organizations hide security policies behind "CONFIDENTIAL" markings, SharePoint access controls, and NDA requirements. They claim "security through obscurity." They fear transparency reveals weaknesses. They're right—if your security is weak, transparency exposes that. Our security isn't weak.</p>
+      
+      <p>We publish 40+ ISMS policies on GitHub. <strong>Classification Framework, Risk Assessment Methodology, all security controls, compliance alignment, security metrics.</strong> 70% public framework proving comprehensive ISMS. Community review improving policies. Customers verifying security before contracts. Competitors... well, they can copy our policies. But policies without systematic implementation are just aspirational documentation.</p>
+      
+      <p><strong>Think for yourself, schmuck!</strong> Question why security policies must be secret—what weakness requires obscurity? Question "trust us, we're secure" when verification is possible. Question security claims without public evidence. (Spoiler: Transparency proves confidence. Obscurity suggests something to hide.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through public, verifiable ISMS implementation. 40+ policies on GitHub. 70% transparency with documented redaction rationale for remaining 30%. ISO 27001 + NIST CSF + CIS Controls alignment with public evidence. OpenSSF ≥7.0, SLSA Level 3, SonarCloud quality gates—all publicly verifiable. This isn't transparency theater—it's radical openness as business strategy.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue hiding security policies in SharePoint and claiming "trust us." Or you can publish comprehensive ISMS on GitHub and compete on verifiable security excellence. Your ISMS. Your choice. Choose confidence over fear. Choose verification over trust.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! If your security policy can't survive public scrutiny, you don't have security—you have security theater wrapped in NDAs. We publish. We prove. We win."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC">Complete Public ISMS Repository</a> — 40+ policies on GitHub</li>
+        <li><a href="discordian-info-sec-policy.html">Tietoturvallisuus Policy</a> — Foundation of CIA+ Framework</li>
+        <li><a href="discordian-classification.html">Classification Framework</a> — Business impact methodology</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blogi</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blogi</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blogi -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogi Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="fi">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
