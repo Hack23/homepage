@@ -54,6 +54,8 @@ Swedish has additional specialized documentation for blog translations:
 - **[SWEDISH_BLOG_TRANSLATION_STATUS.md](SWEDISH_BLOG_TRANSLATION_STATUS.md)** - CIA blog translation status
 - **[SWEDISH_BLOG_CREATION_STATUS.md](SWEDISH_BLOG_CREATION_STATUS.md)** - Blog creation progress
 
+**Note:** These files use uppercase naming (`SWEDISH_BLOG_*`) as they are specialized, topic-specific documentation (CIA blog series), not general language guides. They are preserved from earlier work and referenced by the general Swedish translation files.
+
 ## Quick Start
 
 ### For Translators

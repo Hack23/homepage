@@ -36,7 +36,12 @@ This guide provides comprehensive instructions for creating and maintaining Kore
 
 **ISMS:** 정보보안 관리체계  
 **CIA Triad:** CIA 3요소  
+**Confidentiality:** 기밀성  
+**Integrity:** 무결성  
+**Availability:** 가용성  
 **ISO 27001 Local Standard:** K-ISMS  
+**Compliance:** 컴플라이언스  
+**Risk Assessment:** 위험 평가  
 
 
 ### Call-to-Action
