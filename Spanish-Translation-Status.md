@@ -66,9 +66,21 @@ All 52 Spanish HTML files have complete technical infrastructure:
 - Black Trigram (3 files)
 
 ### Blog Posts (26 files)
+
+**High-Priority Blog Posts (Content Translation Pending):**
 - ❌ `blog-public-isms-benefits_es.html` - Infrastructure complete, needs translation (HIGH PRIORITY)
+  - Word Count: ~3,200 | Effort: 6-7 hours | Budget: €540-640
+  - Focus: Transparency as competitive advantage
 - ❌ `blog-automated-convergence_es.html` - Infrastructure complete, needs translation (HIGH PRIORITY)
+  - Word Count: ~3,000 | Effort: 6-7 hours | Budget: €510-600
+  - Focus: DevSecOps automation (technical)
 - ❌ `blog-information-hoarding_es.html` - Infrastructure complete, needs translation (HIGH PRIORITY)
+  - Word Count: ~2,800 | Effort: 5-6 hours | Budget: €480-560
+  - Focus: Knowledge sharing and organizational transparency
+
+**Total High-Priority:** ~9,000 words | 17-20 hours | €1,530-1,800
+
+**Other Blog Posts:**
 - ❌ 23 additional blog posts - Infrastructure complete, needs translation
 - CIA Series, Compliance Series, Industry & Thought Leadership
 
