@@ -345,3 +345,21 @@ These English pages exist but have no corresponding `_fi.html` translation file:
 **Status:** Infrastructure Complete - Content Translation Required  
 **Last Review:** December 2025  
 **Priority:** HIGH
+
+
+## 📋 Planned GitHub Issues
+
+The following GitHub issues have been identified to complete translation work:
+
+### Issue #2 (Priority: HIGH)
+**Complete Nordic Languages (DA/FI/NO) Discordian ISMS Translations (25 files each)**
+
+- Files to translate: 25
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-2)
+
+### Issue #6 (Priority: MEDIUM)
+**Complete Nordic Languages (DA/FI/NO) ISO 27001 Page Translations (3 files each)**
+
+- Files to translate: 3
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-6)
+

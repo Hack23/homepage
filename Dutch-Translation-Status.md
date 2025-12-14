@@ -308,3 +308,33 @@ These English pages exist but have no corresponding `_nl.html` translation file:
 **Status:** Infrastructure Complete - Content Translation Required  
 **Last Review:** December 2025  
 **Priority:** HIGH
+
+
+## 📋 Planned GitHub Issues
+
+The following GitHub issues have been identified to complete translation work:
+
+### Issue #5 (Priority: MEDIUM)
+**Complete European Languages (DE/NL/FR/ES) Discordian ISMS Translations (38 files each)**
+
+- Files to translate: 38
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-5)
+
+### Issue #7 (Priority: MEDIUM)
+**Complete European Languages (DE/NL/FR/ES) ISO 27001 Page Translations (2-3 files each)**
+
+- Files to translate: 2
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-7)
+
+### Issue #8 (Priority: LOW)
+**Complete European Languages (DE/NL/FR/ES) Blog Post Translations (3 files each)**
+
+- Files to translate: 3
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-8)
+
+### Issue #10 (Priority: LOW)
+**Complete Swedish Election 2026 Page Translations (9 languages)**
+
+- Files to translate: 1
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-10)
+

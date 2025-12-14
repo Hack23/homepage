@@ -407,3 +407,21 @@ Per file validation requirements:
 **Status:** Infrastructure Complete - Content Translation Required  
 **Last Review:** December 2025  
 **Next Review:** Upon content translation completion
+
+
+## 📋 Planned GitHub Issues
+
+The following GitHub issues have been identified to complete translation work:
+
+### Issue #3 (Priority: HIGH)
+**Complete RTL Languages (AR/HE) Discordian ISMS Translations (37-38 files each)**
+
+- Files to translate: 38
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-3)
+
+### Issue #9 (Priority: MEDIUM)
+**Complete Core Page Translations (why-hack23, cia-triad-faq)**
+
+- Files to translate: 2
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-9)
+

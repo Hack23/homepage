@@ -345,3 +345,21 @@ These English pages exist but have no corresponding `_ko.html` translation file:
 **Status:** Infrastructure Complete - Content Translation Required  
 **Last Review:** December 2025  
 **Priority:** HIGH
+
+
+## 📋 Planned GitHub Issues
+
+The following GitHub issues have been identified to complete translation work:
+
+### Issue #4 (Priority: HIGH)
+**Complete Asian Languages (JA/ZH/KO) Discordian ISMS Translations (42 files each)**
+
+- Files to translate: 42
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-4)
+
+### Issue #10 (Priority: LOW)
+**Complete Swedish Election 2026 Page Translations (9 languages)**
+
+- Files to translate: 1
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-10)
+

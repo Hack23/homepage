@@ -398,3 +398,15 @@ These English pages exist but have no corresponding `_sv.html` translation file:
 **Last Review:** December 2025  
 **Priority:** MEDIUM - Most content complete, systematic completion ongoing  
 **Next Milestone:** Complete remaining 8 CIA blog posts
+
+
+## 📋 Planned GitHub Issues
+
+The following GitHub issues have been identified to complete translation work:
+
+### Issue #1 (Priority: HIGH)
+**Complete Swedish (sv) Discordian ISMS Policy Translations (20 files)**
+
+- Files to translate: 20
+- See: [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO_CREATE.md#issue-1)
+
