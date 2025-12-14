@@ -45,7 +45,7 @@ Each language has **two dedicated files**:
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 736 HTML files across 13 languages
+**Total:** 748 HTML files across 13 languages (736 + 12 new European blog files)
 
 ## Swedish Blog-Specific Documentation
 
@@ -142,6 +142,16 @@ All translations must meet:
 - **CI/CD:** GitHub Actions with Lighthouse audits
 - **Security:** ZAP security scanning
 
+## Blog Translation Requirements
+
+For professional blog translation requirements, see:
+- **[BLOG_TRANSLATION_REQUIREMENTS.md](BLOG_TRANSLATION_REQUIREMENTS.md)** - Comprehensive guide for professional translators
+
+**Status:** 3 high-priority blogs need translation across all 13 languages (39 files total)
+- Infrastructure complete (HTML, hreflang, Schema.org)
+- Professional content translation required
+- Estimated effort: 20-30 hours
+
 ## Contact
 
 For questions about translation documentation:
@@ -153,4 +163,4 @@ For questions about translation documentation:
 
 **Last Updated:** December 2025  
 **Maintainer:** Hack23 AB Translation Team  
-**Total Files:** 29 documentation files (26 guides/status + 3 Swedish blog-specific)
+**Total Files:** 30 documentation files (26 guides/status + 3 Swedish blog-specific + 1 blog requirements)

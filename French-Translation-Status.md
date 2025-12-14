@@ -4,7 +4,7 @@
 
 **Language:** French (fr)  
 **Target Markets:** France, Belgium, Switzerland  
-**Total Files:** 49  
+**Total Files:** 52  
 **Last Updated:** December 2025
 
 ### 📄 File Coverage (High-Level Summary)
@@ -12,10 +12,10 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **French Files Exist** | 49 | 51.0% |
-| **Missing Files** | **47** | **49.0%** |
+| **FR Files Exist** | 52 | 54.2% |
+| **Missing Files** | **44** | **45.8%** |
 
-**Missing Files:** 47 files not yet created (1 core page + 46 others)
+**Missing Files:** 44 files not yet created (1 core page + 46 others)
 - **High Priority:** `projects.html` (core navigation page)
 - **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
 - **Lower Priority:** Example pages and additional content
@@ -51,6 +51,21 @@ All 49 French HTML files have complete technical infrastructure:
 - ✅ og:locale: `fr_FR`
 - ✅ Navigation and breadcrumb structure
 - ✅ Mobile responsive design
+
+
+### Blog Posts - Recent Additions (December 2025)
+
+Recently added 3 high-priority blog translations:
+- ✅ `blog-public-isms-benefits_fr.html` - ISMS transparency thought leadership
+- ✅ `blog-automated-convergence_fr.html` - AI agents and automated security
+- ✅ `blog-information-hoarding_fr.html` - Security philosophy
+
+**Status:** Infrastructure complete, content translation required
+- HTML structure with `lang="fr"`
+- Complete hreflang tags (28 languages)
+- Schema.org BlogPosting with `inLanguage: "fr"`
+- og:locale properly set
+- Professional translation needed (see BLOG_TRANSLATION_REQUIREMENTS.md)
 
 ## 📁 Files by Category
 
