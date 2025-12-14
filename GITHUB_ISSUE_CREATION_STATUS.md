@@ -116,11 +116,11 @@ All issue details are in [TRANSLATION_ISSUES_TO_CREATE.md](TRANSLATION_ISSUES_TO
 3. **RTL (AR/HE) Discordian ISMS** - 75 files
 4. **Asian (JA/ZH/KO) Discordian ISMS** - 126 files
 
-### Medium Priority (4 issues - 181 files)
+### Medium Priority (4 issues - 173 files)
 5. **European (DE/NL/FR/ES) Discordian ISMS** - 152 files
 6. **Nordic (DA/FI/NO) ISO 27001** - 9 files
 7. **European (DE/NL/FR/ES) ISO 27001** - 10 files
-9. **Core Pages (why-hack23, cia-triad-faq)** - 10 files
+9. **Core Pages (why-hack23, cia-triad-faq)** - 2 files (AR/HE only)
 
 ### Low Priority (2 issues - 21 files)
 8. **European (DE/NL/FR/ES) Blog Posts** - 12 files
