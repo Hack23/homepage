@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Fren
 | Availability | Disponibilité |
 | ISO 27001 | ISO 27001 |
 | GDPR | RGPD |
-| NIS2 | Directive NIS2 |
+| NIS2 | Directive NIS 2 |
 | Compliance | Conformité |
 | Risk Assessment | Évaluation des risques |
 | Security | Sécurité |
