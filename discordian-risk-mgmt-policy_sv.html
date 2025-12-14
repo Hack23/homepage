@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riskhanteringspolicy | Kvantitativ ALE-metodik | Hack23</title>
+    <meta name="description" content="Femstegs-riskmetodik: Identifiera, Analysera (kvantitativ ALE: SLE × ARO), Utvärdera, Behandla, Övervaka. Matematik slår gissningar. Monte Carlo-simulering.">
+    <meta name="keywords" content="riskhantering, riskbedömningsmetodik, kvantitativ riskanalys, ALE-beräkning, single loss expectancy, årlig förekomstfrekvens, hotaktörprofilering, tillgång-hot-sårbarhetsmappning, riskbehandlingsstrategier, Monte Carlo-simulering, konfidensintervall, femstegs-riskprocess, riskkvantifiering, SLE ARO ALE, nationalstatshot, script kiddie-attacker, probabilistisk risk, statistisk riskanalys, riskaptit, risktolerans, ISO 27005, NIST RMF, riskmetodik">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Riskhantering: Beräkna vad du inte kan förhindra">
+    <meta property="og:description" content="Risk är sannolikhet gånger påverkan. Radikal Discordian-granskning av säkerhetsriskbedömning och behandlingsstrategier.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-risk-mgmt-policy_sv.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    <meta property="og:locale" content="sv_SE">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-risk-mgmt-policy_sv.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Riskhanteringsmetodik: Probabilistisk spådom med matematik",
+      "description": "Femstegs systematisk riskbedömningsmetodik: Identifiera tillgångar/hot/sårbarheter, Analysera kvantitativt (ALE = SLE × ARO), Utvärdera mot riskaptit, Behandla med strategiska alternativ, Övervaka kontinuerligt. Hotaktörprofilering från nationalstater till script kiddies. Monte Carlo-simulering för komplexa risker. Konfidensintervall och osäkerhetskvantifiering. Statistisk rigor slår kalkylarksteater.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-12-14",
+      "dateModified": "2025-12-14",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-risk-mgmt-policy_sv.html"
+      },
+      "keywords": "riskhantering, riskbedömning, kvantitativ riskanalys, ALE-metodik, ISO 27005, NIST RMF",
+      "articleSection": "Informationssäkerhet",
+      "inLanguage": "sv",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_sv.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-policy",
+          "description": "Implementering av ledningssystem för informationssäkerhet"
+        },
+        {
+          "@type": "Thing",
+          "name": "Riskhanteringsmetodik",
+          "description": "Kvantitativ riskanalys och behandlingsstrategier"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-risk-mgmt-policy_sv.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Riskhanteringspolicy",
+          "item": "https://hack23.com/discordian-risk-mgmt-policy_sv.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Hreflang tags for language alternatives -->
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-risk-mgmt-policy_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-risk-mgmt-policy_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-risk-mgmt-policy_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-risk-mgmt-policy_da.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-risk-assessment.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-risk-mgmt-policy_fi.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-risk-mgmt-policy_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-risk-mgmt-policy_he.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-risk-mgmt-policy_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-risk-mgmt-policy_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-risk-mgmt-policy_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-risk-mgmt-policy_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-risk-assessment.html">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_sv.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_sv.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="discordian-cybersecurity_sv.html">Discordian ISMS</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Riskhanteringspolicy
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logotyp" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersäkerhet</h1>
+  <div class="app-link">
+    <a href="index_sv.html" title="Tillbaka till Hem">Hem</a>
+    <a href="discordian-cybersecurity_sv.html" title="Tillbaka till Manifest">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Management_Policy.md" title="Offentlig riskhanteringspolicy">ISMS-policy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">📊 Riskhanteringspolicy: Beräkna vad du inte kan förhindra</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Svensk översättning under utveckling</h2>
+      
+      <p><em>Denna sida är under utveckling för svensk översättning. Innehållet kommer att översättas med bevarande av Discordian-rösten och professionell svensk ISO 27005/NIST RMF-terminologi.</em></p>
+      
+      <p><strong>📊 Riskhanteringspolicy – Översikt:</strong></p>
+      <ul>
+        <li><strong>Femstegs-metodik:</strong> Identifiera, Analysera, Utvärdera, Behandla, Övervaka</li>
+        <li><strong>Kvantitativ analys:</strong> ALE (Annual Loss Expectancy) = SLE × ARO</li>
+        <li><strong>Hotaktörprofilering:</strong> Från nationalstater till script kiddies</li>
+        <li><strong>Monte Carlo-simulering:</strong> Osäkerhetskvantifiering för komplexa risker</li>
+        <li><strong>Behandlingsstrategier:</strong> Undvika, Minska, Överföra, Acceptera</li>
+      </ul>
+      
+      <p><strong>För fullständigt innehåll, se:</strong></p>
+      <ul>
+        <li><a href="discordian-risk-assessment.html">📄 Engelska versionen</a> — Fullständigt innehåll med Discordian-filosofi</li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Management_Policy.md">📋 Offentlig ISMS-policy</a> — Tekniska detaljer på GitHub</li>
+        <li><a href="discordian-risk-register_sv.html">📊 Riskregister</a> — Levande riskdokumentation</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>UPPLYSNING: Risk är vad som återstår efter att du gjort allt du kan. Perfekt säkerhet existerar inte. Nollrisk är omöjlig. Alla som lovar det ljuger eller säljer något. Kvantitativ riskanalys = erkänna att vi gissar, men gissa med matematik istället för magkänsla.</em></p>
+      
+      <p><strong>Nyckelterminologi:</strong></p>
+      <ul>
+        <li><strong>Riskhantering:</strong> Risk Management</li>
+        <li><strong>Riskbedömning:</strong> Risk Assessment</li>
+        <li><strong>ALE:</strong> Annual Loss Expectancy / Årlig förlustförväntan</li>
+        <li><strong>SLE:</strong> Single Loss Expectancy / Enskild händelseförlust</li>
+        <li><strong>ARO:</strong> Annual Rate of Occurrence / Årlig förekomstfrekvens</li>
+        <li><strong>Hotaktör:</strong> Threat Actor</li>
+        <li><strong>Sårbarhet:</strong> Vulnerability</li>
+        <li><strong>Riskaptit:</strong> Risk Appetite</li>
+        <li><strong>Risktolerans:</strong> Risk Tolerance</li>
+        <li><strong>Riskbehandling:</strong> Risk Treatment</li>
+      </ul>
+      
+      <p><strong>Svensk regleringskontext:</strong></p>
+      <ul>
+        <li><strong>ISO 27005:</strong> Riskhantering för informationssäkerhet</li>
+        <li><strong>ISO 31000:</strong> Riskhantering — Riktlinjer (internationell standard)</li>
+        <li><strong>NIST RMF:</strong> Risk Management Framework (använt som metodreferens)</li>
+        <li><strong>MSB:</strong> Nationella riktlinjer för riskanalys och krishantering</li>
+        <li><strong>NIS2-direktivet:</strong> Krav på systematisk riskhantering för kritisk infrastruktur</li>
+      </ul>
+      
+      <p><strong>Behöver experthjälp med riskhantering?</strong> <a href="why-hack23_sv.html">Upptäck varför organisationer väljer Hack23</a> för transparent, praktikerledd cybersäkerhetskonsulting.</p>
+    </section>
+    
+    <section id="five-steps">
+      <h2 class="panel-caption">Femstegs-riskmetodik: Systematisk osäkerhetshantering</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔍 Identifiera tillgångar, hot & sårbarheter</h3>
+          <p><strong>Inventera vad som behöver skyddas och vad det hotas av.</strong> Tillgångsinventering från <a href="discordian-info-asset-mgmt-policy_sv.html">tillgångshanteringspolicy</a>. Hotaktörprofilering: Nationalstater (APT), organiserad brottslighet, hackivister, script kiddies. Sårbarhetsidentifiering genom scanning + penetrationstester.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📊 Analysera kvantitativt (ALE = SLE × ARO)</h3>
+          <p><strong>Beräkna årlig förlustförväntan med matematik, inte gissningar.</strong> SLE (Single Loss Expectancy) = tillgångsvärde × exponerings faktor. ARO (Annual Rate of Occurrence) = sannolikhet per år. ALE = SLE × ARO. Monte Carlo för komplexa scenarier. Konfidensintervall för osäkerhet.</p>
+          <p class="hidden-wisdom"><em>3×4 kvalitativ riskmatris = färgkodad självbedrägeri. ALE = faktisk matematisk förväntan. "Hög risk" = vagt. "€50,000 ALE" = specifikt.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🎯 Utvärdera mot riskaptit</h3>
+          <p><strong>Jämför beräknad risk mot organisatorisk tolerans.</strong> Riskaptit definierad per klassificeringsnivå. Extrem: €1,000 ALE-tröskel. Hög: €10,000. Måttlig: €50,000. Risker över tröskel kräver behandling. Under tröskel = acceptabel restante risk.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🛡️ Behandla: Undvik, Minska, Överför, Acceptera</h3>
+          <p><strong>Fyra strategiska alternativ för riskbehandling.</strong> <strong>Undvik:</strong> Eliminera aktiviteten (stäng ner systemet). <strong>Minska:</strong> Implementera kontroller (MFA, kryptering). <strong>Överför:</strong> Försäkring, tredjepartsleverantörer. <strong>Acceptera:</strong> Dokumenterad acceptans med ledningsgodkännande.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔄 Övervaka & granska kontinuerligt</h3>
+          <p><strong>Risk är inte statisk — kontinuerlig omvärdering krävs.</strong> Kvartalsvis riskgranskning. Nya sårbarheter integrerade (CVE-feeder). Hotlandskap-ändringar övervakade. Incidenter triggar omvärdering. <a href="discordian-risk-register_sv.html">Riskregister</a> levande dokumentation.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="related">
+      <h2 class="panel-caption">Relaterade ISMS-policyer</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy_sv.html">Informationssäkerhetspolicy</a> — Omfattande ISMS-grund och ramverk</li>
+        <li><a href="discordian-risk-register_sv.html">Riskregister</a> — Levande dokumentation av organisatoriska risker</li>
+        <li><a href="discordian-threat-modeling_sv.html">Hotmodelleringspolicy</a> — STRIDE-analys och attackträd</li>
+        <li><a href="discordian-info-asset-mgmt-policy_sv.html">Tillgångshanteringspolicy</a> — Identifiera vad som behöver skyddas</li>
+        <li><a href="discordian-incident-response_sv.html">Incidenthanteringsplan</a> — När risker realiseras</li>
+      </ul>
+    </section>
+    
+    <section id="discordian-note">
+      <p class="signature">— Hagbard Celine, Kapten på <em>Leif Erikson</em><br><br><em>"Risk är vad som återstår efter allt du gjort. Perfekt säkerhet är en illusion. Men kvantifierad risk med matematik slår gissningar med magkänsla."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+
+<footer role="contentinfo" aria-label="Sidfot">
+  <div class="footer-container">
+    
+    <!-- Company Info Column -->
+    <div class="footer-column">
+      <div class="footer-heading">Hack23 AB</div>
+      <p>Cybersäkerhetskonsulter<br>
+      Göteborg, Sverige | Distans</p>
+      <p>Org.nr: 5595347807</p>
+      <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+      <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
+    </div>
+    
+    <!-- Services Column -->
+    <div class="footer-column">
+      <h3>Tjänster</h3>
+      <ul>
+        <li><a href="services_sv.html">Säkerhetskonsulting</a></li>
+        <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+        <li><a href="services_sv.html">Molnsäkerhet</a></li>
+        <li><a href="services_sv.html">DevSecOps-integration</a></li>
+        <li><a href="services_sv.html">Efterlevnad & ISMS</a></li>
+      </ul>
+    </div>
+    
+    <!-- Products Column -->
+    <div class="footer-column">
+      <h3>Produkter</h3>
+      <ul>
+        <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+        <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+        <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
+      </ul>
+    </div>
+    
+    <!-- Resources Column -->
+    <div class="footer-column">
+      <h3>Resurser</h3>
+      <ul>
+        <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
+        <li><a href="discordian-cybersecurity_sv.html">🍎 Discordian-blogg</a></li>
+        <li><a href="cia-triad-faq_sv.html">CIA Triad FAQ</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+        <li><a href="sitemap_sv.html">Sitemap</a></li>
+      </ul>
+    </div>
+    
+    <!-- Company Column -->
+    <div class="footer-column">
+      <h3>Företag</h3>
+      <ul>
+        <li><a href="why-hack23_sv.html">Om Hack23</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
+        <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+        <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+        <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  
+  <!-- Discordian Agents Section -->
+  <div class="footer-discordian">
+    <p class="discordian-authors">
+      <strong>✍️ Bloggförfattare:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+    </p>
+    <p class="discordian-implementation">
+      <strong>💻 Implementeringsverklighet:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas med detta vackra kaos till fungerande kod.
+    </p>
+  </div>
+  
+  <!-- Footer Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2008-2025 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+    <p>
+      <a href="index.html" lang="en">English</a> | 
+      <a href="index_sv.html" lang="sv">Svenska</a> | 
+      <a href="index_ko.html" lang="ko">한국어</a> | 
+      <a href="index_fi.html" lang="fi">Suomi</a> | 
+      <a href="index_no.html" lang="no">Norsk</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

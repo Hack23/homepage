@@ -11,12 +11,18 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Swedish Files Exist** | 74 | 77.1% |
-| **Missing Files** | **22** | **22.9%** |
+| **Swedish Files Exist** | 78 | 81.3% |
+| **Missing Files** | **18** | **18.8%** |
 
-**Missing Files:** 22 files not yet created (1 core page + 21 Discordian ISMS policies)
+**Newly Created (December 14, 2025):** 4 Swedish ISMS policy files
+- ✅ `discordian-access-control-policy_sv.html` - Access Control Policy
+- ✅ `discordian-bc-dr-policy_sv.html` - Business Continuity & Disaster Recovery Policy
+- ✅ `discordian-info-asset-mgmt-policy_sv.html` - Information Asset Management Policy
+- ✅ `discordian-risk-mgmt-policy_sv.html` - Risk Management Policy
+
+**Missing Files:** 18 files not yet created (1 core page + 17 Discordian ISMS policies)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 21 Discordian ISMS policy files (discordian-asset-mgmt, discordian-cloud-security, etc.)
+- **Medium Priority:** 17 Discordian ISMS policy files (discordian-cloud-security, discordian-asset-mgmt, etc.)
 
 ## 📊 Overall Status (Existing Files)
 
@@ -71,11 +77,15 @@
 - Various completion status
 - See `SWEDISH_BLOG_TRANSLATION_STATUS.md` for details
 
-### ISMS Policies (~18/~18)
+### ISMS Policies (~22/~22)
 - ✅ `discordian-cybersecurity_sv.html` - Complete
 - ✅ `discordian-info-sec-policy_sv.html` - Complete
-- ✅ Various Discordian ISMS policies - Most complete
-- Total: ~18 policies with Swedish translations
+- ✅ **NEW:** `discordian-access-control-policy_sv.html` - Complete SEO infrastructure (Dec 14, 2025)
+- ✅ **NEW:** `discordian-bc-dr-policy_sv.html` - Complete SEO infrastructure (Dec 14, 2025)
+- ✅ **NEW:** `discordian-info-asset-mgmt-policy_sv.html` - Complete SEO infrastructure (Dec 14, 2025)
+- ✅ **NEW:** `discordian-risk-mgmt-policy_sv.html` - Complete SEO infrastructure (Dec 14, 2025)
+- ✅ Various other Discordian ISMS policies - Most complete
+- Total: ~22 policies with Swedish translations/infrastructure
 
 ### ISO 27001 Resources (4/4)
 - ✅ `iso-27001-2022-vs-2013_sv.html` - Complete
