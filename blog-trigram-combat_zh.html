@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trigram Combat System | Vital Points & Archetypes | Hack23</title>
+<title>卦象战斗系统 | 韩国武术游戏 | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Combat system design: 70 vital points, 5 archetypes, authentic Korean martial arts techniques. Cultural preservation through gameplay.">
+<meta name="description" content="Black Trigram战斗系统：命中检测、伤害计算、要害系统。韩国武术的基于物理的战斗机制。">
 <meta name="keywords" content="Black Trigram combat, Unity physics, martial arts simulation, Simon Moon, hit detection, combat system, Korean martial arts physics">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
-<meta property="og:title" content="Black Trigram Combat: 70 Vital Points & Physics of Respect">
-<meta property="og:description" content="Sacred geometry meets combat physics. 70 pressure points, five collision types, authentic Korean martial arts simulation.">
+<meta property="og:title" content="Black Trigram战斗系统：基于物理的武术战斗">
+<meta property="og:description" content="韩国武术战斗系统的深入分析：命中检测、要害、伤害计算。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/blog-trigram-combat_zh.html">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://hack23.com/blog-trigram-combat_zh.html">
 <meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
 
 <!-- Twitter Card -->
@@ -25,32 +25,107 @@
 
 <link rel="canonical" href="https://hack23.com/blog-trigram-combat_zh.html">
 	<!-- Hreflang tags for language alternatives -->
-	<link rel="alternate" hreflang="en" href="https://hack23.com/blog-trigram-combat.html">
-	<link rel="alternate" hreflang="da" href="https://hack23.com/blog-trigram-combat_da.html">
-	<link rel="alternate" hreflang="da-DK" href="https://hack23.com/blog-trigram-combat_da.html">
-	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-trigram-combat_de.html">
-	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-trigram-combat_de.html">
-	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-trigram-combat_es.html">
-	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-trigram-combat_es.html">
-	<link rel="alternate" hreflang="fi" href="https://hack23.com/blog-trigram-combat_fi.html">
-	<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/blog-trigram-combat_fi.html">
-	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-trigram-combat_fr.html">
-	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-trigram-combat_fr.html">
-	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-trigram-combat_nl.html">
-	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/blog-trigram-combat_nl.html">
-	<link rel="alternate" hreflang="nb" href="https://hack23.com/blog-trigram-combat_no.html">
-	<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/blog-trigram-combat_no.html">
-	<link rel="alternate" hreflang="no" href="https://hack23.com/blog-trigram-combat_no.html">
-	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-trigram-combat_sv.html">
-	<link rel="alternate" hreflang="sv-SV" href="https://hack23.com/blog-trigram-combat_sv.html">
-	<link rel="alternate" hreflang="ja" href="https://hack23.com/blog-trigram-combat_ja.html">
-	<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/blog-trigram-combat_ja.html">
-	<link rel="alternate" hreflang="zh" href="https://hack23.com/blog-trigram-combat_zh.html">
-	<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/blog-trigram-combat_zh.html">
-	<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/blog-trigram-combat_zh.html">
-	<link rel="alternate" hreflang="ko" href="https://hack23.com/blog-trigram-combat_ko.html">
-	<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/blog-trigram-combat_ko.html">
-	<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-trigram-combat.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Black Trigram Combat: 70 Vital Points & The Physics of Respect",
+      "description": "Exploring the combat physics and cultural authenticity in Black Trigram's design",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "System Architect",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-trigram-combat.html"
+      },
+      "keywords": "combat physics, Unity collision, martial arts simulation, cultural authenticity",
+      "articleSection": "Game Design",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1557,
+      "articleBody": "Traditional Korean martial arts map 70 vital points on the human body. Not mysticism—biomechanics. Nerve clusters, joint articulation points, blood vessel compression zones. Pressure points where phys...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23安全博客"
+      },
+      "inLanguage": "zh"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-trigram-combat.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://hack23.com/index_zh.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://hack23.com/blog_zh.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram Combat",
+          "item": "https://hack23.com/blog-trigram-combat.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-trigram-combat.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-trigram-combat_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-trigram-combat_sv.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-trigram-combat_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/blog-trigram-combat_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-trigram-combat_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-trigram-combat_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-trigram-combat_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/blog-trigram-combat_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-trigram-combat_es.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/blog-trigram-combat_da.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/blog-trigram-combat_fi.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/blog-trigram-combat_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/blog-trigram-combat_no.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/blog-trigram-combat_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/blog-trigram-combat_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/blog-trigram-combat_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/blog-trigram-combat_ko.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/blog-trigram-combat_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/blog-trigram-combat_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/blog-trigram-combat_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/blog-trigram-combat_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-trigram-combat.html">
 </head>
 <body>
   <!-- Breadcrumb Navigation -->
@@ -72,11 +147,11 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>Discordian Cybersecurity</h1>
+  <h1>不和谐派网络安全</h1>
   <div class="app-link">
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+    <a href="index_zh.html">首页</a>
+    <a href="blog_zh.html">博客</a>
+    <a href="black-trigram-docs_zh.html">Black Trigram文档</a>
   </div>
 </header>
 <main>
@@ -294,7 +369,7 @@
       <h2 class="panel-caption">Continue the Journey</h2>
       <p><strong>Previous:</strong> <a href="blog-trigram-architecture.html">Black Trigram Architecture</a> - Five fighters and sacred geometry</p>
       <p><strong>Related:</strong> <a href="black-trigram-docs.html">Complete Documentation</a> - All architecture diagrams and combat specs</p>
-      <p><strong>Back to:</strong> <a href="blog.html">Security Blog</a> - All discordian posts</p>
+      <p><strong>Back to:</strong> <a href="blog_zh.html">安全博客</a> - All discordian posts</p>
     </section>
   </article>
 </main>
@@ -314,31 +389,31 @@
         
         <!-- Services Column -->
         <div class="footer-column">
-          <h3>Services</h3>
+          <h3>服务</h3>
           <ul>
-            <li><a href="services.html">Security Consulting</a></li>
-            <li><a href="services.html">Security Architecture</a></li>
-            <li><a href="services.html">Cloud Security</a></li>
-            <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services_zh.html">安全咨询</a></li>
+            <li><a href="services_zh.html">安全架构</a></li>
+            <li><a href="services_zh.html">云安全</a></li>
+            <li><a href="services_zh.html">DevSecOps集成</a></li>
+            <li><a href="services_zh.html">合规性 & ISMS</a></li>
           </ul>
         </div>
         
         <!-- Products Column -->
         <div class="footer-column">
-          <h3>Products</h3>
+          <h3>产品</h3>
           <ul>
-            <li><a href="black-trigram-features.html">Black Trigram</a></li>
-            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
-            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+            <li><a href="black-trigram-features_zh.html">Black Trigram</a></li>
+            <li><a href="cia-features_zh.html">公民情报局</a></li>
+            <li><a href="cia-compliance-manager-features_zh.html">CIA合规管理器</a></li>
           </ul>
         </div>
         
         <!-- Resources Column -->
         <div class="footer-column">
-          <h3>Resources</h3>
+          <h3>资源</h3>
           <ul>
-            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="blog_zh.html">安全博客</a></li>
             <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
             <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
@@ -348,9 +423,9 @@
         
         <!-- Company Column -->
         <div class="footer-column">
-          <h3>Company</h3>
+          <h3>公司</h3>
           <ul>
-            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="why-hack23_zh.html">关于Hack23</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
             <li><a href="SECURITY.md">Report Security Issue</a></li>
             <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
