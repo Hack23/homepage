@@ -20,6 +20,8 @@
 - **⚠️ Partially Translated:** 38 files (51.4%) - Some English remains
 - **❌ English Content:** 25 files (33.8%) - Needs translation
 
+- **📄 File Coverage:** 74/96 files exist (22 files not yet created)
+
 ### Infrastructure Status
 - ✅ HTML structure with `lang="sv"` attribute
 - ✅ Complete hreflang tags for all supported languages
@@ -202,6 +204,45 @@ See `SWEDISH_BLOG_TRANSLATION_GUIDE.md` for:
 **See:** `SWEDISH_BLOG_TRANSLATION_GUIDE.md` for detailed guidance
 
 
+
+
+
+## ⚠️ Missing Translation Files
+
+**File Coverage:** 74/96 files exist (77.1% coverage)  
+**Missing:** 22 files have not been created yet
+
+These English pages exist but have no corresponding `_sv.html` translation file:
+
+### Discordian ISMS Policies (20 missing)
+1. `discordian-asset-mgmt_sv.html` (from `discordian-asset-mgmt`)
+2. `discordian-backup-recovery_sv.html` (from `discordian-backup-recovery`)
+3. `discordian-business-continuity_sv.html` (from `discordian-business-continuity`)
+4. `discordian-classification_sv.html` (from `discordian-classification`)
+5. `discordian-cloud-security_sv.html` (from `discordian-cloud-security`)
+6. `discordian-cra-conformity_sv.html` (from `discordian-cra-conformity`)
+7. `discordian-crypto_sv.html` (from `discordian-crypto`)
+8. `discordian-data-classification_sv.html` (from `discordian-data-classification`)
+9. `discordian-data-protection_sv.html` (from `discordian-data-protection`)
+10. `discordian-disaster-recovery_sv.html` (from `discordian-disaster-recovery`)
+11. `discordian-llm-security_sv.html` (from `discordian-llm-security`)
+12. `discordian-monitoring-logging_sv.html` (from `discordian-monitoring-logging`)
+13. `discordian-network-security_sv.html` (from `discordian-network-security`)
+14. `discordian-privacy_sv.html` (from `discordian-privacy`)
+15. `discordian-secure-dev_sv.html` (from `discordian-secure-dev`)
+
+*...and 5 more Discordian policy files*
+
+### Other Pages (2 missing)
+1. `breadcrumb-example_sv.html` (from `breadcrumb-example`)
+2. `projects_sv.html` (from `projects`)
+
+### Priority for File Creation
+1. **High:** Core pages (projects.html if missing)
+2. **Medium:** Commonly used ISMS policies (cloud-security, vuln-mgmt, etc.)
+3. **Lower:** Specialized Discordian policies and additional blog posts
+
+**Note:** Files must be created first (with proper infrastructure) before they can be translated.
 
 ## 📋 Detailed File Status
 
