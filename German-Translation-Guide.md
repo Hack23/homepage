@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Germ
 | Availability | Verfügbarkeit |
 | ISO 27001 | ISO 27001 |
 | GDPR | DSGVO |
-| NIS2 | NIS2-Richtlinie |
+| NIS2 | NIS 2-Richtlinie |
 | Compliance | Compliance/Einhaltung |
 | Risk Assessment | Risikobewertung |
 | Security | Sicherheit |

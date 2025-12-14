@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Dutc
 | Availability | Beschikbaarheid |
 | ISO 27001 | ISO 27001 |
 | GDPR | AVG |
-| NIS2 | NIS2-richtlijn |
+| NIS2 | NIS 2-richtlijn |
 | Compliance | Naleving |
 | Risk Assessment | Risicoanalyse |
 | Security | Beveiliging |

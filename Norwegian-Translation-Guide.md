@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Norw
 | Availability | Tilgjengelighet |
 | ISO 27001 | ISO 27001 |
 | GDPR | GDPR |
-| NIS2 | NIS2-direktivet |
+| NIS2 | NIS 2-direktivet |
 | Compliance | Etterlevelse |
 | Risk Assessment | Risikovurdering |
 | Threat Modeling | Trusselmodellering |

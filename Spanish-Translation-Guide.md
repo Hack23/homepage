@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Span
 | Availability | Disponibilidad |
 | ISO 27001 | ISO 27001 |
 | GDPR | RGPD |
-| NIS2 | Directiva NIS2 |
+| NIS2 | Directiva NIS 2 |
 | Compliance | Cumplimiento |
 | Risk Assessment | Evaluación de riesgos |
 | Security | Seguridad |

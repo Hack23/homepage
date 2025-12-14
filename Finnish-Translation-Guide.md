@@ -43,7 +43,7 @@ This guide provides comprehensive instructions for creating and maintaining Finn
 | Availability | Saatavuus |
 | ISO 27001 | ISO 27001 |
 | GDPR | GDPR (EU:n tietosuoja-asetus) |
-| NIS2 | NIS2-direktiivi |
+| NIS2 | NIS 2-direktiivi |
 | Compliance | Vaatimustenmukaisuus |
 | Risk Assessment | Riskiarviointi |
 | Threat Modeling | Uhkamallintaminen |
