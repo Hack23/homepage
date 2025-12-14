@@ -5,17 +5,23 @@
 **Language:** Finnish (fi)  
 **Target Market:** Finland  
 **Total Files:** 66  
-**Last Updated:** December 2024
+**Last Updated:** December 2025
 
 ### 📄 File Coverage (High-Level Summary)
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Finnish Files Exist** | 66 | 68.8% |
-| **Missing Files** | **30** | **31.3%** |
+| **Finnish Files Exist** | 71 | 74.0% |
+| **Missing Files** | **25** | **31.3%** |
 
 **Recent Additions (December 2025):**
+- ✅ **Issue #10 (Nordic ISMS):** 5 Discordian ISMS policy files created (access-control, bc-dr, info-asset-mgmt, incident-response, risk-mgmt)
+- ✅ **Issue #6:** 9 CIA/Compliance Manager pages created with complete infrastructure
+- ⚠️ **Nordic CIA Blog Status:** 10 CIA blog posts assessed - professional translation recommended
+- ✅ **Nordic Industry/ISMS:** Industry pages and security checklist completed
+
+**Previous Additions:**
 - ✅ **Issue #6:** 9 CIA/Compliance Manager pages created with complete infrastructure
 - ⚠️ **Nordic CIA Blog Status:** 10 CIA blog posts assessed - professional translation recommended
 - ✅ **Nordic Industry/ISMS:** Industry pages and security checklist completed
