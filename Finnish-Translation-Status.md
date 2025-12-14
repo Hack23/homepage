@@ -11,14 +11,24 @@
 
 ## 📊 Overall Status
 
-| Metric | Status |
-|--------|--------|
-| Infrastructure | ✅ 100% Complete |
-| Content Translation | ⚠️ English Placeholder - Translation Required |
-| HTML Validation | ✅ Pass |
-| Hreflang Tags | ✅ Complete |
-| Schema.org | ✅ Complete |
+| Category | Total Files | Infrastructure | Translation Status |
+|----------|-------------|----------------|---------------------|
+| **All Files** | **66** | **✅ 100%** | **✅ 19.7% / ⚠️ 37.9% / ❌ 42.4%** |
 
+**Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
+
+### Actual Translation Status (Based on Content Analysis)
+- **✅ Fully Translated:** 13 files (19.7%)
+- **⚠️ Partially Translated:** 25 files (37.9%) - Some English remains
+- **❌ English Content:** 28 files (42.4%) - Needs translation
+
+### Infrastructure Status
+- ✅ HTML structure with `lang="fi"` attribute
+- ✅ Complete hreflang tags for all supported languages
+- ✅ Schema.org structured data with `inLanguage="fi"`
+- ✅ og:locale set to `fi_FI`
+- ✅ Navigation and breadcrumb structure
+- ✅ Mobile responsive design
 ## ✅ Infrastructure Complete (66/66)
 
 All 66 Finnish HTML files have complete technical infrastructure:
@@ -98,41 +108,107 @@ All pages include comprehensive hreflang tags covering all supported languages.
 **Standards:** ISO 27001, local standards  
 **Currency:** EUR (€)
 
-## 💰 Translation Project Estimates
+## 💰 Translation Project Estimates (Based on Actual Analysis)
 
-### Scope of Work
-- **Total words to translate:** ~55,000 words
-- **Current state:** English placeholder content in all 66 files
-- **Infrastructure:** 100% complete (ready for translation)
+### Current State (File-by-File Analysis)
+- **✅ Fully Translated:** 13/66 files (19.7%)
+- **⚠️ Partially Translated:** 25/66 files (37.9%) - Mix of translated and English content
+- **❌ English Placeholder:** 28/66 files (42.4%) - Requires full translation
 
-### Budget Estimates
-- **Professional translation:** €9,000-€12,000
-- **Technical review:** €1,080-€1,560
-- **Quality assurance:** €540-€1,080
-- **Total estimated cost:** €10,620-€14,640
+### Estimated Remaining Work
+- **Partial files:** ~6,250 words to complete
+- **English files:** ~14,000 words to translate
+- **Total remaining:** ~20,250 words
+
+### Budget Estimates for Completion
+- **Professional translation:** €3,037-€4,050
+- **Technical review:** €303-€486
+- **Quality assurance:** €151-€324
+- **Total estimated cost:** €3,492-€4,860
 
 ### Timeline Estimates
 - **Professional service:** 2-3 months
-- **AI translation + review:** 1-2 months (€3,600-€6,000, lower quality)
-- **Phased approach:** 4-6 months (prioritize high-value pages first)
+- **AI translation + review:** 1-2 months (€1,214-€2,025, lower quality)
+- **Current progress:** 19.7% complete, 80.3% remaining
 
-### Translation Priorities by Phase
 
-**Phase 1 - High Impact (2-3 weeks, ~12,100 words)**
-- Core pages: index, services, why-hack23
-- Estimated: €2,057-€2,662
+## 📋 Detailed File Status
 
-**Phase 2 - Products (3-4 weeks, ~18,150 words)**
-- CIA, Compliance Manager, Black Trigram
-- Estimated: €3,085-€3,993
+### ✅ Fully Translated Files (13)
+1. accessibility-statement_fi.html
+2. black-trigram-features_fi.html
+3. discordian-acceptable-use_fi.html
+4. discordian-access-control_fi.html
+5. discordian-classification_fi.html
+6. discordian-crypto_fi.html
+7. discordian-cybersecurity_fi.html
+8. discordian-data-classification_fi.html
+9. discordian-network-security_fi.html
+10. discordian-remote-access_fi.html
+11. discordian-risk-assessment_fi.html
+12. discordian-threat-modeling_fi.html
+13. iso-27001-2022-vs-2013_fi.html
 
-**Phase 3 - Technical Content (4-6 weeks, ~14,850 words)**
-- ISO 27001 resources, ISMS policies
-- Estimated: €2,524-€3,267
+### ⚠️ Partially Translated Files (25)
+*These files have some translated content but still contain English text*
 
-**Phase 4 - Content Marketing (4-6 weeks, ~9,900 words)**
-- Blog posts, industry pages
-- Estimated: €1,683-€2,178
+1. black-trigram-docs_fi.html
+2. blog-betting-gaming-cybersecurity_fi.html
+3. blog-cannabis-cybersecurity-guide_fi.html
+4. blog-cia-alternative-media-discordian-2026_fi.html
+5. blog-cia-architecture_fi.html
+6. blog-cia-business-case-global-news_fi.html
+7. blog-cia-financial-strategy_fi.html
+8. blog-cia-future-security_fi.html
+9. blog-cia-mindmaps_fi.html
+10. blog-cia-security_fi.html
+11. blog-cia-workflows_fi.html
+12. blog-compliance-architecture_fi.html
+13. blog-compliance-future_fi.html
+14. blog-compliance-security_fi.html
+15. blog-george-dorn-compliance-code_fi.html
+16. blog-investment-firm-security_fi.html
+17. blog-medical-cannabis-hipaa-gdpr_fi.html
+18. blog-trigram-architecture_fi.html
+19. blog-trigram-combat_fi.html
+20. blog-trigram-future_fi.html
+21. cia-triad-faq_fi.html
+22. discordian-privacy_fi.html
+23. discordian-risk-register_fi.html
+24. security-assessment-checklist_fi.html
+25. swedish-election-2026_fi.html
+
+### ❌ English Content Files (28)
+*These files primarily contain English content and need translation*
+
+1. black-trigram_fi.html
+2. blog-automated-convergence_fi.html
+3. blog-cia-osint-intelligence_fi.html
+4. blog-cia-swedish-media-election-2026_fi.html
+5. blog-george-dorn-cia-code_fi.html
+6. blog-george-dorn-trigram-code_fi.html
+7. blog-information-hoarding_fi.html
+8. blog-public-isms-benefits_fi.html
+9. blog_fi.html
+10. cia-compliance-manager-docs_fi.html
+11. cia-compliance-manager-features_fi.html
+12. cia-docs_fi.html
+13. cia-features_fi.html
+14. cia-project_fi.html
+15. compliance-manager_fi.html
+16. discordian-compliance-frameworks_fi.html
+17. discordian-compliance_fi.html
+18. discordian-data-protection_fi.html
+19. discordian-info-sec-policy_fi.html
+20. discordian-isms-review_fi.html
+21. discordian-isms-transparency_fi.html
+22. index_fi.html
+23. industries-betting-gaming_fi.html
+24. industries-cannabis-security_fi.html
+25. industries-investment-fintech_fi.html
+26. services_fi.html
+27. sitemap_fi.html
+28. why-hack23_fi.html
 
 ## 🚀 Next Steps
 
