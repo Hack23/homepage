@@ -264,9 +264,6 @@ Pre-deployment checklist:
 **Translation Status:** `Swedish-Translation-Status.md`  
 **Blog Translation Guide:** `SWEDISH_BLOG_TRANSLATION_GUIDE.md`  
 **Blog Translation Status:** `SWEDISH_BLOG_TRANSLATION_STATUS.md`  
-**ISMS Policy Guide:** `SWEDISH_ISMS_POLICY_TRANSLATION_GUIDE.md` (detailed)  
-**ISMS Policy Status:** `SWEDISH_ISMS_POLICY_TRANSLATION_STATUS.md` (detailed)  
-**ISMS Completion Report:** `SWEDISH_ISMS_POLICY_COMPLETION.md`  
 **Example Files:** `index_sv.html`, `services_sv.html`, `discordian-access-control-policy_sv.html`
 
 ## 🎯 Swedish-Specific Content

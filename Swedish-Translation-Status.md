@@ -130,11 +130,6 @@
 - **Discordian Voice:** Preserved ("Tänk själv", "FNORD", "23 FNORD 5")
 - **Full Content Translation:** Phase 2 enhancement (10-14 hours estimated)
 
-**Detailed Documentation:**
-- Comprehensive guide: `SWEDISH_ISMS_POLICY_TRANSLATION_GUIDE.md` (15,918 chars)
-- Status report: `SWEDISH_ISMS_POLICY_TRANSLATION_STATUS.md` (14,917 chars)
-- Completion report: `SWEDISH_ISMS_POLICY_COMPLETION.md` (10,525 chars)
-
 ### ISO 27001 Resources (4/4)
 - ✅ `iso-27001-2022-vs-2013_sv.html` - Complete
 - ✅ `iso-27001-implementation-mistakes_sv.html` - Complete
