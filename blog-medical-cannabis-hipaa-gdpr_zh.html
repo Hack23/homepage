@@ -1,103 +1,40 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="zh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bescherming van Medische Cannabis Patiëntgegevens | Hack23 Security Blog</title>
+<title>Medical Cannabis Patient Data Protection | Hack23 Security Blog</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Medical cannabis patient data protection guide. Enterprise data security practices for protecting patient privacy, health information, and prescription data in medical cannabis operations.">
-<meta name="keywords" content="medical cannabis data protection, patient privacy, health data security, medical cannabis HIPAA, medical cannabis AVG, patient information security, medical cannabis cybersecurity">
+<meta name="keywords" content="medical cannabis data protection, patient privacy, health data security, medical cannabis HIPAA, medical cannabis GDPR, patient information security, medical cannabis cybersecurity">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Bescherming van Medische Cannabis Patiëntgegevens Guide">
+<meta property="og:title" content="Medical Cannabis Patient Data Protection Guide">
 <meta property="og:description" content="Enterprise data protection practices for medical cannabis operations: patient privacy, health information security, and data breach prevention.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
+<meta property="og:url" content="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_zh.html">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hack23.com/blog.webp">
-<link rel="canonical" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
+<link rel="canonical" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_zh.html">
 	<!-- Hreflang tags for language alternatives -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BlogPosting",
-      "headline": "Bescherming van Medische Cannabis Patiëntgegevens: Privacy & Security Guide",
-      "description": "Enterprise data protection practices for medical cannabis operations covering patient privacy, health information security, prescription tracking, and data breach prevention.",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "jobTitle": "CEO / Cybersecurity Expert",
-        "url": "https://hack23.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "url": "https://hack23.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "dateGepubliceerd": "2025-11-27",
-      "dateModified": "2025-11-27",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html"
-      },
-      "keywords": "medical cannabis data protection, patient privacy, health data security, HIPAA, AVG",
-      "articleSection": "Gegevensbescherming",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp"
-      },
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog",
-        "url": "https://hack23.com/blog.html"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://hack23.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://hack23.com/blog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Medical Cannabis HIPAA AVG",
-          "item": "https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html"
-        }
-      ]
-    }
-  ]
-}
-</script>
-	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
-	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
-	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
 	<link rel="alternate" hreflang="en" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr.html">
-	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
-	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
-	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_da.html">
+	<link rel="alternate" hreflang="da-DK" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_da.html">
 	<link rel="alternate" hreflang="de" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_de.html">
 	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_de.html">
-	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fr.html">
-	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fr.html">
 	<link rel="alternate" hreflang="es" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_es.html">
 	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_es.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fi.html">
+	<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fi.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fr.html">
+	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_fr.html">
+	<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
+	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_nl.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_no.html">
+	<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_no.html">
+	<link rel="alternate" hreflang="no" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_no.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
+	<link rel="alternate" hreflang="sv-SV" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_sv.html">
 	<link rel="alternate" hreflang="ja" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_ja.html">
 	<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_ja.html">
 	<link rel="alternate" hreflang="zh" href="https://hack23.com/blog-medical-cannabis-hipaa-gdpr_zh.html">
@@ -112,13 +49,13 @@
 <nav aria-label="Breadcrumb">
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">
-			<a href="index_nl.html">Home</a>
+			<a href="index.html">Home</a>
 		</li>
 		<li class="breadcrumb-item">
-			<a href="blog_nl.html">Blog</a>
+			<a href="blog.html">Blog</a>
 		</li>
 		<li class="breadcrumb-item" aria-current="page">
-			Medical Cannabis HIPAA AVG
+			Medical Cannabis HIPAA GDPR
 		</li>
 	</ol>
 </nav>
@@ -126,16 +63,16 @@
 <header>
 <nav>
 <div class="logo-container">
-<a href="index_nl.html">
+<a href="index.html">
 <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="40" height="40" loading="eager">
 <span class="logo-text">Hack23</span>
 </a>
 </div>
 <ul class="nav-menu">
-<li><a href="index_nl.html">Home</a></li>
-<li><a href="services_nl.html">Diensten</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
 <li><a href="projects.html">Projects</a></li>
-<li><a href="blog_nl.html">Blog</a></li>
+<li><a href="blog.html">Blog</a></li>
 <li><a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></li>
 </ul>
 </nav>
@@ -145,25 +82,25 @@
 <article class="blog-post" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
 
 <div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
-<a href="index_nl.html" class="text-link">Home</a> &gt; 
-<a href="blog_nl.html" class="text-link">Blog</a> &gt; 
-<span>Medische Cannabis Gegevensbescherming</span>
+<a href="index.html" class="text-link">Home</a> &gt; 
+<a href="blog.html" class="text-link">Blog</a> &gt; 
+<span>Medical Cannabis Data Protection</span>
 </div>
 
-<h1>🏥 Bescherming van Medische Cannabis Patiëntgegevens</h1>
+<h1>🏥 Medical Cannabis Patient Data Protection</h1>
 
 <div style="color: var(--text-secondary); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);">
-<p><strong>Auteur:</strong> James Pether Sörling | <strong>Gepubliceerd:</strong> november 27, 2025 | <strong>Leestijd:</strong> 10 minuten</p>
-<p style="margin-top: 0.5rem;"><em>Enterprise gegevensbeschermingspraktijken voor privacy en beveiliging van medische cannabispatiënten</em></p>
+<p><strong>Author:</strong> James Pether Sörling | <strong>Published:</strong> November 27, 2025 | <strong>Reading time:</strong> 10 minutes</p>
+<p style="margin-top: 0.5rem;"><em>Enterprise data protection practices for medical cannabis patient privacy and security</em></p>
 </div>
 
 <div style="background: rgba(220, 20, 60, 0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #DC143C;">
-<p><strong>⚠️ Belangrijke Disclaimer:</strong> Deze gids biedt algemene gegevensbescherming en cyberbeveiligingsrichtlijnen applicable to healthcare and medical operations. Wij geven geen juridisch advies or claim expertise in jurisdiction-specific healthcare regulations (HIPAA, AVG, or other frameworks). Voor advies over regelgevingsnaleving specific to medical cannabis operations, raadpleeg gespecialiseerde juridische adviseurs familiar with healthcare regulations in your jurisdiction.</p>
+<p><strong>⚠️ Important Disclaimer:</strong> This guide provides general data protection and cybersecurity guidance applicable to healthcare and medical operations. We do not provide legal advice or claim expertise in jurisdiction-specific healthcare regulations (HIPAA, GDPR, or other frameworks). For regulatory compliance advice specific to medical cannabis operations, consult specialized legal counsel familiar with healthcare regulations in your jurisdiction.</p>
 </div>
 
-<h2>Waarom Medische Cannabis Patiëntgegevens Speciale Bescherming Vereisen</h2>
+<h2>Why Medical Cannabis Patient Data Requires Special Protection</h2>
 
-<p>Medische cannabisoperaties verwerken de meest gevoelige informatie: patiënt gezondheidstoestanden, behandelplannen, receptgeschiedenis, and personal identifying information. Dit creëert unieke gegevensbeschermingsverantwoordelijkheden:</p>
+<p>Medical cannabis operations handle some of the most sensitive information: patient health conditions, treatment plans, prescription history, and personal identifying information. This creates unique data protection responsibilities:</p>
 
 <ul>
 <li><strong>Health Information Sensitivity:</strong> Patient medical data requires heightened protection similar to traditional healthcare</li>
@@ -202,7 +139,7 @@
 <li>Consultation notes (if providing patient guidance)</li>
 </ul>
 
-<h2>Core Gegevensbescherming Principles</h2>
+<h2>Core Data Protection Principles</h2>
 
 <div class="stats-highlight">
 
@@ -258,7 +195,7 @@
 <li><strong>Segregation of Duties:</strong> No single person should control all aspects of sensitive operations</li>
 </ul>
 
-<h4>Authentication & Auteurization</h4>
+<h4>Authentication & Authorization</h4>
 <ul>
 <li><strong>Unique User Accounts:</strong> No shared logins—each staff member has unique credentials</li>
 <li><strong>Strong Passwords:</strong> Enforce password complexity and regular changes</li>
@@ -276,16 +213,16 @@
 
 </div>
 
-<h3>Encryptie</h3>
+<h3>Encryption</h3>
 
 <div class="stats-highlight">
 
 <h4>Data at Rest</h4>
 <ul>
-<li><strong>Database Encryptie:</strong> Encrypt databases containing patient information (AES-256)</li>
-<li><strong>File System Encryptie:</strong> Encrypt file systems on servers and workstations</li>
-<li><strong>Backup Encryptie:</strong> Encrypt all backup copies of patient data</li>
-<li><strong>Mobile Device Encryptie:</strong> Encrypt laptops, tablets, phones accessing patient data</li>
+<li><strong>Database Encryption:</strong> Encrypt databases containing patient information (AES-256)</li>
+<li><strong>File System Encryption:</strong> Encrypt file systems on servers and workstations</li>
+<li><strong>Backup Encryption:</strong> Encrypt all backup copies of patient data</li>
+<li><strong>Mobile Device Encryption:</strong> Encrypt laptops, tablets, phones accessing patient data</li>
 </ul>
 
 <h4>Data in Transit</h4>
@@ -323,7 +260,7 @@
 
 <div class="stats-highlight">
 
-<h4>Privacy Officer/Gegevensbescherming Officer</h4>
+<h4>Privacy Officer/Data Protection Officer</h4>
 <ul>
 <li>Designate responsible person for data protection oversight</li>
 <li>Ensure adequate authority and resources to fulfill role</li>
@@ -499,13 +436,13 @@
 <p>Healthcare data protection regulations vary significantly by jurisdiction. Common frameworks include:</p>
 <ul>
 <li><strong>HIPAA (United States):</strong> May apply to medical cannabis operations depending on jurisdiction and business model</li>
-<li><strong>AVG (European Union):</strong> Applies to processing of EU residents' data, including health information</li>
+<li><strong>GDPR (European Union):</strong> Applies to processing of EU residents' data, including health information</li>
 <li><strong>State/Provincial Privacy Laws:</strong> Many regions have additional healthcare privacy requirements</li>
 </ul>
 <p class="mt-1"><strong>We strongly recommend consulting with legal counsel specializing in healthcare data protection in your specific jurisdiction to ensure compliance with all applicable regulations.</strong></p>
 </div>
 
-<h2>Getting Started: Gegevensbescherming Roadmap</h2>
+<h2>Getting Started: Data Protection Roadmap</h2>
 
 <div style="background: rgba(0, 102, 51, 0.05); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
 
@@ -545,7 +482,7 @@
 <p>Hack23 provides enterprise data protection consulting applicable to healthcare and medical operations. We focus on practical, implementable security controls that protect patient privacy while supporting your business operations.</p>
 
 <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(0, 119, 68, 0.1)); border-radius: 12px;">
-<h3>Ready to Strengthen Patient Gegevensbescherming?</h3>
+<h3>Ready to Strengthen Patient Data Protection?</h3>
 <p style="margin: 1rem 0;">Contact us to discuss enterprise data protection for your medical cannabis operations.</p>
 <a href="https://www.linkedin.com/company/hack23/" style="display: inline-block; background: var(--primary-color); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem;">
 Contact Us on LinkedIn →
@@ -553,19 +490,19 @@ Contact Us on LinkedIn →
 </div>
 
 <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color);">
-<p><strong>Related Bronnen:</strong></p>
+<p><strong>Related Resources:</strong></p>
 <ul>
 <li><a href="blog-cannabis-cybersecurity-guide.html">Complete Cannabis Cybersecurity Guide</a></li>
-<li><a href="industries-cannabis-security.html">Cannabis Industry Cybersecurity Diensten</a></li>
-<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md">Gegevensbescherming Policy (Public ISMS)</a></li>
+<li><a href="industries-cannabis-security.html">Cannabis Industry Cybersecurity Services</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md">Data Protection Policy (Public ISMS)</a></li>
 <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Data Classification Framework</a></li>
-<li><a href="blog_nl.html">Security Blog - All Posts</a></li>
+<li><a href="blog.html">Security Blog - All Posts</a></li>
 </ul>
 </div>
 
 <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 102, 51, 0.05); border-radius: 8px;">
 <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
-<strong>About the Auteur:</strong> James Pether Sörling (CISSP, CISM, AWS Security Specialty) is CEO of Hack23 AB with 30+ years of experience in cybersecurity and software development. He specializes in data protection, security architecture, and enterprise information security.
+<strong>About the Author:</strong> James Pether Sörling (CISSP, CISM, AWS Security Specialty) is CEO of Hack23 AB with 30+ years of experience in cybersecurity and software development. He specializes in data protection, security architecture, and enterprise information security.
 </p>
 </div>
 
@@ -575,43 +512,43 @@ Contact Us on LinkedIn →
     <footer role="contentinfo" aria-label="Site footer">
       <div class="footer-container">
         
-        <!-- Bedrijf Info Column -->
+        <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
           <p>Cybersecurity Consulting<br>
           Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
-          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Bedrijf Page</a></p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
           <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
         </div>
         
-        <!-- Diensten Column -->
+        <!-- Services Column -->
         <div class="footer-column">
-          <h3>Diensten</h3>
+          <h3>Services</h3>
           <ul>
-            <li><a href="services_nl.html">Security Consulting</a></li>
-            <li><a href="services_nl.html">Security Architecture</a></li>
-            <li><a href="services_nl.html">Cloud Security</a></li>
-            <li><a href="services_nl.html">DevSecOps Integration</a></li>
-            <li><a href="services_nl.html">Naleving & ISMS</a></li>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
           </ul>
         </div>
         
-        <!-- Producten Column -->
+        <!-- Products Column -->
         <div class="footer-column">
-          <h3>Producten</h3>
+          <h3>Products</h3>
           <ul>
             <li><a href="black-trigram-features.html">Black Trigram</a></li>
             <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
-            <li><a href="cia-compliance-manager-features.html">CIA Naleving Manager</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
           </ul>
         </div>
         
-        <!-- Bronnen Column -->
+        <!-- Resources Column -->
         <div class="footer-column">
-          <h3>Bronnen</h3>
+          <h3>Resources</h3>
           <ul>
-            <li><a href="blog_nl.html">Security Blog</a></li>
+            <li><a href="blog.html">Security Blog</a></li>
             <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
             <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
@@ -619,9 +556,9 @@ Contact Us on LinkedIn →
           </ul>
         </div>
         
-        <!-- Bedrijf Column -->
+        <!-- Company Column -->
         <div class="footer-column">
-          <h3>Bedrijf</h3>
+          <h3>Company</h3>
           <ul>
             <li><a href="why-hack23.html">About Hack23</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
@@ -636,7 +573,7 @@ Contact Us on LinkedIn →
       <!-- Discordian Agents Section - Unique to Blog -->
       <div class="footer-discordian">
         <p class="discordian-authors">
-          <strong>✍️ Blog Auteurs:</strong>
+          <strong>✍️ Blog Authors:</strong>
           <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
           <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
         </p>
