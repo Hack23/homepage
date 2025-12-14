@@ -28,9 +28,9 @@ Each language has **two dedicated files**:
 ### Nordic Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Danish | da | 66 | [Danish-Translation-Guide.md](Danish-Translation-Guide.md) | [Danish-Translation-Status.md](Danish-Translation-Status.md) |
-| Finnish | fi | 66 | [Finnish-Translation-Guide.md](Finnish-Translation-Guide.md) | [Finnish-Translation-Status.md](Finnish-Translation-Status.md) |
-| Norwegian | no | 66 | [Norwegian-Translation-Guide.md](Norwegian-Translation-Guide.md) | [Norwegian-Translation-Status.md](Norwegian-Translation-Status.md) |
+| Danish | da | 71 | [Danish-Translation-Guide.md](Danish-Translation-Guide.md) | [Danish-Translation-Status.md](Danish-Translation-Status.md) |
+| Finnish | fi | 71 | [Finnish-Translation-Guide.md](Finnish-Translation-Guide.md) | [Finnish-Translation-Status.md](Finnish-Translation-Status.md) |
+| Norwegian | no | 71 | [Norwegian-Translation-Guide.md](Norwegian-Translation-Guide.md) | [Norwegian-Translation-Status.md](Norwegian-Translation-Status.md) |
 
 ### European Languages
 | Language | Code | Files | Guide | Status |
@@ -45,7 +45,7 @@ Each language has **two dedicated files**:
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 736 HTML files across 13 languages
+**Total:** 751 HTML files across 13 languages (Updated December 2025)
 
 ## Swedish Blog-Specific Documentation
 
