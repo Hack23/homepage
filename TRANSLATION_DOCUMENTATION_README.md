@@ -15,8 +15,8 @@ Each language has **two dedicated files**:
 ### RTL Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Arabic | ar | 54 | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
-| Hebrew | he | 59 | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
+| Arabic | ar | 59 | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
+| Hebrew | he | 64 | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
 
 ### Asian Languages
 | Language | Code | Files | Guide | Status |
@@ -45,7 +45,7 @@ Each language has **two dedicated files**:
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 736 HTML files across 13 languages
+**Total:** 746 HTML files across 13 languages
 
 ## Swedish Blog-Specific Documentation
 
