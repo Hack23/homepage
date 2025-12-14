@@ -36,7 +36,12 @@ This guide provides comprehensive instructions for creating and maintaining Norw
 
 **ISMS:** Ledelsessystem for informasjonssikkerhet  
 **CIA Triad:** CIA-triaden  
-**ISO 27001**  
+**Confidentiality:** Konfidensialitet  
+**Integrity:** Integritet  
+**Availability:** Tilgjengelighet  
+**ISO 27001:** ISO 27001  
+**Compliance:** Etterlevelse  
+**Risk Assessment:** Risikovurdering  
 
 
 ### Call-to-Action

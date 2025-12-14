@@ -36,7 +36,12 @@ This guide provides comprehensive instructions for creating and maintaining Japa
 
 **ISMS:** 情報セキュリティマネジメントシステム  
 **CIA Triad:** CIA三要素  
+**Confidentiality:** 機密性  
+**Integrity:** 完全性  
+**Availability:** 可用性  
 **ISO 27001 Local Standard:** JIS Q 27001  
+**Compliance:** コンプライアンス  
+**Risk Assessment:** リスクアセスメント  
 
 
 ### Call-to-Action

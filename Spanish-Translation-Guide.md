@@ -36,8 +36,13 @@ This guide provides comprehensive instructions for creating and maintaining Span
 
 **ISMS:** Sistema de gestión de seguridad de la información  
 **CIA Triad:** Tríada CIA  
-**ISO 27001**  
-**GDPR:** RGPD
+**Confidentiality:** Confidencialidad  
+**Integrity:** Integridad  
+**Availability:** Disponibilidad  
+**ISO 27001:** ISO 27001  
+**GDPR:** RGPD  
+**Compliance:** Cumplimiento  
+**Risk Assessment:** Evaluación de riesgos
 
 ### Call-to-Action
 
