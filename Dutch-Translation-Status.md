@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **50** | **✅ 100%** | **✅ 8.0% / ⚠️ 12.0% / ❌ 80.0%** |
+| **All Files** | **50** | **✅ 100%** | **✅ 20.0% / ⚠️ 2.0% / ❌ 78.0%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 4 files (8.0%)
-- **⚠️ Partially Translated:** 6 files (12.0%) - Some English remains
-- **❌ English Content:** 40 files (80.0%) - Needs translation
-
-- **📄 File Coverage:** 50/96 files exist (46 files not yet created)
+- **✅ Fully Translated:** 10 files (20.0%)
+- **⚠️ Partially Translated:** 1 files (2.0%) - Some English remains
+- **❌ English Content:** 39 files (78.0%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="nl"` attribute
@@ -185,57 +183,66 @@ These English pages exist but have no corresponding `_nl.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (4)
+### ✅ Fully Translated Files (10)
 1. accessibility-statement_nl.html
-2. iso-27001-2022-vs-2013_nl.html
-3. iso-27001-implementation-mistakes_nl.html
-4. why-hack23_nl.html
+2. black-trigram_nl.html
+3. blog-cannabis-cybersecurity-guide_nl.html
+4. blog-cia-workflows_nl.html
+5. cia-triad-faq_nl.html
+6. iso-27001-2022-vs-2013_nl.html
+7. iso-27001-implementation-mistakes_nl.html
+8. security-assessment-checklist_nl.html
+9. sitemap_nl.html
+10. why-hack23_nl.html
 
-### ⚠️ Partially Translated Files (6)
+### ⚠️ Partially Translated Files (1)
 *These files have some translated content but still contain English text*
+
+1. services_nl.html
+
+### ❌ English Content Files (39)
+*These files need translation - content is primarily in English*
 
 1. black-trigram-docs_nl.html
 2. black-trigram-features_nl.html
-3. black-trigram_nl.html
-4. blog-compliance-future_nl.html
-5. blog-compliance-security_nl.html
-6. cia-triad-faq_nl.html
-
-### ❌ English Content Files (40)
-*These files primarily contain English content and need translation*
-
-1. blog-betting-gaming-cybersecurity_nl.html
-2. blog-cannabis-cybersecurity-guide_nl.html
-3. blog-cia-alternative-media-discordian-2026_nl.html
-4. blog-cia-architecture_nl.html
-5. blog-cia-business-case-global-news_nl.html
-6. blog-cia-financial-strategy_nl.html
-7. blog-cia-future-security_nl.html
-8. blog-cia-mindmaps_nl.html
-9. blog-cia-osint-intelligence_nl.html
-10. blog-cia-security_nl.html
-11. blog-cia-swedish-media-election-2026_nl.html
-12. blog-cia-workflows_nl.html
+3. blog-betting-gaming-cybersecurity_nl.html
+4. blog-cia-alternative-media-discordian-2026_nl.html
+5. blog-cia-architecture_nl.html
+6. blog-cia-business-case-global-news_nl.html
+7. blog-cia-financial-strategy_nl.html
+8. blog-cia-future-security_nl.html
+9. blog-cia-mindmaps_nl.html
+10. blog-cia-osint-intelligence_nl.html
+11. blog-cia-security_nl.html
+12. blog-cia-swedish-media-election-2026_nl.html
 13. blog-compliance-architecture_nl.html
-14. blog-george-dorn-cia-code_nl.html
-15. blog-george-dorn-compliance-code_nl.html
-16. blog-george-dorn-trigram-code_nl.html
-17. blog-investment-firm-security_nl.html
-18. blog-medical-cannabis-hipaa-gdpr_nl.html
-19. blog-trigram-architecture_nl.html
-20. blog-trigram-combat_nl.html
-21. blog-trigram-future_nl.html
-22. blog_nl.html
-23. cia-compliance-manager-docs_nl.html
-24. cia-compliance-manager-features_nl.html
-25. cia-docs_nl.html
-26. cia-features_nl.html
-27. cia-project_nl.html
-28. compliance-manager_nl.html
-29. discordian-compliance-frameworks_nl.html
-30. discordian-compliance_nl.html
+14. blog-compliance-future_nl.html
+15. blog-compliance-security_nl.html
+16. blog-george-dorn-cia-code_nl.html
+17. blog-george-dorn-compliance-code_nl.html
+18. blog-george-dorn-trigram-code_nl.html
+19. blog-investment-firm-security_nl.html
+20. blog-medical-cannabis-hipaa-gdpr_nl.html
+21. blog-trigram-architecture_nl.html
+22. blog-trigram-combat_nl.html
+23. blog-trigram-future_nl.html
+24. blog_nl.html
+25. cia-compliance-manager-docs_nl.html
+26. cia-compliance-manager-features_nl.html
+27. cia-docs_nl.html
+28. cia-features_nl.html
+29. cia-project_nl.html
+30. compliance-manager_nl.html
+31. discordian-compliance-frameworks_nl.html
+32. discordian-compliance_nl.html
+33. discordian-info-sec-policy_nl.html
+34. discordian-isms-review_nl.html
+35. discordian-isms-transparency_nl.html
+36. index_nl.html
+37. industries-betting-gaming_nl.html
+38. industries-cannabis-security_nl.html
+39. industries-investment-fintech_nl.html
 
-*...and 10 more files*
 
 ## 🚀 Next Steps
 

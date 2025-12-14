@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **51** | **✅ 100%** | **✅ 13.7% / ⚠️ 13.7% / ❌ 72.5%** |
+| **All Files** | **51** | **✅ 100%** | **✅ 23.5% / ⚠️ 3.9% / ❌ 72.5%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 7 files (13.7%)
-- **⚠️ Partially Translated:** 7 files (13.7%) - Some English remains
+- **✅ Fully Translated:** 12 files (23.5%)
+- **⚠️ Partially Translated:** 2 files (3.9%) - Some English remains
 - **❌ English Content:** 37 files (72.5%) - Needs translation
-
-- **📄 File Coverage:** 51/96 files exist (45 files not yet created)
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="ja"` attribute
@@ -176,61 +174,67 @@ These English pages exist but have no corresponding `_ja.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (7)
+### ✅ Fully Translated Files (12)
 1. accessibility-statement_ja.html
 2. black-trigram-docs_ja.html
 3. black-trigram-features_ja.html
-4. industries-cannabis-security_ja.html
-5. iso-27001-2022-vs-2013_ja.html
-6. iso-27001-certification-costs-sweden_ja.html
-7. iso-27001-implementation-mistakes_ja.html
+4. black-trigram_ja.html
+5. blog-trigram-architecture_ja.html
+6. cia-triad-faq_ja.html
+7. iso-27001-2022-vs-2013_ja.html
+8. iso-27001-certification-costs-sweden_ja.html
+9. iso-27001-implementation-mistakes_ja.html
+10. security-assessment-checklist_ja.html
+11. sitemap_ja.html
+12. why-hack23_ja.html
 
-### ⚠️ Partially Translated Files (7)
+### ⚠️ Partially Translated Files (2)
 *These files have some translated content but still contain English text*
 
-1. blog-trigram-architecture_ja.html
-2. blog-trigram-combat_ja.html
-3. cia-triad-faq_ja.html
-4. industries-betting-gaming_ja.html
-5. industries-investment-fintech_ja.html
-6. security-assessment-checklist_ja.html
-7. sitemap_ja.html
+1. cia-project_ja.html
+2. compliance-manager_ja.html
 
 ### ❌ English Content Files (37)
-*These files primarily contain English content and need translation*
+*These files need translation - content is primarily in English*
 
-1. black-trigram_ja.html
-2. blog-automated-convergence_ja.html
-3. blog-betting-gaming-cybersecurity_ja.html
-4. blog-cannabis-cybersecurity-guide_ja.html
-5. blog-cia-alternative-media-discordian-2026_ja.html
-6. blog-cia-architecture_ja.html
-7. blog-cia-business-case-global-news_ja.html
-8. blog-cia-financial-strategy_ja.html
-9. blog-cia-future-security_ja.html
-10. blog-cia-mindmaps_ja.html
-11. blog-cia-osint-intelligence_ja.html
-12. blog-cia-security_ja.html
-13. blog-cia-swedish-media-election-2026_ja.html
-14. blog-cia-workflows_ja.html
-15. blog-compliance-architecture_ja.html
-16. blog-compliance-future_ja.html
-17. blog-compliance-security_ja.html
-18. blog-george-dorn-cia-code_ja.html
-19. blog-george-dorn-compliance-code_ja.html
-20. blog-george-dorn-trigram-code_ja.html
-21. blog-information-hoarding_ja.html
-22. blog-investment-firm-security_ja.html
-23. blog-medical-cannabis-hipaa-gdpr_ja.html
-24. blog-public-isms-benefits_ja.html
+1. blog-automated-convergence_ja.html
+2. blog-betting-gaming-cybersecurity_ja.html
+3. blog-cannabis-cybersecurity-guide_ja.html
+4. blog-cia-alternative-media-discordian-2026_ja.html
+5. blog-cia-architecture_ja.html
+6. blog-cia-business-case-global-news_ja.html
+7. blog-cia-financial-strategy_ja.html
+8. blog-cia-future-security_ja.html
+9. blog-cia-mindmaps_ja.html
+10. blog-cia-osint-intelligence_ja.html
+11. blog-cia-security_ja.html
+12. blog-cia-swedish-media-election-2026_ja.html
+13. blog-cia-workflows_ja.html
+14. blog-compliance-architecture_ja.html
+15. blog-compliance-future_ja.html
+16. blog-compliance-security_ja.html
+17. blog-george-dorn-cia-code_ja.html
+18. blog-george-dorn-compliance-code_ja.html
+19. blog-george-dorn-trigram-code_ja.html
+20. blog-information-hoarding_ja.html
+21. blog-investment-firm-security_ja.html
+22. blog-medical-cannabis-hipaa-gdpr_ja.html
+23. blog-public-isms-benefits_ja.html
+24. blog-trigram-combat_ja.html
 25. blog-trigram-future_ja.html
 26. blog_ja.html
 27. cia-compliance-manager-docs_ja.html
 28. cia-compliance-manager-features_ja.html
 29. cia-docs_ja.html
 30. cia-features_ja.html
+31. discordian-cybersecurity_ja.html
+32. index_ja.html
+33. industries-betting-gaming_ja.html
+34. industries-cannabis-security_ja.html
+35. industries-investment-fintech_ja.html
+36. iso-27001-implementation-sweden_ja.html
+37. services_ja.html
 
-*...and 7 more files*
 
 ## 🚀 Next Steps
 

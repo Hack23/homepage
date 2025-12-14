@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **59** | **✅ 100%** | **✅ 23.7% / ⚠️ 20.3% / ❌ 55.9%** |
+| **All Files** | **59** | **✅ 100%** | **✅ 44.1% / ⚠️ 0.0% / ❌ 55.9%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 14 files (23.7%)
-- **⚠️ Partially Translated:** 12 files (20.3%) - Some English remains
+- **✅ Fully Translated:** 26 files (44.1%)
+- **⚠️ Partially Translated:** 0 files (0.0%) - Some English remains
 - **❌ English Content:** 33 files (55.9%) - Needs translation
-
-- **📄 File Coverage:** 59/96 files exist (43 files not yet created)
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="he"` attribute
@@ -287,40 +285,36 @@ These English pages exist but have no corresponding `_he.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (14)
-1. cia-project_he.html
-2. discordian-acceptable-use_he.html
-3. discordian-access-control-policy_he.html
-4. discordian-bc-dr-policy_he.html
-5. discordian-incident-response-policy_he.html
-6. discordian-info-asset-mgmt-policy_he.html
-7. discordian-remote-access_he.html
-8. discordian-risk-mgmt-policy_he.html
-9. discordian-risk-register_he.html
-10. industries-betting-gaming_he.html
-11. industries-cannabis-security_he.html
-12. industries-investment-fintech_he.html
-13. industries_he.html
-14. iso-27001-implementation-sweden_he.html
-
-### ⚠️ Partially Translated Files (12)
-*These files have some translated content but still contain English text*
-
+### ✅ Fully Translated Files (26)
 1. accessibility-statement_he.html
 2. black-trigram-docs_he.html
 3. black-trigram-features_he.html
 4. black-trigram_he.html
-5. cia-compliance-manager-docs_he.html
+5. cia-project_he.html
 6. compliance-manager_he.html
-7. discordian-info-sec-policy_he.html
-8. iso-27001-2022-vs-2013_he.html
-9. iso-27001-certification-costs-sweden_he.html
-10. iso-27001-implementation-mistakes_he.html
-11. security-assessment-checklist_he.html
-12. sitemap_he.html
+7. discordian-acceptable-use_he.html
+8. discordian-access-control-policy_he.html
+9. discordian-bc-dr-policy_he.html
+10. discordian-incident-response-policy_he.html
+11. discordian-info-asset-mgmt-policy_he.html
+12. discordian-info-sec-policy_he.html
+13. discordian-remote-access_he.html
+14. discordian-risk-mgmt-policy_he.html
+15. discordian-risk-register_he.html
+16. industries-betting-gaming_he.html
+17. industries-cannabis-security_he.html
+18. industries-investment-fintech_he.html
+19. industries_he.html
+20. iso-27001-2022-vs-2013_he.html
+21. iso-27001-certification-costs-sweden_he.html
+22. iso-27001-implementation-mistakes_he.html
+23. iso-27001-implementation-sweden_he.html
+24. security-assessment-checklist_he.html
+25. services_he.html
+26. sitemap_he.html
 
 ### ❌ English Content Files (33)
-*These files primarily contain English content and need translation*
+*These files need translation - content is primarily in English*
 
 1. blog-automated-convergence_he.html
 2. blog-betting-gaming-cybersecurity_he.html
@@ -349,11 +343,13 @@ These English pages exist but have no corresponding `_he.html` translation file:
 25. blog-trigram-combat_he.html
 26. blog-trigram-future_he.html
 27. blog_he.html
-28. cia-compliance-manager-features_he.html
-29. cia-docs_he.html
-30. cia-features_he.html
+28. cia-compliance-manager-docs_he.html
+29. cia-compliance-manager-features_he.html
+30. cia-docs_he.html
+31. cia-features_he.html
+32. discordian-cybersecurity_he.html
+33. index_he.html
 
-*...and 3 more files*
 
 ## 🚀 Next Steps
 

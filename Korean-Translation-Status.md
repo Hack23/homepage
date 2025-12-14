@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **51** | **✅ 100%** | **✅ 13.7% / ⚠️ 13.7% / ❌ 72.5%** |
+| **All Files** | **51** | **✅ 100%** | **✅ 27.5% / ⚠️ 3.9% / ❌ 68.6%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 7 files (13.7%)
-- **⚠️ Partially Translated:** 7 files (13.7%) - Some English remains
-- **❌ English Content:** 37 files (72.5%) - Needs translation
-
-- **📄 File Coverage:** 51/96 files exist (45 files not yet created)
+- **✅ Fully Translated:** 14 files (27.5%)
+- **⚠️ Partially Translated:** 2 files (3.9%) - Some English remains
+- **❌ English Content:** 35 files (68.6%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="ko"` attribute
@@ -176,61 +174,67 @@ These English pages exist but have no corresponding `_ko.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (7)
+### ✅ Fully Translated Files (14)
 1. accessibility-statement_ko.html
 2. black-trigram-docs_ko.html
 3. black-trigram-features_ko.html
-4. industries-cannabis-security_ko.html
-5. iso-27001-2022-vs-2013_ko.html
-6. iso-27001-certification-costs-sweden_ko.html
-7. iso-27001-implementation-mistakes_ko.html
+4. black-trigram_ko.html
+5. blog-trigram-architecture_ko.html
+6. cia-triad-faq_ko.html
+7. index_ko.html
+8. iso-27001-2022-vs-2013_ko.html
+9. iso-27001-certification-costs-sweden_ko.html
+10. iso-27001-implementation-mistakes_ko.html
+11. security-assessment-checklist_ko.html
+12. services_ko.html
+13. sitemap_ko.html
+14. why-hack23_ko.html
 
-### ⚠️ Partially Translated Files (7)
+### ⚠️ Partially Translated Files (2)
 *These files have some translated content but still contain English text*
 
-1. blog-trigram-architecture_ko.html
-2. blog-trigram-combat_ko.html
-3. cia-triad-faq_ko.html
-4. industries-betting-gaming_ko.html
-5. industries-investment-fintech_ko.html
-6. security-assessment-checklist_ko.html
-7. sitemap_ko.html
+1. cia-project_ko.html
+2. compliance-manager_ko.html
 
-### ❌ English Content Files (37)
-*These files primarily contain English content and need translation*
+### ❌ English Content Files (35)
+*These files need translation - content is primarily in English*
 
-1. black-trigram_ko.html
-2. blog-automated-convergence_ko.html
-3. blog-betting-gaming-cybersecurity_ko.html
-4. blog-cannabis-cybersecurity-guide_ko.html
-5. blog-cia-alternative-media-discordian-2026_ko.html
-6. blog-cia-architecture_ko.html
-7. blog-cia-business-case-global-news_ko.html
-8. blog-cia-financial-strategy_ko.html
-9. blog-cia-future-security_ko.html
-10. blog-cia-mindmaps_ko.html
-11. blog-cia-osint-intelligence_ko.html
-12. blog-cia-security_ko.html
-13. blog-cia-swedish-media-election-2026_ko.html
-14. blog-cia-workflows_ko.html
-15. blog-compliance-architecture_ko.html
-16. blog-compliance-future_ko.html
-17. blog-compliance-security_ko.html
-18. blog-george-dorn-cia-code_ko.html
-19. blog-george-dorn-compliance-code_ko.html
-20. blog-george-dorn-trigram-code_ko.html
-21. blog-information-hoarding_ko.html
-22. blog-investment-firm-security_ko.html
-23. blog-medical-cannabis-hipaa-gdpr_ko.html
-24. blog-public-isms-benefits_ko.html
+1. blog-automated-convergence_ko.html
+2. blog-betting-gaming-cybersecurity_ko.html
+3. blog-cannabis-cybersecurity-guide_ko.html
+4. blog-cia-alternative-media-discordian-2026_ko.html
+5. blog-cia-architecture_ko.html
+6. blog-cia-business-case-global-news_ko.html
+7. blog-cia-financial-strategy_ko.html
+8. blog-cia-future-security_ko.html
+9. blog-cia-mindmaps_ko.html
+10. blog-cia-osint-intelligence_ko.html
+11. blog-cia-security_ko.html
+12. blog-cia-swedish-media-election-2026_ko.html
+13. blog-cia-workflows_ko.html
+14. blog-compliance-architecture_ko.html
+15. blog-compliance-future_ko.html
+16. blog-compliance-security_ko.html
+17. blog-george-dorn-cia-code_ko.html
+18. blog-george-dorn-compliance-code_ko.html
+19. blog-george-dorn-trigram-code_ko.html
+20. blog-information-hoarding_ko.html
+21. blog-investment-firm-security_ko.html
+22. blog-medical-cannabis-hipaa-gdpr_ko.html
+23. blog-public-isms-benefits_ko.html
+24. blog-trigram-combat_ko.html
 25. blog-trigram-future_ko.html
 26. blog_ko.html
 27. cia-compliance-manager-docs_ko.html
 28. cia-compliance-manager-features_ko.html
 29. cia-docs_ko.html
 30. cia-features_ko.html
+31. discordian-cybersecurity_ko.html
+32. industries-betting-gaming_ko.html
+33. industries-cannabis-security_ko.html
+34. industries-investment-fintech_ko.html
+35. iso-27001-implementation-sweden_ko.html
 
-*...and 7 more files*
 
 ## 🚀 Next Steps
 

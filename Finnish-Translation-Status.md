@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **66** | **✅ 100%** | **✅ 19.7% / ⚠️ 37.9% / ❌ 42.4%** |
+| **All Files** | **66** | **✅ 100%** | **✅ 30.3% / ⚠️ 19.7% / ❌ 50.0%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 13 files (19.7%)
-- **⚠️ Partially Translated:** 25 files (37.9%) - Some English remains
-- **❌ English Content:** 28 files (42.4%) - Needs translation
-
-- **📄 File Coverage:** 66/96 files exist (30 files not yet created)
+- **✅ Fully Translated:** 20 files (30.3%)
+- **⚠️ Partially Translated:** 13 files (19.7%) - Some English remains
+- **❌ English Content:** 33 files (50.0%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="fi"` attribute
@@ -180,81 +178,82 @@ These English pages exist but have no corresponding `_fi.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (13)
+### ✅ Fully Translated Files (20)
 1. accessibility-statement_fi.html
-2. black-trigram-features_fi.html
-3. discordian-acceptable-use_fi.html
-4. discordian-access-control_fi.html
-5. discordian-classification_fi.html
-6. discordian-crypto_fi.html
-7. discordian-cybersecurity_fi.html
-8. discordian-data-classification_fi.html
-9. discordian-network-security_fi.html
-10. discordian-remote-access_fi.html
-11. discordian-risk-assessment_fi.html
-12. discordian-threat-modeling_fi.html
-13. iso-27001-2022-vs-2013_fi.html
+2. blog-cia-architecture_fi.html
+3. blog-cia-security_fi.html
+4. blog-cia-workflows_fi.html
+5. cia-triad-faq_fi.html
+6. discordian-acceptable-use_fi.html
+7. discordian-access-control_fi.html
+8. discordian-classification_fi.html
+9. discordian-crypto_fi.html
+10. discordian-cybersecurity_fi.html
+11. discordian-data-classification_fi.html
+12. discordian-info-sec-policy_fi.html
+13. discordian-network-security_fi.html
+14. discordian-privacy_fi.html
+15. discordian-remote-access_fi.html
+16. discordian-risk-assessment_fi.html
+17. discordian-threat-modeling_fi.html
+18. iso-27001-2022-vs-2013_fi.html
+19. security-assessment-checklist_fi.html
+20. services_fi.html
 
-### ⚠️ Partially Translated Files (25)
+### ⚠️ Partially Translated Files (13)
 *These files have some translated content but still contain English text*
 
-1. black-trigram-docs_fi.html
-2. blog-betting-gaming-cybersecurity_fi.html
-3. blog-cannabis-cybersecurity-guide_fi.html
-4. blog-cia-alternative-media-discordian-2026_fi.html
-5. blog-cia-architecture_fi.html
-6. blog-cia-business-case-global-news_fi.html
-7. blog-cia-financial-strategy_fi.html
-8. blog-cia-future-security_fi.html
-9. blog-cia-mindmaps_fi.html
-10. blog-cia-security_fi.html
-11. blog-cia-workflows_fi.html
-12. blog-compliance-architecture_fi.html
-13. blog-compliance-future_fi.html
-14. blog-compliance-security_fi.html
-15. blog-george-dorn-compliance-code_fi.html
-16. blog-investment-firm-security_fi.html
-17. blog-medical-cannabis-hipaa-gdpr_fi.html
-18. blog-trigram-architecture_fi.html
-19. blog-trigram-combat_fi.html
-20. blog-trigram-future_fi.html
-21. cia-triad-faq_fi.html
-22. discordian-privacy_fi.html
-23. discordian-risk-register_fi.html
-24. security-assessment-checklist_fi.html
-25. swedish-election-2026_fi.html
-
-### ❌ English Content Files (28)
-*These files primarily contain English content and need translation*
-
 1. black-trigram_fi.html
-2. blog-automated-convergence_fi.html
-3. blog-cia-osint-intelligence_fi.html
-4. blog-cia-swedish-media-election-2026_fi.html
-5. blog-george-dorn-cia-code_fi.html
-6. blog-george-dorn-trigram-code_fi.html
-7. blog-information-hoarding_fi.html
-8. blog-public-isms-benefits_fi.html
-9. blog_fi.html
-10. cia-compliance-manager-docs_fi.html
-11. cia-compliance-manager-features_fi.html
-12. cia-docs_fi.html
-13. cia-features_fi.html
-14. cia-project_fi.html
-15. compliance-manager_fi.html
-16. discordian-compliance-frameworks_fi.html
-17. discordian-compliance_fi.html
-18. discordian-data-protection_fi.html
-19. discordian-info-sec-policy_fi.html
-20. discordian-isms-review_fi.html
-21. discordian-isms-transparency_fi.html
-22. index_fi.html
-23. industries-betting-gaming_fi.html
-24. industries-cannabis-security_fi.html
-25. industries-investment-fintech_fi.html
-26. services_fi.html
-27. sitemap_fi.html
-28. why-hack23_fi.html
+2. blog-cia-future-security_fi.html
+3. blog-cia-mindmaps_fi.html
+4. blog-cia-osint-intelligence_fi.html
+5. blog-public-isms-benefits_fi.html
+6. cia-compliance-manager-docs_fi.html
+7. cia-compliance-manager-features_fi.html
+8. cia-docs_fi.html
+9. cia-features_fi.html
+10. cia-project_fi.html
+11. compliance-manager_fi.html
+12. sitemap_fi.html
+13. why-hack23_fi.html
+
+### ❌ English Content Files (33)
+*These files need translation - content is primarily in English*
+
+1. black-trigram-docs_fi.html
+2. black-trigram-features_fi.html
+3. blog-automated-convergence_fi.html
+4. blog-betting-gaming-cybersecurity_fi.html
+5. blog-cannabis-cybersecurity-guide_fi.html
+6. blog-cia-alternative-media-discordian-2026_fi.html
+7. blog-cia-business-case-global-news_fi.html
+8. blog-cia-financial-strategy_fi.html
+9. blog-cia-swedish-media-election-2026_fi.html
+10. blog-compliance-architecture_fi.html
+11. blog-compliance-future_fi.html
+12. blog-compliance-security_fi.html
+13. blog-george-dorn-cia-code_fi.html
+14. blog-george-dorn-compliance-code_fi.html
+15. blog-george-dorn-trigram-code_fi.html
+16. blog-information-hoarding_fi.html
+17. blog-investment-firm-security_fi.html
+18. blog-medical-cannabis-hipaa-gdpr_fi.html
+19. blog-trigram-architecture_fi.html
+20. blog-trigram-combat_fi.html
+21. blog-trigram-future_fi.html
+22. blog_fi.html
+23. discordian-compliance-frameworks_fi.html
+24. discordian-compliance_fi.html
+25. discordian-data-protection_fi.html
+26. discordian-isms-review_fi.html
+27. discordian-isms-transparency_fi.html
+28. discordian-risk-register_fi.html
+29. index_fi.html
+30. industries-betting-gaming_fi.html
+31. industries-cannabis-security_fi.html
+32. industries-investment-fintech_fi.html
+33. swedish-election-2026_fi.html
+
 
 ## 🚀 Next Steps
 

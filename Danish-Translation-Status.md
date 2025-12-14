@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **66** | **✅ 100%** | **✅ 18.2% / ⚠️ 37.9% / ❌ 43.9%** |
+| **All Files** | **66** | **✅ 100%** | **✅ 47.0% / ⚠️ 10.6% / ❌ 42.4%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 12 files (18.2%)
-- **⚠️ Partially Translated:** 25 files (37.9%) - Some English remains
-- **❌ English Content:** 29 files (43.9%) - Needs translation
-
-- **📄 File Coverage:** 66/96 files exist (30 files not yet created)
+- **✅ Fully Translated:** 31 files (47.0%)
+- **⚠️ Partially Translated:** 7 files (10.6%) - Some English remains
+- **❌ English Content:** 28 files (42.4%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="da"` attribute
@@ -180,81 +178,82 @@ These English pages exist but have no corresponding `_da.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (12)
+### ✅ Fully Translated Files (31)
 1. accessibility-statement_da.html
-2. discordian-acceptable-use_da.html
-3. discordian-access-control_da.html
-4. discordian-classification_da.html
-5. discordian-crypto_da.html
-6. discordian-cybersecurity_da.html
-7. discordian-data-classification_da.html
-8. discordian-network-security_da.html
-9. discordian-remote-access_da.html
-10. discordian-risk-assessment_da.html
-11. discordian-threat-modeling_da.html
-12. iso-27001-2022-vs-2013_da.html
+2. black-trigram-features_da.html
+3. black-trigram_da.html
+4. blog-cia-alternative-media-discordian-2026_da.html
+5. blog-cia-architecture_da.html
+6. blog-cia-business-case-global-news_da.html
+7. blog-cia-financial-strategy_da.html
+8. blog-cia-future-security_da.html
+9. blog-cia-mindmaps_da.html
+10. blog-cia-osint-intelligence_da.html
+11. blog-cia-security_da.html
+12. blog-cia-swedish-media-election-2026_da.html
+13. blog-cia-workflows_da.html
+14. blog-public-isms-benefits_da.html
+15. cia-project_da.html
+16. cia-triad-faq_da.html
+17. discordian-acceptable-use_da.html
+18. discordian-access-control_da.html
+19. discordian-classification_da.html
+20. discordian-crypto_da.html
+21. discordian-cybersecurity_da.html
+22. discordian-data-classification_da.html
+23. discordian-info-sec-policy_da.html
+24. discordian-network-security_da.html
+25. discordian-privacy_da.html
+26. discordian-remote-access_da.html
+27. discordian-risk-assessment_da.html
+28. discordian-risk-register_da.html
+29. discordian-threat-modeling_da.html
+30. iso-27001-2022-vs-2013_da.html
+31. security-assessment-checklist_da.html
 
-### ⚠️ Partially Translated Files (25)
+### ⚠️ Partially Translated Files (7)
 *These files have some translated content but still contain English text*
 
+1. cia-compliance-manager-docs_da.html
+2. cia-compliance-manager-features_da.html
+3. cia-docs_da.html
+4. cia-features_da.html
+5. compliance-manager_da.html
+6. services_da.html
+7. why-hack23_da.html
+
+### ❌ English Content Files (28)
+*These files need translation - content is primarily in English*
+
 1. black-trigram-docs_da.html
-2. black-trigram-features_da.html
+2. blog-automated-convergence_da.html
 3. blog-betting-gaming-cybersecurity_da.html
 4. blog-cannabis-cybersecurity-guide_da.html
-5. blog-cia-alternative-media-discordian-2026_da.html
-6. blog-cia-architecture_da.html
-7. blog-cia-business-case-global-news_da.html
-8. blog-cia-financial-strategy_da.html
-9. blog-cia-future-security_da.html
-10. blog-cia-mindmaps_da.html
-11. blog-cia-security_da.html
-12. blog-cia-workflows_da.html
-13. blog-compliance-architecture_da.html
-14. blog-compliance-future_da.html
-15. blog-compliance-security_da.html
-16. blog-george-dorn-compliance-code_da.html
-17. blog-investment-firm-security_da.html
-18. blog-medical-cannabis-hipaa-gdpr_da.html
-19. blog-trigram-architecture_da.html
-20. blog-trigram-combat_da.html
-21. blog-trigram-future_da.html
-22. cia-triad-faq_da.html
-23. discordian-privacy_da.html
-24. discordian-risk-register_da.html
-25. swedish-election-2026_da.html
+5. blog-compliance-architecture_da.html
+6. blog-compliance-future_da.html
+7. blog-compliance-security_da.html
+8. blog-george-dorn-cia-code_da.html
+9. blog-george-dorn-compliance-code_da.html
+10. blog-george-dorn-trigram-code_da.html
+11. blog-information-hoarding_da.html
+12. blog-investment-firm-security_da.html
+13. blog-medical-cannabis-hipaa-gdpr_da.html
+14. blog-trigram-architecture_da.html
+15. blog-trigram-combat_da.html
+16. blog-trigram-future_da.html
+17. blog_da.html
+18. discordian-compliance-frameworks_da.html
+19. discordian-compliance_da.html
+20. discordian-data-protection_da.html
+21. discordian-isms-review_da.html
+22. discordian-isms-transparency_da.html
+23. index_da.html
+24. industries-betting-gaming_da.html
+25. industries-cannabis-security_da.html
+26. industries-investment-fintech_da.html
+27. sitemap_da.html
+28. swedish-election-2026_da.html
 
-### ❌ English Content Files (29)
-*These files primarily contain English content and need translation*
-
-1. black-trigram_da.html
-2. blog-automated-convergence_da.html
-3. blog-cia-osint-intelligence_da.html
-4. blog-cia-swedish-media-election-2026_da.html
-5. blog-george-dorn-cia-code_da.html
-6. blog-george-dorn-trigram-code_da.html
-7. blog-information-hoarding_da.html
-8. blog-public-isms-benefits_da.html
-9. blog_da.html
-10. cia-compliance-manager-docs_da.html
-11. cia-compliance-manager-features_da.html
-12. cia-docs_da.html
-13. cia-features_da.html
-14. cia-project_da.html
-15. compliance-manager_da.html
-16. discordian-compliance-frameworks_da.html
-17. discordian-compliance_da.html
-18. discordian-data-protection_da.html
-19. discordian-info-sec-policy_da.html
-20. discordian-isms-review_da.html
-21. discordian-isms-transparency_da.html
-22. index_da.html
-23. industries-betting-gaming_da.html
-24. industries-cannabis-security_da.html
-25. industries-investment-fintech_da.html
-26. security-assessment-checklist_da.html
-27. services_da.html
-28. sitemap_da.html
-29. why-hack23_da.html
 
 ## 🚀 Next Steps
 
