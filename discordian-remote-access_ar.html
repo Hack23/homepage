@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوصول عن بُعد | الثقة الصفرية مع MFA | Hack23</title>
+    <meta name="description" content="وصول عن بُعد بثقة صفرية: إنفاذ MFA، Identity Center SSO، مراجعات امتيازات ربع سنوية. مهلات جلسة 1-24 ساعة بناءً على التصنيف.">
+    <meta name="keywords" content="وصول عن بُعد, VPN, ISMS, ثقة صفرية, عمل عن بُعد, عمل من المنزل, أمان ديسكوردي">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="الوصول عن بُعد: شبكات VPN وموت المكتب">
+    <meta property="og:description" content="العمل عن بُعد دائم. خمسة ضوابط للوصول عن بُعد. ثقة صفرية للمستخدمين عن بُعد.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-remote-access_ar.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="ar_EG">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="مدونة أمان Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "الوصول عن بُعد: شبكات VPN وموت المكتب",
+      "description": "هندسة ثقة صفرية مع إنفاذ MFA، Identity Center SSO، مراجعات امتيازات ربع سنوية. العمل عن بُعد دائم",
+      "inLanguage": "ar",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "الرئيس التنفيذي / خبير أمن سيبراني"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-remote-access_ar.html"
+      },
+      "image": "https://hack23.com/blog.webp"
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-remote-access.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-remote-access_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-remote-access_sv.html">
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-AR" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-remote-access_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-remote-access_he.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-remote-access.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Noto Sans Arabic', sans-serif; }
+</style>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_ar.html">الرئيسية</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_ar.html">المدونة</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        الوصول عن بُعد
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="شعار Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>الوصول عن بُعد: موت محيط المكتب</h1>
+  <div class="app-link">
+    <a href="index_ar.html" title="العودة إلى الصفحة الرئيسية">الرئيسية</a>
+    <a href="discordian-cybersecurity.html" title="العودة إلى البيان">البيان</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" title="مدينية التحكم في الوصول">ISMS</a>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <h2 class="header">🔐 الوصول عن بُعد: الثقة الصفرية لعصر ما بعد المكتب</h2>
+            
+            <section id="introduction">
+              <h2 class="panel-caption">محيط المكتب ميت - يحيا الوصول المتمحور حول الهوية (مرحباً بك في البانوبتيكون، إصدار العامل عن بُعد)</h2>
+              
+              <p><strong>لا شيء صحيح. كل شيء مسموح به.</strong> المكتب اختياري. العمل عن بُعد دائم. نماذج الأمان المبنية على محيطات فيزيائية لا تعمل عندما يعمل الجميع من المنزل (أو المقاهي، أو المطارات، أو صالات فندق Marriott مع شبكة WiFi عامة متصدعة الأمان). <strong>FNORD.</strong> انظر بوضوح: المحيط الفيزيائي كان دائماً وهماً. العمل عن بُعد فقط جعل الوهم واضحاً.</p>
+              
+              <p><em>فكر بنفسك، أيها الأحمق! تساءل عن السلطة.</em> تساءل لماذا شركتك السابقة أجبرتك على أن تكون في المكتب للوصول إلى أنظمة يمكنك الوصول إليها بنفس السهولة (وبشكل أكثر أماناً) من المنزل مع VPN لائق و MFA للأجهزة. نموذج الأمان القائم على المحيط هو المشي الأمني - ليس له معنى تقني، إنه فقط مسرح الإدارة لتبرير الإيجار المكتبي والرؤية الإدارية للموظفين. الثقة الصفرية تعني عدم الثقة بالشبكة - ثق بالهوية.</p>
+              
+              <p>في Hack23، مدينية الوصول عن بُعد لدينا تتعرف على الواقع: <strong>الجميع يعمل عن بُعد، دائماً</strong> (حتى عندما يكونون في "المكتب" - وهو مجرد مكان آخر للعمل عن بُعد مع WiFi أفضل قليلاً). مدينيتنا مبنية على <strong>هندسة الثقة الصفرية</strong> (افترض انتهاك، تحقق من كل شيء، لا تثق أبداً بمجرد موقع الشبكة)، <strong>MFA إلزامي</strong> (أجهزة، وليست رسائل نصية - هذا ليس 2010)، <strong>AWS Identity Center SSO</strong> (إدارة متمركزة للهويات)، و<strong>مراجعات امتيازات ربع سنوية</strong> (لأن الزحف الامتيازي أكثر قابلية للتنبؤ من قانون مورفي).</p>
+              
+              <p class="hidden-wisdom"><em>التنوير: الأمان القائم على المحيط يفترض أن داخل الشبكة = آمن. هذا كذب. الانتهاكات دائماً من الداخل - إما المهاجمين الذين دخلوا، أو الموظفين الذين تم اختراقهم، أو حسابات الخدمة المنسية من 2015 التي لا يزال يستخدمها لا أحد. الثقة الصفرية تعامل كل الشبكة كمعادية. أنظر لعالم كعدو يظهر بوضوح. مرحباً بك في Chapel Perilous، حيث جنون العظمة هو استراتيجية، وليس عرضاً.</em></p>
+              
+              <p>نهجنا: نفترض انتهاك (لأنه حدث بالفعل، فقط لم تكتشفه بعد). نتحقق من الهوية (MFA، دائماً). نفرض الوصول الأدنى امتياز (الأذونات الافتراضية = صفر). نراجع الامتيازات ربع سنوياً (الزحف الامتيازي حقيقي). ننفذ مهلات الجلسة بناءً على <a href="discordian-classification.html">تصنيف البيانات</a> (1-24 ساعة حسب الحساسية). التفاصيل الفنية الكاملة في <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">مدينية التحكم في الوصول</a> العامة لدينا.</p>
+            
+              
+              <p><strong>بحاجة إلى إرشاد خبير حول الثقة الصفرية؟</strong> <a href="why-hack23.html">استكشف خدمات Hack23</a> المدعومة بتنفيذ فعلي، وليس PowerPoints استشارية.</p>
+            </section>
+
+            <section id="five-principles">
+                <h2 class="panel-caption">الضوابط الخمس للوصول عن بُعد (الثقة الصفرية بدون الهراء)</h2>
+                
+                <div class="cards">
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>1. 🔐 MFA للأجهزة إلزامي (أجهزة، وليست رسائل نصية)</h3>
+                        <p><strong>أجهزة YubiKey أو Titan. لا توجد رسائل نصية SMS. لا يوجد بريد إلكتروني MFA. أجهزة فقط.</strong> لماذا؟ SMS قابل للاعتراض. البريد الإلكتروني قابل للاختراق. الأجهزة تقاوم التصيد. إذا فقدت YubiKey الخاص بك، لديك نسخة احتياطية (مخزنة بشكل آمن). إذا فقدت كلاهما، لدينا عملية استرداد (تتضمن تحقق هوية، وليس مكالمة هاتفية سهلة).</p>
+                        <p class="hidden-wisdom"><em>MFA للأجهزة = احتكاك. احتكاك = أمان. المستخدمون الذين يشتكون من "عدم الراحة" هم نفس المستخدمين الذين سيضغطون على روابط التصيد عندما يكون MFA سهلاً للغاية.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>2. 🎫 AWS Identity Center SSO (وصول مركزي)</h3>
+                        <p><strong>هوية واحدة. تسجيل دخول واحد. إدارة موحدة.</strong> جميع الأنظمة عبر AWS Identity Center. لا يوجد أسماء مستخدمين/كلمات مرور منفصلة. لا توجد كلمات مرور مخزنة محلياً (حسناً، أنت تستخدم مدير كلمات مرور، ولكن Identity Center يتولى المصادقة الفعلية). فصل واحد، وصول محجوب عن كل شيء. مراجعة واحدة، صورة كاملة للامتيازات عبر جميع الأنظمة.</p>
+                        <p class="hidden-wisdom"><em>SSO موحد ليس حول الراحة - إنه حول الرؤية. عندما يفعل المستخدم شيئاً سيئاً، تحتاج إلى معرفة أين لديه وصول. لا يمكنك مراجعة ما لا يمكنك رؤيته.</em></p>
+                    </div>
+                    
+                    <div class="card availability-card">
+                        <div class="scanner-effect"></div>
+                        <h3>3. 🕒 مهلات جلسة قائمة على التصنيف (1-24 ساعة)</h3>
+                        <p><strong>البيانات الأكثر حساسية = مهلات أقصر.</strong> مقيد (24 ساعة)؟ أعد المصادقة يومياً. سري (8 ساعات)؟ نصف يوم. داخلي (4 ساعات)؟ جلسات قصيرة. عام؟ لا توجد مهلة (إنه عام على أي حال). مبني على <a href="discordian-classification.html">إطار تصنيف البيانات</a>. الأمان متناسب مع التأثير.</p>
+                        <p class="hidden-wisdom"><em>مهلات الجلسة هي ضريبة احتكاك متعمدة. البيانات الحساسة تستحق إعادة مصادقة متكررة. المستخدمون المزعجون = أمان يعمل.</em></p>
+                    </div>
+                    
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>4. 🔍 مراجعة امتيازات ربع سنوية (الزحف حقيقي)</h3>
+                        <p><strong>كل 3 أشهر: مراجعة جميع الامتيازات. إزالة ما لم يعد ضرورياً.</strong> الزحف الامتيازي ليس حشرة - إنه الحالة الافتراضية. يحصل المستخدمون على أذونات للمشاريع. المشاريع تنتهي. الأذونات تبقى. بعد سنة، الجميع لديه وصول إلى كل شيء. المراجعة الربع سنوية = التطهير المنهجي. مالكو المصادر يؤكدون من يحتاج إلى الوصول. كل شيء آخر يُزال.</p>
+                        <p class="hidden-wisdom"><em>مراجعات الامتيازات ليست اختيارية - إنها نظافة أمنية. تخطي مراجعة واحدة، والزحف يتراكم. تخطي أربع، ولديك موظف سابق بوصول إلى الإنتاج.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>5. 🌐 الثقة الصفرية: افترض الانتهاك (دائماً)</h3>
+                        <p><strong>لا تثق بالشبكة. لا تثق بالموقع. ثق بالهوية + الجهاز + السياق.</strong> VPN من المنزل = نفس عدم الثقة كـ WiFi المقهى. كلاهما غير موثوق. كلاهما يتطلب MFA. كلاهما يتحقق من كل طلب. الأمان القائم على المحيط ميت - الأمان القائم على الهوية يحكم. موقع الشبكة غير ذي صلة. الامتثال، المصادقة، التفويض - دائماً.</p>
+                        <p class="hidden-wisdom"><em>الثقة الصفرية = جنون العظمة المنهجي. افترض كل شبكة معادية. افترض كل جهاز مخترق. افترض كل مستخدم عرضة للتصيد. ثم بنِ ضوابط تعمل على أي حال.</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion">
+                <h2 class="panel-caption">الخلاصة: احتضن ما بعد المكتب (البانوبتيكون موزع الآن)</h2>
+                
+                <p><strong>المكتب ميت. العمل عن بُعد دائم. الأمان يجب أن يتكيف.</strong></p>
+                
+                <p>الأمان القائم على المحيط يفترض موقع الشبكة = الثقة. هذا لم يكن صحيحاً أبداً - كان فقط مريحاً. العمل عن بُعد حطم الوهم. الثقة الصفرية هي الاعتراف بالواقع: الشبكات غير موثوقة. الهويات قابلة للتحقق. الأجهزة قابلة للشهادة. السياق مهم.</p>
+                
+                <p><strong>خمسة ضوابط للوصول عن بُعد:</strong> (1) MFA للأجهزة إلزامي - أجهزة، وليست رسائل نصية. (2) AWS Identity Center SSO - هوية واحدة، تسجيل دخول واحد، إدارة موحدة. (3) مهلات جلسة قائمة على التصنيف - 1-24 ساعة حسب الحساسية. (4) مراجعات امتيازات ربع سنوية - منع الزحف الامتيازي منهجياً. (5) الثقة الصفرية - افترض الانتهاك، تحقق من كل شيء، لا تثق أبداً بالشبكة.</p>
+                
+                <p><strong>هل أنت بجنون العظمة بما يكفي؟</strong> مدينيتنا عامة. تنفيذنا موثق. معاييرنا شفافة. نقول لك بالضبط كيف نؤمن الوصول عن بُعد ولماذا. اتبع النموذج. انسخ الضوابط. استمتع بالعمل في منظمة تعرف أن المكتب كان دائماً خيالاً.</p>
+                
+                <p class="signature">
+                    <strong>كل التحية لإريس! كل التحية للديسكورديا!</strong><br>
+                    <em>"فكر بنفسك، أيها الأحمق! إذا كان أمانك يعتمد على المستخدمين في شبكة "آمنة"، فليس لديك أمان - لديك دين كارغو."</em><br>
+                    🍎 23 FNORD 5<br>
+                    — Hagbard Celine، قبطان <em>Leif Erikson</em>
+                </p>
+            </section>
+        </article>
+    </main>
+
+<footer role="contentinfo" aria-label="تذييل الموقع">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h2>Hack23 AB</h2>
+      <p>استشارات أمن سيبراني<br>غوتنبرغ، السويد | عن بُعد</p>
+      <p>رقم التسجيل: 5595347807</p>
+      <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">صفحة الشركة على LinkedIn</a></p>
+      <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">الرئيس التنفيذي: James Pether Sörling</a></p>
+    </div>
+    
+    <div class="footer-column">
+      <h3>الخدمات</h3>
+      <ul>
+        <li><a href="services_ar.html">استشارات الأمان</a></li>
+        <li><a href="services_ar.html">هندسة الأمان</a></li>
+        <li><a href="services_ar.html">أمن السحابة</a></li>
+        <li><a href="services_ar.html">تكامل DevSecOps</a></li>
+        <li><a href="services_ar.html">الامتثال وISMS</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>المنتجات</h3>
+      <ul>
+        <li><a href="black-trigram.html">Black Trigram</a></li>
+        <li><a href="cia-project.html">وكالة الاستخبارات المدنية</a></li>
+        <li><a href="compliance-manager_ar.html">مدير الامتثال CIA</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>الموارد</h3>
+      <ul>
+        <li><a href="blog_ar.html">مدونة الأمان</a></li>
+        <li><a href="discordian-cybersecurity.html">🍎 مدونة Discordian</a></li>
+        <li><a href="cia-triad-faq.html">أسئلة وأجوبة ثالوث CIA</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">ISMS العام</a></li>
+        <li><a href="sitemap_ar.html">خريطة الموقع</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>الشركة</h3>
+      <ul>
+        <li><a href="why-hack23.html">حول Hack23</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">مدينية الأمان</a></li>
+        <li><a href="SECURITY.md">الإبلاغ عن مشكلة أمنية</a></li>
+        <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">منظمة GitHub</a></li>
+        <li><a href="accessibility-statement_ar.html">إمكانية الوصول</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-discordian">
+    <p class="discordian-authors">
+      <strong>✍️ مؤلفو المدونة:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (الفلسفة والرؤية) &
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon" rel="noopener noreferrer" target="_blank">Simon Moon</a> (العمارة والأنماط)
+    </p>
+    <p class="discordian-implementation">
+      <strong>💻 واقع التنفيذ:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn" rel="noopener noreferrer" target="_blank">George Dorn</a> يصارع هذه الفوضى الجميلة ليحولها إلى كود يعمل.
+    </p>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2008-2025 Hack23 AB. جميع الحقوق محفوظة. | مرخص بموجب <a href="LICENSE">Apache 2.0</a></p>
+    <p>
+      <a href="index.html" lang="en">English</a> | 
+      <a href="index_sv.html" lang="sv">Svenska</a> | 
+      <a href="index_ar.html" lang="ar">العربية</a> | 
+      <a href="index_he.html" lang="he">עברית</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
