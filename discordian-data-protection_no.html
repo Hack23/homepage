@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Databeskyttelse | GDPR Privacy by Design | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="GDPR-overholdelse: Dataminimering, privacy-by-design på tvers av 3 produkter, 90-dagers oppbevaring, svensk datatilsyn. Kontolevetid + 2 år maksimum.">
+<meta name="keywords" content="data protection, privacy, GDPR compliance, personal data, data privacy, data subject rights, consent management, data minimization, purpose limitation, data retention, privacy by design, privacy impact assessment PIA, data protection officer DPO, data processing agreement DPA, data breach notification, right to erasure, data portability, privacy policy">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Personvernpolicy: GDPR-overholdelse gjennom Privacy-by-Design">
+<meta property="og:description" content="Systematisk personvernimplementering: Dataminimering, GDPR artikkel 5-prinsipper, 90-dagers IP-oppbevaring, privacy-by-design på tvers av 3 Hack23-produkter.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-data-protection_no.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-data-protection_no.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Personvernpolicy: GDPR-overholdelse gjennom Privacy-by-Design",
+      "description": "Hvordan Hack23 implementerer systematisk personvern på tvers av tre produkter med GDPR-overholdelse og dataminimering",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-data-protection.html"
+      },
+      "keywords": "privacy policy, GDPR compliance, data minimization, privacy by design",
+      "articleSection": "Information Security",
+      "inLanguage": "nb",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1285,
+      "articleBody": "Think for yourself, schmuck! Question authority. Including the authority of companies who claim \"we need all your data for better service.\" Data you don't collect can't be stolen. Data you delete can'...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-data-protection.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Privacy Policy",
+          "item": "https://hack23.com/discordian-data-protection.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    <!-- hreflang tags -->
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-data-protection.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-data-protection_da.html">
+    <link rel="alternate" hreflang="da-DK" href="https://hack23.com/discordian-data-protection_da.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-data-protection_fi.html">
+    <link rel="alternate" hreflang="fi-FI" href="https://hack23.com/discordian-data-protection_fi.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-data-protection_no.html">
+    <link rel="alternate" hreflang="nb-NO" href="https://hack23.com/discordian-data-protection_no.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-info-sec-policy_nl.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-info-sec-policy_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-info-sec-policy_de.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-info-sec-policy_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-info-sec-policy_fr.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-info-sec-policy_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-info-sec-policy_es.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-info-sec-policy_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-info-sec-policy_sv.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-data-protection.html">
+
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Privacy Policy
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Privacy Policy</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Discordian Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md" title="Privacy Policy">ISMS Privacy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔐 Privacy Policy: Data Minimization Beats Data Hoarding</h2>
+
+    <section id="introduction">
+      <h2 class="panel-caption">GDPR Compliance Through Privacy-by-Design</h2>
+      
+      <p><strong>Think for yourself, schmuck! Question authority.</strong> Including the authority of companies who claim "we need all your data for better service." Data you don't collect can't be stolen. Data you delete can't leak.</p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except violating GDPR—that costs €20M or 4% of global revenue, whichever hurts more. Amazon: €746M fine. Google: €50M fine. Meta: €1.2B fine. Compliance isn't optional.</p>
+      
+      <p>Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md">Privacy Policy</a> implements systematic data protection across three products: <strong>CIA (political transparency)</strong>, <strong>Black Trigram (educational gaming)</strong>, <strong>CIA Compliance Manager (security assessment)</strong>. Data minimization, 90-day IP retention, account lifetime + 2 years maximum retention, privacy-by-design, Swedish DPA compliance. This demonstrates our cybersecurity consulting expertise through measurable privacy implementation.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: GDPR fines are expensive. Data breaches are more expensive. The cheapest option? Don't collect data you don't need. Revolutionary simplicity.</em></p>
+    
+      
+      <p><strong>Looking for expert implementation support?</strong> <a href="why-hack23.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+    </section>
+
+    <section id="data-controller">
+      <h2 class="panel-caption">Data Controller: Hack23 AB (Swedish Company, EU Jurisdiction)</h2>
+      
+      <p><strong>Legal accountability for your personal data:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Information</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Legal Name</strong></td>
+            <td>Hack23 AB</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Organization Number</strong></td>
+            <td>559534-7807 (Swedish company)</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Registered Address</strong></td>
+            <td>Carl Grimbergsgatan 25, 413 13 Göteborg, Sweden</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Data Protection Contact</strong></td>
+            <td>privacy@hack23.com</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>CEO/DPO</strong></td>
+            <td>James Pether Sörling</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Swedish jurisdiction = Swedish Data Protection Authority (Integritetsskyddsmyndigheten) oversight.</strong> EU GDPR fully applicable. Complaints can be filed with Swedish DPA or your local EU data protection authority.</p>
+      
+      <p class="hidden-wisdom"><em>JURISDICTION ILLUMINATION: Swedish company = Swedish privacy law + EU GDPR. Nordic countries have strong privacy traditions. This isn't California—this is Vikings who take privacy seriously.</em></p>
+    </section>
+
+    <section id="three-products">
+      <h2 class="panel-caption">Three Products, Systematic Privacy Implementation</h2>
+      
+      <p><strong>Privacy policy applies across all Hack23 AB products with product-specific data handling:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ CIA (Citizen Intelligence Agency)</h3>
+          <p><strong>Political transparency platform.</strong> User accounts, activity dashboards, Swedish parliamentary data analysis. Data collected: Name, email, IP (90 days), activity tracking. Purpose: Personalized political transparency. Legal basis: Contract + Legitimate Interest. Retention: Account lifetime + 2 years.</p>
+          <p><a href="https://github.com/Hack23/cia">CIA Platform</a> | <a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">Security Policy</a></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🎮 Black Trigram</h3>
+          <p><strong>Educational gaming platform.</strong> Player profiles, game progress, achievements, Korean martial arts learning. Data collected: Name, email, game statistics, device info. Purpose: Game state persistence, learning progress. Legal basis: Contract. Retention: Account lifetime.</p>
+          <p><a href="https://github.com/Hack23/blacktrigram">Black Trigram Game</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY.md">Security Policy</a></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ CIA Compliance Manager</h3>
+          <p><strong>Security compliance tool.</strong> Organization accounts, security assessments, compliance reports. Data collected: Organization info, user accounts, assessment data. Purpose: Compliance automation. Legal basis: Contract. Retention: Account lifetime + 2 years (audit trail).</p>
+          <p><a href="https://github.com/Hack23/cia-compliance-manager">Compliance Manager</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/SECURITY.md">Security Policy</a></p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>PRODUCT ILLUMINATION: Three different products, one systematic privacy framework. Data collection varies by product purpose. Retention aligned with business need. No data hoarding.</em></p>
+    </section>
+
+    <section id="data-collection">
+      <h2 class="panel-caption">Data We Collect: Minimization Through Classification</h2>
+      
+      <p><strong>All data classified per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#privacy-levels">Privacy Classification Framework</a>:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Privacy Level</th>
+            <th>Purpose</th>
+            <th>Legal Basis</th>
+            <th>Retention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Name</strong></td>
+            <td>Personal Identifier</td>
+            <td>Account identification, communication</td>
+            <td>Contract / Legitimate Interest</td>
+            <td>Account lifetime + 2 years</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>Email Address</strong></td>
+            <td>Personal Identifier</td>
+            <td>Authentication, notifications, support</td>
+            <td>Contract</td>
+            <td>Account lifetime + 2 years</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>IP Address</strong></td>
+            <td>Personal Identifier</td>
+            <td>Security, fraud prevention, analytics</td>
+            <td>Legitimate Interest</td>
+            <td><strong>90 days (logs)</strong></td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Device ID</strong></td>
+            <td>Personal</td>
+            <td>Session management, security</td>
+            <td>Legitimate Interest</td>
+            <td>Session duration</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Application Events</strong></td>
+            <td>Personal</td>
+            <td>Feature usage analytics, UX improvement</td>
+            <td>Legitimate Interest</td>
+            <td>12 months</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Game Progress</strong></td>
+            <td>Personal</td>
+            <td>Save game state, achievements</td>
+            <td>Contract</td>
+            <td>Account lifetime</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Analytics Data</strong></td>
+            <td>Pseudonymized</td>
+            <td>Traffic analysis, content optimization</td>
+            <td>Legitimate Interest</td>
+            <td>14 months</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Data minimization enforced:</strong> No social security numbers collected. No financial data stored (payment processors handle transactions). No health data. No biometric data. No location tracking beyond IP geolocation for security.</p>
+      
+      <p class="hidden-wisdom"><em>MINIMIZATION ILLUMINATION: Every data field has documented purpose and retention period. If we can't justify collection, we don't collect. If we can't justify retention, we delete. Data minimization isn't philosophy—it's operational practice.</em></p>
+    </section>
+
+    <section id="gdpr-principles">
+      <h2 class="panel-caption">GDPR Article 5: Seven Principles of Lawful Processing</h2>
+      
+      <p><strong>Hack23 implements all seven GDPR data protection principles:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Lawfulness, Fairness, Transparency</h3>
+          <p><strong>Legal basis documented for all processing.</strong> Contract for account services, Legitimate Interest for security/analytics, Consent for marketing (opt-in). Privacy policy public, clear language, no legal jargon hiding intent.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Purpose Limitation</h3>
+          <p><strong>Data used only for stated purposes.</strong> Email for authentication? Not used for unsolicited marketing. IP for security? Not sold to advertisers. Purpose specified at collection, documented in policy.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Data Minimization</h3>
+          <p><strong>Collect only necessary data.</strong> No "just in case" data collection. No 50-field registration forms. Ask for name and email—not life history. Minimization = reduced liability.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Accuracy</h3>
+          <p><strong>Keep data correct and current.</strong> Users can update profiles. Incorrect data corrected promptly. Outdated data deleted per retention schedule. Data quality = data protection.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Storage Limitation</h3>
+          <p><strong>Delete when no longer needed.</strong> IP logs: 90 days. Analytics: 12-14 months. Account data: Lifetime + 2 years maximum. Automated deletion enforced. Infinite retention = infinite liability.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>6. Integrity & Confidentiality</h3>
+          <p><strong>Secure data appropriately.</strong> Encryption per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a>, access control per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a>, monitoring per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a>.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>7. Accountability</h3>
+          <p><strong>Prove compliance, not just claim it.</strong> Public ISMS documentation, Data Processing Agreements with suppliers, breach notification procedures (72 hours to DPA), data protection impact assessments (DPIA) for high-risk processing.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>GDPR ILLUMINATION: Article 5 isn't suggestions—it's law. Violate any principle = GDPR non-compliance = regulatory action. These seven principles drive all data processing decisions.</em></p>
+    </section>
+
+    <section id="data-subject-rights">
+      <h2 class="panel-caption">Your Rights Under GDPR: Eight Data Subject Rights</h2>
+      
+      <p><strong>GDPR grants you eight rights over your personal data. Hack23 honors all eight:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Right</th>
+            <th>What It Means</th>
+            <th>How to Exercise</th>
+            <th>Response Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Right to Access</strong></td>
+            <td>Request copy of your personal data</td>
+            <td>Email privacy@hack23.com</td>
+            <td>30 days (GDPR maximum)</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Right to Rectification</strong></td>
+            <td>Correct inaccurate personal data</td>
+            <td>Update profile or email request</td>
+            <td>30 days</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>Right to Erasure</strong></td>
+            <td>"Right to be forgotten"—delete your data</td>
+            <td>Account deletion or email request</td>
+            <td>30 days (includes backups)</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Right to Restriction</strong></td>
+            <td>Limit processing while disputing accuracy</td>
+            <td>Email privacy@hack23.com</td>
+            <td>30 days</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Right to Data Portability</strong></td>
+            <td>Receive your data in machine-readable format</td>
+            <td>Email privacy@hack23.com (JSON export)</td>
+            <td>30 days</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Right to Object</strong></td>
+            <td>Object to processing based on legitimate interest</td>
+            <td>Email privacy@hack23.com</td>
+            <td>Immediate cessation, 30 days confirmation</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Rights re Automated Decision-Making</strong></td>
+            <td>Not subject to purely automated decisions</td>
+            <td>Not applicable (no automated profiling)</td>
+            <td>N/A</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Right to Lodge Complaint</strong></td>
+            <td>Complain to data protection authority</td>
+            <td>Swedish DPA (Integritetsskyddsmyndigheten)</td>
+            <td>N/A (regulatory process)</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>All requests processed within 30 days (GDPR maximum). Most requests completed within 7-14 days.</strong> No fees for first request. Excessive/repetitive requests may incur administrative fee (GDPR Article 12).</p>
+      
+      <p class="hidden-wisdom"><em>RIGHTS ILLUMINATION: These aren't corporate goodwill—they're legal requirements. Exercise them. Companies that don't honor GDPR rights face regulatory enforcement. We respond within 30 days because law requires it.</em></p>
+    </section>
+
+    <section id="isms-integration">
+      <h2 class="panel-caption">ISMS Policy Integration: Privacy Across Security Framework</h2>
+      
+      <p><strong>Privacy Policy integrated with complete Hack23 ISMS framework:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ISMS Policy</th>
+            <th>Privacy Integration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Data Classification Policy</a></td>
+            <td>Privacy levels (Personal Identifier, Personal, Pseudonymized, Anonymous) drive data protection controls</td>
+          </tr>
+          <tr class="roi-high">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a></td>
+            <td>AES-256 encryption for personal data at rest, TLS 1.3 in transit, KMS key management</td>
+          </tr>
+          <tr class="roi-high">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a></td>
+            <td>Least privilege access to personal data, MFA enforcement, audit logging</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">Backup Recovery Policy</a></td>
+            <td>Encrypted backups, retention aligned with GDPR, deletion includes backup purging</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a></td>
+            <td>Personal data breach notification procedures (72 hours to DPA, prompt to users)</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md">Third Party Management</a></td>
+            <td>Data Processing Agreements (DPA) required for all processors, supplier security assessment</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>INTEGRATION ILLUMINATION: Privacy isn't standalone policy—it's systematic integration across security framework. One ISMS, multiple privacy applications. Encryption + access control + incident response = comprehensive data protection.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Conclusion: Privacy Through Systematic Data Minimization</h2>
+      
+      <p><strong>Data you don't collect can't be stolen. Data you delete can't leak. Data you minimize reduces liability.</strong></p>
+      
+      <p>Hack23's privacy approach: <strong>Data minimization (collect only necessary), systematic retention (90 days for IPs, account lifetime + 2 years maximum), privacy-by-design (GDPR Article 25), full data subject rights (30-day response), Swedish DPA compliance.</strong></p>
+      
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md">Privacy Policy</a> isn't marketing document—it's operational framework integrated with ISMS. All privacy practices documented, auditable, enforceable. <strong>Trust through transparency beats trust through promises.</strong></p>
+      
+      <p><strong>Security through transparency beats security through hope.</strong> Privacy policy public. ISMS framework public. Data protection practices measurable. GDPR compliance verifiable.</p>
+      
+      <p class="hidden-wisdom"><em>FINAL ILLUMINATION: GDPR isn't punishment—it's forcing companies to do what they should have done anyway. Collect less. Store securely. Delete promptly. Honor rights. Or pay fines that make insurance companies nervous.</em></p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="nb">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
