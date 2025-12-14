@@ -11,7 +11,8 @@
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp",
       "headers": {
-        "X-MCP-Toolsets": "context,repos,issues,pull_requests,actions,code_security,secret_protection,dependabot,notifications,users,orgs,gists,discussions,git,labels,stargazers,security_advisories,experiments,dynamic,web_search"
+        "X-MCP-Toolsets": "context,repos,issues,pull_requests,actions,code_security,secret_protection,dependabot,notifications,users,orgs,gists,discussions,git,labels,stargazers,security_advisories,experiments,dynamic,web_search",
+        "Authorization": "Bearer $COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN"
       },
       "tools":  ["*"]
     },
