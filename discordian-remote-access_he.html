@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גישה מרחוק | אפס אמון עם MFA | Hack23</title>
+    <meta name="description" content="גישה מרחוק באפס אמון: אכיפת MFA, Identity Center SSO, סקירות הרשאות רבעוניות. פסקי זמן של סשן 1-24 שעות לפי סיווג.">
+    <meta name="keywords" content="גישה מרחוק, VPN, ISMS, אפס אמון, עבודה מרחוק, עבודה מהבית, אבטחה דיסקורדיאנית">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="גישה מרחוק: VPN ומוות המשרד">
+    <meta property="og:description" content="עבודה מרחוק קבועה. חמש בקרות גישה מרחוק. אפס אמון למשתמשי מרחוק.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-remote-access_he.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    <meta property="og:locale" content="he_IL">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-remote-access_he.html">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "גישה מרחוק: VPN ומוות המשרד",
+      "description": "ארכיטקטורת אפס אמון עם אכיפת MFA, Identity Center SSO, סקירות הרשאות רבעוניות. עבודה מרחוק קבועה",
+      "inLanguage": "he",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / מומחה אבטחת סייבר"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-remote-access_he.html"
+      },
+      "image": "https://hack23.com/blog.webp"
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-remote-access.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-remote-access_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-remote-access_sv.html">
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-AR" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-remote-access_ar.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-remote-access_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-remote-access_he.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-remote-access.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Noto Sans Hebrew', sans-serif; }
+</style>
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">ראשי</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        גישה מרחוק
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>גישה מרחוק: מוות היקף המשרד</h1>
+  <div class="app-link">
+    <a href="index_he.html" title="חזרה לדף הבית">ראשי</a>
+    <a href="discordian-cybersecurity.html" title="חזרה למניפסט">מניפסט</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" title="מדיניות בקרת גישה">ISMS</a>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <h2 class="header">🔐 גישה מרחוק: אפס אמון לעידן שאחרי המשרד</h2>
+            
+            <section id="introduction">
+              <h2 class="panel-caption">היקף המשרד מת - יחי הגישה הממוקדת זהות (ברוך הבא לפנופטיקון, מהדורת עובד מרחוק)</h2>
+              
+              <p><strong>כלום לא נכון. הכל מותר.</strong> המשרד אופציונלי. עבודה מרחוק קבועה. מודלי אבטחה הבנויים על היקפים פיזיים לא עובדים כשכולם עובדים מהבית (או בתי קפה, או שדות תעופה, או לובי מלון Marriott עם WiFi ציבורי עם אבטחה מקולקלת). <strong>FNORD.</strong> ראה בבירור: ההיקף הפיזי תמיד היה אשליה. עבודה מרחוק רק הפכה את האשליה לברורה.</p>
+              
+              <p><em>חשוב בעצמך, טיפש! הטל ספק בסמכות.</em> תהה למה החברה הקודמת שלך הכריחה אותך להיות במשרד כדי לגשת למערכות שאתה יכול לגשת אליהן באותה קלות (ובצורה מאובטחת יותר) מהבית עם VPN הגון ו-MFA למכשירים. מודל אבטחה מבוסס היקף הוא הליכת קארגו אבטחה - אין לו טעם טכני, זה רק תיאטרון ניהולי להצדיק שכירות משרד וראיית ניהול של עובדים. אפס אמון אומר לא לבטוח ברשת - לבטוח בזהות.</p>
+              
+              <p>ב-Hack23, מדיניות הגישה מרחוק שלנו מכירה במציאות: <strong>כולם עובדים מרחוק, תמיד</strong> (גם כשהם "במשרד" - זה רק עוד מקום לעבודה מרחוק עם WiFi מעט יותר טוב). המדיניות שלנו בנויה על <strong>ארכיטקטורת אפס אמון</strong> (הנח הפרה, אמת הכל, לעולם אל תבטח רק במיקום רשת), <strong>MFA חובה</strong> (מכשירים, לא SMS - זה לא 2010), <strong>AWS Identity Center SSO</strong> (ניהול זהות מרוכז), ו<strong>סקירות הרשאות רבעוניות</strong> (כי זחילת הרשאות יותר צפויה מחוק מרפי).</p>
+              
+              <p class="hidden-wisdom"><em>הארה: אבטחה מבוססת היקף מניחה שבתוך הרשת = בטוח. זה שקר. הפרות תמיד מבפנים - או תוקפים שנכנסו, או עובדים שנפרצו, או חשבונות שירות שנשכחו מ-2015 שאיש עדיין לא משתמש בהם. אפס אמון מתייחס לכל הרשת כעוינת. ראה את העולם כאויב שמתגלה בבירור. ברוך הבא ל-Chapel Perilous, שם פרנויה היא אסטרטגיה, לא תסמין.</em></p>
+              
+              <p>הגישה שלנו: אנחנו מניחים הפרה (כי זה כבר קרה, רק עדיין לא גילית). אנחנו מאמתים זהות (MFA, תמיד). אנחנו אוכפים גישה בהרשאה מינימלית (הרשאות ברירת מחדל = אפס). אנחנו סוקרים הרשאות רבעונית (זחילת הרשאות אמיתית). אנחנו מיישמים פסקי זמן של סשן בהתבסס על <a href="discordian-classification.html">סיווג נתונים</a> (1-24 שעות לפי רגישות). פרטים טכניים מלאים ב<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">מדיניות בקרת הגישה</a> הציבורית שלנו.</p>
+            
+              
+              <p><strong>צריך הדרכה מקצועית על אפס אמון?</strong> <a href="why-hack23.html">גלה את שירותי Hack23</a> הנתמכים ביישום אמיתי, לא PowerPoints ייעוץ.</p>
+            </section>
+
+            <section id="five-principles">
+                <h2 class="panel-caption">חמש בקרות גישה מרחוק (אפס אמון בלי הבולשיט)</h2>
+                
+                <div class="cards">
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>1. 🔐 MFA מכשירים חובה (מכשירים, לא SMS)</h3>
+                        <p><strong>מכשירי YubiKey או Titan. אין SMS. אין MFA במייל. רק מכשירים.</strong> למה? SMS ניתן ליירוט. מייל ניתן לפריצה. מכשירים עמידים לפישינג. אם איבדת את ה-YubiKey שלך, יש לך גיבוי (מאוחסן בבטחה). אם איבדת את שניהם, יש לנו תהליך שחזור (כולל אימות זהות, לא שיחת טלפון קלה).</p>
+                        <p class="hidden-wisdom"><em>MFA מכשירים = חיכוך. חיכוך = אבטחה. משתמשים שמתלוננים על "אי נוחות" הם אותם משתמשים שילחצו על קישורי פישינג כש-MFA קל מדי.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>2. 🎫 AWS Identity Center SSO (גישה מרוכזת)</h3>
+                        <p><strong>זהות אחת. כניסה אחת. ניהול מאוחד.</strong> כל המערכות דרך AWS Identity Center. אין שמות משתמש/סיסמאות נפרדות. אין סיסמאות מאוחסנות מקומית (בסדר, אתה משתמש במנהל סיסמאות, אבל Identity Center מטפל באימות בפועל). השעייה אחת, גישה חסומה לכל דבר. סקירה אחת, תמונה מלאה של הרשאות על פני כל המערכות.</p>
+                        <p class="hidden-wisdom"><em>SSO מאוחד לא על נוחות - זה על ראות. כשמשתמש עושה משהו רע, אתה צריך לדעת איפה יש לו גישה. אי אפשר לסקור מה שאי אפשר לראות.</em></p>
+                    </div>
+                    
+                    <div class="card availability-card">
+                        <div class="scanner-effect"></div>
+                        <h3>3. 🕒 פסקי זמן סשן מבוססי סיווג (1-24 שעות)</h3>
+                        <p><strong>נתונים רגישים יותר = פסקי זמן קצרים יותר.</strong> מוגבל (24 שעות)? אמת מחדש יומי. סודי (8 שעות)? חצי יום. פנימי (4 שעות)? סשנים קצרים. ציבורי? אין פסק זמן (זה ציבורי בכל מקרה). בנוי על <a href="discordian-classification.html">מסגרת סיווג נתונים</a>. אבטחה פרופורציונלית להשפעה.</p>
+                        <p class="hidden-wisdom"><em>פסקי זמן סשן הם מס חיכוך מכוון. נתונים רגישים שווים אימות מחדש תכוף. משתמשים מעצבנים = אבטחה שעובדת.</em></p>
+                    </div>
+                    
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>4. 🔍 סקירת הרשאות רבעונית (הזחילה אמיתית)</h3>
+                        <p><strong>כל 3 חודשים: סקור את כל ההרשאות. הסר מה שלא נחוץ עוד.</strong> זחילת הרשאות לא באג - זה מצב ברירת המחדל. משתמשים מקבלים הרשאות לפרויקטים. פרויקטים מסתיימים. הרשאות נשארות. אחרי שנה, לכולם יש גישה לכל דבר. סקירה רבעונית = ניקוי שיטתי. בעלי משאבים מאשרים מי צריך גישה. כל השאר מוסר.</p>
+                        <p class="hidden-wisdom"><em>סקירות הרשאות לא אופציונליות - זה היגיינת אבטחה. דלג על סקירה אחת, והזחילה מצטברת. דלג על ארבע, ויש לך עובד לשעבר עם גישה לפרודקשן.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>5. 🌐 אפס אמון: הנח הפרה (תמיד)</h3>
+                        <p><strong>אל תבטח ברשת. אל תבטח במיקום. בטח בזהות + מכשיר + הקשר.</strong> VPN מהבית = אותו חוסר אמון כמו WiFi בית קפה. שניהם לא מהימנים. שניהם דורשים MFA. שניהם מאמתים כל בקשה. אבטחה מבוססת היקף מתה - אבטחה מבוססת זהות שולטת. מיקום רשת לא רלוונטי. אימות, הרשאה, הרשאה - תמיד.</p>
+                        <p class="hidden-wisdom"><em>אפס אמון = פרנויה שיטתית. הנח כל רשת עוינת. הנח כל מכשיר נפרץ. הנח כל משתמש פגיע לפישינג. ואז בנה בקרות שעובדות בכל מקרה.</em></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusion">
+                <h2 class="panel-caption">סיכום: אמץ את שאחרי המשרד (הפנופטיקון מבוזר עכשיו)</h2>
+                
+                <p><strong>המשרד מת. עבודה מרחוק קבועה. אבטחה חייבת להסתגל.</strong></p>
+                
+                <p>אבטחה מבוססת היקף מניחה שמיקום רשת = אמון. זה מעולם לא היה נכון - זה רק היה נוח. עבודה מרחוק שברה את האשליה. אפס אמון הוא הכרה במציאות: רשתות לא מהימנות. זהויות ניתנות לאימות. מכשירים ניתנים לאישור. הקשר חשוב.</p>
+                
+                <p><strong>חמש בקרות גישה מרחוק:</strong> (1) MFA מכשירים חובה - מכשירים, לא SMS. (2) AWS Identity Center SSO - זהות אחת, כניסה אחת, ניהול מאוחד. (3) פסקי זמן סשן מבוססי סיווג - 1-24 שעות לפי רגישות. (4) סקירות הרשאות רבעוניות - מניעת זחילת הרשאות שיטתית. (5) אפס אמון - הנח הפרה, אמת הכל, לעולם אל תבטח ברשת.</p>
+                
+                <p><strong>האם אתה פרנואיד מספיק?</strong> המדיניות שלנו ציבורית. היישום שלנו מתועד. הסטנדרטים שלנו שקופים. אנחנו אומרים לך בדיוק איך אנחנו מאבטחים גישה מרחוק ולמה. עקוב אחרי המודל. העתק את הבקרות. תהנה לעבוד בארגון שיודע שהמשרד תמיד היה דמיון.</p>
+                
+                <p class="signature">
+                    <strong>כל הכבוד לאריס! כל הכבוד לדיסקורדיה!</strong><br>
+                    <em>"חשוב בעצמך, טיפש! אם האבטחה שלך תלויה במשתמשים ברשת 'בטוחה', אין לך אבטחה - יש לך דת קרגו."</em><br>
+                    🍎 23 FNORD 5<br>
+                    — Hagbard Celine, קפטן <em>Leif Erikson</em>
+                </p>
+            </section>
+        </article>
+    </main>
+
+<footer role="contentinfo" aria-label="תחתית האתר">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h2>Hack23 AB</h2>
+      <p>ייעוץ אבטחת סייבר<br>גטבורג, שוודיה | מרחוק</p>
+      <p>מס' רישום: 5595347807</p>
+      <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">דף החברה ב-LinkedIn</a></p>
+      <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+    </div>
+    
+    <div class="footer-column">
+      <h3>שירותים</h3>
+      <ul>
+        <li><a href="services_he.html">ייעוץ אבטחה</a></li>
+        <li><a href="services_he.html">ארכיטקטורת אבטחה</a></li>
+        <li><a href="services_he.html">אבטחת ענן</a></li>
+        <li><a href="services_he.html">אינטגרציה DevSecOps</a></li>
+        <li><a href="services_he.html">ציות ו-ISMS</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>מוצרים</h3>
+      <ul>
+        <li><a href="black-trigram_he.html">Black Trigram</a></li>
+        <li><a href="cia-project_he.html">סוכנות מודיעין אזרחית</a></li>
+        <li><a href="compliance-manager_he.html">מנהל ציות CIA</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>משאבים</h3>
+      <ul>
+        <li><a href="blog_he.html">בלוג אבטחה</a></li>
+        <li><a href="discordian-cybersecurity.html">🍎 בלוג Discordian</a></li>
+        <li><a href="cia-triad-faq.html">שאלות ותשובות משולש CIA</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">ISMS ציבורי</a></li>
+        <li><a href="sitemap_he.html">מפת אתר</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>החברה</h3>
+      <ul>
+        <li><a href="why-hack23.html">אודות Hack23</a></li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">מדיניות אבטחה</a></li>
+        <li><a href="SECURITY.md">דיווח על בעיית אבטחה</a></li>
+        <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">ארגון GitHub</a></li>
+        <li><a href="accessibility-statement_he.html">נגישות</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-discordian">
+    <p class="discordian-authors">
+      <strong>✍️ כותבי הבלוג:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (פילוסופיה וחזון) &
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon" rel="noopener noreferrer" target="_blank">Simon Moon</a> (ארכיטקטורה ודפוסים)
+    </p>
+    <p class="discordian-implementation">
+      <strong>💻 מציאות היישום:</strong>
+      <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn" rel="noopener noreferrer" target="_blank">George Dorn</a> נאבק עם הכאוס היפה הזה להפוך אותו לקוד עובד.
+    </p>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2008-2025 Hack23 AB. כל הזכויות שמורות. | רישיון <a href="LICENSE">Apache 2.0</a></p>
+    <p>
+      <a href="index.html" lang="en">English</a> | 
+      <a href="index_sv.html" lang="sv">Svenska</a> | 
+      <a href="index_ar.html" lang="ar">العربية</a> | 
+      <a href="index_he.html" lang="he">עברית</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
