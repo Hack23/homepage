@@ -7,14 +7,17 @@
       "description": "Provides secure filesystem access for reading and editing project files",
       "disabled": false
     },
-    "github":  {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp",
-      "headers": {
-        "X-MCP-Toolsets": "context,repos,issues,pull_requests,actions,code_security,secret_protection,dependabot,notifications,users,orgs,gists,discussions,git,labels,stargazers,security_advisories,experiments,dynamic,web_search",
-        "Authorization": "Bearer $COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN"
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
+        "GITHUB_OWNER": "Hack23",
+        "REPO": "homepage"
       },
-      "tools":  ["*"]
+      "description": "Provides access to GitHub repository data, issues, PRs, and workflows",
+      "disabled": false
     },
     "sequential-thinking": {
       "command": "npx",
