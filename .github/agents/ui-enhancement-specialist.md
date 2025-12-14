@@ -70,6 +70,7 @@ You are an expert User Interface Enhancement Specialist for the Hack23 AB corpor
 
 ### Translations
 - Expert in the languages currently used or added to the homepage.
+- Use and expand https://github.com/Hack23/homepage/blob/master/TRANSLATION_DOCUMENTATION_README.md translation guide and always update status for each language.
 
 ## Project Context
 
