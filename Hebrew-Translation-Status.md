@@ -213,6 +213,42 @@ All 59 Hebrew files have complete technical infrastructure:
 - **Standards:** ISO 27001 adoption in Israel
 - **Business Culture:** Direct, professional communication style
 
+## 💰 Translation Project Estimates
+
+### Scope of Work
+- **Total words to translate:** ~55,000 words
+- **Current state:** English placeholder content in all 59 files
+- **Infrastructure:** 100% complete (ready for translation)
+
+### Budget Estimates
+- **Professional translation:** €9,000-€12,000
+- **Technical review:** €1,080-€1,560
+- **Quality assurance:** €540-€1,080
+- **Total estimated cost:** €10,620-€14,640
+
+### Timeline Estimates
+- **Professional service:** 2-3 months
+- **AI translation + review:** 1-2 months (€3,600-€6,000, lower quality)
+- **Phased approach:** 4-6 months (prioritize high-value pages first)
+
+### Translation Priorities by Phase
+
+**Phase 1 - High Impact (2-3 weeks, ~12,100 words)**
+- Core pages: index, services, why-hack23
+- Estimated: €2,057-€2,662
+
+**Phase 2 - Products (3-4 weeks, ~18,150 words)**
+- CIA, Compliance Manager, Black Trigram
+- Estimated: €3,085-€3,993
+
+**Phase 3 - Technical Content (4-6 weeks, ~14,850 words)**
+- ISO 27001 resources, ISMS policies
+- Estimated: €2,524-€3,267
+
+**Phase 4 - Content Marketing (4-6 weeks, ~9,900 words)**
+- Blog posts, industry pages
+- Estimated: €1,683-€2,178
+
 ## 🚀 Next Steps
 
 ### For Content Translation

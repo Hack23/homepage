@@ -98,6 +98,42 @@ All pages include comprehensive hreflang tags covering all supported languages.
 **Standards:** ISO 27001, NIS2, AVG  
 **Currency:** EUR (€)
 
+## 💰 Translation Project Estimates
+
+### Scope of Work
+- **Total words to translate:** ~45,000 words
+- **Current state:** English placeholder content in all 50 files
+- **Infrastructure:** 100% complete (ready for translation)
+
+### Budget Estimates
+- **Professional translation:** €7,500-€10,000
+- **Technical review:** €900-€1,300
+- **Quality assurance:** €450-€900
+- **Total estimated cost:** €8,850-€12,200
+
+### Timeline Estimates
+- **Professional service:** 2-3 months
+- **AI translation + review:** 1-2 months (€3,000-€5,000, lower quality)
+- **Phased approach:** 4-6 months (prioritize high-value pages first)
+
+### Translation Priorities by Phase
+
+**Phase 1 - High Impact (2-3 weeks, ~9,900 words)**
+- Core pages: index, services, why-hack23
+- Estimated: €1,683-€2,178
+
+**Phase 2 - Products (3-4 weeks, ~14,850 words)**
+- CIA, Compliance Manager, Black Trigram
+- Estimated: €2,524-€3,267
+
+**Phase 3 - Technical Content (4-6 weeks, ~12,150 words)**
+- ISO 27001 resources, ISMS policies
+- Estimated: €2,065-€2,673
+
+**Phase 4 - Content Marketing (4-6 weeks, ~8,100 words)**
+- Blog posts, industry pages
+- Estimated: €1,377-€1,782
+
 ## 🚀 Next Steps
 
 1. **Engage Professional Translation Service**

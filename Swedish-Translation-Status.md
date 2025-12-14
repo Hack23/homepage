@@ -163,12 +163,42 @@ See `SWEDISH_BLOG_TRANSLATION_GUIDE.md` for:
 **Political Context:** Riksdagen (349 seats), 8 parties, proportional representation  
 **Currency:** SEK (kr)
 
+## 💰 Remaining Translation Work
+
+### Scope of Remaining Work
+- **Total words remaining:** ~8,000 words (8 CIA blog posts)
+- **Current completion:** ~85% (65-70 of 74 files fully translated)
+- **Infrastructure:** 100% complete
+
+### Budget Estimates for Completion
+- **Professional translation:** €1,200-€1,600
+- **Technical review:** €150-€200
+- **Quality assurance:** €100-€150
+- **Total estimated cost:** €1,450-€1,950
+
+### Timeline for Completion
+- **Professional translator:** 2-3 weeks
+- **Internal resources:** 8-10 hours of work
+- **Priority:** Medium (content marketing, not user-facing pages)
+
+### Remaining CIA Blog Posts
+1. blog-cia-security_sv.html
+2. blog-cia-workflows_sv.html
+3. blog-cia-mindmaps_sv.html
+4. blog-cia-osint-intelligence_sv.html
+5. blog-cia-future-security_sv.html
+6. blog-cia-financial-strategy_sv.html
+7. blog-cia-business-case-global-news_sv.html
+8. blog-cia-alternative-media-discordian-2026_sv.html
+
+**See:** `SWEDISH_BLOG_TRANSLATION_GUIDE.md` for detailed guidance
+
 ## 🚀 Next Steps
 
 1. **Complete CIA Blog Series**
    - Follow `SWEDISH_BLOG_TRANSLATION_GUIDE.md`
-   - Estimated: 8-10 hours
-   - 8 remaining posts
+   - Estimated: 8-10 hours or €1,200-€1,600 professional
+   - 8 remaining posts listed above
 
 2. **Quality Review**
    - Review all existing Swedish translations
