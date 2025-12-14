@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kryptografipolicy | AES-256, TLS 1.3 | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Kryptografistandarder: AES-256 for data i ro, TLS 1.3 for data under overføring, AWS KMS, årlig rotasjon, SSL Labs A+. Ingen bakdører, ingen utdaterte algoritmer.">
+<meta name="keywords" content="kryptografi, kryptering, TLS 1.3, AES-256, RSA 4096, nøkkelstyring, AWS KMS nøkkelstyring, sertifikatstyring, PKI offentlig nøkkelinfrastruktur, digitale signaturer, hash-algoritmer, SHA-256, sikker kommunikasjon, datakryptering, kryptering i ro, kryptering under overføring, kryptografiske standarder, NIST kryptografi, ende-til-ende kryptering, symmetrisk kryptering, asymmetrisk kryptering">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Kryptografipolicy: AES-256, TLS 1.3, AWS KMS—Tillit gjennom implementering">
+<meta property="og:description" content="Systematisk kryptografisk implementering med AES-256, TLS 1.3, AWS KMS, årlig nøkkelrotasjon, SSL Labs A+-vurdering.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-crypto_no.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="nb_NO">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Sikkerhetsblogg">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-crypto_no.html">
+
+<!-- hreflang tags -->
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-crypto.html" />
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-crypto_da.html" />
+<link rel="alternate" hreflang="da-DK" href="https://hack23.com/discordian-crypto_da.html" />
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-crypto_fi.html" />
+<link rel="alternate" hreflang="fi-FI" href="https://hack23.com/discordian-crypto_fi.html" />
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-crypto_no.html" />
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-crypto_no.html" />
+<link rel="alternate" hreflang="nb-NO" href="https://hack23.com/discordian-crypto_no.html" />
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-crypto_sv.html" />
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-crypto_sv.html" />
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-crypto_de.html" />
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-crypto_de.html" />
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-crypto_es.html" />
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-crypto_es.html" />
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-crypto_fr.html" />
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-crypto_fr.html" />
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-crypto_nl.html" />
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-crypto_nl.html" />
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-crypto.html" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Kryptografipolicy: Tillit gjennom implementeringens fortreffelighet",
+      "description": "Hvordan Hack23 demonstrerer kryptografisk ekspertise gjennom systematisk implementering: AES-256, TLS 1.3, AWS KMS, årlig rotasjon",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersikkerhetsekspert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-crypto_no.html"
+      },
+      "keywords": "kryptografipolicy, AES-256, TLS 1.3, AWS KMS, krypteringsstandarder",
+      "articleSection": "Informasjonssikkerhet",
+      "inLanguage": "nb",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_no.html#blog",
+        "name": "Hack23 Sikkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-policy",
+          "description": "Implementering av ledelsessystem for informasjonssikkerhet"
+        },
+        {
+          "@type": "Thing",
+          "name": "Kryptografi",
+          "description": "Krypteringsstandarder og nøkkelstyring"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-crypto_no.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hjem",
+          "item": "https://hack23.com/index_no.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_no.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kryptografipolicy",
+          "item": "https://hack23.com/discordian-crypto_no.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+<nav>
+<div class="nav-left">
+<ul>
+<li><a href="index_no.html">Hjem</a></li>
+<li><a href="blog_no.html" class="active">Blogg</a></li>
+</ul>
+</div>
+<div class="nav-right">
+<select onchange="if(this.value) window.location.href=this.value" aria-label="Velg språk">
+<option value="">🌐 Norsk</option>
+<option value="discordian-crypto.html" lang="en">English</option>
+<option value="discordian-crypto_sv.html" lang="sv">Svenska</option>
+<option value="discordian-crypto_da.html" lang="da">Dansk</option>
+<option value="discordian-crypto_fi.html" lang="fi">Suomi</option>
+</select>
+</div>
+</nav>
+</header>
+
+<nav class="breadcrumbs" aria-label="Brødsmulesti">
+<a href="index_no.html">Hjem</a> &gt; 
+<a href="blog_no.html">Blogg</a> &gt; 
+<span aria-current="page">Kryptografipolicy</span>
+</nav>
+
+<main>
+<article>
+<h1>Kryptografipolicy: Tillit gjennom implementering</h1>
+
+<p><strong>TL;DR:</strong> AES-256 for data i ro. TLS 1.3 for data under overføring. AWS KMS til nøkkelstyring. Årlig rotasjon. SSL Labs A+. Ingen bakdører, ingen utdaterte algoritmer. Implementeringen beviser ekspertise.</p>
+
+<h2>Tenk selv, dust! Still spørsmål ved autoritet</h2>
+
+<p>Ja, selv—<em>spesielt</em>—de myndighetene som godkjenner kryptografiske standarder. Men mens du stiller spørsmål ved motiver og historien med bakdører, skal du implementere systematisk.</p>
+
+<p><strong>ISMS-kryptografi:</strong> Kryptografipolicy—systematisk implementering.</p>
+
+<h2>Krypteringsstandarder: Hva vi faktisk bruker</h2>
+
+<ul>
+<li><strong>Data i ro:</strong> AES-256-GCM (AEAD-kryptering)</li>
+<li><strong>Data under overføring:</strong> TLS 1.3 (kun moderne cipher-suiter)</li>
+<li><strong>Asymmetrisk kryptering:</strong> RSA 4096-bit / ECDSA P-384</li>
+<li><strong>Nøkkelstyring:</strong> AWS KMS (Hardware Security Modules)</li>
+<li><strong>Hashing:</strong> SHA-256 minimum (SHA-3 hvor tilgjengelig)</li>
+<li><strong>Årlig rotasjon:</strong> Alle langlivede nøkler</li>
+</ul>
+
+<h2>Implementering: Beviset på ekspertise</h2>
+
+<p>Alle snakker om kryptering. Vi implementerer det:</p>
+
+<ul>
+<li><strong>SSL Labs A+:</strong> Verifisert kvartalsvis</li>
+<li><strong>Perfect Forward Secrecy:</strong> Aktivert på alle endepunkter</li>
+<li><strong>Certificate Transparency:</strong> Overvåket via CT-logger</li>
+<li><strong>HSTS:</strong> Håndhevet med 2-års max-age</li>
+<li><strong>Ingen SSL/TLS 1.0/1.1:</strong> Deaktivert og testet</li>
+</ul>
+
+<h2>Hvorfor disse valgene?</h2>
+
+<p><strong>AES-256:</strong> Ingen praktiske angrep. NIST-godkjent. Bredt støttet. Maskinvareakselerert på moderne CPU-er.</p>
+
+<p><strong>TLS 1.3:</strong> Redusert latens. Forbedret personvern. Færre cipher-suite-feil. Obligatorisk Perfect Forward Secrecy.</p>
+
+<p><strong>AWS KMS:</strong> FIPS 140-2 Level 2+ validert. Sentralisert revisjonsspor. Arbeidsdeling. Automatisk rotasjon.</p>
+
+<h2>Hva vi ikke bruker (og hvorfor)</h2>
+
+<ul>
+<li><strong>Ingen hjemmelagde algoritmer:</strong> Krypto er vanskelig. Bruk standarder.</li>
+<li><strong>Ingen utdaterte cipher-suiter:</strong> RC4, 3DES, MD5—nei.</li>
+<li><strong>Ingen usikre tilfeldighet generatorer:</strong> Kun `/dev/urandom` / CSPRNG</li>
+<li><strong>Ingen hardkodede nøkler:</strong> Nøkler i KMS, ikke i kode</li>
+</ul>
+
+<h2>Nøkkelstyring: Livssyklus</h2>
+
+<ol>
+<li><strong>Generering:</strong> HSM-generert, aldri eksponert</li>
+<li><strong>Distribusjon:</strong> Kryptert kanal, minimal eksponering</li>
+<li><strong>Lagring:</strong> KMS med tilgangskontroll</li>
+<li><strong>Rotasjon:</strong> Årlig minimum, etter hendelser</li>
+<li><strong>Tilbakekalling:</strong> Øyeblikkelig, dokumentert</li>
+<li><strong>Destruksjon:</strong> Sikker sletting, verifisert</li>
+</ol>
+
+<h2>Etterlevelse: Kryss mellom standarder</h2>
+
+<ul>
+<li><strong>ISO 27001:2022 A.8.24:</strong> Kryptografi ✓</li>
+<li><strong>NIST CSF PR.DS-1:</strong> Databeskyttelse ✓</li>
+<li><strong>CIS Controls 3.10:</strong> Krypter sensitiv data ✓</li>
+<li><strong>GDPR Art. 32:</strong> Passende sikkerhetstiltak ✓</li>
+</ul>
+
+<h2>Den diskordiske tilnærmingen: Spør hvorfor</h2>
+
+<p>Hvorfor stoler vi på AES? Fordi 20 års kryptoanalyse ikke har brutt det—ennå. Hvorfor AWS KMS? Fordi vi ikke kan bygge bedre HSM-er selv. Hvorfor TLS 1.3? Fordi TLS 1.2 har for mange legacy-problemer.</p>
+
+<p><strong>Tillit kommer fra implementering, ikke fra påstander.</strong></p>
+
+<h2>Test din egen kryptering</h2>
+
+<p>Verifiser implementeringen vår:</p>
+
+<ul>
+<li><strong>SSL Labs:</strong> <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com" target="_blank" rel="noopener">Test hack23.com</a></li>
+<li><strong>Security Headers:</strong> Verifiser HSTS, CSP, CT</li>
+<li><strong>testssl.sh:</strong> Kjør din egen revisjon</li>
+</ul>
+
+<h2>Videre lesning</h2>
+
+<ul>
+<li><a href="discordian-data-protection_no.html">Databeskyttelsespolicy</a> - GDPR-etterlevelse</li>
+<li><a href="discordian-info-sec-policy_no.html">Informasjonssikkerhetspolicy</a> - Overordnet rammeverk</li>
+<li><a href="discordian-isms-transparency_no.html">ISMS-åpenhetsplan</a> - Offentlig sikkerhet</li>
+</ul>
+
+</article>
+</main>
+
+<footer>
+<p>&copy; 2025 Hack23 AB | <a href="index_no.html">Hjem</a> | <a href="blog_no.html">Blogg</a></p>
+</footer>
+
+</body>
+</html>
