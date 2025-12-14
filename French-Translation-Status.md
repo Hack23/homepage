@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **49** | **✅ 100%** | **✅ 6.1% / ⚠️ 10.2% / ❌ 83.7%** |
+| **All Files** | **49** | **✅ 100%** | **✅ 12.2% / ⚠️ 6.1% / ❌ 81.6%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 3 files (6.1%)
-- **⚠️ Partially Translated:** 5 files (10.2%) - Some English remains
-- **❌ English Content:** 41 files (83.7%) - Needs translation
-
-- **📄 File Coverage:** 49/96 files exist (47 files not yet created)
+- **✅ Fully Translated:** 6 files (12.2%)
+- **⚠️ Partially Translated:** 3 files (6.1%) - Some English remains
+- **❌ English Content:** 40 files (81.6%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="fr"` attribute
@@ -186,55 +184,65 @@ These English pages exist but have no corresponding `_fr.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (3)
+### ✅ Fully Translated Files (6)
 1. accessibility-statement_fr.html
-2. iso-27001-2022-vs-2013_fr.html
-3. why-hack23_fr.html
+2. blog-cannabis-cybersecurity-guide_fr.html
+3. cia-triad-faq_fr.html
+4. iso-27001-2022-vs-2013_fr.html
+5. sitemap_fr.html
+6. why-hack23_fr.html
 
-### ⚠️ Partially Translated Files (5)
+### ⚠️ Partially Translated Files (3)
 *These files have some translated content but still contain English text*
+
+1. blog-cia-workflows_fr.html
+2. security-assessment-checklist_fr.html
+3. services_fr.html
+
+### ❌ English Content Files (40)
+*These files need translation - content is primarily in English*
 
 1. black-trigram-docs_fr.html
 2. black-trigram-features_fr.html
-3. blog-compliance-future_fr.html
-4. blog-compliance-security_fr.html
-5. cia-triad-faq_fr.html
-
-### ❌ English Content Files (41)
-*These files primarily contain English content and need translation*
-
-1. black-trigram_fr.html
-2. blog-betting-gaming-cybersecurity_fr.html
-3. blog-cannabis-cybersecurity-guide_fr.html
-4. blog-cia-alternative-media-discordian-2026_fr.html
-5. blog-cia-architecture_fr.html
-6. blog-cia-business-case-global-news_fr.html
-7. blog-cia-financial-strategy_fr.html
-8. blog-cia-future-security_fr.html
-9. blog-cia-mindmaps_fr.html
-10. blog-cia-osint-intelligence_fr.html
-11. blog-cia-security_fr.html
-12. blog-cia-swedish-media-election-2026_fr.html
-13. blog-cia-workflows_fr.html
+3. black-trigram_fr.html
+4. blog-betting-gaming-cybersecurity_fr.html
+5. blog-cia-alternative-media-discordian-2026_fr.html
+6. blog-cia-architecture_fr.html
+7. blog-cia-business-case-global-news_fr.html
+8. blog-cia-financial-strategy_fr.html
+9. blog-cia-future-security_fr.html
+10. blog-cia-mindmaps_fr.html
+11. blog-cia-osint-intelligence_fr.html
+12. blog-cia-security_fr.html
+13. blog-cia-swedish-media-election-2026_fr.html
 14. blog-compliance-architecture_fr.html
-15. blog-george-dorn-cia-code_fr.html
-16. blog-george-dorn-compliance-code_fr.html
-17. blog-george-dorn-trigram-code_fr.html
-18. blog-investment-firm-security_fr.html
-19. blog-medical-cannabis-hipaa-gdpr_fr.html
-20. blog-trigram-architecture_fr.html
-21. blog-trigram-combat_fr.html
-22. blog-trigram-future_fr.html
-23. blog_fr.html
-24. cia-compliance-manager-docs_fr.html
-25. cia-compliance-manager-features_fr.html
-26. cia-docs_fr.html
-27. cia-features_fr.html
-28. cia-project_fr.html
-29. compliance-manager_fr.html
-30. discordian-compliance-frameworks_fr.html
+15. blog-compliance-future_fr.html
+16. blog-compliance-security_fr.html
+17. blog-george-dorn-cia-code_fr.html
+18. blog-george-dorn-compliance-code_fr.html
+19. blog-george-dorn-trigram-code_fr.html
+20. blog-investment-firm-security_fr.html
+21. blog-medical-cannabis-hipaa-gdpr_fr.html
+22. blog-trigram-architecture_fr.html
+23. blog-trigram-combat_fr.html
+24. blog-trigram-future_fr.html
+25. blog_fr.html
+26. cia-compliance-manager-docs_fr.html
+27. cia-compliance-manager-features_fr.html
+28. cia-docs_fr.html
+29. cia-features_fr.html
+30. cia-project_fr.html
+31. compliance-manager_fr.html
+32. discordian-compliance-frameworks_fr.html
+33. discordian-compliance_fr.html
+34. discordian-info-sec-policy_fr.html
+35. discordian-isms-review_fr.html
+36. discordian-isms-transparency_fr.html
+37. index_fr.html
+38. industries-betting-gaming_fr.html
+39. industries-cannabis-security_fr.html
+40. industries-investment-fintech_fr.html
 
-*...and 11 more files*
 
 ## 🚀 Next Steps
 

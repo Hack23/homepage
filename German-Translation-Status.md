@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **50** | **✅ 100%** | **✅ 8.0% / ⚠️ 6.0% / ❌ 86.0%** |
+| **All Files** | **50** | **✅ 100%** | **✅ 16.0% / ⚠️ 2.0% / ❌ 82.0%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 4 files (8.0%)
-- **⚠️ Partially Translated:** 3 files (6.0%) - Some English remains
-- **❌ English Content:** 43 files (86.0%) - Needs translation
-
-- **📄 File Coverage:** 50/96 files exist (46 files not yet created)
+- **✅ Fully Translated:** 8 files (16.0%)
+- **⚠️ Partially Translated:** 1 files (2.0%) - Some English remains
+- **❌ English Content:** 41 files (82.0%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="de"` attribute
@@ -185,54 +183,66 @@ These English pages exist but have no corresponding `_de.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (4)
+### ✅ Fully Translated Files (8)
 1. accessibility-statement_de.html
-2. iso-27001-2022-vs-2013_de.html
-3. iso-27001-implementation-mistakes_de.html
-4. why-hack23_de.html
+2. blog-cannabis-cybersecurity-guide_de.html
+3. cia-triad-faq_de.html
+4. iso-27001-2022-vs-2013_de.html
+5. iso-27001-implementation-mistakes_de.html
+6. security-assessment-checklist_de.html
+7. sitemap_de.html
+8. why-hack23_de.html
 
-### ⚠️ Partially Translated Files (3)
+### ⚠️ Partially Translated Files (1)
 *These files have some translated content but still contain English text*
+
+1. services_de.html
+
+### ❌ English Content Files (41)
+*These files need translation - content is primarily in English*
 
 1. black-trigram-docs_de.html
 2. black-trigram-features_de.html
-3. cia-triad-faq_de.html
+3. black-trigram_de.html
+4. blog-betting-gaming-cybersecurity_de.html
+5. blog-cia-alternative-media-discordian-2026_de.html
+6. blog-cia-architecture_de.html
+7. blog-cia-business-case-global-news_de.html
+8. blog-cia-financial-strategy_de.html
+9. blog-cia-future-security_de.html
+10. blog-cia-mindmaps_de.html
+11. blog-cia-osint-intelligence_de.html
+12. blog-cia-security_de.html
+13. blog-cia-swedish-media-election-2026_de.html
+14. blog-cia-workflows_de.html
+15. blog-compliance-architecture_de.html
+16. blog-compliance-future_de.html
+17. blog-compliance-security_de.html
+18. blog-george-dorn-cia-code_de.html
+19. blog-george-dorn-compliance-code_de.html
+20. blog-george-dorn-trigram-code_de.html
+21. blog-investment-firm-security_de.html
+22. blog-medical-cannabis-hipaa-gdpr_de.html
+23. blog-trigram-architecture_de.html
+24. blog-trigram-combat_de.html
+25. blog-trigram-future_de.html
+26. blog_de.html
+27. cia-compliance-manager-docs_de.html
+28. cia-compliance-manager-features_de.html
+29. cia-docs_de.html
+30. cia-features_de.html
+31. cia-project_de.html
+32. compliance-manager_de.html
+33. discordian-compliance-frameworks_de.html
+34. discordian-compliance_de.html
+35. discordian-info-sec-policy_de.html
+36. discordian-isms-review_de.html
+37. discordian-isms-transparency_de.html
+38. index_de.html
+39. industries-betting-gaming_de.html
+40. industries-cannabis-security_de.html
+41. industries-investment-fintech_de.html
 
-### ❌ English Content Files (43)
-*These files primarily contain English content and need translation*
-
-1. black-trigram_de.html
-2. blog-betting-gaming-cybersecurity_de.html
-3. blog-cannabis-cybersecurity-guide_de.html
-4. blog-cia-alternative-media-discordian-2026_de.html
-5. blog-cia-architecture_de.html
-6. blog-cia-business-case-global-news_de.html
-7. blog-cia-financial-strategy_de.html
-8. blog-cia-future-security_de.html
-9. blog-cia-mindmaps_de.html
-10. blog-cia-osint-intelligence_de.html
-11. blog-cia-security_de.html
-12. blog-cia-swedish-media-election-2026_de.html
-13. blog-cia-workflows_de.html
-14. blog-compliance-architecture_de.html
-15. blog-compliance-future_de.html
-16. blog-compliance-security_de.html
-17. blog-george-dorn-cia-code_de.html
-18. blog-george-dorn-compliance-code_de.html
-19. blog-george-dorn-trigram-code_de.html
-20. blog-investment-firm-security_de.html
-21. blog-medical-cannabis-hipaa-gdpr_de.html
-22. blog-trigram-architecture_de.html
-23. blog-trigram-combat_de.html
-24. blog-trigram-future_de.html
-25. blog_de.html
-26. cia-compliance-manager-docs_de.html
-27. cia-compliance-manager-features_de.html
-28. cia-docs_de.html
-29. cia-features_de.html
-30. cia-project_de.html
-
-*...and 13 more files*
 
 ## 🚀 Next Steps
 

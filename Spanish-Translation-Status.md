@@ -13,16 +13,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **49** | **✅ 100%** | **✅ 6.1% / ⚠️ 12.2% / ❌ 81.6%** |
+| **All Files** | **49** | **✅ 100%** | **✅ 12.2% / ⚠️ 10.2% / ❌ 77.6%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 3 files (6.1%)
-- **⚠️ Partially Translated:** 6 files (12.2%) - Some English remains
-- **❌ English Content:** 40 files (81.6%) - Needs translation
-
-- **📄 File Coverage:** 49/96 files exist (47 files not yet created)
+- **✅ Fully Translated:** 6 files (12.2%)
+- **⚠️ Partially Translated:** 5 files (10.2%) - Some English remains
+- **❌ English Content:** 38 files (77.6%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="es"` attribute
@@ -186,40 +184,42 @@ These English pages exist but have no corresponding `_es.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (3)
+### ✅ Fully Translated Files (6)
 1. accessibility-statement_es.html
-2. iso-27001-2022-vs-2013_es.html
-3. why-hack23_es.html
+2. blog-cannabis-cybersecurity-guide_es.html
+3. cia-triad-faq_es.html
+4. iso-27001-2022-vs-2013_es.html
+5. sitemap_es.html
+6. why-hack23_es.html
 
-### ⚠️ Partially Translated Files (6)
+### ⚠️ Partially Translated Files (5)
 *These files have some translated content but still contain English text*
+
+1. blog-cia-workflows_es.html
+2. blog-compliance-security_es.html
+3. blog-george-dorn-compliance-code_es.html
+4. security-assessment-checklist_es.html
+5. services_es.html
+
+### ❌ English Content Files (38)
+*These files need translation - content is primarily in English*
 
 1. black-trigram-docs_es.html
 2. black-trigram-features_es.html
-3. blog-compliance-future_es.html
-4. blog-compliance-security_es.html
-5. cia-triad-faq_es.html
-6. sitemap_es.html
-
-### ❌ English Content Files (40)
-*These files primarily contain English content and need translation*
-
-1. black-trigram_es.html
-2. blog-betting-gaming-cybersecurity_es.html
-3. blog-cannabis-cybersecurity-guide_es.html
-4. blog-cia-alternative-media-discordian-2026_es.html
-5. blog-cia-architecture_es.html
-6. blog-cia-business-case-global-news_es.html
-7. blog-cia-financial-strategy_es.html
-8. blog-cia-future-security_es.html
-9. blog-cia-mindmaps_es.html
-10. blog-cia-osint-intelligence_es.html
-11. blog-cia-security_es.html
-12. blog-cia-swedish-media-election-2026_es.html
-13. blog-cia-workflows_es.html
+3. black-trigram_es.html
+4. blog-betting-gaming-cybersecurity_es.html
+5. blog-cia-alternative-media-discordian-2026_es.html
+6. blog-cia-architecture_es.html
+7. blog-cia-business-case-global-news_es.html
+8. blog-cia-financial-strategy_es.html
+9. blog-cia-future-security_es.html
+10. blog-cia-mindmaps_es.html
+11. blog-cia-osint-intelligence_es.html
+12. blog-cia-security_es.html
+13. blog-cia-swedish-media-election-2026_es.html
 14. blog-compliance-architecture_es.html
-15. blog-george-dorn-cia-code_es.html
-16. blog-george-dorn-compliance-code_es.html
+15. blog-compliance-future_es.html
+16. blog-george-dorn-cia-code_es.html
 17. blog-george-dorn-trigram-code_es.html
 18. blog-investment-firm-security_es.html
 19. blog-medical-cannabis-hipaa-gdpr_es.html
@@ -234,8 +234,15 @@ These English pages exist but have no corresponding `_es.html` translation file:
 28. cia-project_es.html
 29. compliance-manager_es.html
 30. discordian-compliance-frameworks_es.html
+31. discordian-compliance_es.html
+32. discordian-info-sec-policy_es.html
+33. discordian-isms-review_es.html
+34. discordian-isms-transparency_es.html
+35. index_es.html
+36. industries-betting-gaming_es.html
+37. industries-cannabis-security_es.html
+38. industries-investment-fintech_es.html
 
-*...and 10 more files*
 
 ## 🚀 Next Steps
 
