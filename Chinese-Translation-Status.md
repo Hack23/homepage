@@ -12,7 +12,7 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Chinese Files Exist** | 63 | 65.6% |
+| **Chinese Files Exist** | 64 | 66.7% |
 | **Missing Files** | **33** | **34.4%** |
 
 **Recent Additions (December 2025):**
@@ -20,8 +20,8 @@
 - ✅ **Issue #687 Batch 7:** 10 CIA blog posts created with complete infrastructure
 - ⚠️ **Issue #8 Batch 2:** 13 additional blog posts assessed - professional translation recommended
 
-**Missing Files:** 33 files not yet created (1 core page + 32 others)
-- **High Priority:** `projects.html` (core navigation page)
+**Missing Files:** 32 files not yet created (1 core page + 32 others)
+
 - **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
 - **Lower Priority:** Example pages and additional content
 

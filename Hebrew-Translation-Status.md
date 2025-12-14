@@ -12,11 +12,11 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Hebrew Files Exist** | 59 | 61.5% |
+| **Hebrew Files Exist** | 60 | 62.5% |
 | **Missing Files** | **37** | **38.5%** |
 
-**Missing Files:** 37 files not yet created (1 core page + others)
-- **High Priority:** `projects.html` (core navigation page)
+**Missing Files:** 36 files not yet created (1 core page + others)
+
 - **Medium Priority:** 20+ Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
 
