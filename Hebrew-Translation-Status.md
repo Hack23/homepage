@@ -6,6 +6,8 @@
 **Direction:** RTL (Right-to-Left)  
 **Target Market:** Israel  
 **Last Updated:** December 2025
+⚠️ **IMPORTANT:** Files exist with complete technical infrastructure (HTML, hreflang, SEO) but content is in English. Professional translation required.
+
 
 ## 📊 Overall Status
 
