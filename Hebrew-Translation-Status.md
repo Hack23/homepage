@@ -6,10 +6,21 @@
 **Direction:** RTL (Right-to-Left)  
 **Target Market:** Israel  
 **Last Updated:** December 2025
-⚠️ **IMPORTANT:** Files exist with complete technical infrastructure (HTML, hreflang, SEO) but content is in English. Professional translation required.
 
+### 📄 File Coverage (High-Level Summary)
 
-## 📊 Overall Status
+| Metric | Count | Percentage |
+|--------|-------|------------|
+| **English Base Files** | 96 | 100% |
+| **Hebrew Files Exist** | 59 | 61.5% |
+| **Missing Files** | **37** | **38.5%** |
+
+**Missing Files:** 37 files not yet created (1 core page + others)
+- **High Priority:** `projects.html` (core navigation page)
+- **Medium Priority:** 20+ Discordian ISMS policy files
+- **Lower Priority:** Example pages and additional content
+
+## 📊 Overall Status (Existing Files)
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
