@@ -34,15 +34,71 @@ This guide provides comprehensive instructions for creating and maintaining Span
 
 ### Cybersecurity Terms
 
-**ISMS:** Sistema de gestión de seguridad de la información  
-**CIA Triad:** Tríada CIA  
-**Confidentiality:** Confidencialidad  
-**Integrity:** Integridad  
-**Availability:** Disponibilidad  
-**ISO 27001:** ISO 27001  
-**GDPR:** RGPD  
-**Compliance:** Cumplimiento  
-**Risk Assessment:** Evaluación de riesgos
+| English | Spanish (ES) |
+|---------|-----------|
+| ISMS | Sistema de gestión de seguridad de la información |
+| CIA Triad | Tríada CIA |
+| Confidentiality | Confidencialidad |
+| Integrity | Integridad |
+| Availability | Disponibilidad |
+| ISO 27001 | ISO 27001 |
+| GDPR | RGPD |
+| NIS2 | Directiva NIS2 |
+| Compliance | Cumplimiento |
+| Risk Assessment | Evaluación de riesgos |
+| Security | Seguridad |
+| Cybersecurity | Ciberseguridad |
+| Architecture | Arquitectura |
+| Framework | Marco |
+
+### DevSecOps & Technical Terms
+
+| English | Spanish (ES) |
+|---------|-----------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Workflow | Flujo de trabajo |
+| Repository | Repositorio |
+| Deployment | Despliegue |
+| Pipeline | Pipeline/Tubería |
+
+### Industry-Specific Terms
+
+#### Gaming/Betting
+| English | Spanish (ES) |
+|---------|-----------|
+| Gaming operator | Operador de juegos |
+| Online casino | Casino en línea |
+| Betting | Apuestas |
+| Gambling license | Licencia de juego |
+| Gaming authority | Autoridad del juego |
+
+#### Cannabis Industry
+| English | Spanish (ES) |
+|---------|-----------|
+| Cannabis | Cannabis |
+| Dispensary | Dispensario |
+| Cultivation | Cultivo |
+| Medical cannabis | Cannabis medicinal |
+| Seed-to-sale | De la semilla a la venta |
+
+#### Investment/Finance
+| English | Spanish (ES) |
+|---------|-----------|
+| Investment firm | Empresa de inversión |
+| Financial services | Servicios financieros |
+| Regulatory compliance | Cumplimiento normativo |
+| Asset management | Gestión de activos |
+
+### Spanish Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | AEPD (Agencia Española de Protección de Datos) |
+| Cybersecurity | CCN-CERT (Centro Criptológico Nacional) |
+| Gaming | DGOJ (Dirección General de Ordenación del Juego) |
+| Finance | CNMV (Comisión Nacional del Mercado de Valores) |
+| Health | AEMPS (Agencia Española de Medicamentos y Productos Sanitarios) |
 
 ### Call-to-Action
 

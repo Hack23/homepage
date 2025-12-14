@@ -44,6 +44,45 @@ This guide provides comprehensive instructions for creating and maintaining Kore
 **Risk Assessment:** 위험 평가  
 
 
+### DevSecOps & Technical Terms
+
+| English | Korean (KO) |
+|---------|-------------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Repository | 리포지토리 |
+| Pipeline | 파이프라인 |
+| Deployment | 배포 |
+| Container | 컨테이너 |
+| Quality Gate | 품질 게이트 |
+| SAST | SAST (정적 분석) |
+| DAST | DAST (동적 분석) |
+| Code Quality | 코드 품질 |
+| Technical Debt | 기술 부채 |
+| Security Scanning | 보안 스캔 |
+| Vulnerability Detection | 취약점 탐지 |
+
+### Threat Modeling
+
+| English | Korean (KO) |
+|---------|-------------|
+| STRIDE | STRIDE |
+| Threat Modeling | 위협 모델링 |
+| Attack Surface | 공격 표면 |
+| Vulnerability | 취약점 |
+| Exploit | 익스플로잇 |
+
+### Black Trigram - Korean Martial Arts Terms
+
+**Note:** Black Trigram game includes Korean martial arts. Preserve Hangul + romanization + translation:
+
+| Hangul | Romanization | English |
+|--------|--------------|---------|
+| 무사 | Musa | Traditional Warrior |
+| 암살자 | Amsalja | Shadow Assassin |
+| 택견 | Taekkyeon | Taekkyeon (UNESCO Heritage) |
+| 급소 | Kyusho | Vital Points |
+
 ### Call-to-Action
 
 | English | Korean |
@@ -51,6 +90,8 @@ This guide provides comprehensive instructions for creating and maintaining Kore
 | Learn More | 자세히 보기 |
 | Get Started | 시작하기 |
 | Contact Us | 문의하기 |
+| Read More | 더 읽기 |
+| Download | 다운로드 |
 
 ## 🛠️ HTML Structure
 

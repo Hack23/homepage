@@ -44,6 +44,34 @@ This guide provides comprehensive instructions for creating and maintaining Japa
 **Risk Assessment:** リスクアセスメント  
 
 
+### DevSecOps & Technical Terms
+
+| English | Japanese (JA) |
+|---------|---------------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Repository | リポジトリ |
+| Pipeline | パイプライン |
+| Deployment | デプロイ |
+| Container | コンテナ |
+| Quality Gate | 品質ゲート |
+| SAST | SAST (静的解析) |
+| DAST | DAST (動的解析) |
+| Code Quality | コード品質 |
+| Technical Debt | 技術的負債 |
+| Security Scanning | セキュリティスキャン |
+| Vulnerability Detection | 脆弱性検出 |
+
+### Threat Modeling
+
+| English | Japanese (JA) |
+|---------|---------------|
+| STRIDE | STRIDE |
+| Threat Modeling | 脅威モデリング |
+| Attack Surface | 攻撃対象領域 |
+| Vulnerability | 脆弱性 |
+| Exploit | エクスプロイト |
+
 ### Call-to-Action
 
 | English | Japanese |
@@ -51,6 +79,8 @@ This guide provides comprehensive instructions for creating and maintaining Japa
 | Learn More | 詳細を見る |
 | Get Started | 始める |
 | Contact Us | お問い合わせ |
+| Read More | もっと読む |
+| Download | ダウンロード |
 
 ## 🛠️ HTML Structure
 

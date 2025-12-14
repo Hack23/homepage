@@ -34,15 +34,49 @@ This guide provides comprehensive instructions for creating and maintaining Norw
 
 ### Cybersecurity Terms
 
-**ISMS:** Ledelsessystem for informasjonssikkerhet  
-**CIA Triad:** CIA-triaden  
-**Confidentiality:** Konfidensialitet  
-**Integrity:** Integritet  
-**Availability:** Tilgjengelighet  
-**ISO 27001:** ISO 27001  
-**Compliance:** Etterlevelse  
-**Risk Assessment:** Risikovurdering  
+| English | Norwegian (NO) |
+|---------|----------------|
+| ISMS | Ledelsessystem for informasjonssikkerhet |
+| CIA Triad | CIA-triaden |
+| Confidentiality | Konfidensialitet |
+| Integrity | Integritet |
+| Availability | Tilgjengelighet |
+| ISO 27001 | ISO 27001 |
+| GDPR | GDPR |
+| NIS2 | NIS2-direktivet |
+| Compliance | Etterlevelse |
+| Risk Assessment | Risikovurdering |
+| Threat Modeling | Trusselmodellering |
+| Security Policy | Sikkerhetspolicy |
+| Data Protection | Databeskyttelse |
+| Access Control | Tilgangskontroll |
+| Incident Response | Hendelseshåndtering |
+| Business Continuity | Forretningskontinuitet |
+| Vulnerability Management | Sårbarhetsadministrasjon |
+| Security Awareness | Sikkerhetsbevissthet |
 
+### ISMS Policy Areas
+
+| English | Norwegian (NO) |
+|---------|----------------|
+| Third Party Management | Tredjepartsadministrasjon |
+| Cryptography | Kryptografi |
+| Cloud Security | Skysikkerhet |
+| Network Security | Nettverkssikkerhet |
+| Physical Security | Fysisk sikkerhet |
+| Change Management | Endringsadministrasjon |
+| Asset Management | Aktivaforvaltning |
+| Backup and Recovery | Sikkerhetskopiering og gjenoppretting |
+| Secure Development | Sikker utvikling |
+| Remote Access | Ekstern tilgang |
+
+### Norwegian Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | Datatilsynet (Norwegian Data Protection Authority) |
+| Cybersecurity | NSM (Nasjonal sikkerhetsmyndighet) |
+| Certification | Norsk Akkreditering |
 
 ### Call-to-Action
 

@@ -34,10 +34,49 @@ This guide provides comprehensive instructions for creating and maintaining Dani
 
 ### Cybersecurity Terms
 
-**ISMS:** Informationssikkerhedsstyringssystem  
-**CIA Triad:** CIA-triaden  
-**ISO 27001**  
+| English | Danish (DA) |
+|---------|-------------|
+| ISMS | Informationssikkerhedsstyringssystem |
+| CIA Triad | CIA-triaden |
+| Confidentiality | Fortrolighed |
+| Integrity | Integritet |
+| Availability | Tilgængelighed |
+| ISO 27001 | ISO 27001 |
+| GDPR | GDPR |
+| NIS2 | NIS2-direktivet |
+| Compliance | Overholdelse |
+| Risk Assessment | Risikovurdering |
+| Threat Modeling | Trusselmodellering |
+| Security Policy | Sikkerhedspolitik |
+| Data Protection | Databeskyttelse |
+| Access Control | Adgangskontrol |
+| Incident Response | Hændelseshåndtering |
+| Business Continuity | Forretningskontinuitet |
+| Vulnerability Management | Sårbarhedsstyring |
+| Security Awareness | Sikkerhedsbevidsthed |
 
+### ISMS Policy Areas
+
+| English | Danish (DA) |
+|---------|-------------|
+| Third Party Management | Tredjepartsstyring |
+| Cryptography | Kryptografi |
+| Cloud Security | Cloud-sikkerhed |
+| Network Security | Netværkssikkerhed |
+| Physical Security | Fysisk sikkerhed |
+| Change Management | Ændringsstyring |
+| Asset Management | Aktivstyring |
+| Backup and Recovery | Backup og gendannelse |
+| Secure Development | Sikker udvikling |
+| Remote Access | Fjernadgang |
+
+### Danish Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | Datatilsynet (Danish Data Protection Agency) |
+| Cybersecurity | Center for Cybersikkerhed (CFCS) |
+| Certification | DANAK (Danish Accreditation) |
 
 ### Call-to-Action
 
