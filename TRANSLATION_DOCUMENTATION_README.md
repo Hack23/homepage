@@ -144,13 +144,23 @@ All translations must meet:
 
 ## Blog Translation Requirements
 
-For professional blog translation requirements, see:
-- **[BLOG_TRANSLATION_REQUIREMENTS.md](BLOG_TRANSLATION_REQUIREMENTS.md)** - Comprehensive guide for professional translators
-
 **Status:** 3 high-priority blogs need translation across all 13 languages (39 files total)
 - Infrastructure complete (HTML, hreflang, Schema.org)
 - Professional content translation required
 - Estimated effort: 20-30 hours
+- Estimated cost: €6,000-10,000
+
+**High-Priority Blog Posts:**
+1. **blog-public-isms-benefits** (~3,200 words) - ISMS transparency thought leadership
+2. **blog-automated-convergence** (~2,800 words) - AI agents and DevSecOps
+3. **blog-information-hoarding** (~1,200 words) - Security philosophy
+
+**Translation Guidelines:**
+- Professional business tone for C-suite audience
+- Keep code examples in English, translate explanations
+- Preserve Discordian philosophical voice while ensuring clarity
+- Use terminology from individual Translation-Guide.md files
+- Adapt cultural references for local markets
 
 ## Contact
 
@@ -163,4 +173,4 @@ For questions about translation documentation:
 
 **Last Updated:** December 2025  
 **Maintainer:** Hack23 AB Translation Team  
-**Total Files:** 30 documentation files (26 guides/status + 3 Swedish blog-specific + 1 blog requirements)
+**Total Files:** 29 documentation files (26 guides/status + 3 Swedish blog-specific)

@@ -65,7 +65,7 @@ Recently added 3 high-priority blog translations:
 - Complete hreflang tags (28 languages)
 - Schema.org BlogPosting with `inLanguage: "nl"`
 - og:locale properly set
-- Professional translation needed (see BLOG_TRANSLATION_REQUIREMENTS.md)
+- Professional translation needed (~7,200 words total, requires cybersecurity expertise)
 
 ## 📁 Files by Category
 
