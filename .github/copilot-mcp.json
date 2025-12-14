@@ -8,16 +8,21 @@
       "disabled": false
     },
     "github": {
+      "type": "local",
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github",
+        "--toolsets",
+        "all",
+        "--tools",
+        "cancel_workflow_run,delete_workflow_run_logs,download_workflow_run_artifact,get_job_logs,get_workflow_run,get_workflow_run_logs,get_workflow_run_usage,list_workflow_jobs,list_workflow_run_artifacts,list_workflow_runs,list_workflows,rerun_failed_jobs,rerun_workflow_run,run_workflow,get_code_scanning_alert,list_code_scanning_alerts,get_me,get_team_members,get_teams,get_dependabot_alert,list_dependabot_alerts,get_discussion,get_discussion_comments,list_discussion_categories,list_discussions,create_gist,get_gist,list_gists,update_gist,get_repository_tree,add_issue_comment,assign_copilot_to_issue,issue_read,issue_write,list_issue_types,list_issues,search_issues,sub_issue_write,get_label,label_write,list_label,dismiss_notification,get_notification_details,list_notifications,manage_notification_subscription,manage_repository_notification_subscription,mark_all_notifications_read,search_orgs,add_project_item,delete_project_item,get_project,get_project_field,get_project_item,list_project_fields,list_project_items,list_projects,update_project_item,add_comment_to_pending_review,create_pull_request,list_pull_requests,merge_pull_request,pull_request_read,pull_request_review_write,request_copilot_review,search_pull_requests,update_pull_request,update_pull_request_branch,create_branch,create_or_update_file,create_repository,delete_file,fork_repository,get_commit,get_file_contents,get_latest_release,get_release_by_tag,get_tag,list_branches,list_commits,list_releases,list_tags,push_files,search_code,search_repositories,get_secret_scanning_alert,list_secret_scanning_alerts,get_global_security_advisory,list_global_security_advisories,list_org_repository_security_advisories,list_repository_security_advisories,list_starred_repositories,star_repository,unstar_repository,search_users,create_pull_request_with_copilot,get_copilot_space,list_copilot_spaces,github_support_docs_search"
+      ],
       "env": {
         "GITHUB_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}",
-        "GITHUB_OWNER": "Hack23",
-        "REPO": "homepage"
-      },
-      "description": "Provides access to GitHub repository data, issues, PRs, and workflows",
-      "disabled": false
+        "GITHUB_OWNER": "Hack23"
+      }
     },
     "sequential-thinking": {
       "command": "npx",
