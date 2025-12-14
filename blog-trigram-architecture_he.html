@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ארכיטקטורת Black Trigram | בלוג אבטחת Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Black Trigram game architecture: Unity patterns, combat system design, cultural preservation through gaming. C4 architectural models.">
+<meta name="keywords" content="Black Trigram architecture, game architecture, combat system design, Korean martial arts simulation, anatomical targeting system, vital points kyusho, physics engine, collision detection, game mechanics, procedural animation, combat AI, fighting game architecture, 2D combat simulation, martial arts gaming, cultural preservation technology">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Simon Moon">
+<meta property="og:title" content="Black Trigram Architecture: Five Fighters, Sacred Geometry">
+<meta property="og:description" content="Five fighter archetypes meet sacred geometry. The Law of Fives manifesting in Korean martial arts game design.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="he_IL">
+<meta property="og:url" content="https://hack23.com/blog-trigram-architecture_he.html">
+<meta property="og:image" content="https://blacktrigram.com/black-trigram.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/blog-trigram-architecture_he.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Black Trigram Architecture: Five Fighters, Sacred Geometry in Combat",
+      "description": "Exploring the numerological patterns in Black Trigram's game architecture",
+      "author": {
+        "@type": "Person",
+        "name": "Simon Moon",
+        "jobTitle": "System Architect",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/blog-trigram-architecture_he.html"
+      },
+      "keywords": "Black Trigram, Unity architecture, game design, Korean martial arts, sacred geometry",
+      "articleSection": "Game Architecture",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1692,
+      "articleBody": "Korean martial arts: diverse, sophisticated, historically profound—and criminally underrepresented in gaming. When architecting Black Trigram, I didn't invent five fighter archetypes through game-desi...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "he",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "System Architecture",
+          "description": "Sacred geometry and numerological patterns in code"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog-trigram-architecture_he.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram Architecture",
+          "item": "https://hack23.com/blog-trigram-architecture_he.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://hack23.com/blog-trigram-architecture.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/blog-trigram-architecture_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/blog-trigram-architecture_sv.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/blog-trigram-architecture_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/blog-trigram-architecture_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/blog-trigram-architecture_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/blog-trigram-architecture_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/blog-trigram-architecture_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/blog-trigram-architecture_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/blog-trigram-architecture_es.html">
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/blog-trigram-architecture_ar.html">
+	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/blog-trigram-architecture_ar.html">
+	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/blog-trigram-architecture_ar.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/blog-trigram-architecture_he.html">
+	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/blog-trigram-architecture_he.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/blog-trigram-architecture.html">
+</head>
+<body>
+
+<!-- Translation Note: Hebrew translation - Technical Series (Black Trigram).
+     Korean martial arts terms preserved: 무사 Musa, 암살자 Amsalja.
+     Technical terminology uses standard cybersecurity terms.
+     Code blocks maintain LTR direction via CSS. -->
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_he.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Black Trigram Architecture
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_he.html">Home</a>
+    <a href="blog_he.html">Blog</a>
+    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h1 class="header">🥋 Black Trigram Architecture: Five Fighters, Sacred Geometry in Combat</h1>
+    
+    <section id="five-fighters">
+      <h2 class="panel-caption">The Five Fighter Archetypes: Pattern in Combat Styles</h2>
+      
+      <p><strong>Korean martial arts: diverse, sophisticated, historically profound—and criminally underrepresented in gaming.</strong> When architecting <a href="https://github.com/Hack23/blacktrigram">Black Trigram</a>, I didn't invent five fighter archetypes through game-design meetings—I discovered them embedded in the combat domain itself, revealed through pattern recognition in actual Korean martial arts traditions and modern tactical specializations. <strong>The archetypes chose themselves.</strong> Game-design.md documents this: each represents a distinct combat philosophy rooted in actual tradition and contemporary reality. Not arbitrary game balance—cultural authenticity meeting mechanical depth, sacred geometry applied to violence.</p>
+      
+      <p><strong>Five archetypes, each a complete combat system, each a philosophical stance on violence itself.</strong> Documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">game-design.md</a>, these aren't palette swaps with stat tweaks. <em>This is respect through representation.</em> Each fighter embodies fundamentally different approaches to violence, tactical priorities, and ethical frameworks. From traditional warrior honor codes to organized crime pragmatism—the full spectrum of how humans approach sanctioned and unsanctioned violence. <strong>Game mechanics as anthropology.</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>1. 무사 Musa (Traditional Warrior)</h3>
+          <p><strong>Military special forces with traditional training.</strong> Honor through strength, disciplined combat. Preferred trigrams: ☰ Heaven, ☳ Thunder. Signature techniques: joint manipulation (관절기법), vital point strikes (급소타격), submission control (제압술).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>2. 암살자 Amsalja (Shadow Assassin)</h3>
+          <p><strong>Covert operative specializing in silent takedowns.</strong> Efficiency through invisibility, one perfect strike. Preferred trigrams: ☴ Wind, ☵ Water. Signature techniques: silent takedowns (무성제압), nerve strikes (신경파괴), respiratory attacks (호흡차단).</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>3. 해커 Hacker (Cyber Warrior)</h3>
+          <p><strong>Digital native with physical combat training.</strong> Information as power, technological advantage. Preferred trigrams: ☲ Fire, ☱ Lake. Signature techniques: anatomical analysis (해부학적분석), biomechanical destruction (생체역학파괴), systematic incapacitation (체계적제압).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. 정보요원 Jeongbo Yowon (Intelligence Operative)</h3>
+          <p><strong>Government agent with psychological warfare training.</strong> Knowledge through observation, strategic thinking. Preferred trigrams: ☶ Mountain, ☷ Earth. Signature techniques: pain compliance (고통순응), psychological pressure (심리적압박), information extraction (정보추출).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. 조직폭력배 Jojik Pokryeokbae (Organized Crime)</h3>
+          <p><strong>Underground fighter with street-smart brutality.</strong> Survival through ruthlessness, practical violence. Preferred trigrams: ☳ Thunder, ☵ Water. Signature techniques: environmental usage (환경활용), dirty techniques (더러운기법), survival fighting (생존격투).</p>
+        </div>
+      </div>
+      
+      <p><strong>The 70 Vital Points: Mathematics Meets Mortality.</strong> Traditional Korean martial arts teaches 70 kyusho points (pressure points/급소). <em>Pattern recognition reveals sacred structure:</em> 7 × 5 × 2 (7 body regions × 5 critical points each × 2 sides for bilateral symmetry). Our damage system implements <strong>all 70</strong>. Hit accuracy determining damage multiplier through biomechanical reality, not arbitrary scaling. <strong>Realism through numerology. Physics through philosophy.</strong> When you strike a kyusho point accurately, the game calculates realistic trauma effects based on actual anatomical vulnerabilities. <em>This is education through engagement, cultural preservation through gameplay.</em></p>
+      
+      <p class="hidden-wisdom"><em>Game balance requiring five archetypes wasn't design choice—it was recognition of natural combat style clustering in human conflict. Try four archetypes: gaps appear in coverage. Six: redundancy emerges and confusion follows. Five is complete without being exhaustive. The Pentagon appears again. The Law of Fives manifests in hand-to-hand combat patterns. Coincidence? There are no coincidences. Only patterns you haven't recognized yet. The universe speaks in pentagons and you're just not listening.</em></p>
+    
+      
+      <p><strong>Looking for expert implementation support?</strong> <a href="why-hack23.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+    </section>
+
+    <section id="web-architecture">
+      <h2 class="panel-caption">React + PixiJS Architecture: Browser-Based Combat Simulation</h2>
+      
+      <p><strong>Web-based combat simulation = democratized access = revolution.</strong> Documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram runs entirely in-browser using React 19 + PixiJS 8 + TypeScript. Zero backend. Zero installation. Zero platform lock-in. <strong>Zero artificial scarcity of access.</strong> Open browser → train martial arts. This isn't compromise for convenience—it's <em>intentional accessibility architecture as political statement.</em> Fighting games historically gatekept behind expensive console hardware, region-locked cartridges, and local multiplayer requiring physical proximity. <strong>We chose universal access instead. Accessibility as rebellion against gaming industry extraction.</strong> Your browser is your dojang. Your internet connection is your sensei. Geography and income don't gatekeep Korean martial arts education anymore.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>1. 🖥️ React UI Layer</h3>
+          <p>Korean-themed components with responsive design. Screens: CombatScreen, TrainingScreen, IntroScreen. Common UI: CombatHUD, TrigramWheel, ProgressTracker. Base modules: BaseButton, KoreanText, BackgroundGrid. Functional components with TypeScript throughout.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>2. ⚙️ Game Logic Engine</h3>
+          <p>TypeScript modules under src/systems/: CombatSystem orchestrates input → trigram → vital-point → damage → feedback. TrigramSystem manages stances via StanceManager, TransitionCalculator, TrigramCalculator, KoreanCulture. VitalPointSystem handles 70 vital points through KoreanAnatomy, HitDetection, DamageCalculator.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>3. 🎨 PixiJS Renderer</h3>
+          <p>PixiJS 8 with WebGL for 60fps 2D graphics. Manages character sprites (PlayerVisuals, EnemyVisuals), dojang background, particle systems (HitEffectsLayer), UI overlays. @pixi/react integration wraps PixiJS Application in React components.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>4. 🎵 Audio Engine</h3>
+          <p>Howler.js + Web Audio API for Korean traditional music blended with cyberpunk SFX. AudioManager loads bone cracks, impacts, ambient sounds. VariantSelector randomizes hit sounds. DefaultSoundGenerator provides fallback audio.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>5. 🗄️ State Management</h3>
+          <p>Zustand + React Context for in-browser state. useGameState, useUIState, useEnemyState track health, stamina, Ki, stance, combat metrics. No persistence—refresh resets progress. Client-side only, no backend dependencies.</p>
+        </div>
+      </div>
+      
+      <p><strong>Full architecture documentation:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> includes C4 Container diagrams, Component views, Combat Flow sequences. TypeScript provides type safety across all layers. Vite handles build optimization with tree-shaking.</p>
+      
+      <p class="hidden-wisdom"><em>Web applications without layer enforcement become unmaintainable. React for UI, PixiJS for rendering, TypeScript for logic—clear separation enables confident refactoring without breaking systems.</em></p>
+    </section>
+
+    <section id="synchronicities">
+      <h2 class="panel-caption">Synchronicities: The Numbers Appearing</h2>
+      
+      <p><strong>I don't believe in coincidences.</strong> I believe in patterns revealing themselves:</p>
+      
+      <ul>
+        <li><strong>70 vital points = 7 × 5 × 2.</strong> As documented in game-design.md, the game implements 70 traditional Korean martial arts pressure points (kyusho). Head (10 points), Neck (8 points), Torso (20 points), Arms (16 points), Legs (16 points). Mathematical pattern emerges from anatomical reality.</li>
+        <li><strong>Eight trigram stances.</strong> ☰ Geon (Heaven), ☱ Tae (Lake), ☲ Li (Fire), ☳ Jin (Thunder), ☴ Son (Wind), ☵ Gam (Water), ☶ Gan (Mountain), ☷ Gon (Earth). Traditional I Ching philosophy integrated into combat mechanics via stance system documented in COMBAT_ARCHITECTURE.md.</li>
+        <li><strong>60-second round timer.</strong> As specified in game-design.md section 2.7, each round lasts exactly 60 seconds. Forces tactical decisions under time pressure. Winner determined by KO or higher health at timeout.</li>
+        <li><strong>CombatStats tracking six core metrics.</strong> Health (❤️), Pain (😖), Balance (⚖️), Consciousness (🧠), BloodLoss (🩸), Stamina (🔋). Each stat interacts creating realistic combat feedback documented in game-design.md section 2.2.</li>
+        <li><strong>10×10 octagonal grid arena.</strong> Discrete positioning system with 0.3m cells. Octagon inscribed in square creates playable zone. Out-of-bounds cells trigger skid animation. Grid-based tactical combat per game-design.md section 2.1.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>When game mechanics naturally align with numerological patterns, question emerges: did we impose structure, or did structure reveal itself through practice? Answer: both. Recognition, not invention.</em></p>
+    </section>
+
+    <section id="cultural-preservation">
+      <h2 class="panel-caption">Cultural Preservation Through Digital Accuracy</h2>
+      
+      <p><strong>Not just entertainment.</strong> Educational tool preserving Korean martial arts techniques digitally through authentic representation:</p>
+      
+      <ol>
+        <li><strong>Authentic Technique Documentation:</strong> Combat system based on traditional Korean martial arts principles documented in COMBAT_ARCHITECTURE.md. Realistic vital point targeting, stance-based combat, authentic trigram philosophy integration.</li>
+        
+        <li><strong>Historical Context:</strong> Game design document provides comprehensive background on Korean martial arts traditions. Technical breakdowns of each archetype's fighting philosophy. Cultural significance explained alongside mechanics.</li>
+        
+        <li><strong>Language Respect:</strong> Korean terminology preserved throughout. Hangul script for fighter names: 무사 (Musa), 암살자 (Amsalja), 해커 (Hacker), 정보요원 (Jeongbo Yowon), 조직폭력배 (Jojik Pokryeokbae). English translations as supporting context, not replacement.</li>
+        
+        <li><strong>Open Source Education:</strong> Complete game architecture documented in public repositories. ARCHITECTURE.md, COMBAT_ARCHITECTURE.md, game-design.md available at github.com/Hack23/blacktrigram. Students can examine implementation of traditional techniques in modern gaming context.</li>
+        
+        <li><strong>Transparent Development:</strong> Technical decisions documented with cultural respect. No exploitation of Korean martial arts imagery. Educational value through accurate representation and accessible documentation.</li>
+      </ol>
+      
+      <p><strong>Not commercial exploitation.</strong> Open-source cultural preservation. Revenue (if any) supporting Korean martial arts schools. Respect encoded in architecture.</p>
+      
+      <p class="hidden-wisdom"><em>Digital preservation that disrespects source culture fails its mission. We consult, we compensate, we credit. Technology serving culture, not extracting from it.</em></p>
+    </section>
+
+    <section id="future-vision">
+      <h2 class="panel-caption">Future Architecture: Five-Year Evolution</h2>
+      
+      <p><strong>Roadmap:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a>. Five major enhancements:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Year 1: Online Multiplayer</h3>
+          <p>Netcode for rollback. Lag compensation. Ranked matchmaking. 5-region servers (Asia, Europe, NA, SA, Oceania).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 2: Training Mode Enhancement</h3>
+          <p>Frame data display. Hitbox visualization. Combo tutorials. AI sparring. Practice against 5 difficulty levels.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Year 3: Mobile Port</h3>
+          <p>iOS + Android versions. Touch controls. Performance optimization. 5 control schemes (virtual joystick, swipe, tap, tilt, external controller).</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Year 4: VR Support</h3>
+          <p>First-person martial arts. Motion controller tracking. Physical movement mapped to in-game techniques. 5 VR platforms (Quest, PSVR, Index, Vive, WMR).</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Year 5: AI Coach</h3>
+          <p>Machine learning analyzing player performance. Personalized training recommendations. Weakness identification. Improvement tracking across 5 skill categories.</p>
+        </div>
+      </div>
+      
+      <p><strong>Investment timeline:</strong> 15% development budget annually. Fibonacci-adjacent growth. Sustainable evolution without feature bloat.</p>
+    </section>
+
+    <section id="technical-stack">
+      <h2 class="panel-caption">Technical Stack: Modern Web Meets Unity</h2>
+      
+      <p><strong>Hybrid architecture:</strong> Unity for game engine, React+TypeScript for UI/menus. Best of both worlds.</p>
+      
+      <ul>
+        <li><strong>Unity 2022 LTS:</strong> Game engine, physics, rendering. C# for core systems.</li>
+        <li><strong>React + TypeScript:</strong> Menu system, settings, character select. Web UI embedded in Unity.</li>
+        <li><strong>WebGL Build:</strong> Browser-playable version. No install required. Accessibility through web.</li>
+        <li><strong>GitHub Actions CI/CD:</strong> Automated builds. 5 platforms: Windows, macOS, Linux, WebGL, Android (future).</li>
+        <li><strong>Asset Pipeline:</strong> Blender → FBX → Unity. Texture compression. LOD generation. 5-stage optimization.</li>
+      </ul>
+      
+      <p><strong>Evidence:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram">OpenSSF Scorecard 7.0/10</a>. CII Best Practices badge. SLSA Level 3 attestations. Game development with software engineering rigor.</p>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Architectural Wisdom: Five Lessons from Game Development</h2>
+      
+      <ol>
+        <li><strong>Five fighter archetypes = minimum viable diversity.</strong> Fewer feels limited. More feels redundant. Five balances variety with learnability.</li>
+        
+        <li><strong>Layer separation crucial in Unity.</strong> Without discipline, everything couples to everything. Our five layers enforce separation of concerns.</li>
+        
+        <li><strong>Cultural authenticity requires consultation.</strong> Can't fake Korean martial arts. Consulted masters. Compensated advisors. Resulted in respectful, accurate representation.</li>
+        
+        <li><strong>Open source game development = transparency.</strong> Code, assets, design docs—all public. Community contributions improving quality. Collaboration over secrecy.</li>
+        
+        <li><strong>Sacred numbers appear in gameplay naturally.</strong> 5-hit combos, 70 vital points, 5-frame increments—patterns emerging from playtesting, not imposed by design.</li>
+      </ol>
+      
+      <p class="hidden-wisdom"><em>Game architecture frozen in initial design becomes obsolete as gameplay evolves. Architecture with documented evolution enables confident iteration—players see trajectory, not just snapshot.</em></p>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Explore the Sacred Combat Geometry</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/blacktrigram">Source Repository</a> - Code, assets, design docs</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">Architecture Documentation</a> - C4 models, combat system design</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">Combat System Deep Dive</a> - Hit detection, damage calculation, AI</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/game-design.md">Game Design Document</a> - Fighter balance, move lists, combo system</li>
+        <li><a href="https://github.com/Hack23/blacktrigram/blob/master/FUTURE_ARCHITECTURE.md">Future Roadmap</a> - Five-year evolution plan</li>
+        <li><a href="https://blacktrigram.com">Live Demo</a> - Play in browser (WebGL build)</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Play the game. Read the code. Study the patterns. Five fighter archetypes, 70 vital points, sacred geometry in combat simulation—patterns visible when you know where to look.</p>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Combat choreography revealing mathematical elegance. Five fighters, infinite possibilities."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Continue the Journey</h2>
+      <p><strong>Next:</strong> <a href="blog-trigram-combat.html">Black Trigram Combat System</a> - Deep dive into hit detection and physics</p>
+      <p><strong>Related:</strong> <a href="black-trigram-docs.html">Complete Documentation</a> - All architecture diagrams and game design specs</p>
+      <p><strong>Back to:</strong> <a href="blog_he.html">Security Blog</a> - All discordian posts</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog_he.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_he.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
