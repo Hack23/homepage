@@ -4,10 +4,21 @@
 
 **Language:** Swedish (sv)  
 **Target Market:** Sweden  
-**Total Files:** 74  
 **Last Updated:** December 2025
 
-## 📊 Overall Status
+### 📄 File Coverage (High-Level Summary)
+
+| Metric | Count | Percentage |
+|--------|-------|------------|
+| **English Base Files** | 96 | 100% |
+| **Swedish Files Exist** | 74 | 77.1% |
+| **Missing Files** | **22** | **22.9%** |
+
+**Missing Files:** 22 files not yet created (1 core page + 21 Discordian ISMS policies)
+- **High Priority:** `projects.html` (core navigation page)
+- **Medium Priority:** 21 Discordian ISMS policy files (discordian-asset-mgmt, discordian-cloud-security, etc.)
+
+## 📊 Overall Status (Existing Files)
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
