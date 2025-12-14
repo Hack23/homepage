@@ -22,6 +22,8 @@
 - **⚠️ Partially Translated:** 12 files (20.3%) - Some English remains
 - **❌ English Content:** 33 files (55.9%) - Needs translation
 
+- **📄 File Coverage:** 59/96 files exist (43 files not yet created)
+
 ### Infrastructure Status
 - ✅ HTML structure with `lang="he"` attribute
 - ✅ Complete hreflang tags for all supported languages
@@ -240,6 +242,48 @@ All 59 Hebrew files have complete technical infrastructure:
 - **AI translation + review:** 1-2 months (€1,170-€1,950, lower quality)
 - **Current progress:** 23.7% complete, 76.3% remaining
 
+
+
+
+## ⚠️ Missing Translation Files
+
+**File Coverage:** 59/96 files exist (61.5% coverage)  
+**Missing:** 43 files have not been created yet
+
+These English pages exist but have no corresponding `_he.html` translation file:
+
+### Discordian ISMS Policies (38 missing)
+1. `discordian-access-control_he.html` (from `discordian-access-control`)
+2. `discordian-ai-policy_he.html` (from `discordian-ai-policy`)
+3. `discordian-asset-mgmt_he.html` (from `discordian-asset-mgmt`)
+4. `discordian-backup-recovery_he.html` (from `discordian-backup-recovery`)
+5. `discordian-business-continuity_he.html` (from `discordian-business-continuity`)
+6. `discordian-business-value_he.html` (from `discordian-business-value`)
+7. `discordian-change-mgmt_he.html` (from `discordian-change-mgmt`)
+8. `discordian-classification_he.html` (from `discordian-classification`)
+9. `discordian-cloud-security_he.html` (from `discordian-cloud-security`)
+10. `discordian-compliance-frameworks_he.html` (from `discordian-compliance-frameworks`)
+11. `discordian-compliance_he.html` (from `discordian-compliance`)
+12. `discordian-cra-conformity_he.html` (from `discordian-cra-conformity`)
+13. `discordian-cra_he.html` (from `discordian-cra`)
+14. `discordian-crypto_he.html` (from `discordian-crypto`)
+15. `discordian-data-classification_he.html` (from `discordian-data-classification`)
+
+*...and 23 more Discordian policy files*
+
+### Other Pages (5 missing)
+1. `breadcrumb-example_he.html` (from `breadcrumb-example`)
+2. `cia-triad-faq_he.html` (from `cia-triad-faq`)
+3. `projects_he.html` (from `projects`)
+4. `swedish-election-2026_he.html` (from `swedish-election-2026`)
+5. `why-hack23_he.html` (from `why-hack23`)
+
+### Priority for File Creation
+1. **High:** Core pages (projects.html if missing)
+2. **Medium:** Commonly used ISMS policies (cloud-security, vuln-mgmt, etc.)
+3. **Lower:** Specialized Discordian policies and additional blog posts
+
+**Note:** Files must be created first (with proper infrastructure) before they can be translated.
 
 ## 📋 Detailed File Status
 

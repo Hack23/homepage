@@ -22,6 +22,8 @@
 - **⚠️ Partially Translated:** 3 files (6.0%) - Some English remains
 - **❌ English Content:** 43 files (86.0%) - Needs translation
 
+- **📄 File Coverage:** 50/96 files exist (46 files not yet created)
+
 ### Infrastructure Status
 - ✅ HTML structure with `lang="de"` attribute
 - ✅ Complete hreflang tags for all supported languages
@@ -131,6 +133,55 @@ All pages include comprehensive hreflang tags covering all supported languages.
 - **AI translation + review:** 1-2 months (€1,334-€2,225, lower quality)
 - **Current progress:** 8.0% complete, 92.0% remaining
 
+
+
+
+## ⚠️ Missing Translation Files
+
+**File Coverage:** 50/96 files exist (52.1% coverage)  
+**Missing:** 46 files have not been created yet
+
+These English pages exist but have no corresponding `_de.html` translation file:
+
+### Discordian ISMS Policies (38 missing)
+1. `discordian-acceptable-use_de.html` (from `discordian-acceptable-use`)
+2. `discordian-access-control_de.html` (from `discordian-access-control`)
+3. `discordian-ai-policy_de.html` (from `discordian-ai-policy`)
+4. `discordian-asset-mgmt_de.html` (from `discordian-asset-mgmt`)
+5. `discordian-backup-recovery_de.html` (from `discordian-backup-recovery`)
+6. `discordian-business-continuity_de.html` (from `discordian-business-continuity`)
+7. `discordian-business-value_de.html` (from `discordian-business-value`)
+8. `discordian-change-mgmt_de.html` (from `discordian-change-mgmt`)
+9. `discordian-classification_de.html` (from `discordian-classification`)
+10. `discordian-cloud-security_de.html` (from `discordian-cloud-security`)
+11. `discordian-cra-conformity_de.html` (from `discordian-cra-conformity`)
+12. `discordian-cra_de.html` (from `discordian-cra`)
+13. `discordian-crypto_de.html` (from `discordian-crypto`)
+14. `discordian-cybersecurity_de.html` (from `discordian-cybersecurity`)
+15. `discordian-data-classification_de.html` (from `discordian-data-classification`)
+
+*...and 23 more Discordian policy files*
+
+### Blog Posts (3 missing)
+1. `blog-automated-convergence_de.html` (from `blog-automated-convergence`)
+2. `blog-information-hoarding_de.html` (from `blog-information-hoarding`)
+3. `blog-public-isms-benefits_de.html` (from `blog-public-isms-benefits`)
+
+### ISO 27001 Resources (2 missing)
+1. `iso-27001-certification-costs-sweden_de.html` (from `iso-27001-certification-costs-sweden`)
+2. `iso-27001-implementation-sweden_de.html` (from `iso-27001-implementation-sweden`)
+
+### Other Pages (3 missing)
+1. `breadcrumb-example_de.html` (from `breadcrumb-example`)
+2. `projects_de.html` (from `projects`)
+3. `swedish-election-2026_de.html` (from `swedish-election-2026`)
+
+### Priority for File Creation
+1. **High:** Core pages (projects.html if missing)
+2. **Medium:** Commonly used ISMS policies (cloud-security, vuln-mgmt, etc.)
+3. **Lower:** Specialized Discordian policies and additional blog posts
+
+**Note:** Files must be created first (with proper infrastructure) before they can be translated.
 
 ## 📋 Detailed File Status
 

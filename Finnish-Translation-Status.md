@@ -22,6 +22,8 @@
 - **⚠️ Partially Translated:** 25 files (37.9%) - Some English remains
 - **❌ English Content:** 28 files (42.4%) - Needs translation
 
+- **📄 File Coverage:** 66/96 files exist (30 files not yet created)
+
 ### Infrastructure Status
 - ✅ HTML structure with `lang="fi"` attribute
 - ✅ Complete hreflang tags for all supported languages
@@ -131,6 +133,50 @@ All pages include comprehensive hreflang tags covering all supported languages.
 - **AI translation + review:** 1-2 months (€1,214-€2,025, lower quality)
 - **Current progress:** 19.7% complete, 80.3% remaining
 
+
+
+
+## ⚠️ Missing Translation Files
+
+**File Coverage:** 66/96 files exist (68.8% coverage)  
+**Missing:** 30 files have not been created yet
+
+These English pages exist but have no corresponding `_fi.html` translation file:
+
+### Discordian ISMS Policies (25 missing)
+1. `discordian-ai-policy_fi.html` (from `discordian-ai-policy`)
+2. `discordian-asset-mgmt_fi.html` (from `discordian-asset-mgmt`)
+3. `discordian-backup-recovery_fi.html` (from `discordian-backup-recovery`)
+4. `discordian-business-continuity_fi.html` (from `discordian-business-continuity`)
+5. `discordian-business-value_fi.html` (from `discordian-business-value`)
+6. `discordian-change-mgmt_fi.html` (from `discordian-change-mgmt`)
+7. `discordian-cloud-security_fi.html` (from `discordian-cloud-security`)
+8. `discordian-cra-conformity_fi.html` (from `discordian-cra-conformity`)
+9. `discordian-cra_fi.html` (from `discordian-cra`)
+10. `discordian-disaster-recovery_fi.html` (from `discordian-disaster-recovery`)
+11. `discordian-email-security_fi.html` (from `discordian-email-security`)
+12. `discordian-incident-response_fi.html` (from `discordian-incident-response`)
+13. `discordian-llm-security_fi.html` (from `discordian-llm-security`)
+14. `discordian-mobile-device_fi.html` (from `discordian-mobile-device`)
+15. `discordian-monitoring-logging_fi.html` (from `discordian-monitoring-logging`)
+
+*...and 10 more Discordian policy files*
+
+### ISO 27001 Resources (3 missing)
+1. `iso-27001-certification-costs-sweden_fi.html` (from `iso-27001-certification-costs-sweden`)
+2. `iso-27001-implementation-mistakes_fi.html` (from `iso-27001-implementation-mistakes`)
+3. `iso-27001-implementation-sweden_fi.html` (from `iso-27001-implementation-sweden`)
+
+### Other Pages (2 missing)
+1. `breadcrumb-example_fi.html` (from `breadcrumb-example`)
+2. `projects_fi.html` (from `projects`)
+
+### Priority for File Creation
+1. **High:** Core pages (projects.html if missing)
+2. **Medium:** Commonly used ISMS policies (cloud-security, vuln-mgmt, etc.)
+3. **Lower:** Specialized Discordian policies and additional blog posts
+
+**Note:** Files must be created first (with proper infrastructure) before they can be translated.
 
 ## 📋 Detailed File Status
 

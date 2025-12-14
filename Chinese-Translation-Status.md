@@ -22,6 +22,8 @@
 - **⚠️ Partially Translated:** 7 files (13.7%) - Some English remains
 - **❌ English Content:** 37 files (72.5%) - Needs translation
 
+- **📄 File Coverage:** 51/96 files exist (45 files not yet created)
+
 ### Infrastructure Status
 - ✅ HTML structure with `lang="zh"` attribute
 - ✅ Complete hreflang tags for all supported languages
@@ -131,6 +133,46 @@ All pages include comprehensive hreflang tags covering all supported languages.
 - **AI translation + review:** 1-2 months (€1,214-€2,025, lower quality)
 - **Current progress:** 13.7% complete, 86.3% remaining
 
+
+
+
+## ⚠️ Missing Translation Files
+
+**File Coverage:** 51/96 files exist (53.1% coverage)  
+**Missing:** 45 files have not been created yet
+
+These English pages exist but have no corresponding `_zh.html` translation file:
+
+### Discordian ISMS Policies (42 missing)
+1. `discordian-acceptable-use_zh.html` (from `discordian-acceptable-use`)
+2. `discordian-access-control_zh.html` (from `discordian-access-control`)
+3. `discordian-ai-policy_zh.html` (from `discordian-ai-policy`)
+4. `discordian-asset-mgmt_zh.html` (from `discordian-asset-mgmt`)
+5. `discordian-backup-recovery_zh.html` (from `discordian-backup-recovery`)
+6. `discordian-business-continuity_zh.html` (from `discordian-business-continuity`)
+7. `discordian-business-value_zh.html` (from `discordian-business-value`)
+8. `discordian-change-mgmt_zh.html` (from `discordian-change-mgmt`)
+9. `discordian-classification_zh.html` (from `discordian-classification`)
+10. `discordian-cloud-security_zh.html` (from `discordian-cloud-security`)
+11. `discordian-compliance-frameworks_zh.html` (from `discordian-compliance-frameworks`)
+12. `discordian-compliance_zh.html` (from `discordian-compliance`)
+13. `discordian-cra-conformity_zh.html` (from `discordian-cra-conformity`)
+14. `discordian-cra_zh.html` (from `discordian-cra`)
+15. `discordian-crypto_zh.html` (from `discordian-crypto`)
+
+*...and 27 more Discordian policy files*
+
+### Other Pages (3 missing)
+1. `breadcrumb-example_zh.html` (from `breadcrumb-example`)
+2. `projects_zh.html` (from `projects`)
+3. `swedish-election-2026_zh.html` (from `swedish-election-2026`)
+
+### Priority for File Creation
+1. **High:** Core pages (projects.html if missing)
+2. **Medium:** Commonly used ISMS policies (cloud-security, vuln-mgmt, etc.)
+3. **Lower:** Specialized Discordian policies and additional blog posts
+
+**Note:** Files must be created first (with proper infrastructure) before they can be translated.
 
 ## 📋 Detailed File Status
 
