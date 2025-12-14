@@ -4,21 +4,28 @@
 
 **Language:** German (de)  
 **Target Markets:** Germany, Austria, Switzerland  
-**Total Files:** 50  
-**Last Updated:** December 2025
+**Total Files:** 55  
+**Last Updated:** December 14, 2025
 
 ### 📄 File Coverage (High-Level Summary)
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **German Files Exist** | 50 | 52.1% |
-| **Missing Files** | **46** | **47.9%** |
+| **German Files Exist** | 55 | 57.3% |
+| **Missing Files** | **41** | **42.7%** |
 
-**Missing Files:** 46 files not yet created (1 core page + 45 others)
+**Missing Files:** 41 files not yet created (1 core page + 40 others)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
+- **Medium Priority:** 15+ additional Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
+
+**Recently Added (Dec 2025):** 5 core ISMS policy files with `-policy` suffix:
+- ✅ `discordian-access-control-policy_de.html`
+- ✅ `discordian-bc-dr-policy_de.html`
+- ✅ `discordian-info-asset-mgmt-policy_de.html`
+- ✅ `discordian-incident-response-policy_de.html`
+- ✅ `discordian-risk-mgmt-policy_de.html`
 
 ⚠️ **IMPORTANT:** Existing files have complete technical infrastructure (HTML, hreflang, SEO) but 82% still need content translation.
 
