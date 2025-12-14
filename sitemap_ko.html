@@ -1,342 +1,139 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>Site Map | Hack23 AB - Complete Site Navigation</title>
+	<title>사이트맵 | Hack23 AB - 완전한 사이트 탐색</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Complete site structure and navigation map for Hack23 cybersecurity consulting services. Browse all pages, projects, blog posts, and security policies.">
-	<meta name="keywords" content="sitemap, site navigation, Hack23, cybersecurity, ISMS, security consulting, open source security, compliance frameworks, ISO 27001, security architecture, cloud security, DevSecOps">
-	<meta name="author" content="James Pether Sörling">
-	<meta name="robots" content="index, follow">
-	
-	<!-- Open Graph metadata -->
-	<meta property="og:title" content="Site Map | Hack23 AB - Complete Site Navigation">
-	<meta property="og:description" content="Navigate Hack23's complete cybersecurity ecosystem: services, open-source projects, 65+ blog posts, and 40+ public ISMS policies. Your roadmap to transparent security consulting.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://hack23.com/sitemap_ko.html">
-	<meta property="og:image" content="https://hack23.com/cia-icon-140.webp">
-	<meta property="og:site_name" content="Hack23 AB">
-	<meta property="og:locale" content="en_US">
-	
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Site Map | Hack23 AB - Complete Site Navigation">
-	<meta name="twitter:description" content="Navigate Hack23's complete cybersecurity ecosystem: services, open-source projects, 65+ blog posts, and 40+ public ISMS policies.">
-	<meta name="twitter:image" content="https://hack23.com/cia-icon-140.webp">
-	<meta name="twitter:site" content="@hack23ab">
-	<meta name="twitter:creator" content="@jamessorling">
-	
+	<meta name="description" content="hack23.com의 모든 페이지와 콘텐츠에 대한 완전한 개요">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="canonical" href="https://hack23.com/sitemap_ko.html">
-	<!-- Schema.org structured data -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@graph": [
-	    {
-	      "@type": "WebSite",
-	      "@id": "https://hack23.com/#website",
-	      "name": "Hack23 AB",
-	      "url": "https://hack23.com/",
-	      "description": "Swedish cybersecurity consulting with radical transparency. Public ISMS, open-source projects, and evidence-based security.",
-	      "inLanguage": ["en", "sv", "ko", "nl", "de", "fr", "ja", "zh", "es", "he", "ar"],
-	      "publisher": {
-	        "@type": "Organization",
-	        "@id": "https://hack23.com/#org"
-	      }
-	    },
-	    {
-	      "@type": "Organization",
-	      "@id": "https://hack23.com/#org",
-	      "name": "Hack23 AB",
-	      "url": "https://hack23.com/",
-	      "logo": {
-	        "@type": "ImageObject",
-	        "url": "https://hack23.com/cia-icon-140.webp"
-	      },
-	      "description": "Swedish cybersecurity consulting company with public ISMS and open-source security projects",
-	      "address": {
-	        "@type": "PostalAddress",
-	        "addressCountry": "SE"
-	      },
-	      "founder": {
-	        "@type": "Person",
-	        "@id": "https://hack23.com/#james-pether-sorling",
-	        "name": "James Pether Sörling",
-	        "jobTitle": "CEO / Cybersecurity Expert",
-	        "url": "https://www.linkedin.com/in/jamessorling/",
-	        "sameAs": [
-	          "https://www.linkedin.com/in/jamessorling/",
-	          "https://github.com/Hack23"
-	        ]
-	      },
-	      "sameAs": [
-	        "https://www.linkedin.com/company/hack23/",
-	        "https://github.com/Hack23"
-	      ]
-	    },
-	    {
-	      "@type": "CollectionPage",
-	      "@id": "https://hack23.com/sitemap_ko.html#page",
-	      "name": "Site Map | Hack23 AB",
-	      "url": "https://hack23.com/sitemap_ko.html",
-	      "description": "Complete hierarchical navigation of Hack23's cybersecurity services, open-source projects, blog content, and public ISMS policies",
-	      "isPartOf": { "@id": "https://hack23.com/#website" },
-	      "about": [
-	        {
-	          "@type": "Thing",
-	          "name": "Cybersecurity Services",
-	          "description": "Security architecture, cloud security, DevSecOps, compliance and regulatory consulting"
-	        },
-	        {
-	          "@type": "Thing",
-	          "name": "Open Source Projects",
-	          "description": "Black Trigram, Citizen Intelligence Agency, CIA Compliance Manager"
-	        },
-	        {
-	          "@type": "Thing",
-	          "name": "Security Blog",
-	          "description": "65+ blog posts on cybersecurity, ISMS policies, architecture, and Discordian security philosophy"
-	        },
-	        {
-	          "@type": "Thing",
-	          "name": "Public ISMS",
-	          "description": "40+ security policies covering ISO 27001, risk management, compliance frameworks, and operational security"
-	        }
-	      ],
-	      "breadcrumb": {
-	        "@type": "BreadcrumbList",
-	        "@id": "https://hack23.com/sitemap_ko.html#breadcrumb",
-	        "itemListElement": [
-	          {
-	            "@type": "ListItem",
-	            "position": 1,
-	            "name": "Home",
-	            "item": "https://hack23.com/"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 2,
-	            "name": "Site Map",
-	            "item": "https://hack23.com/sitemap_ko.html"
-	          }
-	        ]
-	      },
-	      "mainEntity": {
-	        "@type": "ItemList",
-	        "name": "Site Sections",
-	        "numberOfItems": 8,
-	        "itemListElement": [
-	          {
-	            "@type": "ListItem",
-	            "position": 1,
-	            "name": "Home & Company",
-	            "description": "Company information, mission, and CIA Triad fundamentals"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 2,
-	            "name": "Services",
-	            "description": "Cybersecurity consulting services including security architecture, cloud security, and compliance"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 3,
-	            "name": "Industry-Specific Services",
-	            "description": "Specialized cybersecurity for Betting & Gaming, Cannabis, and Investment & FinTech sectors"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 4,
-	            "name": "ISO 27001 Implementation Guides",
-	            "description": "Comprehensive guides for ISO 27001 implementation, certification, and compliance in Sweden"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 5,
-	            "name": "Projects",
-	            "description": "Open-source security projects: Black Trigram, Citizen Intelligence Agency, CIA Compliance Manager"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 6,
-	            "name": "Blog & Insights",
-	            "description": "65+ blog posts on cybersecurity, ISMS policies, architecture patterns, and industry-specific security"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 7,
-	            "name": "ISMS & Security Policies",
-	            "description": "40+ public security policies covering ISO 27001, compliance frameworks, and operational security"
-	          },
-	          {
-	            "@type": "ListItem",
-	            "position": 8,
-	            "name": "Languages",
-	            "description": "Multilingual content in 14 languages: English, Swedish, Korean, Dutch, German, French, Japanese, Chinese, Spanish, Hebrew, Arabic, Danish, Finnish, and Norwegian"
-	          }
-	        ]
-	      }
-	    }
-	  ]
-	}
-	</script>
-
-	<!-- Hreflang tags for international SEO -->	<link rel="alternate" hreflang="ar" href="https://hack23.com/sitemap_ar.html">
-	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/sitemap_ar.html">
-	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/sitemap_ar.html">
-	<link rel="alternate" hreflang="da" href="https://hack23.com/sitemap_da.html">
-	<link rel="alternate" hreflang="de" href="https://hack23.com/sitemap_de.html">
-	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/sitemap_de.html">
-	<link rel="alternate" hreflang="ko" href="https://hack23.com/sitemap_ko.html">
-	<link rel="alternate" hreflang="es" href="https://hack23.com/sitemap_es.html">
-	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/sitemap_es.html">
-	<link rel="alternate" hreflang="fi" href="https://hack23.com/sitemap_fi.html">
-	<link rel="alternate" hreflang="fr" href="https://hack23.com/sitemap_fr.html">
-	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/sitemap_fr.html">
-	<link rel="alternate" hreflang="he" href="https://hack23.com/sitemap_he.html">
-	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/sitemap_he.html">
-	<link rel="alternate" hreflang="ja" href="https://hack23.com/sitemap_ja.html">
-	<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/sitemap_ja.html">
-	<link rel="alternate" hreflang="ko" href="https://hack23.com/sitemap_ko.html">
-	<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/sitemap_ko.html">
-	<link rel="alternate" hreflang="nl" href="https://hack23.com/sitemap_nl.html">
-	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/sitemap_nl.html">
-	<link rel="alternate" hreflang="no" href="https://hack23.com/sitemap_no.html">
-	<link rel="alternate" hreflang="nb" href="https://hack23.com/sitemap_no.html">
-	<link rel="alternate" hreflang="sv" href="https://hack23.com/sitemap_sv.html">
-	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/sitemap_sv.html">
-	<link rel="alternate" hreflang="zh" href="https://hack23.com/sitemap_zh.html">
-	<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/sitemap_zh.html">
-	<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/sitemap_zh.html">
-	<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/sitemap_zh.html">
-	<link rel="alternate" hreflang="x-default" href="https://hack23.com/sitemap_ko.html">
+	<meta property="og:locale" content="ko_KR">
 </head>
 <body>
 	<header>
-		<h1>🗺️ Site Map</h1>
-		<p class="hero-subtitle">Complete overview of all pages and content on hack23.com</p>
+		<h1>🗺️ 사이트맵</h1>
+		<p class="hero-subtitle">hack23.com의 모든 페이지와 콘텐츠에 대한 완전한 개요</p>
 	</header>
 
 	<nav aria-label="Breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index_ko.html">Home</a></li>
-			<li class="breadcrumb-item" aria-current="page">Site Map</li>
+			<li class="breadcrumb-item"><a href="index_ko.html">홈</a></li>
+			<li class="breadcrumb-item" aria-current="page">사이트맵</li>
 		</ol>
 	</nav>
 
 	<main>
 		<section>
-			<p>This page provides a complete hierarchical view of our website's structure. Use it to discover content, understand our offerings, and navigate directly to any page.</p>
+			<p>이 페이지는 웹사이트 구조의 완전한 계층적 보기를 제공합니다. 콘텐츠를 발견하고, 제공 사항을 이해하고, 모든 페이지로 직접 이동하는 데 사용하십시오.</p>
 		</section>
 
-				<div class="sitemap-grid">
+			<div class="sitemap-grid">
 			<section class="sitemap-section">
-				<h2>🏠 Home & Company</h2>
-				<p class="section-description">Company information, mission, values, and CIA Triad fundamentals</p>
+				<h2>🏠 홈 & 회사</h2>
+				<p class="section-description">회사 정보, 미션, 가치 및 CIA 트라이어드 기본사항</p>
 				<ul>
 					<li>
-						<a href="index_ko.html">Cybersecurity Consulting Sweden</a>
-						<span class="link-description">Premium cybersecurity consulting in Sweden. Nation</span>
+						<a href="index_ko.html">스웨덴 사이버보안 컨설팅</a>
+						<span class="link-description">스웨덴 프리미엄 사이버보안 컨설팅. 국가 유일 완전 공개 ISMS. ISO 27001, GDPR/NIS2, AWS 보안 전문가. CISSP/CISM 인증. 예테보리 기반. 투명한 보안 솔루션으로 혁신을 가속화합니다.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>🔑 Services</h2>
-				<p class="section-description">Professional cybersecurity consulting services including security architecture, cloud security, and compliance</p>
+				<h2>🔑 서비스</h2>
+				<p class="section-description">보안 아키텍처, 클라우드 보안 및 규정 준수를 포함한 전문 사이버 보안 컨설팅 서비스</p>
 				<ul>
 					<li>
-						<a href="accessibility-statement_ko.html">Accessibility Statement</a>
-						<span class="link-description">Accessibility statement for Hack23.com. We are committed to WCAG 2.1 Level AA compliance, ensuring our website is accessible to people with disabilities.</span>
+						<a href="accessibility-statement_ko.html">접근성 성명서</a>
+						<span class="link-description">Hack23.com의 접근성 성명서. 우리는 WCAG 2.1 AA 준수를 약속하며 장애인이 웹사이트에 액세스할 수 있도록 보장합니다.</span>
 					</li>
 					<li>
-						<a href="cia-triad-faq_ko.html">CIA Triad FAQ</a>
-						<span class="link-description">CIA Triad fundamentals: Confidentiality, Integrity, Availability explained. Professional NIST, ISO 27001, GDPR compliance guidance.</span>
+						<a href="cia-triad-faq_ko.html">CIA 3요소 FAQ</a>
+						<span class="link-description">CIA 3요소 기초: 기밀성, 무결성, 가용성 설명. NIST, ISO 27001, GDPR 규정 준수 전문 가이던스.</span>
 					</li>
 					<li>
-						<a href="security-assessment-checklist_ko.html">Free Security Assessment Checklist</a>
-						<span class="link-description">Download our comprehensive 95-point security assessment checklist covering CIA triad, cloud security, DevSecOps, and compliance frameworks (ISO 27001, NIST, CIS Controls). Free PDF guide from Hack23</span>
+						<a href="security-assessment-checklist_ko.html">무료 보안 평가 체크리스트</a>
+						<span class="link-description">CIA 삼요소, 클라우드 보안, DevSecOps 및 규정 준수 프레임워크(ISO 27001, NIST, CIS Controls)를 다루는 포괄적인 95항목 보안 평가 체크리스트를 다운로드하십시오. Hack23의 CISSP 인증 전문가가 제공하는 무료 PDF 가이드.</span>
 					</li>
 					<li>
-						<a href="services_ko.html">Cybersecurity Services</a>
-						<span class="link-description">Professional cybersecurity consulting services: Security Architecture, Cloud Security & DevSecOps, Secure Development, Compliance & Governance, Open Source Security. Remote or in-person in Gothenburg.</span>
+						<a href="services_ko.html">사이버보안 서비스</a>
+						<span class="link-description">전문 사이버보안 컨설팅 서비스: 보안 아키텍처, 클라우드 보안 & DevSecOps, 안전한 개발, 규정 준수 & 거버넌스, 오픈 소스 보안. 원격 또는 예테보리에서 현장 제공.</span>
 					</li>
 					<li>
-						<a href="why-hack23_ko.html">Why Choose Hack23?</a>
-						<span class="link-description">Why organizations choose Hack23 AB: Sweden</span>
+						<a href="why-hack23_ko.html">왜 Hack23을 선택하는가?</a>
+						<span class="link-description">조직이 Hack23 AB를 선택하는 이유: 스웨덴 유일의 공개 ISMS 컨설팅, 현역 전문가 지식, 오픈소스 옹호, 개발자 친화적 접근 방식.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>🏭 Industry-Specific Services</h2>
-				<p class="section-description">Specialized cybersecurity for Betting & Gaming, Cannabis, and Investment & FinTech sectors</p>
+				<h2>🏭 산업별 서비스</h2>
+				<p class="section-description">Betting & Gaming, Cannabis 및 Investment & FinTech 부문을 위한 전문 사이버 보안</p>
 				<ul>
 					<li>
-						<a href="industries-betting-gaming_ko.html">Cybersecurity for Betting & Gaming Operators</a>
-						<span class="link-description">Specialized cybersecurity for online betting operators: ISO 27001, MGA/UKGC/SGA compliance, DDoS protection, fraud prevention, and payment security.</span>
+						<a href="industries-betting-gaming_ko.html">베팅 및 게이밍 사업자를 위한 사이버 보안</a>
+						<span class="link-description">온라인 베팅 사업자를 위한 전문 사이버 보안: ISO 27001, 규제 준수, DDoS 방어, 사기 방지, 결제 보안.</span>
 					</li>
 					<li>
-						<a href="industries-cannabis-security_ko.html">Cannabis Industry Cybersecurity Services</a>
-						<span class="link-description">Enterprise cybersecurity services for the cannabis industry. Security architecture, data protection, payment security, and compliance frameworks for dispensaries, cultivators, and cannabis tech platforms.</span>
+						<a href="industries-cannabis-security_ko.html">대마초 산업 사이버 보안 서비스</a>
+						<span class="link-description">대마초 산업을 위한 기업 사이버 보안: 보안 아키텍처, 데이터 보호, 규정 준수 프레임워크.</span>
 					</li>
 					<li>
-						<a href="industries-investment-fintech_ko.html">Cybersecurity for Investment Firms & FinTech</a>
-						<span class="link-description">Specialized cybersecurity for investment firms and FinTech: SOC 2 Type II, ISO 27001, MiFID II/PSD2 compliance, trading platform security, crypto exchange protection.</span>
+						<a href="industries-investment-fintech_ko.html">투자 회사 및 핀테크 사이버 보안</a>
+						<span class="link-description">투자 회사 및 핀테크를 위한 전문 사이버 보안: SOC 2 Type II, ISO 27001, 규제 준수, 거래 플랫폼 보안.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>📋 ISO 27001 Implementation Guides</h2>
-				<p class="section-description">Comprehensive guides for ISO 27001 implementation, certification, and compliance</p>
+				<h2>📋 ISO 27001 구현 가이드</h2>
+				<p class="section-description">ISO 27001 구현, 인증 및 규정 준수를 위한 포괄적인 가이드</p>
 				<ul>
 					<li>
-						<a href="iso-27001-2022-vs-2013_ko.html">ISO 27001:2022 vs 2013: What Changed?</a>
-						<span class="link-description">Detailed comparison of ISO 27001:2022 vs 2013: 93 controls (down from 114), new cloud security controls, attribute-based structure, and transition guidance for Swedish organizations.</span>
+						<a href="iso-27001-2022-vs-2013_ko.html">ISO 27001:2022 vs 2013: 무엇이 변경되었나?</a>
+						<span class="link-description">ISO 27001:2022 vs 2013 상세 비교: 93개 통제 (114개에서 감소), 새로운 클라우드 보안 통제, 속성 기반 구조 및 한국 기업을 위한 전환 지침.</span>
 					</li>
 					<li>
-						<a href="iso-27001-certification-costs-sweden_ko.html">ISO 27001 Certification Costs in Sweden: Complete Breakdown</a>
-						<span class="link-description">Detailed cost analysis for ISO 27001 certification in Sweden: certification body fees (€8,000-€20,000), consultant rates, internal time investment, and ROI calculation for Swedish SMEs.</span>
+						<a href="iso-27001-certification-costs-sweden_ko.html">한국 ISO 27001 인증 비용: 전체 명세</a>
+						<span class="link-description">한국 ISO 27001 인증 상세 비용 분석: 인증기관 비용(1,500만원~4,000만원), 컨설팅 비용, 내부 시간 투자, 한국 기업을 위한 ROI 계산.</span>
 					</li>
 					<li>
-						<a href="iso-27001-implementation-mistakes_ko.html">5 Mistakes to Avoid During ISO 27001 Implementation</a>
-						<span class="link-description">Learn from real mistakes: over-scoping, documentation complexity, skipping risk assessment, weak executive support, and neglecting post-certification maintenance. Practical guidance for Swedish SMEs.</span>
+						<a href="iso-27001-implementation-mistakes_ko.html">ISO 27001 구현 시 피해야 할 5가지 실수</a>
+						<span class="link-description">실제 실수로부터 배우기: 범위 과대화, 문서 복잡성, 위험 평가 생략, 경영진 지원 부족 및 인증 후 유지보수 무시. 한국 기업을 위한 실용 가이드.</span>
 					</li>
 					<li>
-						<a href="iso-27001-implementation-sweden_ko.html">ISO 27001 Implementation Guide for Swedish Companies</a>
-						<span class="link-description">Complete guide to ISO 27001 implementation in Sweden: 90-day roadmap, cost analysis (€25,000-€50,000), SWEDAC certification bodies, and practical lessons from Hack23</span>
+						<a href="iso-27001-implementation-sweden_ko.html">ISO 27001:2022 구현 가이드（한국 기업）</a>
+						<span class="link-description">한국 기업을 위한 ISO 27001:2022 완벽 구현 가이드: 90일 구현 로드맵, 비용 분석(3,000만원~8,000만원), KISA 등 한국 인증 기관 정보, Hack23의 공개 ISMS 실무 경험.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>🚀 Projects</h2>
-				<p class="section-description">Open-source security projects: Black Trigram, Citizen Intelligence Agency, CIA Compliance Manager</p>
+				<h2>🚀 프로젝트</h2>
+				<p class="section-description">오픈 소스 보안 프로젝트: Black Trigram, Citizen Intelligence Agency, CIA Compliance Manager</p>
 				<ul>
 					<li>
-						<a href="black-trigram-docs_ko.html">Black Trigram Architecture</a>
-						<span class="link-description">Black Trigram game architecture: C4 models, Unity integration, combat system design. Korean martial arts cultural preservation through gaming.</span>
+						<a href="black-trigram-docs_ko.html">흑괘 아키텍처 문서</a>
+						<span class="link-description">흑괘 게임 아키텍처: C4 모델, Unity 통합, 전투 시스템 디자인, 에셋 파이프라인. 한국 무예 전통의 디지털 보존. 오픈소스 문화 게임 개발 프로젝트.</span>
 					</li>
 					<li>
-						<a href="black-trigram-features_ko.html">Black Trigram Features</a>
-						<span class="link-description">Korean martial arts combat simulator: 70 vital points, 5 archetypes, authentic Taekkyeon & Hapkido techniques. Cultural preservation through gaming.</span>
+						<a href="black-trigram-features_ko.html">흑괘 기능</a>
+						<span class="link-description">한국 무예 격투 시뮬레이터: 70개 급소점, 5개 원형, 진정한 택견 & 합기도 기법. 게임을 통한 전통 무예 문화 보존. 교육용 무술 훈련 플랫폼.</span>
 					</li>
 					<li>
-						<a href="black-trigram_ko.html">Black Trigram (흑괘)</a>
-						<span class="link-description">Black Trigram: Precision combat simulator with 70 vital points, 5 archetypes, authentic Korean martial arts. Educational gaming with cultural preservation focus.</span>
+						<a href="black-trigram_ko.html">흑괘 (Black Trigram)</a>
+						<span class="link-description">흑괘: 70개 급소점, 5개 원형, 진정한 한국 무예를 특징으로 하는 정밀 격투 시뮬레이터. 문화 보존에 중점을 둔 교육용 게임.</span>
 					</li>
 					<li>
-						<a href="cia-compliance-manager-docs_ko.html">CIA Compliance Manager Architecture</a>
-						<span class="link-description">CIA Compliance Manager architecture: C4 models, STRIDE analysis, CRA assessment, data models, CI/CD workflows, API documentation.</span>
+						<a href="cia-compliance-manager-docs_ko.html">CIA 컴플라이언스 Manager Architecture</a>
+						<span class="link-description">CIA 컴플라이언스 Manager architecture: C4 models, STRIDE analysis, CRA assessment, data models, CI/CD workflows, API documentation.</span>
 					</li>
 					<li>
-						<a href="cia-compliance-manager-features_ko.html">CIA Compliance Manager Features</a>
-						<span class="link-description">Automated CIA Triad assessments for enterprise security. Compliance automation for NIST, ISO 27001, GDPR, HIPAA frameworks with business impact analysis and ROI calculator. Open source.</span>
+						<a href="cia-compliance-manager-features_ko.html">CIA 컴플라이언스 Manager Features</a>
+						<span class="link-description">Automated CIA Triad assessments for enterprise security. 컴플라이언스 automation for NIST, ISO 27001, GDPR, HIPAA frameworks with business impact analysis and ROI calculator. Open source.</span>
 					</li>
 					<li>
-						<a href="cia-docs_ko.html">CIA Architecture Documentation</a>
+						<a href="cia-docs_ko.html">CIA 아키텍처 문서</a>
 						<span class="link-description">CIA architecture documentation: C4 models, Swedish riksdag/government data design, World Bank integration patterns, OSINT architecture, comprehensive API documentation for developers.</span>
 					</li>
 					<li>
@@ -345,30 +142,30 @@
 					</li>
 					<li>
 						<a href="cia-project_ko.html">Citizen Intelligence Agency</a>
-						<span class="link-description">Citizen Intelligence Agency: Open-source political transparency platform for Sweden. Monitor parliamentary activity, voting records, and political accountability.</span>
+						<span class="link-description">Citizen Intelligence Agency: 오픈소스 투명성 platform for Sweden. Monitor parliamentary activity, voting records, and political accountability.</span>
 					</li>
 					<li>
-						<a href="compliance-manager_ko.html">CIA Compliance Manager</a>
-						<span class="link-description">CIA Compliance Manager: Enterprise security assessment platform for Confidentiality, Integrity, Availability with NIST, ISO 27001, GDPR compliance mapping.</span>
+						<a href="compliance-manager_ko.html">CIA 컴플라이언스 Manager</a>
+						<span class="link-description">CIA 컴플라이언스 Manager: 기업의 기밀성, 무결성, 가용성 평가를 위한 보안 평가 플랫폼으로, NIST, ISO 27001, GDPR 등 다양한 컴플라이언스 기준을 한눈에 매핑합니다.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>🍎 Blog & Insights</h2>
-				<p class="section-description">Blog posts on cybersecurity, ISMS policies, architecture, and industry-specific security</p>
+				<h2>🍎 블로그 & 인사이트</h2>
+				<p class="section-description">사이버 보안, ISMS 정책, 아키텍처 및 산업별 보안에 관한 블로그 게시물</p>
 				<ul>
 					<li>
-						<a href="blog-automated-convergence_ko.html">Automated Convergence AI Agents</a>
+						<a href="blog-automated-convergence_ko.html">자동화된 수렴 AI 에이전트</a>
 						<span class="link-description">AI agents creating self-healing secure software through ISMS-aligned automation. Pentagon of continuous improvement: automated issue creation, policy cross-reference, gradual documentation evolution.</span>
 					</li>
 					<li>
-						<a href="blog-betting-gaming-cybersecurity_ko.html">Complete Cybersecurity Guide for Online Betting Operators</a>
-						<span class="link-description">Comprehensive cybersecurity guide for online betting and gaming operators: ISO 27001 certification, MGA/UKGC/SGA compliance, DDoS mitigation, fraud prevention, payment security, and responsible gambling measures.</span>
+						<a href="blog-betting-gaming-cybersecurity_ko.html">베팅 게이밍 사이버 보안</a>
+						<span class="link-description">베팅 및 게이밍 산업 사이버 보안: 플레이어 보호, 거래 보안, 규제 준수. 책임감 있는 게이밍 보안.</span>
 					</li>
 					<li>
-						<a href="blog-cannabis-cybersecurity-guide_ko.html">Cannabis Industry Cybersecurity Guide</a>
-						<span class="link-description">Complete cybersecurity guide for cannabis dispensaries and cultivators. Learn about POS security, payment fraud prevention, data protection, and enterprise security for cannabis businesses.</span>
+						<a href="blog-cannabis-cybersecurity-guide_ko.html">대마초 사이버 보안 가이드</a>
+						<span class="link-description">대마초 산업 사이버 보안: 규정 준수, 데이터 보호, 추적 시스템 보안. 의료 및 레크리에이션 대마초.</span>
 					</li>
 					<li>
 						<a href="blog-cia-alternative-media-discordian-2026_ko.html">CIA for Alternative Media: Discordian Election 2026</a>
@@ -411,16 +208,16 @@
 						<span class="link-description">DevSecOps sacred geometry: Five CI/CD workflows orchestrating democratic transparency through automated state machine transitions, GitHub Actions security scanning, and continuous deployment patterns.</span>
 					</li>
 					<li>
-						<a href="blog-compliance-architecture_ko.html">Compliance Manager Architecture</a>
-						<span class="link-description">Sacred geometry in compliance architecture: Three CIA principles × four maturity levels = twelve control points. Automated compliance system design with NIST SP 800-53, ISO 27001 control mapping.</span>
+						<a href="blog-compliance-architecture_ko.html">컴플라이언스 아키텍처</a>
+						<span class="link-description">CIA Compliance Manager 아키텍처: ISO 27001 자동화, 증거 수집, 규정 준수 관리. 엔터프라이즈 보안 거버넌스.</span>
 					</li>
 					<li>
-						<a href="blog-compliance-future_ko.html">Compliance Future</a>
-						<span class="link-description">Future compliance architecture: Context Engine, ML recommendations, continuous monitoring. Security adapting to organizational reality.</span>
+						<a href="blog-compliance-future_ko.html">컴플라이언스의 미래</a>
+						<span class="link-description">Compliance Manager 미래 비전: AI 기반 감사, 실시간 규정 준수, 예측 거버넌스. 엔터프라이즈 보안 자동화.</span>
 					</li>
 					<li>
-						<a href="blog-compliance-security_ko.html">Compliance Security</a>
-						<span class="link-description">STRIDE threat modeling for compliance automation: Six threat categories, five defensive layers, thirty risk scenarios analyzed.</span>
+						<a href="blog-compliance-security_ko.html">컴플라이언스 보안</a>
+						<span class="link-description">CIA Compliance Manager 보안: 자동화된 보안 통제, 증거 수집, 감사 추적. ISO 27001 보안 관리.</span>
 					</li>
 					<li>
 						<a href="blog-george-dorn-cia-code_ko.html">CIA Code Analysis</a>
@@ -435,7 +232,7 @@
 						<span class="link-description">Black Trigram codebase analysis: TypeScript/React/PixiJS, 132 source files, browser combat system. Korean martial arts game development.</span>
 					</li>
 					<li>
-						<a href="blog-information-hoarding_ko.html">Information Hoarding</a>
+						<a href="blog-information-hoarding_ko.html">정보 은닉</a>
 						<span class="link-description">Breaking information hoarding: Why radical transparency accelerates innovation. Open source knowledge sharing as competitive advantage. CIA Triad integrity principles in practice.</span>
 					</li>
 					<li>
@@ -447,101 +244,70 @@
 						<span class="link-description">Medical cannabis patient data protection guide. Enterprise data security practices for protecting patient privacy, health information, and prescription data in medical cannabis operations.</span>
 					</li>
 					<li>
-						<a href="blog-public-isms-benefits_ko.html">Why Our ISMS is Public</a>
+						<a href="blog-public-isms-benefits_ko.html">공개 ISMS의 이점</a>
 						<span class="link-description">Why Hack23 publishes its complete ISMS on GitHub: transparency as competitive advantage, trust through verification, and security excellence through public scrutiny. 30+ policies demonstrating radical openness.</span>
 					</li>
 					<li>
-						<a href="blog-trigram-architecture_ko.html">Trigram Architecture</a>
-						<span class="link-description">Black Trigram game architecture: Unity patterns, combat system design, cultural preservation through gaming. C4 architectural models.</span>
+						<a href="blog-trigram-architecture_ko.html">트라이그램 아키텍처</a>
+						<span class="link-description">Black Trigram 게임 아키텍처: Unity 패턴, 전투 시스템 설계, 게임을 통한 문화 보존. C4 아키텍처 모델.</span>
 					</li>
 					<li>
-						<a href="blog-trigram-combat_ko.html">Trigram Combat System</a>
-						<span class="link-description">Combat system design: 70 vital points, 5 archetypes, authentic Korean martial arts techniques. Cultural preservation through gameplay.</span>
+						<a href="blog-trigram-combat_ko.html">트라이그램 전투 시스템</a>
+						<span class="link-description">Black Trigram 전투 시스템: 히트 감지, 데미지 계산, 급소 시스템. 한국 무술의 물리 기반 전투 메커니즘.</span>
 					</li>
 					<li>
-						<a href="blog-trigram-future_ko.html">Trigram Future</a>
-						<span class="link-description">Future vision: VR/AR martial arts training, AI sparring partners, global cultural preservation network. Gaming meets tradition.</span>
+						<a href="blog-trigram-future_ko.html">트라이그램의 미래</a>
+						<span class="link-description">Black Trigram 미래 비전: VR/AR 통합, AI 상대, 멀티플레이어 전투. 한국 무술의 다음 진화.</span>
 					</li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>🛡️ ISMS & Security Policies</h2>
-				<p class="section-description">Public security policies covering ISO 27001, compliance frameworks, and operational security</p>
+				<h2>🛡️ ISMS & 보안 정책</h2>
+				<p class="section-description">ISO 27001, 규정 준수 프레임워크 및 운영 보안을 다루는 공개 보안 정책</p>
 				<ul>
 					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-						<a href="discordian-cybersecurity_ko.html">Cybersecurity Strategy</a>
+						<a href="discordian-cybersecurity_ko.html">사이버 보안 전략</a>
 						<span class="link-description">Discordian Cybersecurity: Nation-state surveillance, crypto backdoors, transparent security. Public ISMS with 23 policies. Think for yourself.</span>
 					</li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
-					<li>
 				</ul>
 			</section>
 
 			<section class="sitemap-section">
-				<h2>📄 Other Pages</h2>
-				<p class="section-description">Additional resources and supplementary content</p>
+				<h2>📄 기타 페이지</h2>
+				<p class="section-description">추가 리소스 및 보충 콘텐츠</p>
 				<ul>
 					<li>
 						<a href="blog_ko.html">Security Blog</a>
 						<span class="link-description">Expert insights on cybersecurity, compliance automation, and open-source security. CISSP/CISM perspectives on modern security challenges.</span>
 					</li>
-					<li>
-					<li>
-					<li>
+				</ul>
+			</section>
+
+			<section class="sitemap-section">
+				<h2>🌐 Languages</h2>
+				<p class="section-description">Available language versions of this site</p>
+				<ul class="language-list">
+					<li><a href="sitemap_ar.html">아랍어</a> | <a href="index_ar.html">홈</a></li>
+					<li><a href="sitemap_zh.html">중국어</a> | <a href="index_zh.html">홈</a></li>
+					<li><a href="sitemap_da.html">덴마크어</a> | <a href="index_da.html">홈</a></li>
+					<li><a href="sitemap_nl.html">네덜란드어</a> | <a href="index_nl.html">홈</a></li>
+					<li><a href="sitemap.html">영어</a> | <a href="index.html">홈</a></li>
+					<li><a href="sitemap_fi.html">핀란드어</a> | <a href="index_fi.html">홈</a></li>
+					<li><a href="sitemap_fr.html">프랑스어</a> | <a href="index_fr.html">홈</a></li>
+					<li><a href="sitemap_de.html">독일어</a> | <a href="index_de.html">홈</a></li>
+					<li><a href="sitemap_he.html">히브리어</a> | <a href="index_he.html">홈</a></li>
+					<li><a href="sitemap_ja.html">일본어</a> | <a href="index_ja.html">홈</a></li>
+					<li><a href="sitemap_ko.html">한국어</a> | <a href="index_ko.html">홈</a></li>
+					<li><a href="sitemap_no.html">노르웨이어</a> | <a href="index_no.html">홈</a></li>
+					<li><a href="sitemap_es.html">스페인어</a> | <a href="index_es.html">홈</a></li>
+					<li><a href="sitemap_sv.html">스웨덴어</a> | <a href="index_sv.html">홈</a></li>
 				</ul>
 			</section>
 
 		</div>
-
-		<section class="sitemap-stats">
-			<h2>📊 Site Statistics</h2>
-			<ul>
-				<li><strong>Total Pages:</strong> 95 HTML pages in English</li>
-				<li><strong>Languages:</strong> 14 languages supported</li>
-			</ul>
-		</section>
 	</main>
+
 	<footer>
 		<p>&copy; 2008-2025 Hack23 AB. All rights reserved.</p>
 	</footer>
