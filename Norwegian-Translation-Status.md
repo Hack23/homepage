@@ -5,7 +5,7 @@
 **Language:** Norwegian (no)  
 **Target Market:** Norway  
 **Total Files:** 66  
-**Last Updated:** December 14, 2025
+**Last Updated:** December 2024
 
 ### 📄 File Coverage (High-Level Summary)
 

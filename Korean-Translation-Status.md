@@ -5,7 +5,7 @@
 **Language:** Korean (ko)  
 **Target Market:** South Korea  
 **Total Files:** 63 (updated December 2025)  
-**Last Updated:** December 14, 2025
+**Last Updated:** December 2024
 
 ### 📄 File Coverage (High-Level Summary)
 
@@ -105,7 +105,7 @@ Created 10 Korean CIA blog post files with complete technical infrastructure (sa
 
 **CRITICAL CULTURAL SENSITIVITY REQUIREMENTS:**
 - Black Trigram posts feature traditional Korean martial arts (택견 Taekkyeon - UNESCO Intangible Cultural Heritage)
-- 70 급소 (kyusho) vital points system requires accurate cultural representation
+- 70 급소 (kyusho / vital points) system requires accurate cultural representation
 - Fighter archetypes (무사 Musa, 암살자 Amsalja) must be culturally authentic
 - Balance between gaming entertainment and respectful educational content
 

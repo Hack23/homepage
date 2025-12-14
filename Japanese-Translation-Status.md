@@ -5,7 +5,7 @@
 **Language:** Japanese (ja)  
 **Target Market:** Japan  
 **Total Files:** 63 (updated December 2025)  
-**Last Updated:** December 14, 2025
+**Last Updated:** December 2024
 
 ### 📄 File Coverage (High-Level Summary)
 
