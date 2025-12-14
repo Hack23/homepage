@@ -39,6 +39,34 @@ This guide provides comprehensive instructions for creating and maintaining Chin
 **ISO 27001 Local Standard:** GB/T 22080  
 
 
+### DevSecOps & Technical Terms
+
+| English | Chinese (ZH) |
+|---------|--------------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Repository | 代码库 |
+| Pipeline | 流水线 |
+| Deployment | 部署 |
+| Container | 容器 |
+| Quality Gate | 质量门 |
+| SAST | SAST (静态分析) |
+| DAST | DAST (动态分析) |
+| Code Quality | 代码质量 |
+| Technical Debt | 技术债务 |
+| Security Scanning | 安全扫描 |
+| Vulnerability Detection | 漏洞检测 |
+
+### Threat Modeling
+
+| English | Chinese (ZH) |
+|---------|--------------|
+| STRIDE | STRIDE |
+| Threat Modeling | 威胁建模 |
+| Attack Surface | 攻击面 |
+| Vulnerability | 漏洞 |
+| Exploit | 利用 |
+
 ### Call-to-Action
 
 | English | Chinese |
@@ -46,6 +74,8 @@ This guide provides comprehensive instructions for creating and maintaining Chin
 | Learn More | 了解更多 |
 | Get Started | 开始使用 |
 | Contact Us | 联系我们 |
+| Read More | 阅读更多 |
+| Download | 下载 |
 
 ## 🛠️ HTML Structure
 

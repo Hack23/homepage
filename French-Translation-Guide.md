@@ -34,10 +34,71 @@ This guide provides comprehensive instructions for creating and maintaining Fren
 
 ### Cybersecurity Terms
 
-**ISMS:** Système de management de la sécurité de l'information  
-**CIA Triad:** Triade CIA  
-**ISO 27001**  
-**GDPR:** RGPD
+| English | French (FR) |
+|---------|-----------|
+| ISMS | Système de management de la sécurité de l'information |
+| CIA Triad | Triade CIA |
+| Confidentiality | Confidentialité |
+| Integrity | Intégrité |
+| Availability | Disponibilité |
+| ISO 27001 | ISO 27001 |
+| GDPR | RGPD |
+| NIS2 | Directive NIS2 |
+| Compliance | Conformité |
+| Risk Assessment | Évaluation des risques |
+| Security | Sécurité |
+| Cybersecurity | Cybersécurité |
+| Architecture | Architecture |
+| Framework | Cadre |
+
+### DevSecOps & Technical Terms
+
+| English | French (FR) |
+|---------|-----------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Workflow | Flux de travail |
+| Repository | Dépôt |
+| Deployment | Déploiement |
+| Pipeline | Pipeline |
+
+### Industry-Specific Terms
+
+#### Gaming/Betting
+| English | French (FR) |
+|---------|-----------|
+| Gaming operator | Opérateur de jeu |
+| Online casino | Casino en ligne |
+| Betting | Paris |
+| Gambling license | Licence de jeu |
+| Gaming authority | Autorité des jeux |
+
+#### Cannabis Industry
+| English | French (FR) |
+|---------|-----------|
+| Cannabis | Cannabis |
+| Dispensary | Dispensaire |
+| Cultivation | Culture |
+| Medical cannabis | Cannabis médical |
+| Seed-to-sale | De la graine à la vente |
+
+#### Investment/Finance
+| English | French (FR) |
+|---------|-----------|
+| Investment firm | Société d'investissement |
+| Financial services | Services financiers |
+| Regulatory compliance | Conformité réglementaire |
+| Asset management | Gestion d'actifs |
+
+### French Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | CNIL (Commission Nationale de l'Informatique et des Libertés) |
+| Cybersecurity | ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) |
+| Gaming | ANJ (Autorité Nationale des Jeux) |
+| Finance | AMF (Autorité des Marchés Financiers) |
+| Health | ANSM (Agence Nationale de Sécurité du Médicament) |
 
 ### Call-to-Action
 

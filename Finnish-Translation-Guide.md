@@ -34,10 +34,49 @@ This guide provides comprehensive instructions for creating and maintaining Finn
 
 ### Cybersecurity Terms
 
-**ISMS:** Tietoturvallisuuden hallintajärjestelmä  
-**CIA Triad:** CIA-triadi  
-**ISO 27001**  
+| English | Finnish (FI) |
+|---------|--------------|
+| ISMS | Tietoturvallisuuden hallintajärjestelmä |
+| CIA Triad | CIA-triadi |
+| Confidentiality | Luottamuksellisuus |
+| Integrity | Eheys |
+| Availability | Saatavuus |
+| ISO 27001 | ISO 27001 |
+| GDPR | GDPR (EU:n tietosuoja-asetus) |
+| NIS2 | NIS2-direktiivi |
+| Compliance | Vaatimustenmukaisuus |
+| Risk Assessment | Riskiarviointi |
+| Threat Modeling | Uhkamallintaminen |
+| Security Policy | Tietoturvakäytäntö |
+| Data Protection | Tietosuoja |
+| Access Control | Pääsynhallinta |
+| Incident Response | Tietoturvapoikkeamien hallinta |
+| Business Continuity | Liiketoiminnan jatkuvuus |
+| Vulnerability Management | Haavoittuvuuksien hallinta |
+| Security Awareness | Tietoturvatietoisuus |
 
+### ISMS Policy Areas
+
+| English | Finnish (FI) |
+|---------|--------------|
+| Third Party Management | Kolmannen osapuolen hallinta |
+| Cryptography | Salaus |
+| Cloud Security | Pilviturvallisuus |
+| Network Security | Verkon turvallisuus |
+| Physical Security | Fyysinen turvallisuus |
+| Change Management | Muutoksenhallinta |
+| Asset Management | Omaisuudenhallinta |
+| Backup and Recovery | Varmuuskopiointi ja palautus |
+| Secure Development | Turvallinen kehitys |
+| Remote Access | Etäkäyttö |
+
+### Finnish Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | Tietosuojavaltuutetun toimisto |
+| Cybersecurity | TRAFICOM (Finnish Transport and Communications Agency) |
+| Certification | FINAS (Finnish Accreditation Service) |
 
 ### Call-to-Action
 

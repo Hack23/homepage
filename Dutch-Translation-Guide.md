@@ -34,10 +34,71 @@ This guide provides comprehensive instructions for creating and maintaining Dutc
 
 ### Cybersecurity Terms
 
-**ISMS:** Informatiebeveiligingsmanagementsysteem  
-**CIA Triad:** BIV-classificatie  
-**ISO 27001**  
-**GDPR:** AVG
+| English | Dutch (NL) |
+|---------|-----------|
+| ISMS | Informatiebeveiligingsmanagementsysteem |
+| CIA Triad | BIV-classificatie |
+| Confidentiality | Vertrouwelijkheid |
+| Integrity | Integriteit |
+| Availability | Beschikbaarheid |
+| ISO 27001 | ISO 27001 |
+| GDPR | AVG |
+| NIS2 | NIS2-richtlijn |
+| Compliance | Naleving |
+| Risk Assessment | Risicoanalyse |
+| Security | Beveiliging |
+| Cybersecurity | Cyberbeveiliging |
+| Architecture | Architectuur |
+| Framework | Raamwerk |
+
+### DevSecOps & Technical Terms
+
+| English | Dutch (NL) |
+|---------|-----------|
+| DevSecOps | DevSecOps |
+| CI/CD | CI/CD |
+| Workflow | Workflow |
+| Repository | Repository |
+| Deployment | Implementatie |
+| Pipeline | Pipeline |
+
+### Industry-Specific Terms
+
+#### Gaming/Betting
+| English | Dutch (NL) |
+|---------|-----------|
+| Gaming operator | Speloperator |
+| Online casino | Online casino |
+| Betting | Weddenschappen |
+| Gambling license | Spelvergunning |
+| Gaming authority | Kansspelautoriteit |
+
+#### Cannabis Industry
+| English | Dutch (NL) |
+|---------|-----------|
+| Cannabis | Cannabis |
+| Dispensary | Verkooppunt/Dispensary |
+| Cultivation | Teelt/Kweek |
+| Medical cannabis | Medicinale cannabis |
+| Seed-to-sale | Van zaad tot verkoop |
+
+#### Investment/Finance
+| English | Dutch (NL) |
+|---------|-----------|
+| Investment firm | Beleggingsonderneming |
+| Financial services | Financiële diensten |
+| Regulatory compliance | Naleving van regelgeving |
+| Asset management | Vermogensbeheer |
+
+### Dutch Regulatory Bodies
+
+| Domain | Regulatory Body |
+|--------|-----------------|
+| Data Protection | Autoriteit Persoonsgegevens (AP) |
+| Cybersecurity | NCSC (National Cyber Security Centre) |
+| Gaming | Kansspelautoriteit (KSA) |
+| Finance | Autoriteit Financiële Markten (AFM) |
+| Health | Inspectie Gezondheidszorg en Jeugd (IGJ) |
 
 ### Call-to-Action
 
