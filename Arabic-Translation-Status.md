@@ -165,21 +165,57 @@ All pages include comprehensive hreflang tags for:
 - MENA cultural adaptation: REQUIRES REVIEW
 - Native speaker review: REQUIRED
 
+## 💰 Translation Project Estimates
+
+### Scope of Work
+- **Total words to translate:** ~50,000 words
+- **Current state:** English placeholder content in all 54 files
+- **Infrastructure:** 100% complete (ready for translation)
+
+### Budget Estimates
+- **Professional translation:** €7,000-€9,000
+- **Technical review:** €1,000-€1,500
+- **Quality assurance:** €500-€1,000
+- **Total estimated cost:** €8,500-€11,500
+
+### Timeline Estimates
+- **Professional service:** 2-3 months
+- **AI translation + review:** 1-2 months (€3,000-€5,000, lower quality)
+- **Phased approach:** 4-6 months (prioritize high-value pages first)
+
+### Translation Priorities by Phase
+
+**Phase 1 - High Impact (2-3 weeks, ~10,000 words)**
+- Core pages: index, services, why-hack23
+- Estimated: €1,500-€2,000
+
+**Phase 2 - Products (3-4 weeks, ~15,000 words)**
+- CIA, Compliance Manager, Black Trigram
+- Estimated: €2,500-€3,500
+
+**Phase 3 - Technical Content (4-6 weeks, ~15,000 words)**
+- ISO 27001 resources, ISMS policies
+- Estimated: €2,500-€3,500
+
+**Phase 4 - Content Marketing (4-6 weeks, ~10,000 words)**
+- Blog posts, industry pages
+- Estimated: €2,000-€2,500
+
 ## 🎯 Next Steps
 
 ### For Content Translation
-1. Engage professional Arabic translator with:
+1. **Engage professional Arabic translator with:**
    - Native Arabic (MSA) proficiency
    - Cybersecurity domain expertise
    - Technical writing experience
    - MENA market knowledge
 
-2. Translation priorities:
-   - **High Priority:** Core pages, Products, ISO 27001
-   - **Medium Priority:** Blog posts, ISMS policies
-   - **Lower Priority:** Industry-specific content
+2. **Translation priorities:**
+   - **High Priority:** Core pages (index, services) - User-facing
+   - **Medium Priority:** Products, ISO 27001 - Business value
+   - **Lower Priority:** Blog posts, Industry pages - Marketing
 
-3. Quality assurance:
+3. **Quality assurance:**
    - Technical terminology review
    - Native speaker review for fluency
    - MENA regulatory term validation
