@@ -144,6 +144,63 @@ graph TB
 | 🔒 Security Through Architecture | 🔒 Beveiliging Through Architecture |
 | 🛡️ Security & Quality Standards | 🛡️ Beveiligings- en Kwaliteitsstandaarden |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-triade |
+| Confidentiality | Vertrouwelijkheid |
+| Integrity | Integriteit |
+| Availability | Beschikbaarheid |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Informatiebeveiligingsmanagementsysteem |
+| Security Policy | Beveiligingsbeleid |
+| Risk Management | Risicobeheer |
+| Threat Modeling | Dreigingsmodellering |
+| Risk Register | Risicoregister |
+| Audit | Audit |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Denk zelf |
+| Question Authority | Bevraag autoriteit |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Wet van Vijf |
+| Information Hoarding | Informatie hamsteren |
+| Transparency | Transparantie |
+| Security Theater | Beveiligingstheater |
+| Radical Transparency | Radicale transparantie |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Zero Trust |
+| Defense in Depth | Defense in Depth |
+| Least Privilege | Minimale rechten |
+| Penetration Test | Penetratietest |
+| Attack Surface | Aanvalsoppervlak |
+| Threat Actor | Dreigingsacteur |
+| Security Incident | Beveiligingsincident |
+| Data Breach | Datalek |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

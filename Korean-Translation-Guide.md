@@ -147,6 +147,63 @@ graph TB
 | 🔑 Security Services | 🔑 보안 서비스 |
 | 🛡️ Security & Quality Standards | 🛡️ 보안 및 품질 기준 |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA 3요소 |
+| Confidentiality | 기밀성 |
+| Integrity | 무결성 |
+| Availability | 가용성 |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | 정보보안 관리체계 |
+| Security Policy | 보안 정책 |
+| Risk Management | 위험 관리 |
+| Threat Modeling | 위협 모델링 |
+| Risk Register | 위험 등록부 |
+| Audit | 감사 |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | 스스로 생각하라 |
+| Question Authority | 권위에 의문을 제기하라 |
+| Chapel Perilous | Chapel Perilous |
+| Eris | 에리스 |
+| Law of Fives | 다섯의 법칙 |
+| Information Hoarding | 정보 독점 |
+| Transparency | 투명성 |
+| Security Theater | 보안 연극 |
+| Radical Transparency | 급진적 투명성 |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | 제로 트러스트 |
+| Defense in Depth | 심층 방어 |
+| Least Privilege | 최소 권한 |
+| Penetration Test | 침투 테스트 |
+| Attack Surface | 공격 표면 |
+| Threat Actor | 위협 행위자 |
+| Security Incident | 보안 사고 |
+| Data Breach | 데이터 유출 |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

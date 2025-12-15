@@ -147,6 +147,63 @@ graph TB
 | 🔑 Security Services | 🔑 Sikkerhetstjenester |
 | 🛡️ Security & Quality Standards | 🛡️ Sikkerhets- og Kvalitetsstandarder |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-triaden |
+| Confidentiality | Konfidensialitet |
+| Integrity | Integritet |
+| Availability | Tilgjengelighet |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Informasjonssikkerhetsstyringssystem |
+| Security Policy | Sikkerhetspolicy |
+| Risk Management | Risikostyring |
+| Threat Modeling | Trusselmodellering |
+| Risk Register | Risikoregister |
+| Audit | Revisjon |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Tenk selv |
+| Question Authority | Stille spørsmål ved autoritet |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Femtallsloven |
+| Information Hoarding | Informasjonshamstring |
+| Transparency | Åpenhet |
+| Security Theater | Sikkerhetsteater |
+| Radical Transparency | Radikal åpenhet |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Null tillit |
+| Defense in Depth | Forsvar i dybden |
+| Least Privilege | Minste privilegium |
+| Penetration Test | Penetrasjonstest |
+| Attack Surface | Angrepsfläte |
+| Threat Actor | Trusselsaktør |
+| Security Incident | Sikkerhetshendelse |
+| Data Breach | Datalekkasje |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

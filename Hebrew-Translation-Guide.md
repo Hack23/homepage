@@ -152,6 +152,63 @@ graph TB
 | 🛡️ Financial Services Security Challenges | 🛡️ אתגרי אבטחה בתעשיית המשחקים |
 | 🛡️ Security & Quality Standards | 🛡️ תקני אבטחה ואיכות |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | שילוש CIA |
+| Confidentiality | סודיות |
+| Integrity | שלמות |
+| Availability | זמינות |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | מערכת ניהול אבטחת מידע |
+| Security Policy | מדיניות אבטחה |
+| Risk Management | ניהול סיכונים |
+| Threat Modeling | דוגמת איומים |
+| Risk Register | רישום סיכונים |
+| Audit | ביקורת |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | תחשוב בעצמך |
+| Question Authority | הטל ספק בסמכות |
+| Chapel Perilous | Chapel Perilous |
+| Eris | אריס |
+| Law of Fives | חוק החמש |
+| Information Hoarding | אגירת מידע |
+| Transparency | שקיפות |
+| Security Theater | תיאטרון אבטחה |
+| Radical Transparency | שקיפות רדיקלית |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | אפס אמון |
+| Defense in Depth | הגנה בעומק |
+| Least Privilege | הרשאה מינימלית |
+| Penetration Test | בדיקת חדירה |
+| Attack Surface | משטח תקיפה |
+| Threat Actor | גורם מאיים |
+| Security Incident | אירוע אבטחה |
+| Data Breach | פריצת מידע |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

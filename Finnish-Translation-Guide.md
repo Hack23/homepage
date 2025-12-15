@@ -151,6 +151,63 @@ graph TB
 | 🔑 Security Services | 🔑 Turvallisuuspalvelut |
 | 🛡️ Security & Quality Standards | 🛡️ Turvallisuus- ja Laatustandardit |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-kolmikko |
+| Confidentiality | Luottamuksellisuus |
+| Integrity | Eheys |
+| Availability | Saatavuus |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Tietoturvahallintajärjestelmä |
+| Security Policy | Tietoturvapolitiikka |
+| Risk Management | Riskienhallinta |
+| Threat Modeling | Uhkamallintaminen |
+| Risk Register | Riskirekisteri |
+| Audit | Tarkastus |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Ajattele itse |
+| Question Authority | Kyseenalaista auktoriteetti |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Viisikon laki |
+| Information Hoarding | Tiedon hamstraaminen |
+| Transparency | Läpinäkyvyys |
+| Security Theater | Turvallisuusteatteri |
+| Radical Transparency | Radikaali läpinäkyvyys |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Nollaluottamus |
+| Defense in Depth | Syvyyspuolustus |
+| Least Privilege | Pienimmän oikeuden periaate |
+| Penetration Test | Tunkeutumistesti |
+| Attack Surface | Hyökkäyspinta |
+| Threat Actor | Uhkatekijä |
+| Security Incident | Turvallisuuspoikkeama |
+| Data Breach | Tietomurto |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

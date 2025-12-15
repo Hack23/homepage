@@ -144,6 +144,74 @@ graph TB
 | 🛡️ ISMS & Security Policies | 🔧 Technical |
 | 🛡️ Security & Quality Standards | 🛡️ Sikkerheds- og Kvalitetsstandarder |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-triaden |
+| Confidentiality | Fortrolighed |
+| Integrity | Integritet |
+| Availability | Tilgængelighed |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Informationssikkerhedsstyringssystem |
+| Security Policy | Sikkerhedspolitik |
+| Risk Management | Risikostyring |
+| Threat Modeling | Trusselmodellering |
+| Risk Register | Risikoregister |
+| Audit | Revision |
+| Security Controls | Sikkerhedskontroller |
+| Control Framework | Kontrolramme |
+| Security Assessment | Sikkerhedsvurdering |
+| Security Awareness | Sikkerhedsbevidsthed |
+| Security Training | Sikkerhedstræning |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Tænk selv |
+| Question Authority | Sæt spørgsmålstegn ved autoritet |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Loven om fem |
+| 23 FNORD 5 | 23 FNORD 5 |
+| Information Hoarding | Informationshamstring |
+| Transparency | Gennemsigtighed |
+| Security Theater | Sikkerhedsteater |
+| Radical Transparency | Radikal gennemsigtighed |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Nul tillid |
+| Defense in Depth | Forsvar i dybden |
+| Least Privilege | Mindste privilegium |
+| Separation of Duties | Adskillelse af opgaver |
+| Penetration Test | Penetrationstest |
+| Attack Surface | Angrebsflade |
+| Security Posture | Sikkerhedsstilling |
+| Threat Actor | Trusselaktør |
+| Attack Vector | Angrebsvektor |
+| Security Incident | Sikkerhedshændelse |
+| Data Breach | Datalæk |
+| Security Baseline | Sikkerhedsbaseline |
+| Hardening | Hærdning |
+
 ### 💼 Business & Professional Terms
 
 *Business, consulting, and professional service terms*

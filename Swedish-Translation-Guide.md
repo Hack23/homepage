@@ -159,6 +159,74 @@ graph TB
 | 🔑 Security Services | 🔑 Säkerhetstjänster |
 | 🛡️ Security & Quality Standards | 🛡️ Säkerhets- och Kvalitetsstandarder |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-triaden |
+| Confidentiality | Konfidentialitet |
+| Integrity | Integritet |
+| Availability | Tillgänglighet |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Ledningssystem för informationssäkerhet |
+| Security Policy | Säkerhetspolicy |
+| Risk Management | Riskhantering |
+| Threat Modeling | Hotmodellering |
+| Risk Register | Riskregister |
+| Audit | Revision |
+| Security Controls | Säkerhetskontroller |
+| Control Framework | Kontrollramverk |
+| Security Assessment | Säkerhetsbedömning |
+| Security Awareness | Säkerhetsmedvetenhet |
+| Security Training | Säkerhetsutbildning |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Tänk själv |
+| Question Authority | Ifrågasätt auktoritet |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Femtalens lag |
+| 23 FNORD 5 | 23 FNORD 5 |
+| Information Hoarding | Informationshamstring |
+| Transparency | Transparens |
+| Security Theater | Säkerhetsteater |
+| Radical Transparency | Radikal transparens |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Nolltillit |
+| Defense in Depth | Djupförsvar |
+| Least Privilege | Minsta behörighet |
+| Separation of Duties | Ansvarsfördelning |
+| Penetration Test | Penetrationstest |
+| Attack Surface | Attackyta |
+| Security Posture | Säkerhetsstatus |
+| Threat Actor | Hotaktör |
+| Attack Vector | Attackvektor |
+| Security Incident | Säkerhetsincident |
+| Data Breach | Dataläcka |
+| Security Baseline | Säkerhetsbaslinje |
+| Hardening | Härdning |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

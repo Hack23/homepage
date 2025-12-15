@@ -139,6 +139,63 @@ graph TB
 | 🔒 CI/CD & Security | 🔗 アーキテクチャ & デザイン |
 | 🛡️ Security & Quality Standards | 🛡️ セキュリティと品質基準 |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA三要素 |
+| Confidentiality | 機密性 |
+| Integrity | 完全性 |
+| Availability | 可用性 |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | 情報セキュリティマネジメントシステム |
+| Security Policy | セキュリティポリシー |
+| Risk Management | リスク管理 |
+| Threat Modeling | 脅威モデリング |
+| Risk Register | リスク台帳 |
+| Audit | 監査 |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | 自分で考える |
+| Question Authority | 権威に疑問を持つ |
+| Chapel Perilous | Chapel Perilous |
+| Eris | エリス |
+| Law of Fives | 5の法則 |
+| Information Hoarding | 情報の囲い込み |
+| Transparency | 透明性 |
+| Security Theater | セキュリティシアター |
+| Radical Transparency | 徹底的な透明性 |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | ゼロトラスト |
+| Defense in Depth | 多層防御 |
+| Least Privilege | 最小権限の原則 |
+| Penetration Test | ペネトレーションテスト |
+| Attack Surface | 攻撃対象領域 |
+| Threat Actor | 脅威アクター |
+| Security Incident | セキュリティインシデント |
+| Data Breach | データ侵害 |
+
 ### 💼 Business & Professional Terms
 
 *Business, consulting, and professional service terms*

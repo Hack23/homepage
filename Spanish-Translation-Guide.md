@@ -149,6 +149,63 @@ graph TB
 | 🛡️ Compliance Manager Security: STRIDE Through Five Dimensions | 🛡️ Cumplimiento Manager Seguridad: STRIDE Through Five Dimensions |
 | 🛡️ Security & Quality Standards | 🛡️ Estándares de Seguridad y Calidad |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | Tríada CIA |
+| Confidentiality | Confidencialidad |
+| Integrity | Integridad |
+| Availability | Disponibilidad |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Sistema de Gestión de Seguridad de la Información |
+| Security Policy | Política de seguridad |
+| Risk Management | Gestión de riesgos |
+| Threat Modeling | Modelado de amenazas |
+| Risk Register | Registro de riesgos |
+| Audit | Auditoría |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Piensa por ti mismo |
+| Question Authority | Cuestiona la autoridad |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Ley de los Cinco |
+| Information Hoarding | Acaparamiento de información |
+| Transparency | Transparencia |
+| Security Theater | Teatro de seguridad |
+| Radical Transparency | Transparencia radical |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Confianza Cero |
+| Defense in Depth | Defensa en profundidad |
+| Least Privilege | Mínimo privilegio |
+| Penetration Test | Prueba de penetración |
+| Attack Surface | Superficie de ataque |
+| Threat Actor | Actor de amenaza |
+| Security Incident | Incidente de seguridad |
+| Data Breach | Brecha de datos |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

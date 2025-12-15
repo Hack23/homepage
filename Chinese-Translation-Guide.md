@@ -144,6 +144,63 @@ graph TB
 | 🛡️ Financial Services Security Challenges | Trading Platform Security |
 | 🛡️ Security & Quality Standards | 🛡️ 安全和质量标准 |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA三元组 |
+| Confidentiality | 机密性 |
+| Integrity | 完整性 |
+| Availability | 可用性 |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | 信息安全管理系统 |
+| Security Policy | 安全策略 |
+| Risk Management | 风险管理 |
+| Threat Modeling | 威胁建模 |
+| Risk Register | 风险登记册 |
+| Audit | 审计 |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | 独立思考 |
+| Question Authority | 质疑权威 |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | 五的法则 |
+| Information Hoarding | 信息囤积 |
+| Transparency | 透明度 |
+| Security Theater | 安全剧场 |
+| Radical Transparency | 彻底透明 |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | 零信任 |
+| Defense in Depth | 纵深防御 |
+| Least Privilege | 最小权限 |
+| Penetration Test | 渗透测试 |
+| Attack Surface | 攻击面 |
+| Threat Actor | 威胁行为者 |
+| Security Incident | 安全事件 |
+| Data Breach | 数据泄露 |
+
 ### 💼 Business & Professional Terms
 
 *Business, consulting, and professional service terms*

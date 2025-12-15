@@ -152,6 +152,71 @@ graph TB
 | 🛡️ Compliance Manager Security: STRIDE Through Five Dimensions | 🛡️ Compliance Manager Sicherheit: STRIDE Through Five Dimensions |
 | 🛡️ Security & Quality Standards | 🛡️ Sicherheits- und Qualitätsstandards |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-Triade |
+| Confidentiality | Vertraulichkeit |
+| Integrity | Integrität |
+| Availability | Verfügbarkeit |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Informationssicherheits-Managementsystem |
+| Security Policy | Sicherheitsrichtlinie |
+| Risk Management | Risikomanagement |
+| Threat Modeling | Bedrohungsmodellierung |
+| Risk Register | Risikoregister |
+| Audit | Audit |
+| Security Controls | Sicherheitskontrollen |
+| Control Framework | Kontrollrahmen |
+| Security Assessment | Sicherheitsbewertung |
+| Security Awareness | Sicherheitsbewusstsein |
+| Security Training | Sicherheitsschulung |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Denke selbst |
+| Question Authority | Hinterfrage Autorität |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Gesetz der Fünf |
+| 23 FNORD 5 | 23 FNORD 5 |
+| Information Hoarding | Informationshortung |
+| Transparency | Transparenz |
+| Security Theater | Sicherheitstheater |
+| Radical Transparency | Radikale Transparenz |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Zero Trust |
+| Defense in Depth | Defense in Depth |
+| Least Privilege | Minimale Rechtevergabe |
+| Separation of Duties | Funktionstrennung |
+| Penetration Test | Penetrationstest |
+| Attack Surface | Angriffsfläche |
+| Security Posture | Sicherheitslage |
+| Threat Actor | Bedrohungsakteur |
+| Security Incident | Sicherheitsvorfall |
+| Data Breach | Datenpanne |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*

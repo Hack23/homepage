@@ -142,6 +142,63 @@ graph TB
 | 🔑 Security Services | 🔑 خدمات الأمن |
 | 🛡️ Security & Quality Standards | 🛡️ معايير الأمن والجودة |
 
+
+### 🔐 CIA Triad & Core Principles
+
+*Confidentiality, Integrity, Availability framework*
+
+| English | Translation |
+|---------|-------------|
+| CIA Triad | ثالوث CIA |
+| Confidentiality | السرية |
+| Integrity | النزاهة |
+| Availability | التوافر |
+
+### 🏛️ ISMS & Governance Terminology
+
+*Information Security Management System and governance concepts*
+
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | نظام إدارة أمن المعلومات |
+| Security Policy | سياسة الأمن |
+| Risk Management | إدارة المخاطر |
+| Threat Modeling | نمذجة التهديدات |
+| Risk Register | سجل المخاطر |
+| Audit | تدقيق |
+
+### 🍎 Discordian Philosophy & Terminology
+
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
+
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | فكر بنفسك |
+| Question Authority | اسأل السلطة |
+| Chapel Perilous | Chapel Perilous |
+| Eris | إيريس |
+| Law of Fives | قانون الخمسة |
+| Information Hoarding | اكتناز المعلومات |
+| Transparency | الشفافية |
+| Security Theater | مسرح الأمن |
+| Radical Transparency | الشفافية الجذرية |
+
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | الثقة الصفرية |
+| Defense in Depth | الدفاع في العمق |
+| Least Privilege | الحد الأدنى من الامتيازات |
+| Penetration Test | اختبار الاختراق |
+| Attack Surface | سطح الهجوم |
+| Threat Actor | الجهة الفاعلة التهديدية |
+| Security Incident | حادث أمني |
+| Data Breach | خرق البيانات |
+
 ### 💻 Technical Terms & Development
 
 *Technical and development-related vocabulary*
