@@ -12,109 +12,111 @@ Each language has **two dedicated files**:
 
 ## Supported Languages (13)
 
-### RTL Languages
-| Language | Code | Files | Completion | Guide | Status |
-|----------|------|-------|------------|-------|--------|
-| Arabic | ar | 57/96 | 59.4% | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
-| Hebrew | he | 56/96 | 58.3% | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
+### RTL Languages ←
+| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
+|------|----------|------|-------|------------|---------|-------|--------|
+| 🇸🇦🌙 | Arabic | ar | 57/96 | 59.4% | 40.4% | [Guide 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
+| 🇮🇱✡️ | Hebrew | he | 56/96 | 58.3% | 41.1% | [Guide 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) |
 
-### Asian Languages
-| Language | Code | Files | Completion | Guide | Status |
-|----------|------|-------|------------|-------|--------|
-| Japanese | ja | 53/96 | 55.2% | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
-| Chinese | zh | 53/96 | 55.2% | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
-| Korean | ko | 53/96 | 55.2% | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
+### Asian Languages 🌏
+| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
+|------|----------|------|-------|------------|---------|-------|--------|
+| 🇯🇵🗾 | Japanese | ja | 53/96 | 55.2% | 34.0% | [Guide 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
+| 🇨🇳🐉 | Chinese | zh | 53/96 | 55.2% | 34.0% | [Guide 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
+| 🇰🇷🏯 | Korean | ko | 53/96 | 55.2% | 37.7% | [Guide 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
 
-### Nordic Languages
-| Language | Code | Files | Completion | Guide | Status |
-|----------|------|-------|------------|-------|--------|
-| Danish | da | 67/96 | 69.8% | [Danish-Translation-Guide.md](Danish-Translation-Guide.md) | [Danish-Translation-Status.md](Danish-Translation-Status.md) |
-| Finnish | fi | 67/96 | 69.8% | [Finnish-Translation-Guide.md](Finnish-Translation-Guide.md) | [Finnish-Translation-Status.md](Finnish-Translation-Status.md) |
-| Norwegian | no | 67/96 | 69.8% | [Norwegian-Translation-Guide.md](Norwegian-Translation-Guide.md) | [Norwegian-Translation-Status.md](Norwegian-Translation-Status.md) |
+### Nordic Languages ❄️
+| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
+|------|----------|------|-------|------------|---------|-------|--------|
+| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | 70.1% | [Guide 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
+| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | 71.6% | [Guide 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
+| 🇳🇴⛷️ | Norwegian | no | 67/96 | 69.8% | 73.1% | [Guide 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
 
-### European Languages
-| Language | Code | Files | Completion | Guide | Status |
-|----------|------|-------|------------|-------|--------|
-| Dutch | nl | 59/96 | 61.5% | [Dutch-Translation-Guide.md](Dutch-Translation-Guide.md) | [Dutch-Translation-Status.md](Dutch-Translation-Status.md) |
-| German | de | 61/96 | 63.5% | [German-Translation-Guide.md](German-Translation-Guide.md) | [German-Translation-Status.md](German-Translation-Status.md) |
-| French | fr | 58/96 | 60.4% | [French-Translation-Guide.md](French-Translation-Guide.md) | [French-Translation-Status.md](French-Translation-Status.md) |
-| Spanish | es | 58/96 | 60.4% | [Spanish-Translation-Guide.md](Spanish-Translation-Guide.md) | [Spanish-Translation-Status.md](Spanish-Translation-Status.md) |
+### European Languages 🇪🇺
+| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
+|------|----------|------|-------|------------|---------|-------|--------|
+| 🇳🇱🌷 | Dutch | nl | 59/96 | 61.5% | 39.0% | [Guide 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
+| 🇩🇪🦅 | German | de | 61/96 | 63.5% | 36.1% | [Guide 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
+| 🇫🇷🥐 | French | fr | 58/96 | 60.4% | 36.2% | [Guide 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
+| 🇪🇸🎭 | Spanish | es | 58/96 | 60.4% | 36.2% | [Guide 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
 
-### Base Language
-| Language | Code | Files | Completion | Guide | Status |
-|----------|------|-------|------------|-------|--------|
-| Swedish | sv | 75/96 | 78.1% | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
+### Base Language 👑
+| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
+|------|----------|------|-------|------------|---------|-------|--------|
+| 🇸🇪👑 | Swedish | sv | 75/96 | 78.1% | 77.3% | [Guide 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
 
 **Total:** 784 translation files out of 1,248 possible (96 base × 13 languages) = **62.8% complete**  
 
 ## 📊 Visual Translation Overview
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','primaryTextColor':'#fff','primaryBorderColor':'#2E7D32','lineColor':'#666','secondaryColor':'#2196F3','tertiaryColor':'#FFC107'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','primaryTextColor':'#fff','primaryBorderColor':'#2E7D32','lineColor':'#666','secondaryColor':'#2196F3','tertiaryColor':'#FFC107','fontSize':'16px'}}}%%
 graph TB
-    subgraph "Translation Status Overview - December 2025"
-        A[96 Base English Files] --> B{13 Languages}
-        B --> C[Nordic Group<br/>DA/FI/NO/SV]
-        B --> D[European Group<br/>DE/NL/FR/ES]
-        B --> E[Asian Group<br/>JA/ZH/KO]
-        B --> F[RTL Group<br/>AR/HE]
+    subgraph "🌍 Translation Status Overview - December 2025"
+        A["📚 96 Base English Files"] --> B{"🌐 13 Languages"}
+        B --> C["❄️ Nordic Group<br/>🇩🇰🇫🇮🇳🇴🇸🇪"]
+        B --> D["🇪🇺 European Group<br/>🇩🇪🇳🇱🇫🇷🇪🇸"]
+        B --> E["🌏 Asian Group<br/>🇯🇵🇨🇳🇰🇷"]
+        B --> F["← RTL Group<br/>🇸🇦🇮🇱"]
         
-        C --> C1[Swedish: 82.3%]
-        C --> C2[Nordic 3: 75.0%]
+        C --> C1["🇸🇪👑 Swedish: 78.1%<br/>🏆 Quality: 77.3%"]
+        C --> C2["⚓🦌⛷️ DA/FI/NO: 69.8%<br/>🎯 Quality: 70-73%"]
         
-        D --> D1[German: 63.5%]
-        D --> D2[Others: 60-62%]
+        D --> D1["🇩🇪🦅 German: 63.5%<br/>⚠️  Quality: 36%"]
+        D --> D2["🌷🥐🎭 Others: 60-61%<br/>⚠️  Quality: 36-39%"]
         
-        E --> E1[All: 60.4%]
+        E --> E1["🗾🐉🏯 All: 55%<br/>🚧 Quality: 34-38%"]
         
-        F --> F1[Both: 64.6%]
+        F --> F1["🌙✡️ Both: 59-64%<br/>⚠️  Quality: 40-41%"]
         
-        style A fill:#4CAF50,stroke:#2E7D32,color:#fff
-        style B fill:#2196F3,stroke:#1565C0,color:#fff
-        style C fill:#00BCD4,stroke:#00838F,color:#fff
-        style D fill:#FF9800,stroke:#E65100,color:#fff
-        style E fill:#E91E63,stroke:#AD1457,color:#fff
-        style F fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style C1 fill:#4CAF50,stroke:#2E7D32,color:#fff
-        style C2 fill:#8BC34A,stroke:#558B2F,color:#fff
-        style D1 fill:#FFC107,stroke:#F57C00,color:#000
-        style D2 fill:#FFD54F,stroke:#F9A825,color:#000
-        style E1 fill:#FF5722,stroke:#D84315,color:#fff
-        style F1 fill:#BA68C8,stroke:#7B1FA2,color:#fff
+        style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
+        style B fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:3px
+        style C fill:#00BCD4,stroke:#00838F,color:#fff,stroke-width:2px
+        style D fill:#FF9800,stroke:#E65100,color:#fff,stroke-width:2px
+        style E fill:#E91E63,stroke:#AD1457,color:#fff,stroke-width:2px
+        style F fill:#9C27B0,stroke:#6A1B9A,color:#fff,stroke-width:2px
+        style C1 fill:#2E7D32,stroke:#1B5E20,color:#fff
+        style C2 fill:#43A047,stroke:#2E7D32,color:#fff
+        style D1 fill:#F57C00,stroke:#E65100,color:#fff
+        style D2 fill:#FB8C00,stroke:#F57C00,color:#fff
+        style E1 fill:#D32F2F,stroke:#B71C1C,color:#fff
+        style F1 fill:#7B1FA2,stroke:#4A148C,color:#fff
     end
 ```
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50'}}}%%
-graph LR
-    subgraph "Completion Percentage by Language"
-        SV["🇸🇪 Swedish<br/>82.3%"]
-        DA["🇩🇰 Danish<br/>75.0%"]
-        FI["🇫🇮 Finnish<br/>75.0%"]
-        NO["🇳🇴 Norwegian<br/>75.0%"]
-        AR["🇸🇦 Arabic<br/>64.6%"]
-        HE["🇮🇱 Hebrew<br/>64.6%"]
-        DE["🇩🇪 German<br/>63.5%"]
-        NL["🇳🇱 Dutch<br/>61.5%"]
-        ZH["🇨🇳 Chinese<br/>60.4%"]
-        FR["🇫🇷 French<br/>60.4%"]
-        JA["🇯🇵 Japanese<br/>60.4%"]
-        KO["🇰🇷 Korean<br/>60.4%"]
-        ES["🇪🇸 Spanish<br/>60.4%"]
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','fontSize':'16px'}}}%%
+graph TB
+    subgraph "📊 Completion & Quality by Language"
+        SV["🇸🇪👑 Swedish<br/>78.1% Files | 77.3% Quality<br/>🎯 Excellent"]
+        DA["🇩🇰⚓ Danish<br/>69.8% Files | 70.1% Quality<br/>🎯 Good"]
+        FI["🇫🇮🦌 Finnish<br/>69.8% Files | 71.6% Quality<br/>🎯 Good"]
+        NO["🇳🇴⛷️ Norwegian<br/>69.8% Files | 73.1% Quality<br/>🎯 Good"]
         
-        style SV fill:#1B5E20,stroke:#4CAF50,color:#fff
-        style DA fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style FI fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style NO fill:#2E7D32,stroke:#4CAF50,color:#fff
+        AR["🇸🇦🌙 Arabic<br/>59.4% Files | 40.4% Quality<br/>⚠️  In Progress"]
+        HE["🇮🇱✡️ Hebrew<br/>58.3% Files | 41.1% Quality<br/>⚠️  In Progress"]
+        DE["🇩🇪🦅 German<br/>63.5% Files | 36.1% Quality<br/>⚠️  In Progress"]
+        NL["🇳🇱🌷 Dutch<br/>61.5% Files | 39.0% Quality<br/>⚠️  In Progress"]
+        
+        ZH["🇨🇳🐉 Chinese<br/>55.2% Files | 34.0% Quality<br/>🚧 Active"]
+        FR["🇫🇷🥐 French<br/>60.4% Files | 36.2% Quality<br/>⚠️  In Progress"]
+        JA["🇯🇵🗾 Japanese<br/>55.2% Files | 34.0% Quality<br/>🚧 Active"]
+        KO["🇰🇷🏯 Korean<br/>55.2% Files | 37.7% Quality<br/>🚧 Active"]
+        ES["🇪🇸🎭 Spanish<br/>60.4% Files | 36.2% Quality<br/>⚠️  In Progress"]
+        
+        style SV fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
+        style DA fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
+        style FI fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
+        style NO fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
         style AR fill:#F57C00,stroke:#FF9800,color:#fff
         style HE fill:#F57C00,stroke:#FF9800,color:#fff
         style DE fill:#F57C00,stroke:#FF9800,color:#fff
-        style NL fill:#EF6C00,stroke:#FF9800,color:#fff
-        style ZH fill:#EF6C00,stroke:#FF9800,color:#fff
-        style FR fill:#EF6C00,stroke:#FF9800,color:#fff
-        style JA fill:#EF6C00,stroke:#FF9800,color:#fff
-        style KO fill:#EF6C00,stroke:#FF9800,color:#fff
-        style ES fill:#EF6C00,stroke:#FF9800,color:#fff
+        style NL fill:#F57C00,stroke:#FF9800,color:#fff
+        style ZH fill:#D32F2F,stroke:#F44336,color:#fff
+        style FR fill:#F57C00,stroke:#FF9800,color:#fff
+        style JA fill:#D32F2F,stroke:#F44336,color:#fff
+        style KO fill:#D32F2F,stroke:#F44336,color:#fff
+        style ES fill:#F57C00,stroke:#FF9800,color:#fff
     end
 ```
 

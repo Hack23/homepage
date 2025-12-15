@@ -1,4 +1,4 @@
-# German Translation Guide
+# 🇩🇪 German Translation Guide 🦅
 
 ## Overview
 

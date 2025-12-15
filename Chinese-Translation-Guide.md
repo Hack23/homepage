@@ -1,4 +1,4 @@
-# Chinese Translation Guide
+# 🇨🇳 Chinese Translation Guide 🐉
 
 ## Overview
 

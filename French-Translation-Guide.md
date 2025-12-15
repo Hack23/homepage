@@ -1,4 +1,4 @@
-# French Translation Guide
+# 🇫🇷 French Translation Guide 🥐
 
 ## Overview
 

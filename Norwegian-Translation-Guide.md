@@ -1,4 +1,4 @@
-# Norwegian Translation Guide
+# 🇳🇴 Norwegian Translation Guide ⛷️
 
 ## Overview
 

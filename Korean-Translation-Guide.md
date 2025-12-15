@@ -1,4 +1,4 @@
-# Korean Translation Guide
+# 🇰🇷 Korean Translation Guide 🏯
 
 ## Overview
 

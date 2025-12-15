@@ -1,4 +1,4 @@
-# Swedish Translation Guide
+# 🇸🇪 Swedish Translation Guide 👑
 
 ## Overview
 

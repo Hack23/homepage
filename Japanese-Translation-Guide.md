@@ -1,4 +1,4 @@
-# Japanese Translation Guide
+# 🇯🇵 Japanese Translation Guide 🗾
 
 ## Overview
 

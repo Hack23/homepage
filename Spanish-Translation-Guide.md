@@ -1,4 +1,4 @@
-# Spanish Translation Guide
+# 🇪🇸 Spanish Translation Guide 🎭
 
 ## Overview
 

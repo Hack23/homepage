@@ -1,4 +1,4 @@
-# Hebrew Translation Guide
+# 🇮🇱 Hebrew Translation Guide ✡️
 
 ## Overview
 

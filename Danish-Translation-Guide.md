@@ -1,4 +1,4 @@
-# Danish Translation Guide
+# 🇩🇰 Danish Translation Guide ⚓
 
 ## Overview
 

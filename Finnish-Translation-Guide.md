@@ -1,4 +1,4 @@
-# Finnish Translation Guide
+# 🇫🇮 Finnish Translation Guide 🦌
 
 ## Overview
 
