@@ -12,7 +12,7 @@
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
 | **Swedish Files Exist** | 75 | 78.1% |
-| **Missing Files** | **22** | **22.9%** |
+| **Missing Files** | **21** | **21.9%** |
 
 **Missing Files:** 21 files not yet created (1 core page + 21 Discordian ISMS policies)
 
