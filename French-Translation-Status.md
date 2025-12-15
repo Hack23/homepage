@@ -4,6 +4,8 @@
 
 **Language:** French (fr)  
 **Target Markets:** France, Belgium, Switzerland  
+**Total Files:** 54  
+**Last Updated:** December 14, 2025
 **Total Files:** 52  
 **Last Updated:** December 2025
 
@@ -12,6 +14,10 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **French Files Exist** | 54 | 56.3% |
+| **Missing Files** | **42** | **43.8%** |
+
+**Missing Files:** 42 files not yet created (1 core page + 41 others)
 | **French Files Exist** | 50 | 52.1% |
 | **Missing Files** | **47** | **49.0%** |
 
@@ -22,8 +28,15 @@
 
 **Missing Files:** 44 files not yet created (1 core page + 46 others)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
+- **Medium Priority:** 15+ additional Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
+
+**Recently Added (Dec 2025):** 5 core ISMS policy files:
+- ✅ `discordian-access-control_fr.html`
+- ✅ `discordian-business-continuity_fr.html`
+- ✅ `discordian-asset-mgmt_fr.html`
+- ✅ `discordian-incident-response_fr.html`
+- ✅ `discordian-risk-assessment_fr.html`
 
 ⚠️ **IMPORTANT:** Existing files have complete technical infrastructure (HTML, hreflang, SEO) but 82% still need content translation.
 

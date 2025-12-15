@@ -4,6 +4,8 @@
 
 **Language:** Spanish (es)  
 **Target Markets:** Spain, Latin America  
+**Total Files:** 54  
+**Last Updated:** December 14, 2025
 **Total Files:** 52  
 **Last Updated:** December 2025
 
@@ -12,6 +14,10 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **Spanish Files Exist** | 54 | 56.3% |
+| **Missing Files** | **42** | **43.8%** |
+
+**Missing Files:** 42 files not yet created (1 core page + 41 others)
 | **Spanish Files Exist** | 50 | 52.1% |
 | **Missing Files** | **47** | **49.0%** |
 
@@ -22,8 +28,15 @@
 
 **Missing Files:** 44 files not yet created (1 core page + 46 others)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
+- **Medium Priority:** 15+ additional Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
+
+**Recently Added (Dec 2025):** 5 core ISMS policy files:
+- ✅ `discordian-access-control_es.html`
+- ✅ `discordian-business-continuity_es.html`
+- ✅ `discordian-asset-mgmt_es.html`
+- ✅ `discordian-incident-response_es.html`
+- ✅ `discordian-risk-assessment_es.html`
 
 ⚠️ **IMPORTANT:** Existing files have complete technical infrastructure (HTML, hreflang, SEO) but 78% still need content translation.
 

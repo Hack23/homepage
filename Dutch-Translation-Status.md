@@ -4,6 +4,8 @@
 
 **Language:** Dutch (nl)  
 **Target Markets:** Netherlands, Belgium  
+**Total Files:** 55  
+**Last Updated:** December 14, 2025
 **Total Files:** 53  
 **Last Updated:** December 2025
 
@@ -12,7 +14,10 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Dutch Files Exist** | 53 | 55.2% |
+| **Dutch Files Exist** | 55 | 57.3% |
+| **Missing Files** | **41** | **42.7%** |
+
+**Missing Files:** 41 files not yet created (1 core page + 40 others)
 | **Dutch Files Exist** | 51 | 53.1% |
 | **Missing Files** | **46** | **47.9%** |
 
@@ -23,8 +28,15 @@
 
 **Missing Files:** 43 files not yet created (1 core page + 45 others)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
+- **Medium Priority:** 15+ additional Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
+
+**Recently Added (Dec 2025):** 5 core ISMS policy files:
+- ✅ `discordian-access-control_nl.html`
+- ✅ `discordian-business-continuity_nl.html` 
+- ✅ `discordian-asset-mgmt_nl.html`
+- ✅ `discordian-incident-response_nl.html`
+- ✅ `discordian-risk-assessment_nl.html`
 
 ⚠️ **IMPORTANT:** Existing files have complete technical infrastructure (HTML, hreflang, SEO) but 78% still need content translation.
 

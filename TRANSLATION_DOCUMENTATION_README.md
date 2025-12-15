@@ -35,17 +35,17 @@ Each language has **two dedicated files**:
 ### European Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Dutch | nl | 53 | [Dutch-Translation-Guide.md](Dutch-Translation-Guide.md) | [Dutch-Translation-Status.md](Dutch-Translation-Status.md) |
-| German | de | 53 | [German-Translation-Guide.md](German-Translation-Guide.md) | [German-Translation-Status.md](German-Translation-Status.md) |
-| French | fr | 52 | [French-Translation-Guide.md](French-Translation-Guide.md) | [French-Translation-Status.md](French-Translation-Status.md) |
-| Spanish | es | 52 | [Spanish-Translation-Guide.md](Spanish-Translation-Guide.md) | [Spanish-Translation-Status.md](Spanish-Translation-Status.md) |
+| Dutch | nl | 55 | [Dutch-Translation-Guide.md](Dutch-Translation-Guide.md) | [Dutch-Translation-Status.md](Dutch-Translation-Status.md) |
+| German | de | 55 | [German-Translation-Guide.md](German-Translation-Guide.md) | [German-Translation-Status.md](German-Translation-Status.md) |
+| French | fr | 54 | [French-Translation-Guide.md](French-Translation-Guide.md) | [French-Translation-Status.md](French-Translation-Status.md) |
+| Spanish | es | 54 | [Spanish-Translation-Guide.md](Spanish-Translation-Guide.md) | [Spanish-Translation-Status.md](Spanish-Translation-Status.md) |
 
 ### Base Language
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 756 HTML files across 13 languages
+**Total:** 756 HTML files across 13 languages (+20 European ISMS policy translations, Dec 2025)
 
 ## Blog Translation Status
 
