@@ -4,7 +4,7 @@
 
 **Language:** French (fr)  
 **Target Markets:** France, Belgium, Switzerland  
-**Total Files:** 49  
+**Total Files:** 52  
 **Last Updated:** December 2025
 
 ### 📄 File Coverage (High-Level Summary)
@@ -12,10 +12,10 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **French Files Exist** | 49 | 51.0% |
-| **Missing Files** | **47** | **49.0%** |
+| **FR Files Exist** | 52 | 54.2% |
+| **Missing Files** | **44** | **45.8%** |
 
-**Missing Files:** 47 files not yet created (1 core page + 46 others)
+**Missing Files:** 44 files not yet created (1 core page + 46 others)
 - **High Priority:** `projects.html` (core navigation page)
 - **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
 - **Lower Priority:** Example pages and additional content
@@ -26,14 +26,14 @@
 
 | Category | Total Files | Infrastructure | Translation Status |
 |----------|-------------|----------------|---------------------|
-| **All Files** | **49** | **✅ 100%** | **✅ 12.2% / ⚠️ 6.1% / ❌ 81.6%** |
+| **All Files** | **49** | **✅ 100%** | **✅ 14.3% / ⚠️ 6.1% / ❌ 79.6%** |
 
 **Legend:** ✅ Fully Translated | ⚠️ Partially Translated | ❌ English Content
 
 ### Actual Translation Status (Based on Content Analysis)
-- **✅ Fully Translated:** 6 files (12.2%)
+- **✅ Fully Translated:** 7 files (14.3%) - **+1 completed December 2025**
 - **⚠️ Partially Translated:** 3 files (6.1%) - Some English remains
-- **❌ English Content:** 40 files (81.6%) - Needs translation
+- **❌ English Content:** 39 files (79.6%) - Needs translation
 
 ### Infrastructure Status
 - ✅ HTML structure with `lang="fr"` attribute
@@ -51,6 +51,26 @@ All 52 French HTML files have complete technical infrastructure:
 - ✅ og:locale: `fr_FR`
 - ✅ Navigation and breadcrumb structure
 - ✅ Mobile responsive design
+
+
+### Blog Posts - Recent Additions (December 2025)
+
+Recently completed 1 high-priority blog translation:
+- ✅ `blog-public-isms-benefits_fr.html` - **COMPLETED** - ISMS transparency thought leadership (3,200 words translated)
+
+Pending blog translations:
+- ⚠️ `blog-automated-convergence_fr.html` - Infrastructure complete, needs content translation
+- ⚠️ `blog-information-hoarding_fr.html` - Infrastructure complete, needs content translation
+
+**Completed Translation Details (blog-public-isms-benefits_fr.html):**
+- ✅ Complete French translation (~3,200 words)
+- ✅ Professional business tone for C-suite audience
+- ✅ Discordian voice preserved ("Rien n'est vrai, tout est permis")
+- ✅ French cybersecurity terminology (SMSI, Triade CIA, etc.)
+- ✅ HTML structure validated
+- ✅ Complete hreflang tags (28 languages)
+- ✅ Schema.org BlogPosting with `inLanguage: "fr"`
+- ✅ og:locale properly set
 
 ## 📁 Files by Category
 
@@ -188,10 +208,11 @@ These English pages exist but have no corresponding `_fr.html` translation file:
 
 *...and 23 more Discordian policy files*
 
-### Blog Posts (3 missing)
-1. `blog-automated-convergence_fr.html` (from `blog-automated-convergence`)
-2. `blog-information-hoarding_fr.html` (from `blog-information-hoarding`)
-3. `blog-public-isms-benefits_fr.html` (from `blog-public-isms-benefits`)
+### Blog Posts (2 missing)
+1. `blog-automated-convergence_fr.html` (from `blog-automated-convergence`) - **Infrastructure exists, needs translation**
+2. `blog-information-hoarding_fr.html` (from `blog-information-hoarding`) - **Infrastructure exists, needs translation**
+
+**Note:** `blog-public-isms-benefits_fr.html` is now fully translated (December 2025)
 
 ### ISO 27001 Resources (3 missing)
 1. `iso-27001-certification-costs-sweden_fr.html` (from `iso-27001-certification-costs-sweden`)
@@ -212,13 +233,14 @@ These English pages exist but have no corresponding `_fr.html` translation file:
 
 ## 📋 Detailed File Status
 
-### ✅ Fully Translated Files (6)
+### ✅ Fully Translated Files (7)
 1. accessibility-statement_fr.html
 2. blog-cannabis-cybersecurity-guide_fr.html
-3. cia-triad-faq_fr.html
-4. iso-27001-2022-vs-2013_fr.html
-5. sitemap_fr.html
-6. why-hack23_fr.html
+3. **blog-public-isms-benefits_fr.html** - ⭐ NEW (December 2025)
+4. cia-triad-faq_fr.html
+5. iso-27001-2022-vs-2013_fr.html
+6. sitemap_fr.html
+7. why-hack23_fr.html
 
 ### ⚠️ Partially Translated Files (3)
 *These files have some translated content but still contain English text*
