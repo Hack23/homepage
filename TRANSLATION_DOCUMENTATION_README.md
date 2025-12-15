@@ -13,39 +13,41 @@ Each language has **two dedicated files**:
 ## Supported Languages (13)
 
 ### RTL Languages
-| Language | Code | Files | Guide | Status |
-|----------|------|-------|-------|--------|
-| Arabic | ar | 59 | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
-| Hebrew | he | 64 | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
+| Language | Code | Files | Completion | Guide | Status |
+|----------|------|-------|------------|-------|--------|
+| Arabic | ar | 57/96 | 59.4% | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
+| Hebrew | he | 56/96 | 58.3% | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
 
 ### Asian Languages
-| Language | Code | Files | Guide | Status |
-|----------|------|-------|-------|--------|
-| Japanese | ja | 68 | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
-| Chinese | zh | 68 | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
-| Korean | ko | 68 | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
+| Language | Code | Files | Completion | Guide | Status |
+|----------|------|-------|------------|-------|--------|
+| Japanese | ja | 53/96 | 55.2% | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
+| Chinese | zh | 53/96 | 55.2% | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
+| Korean | ko | 53/96 | 55.2% | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
 
 ### Nordic Languages
-| Language | Code | Files | Guide | Status |
-|----------|------|-------|-------|--------|
-| Danish | da | 71 | [Danish-Translation-Guide.md](Danish-Translation-Guide.md) | [Danish-Translation-Status.md](Danish-Translation-Status.md) |
-| Finnish | fi | 71 | [Finnish-Translation-Guide.md](Finnish-Translation-Guide.md) | [Finnish-Translation-Status.md](Finnish-Translation-Status.md) |
-| Norwegian | no | 71 | [Norwegian-Translation-Guide.md](Norwegian-Translation-Guide.md) | [Norwegian-Translation-Status.md](Norwegian-Translation-Status.md) |
+| Language | Code | Files | Completion | Guide | Status |
+|----------|------|-------|------------|-------|--------|
+| Danish | da | 67/96 | 69.8% | [Danish-Translation-Guide.md](Danish-Translation-Guide.md) | [Danish-Translation-Status.md](Danish-Translation-Status.md) |
+| Finnish | fi | 67/96 | 69.8% | [Finnish-Translation-Guide.md](Finnish-Translation-Guide.md) | [Finnish-Translation-Status.md](Finnish-Translation-Status.md) |
+| Norwegian | no | 67/96 | 69.8% | [Norwegian-Translation-Guide.md](Norwegian-Translation-Guide.md) | [Norwegian-Translation-Status.md](Norwegian-Translation-Status.md) |
 
 ### European Languages
-| Language | Code | Files | Guide | Status |
-|----------|------|-------|-------|--------|
-| Dutch | nl | 55 | [Dutch-Translation-Guide.md](Dutch-Translation-Guide.md) | [Dutch-Translation-Status.md](Dutch-Translation-Status.md) |
-| German | de | 55 | [German-Translation-Guide.md](German-Translation-Guide.md) | [German-Translation-Status.md](German-Translation-Status.md) |
-| French | fr | 54 | [French-Translation-Guide.md](French-Translation-Guide.md) | [French-Translation-Status.md](French-Translation-Status.md) |
-| Spanish | es | 54 | [Spanish-Translation-Guide.md](Spanish-Translation-Guide.md) | [Spanish-Translation-Status.md](Spanish-Translation-Status.md) |
+| Language | Code | Files | Completion | Guide | Status |
+|----------|------|-------|------------|-------|--------|
+| Dutch | nl | 59/96 | 61.5% | [Dutch-Translation-Guide.md](Dutch-Translation-Guide.md) | [Dutch-Translation-Status.md](Dutch-Translation-Status.md) |
+| German | de | 61/96 | 63.5% | [German-Translation-Guide.md](German-Translation-Guide.md) | [German-Translation-Status.md](German-Translation-Status.md) |
+| French | fr | 58/96 | 60.4% | [French-Translation-Guide.md](French-Translation-Guide.md) | [French-Translation-Status.md](French-Translation-Status.md) |
+| Spanish | es | 58/96 | 60.4% | [Spanish-Translation-Guide.md](Spanish-Translation-Guide.md) | [Spanish-Translation-Status.md](Spanish-Translation-Status.md) |
 
 ### Base Language
-| Language | Code | Files | Guide | Status |
-|----------|------|-------|-------|--------|
-| Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
+| Language | Code | Files | Completion | Guide | Status |
+|----------|------|-------|------------|-------|--------|
+| Swedish | sv | 75/96 | 78.1% | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 751 HTML files across 13 languages (Updated December 2025)
+**Total:** 784 translation files out of 1,248 possible (96 base × 13 languages) = **62.8% complete**  
+**Base English Files:** 96  
+**Last Updated:** December 2025
 
 ## Blog Translation Status
 
