@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incident Response | Assume Breach Plan Response | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Assume breach. Plan response. Six-phase IR process: detection, containment, eradication, recovery, lessons learned. Systems will get pwned.">
+<meta name="keywords" content="incident response, IR incident response plan, security incident, data breach response, incident detection, incident containment, incident eradication, incident recovery, post-incident review, SIEM security information event management, incident triage, incident classification, incident handling, incident reporting, incident timeline, forensics investigation, root cause analysis, lessons learned">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Incident Response: When (Not If) Shit Hits the Fan">
+<meta property="og:description" content="Assume breach. Plan response. Think for yourself about incident handling.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-incident-response_de.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="de_DE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-incident-response_de.html">
+<!-- Hreflang tags for language alternatives -->
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-incident-response.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-incident-response_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-incident-response_sv.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-incident-response_da.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-incident-response_fi.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-incident-response_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-incident-response_no.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-incident-response_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-incident-response_nl.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-incident-response_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-incident-response_de.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-incident-response_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-incident-response_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-incident-response_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-incident-response_es.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-incident-response_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-incident-response_ja.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-incident-response_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-incident-response_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-incident-response_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/discordian-incident-response_zh.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-incident-response_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-incident-response_ko.html">
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-incident-response_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-incident-response_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-incident-response_ar.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-incident-response_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-incident-response_he.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-incident-response.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Incident Response: When (Not If) Shit Hits the Fan",
+      "description": "Assume breach. Plan response. Six-phase IR process: detection, containment, eradication, recovery, lessons learned. Systems will get pwned.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-12-14",
+      "dateModified": "2025-12-14",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-incident-response_de.html"
+      },
+      "keywords": "incident response, IR incident response plan, security incident, data breach response, incident detection, incident containment, incident eradication, incident recovery, post-incident review, SIEM security information event management, incident triage, incident classification, incident handling, incident reporting, incident timeline, forensics investigation, root cause analysis, lessons learned",
+      "articleSection": "Information Security",
+      "inLanguage": "de",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-incident-response_de.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://hack23.com/index_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISMS Policy",
+          "item": "https://hack23.com/discordian-incident-response_de.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index_de.html">Startseite</a></li>
+<li><a href="blog_de.html">Blog</a></li>
+<li><a href="services_de.html">Dienstleistungen</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<article>
+<h1>Incident Response | Assume Breach Plan Response | Hack23</h1>
+
+<div class="translation-notice">
+<p><strong>Note:</strong> This page contains English content that requires professional translation. The technical infrastructure (HTML, metadata, SEO) is complete.</p>
+<p>Source: <a href="discordian-incident-response.html">discordian-incident-response.html</a></p>
+</div>
+
+<!-- CONTENT TO BE TRANSLATED -->
+<p>Professional translation of full ISMS policy content required.</p>
+<p>See English source file for complete content: <a href="discordian-incident-response.html">discordian-incident-response.html</a></p>
+
+</article>
+</main>
+
+<footer>
+<p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
+<p><a href="accessibility-statement_de.html">Accessibility Statement</a> | <a href="sitemap_de.html">Sitemap</a></p>
+</footer>
+
+</body>
+</html>

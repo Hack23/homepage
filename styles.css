@@ -1779,6 +1779,19 @@ ul li a {
   transition: color 0.2s ease;
 }
 
+/* Disabled link styling for unavailable translations */
+.disabled-link {
+  color: var(--text-muted);
+  cursor: not-allowed;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.disabled-link:hover {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
 /* Section Styling - Premium with Enhanced Spacing & Visual Grouping */
 section {
   padding: var(--spacing-2xl) var(--spacing-xl);

@@ -43,14 +43,106 @@ This guide provides comprehensive instructions for creating and maintaining Swed
 
 ### Cybersecurity Terms
 
-**ISMS:** Informationssäkerhetsledningssystem  
+**ISMS:** Ledningssystem för informationssäkerhet / Informationssäkerhetsledningssystem  
 **CIA Triad:** CIA-triaden  
-**ISO 27001:** ISO 27001  
+**ISO 27001:** ISO 27001 / SS-EN ISO/IEC 27001 (Swedish standard)  
 **Confidentiality:** Konfidentialitet  
 **Integrity:** Integritet  
 **Availability:** Tillgänglighet  
 **Compliance:** Efterlevnad  
 **Risk Assessment:** Riskbedömning
+
+## 🔐 ISMS Policy Translation Guide
+
+### Core ISMS Terminology
+
+| English | Swedish | Notes |
+|---------|---------|-------|
+| Information Security Management System (ISMS) | Ledningssystem för informationssäkerhet | ISO 27001 |
+| Access Control | Åtkomstkontroll | ISO 27001 A.9 |
+| Business Continuity | Verksamhetskontinuitet | ISO 22301 |
+| Disaster Recovery | Katastrofåterställning | Part of BC/DR |
+| Information Asset Management | Informationstillgångshantering | ISO 27001 A.8 |
+| Risk Management | Riskhantering | ISO 27005 |
+| Risk Assessment | Riskbedömning | Part of risk management |
+| Risk Register | Riskregister | Living document |
+| Statement of Applicability (SoA) | Tillämplighetsbeskrivning | ISO 27001 requirement |
+
+### Access Control Terminology
+
+| English | Swedish | Context |
+|---------|---------|---------|
+| Zero Trust | Zero Trust / Nolltillit | Both acceptable |
+| Multi-Factor Authentication (MFA) | Multifaktorautentisering (MFA) | Keep acronym |
+| Least Privilege | Minsta behörighet | Security principle |
+| Identity-Centric Security | Identitetscentrerad säkerhet | Modern approach |
+| Privileged Access | Privilegierad åtkomst | Admin/root access |
+| Dormant Accounts | Vilande konton | Inactive accounts |
+| Access Matrix | Åtkomstmatris | Permission mapping |
+| Role-Based Access Control (RBAC) | Rollbaserad åtkomstkontroll (RBAC) | Keep acronym |
+| Session Timeout | Sessionstimeout | Technical term |
+| Access Review | Åtkomstgranskning | Periodic review |
+
+### Business Continuity & Disaster Recovery
+
+| English | Swedish | Context |
+|---------|---------|---------|
+| Business Continuity Plan (BCP) | Verksamhetskontinuitetsplan (BCP) | Keep acronym |
+| Recovery Time Objective (RTO) | Återställningstidsmål (RTO) | Technical metric |
+| Recovery Point Objective (RPO) | Återställningspunktsmål (RPO) | Technical metric |
+| Business Impact Analysis (BIA) | Affärspåverkansanalys (BIA) | Assessment method |
+| Crisis Management | Krishantering | Response process |
+| Operational Resilience | Operativ resiliens | System capability |
+| Chaos Engineering | Kaosteknik | Testing methodology |
+| Failover | Failover / Omkoppling | Both acceptable |
+| Five-Phase BCP | Femfas-BCP | Process methodology |
+
+### Asset Management Terminology
+
+| English | Swedish | Context |
+|---------|---------|---------|
+| Configuration Management Database (CMDB) | Konfigurationshanteringsdatabas (CMDB) | Keep acronym |
+| Shadow IT | Shadow IT / Icke-sanktionerad IT | Keep English term |
+| Asset Inventory | Tillgångsinventering | Catalog of assets |
+| Lifecycle Management | Livscykelhantering | Cradle to grave |
+| Asset Classification | Tillgångsklassificering | Security tagging |
+| Asset Owner | Tillgångsägare | Responsible person |
+| Infrastructure Archaeology | Infrastruktur-arkeologi | Discovery process |
+| Automated Discovery | Automatisk upptäckt | Tool-based finding |
+
+### Risk Management Terminology
+
+| English | Swedish | Context |
+|---------|---------|---------|
+| Annual Loss Expectancy (ALE) | Årlig förlustförväntan (ALE) | Quantitative metric |
+| Single Loss Expectancy (SLE) | Enskild händelseförlust (SLE) | Impact calculation |
+| Annual Rate of Occurrence (ARO) | Årlig förekomstfrekvens (ARO) | Probability metric |
+| Threat Actor | Hotaktör | Adversary |
+| Vulnerability | Sårbarhet | Weakness |
+| Risk Appetite | Riskaptit | Organizational tolerance |
+| Risk Tolerance | Risktolerans | Specific threshold |
+| Risk Treatment | Riskbehandling | Response strategy |
+| Monte Carlo Simulation | Monte Carlo-simulering | Statistical method |
+| Confidence Interval | Konfidensintervall | Statistical measure |
+
+### Swedish Regulatory Agencies
+
+| Swedish Name | English | Role |
+|--------------|---------|------|
+| Myndigheten för samhällsskydd och beredskap (MSB) | Swedish Civil Contingencies Agency | Crisis management, BC/DR |
+| Integritetsskyddsmyndigheten (IMY) | Swedish Authority for Privacy Protection | GDPR enforcement |
+| Finansinspektionen (FI) | Swedish Financial Supervisory Authority | Financial sector regulation |
+
+### Regulatory Framework
+
+| Regulation | Swedish Context |
+|------------|-----------------|
+| **GDPR** | GDPR / Dataskyddsförordningen (full Swedish term) |
+| **ISO 27001** | ISO 27001 / SS-EN ISO/IEC 27001 (Swedish standard designation) |
+| **ISO 22301** | ISO 22301 (Business Continuity - international standard) |
+| **ISO 27005** | ISO 27005 (Risk Management - international standard) |
+| **NIS2 Directive** | NIS2-direktivet (Network and Information Security) |
+| **Bokföringslagen** | Swedish Accounting Act (7-year retention requirement) |
 
 ### Swedish Political Terminology
 
@@ -172,7 +264,7 @@ Pre-deployment checklist:
 **Translation Status:** `Swedish-Translation-Status.md`  
 **Blog Translation Guide:** `SWEDISH_BLOG_TRANSLATION_GUIDE.md`  
 **Blog Translation Status:** `SWEDISH_BLOG_TRANSLATION_STATUS.md`  
-**Example Files:** `index_sv.html`, `services_sv.html`
+**Example Files:** `index_sv.html`, `services_sv.html`, `discordian-access-control-policy_sv.html`
 
 ## 🎯 Swedish-Specific Content
 

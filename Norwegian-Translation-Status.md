@@ -26,8 +26,8 @@
 - ⚠️ **Nordic CIA Blog Status:** 10 CIA blog posts assessed - professional translation recommended
 - ✅ **Nordic Industry/ISMS:** Industry pages and security checklist completed
 
-**Missing Files:** 30 files not yet created (1 core page + 29 others)
-- **High Priority:** `projects.html` (core navigation page)
+**Missing Files:** 29 files not yet created (1 core page + 29 others)
+
 - **Medium Priority:** 10 CIA blog posts + 19+ Discordian ISMS policy files
 - **Lower Priority:** Example pages
 
