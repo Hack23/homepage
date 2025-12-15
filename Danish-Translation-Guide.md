@@ -121,21 +121,21 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in da] |
-| Cloud Security | [To be verified in da] |
-| Compliance | [To be verified in da] |
-| Cybersecurity | [To be verified in da] |
+| Access Control | Adgangskontrol |
+| Cloud Security | Cloud Sikkerhed |
+| Compliance | Overholdelse |
+| Cybersecurity | Cybersikkerhed |
 | Decision Flow and Risk Assessments | Beslutningsflow og risikovurderinger |
-| DevSecOps | [To be verified in da] |
-| GDPR | [To be verified in da] |
-| Incident Response | [To be verified in da] |
-| ISO 27001 | [To be verified in da] |
-| Risk Assessment | [To be verified in da] |
-| Security | [To be verified in da] |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | Hændelsesrespons |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Risikovurdering |
+| Security | Sikkerhed |
 | Security Blog | Sikkerhedsblog |
-| Threat | [To be verified in da] |
+| Threat | Trussel |
 | Threat Modeling | Trusselmodellering |
-| Vulnerability | [To be verified in da] |
+| Vulnerability | Sårbarhed |
 | 🎯 The 45 Behavioral Risk Rules: Quantifying Political Dysfunction | 🔬 Analytiska Ramverk: Fem Beteenderiskdimensioner |
 | 🎰 Cybersecurity for Betting & Gaming Operators | 🎰 Cybersikkerhed for Betting & Spiloperatører |
 | 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB Premium Cybersikkerhed Rådgivning \| Sveriges Eneste Offentlige ISMS |

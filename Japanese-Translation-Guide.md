@@ -124,18 +124,18 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in ja] |
-| Cloud Security | [To be verified in ja] |
-| Compliance | [To be verified in ja] |
-| Cybersecurity | [To be verified in ja] |
-| DevSecOps | [To be verified in ja] |
-| GDPR | [To be verified in ja] |
-| Incident Response | [To be verified in ja] |
-| ISO 27001 | [To be verified in ja] |
-| Risk Assessment | [To be verified in ja] |
-| Security | [To be verified in ja] |
-| Threat | [To be verified in ja] |
-| Vulnerability | [To be verified in ja] |
+| Access Control | アクセス制御 |
+| Cloud Security | クラウドセキュリティ |
+| Compliance | コンプライアンス |
+| Cybersecurity | サイバーセキュリティ |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | インシデント対応 |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | リスク評価 |
+| Security | セキュリティ |
+| Threat | 脅威 |
+| Vulnerability | 脆弱性 |
 | 🔒 CI/CD & Security | 🔗 アーキテクチャ & デザイン |
 | 🛡️ Security & Quality Standards | 🛡️ セキュリティと品質基準 |
 

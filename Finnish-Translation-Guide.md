@@ -125,21 +125,21 @@ graph TB
 | English | Translation |
 |---------|-------------|
 | 3. 💼 Business Logic Layer: Compliance Calculations | [TO BE TRANSLATED - Conclusion] |
-| Access Control | [To be verified in fi] |
-| Cloud Security | [To be verified in fi] |
-| Compliance | [To be verified in fi] |
-| Cybersecurity | [To be verified in fi] |
+| Access Control | Pääsynhallinta |
+| Cloud Security | Pilviturvallisuus |
+| Compliance | Vaatimustenmukaisuus |
+| Cybersecurity | Kyberturvallisuus |
 | Decision Flow and Risk Assessments | Decision Flow ja Riskiarvioinnit |
-| DevSecOps | [To be verified in fi] |
+| DevSecOps | DevSecOps |
 | Discordian Cybersecurity | [TO BE TRANSLATED - Main Header] |
-| GDPR | [To be verified in fi] |
-| Incident Response | [To be verified in fi] |
-| ISO 27001 | [To be verified in fi] |
+| GDPR | GDPR |
+| Incident Response | Tapausvasteen |
+| ISO 27001 | ISO 27001 |
 | Privacy by Design: Architecture, Not Checkbox Compliance | Tuotteet |
-| Risk Assessment | [To be verified in fi] |
-| Security | [To be verified in fi] |
-| Threat | [To be verified in fi] |
-| Vulnerability | [To be verified in fi] |
+| Risk Assessment | Riskiarviointi |
+| Security | Turvallisuus |
+| Threat | Uhka |
+| Vulnerability | Haavoittuvuus |
 | ☁️ Cloud Security & DevSecOps | ☁️ Pilviturvallisuus & DevSecOps |
 | ⚖️ Compliance Manager: CIA Triad Meets Sacred Geometry | [TO BE TRANSLATED - Article Title] |
 | 🌐 Open Source Security | 🌐 Avoimen lähdekoodin turvallisuus |

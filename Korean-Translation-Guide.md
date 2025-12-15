@@ -124,18 +124,18 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in ko] |
-| Cloud Security | [To be verified in ko] |
-| Compliance | [To be verified in ko] |
-| Cybersecurity | [To be verified in ko] |
-| DevSecOps | [To be verified in ko] |
-| GDPR | [To be verified in ko] |
-| Incident Response | [To be verified in ko] |
-| ISO 27001 | [To be verified in ko] |
-| Risk Assessment | [To be verified in ko] |
-| Security | [To be verified in ko] |
-| Threat | [To be verified in ko] |
-| Vulnerability | [To be verified in ko] |
+| Access Control | 액세스 제어 |
+| Cloud Security | 클라우드 보안 |
+| Compliance | 규정 준수 |
+| Cybersecurity | 사이버 보안 |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | 사고 대응 |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | 위험 평가 |
+| Security | 보안 |
+| Threat | 위협 |
+| Vulnerability | 취약점 |
 | ☁️ Cloud Security & DevSecOps | ☁️ 클라우드 보안 및 DevSecOps |
 | ⚡ Security Accelerates Innovation | 🛠️ 실용적 솔루션 |
 | 🌐 Open Source Security | 🌐 오픈 소스 보안 |

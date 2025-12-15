@@ -126,18 +126,18 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in zh] |
-| Cloud Security | [To be verified in zh] |
-| Compliance | [To be verified in zh] |
-| Cybersecurity | [To be verified in zh] |
-| DevSecOps | [To be verified in zh] |
-| GDPR | [To be verified in zh] |
-| Incident Response | [To be verified in zh] |
-| ISO 27001 | [To be verified in zh] |
-| Risk Assessment | [To be verified in zh] |
-| Security | [To be verified in zh] |
-| Threat | [To be verified in zh] |
-| Vulnerability | [To be verified in zh] |
+| Access Control | 访问控制 |
+| Cloud Security | 云安全 |
+| Compliance | 合规性 |
+| Cybersecurity | 网络安全 |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | 事件响应 |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | 风险评估 |
+| Security | 安全 |
+| Threat | 威胁 |
+| Vulnerability | 漏洞 |
 | ⚖️ Regulatory Compliance Landscape | Regulatory Compliance |
 | 🎯 The Financial Services Security Landscape | SOC 2 Type II Audit Preparation |
 | 💼 Cybersecurity for Investment Firms & FinTech | 投资公司与金融科技网络安全 |

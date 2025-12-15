@@ -123,18 +123,18 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in ar] |
-| Cloud Security | [To be verified in ar] |
-| Compliance | [To be verified in ar] |
-| Cybersecurity | [To be verified in ar] |
-| DevSecOps | [To be verified in ar] |
-| GDPR | [To be verified in ar] |
-| Incident Response | [To be verified in ar] |
-| ISO 27001 | [To be verified in ar] |
-| Risk Assessment | [To be verified in ar] |
-| Security | [To be verified in ar] |
-| Threat | [To be verified in ar] |
-| Vulnerability | [To be verified in ar] |
+| Access Control | التحكم في الوصول |
+| Cloud Security | أمن السحابة |
+| Compliance | الامتثال |
+| Cybersecurity | الأمن السيبراني |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | الاستجابة للحوادث |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | تقييم المخاطر |
+| Security | الأمن |
+| Threat | التهديد |
+| Vulnerability | الثغرة الأمنية |
 | ☁️ Cloud Security & DevSecOps | ☁️ أمن السحابة و DevSecOps |
 | 🌐 Open Source Security | 🌐 أمن المصادر المفتوحة |
 | 🎓 Security Culture & Training | 🎓 ثقافة الأمن والتدريب |

@@ -128,21 +128,21 @@ graph TB
 |---------|-------------|
 | 4. 💰 Business Value (Security Enables, Not Prevents) | 4. 💰 Affärsvärde (Säkerhet möjliggör, förhindrar inte) |
 | 40+ Integrated ISMS Policies: Comprehensive Security Framework | 40+ integrerade ISMS-policyer: Omfattande säkerhetsramverk |
-| Access Control | [To be verified in sv] |
-| Cloud Security | [To be verified in sv] |
-| Compliance | [To be verified in sv] |
-| Cybersecurity | [To be verified in sv] |
-| DevSecOps | [To be verified in sv] |
+| Access Control | Åtkomstkontroll |
+| Cloud Security | Molnsäkerhet |
+| Compliance | Efterlevnad |
+| Cybersecurity | Cybersäkerhet |
+| DevSecOps | DevSecOps |
 | Discordian Cybersecurity | Discordiansk Cybersäkerhet |
-| GDPR | [To be verified in sv] |
-| Incident Response | [To be verified in sv] |
+| GDPR | GDPR |
+| Incident Response | Incidenthantering |
 | Information Security Policy: CIA+ Framework Foundation | Informationssäkerhetspolicy: CIA+ Ramverkets grund |
-| ISO 27001 | [To be verified in sv] |
-| Risk Assessment | [To be verified in sv] |
-| Security | [To be verified in sv] |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Riskbedömning |
+| Security | Säkerhet |
 | The Five Pillars of CIA+ Framework: Security As Business Enabler | De fem pelarna i CIA+ Ramverket: Säkerhet som affärsmöjliggörare |
-| Threat | [To be verified in sv] |
-| Vulnerability | [To be verified in sv] |
+| Threat | Hot |
+| Vulnerability | Sårbarhet |
 | Why Your Security Policy Is Secret (And Why That's Suspicious) | Varför din säkerhetspolicy är hemlig (och varför det är misstänkt) |
 | ☁️ Cloud Security & DevSecOps | ☁️ Molnsäkerhet & DevSecOps |
 | ⚖️ Regulatory Compliance Landscape | ⚖️ Regelverkslandskap |

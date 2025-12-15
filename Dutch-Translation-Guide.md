@@ -121,19 +121,19 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in nl] |
-| Cloud Security | [To be verified in nl] |
-| Compliance | [To be verified in nl] |
-| Cybersecurity | [To be verified in nl] |
-| DevSecOps | [To be verified in nl] |
-| GDPR | [To be verified in nl] |
-| Incident Response | [To be verified in nl] |
-| ISO 27001 | [To be verified in nl] |
-| Risk Assessment | [To be verified in nl] |
+| Access Control | Toegangscontrole |
+| Cloud Security | Cloud Beveiliging |
+| Compliance | Naleving |
+| Cybersecurity | Cyberbeveiliging |
+| DevSecOps | DevSecOps |
+| GDPR | AVG |
+| Incident Response | Incident Response |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Risicobeoordeling |
 | Risk Assessment Methodology: Probabilistic Divination with Math | Risk Assessment \| Quantitative ALE Methodology \| Hack23 |
-| Security | [To be verified in nl] |
-| Threat | [To be verified in nl] |
-| Vulnerability | [To be verified in nl] |
+| Security | Beveiliging |
+| Threat | Bedreiging |
+| Vulnerability | Kwetsbaarheid |
 | ☁️ Cloud Security & DevSecOps | ☁️ Cloudbeveiliging & DevSecOps |
 | 🌐 Open Source Security | 🌐 Open Source Beveiliging |
 | 🎓 Security Culture & Training | 🎓 Beveiligingscultuur & Training |

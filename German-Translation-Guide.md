@@ -124,21 +124,21 @@ graph TB
 | 1. 🌐 Content Security Policy: Injection Defense | 1. 🌐 Content Sicherheit Policy: Injection Defense |
 | 1. 🏢 Context-Aware Security Framework | 1. 🏢 Context-Aware Sicherheit Framework |
 | 4. 🔒 Data Protection: Browser Storage Security | 4. 🔒 Datenschutz: Browser Storage Sicherheit |
-| Access Control | [To be verified in de] |
+| Access Control | Zugriffskontrolle |
 | Client-Side Security Architecture: Defense Through Simplicity | Client-Side Sicherheit Architektur: Defense Through Simplicity |
-| Cloud Security | [To be verified in de] |
-| Compliance | [To be verified in de] |
-| Cybersecurity | [To be verified in de] |
-| DevSecOps | [To be verified in de] |
-| GDPR | [To be verified in de] |
+| Cloud Security | Cloud-Sicherheit |
+| Compliance | Compliance |
+| Cybersecurity | Cybersicherheit |
+| DevSecOps | DevSecOps |
+| GDPR | DSGVO |
 | How is the CIA Triad implemented in compliance frameworks? | Wie wird die CIA-Triade in Compliance-Frameworks implementiert? |
-| Incident Response | [To be verified in de] |
-| ISO 27001 | [To be verified in de] |
-| Risk Assessment | [To be verified in de] |
-| Security | [To be verified in de] |
+| Incident Response | Incident Response |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Risikobewertung |
+| Security | Sicherheit |
 | The Client-Side Security Advantage | The Client-Side Sicherheit Advantage |
-| Threat | [To be verified in de] |
-| Vulnerability | [To be verified in de] |
+| Threat | Bedrohung |
+| Vulnerability | Verwundbarkeit |
 | What are common threats to each element of the CIA Triad? | Was sind häufige Bedrohungen für jedes Element der CIA-Triade? |
 | What is the CIA Triad in information security? | Was ist die CIA-Triade in der Informationssicherheit? |
 | What tools can help with CIA Triad security assessment? | Welche Tools können bei CIA-Triade Sicherheitsbewertung helfen? |

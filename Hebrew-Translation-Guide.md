@@ -125,19 +125,19 @@ graph TB
 
 | English | Translation |
 |---------|-------------|
-| Access Control | [To be verified in he] |
-| Cloud Security | [To be verified in he] |
-| Compliance | [To be verified in he] |
-| Cybersecurity | [To be verified in he] |
-| DevSecOps | [To be verified in he] |
-| GDPR | [To be verified in he] |
-| Incident Response | [To be verified in he] |
-| ISO 27001 | [To be verified in he] |
-| Risk Assessment | [To be verified in he] |
-| Security | [To be verified in he] |
+| Access Control | בקרת גישה |
+| Cloud Security | אבטחת ענן |
+| Compliance | תאימות |
+| Cybersecurity | אבטחת סייבר |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | תגובה לאירועים |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | הערכת סיכונים |
+| Security | אבטחה |
 | Security Blog | בלוג אבטחת מידע |
-| Threat | [To be verified in he] |
-| Vulnerability | [To be verified in he] |
+| Threat | איום |
+| Vulnerability | פגיעות |
 | ☁️ Cloud Security & DevSecOps | ☁️ אבטחת ענן ו-DevSecOps |
 | ⚖️ Regulatory Compliance Landscape | ⚖️ דרישות ציות רגולטורי |
 | ⚡ Trading Platform Security | 💳 אבטחת תשלומים |

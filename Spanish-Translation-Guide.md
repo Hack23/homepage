@@ -124,22 +124,22 @@ graph TB
 |---------|-------------|
 | 1. 🌐 Content Security Policy: Injection Defense | 1. 🌐 Content Seguridad Policy: Injection Defense |
 | 4. 🔒 Data Protection: Browser Storage Security | 4. 🔒 Protección de Datos: Browser Storage Seguridad |
-| Access Control | [To be verified in es] |
+| Access Control | Control de Acceso |
 | Client-Side Security Architecture: Defense Through Simplicity | Client-Sies Seguridad Arquitectura: Defense Through Simplicity |
-| Cloud Security | [To be verified in es] |
-| Compliance | [To be verified in es] |
-| Cybersecurity | [To be verified in es] |
-| DevSecOps | [To be verified in es] |
+| Cloud Security | Seguridad en la Nube |
+| Compliance | Cumplimiento |
+| Cybersecurity | Ciberseguridad |
+| DevSecOps | DevSecOps |
 | Discordian Cybersecurity | Incident Response \| Assume Breach Plan Response \| Hack23 |
 | Discordian Cybersecurity | Access Control \| Zero Trust Identity Security \| Hack23 |
-| GDPR | [To be verified in es] |
-| Incident Response | [To be verified in es] |
-| ISO 27001 | [To be verified in es] |
-| Risk Assessment | [To be verified in es] |
-| Security | [To be verified in es] |
+| GDPR | RGPD |
+| Incident Response | Respuesta a Incidentes |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Evaluación de Riesgos |
+| Security | Seguridad |
 | The Client-Side Security Advantage | The Client-Sies Seguridad Advantage |
-| Threat | [To be verified in es] |
-| Vulnerability | [To be verified in es] |
+| Threat | Amenaza |
+| Vulnerability | Vulnerabilidad |
 | ☁️ Cloud Security & DevSecOps | ☁️ Seguridad en la Nube & DevSecOps |
 | 🌐 Open Source Security | 🌐 Seguridad de Código Abierto |
 | 🎓 Security Culture & Training | 🎓 Cultura de Seguridad & Formación |

@@ -122,20 +122,20 @@ graph TB
 | 1. 🌐 Content Security Policy: Injection Defense | 1. 🌐 Content Sécurité Policy: Injection Defense |
 | 1. 🏢 Context-Aware Security Framework | 1. 🏢 Context-Aware Sécurité Framework |
 | 4. 🔒 Data Protection: Browser Storage Security | 4. 🔒 Protection des Données: Browser Storage Sécurité |
-| Access Control | [To be verified in fr] |
+| Access Control | Contrôle d'accès |
 | Client-Side Security Architecture: Defense Through Simplicity | Client-Sifr Sécurité Architecture: Defense Through Simplicity |
-| Cloud Security | [To be verified in fr] |
-| Compliance | [To be verified in fr] |
-| Cybersecurity | [To be verified in fr] |
-| DevSecOps | [To be verified in fr] |
-| GDPR | [To be verified in fr] |
-| Incident Response | [To be verified in fr] |
-| ISO 27001 | [To be verified in fr] |
-| Risk Assessment | [To be verified in fr] |
-| Security | [To be verified in fr] |
+| Cloud Security | Sécurité Cloud |
+| Compliance | Conformité |
+| Cybersecurity | Cybersécurité |
+| DevSecOps | DevSecOps |
+| GDPR | RGPD |
+| Incident Response | Réponse aux incidents |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Évaluation des risques |
+| Security | Sécurité |
 | The Client-Side Security Advantage | The Client-Sifr Sécurité Advantage |
-| Threat | [To be verified in fr] |
-| Vulnerability | [To be verified in fr] |
+| Threat | Menace |
+| Vulnerability | Vulnérabilité |
 | ☁️ Cloud Security & DevSecOps | ☁️ Sécurité Cloud & DevSecOps |
 | 🌐 Open Source Security | 🌐 Sécurité Open Source |
 | 🎓 Security Culture & Training | 🎓 Culture de Sécurité & Formation |

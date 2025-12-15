@@ -123,22 +123,22 @@ graph TB
 | English | Translation |
 |---------|-------------|
 | 45 Risk Rules Framework: Systematic Political Monitoring | 5. 🌐 Associated Press — Demokratiserad Underrättelse |
-| Access Control | [To be verified in no] |
+| Access Control | Tilgangskontroll |
 | CIA Intelligence Products for Newsrooms: API, Analytics, Risk Assessments | 🎯 Målkunder: Fem Globala Nyhetsorganisationer |
-| Cloud Security | [To be verified in no] |
-| Compliance | [To be verified in no] |
-| Cybersecurity | [To be verified in no] |
+| Cloud Security | Skysikkerhet |
+| Compliance | Overholdelse |
+| Cybersecurity | Cybersikkerhet |
 | Decision Flow and Risk Assessments | Beslutningsflyt og risikovurderinger |
-| DevSecOps | [To be verified in no] |
+| DevSecOps | DevSecOps |
 | Discordian Cybersecurity | Discordiansk Cybersäkerhet |
-| GDPR | [To be verified in no] |
-| Incident Response | [To be verified in no] |
-| ISO 27001 | [To be verified in no] |
-| Risk Assessment | [To be verified in no] |
-| Security | [To be verified in no] |
+| GDPR | GDPR |
+| Incident Response | Hendelseshåndtering |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Risikovurdering |
+| Security | Sikkerhet |
 | Security Blog | Sikkerhetsblog |
-| Threat | [To be verified in no] |
-| Vulnerability | [To be verified in no] |
+| Threat | Trussel |
+| Vulnerability | Sårbarhet |
 | ⚠️ Risk Assessment Feed: 45 Behavioral Rules | 3. 📡 Reuters — Nyhetsbyrå Distribution |
 | 🎯 Introduction: Why Security Certifications Matter for Investment Firms | [TO BE TRANSLATED - Article Title] |
 | 💼 Cybersecurity for Investment Firms: SOC 2 vs ISO 27001 | [TO BE TRANSLATED - Main Header] |
