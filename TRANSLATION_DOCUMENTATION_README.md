@@ -45,9 +45,7 @@ Each language has **two dedicated files**:
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 746 HTML files across 13 languages
-**Total:** 748 HTML files across 13 languages (736 + 12 new European blog files)
-**Total:** 751 HTML files across 13 languages
+**Total:** 756 HTML files across 13 languages
 
 ## Swedish Blog-Specific Documentation
 
