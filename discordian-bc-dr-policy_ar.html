@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سياسة استمرارية الأعمال والتعافي من الكوارث - Discordian ISMS | Hack23 AB</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="سياسة BC/DR: RTO 4 ساعات، RPO ساعة واحدة، نسخ احتياطية آلية، تمارين نصف سنوية، خطة توثيق عامة">
+<meta name="keywords" content="استمرارية الأعمال، التعافي من الكوارث، RTO، RPO، النسخ الاحتياطي، ISO 22301، ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="سياسة BC/DR: خطط للفشل قبل أن يفشل كل شيء">
+<meta property="og:description" content="RTO 4 ساعات + RPO ساعة + نسخ احتياطية آلية + تمارين نصف سنوية. BC/DR المنهجي للأعمال أحادية الشخص.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-bc-dr-policy_ar.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="ar_EG">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="مدونة أمان Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-bc-dr-policy_ar.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "سياسة استمرارية الأعمال والتعافي من الكوارث",
+      "description": "كيف تطبق Hack23 BC/DR المنهجي مع RTO 4 ساعات، RPO ساعة، نسخ احتياطية آلية وتمارين نصف سنوية",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "الرئيس التنفيذي / خبير الأمن السيبراني",
+        "sameAs": ["https://www.linkedin.com/in/jamessorling/", "https://github.com/Hack23"]
+      },
+      "publisher": {"@type": "Organization", "name": "Hack23 AB", "logo": {"@type": "ImageObject", "url": "cia-icon-140.webp"}},
+      "datePublished": "2025-12-15",
+      "dateModified": "2025-12-15",
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hack23.com/discordian-bc-dr-policy_ar.html"},
+      "keywords": "استمرارية الأعمال، التعافي من الكوارث، RTO، RPO، ISO 22301، ISMS",
+      "articleSection": "أمن المعلومات",
+      "inLanguage": "ar",
+      "image": {"@type": "ImageObject", "url": "https://hack23.com/blog.webp", "width": 1200, "height": 630},
+      "isPartOf": {"@type": "Blog", "@id": "https://hack23.com/blog_ar.html#blog", "name": "مدونة أمان Hack23"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-bc-dr-policy_ar.html#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://hack23.com/index_ar.html"},
+        {"@type": "ListItem", "position": 2, "name": "مدونة", "item": "https://hack23.com/blog_ar.html"},
+        {"@type": "ListItem", "position": 3, "name": "سياسة BC/DR", "item": "https://hack23.com/discordian-bc-dr-policy_ar.html"}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-bc-dr-policy_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-bc-dr-policy_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-bc-dr-policy_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-bc-dr-policy_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-bc-dr-policy_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-bc-dr-policy_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-bc-dr-policy.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-bc-dr-policy_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-bc-dr-policy_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-bc-dr-policy_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-bc-dr-policy_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-bc-dr-policy_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-bc-dr-policy_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-bc-dr-policy_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-bc-dr-policy_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-bc-dr-policy_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-bc-dr-policy_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-bc-dr-policy_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-bc-dr-policy_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-bc-dr-policy_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-bc-dr-policy_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-bc-dr-policy_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-bc-dr-policy_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-bc-dr-policy_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-bc-dr-policy_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-bc-dr-policy_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-bc-dr-policy_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-bc-dr-policy.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index_ar.html">الرئيسية</a></li>
+      <li class="breadcrumb-item"><a href="blog_ar.html">مدونة</a></li>
+      <li class="breadcrumb-item" aria-current="page">سياسة BC/DR</li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="شعار Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>الأمن السيبراني Discordian</h1>
+  <div class="app-link">
+    <a href="index_ar.html">الرئيسية</a>
+    <a href="discordian-cybersecurity_ar.html">البيان</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md">ISMS BC/DR</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">♻️ استمرارية الأعمال والتعافي من الكوارث: خطط للفشل</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">لماذا "النسخ الاحتياطية تكفي" هو خطة فاشلة</h2>
+      
+      <p><strong>فكر بنفسك!</strong> معظم BC/DR هو نسخ احتياطية + أمل. ماذا يحدث عندما يفشل AWS نطاق كامل؟ هل تعرف RTO وRPO الخاص بك؟ متى كانت آخر مرة اختبرت فيها الاستعادة؟ بدون إجابات، ليس لديك خطة BC/DR — لديك وهم الأمان. <strong>FNORD.</strong> النسخ الاحتياطية بدون اختبار = بيانات شرودنجر (موجودة وفارغة حتى تستعيدها).</p>
+      
+      <p><strong>لا شيء صحيح. كل شيء مسموح.</strong> باستثناء BC/DR بدون أهداف قابلة للقياس، نسخ احتياطية بدون اختبار، خطط بدون تمارين. في Hack23، BC/DR ليس "لدينا نسخ احتياطية" — إنه <strong>RTO 4 ساعات</strong> (وقت الاسترداد المستهدف)، <strong>RPO ساعة واحدة</strong> (نقطة الاسترداد المستهدفة)، <strong>نسخ احتياطية آلية يومية</strong> (AWS Backup + S3)، <strong>تمارين نصف سنوية</strong> (الممارسة قبل الحاجة).</p>
+      
+      <p>BC/DR للأعمال أحادية الشخص + أهداف موثقة + شفافية عامة = إثبات أن BC/DR المنهجي يعمل من العمليات الفردية إلى المؤسسات. خطة كاملة في <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md">خطة استمرارية الأعمال</a> العامة لدينا. لأن الأمل ليس استراتيجية.</p>
+      
+      <p><strong>بحاجة إلى إرشاد خبير في BC/DR؟</strong> <a href="why-hack23_ar.html">اكتشف لماذا تختار المنظمات Hack23</a> للاستشارات الشفافة في مجال الأمن السيبراني بقيادة الممارسين.</p>
+    </section>
+
+    <section id="key-metrics">
+      <h2 class="panel-caption">المقاييس الرئيسية: RTO وRPO وأهداف الاسترداد</h2>
+      
+      <p>BC/DR بدون أرقام هو BC/DR خيالي. إليك أهدافنا القابلة للقياس:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🎯 RTO: 4 ساعات</h3>
+          <p><strong>وقت الاسترداد المستهدف = كم من الوقت نستطيع أن نكون معطلين.</strong></p>
+          <p>النظم الحرجة (موقع الويب، البريد الإلكتروني، البنية التحتية AWS) يجب أن تكون عاملة خلال 4 ساعات من الكارثة. ليس "قريبًا"، ليس "عندما نستطيع" — <strong>4 ساعات كحد أقصى</strong>. النظم غير الحرجة: 24 ساعة. المقبول: 72 ساعة.</p>
+          <p class="hidden-wisdom"><em>RTO هو تحمل الألم. 4 ساعات = نستطيع البقاء هذا الوقت بدون إيرادات. أكثر من ذلك؟ تبدأ العواقب المالية الخطيرة. اعرف حدودك.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>⏱️ RPO: ساعة واحدة</h3>
+          <p><strong>نقطة الاسترداد المستهدفة = كم من البيانات نستطيع أن نخسر.</strong></p>
+          <p>النظم الحرجة (قواعد البيانات، الكود المصدري): RPO ساعة واحدة. نسخ احتياطية متكررة كل ساعة. أسوأ حالة؟ نفقد 60 دقيقة من البيانات. النظم غير الحرجة: RPO 24 ساعة (نسخ احتياطية يومية). المقبول: RPO 7 أيام (نسخ احتياطية أسبوعية).</p>
+          <p class="hidden-wisdom"><em>RPO هو تحمل فقدان البيانات. ساعة واحدة = 60 دقيقة من العمل ضائع. مقبول لأننا نستطيع إعادة إنشائه. أكثر من ذلك؟ فقدان البيانات الكارثي يبدأ.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 النسخ الاحتياطية الآلية</h3>
+          <p><strong>يومية، متعددة المناطق، مختبرة.</strong></p>
+          <p><strong>AWS Backup:</strong> نسخ احتياطية آلية لـ RDS، EBS، S3. <strong>نسخ متماثلة عبر المناطق:</strong> البيانات الحرجة متماثلة إلى منطقة ثانوية لـ AWS. <strong>اختبار الاستعادة:</strong> تمارين ربع سنوية تتحقق من أن النسخ الاحتياطية تعمل فعلاً. النسخ الاحتياطية غير المختبرة = وهم الأمان.</p>
+          <p class="hidden-wisdom"><em>النسخ الاحتياطية الآلية تعني عدم وجود إنسان ينسى تشغيلها. عبر المناطق يعني أن فشل المنطقة لا يأخذ النسخ الاحتياطية. الاختبار يعني معرفة أنها تعمل قبل أن تحتاجها.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="isms-link">
+      <h2 class="panel-caption">🔗 روابط ISMS العامة</h2>
+      <p>للحصول على التفاصيل الفنية الكاملة والتطبيق، راجع <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md">خطة استمرارية الأعمال</a> الكاملة في مستودع ISMS العام لدينا.</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 <a href="https://hack23.com">Hack23 AB</a> (Org.nr 5595347807). 
+     <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> | 
+     <a href="https://hack23.com/accessibility-statement_ar.html">إمكانية الوصول</a>
+  </p>
+</footer>
+
+</body>
+</html>

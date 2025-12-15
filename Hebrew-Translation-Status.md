@@ -12,12 +12,20 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Hebrew Files Exist** | 59 | 61.5% |
+| **Hebrew Files Exist** | 60 | 62.5% |
 | **Missing Files** | **37** | **38.5%** |
 
-**Missing Files:** 37 files not yet created (1 core page + others)
-- **High Priority:** `projects.html` (core navigation page)
+**Missing Files:** 36 files not yet created (1 core page + others)
+
 - **Medium Priority:** 20+ Discordian ISMS policy files
+| **Hebrew Files Exist** | 64 | 66.7% |
+| **Missing Files** | **32** | **33.3%** |
+
+**Recent Addition:** +5 RTL ISMS policy files (access-control, bc-dr, info-asset-mgmt, incident-response, risk-mgmt) - replaced stubs with complete infrastructure
+
+**Missing Files:** 32 files not yet created (1 core page + others)
+- **High Priority:** `projects.html` (core navigation page)
+- **Medium Priority:** 15+ Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
 
 ## 📊 Overall Status (Existing Files)

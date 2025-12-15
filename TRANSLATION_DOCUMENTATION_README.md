@@ -15,15 +15,15 @@ Each language has **two dedicated files**:
 ### RTL Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Arabic | ar | 54 | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
-| Hebrew | he | 59 | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
+| Arabic | ar | 59 | [Arabic-Translation-Guide.md](Arabic-Translation-Guide.md) | [Arabic-Translation-Status.md](Arabic-Translation-Status.md) |
+| Hebrew | he | 64 | [Hebrew-Translation-Guide.md](Hebrew-Translation-Guide.md) | [Hebrew-Translation-Status.md](Hebrew-Translation-Status.md) |
 
 ### Asian Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Japanese | ja | 51 | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
-| Chinese | zh | 51 | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
-| Korean | ko | 51 | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
+| Japanese | ja | 68 | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
+| Chinese | zh | 68 | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
+| Korean | ko | 68 | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
 
 ### Nordic Languages
 | Language | Code | Files | Guide | Status |
@@ -46,6 +46,7 @@ Each language has **two dedicated files**:
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
 **Total:** 756 HTML files across 13 languages (+20 new European ISMS policy files, Dec 2025)
+**Total:** 756 HTML files across 13 languages
 
 ## Swedish Blog-Specific Documentation
 
@@ -141,6 +142,26 @@ All translations must meet:
 - **Deployment:** AWS S3 + CloudFront
 - **CI/CD:** GitHub Actions with Lighthouse audits
 - **Security:** ZAP security scanning
+
+## Blog Translation Requirements
+
+**Status:** 3 high-priority blogs need translation across all 13 languages (39 files total)
+- Infrastructure complete (HTML, hreflang, Schema.org)
+- Professional content translation required
+- Estimated effort: 20-30 hours
+- Estimated cost: €6,000-10,000
+
+**High-Priority Blog Posts:**
+1. **blog-public-isms-benefits** (~3,200 words) - ISMS transparency thought leadership
+2. **blog-automated-convergence** (~2,800 words) - AI agents and DevSecOps
+3. **blog-information-hoarding** (~1,200 words) - Security philosophy
+
+**Translation Guidelines:**
+- Professional business tone for C-suite audience
+- Keep code examples in English, translate explanations
+- Preserve Discordian philosophical voice while ensuring clarity
+- Use terminology from individual Translation-Guide.md files
+- Adapt cultural references for local markets
 
 ## Contact
 
