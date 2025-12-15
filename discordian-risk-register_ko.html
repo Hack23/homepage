@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위험 등록부 | 살아있는 문서 추적 | Hack23</title>
+    <meta name="description" content="継続的に更新される生きた위험 등록부：48시간 내 위협 인텔리전스 통합、분기별 검토、위험 기반 투자 결정 추적。">
+    <meta name="keywords" content="위험 등록부, リスク管理, 脅威カタログ, 脆弱性追跡, ISMS リスク, 위험 평가, discordian セキュリティ">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="위험 등록부: 밤잠을 설치게 하는 살아있는 문서">
+    <meta property="og:description" content="위험 등록부管理: 生きた文書 vs. 監査のための形式的文書">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-risk-register_ko.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-risk-register_ko.html">
+    <link rel="stylesheet" href="styles.css">
+    
+<!-- Asian Web Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "위험 등록부: 밤잠을 설치게 하는 살아있는 문서",
+      "description": "継続的に更新される生きた위험 등록부：48시간 내 위협 인텔리전스 통합、분기별 검토、リスクベースの投資判断。経営陣への透明なコミュニケーション",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / 사이버보안 전문가",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-risk-register_ko.html"
+      },
+      "keywords": "위험 등록부, リスク管理, 脅威追跡, JIS Q 27001",
+      "articleSection": "정보보안",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 956,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_ko.html#blog",
+        "name": "Hack23 보안 블로그"
+      },
+      "inLanguage": "ja",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS 정책",
+          "description": "정보보안マネジメントシステムのポリシー実装"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-risk-register_ko.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/index_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://hack23.com/blog_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "위험 등록부",
+          "item": "https://hack23.com/discordian-risk-register_ko.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-risk-register_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-risk-register_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-risk-register_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-risk-register.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-risk-register_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-risk-register_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-risk-register_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-risk-register_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-risk-register_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-risk-register_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-risk-register_he.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-risk-register_ko.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-risk-register_ko.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-risk-register_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-risk-register_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-risk-register_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-risk-register_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-risk-register_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-risk-register_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-risk-register_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-risk-register_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-risk-register_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-risk-register_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-risk-register_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/discordian-risk-register_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-risk-register.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="탐색 경로">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_ko.html">홈</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_ko.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        위험 등록부
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h2>위험 등록부: 生きた文書 vs. 監査のための形式</h2>
+  <div class="app-link">
+    <a href="index_ko.html" title="홈へ戻る">홈</a>
+    <a href="discordian-cybersecurity_ko.html" title="선언문으로 돌아가기">マニフェスト</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" title="위험 등록부">ISMS</a>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <h2>📋 위험 등록부: 밤잠을 설치게 하는 살아있는 문서</h2>
+            
+            <p class="subtitle"><em>「監査のためだけに更新される위험 등록부は、高価なフィクションに過ぎない。本物の위험 등록부は毎週変化する。」</em></p>
+
+            <h2>🍎 황금 사과: 죽은 등록부 vs. 살아있는 문서 (또는: 규정 준수 연극 vs. 실제 위험 관리)</h2>
+            
+            <p>ほとんどの組織は위험 등록부を持っています。それらは JIS Q 27001 監査のために作成され、テンプレートからコピー＆ペーストされた一般的な脅威で埋められ、経営陣を安心させる恣意的な可能性/影響スコアが割り当てられ、来年の監査まで忘れ去られます。<strong>이것은 보안 가부키입니다. 감사자를 위한 퍼포먼스 아트입니다.</strong></p>
+            
+            <p><strong>이것은 위험 관리가 아닙니다—규정 준수 연극입니다。</strong> <em>FNORD。</em> 위험 등록부には「ランサムウェアのリスクは低い」と書いてあるのに、CFO의 노트북이 이미 REvil에 의해 암호화되었습니다。인지 부조화는 기능이지 버그가 아닙니다。</p>
+            
+            <p><em>本物の</em>위험 등록부は生きた文書です（生きている、ゾンビではない、を強調）。새로운 위협이 나타날 때 업데이트됩니다 (매주, 공격자는 분기별 검토를 기다리지 않으니까)。취약점이 발견될 때 수정됩니다 (제대로 하고 있다면 매일)。보안 투자 결정을 할 때 참조됩니다 (공급업체 판촉이나 FUD가 아닌)。실용적인 도구이지, 감사 장식품이 아닙니다。<strong>生きた위험 등록부と死んだ登録簿の違いは、その正確性に自分の仕事を賭けられるかどうかです。賭けられますか？本当に確かですか？FNORD。</strong></p>
+            
+            <div class="hidden-wisdom">
+                <strong>사이코노츠를 위한 계시:</strong> 위험 등록부が6ヶ月間更新されていない場合、それはリスクを追跡しているのではなく、歴史を（不十分に）記録しているだけです。위협은 연간 감사 주기보다 빠르게 진화합니다。제로데이는 분기별 검토 회의를 기다리지 않습니다。음모는 현실이며, 당신의 문서화 프로세스보다 빠르게 움직이고 있습니다。<em>Chapel Perilous에 오신 것을 환영합니다。위험 등록부を更新するか、위험 등록부があなたを更新するか。</em>
+            </div>
+
+            <h2>🛡️ 効果的な위험 등록부の5つの要素</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. 식별된 위험</h3>
+                    <p><strong>무엇이 잘못될 수 있는가?</strong></p>
+                    <p>위협 출처, 취약점, 공격 시나리오. 일반적이지 않고 구체적으로。「피싱을 통한 랜섬웨어" > "사이버 공격」。새로운 위협이 나타나면 업데이트합니다。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. 위험 평가</h3>
+                    <p><strong>얼마나 심각한가?</strong></p>
+                    <p>가능성 (얼마나 발생하기 쉬운가?)。영향 (재무적, 운영적, 평판적)。위험 점수 = 가능성 × 영향。처리 우선순위 결정에 사용。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. 기존 통제 조치</h3>
+                    <p><strong>이를 완화하는 기존 조치는 무엇인가?</strong></p>
+                    <p>기술적 통제 (MFA, EDR, 백업)。프로세스 통제 (변경 관리, 접근 검토)。통제 조치 적용 후 잔여 위험。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. 처리 계획</h3>
+                    <p><strong>어떻게 처리할 것인가?</strong></p>
+                    <p>수용 (잔여 위험 허용)。감소 (통제 조치 추가)。이전 (보험)。회피 (위험 출처 제거)。각 결정에는 소유자와 기한이 필요합니다。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. 모니터링 및 검토</h3>
+                    <p><strong>위험이 변화하고 있는가?</strong></p>
+                    <p>시간 경과에 따라 위험 추세 추적。분기마다 또는 위협 환경이 변화할 때 재평가。처리 효과 검토。통제 조치 구현 시 업데이트。</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>혼돈의 계시:</strong> 위험 평가は予測であり、確実性ではありません。가능성/영향을 할당할 때, 이것들이 경험에 기반한 추측임을 인식하세요。완벽한 방법론으로 숫자가 없는 것보다, 올바른 방법론으로 잘못된 숫자가 더 낫습니다。
+            </div>
+
+            <h2>📋 Hack23の위험 등록부アプローチ</h2>
+            
+            <p>私たちの위험 등록부は公開されています（機密情報を削除したバージョン）: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC 저장소</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" target="_blank">위험 등록부</a></p>
+            
+            <ul>
+                <li><strong>継続的な更新:</strong> CVEフィード、CISAアラート、業界レポートからの新しい脅威インテリジェンスから48時間以内に위험 등록부を更新</li>
+                <li><strong>脅威インテリジェンスの統合:</strong> 年次監査サイクルではなく、自動フィードがリスクレビューをトリガー</li>
+                <li><strong>四半期ごとの正式なレビュー:</strong> 3ヶ月ごとに可能性/影響スコアを再評価し、기존 통제 조치を検証し、처리 계획の進捗を追跡</li>
+                <li><strong>リスクベースの投資:</strong> セキュリティ予算は위험 등록부のスコアによって優先順位付け（ベンダーの売り込みや「ベストプラクティス」ではなく）</li>
+                <li><strong>透明なコミュニケーション:</strong> 経営陣向けサマリーでトップ10リスク、トレンド分析（改善/悪化）、対応進捗率を表示</li>
+                <li><strong>文書化された根拠:</strong> すべてのリスクスコアには、恣意的な割り当てではなく、証拠に基づく理由付けが含まれます</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>メタ啓示:</strong> 機密情報を削除した위험 등록부を公開すること（私たちがしているように）は、知的誠実さを強制します。世界があなたの위험 평가を見ることができるときは、ごまかすことができません。
+            </div>
+
+            <h2>🎯 위험 등록부のアンチパターン（してはいけないこと）</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>❌ 年1回のみの更新</h3>
+                    <p><strong>問題点:</strong> 脅威環境は監査サイクルよりも速く変化します。</p>
+                    <p><strong>現実:</strong> 新しいゼロデイ、新たな攻撃手法、業界の侵害—すべてがリスクプロファイルを継続的に変化させます。</p>
+                    <p><strong>修正:</strong> 最低でも四半期レビュー、主要な脅威に対してはアドホック更新。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ 一般的なリスク記述</h3>
+                    <p><strong>問題点:</strong> 「サイバー攻撃」では何も伝わりません。</p>
+                    <p><strong>現実:</strong> フィッシングによるランサムウェア vs. サプライチェーン侵害 vs. 内部脅威—異なる攻撃、異なる軽減策。</p>
+                    <p><strong>修正:</strong> 攻撃経路を含む具体的な脅威シナリオ。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ 恣意的なスコアリング</h3>
+                    <p><strong>問題点:</strong> 理由なく可能性/影響が割り当てられる。</p>
+                    <p><strong>現実:</strong> ランサムウェアが「高可能性」である理由を説明できなければ、あなたの評価はフィクションです。</p>
+                    <p><strong>修正:</strong> スコアリングの根拠を文書化し、証拠を引用する。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ 所有者のない처리 계획</h3>
+                    <p><strong>問題点:</strong> 所有者や期限なしで「MFAを実装」。</p>
+                    <p><strong>現実:</strong> 所有者のないタスクは完了しません。期限がないということは永遠にないということです。</p>
+                    <p><strong>修正:</strong> すべての처리 계획: 所有者、期限、成功基準。</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ 残存リスクの無視</h3>
+                    <p><strong>問題点:</strong> 管理策がリスクを完全に排除すると仮定。</p>
+                    <p><strong>現実:</strong> MFAはフィッシングリスクを低減しますが、排除しません。残存するものを文書化します。</p>
+                    <p><strong>修正:</strong> 管理策後の残存リスクを計算し、許容可能か判断。</p>
+                </div>
+            </div>
+
+            <h2>🔍 위험 등록부の品質を評価する5つの質問</h2>
+
+            <ol>
+                <li><strong>最後に更新されたのはいつか？</strong> - >3ヶ月 = 古い、>6ヶ月 = フィクション、>12ヶ月 = 監査の小道具</li>
+                <li><strong>リスクは具体的か、一般的か？</strong> - 「RDP経由のランサムウェア」>「サイバー攻撃」</li>
+                <li><strong>スコアを正当化できるか？</strong> - 可能性/影響の根拠を説明するか、推測していることを認める</li>
+                <li><strong>처리 계획に所有者がいるか？</strong> - 所有者のない作業は実行されない</li>
+                <li><strong>登録簿は意思決定を推進しているか？</strong> - セキュリティ投資はリスクスコアと一致しているか？そうでなければ、登録簿は装飾品</li>
+            </ol>
+
+            <div class="hidden-wisdom">
+                <strong>究極の啓示:</strong> 위험 등록부は組織の優先順位を明らかにします。登録簿でランサムウェアが重大と言っているのにEDRを展開していない場合、登録簿が嘘か、優先順位が壊れているかのどちらかです。
+            </div>
+
+            <h2>🎯 위험 등록부 vs. 위험 평가</h2>
+
+            <p>これらは異なるものです:</p>
+
+            <ul>
+                <li><strong>위험 평가方法論</strong> - リスクを特定、分析、評価する方法（プロセス定義）</li>
+                <li><strong>위험 등록부</strong> - 식별된 위험、そのスコア、管理策、처리 계획のカタログ（生きたデータ）</li>
+            </ul>
+
+            <p>위험 평가方法論は比較的静的です。위험 등록부は常に変化します。方法論はプロセスを定義します。登録簿は結果を文書化します。</p>
+
+            <h2>🎯 結論: 위험 등록부を生きたものにする</h2>
+            
+            <p>위험 등록부は、それが最新である場合にのみ有用です。<strong>継続的に更新し、四半期ごとにレビューし、積極的に使用します。</strong></p>
+            
+            <p>具体的な脅威を特定します。証拠に基づいてスコアリングします。기존 통제 조치を文書化します。所有者と期限を含む対応を計画します。時間経過とともに傾向を監視します。</p>
+
+            <p>古い위험 등록부は監査の装飾品です。生きた위험 등록부はセキュリティ投資の意思決定を推進します。</p>
+            
+            <p><strong>リスク管理に関する専門家の指導が必要ですか？</strong> <a href="why-hack23_ko.html">Hack23のコンサルティングアプローチを発見する</a> セキュリティを障壁ではなく、実現者として扱います。</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>「自分で考えろ、ばか者！リスクスコアを疑え—特に1年間変わっていないなら。」</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, <em>Leif Erikson</em>号船長
+            </p>
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="사이트 푸터">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>サイバー보안 컨설팅<br>
+          스웨덴 예테보리 | 원격</p>
+          <p>조직 번호: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 회사 페이지</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>서비스</h3>
+          <ul>
+            <li><a href="services_ko.html">보안 컨설팅</a></li>
+            <li><a href="services_ko.html">보안 아키텍처</a></li>
+            <li><a href="services_ko.html">클라우드 보안</a></li>
+            <li><a href="services_ko.html">DevSecOps 통합</a></li>
+            <li><a href="services_ko.html">규정 준수 및 ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>제품</h3>
+          <ul>
+            <li><a href="black-trigram-features_ko.html">Black Trigram</a></li>
+            <li><a href="cia-features_ko.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_ko.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>리소스</h3>
+          <ul>
+            <li><a href="blog_ko.html">セキュリティ블로그</a></li>
+            <li><a href="discordian-cybersecurity_ko.html">🍎 Discordian블로그</a></li>
+            <li><a href="cia-triad-faq_ko.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">공개 ISMS</a></li>
+            <li><a href="sitemap_ko.html">사이트맵</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>회사</h3>
+          <ul>
+            <li><a href="why-hack23_ko.html">Hack23 소개</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">보안 정책</a></li>
+            <li><a href="SECURITY.md">보안 문제 신고</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement_ko.html">접근성</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 블로그執筆者:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - 비전을 가진 아나키스트 제품 소유자" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (철학 및 비전) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - 철학자 엔지니어 시스템 아키텍트" rel="noopener noreferrer" target="_blank">Simon Moon</a> (아키텍처 및 패턴)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 구현 현실:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - 패닉 주도 개발자" rel="noopener noreferrer" target="_blank">George Dorn</a> 가 이 아름다운 혼돈을 실제 작동하는 코드로 변환합니다。
+          <a href="blog-george-dorn-cia-code_ja.html">CIA 아키텍처</a>、
+          <a href="blog-george-dorn-trigram-code_ja.html">Black Trigram Combat</a>、
+          <a href="blog_ko.html#george-dorn-developer-chronicles">개발자 연대기</a> 에서 철학을 배포 가능하게 만드는 패닉의 순간, 돌파구, 숨겨진 이스터 에그를 참조하세요。
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | 라이센스 <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> |
+          <a href="index_zh.html" lang="zh">中文</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

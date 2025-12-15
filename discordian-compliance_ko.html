@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>규정 준수: Multi-Framework Mapping Without Duplication | Hack23</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Unified compliance: 93% ISO 27001, 87% NIST CSF, 82% CIS Controls. Single control → multiple frameworks. GDPR + NIS2 + CRA ready.">
+    <meta name="keywords" content="compliance, regulatory compliance, ISO 27001, GDPR general data protection regulation, NIS2 network information security directive, SOC 2, PCI DSS, HIPAA, compliance framework, compliance mapping, control framework, audit compliance, compliance automation, compliance monitoring, compliance reporting, regulatory requirements, compliance audit, certification">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="규정 준수: Multi-Framework Mapping Without Duplication">
+    <meta property="og:description" content="93% ISO 27001, 87% NIST CSF, 82% CIS Controls through unified ISMS. Single control → multiple compliance outcomes.">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-compliance_ko.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 보안 블로그">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-compliance_ko.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "규정 준수: Multi-Framework Mapping Without Duplication",
+      "description": "How Hack23 achieves 93% ISO 27001, 87% NIST CSF, 82% CIS Controls through unified ISMS with systematic framework mapping—single control implementation delivers multiple compliance outcomes",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / 사이버보안 전문가",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-compliance_ko.html"
+      },
+      "keywords": "ISO 27001, NIST CSF, CIS Controls, GDPR, NIS2, compliance mapping, ISMS",
+      "articleSection": "정보보안",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1894,
+      "articleBody": "Nothing is true. Everything is permitted. Including the permission to implement one security control that satisfies multiple compliance frameworks instead of treating ISO 27001, NIST CSF, and CIS Cont...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_ko.html#blog",
+        "name": "Hack23 보안 블로그"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS 정책",
+          "description": "정보보안 Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "탐색 경로List",
+      "@id": "https://hack23.com/discordian-compliance_ko.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://hack23.com/blog_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "규정 준수",
+          "item": "https://hack23.com/discordian-compliance_ko.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement ISO 27001, NIST CSF, and CIS Controls Through Unified ISMS",
+      "description": "Complete step-by-step guide to achieving 93% ISO 27001, 87% NIST CSF, and 82% CIS Controls compliance through unified 정보보안 Management System with systematic framework mapping for Swedish SMEs",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "P120D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "30000"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "ISMS Documentation Templates"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "규정 준수 Mapping Matrix"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Risk Assessment Worksheet"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Control Implementation Checklist"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "ISO 27001:2022 Standard Document"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "NIST Cybersecurity Framework 2.0"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "CIS Controls v8 Guidelines"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "CIA 규정 준수 Manager Tool"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Establish Unified ISMS Framework",
+          "text": "Create single 정보보안 Management System that will satisfy multiple compliance frameworks. Define ISMS scope covering all business processes, locations, and technology systems. Document organizational context, stakeholders, and security requirements. Establish unified policy structure that maps to ISO 27001, NIST CSF, and CIS Controls simultaneously.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#intro"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Map Framework Controls to Single Implementation",
+          "text": "Identify overlapping controls across ISO 27001 Annex A, NIST CSF subcategories, and CIS Controls safeguards. Create systematic mapping matrix showing how one security control satisfies multiple framework requirements. For example, access control implementation satisfies ISO 27001 A.5.15, NIST CSF PR.AC-04, and CIS Control 6 simultaneously.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#framework-mapping"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implement ISO 27001 Annex A Controls",
+          "text": "Deploy 114 ISO 27001 Annex A controls across 4 themes: Organizational (A.5), People (A.6), Physical (A.7), and Technological (A.8). Document implementation evidence for each control. Target 93% coverage (106/114 controls) adjusting for business context (office-less operations, cloud-native architecture). Map each control to corresponding NIST and CIS requirements.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#framework-coverage"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Address NIST CSF 2.0 Six Functions",
+          "text": "Implement NIST Cybersecurity Framework 2.0 across six Functions: Govern (GV), Identify (ID), Protect (PR), Detect (DE), Respond (RS), Recover (RC). Target 87% coverage (108/124 subcategories). Focus on Protect function (access control, data security, protective technology) and Detect function (AWS GuardDuty, Security Hub, Config). Establish implementation tiers: Tier 3 (Repeatable) for critical controls, Tier 2 (Risk Informed) for standard controls.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#framework-coverage"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Deploy CIS Controls Implementation Groups",
+          "text": "Implement CIS Controls v8 prioritized by Implementation Groups: IG1 (essential cybersecurity, 52 safeguards), IG2 (enterprise security, 71 safeguards), IG3 (advanced security, 41 safeguards). Target 82% overall coverage (135/164 safeguards). Focus on IG1 (94% coverage) and IG2 (86% coverage). Use cloud-native implementations: CIS 1 (Inventory) via AWS Config, CIS 2 (Software) via Dependabot + SBOM, CIS 3 (Data Protection) via KMS encryption.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#framework-coverage"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Integrate Regulatory Requirements",
+          "text": "Map regulatory compliance requirements to unified ISMS: GDPR (data protection, privacy by design), NIS2 (network security, incident reporting), EU Cyber Resilience Act (product security, vulnerability disclosure), SOC 2 (trust principles), PCI DSS (payment security), HIPAA (healthcare privacy). Document how existing ISMS controls satisfy regulatory obligations without separate compliance programs.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#regulatory-frameworks"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Automate Evidence Collection and Monitoring",
+          "text": "Implement automated compliance evidence collection using CIA 규정 준수 Manager tool. Integrate with AWS Config, Security Hub, CloudTrail for continuous monitoring. Establish automated control testing and validation. Reduce audit preparation time from 80 hours manual to 12 hours automated. Generate compliance reports mapping single control implementations to multiple framework requirements.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#compliance-automation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Conduct Internal Audits and Gap Analysis",
+          "text": "Perform internal audit against ISO 27001, NIST CSF, and CIS Controls requirements simultaneously. Identify gaps in framework coverage. Document non-conformities and improvement opportunities. Validate that unified ISMS approach delivers multiple compliance outcomes from single control implementations. Prepare evidence packages for external certification audits.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#framework-mapping"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Schedule External Certification Audit",
+          "text": "Select SWEDAC-accredited certification body (DNV, Bureau Veritas, BSI, TÜV) for ISO 27001 certification. Schedule Stage 1 (documentation review) and Stage 2 (on-site audit). Present unified ISMS with framework mapping evidence. Demonstrate how single security controls satisfy multiple compliance requirements. Obtain ISO 27001 certification while maintaining NIST CSF and CIS Controls alignment.",
+          "url": "https://hack23.com/discordian-compliance_ko.html#conclusion"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-compliance_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-compliance_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-compliance_de.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-compliance_ko.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-compliance_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-compliance_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-compliance_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-compliance_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-compliance_fr.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-compliance_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-compliance_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-compliance_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-compliance_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-compliance_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-compliance_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-compliance_ko.html">
+</head>
+<body>
+  <!-- 탐색 경로 Navigation -->
+  <nav aria-label="탐색 경로">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">홈</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_ko.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        규정 준수
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>규정 준수: Multi-Framework Mapping</h1>
+  <div class="app-link">
+    <a href="index_ko.html" title="Back to 홈">홈</a>
+    <a href="discordian-cybersecurity_ko.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md" title="규정 준수 Checklist">규정 준수</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">✅ 규정 준수: One Control, Multiple Frameworks, Zero Duplication</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">Unified ISMS: When Framework Mapping Eliminates 규정 준수 Theater</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including the permission to implement <strong>one security control that satisfies multiple compliance frameworks</strong> instead of treating ISO 27001, NIST CSF, and CIS Controls as separate universes requiring separate budgets and separate consultants billing separate hours. <em>Are you paranoid enough to question why compliance consultants profit from complexity while you drown in duplicative audits? The bureaucracy is expanding to meet the needs of the expanding bureaucracy—and billing you for every expansion.</em></p>
+      
+      <p><em>Think for yourself, schmuck! Question authority.</em> Question consultants who sell separate "ISO 27001 program" and "NIST CSF program" and "CIS Controls program" when they're addressing the same security domains with 80% overlapping controls. <strong>The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</strong> Don't feed it. Starve it through efficiency and watch compliance consultants panic when you implement once and map everywhere. <em>One control. Multiple frameworks. Zero duplication. Their nightmare. Your competitive advantage.</em></p>
+      
+      <p>At Hack23, compliance isn't separate programs—it's <strong>unified ISMS with systematic framework mapping.</strong> Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md">규정 준수 Checklist</a> maps single control implementations to multiple frameworks: <strong>93% ISO 27001 Annex A</strong> (106/114 controls), <strong>87% NIST CSF 2.0</strong> (108/124 subcategories), <strong>82% CIS Controls v8</strong> (135/164 safeguards).</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: 규정 준수 frameworks aren't competing standards—they're different lenses on the same security reality. ISO 27001 control A.5.15 (access control) maps to NIST CSF PR.AC-04 (access control) maps to CIS Control 6 (access control). Same control, three compliance checkboxes. Consultants profit from treating these as separate because complexity billable. We profit from mapping because efficiency is competitive advantage. Follow the incentives, psychonaut.</em></p>
+      
+      <p>Our compliance framework demonstrates cybersecurity consulting expertise through <strong>efficiency gains:</strong> Single control implementation → multiple compliance outcomes. Audit prep time: 80 hours manual → 12 hours automated evidence collection. Framework coverage via <a href="https://github.com/Hack23/cia-compliance-manager">CIA 규정 준수 Manager</a> tool.</p>
+    
+      
+      <p><strong>Ready to implement ISO 27001 compliance?</strong> <a href="why-hack23_ko.html">Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.</p>
+    </section>
+
+    <section id="framework-coverage">
+      <h2 class="panel-caption">The Three Primary Frameworks: Coverage Through Systematic Mapping</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ ISO 27001:2022 Annex A</h3>
+          <p><strong>Coverage: 93% (106/114 controls implemented)</strong></p>
+          <p><strong>Framework Purpose:</strong> International standard for 정보보안 Management Systems. Risk-based approach with 114 controls across 4 themes (Organizational, People, Physical, Technological). Gold standard for ISMS certification.</p>
+          <p><strong>Implementation Status:</strong> 106 controls implemented, 8 not applicable (physical security for office-less company, outsourced development—no outsourcing). Evidence documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md">규정 준수 Checklist</a> with direct links to ISMS policies.</p>
+          <p><strong>Coverage Highlights:</strong> A.5 (Organizational controls) 100%, A.6 (People controls) 91%, A.7 (Physical controls) 67% (office-less adjustments), A.8 (Technological controls) 97%.</p>
+          <p><strong>Tool Support:</strong> <a href="https://github.com/Hack23/cia-compliance-manager">CIA 규정 준수 Manager</a> tracks ISO 27001 Annex A control coverage with automated mapping to ISMS documentation.</p>
+          <p class="hidden-wisdom"><em>ISO 27001 is comprehensive but not prescriptive. "Implement access control" doesn't specify how. That's feature, not bug. Allows tailoring to business context. Also allows consultants to charge €50K to tell you what "implement" means. We chose the free option: think for yourself.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ NIST Cybersecurity Framework 2.0</h3>
+          <p><strong>Coverage: 87% (108/124 subcategories addressed)</strong></p>
+          <p><strong>Framework Purpose:</strong> Risk-based framework organized by six Functions (Govern, Identify, Protect, Detect, Respond, Recover). Practical guidance with implementation tiers. Widely adopted in US federal agencies + critical infrastructure.</p>
+          <p><strong>Implementation Status:</strong> 108 subcategories addressed across all six Functions. Govern (GV): 78%, Identify (ID): 89%, Protect (PR): 92%, Detect (DE): 84%, Respond (RS): 87%, Recover (RC): 81%. Full mapping in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md">규정 준수 Checklist</a>.</p>
+          <p><strong>Coverage Highlights:</strong> Strong Protect function (PR.AC access control, PR.DS data security, PR.PT protective technology). Detect function leveraging AWS services (GuardDuty, Security Hub, Config). Response procedures with classification-driven SLAs.</p>
+          <p><strong>Unique Value:</strong> NIST CSF provides implementation tiers (Partial, Risk Informed, Repeatable, Adaptive) enabling maturity assessment. Hack23 targets Tier 3 (Repeatable) for critical controls, Tier 2 (Risk Informed) for standard controls.</p>
+          <p class="hidden-wisdom"><em>NIST CSF is outcome-focused, not prescriptive. "Detect cybersecurity events" doesn't mandate specific tools. Enables AWS-native detection (GuardDuty) vs third-party SIEM based on business context.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 CIS Controls v8</h3>
+          <p><strong>Coverage: 82% (135/164 safeguards implemented)</strong></p>
+          <p><strong>Framework Purpose:</strong> Prioritized set of actions for cyber defense. 18 Controls with 164 Safeguards organized by Implementation Groups (IG1 basic, IG2 intermediate, IG3 advanced). Highly specific, actionable guidance.</p>
+          <p><strong>Implementation Status:</strong> IG1 (essential cybersecurity) 94% (49/52 safeguards), IG2 (enterprise security) 86% (61/71 safeguards), IG3 (advanced security) 61% (25/41 safeguards). Full breakdown in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md">규정 준수 Checklist</a>.</p>
+          <p><strong>Coverage Highlights:</strong> CIS 1 (Inventory) via AWS Config, CIS 2 (Software) via Dependabot + SBOM, CIS 3 (Data Protection) via KMS encryption, CIS 4 (Secure Configuration) via CloudFormation IaC, CIS 5 (Account Management) via IAM policies, CIS 6 (Access Control) via least privilege + MFA.</p>
+          <p><strong>Implementation Groups:</strong> IG1 focus (small business baseline) 94% complete. IG2 focus (enterprise capabilities) 86% complete. IG3 focus (advanced controls) 61% complete—intentional prioritization based on risk vs resource tradeoff.</p>
+          <p class="hidden-wisdom"><em>CIS Controls are specific: "Enable firewall logging" not "implement network security." Specificity reduces ambiguity but requires adaptation to cloud-native architectures (VPC Flow Logs vs traditional firewall logs).</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="regulatory-frameworks">
+      <h2 class="panel-caption">Regulatory Frameworks: GDPR, NIS2, CRA Readiness</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Regulation</th>
+            <th>Applicability</th>
+            <th>Key Requirements</th>
+            <th>Hack23 Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>GDPR (EU General Data Protection Regulation)</strong></td>
+            <td>Fully applicable (EU data processing)</td>
+            <td>
+              <ul class="requirements-list">
+                <li>Lawful basis (<abbr title="Article 6">Art. 6</abbr>)</li>
+                <li>Consent management (<abbr title="Article 7">Art. 7</abbr>)</li>
+                <li>Data subject rights (<abbr title="Articles 12-23">Art. 12-23</abbr>)</li>
+                <li>Breach notification &lt;72hr (<abbr title="Article 33">Art. 33</abbr>)</li>
+                <li>DPO appointment (<abbr title="Articles 37-39">Art. 37-39</abbr>)</li>
+                <li>DPIA for high-risk processing (<abbr title="Article 35">Art. 35</abbr>)</li>
+                <li>International transfers safeguards (<abbr title="Articles 44-50">Art. 44-50</abbr>)</li>
+              </ul>
+            </td>
+            <td><strong>Compliant.</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md">Data Protection Policy</a> addresses all GDPR requirements. Breach procedures with &lt;30min detection, &lt;72hr notification. No DPO required (no large-scale monitoring). All data EU-located (Stockholm region).</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>NIS2 (Network and 정보보안 Directive 2)</strong></td>
+            <td>Potentially applicable (critical infrastructure assessment)</td>
+            <td>Cybersecurity risk management (Art. 21), incident reporting 24hr initial / significant within 72hr (Art. 23), supply chain security (Art. 21), business continuity (Art. 21), security measures (Art. 21), management accountability (Art. 20).</td>
+            <td><strong>Ready.</strong> NIS2 applicability assessment complete (essential services provider determination pending). All technical requirements met: incident response (&lt;30min for critical), supply chain controls (<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md">Third Party Policy</a>), BCP (RTO &lt;1hr critical). Management accountability: CEO = Security Officer.</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>CRA (Cyber Resilience Act)</strong></td>
+            <td>Applicable (software products with digital elements)</td>
+            <td>Secure by design (Art. 10-11), vulnerability handling (Art. 13), mandatory reporting (Art. 14), CE marking (Art. 30), 5-year security support (Art. 13), SBOM provision (Art. 13), security updates (Art. 13).</td>
+            <td><strong>Prepared.</strong> CRA classification: <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> (Important Product Class II), <a href="https://github.com/Hack23/cia-compliance-manager">CIA 규정 준수 Manager</a> (Standard Product). Secure development via <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">SDL Policy</a>. Vulnerability disclosure via <a href="https://github.com/Hack23/cia/security">보안 정책</a>. SBOM via Dependency-Track.</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>UK DPDP Act (Data Protection and Digital Information Act)</strong></td>
+            <td>Potentially applicable (UK market operations)</td>
+            <td>Similar to GDPR with UK modifications: lawful processing, individual rights, security obligations, breach notification, accountability principles.</td>
+            <td><strong>Review complete.</strong> GDPR compliance provides substantial coverage. UK-specific adaptations documented in Data Protection Policy. International data transfers via adequacy decisions. No separate UK operations currently (Stockholm-based).</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>REGULATORY ILLUMINATION: Regulations overlap deliberately. GDPR data protection + NIS2 cybersecurity + CRA product security address same security domains from different angles. Good security posture satisfies multiple regulations, not separate compliance programs.</em></p>
+    </section>
+
+    <section id="framework-mapping">
+      <h2 class="panel-caption">How Framework Mapping Eliminates Duplication</h2>
+      
+      <p><strong>Example: Access Control Implementation</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Control Reference</th>
+            <th>Control Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ISO 27001</strong></td>
+            <td>A.5.15, A.5.16, A.5.17, A.5.18</td>
+            <td>Access control policy, identity management, authentication information, access rights provisioning</td>
+          </tr>
+          <tr>
+            <td><strong>NIST CSF 2.0</strong></td>
+            <td>PR.AC-04, PR.AC-05, PR.AC-06, PR.AC-07</td>
+            <td>Access permissions managed, network integrity protected, identities proved/verified, users authenticated</td>
+          </tr>
+          <tr>
+            <td><strong>CIS Controls v8</strong></td>
+            <td>CIS 5, CIS 6</td>
+            <td>Account management (Control 5: 13 safeguards), Access control management (Control 6: 8 safeguards)</td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>Hack23 Implementation</strong></td>
+            <td colspan="2"><strong>Single IAM policy implementation:</strong> Least privilege AWS IAM roles, MFA enforcement for all humans, service accounts with specific permissions, no root account usage, access review quarterly, automated access provisioning/deprovisioning. Documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a>. <strong>Satisfies 3 frameworks with 1 control.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Framework Mapping Benefits:</strong></p>
+      <ul>
+        <li><strong>Efficiency Gain:</strong> One control implementation → three compliance checkboxes. Reduces implementation effort by ~70% vs separate framework programs.</li>
+        <li><strong>Audit Preparation:</strong> Pre-mapped evidence. ISO 27001 audit → show Access Control Policy. NIST CSF assessment → same policy, different reference numbers. Single evidence source, multiple compliance outcomes.</li>
+        <li><strong>Gap Analysis Simplified:</strong> Identify gaps once, remediate for all frameworks. Missing "vulnerability management" control impacts ISO 27001 A.8.8, NIST CSF DE.CM-08, CIS Control 7. Fix once, satisfy three requirements.</li>
+        <li><strong>규정 준수 Maintenance:</strong> Update policy once, maintain compliance across all frameworks. Access control policy update → automatically updated ISO 27001 + NIST CSF + CIS Controls evidence.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>MAPPING ILLUMINATION: Consultants profit from treating frameworks as separate universes. "You need ISO 27001 program ($50K) plus NIST CSF program ($40K) plus CIS implementation ($35K)." Reality: 80% overlap. Unified ISMS satisfies all three for fraction of cost.</em></p>
+    </section>
+
+    <section id="compliance-automation">
+      <h2 class="panel-caption">규정 준수 Automation: Evidence Collection Over Manual Reporting</h2>
+      
+      <p><strong>Automated Evidence Collection:</strong> AWS Config for configuration compliance, CloudTrail for audit logs, Security Hub for security findings, GitHub Actions for CI/CD evidence, SonarCloud for quality metrics, Dependabot for vulnerability management. <strong>Continuous compliance monitoring vs annual audit scramble.</strong></p>
+      
+      <p><strong>CIA 규정 준수 Manager Tool:</strong> <a href="https://github.com/Hack23/cia-compliance-manager">Open-source framework mapping tool</a> tracking 40+ compliance frameworks. ISO 27001 Annex A mapping, NIST CSF 2.0 coverage, CIS Controls v8 tracking, GDPR requirements checklist, NIS2 readiness assessment, CRA applicability matrix. <strong>Real-time compliance posture visibility.</strong></p>
+      
+      <p><strong>규정 준수 Dashboard Metrics:</strong></p>
+      <ul>
+        <li><strong>Framework Coverage:</strong> ISO 27001 93% (106/114), NIST CSF 87% (108/124), CIS Controls 82% (135/164). Updated automatically as controls implemented.</li>
+        <li><strong>Evidence Completeness:</strong> 98% of implemented controls have documented evidence links (policies, procedures, configurations, logs). 2% pending documentation updates.</li>
+        <li><strong>Gap Analysis:</strong> 8 ISO 27001 controls not applicable, 16 NIST CSF subcategories partially implemented (documented gap remediation plan), 29 CIS Controls safeguards intentionally deferred (IG3 advanced controls, risk-based prioritization).</li>
+        <li><strong>Audit Readiness:</strong> 12 hours estimated for next compliance audit (vs 80 hours manual evidence collection). Pre-generated audit packages with evidence links.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>AUTOMATION ILLUMINATION: Manual compliance is perpetual audit preparation. Automated compliance is continuous evidence collection. One approach scales linearly with controls. Other scales to thousands of controls with same effort.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: 규정 준수 Mapping Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including the permission to implement <strong>unified ISMS with systematic framework mapping</strong> instead of treating ISO 27001, NIST CSF, and CIS Controls as separate compliance programs.</p>
+      
+      <p>Traditional compliance: Separate programs for each framework, consultants billing separately, duplicate control implementations, 80%+ overlap ignored. Hack23 compliance: <strong>Single unified ISMS</strong> (one control implementation) → <strong>multiple framework mapping</strong> (ISO 27001 + NIST CSF + CIS Controls) → <strong>automated evidence collection</strong> (Config + CloudTrail + Security Hub) → <strong>continuous compliance</strong> (real-time posture visibility).</p>
+      
+      <p><strong>Our compliance framework:</strong></p>
+      <ul>
+        <li><strong>Framework Coverage:</strong> 93% ISO 27001 (106/114 controls), 87% NIST CSF (108/124 subcategories), 82% CIS Controls (135/164 safeguards)</li>
+        <li><strong>Regulatory Readiness:</strong> GDPR compliant, NIS2 ready, CRA prepared, UK DPDP reviewed. Single ISMS addresses multiple regulations.</li>
+        <li><strong>Framework Mapping:</strong> Single control implementation → multiple compliance outcomes. Access control satisfies ISO + NIST + CIS simultaneously.</li>
+        <li><strong>규정 준수 Automation:</strong> Continuous evidence collection via AWS services + GitHub + SonarCloud. 12 hours audit prep vs 80 hours manual.</li>
+        <li><strong>Tool Support:</strong> <a href="https://github.com/Hack23/cia-compliance-manager">CIA 규정 준수 Manager</a> for real-time compliance posture tracking across 40+ frameworks.</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Question authority—including compliance consultants whose billable hours depend on treating overlapping frameworks as separate universes. Frameworks aren't competing standards. They're different perspectives on same security reality. Good security satisfies multiple frameworks, not separate programs. <em>ISO 27001 + NIST CSF + CIS Controls = same security, three compliance checkboxes. Consultants who can't see that overlap are either incompetent or incentivized. Guess which.</em></p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>You are now in Chapel Perilous. 규정 준수 without framework mapping is expensive theater. 규정 준수 with systematic mapping is operational efficiency. We map once, comply multiple times. Because business value requires efficiency, not duplicate implementations. The bureaucracy is expanding to meet the needs of the expanding bureaucracy—but only if you let it.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/%EA%B7%9C%EC%A0%95%20%EC%A4%80%EC%88%98_Checklist.md">규정 준수 Checklist</a> with complete framework mappings (ISO 27001 + NIST CSF + CIS Controls + GDPR + NIS2 + CRA), evidence links, and gap analysis. Public. Systematic. Reality-based. With specific coverage percentages we actually measure.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Map systematically. Implement once. Comply multiply. Repeat until efficient."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="사이트 푸터">
+      <div class="footer-container">
+        
+        <!-- 회사 Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>사이버보안 컨설팅<br>
+          스웨덴 예테보리 | 원격</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 회사 Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- 서비스 Column -->
+        <div class="footer-column">
+          <h3>서비스</h3>
+          <ul>
+            <li><a href="services_ko.html">보안 컨설팅</a></li>
+            <li><a href="services_ko.html">보안 아키텍처</a></li>
+            <li><a href="services_ko.html">클라우드 보안</a></li>
+            <li><a href="services_ko.html">DevSecOps 통합</a></li>
+            <li><a href="services_ko.html">규정 준수 & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- 제품 Column -->
+        <div class="footer-column">
+          <h3>제품</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA 규정 준수 Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- 리소스 Column -->
+        <div class="footer-column">
+          <h3>리소스</h3>
+          <ul>
+            <li><a href="blog_ko.html">Security 블로그</a></li>
+            <li><a href="discordian-cybersecurity_ko.html">🍎 Discordian 블로그</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">공개 ISMS</a></li>
+            <li><a href="sitemap_ko.html">사이트맵</a></li>
+          </ul>
+        </div>
+        
+        <!-- 회사 Column -->
+        <div class="footer-column">
+          <h3>회사</h3>
+          <ul>
+            <li><a href="why-hack23_ko.html">Hack23 소개</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">보안 정책</a></li>
+            <li><a href="SECURITY.md">보안 문제 신고</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">접근성</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to 블로그 -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 블로그 Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog_ko.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | 라이센스 <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
