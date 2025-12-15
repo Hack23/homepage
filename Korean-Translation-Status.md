@@ -135,7 +135,7 @@ Files analyzed for English content remaining:
 - ✅ `cia-triad-faq_ko.html` ← `cia-triad-faq.html`
 - ⚠️  `compliance-manager_ko.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (43 files)
+## ⚠️  Missing Translation Files (38 files)
 
 These English pages exist but have no corresponding translation file:
 
@@ -210,17 +210,17 @@ All pages include complete hreflang tags for:
 ## 📈 Quality Metrics & Validation
 
 ### ✅ Technical Quality (All Files)
-- **HTML Validation:** ✅ PASS (53/53 files)
+- **HTML Validation:** ✅ PASS (58/58 files)
 - **Hreflang Tags:** ✅ PASS (14 variants per file)
 - **Schema.org:** ✅ PASS (validated structured data)
 - **Mobile Responsive:** ✅ PASS (all viewports)
 - **Accessibility:** ✅ WCAG 2.1 AA compliant
 
 ### 🎯 Translation Quality (Content)
-- **✅ Fully Translated:** 15 files (28.3%)
-- **⚡ Mostly Translated:** 5 files (9.4%)
-- **⚠️  Needs Work:** 33 files (62.3%)
-- **🏆 Overall Quality:** 37.7%
+- **✅ Fully Translated:** 15 files (25.9%)
+- **⚡ Mostly Translated:** 5 files (8.6%)
+- **⚠️  Needs Work:** 38 files (65.5%)
+- **🏆 Overall Quality:** 34.5%
 
 ## 🚀 Next Steps & Priorities
 
@@ -258,7 +258,7 @@ All pages include complete hreflang tags for:
 **📊 Status Summary**  
 **Overall:** 🚧 Active Development  
 **Last Review:** December 2025  
-**Completion:** 55.2% (53/96 files)  
-**Quality Score:** 37.7% fully/mostly translated  
-**Files Validated:** ✅ All 53 files checked  
+**Completion:** 60.4% (58/96 files)  
+**Quality Score:** 34.5% fully/mostly translated  
+**Files Validated:** ✅ All 58 files checked  
 **Next Milestone:** 🎯 Achieve 100% completion
