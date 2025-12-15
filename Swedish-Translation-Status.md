@@ -6,7 +6,32 @@
 **Target Market:** Sweden  
 **Last Updated:** December 2025
 
-### 📄 File Coverage (High-Level Summary)
+## 📊 Visual Status Overview
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50'}}}%%
+graph TB
+    subgraph "Swedish Translation Status"
+        A[75/96 Files<br/>78.1% Complete]
+        A --> B[Quality Analysis]
+        B --> C[No English: 53]
+        B --> D[Low English: 5]
+        B --> E[Medium English: 17]
+        B --> F[High English: 0]
+        
+        A --> G[Missing: 21 files]
+        
+        style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
+        style B fill:#2196F3,stroke:#1565C0,color:#fff
+        style C fill:#4CAF50,stroke:#2E7D32,color:#fff
+        style D fill:#8BC34A,stroke:#558B2F,color:#fff
+        style E fill:#FFC107,stroke:#F57C00,color:#000
+        style F fill:#F44336,stroke:#C62828,color:#fff
+        style G fill:#9E9E9E,stroke:#616161,color:#fff
+    end
+```
+
+### 📄 File Coverage
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
@@ -14,7 +39,20 @@
 | **Swedish Files Exist** | 75 | 78.1% |
 | **Missing Files** | **21** | **21.9%** |
 
-**Status:** 🎯 High completion - maintenance phase
+### 🎯 Translation Quality Analysis
+
+Files analyzed for English content remaining:
+
+| Quality Level | Count | Description |
+|--------------|-------|-------------|
+| ✅ **Fully Translated** | 53 | No English content detected |
+| ⚡ **Mostly Translated** | 5 | Minimal English (technical terms only) |
+| ⚠️  **Partially Translated** | 17 | Some English content remains |
+| ❌ **Needs Translation** | 0 | Significant English placeholder content |
+
+**Quality Score:** 77.3% of existing files are fully/mostly translated
+
+**Status:** 🎯 Excellent - High completion with good quality
 
 ### Recent Progress (December 2025)
 
@@ -24,7 +62,7 @@
 ## 📊 Files by Category
 
 ### Blog Posts (26 files)
-- ✅ `blog-automated-convergence_sv.html` (from `blog-automated-convergence.html`)
+- ⚠️  `blog-automated-convergence_sv.html` (from `blog-automated-convergence.html`)
 - ✅ `blog-betting-gaming-cybersecurity_sv.html` (from `blog-betting-gaming-cybersecurity.html`)
 - ✅ `blog-cannabis-cybersecurity-guide_sv.html` (from `blog-cannabis-cybersecurity-guide.html`)
 - ✅ `blog-cia-alternative-media-discordian-2026_sv.html` (from `blog-cia-alternative-media-discordian-2026.html`)
@@ -37,13 +75,13 @@
 - ✅ `blog-cia-security_sv.html` (from `blog-cia-security.html`)
 - ✅ `blog-cia-swedish-media-election-2026_sv.html` (from `blog-cia-swedish-media-election-2026.html`)
 - ✅ `blog-cia-workflows_sv.html` (from `blog-cia-workflows.html`)
-- ✅ `blog-compliance-architecture_sv.html` (from `blog-compliance-architecture.html`)
-- ✅ `blog-compliance-future_sv.html` (from `blog-compliance-future.html`)
-- ✅ `blog-compliance-security_sv.html` (from `blog-compliance-security.html`)
-- ✅ `blog-george-dorn-cia-code_sv.html` (from `blog-george-dorn-cia-code.html`)
+- ⚠️  `blog-compliance-architecture_sv.html` (from `blog-compliance-architecture.html`)
+- ⚠️  `blog-compliance-future_sv.html` (from `blog-compliance-future.html`)
+- ⚡ `blog-compliance-security_sv.html` (from `blog-compliance-security.html`)
+- ⚠️  `blog-george-dorn-cia-code_sv.html` (from `blog-george-dorn-cia-code.html`)
 - ✅ `blog-george-dorn-compliance-code_sv.html` (from `blog-george-dorn-compliance-code.html`)
-- ✅ `blog-george-dorn-trigram-code_sv.html` (from `blog-george-dorn-trigram-code.html`)
-- ✅ `blog-information-hoarding_sv.html` (from `blog-information-hoarding.html`)
+- ⚠️  `blog-george-dorn-trigram-code_sv.html` (from `blog-george-dorn-trigram-code.html`)
+- ⚠️  `blog-information-hoarding_sv.html` (from `blog-information-hoarding.html`)
 - ✅ `blog-investment-firm-security_sv.html` (from `blog-investment-firm-security.html`)
 - ✅ `blog-medical-cannabis-hipaa-gdpr_sv.html` (from `blog-medical-cannabis-hipaa-gdpr.html`)
 - ✅ `blog-public-isms-benefits_sv.html` (from `blog-public-isms-benefits.html`)
@@ -53,8 +91,8 @@
 
 ### Core Pages (7 files)
 - ✅ `accessibility-statement_sv.html` (from `accessibility-statement.html`)
-- ✅ `blog_sv.html` (from `blog.html`)
-- ✅ `index_sv.html` (from `index.html`)
+- ⚠️  `blog_sv.html` (from `blog.html`)
+- ⚡ `index_sv.html` (from `index.html`)
 - ✅ `projects_sv.html` (from `projects.html`)
 - ✅ `services_sv.html` (from `services.html`)
 - ✅ `sitemap_sv.html` (from `sitemap.html`)
@@ -88,33 +126,33 @@
 - ✅ `discordian-info-sec-policy_sv.html` (from `discordian-info-sec-policy.html`)
 
 ### ISO 27001 Resources (4 files)
-- ✅ `iso-27001-2022-vs-2013_sv.html` (from `iso-27001-2022-vs-2013.html`)
-- ✅ `iso-27001-certification-costs-sweden_sv.html` (from `iso-27001-certification-costs-sweden.html`)
-- ✅ `iso-27001-implementation-mistakes_sv.html` (from `iso-27001-implementation-mistakes.html`)
-- ✅ `iso-27001-implementation-sweden_sv.html` (from `iso-27001-implementation-sweden.html`)
+- ⚡ `iso-27001-2022-vs-2013_sv.html` (from `iso-27001-2022-vs-2013.html`)
+- ⚡ `iso-27001-certification-costs-sweden_sv.html` (from `iso-27001-certification-costs-sweden.html`)
+- ⚡ `iso-27001-implementation-mistakes_sv.html` (from `iso-27001-implementation-mistakes.html`)
+- ⚠️  `iso-27001-implementation-sweden_sv.html` (from `iso-27001-implementation-sweden.html`)
 
 ### Industry Solutions (3 files)
-- ✅ `industries-betting-gaming_sv.html` (from `industries-betting-gaming.html`)
-- ✅ `industries-cannabis-security_sv.html` (from `industries-cannabis-security.html`)
-- ✅ `industries-investment-fintech_sv.html` (from `industries-investment-fintech.html`)
+- ⚠️  `industries-betting-gaming_sv.html` (from `industries-betting-gaming.html`)
+- ⚠️  `industries-cannabis-security_sv.html` (from `industries-cannabis-security.html`)
+- ⚠️  `industries-investment-fintech_sv.html` (from `industries-investment-fintech.html`)
 
 ### Other Pages (2 files)
 - ✅ `security-assessment-checklist_sv.html` (from `security-assessment-checklist.html`)
 - ✅ `swedish-election-2026_sv.html` (from `swedish-election-2026.html`)
 
 ### Product Pages (10 files)
-- ✅ `black-trigram-docs_sv.html` (from `black-trigram-docs.html`)
+- ⚠️  `black-trigram-docs_sv.html` (from `black-trigram-docs.html`)
 - ✅ `black-trigram-features_sv.html` (from `black-trigram-features.html`)
-- ✅ `black-trigram_sv.html` (from `black-trigram.html`)
-- ✅ `cia-compliance-manager-docs_sv.html` (from `cia-compliance-manager-docs.html`)
+- ⚠️  `black-trigram_sv.html` (from `black-trigram.html`)
+- ⚠️  `cia-compliance-manager-docs_sv.html` (from `cia-compliance-manager-docs.html`)
 - ✅ `cia-compliance-manager-features_sv.html` (from `cia-compliance-manager-features.html`)
-- ✅ `cia-docs_sv.html` (from `cia-docs.html`)
+- ⚠️  `cia-docs_sv.html` (from `cia-docs.html`)
 - ✅ `cia-features_sv.html` (from `cia-features.html`)
-- ✅ `cia-project_sv.html` (from `cia-project.html`)
+- ⚠️  `cia-project_sv.html` (from `cia-project.html`)
 - ✅ `cia-triad-faq_sv.html` (from `cia-triad-faq.html`)
-- ✅ `compliance-manager_sv.html` (from `compliance-manager.html`)
+- ⚠️  `compliance-manager_sv.html` (from `compliance-manager.html`)
 
-## ⚠️ Missing Translation Files (21 files)
+## ⚠️  Missing Translation Files (21 files)
 
 These English pages exist but have no corresponding translation file:
 
@@ -168,18 +206,19 @@ All pages include complete hreflang tags for all 14 variants (13 languages + x-d
 - Mobile responsive: PASS
 
 ### Translation Quality
-- Professional translation: COMPLETE for most files
-- Content review: ONGOING
-- Native speaker validation: RECOMMENDED
+- **Fully translated:** 53 files (70.7%)
+- **Mostly translated:** 5 files (6.7%)
+- **Needs work:** 17 files (22.7%)
+- **Overall quality score:** 77.3%
 
 ## 🚀 Next Steps
 
 ### Maintenance Phase
-1. **Quality Review:** Review existing 75 files for consistency
+1. **Quality Review:** Review 17 files with remaining English content
 2. **Content Updates:** Translate remaining 21 files when prioritized
 3. **Ongoing:** Keep translations up-to-date with English content changes
 
-### Priority for Remaining Files
+### Priority for Remaining Work
 1. **High Priority:** Core pages (homepage, services, products)
 2. **Medium Priority:** ISMS policies, ISO 27001 resources
 3. **Lower Priority:** Blog posts, industry-specific content
@@ -195,7 +234,7 @@ All pages include complete hreflang tags for all 14 variants (13 languages + x-d
 - [x] HTML well-formed (75/75)
 - [x] Hreflang tags correct (75/75)
 - [x] Schema.org valid (75/75)
-- [x] Professional translation (most files)
+- [x] Professional translation (quality score: 77.3%)
 - [x] Grammar reviewed
 - [x] Technical terms verified
 - [x] Links functional (75/75)
@@ -206,4 +245,5 @@ All pages include complete hreflang tags for all 14 variants (13 languages + x-d
 **Status:** ✅ Substantially Complete  
 **Last Review:** December 2025  
 **Completion:** 78.1% (75/96 files)  
-**Next Milestone:** Maintain and update existing translations
+**Quality Score:** 77.3% fully/mostly translated  
+**Next Milestone:** Complete remaining 21 files

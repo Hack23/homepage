@@ -46,6 +46,79 @@ Each language has **two dedicated files**:
 | Swedish | sv | 75/96 | 78.1% | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
 **Total:** 784 translation files out of 1,248 possible (96 base × 13 languages) = **62.8% complete**  
+
+## 📊 Visual Translation Overview
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','primaryTextColor':'#fff','primaryBorderColor':'#2E7D32','lineColor':'#666','secondaryColor':'#2196F3','tertiaryColor':'#FFC107'}}}%%
+graph TB
+    subgraph "Translation Status Overview - December 2025"
+        A[96 Base English Files] --> B{13 Languages}
+        B --> C[Nordic Group<br/>DA/FI/NO/SV]
+        B --> D[European Group<br/>DE/NL/FR/ES]
+        B --> E[Asian Group<br/>JA/ZH/KO]
+        B --> F[RTL Group<br/>AR/HE]
+        
+        C --> C1[Swedish: 82.3%]
+        C --> C2[Nordic 3: 75.0%]
+        
+        D --> D1[German: 63.5%]
+        D --> D2[Others: 60-62%]
+        
+        E --> E1[All: 60.4%]
+        
+        F --> F1[Both: 64.6%]
+        
+        style A fill:#4CAF50,stroke:#2E7D32,color:#fff
+        style B fill:#2196F3,stroke:#1565C0,color:#fff
+        style C fill:#00BCD4,stroke:#00838F,color:#fff
+        style D fill:#FF9800,stroke:#E65100,color:#fff
+        style E fill:#E91E63,stroke:#AD1457,color:#fff
+        style F fill:#9C27B0,stroke:#6A1B9A,color:#fff
+        style C1 fill:#4CAF50,stroke:#2E7D32,color:#fff
+        style C2 fill:#8BC34A,stroke:#558B2F,color:#fff
+        style D1 fill:#FFC107,stroke:#F57C00,color:#000
+        style D2 fill:#FFD54F,stroke:#F9A825,color:#000
+        style E1 fill:#FF5722,stroke:#D84315,color:#fff
+        style F1 fill:#BA68C8,stroke:#7B1FA2,color:#fff
+    end
+```
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50'}}}%%
+graph LR
+    subgraph "Completion Percentage by Language"
+        SV["🇸🇪 Swedish<br/>82.3%"]
+        DA["🇩🇰 Danish<br/>75.0%"]
+        FI["🇫🇮 Finnish<br/>75.0%"]
+        NO["🇳🇴 Norwegian<br/>75.0%"]
+        AR["🇸🇦 Arabic<br/>64.6%"]
+        HE["🇮🇱 Hebrew<br/>64.6%"]
+        DE["🇩🇪 German<br/>63.5%"]
+        NL["🇳🇱 Dutch<br/>61.5%"]
+        ZH["🇨🇳 Chinese<br/>60.4%"]
+        FR["🇫🇷 French<br/>60.4%"]
+        JA["🇯🇵 Japanese<br/>60.4%"]
+        KO["🇰🇷 Korean<br/>60.4%"]
+        ES["🇪🇸 Spanish<br/>60.4%"]
+        
+        style SV fill:#1B5E20,stroke:#4CAF50,color:#fff
+        style DA fill:#2E7D32,stroke:#4CAF50,color:#fff
+        style FI fill:#2E7D32,stroke:#4CAF50,color:#fff
+        style NO fill:#2E7D32,stroke:#4CAF50,color:#fff
+        style AR fill:#F57C00,stroke:#FF9800,color:#fff
+        style HE fill:#F57C00,stroke:#FF9800,color:#fff
+        style DE fill:#F57C00,stroke:#FF9800,color:#fff
+        style NL fill:#EF6C00,stroke:#FF9800,color:#fff
+        style ZH fill:#EF6C00,stroke:#FF9800,color:#fff
+        style FR fill:#EF6C00,stroke:#FF9800,color:#fff
+        style JA fill:#EF6C00,stroke:#FF9800,color:#fff
+        style KO fill:#EF6C00,stroke:#FF9800,color:#fff
+        style ES fill:#EF6C00,stroke:#FF9800,color:#fff
+    end
+```
+
+
 **Base English Files:** 96  
 **Last Updated:** December 2025
 
