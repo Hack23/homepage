@@ -1,248 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سياسة الاستجابة للحوادث - Discordian ISMS | Hack23 AB</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="سياسة الاستجابة للحوادث: احتواء أقل من 30 دقيقة، عملية من 5 مراحل، دروس مستفادة موثقة، تمارين فصلية، شفافية عامة">
-<meta name="keywords" content="الاستجابة للحوادث، احتواء الحوادث، تحليل الطب الشرعي، دروس مستفادة، ISO 27035، NIST CSF، ISMS">
-<meta name="robots" content="index, follow">
-<meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="سياسة الاستجابة للحوادث: الذعر المنظم يتغلب على الفوضى">
-<meta property="og:description" content="احتواء 30 دقيقة + عملية 5 مراحل + دروس موثقة. الاستجابة للحوادث المنهجية لأعمال الشخص الواحد.">
-	<meta property="og:locale" content="ar_SA">
-	<meta property="og:locale:alternate" content="da_DK">
-	<meta property="og:locale:alternate" content="de_DE">
-	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:locale:alternate" content="es_ES">
-	<meta property="og:locale:alternate" content="fi_FI">
-	<meta property="og:locale:alternate" content="fr_FR">
-	<meta property="og:locale:alternate" content="he_IL">
-	<meta property="og:locale:alternate" content="ja_JP">
-	<meta property="og:locale:alternate" content="ko_KR">
-	<meta property="og:locale:alternate" content="nl_NL">
-	<meta property="og:locale:alternate" content="nb_NO">
-	<meta property="og:locale:alternate" content="sv_SE">
-	<meta property="og:locale:alternate" content="zh_CN">
-
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-incident-response-policy_ar.html">
-<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="مدونة أمان Hack23">
-<meta name="twitter:site" content="@hack23ab">
-<meta name="twitter:creator" content="@jamessorling">
-
-<link rel="canonical" href="https://hack23.com/discordian-incident-response-policy_ar.html">
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "سياسة الاستجابة للحوادث: الذعر المنظم يتغلب على الفوضى",
-      "description": "كيف تطبق Hack23 الاستجابة للحوادث المنهجية مع احتواء أقل من 30 دقيقة، عملية من 5 مراحل، دروس موثقة وشفافية عامة",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "url": "https://hack23.com",
-        "jobTitle": "الرئيس التنفيذي / خبير الأمن السيبراني",
-        "sameAs": [
-          "https://www.linkedin.com/in/jamessorling/",
-          "https://github.com/Hack23"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "datePublished": "2025-12-15",
-      "dateModified": "2025-12-15",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-incident-response-policy_ar.html"
-      },
-      "keywords": "الاستجابة للحوادث، احتواء الحوادث، ISO 27035، NIST CSF، ISMS",
-      "articleSection": "أمن المعلومات",
-      "inLanguage": "ar",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp",
-        "width": 1200,
-        "height": 630
-      },
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog_ar.html#blog",
-        "name": "مدونة أمان Hack23"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-incident-response-policy_ar.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://hack23.com/index_ar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "مدونة",
-          "item": "https://hack23.com/blog_ar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "سياسة الاستجابة للحوادث",
-          "item": "https://hack23.com/discordian-incident-response-policy_ar.html"
-        }
-      ]
-    }
-  ]
-}</script>
-<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-incident-response-policy_ar.html">
-<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-incident-response-policy_ar.html">
-<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-incident-response-policy_ar.html">
-<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-incident-response-policy_da.html">
-<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-incident-response-policy_de.html">
-<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-incident-response-policy_de.html">
-<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-incident-response-policy.html">
-<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-incident-response-policy_es.html">
-<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-incident-response-policy_es.html">
-<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-incident-response-policy_fi.html">
-<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-incident-response-policy_fr.html">
-<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-incident-response-policy_fr.html">
-<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-incident-response-policy_he.html">
-<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-incident-response-policy_he.html">
-<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-incident-response-policy_ja.html">
-<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-incident-response-policy_ja.html">
-<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-incident-response-policy_ko.html">
-<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-incident-response-policy_ko.html">
-<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-incident-response-policy_nl.html">
-<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-incident-response-policy_nl.html">
-<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-incident-response-policy_no.html">
-<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-incident-response-policy_no.html">
-<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-incident-response-policy_sv.html">
-<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-incident-response-policy_sv.html">
-<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-incident-response-policy_zh.html">
-<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-incident-response-policy_zh.html">
-<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-incident-response-policy_zh.html">
-<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-incident-response-policy.html">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <nav aria-label="Breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index_ar.html">الرئيسية</a></li>
-      <li class="breadcrumb-item"><a href="blog_ar.html">مدونة</a></li>
-      <li class="breadcrumb-item" aria-current="page">سياسة الاستجابة للحوادث</li>
-    </ol>
-  </nav>
-
-<header>
-  <div class="logo-container">
-    <img src="cia-icon-140.webp" alt="شعار Hack23" class="logo" width="80" height="80">
-  </div>
-  <h1>الأمن السيبراني Discordian</h1>
-  <div class="app-link">
-    <a href="index_ar.html">الرئيسية</a>
-    <a href="discordian-cybersecurity_ar.html">البيان</a>
-    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">ISMS الاستجابة للحوادث</a>
-  </div>
-</header>
-
-<main>
-  <article>
-    <h2 class="header">🚨 الاستجابة للحوادث: الذعر المنظم يتغلب على الفوضى</h2>
-    
-    <section id="introduction">
-      <h2 class="panel-caption">لماذا "نحن سنتعامل مع ذلك عندما يحدث" هو خطة كارثية</h2>
-      
-      <p><strong>فكر بنفسك!</strong> معظم الاستجابة للحوادث هي الذعر مع خطوات إضافية. بدون خطة، كل حادث يصبح بروفة كارثية حيث تتخذ قرارات حرجة تحت ضغط بواسطة أشخاص يفتقدون للنوم ولا يعرفون من هو المسؤول. <strong>FNORD.</strong> الذعر المنظم يتغلب على الفوضى. العمليات تتغلب على الذعر. التوثيق يتغلب على فقدان الذاكرة الناجم عن الأدرينالين.</p>
-      
-      <p><strong>لا شيء صحيح. كل شيء مسموح.</strong> باستثناء الاستجابة للحوادث بدون عملية، احتواء بدون توقيت، حل بدون دروس مستفادة. في Hack23، الحوادث ليست "حالات طوارئ غير متوقعة" — إنها <strong>احتواء أقل من 30 دقيقة</strong> (حرج)، <strong>عملية من 5 مراحل</strong> (كشف، احتواء، استئصال، استرداد، دروس)، <strong>تقارير حوادث عامة</strong> (الشفافية تبني الثقة)، <strong>تمارين ربع سنوية</strong> (ممارسة قبل الضغط).</p>
-      
-      <p>الاستجابة للحوادث في أعمال الشخص الواحد + عملية موثقة + شفافية عامة = إثبات أن الاستجابة المنهجية تعمل من العمليات الفردية إلى المؤسسات. عملية خمس مراحل كاملة في <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">خطة الاستجابة للحوادث</a> العامة لدينا. لأن الذعر بدون عملية هو مجرد ذعر.</p>
-      
-      <p><strong>بحاجة إلى إرشاد خبير في الاستجابة للحوادث؟</strong> <a href="why-hack23_ar.html">اكتشف لماذا تختار المنظمات Hack23</a> للاستشارات الشفافة في مجال الأمن السيبراني بقيادة الممارسين.</p>
-    </section>
-
-    <section id="five-phases">
-      <h2 class="panel-caption">عملية الاستجابة من خمس مراحل: كشف، احتواء، استئصال، استرداد، دروس</h2>
-      
-      <p>الاستجابة للحوادث ليست خطوة واحدة — إنها دورة. خمس مراحل، يتم التدريب عليها ربع سنوياً، وتتحسن مع كل حادث. <em>قانون الخمسة يضرب مرة أخرى. FNORD.</em></p>
-      
-      <div class="cards">
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>1. 🔍 كشف</h3>
-          <p><strong>تعرف متى يحدث شيء سيء.</strong></p>
-          <p><strong>المراقبة:</strong> AWS GuardDuty (تهديدات في الوقت الفعلي)، CloudTrail (سجلات التدقيق)، التنبيهات الأمنية (الإجراءات غير الطبيعية). <strong>المصادر:</strong> الأنظمة الآلية، الموظفون، الباحثون الأمنيون الخارجيون، العملاء.</p>
-          <p><strong>التصنيف:</strong> حرج (مطلوب استجابة فورية)، عالٍ (خلال ساعة)، متوسط (خلال 4 ساعات)، منخفض (خلال 24 ساعة). <strong>الزمن المستهدف:</strong> كشف الحوادث الحرجة خلال 15 دقيقة.</p>
-          <p class="hidden-wisdom"><em>الكشف هو الخطوة الأولى. إذا لم تعرف أنك مخترق، فأنت مخترق بالفعل — فقط لا تعلم بعد. GuardDuty + CloudTrail + اليقظة = رؤية منهجية.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>2. 🛡️ احتواء</h3>
-          <p><strong>أوقف النزيف.</strong></p>
-          <p><strong>فوري:</strong> عزل الأنظمة المخترقة (فصل الشبكة، إلغاء الاعتمادات)، منع الانتشار، حفظ الأدلة. <strong>الزمن المستهدف:</strong> أقل من 30 دقيقة للحوادث الحرجة.</p>
-          <p><strong>طويل المدى:</strong> الأنظمة المعزولة تظل معزولة حتى الاستئصال الكامل. ضوابط تعويضية (WAF، قواعد أمنية، MFA القسري). <strong>لا تعد الإنتاج قبل النظافة.</strong></p>
-          <p class="hidden-wisdom"><em>الاحتواء هو تخفيف الضرر. اعزل، ثم افحص. لا تصلح الخدمة قبل أن تفهم النطاق — ستعيد الخدمة مع الخصم بداخلها.</em></p>
-        </div>
-        
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>3. 🧹 استئصال</h3>
-          <p><strong>أزل التهديد تمامًا.</strong></p>
-          <p><strong>الإجراءات:</strong> إزالة البرامج الضارة، إغلاق الثغرات، تدوير الاعتمادات، ترقيع الأنظمة، تحديث القواعد. <strong>التحقق:</strong> فحص جميع الأنظمة المتأثرة. لا افتراضات — تحقق من كل شيء.</p>
-          <p><strong>الطب الشرعي:</strong> جمع الأدلة، تحليل السبب الجذري، توثيق مسار الهجوم، تحديد IOCs (مؤشرات الاختراق). <strong>حافظ على سلسلة الحفظ</strong> للإجراءات القانونية المحتملة.</p>
-          <p class="hidden-wisdom"><em>الاستئصال لا يتعلق بالسرعة — بل بالاكتمال. الاستئصال الجزئي = إعادة الاختراق الحتمية. قم بتنظيف كل شيء أو ستنظف مرة أخرى قريبًا.</em></p>
-        </div>
-        
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>4. 🔄 استرداد</h3>
-          <p><strong>أعد الأنظمة بأمان.</strong></p>
-          <p><strong>الإجراءات:</strong> استعادة من النسخ الاحتياطية النظيفة، إعادة بناء الأنظمة المخترقة (بدون إعادة استخدام المخترق)، التحقق من السلامة، المراقبة المكثفة. <strong>لا تسرع في الاسترداد.</strong></p>
-          <p><strong>التحقق:</strong> اختبار جميع الوظائف، فحص الأنظمة المستعادة بحثًا عن آثار متبقية، مراقبة الشذوذات. <strong>العودة إلى الإنتاج فقط بعد نظيف يمكن التحقق منه.</strong></p>
-          <p class="hidden-wisdom"><em>الاسترداد ليس "إعادة التشغيل واستمر." إنه "أعد البناء، تحقق، راقب، ثم ربما استعد." السرعة تأتي في المرتبة الثانية بعد اليقين.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>5. 📝 دروس مستفادة</h3>
-          <p><strong>تحسين للحادث التالي.</strong></p>
-          <p><strong>المراجعة:</strong> خلال 48 ساعة من الحل. <strong>الأسئلة:</strong> ماذا حدث؟ لماذا لم نكتشفه مبكرًا؟ ما الذي نجح/فشل في الاستجابة؟ كيف نمنع التكرار؟</p>
-          <p><strong>الإجراءات:</strong> تحديث الضوابط، تحسين المراقبة، ترقيع الأنظمة، تدريب الفريق. <strong>توثيق كل شيء.</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">تقارير الحوادث العامة</a> تبني الثقة.</p>
-          <p class="hidden-wisdom"><em>الحوادث بدون دروس مستفادة ستتكرر. التوثيق بدون إجراءات هو مسرح. نحن ننشر الدروس علنًا لأن الشفافية تبني الثقة أكثر من السرية. FNORD.</em></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="isms-link">
-      <h2 class="panel-caption">🔗 روابط ISMS العامة</h2>
-      <p>للحصول على التفاصيل الفنية الكاملة والتطبيق، راجع <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">خطة الاستجابة للحوادث</a> الكاملة في مستودع ISMS العام لدينا.</p>
-    </section>
-  </article>
-</main>
-
-<footer>
-  <p>&copy; 2008-2025 <a href="https://hack23.com">Hack23 AB</a> (Org.nr 5595347807). 
-     <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> | 
-     <a href="https://hack23.com/accessibility-statement_ar.html">إمكانية الوصول</a>
-  </p>
-</footer>
-
-</body>
-</html>
