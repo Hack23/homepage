@@ -11,7 +11,7 @@ This directory contains comprehensive translation guides and status files for al
 - **Validation Date:** 2025-12-15
 - **Pages Validated:** 925 (100% coverage)
 - **Compliance Rate:** 92.4%
-- **Full Report:** [TRANSLATION_QA_REPORT.md](../TRANSLATION_QA_REPORT.md)
+- **Full Report:** [TRANSLATION_QA_REPORT.md](TRANSLATION_QA_REPORT.md)
 
 ### Key Metrics
 - ✅ **100% RTL Compliance** - All 124 Arabic/Hebrew files properly implement `dir="rtl"`
