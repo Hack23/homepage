@@ -31,12 +31,12 @@
 - **Medium Priority:** 15+ additional Discordian ISMS policy files
 - **Lower Priority:** Example pages and additional content
 
-**Recently Added (Dec 2025):** 5 core ISMS policy files with `-policy` suffix:
-- ✅ `discordian-access-control-policy_fr.html`
-- ✅ `discordian-bc-dr-policy_fr.html`
-- ✅ `discordian-info-asset-mgmt-policy_fr.html`
-- ✅ `discordian-incident-response-policy_fr.html`
-- ✅ `discordian-risk-mgmt-policy_fr.html`
+**Recently Added (Dec 2025):** 5 core ISMS policy files:
+- ✅ `discordian-access-control_fr.html`
+- ✅ `discordian-business-continuity_fr.html`
+- ✅ `discordian-asset-mgmt_fr.html`
+- ✅ `discordian-incident-response_fr.html`
+- ✅ `discordian-risk-assessment_fr.html`
 
 ⚠️ **IMPORTANT:** Existing files have complete technical infrastructure (HTML, hreflang, SEO) but 82% still need content translation.
 
