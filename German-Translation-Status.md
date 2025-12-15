@@ -13,6 +13,12 @@
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
 | **German Files Exist** | 53 | 55.2% |
+| **German Files Exist** | 51 | 53.1% |
+| **Missing Files** | **46** | **47.9%** |
+
+**Missing Files:** 45 files not yet created (1 core page + 45 others)
+
+| **DE Files Exist** | 53 | 55.2% |
 | **Missing Files** | **43** | **44.8%** |
 
 **Missing Files:** 43 files not yet created (1 core page + 45 others)

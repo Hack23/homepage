@@ -12,6 +12,11 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **French Files Exist** | 50 | 52.1% |
+| **Missing Files** | **47** | **49.0%** |
+
+**Missing Files:** 46 files not yet created (1 core page + 46 others)
+
 | **FR Files Exist** | 52 | 54.2% |
 | **Missing Files** | **44** | **45.8%** |
 
