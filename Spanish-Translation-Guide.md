@@ -13,7 +13,7 @@
 | **Currency** | EUR (€) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 58/96 (60.4%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,189 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 4 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Spanish | Notes |
-|---------|-------|-------|
-| Home | *[Verify from files]* | Main navigation |
-| Blog | *[Verify from files]* | |
-| Services | *[Verify from files]* | |
-| Products | *[Verify from files]* | |
-| Documentation | *[Verify from files]* | |
-| Features | *[Verify from files]* | |
-| About | *[Verify from files]* | |
-| Contact | *[Verify from files]* | |
-| Learn More | *[Verify from files]* | CTA button |
-| Get Started | *[Verify from files]* | CTA button |
-| Read More | *[Verify from files]* | Blog/article link |
-| Download | *[Verify from files]* | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Contact | Contacto |
+| FAQ | Preguntas frecuentes |
+| Home | Inicio |
+| Products | Productos |
+| Services | Servicios |
+| Why Hack23 | Por qué Hack23 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Spanish | Context | ISO/Framework |
-|---------|-------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| 1. 🌐 Content Security Policy: Injection Defense | 1. 🌐 Content Seguridad Policy: Injection Defense |
+| 4. 🔒 Data Protection: Browser Storage Security | 4. 🔒 Protección de Datos: Browser Storage Seguridad |
+| Access Control | Control de Acceso |
+| Client-Side Security Architecture: Defense Through Simplicity | Client-Sies Seguridad Arquitectura: Defense Through Simplicity |
+| Cloud Security | Seguridad en la Nube |
+| Compliance | Cumplimiento |
+| Cybersecurity | Ciberseguridad |
+| DevSecOps | DevSecOps |
+| Discordian Cybersecurity | Incident Response \| Assume Breach Plan Response \| Hack23 |
+| Discordian Cybersecurity | Access Control \| Zero Trust Identity Security \| Hack23 |
+| GDPR | RGPD |
+| Incident Response | Respuesta a Incidentes |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Evaluación de Riesgos |
+| Security | Seguridad |
+| The Client-Side Security Advantage | The Client-Sies Seguridad Advantage |
+| Threat | Amenaza |
+| Vulnerability | Vulnerabilidad |
+| ☁️ Cloud Security & DevSecOps | ☁️ Seguridad en la Nube & DevSecOps |
+| 🌐 Open Source Security | 🌐 Seguridad de Código Abierto |
+| 🎓 Security Culture & Training | 🎓 Cultura de Seguridad & Formación |
+| 🏗️ Security Architecture & Strategy | 🏗️ Arquitectura de Seguridad & Estrategia |
+| 📋 Compliance & Regulatory | 📋 Cumplimiento Normativo & Regulatorio |
+| 🔑 Security Services | 🔑 Servicios de Seguridad |
+| 🛡️ Compliance Manager Security: STRIDE Through Five Dimensions | 🛡️ Cumplimiento Manager Seguridad: STRIDE Through Five Dimensions |
+| 🛡️ Security & Quality Standards | 🛡️ Estándares de Seguridad y Calidad |
 
-| English | Spanish | Notes | Context |
-|---------|-------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
 
-### 📋 ISMS Policy Terminology
+### 🔐 CIA Triad & Core Principles
 
-ISO 27001 and related policy documents:
+*Confidentiality, Integrity, Availability framework*
 
-| English | Spanish | ISO Reference | Policy Type |
-|---------|-------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| CIA Triad | Tríada CIA |
+| Confidentiality | Confidencialidad |
+| Integrity | Integridad |
+| Availability | Disponibilidad |
 
-### 🎯 Industry-Specific Terminology
+### 🏛️ ISMS & Governance Terminology
 
-#### 🎲 Gaming & Betting Industry
+*Information Security Management System and governance concepts*
 
-| English | Spanish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Sistema de Gestión de Seguridad de la Información |
+| Security Policy | Política de seguridad |
+| Risk Management | Gestión de riesgos |
+| Threat Modeling | Modelado de amenazas |
+| Risk Register | Registro de riesgos |
+| Audit | Auditoría |
 
-#### 🌿 Cannabis Industry
+### 🍎 Discordian Philosophy & Terminology
 
-| English | Spanish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
 
-#### 💰 Investment & Fintech
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Piensa por ti mismo |
+| Question Authority | Cuestiona la autoridad |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Ley de los Cinco |
+| Information Hoarding | Acaparamiento de información |
+| Transparency | Transparencia |
+| Security Theater | Teatro de seguridad |
+| Radical Transparency | Transparencia radical |
 
-| English | Spanish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Confianza Cero |
+| Defense in Depth | Defensa en profundidad |
+| Least Privilege | Mínimo privilegio |
+| Penetration Test | Prueba de penetración |
+| Attack Surface | Superficie de ataque |
+| Threat Actor | Actor de amenaza |
+| Security Incident | Incidente de seguridad |
+| Data Breach | Brecha de datos |
+
+### 💻 Technical Terms & Development
+
+*Technical and development-related vocabulary*
+
+
+| English | Translation |
+|---------|-------------|
+| 🔧 Secure Development & Code Quality | 🔧 Desarrollo Seguro & Calidad del Código |
+
+### 💼 Business & Professional Terms
+
+*Business, consulting, and professional service terms*
+
+
+| English | Translation |
+|---------|-------------|
+| Arts | Trigram Futuro \| VR/AR Artes Marciales Training \| Hack23 |
+| Choose | Por Qué Hack23 - Redirección |
+| Compliance | Cumplimiento Seguridad \| STRIDE Threat Moesling \| Hack23 |
+| Consulting | Por Qué Hack23 - Redirección |
+| Consulting | Servicios de Ciberseguridad \| Consultoría de Seguridad Profesional \| Hack23 |
+| Consulting | Consultoría de Ciberseguridad Suecia \| SGSI Público \| Hack23 |
+| Cybersecurity | Por Qué Hack23 - Redirección |
+| Cybersecurity | Servicios de Ciberseguridad \| Consultoría de Seguridad Profesional \| Hack23 |
+| Cybersecurity | Consultoría de Ciberseguridad Suecia \| SGSI Público \| Hack23 |
+| Future | Trigram Futuro \| VR/AR Artes Marciales Training \| Hack23 |
+| ISMS | Por Qué Hack23 - Redirección |
+| ISMS | Consultoría de Ciberseguridad Suecia \| SGSI Público \| Hack23 |
+| Martial | Trigram Futuro \| VR/AR Artes Marciales Training \| Hack23 |
+| Modeling | Cumplimiento Seguridad \| STRIDE Threat Moesling \| Hack23 |
+| Only | Por Qué Hack23 - Redirección |
+| Open | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| Professional | Servicios de Ciberseguridad \| Consultoría de Seguridad Profesional \| Hack23 |
+| Projects | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| Public | Por Qué Hack23 - Redirección |
+| Public | Consultoría de Ciberseguridad Suecia \| SGSI Público \| Hack23 |
+| Security | Cumplimiento Seguridad \| STRIDE Threat Moesling \| Hack23 |
+| Security | Servicios de Ciberseguridad \| Consultoría de Seguridad Profesional \| Hack23 |
+| Security | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| Services | Servicios de Ciberseguridad \| Consultoría de Seguridad Profesional \| Hack23 |
+| Source | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| STRIDE | Cumplimiento Seguridad \| STRIDE Threat Moesling \| Hack23 |
+| Sweden | Consultoría de Ciberseguridad Suecia \| SGSI Público \| Hack23 |
+| Threat | Cumplimiento Seguridad \| STRIDE Threat Moesling \| Hack23 |
+| Through | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| Training | Trigram Futuro \| VR/AR Artes Marciales Training \| Hack23 |
+| Transparency | Proyectos de Código Abierto \| Seguridad a Través de la Transparencia \| Hack23 |
+| Trigram | Trigram Futuro \| VR/AR Artes Marciales Training \| Hack23 |
+| 🎯 Core Service Areas | 🎯 Áreas de Servicio Principales |
+| 📋 Service Overview | 📋 Resumen de Servicios |
+
+### 📝 Translation Notes
+
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
+
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 94 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Spanish Regulatory & Standards Framework
 

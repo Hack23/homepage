@@ -13,7 +13,7 @@
 | **Currency** | SAR (ر.س) |
 | **Direction** | RTL (Right-to-Left) ← |
 | **Files Translated** | 62/96 (64.6%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,186 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 4 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Arabic | Notes |
-|---------|------|-------|
-| Home | *[Verify from files]* | Main navigation |
-| Blog | *[Verify from files]* | |
-| Services | *[Verify from files]* | |
-| Products | *[Verify from files]* | |
-| Documentation | *[Verify from files]* | |
-| Features | *[Verify from files]* | |
-| About | *[Verify from files]* | |
-| Contact | *[Verify from files]* | |
-| Learn More | *[Verify from files]* | CTA button |
-| Get Started | *[Verify from files]* | CTA button |
-| Read More | *[Verify from files]* | Blog/article link |
-| Download | *[Verify from files]* | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Blog | المدونة |
+| Contact | اتصل بنا |
+| FAQ | الأسئلة الشائعة |
+| Home | الرئيسية |
+| Products | المنتجات |
+| Services | الخدمات |
+| Why Hack23 | لماذا Hack23 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Arabic | Context | ISO/Framework |
-|---------|------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| Access Control | التحكم في الوصول |
+| Cloud Security | أمن السحابة |
+| Compliance | الامتثال |
+| Cybersecurity | الأمن السيبراني |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | الاستجابة للحوادث |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | تقييم المخاطر |
+| Security | الأمن |
+| Threat | التهديد |
+| Vulnerability | الثغرة الأمنية |
+| ☁️ Cloud Security & DevSecOps | ☁️ أمن السحابة و DevSecOps |
+| 🌐 Open Source Security | 🌐 أمن المصادر المفتوحة |
+| 🎓 Security Culture & Training | 🎓 ثقافة الأمن والتدريب |
+| 🏗️ Security Architecture & Strategy | 🏗️ الهندسة الأمنية والاستراتيجية |
+| 🔑 Security Services | 🔑 خدمات الأمن |
+| 🛡️ Security & Quality Standards | 🛡️ معايير الأمن والجودة |
 
-| English | Arabic | Notes | Context |
-|---------|------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
 
-### 📋 ISMS Policy Terminology
+### 🔐 CIA Triad & Core Principles
 
-ISO 27001 and related policy documents:
+*Confidentiality, Integrity, Availability framework*
 
-| English | Arabic | ISO Reference | Policy Type |
-|---------|------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| CIA Triad | ثالوث CIA |
+| Confidentiality | السرية |
+| Integrity | النزاهة |
+| Availability | التوافر |
 
-### 🎯 Industry-Specific Terminology
+### 🏛️ ISMS & Governance Terminology
 
-#### 🎲 Gaming & Betting Industry
+*Information Security Management System and governance concepts*
 
-| English | Arabic | Context | Regulatory |
-|---------|------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | نظام إدارة أمن المعلومات |
+| Security Policy | سياسة الأمن |
+| Risk Management | إدارة المخاطر |
+| Threat Modeling | نمذجة التهديدات |
+| Risk Register | سجل المخاطر |
+| Audit | تدقيق |
 
-#### 🌿 Cannabis Industry
+### 🍎 Discordian Philosophy & Terminology
 
-| English | Arabic | Context | Regulatory |
-|---------|------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
 
-#### 💰 Investment & Fintech
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | فكر بنفسك |
+| Question Authority | اسأل السلطة |
+| Chapel Perilous | Chapel Perilous |
+| Eris | إيريس |
+| Law of Fives | قانون الخمسة |
+| Information Hoarding | اكتناز المعلومات |
+| Transparency | الشفافية |
+| Security Theater | مسرح الأمن |
+| Radical Transparency | الشفافية الجذرية |
 
-| English | Arabic | Context | Regulatory |
-|---------|------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | الثقة الصفرية |
+| Defense in Depth | الدفاع في العمق |
+| Least Privilege | الحد الأدنى من الامتيازات |
+| Penetration Test | اختبار الاختراق |
+| Attack Surface | سطح الهجوم |
+| Threat Actor | الجهة الفاعلة التهديدية |
+| Security Incident | حادث أمني |
+| Data Breach | خرق البيانات |
+
+### 💻 Technical Terms & Development
+
+*Technical and development-related vocabulary*
+
+
+| English | Translation |
+|---------|-------------|
+| 🔧 Secure Development & Code Quality | 🔧 التطوير الآمن وجودة الكود |
+
+### 💼 Business & Professional Terms
+
+*Business, consulting, and professional service terms*
+
+
+| English | Translation |
+|---------|-------------|
+| Access | الوصول عن بُعد \| الثقة الصفرية مع MFA \| Hack23 |
+| Advantage | لماذا نظام ISMS الخاص بنا علني \| الشفافية كميزة تنافسية \| Hack23 |
+| Choose | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Competitive | لماذا نظام ISMS الخاص بنا علني \| الشفافية كميزة تنافسية \| Hack23 |
+| Consulting | استشارات الأمن السيبراني السويد \| ISMS عام \| Hack23 |
+| Consulting | خدمات الأمن السيبراني \| استشارات أمنية احترافية \| Hack23 |
+| Consulting | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Cybersecurity | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Cybersecurity | بيان الأمن السيبراني الديسكوردي \| مدونة Hack23 |
+| Cybersecurity | خدمات الأمن السيبراني \| استشارات أمنية احترافية \| Hack23 |
+| Cybersecurity | استشارات الأمن السيبراني السويد \| ISMS عام \| Hack23 |
+| Defense | بيان الأمن السيبراني الديسكوردي \| مدونة Hack23 |
+| Depth | بيان الأمن السيبراني الديسكوردي \| مدونة Hack23 |
+| ISMS | استشارات الأمن السيبراني السويد \| ISMS عام \| Hack23 |
+| ISMS | لماذا نظام ISMS الخاص بنا علني \| الشفافية كميزة تنافسية \| Hack23 |
+| ISMS | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Only | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Open | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Professional | خدمات الأمن السيبراني \| استشارات أمنية احترافية \| Hack23 |
+| Projects | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Public | لماذا نظام ISMS الخاص بنا علني \| الشفافية كميزة تنافسية \| Hack23 |
+| Public | لماذا تختار Hack23؟ \| الاستشارات الوحيدة للأمن السيبراني بنظام ISMS عام في السويد |
+| Public | استشارات الأمن السيبراني السويد \| ISMS عام \| Hack23 |
+| Remote | الوصول عن بُعد \| الثقة الصفرية مع MFA \| Hack23 |
+| Security | خدمات الأمن السيبراني \| استشارات أمنية احترافية \| Hack23 |
+| Security | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Services | خدمات الأمن السيبراني \| استشارات أمنية احترافية \| Hack23 |
+| Source | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Strategy | بيان الأمن السيبراني الديسكوردي \| مدونة Hack23 |
+| Sweden | استشارات الأمن السيبراني السويد \| ISMS عام \| Hack23 |
+| Through | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Transparency | مشاريع مفتوحة المصدر \| الأمن من خلال الشفافية \| Hack23 |
+| Transparency | لماذا نظام ISMS الخاص بنا علني \| الشفافية كميزة تنافسية \| Hack23 |
+| Trust | الوصول عن بُعد \| الثقة الصفرية مع MFA \| Hack23 |
+| with | الوصول عن بُعد \| الثقة الصفرية مع MFA \| Hack23 |
+| Zero | الوصول عن بُعد \| الثقة الصفرية مع MFA \| Hack23 |
+| 🎯 Core Service Areas | 🎯 مجالات الخدمة الأساسية |
+| 📋 Service Overview | 📋 نظرة عامة على الخدمة |
+
+### 📝 Translation Notes
+
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
+
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 93 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Arabic Regulatory & Standards Framework
 

@@ -13,7 +13,7 @@
 | **Currency** | EUR (€) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 72/96 (75.0%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,211 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 4 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Finnish | Notes |
-|---------|-------|-------|
-| Home | *[Verify from files]* | Main navigation |
-| Blog | *[Verify from files]* | |
-| Services | *[Verify from files]* | |
-| Products | *[Verify from files]* | |
-| Documentation | *[Verify from files]* | |
-| Features | *[Verify from files]* | |
-| About | *[Verify from files]* | |
-| Contact | *[Verify from files]* | |
-| Learn More | *[Verify from files]* | CTA button |
-| Get Started | *[Verify from files]* | CTA button |
-| Read More | *[Verify from files]* | Blog/article link |
-| Download | *[Verify from files]* | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Blog | Blogi |
+| Contact | Yhteystiedot |
+| FAQ | UKK |
+| Home | Etusivu |
+| Home | Koti |
+| Products | Tuotteet |
+| Services | Palvelut |
+| Why Hack23 | Miksi Hack23 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Finnish | Context | ISO/Framework |
-|---------|-------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| 3. 💼 Business Logic Layer: Compliance Calculations | [TO BE TRANSLATED - Conclusion] |
+| Access Control | Pääsynhallinta |
+| Cloud Security | Pilviturvallisuus |
+| Compliance | Vaatimustenmukaisuus |
+| Cybersecurity | Kyberturvallisuus |
+| Decision Flow and Risk Assessments | Decision Flow ja Riskiarvioinnit |
+| DevSecOps | DevSecOps |
+| Discordian Cybersecurity | [TO BE TRANSLATED - Main Header] |
+| GDPR | GDPR |
+| Incident Response | Tapausvasteen |
+| ISO 27001 | ISO 27001 |
+| Privacy by Design: Architecture, Not Checkbox Compliance | Tuotteet |
+| Risk Assessment | Riskiarviointi |
+| Security | Turvallisuus |
+| Threat | Uhka |
+| Vulnerability | Haavoittuvuus |
+| ☁️ Cloud Security & DevSecOps | ☁️ Pilviturvallisuus & DevSecOps |
+| ⚖️ Compliance Manager: CIA Triad Meets Sacred Geometry | [TO BE TRANSLATED - Article Title] |
+| 🌐 Open Source Security | 🌐 Avoimen lähdekoodin turvallisuus |
+| 🎓 Security Culture & Training | 🎓 Turvallisuuskulttuuri & koulutus |
+| 🏗️ Security Architecture & Strategy | 🏗️ Turvallisuusarkkitehtuuri & strategia |
+| 💼 Cybersecurity for Investment Firms & FinTech | 💼 Kyberturvallisuus Sijoitusyhtiöille & FinTech |
+| 📋 Compliance & Regulatory | 📋 Vaatimustenmukaisuus & säädökset |
+| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB Kyberturvallisuuskonsultointi \| Pohjoismaiden ainoa avoin ISMS |
+| 🔑 Security Services | 🔑 Turvallisuuspalvelut |
+| 🛡️ Security & Quality Standards | 🛡️ Turvallisuus- ja Laatustandardit |
 
-| English | Finnish | Notes | Context |
-|---------|-------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
 
-### 📋 ISMS Policy Terminology
+### 🔐 CIA Triad & Core Principles
 
-ISO 27001 and related policy documents:
+*Confidentiality, Integrity, Availability framework*
 
-| English | Finnish | ISO Reference | Policy Type |
-|---------|-------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-kolmikko |
+| Confidentiality | Luottamuksellisuus |
+| Integrity | Eheys |
+| Availability | Saatavuus |
 
-### 🎯 Industry-Specific Terminology
+### 🏛️ ISMS & Governance Terminology
 
-#### 🎲 Gaming & Betting Industry
+*Information Security Management System and governance concepts*
 
-| English | Finnish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Tietoturvahallintajärjestelmä |
+| Security Policy | Tietoturvapolitiikka |
+| Risk Management | Riskienhallinta |
+| Threat Modeling | Uhkamallintaminen |
+| Risk Register | Riskirekisteri |
+| Audit | Tarkastus |
 
-#### 🌿 Cannabis Industry
+### 🍎 Discordian Philosophy & Terminology
 
-| English | Finnish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
 
-#### 💰 Investment & Fintech
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Ajattele itse |
+| Question Authority | Kyseenalaista auktoriteetti |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Viisikon laki |
+| Information Hoarding | Tiedon hamstraaminen |
+| Transparency | Läpinäkyvyys |
+| Security Theater | Turvallisuusteatteri |
+| Radical Transparency | Radikaali läpinäkyvyys |
 
-| English | Finnish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Nollaluottamus |
+| Defense in Depth | Syvyyspuolustus |
+| Least Privilege | Pienimmän oikeuden periaate |
+| Penetration Test | Tunkeutumistesti |
+| Attack Surface | Hyökkäyspinta |
+| Threat Actor | Uhkatekijä |
+| Security Incident | Turvallisuuspoikkeama |
+| Data Breach | Tietomurto |
+
+### 💻 Technical Terms & Development
+
+*Technical and development-related vocabulary*
+
+
+| English | Translation |
+|---------|-------------|
+| 🔧 Secure Development & Code Quality | 🔧 Turvallinen kehitys & koodin laatu |
+| 🕵️ Privacy Policy: Surveillance Capitalism Meets Anarchist Data Protection | 🕵️ Tietosuojakäytäntö: Valvontakapitalismi Kohtaa Anarkistisen Tietosuojan |
+
+### 💼 Business & Professional Terms
+
+*Business, consulting, and professional service terms*
+
+
+| English | Translation |
+|---------|-------------|
+| Agency | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Architecture | [TO BE TRANSLATED] \| Hack23 |
+| Blog | Turvallisuusblogi \| Kyberturvallisuuden oivallukset \| Hack23 |
+| Choose | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Citizen | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Compliance | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+| Compliance | [TO BE TRANSLATED] \| Hack23 |
+| Consulting | Kyberturvallisuuskonsultointi Suomi \| Avoin ISMS \| Hack23 |
+| Consulting | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Consulting | Kyberturvallisuuspalvelut \| Ammattimainen turvallisuuskonsultointi \| Hack23 |
+| Cybersecurity | Kyberturvallisuus Sijoitusyhtiöille & FinTech \| MiFID II & PSD2 \| Hack23 |
+| Cybersecurity | Kyberturvallisuuskonsultointi Suomi \| Avoin ISMS \| Hack23 |
+| Cybersecurity | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Cybersecurity | Kyberturvallisuuspalvelut \| Ammattimainen turvallisuuskonsultointi \| Hack23 |
+| Cybersecurity | Turvallisuusblogi \| Kyberturvallisuuden oivallukset \| Hack23 |
+| Features | CIA Ominaisuudet \| Ruotsin Riksdags-OSINT \| Hack23 |
+| FinTech | Kyberturvallisuus Sijoitusyhtiöille & FinTech \| MiFID II & PSD2 \| Hack23 |
+| Firms | Kyberturvallisuus Sijoitusyhtiöille & FinTech \| MiFID II & PSD2 \| Hack23 |
+| GDPR | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+| Insights | Turvallisuusblogi \| Kyberturvallisuuden oivallukset \| Hack23 |
+| Intelligence | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Investment | Kyberturvallisuus Sijoitusyhtiöille & FinTech \| MiFID II & PSD2 \| Hack23 |
+| ISMS | Kyberturvallisuuskonsultointi Suomi \| Avoin ISMS \| Hack23 |
+| ISMS | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Manager | [TO BE TRANSLATED] \| Hack23 |
+| Only | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Open | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| OSINT | CIA Ominaisuudet \| Ruotsin Riksdags-OSINT \| Hack23 |
+| Parliament | CIA Ominaisuudet \| Ruotsin Riksdags-OSINT \| Hack23 |
+| Platform | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Policy | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+| Political | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Privacy | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+| Professional | Kyberturvallisuuspalvelut \| Ammattimainen turvallisuuskonsultointi \| Hack23 |
+| Projects | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| Public | Kyberturvallisuuskonsultointi Suomi \| Avoin ISMS \| Hack23 |
+| Public | Miksi valita Hack23? \| Pohjoismaiden ainoa avoin ISMS kyberturvallisuuskonsultointi |
+| Rights | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+| Security | Turvallisuusblogi \| Kyberturvallisuuden oivallukset \| Hack23 |
+| Security | Kyberturvallisuuspalvelut \| Ammattimainen turvallisuuskonsultointi \| Hack23 |
+| Security | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| Services | Kyberturvallisuuspalvelut \| Ammattimainen turvallisuuskonsultointi \| Hack23 |
+| Source | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| Sweden | Kyberturvallisuuskonsultointi Suomi \| Avoin ISMS \| Hack23 |
+| Swedish | CIA Ominaisuudet \| Ruotsin Riksdags-OSINT \| Hack23 |
+| Through | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| Transparency | Avoimen Lähdekoodin Projektit \| Turvallisuus Läpinäkyvyyden Kautta \| Hack23 |
+| Transparency | Citizen Intelligence Agency \| Poliittinen läpinäkyvyys Alusta \| Hack23 |
+| Triad | [TO BE TRANSLATED] \| Hack23 |
+| User | Tietosuojakäytäntö \| GDPR-Yhteensopivuus & Käyttäjäoikeudet \| Hack23 |
+
+*... and 2 more terms*
+
+
+### 📝 Translation Notes
+
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
+
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 125 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Finnish Regulatory & Standards Framework
 

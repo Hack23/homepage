@@ -13,7 +13,7 @@
 | **Currency** | DKK (kr) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 72/96 (75.0%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,201 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 3 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Danish | Notes |
-|---------|------|-------|
-| Home | *[Verify from files]* | Main navigation |
-| Blog | *[Verify from files]* | |
-| Services | *[Verify from files]* | |
-| Products | *[Verify from files]* | |
-| Documentation | *[Verify from files]* | |
-| Features | *[Verify from files]* | |
-| About | *[Verify from files]* | |
-| Contact | *[Verify from files]* | |
-| Learn More | *[Verify from files]* | CTA button |
-| Get Started | *[Verify from files]* | CTA button |
-| Read More | *[Verify from files]* | Blog/article link |
-| Download | *[Verify from files]* | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Contact | Kontakt |
+| Home | Hjem |
+| Products | Produkter |
+| Services | Tjenester |
+| Why Hack23 | Hvorfor Hack23 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Danish | Context | ISO/Framework |
-|---------|------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| Access Control | Adgangskontrol |
+| Cloud Security | Cloud Sikkerhed |
+| Compliance | Overholdelse |
+| Cybersecurity | Cybersikkerhed |
+| Decision Flow and Risk Assessments | Beslutningsflow og risikovurderinger |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | Hændelsesrespons |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | Risikovurdering |
+| Security | Sikkerhed |
+| Security Blog | Sikkerhedsblog |
+| Threat | Trussel |
+| Threat Modeling | Trusselmodellering |
+| Vulnerability | Sårbarhed |
+| 🎯 The 45 Behavioral Risk Rules: Quantifying Political Dysfunction | 🔬 Analytiska Ramverk: Fem Beteenderiskdimensioner |
+| 🎰 Cybersecurity for Betting & Gaming Operators | 🎰 Cybersikkerhed for Betting & Spiloperatører |
+| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB Premium Cybersikkerhed Rådgivning \| Sveriges Eneste Offentlige ISMS |
+| 🔐 Hack23 Security Blog | 🔐 Hack23 Sikkerhedsblog |
+| 🔑 Security Services | 🔑 Sikkerhedstjenester |
+| 🛡️ ISMS & Security Policies | 🔧 Technical |
+| 🛡️ Security & Quality Standards | 🛡️ Sikkerheds- og Kvalitetsstandarder |
 
-| English | Danish | Notes | Context |
-|---------|------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
 
-### 📋 ISMS Policy Terminology
+### 🔐 CIA Triad & Core Principles
 
-ISO 27001 and related policy documents:
+*Confidentiality, Integrity, Availability framework*
 
-| English | Danish | ISO Reference | Policy Type |
-|---------|------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA-triaden |
+| Confidentiality | Fortrolighed |
+| Integrity | Integritet |
+| Availability | Tilgængelighed |
 
-### 🎯 Industry-Specific Terminology
+### 🏛️ ISMS & Governance Terminology
 
-#### 🎲 Gaming & Betting Industry
+*Information Security Management System and governance concepts*
 
-| English | Danish | Context | Regulatory |
-|---------|------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | Informationssikkerhedsstyringssystem |
+| Security Policy | Sikkerhedspolitik |
+| Risk Management | Risikostyring |
+| Threat Modeling | Trusselmodellering |
+| Risk Register | Risikoregister |
+| Audit | Revision |
+| Security Controls | Sikkerhedskontroller |
+| Control Framework | Kontrolramme |
+| Security Assessment | Sikkerhedsvurdering |
+| Security Awareness | Sikkerhedsbevidsthed |
+| Security Training | Sikkerhedstræning |
 
-#### 🌿 Cannabis Industry
+### 🍎 Discordian Philosophy & Terminology
 
-| English | Danish | Context | Regulatory |
-|---------|------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
 
-#### 💰 Investment & Fintech
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | Tænk selv |
+| Question Authority | Sæt spørgsmålstegn ved autoritet |
+| Chapel Perilous | Chapel Perilous |
+| Eris | Eris |
+| Law of Fives | Loven om fem |
+| 23 FNORD 5 | 23 FNORD 5 |
+| Information Hoarding | Informationshamstring |
+| Transparency | Gennemsigtighed |
+| Security Theater | Sikkerhedsteater |
+| Radical Transparency | Radikal gennemsigtighed |
 
-| English | Danish | Context | Regulatory |
-|---------|------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | Nul tillid |
+| Defense in Depth | Forsvar i dybden |
+| Least Privilege | Mindste privilegium |
+| Separation of Duties | Adskillelse af opgaver |
+| Penetration Test | Penetrationstest |
+| Attack Surface | Angrebsflade |
+| Security Posture | Sikkerhedsstilling |
+| Threat Actor | Trusselaktør |
+| Attack Vector | Angrebsvektor |
+| Security Incident | Sikkerhedshændelse |
+| Data Breach | Datalæk |
+| Security Baseline | Sikkerhedsbaseline |
+| Hardening | Hærdning |
+
+### 💼 Business & Professional Terms
+
+*Business, consulting, and professional service terms*
+
+
+| English | Translation |
+|---------|-------------|
+| Assume | Trusselmodellering \| ISMS-risikostyring \| Hack23 |
+| Attackers | Trusselmodellering \| ISMS-risikostyring \| Hack23 |
+| Betting | Cybersikkerhed for Betting & Spiloperatører \| ISO 27001 Compliance \| Hack23 |
+| Blog | Sikkerhedsblog \| Cybersikkerhedsindsigt \| Hack23 |
+| Choose | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| Complete | Sitemap \| Hack23 AB - Komplet Sitenavigation |
+| Compliance | Cybersikkerhed for Betting & Spiloperatører \| ISO 27001 Compliance \| Hack23 |
+| Consulting | Cybersikkerhedstjenester \| Professionel Sikkerhedsrådgivning \| Hack23 |
+| Consulting | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| Consulting | Cybersikkerhed Rådgivning Sverige \| Offentlig ISMS \| Hack23 |
+| Cybersecurity | Cybersikkerhedstjenester \| Professionel Sikkerhedsrådgivning \| Hack23 |
+| Cybersecurity | Cybersikkerhed Rådgivning Sverige \| Offentlig ISMS \| Hack23 |
+| Cybersecurity | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| Cybersecurity | Sikkerhedsblog \| Cybersikkerhedsindsigt \| Hack23 |
+| Cybersecurity | Cybersikkerhed for Betting & Spiloperatører \| ISO 27001 Compliance \| Hack23 |
+| Features | CIA Funktioner \| Svensk Riksdags-OSINT \| Hack23 |
+| Gaming | Cybersikkerhed for Betting & Spiloperatører \| ISO 27001 Compliance \| Hack23 |
+| Insights | Sikkerhedsblog \| Cybersikkerhedsindsigt \| Hack23 |
+| Intelligence | CIA OSINT-intelligens \| Övervaka Övervakarna \| Hack23 |
+| ISMS | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| ISMS | Cybersikkerhed Rådgivning Sverige \| Offentlig ISMS \| Hack23 |
+| Modeling | Trusselmodellering \| ISMS-risikostyring \| Hack23 |
+| Navigation | Sitemap \| Hack23 AB - Komplet Sitenavigation |
+| Only | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| Open | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Operators | Cybersikkerhed for Betting & Spiloperatører \| ISO 27001 Compliance \| Hack23 |
+| OSINT | CIA Funktioner \| Svensk Riksdags-OSINT \| Hack23 |
+| OSINT | CIA OSINT-intelligens \| Övervaka Övervakarna \| Hack23 |
+| Parliament | CIA Funktioner \| Svensk Riksdags-OSINT \| Hack23 |
+| Professional | Cybersikkerhedstjenester \| Professionel Sikkerhedsrådgivning \| Hack23 |
+| Projects | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Public | Cybersikkerhed Rådgivning Sverige \| Offentlig ISMS \| Hack23 |
+| Public | Hvorfor Vælge Hack23? \| Offentlig ISMS Cybersikkerhedsrådgivning |
+| Security | Cybersikkerhedstjenester \| Professionel Sikkerhedsrådgivning \| Hack23 |
+| Security | Sikkerhedsblog \| Cybersikkerhedsindsigt \| Hack23 |
+| Security | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Services | Cybersikkerhedstjenester \| Professionel Sikkerhedsrådgivning \| Hack23 |
+| Site | Sitemap \| Hack23 AB - Komplet Sitenavigation |
+| Source | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Sweden | Cybersikkerhed Rådgivning Sverige \| Offentlig ISMS \| Hack23 |
+| Swedish | CIA Funktioner \| Svensk Riksdags-OSINT \| Hack23 |
+| Threat | Trusselmodellering \| ISMS-risikostyring \| Hack23 |
+| Through | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Transparency | Open Source Projekter \| Sikkerhed Gennem Gennemsigtighed \| Hack23 |
+| Watchers | CIA OSINT-intelligens \| Övervaka Övervakarna \| Hack23 |
+| Watching | CIA OSINT-intelligens \| Övervaka Övervakarna \| Hack23 |
+| 🎯 Core Service Areas | 🎯 Centrale Tjenesteområder |
+| 🏭 Industry-Specific Services | 🚀 Projects |
+| 📋 Service Overview | 📋 Tjenesteoversigt |
+
+### 📝 Translation Notes
+
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
+
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 110 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Danish Regulatory & Standards Framework
 

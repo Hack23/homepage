@@ -13,7 +13,7 @@
 | **Currency** | KRW (₩) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 58/96 (60.4%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,187 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 4 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Korean | Notes |
-|---------|------|-------|
-| Home | *[Verify from files]* | Main navigation |
-| Blog | *[Verify from files]* | |
-| Services | *[Verify from files]* | |
-| Products | *[Verify from files]* | |
-| Documentation | *[Verify from files]* | |
-| Features | *[Verify from files]* | |
-| About | *[Verify from files]* | |
-| Contact | *[Verify from files]* | |
-| Learn More | *[Verify from files]* | CTA button |
-| Get Started | *[Verify from files]* | CTA button |
-| Read More | *[Verify from files]* | Blog/article link |
-| Download | *[Verify from files]* | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Blog | 블로그 |
+| Collapse All | 모두 접기 |
+| Contact | 문의 |
+| Expand All | 모두 펼치기 |
+| Home | 홈 |
+| Products | 제품 |
+| Services | 서비스 |
+| Why Hack23 | Hack23 소개 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Korean | Context | ISO/Framework |
-|---------|------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| Access Control | 액세스 제어 |
+| Cloud Security | 클라우드 보안 |
+| Compliance | 규정 준수 |
+| Cybersecurity | 사이버 보안 |
+| DevSecOps | DevSecOps |
+| GDPR | GDPR |
+| Incident Response | 사고 대응 |
+| ISO 27001 | ISO 27001 |
+| Risk Assessment | 위험 평가 |
+| Security | 보안 |
+| Threat | 위협 |
+| Vulnerability | 취약점 |
+| ☁️ Cloud Security & DevSecOps | ☁️ 클라우드 보안 및 DevSecOps |
+| ⚡ Security Accelerates Innovation | 🛠️ 실용적 솔루션 |
+| 🌐 Open Source Security | 🌐 오픈 소스 보안 |
+| 🎓 Security Culture & Training | 🎓 보안 문화 및 교육 |
+| 🏆 Security & Quality Evidence | 🏆 보안 및 품질 증거 |
+| 🏗️ Security Architecture & Strategy | 🏗️ 보안 아키텍처 및 전략 |
+| 📋 Compliance & Regulatory | 📋 규정 준수 및 규제 |
+| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB 프리미엄 사이버보안 컨설팅 \| 스웨덴 유일의 공개 ISMS |
+| 🔑 Security Services | 🔑 보안 서비스 |
+| 🛡️ Security & Quality Standards | 🛡️ 보안 및 품질 기준 |
 
-| English | Korean | Notes | Context |
-|---------|------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
 
-### 📋 ISMS Policy Terminology
+### 🔐 CIA Triad & Core Principles
 
-ISO 27001 and related policy documents:
+*Confidentiality, Integrity, Availability framework*
 
-| English | Korean | ISO Reference | Policy Type |
-|---------|------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| CIA Triad | CIA 3요소 |
+| Confidentiality | 기밀성 |
+| Integrity | 무결성 |
+| Availability | 가용성 |
 
-### 🎯 Industry-Specific Terminology
+### 🏛️ ISMS & Governance Terminology
 
-#### 🎲 Gaming & Betting Industry
+*Information Security Management System and governance concepts*
 
-| English | Korean | Context | Regulatory |
-|---------|------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
+| English | Translation |
+|---------|-------------|
+| Information Security Management System | 정보보안 관리체계 |
+| Security Policy | 보안 정책 |
+| Risk Management | 위험 관리 |
+| Threat Modeling | 위협 모델링 |
+| Risk Register | 위험 등록부 |
+| Audit | 감사 |
 
-#### 🌿 Cannabis Industry
+### 🍎 Discordian Philosophy & Terminology
 
-| English | Korean | Context | Regulatory |
-|---------|------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+*Unique philosophical concepts from the Discordian approach to cybersecurity*
 
-#### 💰 Investment & Fintech
+| English | Translation |
+|---------|-------------|
+| FNORD | FNORD |
+| Think for Yourself | 스스로 생각하라 |
+| Question Authority | 권위에 의문을 제기하라 |
+| Chapel Perilous | Chapel Perilous |
+| Eris | 에리스 |
+| Law of Fives | 다섯의 법칙 |
+| Information Hoarding | 정보 독점 |
+| Transparency | 투명성 |
+| Security Theater | 보안 연극 |
+| Radical Transparency | 급진적 투명성 |
 
-| English | Korean | Context | Regulatory |
-|---------|------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 🛡️ Advanced Security Concepts
+
+*Modern security practices and methodologies*
+
+| English | Translation |
+|---------|-------------|
+| Zero Trust | 제로 트러스트 |
+| Defense in Depth | 심층 방어 |
+| Least Privilege | 최소 권한 |
+| Penetration Test | 침투 테스트 |
+| Attack Surface | 공격 표면 |
+| Threat Actor | 위협 행위자 |
+| Security Incident | 보안 사고 |
+| Data Breach | 데이터 유출 |
+
+### 💻 Technical Terms & Development
+
+*Technical and development-related vocabulary*
+
+
+| English | Translation |
+|---------|-------------|
+| 🔧 Secure Development & Code Quality | 🔧 안전한 개발 및 코드 품질 |
+
+### 💼 Business & Professional Terms
+
+*Business, consulting, and professional service terms*
+
+
+| English | Translation |
+|---------|-------------|
+| Breakdown | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
+| Certification | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
+| Choose | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| Companies | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| Complete | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| Complete | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
+| Consulting | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
+| Consulting | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
+| Consulting | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| Costs | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
+| Cybersecurity | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
+| Cybersecurity | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
+| Cybersecurity | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| Guide | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| Implementation | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| ISMS | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| ISMS | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
+| Only | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| Open | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| Professional | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
+| Projects | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| Public | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
+| Public | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
+| Roadmap | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| Security | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
+| Security | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| Services | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
+| Source | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| Sweden | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
+| Swedish | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
+| Through | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| Transparency | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
+| 🎯 Core Service Areas | 🎯 핵심 서비스 영역 |
+| 📋 Service Overview | 📋 서비스 개요 |
+
+### 📝 Translation Notes
+
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
+
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 92 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Korean Regulatory & Standards Framework
 
