@@ -12,6 +12,8 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **Japanese Files Exist** | 64 | 66.7% |
+| **Missing Files** | **33** | **34.4%** |
 | **Japanese Files Exist** | 68 | 70.8% |
 | **Missing Files** | **28** | **29.2%** |
 
@@ -21,6 +23,9 @@
 - ✅ **Issue #Current:** 5 Asian ISMS policy files created (access-control, bc-dr, info-asset-mgmt, incident-response, risk-mgmt)
 - ⚠️ **Issue #8 Batch 2:** 13 additional blog posts assessed - professional translation recommended
 
+**Missing Files:** 32 files not yet created (1 core page + 32 others)
+
+- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
 **Missing Files:** 28 files not yet created (1 core page + 27 others)
 - **High Priority:** `projects.html` (core navigation page)
 - **Medium Priority:** 15+ Discordian ISMS policy files + additional pages

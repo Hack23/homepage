@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>开源项目 | 通过透明实现安全 | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <link rel="alternate" hreflang="en" href="https://hack23.com/projects.html">
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/projects_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/projects_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/projects_de.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/projects_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/projects_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/projects_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/projects_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/projects_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/projects_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/projects_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/projects_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/projects_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/projects_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/projects.html">
+    <link rel="canonical" href="https://hack23.com/projects_zh.html">
+    
+    <meta name="description" content="Hack23的开源安全项目：Black Trigram武术游戏、CIA Compliance Manager评估平台、Citizen Intelligence Agency透明度工具。">
+    <meta name="keywords" content="开源安全项目, Black Trigram游戏, CIA Compliance Manager, Citizen Intelligence Agency, 安全工具, 透明度软件, SLSA Level 3">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="开源项目 | 通过透明实现安全 | Hack23">
+    <meta property="og:description" content="通过生产应用展示安全最佳实践">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/projects_zh.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="zh_Hans">
+    <meta property="og:locale:alternate" content="zh_SG">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://hack23.com/#org",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com/",
+          "logo": "cia-icon-140.webp",
+          "description": "瑞典唯一在GitHub上拥有完全公开ISMS框架的网络安全咨询公司。",
+          "foundingDate": "2025-01-01",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gothenburg",
+            "addressCountry": "SE"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hack23.com/projects_zh.html",
+          "url": "https://hack23.com/projects_zh.html",
+          "name": "开源项目 | 通过透明实现安全 | Hack23",
+          "inLanguage": "zh",
+          "isPartOf": {
+            "@id": "https://hack23.com/#website"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/projects_zh.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://hack23.com/index_zh.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "项目",
+              "item": "https://hack23.com/projects_zh.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_zh.html">首页</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                项目
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_zh.html" title="首页">🏠 Hack23</a>
+            <a href="services_zh.html" title="服务">服务</a>
+            <a href="projects_zh.html" title="项目" aria-current="page">项目</a>
+            <a href="why-hack23_zh.html" title="为什么选择Hack23">为什么选择Hack23</a>
+            <a href="blog_zh.html" title="博客">博客</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="projects-hero">
+            <h1>🚀 开源项目</h1>
+            <p class="lead">通过生产应用展示安全最佳实践</p>
+            <p>在Hack23，我们不仅谈论安全——我们通过展示安全控制、合规框架和DevSecOps实践的真实世界实现的开源项目来证明它。每个项目都达到<strong>SLSA Level 3</strong>供应链安全并维护主动安全监控。</p>
+        </section>
+        
+        <!-- Featured Projects -->
+        <section id="featured-projects">
+            <h2>🌟 精选项目</h2>
+            
+            <div class="cards">
+                <!-- Black Trigram -->
+                <div class="card black-trigram-card card-trigram">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <img src="black-trigram-140.webp" alt="Black Trigram Logo" width="80" height="80" class="project-logo">
+                        <div>
+                            <h3 class="project-title">🥋 Black Trigram (흑괘)</h3>
+                            <p class="project-subtitle">旗舰教育游戏项目</p>
+                        </div>
+                    </div>
+                    <p><strong>逼真的2D精确战斗模拟器</strong>受传统韩国武术启发。包含70个解剖要穴、5个不同的战士原型和真实的战斗技术。</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="black-trigram_zh.html" class="btn-primary">📖 了解更多</a>
+                        <a href="https://blacktrigram.com" class="btn-trigram">🎮 立即游玩</a>
+                        <a href="https://github.com/Hack23/blacktrigram">📂 Repository</a>
+                    </div>
+                </div>
+                
+                <!-- CIA Compliance Manager -->
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <img src="cia-icon-140.webp" alt="CIA Compliance Manager Logo" width="80" height="80" class="project-logo-rounded">
+                        <div>
+                            <h3 class="project-title">🔐 CIA Compliance Manager</h3>
+                            <p class="project-subtitle">企业安全评估平台</p>
+                        </div>
+                    </div>
+                    <p><strong>全面的安全评估平台</strong>用于评估机密性、完整性和可用性（CIA三要素）。</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="compliance-manager_zh.html" class="btn-primary">📖 了解更多</a>
+                        <a href="https://hack23.github.io/cia-compliance-manager/" class="btn-compliance">🚀 试用演示</a>
+                        <a href="https://github.com/Hack23/cia-compliance-manager">📂 Repository</a>
+                    </div>
+                </div>
+                
+                <!-- Citizen Intelligence Agency -->
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <picture>
+                            <source type="image/webp" srcset="cia-logo.webp">
+                            <img src="cia-logo.png" alt="CIA Logo" width="80" height="80" class="project-logo-rounded" loading="lazy" decoding="async">
+                        </picture>
+                        <div>
+                            <h3 class="project-title">🔍 Citizen Intelligence Agency</h3>
+                            <p class="project-subtitle">政治透明度平台</p>
+                        </div>
+                    </div>
+                    <p><strong>开源情报（OSINT）平台</strong>用于瑞典的政治透明度。</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/cia?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="cia-project_zh.html" class="btn-primary">📖 了解更多</a>
+                        <a href="cia-features_zh.html">✨ 功能</a>
+                        <a href="https://github.com/Hack23/cia">📂 Repository</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Comparison -->
+        <section id="projects-comparison">
+            <h2>📊 项目概述</h2>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>目的</th>
+                            <th>技术</th>
+                            <th class="text-center">状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Black Trigram</strong></td>
+                            <td>教育武术游戏</td>
+                            <td>Unity、C#、跨平台</td>
+                            <td class="text-center">🟢 活跃</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CIA Compliance Manager</strong></td>
+                            <td>安全评估&合规</td>
+                            <td>HTML5, JavaScript, PWA</td>
+                            <td class="text-center">🟢 活跃</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Citizen Intelligence Agency</strong></td>
+                            <td>政治透明度&监控</td>
+                            <td>Java, Vaadin, PostgreSQL</td>
+                            <td class="text-center">🟢 活跃</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lambda in Private VPC</strong></td>
+                            <td>企业云架构</td>
+                            <td>AWS, CloudFormation, Lambda</td>
+                            <td class="text-center">🟢 活跃</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Additional Projects -->
+        <section id="additional-projects">
+            <h2>🛠️ 其他项目</h2>
+            <div class="cards">
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>☁️ Lambda in Private VPC</h3>
+                    <p>用于关键任务应用程序的多区域主动/主动架构，具有接近零的恢复时间、DNS故障转移和AWS Resilience Hub合规性。</p>
+                    <div class="evidence-badges-simple mt-1">
+                        <a href="https://github.com/Hack23/lambda-in-private-vpc">📂 Repository</a>
+                        <a href="https://github.com/Hack23/lambda-in-private-vpc#-architecture-design">🏗️ Architecture</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>Sonar-CloudFormation-Plugin</h3>
+                    <p>基于NIST、CWE和ISO标准的安全最佳实践分析AWS CloudFormation模板的SonarQube插件。</p>
+                    <div class="badges">
+                        <img src="https://bestpractices.coreinfrastructure.org/projects/4545/badge" alt="CII Badge" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                    </div>
+                    <div class="evidence-badges-simple mt-1">
+                        <a href="https://github.com/Hack23/sonar-cloudformation-plugin">📂 Repository</a>
+                        <a href="https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin">Maven Central</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality Standards -->
+        <section id="project-standards">
+            <h2>🛡️ 安全和质量标准</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 SLSA Level 3</h3>
+                    <p>所有旗舰项目都达到<strong>软件工件供应链级别（SLSA）Level 3</strong>。</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 OpenSSF Scorecard</h3>
+                    <p>使用<strong>OpenSSF Scorecard</strong>评级进行主动安全监控。</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>✅ CII Best Practices</h3>
+                    <p>项目获得<strong>CII最佳实践</strong>徽章。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="explore-cta" class="cta-section">
+            <h2>🎯 探索我们的项目</h2>
+            <p>每个项目都展示了安全最佳实践、DevSecOps自动化和透明开发流程的实际应用。</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="black-trigram_zh.html" class="cta-button">🥋 Black Trigram</a>
+                <a href="compliance-manager_zh.html" class="cta-button">🔐 Compliance Manager</a>
+                <a href="cia-project_zh.html" class="cta-button">🔍 CIA Project</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md">Security Policy</a> |
+            <a href="blog_zh.html">Blog</a> |
+            <a href="https://hack23.com/index_sv.html" lang="sv">瑞典语版本</a>
+        </p>
+    </footer>
+</body>
+</html>

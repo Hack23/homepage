@@ -12,6 +12,12 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **Arabic Files Exist** | 55 | 57.3% |
+| **Missing Files** | **42** | **43.8%** |
+
+**Missing Files:** 41 files not yet created (1 core page + others)
+
+- **Medium Priority:** 20+ Discordian ISMS policy files
 | **Arabic Files Exist** | 59 | 61.5% |
 | **Missing Files** | **37** | **38.5%** |
 

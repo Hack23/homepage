@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <title>פרויקטי קוד פתוח | אבטחה דרך שקיפות | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <link rel="alternate" hreflang="en" href="https://hack23.com/projects.html">
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/projects_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/projects_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/projects_de.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/projects_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/projects_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/projects_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/projects_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/projects_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/projects_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/projects_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/projects_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/projects_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/projects_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/projects.html">
+    <link rel="canonical" href="https://hack23.com/projects_he.html">
+    
+    <meta name="description" content="פרויקטי אבטחה בקוד פתוח מאת Hack23: משחק אומנויות לחימה Black Trigram, פלטפורמת הערכה CIA Compliance Manager, כלי שקיפות Citizen Intelligence Agency.">
+    <meta name="keywords" content="פרויקטי אבטחה בקוד פתוח, משחק Black Trigram, CIA Compliance Manager, Citizen Intelligence Agency, כלי אבטחה, תוכנת שקיפות, SLSA Level 3">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="פרויקטי קוד פתוח | אבטחה דרך שקיפות | Hack23">
+    <meta property="og:description" content="הדגמת שיטות עבודה מומלצות לאבטחה באמצעות יישומי ייצור">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/projects_he.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    <meta property="og:locale" content="he_IL">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "ProfessionalService"],
+          "@id": "https://hack23.com/#org",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com/",
+          "logo": "cia-icon-140.webp",
+          "description": "חברת הייעוץ היחידה לאבטחת סייבר בשוודיה עם מסגרת ISMS ציבורית לחלוטין ב-GitHub.",
+          "foundingDate": "2025-01-01",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gothenburg",
+            "addressCountry": "SE"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hack23.com/projects_he.html",
+          "url": "https://hack23.com/projects_he.html",
+          "name": "פרויקטי קוד פתוח | אבטחה דרך שקיפות | Hack23",
+          "inLanguage": "he",
+          "isPartOf": {
+            "@id": "https://hack23.com/#website"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hack23.com/projects_he.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "בית",
+              "item": "https://hack23.com/index_he.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "פרויקטים",
+              "item": "https://hack23.com/projects_he.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_he.html">בית</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                פרויקטים
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_he.html" title="בית">🏠 Hack23</a>
+            <a href="services_he.html" title="שירותים">שירותים</a>
+            <a href="projects_he.html" title="פרויקטים" aria-current="page">פרויקטים</a>
+            <a href="why-hack23_he.html" title="למה Hack23">למה Hack23</a>
+            <a href="blog_he.html" title="בלוג">בלוג</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="projects-hero">
+            <h1>🚀 פרויקטי קוד פתוח</h1>
+            <p class="lead">הדגמת שיטות עבודה מומלצות לאבטחה באמצעות יישומי ייצור</p>
+            <p>ב-Hack23, אנחנו לא רק מדברים על אבטחה—אנחנו מוכיחים אותה דרך פרויקטי קוד פתוח שמציגים יישום בעולם האמיתי של בקרות אבטחה, מסגרות ציות ופרקטיקות DevSecOps. כל פרויקט משיג אבטחת שרשרת אספקה <strong>SLSA Level 3</strong> ושומר על ניטור אבטחה פעיל.</p>
+        </section>
+        
+        <!-- Featured Projects -->
+        <section id="featured-projects">
+            <h2>🌟 פרויקטים מומלצים</h2>
+            
+            <div class="cards">
+                <!-- Black Trigram -->
+                <div class="card black-trigram-card card-trigram">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <img src="black-trigram-140.webp" alt="Black Trigram Logo" width="80" height="80" class="project-logo">
+                        <div>
+                            <h3 class="project-title">🥋 Black Trigram (흑괘)</h3>
+                            <p class="project-subtitle">פרויקט משחק חינוכי מוביל</p>
+                        </div>
+                    </div>
+                    <p><strong>סימולטור קרב דיוק דו-ממדי ריאליסטי</strong> בהשראת אומנויות לחימה קוריאניות מסורתיות. כולל 70 נקודות חיוניות אנטומיות, 5 ארכיטיפים של לוחמים שונים וטכניקות לחימה אותנטיות.</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="black-trigram_he.html" class="btn-primary">📖 למד עוד</a>
+                        <a href="https://blacktrigram.com" class="btn-trigram">🎮 שחק עכשיו</a>
+                        <a href="https://github.com/Hack23/blacktrigram">📂 Repository</a>
+                    </div>
+                </div>
+                
+                <!-- CIA Compliance Manager -->
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <img src="cia-icon-140.webp" alt="CIA Compliance Manager Logo" width="80" height="80" class="project-logo-rounded">
+                        <div>
+                            <h3 class="project-title">🔐 CIA Compliance Manager</h3>
+                            <p class="project-subtitle">פלטפורמת הערכת אבטחה ארגונית</p>
+                        </div>
+                    </div>
+                    <p><strong>פלטפורמה מקיפה להערכת אבטחה</strong> להערכת חסויות, שלמות וזמינות (משולש CIA).</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="compliance-manager_he.html" class="btn-primary">📖 למד עוד</a>
+                        <a href="https://hack23.github.io/cia-compliance-manager/" class="btn-compliance">🚀 נסה דמו</a>
+                        <a href="https://github.com/Hack23/cia-compliance-manager">📂 Repository</a>
+                    </div>
+                </div>
+                
+                <!-- Citizen Intelligence Agency -->
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <div class="project-header">
+                        <picture>
+                            <source type="image/webp" srcset="cia-logo.webp">
+                            <img src="cia-logo.png" alt="CIA Logo" width="80" height="80" class="project-logo-rounded" loading="lazy" decoding="async">
+                        </picture>
+                        <div>
+                            <h3 class="project-title">🔍 Citizen Intelligence Agency</h3>
+                            <p class="project-subtitle">פלטפורמת שקיפות פוליטית</p>
+                        </div>
+                    </div>
+                    <p><strong>פלטפורמת מודיעין קוד פתוח (OSINT)</strong> לשקיפות פוליטית בשוודיה.</p>
+                    
+                    <div class="badges project-badges">
+                        <img src="https://img.shields.io/github/v/release/Hack23/cia?style=flat-square" alt="Release" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="cia-project_he.html" class="btn-primary">📖 למד עוד</a>
+                        <a href="cia-features_he.html">✨ תכונות</a>
+                        <a href="https://github.com/Hack23/cia">📂 Repository</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Comparison -->
+        <section id="projects-comparison">
+            <h2>📊 סקירת פרויקטים</h2>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>פרויקט</th>
+                            <th>מטרה</th>
+                            <th>טכנולוגיה</th>
+                            <th class="text-center">סטטוס</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Black Trigram</strong></td>
+                            <td>משחקי אומנויות לחימה חינוכיים</td>
+                            <td>Unity, C#, חוצה פלטפורמות</td>
+                            <td class="text-center">🟢 פעיל</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CIA Compliance Manager</strong></td>
+                            <td>הערכת אבטחה & ציות</td>
+                            <td>HTML5, JavaScript, PWA</td>
+                            <td class="text-center">🟢 פעיל</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Citizen Intelligence Agency</strong></td>
+                            <td>שקיפות פוליטית & ניטור</td>
+                            <td>Java, Vaadin, PostgreSQL</td>
+                            <td class="text-center">🟢 פעיל</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lambda in Private VPC</strong></td>
+                            <td>ארכיטקטורת ענן ארגונית</td>
+                            <td>AWS, CloudFormation, Lambda</td>
+                            <td class="text-center">🟢 פעיל</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Additional Projects -->
+        <section id="additional-projects">
+            <h2>🛠️ פרויקטים נוספים</h2>
+            <div class="cards">
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>☁️ Lambda in Private VPC</h3>
+                    <p>ארכיטקטורת פעיל/פעיל מרובת אזורים עם זמן שחזור כמעט אפס, מעבר כשל DNS וציות AWS Resilience Hub ליישומים קריטיים למשימה.</p>
+                    <div class="evidence-badges-simple mt-1">
+                        <a href="https://github.com/Hack23/lambda-in-private-vpc">📂 Repository</a>
+                        <a href="https://github.com/Hack23/lambda-in-private-vpc#-architecture-design">🏗️ Architecture</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>Sonar-CloudFormation-Plugin</h3>
+                    <p>תוסף SonarQube לניתוח תבניות AWS CloudFormation עם שיטות עבודה מומלצות לאבטחה המבוססות על תקני NIST, CWE ו-ISO.</p>
+                    <div class="badges">
+                        <img src="https://bestpractices.coreinfrastructure.org/projects/4545/badge" alt="CII Badge" width="120" height="20" loading="lazy">
+                        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge" alt="Security Score" width="120" height="20" loading="lazy">
+                    </div>
+                    <div class="evidence-badges-simple mt-1">
+                        <a href="https://github.com/Hack23/sonar-cloudformation-plugin">📂 Repository</a>
+                        <a href="https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin">Maven Central</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality Standards -->
+        <section id="project-standards">
+            <h2>🛡️ תקני אבטחה ואיכות</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 SLSA Level 3</h3>
+                    <p>כל הפרויקטים המובילים משיגים <strong>רמות שרשרת אספקה ​​לחפצי תוכנה (SLSA) רמה 3</strong>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 OpenSSF Scorecard</h3>
+                    <p>ניטור אבטחה פעיל עם דירוגי <strong>OpenSSF Scorecard</strong>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>✅ CII Best Practices</h3>
+                    <p>הפרויקטים משיגים תגי <strong>שיטות עבודה מומלצות CII</strong>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="explore-cta" class="cta-section">
+            <h2>🎯 חקור את הפרויקטים שלנו</h2>
+            <p>כל פרויקט מדגים יישום בעולם האמיתי של שיטות עבודה מומלצות לאבטחה, אוטומציה של DevSecOps ותהליכי פיתוח שקופים.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="black-trigram_he.html" class="cta-button">🥋 Black Trigram</a>
+                <a href="compliance-manager_he.html" class="cta-button">🔐 Compliance Manager</a>
+                <a href="cia-project_he.html" class="cta-button">🔍 CIA Project</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md">Security Policy</a> |
+            <a href="blog_he.html">Blog</a> |
+            <a href="https://hack23.com/index_sv.html" lang="sv">גרסה שוודית</a>
+        </p>
+    </footer>
+</body>
+</html>

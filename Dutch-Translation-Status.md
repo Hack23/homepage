@@ -12,6 +12,11 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **Dutch Files Exist** | 51 | 53.1% |
+| **Missing Files** | **46** | **47.9%** |
+
+**Missing Files:** 45 files not yet created (1 core page + 45 others)
+
 | **NL Files Exist** | 53 | 55.2% |
 | **Missing Files** | **43** | **44.8%** |
 

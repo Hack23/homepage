@@ -11,6 +11,12 @@
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
+| **Swedish Files Exist** | 75 | 78.1% |
+| **Missing Files** | **21** | **21.9%** |
+
+**Missing Files:** 21 files not yet created (1 core page + 21 Discordian ISMS policies)
+
+- **Medium Priority:** 21 Discordian ISMS policy files (discordian-asset-mgmt, discordian-cloud-security, etc.)
 | **Swedish Files Exist** | 78 | 81.3% |
 | **Missing Files** | **18** | **18.8%** |
 
