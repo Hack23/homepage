@@ -106,7 +106,7 @@
 37. ✅ `discordian-remote-access_he.html`
 38. ✅ `discordian-cybersecurity_he.html`
 39. ✅ `discordian-access-control-policy_he.html`
-40. ✅ `discordian-bc-dr-policy_he.html`
+40. ✅ `discordian-business-continuity_he.html`
 
 ### ISO 27001 Resources (4)
 41. ✅ `iso-27001-2022-vs-2013_he.html`
@@ -128,7 +128,6 @@
 53. ✅ `blog-trigram-combat_he.html`
 54. ✅ `blog-trigram-future_he.html`
 55. ✅ `cia-triad-faq_he.html`
-56. ✅ `industries_he.html`
 57. ✅ `security-assessment-checklist_he.html`
 58. ✅ `why-hack23_he.html`
 59. ✅ `discordian-incident-response-policy_he.html`
@@ -313,17 +312,16 @@ These English pages exist but have no corresponding `_he.html` translation file:
 6. compliance-manager_he.html
 7. discordian-acceptable-use_he.html
 8. discordian-access-control-policy_he.html
-9. discordian-bc-dr-policy_he.html
+9. discordian-business-continuity_he.html
 10. discordian-incident-response-policy_he.html
-11. discordian-info-asset-mgmt-policy_he.html
+11. discordian-asset-mgmt_he.html
 12. discordian-info-sec-policy_he.html
 13. discordian-remote-access_he.html
-14. discordian-risk-mgmt-policy_he.html
+14. discordian-risk-assessment_he.html
 15. discordian-risk-register_he.html
 16. industries-betting-gaming_he.html
 17. industries-cannabis-security_he.html
 18. industries-investment-fintech_he.html
-19. industries_he.html
 20. iso-27001-2022-vs-2013_he.html
 21. iso-27001-certification-costs-sweden_he.html
 22. iso-27001-implementation-mistakes_he.html

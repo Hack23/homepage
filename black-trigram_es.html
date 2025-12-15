@@ -16,253 +16,286 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Black Trigram | Juego de Artes Marciales Coreanas">
     <meta property="og:description" content="Simulador de combate de precisión 2D realista con 70 puntos vitales, 5 arquetipos y técnicas auténticas de artes marciales coreanas.">
-    <meta property="og:type" content="website">
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:type" content="website">
     <meta property="og:url" content="https://hack23.com/black-trigram_es.html">
     <meta property="og:image" content="black-trigram-140.webp">
-    <meta property="og:site_name" content="Hack23 AB">
-    <meta property="og:locale" content="es_ES">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:site_name" content="Hack23 AB"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
     <!-- Schema.org structured data -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "description": "La única consultoría de ciberseguridad sueca con un marco ISMS completamente público en GitHub. Liderada por un equipo con más de 30 años de experiencia en arquitectura de seguridad, DevSecOps y cumplimiento ISO 27001.",
+      "foundingDate": "2025-01-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressCountry": "SE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "English",
+          "Swedish",
+          "Spanish"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/"
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://blacktrigram.com/#blacktrigram",
+      "name": "Black Trigram",
+      "alternateName": [
+        "흑괘",
+        "Black Trigram Game"
+      ],
+      "description": "Simulador de combate de precisión 2D realista inspirado en las artes marciales coreanas tradicionales, con 70 puntos vitales anatómicos, 5 arquetipos de luchadores diferentes y técnicas de combate auténticas. Proyecto de juego educativo de código abierto para la preservación cultural.",
+      "genre": [
+        "Fighting",
+        "Educational",
+        "Simulation",
+        "Cultural"
+      ],
+      "gamePlatform": [
+        "PC",
+        "Cross-platform",
+        "Web Browser"
+      ],
+      "operatingSystem": "Cross-platform",
+      "url": "https://blacktrigram.com",
+      "downloadUrl": "https://github.com/Hack23/blacktrigram/releases",
+      "softwareVersion": "latest",
+      "image": "https://hack23.com/black-trigram-140.webp",
+      "screenshot": "https://hack23.com/black-trigram-140.webp",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Fighting Game",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source Game"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "email": "info@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "givenName": "James Pether",
+        "familyName": "Sörling",
+        "additionalName": "pethers",
+        "email": "pether@hack23.com",
+        "url": "https://www.linkedin.com/in/jamessorling/",
+        "sameAs": [
+          "https://github.com/Hack23",
+          "https://github.com/pethers",
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://www.openhub.net/accounts/pether",
+          "https://slashdot.org/~pether",
+          "https://openprofile.dev/profile/pether"
+        ]
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "programmingLanguage": [
+        "C#"
+      ],
+      "softwareRequirements": "Unity Engine",
+      "codeRepository": "https://github.com/Hack23/blacktrigram",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "inLanguage": [
+        "en",
+        "ko"
+      ],
+      "featureList": [
+        "70 Anatomical Vital Points System",
+        "5 Combat Archetypes (Musa, Amsalja, Hacker, Jeongbo, Jojik)",
+        "Authentic Korean Martial Arts Techniques",
+        "Physics-Based Combat Simulation",
+        "Educational Gameplay",
+        "Cultural Preservation Focus",
+        "Open Source Development",
+        "Cross-platform Deployment",
+        "SLSA Level 3 Supply Chain Security"
+      ],
+      "teaches": [
+        "Korean Martial Arts",
+        "Taekkyeon Techniques",
+        "Hapkido Joint Locks",
+        "Anatomical Vital Points",
+        "Korean Martial Philosophy",
+        "I Ching Principles"
+      ],
+      "keywords": "Black Trigram, Korean martial arts game, Taekkyeon, Hapkido, combat simulator, vital points, educational gaming, cultural preservation, Unity game, C#, open source game",
+      "isAccessibleForFree": true,
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/PlayGameAction",
+        "userInteractionCount": 100
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hack23.com/black-trigram.html#faq",
+      "name": "Black Trigram Game FAQ",
+      "description": "Frequently asked questions about Black Trigram Korean martial arts combat game, features, platforms, and open source development.",
+      "url": "https://hack23.com/black-trigram.html",
+      "inLanguage": "es",
+      "datePublished": "2025-12-02",
+      "dateModified": "2025-12-02",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "mainEntity": [
         {
-          "@type": ["Organization", "ProfessionalService"],
-          "@id": "https://hack23.com/#org",
-          "name": "Hack23 AB",
-          "url": "https://hack23.com/",
-          "logo": "cia-icon-140.webp",
-          "description": "La única consultoría de ciberseguridad sueca con un marco ISMS completamente público en GitHub. Liderada por un equipo con más de 30 años de experiencia en arquitectura de seguridad, DevSecOps y cumplimiento ISO 27001.",
-          "foundingDate": "2025-01-01",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gothenburg",
-            "addressCountry": "SE"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "url": "https://www.linkedin.com/company/hack23/",
-            "availableLanguage": ["English", "Swedish", "Spanish"]
-          },
-          "sameAs": [
-            "https://github.com/Hack23",
-            "https://www.linkedin.com/company/hack23/"
-          ]
-        },
-        {
-          "@type": "VideoGame",
-          "@id": "https://blacktrigram.com/#blacktrigram",
-          "name": "Black Trigram",
-          "alternateName": ["흑괘", "Black Trigram Game"],
-          "description": "Simulador de combate de precisión 2D realista inspirado en las artes marciales coreanas tradicionales, con 70 puntos vitales anatómicos, 5 arquetipos de luchadores diferentes y técnicas de combate auténticas. Proyecto de juego educativo de código abierto para la preservación cultural.",
-          "genre": ["Fighting", "Educational", "Simulation", "Cultural"],
-          "gamePlatform": ["PC", "Cross-platform", "Web Browser"],
-          "operatingSystem": "Cross-platform",
-          "url": "https://blacktrigram.com",
-          "downloadUrl": "https://github.com/Hack23/blacktrigram/releases",
-          "softwareVersion": "latest",
-          "image": "https://hack23.com/black-trigram-140.webp",
-          "screenshot": "https://hack23.com/black-trigram-140.webp",
-          "applicationCategory": "GameApplication",
-          "applicationSubCategory": "Fighting Game",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "ratingCount": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "category": "Open Source Game"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "@id": "https://hack23.com/#org",
-            "name": "Hack23 AB",
-            "url": "https://hack23.com",
-            "email": "info@hack23.com"
-          },
-          "creator": {
-            "@type": "Person",
-            "@id": "https://hack23.com/#james-pether-sorling",
-            "name": "James Pether Sörling",
-            "givenName": "James Pether",
-            "familyName": "Sörling",
-            "additionalName": "pethers",
-            "email": "pether@hack23.com",
-            "url": "https://www.linkedin.com/in/jamessorling/",
-            "sameAs": [
-              "https://github.com/Hack23",
-              "https://github.com/pethers",
-              "https://www.linkedin.com/in/jamessorling/",
-              "https://www.openhub.net/accounts/pether",
-              "https://slashdot.org/~pether",
-              "https://openprofile.dev/profile/pether"
-            ]
-          },
-          "author": {
-            "@type": "Person",
-            "@id": "https://hack23.com/#james-pether-sorling"
-          },
-          "programmingLanguage": ["C#"],
-          "softwareRequirements": "Unity Engine",
-          "codeRepository": "https://github.com/Hack23/blacktrigram",
-          "license": "https://www.apache.org/licenses/LICENSE-2.0",
-          "inLanguage": ["en", "ko"],
-          "featureList": [
-            "70 Anatomical Vital Points System",
-            "5 Combat Archetypes (Musa, Amsalja, Hacker, Jeongbo, Jojik)",
-            "Authentic Korean Martial Arts Techniques",
-            "Physics-Based Combat Simulation",
-            "Educational Gameplay",
-            "Cultural Preservation Focus",
-            "Open Source Development",
-            "Cross-platform Deployment",
-            "SLSA Level 3 Supply Chain Security"
-          ],
-          "teaches": [
-            "Korean Martial Arts",
-            "Taekkyeon Techniques",
-            "Hapkido Joint Locks",
-            "Anatomical Vital Points",
-            "Korean Martial Philosophy",
-            "I Ching Principles"
-          ],
-          "keywords": "Black Trigram, Korean martial arts game, Taekkyeon, Hapkido, combat simulator, vital points, educational gaming, cultural preservation, Unity game, C#, open source game",
-          "isAccessibleForFree": true,
-          "interactionStatistic": {
-            "@type": "InteractionCounter",
-            "interactionType": "https://schema.org/PlayGameAction",
-            "userInteractionCount": 100
-          },
-          "maintainer": {
-            "@type": "Organization",
-            "@id": "https://hack23.com/#org"
+          "@type": "Question",
+          "name": "Is Black Trigram free to play?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Black Trigram is completely free and open source. You can play directly in your browser at blacktrigram.com, download releases from GitHub, or build from source under the Apache 2.0 license. There are no in-app purchases, subscriptions, or hidden costs."
           }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://hack23.com/black-trigram.html#faq",
-          "name": "Black Trigram Game FAQ",
-          "description": "Frequently asked questions about Black Trigram Korean martial arts combat game, features, platforms, and open source development.",
-          "url": "https://hack23.com/black-trigram.html",
-          "inLanguage": "es",
-          "datePublished": "2025-12-02",
-          "dateModified": "2025-12-02",
-          "author": {
-            "@type": "Person",
-            "name": "James Pether Sörling",
-            "url": "https://hack23.com"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Hack23 AB",
-            "url": "https://hack23.com"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is Black Trigram free to play?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, Black Trigram is completely free and open source. You can play directly in your browser at blacktrigram.com, download releases from GitHub, or build from source under the Apache 2.0 license. There are no in-app purchases, subscriptions, or hidden costs."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What platforms does Black Trigram support?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Black Trigram is built with Unity and supports cross-platform deployment. You can play in modern web browsers (Chrome, Firefox, Safari, Edge), download for PC (Windows, macOS, Linux), or build for other platforms from source. The web version requires no installation and works on most devices."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How realistic is the vital points combat system?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The vital points system is based on traditional Korean martial arts knowledge, featuring 70 anatomical targeting points with unique properties affecting combat effectiveness. While designed for entertainment and education, the techniques draw from authentic Taekkyeon and Hapkido practices. The physics-based combat simulation provides realistic weight, momentum, and impact calculations."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are the 5 combat archetypes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Black Trigram features 5 unique combat archetypes: Musa (무사) - the honorable warrior emphasizing discipline and direct combat; Amsalja (암살자) - the assassin focused on precision and vital point targeting; Hacker - the technical fighter using pattern recognition; Jeongbo (정보원) - the intelligence operative skilled in deception; and Jojik (조직원) - the street-smart fighter with adaptive techniques."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I contribute to the open-source project?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely! Black Trigram welcomes contributions from the community. The project is hosted on GitHub at github.com/Hack23/blacktrigram. You can contribute code, report bugs, suggest features, improve documentation, or help with translations. The project follows security best practices including SLSA Level 3 supply chain security."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What martial arts styles are featured in the game?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Black Trigram authentically represents traditional Korean martial arts including Taekkyeon (traditional Korean footwork and kicking), Hapkido (joint locks and grappling techniques), and elements of traditional Korean martial philosophy based on I Ching principles. Every technique is researched and implemented with cultural authenticity and respect for the arts' heritage."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What educational value does the game provide?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Beyond entertainment, Black Trigram serves as an educational platform for Korean martial arts and cultural heritage. Players learn traditional martial arts philosophy, anatomical targeting concepts, and Korean cultural context while playing. The game preserves and promotes Korean martial traditions through interactive digital media."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Black Trigram ensure security best practices?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As a Hack23 project, Black Trigram demonstrates enterprise-grade security practices including SLSA Level 3 supply chain security, OpenSSF Scorecard compliance, CII Best Practices certification, and SonarCloud quality gates. This ensures the game is built with the same security standards applied to professional software development."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "What platforms does Black Trigram support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Black Trigram is built with Unity and supports cross-platform deployment. You can play in modern web browsers (Chrome, Firefox, Safari, Edge), download for PC (Windows, macOS, Linux), or build for other platforms from source. The web version requires no installation and works on most devices."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://hack23.com/black-trigram.html#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://hack23.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Projects",
-              "item": "https://hack23.com/projects.html"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Black Trigram",
-              "item": "https://hack23.com/black-trigram.html"
-            }
-          ]
+          "@type": "Question",
+          "name": "How realistic is the vital points combat system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The vital points system is based on traditional Korean martial arts knowledge, featuring 70 anatomical targeting points with unique properties affecting combat effectiveness. While designed for entertainment and education, the techniques draw from authentic Taekkyeon and Hapkido practices. The physics-based combat simulation provides realistic weight, momentum, and impact calculations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 5 combat archetypes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Black Trigram features 5 unique combat archetypes: Musa (무사) - the honorable warrior emphasizing discipline and direct combat; Amsalja (암살자) - the assassin focused on precision and vital point targeting; Hacker - the technical fighter using pattern recognition; Jeongbo (정보원) - the intelligence operative skilled in deception; and Jojik (조직원) - the street-smart fighter with adaptive techniques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I contribute to the open-source project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Black Trigram welcomes contributions from the community. The project is hosted on GitHub at github.com/Hack23/blacktrigram. You can contribute code, report bugs, suggest features, improve documentation, or help with translations. The project follows security best practices including SLSA Level 3 supply chain security."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What martial arts styles are featured in the game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Black Trigram authentically represents traditional Korean martial arts including Taekkyeon (traditional Korean footwork and kicking), Hapkido (joint locks and grappling techniques), and elements of traditional Korean martial philosophy based on I Ching principles. Every technique is researched and implemented with cultural authenticity and respect for the arts' heritage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What educational value does the game provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beyond entertainment, Black Trigram serves as an educational platform for Korean martial arts and cultural heritage. Players learn traditional martial arts philosophy, anatomical targeting concepts, and Korean cultural context while playing. The game preserves and promotes Korean martial traditions through interactive digital media."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Black Trigram ensure security best practices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a Hack23 project, Black Trigram demonstrates enterprise-grade security practices including SLSA Level 3 supply chain security, OpenSSF Scorecard compliance, CII Best Practices certification, and SonarCloud quality gates. This ensures the game is built with the same security standards applied to professional software development."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/black-trigram.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://hack23.com/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Black Trigram",
+          "item": "https://hack23.com/black-trigram.html"
         }
       ]
     }
-    </script><link rel="alternate" hreflang="ar" href="https://hack23.com/black-trigram_ar.html">
+  ]
+}</script><link rel="alternate" hreflang="ar" href="https://hack23.com/black-trigram_ar.html">
 <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/black-trigram_ar.html">
 <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/black-trigram_ar.html">
 <link rel="alternate" hreflang="da" href="https://hack23.com/black-trigram_da.html">

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风险管理策略 - Discordian ISMS | Hack23 AB</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="description" content="风险评估与处理方法">
+    <meta name="keywords" content="信息安全管理系统, ISO 27001, GB/T 22080, cybersecurity, information security, risk-mgmt">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="风险管理策略 - Discordian ISMS">
+    <meta property="og:description" content="风险评估与处理方法">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-risk-assessment_zh.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://hack23.com/blog.webp">
+    <meta name="twitter:image:alt" content="Hack23 Security Blog">
+    <meta name="twitter:site" content="@hack23ab">
+    <meta name="twitter:creator" content="@jamessorling">
+    
+    <link rel="canonical" href="https://hack23.com/discordian-risk-assessment_zh.html">
+    
+    <!-- Hreflang tags for language alternatives --><!-- Asian Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Article Markup -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "风险管理策略",
+  "description": "风险评估与处理方法",
+  "inLanguage": "zh",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.com/cia-icon-140.webp"
+    }
+  },
+  "datePublished": "2025-12-14",
+  "dateModified": "2025-12-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-risk-assessment_zh.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "信息安全管理系统",
+      "description": "信息安全管理系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "GB/T 22080",
+      "description": "ISO 27001 中国标准"
+    }
+  ]
+}</script>
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-risk-assessment_ar.html" />
+  <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-risk-assessment_ar.html" />
+  <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-risk-assessment_ar.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-risk-assessment_da.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-risk-assessment_fi.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-risk-assessment_he.html" />
+  <link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-risk-assessment_he.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-risk-assessment_ja.html" />
+  <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-risk-assessment_ja.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-risk-assessment_ko.html" />
+  <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-risk-assessment_ko.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-risk-assessment_no.html" />
+  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-risk-assessment_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-risk-assessment_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-risk-assessment_sv.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-risk-assessment_zh.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-risk-assessment_zh.html" />
+  <link rel="alternate" hreflang="zh-SG" href="https://hack23.com/discordian-risk-assessment_zh.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-risk-assessment_zh.html" />
+
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-risk-assessment_sv.html" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index_zh.html">首页</a></li>
+                <li><a href="blog_zh.html">博客</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>风险管理策略</h1>
+            
+            <section class="policy-meta">
+                <p><strong>信息安全管理系统</strong> | <strong>GB/T 22080</strong> | <strong>个人信息保护法 (PIPL)</strong></p>
+            </section>
+
+            <section class="policy-overview">
+                <h2>📋 概述</h2>
+                <p>风险管理策略定义了组织风险评估和处理的系统方法。</p>
+                <p><em>"独立思考"</em> - <em>"质疑权威"</em></p>
+            </section>
+
+            <section class="policy-content">
+                <h2>📖 策略内容</h2>
+                <p>本策略定义了符合GB/T 22080和GB/T 20984的风险管理要求。</p>
+                
+                <h3>🔑 关键要素</h3>
+                <ul>
+                    <li>风险识别与评估</li>
+                    <li>风险处理选项（缓解、接受、规避、转移）</li>
+                    <li>风险监控与审查</li>
+                    <li>风险登记册维护</li>
+                </ul>
+            </section>
+
+            <section class="policy-compliance">
+                <h2>✅ 合规性</h2>
+                <p>本策略符合以下监管标准：</p>
+                <ul>
+                    <li><strong>GB/T 22080</strong>: 风险管理</li>
+                    <li><strong>个人信息保护法 (PIPL)</strong>: 风险评估要求</li>
+                </ul>
+            </section>
+
+            <section class="policy-links">
+                <h2>🔗 相关文档</h2>
+                <ul>
+                    <li><a href="discordian-info-sec-policy_zh.html">信息安全管理系统 主策略</a></li>
+                    <li><a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC 存储库（英文）</a></li>
+                </ul>
+            </section>
+
+            <section class="discordian-footer">
+                <p><em>🍎 向厄里斯致敬！向迪斯科迪亚致敬！23 FNORD 5</em></p>
+                <p><em>"独立思考" - "质疑权威"</em></p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
+        <p><a href="index_zh.html">首页</a> | <a href="blog_zh.html">博客</a></p>
+    </footer>
+</body>
+</html>

@@ -33,66 +33,79 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Projets Open Source | Sécurité Par La Transparence | Hack23">
     <meta property="og:description" content="Démonstration des meilleures pratiques de sécurité à travers des applications de production">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hack23.com/projects_fr.html">
     <meta property="og:image" content="cia-icon-140.webp">
-    <meta property="og:site_name" content="Hack23 AB">
-    <meta property="og:locale" content="fr_FR">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:site_name" content="Hack23 AB"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
     <!-- Schema.org structured data -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "description": "Le seul cabinet de conseil en cybersécurité de Suède avec un cadre ISMS entièrement public sur GitHub.",
+      "foundingDate": "2025-01-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressCountry": "SE"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/projects_fr.html",
+      "url": "https://hack23.com/projects_fr.html",
+      "name": "Projets Open Source | Sécurité Par La Transparence | Hack23",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://hack23.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/projects_fr.html#breadcrumb",
+      "itemListElement": [
         {
-          "@type": ["Organization", "ProfessionalService"],
-          "@id": "https://hack23.com/#org",
-          "name": "Hack23 AB",
-          "url": "https://hack23.com/",
-          "logo": "cia-icon-140.webp",
-          "description": "Le seul cabinet de conseil en cybersécurité de Suède avec un cadre ISMS entièrement public sur GitHub.",
-          "foundingDate": "2025-01-01",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gothenburg",
-            "addressCountry": "SE"
-          }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://hack23.com/index_fr.html"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://hack23.com/projects_fr.html",
-          "url": "https://hack23.com/projects_fr.html",
-          "name": "Projets Open Source | Sécurité Par La Transparence | Hack23",
-          "inLanguage": "fr",
-          "isPartOf": {
-            "@id": "https://hack23.com/#website"
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://hack23.com/projects_fr.html#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Accueil",
-              "item": "https://hack23.com/index_fr.html"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Projets",
-              "item": "https://hack23.com/projects_fr.html"
-            }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projets",
+          "item": "https://hack23.com/projects_fr.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 </head>
 <body>
     <!-- Breadcrumb Navigation -->

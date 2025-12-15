@@ -1,241 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سياسة التحكم في الوصول - Discordian ISMS | Hack23 AB</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="سياسة التحكم في الوصول مع نموذج الثقة المعدومة: AWS Identity Center SSO، تغطية MFA بنسبة 100٪، مراجعات الحسابات الخاملة لمدة 90 يومًا، مصفوفة الوصول المستندة إلى التصنيف">
-<meta name="keywords" content="التحكم في الوصول، الثقة المعدومة، AWS Identity Center، MFA، أقل الامتيازات، ISMS، أمن الهوية">
-<meta name="robots" content="index, follow">
-<meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="سياسة التحكم في الوصول: لا تثق بأحد (خاصة نفسك)">
-<meta property="og:description" content="AWS Identity Center SSO + تغطية MFA 100% + مراجعات 90 يوم. الثقة المعدومة من خلال الأمن المتمحور حول الهوية.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-access-control-policy_ar.html">
-<meta property="og:image" content="https://hack23.com/blog.webp">
-<meta property="og:locale" content="ar_AR">
-<meta property="og:locale:alternate" content="ar_SA">
-<meta property="og:locale:alternate" content="ar_EG">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="مدونة أمان Hack23">
-<meta name="twitter:site" content="@hack23ab">
-<meta name="twitter:creator" content="@jamessorling">
-
-<link rel="canonical" href="https://hack23.com/discordian-access-control-policy_ar.html">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "سياسة التحكم في الوصول: الثقة المعدومة من خلال الأمن المتمحور حول الهوية",
-      "description": "كيف تطبق Hack23 بنية الثقة المعدومة مع AWS Identity Center SSO، تغطية MFA بنسبة 100٪، مراجعات الحسابات الخاملة لمدة 90 يومًا، والتحكم في الوصول المستند إلى التصنيف الذي يوضح التميز الأمني المنهجي",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "url": "https://hack23.com",
-        "jobTitle": "الرئيس التنفيذي / خبير الأمن السيبراني",
-        "sameAs": [
-          "https://www.linkedin.com/in/jamessorling/",
-          "https://github.com/Hack23"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "datePublished": "2025-12-14",
-      "dateModified": "2025-12-14",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-access-control-policy_ar.html"
-      },
-      "keywords": "التحكم في الوصول، الثقة المعدومة، AWS Identity Center، MFA، أقل الامتيازات، ISMS",
-      "articleSection": "أمن المعلومات",
-      "inLanguage": "ar",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp",
-        "width": 1200,
-        "height": 630
-      },
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog_ar.html#blog",
-        "name": "مدونة أمان Hack23"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-access-control-policy_ar.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://hack23.com/index_ar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "مدونة",
-          "item": "https://hack23.com/blog_ar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "سياسة التحكم في الوصول",
-          "item": "https://hack23.com/discordian-access-control-policy_ar.html"
-        }
-      ]
-    }
-  ]
-}
-</script>
-<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control-policy_ar.html">
-<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control-policy_ar.html">
-<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control-policy_ar.html">
-<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control-policy_da.html">
-<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-access-control-policy_de.html">
-<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-access-control-policy_de.html">
-<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control-policy.html">
-<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-access-control-policy_es.html">
-<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-access-control-policy_es.html">
-<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control-policy_fi.html">
-<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-access-control-policy_fr.html">
-<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-access-control-policy_fr.html">
-<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-access-control-policy_he.html">
-<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-access-control-policy_he.html">
-<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-access-control-policy_ja.html">
-<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-access-control-policy_ja.html">
-<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-access-control-policy_ko.html">
-<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-access-control-policy_ko.html">
-<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-access-control-policy_nl.html">
-<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-access-control-policy_nl.html">
-<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control-policy_no.html">
-<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control-policy_no.html">
-<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control-policy_sv.html">
-<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control-policy_sv.html">
-<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-access-control-policy_zh.html">
-<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-access-control-policy_zh.html">
-<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-access-control-policy_zh.html">
-<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control-policy.html">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <!-- Breadcrumb Navigation -->
-  <nav aria-label="Breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a href="index_ar.html">الرئيسية</a>
-      </li>
-      <li class="breadcrumb-item">
-        <a href="blog_ar.html">مدونة</a>
-      </li>
-      <li class="breadcrumb-item" aria-current="page">
-        سياسة التحكم في الوصول
-      </li>
-    </ol>
-  </nav>
-
-<header>
-  <div class="logo-container">
-    <img src="cia-icon-140.webp" alt="شعار Hack23" class="logo" width="80" height="80">
-  </div>
-  <h1>الأمن السيبراني Discordian</h1>
-  <div class="app-link">
-    <a href="index_ar.html">الرئيسية</a>
-    <a href="discordian-cybersecurity_ar.html">البيان</a>
-    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">ISMS التحكم في الوصول</a>
-  </div>
-</header>
-
-<main>
-  <article>
-    <h2 class="header">🔑 التحكم في الوصول: لا تثق بأحد (خاصة نفسك)</h2>
-    
-    <section id="introduction">
-      <h2 class="panel-caption">الثقة المعدومة: ليست جنون العظمة، بل رياضيات مع مسارات التدقيق</h2>
-      
-      <p><strong>فكر بنفسك يا أحمق!</strong> "الثقة مع التحقق" هي هراء مؤسسي مصمم لجعل الأشخاص الواثقين يشعرون بأنهم أقل سذاجة. إليك الواقع: <strong>فقط تحقق.</strong> تخلَّ عن جزء الثقة تمامًا. AWS Identity Center SSO (المصادقة المركزية أو الخروج)، MFA على كل شيء (بلا استثناءات، ولا حتى "هذه المرة فقط")، عمليات تطهير الحسابات الخاملة لمدة 90 يومًا (بيانات الاعتماد المنسية = اختراق مستقبلي ينتظر الحدوث)، مصفوفات الوصول المستندة إلى التصنيف. هل أنت بجنون عظمة كافٍ؟ جيد. المهاجمون بالتأكيد كذلك — ويراهنون على أنك لست كذلك.</p>
-      
-      <p><strong>لا شيء صحيح. كل شيء مسموح.</strong> باستثناء الوصول بدون مصادقة متعددة العوامل، والترخيص المناسب، والتسجيل الشامل. "الثقة المعدومة" ليست جنون عظمة — إنها الاعتراف بأن محيط الشبكة تلاشى في عام 2010 والتظاهر بخلاف ذلك هو مسرح أمني يجعلك عرضة للاختراق. نموذج القلعة والخندق مات مع العمل عن بعد في كوفيد. <strong>FNORD.</strong> شبكة VPN الخاصة بك هي مجرد نفق مشفر للأجهزة غير الموثوقة. تصرف وفقًا لذلك.</p>
-      
-      <p>في Hack23، التحكم في الوصول ليس مشاعر ونوايا حسنة — إنه <strong>AWS Identity Center</strong> SSO (المصادقة المركزية أو الخروج)، <strong>تغطية MFA بنسبة 100٪</strong> (بلا استثناءات، ولا حتى لك، خاصة ليس لك)، <strong>مراجعات الحسابات الخاملة لمدة 90 يومًا</strong> (بيانات الاعتماد المنسية تصبح بيانات اعتماد الخصم)، <strong>مصفوفات الوصول المستندة إلى التصنيف</strong> وفقًا <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">لإطار التصنيف</a> (الأصول الشديدة تحصل على ضوابط شديدة لأن الرياضيات). مراجعات السياسة نصف السنوية (التالية: 2026-02-20) لأن أنماط الوصول تتغير أسرع من تدقيق الامتثال السنوي. الإصدار 2.2 (ساري المفعول: 2025-08-20) لأننا نكرر على حالات الفشل بدلاً من إخفائها.</p>
-      
-      <p class="hidden-wisdom"><em>الاستنارة: الثقة هي ثغرة أمنية تتنكر في زي التعاون. التحقق هو ضابط متنكر في زي جنون العظمة. AWS Identity Center + MFA الإلزامي = التحقق على نطاق واسع دون أخطاء الحكم البشري. المراقبة للهويات تعمل بشكل أفضل عندما يعلم الجميع أنهم يُراقبون. اختر جنون العظمة المنهجي بدلاً من السذاجة المريحة. اختر الضوابط الموثقة بدلاً من الأمان من خلال الأمل وعقد الأصابع.</em></p>
-      
-      <p>مبادئ الثقة المعدومة + إدارة الهوية على مستوى المؤسسات + شفافية الشركة أحادية الشخص = دليل على أن التحكم المنهجي في الوصول يتوسع من العمليات الفردية إلى المؤسسات. جنون عظمة تقني كامل في <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">سياسة التحكم في الوصول العامة</a> لدينا. لأن الغموض ليس أمانًا — إنه أمل يرتدي معطفًا.</p>
-      
-      <p><strong>بحاجة إلى إرشاد خبير في تطبيق التحكم في الوصول بثقة معدومة؟</strong> <a href="why-hack23_ar.html">اكتشف لماذا تختار المنظمات Hack23</a> للاستشارات الشفافة في مجال الأمن السيبراني بقيادة الممارسين.</p>
-    </section>
-
-    <section id="zero-trust">
-      <h2 class="panel-caption">خمسة أسباب تجعل "الثقة مع التحقق" نصف خطأ (تلميح: تخطَّ جزء الثقة)</h2>
-      
-      <p>"الثقة المعدومة" تبدو جنون عظمة؟ جيد. جنون العظمة هو مطابقة الأنماط مع الواقع. إليك التطبيق المنهجي للرحالة النفسيين:</p>
-      
-      <div class="cards">
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>1. 🔐 تحقق من كل طلب (نعم، كل واحد)</h3>
-          <p><strong>AWS Identity Center SSO + MFA على كل شيء.</strong> لا ثقة. لا "أنت على VPN فاسترخ." لا "لكنه مجرد تطوير." يتم تحدي كل طلب. دائمًا. مراقبة تغطية MFA بنسبة 100٪ في الوقت الفعلي. MFA الأجهزة للحرجة (AWS root، المالية — YubiKey أو لا شيء). TOTP للعالية (خط تطوير — Authy يعمل). الأصلي للمنصة للعامة (التسويق — المدمج جيد). محيط الشبكة ميت. يحيا التحقق من الهوية.</p>
-          <p class="hidden-wisdom"><em>"الصفر" في الثقة المعدومة حرفي. موقع الشبكة = لا معنى له. VPN = عدم ثقة مشفر. Identity Center SSO = الهوية هي المحيط. MFA = إثبات أنك أنت. هل أنت بجنون عظمة كافٍ لتحدي نفسك؟ FNORD.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>2. 📋 الوصول المستند إلى التصنيف (ليست كل البيانات متساوية)</h3>
-          <p><strong>مصفوفة الوصول متوافقة مع إطار التصنيف.</strong> الأصول الشديدة (البنية التحتية الأساسية AWS) = Identity Center + MFA الأجهزة + مهلة 4 ساعات + مراجعات شهرية. عالية جدًا (المالية) = MFA المزود + مهلة ساعة واحدة + مراجعات شهرية. عالية (خط التطوير) = MFA المنصة + مهلة 8 ساعات + مراجعات ربع سنوية. متوسطة = مهلة 24 ساعة + مراجعات نصف سنوية. عامة = مهلة 7 أيام + مراجعات سنوية. أهمية البيانات تدفع كل شيء.</p>
-          <p class="hidden-wisdom"><em>الوصول بحجم واحد يناسب الجميع = الأمان من خلال الكسل. الأنظمة المالية تحتاج إلى مراجعات شهرية. التسويق يحتاج إلى سنوية. التصنيف = جنون عظمة قائم على المخاطر. اختر الضوابط المناسبة أو اختر الاختراق النهائي.</em></p>
-        </div>
-        
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>3. ⏰ عمليات تطهير الحسابات الخاملة لمدة 90 يومًا (الوصول المنسي = الاختراق المستقبلي)</h3>
-          <p><strong>الكشف الآلي، التحقق اليدوي، إلغاء التوفير الب ruthless.</strong> الحسابات غير المستخدمة > 90 يومًا = تم وضع علامة عليها أسبوعيًا. الهدف: صفر حسابات خاملة (ليس "منخفض"، صفر). تنبيهات في الوقت الفعلي عند الانتهاك. الحسابات الخاملة هي زحف امتياز ينتظر استغلاله من قبل ذلك المتعاقد الوحيد الذي غادر في 2019 ولكن لا يزال لديه وصول إلى وحدة تحكم AWS. المراقبة الأسبوعية تمنع علم الآثار من أن تصبح نواقل هجوم.</p>
-          <p class="hidden-wisdom"><em>الحسابات الخاملة هي أبواب خلفية لشرودنجر — مخترقة وجيدة حتى يتم ملاحظتها أثناء الاستجابة للحادث. مراجعات 90 يومًا = نظافة الوصول المنهجية. عمليات التنظيف السنوية = الاعتراف بأنك نسيت لمدة 364 يومًا.</em></p>
-        </div>
-        
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>4. 🔄 مراجعات السياسة نصف السنوية (لأن التهديدات لا تنتظر)</h3>
-          <p><strong>الإصدار 2.2 (ساري المفعول: 2025-08-20). المراجعة التالية: 2026-02-20.</strong> تتم مراجعة السياسات مرتين سنويًا (ليس مرة واحدة، مرتين). محفزات المراجعة: الدورة المجدولة، التغييرات التنظيمية (GDPR/NIS2)، الحوادث، تغييرات المنظمة، تحديثات AWS. التوثيق الحي الذي يتكيف. وليس ملفات PDF الأثرية التي تجمع الغبار الرقمي. السياسات الثابتة في مشهد التهديدات الديناميكي = عدم الصلة في نهاية المطاف.</p>
-          <p class="hidden-wisdom"><em>المراجعات نصف السنوية = الاعتراف بأن الواقع يتغير. AWS تطلق خدمات جديدة. المهاجمون يجدون تقنيات جديدة. متطلبات الامتثال تتغير. سياسة الوصول الخاصة بك من عام 2019؟ قطعة أثرية أثرية، وليست ضابط أمان.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>5. 📊 تسجيل التدقيق لكل شيء (المراقبة حقيقية ومصنوعة من CloudTrail)</h3>
-          <p><strong>AWS CloudTrail + سجلات Identity Center + سجلات تدقيق GitHub.</strong> من وصل إلى ماذا، متى، من أين. مسارات التدقيق لكل تصعيد للامتيازات. السجلات محتفظ بها وفقًا <a href="discordian-data-classification_ar.html">لسياسة التصنيف</a>. التسجيل بدون التنبيه = مسرح أمني. السجلات التي لا تراجعها = اكتناز البيانات يتظاهر بأنه أمان. السجلات التي لا تؤدي إلى العمل = مربع اختيار الامتثال يهدر التخزين.</p>
-          <p class="hidden-wisdom"><em>مسارات التدقيق = وقود الاستجابة للحادث. لا سجلات = لا تحقيق = لا إسناد = لا دروس مستفادة. CloudTrail + التسجيل المركزي = المساءلة المنهجية. المراقبة تعمل بشكل أفضل عندما يعرف الخاضعون أنها موجودة. FNORD.</em></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="isms-link">
-      <h2 class="panel-caption">🔗 روابط ISMS العامة</h2>
-      <p>للحصول على التفاصيل الفنية الكاملة والتطبيق، راجع <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">سياسة التحكم في الوصول</a> الكاملة في مستودع ISMS العام لدينا.</p>
-    </section>
-  </article>
-</main>
-
-<footer>
-  <p>&copy; 2008-2025 <a href="https://hack23.com">Hack23 AB</a> (Org.nr 5595347807). 
-     <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> | 
-     <a href="https://hack23.com/accessibility-statement_ar.html">إمكانية الوصول</a>
-  </p>
-</footer>
-
-</body>
-</html>

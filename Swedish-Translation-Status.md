@@ -22,9 +22,9 @@
 
 **Newly Created (December 14, 2025):** 4 Swedish ISMS policy files
 - ✅ `discordian-access-control-policy_sv.html` - Access Control Policy
-- ✅ `discordian-bc-dr-policy_sv.html` - Business Continuity & Disaster Recovery Policy
-- ✅ `discordian-info-asset-mgmt-policy_sv.html` - Information Asset Management Policy
-- ✅ `discordian-risk-mgmt-policy_sv.html` - Risk Management Policy
+- ✅ `discordian-business-continuity_sv.html` - Business Continuity & Disaster Recovery Policy
+- ✅ `discordian-asset-mgmt_sv.html` - Information Asset Management Policy
+- ✅ `discordian-risk-assessment_sv.html` - Risk Management Policy
 
 **Missing Files:** 18 files not yet created (1 core page + 17 Discordian ISMS policies)
 - **High Priority:** `projects.html` (core navigation page)
@@ -98,7 +98,7 @@
   - Content Status: Placeholder with overview and links to English version
   - Full Translation Effort: 2-3 hours estimated
   
-- ✅ **NEW:** `discordian-bc-dr-policy_sv.html` - **SEO Infrastructure Complete**
+- ✅ **NEW:** `discordian-business-continuity_sv.html` - **SEO Infrastructure Complete**
   - Swedish Title: Verksamhetskontinuitet & Katastrofåterställning: Överleva kaos när allt går sönder
   - Size: 18,211 characters
   - Terminology: Verksamhetskontinuitet, Katastrofåterställning, RTO/RPO, BCP, Femfas-BCP
@@ -107,7 +107,7 @@
   - Content Status: Placeholder with overview and links to English version
   - Full Translation Effort: 3-4 hours estimated
   
-- ✅ **NEW:** `discordian-info-asset-mgmt-policy_sv.html` - **SEO Infrastructure Complete**
+- ✅ **NEW:** `discordian-asset-mgmt_sv.html` - **SEO Infrastructure Complete**
   - Swedish Title: Informationstillgångshantering: Du kan inte skydda vad du inte vet att du har
   - Size: 18,947 characters
   - Terminology: Informationstillgångshantering, Shadow IT, CMDB, Tillgångsinventering
@@ -116,7 +116,7 @@
   - Content Status: Placeholder with overview and links to English version
   - Full Translation Effort: 2-3 hours estimated
   
-- ✅ **NEW:** `discordian-risk-mgmt-policy_sv.html` - **SEO Infrastructure Complete**
+- ✅ **NEW:** `discordian-risk-assessment_sv.html` - **SEO Infrastructure Complete**
   - Swedish Title: Riskhanteringspolicy: Beräkna vad du inte kan förhindra
   - Size: 18,645 characters
   - Terminology: Riskhantering, ALE (SLE × ARO), Hotaktör, Riskaptit, Monte Carlo-simulering
