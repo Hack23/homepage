@@ -13,17 +13,17 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#C62828','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇰🇷 Korean Translation Status 🏯"
-        A["📊 53/96 Files<br/>55.2% Complete 🚧"]
+        A["📊 58/96 Files<br/>60.4% Complete 🚧"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 15<br/>No English content"]
         B --> D["⚡ Mostly Translated: 5<br/>Minimal English"]
-        B --> E["⚠️  Partially Translated: 33<br/>Some English remains"]
+        B --> E["⚠️  Partially Translated: 38<br/>Some English remains"]
         B --> F["❌ Needs Translation: 0<br/>Significant English"]
         
-        A --> G["📝 Missing Files: 43"]
+        A --> G["📝 Missing Files: 38"]
         
-        A --> H["🏆 Quality Score: 37.7%"]
+        A --> H["🏆 Quality Score: 34.5%"]
         
         style A fill:#C62828,stroke:#B71C1C,color:#fff,stroke-width:4px
         style B fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:2px
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇰🇷 Korean Files Exist** | 53 | **55.2%** | 🚧 |
-| **❌ Missing Files** | 43 | 44.8% | ⚠️ |
+| **🇰🇷 Korean Files Exist** | 58 | **60.4%** | 🚧 |
+| **❌ Missing Files** | 38 | 39.6% | ⚠️ |
 
 ### 🎯 Translation Quality Analysis
 
@@ -50,12 +50,12 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 15 | 28.3% | No English content detected |
-| ⚡ **Mostly Translated** | 5 | 9.4% | Minimal English (technical terms only) |
-| ⚠️  **Partially Translated** | 33 | 62.3% | Some English content remains |
+| ✅ **Fully Translated** | 15 | 25.9% | No English content detected |
+| ⚡ **Mostly Translated** | 5 | 8.6% | Minimal English (technical terms only) |
+| ⚠️  **Partially Translated** | 38 | 65.5% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 37.7% of existing files are fully/mostly translated
+**🏆 Quality Score:** 34.5% of existing files are fully/mostly translated
 
 **📈 Status:** 🚧 Early Stage - Significant work remaining
 
