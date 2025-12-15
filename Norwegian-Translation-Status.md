@@ -4,7 +4,7 @@
 
 **Language:** Norwegian (no)  
 **Target Market:** Norway  
-**Total Files:** 66  
+**Total Files:** 71  
 **Last Updated:** December 2025
 
 ### 📄 File Coverage (High-Level Summary)
@@ -13,7 +13,7 @@
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
 | **Norwegian Files Exist** | 71 | 74.0% |
-| **Missing Files** | **25** | **31.3%** |
+| **Missing Files** | **25** | **26.0%** |
 
 **Recent Additions (December 2025):**
 - ✅ **Issue #10 (Nordic ISMS):** 5 Discordian ISMS policy files created (access-control, bc-dr, info-asset-mgmt, incident-response, risk-mgmt)
@@ -21,10 +21,7 @@
 - ⚠️ **Nordic CIA Blog Status:** 10 CIA blog posts assessed - professional translation recommended
 - ✅ **Nordic Industry/ISMS:** Industry pages and security checklist completed
 
-**Previous Additions:**
-- ✅ **Issue #6:** 9 CIA/Compliance Manager pages created with complete infrastructure
-- ⚠️ **Nordic CIA Blog Status:** 10 CIA blog posts assessed - professional translation recommended
-- ✅ **Nordic Industry/ISMS:** Industry pages and security checklist completed
+
 
 **Missing Files:** 29 files not yet created (1 core page + 29 others)
 
