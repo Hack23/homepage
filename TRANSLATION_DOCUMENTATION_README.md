@@ -46,6 +46,7 @@ Each language has **two dedicated files**:
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
 **Total:** 746 HTML files across 13 languages
+**Total:** 748 HTML files across 13 languages (736 + 12 new European blog files)
 **Total:** 751 HTML files across 13 languages
 
 ## Swedish Blog-Specific Documentation
@@ -142,6 +143,26 @@ All translations must meet:
 - **Deployment:** AWS S3 + CloudFront
 - **CI/CD:** GitHub Actions with Lighthouse audits
 - **Security:** ZAP security scanning
+
+## Blog Translation Requirements
+
+**Status:** 3 high-priority blogs need translation across all 13 languages (39 files total)
+- Infrastructure complete (HTML, hreflang, Schema.org)
+- Professional content translation required
+- Estimated effort: 20-30 hours
+- Estimated cost: €6,000-10,000
+
+**High-Priority Blog Posts:**
+1. **blog-public-isms-benefits** (~3,200 words) - ISMS transparency thought leadership
+2. **blog-automated-convergence** (~2,800 words) - AI agents and DevSecOps
+3. **blog-information-hoarding** (~1,200 words) - Security philosophy
+
+**Translation Guidelines:**
+- Professional business tone for C-suite audience
+- Keep code examples in English, translate explanations
+- Preserve Discordian philosophical voice while ensuring clarity
+- Use terminology from individual Translation-Guide.md files
+- Adapt cultural references for local markets
 
 ## Contact
 
