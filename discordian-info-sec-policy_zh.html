@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信息安全策略 | ISMS基础 | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="信息安全策略：ISMS基础、GB/T 22080一致、公开记录、年度审查。透明化安全。">
+<meta name="keywords" content="信息安全策略, CIA三元组, ISMS基础, 安全设计, 公开ISMS, GB/T 22080, NIST CSF, hack23">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="信息安全策略: CIA+框架基础">
+<meta property="og:description" content="CIA+框架 + 40多个集成ISMS策略。公开透明、安全设计、持续改进。GB/T 22080 + NIST CSF + CIS Controls一致。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-info-sec-policy_zh.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-info-sec-policy_zh.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "信息安全策略: CIA+框架基础",
+      "description": "Hack23如何通过CIA+框架、40多个集成策略和彻底透明度实现全面的信息安全",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-info-sec-policy.html"
+      },
+      "keywords": "information security policy, CIA triad, ISMS, ISO 27001, security framework",
+      "articleSection": "Information Security",
+      "inLanguage": "zh",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1532,
+      "articleBody": "Think for yourself, schmuck! Most organizations treat their security policy like it's the nuclear launch codes. Marked \"CONFIDENTIAL.\" Locked in SharePoint dungeons. Only accessible to those with \"nee...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "信息安全管理系统策略实施"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-info-sec-policy.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "信息安全策略",
+          "item": "https://hack23.com/discordian-info-sec-policy.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-info-sec-policy_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-info-sec-policy_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-info-sec-policy_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-info-sec-policy_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-info-sec-policy_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-info-sec-policy_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-info-sec-policy.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-info-sec-policy_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-info-sec-policy_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-info-sec-policy_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-info-sec-policy_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-info-sec-policy_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-info-sec-policy_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-info-sec-policy_he.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-info-sec-policy_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-info-sec-policy_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-info-sec-policy_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-info-sec-policy_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-info-sec-policy_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-info-sec-policy_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-info-sec-policy.html">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Information Security Policy
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Information Security Policy: CIA+ Framework Foundation</h1>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Public InfoSec Policy">ISMS Policy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">📋 Information Security Policy: The Foundation of Radical Transparency</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Why Your Security Policy Is Secret (And Why That's Suspicious)</h2>
+      
+      <p><strong>Think for yourself, schmuck!</strong> Most organizations treat their security policy like it's the nuclear launch codes. Marked "CONFIDENTIAL." Locked in SharePoint dungeons. Only accessible to those with "need to know" (which conveniently excludes the people who actually need to implement it). As if <em>obscurity</em> somehow enhances security. Spoiler: it doesn't. It just hides incompetence behind classification markings and prevents embarrassing questions at board meetings. <strong>FNORD.</strong> See it yet? Every "confidential" marking is a confession that transparency would reveal inadequacy.</p>
+      
+      <p><strong>Question authority—especially security authority:</strong> If your security policy can't withstand public scrutiny, you don't have a security policy—you have <em>security theater</em> wrapped in NDAs and marked "INTERNAL USE ONLY" to prevent anyone from noticing it's bullshit. The same people who mark policies confidential are the ones who lose them in breaches. At least we know ours can't leak—it's already public. <em>Can't compromise what's already exposed. That's not naivety—that's operational security through radical transparency.</em></p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—the permission we give ourselves to publish <em>everything</em> about how we secure systems. Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md">Information Security Policy is on GitHub</a>—it is public, forkable, and auditable by anyone paranoid enough to actually read it (are you paranoid enough?). <strong>40+ integrated policies</strong> demonstrate ISO 27001 + NIST CSF + CIS Controls alignment. Not because we're compliant (compliance is a checkbox theater production, not security), but because these frameworks actually work when you implement them systematically instead of just claiming you do in marketing materials and audit reports. <em>Evidence beats claims. Always.</em></p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Security through obscurity assumes attackers can't read or won't bother looking. They can. They read better than you do. They've probably read your "confidential" policies already—breaches happen, SharePoint leaks, disgruntled employees exist. Security through transparency assumes everyone's watching—community review, client verification, continuous improvement through public feedback. Welcome to Chapel Perilous, where publishing your entire security policy is less risky than hiding it and hoping nobody notices when it fails. Are you paranoid enough to compete on verifiable security excellence instead of marketing promises and vendor-approved "best practices"?</em></p>
+      
+      <p>This isn't aspirational documentation gathering dust until the next audit. It's the operational foundation of how Hack23 actually works—demonstrating cybersecurity consulting expertise through systematic implementation with public evidence. Because in the reality tunnel we inhabit, claims without evidence are just marketing. Full technical details in our <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS repository</a>. Fork it. Critique it. Improve it. We're paranoid enough to want peer review. <strong>FNORD.</strong></p>
+    
+      
+      <p><strong>Need expert guidance on security compliance?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+    </section>
+
+    <section id="five-principles">
+      <h2 class="panel-caption">The Five Pillars of CIA+ Framework: Security As Business Enabler</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔒 Confidentiality (Protect What Matters)</h3>
+          <p><strong>Not everything is secret. Not nothing is secret.</strong> Customer data? Secret. Marketing plans? Internal. Open source code? Public. <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a> based on actual business impact, not paranoia. Four levels: Public, Internal, Confidential, Restricted.</p>
+          <p><strong>Controls:</strong> Hardware MFA (YubiKey), AWS KMS encryption, role-based access control, data classification tags, DLP monitoring.</p>
+          <p class="hidden-wisdom"><em>Over-classification is security negligence disguised as diligence. If everything is confidential, nothing is.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. ✅ Integrity (Trust Your Data)</h3>
+          <p><strong>Data that lies to you is worse than no data.</strong> Version control (Git), audit logs (CloudTrail), hash verification (SHA-256), digital signatures (GPG), immutable infrastructure (IaC). <strong>Prove</strong> data hasn't been tampered with—don't just hope.</p>
+          <p><strong>Evidence:</strong> Git commit signing, CloudFormation drift detection, SonarCloud quality gates, SLSA Level 3 build attestations.</p>
+          <p class="hidden-wisdom"><em>Garbage in, garbage out—unless you also verify the pipeline. Then you at least know it's garbage.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🟢 Availability (Systems Actually Work)</h3>
+          <p><strong>Uptime isn't aspirational—it's measured.</strong> Multi-AZ deployment, auto-scaling, health checks, chaos engineering (monthly FIS experiments), <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md">RTO/RPO targets</a> (5-60 min critical, 1-4 hr high, 4-24 hr standard). Availability through resilience, not luck.</p>
+          <p><strong>Implementation:</strong> AWS Resilience Hub deployment gating, Fault Injection Service validation, immutable cross-region backups.</p>
+          <p class="hidden-wisdom"><em>High availability without chaos testing is hope-based computing. We inject failures monthly to prove recovery works.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 💰 Business Value (Security Enables, Not Prevents)</h3>
+          <p><strong>Security proportional to business impact.</strong> Not everything needs maximum security—that's expensive and slow. <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a> maps security controls to €10K+/day loss, €5-10K/day, €1-5K/day, &lt;€1K/day impact tiers.</p>
+          <p><strong>ROI Focus:</strong> Cost avoidance (breach prevention), revenue protection (uptime), competitive advantage (speed + security), operational efficiency (automation).</p>
+          <p class="hidden-wisdom"><em>Security without business context is just expensive compliance theater. Protect what actually matters.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔄 Continuous Improvement (Static = Dead)</h3>
+          <p><strong>ISMS isn't "done"—it evolves.</strong> Quarterly risk reviews, annual policy updates, continuous metrics tracking (<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Security Metrics</a>), automated security testing (SAST, DAST, SCA), threat modeling updates with new features.</p>
+          <p><strong>Evidence:</strong> OpenSSF Scorecard ≥7.0, SonarCloud quality gates, 80%+ test coverage, &lt;4hr critical vulnerability patching.</p>
+          <p class="hidden-wisdom"><em>Security frameworks that don't evolve ossify into compliance checkboxes disconnected from actual threats.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="isms-integration">
+      <h2 class="panel-caption">40+ Integrated ISMS Policies: Comprehensive Security Framework</h2>
+      
+      <p><strong>Our Information Security Policy isn't a single document—it's the foundation integrating 40+ specialized policies:</strong></p>
+      
+      <p><strong>🔐 Core Security Policies (13):</strong></p>
+      <ul>
+        <li><a href="discordian-access-control.html">Access Control Policy</a> — Zero-trust identity + hardware MFA</li>
+        <li><a href="discordian-classification.html">Classification Framework</a> — Business impact-driven security controls</li>
+        <li><a href="discordian-crypto.html">Cryptography Policy</a> — AES-256, RSA-4096, TLS 1.3 minimum</li>
+        <li><a href="discordian-data-classification.html">Data Classification Policy</a> — Four-tier information handling</li>
+        <li><a href="discordian-network-security.html">Network Security Policy</a> — Cloud-native security groups + WAF</li>
+        <li><a href="discordian-physical-security.html">Physical Security Policy</a> — Home office + device protection</li>
+        <li><a href="discordian-mobile-device.html">Mobile Device Management</a> — BYOD security controls</li>
+        <li><a href="discordian-acceptable-use.html">Acceptable Use Policy</a> — Professional conduct standards</li>
+        <li><a href="discordian-privacy.html">Privacy Policy</a> — GDPR-compliant data protection</li>
+        <li><a href="discordian-email-security.html">Email Security</a> — SPF/DKIM/DMARC + hardware MFA</li>
+        <li><a href="discordian-remote-access.html">Remote Access Policy</a> — VPN + hardware MFA for admin access</li>
+        <li><a href="discordian-ai-policy.html">AI Governance Policy</a> — EU AI Act compliance</li>
+        <li><a href="discordian-llm-security.html">OWASP LLM Security</a> — LLM-specific threat controls</li>
+      </ul>
+      
+      <p><strong>🛡️ Development Security (6):</strong></p>
+      <ul>
+        <li><a href="discordian-secure-dev.html">Secure Development Policy</a> — DevSecOps + 80% test coverage</li>
+        <li><a href="discordian-open-source.html">Open Source Policy</a> — OpenSSF ≥7.0 + SLSA Level 3</li>
+        <li><a href="discordian-vuln-mgmt.html">Vulnerability Management</a> — &lt;4hr critical patches</li>
+        <li><a href="discordian-threat-modeling.html">Threat Modeling</a> — STRIDE + MITRE ATT&CK</li>
+        <li><a href="discordian-change-mgmt.html">Change Management</a> — GitOps + automated deployments</li>
+        <li><a href="discordian-cra.html">Cyber Resilience Act</a> — EU CRA compliance framework</li>
+      </ul>
+      
+      <p><strong>🚨 Incident & Recovery (4):</strong></p>
+      <ul>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — &lt;30min critical incidents</li>
+        <li><a href="discordian-business-continuity.html">Business Continuity Plan</a> — Operational resilience</li>
+        <li><a href="discordian-disaster-recovery.html">Disaster Recovery Plan</a> — &lt;5min RTO critical systems</li>
+        <li><a href="discordian-backup-recovery.html">Backup Recovery Policy</a> — Immutable cross-region backups</li>
+      </ul>
+      
+      <p><strong>📊 Risk & Compliance (7):</strong></p>
+      <ul>
+        <li><a href="discordian-risk-assessment.html">Risk Assessment Methodology</a> — Systematic risk analysis</li>
+        <li><a href="discordian-risk-register.html">Risk Register</a> — Tracked risks + treatments</li>
+        <li><a href="discordian-asset-mgmt.html">Asset Register</a> — Complete inventory</li>
+        <li><a href="discordian-third-party.html">Third Party Management</a> — Supplier risk assessment</li>
+        <li><a href="discordian-compliance.html">Compliance Checklist</a> — Multi-framework tracking</li>
+        <li><a href="discordian-security-metrics.html">Security Metrics</a> — KPI measurement</li>
+        <li><a href="discordian-monitoring-logging.html">Monitoring & Logging</a> — CloudTrail + GuardDuty</li>
+      </ul>
+      
+      <p><strong>🏛️ Governance & Training (5):</strong></p>
+      <ul>
+        <li><a href="discordian-isms-transparency.html">ISMS Transparency Plan</a> — Public disclosure strategy</li>
+        <li><a href="discordian-isms-review.html">ISMS Review Process</a> — Continuous improvement</li>
+        <li><a href="discordian-stakeholders.html">External Stakeholder Registry</a> — Professional network</li>
+        <li><a href="discordian-security-training.html">Security Training Policy</a> — Mandatory awareness training</li>
+        <li><a href="discordian-business-value.html">Business Value Framework</a> — Security ROI analysis</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>INTEGRATION ILLUMINATION: Each policy references others—this isn't a collection of documents, it's an integrated security system. Vulnerability Management triggers Incident Response triggers Business Continuity. Classification Framework drives all access controls. Everything connects.</em></p>
+    </section>
+
+    <section id="framework-alignment">
+      <h2 class="panel-caption">Multi-Framework Compliance: ISO 27001 + NIST CSF + CIS Controls</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Alignment</th>
+            <th>Key Controls</th>
+            <th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>ISO 27001:2022</strong></td>
+            <td>Full Annex A coverage</td>
+            <td>93 controls across 4 themes: Organizational, People, Physical, Technological</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Compliance Checklist</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>NIST CSF 2.0</strong></td>
+            <td>All 6 functions</td>
+            <td>Govern, Identify, Protect, Detect, Respond, Recover</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC">Public ISMS policies</a></td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>CIS Controls v8.1</strong></td>
+            <td>18 critical controls</td>
+            <td>Inventory, Configuration, Access Control, Vulnerability Management</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Security Metrics</a></td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>GDPR</strong></td>
+            <td>Articles 5, 24, 25, 32</td>
+            <td>Privacy by design, security measures, data protection impact assessments</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md">Privacy Policy</a></td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>NIS2 Directive</strong></td>
+            <td>Essential entities</td>
+            <td>Risk management, incident reporting, supply chain security</td>
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">IR Plan</a></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Evidence-Based Compliance:</strong> Not claims—verification. Every control mapped to implementation evidence. Not "we do security"—"here's the public GitHub repo showing exactly what we do."</p>
+      
+      <p class="hidden-wisdom"><em>COMPLIANCE ILLUMINATION: Multi-framework alignment isn't about collecting certifications—it's about comprehensive coverage. ISO 27001 misses things NIST CSF covers. CIS Controls adds operational detail. Together they create defense-in-depth across governance, risk, technology.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Security Policy As Competitive Advantage</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including making your entire security policy public. Most organizations fear transparency. We weaponize it.</p>
+      
+      <p>Most organizations hide their security policies behind "CONFIDENTIAL" markings. They treat security documentation as trade secrets. They claim publishing policies would "help attackers." None of this is true. Security through obscurity is incompetence with a nicer name.</p>
+      
+      <p>We publish everything. <strong>40+ integrated ISMS policies on GitHub.</strong> ISO 27001 + NIST CSF + CIS Controls alignment with public evidence. Classification Framework driving business-focused security. CIA+ Framework enabling security as business enabler, not blocker. This isn't reckless—it's confidence. We can publish because our security actually works.</p>
+      
+      <p><strong>Think for yourself.</strong> Question why security policies must be secret. Question security claims without verification. Question "trust us" when "verify yourself" is possible. (Spoiler: Transparency enables trust through verification.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through public, verifiable implementation. 40+ policies demonstrating comprehensive ISMS. Multi-framework alignment with evidence. Classification Framework enabling risk-proportional security. Public transparency proving confidence over fear. This isn't security theater—it's operational security excellence with auditable proof.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue hiding security policies in SharePoint and claiming "security through obscurity." Or you can publish comprehensive ISMS documentation and compete on verifiable security excellence. Your policy. Your choice. Choose confidence over fear.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! If your security policy can't survive public scrutiny, you don't have security—you have wishful thinking wrapped in NDAs."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-classification.html">Classification Framework</a> — CIA+ business impact methodology</li>
+        <li><a href="discordian-isms-transparency.html">ISMS Transparency Plan</a> — Public disclosure strategy</li>
+        <li><a href="discordian-risk-assessment.html">Risk Assessment Methodology</a> — Systematic risk analysis</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
