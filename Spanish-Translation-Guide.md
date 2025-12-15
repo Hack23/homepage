@@ -488,7 +488,6 @@ graph TD
     <link rel="alternate" hreflang="de" href="https://hack23.com/[page]_de.html">
     <link rel="alternate" hreflang="nl" href="https://hack23.com/[page]_nl.html">
     <link rel="alternate" hreflang="fr" href="https://hack23.com/[page]_fr.html">
-    <link rel="alternate" hreflang="es" href="https://hack23.com/[page]_es.html">
     <link rel="alternate" hreflang="ja" href="https://hack23.com/[page]_ja.html">
     <link rel="alternate" hreflang="zh" href="https://hack23.com/[page]_zh.html">
     <link rel="alternate" hreflang="ko" href="https://hack23.com/[page]_ko.html">
