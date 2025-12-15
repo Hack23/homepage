@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合规框架 | Multi-Framework Implementation | Hack23</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Evidence-based multi-framework: ISO 27001 (93 controls), NIST CSF 2.0, CIS v8.1 (153 safeguards), GDPR, NIS2, EU CRA. Continuous compliance.">
+    <meta name="keywords" content="compliance frameworks, ISO 27001, NIST CSF, CIS Controls, GDPR, NIS2, EU Cyber Resilience Act, evidence-based compliance, compliance automation, continuous monitoring, audit readiness, SOC 2, PCI DSS, HIPAA, multi-framework compliance, compliance mapping, security controls, compliance checklist, transparency">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Hagbard Celine">
+    <meta property="og:title" content="合规框架: Evidence-Based Multi-Framework Implementation">
+    <meta property="og:description" content="Checkbox compliance is security theater. Real compliance requires evidence. 93 ISO 27001 controls, NIST CSF 2.0, CIS Controls v8.1, GDPR, NIS2, CRA—all with documented evidence trails. This is how systematic compliance demonstration works.">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-compliance-frameworks_zh.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 安全博客">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-compliance-frameworks_zh.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "博客Posting",
+      "headline": "合规框架: Evidence-Based Multi-Framework Implementation",
+      "description": "Evidence-based compliance across ISO 27001, NIST CSF 2.0, CIS Controls v8.1, GDPR, NIS2, EU Cyber Resilience Act. Comprehensive framework coverage with documented evidence trails demonstrating 100% transparency in compliance implementation.",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine",
+        "jobTitle": "Product Owner / System Visionary",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Hack23 AB"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-18",
+      "dateModified": "2025-11-18",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-compliance-frameworks_zh.html"
+      },
+      "keywords": "ISO 27001, NIST CSF 2.0, CIS Controls, GDPR, NIS2, EU Cyber Resilience Act, evidence-based compliance, SOC 2, PCI DSS, HIPAA",
+      "articleSection": "Compliance",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 4200,
+      "articleBody": "Checkbox compliance is security theater. Real compliance requires evidence. Not we do this (claim). But here's proof (evidence). Hack23 approach: publish compliance checklist demonstrating 100% coverage transparency...",
+      "isPartOf": {
+        "@type": "博客",
+        "@id": "https://hack23.com/blog_zh.html#blog",
+        "name": "Hack23 安全博客"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "合规框架",
+          "description": "Evidence-based multi-framework compliance implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "ISMS 政策",
+          "description": "Comprehensive compliance checklist with framework mappings"
+        }
+      ]
+    },
+    {
+      "@type": "面包屑导航List",
+      "@id": "https://hack23.com/discordian-compliance-frameworks_zh.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://hack23.com/blog_zh.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "合规框架",
+          "item": "https://hack23.com/discordian-compliance-frameworks_zh.html"
+        }
+      ]
+    }
+  ]
+}</script>
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-compliance-frameworks_da.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-compliance-frameworks_de.html" />
+  <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-compliance-frameworks_de.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-compliance-frameworks_zh.html" />
+  <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-compliance-frameworks_es.html" />
+  <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-compliance-frameworks_es.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-compliance-frameworks_fi.html" />
+  <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-compliance-frameworks_fr.html" />
+  <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-compliance-frameworks_fr.html" />
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-compliance-frameworks_nl.html" />
+  <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-compliance-frameworks_nl.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-compliance-frameworks_no.html" />
+  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-compliance-frameworks_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-compliance-frameworks_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-compliance-frameworks_sv.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-compliance-frameworks_zh.html" />
+
+</head>
+<body>
+  <!-- 面包屑导航 Navigation -->
+  <nav aria-label="面包屑导航">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">首页</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_zh.html">博客</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        合规框架
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>合规框架: Evidence-Based Implementation</h1>
+  <div class="app-link">
+    <a href="index_zh.html" title="Back to 首页">首页</a>
+    <a href="discordian-cybersecurity_zh.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md" title="Compliance Checklist">Compliance</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">✅ 合规框架: When Evidence Replaces Theater</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">🍎 The Golden Apple of Compliance Consciousness</h2>
+      
+      <p><strong>"Checkbox compliance is security theater. Real compliance requires evidence."</strong> — Hagbard Celine</p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including the permission to demonstrate <strong>actual compliance through documented evidence</strong> instead of annual audit theater where consultants check boxes while your security posture remains unchanged. <em>Are you paranoid enough to question why compliance audits happen once a year while breaches happen 24/7? The bureaucracy is expanding to meet the needs of the expanding bureaucracy—and billing you for the privilege of ignoring continuous reality.</em></p>
+      
+      <p><em>Think for yourself, schmuck! Question authority.</em> Question "we're compliant" without documented evidence. Question "passed our audit" when evidence existed for 3 days before audit and disappeared after. <strong>Real compliance isn't audit preparation—it's continuous evidence collection demonstrating security maturity.</strong> Not "we do this" (claim). But "here's proof" (evidence). One approach scales to theater. Other scales to reality. <em>Evidence-based compliance. Their nightmare. Your competitive advantage.</em></p>
+      
+      <p>At Hack23, compliance isn't annual theater—it's <strong>systematic demonstration of security maturity across five frameworks.</strong> Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Compliance Checklist</a> (224KB, updated Nov 2025) documents HOW each control is implemented, WHERE evidence exists, WHEN it was last verified. <strong>ISO 27001:2022</strong> complete control mapping (93 controls), <strong>NIST CSF 2.0</strong> comprehensive mapping (all categories), <strong>CIS Controls v8.1</strong> implementation tracking (153 safeguards), <strong>EU GDPR</strong> compliance evidence, <strong>NIS2 Directive</strong> requirements, <strong>EU Cyber Resilience Act</strong> alignment.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Compliance frameworks are security consciousness taxonomies—different perspectives on the same underlying security reality. ISO 27001 emphasizes management systems, NIST CSF emphasizes risk management, CIS Controls emphasize technical implementation. The Law of Fives suggests five compliance dimensions (Governance, Technical, Operational, Legal, Cultural), each framework emphasizing different aspects. Follow the patterns, psychonaut.</em></p>
+      
+      <p><strong>Psychedelic Futurist Angle:</strong> What if compliance wasn't bureaucratic nightmare but consciousness-expanding journey through nature of information security itself? The <strong>CIA Triad reborn</strong>—Confidentiality (secrets we must keep), Integrity (truths we must preserve), Availability (knowledge we must share). Each dimension contains five security levels (Law of Fives naturally!), and together they form three-dimensional space where every system finds its truth.</p>
+    
+      
+      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23_zh.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+    </section>
+
+    <section id="five-frameworks">
+      <h2 class="panel-caption">🌟 The Five Major Frameworks: Complete Coverage Demonstration</h2>
+      
+      <p><strong>Nothing is true (compliance doesn't guarantee security). Everything is permitted (including honest transparency about compliance gaps). FNORD is in every "partially compliant" status hiding non-implementation.</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ ISO/IEC 27001:2022 — The Management System Perspective</h3>
+          <p><strong>Coverage: 75 controls implemented (81% complete)</strong></p>
+          <p><strong>Framework Philosophy:</strong> ISO 27001 is comprehensive but not prescriptive. "Implement access control" doesn't specify how. That's feature, not bug. Allows tailoring to business context. Also allows consultants to charge €50K to tell you what "implement" means. We chose the free option: <em>think for yourself.</em></p>
+          
+          <p><strong>The Four Control Domains:</strong></p>
+          <ul>
+            <li><strong>A.5 Organizational Controls (37 controls):</strong> Governance, risk management, policies. <em>Status: Strong coverage</em> — 信息安全 Policy, Risk Register, Threat Modeling, Asset Register, Incident Response, Business Continuity all documented with evidence links.</li>
+            <li><strong>A.6 People Controls:</strong> Screening, training, awareness. <em>Status: Some controls planned</em> — Acceptable Use Policy exists, formal screening process pending.</li>
+            <li><strong>A.7 Physical Controls:</strong> Physical security perimeters. <em>Status: 首页 office + AWS inherited</em> — Physical 安全政策 for home office, AWS datacenter controls inherited via SOC2/ISO attestations.</li>
+            <li><strong>A.8 Technological Controls:</strong> Access control, cryptography, monitoring. <em>Status: Strong technical controls</em> — Access Control Policy, Cryptography Policy, Network 安全政策, Secure Development Policy all with technical implementation evidence.</li>
+          </ul>
+          
+          <p><strong>Example Control Implementation:</strong> <strong>A.5.15 (Access Control Policy)</strong> → Documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with AWS IAM implementation, MFA enforcement, quarterly access reviews, least privilege architecture. Evidence: AWS IAM policies, CloudTrail logs, access review records. <strong>Not "we do access control" (claim). But "here's our policy, here's implementation, here's audit trail" (evidence).</strong></p>
+          
+          <p class="hidden-wisdom"><em>ISO 27001 WISDOM: The standard doesn't mandate specific technologies. Firewall? Cloud security groups? Same control, different implementation. This flexibility is why ISO 27001 survives cloud transformation while prescriptive standards become obsolete. Adapt to technology changes without standard updates. Revolutionary.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ NIST Cybersecurity Framework 2.0 — The Risk Management Perspective</h3>
+          <p><strong>Coverage: Comprehensive mapping across all 6 functions</strong></p>
+          <p><strong>Framework Philosophy:</strong> NIST CSF is outcome-focused, not prescriptive. "Detect cybersecurity events" doesn't mandate specific tools. Enables AWS-native detection (GuardDuty) vs third-party SIEM based on business context. <em>Function over form. Results over checkboxes.</em></p>
+          
+          <p><strong>The Six Functions Mapped:</strong></p>
+          <ul>
+            <li><strong>GOVERN (GV):</strong> ISMS governance structure, security metrics, policy framework. <em>Example: GV.PO-01 (Cybersecurity policy established) → 信息安全 Policy with quarterly review cycle.</em></li>
+            <li><strong>IDENTIFY (ID):</strong> Asset management, risk assessment, threat intelligence. <em>Example: ID.AM-01 (Physical/virtual assets inventoried) → Asset Register with 27+ AWS services documented.</em></li>
+            <li><strong>PROTECT (PR):</strong> Access control, data security, protective technology. <em>Example: PR.AC-01 (Identities managed) → AWS IAM Identity Center with unique user IDs, no shared accounts.</em></li>
+            <li><strong>DETECT (DE):</strong> Continuous monitoring, security event detection. <em>Example: DE.CM-01 (Networks monitored) → CloudWatch, GuardDuty, Security Hub, VPC Flow Logs all enabled.</em></li>
+            <li><strong>RESPOND (RS):</strong> Incident response, analysis, mitigation. <em>Example: RS.AN-01 (Incidents analyzed) → Incident Response Plan with severity classification, 30-minute critical incident response.</em></li>
+            <li><strong>RECOVER (RC):</strong> Recovery planning, improvements. <em>Example: RC.RP-01 (Recovery plan executed) → Business Continuity Plan + Disaster Recovery Plan with RTO ≤4hrs, RPO ≤1hr.</em></li>
+          </ul>
+          
+          <p><strong>Implementation Tiers:</strong> NIST CSF provides maturity model (Tier 1 Partial → Tier 4 Adaptive). Hack23 targets <strong>Tier 3 (Repeatable)</strong> for critical controls — formalized, documented, consistently executed. Not perfection. But systematic execution with continuous improvement. <em>Better than 90% of organizations still at Tier 1 (Reactive) wondering why breaches keep happening.</em></p>
+          
+          <p class="hidden-wisdom"><em>NIST CSF WISDOM: The framework is technology-agnostic by design. Written for critical infrastructure operators who can't rip-and-replace legacy systems. Cloud-native companies can achieve Tier 3 faster because infrastructure-as-code eliminates configuration drift. Your advantage. Use it.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 CIS Controls v8.1 — The Technical Implementation Perspective</h3>
+          <p><strong>Coverage: 153 safeguards tracked across 3 implementation groups</strong></p>
+          <p><strong>Framework Philosophy:</strong> CIS Controls are specific: "Enable firewall logging" not "implement network security." Specificity reduces ambiguity but requires adaptation to cloud-native architectures (VPC Flow Logs vs traditional firewall logs). <em>Prescriptive guidance for those who need it. Flexibility for those who earned it.</em></p>
+          
+          <p><strong>The Three Implementation Groups:</strong></p>
+          <ul>
+            <li><strong>IG1 (Basic Cyber Hygiene):</strong> Essential safeguards for all organizations. <em>Focus: Asset inventory, software inventory, data protection, configuration management, account management.</em> <strong>Hack23 Status: Foundation complete</strong> — Asset Register via AWS Config, software tracking via Dependabot + SBOM, encryption via AWS KMS.</li>
+            <li><strong>IG2 (Enterprise Security):</strong> Additional safeguards for organizations with IT resources. <em>Focus: Vulnerability management, audit logging, penetration testing, security awareness.</em> <strong>Hack23 Status: Advanced controls largely covered</strong> — SAST/SCA/DAST in CI/CD, CloudTrail logging, quarterly penetration testing.</li>
+            <li><strong>IG3 (Advanced Security):</strong> Safeguards for organizations with mature security programs. <em>Focus: Threat intelligence, data loss prevention, network monitoring.</em> <strong>Hack23 Status: Enterprise-grade concepts mapped</strong> — GuardDuty threat intelligence, DLP via data classification.</li>
+          </ul>
+          
+          <p><strong>Example Safeguard Implementation:</strong> <strong>CIS 6.3 (Require MFA for administrative access)</strong> → Documented in Access Control Policy. AWS IAM enforces MFA for all human users, hardware tokens required for administrative access, YubiKey or biometric authentication. Evidence: IAM policies, authentication logs, MFA device registry. <strong>Specific requirement. Specific implementation. Specific evidence. No ambiguity.</strong></p>
+          
+          <p class="hidden-wisdom"><em>CIS CONTROLS WISDOM: The framework prioritizes by threat model. Controls 1-6 (basic inventory + access control) prevent 85% of attacks. Controls 7-18 address sophisticated threats. Small organizations: master IG1. Medium: add IG2. Large: consider IG3. Prioritization based on risk vs resources, not completionist checkbox mentality.</em></p>
+        </div>
+        
+        <div class="card roi-exceptional">
+          <div class="scanner-effect"></div>
+          <h3>🇪🇺 GDPR + NIS2 + CRA — The Regulatory Perspective</h3>
+          <p><strong>Coverage: EU regulatory framework compliance</strong></p>
+          <p><strong>Regulatory Philosophy:</strong> Regulations overlap deliberately. GDPR data protection + NIS2 cybersecurity + CRA product security address same security domains from different angles. Good security posture satisfies multiple regulations, not separate compliance programs. <em>One implementation. Multiple regulatory checkboxes. Efficiency.</em></p>
+          
+          <p><strong>GDPR (General Data Protection Regulation):</strong></p>
+          <ul>
+            <li><strong>Core Compliance:</strong> Data Classification Policy addresses GDPR requirements. Lawful basis (Art. 6), consent management (Art. 7), data subject rights (Art. 12-23), breach notification &lt;72hr (Art. 33).</li>
+            <li><strong>Evidence Trail:</strong> Privacy Policy published, Records of Processing Activities (RoPA) in Asset Register, breach procedures with &lt;30min detection + &lt;72hr notification documented in Incident Response Plan.</li>
+            <li><strong>Swedish Context:</strong> All data EU-located (Stockholm region). Swedish Dataskyddslagen compliance. No DPO required (no large-scale monitoring of special categories).</li>
+          </ul>
+          
+          <p><strong>NIS2 (Network and 信息安全 Directive 2):</strong></p>
+          <ul>
+            <li><strong>Article 20 (Governance):</strong> CEO as management body approves cybersecurity risk management measures quarterly.</li>
+            <li><strong>Article 21 (Risk Management):</strong> 10 core measures all documented — risk analysis, incident handling, business continuity, supply chain security, secure development, effectiveness testing, cryptography, access control, MFA, emergency procedures.</li>
+            <li><strong>Article 23 (Incident Reporting):</strong> 24hr/72hr/1-month reporting timelines implemented. CSIRT-SE contact in External Stakeholder Registry. MSB (Swedish authority) compliance ready.</li>
+          </ul>
+          
+          <p><strong>EU Cyber Resilience Act (CRA):</strong></p>
+          <ul>
+            <li><strong>Annex I (Essential Requirements):</strong> Secure by design (Secure Development Policy), vulnerability handling (Vulnerability Management), SBOM provision (release artifacts), security updates (Change Management).</li>
+            <li><strong>Product Assessments:</strong> CIA (Citizen Intelligence Agency), Black Trigram, CIA Compliance Manager all assessed as "Standard (Non-commercial OSS)" classification. Enhanced obligations ready if commercialization occurs.</li>
+            <li><strong>Consulting Readiness:</strong> Critical product classification understanding enables client support for Annex II critical products (IAM systems, network equipment, OS, containers, industrial automation).</li>
+          </ul>
+          
+          <p class="hidden-wisdom"><em>REGULATORY WISDOM: EU regulations are harmonized by design. GDPR protects data. NIS2 protects networks. CRA protects products. Together they address entire attack surface from data layer to network layer to product layer. Unified security posture satisfies all three. Separate compliance programs create gaps between regulatory domains. Integration matters.</em></p>
+        </div>
+        
+        <div class="card roi-high">
+          <div class="scanner-effect"></div>
+          <h3>🏢 SOC 2 + PCI DSS + HIPAA — The Consulting Readiness Perspective</h3>
+          <p><strong>Coverage: Framework alignment for client consulting services</strong></p>
+          <p><strong>Consulting Philosophy:</strong> Demonstrating compliance alignment across multiple frameworks proves consulting capability. SOC 2 for SaaS clients, PCI DSS for payment processing, HIPAA for healthcare. <em>Not current requirements. But capability demonstration for client engagements.</em></p>
+          
+          <p><strong>SOC 2 Type II (Trust 服务 Criteria):</strong></p>
+          <ul>
+            <li><strong>Common Criteria (CC1-CC9):</strong> 100% mapped to ISMS controls. COSO Internal Control Principles, access controls, change management, risk mitigation all documented with operational effectiveness evidence.</li>
+            <li><strong>Trust 服务 Categories:</strong> Security (baseline), Availability (multi-AZ deployment), Processing Integrity (80%+ test coverage), Confidentiality (AES-256 + TLS 1.3), Privacy (GDPR aligned).</li>
+            <li><strong>Type II Readiness:</strong> 6-12 month observation period with continuous evidence collection. Quarterly management attestations. Audit-ready documentation. <em>62 TSC criteria, 100% implemented, Type II evidence documented.</em></li>
+          </ul>
+          
+          <p><strong>PCI DSS v4.0 (Payment Card Industry Data Security Standard):</strong></p>
+          <ul>
+            <li><strong>SAQ A Applicability:</strong> Card-not-present, fully outsourced to Stripe (PCI DSS Level 1 Service Provider). Minimal Hack23 scope — primarily Req 12 (organizational security policies).</li>
+            <li><strong>12 Requirements Mapped:</strong> Network security controls (Req 1), secure configurations (Req 2), encryption (Req 3-4), malware protection (Req 5), secure development (Req 6), access control (Req 7-8), physical security (Req 9), logging (Req 10), testing (Req 11), policies (Req 12).</li>
+            <li><strong>Implementation Status:</strong> 63/73 sub-requirements implemented, 9 N/A (Stripe handles), 1 partial (formal developer training). <em>SAQ A: 22/22 compliant. Ready for PCI validation if processing volume increases.</em></li>
+          </ul>
+          
+          <p><strong>HIPAA (Health Insurance Portability and Accountability Act):</strong></p>
+          <ul>
+            <li><strong>Security Rule Alignment:</strong> 60 requirements mapped across Administrative Safeguards (§164.308), Physical Safeguards (§164.310), Technical Safeguards (§164.312), Organizational Requirements (§164.314), Documentation (§164.316).</li>
+            <li><strong>Current Status:</strong> No PHI processed. But 100% framework alignment demonstrates healthcare sector consulting readiness for Covered Entity / Business Associate engagements.</li>
+            <li><strong>Consulting Value:</strong> HIPAA gap assessments, Security Risk Analysis, technical safeguard implementation, incident response for PHI breaches. <em>Swedish company, U.S. healthcare consulting capability.</em></li>
+          </ul>
+          
+          <p class="hidden-wisdom"><em>MULTI-FRAMEWORK WISDOM: SOC 2 + PCI DSS + HIPAA aren't current Hack23 requirements. They're consulting capability demonstrations. Client asks "can you support our SOC 2 audit?" Answer: "Here's our 62-criteria TSC mapping with Type II evidence documentation." Client asks "do you understand PCI DSS?" Answer: "Here's our 73-requirement analysis with SAQ A validation." Capability proof through systematic documentation. Not claims. Evidence.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence-based-approach">
+      <h2 class="panel-caption">📊 Evidence-Based Compliance: Continuous Monitoring vs Annual Theater</h2>
+      
+      <p><strong>The Compliance Theater Model (How Most Organizations Operate):</strong></p>
+      <ul>
+        <li><strong>Month 1-10:</strong> Ignore compliance. Focus on features. "We'll deal with audit later."</li>
+        <li><strong>Month 11:</strong> Panic. Hire external consultants. Create evidence that didn't exist.</li>
+        <li><strong>Month 12:</strong> Audit. Show manufactured evidence. Pass. Celebrate.</li>
+        <li><strong>Month 1 (next year):</strong> Evidence disappears. Controls stop operating. Repeat cycle.</li>
+      </ul>
+      
+      <p><em>Result: Compliant on paper. Insecure in reality. Annual audit preparation instead of continuous security operation. Theater.</em></p>
+      
+      <p><strong>The Evidence-Based Model (How Hack23 Operates):</strong></p>
+      <ul>
+        <li><strong>Day 1:</strong> Implement security control. Document policy. Configure technology. Capture evidence automatically.</li>
+        <li><strong>Day 2-364:</strong> Control operates continuously. Evidence collected automatically (logs, configurations, metrics). Monitoring detects drift.</li>
+        <li><strong>Day 365:</strong> Audit. Show 365 days of continuous evidence. Pass effortlessly. Continue operating.</li>
+        <li><strong>Day 366+:</strong> Same controls. Same evidence collection. No manufacturing. No panic. No theater.</li>
+      </ul>
+      
+      <p><em>Result: Compliant continuously. Secure continuously. Audit is validation, not preparation. Reality.</em></p>
+      
+      <p><strong>Automated Evidence Collection Infrastructure:</strong></p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Evidence Type</th>
+            <th>Collection Method</th>
+            <th>Retention</th>
+            <th>Framework Mapping</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Configuration Compliance</strong></td>
+            <td>AWS Config continuous recording</td>
+            <td>5 years</td>
+            <td>ISO A.8.9, NIST PR.IP-01, CIS 4.2, PCI Req 2</td>
+          </tr>
+          <tr>
+            <td><strong>Audit Logs</strong></td>
+            <td>CloudTrail immutable logs</td>
+            <td>5 years</td>
+            <td>ISO A.8.15, NIST DE.CM-01, CIS 8.2, PCI Req 10, HIPAA §164.312(b)</td>
+          </tr>
+          <tr>
+            <td><strong>Security Findings</strong></td>
+            <td>Security Hub aggregation</td>
+            <td>90 days active, 5 years archived</td>
+            <td>ISO A.8.16, NIST DE.CM-08, CIS 7.1</td>
+          </tr>
+          <tr>
+            <td><strong>Vulnerability Scans</strong></td>
+            <td>SAST (SonarCloud), SCA (Dependabot), DAST (ZAP)</td>
+            <td>Continuous, 2 years history</td>
+            <td>ISO A.8.8, NIST PR.DS-07, CIS 7.1, PCI Req 6.3, NIS2 Art 21(2)(e)</td>
+          </tr>
+          <tr>
+            <td><strong>Access Reviews</strong></td>
+            <td>Quarterly IAM policy audits</td>
+            <td>7 years</td>
+            <td>ISO A.5.18, NIST PR.AC-04, CIS 5.4, SOC 2 CC6.3, HIPAA §164.308(a)(4)</td>
+          </tr>
+          <tr>
+            <td><strong>Change Records</strong></td>
+            <td>GitHub Pull Requests + CI/CD logs</td>
+            <td>Indefinite (git history)</td>
+            <td>ISO A.8.32, NIST PR.MA-01, CIS 16.7, PCI Req 6.5, SOC 2 CC8.1</td>
+          </tr>
+          <tr>
+            <td><strong>Backup Verification</strong></td>
+            <td>AWS Backup success/failure logs</td>
+            <td>90 days active, 5 years archived</td>
+            <td>ISO A.8.13, NIST PR.DS-05, CIS 11.2, PCI Req 9.2, HIPAA §164.308(a)(7)</td>
+          </tr>
+          <tr>
+            <td><strong>Incident Records</strong></td>
+            <td>Incident Response Plan execution logs</td>
+            <td>7 years</td>
+            <td>ISO A.5.24-A.5.28, NIST RS.AN-01, CIS 17, NIS2 Art 23, GDPR Art 33</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>EVIDENCE ILLUMINATION: The difference between theater and reality is automation. Manual evidence collection scales linearly with controls (double controls = double work). Automated evidence collection scales to thousands of controls with same infrastructure (double controls = same CloudTrail logging). One approach collapses under its own weight. Other scales indefinitely. Choose wisely.</em></p>
+    </section>
+
+    <section id="control-mapping">
+      <h2 class="panel-caption">🗺️ Control Mapping: One Implementation, Multiple Compliance Outcomes</h2>
+      
+      <p><strong>The Mapping Principle:</strong> Security control implementations satisfy multiple framework requirements simultaneously. Don't implement "ISO 27001 access control" separate from "NIST CSF access control" separate from "CIS Control 6." Implement <strong>access control</strong> once, map to all three frameworks. <em>Same security. Three compliance checkboxes. 70% effort reduction.</em></p>
+      
+      <p><strong>Example 1: Access Control Implementation</strong></p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Control Reference</th>
+            <th>Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ISO 27001</strong></td>
+            <td>A.5.15, A.5.16, A.5.17, A.5.18</td>
+            <td>Access control policy, identity management, authentication, access rights lifecycle</td>
+          </tr>
+          <tr>
+            <td><strong>NIST CSF 2.0</strong></td>
+            <td>PR.AC-01, PR.AC-03, PR.AC-04</td>
+            <td>Identities managed, privileged access managed, access permissions managed</td>
+          </tr>
+          <tr>
+            <td><strong>CIS Controls v8</strong></td>
+            <td>CIS 5.1-5.6, CIS 6.1-6.8</td>
+            <td>Account management (13 safeguards), Access control management (8 safeguards)</td>
+          </tr>
+          <tr>
+            <td><strong>SOC 2</strong></td>
+            <td>CC6.1-CC6.8</td>
+            <td>Logical access controls, provisioning, deactivation, credential management</td>
+          </tr>
+          <tr>
+            <td><strong>PCI DSS</strong></td>
+            <td>Req 7, Req 8</td>
+            <td>Restrict access by need-to-know, identify users and authenticate access</td>
+          </tr>
+          <tr>
+            <td><strong>HIPAA</strong></td>
+            <td>§164.308(a)(3), §164.312(a)</td>
+            <td>Workforce security, access control safeguards</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="3"><strong>Hack23 Implementation:</strong> Single <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with AWS IAM Identity Center, least privilege roles, MFA enforcement (hardware tokens), no shared accounts, quarterly access reviews, automated provisioning/deprovisioning. <strong>One policy. Six framework compliance outcomes. 21+ specific control requirements satisfied.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Example 2: Cryptography Implementation</strong></p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Framework</th>
+            <th>Control Reference</th>
+            <th>Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ISO 27001</strong></td>
+            <td>A.8.24</td>
+            <td>Use of cryptography (data at rest + in transit)</td>
+          </tr>
+          <tr>
+            <td><strong>NIST CSF 2.0</strong></td>
+            <td>PR.DS-01, PR.DS-02</td>
+            <td>Data-at-rest protected, Data-in-transit protected</td>
+          </tr>
+          <tr>
+            <td><strong>CIS Controls v8</strong></td>
+            <td>CIS 3.11, CIS 3.10</td>
+            <td>Encrypt sensitive data, Encrypt data in transit</td>
+          </tr>
+          <tr>
+            <td><strong>GDPR</strong></td>
+            <td>Art. 32</td>
+            <td>Security of processing (encryption as appropriate technical measure)</td>
+          </tr>
+          <tr>
+            <td><strong>NIS2</strong></td>
+            <td>Art. 21(2)(g)</td>
+            <td>Cryptography and encryption policies</td>
+          </tr>
+          <tr>
+            <td><strong>PCI DSS</strong></td>
+            <td>Req 3, Req 4</td>
+            <td>Protect stored data, Encrypt transmission</td>
+          </tr>
+          <tr>
+            <td><strong>HIPAA</strong></td>
+            <td>§164.312(a)(2)(iv), §164.312(e)</td>
+            <td>Encryption and decryption (addressable), Transmission security</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="3"><strong>Hack23 Implementation:</strong> Single <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a> with AES-256 for data at rest (AWS KMS), TLS 1.3 for data in transit (TLS 1.2 minimum fallback), RSA 2048+ for asymmetric crypto, key rotation via AWS KMS automatic rotation. <strong>One policy. Seven framework compliance outcomes. Modern cryptography standards across all domains.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>MAPPING ILLUMINATION: Consultants profit from treating frameworks as separate universes. "You need ISO 27001 program ($50K) plus NIST CSF program ($40K) plus CIS implementation ($35K) plus GDPR compliance ($30K)." Total: $155K for overlapping controls. Reality: Unified ISMS satisfies all four for fraction of cost. 80% control overlap means 80% of consultant fees are pure rent-seeking. We map once. They bill four times. Follow the incentives, psychonaut.</em></p>
+    </section>
+
+    <section id="audit-readiness">
+      <h2 class="panel-caption">🎯 Audit Readiness: Documentation Over Preparation</h2>
+      
+      <p><strong>Traditional Audit Model:</strong></p>
+      <ul>
+        <li><strong>Month 11:</strong> Consultant arrives. "Show me your access control documentation." Response: "Let me create that..."</li>
+        <li><strong>Consultant reaction:</strong> "You don't have this documented? That's a finding. I'll need to see evidence of implementation."</li>
+        <li><strong>Scramble mode:</strong> Create policies retroactively. Manufacture evidence. "We've been doing this, just not documented."</li>
+        <li><strong>Audit report:</strong> "Observation: Controls implemented but documentation inadequate." (Translation: Theater detected but we passed you anyway because you paid.)</li>
+        <li><strong>Post-audit:</strong> Documentation disappears. Repeat next year.</li>
+      </ul>
+      
+      <p><em>This is compliance theater. It doesn't improve security. It generates billable hours.</em></p>
+      
+      <p><strong>Evidence-Based Audit Model:</strong></p>
+      <ul>
+        <li><strong>Month 0 (anytime):</strong> Auditor arrives. "Show me your access control documentation." Response: "<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Here's the policy</a> (public, version-controlled, dated 2024-05-15)."</li>
+        <li><strong>Auditor:</strong> "Show me implementation evidence." Response: "Here's AWS IAM configuration (CloudFormation), here's CloudTrail logs (5-year retention), here's quarterly access review records (7-year retention)."</li>
+        <li><strong>Auditor:</strong> "Show me effectiveness evidence." Response: "Here's Security Hub findings (zero IAM misconfigurations), here's access review audit trail, here's MFA enforcement metrics (100% coverage)."</li>
+        <li><strong>Audit report:</strong> "No findings. Controls designed effectively, implemented correctly, operating as intended. Evidence comprehensive."</li>
+        <li><strong>Post-audit:</strong> Same documentation. Same evidence collection. Nothing manufactured. Nothing disappears.</li>
+      </ul>
+      
+      <p><em>This is audit readiness through continuous documentation. It improves security because implementation requires evidence.</em></p>
+      
+      <p><strong>The Compliance Checklist Advantage:</strong> Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Compliance Checklist</a> (224KB, 93 ISO 27001 controls, NIST CSF complete mapping, CIS Controls 153 safeguards) provides:</p>
+      <ul>
+        <li><strong>Pre-mapped evidence:</strong> Every control links to policy document. Every policy document links to implementation (configuration, code, procedure). Every implementation links to evidence (logs, metrics, audit trails).</li>
+        <li><strong>Framework cross-references:</strong> ISO 27001 A.5.15 → NIST CSF PR.AC-01 → CIS 6.1 → PCI Req 7 → HIPAA §164.308(a)(3). One control. Five framework references. Zero duplicate effort.</li>
+        <li><strong>Gap transparency:</strong> Not applicable controls explicitly documented with justification. Partially implemented controls show gap remediation plan with timeline. No hiding. No pretending. <em>Honest transparency > manufactured perfection.</em></li>
+        <li><strong>Audit package generation:</strong> 12 hours to generate complete audit package (vs 80 hours manual evidence collection). Pre-generated Excel exports, evidence archives, control matrices. Auditor-ready format.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>AUDIT ILLUMINATION: Best compliance programs make audit findings boring. No surprises. No gaps discovered by auditors that organization didn't already know. Auditor's job becomes validation, not investigation. When auditor arrives and you say "here's our checklist showing exactly what we do and don't comply with," their finding is "organization has mature compliance program with honest gap assessment." That's the finding you want. Not "here's manufactured evidence we created last month."</em></p>
+    </section>
+
+    <section id="chapel-perilous">
+      <h2 class="panel-caption">🔮 Welcome to Chapel Perilous: The Compliance Consciousness Shift</h2>
+      
+      <p><strong>You are now entering Chapel Perilous.</strong> On the other side of this realization, compliance looks different. You can't unsee the pattern once you see it.</p>
+      
+      <p><strong>The Pattern:</strong></p>
+      <ul>
+        <li><strong>Theater Mode:</strong> Annual audit preparation. Manufactured evidence. Checkbox mentality. Consultants billing by framework. Compliance as cost center. Security posture unchanged.</li>
+        <li><strong>Reality Mode:</strong> Continuous documentation. Automated evidence collection. Framework mapping. Single implementation satisfying multiple requirements. Compliance as operational hygiene. Security posture improved.</li>
+      </ul>
+      
+      <p><strong>The Consciousness Shift:</strong></p>
+      <ul>
+        <li><strong>Before:</strong> "We need to be ISO 27001 compliant for the audit." (Theater mindset)</li>
+        <li><strong>After:</strong> "We need robust access control because attackers don't care about audit dates. ISO 27001 compliance is byproduct of good security." (Reality mindset)</li>
+      </ul>
+      
+      <p><strong>The Uncomfortable Questions (Think for yourself, schmuck!):</strong></p>
+      <ul>
+        <li>If your compliance program stops when audit ends, was it compliance or theater?</li>
+        <li>If you can't demonstrate control effectiveness without 3 months preparation, are controls operating or dormant?</li>
+        <li>If consultant says "you need separate program for each framework," are they incompetent or incentivized by billable hours?</li>
+        <li>If compliance checklist says "implemented" but no evidence links exist, is it implemented or aspirational?</li>
+        <li>If audit report says "no findings" but you know gaps exist, did audit validate security or validate payment?</li>
+      </ul>
+      
+      <p><strong>The Hack23 Approach:</strong></p>
+      <ul>
+        <li><strong>Public transparency:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC">Entire ISMS published on GitHub</a>. Not marketing materials. Actual policies, procedures, checklists. Anyone can review. Anyone can audit. <em>Radical transparency as competitive advantage.</em></li>
+        <li><strong>Evidence-based claims:</strong> "81% ISO 27001 coverage" backed by <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">detailed checklist</a> showing exactly which 75 controls implemented, which 18 not applicable or planned, with evidence links. Not "we're compliant" (vague claim). But "here's our compliance status with evidence" (verifiable reality).</li>
+        <li><strong>Framework mapping:</strong> Single control implementation → multiple framework compliance. Access Control Policy satisfies ISO + NIST + CIS + SOC 2 + PCI + HIPAA. <em>Efficiency through systematic mapping, not duplication.</em></li>
+        <li><strong>Continuous compliance:</strong> Evidence collected daily via CloudTrail + Config + Security Hub. Not annual scramble. Not manufactured documentation. <em>Compliance as operational state, not audit event.</em></li>
+        <li><strong>Honest gaps:</strong> "8 ISO 27001 controls not applicable" (explicit documentation). "CIS IG3 61% coverage" (intentional prioritization based on risk). <em>Transparency about limitations > pretending perfection.</em></li>
+      </ul>
+      
+      <p><strong>The Ultimate Illumination:</strong></p>
+      <p class="hidden-wisdom"><em>Compliance frameworks are security consciousness taxonomies. ISO 27001 is management perspective. NIST CSF is risk perspective. CIS Controls is implementation perspective. GDPR is privacy perspective. NIS2 is operational resilience perspective. Five perspectives (Law of Fives!) on same underlying security reality. Good security satisfies all five, not because you're checking boxes, but because comprehensive security naturally addresses governance + risk + implementation + privacy + resilience. Frameworks don't create security. Security creates framework compliance. Get the causation right, psychonaut.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">🍎 All Hail Eris! All Hail Evidence-Based Compliance!</h2>
+      
+      <p><strong>Nothing is true (compliance doesn't guarantee security). Everything is permitted (including honest transparency about compliance gaps).</strong></p>
+      
+      <p><strong>Our compliance framework demonstrates:</strong></p>
+      <ul>
+        <li><strong>Five Major Frameworks Mapped:</strong> ISO 27001:2022 (93 controls), NIST CSF 2.0 (comprehensive), CIS Controls v8.1 (153 safeguards), GDPR + NIS2 + CRA (EU regulatory), SOC 2 + PCI DSS + HIPAA (consulting readiness).</li>
+        <li><strong>Evidence-Based Approach:</strong> Continuous monitoring via CloudTrail + Config + Security Hub + GitHub. Not annual audit preparation. Not manufactured evidence. <em>365 days of continuous compliance demonstration.</em></li>
+        <li><strong>Control Mapping:</strong> Single implementation → multiple framework outcomes. Access control satisfies 6 frameworks with 21+ control requirements. Cryptography satisfies 7 frameworks. <em>70% effort reduction through systematic mapping.</em></li>
+        <li><strong>Audit Readiness:</strong> 12 hours to generate complete audit package (vs 80 hours manual). Pre-mapped evidence links. Framework cross-references. Gap transparency. <em>Documentation over preparation.</em></li>
+        <li><strong>Public Transparency:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">224KB Compliance Checklist</a> with complete framework mappings, evidence trails, gap analysis. Not marketing claims. Verifiable reality. <em>Radical transparency as competitive advantage.</em></li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Question authority—including compliance consultants whose business model depends on complexity and duplication. Question "we're compliant" without evidence links. Question separate framework programs when 80% controls overlap. Question annual audits that validate nothing about day-to-day security operations. <em>Evidence-based compliance. Continuous documentation. Framework mapping. This is how mature organizations demonstrate security posture. Theater is expensive. Reality scales.</em></p>
+      
+      <p class="hidden-wisdom"><strong>FINAL FNORD:</strong> <em>The bureaucracy is expanding to meet the needs of the expanding bureaucracy—but only if you let it. Compliance consultants profit from complexity. We profit from efficiency. Guess which approach scales to 10 frameworks without 10x cost? Systematic mapping. Evidence automation. Public transparency. These are tools of liberation from compliance industrial complex. Use them wisely, psychonaut. Chapel Perilous awaits those brave enough to question whether checkbox compliance serves security or theater.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><strong>23 FNORD 5</strong> — Compliance is continuous evidence collection, not annual theater. Read our complete <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md">Compliance Checklist</a> with systematic framework mappings across ISO 27001 + NIST CSF + CIS Controls + GDPR + NIS2 + CRA + SOC 2 + PCI DSS + HIPAA. Public. Verifiable. Reality-based. With specific implementation evidence we actually maintain.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em>, Product Owner & System Visionary<br><br><em>"Question authority. Document evidence. Map systematically. Comply continuously. Think for yourself, schmuck!"</em><br><br>🍎 KALLISTI — For the fairest compliance framework: Evidence</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-compliance.html">Compliance Checklist</a> — Systematic compliance management</li>
+        <li><a href="discordian-risk-assessment.html">Risk Assessment Methodology</a> — Evidence-based risk analysis</li>
+        <li><a href="discordian-info-sec-policy.html">信息安全 Policy</a> — Comprehensive ISMS foundation</li>
+        <li><a href="discordian-isms-transparency.html">ISMS Transparency Plan</a> — Public disclosure strategy</li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+    <footer role="contentinfo" aria-label="网站页脚">
+      <div class="footer-container">
+        
+        <!-- 公司 Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>网络安全咨询<br>
+          瑞典哥德堡 | 远程</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 公司 Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- 服务 Column -->
+        <div class="footer-column">
+          <h3>服务</h3>
+          <ul>
+            <li><a href="services_zh.html">安全咨询</a></li>
+            <li><a href="services_zh.html">安全架构</a></li>
+            <li><a href="services_zh.html">云安全</a></li>
+            <li><a href="services_zh.html">DevSecOps集成</a></li>
+            <li><a href="services_zh.html">合规与ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- 产品 Column -->
+        <div class="footer-column">
+          <h3>产品</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- 资源 Column -->
+        <div class="footer-column">
+          <h3>资源</h3>
+          <ul>
+            <li><a href="blog_zh.html">Security 博客</a></li>
+            <li><a href="discordian-cybersecurity_zh.html">🍎 Discordian 博客</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">公开ISMS</a></li>
+            <li><a href="sitemap_zh.html">网站地图</a></li>
+          </ul>
+        </div>
+        
+        <!-- 公司 Column -->
+        <div class="footer-column">
+          <h3>公司</h3>
+          <ul>
+            <li><a href="why-hack23_zh.html">关于Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">安全政策</a></li>
+            <li><a href="SECURITY.md">报告安全问题</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">无障碍</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to 博客 -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 博客 Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog_zh.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | 许可 <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_zh.html" lang="zh">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
