@@ -128,7 +128,9 @@
 - **Professional Terminology:** 60+ ISO 27001/22301/27005 Swedish terms documented
 - **Regulatory Framework:** MSB, IMY, NIS2-direktivet, Bokföringslagen referenced
 - **Discordian Voice:** Preserved ("Tänk själv", "FNORD", "23 FNORD 5")
-- **Full Content Translation:** Phase 2 enhancement (10-14 hours estimated)
+- **Full Content Translation:** ⏳ IN PROGRESS - AI translation over multiple sessions (1-2 files per session)
+  - Session 1: `discordian-access-control-policy_sv.html` (in progress)
+  - Remaining: 3 files (to be completed in subsequent sessions)
 
 ### ISO 27001 Resources (4/4)
 - ✅ `iso-27001-2022-vs-2013_sv.html` - Complete
