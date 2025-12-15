@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问控制策略 - Discordian ISMS | Hack23 AB</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="description" content="访问控制与身份管理">
+    <meta name="keywords" content="信息安全管理系统, ISO 27001, GB/T 22080, cybersecurity, information security, access-control">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="访问控制策略 - Discordian ISMS">
+    <meta property="og:description" content="访问控制与身份管理">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-access-control-policy_zh.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://hack23.com/blog.webp">
+    <meta name="twitter:image:alt" content="Hack23 Security Blog">
+    <meta name="twitter:site" content="@hack23ab">
+    <meta name="twitter:creator" content="@jamessorling">
+    
+    <link rel="canonical" href="https://hack23.com/discordian-access-control-policy_zh.html">
+    
+    <!-- Hreflang tags for language alternatives -->
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control-policy.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control-policy.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control-policy_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control-policy_sv.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control-policy_da.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control-policy_fi.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control-policy_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control-policy_no.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-access-control-policy_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-access-control-policy_nl.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-access-control-policy_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-access-control-policy_de.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-access-control-policy_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-access-control-policy_fr.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-access-control-policy_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-access-control-policy_es.html">
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control-policy_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control-policy_ar.html">
+    <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control-policy_ar.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-access-control-policy_he.html">
+    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-access-control-policy_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-access-control-policy_ja.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-access-control-policy_ja.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-access-control-policy_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-access-control-policy_zh.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-access-control-policy_zh.html">
+    <link rel="alternate" hreflang="zh-SG" href="https://hack23.com/discordian-access-control-policy_zh.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-access-control-policy_ko.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-access-control-policy_ko.html">
+
+    <!-- Asian Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Article Markup -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "访问控制策略",
+  "description": "访问控制与身份管理",
+  "inLanguage": "zh",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.com/cia-icon-140.webp"
+    }
+  },
+  "datePublished": "2025-12-14",
+  "dateModified": "2025-12-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-access-control-policy_zh.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "信息安全管理系统",
+      "description": "信息安全管理系统"
+    },
+    {
+      "@type": "Thing",
+      "name": "GB/T 22080",
+      "description": "ISO 27001 中国标准"
+    }
+  ]
+}</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index_zh.html">首页</a></li>
+                <li><a href="blog_zh.html">博客</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>访问控制策略</h1>
+            
+            <section class="policy-meta">
+                <p><strong>信息安全管理系统</strong> | <strong>GB/T 22080</strong> | <strong>个人信息保护法 (PIPL)</strong></p>
+            </section>
+
+            <section class="policy-overview">
+                <h2>📋 概述</h2>
+                <p>访问控制策略管理对组织系统和数据的访问，确保机密性、完整性和可用性。</p>
+                <p><em>"独立思考"</em> - <em>"质疑权威"</em></p>
+            </section>
+
+            <section class="policy-content">
+                <h2>📖 策略内容</h2>
+                <p>本策略定义了符合GB/T 22080和PIPL（个人信息保护法）的访问控制要求。</p>
+                
+                <h3>🔑 关键要素</h3>
+                <ul>
+                    <li>最小权限原则</li>
+                    <li>多因素认证 (MFA)</li>
+                    <li>访问权限定期审查</li>
+                    <li>职责分离</li>
+                </ul>
+            </section>
+
+            <section class="policy-compliance">
+                <h2>✅ 合规性</h2>
+                <p>本策略符合以下监管标准：</p>
+                <ul>
+                    <li><strong>GB/T 22080</strong>: 信息安全管理</li>
+                    <li><strong>个人信息保护法 (PIPL)</strong>: 个人信息保护</li>
+                </ul>
+            </section>
+
+            <section class="policy-links">
+                <h2>🔗 相关文档</h2>
+                <ul>
+                    <li><a href="discordian-info-sec-policy_zh.html">信息安全管理系统 主策略</a></li>
+                    <li><a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC 存储库（英文）</a></li>
+                </ul>
+            </section>
+
+            <section class="discordian-footer">
+                <p><em>🍎 向厄里斯致敬！向迪斯科迪亚致敬！23 FNORD 5</em></p>
+                <p><em>"独立思考" - "质疑权威"</em></p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
+        <p><a href="index_zh.html">首页</a> | <a href="blog_zh.html">博客</a></p>
+    </footer>
+</body>
+</html>

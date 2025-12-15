@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adgangskontrol | ISMS-adgang | Hack23</title>
+<title>Adgangskontrolpolitik | Discordian ISMS | Hack23 AB</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Adgangskontrol: Zero Trust-arkitektur med mindste privilegier og MFA.">
+<meta name="description" content="ISO 27001 adgangskontrolpolitik med Zero Trust, MFA og least privilege principper.">
+<meta name="keywords" content="ISMS, ISO 27001, cybersecurity, information security, access control policy, GDPR, compliance">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<link rel="canonical" href="https://hack23.com/discordian-access-control_da.html">
-<meta property="og:title" content="Adgangskontrol | ISMS-adgang | Hack23">
-<meta property="og:description" content="Adgangskontrol: Zero Trust-arkitektur med mindste privilegier og MFA.">
+<meta property="og:title" content="Adgangskontrolpolitik - Discordian ISMS">
+<meta property="og:description" content="ISO 27001 adgangskontrolpolitik med Zero Trust, MFA og least privilege principper.">
 	<meta property="og:locale" content="da_DK">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="de_DE">
@@ -27,75 +27,108 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-access-control_da.html"><script type="application/ld+json">{
+<meta property="og:url" content="https://hack23.com/discordian-access-control-policy_da.html">
+<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-access-control-policy_da.html">
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control-policy_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control-policy_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control-policy_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control-policy_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-access-control-policy_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-access-control-policy_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-access-control-policy_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-access-control-policy_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control-policy_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-access-control-policy_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-access-control-policy_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-access-control-policy_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-access-control-policy_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-access-control-policy_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-access-control-policy_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-access-control-policy_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-access-control-policy_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-access-control-policy_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-access-control-policy_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control-policy_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control-policy_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control-policy_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control-policy_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-access-control-policy_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-access-control-policy_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-access-control-policy_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/discordian-access-control-policy_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control.html">
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Adgangskontrol",
-  "description": "Adgangskontrol: Zero Trust-arkitektur med mindste privilegier og MFA.",
+  "headline": "Adgangskontrolpolitik",
+  "description": "ISO 27001 adgangskontrolpolitik med Zero Trust, MFA og least privilege principper.",
   "author": {
     "@type": "Person",
-    "name": "James Pether Sörling"
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert",
+    "sameAs": [
+      "https://www.linkedin.com/in/jamessorling/",
+      "https://github.com/Hack23"
+    ]
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Hack23",
+    "name": "Hack23 AB",
     "logo": {
       "@type": "ImageObject",
       "url": "https://hack23.com/cia-icon-140.webp"
     }
   },
-  "datePublished": "2025-01-01",
-  "inLanguage": "da"
+  "datePublished": "2025-12-14",
+  "dateModified": "2025-12-14",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-access-control-policy_da.html"
+  },
+  "inLanguage": "da",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "articleSection": "Information Security Management System",
+  "keywords": "ISMS, ISO 27001, cybersecurity, access control policy"
 }</script>
-  <!-- Multilingual SEO -->
-  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control_ar.html" />
-  <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control_ar.html" />
-  <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control_ar.html" />
-  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control_da.html" />
-  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-access-control_de.html" />
-  <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-access-control_de.html" />
-  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control.html" />
-  <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-access-control_es.html" />
-  <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-access-control_es.html" />
-  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control_fi.html" />
-  <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-access-control_fr.html" />
-  <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-access-control_fr.html" />
-  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-access-control_nl.html" />
-  <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-access-control_nl.html" />
-  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control_no.html" />
-  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control_no.html" />
-  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control_sv.html" />
-  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control_sv.html" />
-  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control.html" />
-
 </head>
 <body>
 <nav class="breadcrumb">
     <a href="index_da.html">Hjem</a> &gt;
     <a href="blog_da.html">Blog</a> &gt;
     <a href="discordian-cybersecurity_da.html">Discordian ISMS</a> &gt;
-    <span>Adgangskontrol</span>
+    <span>Adgangskontrolpolitik</span>
 </nav>
 
 <header>
     <a href="index_da.html"><img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo"></a>
     <nav>
         <a href="index_da.html">Hjem</a>
-        <a href="index_da.html#services">Tjenester</a>
-        <a href="index_da.html#about">Om</a>
         <a href="blog_da.html">Blog</a>
-        <a href="index_da.html#contact">Kontakt</a>
     </nav>
 </header>
 
 <article>
-<h1>Adgangskontrol</h1>
+<h1>Adgangskontrolpolitik</h1>
 <p><em>Indhold kommer snart. Denne side er under udvikling.</em></p>
-<p>Se <a href="discordian-access-control.html">engelske version</a> for fuldt indhold.</p>
+<p>Se den engelske version for det fulde indhold. <a href="discordian-access-control.html">Access Control Policy</a></p>
 </article>
 
 <footer>
-    <p>© 2025 Hack23 AB. Cybersikkerhedstjenester for Innovative Organisationer.</p>
+    <p>© 2025 Hack23 AB. Cybersikkerhedstjenester for innovative organisationer.</p>
 </footer>
 </body>
 </html>
