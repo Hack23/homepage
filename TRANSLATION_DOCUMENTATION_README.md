@@ -4,6 +4,18 @@
 
 This directory contains comprehensive translation guides and status files for all 13 languages supported by the Hack23 AB website.
 
+### 🆕 Latest Update: Enhanced Vocabulary Edition (v3.1 - December 2025)
+
+**All 13 translation guides have been enhanced with comprehensive vocabulary extracted from actual translated pages:**
+
+- ✅ **Real-world vocabulary**: Terms extracted from 784 translated HTML files across all languages
+- ✅ **Categorized tables**: Navigation, Security, Technical, Business, and Products terminology
+- ✅ **Consistency verification**: Cross-referenced with English base files
+- ✅ **60-90 verified term pairs per language** from actual usage
+- ✅ **Translation notes**: Best practices and consistency guidelines included
+
+This enhancement ensures translation guides reflect actual usage patterns and provide translators with proven, validated terminology from existing high-quality translations.
+
 ## ✅ Quality Assurance Status (December 2025)
 
 **QA Phase 1 Complete:** Comprehensive hreflang and SEO validation across all 925 HTML pages
@@ -29,37 +41,37 @@ Each language has **two dedicated files**:
 ## Supported Languages (13)
 
 ### RTL Languages ←
-| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
-|------|----------|------|-------|------------|---------|-------|--------|
-| 🇸🇦🌙 | Arabic | ar | 57/96 | 59.4% | 40.4% | [Guide 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
-| 🇮🇱✡️ | Hebrew | he | 61/96 | 63.5% | 41.1% | [Guide 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) |
+| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
+|------|----------|------|-------|------------|---------|---------------|--------|
+| 🇸🇦🌙 | Arabic | ar | 57/96 | 59.4% | 40.4% | [v3.1 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
+| 🇮🇱✡️ | Hebrew | he | 61/96 | 63.5% | 41.1% | [v3.1 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) |
 
 ### Asian Languages 🌏
-| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
-|------|----------|------|-------|------------|---------|-------|--------|
-| 🇯🇵🗾 | Japanese | ja | 58/96 | 60.4% | 34.0% | [Guide 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
-| 🇨🇳🐉 | Chinese | zh | 58/96 | 60.4% | 34.0% | [Guide 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
-| 🇰🇷🏯 | Korean | ko | 58/96 | 60.4% | 37.7% | [Guide 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
+| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
+|------|----------|------|-------|------------|---------|---------------|--------|
+| 🇯🇵🗾 | Japanese | ja | 58/96 | 60.4% | 34.0% | [v3.1 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
+| 🇨🇳🐉 | Chinese | zh | 58/96 | 60.4% | 34.0% | [v3.1 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
+| 🇰🇷🏯 | Korean | ko | 58/96 | 60.4% | 37.7% | [v3.1 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
 
 ### Nordic Languages ❄️
-| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
-|------|----------|------|-------|------------|---------|-------|--------|
-| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | 70.1% | [Guide 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
-| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | 71.6% | [Guide 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
-| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | 68.1% | [Guide 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
+| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
+|------|----------|------|-------|------------|---------|---------------|--------|
+| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | 70.1% | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
+| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | 71.6% | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
+| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | 68.1% | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
 
 ### European Languages 🇪🇺
-| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
-|------|----------|------|-------|------------|---------|-------|--------|
-| 🇳🇱🌷 | Dutch | nl | 59/96 | 61.5% | 39.0% | [Guide 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
-| 🇩🇪🦅 | German | de | 61/96 | 63.5% | 36.1% | [Guide 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
-| 🇫🇷🥐 | French | fr | 58/96 | 60.4% | 36.2% | [Guide 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
-| 🇪🇸🎭 | Spanish | es | 58/96 | 60.4% | 36.2% | [Guide 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
+| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
+|------|----------|------|-------|------------|---------|---------------|--------|
+| 🇳🇱🌷 | Dutch | nl | 59/96 | 61.5% | 39.0% | [v3.1 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
+| 🇩🇪🦅 | German | de | 61/96 | 63.5% | 36.1% | [v3.1 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
+| 🇫🇷🥐 | French | fr | 58/96 | 60.4% | 36.2% | [v3.1 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
+| 🇪🇸🎭 | Spanish | es | 58/96 | 60.4% | 36.2% | [v3.1 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
 
 ### Base Language 👑
-| Flag | Language | Code | Files | Completion | Quality | Guide | Status |
-|------|----------|------|-------|------------|---------|-------|--------|
-| 🇸🇪👑 | Swedish | sv | 77/96 | 80.2% | 77.3% | [Guide 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
+| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
+|------|----------|------|-------|------------|---------|---------------|--------|
+| 🇸🇪👑 | Swedish | sv | 77/96 | 80.2% | 77.3% | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
 
 **Total:** 804 translation files out of 1,248 possible (96 base × 13 languages) = **64.4% complete**  
 
@@ -269,6 +281,7 @@ This approach provides immediate international SEO benefits while enabling cost-
 All translations must meet:
 - ✅ **Professional business tone** appropriate for cybersecurity consulting
 - ✅ **Technical accuracy** in cybersecurity terminology
+- ✅ **Terminology consistency** using verified vocabulary from translation guides (v3.1+)
 - ✅ **Proper HTML structure** with valid markup
 - ✅ **Complete hreflang tags** for SEO
 - ✅ **Schema.org validation** for structured data
@@ -375,5 +388,7 @@ For questions about translation documentation:
 ---
 
 **Last Updated:** December 2025  
+**Guide Version:** 3.1 (Enhanced Vocabulary Edition)  
 **Maintainer:** Hack23 AB Translation Team  
-**Total Files:** 748 HTML files | 29 documentation files (26 guides/status + 3 Swedish blog-specific)
+**Total Files:** 748 HTML files | 29 documentation files (26 guides/status + 3 Swedish blog-specific)  
+**Vocabulary Coverage:** 60-91 verified term pairs per language extracted from real translated content

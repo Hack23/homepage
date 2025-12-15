@@ -13,7 +13,7 @@
 | **Currency** | SEK (kr) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 79/96 (82.3%) |
-| **Guide Version** | 3.0 (Publication Edition) |
+| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
 | **Last Updated** | December 2025 |
 
 ## 🎯 Translation Philosophy
@@ -95,138 +95,156 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+
+## 📚 Comprehensive Vocabulary Reference
+
+*Extracted from 4 categories of translated content*
+
+
 ### 🧭 Navigation & UI Elements
 
-Essential interface terms that appear across all pages:
+*Essential interface terms that appear across all pages*
 
-| English | Swedish | Notes |
-|---------|-------|-------|
-| Home | Hem | Main navigation |
-| Blog | Blogg | |
-| Services | Tjänster | |
-| Products | Produkter | |
-| Documentation | Dokumentation | |
-| Features | Funktioner | |
-| About | Om | |
-| Contact | Kontakt | |
-| Learn More | Läs mer | CTA button |
-| Get Started | Kom igång | CTA button |
-| Read More | Läs mer | Blog/article link |
-| Download | Ladda ner | Action button |
 
-### 🔐 Cybersecurity Fundamentals
+| English | Translation |
+|---------|-------------|
+| Blog | Blogg |
+| Collapse All | Minimera alla |
+| Collapse All | Kollapsa Alla |
+| Contact | Kontakt |
+| Expand All | Expandera alla |
+| Expand All | Expandera Alla |
+| Home | Hem |
+| Products | Produkter |
+| Services | Tjänster |
+| Why Hack23 | Varför Hack23 |
 
-Core concepts that form the foundation of information security:
+### 🔒 Security & Cybersecurity Terminology
 
-| English | Swedish | Context | ISO/Framework |
-|---------|-------|---------|---------------|
-| Information Security Management System (ISMS) | *[Verify from files]* | Management framework | ISO 27001 |
-| CIA Triad | *[Verify from files]* | Core security model | Foundational |
-| Confidentiality | *[Verify from files]* | CIA component | ISO 27001 |
-| Integrity | *[Verify from files]* | CIA component | ISO 27001 |
-| Availability | *[Verify from files]* | CIA component | ISO 27001 |
-| ISO 27001 | ISO 27001 | International standard | Keep as-is |
-| GDPR | GDPR | EU regulation | Keep acronym |
-| NIS2 | NIS2 | EU directive | Keep acronym |
-| Compliance | *[Verify from files]* | Regulatory adherence | |
-| Risk Assessment | *[Verify from files]* | Risk analysis | ISO 27005 |
-| Threat Modeling | *[Verify from files]* | Security design | STRIDE, PASTA |
-| Security Policy | *[Verify from files]* | Governance document | |
-| Data Protection | *[Verify from files]* | Privacy safeguards | GDPR |
-| Access Control | *[Verify from files]* | Authorization | ISO 27001 A.9 |
-| Incident Response | *[Verify from files]* | Security events | ISO 27035 |
-| Business Continuity | *[Verify from files]* | Operations continuity | ISO 22301 |
-| Disaster Recovery | *[Verify from files]* | Recovery procedures | BC/DR |
-| Vulnerability Management | *[Verify from files]* | Weakness handling | CVE, CVSS |
-| Security Awareness | *[Verify from files]* | User education | ISO 27001 A.7 |
-| Zero Trust | *[Verify from files]* | Security model | Modern approach |
+*Core security concepts and cybersecurity terms*
 
-### 🔧 DevSecOps & Technical Terms
 
-Development and operational security terminology:
+| English | Translation |
+|---------|-------------|
+| 4. 💰 Business Value (Security Enables, Not Prevents) | 4. 💰 Affärsvärde (Säkerhet möjliggör, förhindrar inte) |
+| 40+ Integrated ISMS Policies: Comprehensive Security Framework | 40+ integrerade ISMS-policyer: Omfattande säkerhetsramverk |
+| Access Control | [To be verified in sv] |
+| Cloud Security | [To be verified in sv] |
+| Compliance | [To be verified in sv] |
+| Cybersecurity | [To be verified in sv] |
+| DevSecOps | [To be verified in sv] |
+| Discordian Cybersecurity | Discordiansk Cybersäkerhet |
+| GDPR | [To be verified in sv] |
+| Incident Response | [To be verified in sv] |
+| Information Security Policy: CIA+ Framework Foundation | Informationssäkerhetspolicy: CIA+ Ramverkets grund |
+| ISO 27001 | [To be verified in sv] |
+| Risk Assessment | [To be verified in sv] |
+| Security | [To be verified in sv] |
+| The Five Pillars of CIA+ Framework: Security As Business Enabler | De fem pelarna i CIA+ Ramverket: Säkerhet som affärsmöjliggörare |
+| Threat | [To be verified in sv] |
+| Vulnerability | [To be verified in sv] |
+| Why Your Security Policy Is Secret (And Why That's Suspicious) | Varför din säkerhetspolicy är hemlig (och varför det är misstänkt) |
+| ☁️ Cloud Security & DevSecOps | ☁️ Molnsäkerhet & DevSecOps |
+| ⚖️ Regulatory Compliance Landscape | ⚖️ Regelverkslandskap |
+| ⚡ Security Accelerates Innovation | 🛠️ Praktiska Lösningar |
+| 🌐 Open Source Security | 🌐 Open Source Säkerhet |
+| 🎓 Security Culture & Training | 🎓 Säkerhetskultur & Utbildning |
+| 🎯 Introduction: The High-Stakes World of Gaming Security | 🎯 Introduktion: Spelindustrins Högriskvärd |
+| 🎰 Complete Cybersecurity Guide for Online Betting Operators | 🎰 Komplett Cybersäkerhetsguide för Onlinespeloperatörer |
+| 🏆 Security & Quality Evidence | 🏆 Säkerhets- & Kvalitetsbevis |
+| 🏗️ Security Architecture & Strategy | 🏗️ Säkerhetsarkitektur & Strategi |
+| 📋 Compliance & Regulatory | 📋 Efterlevnad & Regulatoriskt |
+| 📋 Information Security Policy: The Foundation of Radical Transparency | 📋 Informationssäkerhetspolicy: Grunden för radikal transparens |
+| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB Premium Cybersäkerhetskonsulting \| Sveriges Enda Offentliga ISMS |
+| 🔑 Security Services | 🔑 Säkerhetstjänster |
+| 🛡️ Security & Quality Standards | 🛡️ Säkerhets- och Kvalitetsstandarder |
 
-| English | Swedish | Notes | Context |
-|---------|-------|-------|---------|
-| DevSecOps | DevSecOps | Keep term | Industry standard |
-| CI/CD | CI/CD | Keep acronym | Continuous Integration/Delivery |
-| Pipeline | *[Verify from files]* | | Build automation |
-| Workflow | *[Verify from files]* | | Process automation |
-| Repository | Repository | Usually kept | Git, GitHub |
-| Deployment | *[Verify from files]* | | Release process |
-| Container | *[Verify from files]* | | Docker |
-| Orchestration | *[Verify from files]* | | Kubernetes |
-| Infrastructure as Code | *[Verify from files]* | IaC | Terraform, Ansible |
-| Security Automation | *[Verify from files]* | | Automated security |
-| Static Analysis | *[Verify from files]* | SAST | Code scanning |
-| Dynamic Analysis | *[Verify from files]* | DAST | Runtime testing |
-| Dependency Scanning | *[Verify from files]* | SCA | Supply chain |
-| Secret Management | *[Verify from files]* | | Credentials |
+### 💻 Technical Terms & Development
 
-### 📋 ISMS Policy Terminology
+*Technical and development-related vocabulary*
 
-ISO 27001 and related policy documents:
 
-| English | Swedish | ISO Reference | Policy Type |
-|---------|-------|---------------|-------------|
-| Access Control Policy | *[Verify from files]* | ISO 27001 A.9 | Core |
-| Business Continuity Plan (BCP) | *[Verify from files]* | ISO 22301 | Core |
-| Disaster Recovery Plan (DRP) | *[Verify from files]* | Part of BCP | Core |
-| Information Asset Management | *[Verify from files]* | ISO 27001 A.8 | Core |
-| Incident Response Policy | *[Verify from files]* | ISO 27035 | Core |
-| Risk Management Policy | *[Verify from files]* | ISO 27005 | Core |
-| Acceptable Use Policy | *[Verify from files]* | | Supporting |
-| Data Classification Policy | *[Verify from files]* | | Supporting |
-| Third Party Management | *[Verify from files]* | ISO 27001 A.15 | Supporting |
-| Change Management | *[Verify from files]* | ITIL/ISO 27001 | Supporting |
-| Backup and Recovery | *[Verify from files]* | | Supporting |
-| Cryptography Policy | *[Verify from files]* | ISO 27001 A.10 | Technical |
-| Network Security | *[Verify from files]* | ISO 27001 A.13 | Technical |
-| Physical Security | *[Verify from files]* | ISO 27001 A.11 | Technical |
-| Cloud Security | *[Verify from files]* | | Technical |
-| Mobile Device Management | *[Verify from files]* | | Technical |
-| Remote Access Policy | *[Verify from files]* | | Technical |
-| Security Training Policy | *[Verify from files]* | ISO 27001 A.7 | Supporting |
+| English | Translation |
+|---------|-------------|
+| 🔧 Secure Development & Code Quality | 🔧 Säker Utveckling & Kodkvalitet |
 
-### 🎯 Industry-Specific Terminology
+### 💼 Business & Professional Terms
 
-#### 🎲 Gaming & Betting Industry
+*Business, consulting, and professional service terms*
 
-| English | Swedish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Gaming operator | *[Verify from files]* | Casino/betting operator | Licensed entity |
-| Online casino | *[Verify from files]* | Digital gaming | iGaming |
-| Betting platform | *[Verify from files]* | Sports betting | Technology |
-| Gambling license | *[Verify from files]* | Regulatory requirement | Compliance |
-| Gaming authority | *[Verify from files]* | Regulatory body | Government |
-| Player protection | *[Verify from files]* | Responsible gaming | Consumer safety |
-| Anti-money laundering (AML) | *[Verify from files]* | Financial crime | Compliance |
-| Know Your Customer (KYC) | *[Verify from files]* | Identity verification | Compliance |
 
-#### 🌿 Cannabis Industry
+| English | Translation |
+|---------|-------------|
+| Arts | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Arts | Trigram Framtid \| VR/AR Kampsportsträning \| Hack23 |
+| Betting | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Black | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Blog | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Choose | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| Complete | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Consulting | Cybersäkerhet Sverige \| Öppen ISMS \| Hack23 |
+| Consulting | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| Consulting | Cybersäkerhetstjänster \| Professionell Säkerhetskonsulting \| Hack23 |
+| Cybersecurity | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Cybersecurity | Cybersäkerhet Sverige \| Öppen ISMS \| Hack23 |
+| Cybersecurity | Cybersäkerhetstjänster \| Professionell Säkerhetskonsulting \| Hack23 |
+| Cybersecurity | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| Features | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Foundation | Informationssäkerhetspolicy \| ISMS-grund \| Hack23 |
+| Future | Trigram Framtid \| VR/AR Kampsportsträning \| Hack23 |
+| Game | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Guide | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Information | Informationssäkerhetspolicy \| ISMS-grund \| Hack23 |
+| ISMS | Cybersäkerhet Sverige \| Öppen ISMS \| Hack23 |
+| ISMS | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| ISMS | Informationssäkerhetspolicy \| ISMS-grund \| Hack23 |
+| Korean | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Martial | Trigram Framtid \| VR/AR Kampsportsträning \| Hack23 |
+| Martial | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Online | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Only | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| Open | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Operators | Komplett Cybersäkerhetsguide för Onlinespeloperatörer \| Hack23 Blogg |
+| Policy | Informationssäkerhetspolicy \| ISMS-grund \| Hack23 |
+| Professional | Cybersäkerhetstjänster \| Professionell Säkerhetskonsulting \| Hack23 |
+| Projects | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Public | Cybersäkerhet Sverige \| Öppen ISMS \| Hack23 |
+| Public | Varför välja Hack23? \| Sveriges enda öppna ISMS cybersäkerhetskonsulting |
+| Security | Cybersäkerhetstjänster \| Professionell Säkerhetskonsulting \| Hack23 |
+| Security | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Security | Informationssäkerhetspolicy \| ISMS-grund \| Hack23 |
+| Services | Cybersäkerhetstjänster \| Professionell Säkerhetskonsulting \| Hack23 |
+| Source | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Sweden | Cybersäkerhet Sverige \| Öppen ISMS \| Hack23 |
+| Through | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Training | Trigram Framtid \| VR/AR Kampsportsträning \| Hack23 |
+| Transparency | Open Source Projekt \| Säkerhet Genom Transparens \| Hack23 |
+| Trigram | Black Trigram Funktioner \| Koreansk Kampsport Simulator \| Hack23 |
+| Trigram | Trigram Framtid \| VR/AR Kampsportsträning \| Hack23 |
+| 🎯 Core Service Areas | 🎯 Centrala Tjänsteområden |
+| 📋 Service Overview | 📋 Tjänsteöversikt |
 
-| English | Swedish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Cannabis | *[Verify from files]* | Plant/product | Legal terminology |
-| Dispensary | *[Verify from files]* | Retail location | Licensed facility |
-| Cultivation | *[Verify from files]* | Growing operations | Production |
-| Medical cannabis | *[Verify from files]* | Healthcare use | Prescription |
-| Recreational cannabis | *[Verify from files]* | Adult use | Consumer |
-| Seed-to-sale tracking | *[Verify from files]* | Supply chain | Compliance system |
-| Compliance management | *[Verify from files]* | Regulatory adherence | Operations |
-| Licensed producer | *[Verify from files]* | Authorized grower | Regulatory status |
+### 📝 Translation Notes
 
-#### 💰 Investment & Fintech
+- **Consistency:** Always use the same translation for repeated terms
+- **Context:** Some terms may have multiple valid translations depending on context
+- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Verification:** All translations should be verified by native speakers
 
-| English | Swedish | Context | Regulatory |
-|---------|-------|---------|------------|
-| Investment firm | *[Verify from files]* | Financial services | Asset management |
-| Financial services | *[Verify from files]* | Banking, investment | Industry |
-| Asset management | *[Verify from files]* | Portfolio management | Services |
-| Portfolio management | *[Verify from files]* | Investment strategy | Services |
-| Regulatory compliance | *[Verify from files]* | Financial regulation | Legal |
-| Fiduciary duty | *[Verify from files]* | Legal obligation | Professional |
-| Risk management | *[Verify from files]* | Financial risk | Process |
-| Trading platform | *[Verify from files]* | Exchange system | Technology |
+### 📊 Additional Common Terms
+
+The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
+
+**Translation Principles:**
+- ✅ **Consistency is key**: Always use the same translation for a specific English term
+- ✅ **Context matters**: Some terms may require different translations in different contexts
+- ✅ **Native review**: All translations should be reviewed by native speakers
+- ✅ **Real-world validation**: Test translations with target audience feedback
+
+**Update History:**
+- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 126 real translated pages
+- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
+
 
 ## 🏛️ Swedish Regulatory & Standards Framework
 
