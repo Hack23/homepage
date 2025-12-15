@@ -17,6 +17,18 @@
 **Missing Files:** 21 files not yet created (1 core page + 21 Discordian ISMS policies)
 
 - **Medium Priority:** 21 Discordian ISMS policy files (discordian-asset-mgmt, discordian-cloud-security, etc.)
+| **Swedish Files Exist** | 78 | 81.3% |
+| **Missing Files** | **18** | **18.8%** |
+
+**Newly Created (December 14, 2025):** 4 Swedish ISMS policy files
+- ✅ `discordian-access-control-policy_sv.html` - Access Control Policy
+- ✅ `discordian-bc-dr-policy_sv.html` - Business Continuity & Disaster Recovery Policy
+- ✅ `discordian-info-asset-mgmt-policy_sv.html` - Information Asset Management Policy
+- ✅ `discordian-risk-mgmt-policy_sv.html` - Risk Management Policy
+
+**Missing Files:** 18 files not yet created (1 core page + 17 Discordian ISMS policies)
+- **High Priority:** `projects.html` (core navigation page)
+- **Medium Priority:** 17 Discordian ISMS policy files (discordian-cloud-security, discordian-asset-mgmt, etc.)
 
 ## 📊 Overall Status (Existing Files)
 
@@ -71,11 +83,60 @@
 - Various completion status
 - See `SWEDISH_BLOG_TRANSLATION_STATUS.md` for details
 
-### ISMS Policies (~18/~18)
-- ✅ `discordian-cybersecurity_sv.html` - Complete
-- ✅ `discordian-info-sec-policy_sv.html` - Complete
-- ✅ Various Discordian ISMS policies - Most complete
-- Total: ~18 policies with Swedish translations
+### ISMS Policies (~22/~22)
+
+#### Core Policy Files (Complete)
+- ✅ `discordian-cybersecurity_sv.html` - Complete Swedish translation
+- ✅ `discordian-info-sec-policy_sv.html` - Complete Swedish translation
+
+#### New ISMS Policy Files (Dec 14, 2025)
+- ✅ **NEW:** `discordian-access-control-policy_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Åtkomstkontrollpolicy: Lita på ingen (SPECIELLT dig själv)
+  - Size: 14,999 characters
+  - Terminology: Åtkomstkontroll, Zero Trust, MFA, Minsta behörighet, Identitetscentrerad säkerhet
+  - English Source: `discordian-access-control.html` (559 lines)
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 2-3 hours estimated
+  
+- ✅ **NEW:** `discordian-bc-dr-policy_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Verksamhetskontinuitet & Katastrofåterställning: Överleva kaos när allt går sönder
+  - Size: 18,211 characters
+  - Terminology: Verksamhetskontinuitet, Katastrofåterställning, RTO/RPO, BCP, Femfas-BCP
+  - English Source: `discordian-business-continuity.html` (743 lines)
+  - Regulatory Context: MSB, ISO 22301, NIS2-direktivet
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 3-4 hours estimated
+  
+- ✅ **NEW:** `discordian-info-asset-mgmt-policy_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Informationstillgångshantering: Du kan inte skydda vad du inte vet att du har
+  - Size: 18,947 characters
+  - Terminology: Informationstillgångshantering, Shadow IT, CMDB, Tillgångsinventering
+  - English Source: `discordian-asset-mgmt.html` (479 lines)
+  - Regulatory Context: ISO 27001 A.8, GDPR Art. 30, Bokföringslagen
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 2-3 hours estimated
+  
+- ✅ **NEW:** `discordian-risk-mgmt-policy_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Riskhanteringspolicy: Beräkna vad du inte kan förhindra
+  - Size: 18,645 characters
+  - Terminology: Riskhantering, ALE (SLE × ARO), Hotaktör, Riskaptit, Monte Carlo-simulering
+  - English Source: `discordian-risk-assessment.html` (612 lines)
+  - Regulatory Context: ISO 27005, ISO 31000, NIST RMF
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 3-4 hours estimated
+
+#### Other ISMS Policies
+- ✅ Various other Discordian ISMS policies - Most complete
+- Total: ~22 policies with Swedish translations/infrastructure
+
+**ISMS Translation Summary:**
+- **Complete SEO Infrastructure:** 4/4 new policy files (100%)
+- **Professional Terminology:** 60+ ISO 27001/22301/27005 Swedish terms documented
+- **Regulatory Framework:** MSB, IMY, NIS2-direktivet, Bokföringslagen referenced
+- **Discordian Voice:** Preserved ("Tänk själv", "FNORD", "23 FNORD 5")
+- **Full Content Translation:** ⏳ IN PROGRESS - AI translation over multiple sessions (1-2 files per session)
+  - Session 1: `discordian-access-control-policy_sv.html` (in progress)
+  - Remaining: 3 files (to be completed in subsequent sessions)
 
 ### ISO 27001 Resources (4/4)
 - ✅ `iso-27001-2022-vs-2013_sv.html` - Complete
