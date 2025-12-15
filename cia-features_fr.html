@@ -10,6 +10,21 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Citizen Intelligence Agency | Parliament Transparency Features">
     <meta property="og:description" content="Plateforme d'intelligence open source pour la transparence politique en Suède. Analyses basées sur les données de l'activité parlementaire et de la responsabilité politique.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hack23.com/cia-features_fr.html">
     <meta property="og:image" content="https://cia.sourceforge.io/cia-logo.png">
@@ -31,190 +46,200 @@
     />
     
     <!-- Schema.org structured data -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebApplication",
+      "@id": "https://hack23.com/#citizen-intelligence-agency",
+      "name": "Agence de Renseignement Citoyen",
+      "alternateName": "CIA Political Transparency Platform",
+      "applicationCategory": "AnalyticsApplication",
+      "applicationSubCategory": "Political Intelligence Platform",
+      "operatingSystem": "Web",
+      "softwareVersion": "latest",
+      "description": "Advanced open-source intelligence (OSINT) platform for Swedish political transparency and democratic accountability. Monitor parliamentary activities, track political decisions, analyze governance metrics, and access comprehensive political dashboards with real-time insights into democratic processes.",
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "url": "https://github.com/Hack23/cia",
+      "downloadUrl": "https://github.com/Hack23/cia/releases",
+      "featureList": [
+        "Real-time Parliament Monitoring",
+        "Political Decision Tracking",
+        "Ministry & Government Body Analysis",
+        "Voting Records & Accountability Metrics",
+        "Party Performance Dashboards",
+        "Committee Activity Tracking",
+        "Politician Profile Analytics",
+        "Risk Assessment & Decision Flow Analysis"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "Citizens",
+          "Journalists",
+          "Researchers",
+          "Policy Analysts"
+        ]
+      },
+      "usageInfo": "Open-source platform for monitoring Swedish political transparency and democratic accountability",
+      "screenshot": [
+        "https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png",
+        "https://hack23.com/screenshots/Page-ministry-ranking.png"
+      ],
+      "softwareRequirements": "Modern web browser with JavaScript support",
+      "programmingLanguage": [
+        "Java",
+        "JavaScript",
+        "SQL"
+      ],
+      "runtimePlatform": "Web Browser",
+      "sameAs": [
+        "https://github.com/Hack23/cia",
+        "https://cia.sourceforge.io/"
+      ],
+      "keywords": "Swedish parliament monitoring, political transparency, democratic accountability, voting records, governance analysis",
+      "browserRequirements": "Requires JavaScript. Recommended: Chrome, Firefox, Safari, Edge (latest versions)",
+      "permissions": "Read-only access to public Swedish government data",
+      "teaches": [
+        "Parliamentary Process Understanding",
+        "Democratic Accountability Tracking",
+        "Political Decision Flow Analysis",
+        "Governance Metrics Interpretation",
+        "Open Source Intelligence (OSINT) Methodology",
+        "Ministry Performance Assessment",
+        "World Bank Indicator Analysis",
+        "Political Data Visualization",
+        "Swedish Political System Navigation",
+        "Transparency Platform Usage"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SEK",
+        "availability": "https://schema.org/OnlineOnly",
+        "category": "Open Source Software"
+      },
+      "datePublished": "2010-01-01",
+      "dateModified": "2025-11-17"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-features.html#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "WebApplication",
-          "@id": "https://hack23.com/#citizen-intelligence-agency",
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "Agence de Renseignement Citoyen",
-          "alternateName": "CIA Political Transparency Platform",
-          "applicationCategory": "AnalyticsApplication",
-          "applicationSubCategory": "Political Intelligence Platform",
-          "operatingSystem": "Web",
-          "softwareVersion": "latest",
-          "description": "Advanced open-source intelligence (OSINT) platform for Swedish political transparency and democratic accountability. Monitor parliamentary activities, track political decisions, analyze governance metrics, and access comprehensive political dashboards with real-time insights into democratic processes.",
-          "creator": {
-            "@type": "Person",
-            "name": "James Pether Sörling",
-            "url": "https://hack23.com"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Hack23 AB",
-            "url": "https://hack23.com"
-          },
-          "url": "https://github.com/Hack23/cia",
-          "downloadUrl": "https://github.com/Hack23/cia/releases",
-          "featureList": [
-            "Real-time Parliament Monitoring",
-            "Political Decision Tracking",
-            "Ministry & Government Body Analysis",
-            "Voting Records & Accountability Metrics",
-            "Party Performance Dashboards",
-            "Committee Activity Tracking",
-            "Politician Profile Analytics",
-            "Risk Assessment & Decision Flow Analysis"
-          ],
-          "audience": {
-            "@type": "Audience",
-            "audienceType": ["Citizens", "Journalists", "Researchers", "Policy Analysts"]
-          },
-          "usageInfo": "Open-source platform for monitoring Swedish political transparency and democratic accountability",
-          "screenshot": [
-            "https://hack23.com/screenshots/Page-dashboard-OVERVIEW-331.png",
-            "https://hack23.com/screenshots/Page-ministry-ranking.png"
-          ],
-          "softwareRequirements": "Modern web browser with JavaScript support",
-          "programmingLanguage": ["Java", "JavaScript", "SQL"],
-          "runtimePlatform": "Web Browser",
-          "sameAs": [
-            "https://github.com/Hack23/cia",
-            "https://cia.sourceforge.io/"
-          ],
-          "keywords": "Swedish parliament monitoring, political transparency, democratic accountability, voting records, governance analysis",
-          "browserRequirements": "Requires JavaScript. Recommended: Chrome, Firefox, Safari, Edge (latest versions)",
-          "permissions": "Read-only access to public Swedish government data",
-          "teaches": [
-            "Parliamentary Process Understanding",
-            "Democratic Accountability Tracking",
-            "Political Decision Flow Analysis",
-            "Governance Metrics Interpretation",
-            "Open Source Intelligence (OSINT) Methodology",
-            "Ministry Performance Assessment",
-            "World Bank Indicator Analysis",
-            "Political Data Visualization",
-            "Swedish Political System Navigation",
-            "Transparency Platform Usage"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "SEK",
-            "availability": "https://schema.org/OnlineOnly",
-            "category": "Open Source Software"
-          },
-          "datePublished": "2010-01-01",
-          "dateModified": "2025-11-17"
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://hack23.com/cia-features.html#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://hack23.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Agence de Renseignement Citoyen",
-              "item": "https://hack23.com/cia-features.html"
-            }
-          ]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://hack23.com/cia-features.html#webpage",
-          "url": "https://hack23.com/cia-features.html",
-          "name": "Citizen Intelligence Agency Features | Swedish Parliament OSINT by Hack23",
-          "description": "Swedish parliamentary OSINT platform. Real-time riksdag monitoring, voting records, political dashboards, democratic accountability tracking.",
-          "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://hack23.com/#website"
-          },
-          "about": { "@id": "https://hack23.com/#citizen-intelligence-agency" },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://cia.sourceforge.io/cia-logo.png"
-          },
-          "breadcrumb": { "@id": "https://hack23.com/cia-features.html#breadcrumb" },
-          "inLanguage": "en",
-          "datePublished": "2010-01-01",
-          "dateModified": "2025-11-17"
+          "item": "https://hack23.com/cia-features.html"
         }
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/cia-features.html#webpage",
+      "url": "https://hack23.com/cia-features.html",
+      "name": "Citizen Intelligence Agency Features | Swedish Parliament OSINT by Hack23",
+      "description": "Swedish parliamentary OSINT platform. Real-time riksdag monitoring, voting records, political dashboards, democratic accountability tracking.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://hack23.com/#website"
+      },
+      "about": {
+        "@id": "https://hack23.com/#citizen-intelligence-agency"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://cia.sourceforge.io/cia-logo.png"
+      },
+      "breadcrumb": {
+        "@id": "https://hack23.com/cia-features.html#breadcrumb"
+      },
+      "inLanguage": "en",
+      "datePublished": "2010-01-01",
+      "dateModified": "2025-11-17"
     }
-    </script>
+  ]
+}</script>
     
     <!-- FAQ Schema for SEO -->
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Citizen Intelligence Agency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Citizen Intelligence Agency (CIA) is an open-source intelligence platform for political transparency in Sweden. It monitors Swedish parliamentary activity with comprehensive data-driven insights, analytics, dashboard visualizations, and accountability metrics. The platform tracks politician behavior, voting records, party activities, government documents, and parliamentary decisions to provide citizens with transparent access to political information. Built as a volunteer-driven initiative, it applies advanced data analysis methodologies to democratic oversight and governance evaluation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What political data does Citizen Intelligence Agency track?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Citizen Intelligence Agency tracks comprehensive Swedish political data including: Individual politician activity (voting records, speeches, committee work, parliamentary questions); Political party activities and performance metrics; Government bills, motions, and legislative proposals; Committee meetings and decisions; Election results and campaign data; Parliamentary voting patterns and alliances; Document publication and government transparency; Minister and government member activities; Budget proposals and financial decisions; and Political influence networks and relationships. The platform aggregates this data from official Swedish government sources including the Riksdag (parliament) and government agencies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the data collected and verified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Citizen Intelligence Agency collects data exclusively from official Swedish government sources to ensure accuracy and reliability. The platform uses automated data collection from the Swedish Parliament's open data APIs, government document databases, and official public records. All data is sourced from authoritative government systems, eliminating manual entry errors and bias. The platform includes data validation processes to ensure consistency and accuracy. Since the data comes directly from official government sources, it reflects the same information available to journalists, researchers, and government officials. The open-source nature allows community verification and transparency in data processing methodologies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who uses the Citizen Intelligence Agency platform?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The platform serves diverse users interested in Swedish political transparency: Journalists and media professionals researching political stories and fact-checking; Researchers and academics studying Swedish politics, voting behavior, and governance; Political activists and engaged citizens monitoring their representatives; Voters seeking to understand politician track records before elections; Civil society organizations tracking policy issues and advocacy outcomes; Students learning about Swedish democratic processes; International observers studying Scandinavian political systems; and Opposition parties and political analysts evaluating government performance. The platform democratizes access to political data that was previously difficult to analyze systematically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the political data updated in real-time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The platform updates data regularly based on the availability of information from official government sources. Parliamentary voting records, speeches, and official documents are updated as they become available from the Swedish Riksdag's systems, typically within hours to days of official publication. Some data like committee meetings and government decisions may have slight delays based on official publication schedules. The platform prioritizes accuracy over real-time updates, ensuring all data is properly validated and processed before display. Users can see the last update timestamp for each dataset. While not instantaneous, the update frequency is sufficient for meaningful political monitoring and analysis of ongoing parliamentary activities."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I navigate and use the platform effectively?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Navigating Citizen Intelligence Agency is designed to be intuitive with multiple entry points: Start with the Dashboard Overview to see high-level political activity metrics and trends. Use the Politician Search to find specific representatives and view their complete activity profiles including votes, speeches, and committee work. Browse by Political Party to compare party performance and see voting patterns. Filter by Policy Area or Committee to track specific issues like healthcare, education, or environment. Use the Timeline View to see chronological political developments. Access the Document Library to search government publications and legislative proposals. The Advanced Analytics section provides data visualization tools for deeper analysis. Each view includes export options for researchers and built-in sharing for social media engagement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Citizen Intelligence Agency only for Sweden or available for other countries?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Citizen Intelligence Agency is currently focused exclusively on Swedish politics and the Swedish Parliament (Riksdag). The platform is optimized for Swedish political structures, data sources, and parliamentary procedures. However, as an open-source project, the underlying technology and methodologies could be adapted for other countries with similar open data availability. The codebase is available on GitHub, allowing developers in other countries to fork the project and customize it for their national political systems. The key requirement is access to structured government data APIs and official public records. The project has been featured in international studies on parliamentary monitoring as a model for democratic transparency platforms. While expansion to other Nordic countries is conceptually possible, it would require significant development effort and access to equivalent data sources."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "What is Citizen Intelligence Agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizen Intelligence Agency (CIA) is an open-source intelligence platform for political transparency in Sweden. It monitors Swedish parliamentary activity with comprehensive data-driven insights, analytics, dashboard visualizations, and accountability metrics. The platform tracks politician behavior, voting records, party activities, government documents, and parliamentary decisions to provide citizens with transparent access to political information. Built as a volunteer-driven initiative, it applies advanced data analysis methodologies to democratic oversight and governance evaluation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What political data does Citizen Intelligence Agency track?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizen Intelligence Agency tracks comprehensive Swedish political data including: Individual politician activity (voting records, speeches, committee work, parliamentary questions); Political party activities and performance metrics; Government bills, motions, and legislative proposals; Committee meetings and decisions; Election results and campaign data; Parliamentary voting patterns and alliances; Document publication and government transparency; Minister and government member activities; Budget proposals and financial decisions; and Political influence networks and relationships. The platform aggregates this data from official Swedish government sources including the Riksdag (parliament) and government agencies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the data collected and verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizen Intelligence Agency collects data exclusively from official Swedish government sources to ensure accuracy and reliability. The platform uses automated data collection from the Swedish Parliament's open data APIs, government document databases, and official public records. All data is sourced from authoritative government systems, eliminating manual entry errors and bias. The platform includes data validation processes to ensure consistency and accuracy. Since the data comes directly from official government sources, it reflects the same information available to journalists, researchers, and government officials. The open-source nature allows community verification and transparency in data processing methodologies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who uses the Citizen Intelligence Agency platform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The platform serves diverse users interested in Swedish political transparency: Journalists and media professionals researching political stories and fact-checking; Researchers and academics studying Swedish politics, voting behavior, and governance; Political activists and engaged citizens monitoring their representatives; Voters seeking to understand politician track records before elections; Civil society organizations tracking policy issues and advocacy outcomes; Students learning about Swedish democratic processes; International observers studying Scandinavian political systems; and Opposition parties and political analysts evaluating government performance. The platform democratizes access to political data that was previously difficult to analyze systematically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the political data updated in real-time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The platform updates data regularly based on the availability of information from official government sources. Parliamentary voting records, speeches, and official documents are updated as they become available from the Swedish Riksdag's systems, typically within hours to days of official publication. Some data like committee meetings and government decisions may have slight delays based on official publication schedules. The platform prioritizes accuracy over real-time updates, ensuring all data is properly validated and processed before display. Users can see the last update timestamp for each dataset. While not instantaneous, the update frequency is sufficient for meaningful political monitoring and analysis of ongoing parliamentary activities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I navigate and use the platform effectively?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Navigating Citizen Intelligence Agency is designed to be intuitive with multiple entry points: Start with the Dashboard Overview to see high-level political activity metrics and trends. Use the Politician Search to find specific representatives and view their complete activity profiles including votes, speeches, and committee work. Browse by Political Party to compare party performance and see voting patterns. Filter by Policy Area or Committee to track specific issues like healthcare, education, or environment. Use the Timeline View to see chronological political developments. Access the Document Library to search government publications and legislative proposals. The Advanced Analytics section provides data visualization tools for deeper analysis. Each view includes export options for researchers and built-in sharing for social media engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Citizen Intelligence Agency only for Sweden or available for other countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Citizen Intelligence Agency is currently focused exclusively on Swedish politics and the Swedish Parliament (Riksdag). The platform is optimized for Swedish political structures, data sources, and parliamentary procedures. However, as an open-source project, the underlying technology and methodologies could be adapted for other countries with similar open data availability. The codebase is available on GitHub, allowing developers in other countries to fork the project and customize it for their national political systems. The key requirement is access to structured government data APIs and official public records. The project has been featured in international studies on parliamentary monitoring as a model for democratic transparency platforms. While expansion to other Nordic countries is conceptually possible, it would require significant development effort and access to equivalent data sources."
+      }
     }
-    </script>
+  ],
+  "inLanguage": "fr-FR"
+}</script>
 
 	<!-- Hreflang tags for international SEO --><link rel="alternate" hreflang="ar" href="https://hack23.com/cia-features_ar.html">
 <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/cia-features_ar.html">

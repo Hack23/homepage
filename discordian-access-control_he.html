@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מדיניות בקרת גישה - Discordian ISMS | Hack23 AB</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="מדיניות בקרת גישה עם מודל אפס אמון: AWS Identity Center SSO, כיסוי MFA 100%, סקירות חשבונות רדומים 90 יום, מטריצת גישה מבוססת סיווג">
+<meta name="keywords" content="בקרת גישה, אפס אמון, AWS Identity Center, MFA, הרשאות מינימליות, ISMS, אבטחת זהות">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="מדיניות בקרת גישה: אל תבטח באף אחד (במיוחד בעצמך)">
+<meta property="og:description" content="AWS Identity Center SSO + כיסוי MFA 100% + סקירות 90 יום. אפס אמון דרך אבטחה ממוקדת זהות.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-access-control_he.html">
+<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-access-control_he.html">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "מדיניות בקרת גישה: אפס אמון דרך אבטחה ממוקדת זהות",
+      "description": "איך Hack23 מיישמת ארכיטקטורת אפס אמון עם AWS Identity Center SSO, כיסוי MFA 100%, סקירות חשבונות רדומים 90 יום ובקרת גישה מבוססת סיווג המדגימה מצוינות אבטחה שיטתית",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ\"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-12-15",
+      "dateModified": "2025-12-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-access-control_he.html"
+      },
+      "keywords": "בקרת גישה, אפס אמון, AWS Identity Center, MFA, הרשאות מינימליות, ISMS",
+      "articleSection": "אבטחת מידע",
+      "inLanguage": "he",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_he.html#blog",
+        "name": "בלוג אבטחה Hack23"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-access-control_he.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "מדיניות בקרת גישה",
+          "item": "https://hack23.com/discordian-access-control_he.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-access-control_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-access-control_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control-policy.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-access-control_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-access-control_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-access-control_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-access-control_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-access-control_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-access-control_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-access-control_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/discordian-access-control_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-access-control_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-access-control_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-access-control_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-access-control_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-access-control_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-access-control_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-access-control_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control-policy.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">דף הבית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        מדיניות בקרת גישה
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>אבטחת סייבר Discordian</h1>
+  <div class="app-link">
+    <a href="index_he.html">דף הבית</a>
+    <a href="discordian-cybersecurity_he.html">המניפסט</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">ISMS בקרת גישה</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔑 בקרת גישה: אל תבטח באף אחד (במיוחד בעצמך)</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">אפס אמון: לא פרנויה, רק מתמטיקה עם מסלולי ביקורת</h2>
+      
+      <p><strong>חשוב בעצמך, טמבל!</strong> "בטח אבל אמת" זה שטויות תאגידיות שנועדו לגרום לאנשים אמפתיים להרגיש פחות נאיביים. הנה המציאות: <strong>רק אמת.</strong> דלג על חלק האמון לגמרי. AWS Identity Center SSO (אימות מרכזי או תעוף מפה), MFA על הכל (בלי חריגים, אפילו לא "רק הפעם"), טיהור חשבונות רדומים ל-90 יום (אישורים שכוחים = פריצה עתידית מחכה לקרות), מטריצות גישה מבוססות סיווג. אתה מספיק פרנואיד? טוב. התוקפים בהחלט כן — והם מהמרים שאתה לא.</p>
+      
+      <p><strong>שום דבר לא אמיתי. הכל מותר.</strong> למעט גישה בלי אימות רב-גורמי, הרשאה נכונה ותיעוד מקיף. "אפס אמון" זה לא פרנויה — זה הכרה שהמתחם הרשת התמוסס ב-2010 והעמידת פנים אחרת היא תיאטרון אבטחה שגורם לך להיפרץ. מודל הטירה והחפיר מת עם עבודה מרחוק בקורונה. <strong>FNORD.</strong> ה-VPN שלך הוא רק מנהרה מוצפנת למכשירים לא מהימנים. פעל בהתאם.</p>
+      
+      <p>ב-Hack23, בקרת גישה זה לא תחושות ות כוונות טובות — זה <strong>AWS Identity Center</strong> SSO (אימות מרכזי או תעוף), <strong>כיסוי MFA 100%</strong> (בלי חריגים, אפילו לא בשבילך, במיוחד לא בשבילך), <strong>סקירות חשבונות רדומים 90 יום</strong> (אישורים שכוחים הופכים לאישורי יריב), <strong>מטריצות גישה מבוססות סיווג</strong> לפי <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">מסגרת הסיווג</a> (נכסים קיצוניים מקבלים בקרות קיצוניות כי מתמטיקה). סקירות מדיניות חצי-שנתיות (הבאה: 2026-02-20) כי דפוסי גישה משתנים מהר יותר מביקורת הציות השנתית שלך. גרסה 2.2 (בתוקף: 2025-08-20) כי אנחנו חוזרים על כשלונות במקום להסתיר אותם.</p>
+      
+      <p class="hidden-wisdom"><em>הארה: אמון הוא פגיעות שמתחפשת לשיתוף פעולה. אימות הוא בקר שמתחפש לפרנויה. AWS Identity Center + MFA חובה = אימות בקנה מידה בלי טעויות שיפוט אנושי. הפנופטיקון לזהויות עובד טוב יותר כשכולם יודעים שמשגיחים עליהם. בחר בפרנויה שיטתית על פני נאיביות נוחה. בחר בבקרים מתועדים על פני אבטחה דרך תקווה וצליבת אצבעות.</em></p>
+      
+      <p>עקרונות אפס אמון + ניהול זהות ברמת ארגון + שקיפות חברה חד-אישית = הוכחה שבקרת גישה שיטתית מתרחבת מפעולות סולו לארגונית. פרנויה טכנית מלאה ב<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">מדיניות בקרת הגישה הציבורית</a> שלנו. כי אפלולית זה לא אבטחה — זה תקווה שלובשת מעיל.</p>
+      
+      <p><strong>צריך הדרכה מומחה ביישום בקרת גישה אפס אמון?</strong> <a href="why-hack23_he.html">גלה למה ארגונים בוחרים ב-Hack23</a> לייעוץ אבטחת סייבר שקוף בהובלת מומחים.</p>
+    </section>
+
+    <section id="zero-trust">
+      <h2 class="panel-caption">חמש סיבות למה "בטח אבל אמת" זה חצי שגוי (רמז: דלג על חלק האמון)</h2>
+      
+      <p>"אפס אמון" נשמע פרנואידי? טוב. פרנויה היא התאמת דפוסים למציאות. הנה יישום שיטתי לסייקונאוטים:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔐 אמת כל בקשה (כן, כל אחת)</h3>
+          <p><strong>AWS Identity Center SSO + MFA על הכל.</strong> בלי אמון. בלי "אתה על VPN אז תרגע." בלי "אבל זה רק דב." כל בקשה מאותגרת. תמיד. כיסוי MFA 100% מנוטר בזמן אמת. MFA חומרה לקריטי (AWS root, פיננסי — YubiKey או כלום). TOTP לגבוה (צינור פיתוח — Authy עובד). ילידי פלטפורמה לציבורי (שיווק — מובנה בסדר). המתחם הרשת מת. יחי אימות הזהות.</p>
+          <p class="hidden-wisdom"><em>"האפס" באפס אמון זה מילולי. מיקום רשת = חסר משמעות. VPN = אי-אמון מוצפן. Identity Center SSO = הזהות היא המתחם. MFA = הוכחה שאתה אתה. אתה מספיק פרנואיד לאתגר את עצמך? FNORD.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📋 גישה מבוססת סיווג (לא כל הנתונים שווים)</h3>
+          <p><strong>מטריצת גישה מיושרת עם מסגרת הסיווג.</strong> נכסים קיצוניים (תשתית AWS ליבה) = Identity Center + MFA חומרה + זמן קצוב 4 שעות + סקירות חודשיות. גבוה מאוד (פיננסי) = MFA ספק + זמן קצוב שעה אחת + סקירות חודשיות. גבוה (צינור פיתוח) = MFA פלטפורמה + זמן קצוב 8 שעות + סקירות רבעוניות. בינוני = זמן קצוב 24 שעות + סקירות חצי-שנתיות. ציבורי = זמן קצוב 7 ימים + סקירות שנתיות. קריטיות הנתונים מניעה הכל.</p>
+          <p class="hidden-wisdom"><em>גישה במידה אחת מתאימה לכולם = אבטחה דרך עצלנות. מערכות פיננסיות צריכות סקירות חודשיות. שיווק צריך שנתי. סיווג = פרנויה מבוססת סיכון. בחר בקרים מתאימים או בחר בפריצה סופית.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. ⏰ טיהור חשבונות רדומים 90 יום (גישה שכוחה = פריצה עתידית)</h3>
+          <p><strong>זיהוי אוטומטי, אימות ידני, ביטול אספקה אכזרי.</strong> חשבונות לא בשימוש 90+ ימים = מסומנים שבועית. יעד: אפס חשבונות רדומים (לא "נמוך", אפס). התראות בזמן אמת כשמופר. חשבונות רדומים הם גניבת הרשאות מחכה לניצול על ידי הקבלן האחד שעזב ב-2019 אבל עדיין יש לו גישה לקונסול AWS. ניטור שבועי מונע מארכיאולוגיה להפוך לוקטורי תקיפה.</p>
+          <p class="hidden-wisdom"><em>חשבונות רדומים הם דלתות אחוריות של שרדינגר — גם נפרצים וגם בסדר עד שנצפים במהלך תגובה לאירוע. סקירות 90 יום = היגיינת גישה שיטתית. ניקיונות שנתיים = הודאה ששכחת ל-364 ימים.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔄 סקירות מדיניות חצי-שנתיות (כי איומים לא מחכים)</h3>
+          <p><strong>גרסה 2.2 (בתוקף: 2025-08-20). סקירה הבאה: 2026-02-20.</strong> מדיניות נסקרת פעמיים בשנה (לא פעם, פעמיים). טריגרי סקירה: מחזור מתוזמן, שינויים רגולטוריים (GDPR/NIS2), אירועים, שינויי ארגון, עדכוני AWS. תיעוד חי שמסתגל. לא PDF-ים ארכיאולוגיים שאוספים אבק דיגיטלי. מדיניות סטטית בנוף איומים דינמי = חוסר רלוונטיות סופי.</p>
+          <p class="hidden-wisdom"><em>סקירות חצי-שנתיות = הכרה שהמציאות משתנה. AWS משיקה שירותים חדשים. תוקפים מוצאים טכניקות חדשות. דרישות ציות משתנות. מדיניות הגישה שלך מ-2019? חפץ ארכיאולוגי, לא בקר אבטחה.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 📊 תיעוד ביקורת של הכל (הפנופטיקון אמיתי והוא עשוי מ-CloudTrail)</h3>
+          <p><strong>AWS CloudTrail + לוגים של Identity Center + לוגי ביקורת GitHub.</strong> מי ניגש למה, מתי, מאיפה. מסלולי ביקורת לכל הסלמת הרשאות. לוגים נשמרים לפי <a href="discordian-data-classification_he.html">מדיניות סיווג</a>. תיעוד בלי התראה = תיאטרון אבטחה. לוגים שאתה לא בודק = אגירת מידע שמעמידה פנים שהיא אבטחה. לוגים שלא מובילים לפעולה = תיבת סימון ציות שמבזבזת אחסון.</p>
+          <p class="hidden-wisdom"><em>מסלולי ביקורת = דלק לתגובה לאירוע. בלי לוגים = בלי חקירה = בלי ייחוס = בלי לקחים. CloudTrail + תיעוד מרכזי = אחריות שיטתית. הפנופטיקון עובד הכי טוב כשהנבדקים יודעים שהוא קיים. FNORD.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="isms-link">
+      <h2 class="panel-caption">🔗 קישורי ISMS ציבורי</h2>
+      <p>לפרטים טכניים מלאים ויישום, עיין ב<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">מדיניות בקרת הגישה</a> המלאה במאגר ISMS הציבורי שלנו.</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 <a href="https://hack23.com">Hack23 AB</a> (Org.nr 5595347807). 
+     <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> | 
+     <a href="https://hack23.com/accessibility-statement_he.html">נגישות</a>
+  </p>
+</footer>
+
+</body>
+</html>

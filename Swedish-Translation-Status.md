@@ -44,7 +44,15 @@ graph TB
 | **🇸🇪 Swedish Files Exist** | 75 | **78.1%** | 🎯 |
 | **❌ Missing Files** | 21 | 21.9% | ⚠️ |
 
+<<<<<<< HEAD
 ### 🎯 Translation Quality Analysis
+=======
+**Newly Created (December 14, 2025):** 4 Swedish ISMS policy files
+- ✅ `discordian-access-control-policy_sv.html` - Access Control Policy
+- ✅ `discordian-business-continuity_sv.html` - Business Continuity & Disaster Recovery Policy
+- ✅ `discordian-asset-mgmt_sv.html` - Information Asset Management Policy
+- ✅ `discordian-risk-assessment_sv.html` - Risk Management Policy
+>>>>>>> origin/master
 
 Files analyzed for English content remaining:
 
@@ -145,6 +153,7 @@ Files analyzed for English content remaining:
 - ✅ `security-assessment-checklist_sv.html` ← `security-assessment-checklist.html`
 - ✅ `swedish-election-2026_sv.html` ← `swedish-election-2026.html`
 
+<<<<<<< HEAD
 ### Product Pages (10 files)
 - ⚠️  `black-trigram-docs_sv.html` ← `black-trigram-docs.html`
 - ✅ `black-trigram-features_sv.html` ← `black-trigram-features.html`
@@ -156,8 +165,45 @@ Files analyzed for English content remaining:
 - ⚠️  `cia-project_sv.html` ← `cia-project.html`
 - ✅ `cia-triad-faq_sv.html` ← `cia-triad-faq.html`
 - ⚠️  `compliance-manager_sv.html` ← `compliance-manager.html`
+=======
+#### New ISMS Policy Files (Dec 14, 2025)
+- ✅ **NEW:** `discordian-access-control-policy_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Åtkomstkontrollpolicy: Lita på ingen (SPECIELLT dig själv)
+  - Size: 14,999 characters
+  - Terminology: Åtkomstkontroll, Zero Trust, MFA, Minsta behörighet, Identitetscentrerad säkerhet
+  - English Source: `discordian-access-control.html` (559 lines)
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 2-3 hours estimated
+  
+- ✅ **NEW:** `discordian-business-continuity_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Verksamhetskontinuitet & Katastrofåterställning: Överleva kaos när allt går sönder
+  - Size: 18,211 characters
+  - Terminology: Verksamhetskontinuitet, Katastrofåterställning, RTO/RPO, BCP, Femfas-BCP
+  - English Source: `discordian-business-continuity.html` (743 lines)
+  - Regulatory Context: MSB, ISO 22301, NIS2-direktivet
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 3-4 hours estimated
+  
+- ✅ **NEW:** `discordian-asset-mgmt_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Informationstillgångshantering: Du kan inte skydda vad du inte vet att du har
+  - Size: 18,947 characters
+  - Terminology: Informationstillgångshantering, Shadow IT, CMDB, Tillgångsinventering
+  - English Source: `discordian-asset-mgmt.html` (479 lines)
+  - Regulatory Context: ISO 27001 A.8, GDPR Art. 30, Bokföringslagen
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 2-3 hours estimated
+  
+- ✅ **NEW:** `discordian-risk-assessment_sv.html` - **SEO Infrastructure Complete**
+  - Swedish Title: Riskhanteringspolicy: Beräkna vad du inte kan förhindra
+  - Size: 18,645 characters
+  - Terminology: Riskhantering, ALE (SLE × ARO), Hotaktör, Riskaptit, Monte Carlo-simulering
+  - English Source: `discordian-risk-assessment.html` (612 lines)
+  - Regulatory Context: ISO 27005, ISO 31000, NIST RMF
+  - Content Status: Placeholder with overview and links to English version
+  - Full Translation Effort: 3-4 hours estimated
+>>>>>>> origin/master
 
-## ⚠️  Missing Translation Files (21 files)
+## ⚠️  Missing Translation Files (19 files)
 
 These English pages exist but have no corresponding translation file:
 
@@ -256,7 +302,7 @@ All pages include complete hreflang tags for:
 **📊 Status Summary**  
 **Overall:** ✅ Substantially Complete  
 **Last Review:** December 2025  
-**Completion:** 78.1% (75/96 files)  
+**Completion:** 80.2% (77/96 files)  
 **Quality Score:** 77.3% fully/mostly translated  
 **Files Validated:** ✅ All 75 files checked  
 **Next Milestone:** 🎯 Achieve 100% completion
