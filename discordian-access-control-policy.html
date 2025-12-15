@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access Control | Zero Trust Identity Security | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="AWS Identity Center SSO + MFA 100% + 90-day dormant reviews. Zero trust identity-centric security. Classification-driven access matrix.">
+<meta name="keywords" content="access control, zero trust architecture, least privilege principle, AWS Identity Center, SSO single sign-on, MFA multi-factor authentication, identity management, authentication, authorization, RBAC role-based access, IAM identity access management, privileged access, dormant accounts, access review, credential management, identity-centric security, continuous verification, question authority, radical transparency">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Access Control: Trust No One (Including Yourself)">
+<meta property="og:description" content="AWS Identity Center SSO + MFA 100% + 90-day reviews. Zero trust through identity-centric security.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-access-control.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-access-control.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Access Control: Zero Trust Through Identity-Centric Security",
+      "description": "How Hack23 implements zero trust architecture with AWS Identity Center SSO, 100% MFA coverage, 90-day dormant account reviews, and classification-driven access control demonstrating systematic security excellence",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-access-control.html"
+      },
+      "keywords": "access control, zero trust, AWS Identity Center, MFA, least privilege, ISMS",
+      "articleSection": "Information Security",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1573,
+      "articleBody": "Think for yourself, schmuck! \"Trust but verify\" is corporate bullshit designed to make trusting people feel less naive. Here's reality: JUST VERIFY. Skip the trust part entirely. AWS Identity Center S...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Zero Trust Architecture",
+          "description": "Identity-centric security with continuous verification"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-access-control.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Access Control",
+          "item": "https://hack23.com/discordian-access-control.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Zero Trust Access Control",
+      "description": "Step-by-step guide to implementing zero trust access control using AWS Identity Center, MFA, and classification-driven access matrices",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT2H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS Identity Center"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Multi-Factor Authentication (Hardware MFA for critical, TOTP for high)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudTrail"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Classification Framework",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Access Control Policy Template",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enable AWS Identity Center SSO",
+          "text": "Set up AWS Identity Center (formerly AWS SSO) as your centralized authentication system for all AWS accounts and applications",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Centralized authentication eliminates scattered credentials and provides single-pane-of-glass access management"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Implement 100% MFA Coverage",
+          "text": "Enforce multi-factor authentication on every account with no exceptions. Use hardware MFA (YubiKey) for critical systems, TOTP for high-value systems, and platform native for public systems",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Monitor MFA coverage in real-time and alert on any accounts without MFA enabled"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Create Classification-Driven Access Matrix",
+          "text": "Define access controls based on data classification levels (Extreme, Very High, High, Moderate, Public) with appropriate timeout periods and review frequencies",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Extreme assets: Identity Center + hardware MFA + 4-hour timeout + monthly reviews"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Very High: Provider MFA + 1-hour timeout + monthly reviews"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "High: Platform MFA + 8-hour timeout + quarterly reviews"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Moderate: 24-hour timeout + semi-annual reviews"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Public: 7-day timeout + annual reviews"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Implement 90-Day Dormant Account Detection",
+          "text": "Set up automated detection for accounts unused for more than 90 days. Flag dormant accounts weekly and deprovision after validation",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Target zero dormant accounts - forgotten credentials become adversary credentials"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Enable Comprehensive Audit Logging",
+          "text": "Configure AWS CloudTrail, Identity Center logs, and GitHub audit logs to capture WHO accessed WHAT, WHEN, from WHERE for every privilege escalation",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Logging without alerting is security theater - ensure logs lead to actionable insights"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Schedule Semi-Annual Policy Reviews",
+          "text": "Review access control policies twice annually or when triggered by regulatory changes, incidents, organizational changes, or platform updates"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Verify Every Request",
+          "text": "Challenge every access request regardless of network location. Network perimeter is meaningless - identity is the new perimeter"
+        }
+      ]
+    }
+  ]
+}
+</script>
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-access-control_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-access-control_da.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-access-control.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-access-control_fi.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-access-control_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-access-control_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-access-control_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-access-control_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-access-control.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Access Control
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Home</a>
+    <a href="discordian-cybersecurity.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">ISMS Access Control</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h2 class="header">🔑 Access Control: Trust No One (ESPECIALLY Yourself)</h2>
+    <section id="introduction">
+      <h2 class="panel-caption">Zero Trust: Not Paranoia, Just Mathematics With Audit Trails</h2>
+      
+      <p><strong>Think for yourself, schmuck!</strong> "Trust but verify" is corporate bullshit designed to make trusting people feel less naive. Here's reality: <strong>JUST VERIFY.</strong> Skip the trust part entirely. AWS Identity Center SSO (centralized auth or GTFO), MFA on EVERYTHING (no exceptions, not even for "just this once"), 90-day dormant account purges (forgotten credentials = future breach waiting to happen), classification-driven access matrices. Are you paranoid enough? Good. The attackers certainly are—and they're betting you're not.</p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except access without multi-factor auth, proper authorization, and comprehensive logging. "Zero trust" isn't paranoia—it's acknowledging that the network perimeter dissolved in 2010 and pretending otherwise is security theater that gets you breached. The castle-and-moat model died with COVID remote work. <strong>FNORD.</strong> Your VPN is just an encrypted tunnel to untrusted devices. Act accordingly.</p>
+      
+      <p>At Hack23, access control isn't vibes and good intentions—it's <strong>AWS Identity Center</strong> SSO (centralized auth or GTFO), <strong>100% MFA coverage</strong> (no exceptions, not even for you, especially not for you), <strong>90-day dormant account reviews</strong> (forgotten credentials become adversary credentials), <strong>classification-driven access matrices</strong> per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a> (extreme assets get extreme controls because math). Semi-annual policy reviews (next: 2026-02-20) because access patterns change faster than your annual compliance audit. Version 2.2 (effective: 2025-08-20) because we iterate on failures instead of hiding them.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination: Trust is a VULNERABILITY masquerading as collaboration. Verification is a CONTROL disguised as paranoia. AWS Identity Center + mandatory MFA = verification at scale without human judgment errors. The panopticon for identities works better when everyone knows they're watched. Choose systematic paranoia over comfortable naivety. Choose documented controls over security through hope and crossing your fingers.</em></p>
+      
+      <p>Zero trust principles + enterprise-grade identity management + single-person company transparency = proof that systematic access control scales from solo operations to enterprise. Full technical paranoia in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">public Access Control Policy</a>. Because obscurity isn't security—it's hope wearing a trench coat.</p>
+      
+      <p><strong>Need expert guidance implementing zero trust access control?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+    </section>
+    <section id="zero-trust">
+      <h2 class="panel-caption">Five Reasons "Trust But Verify" Is Half Wrong (Hint: Skip The Trust Part)</h2>
+      
+      <p>"Zero trust" sounds paranoid? GOOD. Paranoia is pattern-matching reality. Here's systematic implementation for psychonauts:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔐 Verify Every Request (Yes, EVERY)</h3>
+          <p><strong>AWS Identity Center SSO + MFA on EVERYTHING.</strong> No trust. No "you're on VPN so chill." No "but it's just dev." EVERY request challenged. ALWAYS. 100% MFA coverage monitored real-time. Hardware MFA for critical (AWS root, financial—YubiKey or bust). TOTP for high (dev pipeline—Authy works). Platform native for public (marketing—built-in is fine). The network perimeter is DEAD. Long live identity verification.</p>
+          <p class="hidden-wisdom"><em>The "zero" in zero trust is LITERAL. Network location = meaningless. VPN = encrypted untrust. Identity Center SSO = identity IS the perimeter. MFA = proof you're you. Are you paranoid enough to challenge yourself? FNORD.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📋 Classification-Driven Access (Not All Data Is Equal)</h3>
+          <p><strong>Access matrix aligned with Classification Framework.</strong> Extreme assets (AWS core infra) = Identity Center + hardware MFA + 4-hour timeout + MONTHLY reviews. Very High (financial) = provider MFA + 1-hour timeout + monthly reviews. High (dev pipeline) = platform MFA + 8-hour timeout + quarterly reviews. Moderate = 24-hour timeout + semi-annual reviews. Public = 7-day timeout + annual reviews. Data criticality drives EVERYTHING.</p>
+          <p class="hidden-wisdom"><em>One-size-fits-all access = security through laziness. Financial systems need monthly reviews. Marketing needs annual. Classification = risk-based paranoia. Choose appropriate controls or choose eventual breach.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. ⏰ 90-Day Dormant Account Purges (Forgotten Access = Future Breach)</h3>
+          <p><strong>Automated detection, manual validation, ruthless deprovisioning.</strong> Accounts unused >90 days = flagged WEEKLY. Target: ZERO dormant accounts (not "low," ZERO). Real-time alerts when breached. Dormant accounts are privilege creep waiting to be exploited by that one contractor who left in 2019 but still has AWS console access. Weekly monitoring prevents archaeology becoming attack vectors.</p>
+          <p class="hidden-wisdom"><em>Dormant accounts are Schrödinger's backdoors—both compromised and fine until observed during incident response. 90-day reviews = systematic access hygiene. Annual cleanups = admitting you forgot for 364 days.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔄 Semi-Annual Policy Reviews (Because Threats Don't Wait)</h3>
+          <p><strong>Version 2.2 (Effective: 2025-08-20). Next review: 2026-02-20.</strong> Policies reviewed TWICE annually (not once, TWICE). Review triggers: scheduled cycle, regulatory changes (GDPR/NIS2), incidents, org changes, AWS updates. Living documentation that adapts. Not archaeological PDFs gathering digital dust. Static policies in dynamic threat landscape = eventual irrelevance.</p>
+          <p class="hidden-wisdom"><em>Semi-annual reviews = acknowledging reality changes. AWS launches new services. Attackers find new techniques. Compliance requirements shift. Your access policy from 2019? Archaeological artifact, not security control.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 📊 Audit Logging EVERYTHING (The Panopticon Is Real And It's Made Of CloudTrail)</h3>
+          <p><strong>AWS CloudTrail + Identity Center logs + GitHub audit logs.</strong> WHO accessed WHAT, WHEN, from WHERE. Audit trails for EVERY privilege escalation. Logs retained per <a href="discordian-data-classification.html">classification policy</a>. Logging without alerting = security theater. Logs you don't review = data hoarding pretending to be security. Logs that don't lead to action = compliance checkbox wasting storage.</p>
+          <p class="hidden-wisdom"><em>Audit trails = incident response fuel. No logs = no investigation = no attribution = no lessons learned. CloudTrail + centralized logging = systematic accountability. The panopticon works best when subjects know it exists. FNORD.</em></p>
+        </div>
+      </div>
+    </section>
+    <section id="access-matrix">
+      <h2 class="panel-caption">Classification-Driven Access Control Matrix</h2>
+      
+      <p>Access privileges aligned with our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a> business impact analysis:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Asset Category</th>
+            <th>Classification</th>
+            <th>MFA Requirement</th>
+            <th>Session Timeout</th>
+            <th>Review Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>☁️ AWS Core Infrastructure</strong></td>
+            <td>🔴 Extreme</td>
+            <td>Identity Center SSO + Hardware MFA</td>
+            <td>4 hours</td>
+            <td>Monthly</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>💰 Financial Systems</strong></td>
+            <td>🟠 Very High</td>
+            <td>Provider MFA + IdP + Hardware/SMS</td>
+            <td>1 hour</td>
+            <td>Monthly</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>📝 Development Pipeline</strong></td>
+            <td>🟡 High</td>
+            <td>Platform MFA + TOTP + SSH Keys</td>
+            <td>8 hours</td>
+            <td>Quarterly</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>📊 Business Intelligence</strong></td>
+            <td>🟢 Moderate</td>
+            <td>SSO Integration + TOTP</td>
+            <td>24 hours</td>
+            <td>Semi-Annual</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>📢 Marketing Platforms</strong></td>
+            <td>⚪ Public</td>
+            <td>Platform Native MFA</td>
+            <td>7 days</td>
+            <td>Annual</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Access Control Metrics (Real-Time Monitoring):</strong></p>
+      <ul>
+        <li><strong>MFA Coverage:</strong> Target 100%, alert threshold &lt;100%, real-time monitoring</li>
+        <li><strong>Dormant Accounts:</strong> Target 0, unused >90 days, weekly reviews</li>
+        <li><strong>Failed Authentication:</strong> Alert on 5+ failures in 15 minutes (potential attack)</li>
+        <li><strong>Privilege Escalation:</strong> All changes logged and reviewed monthly</li>
+        <li><strong>Session Violations:</strong> Automatic logout on timeout (no extensions)</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Classification-driven access means privileges match risk. Extreme assets get extreme controls. Public assets get reasonable controls. Not all systems need hardware MFA—but all need appropriate controls.</em></p>
+    </section>
+    
+    <section id="authentication">
+      <h2 class="panel-caption">Multi-Factor Authentication: Not Optional, Not Negotiable</h2>
+      
+      <p><strong>MFA isn't optional.</strong> Passwords alone are security theater. At Hack23, we enforce MFA across all systems with classification-appropriate methods:</p>
+      
+      <p><strong>🔐 MFA Implementation by System Type:</strong></p>
+      <ul>
+        <li><strong>AWS Root Account:</strong> Hardware MFA (YubiKey) + recovery codes in secure vault. Never used for daily operations (Identity Center SSO instead).</li>
+        <li><strong>AWS Identity Center:</strong> Identity provider MFA + SSO. Central authentication point for all AWS accounts.</li>
+        <li><strong>GitHub Organizations:</strong> TOTP required (Authy/Google Authenticator) + SSH keys for git operations. Security keys supported.</li>
+        <li><strong>Financial Systems:</strong> Provider MFA (Stripe, payment gateways) + hardware/SMS backup. Monthly access reviews.</li>
+        <li><strong>Development Tools:</strong> Platform-native MFA (SonarCloud, Snyk, FOSSA). TOTP preferred, SMS acceptable.</li>
+        <li><strong>Marketing Platforms:</strong> Platform-native MFA. Annual reviews sufficient for public-classified systems.</li>
+      </ul>
+      
+      <p><strong>The Five Factors of Not Getting Pwned:</strong></p>
+      <ul>
+        <li><strong>Something you know</strong> (password) — Easily stolen, phished, guessed. Never used alone.</li>
+        <li><strong>Something you have</strong> (hardware token) — YubiKey for AWS root. Better than SMS, losable but replaceable.</li>
+        <li><strong>Something you are</strong> (biometric) — Not used (can't change if compromised, privacy concerns).</li>
+        <li><strong>Somewhere you are</strong> (geolocation) — IP addresses lie. Not relied upon for authentication.</li>
+        <li><strong>Something you do</strong> (behavior patterns) — ML-based, fallible but useful for anomaly detection.</li>
+      </ul>
+      
+      <p><strong>Use at least two factors.</strong> Three is better for critical systems (AWS Identity Center = IdP password + IdP MFA + SSO). One factor is negligence.</p>
+    </section>
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Access Control Is Authority Control</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except access without identity verification, classification-appropriate MFA, and systematic audit logging—that's not zero trust, that's zero security.</p>
+      
+      <p>Most organizations claim "zero trust" while running VPN-based perimeter security. They say "MFA required" but allow SMS fallback for everything. They perform annual access reviews when quarterly is minimum. They trust network location instead of identity verification.</p>
+      
+      <p>We implement zero trust through systematic controls. <strong>AWS Identity Center SSO</strong> for centralized identity management. <strong>100% MFA coverage</strong> with classification-appropriate methods (hardware for critical, TOTP for high, platform native for public). <strong>90-day dormant account reviews</strong> with weekly monitoring and zero-tolerance targets. <strong>Semi-annual policy reviews</strong> (Version 2.2, next review: 2026-02-20). <strong>Classification-driven access matrix</strong> aligning privileges with business impact.</p>
+      
+      <p><strong>Think for yourself.</strong> Question "trust but verify" dogma—just verify. Question why password-only access is acceptable—it's not. Question annual access reviews when dormant accounts create risk daily. (Spoiler: Because systematic access control requires operational discipline, not annual compliance theater.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through verifiable access control implementation. Public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with specific metrics. AWS Identity Center architecture documented. MFA enforcement demonstrable. 90-day review cycles automated. This isn't theoretical—it's operational reality clients can audit before engagement.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. Access control is authority control. Who gets access defines who has power. Systematic verification prevents unauthorized power. Choose identity-centric security over network-centric hope. Your incident response depends on it.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy on GitHub</a>. Public. Auditable. Zero bullshit. With specific MFA requirements, session timeouts, review frequencies, and access control matrices clients can verify.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Trust is a vulnerability masquerading as a feature. Zero trust through identity verification is security through mathematics."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+    
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy.html">Information Security Policy</a> — Comprehensive ISMS foundation and framework</li>
+        <li><a href="discordian-data-classification.html">Data Classification Policy</a> — Protecting information assets by criticality</li>
+        <li><a href="discordian-acceptable-use.html">Acceptable Use Policy</a> — Professional standards through clear expectations</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — When access controls fail</li>
+        <li><a href="discordian-monitoring-logging.html">Monitoring & Logging Policy</a> — Audit trails for accountability</li>
+      </ul>
+    </section>
+  </article>
+</main>
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
