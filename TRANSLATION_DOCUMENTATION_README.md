@@ -21,9 +21,9 @@ Each language has **two dedicated files**:
 ### Asian Languages
 | Language | Code | Files | Guide | Status |
 |----------|------|-------|-------|--------|
-| Japanese | ja | 51 | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
-| Chinese | zh | 51 | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
-| Korean | ko | 51 | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
+| Japanese | ja | 68 | [Japanese-Translation-Guide.md](Japanese-Translation-Guide.md) | [Japanese-Translation-Status.md](Japanese-Translation-Status.md) |
+| Chinese | zh | 68 | [Chinese-Translation-Guide.md](Chinese-Translation-Guide.md) | [Chinese-Translation-Status.md](Chinese-Translation-Status.md) |
+| Korean | ko | 68 | [Korean-Translation-Guide.md](Korean-Translation-Guide.md) | [Korean-Translation-Status.md](Korean-Translation-Status.md) |
 
 ### Nordic Languages
 | Language | Code | Files | Guide | Status |
@@ -45,7 +45,7 @@ Each language has **two dedicated files**:
 |----------|------|-------|-------|--------|
 | Swedish | sv | 74 | [Swedish-Translation-Guide.md](Swedish-Translation-Guide.md) | [Swedish-Translation-Status.md](Swedish-Translation-Status.md) |
 
-**Total:** 736 HTML files across 13 languages
+**Total:** 751 HTML files across 13 languages
 
 ## Swedish Blog-Specific Documentation
 

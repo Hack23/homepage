@@ -4,26 +4,34 @@
 
 **Language:** Korean (ko)  
 **Target Market:** South Korea  
-**Total Files:** 63 (updated December 2025)  
-**Last Updated:** December 2024
+**Total Files:** 68 (updated December 2025)  
+**Last Updated:** December 2025
 
 ### 📄 File Coverage (High-Level Summary)
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **English Base Files** | 96 | 100% |
-| **Korean Files Exist** | 63 | 65.6% |
-| **Missing Files** | **33** | **34.4%** |
+| **Korean Files Exist** | 68 | 70.8% |
+| **Missing Files** | **28** | **29.2%** |
 
 **Recent Additions (December 2025):**
 - ✅ **Issue #3:** 3 industry pages created (betting/gaming, cannabis, investment/fintech)
 - ✅ **Issue #687 Batch 7:** 10 CIA blog posts created with complete infrastructure
+- ✅ **Issue #Current:** 5 Asian ISMS policy files created (access-control, bc-dr, info-asset-mgmt, incident-response, risk-mgmt)
 - ⚠️ **Issue #8 Batch 2:** 13 additional blog posts assessed - **CRITICAL: Professional translation with martial arts expertise required**
 
-**Missing Files:** 33 files not yet created (1 core page + 32 others)
+**Missing Files:** 28 files not yet created (1 core page + 27 others)
 - **High Priority:** `projects.html` (core navigation page)
-- **Medium Priority:** 20+ Discordian ISMS policy files + additional pages
+- **Medium Priority:** 15+ Discordian ISMS policy files + additional pages
 - **Lower Priority:** Example pages and additional content
+
+**✅ Completed:** 5 Asian ISMS Policy files now created with complete SEO infrastructure:
+- `discordian-access-control-policy_ko.html`
+- `discordian-bc-dr-policy_ko.html`
+- `discordian-info-asset-mgmt-policy_ko.html`
+- `discordian-incident-response-policy_ko.html`
+- `discordian-risk-mgmt-policy_ko.html`
 
 ⚠️ **CRITICAL FOR KOREAN:** Black Trigram blog posts require professional translator with Korean martial arts cultural knowledge (택견 Taekkyeon, UNESCO heritage, 70 급소 vital points).
 
