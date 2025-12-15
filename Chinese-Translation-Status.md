@@ -33,10 +33,10 @@
 
 **✅ Completed:** 5 Asian ISMS Policy files now created with complete SEO infrastructure:
 - `discordian-access-control-policy_zh.html`
-- `discordian-bc-dr-policy_zh.html`
-- `discordian-info-asset-mgmt-policy_zh.html`
+- `discordian-business-continuity_zh.html`
+- `discordian-asset-mgmt_zh.html`
 - `discordian-incident-response-policy_zh.html`
-- `discordian-risk-mgmt-policy_zh.html`
+- `discordian-risk-assessment_zh.html`
 
 ⚠️ **IMPORTANT:** Most existing files have complete technical infrastructure (HTML, hreflang, SEO) but require professional content translation for business-critical accuracy.
 

@@ -33,10 +33,10 @@
 
 **✅ Completed:** 5 Asian ISMS Policy files now created with complete SEO infrastructure:
 - `discordian-access-control-policy_ko.html`
-- `discordian-bc-dr-policy_ko.html`
-- `discordian-info-asset-mgmt-policy_ko.html`
+- `discordian-business-continuity_ko.html`
+- `discordian-asset-mgmt_ko.html`
 - `discordian-incident-response-policy_ko.html`
-- `discordian-risk-mgmt-policy_ko.html`
+- `discordian-risk-assessment_ko.html`
 
 ⚠️ **CRITICAL FOR KOREAN:** Black Trigram blog posts require professional translator with Korean martial arts cultural knowledge (택견 Taekkyeon, UNESCO heritage, 70 급소 vital points).
 
