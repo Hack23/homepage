@@ -26,6 +26,14 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache npm global packages
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-global-${{ hashFiles('**/package-lock.json') }}-htmlhint
+          restore-keys: |
+            ${{ runner.os }}-npm-global-
+
       - name: Install HTMLHint
         run: npm install -g htmlhint
 
@@ -70,6 +78,22 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version: '20'
+
+      - name: Cache npm global packages
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-global-${{ hashFiles('**/package-lock.json') }}-linkinator
+          restore-keys: |
+            ${{ runner.os }}-npm-global-
+
+      - name: Cache apt packages
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/.github/workflows/quality-checks.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
 
       - name: Install linkinator
         run: npm install -g linkinator
