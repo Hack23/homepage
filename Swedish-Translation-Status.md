@@ -285,16 +285,28 @@ These English pages exist but have no corresponding translation file:
 - ✅ `discordian-business-continuity_sv.html` ← `discordian-business-continuity.html` **[ALREADY EXISTS]**
   - Note: This file already had a Swedish version (20KB file)
 
-### 🟢 LOWER PRIORITY: Governance & Strategy (5 files)
-- ❌ `discordian-security-strategy_sv.html` ← `discordian-security-strategy.html`
-- ❌ `discordian-security-metrics_sv.html` ← `discordian-security-metrics.html`
-- ❌ `discordian-stakeholders_sv.html` ← `discordian-stakeholders.html`
-- ❌ `discordian-supplier-reality_sv.html` ← `discordian-supplier-reality.html`
-- ❌ `discordian-llm-security_sv.html` ← `discordian-llm-security.html`
+### 🟢 LOWER PRIORITY: Governance & Strategy (6 files) - **PHASE 3 PLANNED**
+- ⏳ `discordian-security-strategy_sv.html` ← `discordian-security-strategy.html` (592 lines) **[READY TO CREATE]**
+  - Swedish Title: Säkerhetsstrategi | Riskbaserad & Kostnadseffektiv | Hack23
+  - Terminology: Säkerhetsstrategi, riskhantering, kostnadseffektiv säkerhet, säkerhetsinvesteringar
+- ⏳ `discordian-security-metrics_sv.html` ← `discordian-security-metrics.html` (682 lines) **[READY TO CREATE]**
+  - Swedish Title: Säkerhetsmått | Mätbar Säkerhetsprestanda | Hack23
+  - Terminology: Säkerhetsmått, KPI:er, säkerhetsprestanda, mätbar säkerhet, MTTR
+- ⏳ `discordian-stakeholders_sv.html` ← `discordian-stakeholders.html` (567 lines) **[READY TO CREATE]**
+  - Swedish Title: Intressenthantering | Transparent Kommunikation | Hack23
+  - Terminology: Intressenthantering, transparent kommunikation, säkerhetskommunikation
+- ⏳ `discordian-supplier-reality_sv.html` ← `discordian-supplier-reality.html` (651 lines) **[READY TO CREATE]**
+  - Swedish Title: Tredjepartshantering | Realistisk Leverantörssäkerhet | Hack23
+  - Terminology: Tredjepartshantering, leverantörssäkerhet, supply chain-säkerhet
+- ⏳ `discordian-llm-security_sv.html` ← `discordian-llm-security.html` (508 lines) **[READY TO CREATE]**
+  - Swedish Title: LLM-säkerhet | AI-säkerhet & Dataintegritet | Hack23
+  - Terminology: LLM-säkerhet, AI-säkerhet, prompt injection, dataintegritet
+- ⏳ `discordian-cra-conformity_sv.html` ← `discordian-cra-conformity.html` (821 lines) **[READY TO CREATE]**
+  - Swedish Title: CRA-överensstämmelse | Cyber Resilience Act | Hack23
+  - Terminology: CRA, Cyber Resilience Act, produktsäkerhet, EU-cyberresiliens
 
-### ⚪ Regulatory & Other (2 files)
-- ❌ `discordian-cra-conformity_sv.html` ← `discordian-cra-conformity.html`
-- ❌ `breadcrumb-example_sv.html` ← `breadcrumb-example.html`
+### ⚪ Other (1 file)
+- ❌ `breadcrumb-example_sv.html` ← `breadcrumb-example.html` (intentionally untranslated - example page)
 
 ## 🛠️ Technical Implementation
 
