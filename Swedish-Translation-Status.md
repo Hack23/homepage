@@ -214,9 +214,24 @@ These English pages exist but have no corresponding translation file:
   - ✅ Hreflang tags complete (sv, sv-SE)
   - ✅ Navigation breadcrumbs in Swedish
   - ⏳ Body content ~400 lines remaining
-- ❌ `discordian-secure-dev_sv.html` ← `discordian-secure-dev.html`
-- ❌ `discordian-vuln-mgmt_sv.html` ← `discordian-vuln-mgmt.html`
-- ❌ `discordian-crypto_sv.html` ← `discordian-crypto.html`
+- ⚡ `discordian-secure-dev_sv.html` ← `discordian-secure-dev.html` **[SEO COMPLETE - NEW]**
+  - ✅ All meta tags translated (Säker Utveckling, DevSecOps, STRIDE hotmodellering)
+  - ✅ Schema.org structured data (BlogPosting, BreadcrumbList, HowTo)
+  - ✅ Hreflang tags complete (sv, sv-SE)
+  - ✅ Navigation breadcrumbs in Swedish
+  - ⏳ Body content remaining
+- ⚡ `discordian-vuln-mgmt_sv.html` ← `discordian-vuln-mgmt.html` **[SEO COMPLETE - NEW]**
+  - ✅ All meta tags translated (Sårbarhetshantering, patch-hantering, CVSS)
+  - ✅ Schema.org structured data (BlogPosting, BreadcrumbList)
+  - ✅ Hreflang tags complete (sv, sv-SE)
+  - ✅ Navigation breadcrumbs in Swedish
+  - ⏳ Body content remaining
+- ⚡ `discordian-crypto_sv.html` ← `discordian-crypto.html` **[SEO COMPLETE - NEW]**
+  - ✅ All meta tags translated (Kryptografipolicy, AES-256, TLS 1.3, AWS KMS)
+  - ✅ Schema.org structured data (BlogPosting, BreadcrumbList)
+  - ✅ Hreflang tags complete (sv, sv-SE)
+  - ✅ Navigation breadcrumbs in Swedish
+  - ⏳ Body content remaining
 - ❌ `discordian-data-protection_sv.html` ← `discordian-data-protection.html`
 - ❌ `discordian-privacy_sv.html` ← `discordian-privacy.html`
 - ❌ `discordian-cloud-security_sv.html` ← `discordian-cloud-security.html`

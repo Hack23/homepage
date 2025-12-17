@@ -239,8 +239,28 @@ graph TB
 | Vulnerability | Sårbarhet |
 | WAF (Web Application Firewall) | WAF / Webbapplikationsbrandvägg |
 | CloudFront | CloudFront (AWS CDN) |
-| Multi-region | Multireg ion |
+| Multi-region | Multiregion |
 | Assume Breach | Förutsätt intrång |
+| Secure Development | Säker utveckling |
+| DevSecOps | DevSecOps |
+| Threat Modeling | Hotmodellering / Hotanalys |
+| STRIDE | STRIDE (hotmodellering enligt STRIDE-metoden) |
+| Vulnerability Scanning | Sårbarhetsskanning |
+| Code Review | Kodgranskning / Kodrecension |
+| SDLC | Livscykel för mjukvaruutveckling |
+| Secure Coding | Säker kodning |
+| Vulnerability Management | Sårbarhetshantering |
+| Patch Management | Patch-hantering |
+| CVE | CVE (gemensamma sårbarheter) |
+| CVSS | CVSS (sårbarhetsbedömningssystem) |
+| Zero-day | Zero-day sårbarheter |
+| Cryptography | Kryptografi |
+| Encryption | Kryptering |
+| Key Management | Nyckelhantering |
+| Certificate Management | Certifikathantering |
+| Digital Signatures | Digitala signaturer |
+| Encryption at Rest | Kryptering i vila |
+| Encryption in Transit | Kryptering under transport |
 
 ### 💻 Technical Terms & Development
 
