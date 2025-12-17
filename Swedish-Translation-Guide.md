@@ -223,9 +223,24 @@ graph TB
 | Threat Actor | Hotaktör |
 | Attack Vector | Attackvektor |
 | Security Incident | Säkerhetsincident |
-| Data Breach | Dataläcka |
+| Data Breach | Dataläcka / Säkerhetsintrång |
 | Security Baseline | Säkerhetsbaslinje |
 | Hardening | Härdning |
+| Network Security | Nätverkssäkerhet |
+| Perimeter Security | Perimetersäkerhet |
+| Firewall | Brandvägg |
+| DDoS Protection | DDoS-skydd |
+| Threat Detection | Hotdetektering |
+| Security Hub | Security Hub / Säkerhetsnav |
+| GuardDuty | GuardDuty (AWS-tjänst) |
+| VPC Flow Logs | VPC-flödesloggar |
+| Network Segmentation | Nätverkssegmentering |
+| Breach | Intrång / Säkerhetsintrång |
+| Vulnerability | Sårbarhet |
+| WAF (Web Application Firewall) | WAF / Webbapplikationsbrandvägg |
+| CloudFront | CloudFront (AWS CDN) |
+| Multi-region | Multireg ion |
+| Assume Breach | Förutsätt intrång |
 
 ### 💻 Technical Terms & Development
 

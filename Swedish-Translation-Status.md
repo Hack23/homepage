@@ -207,29 +207,32 @@ Files analyzed for English content remaining:
 
 These English pages exist but have no corresponding translation file:
 
-### ISMS Documentation (20 files)
-- ❌ `discordian-asset-mgmt_sv.html` ← `discordian-asset-mgmt.html`
-- ❌ `discordian-backup-recovery_sv.html` ← `discordian-backup-recovery.html`
-- ❌ `discordian-business-continuity_sv.html` ← `discordian-business-continuity.html`
-- ❌ `discordian-classification_sv.html` ← `discordian-classification.html`
-- ❌ `discordian-cloud-security_sv.html` ← `discordian-cloud-security.html`
-- ❌ `discordian-cra-conformity_sv.html` ← `discordian-cra-conformity.html`
-- ❌ `discordian-crypto_sv.html` ← `discordian-crypto.html`
-- ❌ `discordian-data-classification_sv.html` ← `discordian-data-classification.html`
-- ❌ `discordian-data-protection_sv.html` ← `discordian-data-protection.html`
-- ❌ `discordian-disaster-recovery_sv.html` ← `discordian-disaster-recovery.html`
-- ❌ `discordian-llm-security_sv.html` ← `discordian-llm-security.html`
-- ❌ `discordian-monitoring-logging_sv.html` ← `discordian-monitoring-logging.html`
-- ❌ `discordian-network-security_sv.html` ← `discordian-network-security.html`
-- ❌ `discordian-privacy_sv.html` ← `discordian-privacy.html`
+### 🔴 HIGH PRIORITY: Critical Security Documentation (7 files)
+- 🚧 `discordian-network-security_sv.html` ← `discordian-network-security.html` **[IN PROGRESS]**
 - ❌ `discordian-secure-dev_sv.html` ← `discordian-secure-dev.html`
-- ❌ `discordian-security-metrics_sv.html` ← `discordian-security-metrics.html`
+- ❌ `discordian-vuln-mgmt_sv.html` ← `discordian-vuln-mgmt.html`
+- ❌ `discordian-crypto_sv.html` ← `discordian-crypto.html`
+- ❌ `discordian-data-protection_sv.html` ← `discordian-data-protection.html`
+- ❌ `discordian-privacy_sv.html` ← `discordian-privacy.html`
+- ❌ `discordian-cloud-security_sv.html` ← `discordian-cloud-security.html`
+
+### 🟡 MEDIUM PRIORITY: Operational ISMS Policies (6 files)
+- ❌ `discordian-classification_sv.html` ← `discordian-classification.html`
+- ❌ `discordian-data-classification_sv.html` ← `discordian-data-classification.html`
+- ❌ `discordian-monitoring-logging_sv.html` ← `discordian-monitoring-logging.html`
+- ❌ `discordian-backup-recovery_sv.html` ← `discordian-backup-recovery.html`
+- ❌ `discordian-disaster-recovery_sv.html` ← `discordian-disaster-recovery.html`
+- ❌ `discordian-business-continuity_sv.html` ← `discordian-business-continuity.html`
+
+### 🟢 LOWER PRIORITY: Governance & Strategy (5 files)
 - ❌ `discordian-security-strategy_sv.html` ← `discordian-security-strategy.html`
+- ❌ `discordian-security-metrics_sv.html` ← `discordian-security-metrics.html`
 - ❌ `discordian-stakeholders_sv.html` ← `discordian-stakeholders.html`
 - ❌ `discordian-supplier-reality_sv.html` ← `discordian-supplier-reality.html`
-- ❌ `discordian-vuln-mgmt_sv.html` ← `discordian-vuln-mgmt.html`
+- ❌ `discordian-llm-security_sv.html` ← `discordian-llm-security.html`
 
-### Other Pages (1 files)
+### ⚪ Regulatory & Other (2 files)
+- ❌ `discordian-cra-conformity_sv.html` ← `discordian-cra-conformity.html`
 - ❌ `breadcrumb-example_sv.html` ← `breadcrumb-example.html`
 
 ## 🛠️ Technical Implementation
