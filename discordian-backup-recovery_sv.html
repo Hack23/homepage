@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Backup & Recovery | AWS S3 + 3-2-1 Rule | Hack23</title>
+<title>Säkerhetskopiering & Återställning | AWS S3 + 3-2-1 Regeln | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="99.9% backup success + 3-2-1 rule + classification-driven RTO/RPO. Critical: &lt;1hr RTO, &lt;15min RPO. AWS S3 + Glacier. Quarterly tests.">
-<meta name="keywords" content="backup and recovery, data backup, disaster recovery, business continuity, backup strategy, 3-2-1 backup rule, backup retention, recovery point objective RPO, recovery time objective RTO, AWS backup, S3 versioning, snapshot management, automated backups, offsite backups, backup testing, backup verification, data restoration, backup encryption">
+<meta name="description" content="99.9% säkerhetskopieringssuccess + 3-2-1 regeln + klassificeringsstyrd RTO/RPO. Kritisk: <1tim RTO, <15min RPO. AWS S3 + Glacier. Kvartalsvisa tester.">
+<meta name="keywords" content="säkerhetskopiering och återställning, datasäkerhetskopiering, katastrofåterställning, verksamhetskontinuitet, säkerhetskopieringsstrategi, 3-2-1 säkerhetskopieringsregel, säkerhetskopieringslagring, återställningspunktsmål RPO, återställningstidsmål RTO, AWS-säkerhetskopiering, S3-versionshantering, snapshot-hantering, automatiserad säkerhetskopiering, offsite-säkerhetskopiering, säkerhetskopieringstestning, säkerhetskopieringsverifiering, dataåterställning, säkerhetskopieringskryptering, hack23 ISMS">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Backup & Recovery: Restore or Regret">
-<meta property="og:description" content="Assume breach. Assume ransomware. Assume disaster. A backup you haven't tested is Schrödinger's backup.">
+<meta property="og:title" content="Säkerhetskopiering & Återställning: Återställ eller ångra">
+<meta property="og:description" content="Förutsätt intrång. Förutsätt ransomware. Förutsätt katastrof. En säkerhetskopia du inte testat är Schrödingers säkerhetskopia.">
 	<meta property="og:locale" content="sv_SE">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -27,7 +27,7 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-backup-recovery.html">
+<meta property="og:url" content="https://hack23.com/discordian-backup-recovery_sv.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
 
 <!-- Twitter Card -->
@@ -37,7 +37,7 @@
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
-<link rel="canonical" href="https://hack23.com/discordian-backup-recovery.html">
+<link rel="canonical" href="https://hack23.com/discordian-backup-recovery_sv.html">
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -45,8 +45,8 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Backup & Recovery: Restore or Regret",
-      "description": "Backup and recovery strategy for surviving breaches, ransomware, and disasters",
+      "headline": "Säkerhetskopiering & Återställning: Återställ eller ångra",
+      "description": "Säkerhetskopierings- och återställningsstrategi för att överleva intrång, ransomware och katastrofer",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
@@ -69,7 +69,7 @@
       "dateModified": "2025-11-05",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-backup-recovery.html"
+        "@id": "https://hack23.com/discordian-backup-recovery_sv.html"
       },
       "keywords": "backup recovery, RTO, RPO, 3-2-1 rule, ISMS",
       "articleSection": "Informationssäkerhet",
@@ -97,25 +97,25 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-backup-recovery.html#breadcrumb",
+      "@id": "https://hack23.com/discordian-backup-recovery_sv.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
-          "item": "https://hack23.com/"
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Blog",
-          "item": "https://hack23.com/blog.html"
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Backup & Recovery",
-          "item": "https://hack23.com/discordian-backup-recovery.html"
+          "name": "Säkerhetskopiering & Återställning",
+          "item": "https://hack23.com/discordian-backup-recovery_sv.html"
         }
       ]
     },
@@ -270,6 +270,8 @@
 
   <!-- Multilingual SEO -->
   <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-backup-recovery.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-backup-recovery_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-backup-recovery_sv.html" />
   <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-backup-recovery.html" />
 
 </head>
@@ -279,13 +281,13 @@
   <nav aria-label="Breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Home</a>
+        <a href="/index_sv.html">Hem</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="/blog.html">Blog</a>
+        <a href="/blog_sv.html">Blogg</a>
       </li>
       <li class="breadcrumb-item" aria-current="page">
-        Backup & Recovery
+        Säkerhetskopiering & Återställning
       </li>
     </ol>
   </nav>

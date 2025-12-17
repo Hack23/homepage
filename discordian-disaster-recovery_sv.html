@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Disaster Recovery | AWS Chaos Engineering | Hack23</title>
+<title>Katastrofåterställning | AWS Chaos Engineering | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="AWS FIS chaos experiments, multi-region failover, immutable backups, automated validation. &lt;5min RTO monthly testing. Evidence-based resilience.">
-<meta name="keywords" content="disaster recovery, AWS Resilience Hub, Fault Injection Service, chaos engineering, RTO RPO, AWS Backup, immutable backups, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, multi-region recovery, backup validation, restore testing, disaster recovery testing, realistic DR testing, evidence collection, hack23 ISMS">
+<meta name="description" content="AWS FIS kaosexperiment, multiregion-failover, oföränderliga säkerhetskopior, automatiserad validering. <5min RTO månatlig testning. Evidensbaserad resiliens.">
+<meta name="keywords" content="katastrofåterställning, AWS Resilience Hub, Fault Injection Service, chaos engineering, RTO RPO, AWS Backup, oföränderliga säkerhetskopior, SSM-automatisering, CloudFormation, DynamoDB PITR, Route 53 failover, multiregion-återställning, säkerhetskopieringsvalidering, återställningstestning, katastrofåterställningstestning, realistisk DR-testning, bevisinsamling, hack23 ISMS">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Disaster Recovery: AWS-Native Resilience with Chaos Engineering">
-<meta property="og:description" content="AWS Resilience Hub + Fault Injection Service for <5min RTO critical systems. Monthly chaos experiments prove recovery capabilities with auditable evidence.">
+<meta property="og:title" content="Katastrofåterställning: AWS-native resiliens med Chaos Engineering">
+<meta property="og:description" content="AWS Resilience Hub + Fault Injection Service för <5min RTO kritiska system. Månatliga kaosexperiment bevisar återställningsförmåga med granskningsbar evidens.">
 	<meta property="og:locale" content="sv_SE">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -27,7 +27,7 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-disaster-recovery.html">
+<meta property="og:url" content="https://hack23.com/discordian-disaster-recovery_sv.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
 
 <!-- Twitter Card -->
@@ -37,7 +37,7 @@
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
-<link rel="canonical" href="https://hack23.com/discordian-disaster-recovery.html">
+<link rel="canonical" href="https://hack23.com/discordian-disaster-recovery_sv.html">
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -45,8 +45,8 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Disaster Recovery: AWS-Native Resilience with Chaos Engineering",
-      "description": "Complete technical disaster recovery implementation using AWS-native tooling: FIS chaos experiments with SSM automation, Route 53 multi-region failover, DynamoDB point-in-time recovery, immutable backup vaults, CloudFormation infrastructure-as-code, automated restore validation, and realistic disaster testing under Murphy's Law conditions (3 AM, degraded network, missing personnel, corrupted backups). Covering five disaster scenarios with evidence-based recovery procedures.",
+      "headline": "Katastrofåterställning: AWS-native resiliens med Chaos Engineering",
+      "description": "Komplett teknisk katastrofåterställningsimplementation med AWS-native verktyg: FIS kaosexperiment med SSM-automatisering, Route 53 multiregion-failover, DynamoDB point-in-time recovery, oföränderliga säkerhetskopieringsvalv, CloudFormation infrastruktur-som-kod, automatiserad återställningsvalidering och realistisk katastroft estning under Murphys lag-förhållanden (kl 03, försämrat nätverk, saknad personal, korrupta säkerhetskopior). Täcker fem katastrofscenarier med evidensbaserade återställningsprocedurer.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
@@ -69,7 +69,7 @@
       "dateModified": "2025-11-05",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-disaster-recovery.html"
+        "@id": "https://hack23.com/discordian-disaster-recovery_sv.html"
       },
       "keywords": "disaster recovery, AWS Resilience Hub, chaos engineering, FIS, RTO RPO, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, backup validation, realistic disaster testing",
       "articleSection": "Informationssäkerhet",
@@ -97,25 +97,25 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-disaster-recovery.html#breadcrumb",
+      "@id": "https://hack23.com/discordian-disaster-recovery_sv.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
-          "item": "https://hack23.com/"
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Blog",
-          "item": "https://hack23.com/blog.html"
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Disaster Recovery",
-          "item": "https://hack23.com/discordian-disaster-recovery.html"
+          "name": "Katastrofåterställning",
+          "item": "https://hack23.com/discordian-disaster-recovery_sv.html"
         }
       ]
     }
@@ -124,6 +124,8 @@
 
   <!-- Multilingual SEO -->
   <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-disaster-recovery.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-disaster-recovery_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-disaster-recovery_sv.html" />
   <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-disaster-recovery.html" />
 
 </head>
@@ -133,13 +135,13 @@
   <nav aria-label="Breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Home</a>
+        <a href="/index_sv.html">Hem</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="/blog.html">Blog</a>
+        <a href="/blog_sv.html">Blogg</a>
       </li>
       <li class="breadcrumb-item" aria-current="page">
-        Disaster Recovery
+        Katastrofåterställning
       </li>
     </ol>
   </nav>
