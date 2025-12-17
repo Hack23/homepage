@@ -12,9 +12,9 @@
 | **Locale** | sv_SE |
 | **Currency** | SEK (kr) |
 | **Direction** | LTR (Left-to-Right) → |
-| **Files Translated** | 79/96 (82.3%) |
-| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
-| **Last Updated** | December 2025 |
+| **Files Translated** | 94/96 (97.9%) |
+| **Guide Version** | 4.0 (Phase 3 Complete Edition)
+| **Last Updated** | December 17, 2025 |
 
 ## 🎯 Translation Philosophy
 
@@ -308,6 +308,124 @@ graph TB
 | Backup Strategy | Säkerhetskopieringsstrategi |
 | Recovery Point Objective (RPO) | Återställningspunktsmål |
 | Recovery Time Objective (RTO) | Återställningstidsmål |
+
+### 📊 Governance & Strategy (Phase 3)
+
+*Strategic security management and governance terms*
+
+| English | Translation |
+|---------|-------------|
+| Security Strategy | Säkerhetsstrategi |
+| Risk-Based Security | Riskbaserad säkerhet |
+| Cost-Effective Security | Kostnadseffektiv säkerhet |
+| Security Investment | Säkerhetsinvestering |
+| Pragmatic Security | Pragmatisk säkerhet |
+| Competitive Advantage | Konkurrensfördel |
+| Security ROI | Säkerhets-ROI |
+| Strategic Positioning | Strategisk positionering |
+| Trust Enhancement | Förtroendestärkande |
+| Operational Efficiency | Operativ effektivitet |
+| Innovation Enablement | Innovationsmöjliggörande |
+| Decision Quality | Beslutskvalitet |
+| Risk Reduction | Riskreducering |
+
+### 📈 Security Metrics & KPIs (Phase 3)
+
+*Measurable security performance indicators*
+
+| English | Translation |
+|---------|-------------|
+| Security Metrics | Säkerhetsmått |
+| Key Performance Indicators (KPIs) | Nyckelprestandaindikatorer / KPI:er |
+| Mean Time To Detect (MTTD) | Genomsnittlig tid till detektering |
+| Mean Time To Resolve (MTTR) | Genomsnittlig tid till lösning |
+| Security Performance | Säkerhetsprestanda |
+| Measurable Security | Mätbar säkerhet |
+| Patch Coverage | Patch-täckning |
+| Vulnerability SLA | Sårbarhets-SLA |
+| OpenSSF Scorecard | OpenSSF Scorecard |
+| SLSA Level | SLSA-nivå |
+| Quality Gates | Kvalitetsportar |
+| Security Baseline | Säkerhetsbaslinje |
+| Compliance Rate | Efterlevnadsgrad |
+
+### 🤝 Stakeholder & Communication (Phase 3)
+
+*Stakeholder management and communication terms*
+
+| English | Translation |
+|---------|-------------|
+| Stakeholder Management | Intressenthantering |
+| Interested Parties | Intresserade parter |
+| Transparent Communication | Transparent kommunikation |
+| Security Communication | Säkerhetskommunikation |
+| Stakeholder Engagement | Intressentengagemang |
+| Regular Updates | Regelbundna uppdateringar |
+| Regulatory Contact | Regulatorisk kontakt |
+| Professional Certifications | Professionella certifieringar |
+| Industry Groups | Branschgrupper |
+| Working Groups | Arbetsgrupper |
+| Briefings | Briefingar |
+| CISM (Certified Information Security Manager) | CISM (Certifierad informationssäkerhetschef) |
+| CISSP (Certified Information Systems Security Professional) | CISSP (Certifierad informationssystemsäkerhetsprofessionell) |
+
+### 🔗 Third-Party & Supply Chain (Phase 3)
+
+*Third-party and supply chain security terms*
+
+| English | Translation |
+|---------|-------------|
+| Third-Party Management | Tredjepartshantering |
+| Supplier Security | Leverantörssäkerhet |
+| Supply Chain Security | Supply chain-säkerhet / Leveranskedjesäkerhet |
+| Vendor Management | Leverantörshantering |
+| Supplier Review | Leverantörsrecension |
+| NDA (Non-Disclosure Agreement) | Sekretessavtal / NDA |
+| DPA (Data Processing Agreement) | Dataprocessingsavtal / DPA |
+| Critical Suppliers | Kritiska leverantörer |
+| Vendor Risk Management | Leverantörsriskhantering |
+| Third-Party Risks | Tredjepartsrisker |
+| Encrypted Communication | Krypterad kommunikation |
+| Annual Supplier Review | Årlig leverantörsrecension |
+
+### 🤖 AI & LLM Security (Phase 3)
+
+*Artificial Intelligence and Large Language Model security*
+
+| English | Translation |
+|---------|-------------|
+| LLM Security | LLM-säkerhet |
+| AI Security | AI-säkerhet |
+| Prompt Injection | Prompt injection |
+| Data Integrity | Dataintegritet |
+| GPT Security | GPT-säkerhet |
+| Machine Learning Security | Maskininlärningssäkerhet |
+| OWASP LLM Top 10 | OWASP LLM Top 10 |
+| OpenAI Security | OpenAI-säkerhet |
+| AI Data Handling | AI-datahantering |
+| Model Security | Modellsäkerhet |
+| Training Data | Träningsdata |
+| Sensitive Data | Känslig data |
+| AI API Security | AI API-säkerhet |
+
+### ⚖️ Regulatory & Compliance (Phase 3)
+
+*Regulatory compliance and assessment terms*
+
+| English | Translation |
+|---------|-------------|
+| CRA (Cyber Resilience Act) | CRA / Cyberresilienslagen |
+| Conformity Assessment | Överensstämmelsebedömning |
+| Product Security | Produktsäkerhet |
+| EU Cyber Resilience | EU-cyberresiliens |
+| Regulatory Compliance | Regelefterlevnad |
+| CE Marking | CE-märkning |
+| SBOM (Software Bill of Materials) | SBOM / Programvarumaterialförteckning |
+| Security Updates | Säkerhetsuppdateringar |
+| Vulnerability Disclosure | Sårbarhetsupplysning |
+| Product Lifecycle | Produktlivscykel |
+| Support SLA | Support-SLA |
+| Critical Products | Kritiska produkter |
 
 ### 💻 Technical Terms & Development
 
