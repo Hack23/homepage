@@ -50,17 +50,21 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 23 | 37.7% | No English content detected |
+| ✅ **Fully Translated** | 25 | 41.0% | No English content detected |
 | ⚡ **Mostly Translated** | 5 | 8.2% | Minimal English (technical terms only) |
-| ⚠️  **Partially Translated** | 33 | 54.1% | Some English content remains |
+| ⚠️  **Partially Translated** | 31 | 50.8% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 45.9% of existing files are fully/mostly translated
+**🏆 Quality Score:** 49.2% of existing files are fully/mostly translated
 
 **📈 Status:** ⚠️  In Progress - Active translation needed
 
 ### 🎉 Recent Progress (December 2025)
 
+- ✅ **December 17, 2025**: ISMS policy pages completed
+  - discordian-cybersecurity_de.html (Manifesto - Schema.org about sections)
+  - discordian-compliance_de.html (Compliance guide - HowTo schema, supplies, tools)
+  - Quality improved from ⚠️ Partial to ✅ Fully Translated
 - ✅ **December 17, 2025**: cia-project_de.html & compliance-manager_de.html completed
   - Both product pages fully translated (Schema.org, feature lists, breadcrumbs)
   - Organization descriptions standardized
@@ -133,8 +137,8 @@ Files analyzed for English content remaining:
 - ✅ `discordian-asset-mgmt_de.html` ← `discordian-asset-mgmt.html`
 - ✅ `discordian-business-continuity_de.html` ← `discordian-business-continuity.html`
 - ⚠️  `discordian-compliance-frameworks_de.html` ← `discordian-compliance-frameworks.html`
-- ⚠️  `discordian-compliance_de.html` ← `discordian-compliance.html`
-- ⚠️  `discordian-cybersecurity_de.html` ← `discordian-cybersecurity.html`
+- ✅ `discordian-compliance_de.html` ← `discordian-compliance.html`
+- ✅ `discordian-cybersecurity_de.html` ← `discordian-cybersecurity.html`
 - ✅ `discordian-incident-response_de.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_de.html` ← `discordian-isms-review.html`
 - ⚠️  `discordian-isms-transparency_de.html` ← `discordian-isms-transparency.html`
