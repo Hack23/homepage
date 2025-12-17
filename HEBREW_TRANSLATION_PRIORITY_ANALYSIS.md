@@ -97,11 +97,11 @@ Supporting ISMS documentation:
 ### Critical Partially Translated (5 files)
 **Issue:** English content remains, impacts SEO and UX
 
-1. **`index_he.html`** ⚠️ **CRITICAL**
-   - **Status:** Core homepage with English placeholder text
-   - **Issue:** Mixed Hebrew/English degrades user trust
-   - **Action Required:** Complete translation of all sections
-   - **SEO Impact:** HIGH - main entry point
+1. **`index_he.html`** ✅ **COMPLETED (Dec 17, 2025)**
+   - **Status:** Core homepage - English content translated
+   - **Completed:** Navigation links, service descriptions, FAQ schema, structured data
+   - **Action Taken:** Full Hebrew translation of visible content and metadata
+   - **SEO Impact:** HIGH - main entry point now fully Hebrew
 
 2. **`blog_he.html`** ⚠️ **HIGH**
    - **Status:** Blog index with English descriptions
@@ -228,11 +228,11 @@ Most blog posts marked ⚠️ have:
 ### Phase 1: Critical Fixes (Weeks 1-2)
 **Goal:** Fix highest-impact partially translated pages
 
-1. Complete `index_he.html` translation
-2. Complete `why-hack23_he.html` translation
-3. Complete `blog_he.html` post summaries
-4. Validate all SEO metadata consistency
-5. Run comprehensive QA on existing 62 files
+1. ✅ Complete `index_he.html` translation **[DONE Dec 17, 2025]**
+2. 🎯 Complete `why-hack23_he.html` translation **[NEXT]**
+3. 🎯 Complete `blog_he.html` post summaries
+4. 🎯 Validate all SEO metadata consistency
+5. 🎯 Run comprehensive QA on existing 62 files
 
 **Expected Impact:**
 - Improved user trust
