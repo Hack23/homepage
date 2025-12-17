@@ -51,12 +51,12 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 25 | 43.9% | No English content detected |
-| ⚡ **Mostly Translated** | 2 | 3.5% | Minimal English (technical terms only) |
+| ✅ **Fully Translated** | 27 | 47.4% | No English content detected |
+| ⚡ **Mostly Translated** | 0 | 0.0% | Minimal English (technical terms only) |
 | ⚠️  **Partially Translated** | 30 | 52.6% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 47.4% of existing files are fully/mostly translated
+**🏆 Quality Score:** 47.4% of existing files are fully translated
 
 **📈 Status:** 🚧 Active Development - Significant work remaining
 
@@ -89,6 +89,14 @@ Files analyzed for English content remaining:
   - Blog post summaries and descriptions
   - Structured data (Blog schema) in Hebrew
   - Navigation links to Hebrew versions
+- ✅ **COMPLETED**: blog-compliance-security_he.html - Compliance security blog fully translated (Dec 17, 2025)
+  - All English technical phrases translated
+  - Security mechanisms and terminology in Hebrew
+  - Build provenance and SLSA Level 3 references translated
+- ✅ **COMPLETED**: blog-george-dorn-compliance-code_he.html - George Dorn code analysis fully translated (Dec 17, 2025)
+  - Developer notes and commentary translated
+  - Architecture analysis in Hebrew
+  - Technical implementation details translated
 
 ## 📊 Files by Category
 
@@ -108,9 +116,9 @@ Files analyzed for English content remaining:
 - ⚠️  `blog-cia-workflows_he.html` ← `blog-cia-workflows.html`
 - ⚠️  `blog-compliance-architecture_he.html` ← `blog-compliance-architecture.html`
 - ⚠️  `blog-compliance-future_he.html` ← `blog-compliance-future.html`
-- ⚡ `blog-compliance-security_he.html` ← `blog-compliance-security.html`
+- ✅ `blog-compliance-security_he.html` ← `blog-compliance-security.html` **[COMPLETED Dec 17, 2025]**
 - ⚠️  `blog-george-dorn-cia-code_he.html` ← `blog-george-dorn-cia-code.html`
-- ⚡ `blog-george-dorn-compliance-code_he.html` ← `blog-george-dorn-compliance-code.html`
+- ✅ `blog-george-dorn-compliance-code_he.html` ← `blog-george-dorn-compliance-code.html` **[COMPLETED Dec 17, 2025]**
 - ⚠️  `blog-george-dorn-trigram-code_he.html` ← `blog-george-dorn-trigram-code.html`
 - ⚠️  `blog-information-hoarding_he.html` ← `blog-information-hoarding.html`
 - ⚠️  `blog-investment-firm-security_he.html` ← `blog-investment-firm-security.html`
