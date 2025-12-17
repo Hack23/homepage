@@ -44,7 +44,7 @@ Each language has **two dedicated files**:
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
 |------|----------|------|-------|------------|---------|---------------|--------|
 | 🇸🇦🌙 | Arabic | ar | 57/96 | 59.4% | 40.4% | [v3.1 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
-| 🇮🇱✡️ | Hebrew | he | 61/96 | 63.5% | 41.1% | [v3.1 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) |
+| 🇮🇱✡️ | Hebrew | he | 62/96 | 64.6% | 42.1% | [v3.1 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) \| [Analysis 📊](HEBREW_TRANSLATION_PRIORITY_ANALYSIS.md) |
 
 ### Asian Languages 🌏
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
