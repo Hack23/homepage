@@ -50,17 +50,22 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 28 | 45.9% | No English content detected |
+| ✅ **Fully Translated** | 31 | 50.8% | No English content detected |
 | ⚡ **Mostly Translated** | 5 | 8.2% | Minimal English (technical terms only) |
-| ⚠️  **Partially Translated** | 28 | 45.9% | Some English content remains |
+| ⚠️  **Partially Translated** | 25 | 41.0% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 54.1% of existing files are fully/mostly translated
+**🏆 Quality Score:** 59.0% of existing files are fully/mostly translated
 
 **📈 Status:** ⚠️  In Progress - Active translation needed
 
 ### 🎉 Recent Progress (December 2025)
 
+- ✅ **December 17, 2025**: ISMS policies & CM features completed
+  - discordian-compliance-frameworks_de.html (Multi-framework compliance)
+  - discordian-isms-transparency_de.html (Radical ISMS transparency)
+  - cia-compliance-manager-features_de.html (CM platform features)
+  - Quality improved from ⚠️ Partial to ✅ Fully Translated
 - ✅ **December 17, 2025**: Product features & Swedish election blog completed
   - blog-cia-swedish-media-election-2026_de.html (Swedish election 2026 coverage)
   - black-trigram-features_de.html (Game features - vital points, archetypes, techniques)
@@ -141,12 +146,12 @@ Files analyzed for English content remaining:
 - ✅ `discordian-access-control_de.html` ← `discordian-access-control.html`
 - ✅ `discordian-asset-mgmt_de.html` ← `discordian-asset-mgmt.html`
 - ✅ `discordian-business-continuity_de.html` ← `discordian-business-continuity.html`
-- ⚠️  `discordian-compliance-frameworks_de.html` ← `discordian-compliance-frameworks.html`
+- ✅ `discordian-compliance-frameworks_de.html` ← `discordian-compliance-frameworks.html`
 - ✅ `discordian-compliance_de.html` ← `discordian-compliance.html`
 - ✅ `discordian-cybersecurity_de.html` ← `discordian-cybersecurity.html`
 - ✅ `discordian-incident-response_de.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_de.html` ← `discordian-isms-review.html`
-- ⚠️  `discordian-isms-transparency_de.html` ← `discordian-isms-transparency.html`
+- ✅ `discordian-isms-transparency_de.html` ← `discordian-isms-transparency.html`
 - ✅ `discordian-risk-assessment_de.html` ← `discordian-risk-assessment.html`
 - ⚠️  `discordian-security-strategy_de.html` ← `discordian-security-strategy.html`
 
@@ -170,7 +175,7 @@ Files analyzed for English content remaining:
 - ✅ `black-trigram-features_de.html` ← `black-trigram-features.html`
 - ✅ `black-trigram_de.html` ← `black-trigram.html`
 - ⚠️  `cia-compliance-manager-docs_de.html` ← `cia-compliance-manager-docs.html`
-- ⚠️  `cia-compliance-manager-features_de.html` ← `cia-compliance-manager-features.html`
+- ✅ `cia-compliance-manager-features_de.html` ← `cia-compliance-manager-features.html`
 - ⚠️  `cia-docs_de.html` ← `cia-docs.html`
 - ✅ `cia-features_de.html` ← `cia-features.html`
 - ✅ `cia-project_de.html` ← `cia-project.html`
