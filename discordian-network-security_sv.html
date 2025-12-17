@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Network Security | Zero Trust Cloud Architecture | Hack23</title>
+<title>Nätverkssäkerhet | Zero Trust Molnarkitektur | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Zero-trust AWS network: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Multi-region (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.">
-<meta name="keywords" content="network security, zero trust network, firewall, perimeter security, assume breach, network segmentation">
+<meta name="description" content="Nolltillit AWS-nätverk: CloudFront+WAF, GuardDuty, Security Hub, VPC-flödesloggar. Multiregion (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.">
+<meta name="keywords" content="nätverkssäkerhet, nolltillit, brandvägg, perimetersäkerhet, förutsätt intrång, nätverkssegmentering, hack23 ISMS">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Network Security: The Perimeter Is Dead, Long Live the Perimeter">
-<meta property="og:description" content="The perimeter dissolved in 2010. Question authority over firewall dogma. Assume breach, design accordingly.">
-	<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Nätverkssäkerhet: Perimetern är död, länge leve perimetern">
+<meta property="og:description" content="Perimetern upplöstes 2010. Ifrågasätt auktoritet över brandväggsdogmer. Förutsätt intrång, designa därefter.">
+	<meta property="og:locale" content="sv_SE">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
 	<meta property="og:locale:alternate" content="de_DE">
@@ -27,17 +27,17 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-network-security.html">
+<meta property="og:url" content="https://hack23.com/discordian-network-security_sv.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
-<link rel="canonical" href="https://hack23.com/discordian-network-security.html">
+<link rel="canonical" href="https://hack23.com/discordian-network-security_sv.html">
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -45,13 +45,13 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Network Security: The Perimeter Is Dead, Long Live the Perimeter",
-      "description": "Think for yourself about network security. The perimeter dissolved in 2010. Question authority over firewall dogma. Hack23's zero-trust AWS architecture: CloudFront+WAF DDoS protection, GuardDuty threat detection, Security Hub aggregation, multi-region resilience.",
+      "headline": "Nätverkssäkerhet: Perimetern är död, länge leve perimetern",
+      "description": "Tänk själv om nätverkssäkerhet. Perimetern upplöstes 2010. Ifrågasätt auktoritet över brandväggsdogmer. Hack23:s nolltillit AWS-arkitektur: CloudFront+WAF DDoS-skydd, GuardDuty hotdetektering, Security Hub-aggregering, multiregionell resiliens.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
         "url": "https://hack23.com",
-        "jobTitle": "CEO / Cybersecurity Expert",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
         "sameAs": [
           "https://www.linkedin.com/in/jamessorling/",
           "https://github.com/Hack23"
@@ -69,10 +69,10 @@
       "dateModified": "2025-11-05",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-network-security.html"
+        "@id": "https://hack23.com/discordian-network-security_sv.html"
       },
-      "keywords": "network security, zero trust, firewall, ISMS",
-      "articleSection": "Information Security",
+      "keywords": "nätverkssäkerhet, nolltillit, brandvägg, ISMS",
+      "articleSection": "Informationssäkerhet",
       "image": {
         "@type": "ImageObject",
         "url": "https://hack23.com/blog.webp",
@@ -80,55 +80,55 @@
         "height": 630
       },
       "wordCount": 1674,
-      "articleBody": "Think for yourself, schmuck! Network security used to be simple: hard shell, soft interior. Firewall keeps bad guys out, everything inside is trusted. That was always fantasy, but it was comfortable f...",
+      "articleBody": "Tänk själv, dumbom! Nätverkssäkerhet brukade vara enkelt: hårt skal, mjukt inre. Brandvägg håller ute skurkarna, allt inuti är pålitligt. Det var alltid fantasi, men det var bekväm f...",
       "isPartOf": {
         "@type": "Blog",
-        "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog"
+        "@id": "https://hack23.com/blog_sv.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
       },
-      "inLanguage": "en",
+      "inLanguage": "sv",
       "about": [
         {
           "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
+          "name": "ISMS-policy",
+          "description": "Implementation av ledningssystem för informationssäkerhet"
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-network-security.html#breadcrumb",
+      "@id": "https://hack23.com/discordian-network-security_sv.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
-          "item": "https://hack23.com/"
+          "name": "Hem",
+          "item": "https://hack23.com/index_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Blog",
-          "item": "https://hack23.com/blog.html"
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_sv.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Network Security",
-          "item": "https://hack23.com/discordian-network-security.html"
+          "name": "Nätverkssäkerhet",
+          "item": "https://hack23.com/discordian-network-security_sv.html"
         }
       ]
     },
     {
       "@type": "HowTo",
-      "name": "How to Implement Zero Trust Network Security in AWS",
-      "description": "Step-by-step guide to implementing zero trust network architecture using CloudFront, WAF, GuardDuty, Security Hub, and multi-region resilience",
+      "name": "Hur man implementerar nolltillit nätverkssäkerhet i AWS",
+      "description": "Steg-för-steg-guide för att implementera nolltillit nätverksarkitektur med CloudFront, WAF, GuardDuty, Security Hub och multiregionell resiliens",
       "image": "https://hack23.com/blog.webp",
       "totalTime": "PT5H",
       "estimatedCost": {
         "@type": "MonetaryAmount",
-        "currency": "USD",
-        "value": "150"
+        "currency": "SEK",
+        "value": "1500"
       },
       "tool": [
         {
@@ -163,7 +163,7 @@
       "supply": [
         {
           "@type": "HowToSupply",
-          "name": "Network Security Policy",
+          "name": "Nätverkssäkerhetspolicy",
           "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
         }
       ],
@@ -171,136 +171,136 @@
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Abandon Traditional Perimeter Thinking",
-          "text": "Acknowledge that the network perimeter is dead. Design for breach - assume attackers are already inside or will get inside",
+          "name": "Överge traditionellt perimetertänkande",
+          "text": "Erkänn att nätverksperimetern är död. Designa för intrång - förutsätt att angripare redan är inne eller kommer att ta sig in",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "The perimeter dissolved in 2010 with cloud computing and remote work. Stop pretending otherwise"
+              "text": "Perimetern upplöstes 2010 med molntjänster och distansarbete. Sluta låtsas annat"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Deploy CloudFront with WAF",
-          "text": "Set up AWS CloudFront as your content delivery network with AWS WAF attached for DDoS protection and web application security",
+          "name": "Distribuera CloudFront med WAF",
+          "text": "Konfigurera AWS CloudFront som ditt innehållsleveransnätverk med AWS WAF kopplad för DDoS-skydd och webbapplikationssäkerhet",
           "itemListElement": [
             {
               "@type": "HowToDirection",
-              "text": "Configure WAF rules for SQL injection, XSS, and rate limiting"
+              "text": "Konfigurera WAF-regler för SQL-injektion, XSS och hastighetsbegränsning"
             },
             {
               "@type": "HowToDirection",
-              "text": "Enable AWS Shield Standard (automatic) or Shield Advanced for enhanced DDoS protection"
+              "text": "Aktivera AWS Shield Standard (automatiskt) eller Shield Advanced för förbättrat DDoS-skydd"
             },
             {
               "@type": "HowToDirection",
-              "text": "Set up geo-blocking if needed for compliance requirements"
+              "text": "Konfigurera geo-blockering om det behövs för efterlevnadskrav"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Implement Multi-Region Architecture",
-          "text": "Deploy resources across multiple AWS regions for resilience. Use eu-west-1 (Ireland) as primary and eu-central-1 (Frankfurt) for redundancy",
+          "name": "Implementera multiregionarkitektur",
+          "text": "Distribuera resurser över flera AWS-regioner för resiliens. Använd eu-west-1 (Irland) som primär och eu-central-1 (Frankfurt) för redundans",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "Multi-region protects against regional outages and provides lower latency for users"
+              "text": "Multiregion skyddar mot regionala avbrott och ger lägre latens för användare"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 4,
-          "name": "Enable VPC Flow Logs",
-          "text": "Activate VPC Flow Logs to capture network traffic metadata. Log all accepted and rejected traffic for security analysis",
+          "name": "Aktivera VPC-flödesloggar",
+          "text": "Aktivera VPC-flödesloggar för att fånga metadata om nätverkstrafik. Logga all accepterad och avvisad trafik för säkerhetsanalys",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "Flow logs enable forensic analysis and anomaly detection without impacting performance"
+              "text": "Flödesloggar möjliggör forensisk analys och anomalidetektering utan att påverka prestanda"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 5,
-          "name": "Configure GuardDuty",
-          "text": "Enable AWS GuardDuty for intelligent threat detection. Configure findings to route to Security Hub for centralized monitoring",
+          "name": "Konfigurera GuardDuty",
+          "text": "Aktivera AWS GuardDuty för intelligent hotdetektering. Konfigurera fynd att dirigeras till Security Hub för centraliserad övervakning",
           "itemListElement": [
             {
               "@type": "HowToDirection",
-              "text": "GuardDuty analyzes VPC Flow Logs, CloudTrail events, and DNS logs"
+              "text": "GuardDuty analyserar VPC-flödesloggar, CloudTrail-händelser och DNS-loggar"
             },
             {
               "@type": "HowToDirection",
-              "text": "Set up SNS notifications for high and critical severity findings"
+              "text": "Konfigurera SNS-notifieringar för fynd med hög och kritisk allvarlighetsgrad"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 6,
-          "name": "Implement Network Segmentation",
-          "text": "Create isolated network segments using VPCs and subnets. Use Security Groups and NACLs for microsegmentation",
+          "name": "Implementera nätverkssegmentering",
+          "text": "Skapa isolerade nätverkssegment med hjälp av VPC:er och subnät. Använd säkerhetsgrupper och NACL för mikrosegmentering",
           "itemListElement": [
             {
               "@type": "HowToDirection",
-              "text": "Public subnet: Internet-facing load balancers only"
+              "text": "Publikt subnät: Endast internetvända lastbalanserare"
             },
             {
               "@type": "HowToDirection",
-              "text": "Private subnet: Application servers with no direct internet access"
+              "text": "Privat subnät: Applikationsservrar utan direkt internetåtkomst"
             },
             {
               "@type": "HowToDirection",
-              "text": "Isolated subnet: Databases with strict access controls"
+              "text": "Isolerat subnät: Databaser med strikt åtkomstkontroll"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 7,
-          "name": "Enable DNSSEC on Route 53",
-          "text": "Configure DNSSEC signing on Route 53 hosted zones to prevent DNS spoofing and cache poisoning attacks",
+          "name": "Aktivera DNSSEC på Route 53",
+          "text": "Konfigurera DNSSEC-signering på Route 53 hosted zones för att förhindra DNS-förfalskning och cache poisoning-attacker",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "DNSSEC provides cryptographic authentication of DNS responses"
+              "text": "DNSSEC tillhandahåller kryptografisk autentisering av DNS-svar"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 8,
-          "name": "Enforce TLS 1.2+ Only",
-          "text": "Configure CloudFront and ALB to require TLS 1.2 or higher. Disable older protocols (SSL, TLS 1.0, TLS 1.1)",
+          "name": "Framtvinga endast TLS 1.2+",
+          "text": "Konfigurera CloudFront och ALB att kräva TLS 1.2 eller högre. Inaktivera äldre protokoll (SSL, TLS 1.0, TLS 1.1)",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "Older TLS versions have known vulnerabilities. Modern browsers support TLS 1.2+"
+              "text": "Äldre TLS-versioner har kända sårbarheter. Moderna webbläsare stöder TLS 1.2+"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 9,
-          "name": "Implement Network Monitoring",
-          "text": "Set up comprehensive monitoring using Security Hub, GuardDuty findings, VPC Flow Logs analysis, and CloudWatch alarms",
+          "name": "Implementera nätverksövervakning",
+          "text": "Konfigurera omfattande övervakning med Security Hub, GuardDuty-fynd, VPC-flödeslogganalys och CloudWatch-larm",
           "itemListElement": [
             {
               "@type": "HowToTip",
-              "text": "Visibility is critical for zero trust - you can't protect what you can't see"
+              "text": "Synlighet är kritiskt för nolltillit - du kan inte skydda det du inte ser"
             }
           ]
         },
         {
           "@type": "HowToStep",
           "position": 10,
-          "name": "Review and Update Policy",
-          "text": "Conduct semi-annual reviews of network security architecture. Update based on new threats, AWS service updates, or incident learnings"
+          "name": "Granska och uppdatera policy",
+          "text": "Genomför halvårliga granskningar av nätverkssäkerhetsarkitekturen. Uppdatera baserat på nya hot, AWS-tjänstuppdateringar eller lärdomar från incidenter"
         }
       ]
     }
@@ -313,6 +313,8 @@
     <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-network-security_fi.html">
     <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-network-security_no.html">
     <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-network-security_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-network-security_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-network-security_sv.html">
     <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-network-security.html">
 </head>
 <body>
@@ -320,13 +322,13 @@
   <nav aria-label="Breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Home</a>
+        <a href="/index_sv.html">Hem</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="/blog.html">Blog</a>
+        <a href="/blog_sv.html">Blogg</a>
       </li>
       <li class="breadcrumb-item" aria-current="page">
-        Network Security
+        Nätverkssäkerhet
       </li>
     </ol>
   </nav>
