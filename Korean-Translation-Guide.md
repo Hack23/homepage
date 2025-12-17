@@ -13,8 +13,10 @@
 | **Currency** | KRW (₩) |
 | **Direction** | LTR (Left-to-Right) → |
 | **Files Translated** | 58/96 (60.4%) |
-| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
-| **Last Updated** | December 2025 |
+| **Blog Posts Complete** | 26/26 (100%) ✅ |
+| **Quality Score** | 62.1% |
+| **Guide Version** | 4.0 (Blog Posts Complete Edition)
+| **Last Updated** | December 17, 2025 |
 
 ## 🎯 Translation Philosophy
 
@@ -255,12 +257,72 @@ graph TB
 | 🎯 Core Service Areas | 🎯 핵심 서비스 영역 |
 | 📋 Service Overview | 📋 서비스 개요 |
 
+### 📝 Blog Post Translation Vocabulary (December 2025)
+
+**Newly Added Terms from 26 Blog Post Translations:**
+
+| English | Korean Translation | Context |
+|---------|-------------------|---------|
+| Automated convergence | 자동화된 수렴 | AI/automation |
+| Self-healing software | 자가 치유 소프트웨어 | DevSecOps |
+| ISMS automation | ISMS 자동화 | Compliance |
+| Threat modeling | 위협 모델링 | Security architecture |
+| STRIDE | STRIDE | Keep as-is (framework name) |
+| Five-layer defense | 5단계 방어 | Security strategy |
+| Post-quantum cryptography | 포스트 양자 암호화 | Future security |
+| AWS Bedrock | AWS Bedrock | Keep as-is (service name) |
+| Zero trust | 제로 트러스트 | Security model |
+| Combat system | 전투 시스템 | Game development |
+| Hit detection | 히트 감지 | Game mechanics |
+| Vital points (kyusho) | 급소 | Martial arts |
+| Physics engine | 물리 엔진 | Game development |
+| Collision detection | 충돌 감지 | Game mechanics |
+| Procedural animation | 절차적 애니메이션 | Game development |
+| Combat AI | 전투 AI | Game development |
+| VR martial arts | VR 무술 | Gaming/training |
+| Motion control gaming | 모션 컨트롤 게임 | Gaming |
+| Cultural preservation | 문화 보존 | Heritage technology |
+| Intelligence-as-a-Service | Intelligence-as-a-Service | Business model (keep English) |
+| Parliamentary monitoring | 의회 모니터링 | Political intelligence |
+| Coalition analysis | 연정 분석 | Political analysis |
+| Behavioral risk rules | 행동 위험 규칙 | Risk assessment |
+| Data journalism | 데이터 저널리즘 | Media/journalism |
+| Alternative media | 대안 미디어 | Media landscape |
+| Discordian | 디스코디안 | Philosophy (transliterated) |
+| Chapel Perilous | Chapel Perilous | Keep as-is (philosophical concept) |
+| FNORD | FNORD | Keep as-is (Discordian term) |
+| Law of Fives | 5의 법칙 | Discordian philosophy |
+| Sacred geometry | 신성한 기하학 | Philosophy/mathematics |
+| Pentagon of security | 보안 오각형 | Security framework (metaphor) |
+| Golden ratio allocation | 황금 비율 할당 | Financial strategy |
+| AWS cost optimization | AWS 비용 최적화 | Cloud economics |
+| Context-aware security | 컨텍스트 인식 보안 | Adaptive security |
+| Adaptive recommendations | 적응형 권장사항 | ML/AI security |
+| Continuous compliance | 지속적 규정준수 | Compliance automation |
+| Business impact analysis | 비즈니스 영향 분석 | Risk management |
+| GRC platform | GRC 플랫폼 | Governance/risk/compliance |
+| Maven multi-module | Maven 멀티 모듈 | Java development |
+| Client-side architecture | 클라이언트 사이드 아키텍처 | Web development |
+| TypeScript React | TypeScript React | Keep as-is (tech stack) |
+| PixiJS | PixiJS | Keep as-is (library name) |
+| Browser combat system | 브라우저 전투 시스템 | Web gaming |
+| Medical cannabis | 의료용 대마초 | Healthcare |
+| Patient data protection | 환자 데이터 보호 | Healthcare security |
+| HIPAA | HIPAA | Keep as-is (regulation) |
+| Prescription data | 처방 데이터 | Healthcare |
+| Betting gaming | 베팅 게임 | Gaming industry |
+| Player protection | 플레이어 보호 | Gaming security |
+| Responsible gaming | 책임감 있는 게임 | Gaming ethics |
+| Cannabis cybersecurity | 대마초 사이버보안 | Industry-specific |
+| Tracking systems | 추적 시스템 | Compliance technology |
+
 ### 📝 Translation Notes
 
 - **Consistency:** Always use the same translation for repeated terms
 - **Context:** Some terms may have multiple valid translations depending on context
-- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
+- **Updates:** Vocabulary extracted from 58 translated pages including all 26 blog posts (December 2025)
 - **Verification:** All translations should be verified by native speakers
+- **Blog Posts:** 100% complete with professional Korean SEO infrastructure
 
 ### 📊 Additional Common Terms
 
