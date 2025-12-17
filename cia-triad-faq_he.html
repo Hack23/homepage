@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שאלות נפוצות על שילוש CIA | יסודות אבטחת מידע | Hack23</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="description" content="יסודות שילוש CIA: סודיות, שלמות, זמינות מוסברים. הדרכה מקצועית לציות NIST, ISO 27001, GDPR.">
+  <meta name="keywords" content="שאלות נפוצות שילוש CIA Hack23, יסודות אבטחת מידע, סודיות שלמות זמינות מוסבר, הטמעת NIST ISO 27001, הדרכה לציות GDPR, יסודות הערכת אבטחת סייבר, אסטרטגיות סיווג נתונים, מסגרת ממשל אבטחה, מדריך הטמעת ציות, שיטות עבודה מומלצות באבטחת מידע, הטמעת בקרות אבטחה, חינוך שילוש CIA, חומרי הדרכה באבטחת סייבר, שאלות נפוצות באבטחת מידע ישראל, הדרכת מודעות אבטחה, משאבי חינוך CISO, הסמכה מקצועית באבטחה, מדריך הטמעת ISO 27001, מדריך סיווג נתונים GDPR, הדרכת ציות NIS2, הדרכת עמידות סייבר CRA, הדרכת ניהול סיכוני אבטחה, מתודולוגיית מודל איומים, שיטות עבודה מומלצות לניהול פגיעויות, מדריך תכנון תגובה לאירועים, תכנון אבטחה בהמשכיות עסקית, יסודות בדיקות חדירה, הטמעת ביקורת אבטחה, מדריך הטמעת הצפנה, אסטרטגיות בקרת גישה, שיטות עבודה מומלצות לניטור אבטחה, פיתוח מדיניות אבטחה, הטמעת תרבות אבטחה, הדרכת אבטחה לעובדים, הדרכת מודעות לפישינג, הגנה מפני הנדסה חברתית, טיפול באירועי אבטחה, יסודות ניתוח פורנזי, אוטומציה של ציות אבטחה, מתודולוגיית הערכת סיכונים, מדדי ביצוע אבטחה KPI, ניהול אבטחת מידע, מודל בגרות אבטחת סייבר, החזר השקעה באבטחה ROI, שיטות עבודה מומלצות באבטחת ענן, יסודות אבטחת IoT, אסטרטגיות אבטחת מובייל, פילוח אבטחת רשת, עקרונות ארכיטקטורת אפס אמון, אוטומציה של תיאום אבטחה, שילוב מודיעין איומים, מתודולוגיות בדיקת אבטחה, ניתוח פערי ציות, דפוסי ארכיטקטורת אבטחה, מסגרת אבטחה ארגונית">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="James Pether Sörling">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="שאלות נפוצות על שילוש CIA | יסודות אבטחת מידע">
+  <meta property="og:description" content="למדו על יסודות שילוש CIA: סודיות, שלמות, זמינות עם הדרכה מקצועית להטמעה על ידי Hack23.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hack23.com/cia-triad-faq_he.html">
+  <meta property="og:image" content="cia-icon-140.webp">
+  <meta property="og:site_name" content="Hack23 CIA Compliance Manager">
+  
+  <link rel="canonical" href="https://hack23.com/cia-triad-faq_he.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- FAQ Schema.org structured data -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "שאלות נפוצות על שילוש CIA: סודיות, שלמות וזמינות באבטחת מידע",
+      "description": "שאלות נפוצות מקיפות המכסות הטמעת שילוש CIA, סיווג נתונים, מסגרות ציות, כלי הערכת אבטחה ושיטות עבודה מומלצות לניהול אבטחת מידע.",
+      "url": "https://hack23.com/cia-triad-faq_he.html",
+      "inLanguage": "he",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-12-17",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מומחה אבטחת סייבר"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "שילוש CIA",
+          "description": "מודל אבטחת מידע המתמקד בסודיות, שלמות וזמינות"
+        },
+        {
+          "@type": "Thing",
+          "name": "ניהול אבטחת מידע",
+          "description": "גישה שיטתית לניהול מידע רגיש של החברה"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "אנשי מקצוע בתחום ה-IT",
+          "קציני אבטחה",
+          "סטודנטים",
+          "מנהלי עסקים"
+        ]
+      },
+      "teaches": [
+        "עקרונות שילוש CIA",
+        "אסטרטגיות סיווג נתונים",
+        "הטמעת מסגרות ציות",
+        "מתודולוגיות הערכת אבטחה"
+      ],
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "מהו שילוש CIA באבטחת מידע?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "שילוש CIA הוא מודל אבטחה בסיסי המורכב משלושה עקרונות ליבה: סודיות (Confidentiality), שלמות (Integrity) וזמינות (Availability). סודיות מבטיחה שמידע רגיש נגיש רק לאנשים מורשים. שלמות מבטיחה דיוק ואמינות של נתונים לאורך כל מחזור חייהם. זמינות מבטיחה שמידע ומערכות נגישים כאשר נדרשים על ידי משתמשים מורשים."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "איך סיווג נתונים קשור לשילוש CIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "סיווג נתונים קשור ישירות לשילוש CIA על ידי סיוע לארגונים לקבוע בקרות אבטחה מתאימות בהתבסס על רגישות הנתונים. על ידי סיווג נתונים (למשל, ציבורי, פנימי, סודי, מוגבל), ארגונים יכולים להחיל אמצעי סודיות פרופורציונליים, שיטות אימות שלמות ודרישות זמינות לסוגים שונים של מידע בהתבסס על חשיבותם ורגישותם."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "כיצד שילוש CIA מיושם במסגרות ציות?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "שילוש CIA מהווה את היסוד של מסגרות ציות עיקריות. מסגרות NIST משלבות עקרונות CIA דרך בקרות המתייחסות לכל היבט. ISO 27001 מבנה את יעדי הבקרה שלו סביב הגנה על אלמנטים של CIA. GDPR מדגיש סודיות ושלמות של נתונים אישיים. PCI DSS מתמקד באבטחת נתוני בעלי כרטיסים בכל שלושת הממדים. ארגונים בדרך כלל ממפים את הבקרות המבוססות על CIA שלהם לדרישות מסגרת ספציפיות."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "אילו כלים יכולים לסייע בהערכת אבטחה של שילוש CIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "מספר כלים מסייעים בהערכת אבטחה של שילוש CIA: 1) CIA Compliance Manager - מספק הערכה מקיפה של בקרות אבטחה בכל שלושת התחומים, 2) סורקי פגיעויות - מזהים חולשות המשפיעות על סודיות ושלמות, 3) כלי ניטור זמינות - עוקבים אחר זמן פעילות ומשך ביצועי מערכת, 4) כלי סיווג נתונים - עוזרים לסווג מידע להגנה מתאימה, 5) פלטפורמות הערכת סיכונים - מעריכות איומים לכל רכיב CIA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "כיצד מאזנים את שלושת האלמנטים של שילוש CIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "איזון שילוש CIA כולל: 1) הערכת סיכונים לזיהוי החשיבות היחסית של כל אלמנט עבור מערכות/נתונים ספציפיים, 2) הטמעת בקרות מתאימות בהתבסס על סיווג נתונים, 3) שימוש בעקרון ההרשאה המינימלית לבקרת גישה, 4) הטמעת אסטרטגיות הגנה בעומק, 5) הערכה ובדיקה סדירה של אבטחה בכל שלושת התחומים, 6) יצירת מדיניות המכירה בפשרות בין האלמנטים, ו-7) התאמת בקרות בהתבסס על צרכים עסקיים משתנים ונוף האיומים."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מהם איומים נפוצים לכל אלמנט של שילוש CIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "איומים נפוצים על סודיות כוללים פריצות נתונים, גישה לא מורשית, האזנות סתר והנדסה חברתית. איומי שלמות כוללים שינויים לא מורשים, התקפות איש באמצע, בקרות גישה לא נאותות ושחיתות נתונים. איומי זמינות כוללים התקפות DDoS, כשלים בחומרה, אסונות טבע, הפסקות חשמל ותשישות משאבים. תוכנית אבטחה מקיפה חייבת להתייחס לאיומים על כל שלושת האלמנטים."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "כיצד מודדים אפקטיביות של הטמעת שילוש CIA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "אפקטיביות של הטמעת שילוש CIA ניתנת למדידה דרך: 1) מדדי אבטחה ספציפיים לכל אלמנט (למשל, מספר פריצות נתונים לסודיות, אירועי שחיתות נתונים לשלמות, אחוז זמן פעילות לזמינות), 2) הערכות אבטחה סדירות מול מסגרות כמו NIST או ISO 27001, 3) תוצאות בדיקות חדירה, 4) אפקטיביות תגובה לאירועים, 5) יעדי זמן שחזור (RTO) ויעדי נקודת שחזור (RPO), ו-6) תוצאות ניתוח השפעה עסקית."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-triad-faq_he.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "בית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "שאלות נפוצות על שילוש CIA",
+          "item": "https://hack23.com/cia-triad-faq_he.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+	<!-- Hreflang tags for international SEO -->
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/cia-triad-faq_ar.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/cia-triad-faq_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/cia-triad-faq_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/cia-triad-faq_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/cia-triad-faq.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/cia-triad-faq_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/cia-triad-faq_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/cia-triad-faq_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/cia-triad-faq_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/cia-triad-faq_fr.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/cia-triad-faq_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/cia-triad-faq_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/cia-triad-faq_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/cia-triad-faq_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/cia-triad-faq_ko.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/cia-triad-faq_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/cia-triad-faq_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/cia-triad-faq_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/cia-triad-faq_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/cia-triad-faq_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/cia-triad-faq_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/cia-triad-faq_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/cia-triad-faq_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/cia-triad-faq_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/cia-triad-faq_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/cia-triad-faq.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="ניווט פירורי לחם">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_he.html">בית</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        שאלות נפוצות על שילוש CIA
+      </li>
+    </ol>
+  </nav>
+
+  <header>
+    <div class="logo-container">
+      <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80" />
+    </div>
+    <h1>שילוש CIA: שאלות נפוצות</h1>
+    <p>מדריך מקיף לסודיות, שלמות וזמינות באבטחת מידע</p>
+        <div class="app-link">
+      <a href="index_he.html" title="חזרה לדף הבית">בית</a>
+      <a href="cia-compliance-manager-features_he.html" title="תכונות CIA Compliance Manager">CIA Compliance Manager</a>
+      <a href="blog_he.html" title="בלוג אבטחה">בלוג אבטחה</a>
+      <a href="cia-docs_he.html" title="תיעוד פלטפורמת CIA">📖 תיעוד פלטפורמת CIA</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>הבנת שילוש CIA</h2>
+      <p>שילוש CIA הוא היסוד של אבטחת מידע מודרנית, ומספק מסגרת להערכה והטמעה של אמצעי אבטחה בארגונים מכל הגדלים. שאלות נפוצות אלו עונות על שאלות נפוצות על עקרונותיו, הטמעתו ושיטות עבודה מומלצות.</p>
+    </section>
+
+    <section id="faq">
+      <div class="faq-item">
+        <h3>מהו שילוש CIA באבטחת מידע?</h3>
+        <div class="faq-answer">
+          <p>שילוש CIA הוא מודל אבטחה בסיסי המורכב משלושה עקרונות ליבה:</p>
+          <ul>
+            <li><strong>סודיות (Confidentiality):</strong> הבטחה שמידע רגיש נגיש רק לאנשים מורשים</li>
+            <li><strong>שלמות (Integrity):</strong> הבטחת דיוק ואמינות נתונים לאורך כל מחזור חייהם</li>
+            <li><strong>זמינות (Availability):</strong> הבטחה שמידע ומערכות נגישים כאשר נדרשים על ידי משתמשים מורשים</li>
+          </ul>
+          <p>שלושת עקרונות אלו מהווים את היסוד לפיתוח מדיניות אבטחה, בחירת בקרות והערכת מצב האבטחה של הארגון.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>איך סיווג נתונים קשור לשילוש CIA?</h3>
+        <div class="faq-answer">
+          <p>סיווג נתונים קשור ישירות לשילוש CIA על ידי סיוע לארגונים לקבוע בקרות אבטחה מתאימות בהתבסס על רגישות הנתונים:</p>
+          <ul>
+            <li><strong>סודיות:</strong> רמות סיווג (למשל, ציבורי, פנימי, סודי, מוגבל) קובעות בקרות גישה</li>
+            <li><strong>שלמות:</strong> סיווגים רגישים יותר עשויים לדרוש אימות מחמיר יותר, סכומי ביקורת או תהליכי אישור</li>
+            <li><strong>זמינות:</strong> סיווגי נתונים קריטיים לרוב דורשים יתירות ודרישות זמן פעילות גבוהות יותר</li>
+          </ul>
+          <p>על ידי סיווג נתונים, ארגונים יכולים להחיל בקרות אבטחה פרופורציונליות בכל שלושת הממדים של שילוש CIA.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>כיצד שילוש CIA מיושם במסגרות ציות?</h3>
+        <div class="faq-answer">
+          <p>שילוש CIA מהווה את היסוד של מסגרות ציות עיקריות:</p>
+          <ul>
+            <li><strong>מסגרות NIST:</strong> משלבות עקרונות CIA דרך בקרות המתייחסות לכל היבט</li>
+            <li><strong>ISO 27001:</strong> מבנה את יעדי הבקרה שלו סביב הגנה על סודיות, שלמות וזמינות</li>
+            <li><strong>GDPR:</strong> מדגיש סודיות ושלמות של נתונים אישיים</li>
+            <li><strong>PCI DSS:</strong> מתמקד באבטחת נתוני בעלי כרטיסים בכל שלושת הממדים</li>
+          </ul>
+          <p>ארגונים בדרך כלל ממפים את הבקרות המבוססות על CIA שלהם לדרישות מסגרת ספציפיות במהלך מאמצי ציות.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>אילו כלים יכולים לסייע בהערכת אבטחה של שילוש CIA?</h3>
+        <div class="faq-answer">
+          <p>מספר כלים מסייעים בהערכת אבטחה של שילוש CIA:</p>
+          <ul>
+            <li><strong><a href="cia-compliance-manager-features_he.html">CIA Compliance Manager</a>:</strong> מספק הערכה מקיפה של בקרות אבטחה בכל שלושת התחומים</li>
+            <li><strong>סורקי פגיעויות:</strong> מזהים חולשות המשפיעות על סודיות ושלמות</li>
+            <li><strong>כלי ניטור זמינות:</strong> עוקבים אחר זמן פעילות וביצועי מערכת</li>
+            <li><strong>כלי סיווג נתונים:</strong> עוזרים לסווג מידע להגנה מתאימה</li>
+            <li><strong>פלטפורמות הערכת סיכונים:</strong> מעריכות איומים לכל רכיב CIA</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>כיצד מאזנים את שלושת האלמנטים של שילוש CIA?</h3>
+        <div class="faq-answer">
+          <p>איזון שילוש CIA כולל:</p>
+          <ol>
+            <li>הערכת סיכונים לזיהוי החשיבות היחסית של כל אלמנט עבור מערכות/נתונים ספציפיים</li>
+            <li>הטמעת בקרות מתאימות בהתבסס על סיווג נתונים</li>
+            <li>שימוש בעקרון ההרשאה המינימלית לבקרת גישה</li>
+            <li>הטמעת אסטרטגיות הגנה בעומק</li>
+            <li>הערכה ובדיקה סדירה של אבטחה בכל שלושת התחומים</li>
+            <li>יצירת מדיניות המכירה בפשרות בין האלמנטים</li>
+            <li>התאמת בקרות בהתבסס על צרכים עסקיים משתנים ונוף האיומים</li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>מהם איומים נפוצים לכל אלמנט של שילוש CIA?</h3>
+        <div class="faq-answer">
+          <p><strong>איומי סודיות:</strong></p>
+          <ul>
+            <li>פריצות נתונים</li>
+            <li>גישה לא מורשית</li>
+            <li>האזנות סתר</li>
+            <li>הנדסה חברתית</li>
+          </ul>
+          
+          <p><strong>איומי שלמות:</strong></p>
+          <ul>
+            <li>שינויים לא מורשים</li>
+            <li>התקפות איש באמצע</li>
+            <li>בקרות גישה לא נאותות</li>
+            <li>שחיתות נתונים</li>
+          </ul>
+          
+          <p><strong>איומי זמינות:</strong></p>
+          <ul>
+            <li>התקפות DDoS</li>
+            <li>כשלים בחומרה</li>
+            <li>אסונות טבע</li>
+            <li>הפסקות חשמל</li>
+            <li>תשישות משאבים</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <h3>כיצד מודדים אפקטיביות של הטמעת שילוש CIA?</h3>
+        <div class="faq-answer">
+          <p>אפקטיביות ניתנת למדידה דרך:</p>
+          <ul>
+            <li><strong>מדדי אבטחה:</strong> ספציפיים לכל אלמנט (למשל, מספר פריצות נתונים לסודיות)</li>
+            <li><strong>הערכות אבטחה:</strong> הערכה סדירה מול מסגרות כמו NIST או ISO 27001</li>
+            <li><strong>בדיקות חדירה:</strong> תוצאות מבדיקות אבטחה מבוקרות</li>
+            <li><strong>תגובה לאירועים:</strong> אפקטיביות בטיפול באירועי אבטחה</li>
+            <li><strong>RTO ו-RPO:</strong> יעדי זמן שחזור ויעדי נקודת שחזור</li>
+            <li><strong>ניתוח השפעה עסקית:</strong> הבנת אפקטיביות בקרת אבטחה ביחס לדרישות עסקיות</li>
+          </ul>
+          <p><a href="cia-compliance-manager-features_he.html">CIA Compliance Manager</a> מספק כלים חזקים למדידה ומעקב אחר מדדים אלו.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="related-resources">
+      <h2>משאבים קשורים</h2>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>CIA Compliance Manager</h3>
+          <p>כלי ההערכה המקיף שלנו לאבטחה להטמעה ומדידת אפקטיביות שילוש CIA.</p>
+          <a href="cia-compliance-manager-features_he.html">למדו עוד</a>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>בלוג שילוש CIA</h3>
+          <p>חקרו את הניתוח המעמיק שלנו על איזון אלמנטים של שילוש CIA עם סיווג נתונים נכון.</p>
+          <a href="blog_he.html">קראו את הבלוג</a>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>סוכנות מודיעין אזרחי</h3>
+          <p>ראו כיצד עקרונות שקיפות ואחריות מיושמים בפלטפורמת הניטור הפוליטי שלנו.</p>
+          <a href="cia-features_he.html">צפו בתכונות</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+        <footer>
+      <p>&copy; 2008-2025 | Hack23 AB (מס' רישום 5595347807) |
+        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+        <a href="https://www.linkedin.com/company/hack23/">LinkedIn חברה</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="מאגר ISMS ציבורי">ISMS</a> |
+        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="מדיניות אבטחת מידע">מדיניות אבטחה</a> |
+        <a href="blog_he.html" title="בלוג אבטחה">בלוג</a> |
+        <a href="discordian-cybersecurity_he.html" title="בלוג אבטחת סייבר דיסקורדית">🍎 בלוג דיסקורדית</a> |
+        <a href="https://hack23.com/index.html" lang="en">English version</a>
+      </p>
+    </footer>
+</body>
+</html>
