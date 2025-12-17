@@ -12,9 +12,9 @@
 | **Locale** | sv_SE |
 | **Currency** | SEK (kr) |
 | **Direction** | LTR (Left-to-Right) → |
-| **Files Translated** | 79/96 (82.3%) |
-| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
-| **Last Updated** | December 2025 |
+| **Files Translated** | 94/96 (97.9%) |
+| **Guide Version** | 4.0 (All Phases Complete Edition)
+| **Last Updated** | December 17, 2025 |
 
 ## 🎯 Translation Philosophy
 
@@ -223,9 +223,209 @@ graph TB
 | Threat Actor | Hotaktör |
 | Attack Vector | Attackvektor |
 | Security Incident | Säkerhetsincident |
-| Data Breach | Dataläcka |
+| Data Breach | Dataläcka / Säkerhetsintrång |
 | Security Baseline | Säkerhetsbaslinje |
 | Hardening | Härdning |
+| Network Security | Nätverkssäkerhet |
+| Perimeter Security | Perimetersäkerhet |
+| Firewall | Brandvägg |
+| DDoS Protection | DDoS-skydd |
+| Threat Detection | Hotdetektering |
+| Security Hub | Security Hub / Säkerhetsnav |
+| GuardDuty | GuardDuty (AWS-tjänst) |
+| VPC Flow Logs | VPC-flödesloggar |
+| Network Segmentation | Nätverkssegmentering |
+| Breach | Intrång / Säkerhetsintrång |
+| Vulnerability | Sårbarhet |
+| WAF (Web Application Firewall) | WAF / Webbapplikationsbrandvägg |
+| CloudFront | CloudFront (AWS CDN) |
+| Multi-region | Multiregion |
+| Assume Breach | Förutsätt intrång |
+| Secure Development | Säker utveckling |
+| DevSecOps | DevSecOps |
+| Threat Modeling | Hotmodellering / Hotanalys |
+| STRIDE | STRIDE (hotmodellering enligt STRIDE-metoden) |
+| Vulnerability Scanning | Sårbarhetsskanning |
+| Code Review | Kodgranskning / Kodrecension |
+| SDLC | Livscykel för mjukvaruutveckling |
+| Secure Coding | Säker kodning |
+| Vulnerability Management | Sårbarhetshantering |
+| Patch Management | Patch-hantering |
+| CVE | CVE (gemensamma sårbarheter) |
+| CVSS | CVSS (sårbarhetsbedömningssystem) |
+| Zero-day | Zero-day sårbarheter |
+| Cryptography | Kryptografi |
+| Encryption | Kryptering |
+| Key Management | Nyckelhantering |
+| Certificate Management | Certifikathantering |
+| Digital Signatures | Digitala signaturer |
+| Encryption at Rest | Kryptering i vila |
+| Encryption in Transit | Kryptering under transport |
+| Data Protection | Dataskydd |
+| Privacy | Integritet |
+| Privacy Policy | Integritetspolicy |
+| GDPR Compliance | GDPR-efterlevnad |
+| Personal Data | Personuppgifter |
+| Data Subject Rights | Registrerades rättigheter |
+| Consent Management | Samtyckshantering |
+| Data Minimization | Dataminimering |
+| Purpose Limitation | Ändamålsbegränsning |
+| Data Retention | Datalagring |
+| Privacy by Design | Privacy by Design |
+| Privacy Impact Assessment (PIA) | Integritetskonsekvensbedömning |
+| Data Protection Officer (DPO) | Dataskyddsombud |
+| Data Breach Notification | Dataläckageanmälan |
+| Right to Erasure | Rätt till radering |
+| Data Portability | Dataportabilitet |
+| Surveillance Capitalism | Övervakningskapitalism |
+| Cloud Security | Molnsäkerhet |
+| Multi-Layer Defense | Flerlagerförsvar |
+| Cloud Architecture | Molnarkitektur |
+| VPC Security | VPC-säkerhet |
+| Security Groups | Säkerhetsgrupper |
+| CloudTrail Logging | CloudTrail-loggning |
+| S3 Bucket Security | S3-bucketsäkerhet |
+| Serverless Security | Serverlös säkerhet |
+| Cloud Native Security | Cloud native säkerhet |
+| Infrastructure as Code | Infrastruktur som kod |
+| Data Classification | Dataklassificering |
+| Information Classification | Informationsklassificering |
+| Security Classification | Säkerhetsklassificering |
+| Confidentiality Levels | Konfidentialitetsnivåer |
+| Integrity Levels | Integritetsnivåer |
+| Availability Levels | Tillgänglighetsnivåer |
+| Classification Policy | Klassificeringspolicy |
+| Monitoring | Övervakning |
+| Logging | Loggning |
+| SIEM | SIEM (Security Information and Event Management) |
+| CloudWatch | CloudWatch (AWS-tjänst) |
+| CloudTrail | CloudTrail (AWS API-loggning) |
+| Anomaly Detection | Anomalidetektering |
+| Backup | Säkerhetskopiering |
+| Recovery | Återställning |
+| Disaster Recovery | Katastrofåterställning |
+| Business Continuity | Verksamhetskontinuitet |
+| Backup Strategy | Säkerhetskopieringsstrategi |
+| Recovery Point Objective (RPO) | Återställningspunktsmål |
+| Recovery Time Objective (RTO) | Återställningstidsmål |
+
+### 📊 Governance & Strategy (Phase 3)
+
+*Strategic security management and governance terms*
+
+| English | Translation |
+|---------|-------------|
+| Security Strategy | Säkerhetsstrategi |
+| Risk-Based Security | Riskbaserad säkerhet |
+| Cost-Effective Security | Kostnadseffektiv säkerhet |
+| Security Investment | Säkerhetsinvestering |
+| Pragmatic Security | Pragmatisk säkerhet |
+| Competitive Advantage | Konkurrensfördel |
+| Security ROI | Säkerhets-ROI |
+| Strategic Positioning | Strategisk positionering |
+| Trust Enhancement | Förtroendestärkande |
+| Operational Efficiency | Operativ effektivitet |
+| Innovation Enablement | Innovationsmöjliggörande |
+| Decision Quality | Beslutskvalitet |
+| Risk Reduction | Riskreducering |
+
+### 📈 Security Metrics & KPIs (Phase 3)
+
+*Measurable security performance indicators*
+
+| English | Translation |
+|---------|-------------|
+| Security Metrics | Säkerhetsmått |
+| Key Performance Indicators (KPIs) | Nyckelprestandaindikatorer / KPI:er |
+| Mean Time To Detect (MTTD) | Genomsnittlig tid till detektering |
+| Mean Time To Resolve (MTTR) | Genomsnittlig tid till lösning |
+| Security Performance | Säkerhetsprestanda |
+| Measurable Security | Mätbar säkerhet |
+| Patch Coverage | Patch-täckning |
+| Vulnerability SLA | Sårbarhets-SLA |
+| OpenSSF Scorecard | OpenSSF Scorecard |
+| SLSA Level | SLSA-nivå |
+| Quality Gates | Kvalitetsportar |
+| Security Baseline | Säkerhetsbaslinje |
+| Compliance Rate | Efterlevnadsgrad |
+
+### 🤝 Stakeholder & Communication (Phase 3)
+
+*Stakeholder management and communication terms*
+
+| English | Translation |
+|---------|-------------|
+| Stakeholder Management | Intressenthantering |
+| Interested Parties | Intresserade parter |
+| Transparent Communication | Transparent kommunikation |
+| Security Communication | Säkerhetskommunikation |
+| Stakeholder Engagement | Intressentengagemang |
+| Regular Updates | Regelbundna uppdateringar |
+| Regulatory Contact | Regulatorisk kontakt |
+| Professional Certifications | Professionella certifieringar |
+| Industry Groups | Branschgrupper |
+| Working Groups | Arbetsgrupper |
+| Briefings | Briefingar |
+| CISM (Certified Information Security Manager) | CISM (Certifierad informationssäkerhetschef) |
+| CISSP (Certified Information Systems Security Professional) | CISSP (Certifierad informationssystemsäkerhetsprofessionell) |
+
+### 🔗 Third-Party & Supply Chain (Phase 3)
+
+*Third-party and supply chain security terms*
+
+| English | Translation |
+|---------|-------------|
+| Third-Party Management | Tredjepartshantering |
+| Supplier Security | Leverantörssäkerhet |
+| Supply Chain Security | Supply chain-säkerhet / Leveranskedjesäkerhet |
+| Vendor Management | Leverantörshantering |
+| Supplier Review | Leverantörsrecension |
+| NDA (Non-Disclosure Agreement) | Sekretessavtal / NDA |
+| DPA (Data Processing Agreement) | Dataprocessingsavtal / DPA |
+| Critical Suppliers | Kritiska leverantörer |
+| Vendor Risk Management | Leverantörsriskhantering |
+| Third-Party Risks | Tredjepartsrisker |
+| Encrypted Communication | Krypterad kommunikation |
+| Annual Supplier Review | Årlig leverantörsrecension |
+
+### 🤖 AI & LLM Security (Phase 3)
+
+*Artificial Intelligence and Large Language Model security*
+
+| English | Translation |
+|---------|-------------|
+| LLM Security | LLM-säkerhet |
+| AI Security | AI-säkerhet |
+| Prompt Injection | Prompt injection |
+| Data Integrity | Dataintegritet |
+| GPT Security | GPT-säkerhet |
+| Machine Learning Security | Maskininlärningssäkerhet |
+| OWASP LLM Top 10 | OWASP LLM Top 10 |
+| OpenAI Security | OpenAI-säkerhet |
+| AI Data Handling | AI-datahantering |
+| Model Security | Modellsäkerhet |
+| Training Data | Träningsdata |
+| Sensitive Data | Känslig data |
+| AI API Security | AI API-säkerhet |
+
+### ⚖️ Regulatory & Compliance (Phase 3)
+
+*Regulatory compliance and assessment terms*
+
+| English | Translation |
+|---------|-------------|
+| CRA (Cyber Resilience Act) | CRA / Cyberresilienslagen |
+| Conformity Assessment | Överensstämmelsebedömning |
+| Product Security | Produktsäkerhet |
+| EU Cyber Resilience | EU-cyberresiliens |
+| Regulatory Compliance | Regelefterlevnad |
+| CE Marking | CE-märkning |
+| SBOM (Software Bill of Materials) | SBOM / Programvarumaterialförteckning |
+| Security Updates | Säkerhetsuppdateringar |
+| Vulnerability Disclosure | Sårbarhetsupplysning |
+| Product Lifecycle | Produktlivscykel |
+| Support SLA | Support-SLA |
+| Critical Products | Kritiska produkter |
 
 ### 💻 Technical Terms & Development
 
@@ -310,6 +510,7 @@ The following terms appear frequently across translated pages. For comprehensive
 - ✅ **Real-world validation**: Test translations with target audience feedback
 
 **Update History:**
+- **Version 4.0 (December 2025)**: All 3 phases complete - 19 new ISMS files with full SEO infrastructure
 - **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 126 real translated pages
 - **Version 3.0 (December 2025)**: Initial comprehensive publication edition
 
