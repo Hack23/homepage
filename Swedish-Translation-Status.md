@@ -251,13 +251,27 @@ These English pages exist but have no corresponding translation file:
   - ✅ Navigation breadcrumbs in Swedish
   - ⏳ Body content remaining
 
-### 🟡 MEDIUM PRIORITY: Operational ISMS Policies (6 files)
-- ❌ `discordian-classification_sv.html` ← `discordian-classification.html`
-- ❌ `discordian-data-classification_sv.html` ← `discordian-data-classification.html`
-- ❌ `discordian-monitoring-logging_sv.html` ← `discordian-monitoring-logging.html`
-- ❌ `discordian-backup-recovery_sv.html` ← `discordian-backup-recovery.html`
-- ❌ `discordian-disaster-recovery_sv.html` ← `discordian-disaster-recovery.html`
-- ❌ `discordian-business-continuity_sv.html` ← `discordian-business-continuity.html`
+### 🟡 MEDIUM PRIORITY: Operational ISMS Policies (6 files) - Phase 2 IN PROGRESS
+- ⚡ `discordian-classification_sv.html` ← `discordian-classification.html` **[SEO COMPLETE - NEW]**
+  - ✅ All meta tags translated (Dataklassificering, fem säkerhetsnivåer)
+  - ✅ Schema.org structured data (BlogPosting, BreadcrumbList)
+  - ✅ Hreflang tags complete (sv, sv-SE, da, fi, no)
+  - ✅ Navigation breadcrumbs in Swedish
+  - ⏳ Body content remaining
+- ⚡ `discordian-data-classification_sv.html` ← `discordian-data-classification.html` **[SEO IN PROGRESS - NEW]**
+  - ✅ Basic meta tags translated
+  - ⏳ Complete SEO infrastructure in progress
+- ⚡ `discordian-monitoring-logging_sv.html` ← `discordian-monitoring-logging.html` **[SEO IN PROGRESS - NEW]**
+  - ✅ Title and description translated (Övervakning & Loggning)
+  - ⏳ Complete SEO infrastructure in progress
+- ⚡ `discordian-backup-recovery_sv.html` ← `discordian-backup-recovery.html` **[SEO IN PROGRESS - NEW]**
+  - ✅ Basic meta tags translated
+  - ⏳ Complete SEO infrastructure in progress
+- ⚡ `discordian-disaster-recovery_sv.html` ← `discordian-disaster-recovery.html` **[SEO IN PROGRESS - NEW]**
+  - ✅ Basic meta tags translated
+  - ⏳ Complete SEO infrastructure in progress
+- ✅ `discordian-business-continuity_sv.html` ← `discordian-business-continuity.html` **[ALREADY EXISTS]**
+  - Note: This file already had a Swedish version (20KB file)
 
 ### 🟢 LOWER PRIORITY: Governance & Strategy (5 files)
 - ❌ `discordian-security-strategy_sv.html` ← `discordian-security-strategy.html`

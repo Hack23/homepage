@@ -288,6 +288,26 @@ graph TB
 | Serverless Security | Serverlös säkerhet |
 | Cloud Native Security | Cloud native säkerhet |
 | Infrastructure as Code | Infrastruktur som kod |
+| Data Classification | Dataklassificering |
+| Information Classification | Informationsklassificering |
+| Security Classification | Säkerhetsklassificering |
+| Confidentiality Levels | Konfidentialitetsnivåer |
+| Integrity Levels | Integritetsnivåer |
+| Availability Levels | Tillgänglighetsnivåer |
+| Classification Policy | Klassificeringspolicy |
+| Monitoring | Övervakning |
+| Logging | Loggning |
+| SIEM | SIEM (Security Information and Event Management) |
+| CloudWatch | CloudWatch (AWS-tjänst) |
+| CloudTrail | CloudTrail (AWS API-loggning) |
+| Anomaly Detection | Anomalidetektering |
+| Backup | Säkerhetskopiering |
+| Recovery | Återställning |
+| Disaster Recovery | Katastrofåterställning |
+| Business Continuity | Verksamhetskontinuitet |
+| Backup Strategy | Säkerhetskopieringsstrategi |
+| Recovery Point Objective (RPO) | Återställningspunktsmål |
+| Recovery Time Objective (RTO) | Återställningstidsmål |
 
 ### 💻 Technical Terms & Development
 
