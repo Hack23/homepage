@@ -40,6 +40,14 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Cache apt packages
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/.github/workflows/scorecards.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
+
       - name: "Run analysis"
         uses: ossf/scorecard-action@4eaacf0543bb3f2c246792bd56e8cdeffafb205a # v2.4.3
         with:
