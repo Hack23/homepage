@@ -261,6 +261,33 @@ graph TB
 | Digital Signatures | Digitala signaturer |
 | Encryption at Rest | Kryptering i vila |
 | Encryption in Transit | Kryptering under transport |
+| Data Protection | Dataskydd |
+| Privacy | Integritet |
+| Privacy Policy | Integritetspolicy |
+| GDPR Compliance | GDPR-efterlevnad |
+| Personal Data | Personuppgifter |
+| Data Subject Rights | Registrerades rättigheter |
+| Consent Management | Samtyckshantering |
+| Data Minimization | Dataminimering |
+| Purpose Limitation | Ändamålsbegränsning |
+| Data Retention | Datalagring |
+| Privacy by Design | Privacy by Design |
+| Privacy Impact Assessment (PIA) | Integritetskonsekvensbedömning |
+| Data Protection Officer (DPO) | Dataskyddsombud |
+| Data Breach Notification | Dataläckageanmälan |
+| Right to Erasure | Rätt till radering |
+| Data Portability | Dataportabilitet |
+| Surveillance Capitalism | Övervakningskapitalism |
+| Cloud Security | Molnsäkerhet |
+| Multi-Layer Defense | Flerlagerförsvar |
+| Cloud Architecture | Molnarkitektur |
+| VPC Security | VPC-säkerhet |
+| Security Groups | Säkerhetsgrupper |
+| CloudTrail Logging | CloudTrail-loggning |
+| S3 Bucket Security | S3-bucketsäkerhet |
+| Serverless Security | Serverlös säkerhet |
+| Cloud Native Security | Cloud native säkerhet |
+| Infrastructure as Code | Infrastruktur som kod |
 
 ### 💻 Technical Terms & Development
 
