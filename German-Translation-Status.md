@@ -16,14 +16,14 @@ graph TB
         A["📊 61/96 Files<br/>63.5% Complete ⚠️"]
         
         A --> B["🎯 Quality Analysis"]
-        B --> C["✅ Fully Translated: 18<br/>No English content"]
-        B --> D["⚡ Mostly Translated: 4<br/>Minimal English"]
-        B --> E["⚠️  Partially Translated: 39<br/>Some English remains"]
+        B --> C["✅ Fully Translated: 34<br/>No English content"]
+        B --> D["⚡ Mostly Translated: 5<br/>Minimal English"]
+        B --> E["⚠️  Partially Translated: 22<br/>Some English remains"]
         B --> F["❌ Needs Translation: 0<br/>Significant English"]
         
         A --> G["📝 Missing Files: 35"]
         
-        A --> H["🏆 Quality Score: 36.1%"]
+        A --> H["🏆 Quality Score: 63.9%"]
         
         style A fill:#F57C00,stroke:#E65100,color:#fff,stroke-width:4px
         style B fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:2px
