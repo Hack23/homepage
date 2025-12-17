@@ -16,14 +16,14 @@ graph TB
         A["📊 58/96 Files<br/>60.4% Complete 🚧"]
         
         A --> B["🎯 Quality Analysis"]
-        B --> C["✅ Fully Translated: 26<br/>Complete SEO/meta/data"]
+        B --> C["✅ Fully Translated: 31<br/>Complete SEO/meta/data"]
         B --> D["⚡ Mostly Translated: 5<br/>Minimal English"]
-        B --> E["⚠️  Partially Translated: 27<br/>Some English remains"]
+        B --> E["⚠️  Partially Translated: 22<br/>Some English remains"]
         B --> F["❌ Needs Translation: 0<br/>Significant English"]
         
         A --> G["📝 Missing Files: 38"]
         
-        A --> H["🏆 Quality Score: 53.4%<br/>🎉 Over half complete!"]
+        A --> H["🏆 Quality Score: 62.1%<br/>🎉 Nearly two-thirds done!"]
         
         style A fill:#C62828,stroke:#B71C1C,color:#fff,stroke-width:4px
         style B fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:2px
@@ -62,12 +62,12 @@ graph TB
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 26 | 44.8% | No English content - Complete SEO/meta/structured data |
+| ✅ **Fully Translated** | 31 | 53.4% | No English content - Complete SEO/meta/structured data |
 | ⚡ **Mostly Translated** | 5 | 8.6% | Minimal English (technical terms only) |
-| ⚠️  **Partially Translated** | 27 | 46.6% | Some English content remains |
+| ⚠️  **Partially Translated** | 22 | 37.9% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 53.4% of existing files are fully/mostly translated (↑ from 34.5%)
+**🏆 Quality Score:** 62.1% of existing files are fully/mostly translated (↑ from 34.5%)
 
 **📈 Status:** 🎉 Major Milestone - All product pages (10/10) and core pages (7/7) complete!
 
