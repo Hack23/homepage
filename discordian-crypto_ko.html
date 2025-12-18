@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>암호화 정책 | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="ISO 27001 A.8.24 + NIST. 암호화 표준 및 키 관리 - K-ISMS 및 PIPA 준수">
+<meta name="keywords" content="cryptography, encryption, TLS 1.3, AES-256, RSA 4096, key management, AWS KMS key management service, certificate management, PKI public key infrastructure, digital signatures, hashing algorithms, SHA-256, secure communication, data encryption, encryption at rest, encryption in transit, cryptographic standards, NIST cryptography, end-to-end encryption, symmetric encryption, asymmetric encryption">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="암호화 정책">
+<meta property="og:description" content="ISO 27001 A.8.24 + NIST. 암호화 표준 및 키 관리 - K-ISMS 및 PIPA 준수">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-crypto_ko.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-crypto_ko.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cryptography Policy: Trust Through Implementation Excellence",
+      "description": "How Hack23 demonstrates cryptographic expertise through systematic implementation: AES-256, TLS 1.3, AWS KMS, annual rotation",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-crypto.html"
+      },
+      "keywords": "cryptography policy, AES-256, TLS 1.3, AWS KMS, encryption standards",
+      "articleSection": "Information Security",
+      "inLanguage": "ko",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1475,
+      "articleBody": "스스로 생각하라! 권위에 의문을 제기하라. Yes, even—especially—the authorities who approve cryptographic standards. But while questioning motives and backdoor history, implement systematically ...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cryptography",
+          "description": "Encryption standards and key management"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-crypto.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cryptography Policy",
+          "item": "https://hack23.com/discordian-crypto.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <!-- Hreflang tags for international SEO -->
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-crypto_da.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-crypto.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-crypto_fi.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-crypto_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-crypto_no.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-crypto.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-crypto_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-crypto_ko.html">
+    <!-- Asian Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    </head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index_ko.html">홈</a>
+      </li>
+      <li class="breadcrumb-item"><a href="/blog_ko.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Cryptography Policy
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Cryptography Policy</h1>
+  <div class="app-link">
+    <a href="index_ko.html" title="Back to 홈">홈</a>
+    <a href="discordian-cybersecurity_ko.html" title="Discordian 선언문">선언문</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md" title="Our Crypto Policy">ISMS Crypto Policy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔐 Cryptography Policy: Question Authorities, Trust Implementation</h2>
+
+    <section id="introduction">
+      <h2 class="panel-caption">Encryption Excellence Through Systematic Standards</h2>
+      
+      <p><strong>스스로 생각하라! 권위에 의문을 제기하라.</strong> Yes, even—especially—the authorities who approve cryptographic standards. But while questioning motives and backdoor history, implement systematically with best available algorithms. <em>Paranoia without action is just anxiety. Paranoia with documented cryptographic controls is security engineering.</em></p>
+      
+      <p><strong>진실은 없다. 모든 것이 허용된다.</strong> Including honest assessment of cryptographic trust in a post-Snowden, post-Dual_EC_DRBG world. Government-approved algorithms exist because intelligence agencies approve them (the same agencies running PRISM and tapping fiber optic cables). Does that inspire confidence? <em>Uncomfortable question.</em> Do we have better alternatives than NIST standards? <em>Not really—unless you want to roll your own crypto and become a cautionary tale.</em> The math is public. The implementations are auditable. The alternatives are worse. <strong>Choose transparency over mystery. Choose analyzed algorithms over vendor promises.</strong></p>
+      
+      <p>At Hack23, we use NIST-approved algorithms—<strong>AES-256, TLS 1.3, Ed25519, SHA-256</strong>—not because governments are trustworthy, but because these are the best publicly-analyzed standards available. Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a> implements systematic encryption: AES-256 encryption at rest, TLS 1.3 in transit, AWS KMS key management with annual rotation, SSL Labs A+ rating on public endpoints. Trust through implementation excellence, not algorithm providence.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Question cryptographic authorities—but implement systematically. Perfect security doesn't exist. Operational excellence with best-available standards does.</em></p>
+      
+      <p>This demonstrates our cybersecurity consulting expertise through measurable cryptographic implementation rather than theoretical security discussions.</p>
+    
+      
+      <p><strong>Need expert guidance on security compliance?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+    </section>
+
+    <section id="five-uncomfortable-questions">
+      <h2 class="panel-caption">The Five Uncomfortable Questions About Government-Approved Crypto</h2>
+      
+      <p><strong>Before we discuss implementation, let's address the elephant in the room:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Who Approves These Algorithms?</h3>
+          <p>Intelligence agencies. NIST (NSA-influenced), FIPS (DoD-aligned), cryptography standardization bodies with nation-state participation. The same organizations running <strong>global surveillance programs.</strong></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. What's Their Motivation?</h3>
+          <p>Signals intelligence. Their mission is <strong>intercepting communications</strong>—breaking encryption is literally their job description. Tension between enabling security and maintaining intelligence capabilities.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Can They Break What They Approve?</h3>
+          <p><strong>We don't know.</strong> Dual_EC_DRBG had a backdoor for 7 years (2006-2013). Crypto AG sold compromised encryption for 50 years (1970-2018). History suggests skepticism is warranted.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Would They Tell Us If They Could?</h3>
+          <p><strong>No.</strong> National security doctrine requires keeping capabilities secret. Intelligence value comes from adversaries not knowing what you can break.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. What Do We Do About It?</h3>
+          <p>Use approved algorithms <em>properly</em>, implement systematically, layer defenses, assume nation-state adversaries exist, don't rely on encryption alone. <strong>Operational security through systematic implementation.</strong></p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>CRYPTO ILLUMINATION: The Law of Fives never lies. There are always five uncomfortable questions about government-approved cryptography. Ask them. Then implement systematically anyway.</em></p>
+    </section>
+
+    <section id="encryption-framework">
+      <h2 class="panel-caption">Hack23 Cryptographic Framework: Three Implementation Layers</h2>
+      
+      <p><strong>Our cryptography policy implements three systematic encryption layers:</strong></p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔐 Encryption at Rest</h3>
+          <p><strong>AES-256 with AWS KMS integration.</strong> All data storage encrypted: Extreme data (HSM encryption), High data (AES-256 CMK), Standard data (AES-256 service-managed). Centralized key management, annual rotation minimum (quarterly preferred), cross-region key backup, audit logging for all key operations.</p>
+          <p><strong>Evidence:</strong> All Hack23 projects use AWS KMS encryption. S3 buckets with SSE-KMS, RDS with encryption at rest, EBS volumes encrypted, backups encrypted.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🌐 Encryption in Transit</h3>
+          <p><strong>TLS 1.3 preferred, TLS 1.2 minimum.</strong> All network transmission encrypted: HTTPS everywhere, API security with TLS + signatures, modern cipher suites with forward secrecy only, SSL Labs A+ rating for public endpoints. Protocol testing automated, weak cipher detection monitored.</p>
+          <p><strong>Evidence:</strong> CloudFront CDN with TLS termination, Application Load Balancer with TLS 1.2+ only, API Gateway with modern ciphers, Lambda HTTPS-only communication.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🔑 Key Management Framework</h3>
+          <p><strong>AWS KMS centralized key management.</strong> Hardware security module generation, role-based access control, complete audit trails for key lifecycle, annual key rotation enforced, cross-region key backup, secure key destruction procedures.</p>
+          <p><strong>Evidence:</strong> AWS KMS integration across all projects, CloudTrail logging of key operations, IAM policies for least-privilege key access, automated rotation alerts.</p>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>IMPLEMENTATION ILLUMINATION: Three layers = defense in depth. Encryption at rest protects stored data. Encryption in transit protects network data. Key management protects cryptographic foundation.</em></p>
+    </section>
+
+    <section id="approved-algorithms">
+      <h2 class="panel-caption">Approved Cryptographic Algorithms: NIST Standards with Operational Evidence</h2>
+      
+      <p><strong>Hack23 cryptography policy implements NIST-approved algorithms systematically:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Algorithm Type</th>
+            <th>Algorithm</th>
+            <th>Key Size</th>
+            <th>Hack23 Implementation</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Symmetric Encryption</strong></td>
+            <td>AES</td>
+            <td>256-bit</td>
+            <td>AWS KMS, S3 SSE-KMS, RDS encryption, EBS encryption</td>
+            <td>✓ Approved</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Asymmetric Encryption</strong></td>
+            <td>Ed25519</td>
+            <td>256-bit</td>
+            <td>SSH keys (preferred), signing operations, authentication</td>
+            <td>✓ Approved</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Asymmetric Encryption</strong></td>
+            <td>RSA</td>
+            <td>4096-bit</td>
+            <td>Legacy SSH keys, TLS certificates (backward compatibility)</td>
+            <td>⚠️ Legacy Support</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>Hashing</strong></td>
+            <td>SHA-256</td>
+            <td>256-bit</td>
+            <td>Integrity verification, SBOM generation, commit signing</td>
+            <td>✓ Approved</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Hashing</strong></td>
+            <td>SHA-3</td>
+            <td>256-bit</td>
+            <td>Future-ready implementation, research projects</td>
+            <td>✓ Approved</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Prohibited Algorithms (Immediate Replacement Required):</strong></p>
+      <ul>
+        <li><strong>MD5:</strong> Collision attacks trivial → Replace with SHA-256</li>
+        <li><strong>SHA-1:</strong> Collision attacks demonstrated → Replace with SHA-256</li>
+        <li><strong>DES/3DES:</strong> Inadequate key size → Replace with AES-256</li>
+        <li><strong>RC4:</strong> Stream cipher weaknesses → Replace with AES-GCM</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>ALGORITHM ILLUMINATION: We use government-approved algorithms because public cryptanalysis hasn't broken them yet. Non-approved alternatives lack scrutiny. Choose analyzed standards over obscure alternatives.</em></p>
+    </section>
+
+    <section id="classification-driven">
+      <h2 class="panel-caption">Encryption by Data Classification: CIA+ Framework Integration</h2>
+      
+      <p><strong>Encryption requirements driven by <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Data Classification Policy</a>:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Classification Level</th>
+            <th>Encryption Requirement</th>
+            <th>Key Management</th>
+            <th>구현</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Extreme Confidentiality</strong></td>
+            <td>HSM-based AES-256</td>
+            <td>AWS CloudHSM</td>
+            <td>Hardware Security Module with dedicated HSM cluster</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>Very High Confidentiality</strong></td>
+            <td>AES-256 + CMK</td>
+            <td>AWS KMS Customer Managed Keys</td>
+            <td>Customer-managed encryption keys with granular control</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>High Confidentiality</strong></td>
+            <td>AES-256 encryption</td>
+            <td>AWS KMS Service Managed Keys</td>
+            <td>Service-managed keys with automated rotation</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Moderate Confidentiality</strong></td>
+            <td>Standard encryption</td>
+            <td>S3 SSE, RDS encryption</td>
+            <td>AWS service default encryption</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Low Confidentiality</strong></td>
+            <td>Basic protection</td>
+            <td>Platform standard</td>
+            <td>Service-level encryption where available</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Classification drives security investment:</strong> €10K+ daily loss = Extreme (HSM), €5-10K = Very High (CMK), €1-5K = High (AES-256), €500-1K = Moderate (standard), &lt;€500 = Low (basic).</p>
+      
+      <p class="hidden-wisdom"><em>CLASSIFICATION ILLUMINATION: Encryption scaled to risk. Not everything needs HSM protection. Not everything is public. Classification-driven encryption = intelligent resource allocation.</em></p>
+    </section>
+
+    <section id="transport-security">
+      <h2 class="panel-caption">Transport Layer Security: TLS 1.3, Modern Ciphers, SSL Labs A+</h2>
+      
+      <p><strong>All Hack23 network communication encrypted with systematic TLS implementation:</strong></p>
+      
+      <ul>
+        <li><strong>TLS 1.3 preferred</strong> for all new implementations (forward secrecy, improved handshake)</li>
+        <li><strong>TLS 1.2 minimum</strong> for legacy compatibility (older clients support)</li>
+        <li><strong>Modern cipher suites only</strong> with AEAD (Authenticated Encryption with Associated Data)</li>
+        <li><strong>SSL Labs A+ rating</strong> for all public endpoints (verified quarterly)</li>
+        <li><strong>HTTPS everywhere</strong> enforcement (no unencrypted HTTP)</li>
+        <li><strong>HSTS headers</strong> enabled (HTTP Strict Transport Security)</li>
+        <li><strong>Certificate transparency</strong> monitoring (CT logs validation)</li>
+      </ul>
+      
+      <p><strong>Implementation architecture:</strong></p>
+      <ul>
+        <li><strong>CloudFront CDN:</strong> TLS termination at edge locations</li>
+        <li><strong>AWS WAF:</strong> Cipher suite filtering, protocol validation</li>
+        <li><strong>Application Load Balancer:</strong> TLS 1.2+ enforcement, modern ciphers only</li>
+        <li><strong>API Gateway:</strong> TLS 1.3 preferred, backward compatibility for TLS 1.2</li>
+        <li><strong>Lambda Functions:</strong> HTTPS-only communication to all AWS services</li>
+        <li><strong>RDS PostgreSQL:</strong> Force SSL connections, reject unencrypted clients</li>
+        <li><strong>S3 Buckets:</strong> HTTPS required policy, deny HTTP requests</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>TRANSPORT ILLUMINATION: TLS protects data in flight. Configuration matters—weak ciphers negate strong protocol. SSL Labs A+ = externally validated transport security.</em></p>
+    </section>
+
+    <section id="key-management">
+      <h2 class="panel-caption">Key Management Lifecycle: Generation, Storage, Rotation, Destruction</h2>
+      
+      <p><strong>AWS KMS centralized key management with systematic lifecycle procedures:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Lifecycle Phase</th>
+            <th>Requirement</th>
+            <th>Hack23 Implementation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🔑 Key Generation</strong></td>
+            <td>HSM generation required</td>
+            <td>AWS KMS FIPS 140-2 Level 2 validated HSMs, automated generation</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🏦 Secure Storage</strong></td>
+            <td>Centralized KMS, least privilege access</td>
+            <td>AWS KMS with IAM policies, role-based access, multi-region replication</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🔄 Key Rotation</strong></td>
+            <td>Annual minimum, quarterly preferred</td>
+            <td>Automated KMS rotation enabled, CloudWatch alerts for rotation status</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>📊 Audit Logging</strong></td>
+            <td>All key operations logged</td>
+            <td>AWS CloudTrail integration, 90-day retention, SIEM forwarding</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🗑️ Secure Deletion</strong></td>
+            <td>Cryptographic key destruction</td>
+            <td>KMS scheduled deletion (7-30 day window), audit trail maintained</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Key access controls:</strong></p>
+      <ul>
+        <li><strong>IAM policies:</strong> Least privilege principle, explicit deny for unauthorized access</li>
+        <li><strong>Service roles:</strong> Application-specific key access, no human direct access</li>
+        <li><strong>Multi-factor authentication:</strong> Required for manual key operations</li>
+        <li><strong>Key grants:</strong> Temporary key access with automatic expiration</li>
+        <li><strong>Key aliases:</strong> Application references to keys, not direct key IDs</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>KEY MANAGEMENT ILLUMINATION: Encryption strength depends on key protection. Perfect algorithm with compromised keys = worthless protection. KMS centralization = systematic key security.</em></p>
+    </section>
+
+    <section id="isms-integration">
+      <h2 class="panel-caption">ISMS Policy Integration: Cryptography Across Security Framework</h2>
+      
+      <p><strong>Cryptography Policy integrated with Hack23 ISMS framework:</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ISMS Policy</th>
+            <th>Cryptographic Integration</th>
+            <th>Implementation Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Data Classification Policy</a></td>
+            <td>Encryption requirements per classification level</td>
+            <td>CIA+ framework with HSM/CMK/Service encryption tiers</td>
+          </tr>
+          <tr class="roi-high">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a></td>
+            <td>Key access management, IAM integration</td>
+            <td>Least privilege key access, MFA for sensitive operations</td>
+          </tr>
+          <tr class="roi-high">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network 보안 정책</a></td>
+            <td>TLS enforcement, transport encryption</td>
+            <td>TLS 1.3 preferred, SSL Labs A+ rating, HSTS enabled</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">Backup Recovery Policy</a></td>
+            <td>Backup encryption requirements</td>
+            <td>Encrypted backups, cross-region key replication</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a></td>
+            <td>Cryptographic incident handling</td>
+            <td>Key compromise procedures, emergency rotation protocols</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>INTEGRATION ILLUMINATION: Cryptography isn't standalone policy—it's systematic integration across security framework. One encryption standard, multiple policy applications.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Conclusion: Question Authorities, Implement Systematically</h2>
+      
+      <p><strong>Uncomfortable truth:</strong> Government-approved cryptographic standards exist because intelligence agencies participate in standardization. Should we trust them? <em>Healthy skepticism warranted.</em> Do we have better alternatives? <em>Not really—public cryptanalysis matters.</em></p>
+      
+      <p>Hack23's approach: <strong>Use NIST-approved algorithms because they're publicly analyzed, implement systematically through operational standards, assume nation-state adversaries exist, don't rely on encryption alone for security.</strong></p>
+      
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a> implements measurable encryption: AES-256 at rest, TLS 1.3 in transit, AWS KMS key management, annual rotation, SSL Labs A+ rating, classification-driven encryption requirements. <strong>Trust through implementation excellence, not algorithm providence.</strong></p>
+      
+      <p><strong>Security through transparency beats security through hope.</strong> All cryptography policies publicly documented. All implementation standards measurable. All key management procedures auditable.</p>
+      
+      <p class="hidden-wisdom"><em>FINAL ILLUMINATION: Perfect security doesn't exist. Nation-states can compromise anything given enough resources. Operational excellence with best-available cryptographic standards = realistic security posture.</em></p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">관련 ISMS 정책</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy_ko.html">Information 보안 정책</a> — Comprehensive ISMS foundation and framework</li>
+        <li><a href="discordian-data-classification_ko.html">Data Classification Policy</a> — Protecting information assets by criticality</li>
+        <li><a href="discordian-network-security_ko.html">Network 보안 정책</a> — TLS, VPC architecture, and traffic protection</li>
+        <li><a href="discordian-physical-security_ko.html">Physical 보안 정책</a> — Device encryption and physical controls</li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- 회사 Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>사이버보안 컨설팅<br>
+          고텐부르크, 스웨덴 | 원격</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 회사 Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- 서비스 Column -->
+        <div class="footer-column">
+          <h3>서비스</h3>
+          <ul>
+            <li><a href="services_ko.html">보안 컨설팅</a></li>
+            <li><a href="services_ko.html">보안 아키텍처</a></li>
+            <li><a href="services_ko.html">클라우드 보안</a></li>
+            <li><a href="services_ko.html">DevSecOps 통합</a></li>
+            <li><a href="services_ko.html">규정 준수 및 ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- 제품 Column -->
+        <div class="footer-column">
+          <h3>제품</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- 리소스 Column -->
+        <div class="footer-column">
+          <h3>리소스</h3>
+          <ul>
+            <li><a href="blog_ko.html">Security 블로그</a></li>
+            <li><a href="discordian-cybersecurity_ko.html">🍎 Discordian 블로그</a></li>
+            <li><a href="cia-triad-faq.html">CIA 3요소 FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">공개 ISMS</a></li>
+            <li><a href="sitemap.html">사이트맵</a></li>
+          </ul>
+        </div>
+        
+        <!-- 회사 Column -->
+        <div class="footer-column">
+          <h3>회사</h3>
+          <ul>
+            <li><a href="why-hack23.html">Hack23 소개</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">보안 정책</a></li>
+            <li><a href="SECURITY.md">보안 문제 보고</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub 조직</a></li>
+            <li><a href="accessibility-statement.html">접근성</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to 블로그 -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 블로그 Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. 모든 권리 보유. | 라이선스: <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_ko.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko"><strong>한국어</strong></a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
