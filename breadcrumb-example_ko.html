@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>브레드크럼 네비게이션 구현 예제 | Hack23 기술 문서</title>
+  <meta name="description" content="접근성을 고려한 브레드크럼 네비게이션 구현 가이드. WCAG 2.1 AA 준수, Schema.org 구조화 데이터, 시맨틱 HTML 예제.">
+  <meta name="keywords" content="브레드크럼, 경로 탐색, 접근성, WCAG, Schema.org, 구조화 데이터, 웹 개발, HTML, 시맨틱 마크업, 스크린 리더, 한국어 기술 문서">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Multilingual SEO -->
+  
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+<link rel="canonical" href="https://hack23.com/breadcrumb-example_ko.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/breadcrumb-example_ko.html" />
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/breadcrumb-example_ar.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/breadcrumb-example_da.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/breadcrumb-example_de.html" />
+  <link rel="alternate" hreflang="es" href="https://hack23.com/breadcrumb-example_es.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/breadcrumb-example_fi.html" />
+  <link rel="alternate" hreflang="fr" href="https://hack23.com/breadcrumb-example_fr.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/breadcrumb-example_he.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/breadcrumb-example_ja.html" />
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/breadcrumb-example_nl.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/breadcrumb-example_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/breadcrumb-example_sv.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/breadcrumb-example_zh.html" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "브레드크럼 네비게이션 구현 예제",
+    "description": "접근성을 고려한 브레드크럼 네비게이션 구현 가이드. WCAG 2.1 AA 준수, Schema.org 구조화 데이터, 시맨틱 HTML 예제.",
+    "inLanguage": "ko",
+    "url": "https://hack23.com/breadcrumb-example_ko.html",
+    "author": {
+      "@type": "Organization",
+      "name": "Hack23 AB"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/index_ko.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "브레드크럼 예제",
+          "item": "https://hack23.com/breadcrumb-example_ko.html"
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>브레드크럼 컴포넌트 예제</h1>
+    <p>WCAG 2.1 AA 준수 전문 브레드크럼 네비게이션</p>
+  </header>
+
+  <!-- 예제 1: 2단계 브레드크럼 (홈 > 현재 페이지) -->
+  <nav aria-label="브레드크럼">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">홈</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        기능
+      </li>
+    </ol>
+  </nav>
+
+  <h2>2단계 브레드크럼 예제</h2>
+  <p>간단한 브레드크럼 경로를 보여줍니다: 홈 > 기능 (현재 페이지)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- 예제 2: 3단계 브레드크럼 -->
+  <nav aria-label="브레드크럼">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">홈</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">시민 정보기관</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        기능
+      </li>
+    </ol>
+  </nav>
+
+  <h2>3단계 브레드크럼 예제</h2>
+  <p>더 깊은 브레드크럼 경로를 보여줍니다: 홈 > 시민 정보기관 > 기능 (현재 페이지)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- 예제 3: 4단계 브레드크럼 -->
+  <nav aria-label="브레드크럼">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">홈</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html#cia">CIA 기사</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIA 아키텍처 심층 분석
+      </li>
+    </ol>
+  </nav>
+
+  <h2>4단계 브레드크럼 예제</h2>
+  <p>4단계의 네비게이션 계층 구조를 가진 더욱 깊은 브레드크럼 경로를 보여줍니다.</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <h2>접근성 기능</h2>
+  <ul>
+    <li><strong>시맨틱 HTML:</strong> <code>&lt;nav&gt;</code> 요소와 <code>aria-label="브레드크럼"</code> 및 <code>&lt;ol&gt;</code> 목록 구조 사용</li>
+    <li><strong>ARIA 속성:</strong> 현재 페이지는 <code>aria-current="page"</code>로 표시</li>
+    <li><strong>키보드 네비게이션:</strong> 모든 링크는 Tab 키로 접근 가능하며 명확한 포커스 표시기 제공</li>
+    <li><strong>스크린 리더 친화적:</strong> 적절한 시맨틱 구조가 네비게이션 컨텍스트를 알려줌</li>
+    <li><strong>색상 대비:</strong> WCAG 2.1 AA 기준 충족 (최소 4.5:1)</li>
+    <li><strong>반응형 디자인:</strong> 모바일, 태블릿, 데스크톱 뷰포트에 맞게 조정</li>
+    <li><strong>테마 지원:</strong> 라이트 모드, 다크 모드, Black Trigram 테마에서 작동</li>
+  </ul>
+
+  <h2>사용 방법</h2>
+  <pre style="background: #f6f8fa; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>&lt;!-- 브레드크럼 네비게이션 구조 --&gt;
+&lt;nav aria-label="브레드크럼"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/"&gt;홈&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/section.html"&gt;섹션&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item" aria-current="page"&gt;
+      현재 페이지
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h2>테스트 체크리스트</h2>
+  <ul>
+    <li>✅ 키보드 네비게이션 (Tab, Shift+Tab, Enter)</li>
+    <li>✅ 스크린 리더 알림 (NVDA, JAWS, VoiceOver로 테스트)</li>
+    <li>✅ 색상 대비가 WCAG 2.1 AA 충족 (일반 텍스트 4.5:1)</li>
+    <li>✅ 모든 뷰포트 크기에서 반응형 디자인 작동</li>
+    <li>✅ 포커스 표시기가 명확하게 표시됨</li>
+    <li>✅ 호버 상태가 시각적 피드백 제공</li>
+    <li>✅ 라이트 모드와 다크 모드에서 작동</li>
+    <li>✅ Black Trigram 테마에서 작동</li>
+  </ul>
+
+  <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center;">
+    <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+      <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+      <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+      <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+      <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">보안 정책</a> |
+      <a href="blog_ko.html" title="보안 블로그">블로그</a> |
+      <a href="discordian-cybersecurity_ko.html" title="Discordian 사이버보안 블로그">🍎 Discordian 블로그</a>
+    </p>
+    <p>
+      <a href="breadcrumb-example.html" title="English documentation">English</a> |
+      <a href="breadcrumb-example_ko.html" title="Korean documentation">한국어</a>
+    </p>
+  </footer>
+</body>
+</html>
