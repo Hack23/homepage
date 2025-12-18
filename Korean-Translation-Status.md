@@ -5,7 +5,26 @@
 **Language:** Korean (ko)  
 **Flag:** 🇰🇷 **Icon:** 🏯  
 **Target Market:** South Korea  
-**Last Updated:** December 2025
+**Last Updated:** December 18, 2025
+
+### 🚨 **Terminology Standardization Status**
+
+**Major Update (December 2025):** Comprehensive terminology audit completed, standardization plan created.
+
+📊 **Inconsistencies Identified:**
+- 59 spacing issues (사이버 보안 → 사이버보안)
+- 22 spacing issues (정보 보안 → 정보보안)
+- 11 spacing issues (규정준수 → 규정 준수)
+- 7 Konglish terms (리스크 → 위험)
+- 23 files missing Schema.org `inLanguage: ko`
+- K-ISMS context needed alongside ISO 27001 references
+- PIPA context needed alongside GDPR references
+
+📚 **Reference Documents:**
+- [Korean-Cybersecurity-Glossary.md](Korean-Cybersecurity-Glossary.md) - 200+ standardized terms
+- [Korean-Translation-Standardization-Plan.md](Korean-Translation-Standardization-Plan.md) - Detailed fix plan
+
+**Status:** 🚧 Standardization implementation ready to begin
 
 ## 📊 Visual Status Overview
 

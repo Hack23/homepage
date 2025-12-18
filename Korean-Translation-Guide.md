@@ -15,8 +15,40 @@
 | **Files Translated** | 58/96 (60.4%) |
 | **Blog Posts Complete** | 26/26 (100%) ✅ |
 | **Quality Score** | 62.1% |
-| **Guide Version** | 4.0 (Blog Posts Complete Edition)
-| **Last Updated** | December 17, 2025 |
+| **Guide Version** | 5.0 (Terminology Standardization Edition)
+| **Last Updated** | December 18, 2025 |
+| **Glossary** | [Korean-Cybersecurity-Glossary.md](Korean-Cybersecurity-Glossary.md) (200+ terms) |
+| **Fix Plan** | [Korean-Translation-Standardization-Plan.md](Korean-Translation-Standardization-Plan.md) |
+
+## 🚨 **IMPORTANT: Terminology Standardization in Progress**
+
+**December 2025 Update:** A comprehensive terminology audit identified inconsistencies across 68 Korean files. A standardization effort is underway to ensure professional quality.
+
+### 📋 Key Changes Being Implemented
+
+**1. Spacing Standardization:**
+- ✅ **사이버보안** (no space) - preferred for technical compounds
+- ✅ **정보보안** (no space) - aligns with K-ISMS terminology
+- ✅ **규정 준수** (with space) - proper Korean for action phrases
+
+**2. Konglish Reduction:**
+- ✅ **위험** (proper Korean) - replaces 리스크 (Konglish)
+
+**3. Regulatory Context Enhancement:**
+- ✅ **K-ISMS** context added alongside ISO 27001
+- ✅ **PIPA (개인정보보호법)** context added alongside GDPR
+
+**4. Technical Fixes:**
+- ✅ Schema.org `"inLanguage": "ko"` added to all 68 files
+
+### 📚 Reference Documents
+
+- **[Korean-Cybersecurity-Glossary.md](Korean-Cybersecurity-Glossary.md)** - Complete terminology reference (200+ terms)
+- **[Korean-Translation-Standardization-Plan.md](Korean-Translation-Standardization-Plan.md)** - Detailed fix plan
+
+**All translators should consult these documents before making changes to ensure consistency.**
+
+---
 
 ## 🎯 Translation Philosophy
 
@@ -97,10 +129,25 @@ graph TB
 
 ## 📚 Comprehensive Terminology Reference
 
+### 🔗 **NEW: Complete Cybersecurity Glossary Available!**
 
-## 📚 Comprehensive Vocabulary Reference
+**All Korean cybersecurity terminology is now available in a dedicated comprehensive glossary:**
 
-*Extracted from 4 categories of translated content*
+👉 **[Korean-Cybersecurity-Glossary.md](Korean-Cybersecurity-Glossary.md)** - 200+ terms with:
+- ✅ Standardization rules for spacing and Konglish vs. proper Korean
+- ✅ K-ISMS and PIPA regulatory context patterns
+- ✅ Discordian philosophy terminology (30+ terms)
+- ✅ Korean market-specific terminology (50+ terms)
+- ✅ Decision trees for terminology choices
+- ✅ Translation patterns and best practices
+
+**For quick reference, essential vocabulary is included below. For comprehensive terminology, consult the full glossary.**
+
+---
+
+## 📚 Essential Vocabulary Reference
+
+*Core terms extracted from 68 translated files - See [Korean-Cybersecurity-Glossary.md](Korean-Cybersecurity-Glossary.md) for complete terminology*
 
 
 ### 🧭 Navigation & UI Elements
