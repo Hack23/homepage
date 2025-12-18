@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원격 액세스 보안 | Hack23</title>
+    <meta name="description" content="ISO 27001 A.6.7 + CIS Control 12.6. VPN, MFA, 원격 근무 - K-ISMS 및 PIPA 준수">
+    <meta name="keywords" content="remote access, VPN, ISMS, zero trust, remote work, work from home, discordian security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="원격 액세스 보안">
+    <meta property="og:description" content="ISO 27001 A.6.7 + CIS Control 12.6. VPN, MFA, 원격 근무 - K-ISMS 및 PIPA 준수">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-remote-access_ko.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security 블로그">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-remote-access_ko.html">
+	<!-- Hreflang tags for language alternatives -->    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "블로그Posting",
+      "headline": "Remote Access: VPNs and the Death of the Office",
+      "description": "Zero trust architecture with MFA enforcement, Identity Center SSO, quarterly privilege reviews. Remote work permanent: session timeouts 1-24h based on classification framework",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-remote-access.html"
+      },
+      "keywords": "remote access, VPN, zero trust, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1562,
+      "articleBody": "진실은 없다. 모든 것이 허용된다. The office is optional. Remote work is permanent. Security models built on physical perimeters don't work when everyone works from home (or coffee shops, or T...",
+      "isPartOf": {
+        "@type": "블로그",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security 블로그"
+      },
+      "inLanguage": "ko",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-remote-access.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Remote Access",
+          "item": "https://hack23.com/discordian-remote-access.html"
+        }
+      ]
+    }
+  ]
+}</script>
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-remote-access_ar.html" />
+  <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-remote-access_ar.html" />
+  <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-remote-access_ar.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-remote-access_da.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-remote-access.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-remote-access_fi.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-remote-access_he.html" />
+  <link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-remote-access_he.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-remote-access_no.html" />
+  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-remote-access_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-remote-access_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-remote-access_sv.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-remote-access.html" />
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-remote-access_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-remote-access_ko.html">
+
+    <!-- Asian Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index_ko.html">홈</a>
+      </li>
+      <li class="breadcrumb-item"><a href="/blog_ko.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Remote Access
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Remote Access: Death of the Office Perimeter</h1>
+  <div class="app-link">
+    <a href="index_ko.html" title="Back to 홈">홈</a>
+    <a href="discordian-cybersecurity_ko.html" title="Back to 선언문">선언문</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" title="Access Control Policy">ISMS</a>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <h2 class="header">🔐 Remote Access: Zero Trust for the Post-Office Era</h2>
+            
+            <section id="introduction">
+              <h2 class="panel-caption">The Office Perimeter is Dead—Long Live Identity-Centric Access (Welcome to the Panopticon, Remote Worker Edition)</h2>
+              
+              <p><strong>진실은 없다. 모든 것이 허용된다.</strong> The office is optional. Remote work is permanent. Security models built on physical perimeters don't work when everyone works from home (or coffee shops, or Thai beaches, or their mom's basement). <strong>The castle-and-moat died. Identity is the new perimeter. FNORD.</strong></p>
+              
+              <p><strong>스스로 생각하라!</strong> VPNs don't make traffic secure—encryption does. VPNs just move the trust boundary (and create a false sense of security that's adorable). Zero trust for remote users or accept that compromised home networks compromise corporate access. <strong>Are you paranoid enough? Your neighbor's IoT botnet printer is laughing at your "secure VPN."</strong></p>
+              
+              <p>At Hack23, remote access isn't "work from home policy"—it's <strong>zero trust architecture</strong> integrated into our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with MFA enforcement (hardware keys for the paranoid, TOTP for the pragmatic), Identity Center SSO (one login to rule them all), and classification-based session timeouts: 1-hour for financial systems (Very High—because money attracts thieves), 4-hour for cloud core infrastructure (Extreme—because this is the kingdom), 8-hour for development pipeline (High—because code is power).</p>
+              
+              <p>Remote access controls documented in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">public Access Control Policy</a>—because security through obscurity means attackers know your weaknesses better than you do (they've been studying while you've been hoping). We implement identity-centric security demonstrating cybersecurity consulting expertise through systematic access management. <strong>No secret sauce. No proprietary magic. Just math, cryptography, and healthy paranoia.</strong></p>
+              
+              <p class="hidden-wisdom"><em>ILLUMINATION FOR PSYCHONAUTS: Office perimeter security assumed "inside = trusted." Remote work proved that assumption fatal (like most assumptions). Identity is the new perimeter. Verify every request. Trust nothing. Not even this sentence. Especially not this sentence. The conspiracy is inside the house. Always has been.</em></p>
+            
+      
+      <p><strong>Ready to build a robust security program?</strong> <a href="why-hack23.html">Discover Hack23's consulting approach</a> that treats security as an enabler, not a barrier.</p>
+    </section>
+
+            <section id="zero-trust-matrix">
+              <h2 class="panel-caption">The Five Layers of Zero Trust Access Control</h2>
+              
+              <p>Remote access at Hack23 implements zero trust architecture integrated with our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Classification Framework</a>:</p>
+              
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Asset Category</th>
+                    <th>Classification</th>
+                    <th>Access Method</th>
+                    <th>MFA Requirement</th>
+                    <th>Session Timeout</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="roi-exceptional">
+                    <td><strong>☁️ Cloud Core Infrastructure</strong></td>
+                    <td>Extreme</td>
+                    <td>AWS Identity Center SSO</td>
+                    <td>Hardware + Software</td>
+                    <td><strong>4 hours</strong></td>
+                  </tr>
+                  <tr class="roi-high">
+                    <td><strong>💰 Financial Systems</strong></td>
+                    <td>Very High</td>
+                    <td>Provider MFA + IdP</td>
+                    <td>Hardware + SMS</td>
+                    <td><strong>1 hour</strong></td>
+                  </tr>
+                  <tr class="roi-high">
+                    <td><strong>📝 Development Pipeline</strong></td>
+                    <td>High</td>
+                    <td>GitHub Platform MFA</td>
+                    <td>TOTP + SSH Keys</td>
+                    <td><strong>8 hours</strong></td>
+                  </tr>
+                  <tr class="roi-moderate">
+                    <td><strong>📊 Business Intelligence</strong></td>
+                    <td>Moderate</td>
+                    <td>SSO Integration</td>
+                    <td>TOTP</td>
+                    <td><strong>24 hours</strong></td>
+                  </tr>
+                  <tr class="roi-basic">
+                    <td><strong>📢 Marketing Platforms</strong></td>
+                    <td>Public</td>
+                    <td>Platform Native</td>
+                    <td>Platform MFA</td>
+                    <td><strong>7 days</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <p><strong>Classification drives session management:</strong> Higher classification = shorter timeout. Extreme assets (cloud infrastructure) require re-authentication every 4 hours. Very High (financial) every 1 hour. Session timeouts enforce least-exposure principle.</p>
+              
+              <p class="hidden-wisdom"><em>META-ILLUMINATION: Session timeouts aren't user inconvenience—they're attack surface reduction. Stolen session tokens expire fast for critical systems. Trade convenience for security on high-value assets.</em></p>
+            </section>
+            
+            <section id="five-controls">
+              <h2 class="panel-caption">The Five Remote Access Controls That Actually Work</h2>
+              
+              <div class="cards">
+                <div class="card confidentiality-card">
+                  <div class="scanner-effect"></div>
+                  <h3>1. 🔐 Multi-Factor Authentication (Universal)</h3>
+                  <p><strong>Passwords alone aren't enough.</strong> MFA for all remote access. No exceptions. Phished passwords are useless without second factor. Hardware security keys (FIDO2) for Extreme/Very High, TOTP for High/Moderate, platform MFA minimum for Public.</p>
+                  <p><strong>Implementation:</strong> AWS Identity Center enforces MFA via primary identity provider. GitHub requires TOTP. Banking uses provider-issued tokens. Social platforms use native MFA.</p>
+                  <p class="hidden-wisdom"><em>Passwords + phishing = compromise. Passwords + MFA + phishing = failed attack. Math is simple.</em></p>
+                </div>
+                
+                <div class="card integrity-card">
+                  <div class="scanner-effect"></div>
+                  <h3>2. 🖥️ Identity-Centric Access (Not Network-Based)</h3>
+                  <p><strong>Verify every request, trust nothing.</strong> No implicit trust based on network location. Remote user = on-premises user = same verification. Identity Center SSO for cloud, platform MFA for development, zero trust for all systems.</p>
+                  <p><strong>Implementation:</strong> AWS Identity Center centralized identity. GitHub organization access. No "inside network = trusted" assumptions. Every request authenticated and authorized.</p>
+                  <p class="hidden-wisdom"><em>Network location is not identity. VPN connections don't prove trustworthiness. Verify identity, not IP address.</em></p>
+                </div>
+                
+                <div class="card availability-card">
+                  <div class="scanner-effect"></div>
+                  <h3>3. ⏱️ Session Management (Classification-Based)</h3>
+                  <p><strong>Session timeouts prevent token theft.</strong> Extreme assets: 4h timeout. Very High: 1h. High: 8h. Moderate: 24h. Public: 7 days. Shorter timeout = faster stolen token expiration = reduced attack window.</p>
+                  <p><strong>Implementation:</strong> IdP enforces session lifetime. Cloud platforms honor IdP session. Re-authentication required after timeout. No "remember me forever" for critical systems.</p>
+                  <p class="hidden-wisdom"><em>Stolen session tokens are time-bombs. Shorter fuses = less damage. Critical systems require fresh authentication frequently.</em></p>
+                </div>
+                
+                <div class="card confidentiality-card">
+                  <div class="scanner-effect"></div>
+                  <h3>4. 📊 Continuous Monitoring (Detect Anomalies)</h3>
+                  <p><strong>Log all remote access. Monitor for anomalies.</strong> CloudTrail logs every AWS API call. GitHub logs repository access. Automated alerts on suspicious patterns: impossible travel, unusual access times, privilege escalation attempts.</p>
+                  <p><strong>Implementation:</strong> AWS CloudTrail + GuardDuty. GitHub audit logs. Security Hub aggregation. Automated anomaly detection with CEO escalation for critical alerts.</p>
+                  <p class="hidden-wisdom"><em>Detection requires visibility. Visibility requires logging. Logging without monitoring is audit theater. Monitor, alert, respond.</em></p>
+                </div>
+                
+                <div class="card integrity-card">
+                  <div class="scanner-effect"></div>
+                  <h3>5. 🔄 Quarterly Access Reviews (Revoke Stale Access)</h3>
+                  <p><strong>Verify who has access to what.</strong> Quarterly privilege reviews per our Access Control Policy. Dormant accounts disabled. Excessive privileges revoked. Access aligned with current roles, not historical permissions.</p>
+                  <p><strong>Implementation:</strong> Automated access reports from IdP. Manual review of privileged accounts. Revocation workflow for inactive users. Documentation of review results.</p>
+                  <p class="hidden-wisdom"><em>Access creep is real. Users accumulate permissions over time. Regular reviews prevent privilege sprawl. Revoke what's unused.</em></p>
+                </div>
+              </div>
+            </section>
+
+            <section id="implementation">
+              <h2 class="panel-caption">Our Implementation: Zero Trust Through Identity Center</h2>
+              
+              <p>Remote access controls are integrated into our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a>—no standalone Remote Access Policy exists because remote access is just access:</p>
+              
+              <p><strong>🔐 Identity Provider Architecture:</strong></p>
+              <ul>
+                <li><strong>Primary Identity Provider:</strong> Centralized authentication with MFA enforcement</li>
+                <li><strong>AWS Identity Center:</strong> SSO + MFA for all AWS accounts via centralized IdP</li>
+                <li><strong>GitHub 조직:</strong> Platform MFA required, SSH key authentication for repository access</li>
+                <li><strong>Business 서비스:</strong> Each service with provider MFA, federated where possible</li>
+              </ul>
+              
+              <p><strong>🛡️ Multi-Factor Authentication Matrix:</strong></p>
+              <ul>
+                <li><strong>Hardware Security Keys:</strong> FIDO2/WebAuthn for primary IdP (Extreme/Very High assets)</li>
+                <li><strong>TOTP Authenticator:</strong> Time-based one-time passwords for High/Moderate assets</li>
+                <li><strong>Platform Native MFA:</strong> Service-provided MFA for Public classification</li>
+                <li><strong>Backup MFA:</strong> SMS recovery (not primary—SMS vulnerable to SIM swap)</li>
+              </ul>
+              
+              <p><strong>⏱️ Session Management by Classification:</strong></p>
+              <ul>
+                <li><strong>Extreme (Cloud Core):</strong> 4-hour session timeout, hardware + software MFA</li>
+                <li><strong>Very High (Financial):</strong> 1-hour session timeout, hardware + SMS MFA</li>
+                <li><strong>High (Development):</strong> 8-hour session timeout, TOTP + SSH keys</li>
+                <li><strong>Moderate (Business Intel):</strong> 24-hour session timeout, TOTP</li>
+                <li><strong>Public (Marketing):</strong> 7-day session timeout, platform MFA</li>
+              </ul>
+              
+              <p><strong>📊 Continuous Monitoring & Logging:</strong></p>
+              <ul>
+                <li><strong>AWS CloudTrail:</strong> Every API call logged, retained 90 days, archived to S3</li>
+                <li><strong>AWS GuardDuty:</strong> Threat detection for malicious activity, compromised credentials</li>
+                <li><strong>AWS Security Hub:</strong> Centralized security findings aggregation</li>
+                <li><strong>GitHub Audit Log:</strong> Repository access, organization changes, permission modifications</li>
+                <li><strong>Anomaly Detection:</strong> Impossible travel, unusual access patterns, privilege escalation</li>
+              </ul>
+              
+              <p><strong>🔄 Access Review Schedule:</strong></p>
+              <ul>
+                <li><strong>Quarterly Reviews:</strong> All privileged accounts reviewed by CEO</li>
+                <li><strong>Monthly Reviews:</strong> Extreme/Very High asset access (cloud core, financial systems)</li>
+                <li><strong>Automated Reports:</strong> Dormant accounts, excessive privileges, access violations</li>
+                <li><strong>Immediate Revocation:</strong> Terminated employees, contractors, role changes</li>
+              </ul>
+              
+              <p class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Remote access policy is access control policy. Physical location doesn't change security requirements. Verify identity, enforce MFA, monitor access, review privileges—same controls whether user is in office or on beach in Bali.</p>
+            </section>
+
+            <section id="conclusion">
+              <h2 class="panel-caption">Chapel Perilous에 오신 것을 환영합니다: Remote Access Edition (The Panopticon Went Distributed)</h2>
+              
+              <p><strong>진실은 없다. 모든 것이 허용된다.</strong> The office perimeter is dead (killed by COVID, resurrected as zombie security). Remote work is permanent (deal with it, real estate investors). Security models built on physical location assumptions are obsolete—adapt or breach. <em>FNORD.</em> Your VPN from 2015 isn't saving you.</p>
+              
+              <p>Most organizations discover remote compromises months after initial access (average dwell time: 207 days per 2023 data—that's attackers living rent-free in your systems longer than most leases). We prevent remote attacks through <strong>zero trust architecture</strong>: MFA enforcement (because passwords died in 2010, we just haven't buried them), Identity Center SSO (one ring to rule them all), classification-based session timeouts (trust expires, refresh or logout), continuous monitoring (because paranoia is a feature), quarterly privilege reviews (access creep is real).</p>
+              
+              <p><strong>Our remote access framework demonstrates consulting expertise (and weaponized paranoia):</strong></p>
+              <ul>
+                <li><strong>Universal MFA</strong> — Hardware keys for Extreme/Very High (FIDO2 master race), TOTP for High/Moderate (pragmatic paranoia), platform MFA for Public (bare minimum acceptable)</li>
+                <li><strong>Identity-Centric</strong> — AWS Identity Center SSO, GitHub organization MFA, zero network trust (location is not identity, IP addresses lie)</li>
+                <li><strong>Session Management</strong> — 1-hour to 7-day timeouts based on classification framework (stolen tokens expire, attackers cry)</li>
+                <li><strong>Continuous Monitoring</strong> — CloudTrail, GuardDuty, Security Hub, GitHub audit logs (seeing everything, trusting nothing)</li>
+                <li><strong>Regular Reviews</strong> — Quarterly privilege reviews, monthly for Extreme/Very High assets (because access you don't audit is access attackers exploit)</li>
+              </ul>
+              
+              <p><strong>스스로 생각하라!</strong> Question authority—including the assumption that VPNs equal security (they don't—they equal network routing with extra steps). VPNs are network tunnels, not authentication (crypto 101, apparently forgotten). Identity is the new perimeter (has been since 2010, some just haven't noticed). Verify every request. Trust nothing, especially not "inside the network" (that concept died with the castle-and-moat).</p>
+              
+              <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION FOR REMOTE PSYCHONAUTS:</strong> <em>You are now in Chapel Perilous (remote edition). Remote work is permanent (the genie isn't going back in the bottle). Office perimeters are obsolete (zombie security walking among us). Identity-centric security is the only security that scales (math doesn't care about your office layout). Verify identity on every request or accept that remote users are unverified attack vectors (spoiler: they are). Your infrastructure. Your choice. Choose wisely. Or don't. The attackers already chose for you. FNORD.</em></p>
+              
+              <p><strong>에리스 만세! 디스코디아 만세!</strong></p>
+              
+              <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with complete remote access controls, MFA requirements, session management, and monitoring procedures. Public. Tested. Reality-based. No "we'll implement that next quarter"—implemented now (because attackers don't wait for roadmaps).</p>
+              
+              <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Location doesn't determine trust. Identity does. Verify everything. Trust nothing. Remote access is just access (from untrusted networks). Your home WiFi is compromised. Your neighbor's IoT devices are botnet nodes. Welcome to distributed paranoia. It's healthier than distributed false security."</em><br><br>🍎 23 FNORD 5</p>
+            </section>
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- 회사 Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>사이버보안 컨설팅<br>
+          고텐부르크, 스웨덴 | 원격</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 회사 Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- 서비스 Column -->
+        <div class="footer-column">
+          <h3>서비스</h3>
+          <ul>
+            <li><a href="services_ko.html">보안 컨설팅</a></li>
+            <li><a href="services_ko.html">보안 아키텍처</a></li>
+            <li><a href="services_ko.html">클라우드 보안</a></li>
+            <li><a href="services_ko.html">DevSecOps 통합</a></li>
+            <li><a href="services_ko.html">규정 준수 및 ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- 제품 Column -->
+        <div class="footer-column">
+          <h3>제품</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- 리소스 Column -->
+        <div class="footer-column">
+          <h3>리소스</h3>
+          <ul>
+            <li><a href="blog_ko.html">Security 블로그</a></li>
+            <li><a href="discordian-cybersecurity_ko.html">🍎 Discordian 블로그</a></li>
+            <li><a href="cia-triad-faq.html">CIA 3요소 FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">공개 ISMS</a></li>
+            <li><a href="sitemap.html">사이트맵</a></li>
+          </ul>
+        </div>
+        
+        <!-- 회사 Column -->
+        <div class="footer-column">
+          <h3>회사</h3>
+          <ul>
+            <li><a href="why-hack23.html">Hack23 소개</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">보안 정책</a></li>
+            <li><a href="SECURITY.md">보안 문제 보고</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub 조직</a></li>
+            <li><a href="accessibility-statement.html">접근성</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to 블로그 -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 블로그 Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. 모든 권리 보유. | 라이선스: <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_ko.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko"><strong>한국어</strong></a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
