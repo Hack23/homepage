@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>위협 모델링 | Assume Nation-State Attackers | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Assume attackers with infinite resources exist—because they do. Threat model includes nation-states, because theirs includes you.">
-<meta name="keywords" content="위협 모델링, STRIDE, security architecture, think for yourself, question authority, nation-state threats, hack23 ISMS">
+<meta name="description" content="무한한 자원을 가진 공격자가 존재한다고 가정하라. 당신의 위협 모델에는 국가 지원 위협이 포함되어야 한다. STRIDE 방법론, 공격 표면 분석, 방어적 아키텍처 설계.">
+<meta name="keywords" content="위협 모델링, 위협 분석, STRIDE, STRIDE 방법론, 보안 아키텍처, 위협 식별, 위협 평가, 위협 완화, 국가 지원 위협, APT 고급 지속 위협, 위협 행위자, 공격 벡터, 공격 표면 분석, 보안 설계 원칙, 방어적 아키텍처, 위협 인텔리전스, 위협 헌팅, 사이버 킬 체인, MITRE ATT&CK, 적대적 위협 모델링, 데이터 흐름 다이어그램, 신뢰 경계, 공격 트리, 위협 시나리오, 보안 제어 매핑, 위협 우선순위, 위험 기반 위협 모델링, 애플리케이션 위협 모델링, 인프라 위협 모델링, 클라우드 위협 모델링, IoT 위협 모델링, 모바일 위협 모델링, API 위협 모델링, 공급망 위협 모델링, 스푸핑 위협, 변조 위협, 부인 위협, 정보 공개 위협, 서비스 거부 위협, 권한 상승 위협, 위협 모델링 프로세스, 위협 모델링 도구, Microsoft Threat Modeling Tool, OWASP 위협 모델링, PASTA 위협 모델링, VAST 위협 모델링, Trike 방법론, 자동화된 위협 모델링, 지속적 위협 모델링, DevSecOps 위협 모델링, 위협 모델 문서화, 위협 모델 검증, 침투 테스트 위협 모델, 레드팀 위협 모델, 블루팀 방어 모델, 제로 트러스트 위협 모델, 가정 위반 사고방식, 스스로 생각하라, 권위에 의문을 제기하라, 디스코디안 위협 모델링, 공개 위협 모델, 투명한 보안 설계, Hack23 위협 모델링, Hack23 ISMS, 스웨덴 사이버보안 모범 사례">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="위협 모델링: Know Thy Enemy (They Already Know You)">
-<meta property="og:description" content="Assume attackers with infinite resources exist—because they do. Your threat model should include nation-states.">
+<meta property="og:title" content="위협 모델링: 적을 알라 (그들은 이미 당신을 알고 있다)">
+<meta property="og:description" content="무한한 자원을 가진 공격자가 존재한다고 가정하라—왜냐하면 그들은 실제로 존재하기 때문이다. 당신의 위협 모델에는 국가 지원 위협이 포함되어야 한다. STRIDE 방법론과 국가 수준의 적대자.">
 	<meta property="og:locale" content="ko_KR">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -32,6 +32,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="위협 모델링: 적을 알라 (그들은 이미 당신을 알고 있다)">
+<meta name="twitter:description" content="무한한 자원을 가진 공격자가 존재한다고 가정하라—왜냐하면 그들은 실제로 존재하기 때문이다. 당신의 위협 모델에는 국가 지원 위협이 포함되어야 한다.">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
 <meta name="twitter:image:alt" content="Hack23 보안 블로그">
 <meta name="twitter:site" content="@hack23ab">
@@ -45,8 +47,8 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "위협 모델링: Know Thy Enemy (They Already Know You)",
-      "description": "Threat modeling for systems that assume nation-state adversaries exist",
+      "headline": "위협 모델링: 적을 알라 (그들은 이미 당신을 알고 있다)",
+      "description": "국가 지원 적대자가 존재한다고 가정하는 시스템을 위한 위협 모델링. STRIDE 방법론, 공격 표면 분석, 방어적 아키텍처 설계.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
@@ -71,7 +73,7 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-threat-modeling_ko.html"
       },
-      "keywords": "위협 모델링, STRIDE, security architecture, ISMS",
+      "keywords": "위협 모델링, 위협 분석, STRIDE, STRIDE 방법론, 보안 아키텍처, 국가 지원 위협, APT, 공격 표면 분석, ISMS",
       "articleSection": "정보보안",
       "inLanguage": "ko",
       "image": {
@@ -96,7 +98,7 @@
       ]
     },
     {
-      "@type": "탐색 경로List",
+      "@type": "BreadcrumbList",
       "@id": "https://hack23.com/discordian-threat-modeling_ko.html#breadcrumb",
       "itemListElement": [
         {

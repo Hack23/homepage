@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>이메일 보안 | SPF/DKIM/DMARC + MFA | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Gmail Workspace: SPF/DKIM/DMARC enforcement, hardware 2FA (YubiKey), mandatory phishing training. Your CEO doesn't need iTunes cards.">
-<meta name="keywords" content="email security, SPF, DKIM, DMARC, phishing, BEC, Gmail Workspace, YubiKey MFA, hack23 ISMS">
+<meta name="description" content="K-ISMS 및 ISO 27001 기반 이메일 보안 정책. Gmail Workspace: SPF/DKIM/DMARC 강제 시행, 하드웨어 2FA (YubiKey), 필수 피싱 교육, BEC 방어, 이메일 암호화 및 개인정보보호법(PIPA) 준수.">
+<meta name="keywords" content="이메일 보안, 메일 보안, 정보보안 관리체계, K-ISMS, ISO 27001, ISO 27002, 개인정보보호법, PIPA, SPF, Sender Policy Framework, DKIM, DomainKeys Identified Mail, DMARC, Domain-based Message Authentication, 피싱, 스피어 피싱, BEC, Business Email Compromise, 이메일 사기, 이메일 스푸핑, 도메인 스푸핑, Gmail Workspace, Google Workspace, YubiKey, 하드웨어 2FA, 하드웨어 MFA, 다중 요소 인증, 2단계 인증, 피싱 교육, 보안 인식 교육, 이메일 인증, 발신자 인증, 도메인 인증, 메시지 인증, 이메일 암호화, TLS, STARTTLS, S/MIME, PGP, 엔드투엔드 암호화, 이메일 필터링, 스팸 필터, 맬웨어 필터, 바이러스 차단, 첨부 파일 검사, 링크 스캔, 안전한 링크, Advanced Protection Program, 이메일 정책, 이메일 보안 정책, 이메일 사용 정책, 데이터 유출 방지, DLP, 이메일 DLP, 민감 정보 보호, 이메일 아카이빙, 이메일 보관, 이메일 백업, 이메일 복구, 이메일 감사, 이메일 로그, 이메일 모니터링, 이메일 포렌식, 이메일 사고 대응, 재정 요청 검증, 대역외 검증, Out-of-band verification, 송금 확인, 이메일 사회 공학, 사회공학 공격, CEO 사기, 임원 사칭, 이메일 공격, 이메일 위협, ATP, Advanced Threat Protection, 제로데이 공격, 랜섬웨어, 크레덴셜 피싱, 계정 탈취, ATO, Account Takeover, 이메일 보안 게이트웨이, SEG, 클라우드 이메일 보안, 정보 보호, 데이터 보호, 사이버 보안, 정보 보안, 보안 정책, 보안 통제, 위험 관리">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="이메일 보안: SPF/DKIM/DMARC + Hardware MFA">
-<meta property="og:description" content="Gmail Workspace + SPF/DKIM/DMARC quarantine policy + hardware 2FA. Phishing training + out-of-band verification for financial requests.">
+<meta property="og:title" content="이메일 보안 정책 - SPF/DKIM/DMARC, 하드웨어 MFA, 피싱 방어 | Hack23 Discordian ISMS">
+<meta property="og:description" content="Gmail Workspace 기반: SPF/DKIM/DMARC 격리 정책, 하드웨어 2FA (YubiKey), 피싱 교육, BEC 방어, 재정 요청 대역외 검증. K-ISMS 및 PIPA 준수.">
 	<meta property="og:locale" content="ko_KR">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -32,8 +32,10 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="이메일 보안 정책 - SPF/DKIM/DMARC, MFA, 피싱 방어 | Hack23">
+<meta name="twitter:description" content="Gmail Workspace: SPF/DKIM/DMARC, 하드웨어 2FA, 피싱 교육, BEC 방어. K-ISMS 및 PIPA 준수.">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="Hack23 보안 블로그">
+<meta name="twitter:image:alt" content="Hack23 이메일 보안 정책 - 정보보안 관리체계">
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
@@ -45,8 +47,9 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "이메일 보안: SPF/DKIM/DMARC + Hardware MFA",
-      "description": "How Hack23 implements email security with Gmail Workspace, SPF/DKIM/DMARC enforcement, hardware 2FA, and mandatory phishing training",
+      "headline": "이메일 보안 정책 - SPF/DKIM/DMARC 및 하드웨어 MFA",
+      "description": "K-ISMS 및 ISO 27001 기반 이메일 보안 정책. Gmail Workspace를 활용한 SPF/DKIM/DMARC 강제 시행, 하드웨어 2FA (YubiKey), 필수 피싱 교육, BEC 방어 전략, 재정 요청 대역외 검증. 개인정보보호법(PIPA) 준수.",
+      "keywords": "이메일 보안, K-ISMS, ISO 27001, SPF, DKIM, DMARC, 피싱, BEC, Gmail Workspace, YubiKey, 하드웨어 2FA, 하드웨어 MFA, 피싱 교육, 이메일 인증, 이메일 암호화, 대역외 검증, CEO 사기 방어, 이메일 사고 대응, 개인정보보호법, PIPA, 정보보안 관리체계, 사이버 보안, 정보 보호, 보안 정책",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
