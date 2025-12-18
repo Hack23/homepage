@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클라우드 보안 정책 | Hack23</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AWS 보안 모범 사례, ISO 27017, NIST CSF 2.0 - K-ISMS 및 PIPA 준수">
+    <meta name="keywords" content="cloud security, AWS security, multi-layer defense, cloud architecture, VPC security, security groups, NACLs network access control lists, AWS WAF web application firewall, CloudTrail logging, GuardDuty threat detection, AWS Shield DDoS protection, AWS Config compliance, AWS Security Hub, S3 bucket security, EC2 security, Lambda security, serverless security, cloud native security, infrastructure as code security, CloudFormation security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="클라우드 보안 정책">
+    <meta property="og:description" content="AWS 보안 모범 사례, ISO 27017, NIST CSF 2.0 - K-ISMS 및 PIPA 준수">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-cloud-security_ko.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-cloud-security_ko.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "클라우드 보안: AWS Multi-Layer Defense Architecture",
+      "description": "How Hack23 implements AWS security-by-design through GuardDuty, Security Hub, Config, KMS, and VPC zero-trust architecture for 99.9% uptime",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-cloud-security.html"
+      },
+      "keywords": "AWS security, cloud security, GuardDuty, Security Hub, Config, KMS, VPC, ISMS",
+      "articleSection": "Information Security",
+      "inLanguage": "ko",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1834,
+      "articleBody": "진실은 없다. 모든 것이 허용된다. Except blaming AWS when your misconfigured S3 bucket leaks customer data—that's your responsibility, not theirs. Are you paranoid enough? Good. Now be paranoi...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "클라우드 보안",
+          "description": "AWS security architecture and best practices"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-cloud-security.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "블로그",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "클라우드 보안",
+          "item": "https://hack23.com/discordian-cloud-security.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement AWS Multi-Layer 클라우드 보안",
+      "description": "Step-by-step guide to implementing comprehensive cloud security using AWS GuardDuty, Security Hub, Config, KMS encryption, and VPC segmentation",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT4H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "100"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Config"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS KMS"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS WAF"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudTrail"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Network 보안 정책",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enable AWS GuardDuty",
+          "text": "Activate AWS GuardDuty for intelligent threat detection across your AWS accounts. Enable automated threat monitoring and configure alerts for suspicious activity",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "GuardDuty analyzes VPC Flow Logs, CloudTrail events, and DNS logs to detect threats"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Configure AWS Security Hub",
+          "text": "Set up Security Hub as your centralized security and compliance view. Enable all security standards (AWS Foundational Security Best Practices, CIS AWS Foundations Benchmark, PCI DSS)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Security Hub aggregates findings from GuardDuty, Inspector, Macie, and Config"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implement AWS Config Rules",
+          "text": "Enable AWS Config to continuously assess, audit, and evaluate AWS resource configurations. Set up automated compliance rules for security best practices",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Config provides configuration history and change tracking for compliance audits"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Deploy VPC 보안 아키텍처",
+          "text": "Create VPC segmentation with public, private, and isolated subnets. Configure Security Groups as stateful firewalls and Network ACLs for subnet-level filtering",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Public subnet: Internet-facing resources with minimal exposure"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Private subnet: Application servers with no direct internet access"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Isolated subnet: Databases with strict access controls"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Enable KMS Encryption",
+          "text": "Use AWS KMS to encrypt data at rest for all services (S3, EBS, RDS). Implement customer-managed keys with rotation policies and access controls",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Enable automatic key rotation for customer-managed KMS keys (365-day cycle)"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Configure AWS WAF",
+          "text": "Deploy AWS WAF to protect web applications from common web exploits. Create custom rules for SQL injection, XSS, and rate limiting",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Use AWS Managed Rules as a baseline, then customize for your applications"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Enable Comprehensive Logging",
+          "text": "Activate CloudTrail for API logging, VPC Flow Logs for network traffic, and S3 access logging. Centralize logs in a secure logging account",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Enable log file validation in CloudTrail to detect tampering"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Implement S3 Bucket Security",
+          "text": "Block public access on all S3 buckets by default. Enable versioning, encryption, and MFA Delete. Use bucket policies with least privilege",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Misconfigured S3 buckets are the leading cause of cloud data breaches"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Set Up Automated Remediation",
+          "text": "Configure AWS Config rules with automated remediation actions. Use Systems Manager Automation to fix non-compliant resources automatically"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Monitor and Review",
+          "text": "Review Security Hub findings daily. Conduct quarterly architecture reviews and semi-annual policy updates. Target 99.9% uptime through systematic controls"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-cloud-security.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-cloud-security.html" />
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-cloud-security_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/discordian-cloud-security_ko.html">
+
+    <!-- Asian Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/index_ko.html">홈</a>
+      </li>
+      <li class="breadcrumb-item"><a href="/blog_ko.html">블로그</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        클라우드 보안
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>클라우드 보안: AWS Multi-Layer Defense</h1>
+  <div class="app-link">
+    <a href="index_ko.html" title="Back to 홈">홈</a>
+    <a href="discordian-cybersecurity_ko.html" title="Back to 선언문">선언문</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md" title="Network Security">Network Policy</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">☁️ 클라우드 보안: Configuration Is Your Vulnerability Surface</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Shared Responsibility Reality: AWS Secures Infrastructure, You Secure Everything Else</h2>
+      
+      <p><strong>진실은 없다. 모든 것이 허용된다.</strong> Except blaming AWS when your misconfigured S3 bucket leaks customer data—that's your responsibility, not theirs. <em>Are you paranoid enough? Good. Now be paranoid about your IAM policies, not AWS's hypervisor.</em></p>
+      
+      <p><em>스스로 생각하라! 권위에 의문을 제기하라.</em> Question why everyone else accepts "the cloud is secure" marketing (it's not—YOUR configuration is) while ignoring the shared responsibility model that vendors bury in fine print: <strong>AWS secures infrastructure, you secure configuration.</strong> <em>"But it's in the cloud!"</em> is not a security strategy, schmuck. It's wishful thinking with a monthly bill. <strong>Your S3 bucket set to public? That's you, not AWS. Your leaked IAM keys? You again. Your security groups allowing 0.0.0.0/0? Still you.</strong></p>
+      
+      <p>At Hack23, cloud security isn't hope—it's <strong>systematic AWS security controls</strong> across five layers: <strong>GuardDuty</strong> (threat detection), <strong>Security Hub</strong> (centralized monitoring), <strong>Config</strong> (compliance automation), <strong>KMS</strong> (encryption management), <strong>VPC</strong> (zero-trust network segmentation). Plus CloudFormation IaC, Route 53 DNS Firewall, WAF protection.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: "Someone else's computer" is accurate. AWS secures the hypervisor. You secure IAM policies, S3 permissions, security group rules, encryption configurations. Misconfiguration is breach, and it's always your fault. Most "cloud breaches" are configuration fails, not AWS fails. But "we misconfigured our S3 bucket" sounds worse than "the cloud was hacked" in press releases.</em></p>
+      
+      <p>Our AWS security demonstrates cybersecurity consulting expertise through measurable outcomes: <strong>99.9% uptime</strong> (52 minutes/year downtime budget), <strong>zero security incidents 2023-2025</strong>, <strong>zero misconfigurations detected</strong> (Config continuous monitoring). Full architecture in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network 보안 정책</a> and <a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda VPC Architecture</a>.</p>
+    
+      
+      <p><strong>Looking for expert implementation support?</strong> <a href="why-hack23.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+    </section>
+
+    <section id="aws-five-layers">
+      <h2 class="panel-caption">The Five Layers of AWS Security Defense</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🔍 GuardDuty: Threat Detection</h3>
+          <p><strong>Continuous threat detection using ML-powered analysis of VPC Flow Logs, CloudTrail events, DNS logs.</strong></p>
+          <p><strong>Detection Capabilities:</strong> Compromised EC2 instances (malicious IP communication, crypto-mining activity), compromised IAM credentials (unusual API calls, credential exfiltration attempts), unauthorized reconnaissance (port scanning, brute force attacks), data exfiltration patterns (unusual S3 downloads, cross-region data transfers).</p>
+          <p><strong>Alert Integration:</strong> Critical findings → SNS → CEO email + Slack. High-severity findings trigger incident response procedures (&lt;30 minutes response time for critical). Medium/Low findings reviewed daily.</p>
+          <p><strong>2024 Metrics:</strong> Zero actual threats detected (good news). 12 false positives investigated (authorized security testing). Average investigation time: 18 minutes per alert. <strong>Detection without disruption.</strong></p>
+          <p class="hidden-wisdom"><em>GuardDuty is early warning system. Most alerts are false positives (security tools testing, legitimate admin activity). But the one real alert justifies the cost.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🛡️ Security Hub: Centralized Monitoring</h3>
+          <p><strong>Aggregated security findings from GuardDuty, Config, IAM Access Analyzer, Macie, Inspector across all AWS accounts.</strong></p>
+          <p><strong>Compliance Frameworks:</strong> AWS Foundational Security Best Practices (93% compliance), CIS AWS Foundations Benchmark v1.4 (89% compliance), PCI DSS v3.2.1 (N/A—no card processing). Automated compliance scoring with drift detection.</p>
+          <p><strong>Automated Remediation:</strong> Critical findings auto-remediate via Lambda (S3 public access block, unencrypted EBS volumes, overly permissive security groups). Medium findings require CEO review. Low findings tracked for quarterly review.</p>
+          <p><strong>Evidence Links:</strong> Security Hub dashboard provides audit trail for compliance validation. Config rules provide continuous compliance monitoring. CloudTrail provides event history for forensics.</p>
+          <p class="hidden-wisdom"><em>Security Hub is single pane of glass. Without it, you're checking 8 different AWS security services manually. Centralization isn't luxury—it's operational necessity.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. ⚙️ Config: Compliance Automation</h3>
+          <p><strong>Continuous configuration monitoring with automated compliance evaluation against custom rules.</strong></p>
+          <p><strong>Config Rules Enforced:</strong> S3 bucket encryption (AES-256 or KMS), S3 public access blocked (no public ACLs, no public bucket policies), RDS encryption at rest (all databases), EBS volume encryption (all volumes), security groups no unrestricted ingress (no 0.0.0.0/0 on sensitive ports), IAM password policy enforcement (min 14 chars, complexity requirements), MFA enabled for root account.</p>
+          <p><strong>Compliance Dashboard:</strong> Real-time compliance status per rule. Non-compliant resources flagged immediately. Automated remediation for critical violations (Lambda-triggered fixes). Compliance history tracked for audit evidence.</p>
+          <p><strong>2024 Compliance:</strong> 387 Config rule evaluations/day. 99.7% compliant resources (12 intentional exceptions documented in ISMS). Average time to remediate non-compliance: 4.2 hours. <strong>Drift detection prevents configuration decay.</strong></p>
+          <p class="hidden-wisdom"><em>Config is compliance automation. Manual compliance checks scale linearly with resources. Automated compliance checks scale to thousands of resources with same effort.</em></p>
+        </div>
+        
+        <div class="card non-business-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔐 KMS: Encryption Management</h3>
+          <p><strong>Centralized key management with hardware security modules (HSM) and automated rotation.</strong></p>
+          <p><strong>Encryption Strategy:</strong> All data encrypted at rest (S3, RDS, EBS, DynamoDB) using AWS KMS customer-managed keys. All data encrypted in transit (TLS 1.3 for HTTPS, TLS 1.2 minimum for AWS services). Key rotation: automatic annual rotation for customer-managed keys.</p>
+          <p><strong>Key Hierarchy:</strong> Master keys per environment (production, staging, development). Service-specific data keys (database encryption, S3 bucket encryption, EBS volume encryption). IAM policy-based key access control (principle of least privilege, MFA for production key usage).</p>
+          <p><strong>Compliance Integration:</strong> CloudTrail logs all KMS key usage (audit trail for compliance). Key policies enforce encryption requirements (S3 uploads must use KMS, RDS creation requires encryption). Automated alerts for key policy changes (CEO notification for production key modifications).</p>
+          <p class="hidden-wisdom"><em>KMS is encryption without key management headaches. You don't rotate keys manually. You don't store keys in code. AWS handles HSM complexity. You handle access policies.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🌐 VPC: Zero-Trust Segmentation</h3>
+          <p><strong>Multi-tier network architecture with security groups, NACLs, and private subnets.</strong></p>
+          <p><strong>Network Architecture:</strong> Public subnet (ALB/NLB, NAT Gateway, Bastion—if needed), Private app subnet (Lambda, ECS, EC2—application tier), Private data subnet (RDS, ElastiCache—no internet access), Management subnet (monitoring, logging—restricted access). See detailed architecture: <a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda in Private VPC</a>.</p>
+          <p><strong>Security Controls:</strong> Security groups (stateful, application-level, deny-by-default), NACLs (stateless, subnet-level, explicit deny rules), VPC Flow Logs (all traffic logged to CloudWatch, S3 retention 90 days), PrivateLink (AWS service access without internet gateway), VPC Peering (cross-region redundancy without public internet).</p>
+          <p><strong>Zero-Trust Principle:</strong> No implicit trust between tiers. Application tier cannot directly access data tier (RDS proxy required). Public tier cannot access management tier. All cross-tier traffic logged and monitored. <strong>Assume breach, limit blast radius.</strong></p>
+          <p class="hidden-wisdom"><em>VPC segmentation is blast radius containment. Flat networks mean one compromised instance = entire infrastructure at risk. Multi-tier architecture means compromise requires multiple control failures.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cloudformation-iac">
+      <h2 class="panel-caption">Infrastructure as Code: Configuration Drift Is Configuration Vulnerability</h2>
+      
+      <p><strong>Manual AWS console changes create undocumented drift. CloudFormation IaC creates auditable, version-controlled infrastructure.</strong></p>
+      
+      <p><strong>IaC Strategy:</strong></p>
+      <ul>
+        <li><strong>All Infrastructure Defined in Code:</strong> VPC configurations, security groups, IAM roles, Lambda functions, RDS databases, S3 buckets. <a href="https://github.com/Hack23/lambda-in-private-vpc">Example CloudFormation templates</a>.</li>
+        <li><strong>Version Control:</strong> Git repository for all CloudFormation templates. PR review required for infrastructure changes. Change history provides audit trail.</li>
+        <li><strong>Automated Deployment:</strong> GitHub Actions CI/CD deploys CloudFormation stacks. CEO approval required for production stack changes. Rollback via CloudFormation change sets.</li>
+        <li><strong>Drift Detection:</strong> CloudFormation drift detection runs weekly. Manual changes detected and flagged. Drift remediation: update CloudFormation template, re-deploy stack (never manual console fixes).</li>
+        <li><strong>Stack Policies:</strong> Production stacks protected against accidental deletion. Critical resources (databases, S3 buckets) have deletion protection. Change sets preview all modifications before application.</li>
+      </ul>
+      
+      <p><strong>Benefits Measured:</strong> Infrastructure deployment time: 4 hours manual → 22 minutes CloudFormation. Configuration errors: 12/year manual → 2/year CloudFormation (both caught in pre-production testing). Recovery time: 6-8 hours manual rebuild → 47 minutes CloudFormation re-deployment (BCP tested quarterly).</p>
+      
+      <p class="hidden-wisdom"><em>IaC ILLUMINATION: Manual infrastructure is tribal knowledge. CloudFormation is documented knowledge. Tribal knowledge disappears when people leave. Documented knowledge survives in Git forever.</em></p>
+    </section>
+
+    <section id="dns-waf-protection">
+      <h2 class="panel-caption">Perimeter Defense: Route 53 DNS Firewall + AWS WAF</h2>
+      
+      <p><strong>Route 53 DNS Firewall:</strong> DNS-level threat blocking using managed threat intelligence. Blocks queries to known malware domains, phishing sites, botnet C2 servers. DNS query logging to CloudWatch Logs. Automatic threat feed updates from AWS threat intelligence.</p>
+      
+      <p><strong>DNS Firewall Rules:</strong></p>
+      <ul>
+        <li><strong>AWS Managed Domain Lists:</strong> AWSManagedDomainsMalwareDomainList (known malware domains), AWSManagedDomainsBotnetCommandandControl (C2 infrastructure).</li>
+        <li><strong>Custom Block Lists:</strong> Cryptocurrency mining domains, known phishing infrastructure, documented threat intelligence sources.</li>
+        <li><strong>DNSSEC Validation:</strong> DNS Security Extensions enabled for domain integrity. Protects against DNS spoofing, cache poisoning attacks.</li>
+      </ul>
+      
+      <p><strong>AWS WAF (Web Application Firewall):</strong> Application-layer protection for CloudFront distributions and ALBs. Protects against OWASP Top 10 vulnerabilities (SQL injection, XSS, CSRF). Rate limiting to prevent DDoS attacks. Geo-blocking for known threat regions.</p>
+      
+      <p><strong>WAF Rules Deployed:</strong></p>
+      <ul>
+        <li><strong>AWS Managed Rules:</strong> Core Rule Set, Known Bad Inputs, SQL Database Protection</li>
+        <li><strong>Rate-based rules:</strong> 100 requests/5 minutes per IP</li>
+        <li><strong>Custom rules:</strong> Block specific user agents, block malicious regex patterns</li>
+        <li><strong>Geo-restriction rules:</strong> Block high-risk countries with no business presence</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>Perimeter defense isn't silver bullet—it's first line of defense. Most attacks still get through (WAF bypass, zero-day exploits). But blocking 95% of commodity attacks reduces noise for human analysis.</em></p>
+    </section>
+
+    <section id="shared-responsibility">
+      <h2 class="panel-caption">Shared Responsibility Model: Where AWS Stops and You Start</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Security Domain</th>
+            <th>AWS Responsibility</th>
+            <th>Hack23 Responsibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Infrastructure</strong></td>
+            <td>Physical security, hypervisor, network infrastructure, hardware maintenance, power/cooling/fire suppression</td>
+            <td>VPC configuration, security groups, NACLs, VPC Flow Logs, network segmentation</td>
+          </tr>
+          <tr>
+            <td><strong>Compute</strong></td>
+            <td>EC2 host security, Lambda execution environment, ECS container orchestration</td>
+            <td>OS patching (EC2), application code security, Lambda function configuration, container image security</td>
+          </tr>
+          <tr>
+            <td><strong>Storage</strong></td>
+            <td>S3 infrastructure durability, EBS volume replication, physical disk security</td>
+            <td>S3 bucket policies, S3 encryption, access logging, EBS volume encryption, backup retention</td>
+          </tr>
+          <tr>
+            <td><strong>Database</strong></td>
+            <td>RDS infrastructure, automatic backups, multi-AZ replication</td>
+            <td>Database encryption, IAM authentication, network isolation, backup retention policies, access control</td>
+          </tr>
+          <tr>
+            <td><strong>Identity</strong></td>
+            <td>IAM service availability, MFA token infrastructure</td>
+            <td>IAM policies, user management, MFA enforcement, access key rotation, least privilege implementation</td>
+          </tr>
+          <tr>
+            <td><strong>Compliance</strong></td>
+            <td>AWS compliance certifications (ISO 27001, SOC 2, PCI DSS infrastructure)</td>
+            <td>Application-level compliance, data classification, incident response, audit trail maintenance</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Critical Insight:</strong> Most AWS breaches are customer responsibility failures, not AWS infrastructure failures. Public S3 buckets (customer misconfiguration), stolen IAM credentials (customer key management), unpatched EC2 instances (customer maintenance), overly permissive security groups (customer policy error).</p>
+      
+      <p class="hidden-wisdom"><em>RESPONSIBILITY ILLUMINATION: "But it's in the cloud!" is not security strategy. AWS secures infrastructure magnificently. AWS cannot secure your configurations, IAM policies, or application code. That's your job.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Chapel Perilous에 오신 것을 환영합니다: 클라우드 보안 Edition</h2>
+      
+      <p><strong>진실은 없다. 모든 것이 허용된다.</strong> Including accepting that <strong>cloud security is configuration management</strong>, not infrastructure faith. AWS infrastructure is secure. Your configurations might not be.</p>
+      
+      <p>Traditional cloud security: "We're using AWS, so we're secure." Hack23 cloud security: <strong>systematic AWS security controls</strong> (GuardDuty threat detection, Security Hub monitoring, Config compliance automation, KMS encryption management, VPC zero-trust segmentation) + <strong>CloudFormation IaC</strong> (configuration as code, version control, automated deployment) + <strong>measurable outcomes</strong> (99.9% uptime, zero misconfigurations, zero security incidents 2023-2025).</p>
+      
+      <p><strong>Our AWS security framework:</strong></p>
+      <ul>
+        <li><strong>Five Security Layers:</strong> GuardDuty (threat detection), Security Hub (centralized monitoring), Config (compliance automation), KMS (encryption management), VPC (network segmentation)</li>
+        <li><strong>Infrastructure as Code:</strong> All AWS resources defined in CloudFormation templates, version-controlled in Git, deployed via CI/CD</li>
+        <li><strong>Perimeter Defense:</strong> Route 53 DNS Firewall (malware/botnet blocking), AWS WAF (OWASP Top 10 protection), rate limiting, geo-blocking</li>
+        <li><strong>Shared Responsibility:</strong> AWS secures infrastructure, Hack23 secures configuration, policies, applications, data</li>
+        <li><strong>Measured Outcomes:</strong> 99.9% uptime, zero breaches, 99.7% Config compliance, automated drift detection</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Question authority—including the assumption that "cloud provider security" means "we don't need security strategy." AWS provides tools. You must use them correctly. Misconfiguration is breach, and it's always your responsibility.</p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>You are now in Chapel Perilous. Cloud security without systematic controls is infrastructure faith. We deploy systematic controls: GuardDuty, Security Hub, Config, KMS, VPC, IaC. Because 99.9% uptime requires engineering, not hoping AWS handles everything.</em></p>
+      
+      <p><strong>에리스 만세! 디스코디아 만세!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network 보안 정책</a>, <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a>, and <a href="https://github.com/Hack23/lambda-in-private-vpc">Lambda VPC Architecture</a> with complete AWS security configurations. Public. Systematic. Reality-based. With specific AWS services we actually use.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Configure systematically. Monitor continuously. Remediate automatically. Repeat until secure."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+
+    <!-- Security Assessment Checklist CTA -->
+    <section class="blog-cta">
+      <h2>🔍 Evaluate Your 클라우드 보안 Posture</h2>
+      <p>Download our comprehensive security assessment checklist with dedicated sections for cloud security, network controls, and AWS best practices.</p>
+      <p><strong>95-Point Assessment Based on ISO 27001 & AWS Well-Architected Framework</strong></p>
+      <a href="security-assessment-checklist.html" class="blog-cta-button">Get Your Free Checklist</a>
+    </section>
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- 회사 Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>사이버보안 컨설팅<br>
+          고텐부르크, 스웨덴 | 원격</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn 회사 Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- 서비스 Column -->
+        <div class="footer-column">
+          <h3>서비스</h3>
+          <ul>
+            <li><a href="services_ko.html">보안 컨설팅</a></li>
+            <li><a href="services_ko.html">보안 아키텍처</a></li>
+            <li><a href="services_ko.html">클라우드 보안</a></li>
+            <li><a href="services_ko.html">DevSecOps 통합</a></li>
+            <li><a href="services_ko.html">규정 준수 및 ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- 제품 Column -->
+        <div class="footer-column">
+          <h3>제품</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- 리소스 Column -->
+        <div class="footer-column">
+          <h3>리소스</h3>
+          <ul>
+            <li><a href="blog_ko.html">Security 블로그</a></li>
+            <li><a href="discordian-cybersecurity_ko.html">🍎 Discordian 블로그</a></li>
+            <li><a href="cia-triad-faq.html">CIA 3요소 FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">공개 ISMS</a></li>
+            <li><a href="sitemap.html">사이트맵</a></li>
+          </ul>
+        </div>
+        
+        <!-- 회사 Column -->
+        <div class="footer-column">
+          <h3>회사</h3>
+          <ul>
+            <li><a href="why-hack23.html">Hack23 소개</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">보안 정책</a></li>
+            <li><a href="SECURITY.md">보안 문제 보고</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub 조직</a></li>
+            <li><a href="accessibility-statement.html">접근성</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to 블로그 -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ 블로그 Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. 모든 권리 보유. | 라이선스: <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_ko.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko"><strong>한국어</strong></a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
