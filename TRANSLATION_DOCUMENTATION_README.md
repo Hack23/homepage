@@ -51,7 +51,7 @@ Each language has **two dedicated files**:
 |------|----------|------|-------|------------|---------|---------------|--------|
 | 🇯🇵🗾 | Japanese | ja | 58/96 | 60.4% | 34.0% | [v3.1 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
 | 🇨🇳🐉 | Chinese | zh | 58/96 | 60.4% | 34.0% | [v3.1 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
-| 🇰🇷🏯 | Korean | ko | 68/96 | 70.8% | 62.1% | [v5.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) \| [Glossary 📚](Korean-Cybersecurity-Glossary.md) \| [Fix Plan 🔧](Korean-Translation-Standardization-Plan.md) |
+| 🇰🇷🏯 | Korean | ko | 96/96 | 100% | 75%+ | [v6.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
 
 ### Nordic Languages ❄️
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
