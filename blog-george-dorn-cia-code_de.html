@@ -260,241 +260,241 @@
     </section>
 
     <section id="tech-stack-reality">
-      <h2 class="panel-caption">Technologie-Stack: What's Actually Running</h2>
+      <h2 class="panel-caption">Technologie-Stack: Was tatsächlich läuft</h2>
       
       <div class="cards">
         <div class="card Vertraulichkeit-card">
           <div class="scanner-effect"></div>
-          <h3>🖥️ Core Platform</h3>
-          <p><strong>Language:</strong> Java (confirmed by 1,372 .java files)</p>
-          <p><strong>Build Tool:</strong> Maven (49 pom.xml files)</p>
+          <h3>🖥️ Kernplattform</h3>
+          <p><strong>Sprache:</strong> Java (bestätigt durch 1.372 .java-Dateien)</p>
+          <p><strong>Build-Tool:</strong> Maven (49 pom.xml-Dateien)</p>
           <p><strong>Framework:</strong> Spring Framework + Spring Boot</p>
-          <p><strong>Web UI:</strong> Vaadin (server-side Java framework, no JavaScript required)</p>
-          <p><strong>Datenbank:</strong> PostgreSQL with JPA/Hibernate ORM</p>
+          <p><strong>Web-UI:</strong> Vaadin (serverseitiges Java-Framework, kein JavaScript erforderlich)</p>
+          <p><strong>Datenbank:</strong> PostgreSQL mit JPA/Hibernate ORM</p>
           
-          <p><strong>Why This Stack?</strong></p>
+          <p><strong>Warum dieser Stack?</strong></p>
           <ul>
-            <li><strong>Java:</strong> Type safety, mature ecosystem, enterprise stability</li>
-            <li><strong>Spring:</strong> Battle-tested dependency injection, transaction management, Sicherheit</li>
-            <li><strong>Vaadin:</strong> Complex UI in Java without writing JavaScript—controversial but effective for data-heavy applications</li>
-            <li><strong>PostgreSQL:</strong> Open source, ACID compliance, excellent for relational political data</li>
+            <li><strong>Java:</strong> Typsicherheit, ausgereiftes Ökosystem, Unternehmens-Stabilität</li>
+            <li><strong>Spring:</strong> Kampferprobte Dependency Injection, Transaktionsverwaltung, Sicherheit</li>
+            <li><strong>Vaadin:</strong> Komplexe UI in Java ohne JavaScript-Entwicklung – umstritten, aber effektiv für datenintensive Anwendungen</li>
+            <li><strong>PostgreSQL:</strong> Open Source, ACID-Konformität, excellent für relationale politische Daten</li>
           </ul>
         </div>
         
         <div class="card Integrität-card">
           <div class="scanner-effect"></div>
-          <h3>🗄️ Data Layer Architecture</h3>
-          <p><strong>Confirmed from DATA_MODEL.md:</strong></p>
+          <h3>🗄️ Datenschicht-Architektur</h3>
+          <p><strong>Bestätigt aus DATA_MODEL.md:</strong></p>
           <ul>
-            <li>60+ base entity tables</li>
-            <li>30+ materialized views for analytics</li>
-            <li>Composite primary keys for many-to-many relationships</li>
-            <li>Javers auditing for change tracking</li>
-            <li>View entities optimized for read operations</li>
+            <li>Über 60 Basis-Entity-Tabellen</li>
+            <li>Über 30 materialisierte Views für Analytik</li>
+            <li><strong>Composite Primary Keys</strong> für Many-to-Many-Beziehungen</li>
+            <li>Javers-Auditing für Change-Tracking</li>
+            <li>View-Entitäten optimiert für Leseoperationen</li>
           </ul>
           
-          <p><strong>Data Sources Integration:</strong></p>
+          <p><strong>Datenquellen-Integration:</strong></p>
           <ul>
-            <li>Swedish Parliament API (riksdagen.se)</li>
-            <li>Election Autority (val.se)</li>
-            <li>World Bank Open Data</li>
-            <li>Swedish Financial Management Autority (ESV)</li>
-            <li>Government Bodies data</li>
+            <li>Schwedisches Parlaments-API (riksdagen.se)</li>
+            <li>Wahlbehörde (val.se)</li>
+            <li>Weltbank Open Data</li>
+            <li>Schwedische Finanzverwaltungsbehörde (ESV)</li>
+            <li>Regierungsbehörden-Daten</li>
           </ul>
           
-          <p><strong>Integration Pattern:</strong> Spring Integration framework for ETL pipelines. Data fetched via REST APIs, transformed, persisted to PostgreSQL, then materialized views aggregate for analytics.</p>
+          <p><strong>Integrationsmuster:</strong> Spring Integration Framework für ETL-Pipelines. Daten über REST-APIs abgerufen, transformiert, in PostgreSQL persistiert, dann aggregieren materialisierte Views für Analytik.</p>
         </div>
         
         <div class="card Verfügbarkeit-card">
           <div class="scanner-effect"></div>
-          <h3>🔐 Sicherheit Implementation</h3>
-          <p><strong>From SECURITY_ARCHITECTURE.md Analysis:</strong></p>
+          <h3>🔐 Sicherheits-Implementierung</h3>
+          <p><strong>Aus SECURITY_ARCHITECTURE.md-Analyse:</strong></p>
           <ul>
-            <li><strong>Spring Security</strong> for authentication/authorization</li>
-            <li><strong>Parameterized queries</strong> via JPA (SQL injection prevention)</li>
-            <li><strong>Network isolation</strong> through firewall rules</li>
-            <li><strong>Javers auditing</strong> for every data modification</li>
-            <li><strong>Role-based access control</strong> with least-privilege Datenbank roles</li>
+            <li><strong>Spring Security</strong> für Authentifizierung/Autorisierung</li>
+            <li><strong>Parametrisierte Abfragen</strong> über JPA (SQL-Injection-Prävention)</li>
+            <li><strong>Netzwerk-Isolation</strong> durch Firewall-Regeln</li>
+            <li><strong>Javers-Auditing</strong> für jede Datenänderung</li>
+            <li><strong>Rollenbasierte Zugriffskontrolle</strong> mit Least-Privilege-Datenbankrollen</li>
           </ul>
           
-          <p><strong>OpenSSF Scorecard:</strong> 7.2/10 (verified at <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">scorecard.dev</a>)</p>
-          <p><strong>SLSA Level:</strong> 3 (build provenance attestations)</p>
-          <p><strong>CII Best Practices:</strong> Badge earned</p>
+          <p><strong>OpenSSF Scorecard:</strong> 7,2/10 (verifiziert unter <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">scorecard.dev</a>)</p>
+          <p><strong>SLSA Level:</strong> 3 (Build-Provenance-Attestierungen)</p>
+          <p><strong>CII Best Practices:</strong> Badge erhalten</p>
           
-          <p class="hidden-wisdom"><em>Security through measurable practices, not marketing claims. OpenSSF Scorecard provides public evidence—7.2/10 is solid for open-source project, not perfect but continuously improving.</em></p>
+          <p class="hidden-wisdom"><em>Sicherheit durch messbare Praktiken, nicht Marketing-Behauptungen. OpenSSF Scorecard liefert öffentliche Evidenz – 7,2/10 ist solide für Open-Source-Projekt, nicht perfekt, aber kontinuierlich verbessernd.</em></p>
         </div>
       </div>
     </section>
 
     <section id="developer-observations">
-      <h2 class="panel-caption">Developer Observations: What I Learned Analyzing the Code</h2>
+      <h2 class="panel-caption">Entwickler-Beobachtungen: Was ich bei der Code-Analyse gelernt habe</h2>
       
       <div class="cards">
         <div class="card Vertraulichkeit-card">
           <div class="scanner-effect"></div>
-          <h3>✅ What Works Well</h3>
+          <h3>✅ Was gut funktioniert</h3>
           <ul>
-            <li><strong>Modular Architecture:</strong> 49 Maven modules = clean separation. Service layer doesn't know about web layer. Data access isolated. Good boundaries.</li>
-            <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, Sicherheit_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
-            <li><strong>Test Infrastructure:</strong> Dedicated <code>testfoundation</code> module for test utilities. Shared test infrastructure = consistent testing approach.</li>
-            <li><strong>Domain-Driven Design:</strong> Separate model modules for external data, internal data, application data. Clear domain boundaries.</li>
-            <li><strong>Automated Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Measurable quality metrics.</li>
+            <li><strong>Modulare Architektur:</strong> 49 Maven-Module = saubere Trennung. Service-Schicht kennt Web-Schicht nicht. Datenzugriff isoliert. Gute Grenzen.</li>
+            <li><strong>Umfassende Dokumentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md alle vorhanden und detailliert. Selten für Open Source.</li>
+            <li><strong>Test-Infrastruktur:</strong> Dediziertes <code>testfoundation</code>-Modul für Test-Utilities. Gemeinsame Test-Infrastruktur = konsistenter Testing-Ansatz.</li>
+            <li><strong>Domain-Driven Design:</strong> Separate Model-Module für externe Daten, interne Daten, Anwendungsdaten. Klare Domänengrenzen.</li>
+            <li><strong>Automatisierte Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Messbare Qualitätsmetriken.</li>
           </ul>
         </div>
         
         <div class="card Integrität-card">
           <div class="scanner-effect"></div>
-          <h3>⚠️ Complexity Challenges</h3>
+          <h3>⚠️ Komplexitäts-Herausforderungen</h3>
           <ul>
-            <li><strong>Maven Module Coordination:</strong> 49 modules = version management complexity. Dependency changes ripple across modules.</li>
-            <li><strong>Vaadin Learning Curve:</strong> Server-side UI framework is unusual. Team members need Vaadin expertise, not just Java.</li>
-            <li><strong>PostgreSQL Schema Size:</strong> 90+ tables/views = complex data model. Understanding relationships requires DATA_MODEL.md study.</li>
-            <li><strong>Integration Brittleness:</strong> External APIs (Riksdag, World Bank) can change formats. Requires defensive parsing and version detection.</li>
-            <li><strong>Build Time:</strong> Multi-module Maven build likely takes 10-20+ Minuten for full clean install. Iterative development needs incremental builds.</li>
+            <li><strong>Maven-Modul-Koordination:</strong> 49 Module = Versions-Management-Komplexität. Abhängigkeitsänderungen wirken sich über Module hinweg aus.</li>
+            <li><strong>Vaadin-Lernkurve:</strong> Serverseitiges UI-Framework ist ungewöhnlich. Teammitglieder benötigen Vaadin-Expertise, nicht nur Java.</li>
+            <li><strong>PostgreSQL-Schema-Größe:</strong> Über 90 Tabellen/Views = komplexes Datenmodell. Beziehungen verstehen erfordert DATA_MODEL.md-Studium.</li>
+            <li><strong>Integrations-Fragilität:</strong> Externe APIs (Riksdag, Weltbank) können Formate ändern. Erfordert defensives Parsing und Versionserkennung.</li>
+            <li><strong>Build-Zeit:</strong> Multi-Modul-Maven-Build dauert wahrscheinlich 10-20+ Minuten für vollständigen Clean Install. Iterative Entwicklung benötigt inkrementelle Builds.</li>
           </ul>
         </div>
         
         <div class="card Verfügbarkeit-card">
           <div class="scanner-effect"></div>
-          <h3>🎯 Developer Experience Insights</h3>
+          <h3>🎯 Developer-Experience-Einblicke</h3>
           <p><strong>Erste Schritte:</strong></p>
           <ol>
             <li><code>git clone https://github.com/Hack23/cia.git</code></li>
-            <li><code>mvn clean install</code> (will take 15-20 Minuten first time)</li>
-            <li>Read ARCHITECTURE.md to understand module structure</li>
-            <li>Read DATA_MODEL.md to understand Datenbank schema</li>
-            <li>Run <code>citizen-intelligence-agency</code> main application module</li>
+            <li><code>mvn clean install</code> (dauert beim ersten Mal 15-20 Minuten)</li>
+            <li>Lesen Sie ARCHITECTURE.md, um die Modulstruktur zu verstehen</li>
+            <li>Lesen Sie DATA_MODEL.md, um das Datenbankschema zu verstehen</li>
+            <li>Führen Sie das <code>citizen-intelligence-agency</code> Hauptanwendungsmodul aus</li>
           </ol>
           
-          <p><strong>Prerequisites:</strong></p>
+          <p><strong>Voraussetzungen:</strong></p>
           <ul>
-            <li>Java 17+ (confirmed in POMs)</li>
+            <li>Java 17+ (bestätigt in POMs)</li>
             <li>Maven 3.8+</li>
-            <li>PostgreSQL 14+ for local development</li>
-            <li>8GB+ RAM (Vaadin apps are memory-hungry)</li>
-            <li>Patience (multi-module builds test your patience)</li>
+            <li>PostgreSQL 14+ für lokale Entwicklung</li>
+            <li>8GB+ RAM (Vaadin-Apps sind speicherhungrig)</li>
+            <li>Geduld (Multi-Modul-Builds testen Ihre Geduld)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>First-time setup is non-trivial. Documentation helps, but expect 2-4 hours to get local environment running. Multi-module Maven projects require discipline—don't skip reading architecture docs.</em></p>
+          <p class="hidden-wisdom"><em>Ersteinrichtung ist nicht trivial. Dokumentation hilft, aber erwarten Sie 2-4 Stunden, um die lokale Umgebung zum Laufen zu bringen. Multi-Modul-Maven-Projekte erfordern Disziplin – überspringen Sie nicht das Lesen der Architekturdokumentation.</em></p>
         </div>
       </div>
     </section>
 
     <section id="code-quality">
-      <h2 class="panel-caption">Code Quality Metrics: Measurable Evidence</h2>
+      <h2 class="panel-caption">Code-Qualitätsmetriken: Messbare Evidenz</h2>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>Metric</th>
-            <th>Value</th>
-            <th>Analysis</th>
+            <th>Metrik</th>
+            <th>Wert</th>
+            <th>Analyse</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Maven Modules</strong></td>
+            <td><strong>Maven-Module</strong></td>
             <td>49</td>
-            <td>Well-structured modular architecture</td>
+            <td>Gut strukturierte modulare Architektur</td>
           </tr>
           <tr>
-            <td><strong>Java Files</strong></td>
-            <td>1,372</td>
-            <td>Significant codebase, requires good organization</td>
+            <td><strong>Java-Dateien</strong></td>
+            <td>1.372</td>
+            <td>Bedeutende Codebasis, erfordert gute Organisation</td>
           </tr>
           <tr>
-            <td><strong>Documentation Files</strong></td>
-            <td>10+ major MD files</td>
-            <td>Comprehensive technical documentation</td>
+            <td><strong>Dokumentationsdateien</strong></td>
+            <td>Über 10 große MD-Dateien</td>
+            <td>Umfassende technische Dokumentation</td>
           </tr>
           <tr>
             <td><strong>OpenSSF Scorecard</strong></td>
-            <td>7.2/10</td>
-            <td>Solid Sicherheit practices, continuously improving</td>
+            <td>7,2/10</td>
+            <td>Solide Sicherheitspraktiken, kontinuierlich verbessernd</td>
           </tr>
           <tr>
-            <td><strong>Datenbank Tables</strong></td>
-            <td>60+ base + 30+ views</td>
-            <td>Complex data model, well-documented</td>
+            <td><strong>Datenbanktabellen</strong></td>
+            <td>Über 60 Basis + über 30 Views</td>
+            <td>Komplexes Datenmodell, gut dokumentiert</td>
           </tr>
           <tr>
-            <td><strong>External Integrations</strong></td>
-            <td>5 major APIs</td>
-            <td>Riksdag, World Bank, Election Autority, ESV, Gov Bodies</td>
+            <td><strong>Externe Integrationen</strong></td>
+            <td>5 Haupt-APIs</td>
+            <td>Riksdag, Weltbank, Wahlbehörde, ESV, Regierungsbehörden</td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>Verdict:</strong> This is a <em>serious</em> codebase. Not a weekend project—multi-year enterprise application with proper architecture, documentation, and quality gates. The 49-module structure demonstrates thought went into separating concerns. Documentation quality suggests this is meant to be maintained long-term.</p>
+      <p><strong>Urteil:</strong> Dies ist eine <em>ernsthafte</em> Codebasis. Kein Wochenendprojekt – eine mehrjährige Unternehmensanwendung mit ordentlicher Architektur, Dokumentation und Quality Gates. Die 49-Modul-Struktur zeigt, dass Gedanken in die Trennung der Zuständigkeiten geflossen sind. Die Dokumentationsqualität deutet darauf hin, dass dies langfristig gewartet werden soll.</p>
     </section>
 
     <section id="easter-eggs">
-      <h2 class="panel-caption">🥚 Easter Eggs I Discovered in the Code</h2>
+      <h2 class="panel-caption">🥚 Easter Eggs, die ich im Code entdeckt habe</h2>
       
-      <p><strong>While analyzing the repository, I found these delightful hidden details:</strong></p>
+      <p><strong>Während der Repository-Analyse fand ich diese entzückenden versteckten Details:</strong></p>
       
       <ul>
-        <li><strong>Module Count:</strong> 49 modules = 7 × 7. Seven being a cosmically significant number (days of week, deadly sins, etc.). Coincidence? In a Discordian project, nothing is coincidence.</li>
-        <li><strong>FNORD Files:</strong> Checked for files containing "fnord" or "23"—didn't find obvious Easter eggs in filenames, but the spirit is there in the philosophy.</li>
-        <li><strong>Documentation Humor:</strong> CRA-ASSESSMENT.md contains dry Swedish bureaucracy humor about complying with EU regulations.</li>
-        <li><strong>Test Module Naming:</strong> <code>testfoundation</code> module suggests tests are foundational, not afterthought. Philosophy embedded in structure.</li>
+        <li><strong>Modulanzahl:</strong> 49 Module = 7 × 7. Sieben ist eine kosmisch bedeutsame Zahl (Wochentage, Todsünden, etc.). Zufall? In einem Discordischen Projekt ist nichts Zufall.</li>
+        <li><strong>FNORD-Dateien:</strong> Habe nach Dateien gesucht, die "fnord" oder "23" enthalten – keine offensichtlichen Easter Eggs in Dateinamen gefunden, aber der Geist ist in der Philosophie da.</li>
+        <li><strong>Dokumentationshumor:</strong> CRA-ASSESSMENT.md enthält trockenen schwedischen Bürokratiehumor über EU-Vorschriften-Compliance.</li>
+        <li><strong>Testmodul-Benennung:</strong> <code>testfoundation</code>-Modul suggeriert, dass Tests grundlegend sind, kein Nachgedanke. Philosophie eingebettet in Struktur.</li>
       </ul>
       
-      <p class="hidden-wisdom"><em>Easter eggs aren't just jokes—they're breadcrumbs for future developers. Code that delights is code that gets maintained. Discordian philosophy recognizes this truth.</em></p>
+      <p class="hidden-wisdom"><em>Easter Eggs sind nicht nur Witze – sie sind Breadcrumbs für zukünftige Entwickler. Code, der erfreut, ist Code, der gewartet wird. Discordische Philosophie erkennt diese Wahrheit.</em></p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">Final Verdict: Production-Quality Open Source Political Intelligence</h2>
+      <h2 class="panel-caption">Abschließendes Urteil: Produktionsreife Open-Source-Political-Intelligence</h2>
       
-      <p><strong>This is what I found:</strong> Citizen Intelligence Agency is a legitimate, well-architected, production-quality application for analyzing Swedish political data. Not vaporware. Not a proof-of-concept. An actual working system with:</p>
+      <p><strong>Das habe ich gefunden:</strong> Citizen Intelligence Agency ist eine legitime, gut architekturierte, produktionsreife Anwendung zur Analyse schwedischer politischer Daten. Keine Vaporware. Kein Proof-of-Concept. Ein tatsächlich funktionierendes System mit:</p>
       
       <ul>
-        <li>✅ <strong>49-module Maven architecture</strong> enforcing separation of concerns</li>
-        <li>✅ <strong>1,372 Java files</strong> implementing real business logic</li>
-        <li>✅ <strong>Comprehensive documentation</strong> (ARCHITECTURE.md, DATA_MODEL.md, etc.)</li>
-        <li>✅ <strong>Sicherheit best practices</strong> (OpenSSF 7.2/10, SLSA Level 3)</li>
-        <li>✅ <strong>Complex PostgreSQL schema</strong> (90+ tables/views)</li>
-        <li>✅ <strong>Multiple external integrations</strong> (Riksdag, World Bank, Election Autority)</li>
-        <li>✅ <strong>CI/CD automation</strong> (GitHub Actions workflows)</li>
-        <li>✅ <strong>Open source transparency</strong> (all code public on GitHub)</li>
+        <li>✅ <strong>49-Modul-Maven-Architektur</strong>, die Trennung der Zuständigkeiten erzwingt</li>
+        <li>✅ <strong>1.372 Java-Dateien</strong>, die echte Geschäftslogik implementieren</li>
+        <li>✅ <strong>Umfassender Dokumentation</strong> (ARCHITECTURE.md, DATA_MODEL.md, etc.)</li>
+        <li>✅ <strong>Sicherheits-Best-Practices</strong> (OpenSSF 7,2/10, SLSA Level 3)</li>
+        <li>✅ <strong>Komplexem PostgreSQL-Schema</strong> (über 90 Tabellen/Views)</li>
+        <li>✅ <strong>Mehreren externen Integrationen</strong> (Riksdag, Weltbank, Wahlbehörde)</li>
+        <li>✅ <strong>CI/CD-Automatisierung</strong> (GitHub Actions Workflows)</li>
+        <li>✅ <strong>Open-Source-Transparenz</strong> (gesamter Code öffentlich auf GitHub)</li>
       </ul>
       
-      <p><strong>Developer Time Investment Required:</strong> Understanding this codebase = 40-80 hours minimum. It's not simple. But simplicity wasn't the goal—comprehensive political transparency was. Complexity is justified by problem domain complexity.</p>
+      <p><strong>Erforderliche Entwickler-Zeitinvestition:</strong> Diese Codebasis verstehen = mindestens 40-80 Stunden. Es ist nicht einfach. Aber Einfachheit war nicht das Ziel – umfassende politische Transparenz war es. Komplexität ist durch Problemdomänen-Komplexität gerechtfertigt.</p>
       
-      <p><strong>Would I want to work on this codebase?</strong> Yes. Well-organized, documented, tested, and maintained. The kind of codebase where you can make changes confidently because the architecture supports it.</p>
+      <p><strong>Würde ich an dieser Codebasis arbeiten wollen?</strong> Ja. Gut organisiert, dokumentiert, getestet und gewartet. Die Art von Codebasis, wo man zuversichtlich Änderungen vornehmen kann, weil die Architektur es unterstützt.</p>
       
-      <p class="signature"><em>— George Dorn<br>Developer / Code Analyzer / Repository Inspector<br>Hack23 AB<br><br>"I cloned the repo. I read the code. This is what's actually there."<br><br>💻 FNORD 🔍</em></p>
+      <p class="signature"><em>— George Dorn<br>Entwickler / Code-Analyst / Repository-Inspektor<br>Hack23 AB<br><br>"Ich habe das Repo geklont. Ich habe den Code gelesen. Das ist, was tatsächlich da ist."<br><br>💻 FNORD 🔍</em></p>
     </section>
 
     <section id="resources">
-      <h2 class="panel-caption">Explore the Code Yourself</h2>
+      <h2 class="panel-caption">Erkunden Sie den Code selbst</h2>
       
       <div class="cards">
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>🔗 Repository & Documentation</h3>
+          <h3>🔗 Repository & Dokumentation</h3>
           <ul>
-            <li><a href="https://github.com/Hack23/cia">GitHub Repository</a> - Clone and analyze yourself</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4 models and system design</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Datenbank schema documentation</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/Sicherheit_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Security patterns</li>
-            <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Security metrics</li>
+            <li><a href="https://github.com/Hack23/cia">GitHub-Repository</a> - Klonen und selbst analysieren</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4-Modelle und Systemdesign</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Datenbankschema-Dokumentation</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Sicherheitsmuster</li>
+            <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Sicherheitsmetriken</li>
           </ul>
         </div>
         
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>📚 Related Reading</h3>
+          <h3>📚 Verwandte Lektüre</h3>
           <ul>
-            <li><a href="cia-docs.html">CIA Product Documentation</a> - User-facing documentation</li>
-            <li><a href="blog_de.html">Hack23 Security Blog</a> - All blog entries</li>
-            <li><a href="blog-george-dorn-trigram-code.html">Black Trigram Code-Analyse</a> - TypeScript/React game analysis</li>
-            <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Code-Analyse</a> - Client-side architecture</li>
+            <li><a href="cia-docs_de.html">CIA-Produktdokumentation</a> - Benutzerdokumentation</li>
+            <li><a href="blog_de.html">Hack23 Security-Blog</a> - Alle Blog-Einträge</li>
+            <li><a href="blog-george-dorn-trigram-code_de.html">Black Trigram Code-Analyse</a> - TypeScript/React-Spiel-Analyse</li>
+            <li><a href="blog-george-dorn-compliance-code_de.html">Compliance Manager Code-Analyse</a> - Client-seitige Architektur</li>
           </ul>
         </div>
       </div>
       
-      <p><strong>Think for yourself:</strong> Don't trust my analysis—clone the repository and verify. Code inspection beats documentation reading. Reality testing beats theoretical understanding.</p>
+      <p><strong>Denke selbst:</strong> Vertraue nicht meiner Analyse – klone das Repository und verifiziere es. Code-Inspektion schlägt Dokumentationslesen. Realitätstests schlagen theoretisches Verständnis.</p>
     </section>
   </article>
 </main>
