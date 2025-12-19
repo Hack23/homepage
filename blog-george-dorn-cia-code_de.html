@@ -177,66 +177,66 @@
     <h1 class="header">💻 George Dorn's CIA Code-Analyse: What The Repository Actually Contains</h1>
     
     <section id="introduction">
-      <h2 class="panel-caption">Reality-Tested Code Review: I Dowdeoaded and Analyzed the Actual Repository</h2>
+      <h2 class="panel-caption">Realitäts-geprüfte Code-Bewertung: Ich habe das eigentliche Repository heruntergeladen und analysiert</h2>
       
-      <p><strong>Developer's Note:</strong> Forget the theory. I cloned <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a>, analyzed the actual code structure, read the POMs, examined the Java files, and counted the real numbers. This is what the Citizen Intelligence Agency codebase <em>actually</em> looks like.</p>
+      <p><strong>Entwicklerhinweis:</strong> Vergiss die Theorie. Ich habe <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a> geklont, die tatsächliche Code-Struktur analysiert, die POMs gelesen, die Java-Dateien untersucht und die realen Zahlen gezählt. So sieht die Codebasis der Citizen Intelligence Agency <em>tatsächlich</em> aus.</p>
       
-      <p><strong>Repository URL:</strong> <code>git clone https://github.com/Hack23/cia.git</code></p>
-      <p><strong>Analysis Date:</strong> November 8, 2025</p>
-      <p><strong>Branch Analyzed:</strong> master</p>
+      <p><strong>Repository-URL:</strong> <code>git clone https://github.com/Hack23/cia.git</code></p>
+      <p><strong>Analysedatum:</strong> 8. November 2025</p>
+      <p><strong>Analysierter Branch:</strong> master</p>
       
-      <p class="hidden-wisdom"><em>Think for yourself: Don't trust documentation—clone the repo and verify. Code doesn't lie.</em></p>
+      <p class="hidden-wisdom"><em>Denke selbst: Vertraue nicht der Dokumentation – klone das Repository und überprüfe es selbst. Code lügt nicht.</em></p>
     
       
-      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cyberSicherheit consulting.</p>
+      <p><strong>Benötigen Sie fachkundige Unterstützung bei der Implementierung Ihres ISMS?</strong> <a href="why-hack23_de.html">Erfahren Sie, warum sich Unternehmen für Hack23 entscheiden</a> – für transparente, praxisorientierte Cybersicherheitsberatung.</p>
     </section>
 
     <section id="repository-structure">
-      <h2 class="panel-caption">Repository Structure: 49 Maven Modules Fighting Political Chaos</h2>
+      <h2 class="panel-caption">Repository-Struktur: 49 Maven-Module im Kampf gegen politisches Chaos</h2>
       
       <div class="cards">
         <div class="card Vertraulichkeit-card">
           <div class="scanner-effect"></div>
-          <h3>🏗️ Maven Multi-Module Architecture</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM files</strong></p>
-          <p><strong>What This Means:</strong> The project is organized into 49 Maven modules. Not monolithic—modular separation of concerns across service layer, data access, web application, integration services, and parent POMs.</p>
+          <h3>🏗️ Maven-Multi-Modul-Architektur</h3>
+          <p><strong>Tatsächliche Anzahl:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM-Dateien</strong></p>
+          <p><strong>Was dies bedeutet:</strong> Das Projekt ist in 49 Maven-Module organisiert. Nicht monolithisch – modulare Trennung der Zuständigkeiten über Service-Schicht, Datenzugriff, Webanwendung, Integrationsdienste und übergeordnete POMs hinweg.</p>
           
-          <p><strong>Key Modules Discovered:</strong></p>
+          <p><strong>Gefundene Schlüsselmodule:</strong></p>
           <ul>
-            <li><code>service.api/</code> - Service layer API definitions</li>
-            <li><code>service.data.impl/</code> - JPA/Hibernate data access implementation</li>
-            <li><code>service.component.agent.impl/</code> - Data import agents (Riksdag, World Bank, etc.)</li>
-            <li><code>citizen-intelligence-agency/</code> - Main web application (Vaadin UI)</li>
-            <li><code>model.*/</code> - Multiple domain model modules (external, internal, application)</li>
+            <li><code>service.api/</code> - Service-Schicht-API-Definitionen</li>
+            <li><code>service.data.impl/</code> - JPA/Hibernate-Datenzugriff-Implementierung</li>
+            <li><code>service.component.agent.impl/</code> - Datenimport-Agenten (Riksdag, Weltbank, etc.)</li>
+            <li><code>citizen-intelligence-agency/</code> - Hauptwebanwendung (Vaadin-UI)</li>
+            <li><code>model.*/</code> - Mehrere Domänenmodell-Module (extern, intern, Anwendung)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>Modular architecture = independent deployment potential, but also coordination complexity. Each module can evolve independently—until integration tests discover you broke something three modules away.</em></p>
+          <p class="hidden-wisdom"><em>Modulare Architektur = unabhängiges Deployment-Potenzial, aber auch Koordinierungskomplexität. Jedes Modul kann sich unabhängig entwickeln – bis Integrationstests entdecken, dass du etwas drei Module entfernt kaputt gemacht hast.</em></p>
         </div>
         
         <div class="card Integrität-card">
           <div class="scanner-effect"></div>
-          <h3>☕ Java Source Files</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1,372 Java files</strong></p>
-          <p><strong>Lines of Code:</strong> Estimated 60,000+ lines across all modules (based on typical Java file averaging ~50-80 lines per file for service/data layer code)</p>
+          <h3>☕ Java-Quelldateien</h3>
+          <p><strong>Tatsächliche Anzahl:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1.372 Java-Dateien</strong></p>
+          <p><strong>Codezeilen:</strong> Geschätzt über 60.000 Zeilen über alle Module hinweg (basierend auf typischen Java-Dateien mit durchschnittlich ~50-80 Zeilen pro Datei für Service-/Datenbank-Schicht-Code)</p>
           
-          <p><strong>Package Structure Observed:</strong></p>
+          <p><strong>Beobachtete Paketstruktur:</strong></p>
           <ul>
-            <li><code>com.hack23.cia.service.*</code> - Service layer business logic</li>
-            <li><code>com.hack23.cia.model.*</code> - Domain models and entities</li>
-            <li><code>com.hack23.cia.web.*</code> - Web/UI layer (Vaadin components)</li>
-            <li><code>com.hack23.cia.testfoundation.*</code> - Test infrastructure and utilities</li>
+            <li><code>com.hack23.cia.service.*</code> - Service-Schicht-Geschäftslogik</li>
+            <li><code>com.hack23.cia.model.*</code> - Domänenmodelle und Entitäten</li>
+            <li><code>com.hack23.cia.web.*</code> - Web-/UI-Schicht (Vaadin-Komponenten)</li>
+            <li><code>com.hack23.cia.testfoundation.*</code> - Testinfrastruktur und -utilities</li>
           </ul>
           
-          <p><strong>Technologies Confirmed in POMs:</strong></p>
+          <p><strong>In POMs bestätigte Technologien:</strong></p>
           <ul>
-            <li><strong>Spring Framework</strong> - Dependency injection, transaction management</li>
-            <li><strong>Spring Sicherheit</strong> - Authentication and authorization</li>
-            <li><strong>JPA/Hibernate</strong> - Datenbank ORM layer</li>
-            <li><strong>Vaadin</strong> - Server-side Java web framework for UI</li>
-            <li><strong>PostgreSQL</strong> - Primary Datenbank (confirmed in data model docs)</li>
+            <li><strong>Spring Framework</strong> - Dependency Injection, Transaktionsverwaltung</li>
+            <li><strong>Spring Sicherheit</strong> - Authentifizierung und Autorisierung</li>
+            <li><strong>JPA/Hibernate</strong> - Datenbank-ORM-Schicht</li>
+            <li><strong>Vaadin</strong> - Serverseitiges Java-Web-Framework für UI</li>
+            <li><strong>PostgreSQL</strong> - Primäre Datenbank (bestätigt in Datenmodell-Dokumentation)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>1,372 Java files = significant codebase requiring disciplined architecture. Without modular separation, this would be unmaintainable. The 49-module structure keeps complexity contained.</em></p>
+          <p class="hidden-wisdom"><em>1.372 Java-Dateien = bedeutende Codebasis, die disziplinierte Architektur erfordert. Ohne modulare Trennung wäre dies nicht wartbar. Die 49-Modul-Struktur hält die Komplexität im Zaum.</em></p>
         </div>
         
         <div class="card Verfügbarkeit-card">
