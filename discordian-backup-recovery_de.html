@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sicherung & Wiederherstellung | AWS S3 + 3-2-1 Regel | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="99,9% Backup-Erfolg + 3-2-1 Regel + klassifizierungsgetriebene RTO/RPO. Kritisch: <1h RTO, <15min RPO. AWS S3 + Glacier. Vierteljährliche Tests.">
+<meta name="keywords" content="Backup und Recovery, Datensicherung, Disaster Recovery, Business Continuity, Backup-Strategie, 3-2-1 Backup-Regel, RTO, RPO, AWS Backup">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Sicherung & Wiederherstellung: Wiederherstellen oder bereuen">
+<meta property="og:description" content="Gehen Sie von einer Kompromittierung aus. Gehen Sie von Ransomware aus. Gehen Sie von einer Katastrophe aus. Ein Backup, das Sie nicht getestet haben, ist Schrödingers Backup.">
+	<meta property="og:locale" content="de_DE">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-backup-recovery_de.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Sicherheitsblog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-backup-recovery_de.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Säkerhetskopiering & Återställning: Återställ eller ångra",
+      "description": "Säkerhetskopierings- och återställningsstrategi för att överleva intrång, ransomware och katastrofer",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "VD / Cybersäkerhetsexpert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-backup-recovery_de.html"
+      },
+      "keywords": "backup recovery, RTO, RPO, 3-2-1 rule, ISMS",
+      "articleSection": "Informationssäkerhet",
+      "inLanguage": "de",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 943,
+      "articleBody": "Nothing is true. Everything is permitted. Except depending on untested backups—Schrödinger's backup is both working and broken until disaster strikes and you discover it's been broken the entire time....",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Säkerhetsblogg"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-backup-recovery_de.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hem",
+          "item": "https://hack23.com/index_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogg",
+          "item": "https://hack23.com/blog_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Säkerhetskopiering & Återställning",
+          "item": "https://hack23.com/discordian-backup-recovery_de.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Classification-Driven Backup and Recovery",
+      "description": "Step-by-step guide to implementing the 3-2-1 backup rule with AWS S3, Glacier Deep Archive, and classification-driven RTO/RPO targets",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT3H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "50"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS S3"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Glacier Deep Archive"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Backup automation tools"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Monitoring and alerting system"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Backup & Recovery Policy Template",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Classification Framework",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Implement the 3-2-1 Backup Rule",
+          "text": "Create 3 copies of your data on 2 different media types with 1 copy offsite. Use AWS S3 for primary backups and Glacier Deep Archive for long-term offsite storage",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "One backup is no backup. Two is barely a backup. Three is the minimum for survival"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Define Classification-Driven RTO/RPO Targets",
+          "text": "Set Recovery Time Objective (RTO) and Recovery Point Objective (RPO) based on data classification levels",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Critical systems: <1 hour RTO, <15 minutes RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "High priority: <4 hours RTO, <1 hour RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Medium priority: <24 hours RTO, <4 hours RPO"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Low priority: <72 hours RTO, <24 hours RPO"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Configure Immutable Backups",
+          "text": "Use AWS S3 Object Lock or Glacier Vault Lock to create immutable backups that ransomware cannot encrypt. Enable versioning and MFA Delete",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "If ransomware can reach your backups, you don't have backups - you have additional victims"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable Backup Encryption",
+          "text": "Encrypt all backups using AWS KMS or customer-managed keys. Implement secure key management and protect encryption keys separately from backup data",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Unencrypted backups are just data breaches waiting for physical access"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Set Up Automated Backup Monitoring",
+          "text": "Configure real-time monitoring to track backup success rates. Target 99.9% success rate and trigger alerts when success rate drops below 99%",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Monitoring without alerting is security theater - backups fail silently without monitoring"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Schedule Quarterly Recovery Tests",
+          "text": "Test full system restores quarterly, not just file-level recoveries. Document recovery times and identify gaps in procedures",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "A backup you haven't tested is Schrödinger's backup - both working and broken until disaster strikes"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Document Recovery Procedures",
+          "text": "Create comprehensive documentation covering what to backup, how to restore, who has access, where encryption keys are stored, and step-by-step recovery procedures",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Disaster recovery isn't the time to figure out procedures - tribal knowledge doesn't survive disasters"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Conduct Annual Policy Review",
+          "text": "Review and update backup policies annually or when triggered by incidents, technology changes, or regulatory requirements"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-backup-recovery.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-backup-recovery_de.html" />
+  <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-backup-recovery_de.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-backup-recovery_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-backup-recovery_de.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-backup-recovery.html" />
+
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_de.html">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_de.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Säkerhetskopiering & Återställning
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Säkerhetskopiering & Återställning</h1>
+  <div class="app-link">
+    <a href="index_de.html" title="Tillbaka till Hem">Hem</a>
+    <a href="discordian-cybersecurity_de.html" title="Tillbaka till Manifest">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Publikt ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h1 class="header">💾 Backup & Recovery: Restore or Regret</h1>
+
+    <section id="intro">
+      <h2 class="panel-caption">Classification-Driven RTO/RPO: 99.9% Success Rate Through Systematic Testing</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except depending on untested backups—Schrödinger's backup is both working and broken until disaster strikes and you discover it's been broken the entire time. 99.9% backup success rate target (anything less is slow-motion data loss), quarterly recovery tests (hope isn't a strategy), 95% RTO achievement (failures are learning opportunities, not cover-ups). <em>A backup you haven't tested is just expensive disk space pretending to be insurance.</em></p>
+      
+      <p><em>Think for yourself, schmuck! Question authority.</em> Question why "backups are fine" statements come from people who've never tried restoring them. Question backup vendors who sell "peace of mind" instead of "tested recovery procedures." We demonstrate systematic backup through transparent testing metrics—not marketing claims and audit checkboxes. <strong>Are you paranoid enough to actually test your backups? Ransomware is betting you're not.</strong></p>
+      
+      <p>At Hack23, backup & recovery demonstrates cybersecurity consulting expertise through comprehensive implementation: <strong>AWS S3 + Glacier Deep Archive</strong> for 3-2-1 rule compliance, <strong>classification-driven RTO/RPO targets</strong> (critical: &lt;1hr RTO, &lt;15min RPO), <strong>99.9% backup success rate</strong> monitored real-time, <strong>quarterly recovery tests</strong> with documented results. Annual policy review (Version 1.0, next: 2026-11-05).</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: A backup you haven't tested is Schrödinger's backup—both working and broken until observed. Quarterly testing means observed regularly, not discovered during ransomware incident.</em></p>
+      
+      <p>Here's how we survive the inevitable: AWS S3 for versioned backups, Glacier Deep Archive for long-term retention, automated monitoring (&lt;99% success triggers alerts), quarterly recovery validation per business impact classification. Full strategy in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">public Backup & Recovery Policy</a>:</p>
+    
+      
+      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+    </section>
+
+    <section id="five-rules">
+      <h2 class="panel-caption">The Five Rules of Not Losing Everything</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. The 3-2-1 Rule</h3>
+          <p><strong>3</strong> copies of data, on <strong>2</strong> different media types, with <strong>1</strong> offsite. Redundancy isn't paranoia—it's survival.</p>
+          <p class="hidden-wisdom"><em>One backup is no backup. Two backups is barely a backup. Three is the minimum.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Test Restores</h3>
+          <p>Backups you haven't tested are just unverified hope. Test restores regularly. Full restores, not just file-level. Know your recovery time.</p>
+          <p class="hidden-wisdom"><em>You don't have a backup strategy. You have a restore strategy. Or you have nothing.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Immutable Backups</h3>
+          <p>Ransomware encrypts backups too. Use immutable storage, air-gapped systems, write-once media. Protect backups from the breach.</p>
+          <p class="hidden-wisdom"><em>If ransomware can reach your backups, you don't have backups—you have additional victims.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Encryption</h3>
+          <p>Backups contain everything. Encrypt them. Key management matters. Lose the keys, lose the data. Protect keys like they're the data itself.</p>
+          <p class="hidden-wisdom"><em>Unencrypted backups are just data breaches waiting for physical access.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. Document Everything</h3>
+          <p>Disaster recovery isn't the time to figure out procedures. Document: What to backup, how to restore, who has access, where keys are.</p>
+          <p class="hidden-wisdom"><em>Tribal knowledge doesn't survive disasters. Documentation might.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rto-rpo">
+      <h2 class="panel-caption">RTO vs RPO: How Fast vs How Much</h2>
+      
+      <p>Two critical metrics for recovery planning:</p>
+      
+      <ul>
+        <li><strong>Recovery Time Objective (RTO)</strong> — How long can you be down? How fast must you restore? Minutes? Hours? Days? Define it. Architect for it.</li>
+        <li><strong>Recovery Point Objective (RPO)</strong> — How much data can you afford to lose? Last backup was when? How often do you backup? Match RPO to business needs.</li>
+      </ul>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>System Criticality</th>
+            <th>RTO Example</th>
+            <th>RPO Example</th>
+            <th>Backup Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Critical</strong></td>
+            <td>&lt; 1 hour</td>
+            <td>&lt; 15 minutes</td>
+            <td>Continuous replication</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>High</strong></td>
+            <td>4 hours</td>
+            <td>1 hour</td>
+            <td>Hourly backups</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Moderate</strong></td>
+            <td>24 hours</td>
+            <td>24 hours</td>
+            <td>Daily backups</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>Low</strong></td>
+            <td>1 week</td>
+            <td>1 week</td>
+            <td>Weekly backups</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Faster RTO/RPO = more expensive.</strong> Align with business needs, not paranoid ideals.</p>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: RTO/RPO are business decisions dressed as technical requirements. Ask business how much downtime costs.</em></p>
+    </section>
+
+    <section id="ransomware">
+      <h2 class="panel-caption">Ransomware: When Backups Are Your Only Hope</h2>
+      
+      <p>Ransomware is <em>when</em>, not <em>if</em>. Your backup strategy is your ransomware strategy:</p>
+      
+      <ul>
+        <li><strong>Immutable Backups</strong> — Ransomware can't encrypt what it can't modify. Air-gapped, write-once, versioned.</li>
+        <li><strong>Offsite Backups</strong> — Ransomware spreads. Lateral movement. If backups are on the network, they're at risk.</li>
+        <li><strong>Test Restores</strong> — Can you actually restore from backup? Under pressure? In disaster mode? Test. Now.</li>
+        <li><strong>Incident Response</strong> — Backup restoration is part of IR. Have playbook. Know who does what.</li>
+        <li><strong>Don't Pay</strong> — Paying ransomware funds criminals and doesn't guarantee decryption. Restore from backup instead.</li>
+      </ul>
+      
+      <p><strong>Operation Mindfuck the ransomware gangs:</strong> Make backups so good paying ransom is obviously stupid.</p>
+      
+      <p class="hidden-wisdom"><em>CHAOS ILLUMINATION: Ransomware gangs research targets. They know who has backups. Be the target that does.</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: 3-2-1, Tested, Immutable</h2>
+      
+      <p>At Hack23, backups are survival, not afterthought:</p>
+      
+      <ul>
+        <li><strong>3-2-1 Rule</strong> — Three copies, two media types, one offsite. Religiously enforced.</li>
+        <li><strong>Daily Backups</strong> — Automated, verified, monitored. Alerts on failures.</li>
+        <li><strong>Monthly Test Restores</strong> — Full recovery tests. Documented. Timed.</li>
+        <li><strong>Immutable Storage</strong> — Backups can't be modified or deleted for retention period. Ransomware-proof.</li>
+        <li><strong>Encrypted Backups</strong> — AES-256, keys in separate secure system. No plaintext backups.</li>
+        <li><strong>Version Retention</strong> — 30 days daily, 12 months monthly, 7 years annual. GDPR-compliant.</li>
+      </ul>
+      
+      <p>Full details in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">public Backup & Recovery Policy</a>—including our test restore results.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Backup Edition</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Except depending on untested backups during a ransomware incident—that's panic, not planning.</p>
+      
+      <p>Disasters happen. Breaches happen. Ransomware happens. Hardware fails. Backups are your recovery. Test them or regret it.</p>
+      
+      <p><strong>Think for yourself.</strong> Don't assume backups work. Test. Verify. Document. Because 3am during a disaster isn't when you want to discover backups are corrupted.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. Your backups are Schrödinger's cat—alive and dead until you test. When was the last time you checked?</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Think for yourself, schmuck! Question everything—especially backup strategies that have never been tested."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — When (not if) shit hits the fan</li>
+        <li><a href="discordian-vuln-mgmt.html">Vulnerability Management</a> — Patch or perish</li>
+        <li><a href="discordian-network-security.html">Network Security Policy</a> — The perimeter is dead</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main Manifesto</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_de.html" lang="de">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
