@@ -329,9 +329,9 @@ All pages include complete hreflang tags for:
 
 ### 🎯 Translation Quality (Content)
 - **✅ Fully Translated:** 53 files (70.7%)
-- **⚡ Mostly Translated:** 5 files (6.7%)
-- **⚠️  Needs Work:** 17 files (22.7%)
-- **🏆 Overall Quality:** 82%
+- **⚡ Mostly Translated:** 0 files (0.0%)
+- **⚠️  Needs Work:** 15 files (20.0%)
+- **🏆 Overall Quality:** 91%
 
 ## 🚀 Next Steps & Priorities
 
