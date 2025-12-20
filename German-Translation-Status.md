@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇩🇪 German Files Exist** | 61 | **63.5%** | ⚠️ |
-| **❌ Missing Files** | 35 | 36.5% | ⚠️ |
+| **🇩🇪 German Files Exist** | 71 | **74.0%** | ⚠️ |
+| **❌ Missing Files** | 25 | 26.0% | ⚠️ |
 
 ### 🎯 Translation Quality Analysis
 
@@ -67,6 +67,18 @@ Files analyzed for English content remaining:
   - Discordian philosophy preserved ("Gesetz der Fünf", "23 FNORD 5")
   - Technical terminology follows German-Translation-Guide.md
   - Quality upgraded from ⚠️ Partial to ✅ Fully Translated
+- ✅ **December 19, 2025**: 10 ISMS policy files created (Issue #5)
+  - discordian-ai-policy_de.html (AI Governance - OWASP LLM, EU AI Act)
+  - discordian-llm-security_de.html (LLM Security - OWASP Top 10)
+  - discordian-backup-recovery_de.html (Backup & Recovery - 3-2-1 rule, RTO/RPO)
+  - discordian-business-value_de.html (Business Value of Security)
+  - discordian-change-mgmt_de.html (Change Management)
+  - discordian-classification_de.html (Data Classification - 5 levels)
+  - discordian-crypto_de.html (Cryptography Policy - BSI TR-02102)
+  - discordian-disaster-recovery_de.html (Disaster Recovery - ISO 22301)
+  - discordian-mobile-device_de.html (Mobile Device Management - MDM/BYOD)
+  - discordian-monitoring-logging_de.html (Monitoring & Logging - SIEM, DSGVO)
+  - Coverage increased from 61/96 (63.5%) to 71/96 (74.0%)
 - ✅ **December 17, 2025**: Documentation pages & security strategy completed
   - discordian-security-strategy_de.html (Security as competitive advantage)
   - black-trigram-docs_de.html (Game architecture documentation)
@@ -153,16 +165,26 @@ Files analyzed for English content remaining:
 - ✅ `sitemap_de.html` ← `sitemap.html`
 - ✅ `why-hack23_de.html` ← `why-hack23.html`
 
-### ISMS Documentation (11 files)
+### ISMS Documentation (21 files)
 - ✅ `discordian-access-control_de.html` ← `discordian-access-control.html`
+- ✅ `discordian-ai-policy_de.html` ← `discordian-ai-policy.html`
 - ✅ `discordian-asset-mgmt_de.html` ← `discordian-asset-mgmt.html`
+- ✅ `discordian-backup-recovery_de.html` ← `discordian-backup-recovery.html`
 - ✅ `discordian-business-continuity_de.html` ← `discordian-business-continuity.html`
+- ✅ `discordian-business-value_de.html` ← `discordian-business-value.html`
+- ✅ `discordian-change-mgmt_de.html` ← `discordian-change-mgmt.html`
+- ✅ `discordian-classification_de.html` ← `discordian-classification.html`
 - ✅ `discordian-compliance-frameworks_de.html` ← `discordian-compliance-frameworks.html`
 - ✅ `discordian-compliance_de.html` ← `discordian-compliance.html`
+- ✅ `discordian-crypto_de.html` ← `discordian-crypto.html`
 - ✅ `discordian-cybersecurity_de.html` ← `discordian-cybersecurity.html`
+- ✅ `discordian-disaster-recovery_de.html` ← `discordian-disaster-recovery.html`
 - ✅ `discordian-incident-response_de.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_de.html` ← `discordian-isms-review.html`
 - ✅ `discordian-isms-transparency_de.html` ← `discordian-isms-transparency.html`
+- ✅ `discordian-llm-security_de.html` ← `discordian-llm-security.html`
+- ✅ `discordian-mobile-device_de.html` ← `discordian-mobile-device.html`
+- ✅ `discordian-monitoring-logging_de.html` ← `discordian-monitoring-logging.html`
 - ✅ `discordian-risk-assessment_de.html` ← `discordian-risk-assessment.html`
 - ✅ `discordian-security-strategy_de.html` ← `discordian-security-strategy.html`
 
@@ -193,27 +215,18 @@ Files analyzed for English content remaining:
 - ✅ `cia-triad-faq_de.html` ← `cia-triad-faq.html`
 - ✅ `compliance-manager_de.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (35 files)
+## ⚠️  Missing Translation Files (25 files)
 
 These English pages exist but have no corresponding translation file:
 
-### ISMS Documentation (30 files)
+### ISMS Documentation (20 files)
 - ❌ `discordian-acceptable-use_de.html` ← `discordian-acceptable-use.html`
-- ❌ `discordian-backup-recovery_de.html` ← `discordian-backup-recovery.html`
-- ❌ `discordian-business-value_de.html` ← `discordian-business-value.html`
-- ❌ `discordian-change-mgmt_de.html` ← `discordian-change-mgmt.html`
-- ❌ `discordian-classification_de.html` ← `discordian-classification.html`
 - ❌ `discordian-cloud-security_de.html` ← `discordian-cloud-security.html`
 - ❌ `discordian-cra-conformity_de.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_de.html` ← `discordian-cra.html`
-- ❌ `discordian-crypto_de.html` ← `discordian-crypto.html`
 - ❌ `discordian-data-classification_de.html` ← `discordian-data-classification.html`
 - ❌ `discordian-data-protection_de.html` ← `discordian-data-protection.html`
-- ❌ `discordian-disaster-recovery_de.html` ← `discordian-disaster-recovery.html`
 - ❌ `discordian-email-security_de.html` ← `discordian-email-security.html`
-- ❌ `discordian-llm-security_de.html` ← `discordian-llm-security.html`
-- ❌ `discordian-mobile-device_de.html` ← `discordian-mobile-device.html`
-- ❌ `discordian-monitoring-logging_de.html` ← `discordian-monitoring-logging.html`
 - ❌ `discordian-network-security_de.html` ← `discordian-network-security.html`
 - ❌ `discordian-open-source_de.html` ← `discordian-open-source.html`
 - ❌ `discordian-physical-security_de.html` ← `discordian-physical-security.html`
@@ -228,9 +241,6 @@ These English pages exist but have no corresponding translation file:
 - ❌ `discordian-third-party_de.html` ← `discordian-third-party.html`
 - ❌ `discordian-threat-modeling_de.html` ← `discordian-threat-modeling.html`
 - ❌ `discordian-vuln-mgmt_de.html` ← `discordian-vuln-mgmt.html`
-
-### ISMS Policy Files (1 files)
-- ❌ `discordian-ai-policy_de.html` ← `discordian-ai-policy.html`
 
 ### ISO 27001 Resources (2 files)
 - ❌ `iso-27001-certification-costs-sweden_de.html` ← `iso-27001-certification-costs-sweden.html`
