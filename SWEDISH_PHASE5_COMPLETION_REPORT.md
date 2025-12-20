@@ -37,8 +37,8 @@ Phase 5 of the Swedish translation project has been successfully completed. This
 | ⚠️ Partially Translated | 17 | 17.9% | Some English remains in body/meta |
 | ⚪ Excluded | 1 | 1.1% | Example page |
 
-**Quality Score Formula:** (Fully Translated + Mostly Translated × 0.8) / Total Files  
-**Result:** (53 + 24 × 0.8) / 95 = **76.0%**
+**Quality Score Formula:** (Fully Translated + (Mostly Translated × 0.8)) / Total Files  
+**Result:** (53 + (24 × 0.8)) / 95 = **76.0%**
 
 ---
 
