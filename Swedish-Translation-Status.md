@@ -104,7 +104,7 @@ graph TB
 - ✅ `blog-cia-workflows_sv.html` ← `blog-cia-workflows.html`
 - ⚠️  `blog-compliance-architecture_sv.html` ← `blog-compliance-architecture.html`
 - ⚠️  `blog-compliance-future_sv.html` ← `blog-compliance-future.html`
-- ⚡ `blog-compliance-security_sv.html` ← `blog-compliance-security.html`
+- ✅ `blog-compliance-security_sv.html` ← `blog-compliance-security.html`
 - ⚠️  `blog-george-dorn-cia-code_sv.html` ← `blog-george-dorn-cia-code.html`
 - ✅ `blog-george-dorn-compliance-code_sv.html` ← `blog-george-dorn-compliance-code.html`
 - ⚠️  `blog-george-dorn-trigram-code_sv.html` ← `blog-george-dorn-trigram-code.html`
@@ -156,12 +156,12 @@ graph TB
 - ⚡ `iso-27001-2022-vs-2013_sv.html` ← `iso-27001-2022-vs-2013.html`
 - ⚡ `iso-27001-certification-costs-sweden_sv.html` ← `iso-27001-certification-costs-sweden.html`
 - ⚡ `iso-27001-implementation-mistakes_sv.html` ← `iso-27001-implementation-mistakes.html`
-- ⚠️  `iso-27001-implementation-sweden_sv.html` ← `iso-27001-implementation-sweden.html`
+- ✅ `iso-27001-implementation-sweden_sv.html` ← `iso-27001-implementation-sweden.html` **[PHASE 3 COMPLETE]**
 
 ### Industry Solutions (3 files)
-- ⚠️  `industries-betting-gaming_sv.html` ← `industries-betting-gaming.html`
-- ⚠️  `industries-cannabis-security_sv.html` ← `industries-cannabis-security.html`
-- ⚠️  `industries-investment-fintech_sv.html` ← `industries-investment-fintech.html`
+- ✅ `industries-betting-gaming_sv.html` ← `industries-betting-gaming.html` **[PHASE 3 COMPLETE]**
+- ✅ `industries-cannabis-security_sv.html` ← `industries-cannabis-security.html` **[PHASE 3 COMPLETE]**
+- ✅ `industries-investment-fintech_sv.html` ← `industries-investment-fintech.html` **[PHASE 3 COMPLETE]**
 
 ### Other Pages (2 files)
 - ✅ `security-assessment-checklist_sv.html` ← `security-assessment-checklist.html`
@@ -177,7 +177,7 @@ graph TB
 - ✅ `cia-features_sv.html` ← `cia-features.html`
 - ⚠️  `cia-project_sv.html` ← `cia-project.html`
 - ✅ `cia-triad-faq_sv.html` ← `cia-triad-faq.html`
-- ⚠️  `compliance-manager_sv.html` ← `compliance-manager.html`
+- ✅ `compliance-manager_sv.html` ← `compliance-manager.html`
 
 ## ✅ Recently Completed Translation Files (19 files) - All Phases Complete!
 
