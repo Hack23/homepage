@@ -186,41 +186,209 @@
 
 <main>
   <article>
-    <section id="translation-notice">
-      <div class="notice-box">
-        <h2>⚠️ Translation In Progress</h2>
-        <p><strong>This page contains English content pending professional translation.</strong></p>
-        <p>Complete technical infrastructure (HTML, SEO, Schema.org) is in place. Professional translation services are recommended for accurate cybersecurity terminology and cultural adaptation.</p>
-        <p><a href="blog-information-hoarding.html">View English version →</a></p>
+    <h1 class="header">De verborgen kosten van informatiehamstering: Wanneer toegangsbeperkingen data-integriteit vernietigen</h1>
+
+    <section id="introduction">
+      <h2 class="panel-caption">De verbinding tussen integriteit en beschikbaarheid</h2>
+      
+      <p>We hebben het allemaal wel eens meegemaakt: Je probeert een probleem op te lossen wanneer iemand terloops opmerkt: "Oh, dat hebben we vorig jaar al opgelost." Waar is de documentatie? "Ergens in mijn e-mail." Of nog erger: "We hebben het besproken in een vergadering met de vorige teamleider."</p>
+      
+      <figure>
+        <img src="blog.webp" alt="CIA-triade toont de relatie tussen Vertrouwelijkheid, Integriteit en Beschikbaarheid" width="600" height="400" loading="lazy">
+        <figcaption>De vergeten relatie van de CIA-triade: Hoe beschikbaarheid direct de data-integriteit beïnvloedt</figcaption>
+      </figure>
+      
+      <p>Dit is niet alleen vervelend—het is een fundamentele storing van het Beschikbaarheidsprincipe in de CIA-triade die direct Integriteitsfouten creëert. Wanneer informatie die beschikbaar zou moeten zijn voor geautoriseerde gebruikers vast komt te zitten in persoonlijke opslag, e-mailthreads en ongedocumenteerde vergaderingen, verliest de organisatie haar vermogen om data-integriteit te handhaven over tijd en teams heen.</p>
+    
+      
+      <p><strong>Klaar om een robuust beveiligingsprogramma op te bouwen?</strong> <a href="why-hack23.html">Ontdek Hack23's adviesaanpak</a> die beveiliging als enabler behandelt, niet als barrière.</p>
+    </section>
+
+    <section id="information-hiding">
+      <h2 class="panel-caption">Hoe informatie verborgen wordt voor degenen die het nodig hebben</h2>
+      
+      <p>Vijf veelvoorkomende patronen van informatieverschuiling die organisaties verlammen. Elk creëert een specifiek type integriteitsfout:</p>
+      
+      <ul>
+        <li><strong>Spookvergaderingen:</strong> Kritieke beslissingen genomen in vergaderingen zonder agenda, notulen of centrale registratie. Alleen de aanwezigen weten wat er besloten is.</li>
+        <li><strong>E-mailthreads als kennisbases:</strong> Wanneer belangrijke informatie alleen bestaat in e-mailwisselingen tussen een select groepje mensen, waardoor kunstmatig beperkte informatie ontstaat.</li>
+        <li><strong>Persoonlijke opslagsilo's:</strong> Informatie bewaard in persoonlijke OneDrive-accounts of lokale schijven die volledig ontoegankelijk worden wanneer iemand vertrekt.</li>
+        <li><strong>Over-gerestricteerde SharePoint-sites:</strong> Samenwerkingsruimtes met rechten zo beperkt ingesteld dat relevante stakeholders geen toegang hebben tot informatie die ze nodig hebben.</li>
+        <li><strong>Schaduwdocumentatie:</strong> Documentatie onderhouden op onofficiële, beperkt toegankelijke locaties in plaats van in aangewezen repositories.</li>
+      </ul>
+      
+    </section>
+
+    <section id="understanding-impact">
+      <h2 class="panel-caption">Wanneer nieuw werk wordt gebouwd op onvolledige kennis</h2>
+      
+      <p>Informatieverschuiling verspilt niet alleen tijd—het corrumpeert actief de integriteit van nieuw werk. Wanneer mensen beslissingen nemen zonder toegang tot kritieke context en eerder werk, dan:</p>
+      
+      <ul>
+        <li>Creëren ze <strong>conflicterende implementaties</strong> die niet aansluiten bij bestaande systemen</li>
+        <li>Maken ze <strong>redundante oplossingen</strong> die middelen verspillen en onderhoudsproblemen creëren</li>
+        <li>Implementeren ze <strong>tegenstrijdige beleidslijnen</strong> die compliance-risico's creëren</li>
+        <li>Vestigen ze <strong>incompatibele processen</strong> die niet kunnen integreren met bestaande workflows</li>
+        <li>Genereren ze <strong>inconsistente gegevens</strong> die rapportage en analyse ondermijnen</li>
+      </ul>
+      
+      <p>In elk geval wordt de integriteit van organisatiekennis en systemen direct gecompromitteerd vanwege een beschikbaarheidsprobleem. Mensen werken niet met slechte informatie—ze werken met onvolledige informatie.</p>
+      
+      <figure>
+        <img src="https://hack23.com/blog.webp" alt="Clark-Wilson-model toont functiescheiding en goed gevormde transacties" width="600" height="350" loading="lazy">
+        <figcaption>Het Clark-Wilson-model: Integriteit handhaven vereist toegang tot volledige informatie</figcaption>
+      </figure>
+    </section>
+
+    <section id="case-studies">
+      <h2 class="panel-caption">Echte rampen door informatieverschuiling</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>De onzichtbare architectuurbeslissing</h3>
+          <p>Een architectuurbeslissing om te standardiseren op specifieke cloudservices werd genomen in een leiderschapsoverleg zonder documentatie. Zes maanden later implementeerde een nieuw team een oplossing met incompatibele technologieën, waardoor een gefragmenteerde architectuur ontstond die kostbaar herstel vereiste. Niemand had hen verteld over de standaard—het bestond alleen in de herinneringen van degenen die bij het oorspronkelijke gesprek aanwezig waren.</p>
+          <p><strong>Integriteitsimpact:</strong> Gefragmenteerde systemen met incompatibele architecturen die niet geïntegreerd konden worden zonder aanzienlijk herwerk</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>De e-mailthread kennisbase</h3>
+          <p>Kritieke klantvereisten werden uitsluitend besproken en verfijnd via e-mailwisselingen tussen een productmanager en drie belangrijke stakeholders. Toen de productmanager het bedrijf verliet, bouwde het ontwikkelingsteam functies gebaseerd op onvolledige documentatie. Het resulterende product voldeed niet aan de werkelijke klantbehoeften omdat belangrijke details opgesloten zaten in een e-mailarchief waar niemand toegang toe had.</p>
+          <p><strong>Integriteitsimpact:</strong> Productfuncties gebouwd op gedeeltelijke vereisten die niet voldeden aan werkelijke klantbehoeften</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>De persoonlijke OneDrive-documentatie</h3>
+          <p>Een beveiligingsingenieur documenteerde gedetailleerde configuratievereisten in Word-documenten bewaard op zijn persoonlijke OneDrive. Hij deelde links met specifieke mensen wanneer gevraagd, maar behield controle over de masterdocumenten. Toen hij van rol veranderde, erfde zijn vervanger systemen zonder documentatie. Beveiligingsconfiguraties dreven geleidelijk af van de vereisten omdat niemand wist hoe ze zouden moeten zijn.</p>
+          <p><strong>Integriteitsimpact:</strong> Beveiligingsconfiguraties die langzaam degradeerden door gebrek aan beschikbare documentatie</p>
+        </div>
       </div>
     </section>
 
-    <h2 class="header">🔓 Informatiehamstering vernietigt data-integriteit</h2>
-
-    <section id="content-placeholder">
-      <p><em>Professional translation of blog content will be added here. The English version is available at <a href="blog-information-hoarding.html">blog-information-hoarding.html</a>.</em></p>
+    <section id="solutions">
+      <h2 class="panel-caption">De informatiehamstering-cyclus doorbreken</h2>
       
-      <p><strong>Translation Requirements:</strong></p>
-      <ul>
-        <li>Professional cybersecurity terminology</li>
-        <li>Business-appropriate tone for C-suite audience</li>
-        <li>Cultural adaptation for target market</li>
-        <li>Preservation of Discordian philosophical voice</li>
-        <li>Technical accuracy in security concepts</li>
-      </ul>
+      <p>Om deze integriteit-vernietigende informatiehamstering te stoppen, moeten organisaties gestructureerde beschikbaarheidspraktijken implementeren:</p>
+      
+      <ol>
+        <li><strong>Geen beslissingen zonder documentatie:</strong> Stel een regel vast dat beslissingen pas definitief zijn wanneer ze gedocumenteerd zijn op een gedeelde, toegankelijke locatie</li>
+        <li><strong>Beëindig e-mailkennisbases:</strong> Stel een beleid vast dat substantiële informatie in e-mails moet worden overgedragen naar geschikte documentatiesystemen</li>
+        <li><strong>Elimineer persoonlijke opslag voor bedrijfsinformatie:</strong> Verbied het gebruik van persoonlijke accounts voor het opslaan van werkinformatie</li>
+        <li><strong>Standaard open toegangsbeleid:</strong> Maak informatie standaard beschikbaar voor alle medewerkers, alleen beperkend wanneer er een specifieke reden is</li>
+        <li><strong>Creëer officiële kennisrepositories:</strong> Vestig duidelijke, goed gestructureerde systemen waar informatie zou moeten bestaan</li>
+        <li><strong>Regelmatige kennisaudits:</strong> Zoek systematisch naar "donkere kennis" die alleen op beperkte locaties bestaat en breng het naar het licht</li>
+      </ol>
 
-      <p><strong>Key Topics Covered:</strong></p>
-      <ul>
-        <li>Public ISMS as competitive advantage</li>
-        <li>Trust through verification vs. marketing claims</li>
-        <li>Transparency in cybersecurity consulting</li>
-        <li>Evidence-based security practices</li>
-        <li>30+ publicly available security policies</li>
-      </ul>
+      <p>De meest effectieve oplossing is cultureel: maak documentatie en kennisdeling deel van ieders werk, niet een nagedachte. Informatie die geautoriseerde medewerkers niet kunnen vinden, zou net zo goed niet kunnen bestaan—en de organisatie zal de integriteitsprijs betalen.</p>
+    </section>
 
-      <p class="cta-section">
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" class="cta-button">View Public ISMS Repository</a>
-      </p>
+    <section id="conclusion">
+      <h2 class="panel-caption">Informatie moet stromen naar degenen die het nodig hebben</h2>
+      
+      <p>Elke keer dat iemand informatie verbergt in persoonlijke opslag, beperkte kanalen of ongedocumenteerde vergaderingen, creëren ze toekomstige integriteitsproblemen. Ze zorgen ervoor dat beslissingen worden genomen met onvolledige informatie, systemen worden gebouwd zonder belangrijke context en werk onnodig wordt gedupliceerd.</p>
+      
+      <p>Informatiebeschikbaarheid gaat niet alleen over systeembeschikbaarheid—het gaat erom ervoor te zorgen dat organisatiekennis stroomt naar iedereen die het legitiem nodig heeft om hun werk te doen. Zonder deze stroom lijdt de data-integriteit onvermijdelijk terwijl mensen in het donker werken.</p>
+      
+      <p>Onthoud: Het beste beveiligingsbeleid ter wereld is waardeloos als het opgeslagen is in iemands persoonlijke e-mail. De meest briljante architectuurbeslissing is nutteloos als het alleen gedeeld wordt in een vergadering zonder notulen. En de meest zorgvuldig opgestelde standaard is zinloos als het verborgen is op een SharePoint-site waar niemand toegang toe heeft.</p>
+      
+      <p>Stop informatiehamstering—uw data-integriteit hangt ervan af.</p>
+    </section>
+
+    <section id="discordian-blog">
+      <h2 class="panel-caption">🍎 Discordian Cybersecurity Blog - Volledige ISMS-dekking</h2>
+      
+      <p><em>"Niets is waar. Alles is toegestaan. Denk zelf na."</em> — Een radicaal onderzoek naar beveiligingstheater, surveillancestaten en ISMS-transparantie door de lens van Illuminatus! trilogie-filosofie.</p>
+      
+      <h3>Kernmanifest & Filosofie</h3>
+      <ul>
+        <li><a href="discordian-cybersecurity.html"><strong>Alles wat je weet over beveiliging is een leugen</strong></a> — Nationale capaciteiten, goedgekeurde crypto-paradox, Chapel Perilous-initiatie</li>
+        <li><a href="discordian-business-value.html"><strong>Het beveiligings-industrieel complex</strong></a> — Hoe angst een businessmodel werd</li>
+        <li><a href="discordian-crypto.html"><strong>Bevraagteken autoriteit: Crypto goedgekeurd door spionnen</strong></a> — Dual_EC_DRBG, Crypto AG en waarom overheidsgoedkeuring verdacht is</li>
+        <li><a href="discordian-classification.html"><strong>Denk zelf na: Classificatie voorbij compliance-theater</strong></a> — Vijf niveaus van echt geven om</li>
+      </ul>
+      
+      <h3>Fundamentele beleidslijnen</h3>
+      <ul>
+        <li><a href="discordian-info-sec-policy.html"><strong>Informatiebeveiligingsbeleid</strong></a> — Het fundament van radicale transparantie</li>
+        <li><a href="discordian-access-control.html"><strong>Toegangscontrole</strong></a> — Vertrouw niemand (inclusief jezelf)</li>
+        <li><a href="discordian-incident-response.html"><strong>Incidentrespons</strong></a> — Wanneer (niet als) de shit de ventilator raakt</li>
+      </ul>
+      
+      <h3>Ontwikkeling & Operaties</h3>
+      <ul>
+        <li><a href="discordian-open-source.html"><strong>Open Source-beleid</strong></a> — Vertrouwen door transparantie</li>
+        <li><a href="discordian-secure-dev.html"><strong>Veilige ontwikkeling</strong></a> — Code zonder backdoors (opzettelijk)</li>
+        <li><a href="discordian-vuln-mgmt.html"><strong>Kwetsbaarheidsbeheer</strong></a> — Patchen of vergaan</li>
+        <li><a href="discordian-threat-modeling.html"><strong>Dreigingsmodellering</strong></a> — Ken je vijand (hij kent jou al)</li>
+        <li><a href="discordian-monitoring-logging.html"><strong>Monitoring & Logging</strong></a> — Als een boom valt en niemand logt het...</li>
+      </ul>
+      
+      <h3>Infrastructuur & Toegang</h3>
+      <ul>
+        <li><a href="discordian-network-security.html"><strong>Netwerkbeveiliging</strong></a> — De perimeter is dood, leve de perimeter</li>
+        <li><a href="discordian-physical-security.html"><strong>Fysieke beveiliging</strong></a> — Sloten, bewakers en slimme social engineering</li>
+        <li><a href="discordian-asset-mgmt.html"><strong>Asset Management</strong></a> — Je kunt niet beschermen wat je niet weet dat je hebt</li>
+        <li><a href="discordian-mobile-device.html"><strong>Mobile Device Management</strong></a> — BYOD betekent Bring Your Own Disaster</li>
+        <li><a href="discordian-remote-access.html"><strong>Externe toegang</strong></a> — VPN's en de dood van het kantoor</li>
+      </ul>
+      
+      <h3>Bedrijfscontinuïteit & Risico</h3>
+      <ul>
+        <li><a href="discordian-backup-recovery.html"><strong>Backup & Herstel</strong></a> — Herstellen of spijt hebben</li>
+        <li><a href="discordian-business-continuity.html"><strong>Bedrijfscontinuïteit</strong></a> — De chaos overleven</li>
+        <li><a href="discordian-disaster-recovery.html"><strong>Disaster Recovery</strong></a> — Plan B wanneer alles brandt</li>
+        <li><a href="discordian-risk-assessment.html"><strong>Risicobeoordeling</strong></a> — Berekenen wat je niet kunt voorkomen</li>
+        <li><a href="discordian-change-mgmt.html"><strong>Verandermanagement</strong></a> — Snel bewegen zonder (alles) te breken</li>
+      </ul>
+      
+      <h3>Governance & Compliance</h3>
+      <ul>
+        <li><a href="discordian-privacy.html"><strong>Privacybeleid</strong></a> — Surveillancekapitalisme ontmoet anarchistische gegevensbescherming</li>
+        <li><a href="discordian-data-protection.html"><strong>Gegevensbescherming</strong></a> — AVG wil je locatie weten</li>
+        <li><a href="discordian-third-party.html"><strong>Derde partij-beheer</strong></a> — Vertrouw je je leveranciers? (LOL)</li>
+        <li><a href="discordian-acceptable-use.html"><strong>Acceptabel Gebruik Beleid</strong></a> — Doe geen domme dingen op bedrijfssystemen</li>
+        <li><a href="discordian-security-training.html"><strong>Beveiligingsbewustzijnstraining</strong></a> — Mensen leren niet op shit te klikken</li>
+      </ul>
+      
+      <h3>Opkomende technologieën</h3>
+      <ul>
+        <li><a href="discordian-cloud-security.html"><strong>Cloudbeveiliging</strong></a> — Iemand anders' computer</li>
+        <li><a href="discordian-email-security.html"><strong>E-mailbeveiliging</strong></a> — Je CEO heeft geen iTunes-kaarten nodig</li>
+        <li><a href="discordian-llm-security.html"><strong>OWASP LLM-beveiliging</strong></a> — AI trainen om je geheimen niet te hallucineren</li>
+      </ul>
+      
+      <p><strong>Alle 29 items handhaven de radicale Illuminatus! trilogie-stijl:</strong> "Denk zelf na, bevraagteken autoriteit," FNORD-detectie, Chapel Perilous, Operation Mindfuck en 23 FNORD 5-handtekeningen. Volledige dekking van <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a> beleidslijnen met verborgen wijsheid overal.</p>
+      
+      <p><em>Heil Eris! Heil Discordia! 🍎</em></p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Gerelateerde bronnen</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🍎 Discordian Cybersecurity Manifesto</h3>
+          <p>Een cynisch onderzoek naar nationale surveillance, door overheid goedgekeurde crypto en waarom transparantie beveiligingstheater verslaat.</p>
+          <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Manifesto">Lees Manifesto →</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>CIA Compliance Manager</h3>
+          <p>Onze compliance-tool helpt ervoor te zorgen dat informatie beschikbaar is voor geautoriseerde gebruikers terwijl passende beveiligingscontroles worden gehandhaafd.</p>
+          <a href="cia-compliance-manager-features.html" title="Leer meer over CIA Compliance Manager">Leer meer</a>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>CIA-triade FAQ</h3>
+          <p>Verken de relatie tussen beschikbaarheid en integriteit in de CIA-triade en hoe ze elkaar ondersteunen.</p>
+          <a href="cia-triad-faq.html" title="Lees onze CIA-triade FAQ">Lees FAQ</a>
+        </div>
+      </div>
     </section>
   </article>
 </main>
