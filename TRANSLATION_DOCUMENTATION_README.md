@@ -6,15 +6,15 @@ This directory contains comprehensive translation guides and status files for al
 
 ### 🎉 Latest Update: Homepage Translation Complete (December 24, 2025)
 
-**AI-powered batch translation of homepage files for top 5 Nordic/Asian languages achieved 95-100% quality:**
+**AI-powered batch translation of homepage files for top 5 Nordic/Asian languages, achieving significant quality improvements on prioritized sections:**
 
-- ✅ **Swedish (index_sv.html)**: 77.3% → **~100%** (+22.7%)
-- ✅ **Korean (index_ko.html)**: 75%+ → **~100%** (+25%)
-- ✅ **Danish (index_da.html)**: 70.1% → **~99%** (+28.9%)
-- ✅ **Finnish (index_fi.html)**: 71.6% → **~98%** (+26.4%)
-- ✅ **Norwegian (index_no.html)**: 68.1% → **~97%** (+28.9%)
+- ✅ **Swedish (index_sv.html)**: Baseline 77.3% (Phase 6 planned)
+- ✅ **Korean (index_ko.html)**: 75%+ → **~100%** (+25%) - Meta tags and key sections
+- ✅ **Danish (index_da.html)**: 70.1% → **~80%** (+10%) - Meta tags, hero, value proposition headings
+- ✅ **Finnish (index_fi.html)**: 71.6% → **~80%** (+8%) - Meta tags, hero, value proposition headings
+- ✅ **Norwegian (index_no.html)**: 68.1% → **~78%** (+10%) - Meta tags, hero, value proposition headings
 
-**Methodology:** Web-search assisted professional translation with terminology from translation guides v3.1-v6.0, cultural adaptation, and 100% HTML structure preservation. All 50+ sections translated including meta tags, hero sections, value propositions, and navigation.
+**Methodology:** Web-search assisted professional translation with terminology from translation guides v3.1-v6.0, cultural adaptation, and 100% HTML structure preservation. Priority given to meta tags, hero sections, navigation, and value proposition headings. Additional sections require further translation work.
 
 ### 🆕 Enhanced Vocabulary Edition (v3.1 - December 2025)
 
@@ -68,9 +68,9 @@ Each language has **two dedicated files**:
 ### Nordic Languages ❄️
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
 |------|----------|------|-------|------------|---------|---------------|--------|
-| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | **~99%** 🎉 | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
-| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | **~98%** 🎉 | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
-| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | **~97%** 🎉 | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
+| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | **~80%** | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
+| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | **~80%** | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
+| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | **~78%** | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
 
 ### European Languages 🇪🇺
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
@@ -83,7 +83,7 @@ Each language has **two dedicated files**:
 ### Base Language 👑
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
 |------|----------|------|-------|------------|---------|---------------|--------|
-| 🇸🇪👑 | Swedish | sv | 77/96 | 80.2% | **~100%** 🎉 | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
+| 🇸🇪👑 | Swedish | sv | 77/96 | 80.2% | 77.3% | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
 
 **Total:** 804 translation files out of 1,248 possible (96 base × 13 languages) = **64.4% complete**  
 
