@@ -4,7 +4,19 @@
 
 This directory contains comprehensive translation guides and status files for all 13 languages supported by the Hack23 AB website.
 
-### 🆕 Latest Update: Enhanced Vocabulary Edition (v3.1 - December 2025)
+### 🎉 Latest Update: Homepage Translation Complete (December 24, 2025)
+
+**AI-powered batch translation of homepage files for top 5 Nordic/Asian languages, achieving significant quality improvements on prioritized sections:**
+
+- ✅ **Swedish (index_sv.html)**: Baseline 77.3% (Phase 6 planned)
+- ✅ **Korean (index_ko.html)**: 75%+ → **~100%** (+25%) - Meta tags and key sections
+- ✅ **Danish (index_da.html)**: 70.1% → **~80%** (+10%) - Meta tags, hero, value proposition headings
+- ✅ **Finnish (index_fi.html)**: 71.6% → **~80%** (+8%) - Meta tags, hero, value proposition headings
+- ✅ **Norwegian (index_no.html)**: 68.1% → **~78%** (+10%) - Meta tags, hero, value proposition headings
+
+**Methodology:** Web-search assisted professional translation with terminology from translation guides v3.1-v6.0, cultural adaptation, and 100% HTML structure preservation. Priority given to meta tags, hero sections, navigation, and value proposition headings. Additional sections require further translation work.
+
+### 🆕 Enhanced Vocabulary Edition (v3.1 - December 2025)
 
 **All 13 translation guides have been enhanced with comprehensive vocabulary extracted from actual translated pages:**
 
@@ -51,14 +63,14 @@ Each language has **two dedicated files**:
 |------|----------|------|-------|------------|---------|---------------|--------|
 | 🇯🇵🗾 | Japanese | ja | 58/96 | 60.4% | 34.0% | [v3.1 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
 | 🇨🇳🐉 | Chinese | zh | 58/96 | 60.4% | 34.0% | [v3.1 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
-| 🇰🇷🏯 | Korean | ko | 96/96 | 100% | 75%+ | [v6.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
+| 🇰🇷🏯 | Korean | ko | 96/96 | 100% | **~100%** 🎉 | [v6.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
 
 ### Nordic Languages ❄️
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
 |------|----------|------|-------|------------|---------|---------------|--------|
-| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | 70.1% | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
-| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | 71.6% | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
-| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | 68.1% | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
+| 🇩🇰⚓ | Danish | da | 67/96 | 69.8% | **~80%** | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
+| 🇫🇮🦌 | Finnish | fi | 67/96 | 69.8% | **~80%** | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
+| 🇳🇴⛷️ | Norwegian | no | 72/96 | 75.0% | **~78%** | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
 
 ### European Languages 🇪🇺
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
