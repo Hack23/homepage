@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwetsbaarheidsbeheer | <4 Uur Kritieke Patches | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Nieuwste stabiele releases, <4 uur kritieke patch-respons. OpenSSF Scorecard integratie, geautomatiseerde security gates, proactief EOL-beheer.">
+<meta name="keywords" content="kwetsbaarheidsbeheer, vulnerability scanning, kwetsbaarheidsanalyse, CVE, CVSS, patchbeheer, security patching, zero-day kwetsbaarheden, vulnerability disclosure, responsible disclosure, bug bounty, penetration testing, security testing, kwetsbaarheidsherstel, beveiligingsupdates, dependency scanning, OWASP dependency check, Snyk, Dependabot">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Kwetsbaarheidsbeheer: Leven op de Bleeding Edge">
+<meta property="og:description" content="Nieuwste stabiele releases met <4 uur kritieke patch-respons. OpenSSF Scorecard integratie, geautomatiseerde security gates, proactief EOL-beheer.">
+	<meta property="og:locale" content="nl_NL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-vuln-mgmt_nl.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-vuln-mgmt_nl.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Kwetsbaarheidsbeheer: Leven op de Bleeding Edge",
+      "description": "Hoe Hack23 bleeding-edge dependency management inzet met uitgebreide geautomatiseerde beveiligingscontroles voor <4 uur kwetsbaarheidsrespons",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-vuln-mgmt_nl.html"
+      },
+      "keywords": "kwetsbaarheidsbeheer, patchbeheer, CVSS, ISMS",
+      "articleSection": "Information Security",
+      "inLanguage": "nl",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1261,
+      "articleBody": "Niets is waar. Alles is toegestaan. Behalve verouderde dependencies draaien—dat is geen acceptatie van technische schuld, maar pre-installatie van toekomstige exploits...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-vuln-mgmt_nl.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kwetsbaarheidsbeheer",
+          "item": "https://hack23.com/discordian-vuln-mgmt_nl.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-vuln-mgmt_nl.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-vuln-mgmt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-vuln-mgmt.html" />
+
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Kwetsbaarheidsbeheer
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Kwetsbaarheidsbeheer: Leven op de Bleeding Edge</h1>
+  <div class="app-link">
+    <a href="index.html" title="Terug naar Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Terug naar Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Publiek ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🛡️ Kwetsbaarheidsbeheer: Patchen of Vergaan</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Leven op de Bleeding Edge: Kwetsbaarheidsbeheer als Concurrentievoordeel</h2>
+      
+      <p><strong>Niets is waar. Alles is toegestaan.</strong> Behalve verouderde dependencies draaien—dat is geen acceptatie van technische schuld, maar pre-installatie van toekomstige exploits, in de hoop dat niemand het merkt voordat jij het doet. <em>Ongepatchte CVE's zijn niet alleen kwetsbaarheden—het zijn gedocumenteerde aanvalsvectoren met publieke proof-of-concept code die aanvallers al hebben geautomatiseerd.</em></p>
+      
+      <p><em>Denk voor jezelf, sufkop! Bevraag autoriteit.</em> Bevraag waarom iedereen verouderde dependencies accepteert (comfortabele middelmaat) terwijl wij de bleeding edge omarmen met veiligheidscontroles (systematische excellentie). Bevraag "stabiel betekent veilig" wanneer het eigenlijk betekent "oud en vol met bekende kwetsbaarheden die we te bang zijn om te repareren." <strong>Ben je paranoïde genoeg om te weten welke versies je draait? Wij wel—in real-time, met geautomatiseerde meldingen.</strong></p>
+      
+      <p>Bij Hack23 patchen we niet alleen kwetsbaarheden—<strong>we voorkomen ze</strong> door radicaal dependency management: <strong>altijd nieuwste stabiele releases</strong>, geautomatiseerde security gates, OpenSSF Scorecard integratie, en proactief end-of-life management. We auto-mergen Dependabot PR's binnen uren, niet weken. Dit is niet roekeloos—het is systematische operationele excellentie door uitgebreide geautomatiseerde testen.</p>
+      
+      <p class="hidden-wisdom"><em>VERLICHTING: De meeste bedrijven vrezen de bleeding edge. Wij wapenen ermee. Nieuwste stabiel betekent nieuwste beveiligingspatches, zero-day kwetsbaarheidsvensters gemeten in uren, niet maanden.</em></p>
+      
+      <p>Onze aanpak combineert bleeding-edge updates (<4 uur voor kritieke patches) met enterprise-grade controles (volledige test suites, dependency review, supply chain security). Dit toont onze cybersecurity consulting expertise door meetbare beveiligingsresultaten. Volledige technische details in ons <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md">publiek Kwetsbaarheidsbeheer Beleid</a>.</p>
+    
+      
+      <p><strong>Op zoek naar expert implementatie ondersteuning?</strong> <a href="why-hack23.html">Zie waarom organisaties Hack23 kiezen</a> voor security consulting die innovatie versnelt.</p>
+    </section>
+
+    <section id="five-principles">
+      <h2 class="panel-caption">De Vijf Principes van Leven op de Edge</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🚀 Snelheid Eerst</h3>
+          <p><strong><4 uur voor kritieke patches.</strong> Geen dagen. Geen weken. Uren. Geautomatiseerde Dependabot PR's, uitgebreide test gates, auto-merge bij groen. Onze bleeding-edge strategie betekent kwetsbaarheidsvensters gemeten in uren, niet maanden.</p>
+          <p class="hidden-wisdom"><em>Terwijl anderen change control committees debatteren, zijn wij al gepatcht en gevalideerd.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🛡️ Veiligheid Altijd</h3>
+          <p>Bleeding edge met uitgebreide geautomatiseerde testen. Unit tests, integratie tests, security scans (SAST, secret scanning, CodeQL), SonarCloud quality gates. We vertrouwen test suites meer dan handmatige review—omdat mensen langzaam zijn en tests snel.</p>
+          <p class="hidden-wisdom"><em>Aanrakingsvrije dependency beslissingen door automatisering boven handmatige gatekeepers.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🤖 Automatisering Boven Handmatig</h3>
+          <p>GitHub Dependency Review Action met OpenSSF Scorecard integratie. Geautomatiseerde kwetsbaarheidscontrole, licentiecompliance, supply chain risicobeoordeling. Auto-merge wanneer alle gates slagen. Nul handmatige overhead voor standaard updates.</p>
+          <p class="hidden-wisdom"><em>Handmatige review schaalt lineair. Automatisering schaalt exponentieel. Kies exponentieel.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔍 Intelligence Gedreven</h3>
+          <p>OpenSSF Scorecard evalueert dependency security posture. Code review praktijken, CI tests, SAST gebruik, kwetsbaarheidsafhandeling. We controleren niet alleen op CVE's—we beoordelen leverancier security volwassenheid. Supply chain security is dependency security.</p>
+          <p class="hidden-wisdom"><em>Vertrouw maar verifieer leverancier security praktijken door geautomatiseerde intelligence.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🌟 Transparantie Eerst</h3>
+          <p>Publieke kwetsbaarheidsstatus, gedocumenteerde EOL-strategieën, transparante security posture. Ons <a href="https://github.com/Hack23/ISMS-PUBLIC">publiek ISMS</a> omvat de volledige kwetsbaarheidsbeheer aanpak. Radicale transparantie bouwt vertrouwen en toont expertise.</p>
+          <p class="hidden-wisdom"><em>Security door obscuriteit is security door onwetendheid. Transparantie door documentatie is security door vertrouwen.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="response-matrix">
+      <h2 class="panel-caption">Snelle Security Respons: Uren Geen Weken</h2>
+      
+      <p>Onze bleeding-edge aanpak betekent responstijden gemeten in uren, geïntegreerd met ons Classification Framework business impact analyse:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Ernst</th>
+            <th>Detectie</th>
+            <th>Responstijd</th>
+            <th>Geautomatiseerde Actie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🔴 Kritiek (CVSS ≥9.0)</strong></td>
+            <td>GitHub Security Advisories</td>
+            <td><strong><4 uur</strong></td>
+            <td>Directe PR + auto-merge bij groen</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🟠 Hoog (CVSS 7.0-8.9)</strong></td>
+            <td>Dependabot alerts</td>
+            <td><strong><8 uur</strong></td>
+            <td>Prioriteit PR + uitgebreide testen</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🟡 Medium (CVSS 4.0-6.9)</strong></td>
+            <td>Geplande scans</td>
+            <td><strong><24 uur</strong></td>
+            <td>Standaard PR workflow</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>🟢 Laag (CVSS <4.0)</strong></td>
+            <td>Wekelijkse reviews</td>
+            <td><strong><72 uur</strong></td>
+            <td>Batch met andere updates</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Dependency Update Classificatie:</strong></p>
+      <ul>
+        <li><strong>🔴 Security Patches:</strong> <4 uur, auto-merge bij groene tests. Direct ongeacht EOL status.</li>
+        <li><strong>🟠 Major Releases:</strong> <24 uur met volledige test suite. Check EOL timeline afstemming.</li>
+        <li><strong>🟡 Minor Releases:</strong> <8 uur met standaard testen. Prefereer LTS versies waar beschikbaar.</li>
+        <li><strong>🟢 Patch Releases:</strong> <2 uur, directe auto-merge. Pas altijd toe binnen support window.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>META-VERLICHTING: Snelheid zonder veiligheid is roekeloosheid. Veiligheid zonder snelheid is nalatigheid. We bereiken beide door uitgebreide automatisering.</em></p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain Security: OpenSSF Scorecard Integratie</h2>
+      
+      <p>We controleren niet alleen op CVE's—we beoordelen dependency security praktijken door geautomatiseerde OpenSSF Scorecard evaluatie:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Scorecard Check</th>
+            <th>Gewicht</th>
+            <th>Drempelwaarde</th>
+            <th>Geautomatiseerde Respons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🚨 Kwetsbaarheden</strong></td>
+            <td>Kritiek</td>
+            <td>< 7.0</td>
+            <td>Blokkeer tenzij gepatcht</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>📝 Code Review</strong></td>
+            <td>Hoog</td>
+            <td>< 6.0</td>
+            <td>Handmatige review vereist</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🛡️ SAST</strong></td>
+            <td>Hoog</td>
+            <td>< 5.0</td>
+            <td>Extra security scan</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🔄 Maintained</strong></td>
+            <td>Hoog</td>
+            <td>< 5.0</td>
+            <td>Markeer voor beoordeling</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🧪 CI Tests</strong></td>
+            <td>Medium</td>
+            <td>< 4.0</td>
+            <td>Uitgebreide testen</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Waarom Scorecard Belangrijk Is:</strong> Een dependency zonder code review proces, zonder CI tests, en zonder SAST is een kwetsbaarheid die wacht om te gebeuren. Score > 5.0 (versoepelde drempel) geeft volwassen security praktijken aan. Daaronder? Handmatige evaluatie vereist.</p>
+      
+      <p class="hidden-wisdom"><em>SUPPLY CHAIN VERLICHTING: Je security is slechts zo sterk als je zwakste dependency. Beoordeel leverancier volwassenheid, niet alleen CVE telling.</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Onze Aanpak: Dagelijkse Operaties & Wekelijkse Releases</h2>
+      
+      <p>Bij Hack23 is kwetsbaarheidsbeheer continu, geautomatiseerd en transparant:</p>
+      
+      <p><strong>🔄 Continue Dependency Monitoring:</strong></p>
+      <ul>
+        <li><strong>GitHub Dependabot:</strong> Dagelijkse dependency scanning om 09:00 CET. Max 10 gelijktijdige PR's per repo.</li>
+        <li><strong>Dependency Review Action:</strong> Geautomatiseerde kwetsbaarheid + licentiecompliance controle op elke PR.</li>
+        <li><strong>OpenSSF Scorecard:</strong> Supply chain security beoordeling voor elke dependency.</li>
+        <li><strong>Auto-Merge Strategie:</strong> Wanneer ALLE gates slagen (tests, security scans, dependency review), auto-merge binnen uren.</li>
+      </ul>
+      
+      <p><strong>🛡️ Security Gate Validatie (Allen Moeten Slagen):</strong></p>
+      <ul>
+        <li><strong>Dependency Review:</strong> Geen high/critical CVE's, OpenSSF score > 5.0, licentiecompliance geverifieerd.</li>
+        <li><strong>Uitgebreide Tests:</strong> Unit tests, integratie tests, SAST, secret scanning—100% slagingspercentage.</li>
+        <li><strong>Security Scanning:</strong> SonarCloud quality gate, CodeQL analyse, FOSSA licentie scan—alles schoon.</li>
+        <li><strong>Geautomatiseerde Validatie:</strong> Conventional commits, nieuwste stabiele versie, geen breaking changes in patch/minor.</li>
+      </ul>
+      
+      <p><strong>☁️ AWS Runtime Monitoring:</strong></p>
+      <ul>
+        <li><strong>GuardDuty:</strong> Kwaadaardig verkeer detectie met geautomatiseerde blokkering.</li>
+        <li><strong>Inspector:</strong> Runtime kwetsbaarheidsscanning met patch orchestratie.</li>
+        <li><strong>Security Hub:</strong> Gecentraliseerde security finding aggregatie over AWS services.</li>
+        <li><strong>Config:</strong> Security configuratie monitoring met auto-remediatie.</li>
+      </ul>
+      
+      <p><strong>📅 Dagelijks Proactief Onderhoud (03:00 CET):</strong></p>
+      <ul>
+        <li><strong>EOL Status Check:</strong> Nadert end-of-life? Activeer migratieplanning.</li>
+        <li><strong>Patch Beschikbaarheid:</strong> Kritieke patches direct toegepast, hoog gepland binnen 8 uur.</li>
+        <li><strong>Security Scanning:</strong> Gedetecteerde kwetsbaarheden activeren urgent responsprotocol.</li>
+        <li><strong>Geautomatiseerde Rapportage:</strong> Dashboards bijgewerkt, drempels gemonitord, CEO escalatie bij overschrijding.</li>
+      </ul>
+      
+      <p><strong>📋 Verplichte EOL Documentatie:</strong> Elk project onderhoudt End-of-Life-Strategy.md met technologie stack matrix, EOL datums, migratie triggers, en transparante publieke documentatie. We blijven nieuwste versies gebruiken tot architectonische barrières, dan plannen we proactief migraties voordat EOL datums noodactie forceren.</p>
+      
+      <p>Volledige technische implementatie in ons <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md">publiek Kwetsbaarheidsbeheer Beleid</a>—omdat transparantie ook onze automatiseringsstrategieën en EOL-planning omvat.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welkom in Chapel Perilous: Leven op de Bleeding Edge</h2>
+      
+      <p><strong>Niets is waar. Alles is toegestaan.</strong> Behalve verouderde dependencies accepteren als "stabiel"—dat is alleen technische schuld vermomd als conservatisme.</p>
+      
+      <p>De meeste organisaties vrezen de bleeding edge. Ze noemen het "risicovol". Ze prefereren "stabiele" (lees: verouderde) dependencies. Ze patchen per kwartaal (lees: nooit voor laag-prioriteit systemen). Ze debatteren change control voor security patches (lees: bikeshedding terwijl kwetsbaarheden blijven bestaan).</p>
+      
+      <p>Wij wapenen de bleeding edge. <strong>Nieuwste stabiele releases</strong> betekent nieuwste security patches. Kwetsbaarheidsvensters gemeten in <strong>uren, niet maanden</strong>. Uitgebreide geautomatiseerde testen betekent zelfverzekerd deployment. OpenSSF Scorecard betekent intelligent leverancier vertrouwen. Proactief EOL management betekent strategische, niet reactieve migratie.</p>
+      
+      <p><strong>Denk voor jezelf.</strong> Bevraag waarom "stabiel" "oud" betekent. Bevraag waarom handmatige review beter schaalt dan geautomatiseerde gates. Bevraag waarom kwartaalpatchen acceptabel is. (Spoiler: Dat is het niet.)</p>
+      
+      <p><strong>Ons concurrentievoordeel:</strong> We tonen cybersecurity consulting expertise door meetbare security resultaten. <4 uur kritieke patch respons. Wekelijkse release cycli. Publieke kwetsbaarheidsbeheer documentatie. Transparante EOL strategieën. Dit is niet theoretisch—het is operationeel.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIEME VERLICHTING: Je bent nu in Chapel Perilous. Je kunt blijven patchen per kwartaal en hopen op het beste. Of je kunt de bleeding edge omarmen met veiligheidscontroles en sneller patchen dan aanvallers kunnen wapenen. Jouw infrastructuur. Jouw keuze. Kies wijs.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Denk voor jezelf, sufkop! Nieuwste stabiel is niet risicovol—het is de enige rationele keuze wanneer je uitgebreide geautomatiseerde testen hebt."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Kapitein van de <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Gerelateerde ISMS Beleidslijnen</h2>
+      <ul>
+        <li><a href="discordian-secure-dev.html">Veilige Ontwikkelingsbeleid</a> — Code zonder backdoors (met opzet)</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — Wanneer (niet als) het mis gaat</li>
+        <li><a href="discordian-network-security.html">Netwerk Beveiligingsbeleid</a> — De perimeter is dood</li>
+        <li><a href="discordian-cybersecurity.html">Terug naar Hoofd Manifesto</a> — Alles wat je weet over security is een leugen</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Göteborg, Zweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Bedrijfspagina</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Producten</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publiek ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Bedrijf</h3>
+          <ul>
+            <li><a href="why-hack23.html">Over Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Beveiligingsbeleid</a></li>
+            <li><a href="SECURITY.md">Beveiligingsprobleem Melden</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisatie</a></li>
+            <li><a href="accessibility-statement.html">Toegankelijkheid</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Auteurs:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionaire anarchistische Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofie & Visie) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosoof-ingenieur System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architectuur & Patronen)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementatie Realiteit:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Paniek-gedreven Developer die het echt werkend maakt" rel="noopener noreferrer" target="_blank">George Dorn</a> worstelt deze mooie chaos in werkende code. Zie zijn technische commentaren in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, en
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> voor de paniek momenten, doorbraken, en verborgen Easter eggs die filosofie deploybaar maken.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alle rechten voorbehouden. | Gelicentieerd onder <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
