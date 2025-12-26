@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אבטחה פיזית | Hack23</title>
+    <meta name="description" content="דף הבית office security: Full disk encryption (AES-256), WPA3 Wi-Fi, device lock screens (15-min timeout). Cloud-native endpoint protection.">
+    <meta name="keywords" content="physical security, ISMS, social engineering, access control, badge systems, perimeter security, discordian security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Physical Security: Locks, Guards, and Clever Social Engineering">
+    <meta property="og:description" content="Physical access = game over. Five layers of defense. Don't hold doors. Don't plug in found USBs.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-physical-security_he.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-physical-security_he.html">
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Physical Security: Locks, Guards, and Clever Social Engineering",
+      "description": "Physical access = game over. Five layers of defense adapted for דף הבית office: residential perimeter, dedicated workspace, device protection (FDE AES-256), media security, environmental monitoring. Single-person company, cloud-native infrastructure.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-physical-security.html"
+      },
+      "keywords": "physical security, social engineering, access control, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 980,
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "inLanguage": "he",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-physical-security.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Physical Security",
+          "item": "https://hack23.com/discordian-physical-security.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-physical-security.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-physical-security_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-physical-security_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-physical-security.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">דף הבית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Physical Security
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity בלוג</h1>
+        <nav><a href="index_he.html">דף הבית</a> <a href="discordian-cybersecurity_he.html">המניפסט</a> <a href="blog_he.html">בלוג</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Physical Security: Locks, Guards, and Clever Social Engineering</h2>
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Physical access = game over."</em></p>
+            <h2>🏰 The Problem: Physical Access Bypasses Everything</h2>
+            <p>Physical access = game over. <strong>All your crypto is irrelevant when someone walks out with the server.</strong> Firewalls don't stop tailgating. Encryption doesn't stop USB keyloggers. Physical security is foundational—without it, everything else fails. <strong>FNORD—and all your cloud security means nothing when they steal your laptop from a café.</strong></p>
+            
+            <p>At Hack23, physical security adapts to reality: <strong>single-person Swedish company, דף הבית office environment, cloud-native infrastructure.</strong> No corporate office. No server rooms. No badge systems. Just devices that need protection and a workspace that needs security. <strong>Are you paranoid enough to encrypt everything? Because you should be.</strong></p>
+            
+            <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Physical Security Policy</a> demonstrates how systematic physical protection works in distributed environments—because cybersecurity consulting expertise includes understanding that cloud-native doesn't eliminate physical risk. <strong>Nothing is true—especially the myth that "it's all in the cloud" means physical security doesn't matter.</strong></p>
+            
+            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Social engineering bypasses your firewall by walking through the door with a smile. In דף הבית office environments, social engineering means fake delivery drivers, shoulder surfing at cafes, and "borrowed" devices. Physical security requires physical vigilance—adapted for remote work reality. <strong>FNORD—the most sophisticated attack vector is a friendly person asking to borrow your charger while casually glancing at your screen. Are you paranoid enough yet?</strong></div>
+            <h2>🛡️ The Five Layers of Physical Security (דף הבית Office Edition)</h2>
+            <div class="value-grid">
+                <div class="value-card"><h3>1. Perimeter (Residential)</h3><p><strong>דף הבית building access control.</strong></p><p>Residential locks, alarm system, security awareness. Deters casual intruders. Won't stop determined attackers but raises difficulty level.</p><p class="hidden-wisdom"><em>Reality: You don't control residential perimeter like corporate office. Focus defense-in-depth on layers you do control.</em></p></div>
+                
+                <div class="value-card"><h3>2. Workspace (Dedicated Office)</h3><p><strong>Separated work area, door lock optional.</strong></p><p>Dedicated דף הבית office workspace. Physical separation from living areas where practical. Minimize non-work traffic through office space.</p><p class="hidden-wisdom"><em>Single-person company: More about creating security mindset than access control. Visitors rare—when present, escort mandatory.</em></p></div>
+                
+                <div class="value-card"><h3>3. Device Protection</h3><p><strong>Full disk encryption mandatory, cable locks optional.</strong></p><p>All computing devices: AES-256 FDE per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a>. Lock screens after 15 min idle. Strong passphrases (not PINs). Cable locks for stationary equipment in high-risk scenarios.</p><p class="hidden-wisdom"><em>Cloud-native infrastructure means endpoints are the crown jewels. Encrypt everything. Lock everything. Trust nothing.</em></p></div>
+                
+                <div class="value-card"><h3>4. Media Security</h3><p><strong>External storage encrypted, secure disposal.</strong></p><p>External hard drives: Full encryption required. USB drives: Encrypted for business data. Backup media: Secured in locked storage. Disposal: Secure wipe or physical destruction.</p><p class="hidden-wisdom"><em>No tape backups in datacenter—just removable media that needs same protection as primary storage.</em></p></div>
+                
+                <div class="value-card"><h3>5. Environmental Controls</h3><p><strong>Fire, water, power protection.</strong></p><p>Smoke detectors in workspace. Fire extinguisher accessible. Surge protectors for equipment. Climate awareness (avoid overheating). Power backup (UPS) for critical work sessions.</p><p class="hidden-wisdom"><em>דף הבית office means residential environmental protection. No HVAC monitoring or halon systems—just common sense fire safety.</em></p></div>
+            </div>
+            <h2>📋 What Hack23 Actually Does</h2>
+            <p>Our physical security is public: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">ISMS-PUBLIC Physical Security Policy</a></p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Device Encryption (100% Implemented)</h3>
+                    <p><strong>Full Disk Encryption:</strong> AES-256 on all computing devices per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptography_Policy.md">Cryptography Policy</a></p>
+                    <p><strong>Mobile Devices:</strong> iOS/Android native encryption enabled, remote wipe capability configured</p>
+                    <p><strong>External Storage:</strong> Encrypted external drives (VeraCrypt/BitLocker) for business data</p>
+                    <p><strong>Lock Screens:</strong> 15-minute idle timeout, strong passphrase mandatory</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏠 Workspace Security (דף הבית Office)</h3>
+                    <p><strong>Dedicated Office:</strong> Separated workspace with door (lockable where practical)</p>
+                    <p><strong>Wi-Fi Security:</strong> WPA3 encryption, strong password, SSID hidden, guest network separated</p>
+                    <p><strong>Smart Devices:</strong> IoT on separate VLAN where possible, default credentials changed, regular updates</p>
+                    <p><strong>Visitor Protocol:</strong> Rare visitors escorted, screens locked before visitor entry</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗑️ Secure Disposal</h3>
+                    <p><strong>Hard Drives:</strong> Secure wipe (DBAN/equivalent) or physical destruction before disposal</p>
+                    <p><strong>Documents:</strong> Shredding for sensitive paper documents (minimal—mostly digital)</p>
+                    <p><strong>Devices:</strong> Factory reset after secure wipe, remove all business data</p>
+                    <p><strong>USB Drives:</strong> Secure format and physical destruction for high-sensitivity media</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>⚠️ Environmental Protection</h3>
+                    <p><strong>Fire Safety:</strong> Smoke detectors operational, fire extinguisher accessible</p>
+                    <p><strong>Power Protection:</strong> Surge protectors for all equipment, UPS for critical sessions</p>
+                    <p><strong>Climate:</strong> Equipment ventilation, avoid overheating, no liquid near devices</p>
+                    <p><strong>Backups:</strong> Encrypted external backups stored securely, AWS Backup for cloud resources</p>
+                </div>
+            </div>
+            
+            <p><strong>Organizational Context:</strong></p>
+            <ul>
+                <li>🏢 <strong>Single-Person Company:</strong> CEO/Founder only employee, no staff access control needed</li>
+                <li>☁️ <strong>Cloud-Native:</strong> No physical servers, no datacenter, no server room security</li>
+                <li>🏠 <strong>דף הבית Office:</strong> Residential environment, adapted physical security controls</li>
+                <li>📱 <strong>Device-Centric:</strong> Endpoints are the attack surface—encrypt everything</li>
+            </ul>
+            
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Perfect physical security is impossible in דף הבית environments. Systematic physical security is mandatory. The difference is honest implementation adapted to reality vs. copying corporate datacenter policies. We do former—device encryption 100%, workspace separation practical, social engineering awareness operational.</div>
+            <h2>🎯 Conclusion: Guard the Physical (Even From דף הבית)</h2>
+            <p>Physical access = game over. <strong>Lock screens. Encrypt devices. Secure workspace.</strong> Layer security from residential perimeter to device encryption. Or find out that your impenetrable cloud infrastructure was bypassed by someone stealing your laptop from a café. <strong>FNORD—the weakest link is always the meatbag carrying the encrypted device.</strong></p>
+            
+            <p><strong>דף הבית office physical security reality (for psychonauts navigating Chapel Perilous):</strong></p>
+            <ul>
+                <li>✅ <strong>Device Encryption:</strong> 100% implemented—AES-256 FDE on all devices (because paranoia is a feature, not a bug)</li>
+                <li>✅ <strong>Lock Screens:</strong> 15-min timeout mandatory, strong passphrases enforced (your password is not "password123", right?)</li>
+                <li>✅ <strong>Wi-Fi Security:</strong> WPA3 encryption, separate guest network, IoT segmentation (because your smart fridge shouldn't access your secrets)</li>
+                <li>✅ <strong>Secure Disposal:</strong> Wipe or destroy—no exceptions for retired devices (degaussing is therapeutic)</li>
+                <li>⚠️ <strong>Social Engineering:</strong> Awareness training (self), visitor protocols operational (trust nobody, verify everything)</li>
+            </ul>
+            
+            <p><strong>Cloud-native doesn't eliminate physical risk—it concentrates it on endpoints.</strong> Our physical security policy demonstrates how systematic protection adapts to distributed work environments while maintaining security excellence. <strong>Are you paranoid enough to never leave your laptop unattended? Good. That's the right level of paranoia.</strong></p>
+            
+            <p><strong>Need expert guidance on physical security controls?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+            
+            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"תחשוב בעצמך, schmuck! Question everything—especially strangers offering to help with your laptop at Starbucks. <strong>Nothing is true. Everything is permitted. Your unencrypted device permits EVERYTHING.</strong>"</em><br>🍎 23 FNORD 5<br>— Hagbard Celine, Captain of the <cite>Leif Erikson</cite></p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your physical security is either systematic or theatrical. Both require effort. Only one provides actual protection. <strong>Nothing is true—except the theft report you'll file if you don't encrypt that device. Are you paranoid enough? FNORD.</strong></small></p>
+        </article>
+    </main>
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="בלוג.html">Security בלוג</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian בלוג</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="נגישות-statement.html">נגישות</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to בלוג -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ בלוג Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="בלוג-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="בלוג-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="בלוג.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

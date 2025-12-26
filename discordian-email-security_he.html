@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אבטחת אימייל | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Gmail Workspace: SPF/DKIM/DMARC enforcement, hardware 2FA (YubiKey), mandatory phishing training. Your CEO doesn't need iTunes cards.">
+<meta name="keywords" content="email security, SPF, DKIM, DMARC, phishing, BEC, Gmail Workspace, YubiKey MFA, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Email Security: SPF/DKIM/DMARC + Hardware MFA">
+<meta property="og:description" content="Gmail Workspace + SPF/DKIM/DMARC quarantine policy + hardware 2FA. Phishing training + out-of-band verification for financial requests.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-email-security_he.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-email-security_he.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Email Security: SPF/DKIM/DMARC + Hardware MFA",
+      "description": "How Hack23 implements email security with Gmail Workspace, SPF/DKIM/DMARC enforcement, hardware 2FA, and mandatory phishing training",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-email-security.html"
+      },
+      "keywords": "email security, SPF, DKIM, DMARC, phishing, Gmail, MFA",
+      "articleSection": "Information Security",
+      "inLanguage": "he",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1508,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—email sender addresses. SMTP was specified in RFC 821 in 1982 for trusted academics who believed everyone was honest. Forty-three years l...",
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Security",
+          "description": "OWASP LLM Top 10 and AI model security"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-email-security.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Email Security",
+          "item": "https://hack23.com/discordian-email-security.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-email-security.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-email-security_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-email-security_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-email-security.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">דף הבית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Email Security
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>Email Security: SPF/DKIM/DMARC + Hardware MFA</h1>
+  <div class="app-link">
+    <a href="index_he.html">דף הבית</a>
+    <a href="discordian-cybersecurity_he.html">המניפסט</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">📧 Email Security: Your CEO Doesn't Need iTunes Cards</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Email Is Broken By Design—And They Knew It From The Start</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—email sender addresses. SMTP was specified in RFC 821 in 1982 for trusted academics who believed everyone was honest. Forty-three years later, in 2025, email authentication is <em>still optional</em>. This isn't a bug. <strong>It's a feature.</strong> For someone. Guess who?</p>
+      
+      <p><em>תחשוב בעצמך. הטל ספק בסמכות.</em> Question that urgent email from "your CEO" requesting iTunes gift cards. Question "IT support" asking for your password via email. Question why email—the most critical business communication channel—has the security architecture of a postcard. <strong>FNORD.</strong> Your inbox is a threat vector and always has been.</p>
+      
+      <p>At Hack23, we're paranoid enough about email to assume <em>all of it</em> is hostile until cryptographically proven otherwise. Email security isn't hope-based filtering and user awareness training—it's <strong>mandatory SPF/DKIM/DMARC enforcement</strong> that automatically quarantines spoofed domains before they reach human eyeballs. Because humans are the vulnerability. Always have been. Hardware 2FA (YubiKey) for all accounts—no SMS, no TOTP, no "just this once" exceptions. Quarterly phishing simulations where we deliberately attack our own people to measure the click rate. <strong>We weaponize paranoia.</strong></p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Your CEO doesn't need iTunes cards. That's not your CEO. That's an attacker who knows email sender addresses are trivially spoofed and most humans trust what they see over what's technically true. Welcome to Chapel Perilous, where you question every email, verify every request through different channels, and realize email security is an oxymoron without cryptographic proof. Are you paranoid enough to verify out-of-band?</em></p>
+      
+      <p>Our approach: Gmail Workspace (because Google already reads all your email anyway, might as well get Advanced Protection and Security Sandbox in exchange), DNS-level authentication (SPF/DKIM/DMARC with quarantine policy—because trust must be cryptographically verified), and systematic phishing training (because users are the weakest link and the strongest defense simultaneously). This demonstrates cybersecurity consulting expertise through measurable paranoia converted to technical controls. Full details in our public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md#-email-security-architecture">Network Security Policy — Email Security Architecture</a>. Yes, public. Because obscurity isn't security—it's just obscurity. <strong>FNORD.</strong></p>
+    
+      
+      <p><strong>Ready to implement ISO 27001 compliance?</strong> <a href="why-hack23.html">Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.</p>
+    </section>
+
+    <section id="five-threats">
+      <h2 class="panel-caption">The Five Email Threat Categories: Why Email Is Primary Attack Vector</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎣 Phishing & Spear Phishing</h3>
+          <p><strong>Click this link to verify your account.</strong> Mass phishing targets everyone. Spear phishing targets specific individuals with researched personal details. Both steal credentials or deliver malware.</p>
+          <p><strong>Defense:</strong> Gmail Advanced Protection, link rewriting, attachment sandboxing, mandatory security training with simulated phishing tests quarterly.</p>
+          <p class="hidden-wisdom"><em>Phishing works because humans trust visual cues (logos, formatting) over technical reality (actual sender domain).</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 💰 Business Email Compromise (BEC)</h3>
+          <p><strong>CEO needs wire transfer ASAP.</strong> Impersonating executives to request urgent financial transactions. FBI reports $43 billion lost globally 2016-2021. Most successful cyber attack type by financial impact.</p>
+          <p><strong>Defense:</strong> DMARC quarantine policy blocks spoofed domains. Out-of-band verification mandatory for financial requests >€500. Display name spoofing detection in Gmail.</p>
+          <p class="hidden-wisdom"><em>BEC targets finance departments because they're trained to respond urgently to executive requests—security vs. compliance conflict.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🦠 Malware & Ransomware Delivery</h3>
+          <p><strong>Invoice.pdf.exe attached.</strong> Malicious attachments deliver ransomware, keyloggers, remote access trojans. Macro-enabled Office documents remain effective attack vector despite decades of warnings.</p>
+          <p><strong>Defense:</strong> Gmail Security Sandbox analyzes attachments in isolated environment. Dangerous attachment types blocked (.exe, .scr, .vbs). Endpoint protection (antivirus, EDR) as defense-in-depth.</p>
+          <p class="hidden-wisdom"><em>File extensions can be spoofed (invoice.pdf.exe displays as "invoice.pdf" with default Windows settings). Always show file extensions.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🕵️ Account Compromise & Data Exfiltration</h3>
+          <p><strong>Compromised credentials enable persistent access.</strong> Stolen email passwords grant access to email history, contacts, calendar, Google Drive. Attackers use compromised accounts for lateral phishing attacks against contacts.</p>
+          <p><strong>Defense:</strong> Hardware 2FA (YubiKey) required for all accounts—no SMS fallback. Password manager (1Password) with unique passwords per service. Gmail Vault for audit log retention.</p>
+          <p class="hidden-wisdom"><em>Email compromise is persistent—attackers maintain access through email forwarding rules and OAuth token grants even after password changes.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔍 Email Spoofing & Domain Impersonation</h3>
+          <p><strong>SMTP allows sender address spoofing.</strong> Without SPF/DKIM/DMARC, anyone can send email claiming to be from any domain. Typosquatting domains (hack23.com vs hack23.co) bypass simple checks.</p>
+          <p><strong>Defense:</strong> SPF (authorized sending servers), DKIM (cryptographic signature), DMARC (policy enforcement: quarantine/reject). Monitor DMARC reports for impersonation attempts.</p>
+          <p class="hidden-wisdom"><em>SPF/DKIM/DMARC protect recipients from emails claiming to be from your domain—protecting your brand reputation, not your inbox.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="authentication-stack">
+      <h2 class="panel-caption">Email Authentication Stack: SPF + DKIM + DMARC</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+            <th>Hack23 Configuration</th>
+            <th>Validation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>SPF (Sender Policy Framework)</strong></td>
+            <td>Authorizes which mail servers can send from domain</td>
+            <td>TXT record lists Gmail + SendGrid as authorized senders</td>
+            <td>SPF Pass required, -all (hard fail) for unauthorized</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>DKIM (DomainKeys Identified Mail)</strong></td>
+            <td>Cryptographic signature proves email authenticity</td>
+            <td>Gmail signs all outbound email with 2048-bit RSA key</td>
+            <td>DKIM signature verification on inbound email</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>DMARC (Domain-based Message Authentication)</strong></td>
+            <td>Policy enforcement: what to do with failing SPF/DKIM</td>
+            <td>p=quarantine for non-aligned email, aggregate reports to security@</td>
+            <td>Weekly DMARC report analysis for impersonation attempts</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>MX Records + TLS</strong></td>
+            <td>Mail routing with encryption in transit</td>
+            <td>Gmail MX records, enforced TLS for email transport</td>
+            <td>Opportunistic TLS verified via Gmail admin console</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>DMARC Policy Progression:</strong> Start with p=none (monitoring), analyze reports for 30 days, move to p=quarantine (failed email sent to spam), eventually p=reject (hard block). We're at p=quarantine with 95%+ legitimate email passing authentication.</p>
+      
+      <p class="hidden-wisdom"><em>AUTHENTICATION ILLUMINATION: SPF/DKIM/DMARC protect your domain reputation, not your inbox. They prevent others from spoofing your domain—inbound phishing requires different controls (filtering, training, sandboxing).</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: Gmail Workspace + Hardware MFA + Training</h2>
+      
+      <p>At Hack23, email security is layered defense combining technical controls and human awareness:</p>
+      
+      <p><strong>📧 Gmail Workspace Enterprise Security:</strong></p>
+      <ul>
+        <li><strong>Advanced Protection:</strong> Enhanced phishing/malware detection using machine learning and reputation analysis.</li>
+        <li><strong>Security Sandbox:</strong> Suspicious attachments analyzed in isolated environment before delivery.</li>
+        <li><strong>Link Rewriting:</strong> URLs in email rewritten to click-time analysis—blocks malicious sites even if link was clean when sent.</li>
+        <li><strong>Gmail Vault:</strong> Email retention (7 years) and legal hold capability for compliance and forensics.</li>
+        <li><strong>Admin Alerts:</strong> Automated alerts for suspicious activity (mass deletions, unusual login locations, external forwarding rules).</li>
+      </ul>
+      
+      <p><strong>🔐 Hardware Multi-Factor Authentication:</strong></p>
+      <ul>
+        <li><strong>YubiKey Enforcement:</strong> All Hack23 accounts require hardware 2FA token—no SMS fallback, no TOTP codes.</li>
+        <li><strong>Phishing-Resistant:</strong> FIDO2/WebAuthn prevents MFA bypass attacks (reverse proxy phishing, session hijacking).</li>
+        <li><strong>Backup Tokens:</strong> Two YubiKeys per user (primary + backup) stored separately to prevent lockout.</li>
+        <li><strong>Device Trust:</strong> Google Advanced Protection requires device verification for sensitive data access.</li>
+      </ul>
+      
+      <p><strong>🎓 Mandatory Security Awareness Training:</strong></p>
+      <ul>
+        <li><strong>Quarterly Phishing Simulations:</strong> Realistic phishing emails sent to all employees, click tracking, remedial training for failures.</li>
+        <li><strong>Security Training:</strong> Annual comprehensive training (phishing, password management, social engineering, physical security).</li>
+        <li><strong>Incident Reporting:</strong> Report Phishing button in Gmail, security@ contact for suspicious emails, no-blame culture for reports.</li>
+        <li><strong>Metrics Tracking:</strong> Phishing simulation click rate (target: &lt;5%), training completion rate (required: 100%), time-to-report suspicious emails.</li>
+      </ul>
+      
+      <p><strong>💰 Financial Request Verification Protocol:</strong></p>
+      <ul>
+        <li><strong>Out-of-Band Verification:</strong> All financial requests >€500 require phone call or in-person confirmation—never email alone.</li>
+        <li><strong>Change Detection:</strong> Changes to bank accounts, payment details, wire transfer instructions require dual authorization.</li>
+        <li><strong>CEO Fraud Awareness:</strong> Explicit training that CEO will never request wire transfers, gift cards, or password disclosure via email.</li>
+        <li><strong>Urgency Red Flag:</strong> "URGENT," "CONFIDENTIAL," "ASAP" in financial emails trigger additional verification steps.</li>
+      </ul>
+      
+      <p><strong>🔍 Continuous Email Security Monitoring:</strong></p>
+      <ul>
+        <li><strong>DMARC Reports:</strong> Weekly analysis of aggregate and forensic reports identifying impersonation attempts.</li>
+        <li><strong>Gmail Admin Logs:</strong> Continuous monitoring for suspicious account activity (login anomalies, forwarding rules, OAuth grants).</li>
+        <li><strong>Threat Intelligence:</strong> Google Workspace Alert Center integration for automated security alerts.</li>
+        <li><strong>Incident Response:</strong> Compromised account playbook (password reset, OAuth revocation, session termination, email search for exfiltration).</li>
+      </ul>
+      
+      <p>Full email security controls documented in our public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md#-email-security-architecture">Network Security Policy — Email Security Architecture</a> with comprehensive implementation guides for SPF, DKIM, DMARC, MTA-STS, TLS-RPT, and WorkMail configuration.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Email Is Adversarial By Default</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including email sender addresses. SMTP has no authentication. Trust must be cryptographically verified (DKIM) or sender-authorized (SPF/DMARC).</p>
+      
+      <p>Most organizations treat email as trusted communication channel. They trust sender addresses. They trust display names. They trust urgency claims. They respond to "CEO" requests without verification. Then they wire $50K to attackers and wonder what happened.</p>
+      
+      <p>We weaponize skepticism. <strong>SPF/DKIM/DMARC quarantine</strong> blocks spoofed domains automatically. <strong>Hardware 2FA</strong> prevents account compromise. <strong>Quarterly phishing tests</strong> train humans to distrust email by default. <strong>Out-of-band verification</strong> for financial requests treats email as untrusted until proven otherwise.</p>
+      
+      <p><strong>תחשוב בעצמך, schmuck!</strong> Question urgent CEO emails. Question password reset requests. Question "just this once" MFA bypass requests. Question email as secure communication—it's not, and never was. (Spoiler: Verify through different channels.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through measurable email security controls. SPF/DKIM/DMARC enforcement with public DNS verification. Hardware MFA with zero SMS fallback. &lt;5% phishing simulation click rate. Public email security documentation. This isn't email security theater—it's operational defense.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue trusting email sender addresses and hoping employees detect phishing. Or you can implement SPF/DKIM/DMARC, hardware MFA, and out-of-band verification for financial requests. Your inbox. Your choice. Choose cryptographic verification over hope.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"תחשוב בעצמך, schmuck! Your CEO doesn't need iTunes cards. That's not your CEO. Verify out-of-band."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-security-training.html">Security Training Policy</a> — Phishing simulations quarterly</li>
+        <li><a href="discordian-access-control.html">Access Control Policy</a> — Hardware MFA enforcement</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — Compromised account procedures</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main המניפסט</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="בלוג.html">Security בלוג</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian בלוג</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="נגישות-statement.html">נגישות</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to בלוג -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ בלוג Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="בלוג-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="בלוג-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="בלוג.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
