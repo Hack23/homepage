@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veilige Ontwikkeling | STRIDE + DevSecOps | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="STRIDE Dreigingsmodellering + 80% testdekking + SLSA 3 + OpenSSF 7.0+. Security Architectuur Documentatie, geautomatiseerde tests, openbare bewijs badges.">
+<meta name="keywords" content="veilige ontwikkeling, DevSecOps, STRIDE Dreigingsmodellering, SLSA 3, OpenSSF Scorecard, Unit Testing, E2E Testing, SBOM, hack23 ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Veilige Ontwikkeling: Code zonder achterdeuren (opzettelijk)">
+<meta property="og:description" content="STRIDE Dreigingsmodellering + 80% testdekking + SLSA 3 Attestaties + OpenSSF 7.0+ Scorecard. Security Architectuur Documentatie, geautomatiseerde test pipelines en openbare bewijs badges.">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="he_IL">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-secure-dev_nl.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-secure-dev_nl.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Veilige Ontwikkeling: DevSecOps als Concurrentievoordeel",
+      "description": "Hoe Hack23 Security-by-Design toepast met STRIDE dreigingsmodellering, 80% testdekking, SLSA 3-attestaties en openbare security-bewijzen voor DevSecOps-excellentie",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-secure-dev_nl.html"
+      },
+      "keywords": "veilige ontwikkeling, SDLC, veilig coderen, ISMS",
+      "articleSection": "Information Security",
+      "inLanguage": "nl",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1561,
+      "articleBody": "Niets is waar. Alles is toegestaan. Behalve code zonder dreigingsmodellen uitleveren—dat is geen agile ontwikkeling, maar gokken met andermans data...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-secure-dev_nl.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Veilige Ontwikkeling",
+          "item": "https://hack23.com/discordian-secure-dev_nl.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-secure-dev_nl.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-secure-dev.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-secure-dev.html" />
+
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Veilige Ontwikkeling
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Veilige Ontwikkelingsrichtlinie</h1>
+  <div class="app-link">
+    <a href="index.html" title="Terug naar Home">Home</a>
+    <a href="discordian-cybersecurity.html" title="Terug naar Manifesto">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Openbaar ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">💻 Veilige Ontwikkeling: Code zonder Backdoors (met Opzet)</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Security-by-Design: DevSecOps als Concurrentievoordeel</h2>
+      
+      <p><strong>Niets is waar. Alles is toegestaan.</strong> Behalve code zonder dreigingsmodellen leveren—dat is geen agile ontwikkeling, maar gokken met andermans data in de hoop op geluk. <em>Elke coderegel is een potentiële kwetsbaarheid. Elk feature is een potentieel aanvalsoppervlak. Elke dependency is een potentieel supply chain compromis. Handel dienovereenkomstig.</em></p>
+      
+      <p><em>Denk zelf, dwaas! Bevraag autoriteit.</em> Vooral de autoriteit die zegt "beveiliging vertraagt ons" (dat doet het niet—slechte kwaliteit vertraagt, beveiliging maakt het alleen zichtbaar). Bevraag "move fast and break things" wanneer "things" gebruikersdata omvat en "breaking" een breach betekent. Onze Security-by-Design <em>is</em> onze snelheid, omdat veilige code geen noodpatches om 3 uur 's nachts vereist. <strong>Ben je paranoïde genoeg om dreigingsmodellen te maken voordat je gaat coderen? Wij zijn het—het is goedkoper dan incident response.</strong></p>
+      
+      <p>Bij Hack23 wordt beveiliging niet achteraf toegevoegd—<strong>het wordt vanaf commit één gearchitectureerd</strong>. STRIDE dreigingsmodellering voor code, 80% testdekking minimum, SLSA 3 build attestaties, OpenSSF Scorecard 7.0+ doelen. Elke repository bevat SECURITY_ARCHITECTURE.md, THREAT_MODEL.md, uitgebreide testplannen en geautomatiseerde CI/CD security gates. Dit is geen overhead—het is systematische operationele excellentie die meetbare concurrentievoordelen creëert.</p>
+      
+      <p class="hidden-wisdom"><em>VERLICHTING: De meeste bedrijven schrijven eerst code, voegen later beveiliging toe, leveren altijd kwetsbaarheden. Wij modelleren eerst dreigingen, testen continu, leveren openbaar bewijs.</em></p>
+      
+      <p>Onze aanpak combineert bleeding-edge ontwikkelsnelheid (dagelijkse dependency updates, auto-merge bij groen) met enterprise-grade beveiligingscontroles (verplichte dreigingsmodellen, 80% dekking, SLSA attestaties). Dit demonstreert onze cybersecurity consultancy competentie door levend bewijs—geen beloftes. Volledige technische implementatie in ons <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">openbaar Veilig Ontwikkelingsbeleid</a>.</p>
+    
+      
+      <p><strong>Klaar voor ISO 27001 compliance implementatie?</strong> <a href="why-hack23.html">Lees meer over Hack23's cybersecurity consultancy diensten</a> en onze unieke openbare ISMS aanpak.</p>
+    </section>
+
+    <section id="five-practices">
+      <h2 class="panel-caption">De Vijf Pilaren van Security-by-Design</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎯 Verplichte Dreigingsmodellering</h3>
+          <p><strong>STRIDE vóór code.</strong> Elk project vereist THREAT_MODEL.md met uitgebreide analyse: STRIDE-framework toepassing, MITRE ATT&CK integratie, attack tree ontwikkeling, kwantitatieve risicobeoordeling. CIA bereikte OpenSSF-score 7.2—publieke dreigingsmodellen zijn bewijs van systematisch security denken, niet checkbox compliance.</p>
+          <p class="hidden-wisdom"><em>Code zonder dreigingsmodellen is alleen kwetsbaarheidscreatie met optimisme en budget.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📊 80% testdekking Minimum</h3>
+          <p>Uitgebreide tests zijn niet optioneel. <strong>Minimum 80% Line Coverage, 70% Branch Coverage.</strong> Openbare JaCoCo/Jest/Vitest rapporten, geautomatiseerde uitvoering bij elke commit, historische trend tracking. CIA en Black Trigram onderhouden live coverage dashboards—transparantie boven beloftes, bewijs boven beweringen.</p>
+          <p class="hidden-wisdom"><em>Als je het niet kunt meten, kun je het niet beveiligen. Als je het niet publiceert, verberg je iets.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🔐 SLSA 3 Build Attestaties</h3>
+          <p>Supply chain security door verifieerbare provenance. SLSA 3 attestaties, ondertekende artefacten, geautomatiseerde SBOM generatie, onveranderlijk build bewijs. Elke release bevat cryptografisch bewijs van wat gebouwd werd, door wie, van welke bron. Vertrouw maar verifieer—wij leveren de verificatiedata.</p>
+          <p class="hidden-wisdom"><em>Ongetekende artefacten zijn beloftes. Getekende attestaties zijn bewijs. Wij handelen in bewijs.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🏗️ Security Architectuur Documentatie</h3>
+          <p>Levende documentatie, geen verouderde PDFs. Elk repository: SECURITY_ARCHITECTURE.md (huidige staat), FUTURE_SECURITY_ARCHITECTURE.md (roadmap), WORKFLOWS.md (CI/CD automatisering). Mermaid diagrammen, bewijs links, AWS Well-Architected afstemming. Documentatie als code betekent het blijft actueel of CI faalt.</p>
+          <p class="hidden-wisdom"><em>Verouderde documentatie is erger dan geen documentatie. Geautomatiseerde verificatie verslaat handmatige beloftes.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🤖 Geautomatiseerde Security Gates</h3>
+          <p>Mensen maken fouten om 2 uur 's nachts. Computers niet. SAST (SonarCloud), SCA (Dependabot/FOSSA), DAST (OWASP ZAP), secret scanning, CodeQL—alles geautomatiseerd, alles blokkerend bij kritieke bevindingen. OpenSSF Scorecard 7.0+ doelen met publieke badges. Security gates zijn geen bureaucratie—ze zijn systematische excellentie op schaal.</p>
+          <p class="hidden-wisdom"><em>Handmatige review is noodzakelijk maar onvoldoende. Geautomatiseerde gates vangen het voor de hand liggende dat uitgeputte mensen missen.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welkom in Chapel Perilous: Security-by-Design als bedrijfsstrategie</h2>
+      
+      <p><strong>Niets is waar. Alles is toegestaan.</strong> Behalve beveiliging behandelen als een toevoeging achteraf—dat is alleen technische schuld vermomd als pragmatisme.</p>
+      
+      <p>De meeste organisaties behandelen beveiliging als een afvinkvakje. Ze schrijven code, voegen tests toe (misschien), scannen op kwetsbaarheden (soms), hopen op het beste (altijd). Zij noemen het "pragmatisch". Wij noemen het een "vooraf geprogrammeerde breach".</p>
+      
+      <p>Wij architectureren beveiliging erin. <strong>STRIDE vóór code</strong> betekent dat bedreigingen worden aangepakt voordat ze worden geïmplementeerd. <strong>80% testdekking</strong> betekent dat beveiligingsregressies onmiddellijk worden gedetecteerd. <strong>SLSA 3 attestaties</strong> betekenen dat supply chain integriteit aantoonbaar is, niet aangenomen. <strong>OpenSSF Scorecard 7.0+</strong> betekent dat best practices meetbaar zijn, niet theoretisch.</p>
+      
+      <p><strong>Denk zelf.</strong> Bevraag waarom "snel bewegen" belangrijker zou moeten zijn dan "veilig bewegen". Bevraag waarom tests "overhead" zouden zijn in plaats van "bewijs van kwaliteit". Bevraag waarom beveiligingsdocumentatie "bureaucratie" zou zijn in plaats van "operationele intelligentie".</p>
+      
+      <p><strong>Ons concurrentievoordeel:</strong> Wij demonstreren cybersecurity consultancy competentie via meetbare resultaten. Openbare dreigingsmodellen. Live test coverage dashboards. SLSA 3 build herkomst. OpenSSF Scorecard 7.0+ scores. Dat is geen marketing—dat is operationeel bewijs.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIEME VERLICHTING: Je bent nu in Chapel Perilous. Je kunt beveiliging blijven behandelen als een afvinkvakje en hopen dat je niet wordt gehackt. Of je kunt beveiliging erin architectureren en aantoonbaar veilig zijn. Jouw code. Jouw keuze. Kies wijs.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"Denk zelf, dwaas! Beveiliging vertraagt niet—het voorkomt 3-uur-'s-nachts-noodgevallen die echt vertragen."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Kapitein van de <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Gerelateerde ISMS Beleidslijnen</h2>
+      <ul>
+        <li><a href="discordian-vuln-mgmt.html">Kwetsbaarheidsbeheer</a> — Patchen of vergaan</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — Wanneer (niet als) het mis gaat</li>
+        <li><a href="discordian-threat-modeling.html">Dreigingsmodellering</a> — Ken je vijand (hij kent jou al)</li>
+        <li><a href="discordian-cybersecurity.html">Terug naar Hoofd Manifesto</a> — Alles wat je weet over security is een leugen</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Göteborg, Zweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Bedrijfspagina</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Producten</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Openbaar ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Bedrijf</h3>
+          <ul>
+            <li><a href="why-hack23.html">Over Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Beveiligingsbeleid</a></li>
+            <li><a href="SECURITY.md">Beveiligingsprobleem Melden</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisatie</a></li>
+            <li><a href="accessibility-statement.html">Toegankelijkheid</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Auteurs:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionaire anarchistische Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofie & Visie) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosoof-ingenieur System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architectuur & Ontwerppatronen)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementatie Realiteit:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Paniek-gedreven developer die het echt werkend maakt" rel="noopener noreferrer" target="_blank">George Dorn</a> brengt deze mooie chaos om in werkende code. Zie zijn technische commentaar in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, en
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> voor de paniekmomenten, doorbraken en verborgen easter eggs die filosofie deploybaar maken.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alle rechten voorbehouden. | Gelicentieerd onder <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
