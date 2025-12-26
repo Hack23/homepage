@@ -14,7 +14,7 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#C62828','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇮🇱 Hebrew Translation Status ✡️"
-        A["📊 74/96 Files<br/>77.1% Complete 🚧"]
+        A["📊 79/96 Files<br/>82.3% Complete 🚧"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 22<br/>No English content"]
@@ -42,8 +42,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇮🇱 Hebrew Files Exist** | 74 | **77.1%** | 🚧 |
-| **❌ Missing Files** | 22 | 22.9% | ⚠️ |
+| **🇮🇱 Hebrew Files Exist** | 79 | **82.3%** | 🚧 |
+| **❌ Missing Files** | 17 | 17.7% | ⚠️ |
 
 ### 🎯 Translation Quality Analysis
 
@@ -112,7 +112,15 @@ Files analyzed for English content remaining:
   - discordian-disaster-recovery_he.html - שחזור אסון (Disaster Recovery)
   - discordian-change-mgmt_he.html - ניהול שינויים (Change Management)
   - Total Phase 2: 12 new Hebrew ISMS policy pages
-  - Repository now at 77.1% Hebrew coverage - George Dorn code analysis fully translated (Dec 17, 2025)
+  - Repository now at 77.1% Hebrew coverage
+- ✅ **COMPLETED**: Phase 2 Extension 2 - 5 More Discordian ISMS Pages (Dec 26, 2025)
+  - discordian-ai-policy_he.html - מדיניות AI (AI Policy)
+  - discordian-email-security_he.html - אבטחת אימייל (Email Security)
+  - discordian-mobile-device_he.html - מכשירים ניידים (Mobile Devices)
+  - discordian-monitoring-logging_he.html - ניטור ותיעוד (Monitoring & Logging)
+  - discordian-physical-security_he.html - אבטחה פיזית (Physical Security)
+  - Total Phase 2: 17 new Hebrew ISMS policy pages
+  - Repository now at 82.3% Hebrew coverage - George Dorn code analysis fully translated (Dec 17, 2025)
   - Developer notes and commentary translated
   - Architecture analysis in Hebrew
   - Technical implementation details translated
@@ -156,8 +164,10 @@ Files analyzed for English content remaining:
 - ✅ `sitemap_he.html` ← `sitemap.html`
 - ✅ `why-hack23_he.html` ← `why-hack23.html` **[COMPLETED Dec 17, 2025]**
 
-### ISMS Documentation (23 files) - **[PHASE 2 COMPLETED + EXTENDED]**
+### ISMS Documentation (28 files) - **[PHASE 2 COMPLETED + 2 EXTENSIONS]**
 - ✅ `discordian-acceptable-use_he.html` ← `discordian-acceptable-use.html`
+- ✅ `discordian-ai-policy_he.html` ← `discordian-ai-policy.html` **[NEW - Dec 26, 2025]**
+
 - ✅ `discordian-access-control_he.html` ← `discordian-access-control.html`
 - ✅ `discordian-asset-mgmt_he.html` ← `discordian-asset-mgmt.html`
 - ✅ `discordian-business-continuity_he.html` ← `discordian-business-continuity.html`
@@ -166,6 +176,8 @@ Files analyzed for English content remaining:
 - ✅ `discordian-crypto_he.html` ← `discordian-crypto.html` **[NEW - Dec 26, 2025]**
 - ✅ `discordian-data-protection_he.html` ← `discordian-data-protection.html` **[NEW - Dec 26, 2025]**
 - ✅ `discordian-disaster-recovery_he.html` ← `discordian-disaster-recovery.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-email-security_he.html` ← `discordian-email-security.html` **[NEW - Dec 26, 2025]**
+
 
 - ✅ `discordian-cloud-security_he.html` ← `discordian-cloud-security.html` **[NEW - Dec 26, 2025]**
 - ✅ `discordian-compliance_he.html` ← `discordian-compliance.html` **[NEW - Dec 26, 2025]**
@@ -174,7 +186,12 @@ Files analyzed for English content remaining:
 - ✅ `discordian-incident-response_he.html` ← `discordian-incident-response.html`
 - ✅ `discordian-info-sec-policy_he.html` ← `discordian-info-sec-policy.html`
 - ✅ `discordian-isms-transparency_he.html` ← `discordian-isms-transparency.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-mobile-device_he.html` ← `discordian-mobile-device.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-monitoring-logging_he.html` ← `discordian-monitoring-logging.html` **[NEW - Dec 26, 2025]**
+
 - ✅ `discordian-network-security_he.html` ← `discordian-network-security.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-physical-security_he.html` ← `discordian-physical-security.html` **[NEW - Dec 26, 2025]**
+
 - ✅ `discordian-remote-access_he.html` ← `discordian-remote-access.html`
 - ✅ `discordian-risk-assessment_he.html` ← `discordian-risk-assessment.html`
 - ✅ `discordian-risk-register_he.html` ← `discordian-risk-register.html`
