@@ -14,7 +14,7 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#C62828','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇮🇱 Hebrew Translation Status ✡️"
-        A["📊 69/96 Files<br/>71.9% Complete 🚧"]
+        A["📊 74/96 Files<br/>77.1% Complete 🚧"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 22<br/>No English content"]
@@ -42,8 +42,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇮🇱 Hebrew Files Exist** | 69 | **71.9%** | 🚧 |
-| **❌ Missing Files** | 27 | 28.1% | ⚠️ |
+| **🇮🇱 Hebrew Files Exist** | 74 | **77.1%** | 🚧 |
+| **❌ Missing Files** | 22 | 22.9% | ⚠️ |
 
 ### 🎯 Translation Quality Analysis
 
@@ -104,7 +104,15 @@ Files analyzed for English content remaining:
   - discordian-isms-transparency_he.html - שקיפות ISMS (ISMS Transparency)
   - AI-assisted translation with proper RTL structure
   - Hebrew terminology from v3.1 guide applied
-  - All 10 priority ISMS pages now complete - George Dorn code analysis fully translated (Dec 17, 2025)
+  - All 10 priority ISMS pages now complete
+- ✅ **COMPLETED**: Phase 2 Extension - 5 Additional Discordian ISMS Pages (Dec 26, 2025)
+  - discordian-crypto_he.html - קריפטוגרפיה (Cryptography)
+  - discordian-data-protection_he.html - הגנת מידע (Data Protection)
+  - discordian-backup-recovery_he.html - גיבוי ושחזור (Backup & Recovery)
+  - discordian-disaster-recovery_he.html - שחזור אסון (Disaster Recovery)
+  - discordian-change-mgmt_he.html - ניהול שינויים (Change Management)
+  - Total Phase 2: 12 new Hebrew ISMS policy pages
+  - Repository now at 77.1% Hebrew coverage - George Dorn code analysis fully translated (Dec 17, 2025)
   - Developer notes and commentary translated
   - Architecture analysis in Hebrew
   - Technical implementation details translated
@@ -148,11 +156,17 @@ Files analyzed for English content remaining:
 - ✅ `sitemap_he.html` ← `sitemap.html`
 - ✅ `why-hack23_he.html` ← `why-hack23.html` **[COMPLETED Dec 17, 2025]**
 
-### ISMS Documentation (18 files) - **[PHASE 2 COMPLETED]**
+### ISMS Documentation (23 files) - **[PHASE 2 COMPLETED + EXTENDED]**
 - ✅ `discordian-acceptable-use_he.html` ← `discordian-acceptable-use.html`
 - ✅ `discordian-access-control_he.html` ← `discordian-access-control.html`
 - ✅ `discordian-asset-mgmt_he.html` ← `discordian-asset-mgmt.html`
 - ✅ `discordian-business-continuity_he.html` ← `discordian-business-continuity.html`
+- ✅ `discordian-backup-recovery_he.html` ← `discordian-backup-recovery.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-change-mgmt_he.html` ← `discordian-change-mgmt.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-crypto_he.html` ← `discordian-crypto.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-data-protection_he.html` ← `discordian-data-protection.html` **[NEW - Dec 26, 2025]**
+- ✅ `discordian-disaster-recovery_he.html` ← `discordian-disaster-recovery.html` **[NEW - Dec 26, 2025]**
+
 - ✅ `discordian-cloud-security_he.html` ← `discordian-cloud-security.html` **[NEW - Dec 26, 2025]**
 - ✅ `discordian-compliance_he.html` ← `discordian-compliance.html` **[NEW - Dec 26, 2025]**
 - ⚠️  `discordian-cybersecurity_he.html` ← `discordian-cybersecurity.html`
