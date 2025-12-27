@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIA Security | Defense Through Transparency | Hack23</title>
+<title>אבטחת CIA | הגנה דרך שקיפות | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, ניהול אבטחת מידע">
-<meta name="keywords" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, NIST CSF, ניהול אבטחת מידע">
+<meta name="description" content="חקירת ארכיטקטורת האבטחה בת חמש שכבות של פלטפורמת OSINT סוכנות המודיעין האזרחי, הגנה בעומק, מידול איומים STRIDE, ואבטחה דרך שקיפות.">
+<meta name="keywords" content="ארכיטקטורת אבטחה, OSINT, מידול איומים, STRIDE, הגנה בעומק, אבטחה דרך שקיפות, Simon Moon, CIA security, פלטפורמה דמוקרטית, שקיפות פוליטית, אבטחה קוד-פתוח, defense-in-depth, תחום האיומים, OpenSSF Scorecard, SLSA provenance">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
-<meta property="og:title" content="אבטחת סייבר וציות | Hack23">
-<meta property="og:description" content="ייעוץ אבטחת סייבר וציות מ-Hack23. פתרונות אבטחה מקיפים, ISMS, ISO 27001, NIST CSF.">
+<meta property="og:title" content="אבטחת CIA: הגנה דרך שקיפות ותעלומת 23">
+<meta property="og:description" content="חקירת ארכיטקטורת האבטחה בת חמש שכבות של פלטפורמת OSINT סוכנות המודיעין האזרחי.">
 	<meta property="og:locale" content="he_IL">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -43,8 +43,8 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "CIA Security: Defense Through Transparency & The 23 Enigma",
-      "description": "Exploring the five-layer security architecture of the Citizen Intelligence Agency OSINT platform",
+      "headline": "אבטחת CIA: הגנה דרך שקיפות ותעלומת 23",
+      "description": "חקירת ארכיטקטורת האבטחה בת חמש שכבות של פלטפורמת OSINT סוכנות המודיעין האזרחי",
       "author": {
         "@type": "Person",
         "name": "Simon Moon",
@@ -70,7 +70,7 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-cia-security_he.html"
       },
-      "keywords": "security architecture, OSINT, threat modeling, STRIDE, defense-in-depth",
+      "keywords": "security architecture, OSINT, איום modeling, STRIDE, defense-in-depth",
       "articleSection": "Security Architecture",
       "image": {
         "@type": "ImageObject",
@@ -79,7 +79,7 @@
         "height": 630
       },
       "wordCount": 2105,
-      "articleBody": "The transparency paradox stares every open-source security architect in the face: How do you defend a system when attackers can read every line of defense code?",
+      "articleBody": "פרדוקס השקיפות בוהה בכל ארכיטקט אבטחה קוד-פתוח בפנים: איך אתה מגן על מערכת כשתוקפים יכולים לקרוא כל שורת קוד הגנה?",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
@@ -146,7 +146,7 @@
 <body>
 
 <!-- Translation Note: This is a Hebrew translation of the CIA blog series.
-     Technical terminology uses standard cybersecurity terms in Hebrew.
+     Technical terminology uses standard אבטחת סייבר terms in Hebrew.
      Code blocks maintain LTR direction via CSS. -->
 
   <!-- Breadcrumb Navigation -->
@@ -168,7 +168,7 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>Discordian Cybersecurity</h1>
+  <h1>Discordian אבטחת סייבר</h1>
   <div class="app-link">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
@@ -177,104 +177,104 @@
 </header>
 <main>
   <article>
-    <h1 class="header">🔐 CIA Security: Defense Through Transparency & The 23 Enigma</h1>
+    <h1 class="header">🔐 אבטחת CIA: הגנה דרך שקיפות ותעלומת 23</h1>
     
     <section id="paradox">
-      <h2 class="panel-caption">The Transparency Paradox</h2>
+      <h2 class="panel-caption">פרדוקס השקיפות</h2>
       
-      <p><strong>The transparency paradox stares every open-source security architect in the face:</strong> How do you defend a system when attackers can read every line of defense code?</p>
+      <p><strong>פרדוקס השקיפות בוהה בכל ארכיטקט אבטחה קוד-פתוח בפנים:</strong> איך אתה מגן על מערכת כשתוקפים יכולים לקרוא כל שורת קוד הגנה?</p>
       
-      <p><strong>Answer:</strong> You publish security through mathematical proof, not mystical obscurity. <em>Security through transparency</em>—where defense mechanisms survive adversarial analysis because they're built on cryptographic primitives, not secret sauce.</p>
+      <p><strong>תשובה:</strong> אתה מפרסם אבטחה דרך הוכחה מתמטית, לא ערפול מיסטי. <em>אבטחה דרך שקיפות</em>—שבה מנגנוני הגנה שורדים ניתוח יריבי כי הם בנויים על פרימיטיבים קריפטוגרפיים, לא על רוטב סודי.</p>
       
-      <p><strong>When architecting security for the <a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a>, conventional wisdom whispered fears:</strong> "Don't publish threat models—you're giving attackers a roadmap." "Don't document attack surfaces—you're handing them targets." "Don't reveal defensive strategies—you're surrendering advantage." Conventional wisdom creates security theater—confidence masks hiding evidence-free claims.</p>
+      <p><strong>כשאדריכלנו אבטחה עבור <a href="https://github.com/Hack23/cia">סוכנות המודיעין האזרחי</a>, החוכמה המקובלת לחשה פחדים:</strong> "אל תפרסם מודלי איומים—אתה נותן לתוקפים מפת דרכים." "אל תתעד משטחי תקיפה—אתה מוסר להם מטרות." "אל תחשוף אסטרטגיות הגנה—אתה מוותר על יתרון." החוכמה המקובלת יוצרת תיאטרון אבטחה—מסכות ביטחון שמסתירות טענות חסרות ראיות.</p>
       
-      <p><strong>We chose radical transparency instead.</strong> Everything public: <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">current security architecture</a>, <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">future security roadmap</a>, <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">complete STRIDE threat model</a>, <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA compliance assessment</a>. No secrets. All verifiable. Challenge us—the code's on GitHub.</p>
+      <p><strong>בחרנו בשקיפות רדיקלית במקום.</strong> הכל ציבורי: <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">ארכיטקטורת אבטחה נוכחית</a>, <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">מפת דרכים אבטחה עתידית</a>, <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">מודל איומים STRIDE מלא</a>, <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">הערכת ציות CRA</a>. אין סודות. הכל ניתן לאימות. אתגרו אותנו—הקוד ב-GitHub.</p>
       
-      <p><strong>Results speak louder than promises:</strong> OpenSSF Scorecard <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">7.2/10</a>. SLSA Level 3 build attestations. CII Best Practices badge. Zero critical vulnerabilities in production across 5 years. Not marketing—<em>measurable security</em>.</p>
+      <p><strong>תוצאות מדברות חזק יותר מהבטחות:</strong> OpenSSF Scorecard <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">7.2/10</a>. אישורי בנייה SLSA Level 3. תג CII Best Practices. אפס פגיעויות קריטיות בייצור על פני 5 שנים. לא שיווק—<em>אבטחה ניתנת למדידה</em>.</p>
       
-      <p class="hidden-wisdom"><em>Illumination: Security through obscurity fails when attackers have time. Security through mathematical proof holds when attackers have eternity. Choose accordingly.</em></p>
+      <p class="hidden-wisdom"><em>הארה: אבטחה דרך ערפול נכשלת כשלתוקפים יש זמן. אבטחה דרך הוכחה מתמטית מחזיקה כשלתוקפים יש נצח. בחר בהתאם.</em></p>
     
       
-      <p><strong>Need expert guidance on security compliance?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+      <p><strong>צריך הדרכה מומחית על ציות אבטחה?</strong> <a href="why-hack23_he.html">גלה את שירותי ייעוץ אבטחת הסייבר של Hack23</a> המגובים ב-ISMS הציבורי המלא שלנו.</p>
     </section>
 
     <section id="five-defensive-layers">
-      <h2 class="panel-caption">The Five Defensive Layers</h2>
+      <h2 class="panel-caption">חמש שכבות ההגנה</h2>
       
-      <p><strong>Defense-in-depth organized by the Law of Fives.</strong> Each layer independent. Breach one, four remain. Classic military strategy meeting modern cybersecurity.</p>
+      <p><strong>הגנה בעומק מאורגנת לפי חוק החמישיות.</strong> כל שכבה עצמאית. פרוץ אחת, ארבע נותרות. אסטרטגיה צבאית קלאסית פוגשת אבטחת סייבר מודרנית.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🌐 Perimeter Defense: Network Security</h3>
-          <p><strong>AWS Shield and WAF.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>, AWS Shield provides DDoS protection at network and transport layers, while AWS WAF guards against OWASP Top 10 vulnerabilities with managed rule sets.</p>
-          <p><strong>Multi-layered network segmentation:</strong> Three-zone architecture with public subnets (internet-facing), private app subnets (application tier), and private DB subnets (data tier). NAT Gateways provide secure outbound connectivity. VPC Flow Logs enable comprehensive traffic monitoring.</p>
-          <p><strong>Application Load Balancer (ALB):</strong> Distributes traffic with TLS termination. Security Groups and Network ACLs provide layered stateful and stateless filtering. VPC Endpoints enable private AWS service access without internet exposure.</p>
-          <p class="hidden-wisdom"><em>Perimeter defense that blocks legitimate users fails its mission. Perimeter defense that lets attackers through fails harder. The balance emerges through measured thresholds informed by actual attack patterns.</em></p>
+          <h3>1. 🌐 הגנת היקפית: אבטחת רשת</h3>
+          <p><strong>AWS Shield ו-WAF.</strong> כמתועד ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>, AWS Shield מספק הגנת DDoS בשכבות רשת ותעבורה, בעוד AWS WAF שומר מפני פגיעויות OWASP Top 10 עם ערכות כללים מנוהלות.</p>
+          <p><strong>פילוח רשת רב-שכבתי:</strong> ארכיטקטורת שלושה אזורים עם רשתות משנה ציבוריות (פונות אינטרנט), רשתות משנה אפליקציה פרטיות (שכבת אפליקציה), ורשתות משנה DB פרטיות (שכבת נתונים). NAT Gateways מספקים קישוריות יוצאת מאובטחת. VPC Flow Logs מאפשרים ניטור תעבורה מקיף.</p>
+          <p><strong>Application Load Balancer (ALB):</strong> מפזר תעבורה עם סיום TLS. Security Groups ו-Network ACLs מספקים סינון שכבתי stateful ו-stateless. VPC Endpoints מאפשרים גישה פרטית לשירותי AWS ללא חשיפה לאינטרנט.</p>
+          <p class="hidden-wisdom"><em>הגנה היקפית שחוסמת משתמשים לגיטימיים נכשלת במשימתה. הגנה היקפית שמאפשרת לתוקפים לעבור נכשלת קשה יותר. האיזון מתגלה דרך ספים מדודים המודעים לדפוסי תקיפה בפועל.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. 🚪 Application Gateway: Authentication & Authorization</h3>
-          <p><strong>Spring Security framework.</strong> The authentication architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implements three security tiers: Anonymous (read-only public data access), User (authenticated access with bookmarking and tracking), and Admin (system management with elevated privileges).</p>
-          <p><strong>Multi-Factor Authentication:</strong> Google Authenticator OTP integration for enhanced security. Brute force protection via login blocking with configurable thresholds per IP, session, and user.</p>
-          <p><strong>Method-level security:</strong> @Secured annotations enforce role-based access control at the service layer. Complete session invalidation on logout with comprehensive audit logging via ApplicationSession tracking.</p>
-          <p><strong>Session management:</strong> Spring Security handles session lifecycle with secure session cookies, CSRF protection, and session fixation prevention. Every user interaction logged through ApplicationActionEvent for security analysis.</p>
-          <p class="hidden-wisdom"><em>Authentication without authorization is security theater. Authorization without authentication is chaos. Both required. Both enforced. Both audited.</em></p>
+          <h3>2. 🚪 שער אפליקציה: אימות והרשאה</h3>
+          <p><strong>מסגרת Spring Security.</strong> ארכיטקטורת האימות (מתועדת ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) מיישמת שלוש שכבות אבטחה: אנונימי (גישת קריאה בלבד לנתונים ציבוריים), משתמש (גישה מאומתת עם סימניות ומעקב), ומנהל (ניהול מערכת עם הרשאות מוגברות).</p>
+          <p><strong>אימות רב-גורמי:</strong> אינטגרציית Google Authenticator OTP לאבטחה משופרת. הגנת brute force דרך חסימת התחברות עם ספים הניתנים להגדרה לכל IP, סשן ומשתמש.</p>
+          <p><strong>אבטחה ברמת מתודה:</strong> הערות @Secured אוכפות בקרת גישה מבוססת תפקידים בשכבת השירות. ביטול סשן מלא ביציאה עם רישום ביקורת מקיף דרך מעקב ApplicationSession.</p>
+          <p><strong>ניהול סשן:</strong> Spring Security מטפל במחזור חיי סשן עם עוגיות סשן מאובטחות, הגנת CSRF ומניעת קיבוע סשן. כל אינטראקציית משתמש נרשמת דרך ApplicationActionEvent לניתוח אבטחה.</p>
+          <p class="hidden-wisdom"><em>אימות ללא הרשאה הוא תיאטרון אבטחה. הרשאה ללא אימות היא כאוס. שניהם נדרשים. שניהם נאכפים. שניהם מבוקרים.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 🛡️ Business Logic Validation: Input Validation</h3>
-          <p><strong>Spring Security and ORM parameterization.</strong> The application layer validates input at multiple stages: client-side validation, server-side validation in controllers, service-layer business rules enforcement, and ORM-level constraints.</p>
-          <p><strong>Example - data integrity protection:</strong></p>
+          <h3>3. 🛡️ אימות לוגיקה עסקית: אימות קלט</h3>
+          <p><strong>Spring Security ופרמטריזציה של ORM.</strong> שכבת האפליקציה מאמתת קלט במספר שלבים: אימות צד לקוח, אימות צד שרת בבקרים, אכיפת כללים עסקיים בשכבת שירות, ואילוצים ברמת ORM.</p>
+          <p><strong>דוגמה - הגנת שלמות נתונים:</strong></p>
           <ul>
-            <li>Parameterized queries via JPA/Hibernate prevent SQL injection</li>
-            <li>Input sanitization through Spring validation framework</li>
-            <li>Business rule enforcement via service layer @Secured methods</li>
-            <li>Data consistency checks through database constraints</li>
-            <li>Comprehensive audit trails via Javers versioning</li>
+            <li>שאילתות ממופרמטות דרך JPA/Hibernate מונעות SQL injection</li>
+            <li>סניטציה של קלט דרך מסגרת אימות Spring</li>
+            <li>אכיפת כללים עסקיים דרך מתודות @Secured בשכבת שירות</li>
+            <li>בדיקות עקביות נתונים דרך אילוצי מסד נתונים</li>
+            <li>עקבות ביקורת מקיפות דרך גרסאות Javers</li>
           </ul>
-          <p><strong>STRIDE threat mitigations documented in <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (authentication), Tampering (parameterized queries + Javers auditing), Repudiation (immutable audit logs), Information Disclosure (network isolation + encryption), Denial of Service (WAF rate limiting), Elevation of Privilege (method-level @Secured annotations).</p>
-          <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
+          <p><strong>הפחתות איום STRIDE מתועדות ב-<a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (אימות), Tampering (שאילתות ממופרמטות + ביקורת Javers), Repudiation (לוגים בלתי ניתנים לשינוי), Information Disclosure (בידוד רשת + הצפנה), Denial of Service (הגבלת קצב WAF), Elevation of Privilege (הערות @Secured ברמת מתודה).</p>
+          <p class="hidden-wisdom"><em>פגיעויות לוגיקה עסקית הן הקשות ביותר לזיהוי עם כלים אוטומטיים. הן לא באגים—הן תכונות בשימוש לרעה. הגנה דורשת הבנת תחום הבעיה, לא רק הרצת סורקים.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Data Protection: Encryption & Key Management</h3>
-          <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for databases, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
-          <p><strong>Secrets management:</strong> AWS Secrets Manager handles database credentials, API keys, and service accounts with automated rotation. Secure credential storage with just-in-time delivery to services.</p>
-          <p><strong>Data classification system:</strong> Information categorized by sensitivity with appropriate protection controls. Minimal personal data collection (user accounts only). PostgreSQL SSL configuration enforces encrypted connections.</p>
-          <p><strong>Javers auditing:</strong> Every data change tracked with author attribution, complete change history, and temporal data access. Property-level tracking provides before/after snapshots for compliance and forensics.</p>
-          <p class="hidden-wisdom"><em>Encryption that can't be decrypted when needed is expensive data destruction. Encryption that decrypts too easily is expensive obfuscation. Balance through key management discipline.</em></p>
+          <h3>4. 🔒 הגנת נתונים: הצפנה וניהול מפתחות</h3>
+          <p><strong>הצפנת AWS KMS.</strong> כמתועד ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, הצפנת data-at-rest משתמשת ב-AWS KMS למסדי נתונים, כרכי EBS, ו-S3 buckets. TLS 1.3 לכל תקשורת לקוח, TLS 1.2+ לתקשורת שירות פנימית.</p>
+          <p><strong>ניהול סודות:</strong> AWS Secrets Manager מטפל באישורי מסד נתונים, מפתחות API, וחשבונות שירות עם סיבוב אוטומטי. אחסון אישורים מאובטח עם מסירה just-in-time לשירותים.</p>
+          <p><strong>מערכת סיווג נתונים:</strong> מידע מסווג לפי רגישות עם בקרות הגנה מתאימות. איסוף מינימלי של נתונים אישיים (חשבונות משתמש בלבד). תצורת PostgreSQL SSL אוכפת חיבורים מוצפנים.</p>
+          <p><strong>ביקורת Javers:</strong> כל שינוי נתונים מעוקב עם ייחוס מחבר, היסטוריית שינויים מלאה, וגישת נתונים זמנית. מעקב ברמת מאפיין מספק תמונות מצב לפני/אחרי לציות ופורנזיקה.</p>
+          <p class="hidden-wisdom"><em>הצפנה שלא ניתן לפענח כשצריך היא השמדת נתונים יקרה. הצפנה שמפענחת בקלות רבה מדי היא ערפול יקר. איזון דרך משמעת ניהול מפתחות.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Monitoring & Detection: Security Intelligence</h3>
-          <p><strong>AWS security services integration.</strong> The monitoring architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) combines multiple AWS services for comprehensive threat detection.</p>
-          <p><strong>GuardDuty threat intelligence:</strong> Machine learning-based detection across CloudTrail logs, VPC Flow Logs, and DNS logs. Enhanced protection for EKS, Lambda, RDS, S3, and EC2 with malware scanning.</p>
-          <p><strong>Security Hub aggregation:</strong> Centralized security findings from GuardDuty, Inspector, IAM Access Analyzer, and AWS Config. Automated evaluation against AWS Foundational Security Best Practices and CIS Benchmarks.</p>
-          <p><strong>Application monitoring:</strong> ApplicationSession tracking logs all user sessions. ApplicationActionEvent captures every user interaction. Javers auditing provides complete data change history with author attribution.</p>
-          <p><strong>Incident response workflow:</strong> EventBridge rules trigger Step Functions for automated containment. Security events generate CloudWatch alarms. Complete audit trail supports forensic investigation and compliance reporting.</p>
-          <p class="hidden-wisdom"><em>Monitoring that doesn't inform action is surveillance without purpose. Monitoring that enables rapid response is defensive intelligence. Know the difference.</em></p>
+          <h3>5. 👁️ ניטור וזיהוי: מודיעין אבטחה</h3>
+          <p><strong>אינטגרציית שירותי אבטחה AWS.</strong> ארכיטקטורת הניטור (מתועדת ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) משלבת מספר שירותי AWS לזיהוי איומים מקיף.</p>
+          <p><strong>מודיעין איומים GuardDuty:</strong> זיהוי מבוסס למידת מכונה על פני CloudTrail logs, VPC Flow Logs, ו-DNS logs. הגנה משופרת עבור EKS, Lambda, RDS, S3, ו-EC2 עם סריקת תוכנות זדוניות.</p>
+          <p><strong>צבירת Security Hub:</strong> ממצאי אבטחה מרוכזים מ-GuardDuty, Inspector, IAM Access Analyzer, ו-AWS Config. הערכה אוטומטית מול AWS Foundational Security Best Practices ו-CIS Benchmarks.</p>
+          <p><strong>ניטור אפליקציה:</strong> מעקב ApplicationSession רושם את כל סשנים המשתמשים. ApplicationActionEvent לוכד כל אינטראקציית משתמש. ביקורת Javers מספקת היסטוריית שינויי נתונים מלאה עם ייחוס מחבר.</p>
+          <p><strong>זרימת עבודה תגובת אירוע:</strong> כללי EventBridge מפעילים Step Functions לבלימה אוטומטית. אירועי אבטחה מייצרים התרעות CloudWatch. עקב ביקורת מלא תומך בחקירה פורנזית ודיווח ציות.</p>
+          <p class="hidden-wisdom"><em>ניטור שלא מודיע לפעולה הוא מעקב ללא מטרה. ניטור שמאפשר תגובה מהירה הוא מודיעין הגנתי. דע את ההבדל.</em></p>
         </div>
       </div>
     </section>
 
     <section id="threat-model">
-      <h2 class="panel-caption">STRIDE Threat Model: Systematic Risk Analysis</h2>
+      <h2 class="panel-caption">מודל איומים STRIDE: ניתוח סיכונים שיטתי</h2>
       
-      <p><strong>Comprehensive threat modeling using STRIDE framework.</strong> The <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> documents systematic threat analysis across all architecture elements, integrating STRIDE categorization with MITRE ATT&CK mapping for advanced threat intelligence.</p>
+      <p><strong>מידול איומים מקיף באמצעות מסגרת STRIDE.</strong> ה-<a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> מתעד ניתוח איומים שיטתי על פני כל אלמנטי הארכיטקטורה, משלב קטגוריזציה STRIDE עם מיפוי MITRE ATT&CK למודיעין איומים מתקדם.</p>
       
-      <p><strong>Priority threat scenarios documented:</strong> Web Application Compromise, Supply Chain Dependency Attack, Administrative Credential Compromise, Database Exfiltration, Import Pipeline Data Poisoning, and Distributed Denial of Service. Each scenario includes likelihood assessment, impact analysis (C/I/A), control implementation, and residual risk evaluation.</p>
+      <p><strong>תרחישי איום בעדיפות מתועדים:</strong> פשרת אפליקציית Web, תקיפת תלות שרשרת אספקה, פשרת אישורי מנהל, חילוץ מסד נתונים, הרעלת נתונים של צינור ייבוא, והתקפת מניעת שירות מבוזרת. כל תרחיש כולל הערכת סבירות, ניתוח השפעה (C/I/A), יישום בקרה, והערכת סיכון שיורי.</p>
       
-      <p><strong>Key documented threats include:</strong></p>
+      <p><strong>איומים מרכזיים מתועדים כוללים:</strong></p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>🎯 Web Application Compromise</h3>
-          <p><strong>Attack Vector:</strong> Exploitation of application vulnerabilities to manipulate political data integrity. <strong>Mitigations:</strong> WAF protection, input validation via ORM parameterization, defense-in-depth across network/application/data layers. <strong>Residual Risk:</strong> Low after comprehensive controls.</p>
+          <h3>🎯 פשרת אפליקציית Web</h3>
+          <p><strong>וקטור התקפה:</strong> ניצול פגיעויות אפליקציה לתמרן שלמות נתונים פוליטיים. <strong>הפחתות:</strong> הגנת WAF, אימות קלט דרך פרמטריזציה ORM, הגנה בעומק על פני שכבות רשת/אפליקציה/נתונים. <strong>סיכון שיורי:</strong> נמוך לאחר בקרות מקיפות.</p>
         </div>
         
         <div class="card integrity-card">
@@ -293,29 +293,29 @@
         </div>
         
         <div class="card integrity-card">
-          <h3>🗂️ Data Integrity Attack</h3>
+          <h3>🗂️ Data שלמות Attack</h3>
           <p><strong>Attack Vector:</strong> Manipulation of political data through compromised import pipelines or database access. <strong>Mitigations:</strong> Source verification from Riksdag API, schema validation, Javers auditing with immutable trails, duplicate detection. <strong>Residual Risk:</strong> Low with multi-layer validation.</p>
         </div>
       </div>
       
-      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
+      <p class="hidden-wisdom"><em>איום modeling that stops at "here are the threats" is איום identification, not איום modeling. Real איום modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Build Integrity & Provenance</h2>
+      <h2 class="panel-caption">Supply Chain Security: Build שלמות & Provenance</h2>
       
       <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
       
       <ol>
-        <li><strong>FOSSA license compliance:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public compliance badge</a> provides real-time verification of license adherence.</li>
+        <li><strong>FOSSA license ציות:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public ציות badge</a> provides real-time verification of license adherence.</li>
         
         <li><strong>Dependabot automation:</strong> GitHub-native security updates with automatic PR generation for vulnerable dependencies. Configured in <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> for continuous monitoring across all ecosystems.</li>
         
         <li><strong>CodeQL security scanning:</strong> Automated SAST integrated into CI/CD pipeline. Identifies vulnerabilities in code and dependencies before deployment. Results visible in <a href="https://github.com/Hack23/cia/security/code-scanning">Security tab</a>.</li>
         
-        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build integrity and supply chain security.</li>
+        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build שלמות and supply chain security.</li>
         
-        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and vulnerability disclosure. Automated third-party validation of security hygiene.</li>
+        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and פגיעות disclosure. Automated third-party validation of security hygiene.</li>
       </ol>
       
       <p><strong>The 23rd dependency insight:</strong> When we inventory dependencies, critical path always includes 23-25 packages (varies by release). Why? Pareto principle in action—20% of dependencies (23 out of ~120 total) provide 80% of functionality. The natural clustering revealing itself.</p>
@@ -324,7 +324,7 @@
     </section>
 
     <section id="cra-assessment">
-      <h2 class="panel-caption">CRA Compliance: The Cyber Resilience Act Assessment</h2>
+      <h2 class="panel-caption">CRA ציות: The Cyber Resilience Act Assessment</h2>
       
       <p><strong>EU Cyber Resilience Act mandates security practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
       
@@ -345,7 +345,7 @@
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#secure-by-default">SECURITY_ARCHITECTURE.md</a></td>
           </tr>
           <tr class="roi-high">
-            <td><strong>Vulnerability Disclosure</strong></td>
+            <td><strong>פגיעות Disclosure</strong></td>
             <td>Public SECURITY.md, security@hack23.com, 90-day disclosure timeline</td>
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a></td>
           </tr>
@@ -367,9 +367,9 @@
         </tbody>
       </table>
       
-      <p><strong>Compliance status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, penetration testing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
+      <p><strong>ציות status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, בדיקת חדירהing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
       
-      <p class="hidden-wisdom"><em>Compliance without understanding is checkbox security. Compliance with understanding is risk management. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
+      <p class="hidden-wisdom"><em>ציות without understanding is checkbox security. ציות with understanding is ניהול סיכונים. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
     </section>
 
     <section id="future-security">
@@ -400,11 +400,11 @@
         
         <div class="card integrity-card">
           <h3>Year 5: Quantum-Resistant Cryptography</h3>
-          <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum threat emerges.</p>
+          <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum איום emerges.</p>
         </div>
       </div>
       
-      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching threat landscape evolution. Not reactive—proactive.</p>
+      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching איום landscape evolution. Not reactive—proactive.</p>
     </section>
 
     <section id="lessons-learned">
@@ -413,7 +413,7 @@
       <p><strong>After architecting security for a transparency platform, what did I learn?</strong></p>
       
       <ol>
-        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our threat model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
+        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our איום model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
         
         <li><strong>The 23 Enigma manifests in unexpected places.</strong> Session timeouts, rate limits, critical attack scenarios, key dependencies—23 keeps appearing. Not numerological superstition. Pattern recognition in action. When the same number clusters, investigate underlying structure.</li>
         
@@ -421,7 +421,7 @@
         
         <li><strong>Automated evidence > manual assurance.</strong> OpenSSF Scorecard, SLSA attestations, FOSSA scanning—continuous automated validation. Can't fake a cryptographic signature. Can't game a public transparency report. Mathematical proof > marketing claims.</li>
         
-        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future vulnerability. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
+        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future פגיעות. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
       </ol>
       
       <p class="hidden-wisdom"><em>The map is not the territory, but our security map accurately describes our security territory because we update the map every time the territory changes. Documentation drift = security gap.</em></p>
@@ -434,13 +434,13 @@
       
       <ul>
         <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in technical detail</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE Threat Model</a> - 23 attack scenarios with mitigations</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act compliance status</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE איום Model</a> - 23 attack scenarios with mitigations</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act ציות status</li>
         <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a> - Five-year security roadmap</li>
         <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 automated security validation</li>
         <li><a href="https://github.com/Hack23/cia/attestations">SLSA Attestations</a> - Build provenance cryptographic proof</li>
-        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain compliance</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">Vulnerability Disclosure</a> - How to report security issues</li>
+        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain ציות</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">פגיעות Disclosure</a> - How to report security issues</li>
       </ul>
       
       <p><strong>Think for yourself.</strong> Review our mitigations. Test our controls. Find gaps. Report vulnerabilities. We respond within 48 hours. Fix critical issues within 24 hours. Publish coordinated disclosures after 90 days.</p>
@@ -467,7 +467,7 @@
         <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersecurity Consulting<br>
+          <p>אבטחת סייבר Consulting<br>
           Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
@@ -482,7 +482,7 @@
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">ציות & ISMS</a></li>
           </ul>
         </div>
         
@@ -513,7 +513,7 @@
           <h3>Company</h3>
           <ul>
             <li><a href="why-hack23.html">About Hack23</a></li>
-            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">מדיניות אבטחה</a></li>
             <li><a href="SECURITY.md">Report Security Issue</a></li>
             <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
             <li><a href="accessibility-statement.html">Accessibility</a></li>
