@@ -70,7 +70,7 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-cia-security_he.html"
       },
-      "keywords": "security architecture, OSINT, threat modeling, STRIDE, defense-in-depth",
+      "keywords": "security architecture, OSINT, איום modeling, STRIDE, defense-in-depth",
       "articleSection": "Security Architecture",
       "image": {
         "@type": "ImageObject",
@@ -146,7 +146,7 @@
 <body>
 
 <!-- Translation Note: This is a Hebrew translation of the CIA blog series.
-     Technical terminology uses standard cybersecurity terms in Hebrew.
+     Technical terminology uses standard אבטחת סייבר terms in Hebrew.
      Code blocks maintain LTR direction via CSS. -->
 
   <!-- Breadcrumb Navigation -->
@@ -168,7 +168,7 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>Discordian Cybersecurity</h1>
+  <h1>Discordian אבטחת סייבר</h1>
   <div class="app-link">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
@@ -293,29 +293,29 @@
         </div>
         
         <div class="card integrity-card">
-          <h3>🗂️ Data Integrity Attack</h3>
+          <h3>🗂️ Data שלמות Attack</h3>
           <p><strong>Attack Vector:</strong> Manipulation of political data through compromised import pipelines or database access. <strong>Mitigations:</strong> Source verification from Riksdag API, schema validation, Javers auditing with immutable trails, duplicate detection. <strong>Residual Risk:</strong> Low with multi-layer validation.</p>
         </div>
       </div>
       
-      <p class="hidden-wisdom"><em>Threat modeling that stops at "here are the threats" is threat identification, not threat modeling. Real threat modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
+      <p class="hidden-wisdom"><em>איום modeling that stops at "here are the threats" is איום identification, not איום modeling. Real איום modeling includes probability, impact, cost of mitigation, and residual risk. Complete documentation enables informed security decisions.</em></p>
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Build Integrity & Provenance</h2>
+      <h2 class="panel-caption">Supply Chain Security: Build שלמות & Provenance</h2>
       
       <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
       
       <ol>
-        <li><strong>FOSSA license compliance:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public compliance badge</a> provides real-time verification of license adherence.</li>
+        <li><strong>FOSSA license ציות:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public ציות badge</a> provides real-time verification of license adherence.</li>
         
         <li><strong>Dependabot automation:</strong> GitHub-native security updates with automatic PR generation for vulnerable dependencies. Configured in <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> for continuous monitoring across all ecosystems.</li>
         
         <li><strong>CodeQL security scanning:</strong> Automated SAST integrated into CI/CD pipeline. Identifies vulnerabilities in code and dependencies before deployment. Results visible in <a href="https://github.com/Hack23/cia/security/code-scanning">Security tab</a>.</li>
         
-        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build integrity and supply chain security.</li>
+        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build שלמות and supply chain security.</li>
         
-        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and vulnerability disclosure. Automated third-party validation of security hygiene.</li>
+        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and פגיעות disclosure. Automated third-party validation of security hygiene.</li>
       </ol>
       
       <p><strong>The 23rd dependency insight:</strong> When we inventory dependencies, critical path always includes 23-25 packages (varies by release). Why? Pareto principle in action—20% of dependencies (23 out of ~120 total) provide 80% of functionality. The natural clustering revealing itself.</p>
@@ -324,7 +324,7 @@
     </section>
 
     <section id="cra-assessment">
-      <h2 class="panel-caption">CRA Compliance: The Cyber Resilience Act Assessment</h2>
+      <h2 class="panel-caption">CRA ציות: The Cyber Resilience Act Assessment</h2>
       
       <p><strong>EU Cyber Resilience Act mandates security practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
       
@@ -345,7 +345,7 @@
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#secure-by-default">SECURITY_ARCHITECTURE.md</a></td>
           </tr>
           <tr class="roi-high">
-            <td><strong>Vulnerability Disclosure</strong></td>
+            <td><strong>פגיעות Disclosure</strong></td>
             <td>Public SECURITY.md, security@hack23.com, 90-day disclosure timeline</td>
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a></td>
           </tr>
@@ -367,9 +367,9 @@
         </tbody>
       </table>
       
-      <p><strong>Compliance status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, penetration testing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
+      <p><strong>ציות status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, בדיקת חדירהing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
       
-      <p class="hidden-wisdom"><em>Compliance without understanding is checkbox security. Compliance with understanding is risk management. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
+      <p class="hidden-wisdom"><em>ציות without understanding is checkbox security. ציות with understanding is ניהול סיכונים. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
     </section>
 
     <section id="future-security">
@@ -400,11 +400,11 @@
         
         <div class="card integrity-card">
           <h3>Year 5: Quantum-Resistant Cryptography</h3>
-          <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum threat emerges.</p>
+          <p>Post-quantum encryption algorithms. Lattice-based crypto, hash-based signatures. Preparing for quantum computers that break RSA/ECC. Future-proofing security before quantum איום emerges.</p>
         </div>
       </div>
       
-      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching threat landscape evolution. Not reactive—proactive.</p>
+      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching איום landscape evolution. Not reactive—proactive.</p>
     </section>
 
     <section id="lessons-learned">
@@ -413,7 +413,7 @@
       <p><strong>After architecting security for a transparency platform, what did I learn?</strong></p>
       
       <ol>
-        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our threat model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
+        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our איום model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
         
         <li><strong>The 23 Enigma manifests in unexpected places.</strong> Session timeouts, rate limits, critical attack scenarios, key dependencies—23 keeps appearing. Not numerological superstition. Pattern recognition in action. When the same number clusters, investigate underlying structure.</li>
         
@@ -421,7 +421,7 @@
         
         <li><strong>Automated evidence > manual assurance.</strong> OpenSSF Scorecard, SLSA attestations, FOSSA scanning—continuous automated validation. Can't fake a cryptographic signature. Can't game a public transparency report. Mathematical proof > marketing claims.</li>
         
-        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future vulnerability. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
+        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future פגיעות. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
       </ol>
       
       <p class="hidden-wisdom"><em>The map is not the territory, but our security map accurately describes our security territory because we update the map every time the territory changes. Documentation drift = security gap.</em></p>
@@ -434,13 +434,13 @@
       
       <ul>
         <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in technical detail</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE Threat Model</a> - 23 attack scenarios with mitigations</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act compliance status</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE איום Model</a> - 23 attack scenarios with mitigations</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act ציות status</li>
         <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a> - Five-year security roadmap</li>
         <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 automated security validation</li>
         <li><a href="https://github.com/Hack23/cia/attestations">SLSA Attestations</a> - Build provenance cryptographic proof</li>
-        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain compliance</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">Vulnerability Disclosure</a> - How to report security issues</li>
+        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain ציות</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">פגיעות Disclosure</a> - How to report security issues</li>
       </ul>
       
       <p><strong>Think for yourself.</strong> Review our mitigations. Test our controls. Find gaps. Report vulnerabilities. We respond within 48 hours. Fix critical issues within 24 hours. Publish coordinated disclosures after 90 days.</p>
@@ -467,7 +467,7 @@
         <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersecurity Consulting<br>
+          <p>אבטחת סייבר Consulting<br>
           Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
@@ -482,7 +482,7 @@
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">ציות & ISMS</a></li>
           </ul>
         </div>
         
@@ -513,7 +513,7 @@
           <h3>Company</h3>
           <ul>
             <li><a href="why-hack23.html">About Hack23</a></li>
-            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">מדיניות אבטחה</a></li>
             <li><a href="SECURITY.md">Report Security Issue</a></li>
             <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
             <li><a href="accessibility-statement.html">Accessibility</a></li>

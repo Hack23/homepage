@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Cache npm global packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -77,15 +77,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
-          node-version: '20'
+          node-version: '24'
 
-      - name: Cache npm global packages
+      - name: Cache npm packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-global-${{ hashFiles('**/package-lock.json') }}-linkinator
+          key: ${{ runner.os }}-npm-linkinator6-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-global-
+            ${{ runner.os }}-npm-linkinator6-
 
       - name: Cache apt packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -95,8 +95,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
 
-      - name: Install linkinator
-        run: npm install -g linkinator
+      - name: Install linkinator@6
+        run: |
+          echo "Installing linkinator v6 (v7.5.2 has module resolution bug)..."
+          npm install -g linkinator@6
+          linkinator --version
+          echo "✅ linkinator v6 installed successfully"
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -114,7 +118,7 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost
+          # Check links on localhost using global linkinator v6 (v7.5.2 has module resolution bug)
           linkinator http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
