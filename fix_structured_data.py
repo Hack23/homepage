@@ -1,26 +1,38 @@
 #!/usr/bin/env python3
 """
-Fix URL and filename corruption from terminology standardization
-Reverts Hebrew characters in URLs, canonical links, and hrefs back to English
+Fix structured data and attribute corruption from terminology standardization
+Reverts Hebrew in JSON-LD schema, CSS classes, and title attributes
 """
 
 from pathlib import Path
 
 # Patterns to fix
 FIXES = {
-    # Fix compliance-manager URLs
-    r'ציות-manager': 'compliance-manager',
-    r'cia-ציות-manager': 'cia-compliance-manager',
+    # JSON-LD Schema.org property names (must remain English)
+    '"זמינות"': '"availability"',
+    '"סודיות"': '"confidentiality"',
+    '"שלמות"': '"integrity"',
     
-    # Fix plural issues (Hebrew + English 's')
-    r'הערכת סיכוניםs': 'risk assessments',
-    r'רישום סיכוניםs': 'risk registers',
-    r'איוםs': 'threats',
-    r'פגיעותs': 'vulnerabilities',
+    # CSS class names (must remain ASCII)
+    'class="btn-ציות"': 'class="btn-compliance"',
+    'class="btn-אבטחה"': 'class="btn-security"',
+    
+    # More plural issues
+    'אירוע אבטחהs': 'security incidents',
+    'איוםs threat': 'threats',
+    
+    # Mixed language in title attributes and structured data
+    'Information מדיניות אבטחה': 'Information Security Policy',
+    'Transparent אבטחת סייבר Consulting': 'Transparent Cybersecurity Consulting',
+    
+    # Revert Hebrew in English FAQ structured data
+    'ISO 27001 ציות': 'ISO 27001 compliance',
+    'emerging איוםs': 'emerging threats',
+    'continuously monitor איוםs': 'continuously monitor threats',
 }
 
 def fix_file(file_path: Path) -> int:
-    """Fix URL corruption in a single file"""
+    """Fix structured data and attribute corruption in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -47,7 +59,7 @@ def fix_file(file_path: Path) -> int:
 
 def main():
     """Main execution"""
-    print("🔧 Fixing URL and Filename Corruption")
+    print("🔧 Fixing Structured Data and Attribute Corruption")
     print("=" * 60)
     print()
     
@@ -80,7 +92,7 @@ def main():
     print()
     
     if total_fixes > 0:
-        print("✅ URL corruption fixed")
+        print("✅ Structured data corruption fixed")
         return 0
     else:
         print("ℹ️  No issues found")

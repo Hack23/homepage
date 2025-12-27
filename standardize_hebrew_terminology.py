@@ -9,11 +9,20 @@ IMPORTANT SAFETY FEATURES:
 - Skips CSS IDs and class names
 - Avoids replacements inside HTML tags
 - Protects product names (e.g., "Compliance Manager")
+- Protects JSON-LD structured data property names (schema.org)
+- Protects HTML title attributes
 - Only replaces terms in visible content text
 
 NOTE: English plural forms (assessments, registers, threats) are NOT translated
 to avoid creating mixed Hebrew+English forms like "הערכת סיכוניםs". Keep plurals
 in English or use proper Hebrew plural constructions.
+
+PROTECTED CONTEXTS:
+- JSON-LD schema.org property names (e.g., "availability", "integrity")
+- CSS class and id attributes (e.g., class="btn-compliance")
+- URL paths and filenames
+- Title and alt attributes in English context
+- Mixed-language prevention in structured data
 """
 
 import re
@@ -157,6 +166,23 @@ def should_skip_replacement(text: str, term: str, position: int) -> bool:
     
     # Skip if inside a URL pattern (contains ://)
     if '://' in around_term:
+        return True
+    
+    # Skip if inside JSON-LD structured data
+    # Check for schema.org property names that must remain in English
+    if '"' + term.lower() + '"' in around_term.lower():
+        # Check if preceded by colon (JSON property)
+        json_context = context[max(0, relative_pos-10):relative_pos]
+        if ':' in json_context or '"@type"' in before_term[-100:]:
+            return True
+    
+    # Skip if inside title attribute (to avoid mixed language)
+    if 'title="' in before_term[-15:] and '"' not in context[relative_pos:relative_pos+50]:
+        # We're inside a title attribute
+        return True
+    
+    # Skip if inside alt attribute (to avoid mixed language)
+    if 'alt="' in before_term[-15:] and '"' not in context[relative_pos:relative_pos+50]:
         return True
     
     return False
