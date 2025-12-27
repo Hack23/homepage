@@ -59,13 +59,12 @@ jobs:
           css: false
           
       # Link Checking - Verify internal links using linkinator with npx
-      - name: Install jq for JSON parsing
-        run: sudo apt-get update && sudo apt-get install -y jq
-
+      # Note: jq is pre-installed on ubuntu-latest, no sudo installation needed
+      
       - name: Verify npx linkinator
         run: |
-          echo "Testing linkinator via npx (no global install needed)..."
-          npx linkinator@latest --version
+          echo "Testing linkinator v6 via npx (no global install needed)..."
+          npx linkinator@6 --version
 
       - name: Check Links
         run: |
@@ -80,8 +79,8 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost using npx (no global install needed)
-          npx linkinator@latest http://localhost:8080/ \
+          # Check links on localhost using npx with linkinator v6 (v7.5.2 has module resolution bug)
+          npx linkinator@6 http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
