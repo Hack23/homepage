@@ -46,10 +46,9 @@ jobs:
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-validator-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-npm-linkinator6-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-validator-
-            ${{ runner.os }}-npm-
+            ${{ runner.os }}-npm-linkinator6-
 
       # HTML Validation - Ensure all HTML files are valid HTML5
       - name: Validate HTML
@@ -62,13 +61,13 @@ jobs:
       # Note: jq is pre-installed on ubuntu-latest, no sudo installation needed
       # Using linkinator@6 because v7.5.2 has module resolution bug
       
-      - name: Clear npm cache and verify linkinator@6
+      - name: Verify linkinator@6 installation
         run: |
-          echo "Clearing npm cache to ensure clean linkinator@6 install..."
-          npm cache clean --force
-          echo ""
-          echo "Testing linkinator v6 via npx (no global install needed)..."
-          npx --yes linkinator@6 --version
+          echo "Installing and verifying linkinator v6..."
+          # Force install linkinator@6 to ensure it's available
+          npm install -g linkinator@6
+          linkinator --version
+          echo "✅ linkinator v6 installed successfully"
 
       - name: Check Links
         run: |
@@ -83,8 +82,8 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost using npx with linkinator v6 (v7.5.2 has module resolution bug)
-          npx --yes linkinator@6 http://localhost:8080/ \
+          # Check links on localhost using global linkinator v6 (v7.5.2 has module resolution bug)
+          linkinator http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
