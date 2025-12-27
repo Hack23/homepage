@@ -6,12 +6,13 @@ Phase 4: Apply consistent terminology across all 62 Hebrew pages
 IMPORTANT SAFETY FEATURES:
 - Protects URLs, canonical links, and hreflang attributes
 - Preserves filenames and file extensions
-- Skips CSS IDs and class names
+- Skips CSS IDs and class names (NEVER translates id="..." attributes)
 - Avoids replacements inside HTML tags
 - Protects product names (e.g., "Compliance Manager")
 - Protects JSON-LD structured data property names (schema.org)
 - Protects HTML title attributes
 - Only replaces terms in visible content text
+- ID attributes MUST match styles.css and English versions
 
 NOTE: English plural forms (assessments, registers, threats) are NOT translated
 to avoid creating mixed Hebrew+English forms like "הערכת סיכוניםs". Keep plurals
@@ -19,7 +20,8 @@ in English or use proper Hebrew plural constructions.
 
 PROTECTED CONTEXTS:
 - JSON-LD schema.org property names (e.g., "availability", "integrity")
-- CSS class and id attributes (e.g., class="btn-compliance")
+- CSS class and id attributes (e.g., class="btn-compliance", id="compliance")
+- HTML id attributes MUST remain ASCII and match English versions
 - URL paths and filenames
 - Title and alt attributes in English context
 - Mixed-language prevention in structured data
