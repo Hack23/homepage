@@ -37,6 +37,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
 
+      - name: Setup Node.js
+        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        with:
+          node-version: '24'
+
       - name: Cache npm dependencies
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
@@ -53,12 +58,68 @@ jobs:
           root: .
           css: false
           
-      # Link Checking - Verify internal links only (local references)
+      # Link Checking - Verify internal links using linkinator with npx
+      - name: Install jq for JSON parsing
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Verify npx linkinator
+        run: |
+          echo "Testing linkinator via npx (no global install needed)..."
+          npx linkinator@latest --version
+
       - name: Check Links
-        uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0 # v2.7.0
+        run: |
+          echo "🔍 Starting local HTTP server for internal link checking..."
+          python3 -m http.server 8080 &
+          SERVER_PID=$!
+          echo "Server PID: $SERVER_PID"
+          
+          # Wait for server to start
+          sleep 5
+          
+          echo ""
+          echo "🔗 Checking internal links on localhost..."
+          
+          # Check links on localhost using npx (no global install needed)
+          npx linkinator@latest http://localhost:8080/ \
+            --recurse \
+            --skip "^(?!http://localhost:8080)" \
+            --format json > internal-links-report.json || true
+          
+          # Kill server
+          kill $SERVER_PID 2>/dev/null || true
+          
+          # Parse and display results
+          echo ""
+          echo "📊 Internal Link Check Results:"
+          if [ -f internal-links-report.json ]; then
+            jq '.links[0:10]' internal-links-report.json
+            
+            # Count passed and failed links in a single jq invocation
+            read passed failed < <(jq -r '
+              [([.links[] | select(.state == "OK")] | length),
+               ([.links[] | select(.state != "OK")] | length)] | @tsv
+            ' internal-links-report.json 2>/dev/null || echo "0	0")
+            
+            echo ""
+            echo "✅ Passed: $passed links"
+            echo "❌ Failed: $failed links"
+            
+            # Fail if there are broken links
+            if [ "$failed" -gt "0" ]; then
+              echo ""
+              echo "❌ Found $failed broken internal links"
+              exit 1
+            fi
+          fi
+
+      - name: Upload Link Check Report
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
-          args: --offline --verbose --no-progress --exclude-path screenshots './**/*.html' './**/*.md'
-          fail: true
+          name: link-checker-report
+          path: internal-links-report.json
+          retention-days: 30
           
       # Test Minify Action - Verify minification works correctly
       - name: Test Minify Action
