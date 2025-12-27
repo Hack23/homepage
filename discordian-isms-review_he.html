@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סקירת ISMS | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Annual ISMS review: Management commitment, policy effectiveness, control performance, improvement actions. Continuous security enhancement.">
+<meta name="keywords" content="ISMS review, management review, continuous improvement, ISO 27001 clause 9.3, quarterly risk review, semi-annual compliance audit, annual policy update, security metrics, OpenSSF Scorecard, threat landscape monitoring, risk assessment review, compliance monitoring, ISMS effectiveness, security performance indicators, KPI key performance indicators, management commitment, PDCA plan-do-check-act">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="ISMS Strategic Review: Continuous Improvement Through Metrics">
+<meta property="og:description" content="Quarterly risk reviews + semi-annual compliance audits + annual policy updates. OpenSSF ≥7.0, metric-driven improvement, adaptive security.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-isms-review_he.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-isms-review_he.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "ISMS Strategic Review: Continuous Improvement Through Metrics",
+      "description": "How Hack23 implements systematic ISMS review through quarterly risk assessments, semi-annual compliance audits, and metric-driven continuous improvement",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-isms-review.html"
+      },
+      "keywords": "ISMS review, management review, continuous improvement, ISO 27001, security metrics",
+      "articleSection": "Information Security",
+      "inLanguage": "he",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1478,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—ISO 27001 certification followed by zero meaningful security improvements. \"Management review\" reduced to an annual checkbox exercise whe...",
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-isms-review.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISMS Strategic Review",
+          "item": "https://hack23.com/discordian-isms-review.html"
+        }
+      ]
+    }
+  ]
+}</script>
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-isms-review_da.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-isms-review_de.html">
+<link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-isms-review_de.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-isms-review.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-isms-review_es.html">
+<link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-isms-review_es.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-isms-review_fi.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-isms-review_fr.html">
+<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-isms-review_fr.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-isms-review_nl.html">
+<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-isms-review_nl.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-isms-review_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-isms-review_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-isms-review_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-isms-review_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-isms-review.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">דף הבית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ISMS Strategic Review
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>ISMS Strategic Review: Continuous Improvement</h1>
+  <div class="app-link">
+    <a href="index_he.html">דף הבית</a>
+    <a href="discordian-cybersecurity_he.html">המניפסט</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔄 ISMS Strategic Review: Static Is Dead</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Why Most ISMS Reviews Are Compliance Theater (And Yours Probably Is Too)</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—ISO 27001 certification followed by zero meaningful security improvements. "Management review" reduced to an annual checkbox exercise where everyone nods sagely and concludes "no action required." <strong>FNORD.</strong> Your ISMS is ossifying into compliance theater while threats evolve daily.</p>
+      
+      <p><em>תחשוב בעצמך. הטל ספק בסמכות.</em> Question ISMS reviews that always conclude "everything's fine." Question annual risk assessments in threat landscapes that change weekly. Question "continuous improvement" claims from organizations whose security metrics haven't budged in years. If your last management review found zero issues, either you're perfect (you're not) or you're not looking hard enough (you're not).</p>
+      
+      <p>At Hack23, we're paranoid enough to assume our ISMS is always incomplete, always behind the threats, always needing improvement. ISMS review isn't a compliance ritual where we pretend everything's fine—it's <strong>systematic continuous improvement driven by quantifiable metrics that don't lie</strong>. Quarterly risk reviews hunt for new threats in the wild. Semi-annual compliance audits verify controls actually work (not just exist on paper). Annual policy updates incorporate the lessons we learned from the things that almost went wrong. <strong>We weaponize paranoia into continuous improvement.</strong></p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Welcome to Chapel Perilous, where you realize ISO 27001 Clause 9.3 requires management review not because auditors love bureaucracy, but because security without adaptation is security theater slowly decaying into negligence. Static ISMS is dead ISMS. The threats evolved. Did your defenses? Are you paranoid enough to track whether your security metrics are actually improving, or just existing?</em></p>
+      
+      <p>Quarterly risk reviews update the <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md">Risk Register</a> based on actual threats in the wild, not theoretical ones from last year's audit. Semi-annual compliance audits verify controls <em>actually work</em>, not just that they exist in policy documents. Annual updates incorporate lessons learned from incidents, near-misses, and "oh shit" moments. <strong>OpenSSF Scorecard, SonarCloud quality gates, test coverage, patch response time</strong>—all tracked, all improving (or we know why they're not), all public because transparency beats bullshit. <strong>FNORD.</strong></p>
+      
+      <p>Our approach combines formal ISO 27001 Clause 9.3 requirements (because standards exist for reasons) with continuous metric-driven paranoia (because threats don't wait for annual reviews). This demonstrates cybersecurity consulting expertise through measurable security evolution—not "we did security" but "here's proof security improved and here's why." Full methodology in our public <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS documentation</a>. Are you paranoid enough to measure whether you're actually getting more secure, or just claiming you are?</p>
+    
+      
+      <p><strong>Ready to build a robust security program?</strong> <a href="why-hack23.html">Discover Hack23's consulting approach</a> that treats security as an enabler, not a barrier.</p>
+    </section>
+
+    <section id="five-review-cycles">
+      <h2 class="panel-caption">The Five Review Cycles: From Continuous to Annual</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 📊 Continuous Monitoring (Real-Time)</h3>
+          <p><strong>Daily automated security validation.</strong> OpenSSF Scorecard checks, SonarCloud quality gates, dependency vulnerability scanning (Dependabot daily 09:00 CET), AWS Security Hub findings, GuardDuty threat detection. Automated dashboards with threshold alerts.</p>
+          <p><strong>Triggers:</strong> Critical vulnerability detected → &lt;4hr patch cycle. OpenSSF score drops below 7.0 → immediate investigation. SonarCloud gate fails → block deployment.</p>
+          <p class="hidden-wisdom"><em>Continuous monitoring enables rapid response—but only if thresholds trigger action, not just alerts.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🗓️ Monthly Operations Review</h3>
+          <p><strong>Monthly FIS chaos experiments.</strong> Validate disaster recovery through deliberate infrastructure failure. Review chaos engineering results vs. RTO/RPO targets. Incident retrospectives for all incidents (classification-driven analysis). Security metric trends (test coverage, patch latency, vulnerability aging).</p>
+          <p><strong>Actions:</strong> Failed FIS experiments trigger architectural remediation. Missed RTO targets require recovery automation improvements. Incident patterns drive preventive controls.</p>
+          <p class="hidden-wisdom"><em>Monthly chaos proves or disproves recovery capabilities. Hope-based DR dies in chaos engineering fire.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📈 Quarterly Risk Review</h3>
+          <p><strong>Quarterly Risk Register update.</strong> Review all risks in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md">Risk Register</a> for status changes. New threat intelligence (MITRE ATT&CK updates, major vulnerabilities, supply chain attacks). Business changes requiring risk reassessment (new features, infrastructure changes, dependency updates).</p>
+          <p><strong>Outcomes:</strong> Update risk ratings, adjust treatment plans, identify new risks, retire addressed risks. Security training topics driven by emerging threats.</p>
+          <p class="hidden-wisdom"><em>Quarterly reviews catch evolving threats before they become incidents. Annual-only risk assessment misses 9 months of threat evolution.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔍 Semi-Annual Compliance Audit</h3>
+          <p><strong>Semi-annual control effectiveness validation.</strong> Verify ISO 27001 Annex A controls still implemented correctly. Compliance checklist review (GDPR, NIS2, CRA). Framework alignment verification (NIST CSF, CIS Controls). Third-party security assessments (supplier reviews, penetration testing results).</p>
+          <p><strong>Evidence Review:</strong> Test logs, access reviews, backup validations, incident reports, training completion, policy acknowledgments.</p>
+          <p class="hidden-wisdom"><em>Compliance audits verify controls work, not just exist. "Implemented" without "effective" is compliance theater.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 📋 Annual Management Review (ISO 27001 Clause 9.3)</h3>
+          <p><strong>Annual comprehensive ISMS review.</strong> Strategic alignment with business objectives. Security metrics performance (all KPIs across all domains). Policy updates incorporating lessons learned. Framework alignment verification (ISO 27001, NIST CSF, CIS Controls). External audit preparation.</p>
+          <p><strong>Deliverables:</strong> Updated policies, revised Risk Register, security roadmap, budget allocation, training plan, audit findings remediation.</p>
+          <p class="hidden-wisdom"><em>Annual review synthesizes continuous data into strategic decisions. Without continuous data, annual review is speculation.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="security-metrics">
+      <h2 class="panel-caption">Key Security Metrics Driving Continuous Improvement</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Metric Category</th>
+            <th>KPIs</th>
+            <th>Current Performance</th>
+            <th>Target</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>Supply Chain Security</strong></td>
+            <td>OpenSSF Scorecard, SLSA Level, dependency freshness</td>
+            <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA: 7.2</a>, SLSA 3, latest stable</td>
+            <td>≥7.0, SLSA 3, &lt;4hr critical patches</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Code Quality & Security</strong></td>
+            <td>SonarCloud quality gate, test coverage, security hotspots</td>
+            <td>Passing, 80%+ coverage, 0 hotspots</td>
+            <td>100% pass, ≥80% coverage, 0 critical/high</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>Vulnerability Management</strong></td>
+            <td>Critical patch latency, vulnerability aging, scan coverage</td>
+            <td>&lt;4hr critical, 0 aged >30 days, 100% coverage</td>
+            <td>&lt;4hr critical, &lt;8hr high, 0 aged >30d</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Resilience Validation</strong></td>
+            <td>FIS experiment success rate, RTO compliance, RPO compliance</td>
+            <td>Monthly experiments, &lt;5min critical RTO</td>
+            <td>100% experiments pass, meet RTO/RPO targets</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>Incident Response</strong></td>
+            <td>Mean time to detect (MTTD), mean time to respond (MTTR), incidents</td>
+            <td>&lt;30min critical MTTD, &lt;4hr critical MTTR</td>
+            <td>Meet classification SLAs, trend down incidents</td>
+          </tr>
+          <tr class="roi-low">
+            <td><strong>Security Awareness</strong></td>
+            <td>Phishing simulation click rate, training completion, report time</td>
+            <td>&lt;5% click rate, 100% completion</td>
+            <td>&lt;5% click, 100% completion, &lt;1hr report</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Metrics Drive Action:</strong> Not vanity metrics—actionable KPIs with thresholds triggering improvement. OpenSSF &lt;7.0? Investigate dependencies. Test coverage &lt;80%? Add tests before merging. Patch latency >4hr critical? Escalate to CEO. Metrics without action are just dashboards.</p>
+      
+      <p class="hidden-wisdom"><em>METRICS ILLUMINATION: Track what matters, ignore vanity. Number of policies doesn't matter—control effectiveness matters. Lines of security documentation don't matter—measurable security outcomes matter.</em></p>
+    </section>
+
+    <section id="iso-27001-clause-9-3">
+      <h2 class="panel-caption">ISO 27001 Clause 9.3 Management Review Requirements</h2>
+      
+      <p><strong>Annual management review addresses:</strong></p>
+      
+      <p><strong>📊 Performance Inputs:</strong></p>
+      <ul>
+        <li><strong>Security Metrics:</strong> All KPIs from <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Security Metrics</a> dashboard—trends, thresholds, targets.</li>
+        <li><strong>Incident Analysis:</strong> All security incidents (classification, root cause, remediation, lessons learned).</li>
+        <li><strong>Audit Findings:</strong> Internal audits, external assessments, penetration test results, compliance gaps.</li>
+        <li><strong>Risk Changes:</strong> New risks, risk rating changes, treatment effectiveness, residual risk acceptance.</li>
+        <li><strong>Stakeholder Feedback:</strong> Customer security questionnaires, supplier assessments, regulatory guidance.</li>
+      </ul>
+      
+      <p><strong>🎯 Strategic Decisions:</strong></p>
+      <ul>
+        <li><strong>ISMS Improvement:</strong> Policy updates, control enhancements, process optimization, tool replacements.</li>
+        <li><strong>Resource Allocation:</strong> Budget for security tools, training, certifications, external assessments.</li>
+        <li><strong>Risk Treatment:</strong> Accept new risks, modify treatments, retire obsolete controls, implement new controls.</li>
+        <li><strong>Business Alignment:</strong> Security roadmap aligned with product roadmap, market expansion, regulatory changes.</li>
+      </ul>
+      
+      <p><strong>📋 Review Outputs:</strong></p>
+      <ul>
+        <li><strong>Updated Policies:</strong> Annual policy review incorporating lessons learned, regulatory changes, best practices.</li>
+        <li><strong>Action Plan:</strong> Prioritized security improvements with owners, deadlines, success criteria.</li>
+        <li><strong>Metrics Baseline:</strong> Updated KPI targets based on performance trends and business objectives.</li>
+        <li><strong>Compliance Status:</strong> Gap analysis vs. ISO 27001, NIST CSF, CIS Controls, GDPR, NIS2.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>ISO ILLUMINATION: Clause 9.3 isn't bureaucracy—it's forcing function for strategic security thinking. Without formal review, ISMS ossifies into compliance checkbox disconnected from actual business risks.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Continuous Improvement Or Continuous Decay</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including ISO 27001 certification followed by zero meaningful security improvement. Static ISMS is dead ISMS.</p>
+      
+      <p>Most organizations implement ISO 27001, pass certification audit, then treat ISMS as "done." Policies gather dust between annual reviews. Risk Register updated perfunctorily before auditor visits. Security metrics tracked but not acted upon. "Management review" as compliance checkbox, not strategic security governance.</p>
+      
+      <p>We weaponize continuous improvement. <strong>Quarterly risk reviews</strong> adapt to evolving threats. <strong>Monthly FIS chaos experiments</strong> validate resilience. <strong>Daily security metrics</strong> trigger automated responses. <strong>Semi-annual compliance audits</strong> verify control effectiveness. <strong>Annual management review</strong> drives strategic security decisions. This isn't ISMS maintenance—it's systematic security evolution.</p>
+      
+      <p><strong>תחשוב בעצמך, schmuck!</strong> Question annual-only risk assessments in rapidly evolving threat landscapes. Question management reviews concluding "no action required." Question continuous improvement claims without metrics showing improvement. (Spoiler: Static security is decaying security.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through measurable continuous improvement. OpenSSF Scorecard ≥7.0 trend up. Test coverage trend up. Patch latency trend down. Public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md">Security Metrics</a> dashboard. Annual policy updates with public change history. This isn't improvement theater—it's metric-driven security evolution.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue treating ISMS review as annual compliance checkbox. Or you can implement continuous metric-driven improvement with quarterly risk reviews and monthly chaos validation. Your ISMS. Your choice. Choose evolution over ossification.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"תחשוב בעצמך, schmuck! An ISMS that doesn't evolve dies. Static security frameworks ossify into compliance theater disconnected from actual threats."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-security-metrics.html">Security Metrics</a> — KPI dashboard and tracking</li>
+        <li><a href="discordian-risk-assessment.html">Risk Assessment Methodology</a> — Quarterly risk review process</li>
+        <li><a href="discordian-incident-response.html">Incident Response Plan</a> — Incident retrospectives and lessons learned</li>
+        <li><a href="discordian-cybersecurity.html">Back to Main המניפסט</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="בלוג.html">Security בלוג</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian בלוג</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="נגישות-statement.html">נגישות</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to בלוג -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ בלוג Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="בלוג-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="בלוג-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="בלוג.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
