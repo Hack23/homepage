@@ -60,11 +60,15 @@ jobs:
           
       # Link Checking - Verify internal links using linkinator with npx
       # Note: jq is pre-installed on ubuntu-latest, no sudo installation needed
+      # Using linkinator@6 because v7.5.2 has module resolution bug
       
-      - name: Verify npx linkinator
+      - name: Clear npm cache and verify linkinator@6
         run: |
+          echo "Clearing npm cache to ensure clean linkinator@6 install..."
+          npm cache clean --force
+          echo ""
           echo "Testing linkinator v6 via npx (no global install needed)..."
-          npx linkinator@6 --version
+          npx --yes linkinator@6 --version
 
       - name: Check Links
         run: |
@@ -80,7 +84,7 @@ jobs:
           echo "🔗 Checking internal links on localhost..."
           
           # Check links on localhost using npx with linkinator v6 (v7.5.2 has module resolution bug)
-          npx linkinator@6 http://localhost:8080/ \
+          npx --yes linkinator@6 http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
