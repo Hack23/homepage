@@ -83,9 +83,9 @@ jobs:
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}-linkinator
+          key: ${{ runner.os }}-npm-linkinator6-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-
+            ${{ runner.os }}-npm-linkinator6-
 
       - name: Cache apt packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -95,10 +95,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
 
-      - name: Verify npx linkinator
+      - name: Install linkinator@6
         run: |
-          echo "Testing linkinator via npx (no global install needed)..."
-          npx linkinator@latest --version
+          echo "Installing linkinator v6 (v7.5.2 has module resolution bug)..."
+          npm install -g linkinator@6
+          linkinator --version
+          echo "✅ linkinator v6 installed successfully"
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -116,8 +118,8 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost using npx (no global install needed)
-          npx linkinator@latest http://localhost:8080/ \
+          # Check links on localhost using global linkinator v6 (v7.5.2 has module resolution bug)
+          linkinator http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
@@ -150,7 +152,7 @@ jobs:
           
           # Check external links on deployed site (less frequently)
           # Only check key pages to avoid rate limiting
-          npx linkinator@latest https://hack23.com/ \
+          linkinator https://hack23.com/ \
             --skip "(fonts\.googleapis\.com|fonts\.gstatic\.com|github\.com)" \
             --timeout 30000 \
             --format json > external-links-report.json || true
