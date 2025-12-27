@@ -223,69 +223,69 @@
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 💼 Domain Layer: The Business Truth</h3>
-          <p><strong>Entity families documented in <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>:</strong></p>
+          <h3>3. 💼 שכבת תחום: האמת העסקית</h3>
+          <p><strong>משפחות ישויות המתועדות ב-<a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a>:</strong></p>
           <ul>
-            <li><strong>Person Data</strong> (Political persons, assignments, biographical details)</li>
-            <li><strong>Document Data</strong> (Parliamentary documents, content, status tracking)</li>
-            <li><strong>Vote Data</strong> (Ballots, voting records, individual votes)</li>
-            <li><strong>External Data</strong> (World Bank indicators, election authority data)</li>
-            <li><strong>System Data</strong> (User accounts, sessions, application events, configuration)</li>
+            <li><strong>נתוני אנשים</strong> (אנשים פוליטיים, משימות, פרטים ביוגרפיים)</li>
+            <li><strong>נתוני מסמכים</strong> (מסמכים פרלמנטריים, תוכן, מעקב סטטוס)</li>
+            <li><strong>נתוני הצבעה</strong> (הצבעות, רישומי הצבעה, הצבעות פרטניות)</li>
+            <li><strong>נתונים חיצוניים</strong> (אינדיקטורים של הבנק העולמי, נתוני רשות הבחירות)</li>
+            <li><strong>נתוני מערכת</strong> (חשבונות משתמשים, סשנים, אירועי אפליקציה, תצורה)</li>
           </ul>
-          <p><strong>Five data sources confirmed:</strong> Swedish Parliament API (riksdagen.se), Election Authority (val.se), World Bank Open Data, Swedish Financial Management Authority (ESV), Government Bodies data. The DATA_MODEL.md documents how these sources integrate through standardized entity mapping.</p>
-          <p><strong>60+ base tables plus 30+ materialized analytical views.</strong> PostgreSQL implementation with JPA/Hibernate ORM. Composite primary keys for many-to-many relationships. Audit tracking through timestamp fields. The <a href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html">Entity Documentation</a> reveals the complete graph.</p>
-          <p class="hidden-wisdom"><em>Domain models that accurately reflect reality need minimal abstraction layers. When entities mirror the riksdag's actual structure, the code becomes self-documenting through truthful representation.</em></p>
+          <p><strong>חמישה מקורות נתונים מאושרים:</strong> API של הפרלמנט השוודי (riksdagen.se), רשות הבחירות (val.se), נתונים פתוחים של הבנק העולמי, רשות הניהול הפיננסי השוודית (ESV), נתוני גופים ממשלתיים. DATA_MODEL.md מתעד איך מקורות אלה משתלבים דרך מיפוי ישויות מסטנדרט.</p>
+          <p><strong>60+ טבלאות בסיס בתוספת 30+ תצוגות אנליטיות ממומשות.</strong> יישום PostgreSQL עם JPA/Hibernate ORM. מפתחות ראשיים מורכבים ליחסי many-to-many. מעקב ביקורת דרך שדות חותמת זמן. <a href="https://hack23.github.io/cia/service.data.impl/hbm2doc/entities/index.html">תיעוד הישויות</a> חושף את הגרף המלא.</p>
+          <p class="hidden-wisdom"><em>מודלים של תחום שמשקפים באופן מדויק את המציאות צריכים שכבות הפשטה מינימליות. כשישויות משקפות את המבנה בפועל של הריקסדאג, הקוד הופך לבעל תיעוד עצמי דרך ייצוג אמיתי.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🗄️ Data Access Layer: Persistence Foundation</h3>
-          <p><strong>PostgreSQL database with JPA/Hibernate.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, the Data Access Layer uses entity-specific data containers, Java domain model classes, and view entities optimized for read operations. Least-privilege database roles enforce security isolation.</p>
-          <p><strong>Security architecture</strong> (see <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>) includes network isolation, parameterized queries via ORM, and comprehensive Javers auditing for data integrity. Every modification tracked with author attribution and temporal snapshots.</p>
-          <p><strong>OpenSSF Scorecard 7.2/10</strong> validates security practices. SLSA Level 3 build provenance. CII Best Practices badge. Public evidence: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Scorecard Results</a>.</p>
-          <p class="hidden-wisdom"><em>Persistence layers that separate reads from writes enable optimization without sacrificing data integrity. View entities for queries, base entities for updates—the duality that maintains consistency.</em></p>
+          <h3>4. 🗄️ שכבת גישה לנתונים: יסוד התמדה</h3>
+          <p><strong>מסד נתונים PostgreSQL עם JPA/Hibernate.</strong> כמתועד ב-<a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, שכבת גישה לנתונים משתמשת במכולות נתונים ספציפיות לישות, מחלקות מודל תחום Java, וישויות תצוגה מותאמות לפעולות קריאה. תפקידי מסד נתונים עם הרשאות מינימליות אוכפים בידוד אבטחה.</p>
+          <p><strong>ארכיטקטורת אבטחה</strong> (ראה <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a>) כוללת בידוד רשת, שאילתות ממופרמטות דרך ORM, וביקורת Javers מקיפה לשלמות נתונים. כל שינוי מעוקב עם ייחוס מחבר ותמונות מצב זמניות.</p>
+          <p><strong>OpenSSF Scorecard 7.2/10</strong> מאמת שיטות אבטחה. SLSA Level 3 build provenance. תג CII Best Practices. ראיות ציבוריות: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">תוצאות Scorecard</a>.</p>
+          <p class="hidden-wisdom"><em>שכבות התמדה שמפרידות קריאות מכתיבות מאפשרות אופטימיזציה ללא פגיעה בשלמות נתונים. ישויות תצוגה לשאילתות, ישויות בסיס לעדכונים—הדואליות שמשמרת עקביות.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 📈 Integration & Analytics: Data Flow and Insights</h3>
-          <p><strong>The Integration Services layer</strong> (documented in <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) fetches and processes data from external sources: riksdagen.se Parliament API, val.se Election Authority, World Bank Open Data, and Swedish government bodies. Spring Integration framework coordinates the data flow.</p>
-          <p><strong>Materialized Views</strong> transform raw data into political intelligence: VIEW_RIKSDAGEN_POLITICIAN (activity metrics), VIEW_RIKSDAGEN_PARTY (performance indicators), VIEW_RIKSDAGEN_COMMITTEE (productivity stats), VIEW_RIKSDAGEN_POLITICIAN_BALLOT_SUMMARY (voting analysis with loyalty/rebel/success rates). See <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> for complete view catalog.</p>
-          <p><strong>Future vision:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> envisions quantum-enhanced pattern recognition, neural-integrated political intelligence ecosystems, and consciousness-based democratic participation. Today's five-layer architecture evolves into fluid computational mediums that coalesce based on democratic needs.</p>
-          <p class="hidden-wisdom"><em>Analytics that produce actionable citizen insights justify their computational cost. Every materialized view must answer: "What democratic transparency does this enable?" Vanity metrics waste both computation and attention.</em></p>
+          <h3>5. 📈 אינטגרציה ואנליטיקה: זרימת נתונים ותובנות</h3>
+          <p><strong>שכבת שירותי אינטגרציה</strong> (מתועדת ב-<a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>) מביאה ומעבדת נתונים ממקורות חיצוניים: riksdagen.se Parliament API, val.se Election Authority, נתונים פתוחים של הבנק העולמי, וגופים ממשלתיים שוודיים. מסגרת Spring Integration מתאמת את זרימת הנתונים.</p>
+          <p><strong>תצוגות ממומשות</strong> הופכות נתונים גולמיים למודיעין פוליטי: VIEW_RIKSDAGEN_POLITICIAN (מדדי פעילות), VIEW_RIKSDAGEN_PARTY (אינדיקטורי ביצועים), VIEW_RIKSDAGEN_COMMITTEE (סטטיסטיקות פרודוקטיביות), VIEW_RIKSDAGEN_POLITICIAN_BALLOT_SUMMARY (ניתוח הצבעה עם אחוזי נאמנות/מרד/הצלחה). ראה <a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> לקטלוג תצוגות מלא.</p>
+          <p><strong>חזון עתידי:</strong> <a href="https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md">FUTURE_ARCHITECTURE.md</a> חוזה זיהוי דפוסים משופר קוונטי, מערכות אקולוגיות של מודיעין פוליטי משולבות עצביות, והשתתפות דמוקרטית מבוססת תודעה. ארכיטקטורת חמש השכבות של היום מתפתחת למדיומים חישוביים נזילים שמתלכדים על בסיס צרכים דמוקרטיים.</p>
+          <p class="hidden-wisdom"><em>אנליטיקה שמייצרת תובנות אזרח ניתנות לפעולה מצדיקה את העלות החישובית שלה. כל תצוגה ממומשת חייבת לענות: "איזו שקיפות דמוקרטית זה מאפשר?" מדדי יוהרה מבזבזים גם חישוב וגם תשומת לב.</em></p>
         </div>
       </div>
     </section>
 
     <section id="architectural-pentagram">
-      <h2 class="panel-caption">The Architectural Pentagram</h2>
+      <h2 class="panel-caption">הפנטגרם הארכיטקטוני</h2>
       
-      <p><strong>Every system balances five forces:</strong></p>
+      <p><strong>כל מערכת מאזנת חמישה כוחות:</strong></p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>🔐 Security</h3>
-          <p>Public data, yes. Open access, yes. But <em>authenticated writes</em> and audit logging. Defense-in-depth across five layers: network perimeter, application gateway, business logic validation, data encryption at rest, monitoring/alerting. See <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> for the full defensive pentacle.</p>
+          <h3>🔐 אבטחה</h3>
+          <p>נתונים ציבוריים, כן. גישה פתוחה, כן. אבל <em>כתיבות מאומתות</em> ורישום ביקורת. הגנה בעומק על פני חמש שכבות: היקף רשת, שער אפליקציה, אימות לוגיקה עסקית, הצפנת נתונים במנוחה, ניטור/התרעות. ראה <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> לפנטקל ההגנתי המלא.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>⚡ Performance</h3>
-          <p>Caching at five levels: browser (HTTP), CDN (geographic), application (object), database (query), analytics (materialized views). Each cache layer 61.8% faster than going to source. Golden ratio compounding.</p>
+          <h3>⚡ ביצועים</h3>
+          <p>מטמון בחמש רמות: דפדפן (HTTP), CDN (גיאוגרפי), אפליקציה (אובייקט), מסד נתונים (שאילתה), אנליטיקה (תצוגות ממומשות). כל שכבת מטמון מהירה ב-61.8% מהמקור. ריבוי יחס הזהב.</p>
         </div>
         
         <div class="card availability-card">
-          <h3>📈 Scalability</h3>
-          <p>Horizontal scaling in five tiers: static assets (infinite CDN), API gateway (elastic instances), service layer (Kubernetes pods), database read replicas (5 regions), analytics clusters (Spark executors). Currently single-region. Future: multi-region active-active.</p>
+          <h3>📈 מדרגיות</h3>
+          <p>התרחבות אופקית בחמש שכבות: נכסים סטטיים (CDN אינסופי), שער API (מופעים אלסטיים), שכבת שירות (Kubernetes pods), העתקי קריאה של מסד נתונים (5 אזורים), אשכולות אנליטיקה (Spark executors). כרגע אזור יחיד. עתיד: multi-region active-active.</p>
         </div>
         
         <div class="card confidentiality-card">
-          <h3>🛠️ Maintainability</h3>
-          <p>Documented in five artifact types: C4 architecture models, data entity diagrams, process flowcharts, state diagrams, API documentation. Every system component described at five levels of abstraction. Read <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> to see the full spectrum.</p>
+          <h3>🛠️ תחזוקה</h3>
+          <p>מתועד בחמישה סוגי אמצעים: מודלים ארכיטקטוניים C4, דיאגרמות ישויות נתונים, תרשימי זרימה של תהליכים, דיאגרמות מצב, תיעוד API. כל רכיב מערכת מתואר בחמש רמות הפשטה. קרא <a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> לראות את הספקטרום המלא.</p>
         </div>
         
         <div class="card integrity-card">
-          <h3>👁️ Observability</h3>
-          <p>Five observability pillars: structured logs (what happened), metrics (how much), traces (where slow), alerts (what's wrong), dashboards (holistic view). <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">CI/CD workflows</a> validated continuously. Quality gates that actually gate.</p>
+          <h3>👁️ ניתנות לצפייה</h3>
+          <p>חמישה עמודי ניתנות לצפייה: לוגים מובנים (מה קרה), מדדים (כמה), עקבות (איפה איטי), התרעות (מה לא בסדר), לוחות מחוונים (תצוגה הוליסטית). <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">זרימות עבודה CI/CD</a> מאומתות ברציפות. שערי איכות שבאמת שוערים.</p>
         </div>
       </div>
       
