@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Cache npm global packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -77,7 +77,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Cache npm global packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -96,7 +96,12 @@ jobs:
             ${{ runner.os }}-apt-
 
       - name: Install linkinator
-        run: npm install -g linkinator
+        run: npm install -g linkinator@latest
+
+      - name: Verify linkinator installation
+        run: |
+          echo "Testing linkinator installation..."
+          linkinator --version || npx linkinator --version
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -114,8 +119,8 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost
-          linkinator http://localhost:8080/ \
+          # Check links on localhost using npx for reliability
+          npx linkinator http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
@@ -148,7 +153,7 @@ jobs:
           
           # Check external links on deployed site (less frequently)
           # Only check key pages to avoid rate limiting
-          linkinator https://hack23.com/ \
+          npx linkinator https://hack23.com/ \
             --skip "(fonts\.googleapis\.com|fonts\.gstatic\.com|github\.com)" \
             --timeout 30000 \
             --format json > external-links-report.json || true
