@@ -146,7 +146,7 @@
 <body>
 
 <!-- Translation Note: This is a Hebrew translation of the CIA blog series.
-     Technical terminology uses standard cybersecurity terms in Hebrew.
+     Technical terminology uses standard אבטחת סייבר terms in Hebrew.
      Code blocks maintain LTR direction via CSS. -->
 
   <!-- Breadcrumb Navigation -->
@@ -168,7 +168,7 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>Discordian Cybersecurity</h1>
+  <h1>Discordian אבטחת סייבר</h1>
   <div class="app-link">
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
@@ -186,7 +186,7 @@
       
       <p><strong>Continuous Integration meets Continuous Deployment through state transitions:</strong> Pull requests trigger CI workflows (CodeQL, Dependency Review, Labeler). Merged commits flow to main branch. Tags activate CD pipeline (Verify & Release). Each workflow a state machine processing inputs, transforming data, producing outputs. <a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">State diagrams</a> documenting behavioral patterns—systems revealing themselves through transition logic.</p>
       
-      <p><strong>Security scanning as gates, not theater:</strong> CodeQL analyzing source code for vulnerabilities before merge. Dependency Review preventing malicious supply chain injection. Scorecard evaluating OSSF compliance weekly. These aren't checkbox exercises—they're <em>automated security enforcement</em>. Workflows blocking releases when scans fail. Gates preventing vulnerable code from reaching production. Trust but verify through automation.</p>
+      <p><strong>Security scanning as gates, not theater:</strong> CodeQL analyzing source code for vulnerabilities before merge. Dependency Review preventing malicious supply chain injection. Scorecard evaluating OSSF ציות weekly. These aren't checkbox exercises—they're <em>automated security enforcement</em>. Workflows blocking releases when scans fail. Gates preventing vulnerable code from reaching production. Trust but verify through automation.</p>
       
       <p class="hidden-wisdom"><em>Illumination: Workflows organizing into five categories. State machines processing political data through finite transitions. Automation revealing sacred geometry through necessity, not numerological fantasy. When DevSecOps naturally yields pentagonal patterns, the architecture aligns with cosmic truth.</em></p>
     
@@ -202,7 +202,7 @@
           <div class="scanner-effect"></div>
           <h3>1. 🚀 Verify & Release: The Complete Lifecycle Pipeline</h3>
           <p><strong>Build → Test → Attest → Release:</strong> <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">WORKFLOWS.md</a> documents the comprehensive release workflow. Environment setup, Maven build, version management, SBOM generation, attestation creation (DEB, WAR, SBOM), release notes, GitHub release publication, dependency reporting. Not just "build and ship"—<em>verifiable supply chain from source to artifact.</em></p>
-          <p><strong>Attestations proving artifact integrity:</strong> Cryptographic signatures linking build artifacts to source commits. SBOM (Software Bill of Materials) documenting every dependency. When someone downloads CIA releases, attestations enable verification—confirming binaries match claimed source code. Trust through cryptographic proof, not faith in build processes.</p>
+          <p><strong>Attestations proving artifact שלמות:</strong> Cryptographic signatures linking build artifacts to source commits. SBOM (Software Bill of Materials) documenting every dependency. When someone downloads CIA releases, attestations enable verification—confirming binaries match claimed source code. Trust through cryptographic proof, not faith in build processes.</p>
           <p class="hidden-wisdom"><em>Automated releases eliminating human error. Version numbers committed automatically. Artifacts signed cryptographically. Every step documented, every output verifiable. Democracy's infrastructure built through reproducible processes.</em></p>
         </div>
         
@@ -210,13 +210,13 @@
           <div class="scanner-effect"></div>
           <h3>2. 🔍 CodeQL Analysis: Security Scanning Democracy's Code</h3>
           <p><strong>GitHub's semantic code analysis engine:</strong> CodeQL doesn't grep for patterns—it understands code structure, data flow, control flow. Detecting vulnerabilities like SQL injection, XSS, path traversal through <em>program analysis</em>, not regex matching. <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Workflow documentation</a> shows CodeQL scanning on every PR and weekly on main branch.</p>
-          <p><strong>Continuous security validation:</strong> Not scanning once during initial development, forgetting about it afterward. CodeQL running on every code change. Weekly scans catching newly-discovered vulnerability patterns. Security as continuous process, not point-in-time assessment. Automated vigilance preventing regression.</p>
+          <p><strong>Continuous security validation:</strong> Not scanning once during initial development, forgetting about it afterward. CodeQL running on every code change. Weekly scans catching newly-discovered פגיעות patterns. Security as continuous process, not point-in-time assessment. Automated vigilance preventing regression.</p>
           <p class="hidden-wisdom"><em>Code revealing vulnerabilities through semantic analysis. Data flows exposing injection risks. Control paths showing authentication bypasses. CodeQL seeing what manual code review misses—patterns emerging from static analysis at scale.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 📦 Dependency Review: Supply Chain Threat Prevention</h3>
+          <h3>3. 📦 Dependency Review: Supply Chain איום Prevention</h3>
           <p><strong>GitHub's dependency change analyzer:</strong> Every PR adding or updating dependencies triggers automated review. <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Dependency Review workflow</a> checking for known vulnerabilities, license incompatibilities, malicious packages. Preventing supply chain attacks before malicious code enters repository.</p>
           <p><strong>The SolarWinds lesson applied:</strong> Supply chain attacks compromise dependencies, not direct code. Dependency Review automates vigilance—scanning every Maven artifact, every transitive dependency, every version update. When attacker publishes malicious library version, automated review blocks integration. Defense through automation scaling beyond human review capacity.</p>
           <p class="hidden-wisdom"><em>Trust but verify applied to dependencies. Open source transparency meeting automated validation. Every jar file analyzed. Every version change reviewed. Supply chain security through continuous monitoring, not blind trust.</em></p>
@@ -224,8 +224,8 @@
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. ⭐ Scorecard Analysis: OSSF Best Practice Compliance</h3>
-          <p><strong>OpenSSF Scorecard evaluating project security:</strong> <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Scorecard workflow</a> running weekly, assessing against OSSF (Open Source Security Foundation) best practices. Binary artifacts, branch protection, CI tests, code review, dangerous workflows, dependency updates, fuzzing, maintained status, packaging, pinned dependencies, SAST, security policy, signed releases, token permissions, vulnerabilities. Not subjective assessment—objective measurement.</p>
+          <h3>4. ⭐ Scorecard Analysis: OSSF Best Practice ציות</h3>
+          <p><strong>OpenSSF Scorecard evaluating project security:</strong> <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">Scorecard workflow</a> running weekly, assessing against OSSF (Open Source Security Foundation) best practices. Binary artifacts, branch protection, CI tests, code review, dangerous workflows, dependency updates, fuzzing, maintained status, packaging, pinned dependencies, SAST, מדיניות אבטחה, signed releases, token permissions, vulnerabilities. Not subjective assessment—objective measurement.</p>
           <p><strong>CIA's 7.2/10 score documented transparently:</strong> Not hiding scores or gaming metrics. Publishing results on <a href="https://securityscorecards.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard viewer</a>. Weaknesses identified. Improvements tracked over time. Transparency extending to security posture evaluation—radical honesty about current state versus aspirational perfection.</p>
           <p class="hidden-wisdom"><em>Security measured objectively. Best practices automated. Scorecard revealing gaps before attackers exploit them. Continuous improvement through quantified assessment, not vague security promises.</em></p>
         </div>
@@ -249,7 +249,7 @@
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>📊 Data Processing State Machine: Five Major Transitions</h3>
-          <p><strong>Political data flowing through states:</strong> <a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">STATEDIAGRAM.md</a> shows data lifecycle. <em>Initialization</em> → <em>DataCollection</em> (from Parliament API, Election Authority, Government Bodies, World Bank) → <em>DataValidation</em> (schema, integrity, referential checks, duplicate detection) → <em>DataTransformation</em> (normalization, entity extraction, relationship mapping, metrics calculation) → <em>DataPersistence</em> (database write, index update, cache refresh) → <em>DataAvailable</em> (ready for query, analysis, visualization).</p>
+          <p><strong>Political data flowing through states:</strong> <a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">STATEDIAGRAM.md</a> shows data lifecycle. <em>Initialization</em> → <em>DataCollection</em> (from Parliament API, Election Authority, Government Bodies, World Bank) → <em>DataValidation</em> (schema, שלמות, referential checks, duplicate detection) → <em>DataTransformation</em> (normalization, entity extraction, relationship mapping, metrics calculation) → <em>DataPersistence</em> (database write, index update, cache refresh) → <em>DataAvailable</em> (ready for query, analysis, visualization).</p>
           <p><strong>Error handling through state transitions:</strong> Validation failures triggering <em>Invalid</em> state. Manual intervention flowing through <em>ErrorHandling</em> state machine. Resolved issues returning to <em>DataCollection</em>. Failed validations not crashing system—transitioning to error states, logging issues, notifying operators. Resilience through explicit error state modeling.</p>
           <p class="hidden-wisdom"><em>Political data lifecycle modeled as state machine. Each transition validated. Each state defined. No ambiguous "processing" black box—explicit states revealing system behavior through finite automata theory applied to democracy.</em></p>
         </div>
@@ -279,7 +279,7 @@
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>🔗 CI/CD Workflows as State Machines</h3>
-          <p><strong>GitHub Actions workflows are state machines:</strong> Each workflow defines states (jobs), transitions (job dependencies), inputs (triggers), outputs (artifacts). <em>Verify & Release</em> workflow: <em>Setup</em> → <em>Build</em> → <em>Attest</em> → <em>Release</em> states. Failed builds preventing attestation generation. Attestation failures blocking release publication. State transitions enforcing workflow integrity.</p>
+          <p><strong>GitHub Actions workflows are state machines:</strong> Each workflow defines states (jobs), transitions (job dependencies), inputs (triggers), outputs (artifacts). <em>Verify & Release</em> workflow: <em>Setup</em> → <em>Build</em> → <em>Attest</em> → <em>Release</em> states. Failed builds preventing attestation generation. Attestation failures blocking release publication. State transitions enforcing workflow שלמות.</p>
           <p><strong>Workflow failures as state transitions:</strong> CodeQL finding vulnerabilities triggers <em>Failed</em> state. Security findings preventing PR merge. Failed states blocking downstream transitions. Not proceeding despite failures—workflows enforcing quality through state machine logic.</p>
         </div>
         
@@ -304,7 +304,7 @@
       
       <p><strong>Manual processes are technical debt.</strong> Every manual release risks human error. Every manual security scan risks forgotten vulnerabilities. Every manual labeling wastes cognitive capacity. The <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">CIA workflow architecture</a> eliminates manual intervention—automation handling repetitive tasks, humans focusing on strategic decisions.</p>
       
-      <p><strong>Security integrated into workflows, not bolted on afterward:</strong> CodeQL scanning every PR. Dependency review preventing supply chain attacks. Scorecard evaluating OSSF compliance. Security checks blocking merges when vulnerabilities detected. Not "we'll add security later"—security enforced through automated gates from day one. DevSecOps as integrated discipline, not separate security team validating after development completes.</p>
+      <p><strong>Security integrated into workflows, not bolted on afterward:</strong> CodeQL scanning every PR. Dependency review preventing supply chain attacks. Scorecard evaluating OSSF ציות. Security checks blocking merges when vulnerabilities detected. Not "we'll add security later"—security enforced through automated gates from day one. DevSecOps as integrated discipline, not separate security team validating after development completes.</p>
       
       <p><strong>State machines modeling behavior explicitly:</strong> <a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">State diagrams</a> documenting actual system behavior. Not vague "data gets processed"—explicit states (collection, validation, transformation, persistence, available) with defined transitions. Behavioral patterns documented visually. State machines enabling reasoning about system correctness—if valid input enters <em>DataCollection</em> state, following state transition rules guarantees reaching <em>DataAvailable</em> state or explicit error state.</p>
       
@@ -320,18 +320,18 @@
         <li><a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">CI/CD Workflows</a> — Complete GitHub Actions workflow documentation, Mermaid diagrams</li>
         <li><a href="https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md">State Diagrams</a> — Data processing, user sessions, application lifecycle states</li>
         <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">Architecture Documentation</a> — C4 model system structure, five-layer design</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> — Defense-in-depth, threat model integration</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> — Defense-in-depth, איום model integration</li>
         <li><a href="https://github.com/Hack23/cia/blob/master/FLOWCHART.md">Process Flowcharts</a> — Data import workflows, processing pipelines</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">Threat Model</a> — STRIDE analysis, security justifications</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">איום Model</a> — STRIDE analysis, security justifications</li>
       </ul>
       
       <p><strong>Cross-reference with related blog posts:</strong></p>
       
       <ul>
         <li><a href="blog-cia-architecture.html">CIA Architecture: The Five Pentacles of Political Transparency</a> — Five-layer system design</li>
-        <li><a href="blog-cia-security.html">CIA Security: Defense Through Transparency</a> — STRIDE threat model, defensive layers</li>
+        <li><a href="blog-cia-security.html">CIA Security: Defense Through Transparency</a> — STRIDE איום model, defensive layers</li>
         <li><a href="blog-cia-financial-strategy.html">CIA Financial Strategy: $24.70/Day Democracy</a> — AWS costs, SWOT analysis, strategic planning</li>
-        <li><a href="blog-compliance-security.html">Compliance Security: STRIDE Through Five Dimensions</a> — Client-side security architecture</li>
+        <li><a href="blog-compliance-security.html">ציות Security: STRIDE Through Five Dimensions</a> — Client-side security architecture</li>
       </ul>
     </section>
 
@@ -356,7 +356,7 @@
         <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersecurity Consulting<br>
+          <p>אבטחת סייבר Consulting<br>
           Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
@@ -371,7 +371,7 @@
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">ציות & ISMS</a></li>
           </ul>
         </div>
         
@@ -402,7 +402,7 @@
           <h3>Company</h3>
           <ul>
             <li><a href="why-hack23.html">About Hack23</a></li>
-            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">מדיניות אבטחה</a></li>
             <li><a href="SECURITY.md">Report Security Issue</a></li>
             <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
             <li><a href="accessibility-statement.html">Accessibility</a></li>
