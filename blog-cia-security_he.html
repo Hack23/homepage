@@ -225,56 +225,56 @@
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 🛡️ Business Logic Validation: Input Validation</h3>
-          <p><strong>Spring Security and ORM parameterization.</strong> The application layer validates input at multiple stages: client-side validation, server-side validation in controllers, service-layer business rules enforcement, and ORM-level constraints.</p>
-          <p><strong>Example - data integrity protection:</strong></p>
+          <h3>3. 🛡️ אימות לוגיקה עסקית: אימות קלט</h3>
+          <p><strong>Spring Security ופרמטריזציה של ORM.</strong> שכבת האפליקציה מאמתת קלט במספר שלבים: אימות צד לקוח, אימות צד שרת בבקרים, אכיפת כללים עסקיים בשכבת שירות, ואילוצים ברמת ORM.</p>
+          <p><strong>דוגמה - הגנת שלמות נתונים:</strong></p>
           <ul>
-            <li>Parameterized queries via JPA/Hibernate prevent SQL injection</li>
-            <li>Input sanitization through Spring validation framework</li>
-            <li>Business rule enforcement via service layer @Secured methods</li>
-            <li>Data consistency checks through database constraints</li>
-            <li>Comprehensive audit trails via Javers versioning</li>
+            <li>שאילתות ממופרמטות דרך JPA/Hibernate מונעות SQL injection</li>
+            <li>סניטציה של קלט דרך מסגרת אימות Spring</li>
+            <li>אכיפת כללים עסקיים דרך מתודות @Secured בשכבת שירות</li>
+            <li>בדיקות עקביות נתונים דרך אילוצי מסד נתונים</li>
+            <li>עקבות ביקורת מקיפות דרך גרסאות Javers</li>
           </ul>
-          <p><strong>STRIDE threat mitigations documented in <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (authentication), Tampering (parameterized queries + Javers auditing), Repudiation (immutable audit logs), Information Disclosure (network isolation + encryption), Denial of Service (WAF rate limiting), Elevation of Privilege (method-level @Secured annotations).</p>
-          <p class="hidden-wisdom"><em>Business logic vulnerabilities are the hardest to detect with automated tools. They're not bugs—they're features misused. Defense requires understanding the problem domain, not just running scanners.</em></p>
+          <p><strong>הפחתות איום STRIDE מתועדות ב-<a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a>:</strong> Spoofing (אימות), Tampering (שאילתות ממופרמטות + ביקורת Javers), Repudiation (לוגים בלתי ניתנים לשינוי), Information Disclosure (בידוד רשת + הצפנה), Denial of Service (הגבלת קצב WAF), Elevation of Privilege (הערות @Secured ברמת מתודה).</p>
+          <p class="hidden-wisdom"><em>פגיעויות לוגיקה עסקית הן הקשות ביותר לזיהוי עם כלים אוטומטיים. הן לא באגים—הן תכונות בשימוש לרעה. הגנה דורשת הבנת תחום הבעיה, לא רק הרצת סורקים.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Data Protection: Encryption & Key Management</h3>
-          <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for databases, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
-          <p><strong>Secrets management:</strong> AWS Secrets Manager handles database credentials, API keys, and service accounts with automated rotation. Secure credential storage with just-in-time delivery to services.</p>
-          <p><strong>Data classification system:</strong> Information categorized by sensitivity with appropriate protection controls. Minimal personal data collection (user accounts only). PostgreSQL SSL configuration enforces encrypted connections.</p>
-          <p><strong>Javers auditing:</strong> Every data change tracked with author attribution, complete change history, and temporal data access. Property-level tracking provides before/after snapshots for compliance and forensics.</p>
-          <p class="hidden-wisdom"><em>Encryption that can't be decrypted when needed is expensive data destruction. Encryption that decrypts too easily is expensive obfuscation. Balance through key management discipline.</em></p>
+          <h3>4. 🔒 הגנת נתונים: הצפנה וניהול מפתחות</h3>
+          <p><strong>הצפנת AWS KMS.</strong> כמתועד ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, הצפנת data-at-rest משתמשת ב-AWS KMS למסדי נתונים, כרכי EBS, ו-S3 buckets. TLS 1.3 לכל תקשורת לקוח, TLS 1.2+ לתקשורת שירות פנימית.</p>
+          <p><strong>ניהול סודות:</strong> AWS Secrets Manager מטפל באישורי מסד נתונים, מפתחות API, וחשבונות שירות עם סיבוב אוטומטי. אחסון אישורים מאובטח עם מסירה just-in-time לשירותים.</p>
+          <p><strong>מערכת סיווג נתונים:</strong> מידע מסווג לפי רגישות עם בקרות הגנה מתאימות. איסוף מינימלי של נתונים אישיים (חשבונות משתמש בלבד). תצורת PostgreSQL SSL אוכפת חיבורים מוצפנים.</p>
+          <p><strong>ביקורת Javers:</strong> כל שינוי נתונים מעוקב עם ייחוס מחבר, היסטוריית שינויים מלאה, וגישת נתונים זמנית. מעקב ברמת מאפיין מספק תמונות מצב לפני/אחרי לציות ופורנזיקה.</p>
+          <p class="hidden-wisdom"><em>הצפנה שלא ניתן לפענח כשצריך היא השמדת נתונים יקרה. הצפנה שמפענחת בקלות רבה מדי היא ערפול יקר. איזון דרך משמעת ניהול מפתחות.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Monitoring & Detection: Security Intelligence</h3>
-          <p><strong>AWS security services integration.</strong> The monitoring architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) combines multiple AWS services for comprehensive threat detection.</p>
-          <p><strong>GuardDuty threat intelligence:</strong> Machine learning-based detection across CloudTrail logs, VPC Flow Logs, and DNS logs. Enhanced protection for EKS, Lambda, RDS, S3, and EC2 with malware scanning.</p>
-          <p><strong>Security Hub aggregation:</strong> Centralized security findings from GuardDuty, Inspector, IAM Access Analyzer, and AWS Config. Automated evaluation against AWS Foundational Security Best Practices and CIS Benchmarks.</p>
-          <p><strong>Application monitoring:</strong> ApplicationSession tracking logs all user sessions. ApplicationActionEvent captures every user interaction. Javers auditing provides complete data change history with author attribution.</p>
-          <p><strong>Incident response workflow:</strong> EventBridge rules trigger Step Functions for automated containment. Security events generate CloudWatch alarms. Complete audit trail supports forensic investigation and compliance reporting.</p>
-          <p class="hidden-wisdom"><em>Monitoring that doesn't inform action is surveillance without purpose. Monitoring that enables rapid response is defensive intelligence. Know the difference.</em></p>
+          <h3>5. 👁️ ניטור וזיהוי: מודיעין אבטחה</h3>
+          <p><strong>אינטגרציית שירותי אבטחה AWS.</strong> ארכיטקטורת הניטור (מתועדת ב-<a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) משלבת מספר שירותי AWS לזיהוי איומים מקיף.</p>
+          <p><strong>מודיעין איומים GuardDuty:</strong> זיהוי מבוסס למידת מכונה על פני CloudTrail logs, VPC Flow Logs, ו-DNS logs. הגנה משופרת עבור EKS, Lambda, RDS, S3, ו-EC2 עם סריקת תוכנות זדוניות.</p>
+          <p><strong>צבירת Security Hub:</strong> ממצאי אבטחה מרוכזים מ-GuardDuty, Inspector, IAM Access Analyzer, ו-AWS Config. הערכה אוטומטית מול AWS Foundational Security Best Practices ו-CIS Benchmarks.</p>
+          <p><strong>ניטור אפליקציה:</strong> מעקב ApplicationSession רושם את כל סשנים המשתמשים. ApplicationActionEvent לוכד כל אינטראקציית משתמש. ביקורת Javers מספקת היסטוריית שינויי נתונים מלאה עם ייחוס מחבר.</p>
+          <p><strong>זרימת עבודה תגובת אירוע:</strong> כללי EventBridge מפעילים Step Functions לבלימה אוטומטית. אירועי אבטחה מייצרים התרעות CloudWatch. עקב ביקורת מלא תומך בחקירה פורנזית ודיווח ציות.</p>
+          <p class="hidden-wisdom"><em>ניטור שלא מודיע לפעולה הוא מעקב ללא מטרה. ניטור שמאפשר תגובה מהירה הוא מודיעין הגנתי. דע את ההבדל.</em></p>
         </div>
       </div>
     </section>
 
     <section id="threat-model">
-      <h2 class="panel-caption">STRIDE Threat Model: Systematic Risk Analysis</h2>
+      <h2 class="panel-caption">מודל איומים STRIDE: ניתוח סיכונים שיטתי</h2>
       
-      <p><strong>Comprehensive threat modeling using STRIDE framework.</strong> The <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> documents systematic threat analysis across all architecture elements, integrating STRIDE categorization with MITRE ATT&CK mapping for advanced threat intelligence.</p>
+      <p><strong>מידול איומים מקיף באמצעות מסגרת STRIDE.</strong> ה-<a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> מתעד ניתוח איומים שיטתי על פני כל אלמנטי הארכיטקטורה, משלב קטגוריזציה STRIDE עם מיפוי MITRE ATT&CK למודיעין איומים מתקדם.</p>
       
-      <p><strong>Priority threat scenarios documented:</strong> Web Application Compromise, Supply Chain Dependency Attack, Administrative Credential Compromise, Database Exfiltration, Import Pipeline Data Poisoning, and Distributed Denial of Service. Each scenario includes likelihood assessment, impact analysis (C/I/A), control implementation, and residual risk evaluation.</p>
+      <p><strong>תרחישי איום בעדיפות מתועדים:</strong> פשרת אפליקציית Web, תקיפת תלות שרשרת אספקה, פשרת אישורי מנהל, חילוץ מסד נתונים, הרעלת נתונים של צינור ייבוא, והתקפת מניעת שירות מבוזרת. כל תרחיש כולל הערכת סבירות, ניתוח השפעה (C/I/A), יישום בקרה, והערכת סיכון שיורי.</p>
       
-      <p><strong>Key documented threats include:</strong></p>
+      <p><strong>איומים מרכזיים מתועדים כוללים:</strong></p>
       
       <div class="cards">
         <div class="card confidentiality-card">
-          <h3>🎯 Web Application Compromise</h3>
-          <p><strong>Attack Vector:</strong> Exploitation of application vulnerabilities to manipulate political data integrity. <strong>Mitigations:</strong> WAF protection, input validation via ORM parameterization, defense-in-depth across network/application/data layers. <strong>Residual Risk:</strong> Low after comprehensive controls.</p>
+          <h3>🎯 פשרת אפליקציית Web</h3>
+          <p><strong>וקטור התקפה:</strong> ניצול פגיעויות אפליקציה לתמרן שלמות נתונים פוליטיים. <strong>הפחתות:</strong> הגנת WAF, אימות קלט דרך פרמטריזציה ORM, הגנה בעומק על פני שכבות רשת/אפליקציה/נתונים. <strong>סיכון שיורי:</strong> נמוך לאחר בקרות מקיפות.</p>
         </div>
         
         <div class="card integrity-card">
