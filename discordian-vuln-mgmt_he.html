@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ניהול פגיעויות | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Latest stable releases, &lt;4 hour critical patch response. OpenSSF Scorecard integration, automated security gates, proactive EOL management.">
+<meta name="keywords" content="ניהול פגיעויות, vulnerability scanning, vulnerability assessment, CVE common vulnerabilities exposures, CVSS common vulnerability scoring system, patch management, security patching, zero-day vulnerabilities, vulnerability disclosure, responsible disclosure, bug bounty, penetration testing, security testing, vulnerability remediation, security updates, dependency scanning, OWASP dependency check, Snyk, Dependabot">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="ניהול פגיעויות: Living on the Bleeding Edge">
+<meta property="og:description" content="Latest stable releases with <4 hour critical patch response. OpenSSF Scorecard integration, automated security gates, proactive EOL management.">
+	<meta property="og:locale" content="he_IL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-vuln-mgmt_he.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="בלוג אבטחה Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-vuln-mgmt_he.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "ניהול פגיעויות: Living on the Bleeding Edge",
+      "description": "How Hack23 weaponizes bleeding-edge dependency management with comprehensive automated safety controls for <4 hour vulnerability response",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-vuln-mgmt.html"
+      },
+      "keywords": "ניהול פגיעויות, patch management, CVSS, ISMS",
+      "articleSection": "אבטחת מידע",
+      "inLanguage": "he",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1261,
+      "articleBody": "Nothing is true. Everything is permitted. Except running outdated dependencies—that's not accepting technical debt, that's pre-installing future exploits and hoping nobody notices before you do. Unpat...",
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "אבטחת מידע Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-vuln-mgmt.html#ניווט",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ניהול פגיעויות",
+          "item": "https://hack23.com/discordian-vuln-mgmt_he.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-vuln-mgmt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-vuln-mgmt.html" />
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">דף הבית</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_he.html">בלוג</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ניהול פגיעויות
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="לוגו Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>ניהול פגיעויות: Living on the Bleeding Edge</h1>
+  <div class="app-link">
+    <a href="index_he.html">דף הבית</a>
+    <a href="discordian-cybersecurity_he.html">המניפסט</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC" title="ISMS ציבורי">ISMS</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🛡️ ניהול פגיעויות: Patch or Perish</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">Living on the Bleeding Edge: ניהול פגיעויות as Competitive Advantage</h2>
+      
+      <p><strong>שום דבר לא אמיתי. הכל מותר.</strong> Except running outdated dependencies—that's not accepting technical debt, that's pre-installing future exploits and hoping nobody notices before you do. <em>Unpatched CVEs aren't just vulnerabilities—they're documented attack vectors with public proof-of-concept code that adversaries already automated.</em></p>
+      
+      <p><em>תחשוב בעצמך, schmuck! הטל ספק בסמכות.</em> הטל ספק למה everyone else accepts stale dependencies (comfortable mediocrity) while we embrace the bleeding edge with safety controls (systematic excellence). Question "stable means secure" when it actually means "old and full of known vulnerabilities we're too afraid to fix." <strong>האם אתה פרנואיד מספיק to know what versions you're running? We are—in real-time, with automated alerts.</strong></p>
+      
+      <p>At Hack23, we don't just patch vulnerabilities—<strong>we prevent them</strong> through radical dependency management: <strong>always latest stable releases</strong>, automated security gates, OpenSSF Scorecard integration, and proactive end-of-life management. We auto-merge Dependabot PRs within hours, not weeks. This isn't reckless—it's systematic operational excellence through comprehensive automated testing.</p>
+      
+      <p class="hidden-wisdom"><em>ILLUMINATION: Most companies fear the bleeding edge. We weaponize it. Latest stable means latest security patches, zero-day vulnerability windows measured in hours, not months.</em></p>
+      
+      <p>Our approach combines bleeding-edge updates (&lt;4 hours for critical patches) with enterprise-grade controls (full test suites, dependency review, supply chain security). This demonstrates our אבטחת סייבר consulting expertise through measurable security outcomes. Full technical details in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md">public ניהול פגיעויות Policy</a>.</p>
+    
+      
+      <p><strong>מחפשים תמיכת מומחה ביישום?</strong> <a href="why-hack23.html">גלה למה ארגונים בוחרים ב-Hack23</a> לייעוץ אבטחה שמאיץ חדשנות.</p>
+    </section>
+
+    <section id="five-principles">
+      <h2 class="panel-caption">The Five Principles of Living on the Edge</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🚀 Speed First</h3>
+          <p><strong>&lt;4 hours for critical patches.</strong> Not days. Not weeks. Hours. Automated Dependabot PRs, comprehensive test gates, auto-merge on green. Our bleeding-edge strategy means vulnerability windows measured in hours, not months.</p>
+          <p class="hidden-wisdom"><em>While others debate change control committees, we're already patched and validated.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🛡️ Safety Always</h3>
+          <p>Bleeding-edge with comprehensive automated testing. Unit tests, integration tests, security scans (SAST, secret scanning, CodeQL), SonarCloud quality gates. We trust test suites over manual review—because humans are slow and tests are fast.</p>
+          <p class="hidden-wisdom"><em>Zero-touch dependency decisions through automation over manual gatekeeping.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🤖 Automation Over Manual</h3>
+          <p>GitHub Dependency Review Action with OpenSSF Scorecard integration. Automated vulnerability checking, license ציות, supply chain הערכת סיכונים. Auto-merge when all gates pass. Zero manual overhead for standard updates.</p>
+          <p class="hidden-wisdom"><em>Manual review scales linearly. Automation scales exponentially. Choose exponential.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔍 Intelligence Driven</h3>
+          <p>OpenSSF Scorecard evaluates dependency security posture. Code review practices, CI tests, SAST usage, vulnerability handling. We don't just check for CVEs—we assess supplier security maturity. Supply chain security is dependency security.</p>
+          <p class="hidden-wisdom"><em>Trust but verify supplier security practices through automated intelligence.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🌟 Transparency First</h3>
+          <p>Public vulnerability status, documented EOL strategies, transparent security posture. Our <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS ציבורי</a> includes complete ניהול פגיעויות approach. Radical transparency builds trust and demonstrates expertise.</p>
+          <p class="hidden-wisdom"><em>Security through obscurity is security through ignorance. Transparency through documentation is security through confidence.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="response-matrix">
+      <h2 class="panel-caption">Rapid Security Response: Hours Not Weeks</h2>
+      
+      <p>Our bleeding-edge approach means response times measured in hours, integrated with our Classification Framework business impact analysis:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Detection</th>
+            <th>Response Time</th>
+            <th>Automated Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🔴 Critical (CVSS ≥9.0)</strong></td>
+            <td>GitHub Security Advisories</td>
+            <td><strong>&lt;4 hours</strong></td>
+            <td>Immediate PR + auto-merge on green</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🟠 High (CVSS 7.0-8.9)</strong></td>
+            <td>Dependabot alerts</td>
+            <td><strong>&lt;8 hours</strong></td>
+            <td>Priority PR + enhanced testing</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🟡 Medium (CVSS 4.0-6.9)</strong></td>
+            <td>Scheduled scans</td>
+            <td><strong>&lt;24 hours</strong></td>
+            <td>Standard PR workflow</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>🟢 Low (CVSS &lt;4.0)</strong></td>
+            <td>Weekly reviews</td>
+            <td><strong>&lt;72 hours</strong></td>
+            <td>Batch with other updates</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Dependency Update Classification:</strong></p>
+      <ul>
+        <li><strong>🔴 Security Patches:</strong> &lt;4 hours, auto-merge on green tests. Immediate regardless of EOL status.</li>
+        <li><strong>🟠 Major Releases:</strong> &lt;24 hours with full test suite. Check EOL timeline alignment.</li>
+        <li><strong>🟡 Minor Releases:</strong> &lt;8 hours with standard testing. Prefer LTS versions where available.</li>
+        <li><strong>🟢 Patch Releases:</strong> &lt;2 hours, immediate auto-merge. Always apply within support window.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Speed without safety is recklessness. Safety without speed is negligence. We achieve both through comprehensive automation.</em></p>
+    </section>
+
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply Chain Security: OpenSSF Scorecard Integration</h2>
+      
+      <p>We don't just check for CVEs—we assess dependency security practices through OpenSSF Scorecard automated evaluation:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Scorecard Check</th>
+            <th>Weight</th>
+            <th>Threshold</th>
+            <th>Automated Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-exceptional">
+            <td><strong>🚨 Vulnerabilities</strong></td>
+            <td>Critical</td>
+            <td>&lt; 7.0</td>
+            <td>Block unless patched</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>📝 Code Review</strong></td>
+            <td>High</td>
+            <td>&lt; 6.0</td>
+            <td>Manual review required</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🛡️ SAST</strong></td>
+            <td>High</td>
+            <td>&lt; 5.0</td>
+            <td>Additional security scan</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>🔄 Maintained</strong></td>
+            <td>High</td>
+            <td>&lt; 5.0</td>
+            <td>Flag for assessment</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>🧪 CI Tests</strong></td>
+            <td>Medium</td>
+            <td>&lt; 4.0</td>
+            <td>Enhanced testing</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Why Scorecard Matters:</strong> A dependency with no code review process, no CI tests, and no SAST is a vulnerability waiting to happen. Score &gt; 5.0 (relaxed threshold) indicates mature security practices. Below that? Manual evaluation required.</p>
+      
+      <p class="hidden-wisdom"><em>SUPPLY CHAIN ILLUMINATION: Your security is only as strong as your weakest dependency. Assess supplier maturity, not just CVE count.</em></p>
+    </section>
+
+    <section id="implementation">
+      <h2 class="panel-caption">Our Approach: Daily Operations & Weekly Releases</h2>
+      
+      <p>At Hack23, ניהול פגיעויות is continuous, automated, and transparent:</p>
+      
+      <p><strong>🔄 Continuous Dependency Monitoring:</strong></p>
+      <ul>
+        <li><strong>GitHub Dependabot:</strong> Daily 09:00 CET dependency scanning. Max 10 concurrent PRs per repo.</li>
+        <li><strong>Dependency Review Action:</strong> Automated vulnerability + license ציות checking on every PR.</li>
+        <li><strong>OpenSSF Scorecard:</strong> Supply chain security assessment for every dependency.</li>
+        <li><strong>Auto-Merge Strategy:</strong> When ALL gates pass (tests, security scans, dependency review), auto-merge within hours.</li>
+      </ul>
+      
+      <p><strong>🛡️ Security Gate Validation (All Must Pass):</strong></p>
+      <ul>
+        <li><strong>Dependency Review:</strong> No high/critical CVEs, OpenSSF score &gt; 5.0, license ציות verified.</li>
+        <li><strong>Comprehensive Tests:</strong> Unit tests, integration tests, SAST, secret scanning—100% pass rate.</li>
+        <li><strong>Security Scanning:</strong> SonarCloud quality gate, CodeQL analysis, FOSSA license scan—all clear.</li>
+        <li><strong>Automated Validation:</strong> Conventional commits, latest stable version, no breaking changes in patch/minor.</li>
+      </ul>
+      
+      <p><strong>☁️ AWS Runtime Monitoring:</strong></p>
+      <ul>
+        <li><strong>GuardDuty:</strong> Malicious traffic detection with automated blocking.</li>
+        <li><strong>Inspector:</strong> Runtime vulnerability scanning with patch orchestration.</li>
+        <li><strong>Security Hub:</strong> Centralized security finding aggregation across AWS services.</li>
+        <li><strong>Config:</strong> Security configuration monitoring with auto-remediation.</li>
+      </ul>
+      
+      <p><strong>📅 Daily Proactive Maintenance (03:00 CET):</strong></p>
+      <ul>
+        <li><strong>EOL Status Check:</strong> Approaching end-of-life? Trigger migration planning.</li>
+        <li><strong>Patch Availability:</strong> Critical patches applied immediately, high scheduled within 8 hours.</li>
+        <li><strong>Security Scanning:</strong> Vulnerabilities detected trigger urgent response protocol.</li>
+        <li><strong>Automated Reporting:</strong> Dashboards updated, thresholds monitored, CEO escalation if breached.</li>
+      </ul>
+      
+      <p><strong>📋 Mandatory EOL Documentation:</strong> Every project maintains End-of-Life-Strategy.md with technology stack matrix, EOL dates, migration triggers, and transparent public documentation. We continue latest versions until architectural barriers, then proactively plan migrations before EOL dates force emergency action.</p>
+      
+      <p>Full technical implementation in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md">public ניהול פגיעויות Policy</a>—because transparency includes our automation strategies and EOL planning too.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Living on the Bleeding Edge</h2>
+      
+      <p><strong>שום דבר לא אמיתי. הכל מותר.</strong> Except accepting outdated dependencies as "stable"—that's just technical debt disguised as conservatism.</p>
+      
+      <p>Most organizations fear the bleeding edge. They call it "risky." They prefer "stable" (read: outdated) dependencies. They patch quarterly (read: never for low-priority systems). They debate change control for security patches (read: bikeshed while vulnerabilities persist).</p>
+      
+      <p>We weaponize the bleeding edge. <strong>Latest stable releases</strong> means latest security patches. Vulnerability windows measured in <strong>hours, not months</strong>. Comprehensive automated testing means we deploy confidently. OpenSSF Scorecard means we trust suppliers intelligently. Proactive EOL management means we migrate strategically, not reactively.</p>
+      
+      <p><strong>תחשוב בעצמך.</strong> הטל ספק למה "stable" means "old." הטל ספק למה manual review scales better than automated gates. הטל ספק למה quarterly patching is acceptable. (Spoiler: It's not.)</p>
+      
+      <p><strong>Our competitive advantage:</strong> We demonstrate אבטחת סייבר consulting expertise through measurable security outcomes. &lt;4 hour critical patch response. Weekly release cycles. Public ניהול פגיעויות documentation. Transparent EOL strategies. This isn't theoretical—it's operational.</p>
+      
+      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. You can continue patching quarterly and hoping for the best. Or you can embrace bleeding-edge with safety controls and patch faster than attackers can weaponize. Your infrastructure. Your choice. Choose wisely.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p><em>"תחשוב בעצמך, schmuck! Latest stable isn't risky—it's the only rational choice when you have comprehensive automated testing."</em></p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-secure-dev.html">פיתוח מאובטח Policy</a> — Code without backdoors (on purpose)</li>
+        <li><a href="discordian-incident-response.html">תגובה לאירועים Plan</a> — When (not if) shit hits the fan</li>
+        <li><a href="discordian-network-security.html">אבטחת רשת Policy</a> — The perimeter is dead</li>
+        <li><a href="discordian-cybersecurity_he.html">Back to Main המניפסט</a> — Everything you know about security is a lie</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>אבטחת סייבר Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">אבטחת ענן</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">ציות & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-ציות-manager-features.html">CIA ציות Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="בלוג.html">Security בלוג</a></li>
+            <li><a href="discordian-cybersecurity_he.html">🍎 Discordian בלוג</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">ISMS ציבורי</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="נגישות-statement.html">נגישות</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to בלוג -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ בלוג Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="בלוג-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="בלוג-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="בלוג.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+
+</body>
+</html>
