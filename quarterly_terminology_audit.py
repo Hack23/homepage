@@ -4,9 +4,8 @@ Hebrew Terminology Quarterly Audit Tool
 Automated maintenance script to verify terminology consistency and identify drift
 """
 
-import re
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict
 from datetime import datetime
 import json
 

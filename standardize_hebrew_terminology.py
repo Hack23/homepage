@@ -2,14 +2,24 @@
 """
 Hebrew Terminology Standardization Script
 Phase 4: Apply consistent terminology across all 62 Hebrew pages
+
+IMPORTANT SAFETY FEATURES:
+- Protects URLs, canonical links, and hreflang attributes
+- Preserves filenames and file extensions
+- Skips CSS IDs and class names
+- Avoids replacements inside HTML tags
+- Protects product names (e.g., "Compliance Manager")
+- Only replaces terms in visible content text
+
+NOTE: English plural forms (assessments, registers, threats) are NOT translated
+to avoid creating mixed Hebrew+English forms like "הערכת סיכוניםs". Keep plurals
+in English or use proper Hebrew plural constructions.
 """
 
 import re
 import os
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple
-import json
 
 # Terminology mapping based on Hebrew-Translation-Guide.md v3.1
 TERMINOLOGY_MAP = {
@@ -96,6 +106,7 @@ PRESERVE_ENGLISH = [
 
 def should_skip_replacement(text: str, term: str, position: int) -> bool:
     """Check if replacement should be skipped based on context"""
+    
     # Check if term is part of a product name
     if term in ["Compliance", "compliance"]:
         # Check for "Compliance Manager" (product name)
@@ -104,18 +115,49 @@ def should_skip_replacement(text: str, term: str, position: int) -> bool:
             if "Manager" in following:
                 return True
     
-    # Check if inside HTML tag
-    start = max(0, position - 100)
-    end = min(len(text), position + 100)
+    # Get context around the term (larger window for better detection)
+    start = max(0, position - 200)
+    end = min(len(text), position + len(term) + 200)
     context = text[start:end]
+    relative_pos = position - start
     
-    # Skip if inside <script>, <style>, or HTML attributes
-    if '<script' in context[:position-start] and '</script>' not in context[:position-start]:
+    # Skip if inside <script> or <style> tags
+    if '<script' in context[:relative_pos] and '</script>' not in context[:relative_pos]:
         return True
-    if '<style' in context[:position-start] and '</style>' not in context[:position-start]:
+    if '<style' in context[:relative_pos] and '</style>' not in context[:relative_pos]:
         return True
-    if context[:position-start].rfind('<') > context[:position-start].rfind('>'):
+    
+    # Skip if inside HTML tag (between < and >)
+    before_term = context[:relative_pos]
+    last_open = before_term.rfind('<')
+    last_close = before_term.rfind('>')
+    if last_open > last_close:
         return True  # Inside HTML tag
+    
+    # Skip if inside href, src, or canonical URL attributes
+    # Look for patterns like href="..." or src="..." containing the term
+    if last_open != -1:
+        tag_content = context[last_open:relative_pos + len(term)]
+        # Check if we're inside a URL attribute
+        if any(attr in tag_content for attr in ['href="', 'src="', 'content="http', 'data-href=']):
+            return True
+    
+    # Skip if inside hreflang or canonical links
+    if 'hreflang' in before_term[-50:] or 'canonical' in before_term[-50:]:
+        return True
+    
+    # Skip if inside id or class attributes (CSS identifiers)
+    if any(attr in before_term[-30:] for attr in ['id="', 'class="', 'data-']):
+        return True
+    
+    # Skip if part of a filename pattern (contains .html, .css, .js, etc.)
+    around_term = context[max(0, relative_pos-20):min(len(context), relative_pos+len(term)+20)]
+    if any(ext in around_term for ext in ['.html', '.css', '.js', '.png', '.jpg', '.svg', '.pdf']):
+        return True
+    
+    # Skip if inside a URL pattern (contains ://)
+    if '://' in around_term:
+        return True
     
     return False
 

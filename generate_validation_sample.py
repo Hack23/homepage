@@ -7,7 +7,6 @@ Creates a stratified sample of Hebrew files for native speaker validation
 import random
 from pathlib import Path
 from typing import List, Dict
-import json
 
 # File categories for stratified sampling
 FILE_CATEGORIES = {

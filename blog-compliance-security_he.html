@@ -171,7 +171,7 @@
   <div class="app-link">
     <a href="index_he.html">Home</a>
     <a href="blog_he.html">Blog</a>
-    <a href="cia-ציות-manager-docs.html">ציות Docs</a>
+    <a href="cia-compliance-manager-docs.html">ציות Docs</a>
   </div>
 </header>
 <main>
@@ -183,11 +183,11 @@
       
       <p><strong>STRIDE איום modeling: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege.</strong> Microsoft's six-category taxonomy for systematic איום analysis. Industry-standard. Battle-tested. Comprehensive—allegedly.</p>
       
-      <p><strong>Here's where numerology meets reality:</strong> Mapping STRIDE to the <a href="https://github.com/Hack23/cia-ציות-manager">CIA Compliance Manager</a> architecture revealed six categories compressing into five defensive requirements. Denial of Service? Defeated by architectural simplicity (static hosting eliminates 90% of DoS משטח תקיפה). The remaining five איוםs align perfectly with five defensive layers. Coincidence? Or the universe revealing optimal security structure through constraint?</p>
+      <p><strong>Here's where numerology meets reality:</strong> Mapping STRIDE to the <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> architecture revealed six categories compressing into five defensive requirements. Denial of Service? Defeated by architectural simplicity (static hosting eliminates 90% of DoS משטח תקיפה). The remaining five threats align perfectly with five defensive layers. Coincidence? Or the universe revealing optimal security structure through constraint?</p>
       
-      <p><strong>Challenge conventional security thinking:</strong> More איום categories don't guarantee comprehensive defense. Overlapping categories create false coverage confidence. Our five-layer defense addresses all six STRIDE איוםs because layers are <em>orthogonal</em>—each protecting fundamentally different משטח תקיפהs. Pattern recognition enabling defensive efficiency over exhaustive categorization.</p>
+      <p><strong>Challenge conventional security thinking:</strong> More איום categories don't guarantee comprehensive defense. Overlapping categories create false coverage confidence. Our five-layer defense addresses all six STRIDE threats because layers are <em>orthogonal</em>—each protecting fundamentally different משטח תקיפהs. Pattern recognition enabling defensive efficiency over exhaustive categorization.</p>
       
-      <p class="hidden-wisdom"><em>Illumination: Six STRIDE categories mapping to five defenses reveals which איוםs share root causes. Spoofing + Elevation of Privilege both defeated by authentication. Tampering + Repudiation both defeated by שלמות controls. Pattern recognition enabling defensive efficiency.</em></p>
+      <p class="hidden-wisdom"><em>Illumination: Six STRIDE categories mapping to five defenses reveals which threats share root causes. Spoofing + Elevation of Privilege both defeated by authentication. Tampering + Repudiation both defeated by שלמות controls. Pattern recognition enabling defensive efficiency.</em></p>
     
       
       <p><strong>Ready to implement ISO 27001 ציות?</strong> <a href="why-hack23.html">Learn about Hack23's אבטחת סייבר consulting services</a> and our unique public ISMS approach.</p>
@@ -222,13 +222,13 @@
     <section id="five-defensive-layers">
       <h2 class="panel-caption">Client-Side Security Architecture: Defense Through Simplicity</h2>
       
-      <p><strong>Each security layer addresses specific איום categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based איוםs.</p>
+      <p><strong>Each security layer addresses specific איום categories.</strong> Client-side architecture fundamentally eliminates server-side attack vectors while requiring careful defense of browser-based threats.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>1. 🌐 Content מדיניות אבטחה: Injection Defense</h3>
-          <p><strong>איוםs mitigated:</strong> Cross-site scripting (XSS), data exfiltration via injected scripts, unauthorized resource loading.</p>
+          <p><strong>threats mitigated:</strong> Cross-site scripting (XSS), data exfiltration via injected scripts, unauthorized resource loading.</p>
           <p><strong>CSP directives:</strong> Restrictive policy limiting script sources, style sources, and connection endpoints. Configuration deployed via GitHub Pages headers.</p>
           <p><strong>React framework protection:</strong> Automatic XSS prevention through JSX escaping, DOM manipulation sanitization, and controlled prop rendering.</p>
           <p class="hidden-wisdom"><em>CSP that blocks legitimate functionality fails usability. CSP that allows everything fails security. Balance through minimum necessary directives based on actual application requirements.</em></p>
@@ -239,13 +239,13 @@
           <h3>2. 🔐 Subresource שלמות: Dependency Trust</h3>
           <p><strong>איום mitigated:</strong> Compromised CDN serving malicious library versions, supply chain attacks on external dependencies.</p>
           <p><strong>SRI implementation:</strong> Cryptographic hash validation for external resources. Dependency שלמות verification at build time.</p>
-          <p><strong>Supply chain verification:</strong> Dependabot automation for security updates, FOSSA license ציות scanning. Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-ציות-manager">FOSSA dashboard</a>.</p>
+          <p><strong>Supply chain verification:</strong> Dependabot automation for security updates, FOSSA license ציות scanning. Evidence: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA dashboard</a>.</p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. 🛡️ Type Safety: Runtime Error Prevention</h3>
-          <p><strong>איוםs mitigated:</strong> Type confusion vulnerabilities, runtime errors causing denial of service, malformed data processing.</p>
+          <p><strong>threats mitigated:</strong> Type confusion vulnerabilities, runtime errors causing denial of service, malformed data processing.</p>
           <p><strong>TypeScript strict mode:</strong> Comprehensive type checking with noImplicitAny, strictNullChecks, strictFunctionTypes compilation flags. Type errors block builds.</p>
           <p><strong>Build-time validation:</strong> ESLint static analysis, TypeScript compiler checks, Vite build optimization with tree-shaking removing unused code.</p>
         </div>
@@ -261,9 +261,9 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. 👁️ Build שלמות: Supply Chain Assurance</h3>
-          <p><strong>איוםs mitigated:</strong> Compromised build pipeline, tampered artifacts, unauthorized code injection.</p>
+          <p><strong>threats mitigated:</strong> Compromised build pipeline, tampered artifacts, unauthorized code injection.</p>
           <p><strong>מנגנונים:</strong> CI/CD אוטומטי דרך GitHub Actions, אישורי מקור SLSA Level 3, חפצי build בלתי ניתנים לשינוי, חתימה קריפטוגרפית של שחרורים.</p>
-          <p><strong>Validation:</strong> OpenSSF Scorecard monitoring (check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-ציות-manager">current score</a>), dependency review workflow, CodeQL security scanning.</p>
+          <p><strong>Validation:</strong> OpenSSF Scorecard monitoring (check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a>), dependency review workflow, CodeQL security scanning.</p>
         </div>
       </div>
     </section>
@@ -292,10 +292,10 @@
       <p><strong>npm dependencies represent trust decisions.</strong> How verification works:</p>
       
       <ol>
-        <li><strong>License ציות:</strong> FOSSA scanning ensures MIT/Apache-2.0/BSD compatibility. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-ציות-manager">Public ציות badge</a> provides transparency.</li>
+        <li><strong>License ציות:</strong> FOSSA scanning ensures MIT/Apache-2.0/BSD compatibility. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Public ציות badge</a> provides transparency.</li>
         <li><strong>פגיעות Scanning:</strong> Dependabot automation generates security update PRs. GitHub dependency review workflow blocks vulnerable package introductions.</li>
-        <li><strong>מקור Build:</strong> אישורי SLSA Level 3 מספקים עדות קריפטוגרפית המקשרת חפצים למקור. צפו ב<a href="https://github.com/Hack23/cia-ציות-manager/attestations">אישורים ציבוריים</a>.</li>
-        <li><strong>Continuous Validation:</strong> OpenSSF Scorecard measures security practices. Check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-ציות-manager">current score</a> for branch protection, code review, and dependency update evidence.</li>
+        <li><strong>מקור Build:</strong> אישורי SLSA Level 3 מספקים עדות קריפטוגרפית המקשרת חפצים למקור. צפו ב<a href="https://github.com/Hack23/cia-compliance-manager/attestations">אישורים ציבוריים</a>.</li>
+        <li><strong>Continuous Validation:</strong> OpenSSF Scorecard measures security practices. Check <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">current score</a> for branch protection, code review, and dependency update evidence.</li>
         <li><strong>Static Analysis:</strong> CodeQL security scanning integrated into CI/CD. ESLint rules enforce secure coding patterns.</li>
       </ol>
       
@@ -351,11 +351,11 @@
       <h2 class="panel-caption">Verify Our Security</h2>
       
       <ul>
-        <li><a href="https://github.com/Hack23/cia-ציות-manager/blob/master/THREAT_MODEL.md">STRIDE איום Model</a></li>
-        <li><a href="https://github.com/Hack23/cia-ציות-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a></li>
-        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-ציות-manager">OpenSSF Scorecard 7.4/10</a></li>
-        <li><a href="https://github.com/Hack23/cia-ציות-manager/attestations">SLSA Attestations</a></li>
-        <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-ציות-manager">FOSSA Report</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">STRIDE איום Model</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a></li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">OpenSSF Scorecard 7.4/10</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA Attestations</a></li>
+        <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA Report</a></li>
       </ul>
       
       <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
@@ -402,7 +402,7 @@
           <ul>
             <li><a href="black-trigram-features.html">Black Trigram</a></li>
             <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
-            <li><a href="cia-ציות-manager-features.html">CIA Compliance Manager</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
           </ul>
         </div>
         
