@@ -79,13 +79,13 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Cache npm global packages
+      - name: Cache npm packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-global-${{ hashFiles('**/package-lock.json') }}-linkinator
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}-linkinator
           restore-keys: |
-            ${{ runner.os }}-npm-global-
+            ${{ runner.os }}-npm-
 
       - name: Cache apt packages
         uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
@@ -95,13 +95,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-
 
-      - name: Install linkinator
-        run: npm install -g linkinator@latest
-
-      - name: Verify linkinator installation
+      - name: Verify npx linkinator
         run: |
-          echo "Testing linkinator installation..."
-          linkinator --version || npx linkinator --version
+          echo "Testing linkinator via npx (no global install needed)..."
+          npx linkinator@latest --version
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -119,8 +116,8 @@ jobs:
           echo ""
           echo "🔗 Checking internal links on localhost..."
           
-          # Check links on localhost using npx for reliability
-          npx linkinator http://localhost:8080/ \
+          # Check links on localhost using npx (no global install needed)
+          npx linkinator@latest http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
             --format json > internal-links-report.json || true
@@ -153,7 +150,7 @@ jobs:
           
           # Check external links on deployed site (less frequently)
           # Only check key pages to avoid rate limiting
-          npx linkinator https://hack23.com/ \
+          npx linkinator@latest https://hack23.com/ \
             --skip "(fonts\.googleapis\.com|fonts\.gstatic\.com|github\.com)" \
             --timeout 30000 \
             --format json > external-links-report.json || true
