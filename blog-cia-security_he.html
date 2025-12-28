@@ -302,80 +302,80 @@
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Build שלמות & Provenance</h2>
+      <h2 class="panel-caption">אבטחת שרשרת אספקה: שלמות Build ומקור</h2>
       
-      <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
+      <p><strong>פרויקט קוד פתוח = ניהול תלות נרחב.</strong> כמתועד ב-<a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, אימות אבטחת שרשרת אספקה כולל שכבות אוטומטיות מרובות:</p>
       
       <ol>
-        <li><strong>FOSSA license ציות:</strong> Automated dependency license analysis ensuring only approved open-source licenses. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">Public ציות badge</a> provides real-time verification of license adherence.</li>
+        <li><strong>ציות רישיונות FOSSA:</strong> ניתוח אוטומטי של רישיונות תלות המבטיח רק רישיונות קוד פתוח מאושרים. <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">תג ציות ציבורי</a> מספק אימות בזמן אמת של דבקות רישיון.</li>
         
-        <li><strong>Dependabot automation:</strong> GitHub-native security updates with automatic PR generation for vulnerable dependencies. Configured in <a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> for continuous monitoring across all ecosystems.</li>
+        <li><strong>אוטומציית Dependabot:</strong> עדכוני אבטחה מקוריים ל-GitHub עם יצירת PR אוטומטית עבור תלות פגיעות. מוגדר ב-<a href="https://github.com/Hack23/cia/blob/master/.github/dependabot.yml">dependabot.yml</a> לניטור מתמיד על פני כל המערכות האקולוגיות.</li>
         
-        <li><strong>CodeQL security scanning:</strong> Automated SAST integrated into CI/CD pipeline. Identifies vulnerabilities in code and dependencies before deployment. Results visible in <a href="https://github.com/Hack23/cia/security/code-scanning">Security tab</a>.</li>
+        <li><strong>סריקת אבטחה CodeQL:</strong> SAST אוטומטי משולב בצינור CI/CD. מזהה פגיעויות בקוד ובתלות לפני פריסה. תוצאות גלויות ב<a href="https://github.com/Hack23/cia/security/code-scanning">לשונית אבטחה</a>.</li>
         
-        <li><strong>SLSA Level 3 build provenance:</strong> Cryptographic attestation linking artifacts to source repository with tamper-proof build chain. View <a href="https://github.com/Hack23/cia/attestations">attestations</a> for public evidence of build שלמות and supply chain security.</li>
+        <li><strong>מקור build ברמת SLSA 3:</strong> אישור קריפטוגרפי המקשר אמצעים למאגר מקור עם שרשרת build חסינת חבלות. צפה ב<a href="https://github.com/Hack23/cia/attestations">אישורים</a> לראיות ציבוריות של שלמות build ואבטחת שרשרת אספקה.</li>
         
-        <li><strong>OpenSSF Scorecard continuous validation:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score 7.2/10</a> measuring branch protection, dependency updates, code review practices, SAST integration, and פגיעות disclosure. Automated third-party validation of security hygiene.</li>
+        <li><strong>אימות מתמיד OpenSSF Scorecard:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">ציון 7.2/10</a> המודד הגנת ענף, עדכוני תלות, שיטות סקירת קוד, אינטגרציית SAST וחשיפת פגיעויות. אימות צד שלישי אוטומטי של היגיינת אבטחה.</li>
       </ol>
       
-      <p><strong>The 23rd dependency insight:</strong> When we inventory dependencies, critical path always includes 23-25 packages (varies by release). Why? Pareto principle in action—20% of dependencies (23 out of ~120 total) provide 80% of functionality. The natural clustering revealing itself.</p>
+      <p><strong>תובנת התלות ה-23:</strong> כשאנחנו מבצעים רשימת תלות, הנתיב הקריטי תמיד כולל 23-25 חבילות (משתנה לפי גרסה). למה? עקרון פארטו בפעולה—20% מהתלות (23 מתוך ~120 סה"כ) מספקות 80% מהפונקציונליות. ההתקבצות הטבעית מתגלה.</p>
       
-      <p class="hidden-wisdom"><em>Supply chain security that trusts by default is naive. Supply chain security that trusts nothing is paralyzed. We trust with verification—cryptographic, automated, continuous.</em></p>
+      <p class="hidden-wisdom"><em>אבטחת שרשרת אספקה שסומכת כברירת מחדל היא נאיבית. אבטחת שרשרת אספקה שלא סומכת על כלום היא משותקת. אנחנו סומכים עם אימות—קריפטוגרפי, אוטומטי, מתמיד.</em></p>
     </section>
 
     <section id="cra-assessment">
-      <h2 class="panel-caption">CRA ציות: The Cyber Resilience Act Assessment</h2>
+      <h2 class="panel-caption">ציות CRA: הערכת חוק העמידות בסייבר</h2>
       
-      <p><strong>EU Cyber Resilience Act mandates security practices.</strong> We assessed ourselves against all requirements. Full report: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
+      <p><strong>חוק העמידות בסייבר של האיחוד האירופי מחייב שיטות אבטחה.</strong> העריכנו את עצמנו מול כל הדרישות. דוח מלא: <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>.</p>
       
-      <p><strong>Five CRA pillars matched to our five defensive layers:</strong></p>
+      <p><strong>חמישה עמודי CRA מותאמים לחמש שכבות ההגנה שלנו:</strong></p>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>CRA Requirement</th>
-            <th>Our Implementation</th>
-            <th>Evidence</th>
+            <th>דרישת CRA</th>
+            <th>היישום שלנו</th>
+            <th>ראיות</th>
           </tr>
         </thead>
         <tbody>
           <tr class="roi-high">
-            <td><strong>Secure by Default</strong></td>
-            <td>No default credentials, HTTPS-only, automatic security headers, least-privilege roles</td>
+            <td><strong>מאובטח כברירת מחדל</strong></td>
+            <td>אין אישורים ברירת מחדל, HTTPS בלבד, כותרות אבטחה אוטומטיות, תפקידים בהרשאות מינימליות</td>
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#secure-by-default">SECURITY_ARCHITECTURE.md</a></td>
           </tr>
           <tr class="roi-high">
-            <td><strong>פגיעות Disclosure</strong></td>
-            <td>Public SECURITY.md, security@hack23.com, 90-day disclosure timeline</td>
+            <td><strong>חשיפת פגיעויות</strong></td>
+            <td>SECURITY.md ציבורי, security@hack23.com, ציר זמן חשיפה של 90 יום</td>
             <td><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">SECURITY.md</a></td>
           </tr>
           <tr class="roi-exceptional">
-            <td><strong>Software Bill of Materials</strong></td>
-            <td>FOSSA-generated SBOM, updated daily, publicly accessible</td>
+            <td><strong>כתב כמויות תוכנה</strong></td>
+            <td>SBOM שנוצר על ידי FOSSA, מעודכן יומית, נגיש לציבור</td>
             <td><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA Report</a></td>
           </tr>
           <tr class="roi-high">
-            <td><strong>Security Updates</strong></td>
-            <td>Automated dependency scanning, SLA-based patching, public changelog</td>
+            <td><strong>עדכוני אבטחה</strong></td>
+            <td>סריקת תלות אוטומטית, תיקון מבוסס-SLA, changelog ציבורי</td>
             <td><a href="https://github.com/Hack23/cia/releases">Release Notes</a></td>
           </tr>
           <tr class="roi-high">
-            <td><strong>End-of-Life Strategy</strong></td>
-            <td>5-year support commitment, data export tools, migration guides</td>
+            <td><strong>אסטרטגיית סוף חיים</strong></td>
+            <td>התחייבות תמיכה ל-5 שנים, כלי ייצוא נתונים, מדריכי מעבר</td>
             <td><a href="https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md">End-of-Life-Strategy.md</a></td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>ציות status:</strong> 47 of 50 CRA requirements met. 3 requirements partially met (multi-factor authentication optional not mandatory, incident notification 48-hour target not 24-hour, בדיקת חדירהing annual not quarterly). <strong>Intentional tradeoffs:</strong> MFA mandatory would block research access. 24-hour incident notification unrealistic for volunteer-maintained OSS. Quarterly pentests exceed budget for transparency platform.</p>
+      <p><strong>סטטוס ציות:</strong> 47 מתוך 50 דרישות CRA הושגו. 3 דרישות הושגו חלקית (אימות רב-גורמי אופציונלי ולא חובה, הודעת אירוע יעד 48 שעות ולא 24 שעות, בדיקות חדירה שנתיות ולא רבעוניות). <strong>פשרות כוונתיות:</strong> MFA חובה תחסום גישת מחקר. הודעת אירוע ב-24 שעות לא ריאלית עבור OSS מתוחזק מתנדבים. בדיקות חדירה רבעוניות עולות על תקציב לפלטפורמת שקיפות.</p>
       
-      <p class="hidden-wisdom"><em>ציות without understanding is checkbox security. ציות with understanding is ניהול סיכונים. We document WHY we comply or don't—transparency includes explaining tradeoffs.</em></p>
+      <p class="hidden-wisdom"><em>ציות ללא הבנה הוא אבטחת תיבות סימון. ציות עם הבנה הוא ניהול סיכונים. אנחנו מתעדים למה אנחנו עומדים בציות או לא—שקיפות כוללת הסבר פשרות.</em></p>
     </section>
 
     <section id="future-security">
-      <h2 class="panel-caption">Future Security Architecture: The Next Pentacle</h2>
+      <h2 class="panel-caption">ארכיטקטורת אבטחה עתידית: החומש הבא</h2>
       
-      <p><strong>Where does security evolve?</strong> Full roadmap: <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a>. Five major enhancements over five years:</p>
+      <p><strong>לאן האבטחה מתפתחת?</strong> מפת דרכים מלאה: <a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">FUTURE_SECURITY_ARCHITECTURE.md</a>. חמישה שיפורים מרכזיים לאורך חמש שנים:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -404,59 +404,59 @@
         </div>
       </div>
       
-      <p><strong>Investment timeline:</strong> 5% of development budget year 1, scaling to 10% by year 5. Fibonacci growth in security investment matching איום landscape evolution. Not reactive—proactive.</p>
+      <p><strong>ציר זמן השקעה:</strong> 5% מתקציב פיתוח שנה 1, עולה ל-10% עד שנה 5. צמיחת פיבונאצ'י בהשקעת אבטחה התואמת התפתחות נוף איומים. לא ראקטיבי—פרואקטיבי.</p>
     </section>
 
     <section id="lessons-learned">
-      <h2 class="panel-caption">Security Wisdom: What the Patterns Taught Me</h2>
+      <h2 class="panel-caption">חוכמת אבטחה: מה התבניות לימדו אותי</h2>
       
-      <p><strong>After architecting security for a transparency platform, what did I learn?</strong></p>
+      <p><strong>אחרי עיצוב אבטחה לפלטפורמת שקיפות, מה למדתי?</strong></p>
       
       <ol>
-        <li><strong>Transparency is security's ally, not enemy.</strong> Publishing our איום model didn't help attackers—it helped defenders. Security researchers review our mitigations and suggest improvements. Crowdsourced security through radical openness.</li>
+        <li><strong>שקיפות היא בת ברית של אבטחה, לא אויב.</strong> פרסום מודל האיומים שלנו לא עזר לתוקפים—הוא עזר למגנים. חוקרי אבטחה סוקרים את ההפחתות שלנו ומציעים שיפורים. אבטחה ממקור המונים דרך פתיחות רדיקלית.</li>
         
-        <li><strong>The 23 Enigma manifests in unexpected places.</strong> Session timeouts, rate limits, critical attack scenarios, key dependencies—23 keeps appearing. Not numerological superstition. Pattern recognition in action. When the same number clusters, investigate underlying structure.</li>
+        <li><strong>חידת ה-23 מתבטאת במקומות בלתי צפויים.</strong> פסקי זמן סשן, מגבלות קצב, תרחישי תקיפה קריטיים, תלות מרכזיות—23 ממשיך להופיע. לא אמונה תפלה נומרולוגית. זיהוי דפוסים בפעולה. כשאותו מספר מתקבץ, חקור מבנה בסיסי.</li>
         
-        <li><strong>Defense-in-depth requires five independent layers minimum.</strong> Three layers = fragile. Four = asymmetric. Five = resilient. Pentagon structure resists single-point failures. One layer breached, four remain defending.</li>
+        <li><strong>הגנה-בעומק דורשת מינימום חמישה שכבות עצמאיות.</strong> שלוש שכבות = שביר. ארבע = אסימטרי. חמש = עמיד. מבנה חומש מתנגד לכשלים בנקודה אחת. שכבה אחת נפרצת, ארבע נותרות מגינות.</li>
         
-        <li><strong>Automated evidence > manual assurance.</strong> OpenSSF Scorecard, SLSA attestations, FOSSA scanning—continuous automated validation. Can't fake a cryptographic signature. Can't game a public transparency report. Mathematical proof > marketing claims.</li>
+        <li><strong>ראיות אוטומטיות > אבטחה ידנית.</strong> OpenSSF Scorecard, אישורי SLSA, סריקת FOSSA—אימות אוטומטי מתמיד. לא יכול לזייף חתימה קריפטוגרפית. לא יכול לתמרן דוח שקיפות ציבורי. הוכחה מתמטית > טענות שיווק.</li>
         
-        <li><strong>Security debt accumulates faster than technical debt.</strong> Skipped security review = future פגיעות. Delayed dependency update = time-bomb CVE. Disabled audit logging = forensic blindness. Pay security debt immediately or pay compound interest in breaches.</li>
+        <li><strong>חוב אבטחה מצטבר מהר יותר מחוב טכני.</strong> סקירת אבטחה שדולגה = פגיעות עתידית. עדכון תלות מעוכב = CVE מפצצת זמן. תיעוד ביקורת מושבת = עיוורון פורנזי. שלם חוב אבטחה מיידית או שלם ריבית דריבית בפריצות.</li>
       </ol>
       
-      <p class="hidden-wisdom"><em>The map is not the territory, but our security map accurately describes our security territory because we update the map every time the territory changes. Documentation drift = security gap.</em></p>
+      <p class="hidden-wisdom"><em>המפה אינה השטח, אבל מפת האבטחה שלנו מתארת במדויק את שטח האבטחה שלנו כי אנחנו מעדכנים את המפה בכל פעם שהשטח משתנה. סחיפת תיעוד = פער אבטחה.</em></p>
     </section>
 
     <section id="invitation">
-      <h2 class="panel-caption">Verify Everything. Trust Through Evidence.</h2>
+      <h2 class="panel-caption">אמת הכל. אמון דרך ראיות.</h2>
       
-      <p><strong>Don't trust our security claims. Verify them:</strong></p>
+      <p><strong>אל תסמוך על טענות האבטחה שלנו. אמת אותן:</strong></p>
       
       <ul>
-        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Security Architecture</a> - Five defensive layers in technical detail</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">STRIDE איום Model</a> - 23 attack scenarios with mitigations</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA Assessment</a> - Cyber Resilience Act ציות status</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Future Security</a> - Five-year security roadmap</li>
-        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - 7.2/10 automated security validation</li>
-        <li><a href="https://github.com/Hack23/cia/attestations">SLSA Attestations</a> - Build provenance cryptographic proof</li>
-        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">FOSSA License Report</a> - Supply chain ציות</li>
-        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">פגיעות Disclosure</a> - How to report security issues</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">ארכיטקטורת אבטחה</a> - חמש שכבות הגנה בפירוט טכני</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">מודל איומים STRIDE</a> - 23 תרחישי תקיפה עם הפחתות</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">הערכת CRA</a> - סטטוס ציות לחוק העמידות בסייבר</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">אבטחה עתידית</a> - מפת דרכים אבטחה לחמש שנים</li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - אימות אבטחה אוטומטי 7.2/10</li>
+        <li><a href="https://github.com/Hack23/cia/attestations">אישורי SLSA</a> - הוכחה קריפטוגרפית של מקור build</li>
+        <li><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">דוח רישיונות FOSSA</a> - ציות שרשרת אספקה</li>
+        <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY.md">חשיפת פגיעויות</a> - איך לדווח על בעיות אבטחה</li>
       </ul>
       
-      <p><strong>Think for yourself.</strong> Review our mitigations. Test our controls. Find gaps. Report vulnerabilities. We respond within 48 hours. Fix critical issues within 24 hours. Publish coordinated disclosures after 90 days.</p>
+      <p><strong>תחשוב בעצמך.</strong> סקור את ההפחתות שלנו. בדוק את הבקרות שלנו. מצא פערים. דווח על פגיעויות. אנחנו מגיבים תוך 48 שעות. מתקנים בעיות קריטיות תוך 24 שעות. מפרסמים חשיפות מתואמות אחרי 90 יום.</p>
       
-      <p><strong>Security through transparency works when everyone participates.</strong> We provide the platform. You provide the scrutiny. Together we build trustworthy democratic infrastructure.</p>
+      <p><strong>אבטחה דרך שקיפות עובדת כשכולם משתתפים.</strong> אנחנו מספקים את הפלטפורמה. אתה מספק את הביקורת. ביחד אנחנו בונים תשתית דמוקרטית מהימנה.</p>
       
-      <p class="hidden-wisdom"><em>Simon Moon, System Architect, Hack23 AB</em></p>
-      <p class="hidden-wisdom"><em>"Security is not a product, but a process. Transparency makes that process verifiable."</em></p>
+      <p class="hidden-wisdom"><em>Simon Moon, אדריכל מערכות, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"אבטחה אינה מוצר, אלא תהליך. שקיפות הופכת את התהליך הזה לניתן לאימות."</em></p>
     </section>
 
     <section id="next-reading">
-      <h2 class="panel-caption">Continue the Journey</h2>
-      <p><strong>Previous:</strong> <a href="blog-cia-architecture.html">CIA Architecture: The Five Pentacles</a> - Exploring the numerological patterns in system design</p>
-      <p><strong>Next:</strong> <a href="blog-compliance-architecture.html">Compliance Manager Architecture</a> - CIA Triad meets Sacred Geometry</p>
-      <p><strong>Related:</strong> <a href="cia-docs.html">Complete CIA Documentation</a> - All architecture diagrams, data models, and security specifications</p>
-      <p><strong>חזרה ל:</strong> <a href="blog.html">בלוג אבטחה</a> - All discordian posts</p>
+      <h2 class="panel-caption">המשך את המסע</h2>
+      <p><strong>קודם:</strong> <a href="blog-cia-architecture_he.html">ארכיטקטורת CIA: החומשים החמישה</a> - חקר הדפוסים הנומרולוגיים בעיצוב מערכת</p>
+      <p><strong>הבא:</strong> <a href="blog-compliance-architecture_he.html">ארכיטקטורת מנהל הציות</a> - CIA Triad פוגש גאומטריה קדושה</p>
+      <p><strong>קשור:</strong> <a href="cia-docs_he.html">תיעוד CIA מלא</a> - כל דיאגרמות הארכיטקטורה, מודלי נתונים ומפרטי אבטחה</p>
+      <p><strong>חזרה ל:</strong> <a href="blog_he.html">בלוג אבטחה</a> - כל הפוסטים הדיסקורדיאניים</p>
     </section>
   </article>
 </main>
