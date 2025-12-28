@@ -6,7 +6,6 @@ Ensures each HTML file has complete hreflang references to all available languag
 
 import os
 import re
-from pathlib import Path
 from collections import defaultdict
 
 # Language codes with their regional variants

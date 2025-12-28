@@ -4,7 +4,6 @@ Sitemap Generator for Hack23 AB Homepage
 Generates sitemap.xml with all HTML files and proper hreflang tags
 """
 
-import os
 from datetime import datetime
 from pathlib import Path
 import xml.etree.ElementTree as ET
