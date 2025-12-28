@@ -17,7 +17,8 @@
 	<meta property="og:locale:alternate" content="de_DE">
 	<meta property="og:locale:alternate" content="es_ES">
 	<meta property="og:locale:alternate" content="fi_FI">
-	<meta property="og:locale:alternate" content="fr_FR">	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="ja_JP">
 	<meta property="og:locale:alternate" content="ko_KR">
 	<meta property="og:locale:alternate" content="nl_NL">
 	<meta property="og:locale:alternate" content="nb_NO">
@@ -81,8 +82,8 @@
       "wordCount": 1561,
       "articleBody": "Nothing is true. Everything is permitted. Except shipping code without threat models—that's not agile development, that's gambling with someone else's data and hoping you're lucky. Every line of code ...",
       "isPartOf": {
-        "@type": "مدونة",
-        "@id": "https://hack23.com/blog_ar.html#مدونة",
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_ar.html#blog",
         "name": "مدونة الأمن Hack23"
       },
       "about": [
@@ -119,8 +120,8 @@
     },
     {
       "@type": "HowTo",
-      "name": "How to Implement Secure DevSecOps with SLSA Level 3 and 80% Test Coverage",
-      "description": "Comprehensive guide to implementing security-by-design with STRIDE דוגמת איומים, automated testing pipelines, SLSA 3 attestations, and OpenSSF Scorecard 7.0+ for modern development teams",
+      "name": "كيفية تطبيق DevSecOps الآمن مع مستوى SLSA 3 وتغطية اختبار 80%",
+      "description": "دليل شامل لتطبيق الأمن حسب التصميم مع نمذجة التهديدات STRIDE، خطوط اختبار آلية، شهادات SLSA 3، وبطاقة OpenSSF 7.0+ لفرق التطوير الحديثة",
       "image": "https://hack23.com/blog.webp",
       "totalTime": "P60D",
       "estimatedCost": {
@@ -131,105 +132,105 @@
       "supply": [
         {
           "@type": "HowToSupply",
-          "name": "Secure SDLC Documentation Templates"
+          "name": "قوالب توثيق دورة حياة التطوير الآمن"
         },
         {
           "@type": "HowToSupply",
-          "name": "Security Architecture Documentation"
+          "name": "توثيق الهندسة الأمنية"
         },
         {
           "@type": "HowToSupply",
-          "name": "Code Review Checklist"
+          "name": "قائمة مراجعة الكود"
         },
         {
           "@type": "HowToSupply",
-          "name": "Security Testing Plan"
+          "name": "خطة اختبار الأمن"
         }
       ],
       "tool": [
         {
           "@type": "HowToTool",
-          "name": "GitHub Actions for CI/CD automation"
+          "name": "GitHub Actions لأتمتة CI/CD"
         },
         {
           "@type": "HowToTool",
-          "name": "SonarCloud for code quality and security analysis"
+          "name": "SonarCloud لتحليل جودة الكود والأمن"
         },
         {
           "@type": "HowToTool",
-          "name": "Dependabot for dependency management"
+          "name": "Dependabot لإدارة التبعيات"
         },
         {
           "@type": "HowToTool",
-          "name": "OWASP ZAP for security testing"
+          "name": "OWASP ZAP لاختبار الأمن"
         },
         {
           "@type": "HowToTool",
-          "name": "SLSA Framework for supply chain security"
+          "name": "إطار عمل SLSA لأمن سلسلة التوريد"
         }
       ],
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Establish Security-by-Design Foundation",
-          "text": "Integrate security into development lifecycle from inception: Define security requirements during product planning phase. Create threat models before writing code using STRIDE methodology. Document security architecture (authentication, authorization, data protection, encryption). Establish secure coding standards (OWASP Top 10, CWE Top 25). Define security review gates: design review with threat model, code review with security checklist, security testing before deployment. Train development team on secure coding practices and common vulnerabilities.",
+          "name": "إنشاء أساس الأمن حسب التصميم",
+          "text": "دمج الأمن في دورة حياة التطوير منذ البداية: تحديد متطلبات الأمن خلال مرحلة تخطيط المنتج. إنشاء نماذج التهديدات قبل كتابة الكود باستخدام منهجية STRIDE. توثيق الهندسة الأمنية (المصادقة، التفويض، حماية البيانات، التشفير). إنشاء معايير الترميز الآمن (OWASP Top 10، CWE Top 25). تحديد بوابات المراجعة الأمنية: مراجعة التصميم مع نموذج التهديدات، مراجعة الكود مع قائمة التحقق الأمنية، اختبار الأمن قبل النشر. تدريب فريق التطوير على ممارسات الترميز الآمن والثغرات الشائعة.",
           "url": "https://hack23.com/discordian-secure-dev.html#intro"
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Implement Automated Security Testing in CI/CD",
-          "text": "Build comprehensive security testing pipeline integrated with CI/CD: Static Application Security Testing (SAST) using SonarCloud analyzing code for vulnerabilities, code smells, security hotspots. Dependency vulnerability scanning using Dependabot and GitHub Security Advisories. Software Composition Analysis (SCA) generating SBOM (Software Bill of Materials) for transparency. Dynamic Application Security Testing (DAST) using OWASP ZAP for runtime vulnerability detection. Configure automated testing to run on every pull request and block merge if critical issues found.",
+          "name": "تطبيق اختبار الأمن الآلي في CI/CD",
+          "text": "بناء خط اختبار أمن شامل متكامل مع CI/CD: اختبار أمن التطبيقات الثابت (SAST) باستخدام SonarCloud لتحليل الكود بحثًا عن الثغرات، رائحة الكود، النقاط الساخنة الأمنية. فحص ثغرات التبعيات باستخدام Dependabot وتنبيهات أمان GitHub. تحليل تكوين البرمجيات (SCA) يولد SBOM (قائمة مواد البرمجيات) للشفافية. اختبار أمن التطبيقات الديناميكي (DAST) باستخدام OWASP ZAP لاكتشاف الثغرات في وقت التشغيل. تكوين الاختبار الآلي للتشغيل على كل طلب سحب وحجب الدمج إذا تم العثور على مشاكل حرجة.",
           "url": "https://hack23.com/discordian-secure-dev.html#tools"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Achieve 80% Test Coverage with Security Focus",
-          "text": "Establish comprehensive testing strategy with security validation: Unit tests covering individual functions, edge cases, and input validation. Integration tests validating component interactions, authentication flows, authorization checks. End-to-end tests simulating user journeys including security scenarios (authentication, session management, בקרת גישה). Security-specific tests: SQL injection attempts, XSS payloads, CSRF token validation, authentication bypass attempts, authorization checks. Target minimum 80% code coverage measured by tools like Jest, PyTest, or JaCoCo. Configure CI/CD to fail builds below coverage threshold.",
+          "text": "تحقيق استراتيجية اختبار شاملة مع التحقق الأمني: اختبارات الوحدة التي تغطي الوظائف الفردية، الحالات الحدية، والتحقق من المدخلات. اختبارات التكامل التي تتحقق من تفاعلات المكونات، تدفقات المصادقة، وفحوصات التفويض. اختبارات من البداية للنهاية تحاكي رحلات المستخدم بما في ذلك سيناريوهات الأمان (المصادقة، إدارة الجلسات، التحكم في الوصول). اختبارات خاصة بالأمن: محاولات حقن SQL، حمولات XSS، التحقق من رمز CSRF، محاولات تجاوز المصادقة، فحوصات التفويض. استهداف الحد الأدنى لتغطية الكود 80% مقاسة بأدوات مثل Jest أو PyTest أو JaCoCo. تكوين CI/CD لفشل البناء تحت عتبة التغطية.",
           "url": "https://hack23.com/discordian-secure-dev.html#five-practices"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Implement SLSA Level 3 Supply Chain Security",
-          "text": "Achieve SLSA (Supply chain Levels for Software Artifacts) Level 3 ציות: Build provenance - generate cryptographically signed attestations for every build showing source repository, commit hash, build process, dependencies. Source integrity - ensure builds are created from version-controlled source with no manual steps. Build isolation - use ephemeral build environments (GitHub Actions runners) preventing tampering. Dependency pinning - lock all dependencies to specific versions with hash verification. Automated release process - no manual artifact modifications post-build. Publish SLSA provenance to GitHub attestations for verification.",
+          "text": "تحقيق الامتثال لمستوى SLSA (مستويات سلسلة التوريد لمصنوعات البرمجيات) المستوى 3: مصدر البناء - إنشاء شهادات موقعة تشفيريًا لكل بناء تظهر مستودع المصدر، تجزئة الالتزام، عملية البناء، والتبعيات. سلامة المصدر - التأكد من إنشاء البناءات من مصدر يتم التحكم في إصداراته بدون خطوات يدوية. عزل البناء - استخدام بيئات بناء مؤقتة (GitHub Actions runners) تمنع التلاعب. تثبيت التبعيات - قفل جميع التبعيات على إصدارات محددة مع التحقق من التجزئة. عملية إصدار آلية - لا توجد تعديلات يدوية للمصنوعات بعد البناء. نشر مصدر SLSA على شهادات GitHub للتحقق.",
           "url": "https://hack23.com/discordian-secure-dev.html#supply-chain"
         },
         {
           "@type": "HowToStep",
           "position": 5,
-          "name": "Achieve OpenSSF Scorecard 7.0+ Rating",
-          "text": "Implement OpenSSF (Open Source Security Foundation) best practices for 7.0+ score: Branch protection - require pull request reviews, status checks, prevent force pushes. Signed commits - enforce commit signature verification. Security policy - publish SECURITY.md with vulnerability disclosure process. Dependency updates - automated Dependabot updates for vulnerabilities. Code review - require approvals from code owners. CI tests - comprehensive automated testing in CI/CD. SAST tools - integrated static analysis in pipeline. Dangerous workflow prevention - no untrusted code execution in workflows. Token permissions - minimal GitHub Actions token permissions. Pinned dependencies - all actions and dependencies pinned to specific versions.",
+          "name": "تحقيق تصنيف بطاقة OpenSSF 7.0+",
+          "text": "تطبيق أفضل ممارسات OpenSSF (مؤسسة الأمن مفتوح المصدر) لتحقيق نقاط 7.0+: حماية الفرع - طلب مراجعات طلبات السحب، فحوصات الحالة، منع الدفع القسري. الالتزامات الموقعة - فرض التحقق من توقيع الالتزام. سياسة الأمن - نشر SECURITY.md مع عملية الإفصاح عن الثغرات. تحديثات التبعيات - تحديثات Dependabot الآلية للثغرات. مراجعة الكود - طلب الموافقات من مالكي الكود. اختبارات CI - اختبار آلي شامل في CI/CD. أدوات SAST - تحليل ثابت متكامل في خط الإنتاج. منع سير العمل الخطير - لا تنفيذ كود غير موثوق في سير العمل. أذونات الرموز - الحد الأدنى من أذونات رموز GitHub Actions. التبعيات المثبتة - جميع الإجراءات والتبعيات مثبتة على إصدارات محددة.",
           "url": "https://hack23.com/discordian-secure-dev.html#supply-chain"
         },
         {
           "@type": "HowToStep",
           "position": 6,
-          "name": "Establish Secure Dependency Management",
-          "text": "Implement systematic dependency security management: Dependency inventory - maintain complete SBOM listing all direct and transitive dependencies. Vulnerability monitoring - automated scanning via Dependabot, GitHub Security Advisories, Snyk. Update strategy - apply security patches within 7 days for critical vulnerabilities, 30 days for high severity. Dependency review - evaluate new dependencies for: security track record, active maintenance, license compatibility, supply chain risk. Pin dependencies to specific versions with cryptographic hash verification. Regular dependency updates (monthly) balancing security with stability.",
+          "name": "إنشاء إدارة تبعيات آمنة",
+          "text": "تطبيق إدارة أمن التبعيات المنهجية: جرد التبعيات - الحفاظ على SBOM كامل يسرد جميع التبعيات المباشرة والانتقالية. مراقبة الثغرات - الفحص الآلي عبر Dependabot وتنبيهات أمان GitHub و Snyk. استراتيجية التحديث - تطبيق تصحيحات الأمان خلال 7 أيام للثغرات الحرجة، 30 يومًا للخطورة العالية. مراجعة التبعيات - تقييم التبعيات الجديدة لـ: سجل الأمن، الصيانة النشطة، توافق الترخيص، مخاطر سلسلة التوريد. تثبيت التبعيات على إصدارات محددة مع التحقق من التجزئة التشفيرية. تحديثات التبعيات المنتظمة (شهرية) توازن بين الأمن والاستقرار.",
           "url": "https://hack23.com/discordian-secure-dev.html#dependencies"
         },
         {
           "@type": "HowToStep",
           "position": 7,
-          "name": "Implement Security Code Review Process",
-          "text": "Establish mandatory security-focused code review: Security review checklist covering: input validation and sanitization, output encoding and escaping, authentication and session management, authorization and בקרת גישה, cryptographic implementations, error handling and logging, secure configuration, sensitive data handling. Require minimum 2 approvals for security-sensitive changes. Security expert review for: authentication changes, authorization logic, cryptographic code, external integrations, privilege escalation paths. Automated review tools: pre-commit hooks for secret detection, IDE security plugins, PR-triggered security scans.",
+          "name": "تطبيق عملية مراجعة كود الأمن",
+          "text": "إنشاء مراجعة كود إلزامية مركزة على الأمن: قائمة مراجعة الأمن التي تغطي: التحقق من المدخلات والتطهير، ترميز المخرجات والهروب، المصادقة وإدارة الجلسات، التفويض والتحكم في الوصول، التنفيذات التشفيرية، معالجة الأخطاء والتسجيل، التكوين الآمن، معالجة البيانات الحساسة. طلب الحد الأدنى من موافقتين للتغييرات الحساسة للأمن. مراجعة خبير الأمن لـ: تغييرات المصادقة، منطق التفويض، الكود التشفيري، التكاملات الخارجية، مسارات تصعيد الامتيازات. أدوات المراجعة الآلية: خطافات ما قبل الالتزام لاكتشاف الأسرار، ملحقات IDE الأمنية، فحوصات الأمن التي تنطلق مع PR.",
           "url": "https://hack23.com/discordian-secure-dev.html#sdlc"
         },
         {
           "@type": "HowToStep",
           "position": 8,
-          "name": "Deploy Security Monitoring and תגובה לאירועים",
-          "text": "Implement runtime security monitoring and response capabilities: Application logging - comprehensive security event logging (authentication attempts, authorization failures, suspicious patterns, errors). Centralized log aggregation - collect logs in secure, tamper-proof storage with retention policy. Security monitoring - automated alerting for: repeated authentication failures, unusual access patterns, suspicious API usage, error rate spikes. תגובה לאירועים integration - security alerts trigger תגובה לאירועים procedures. Security metrics dashboard - track: vulnerability discovery/remediation time, security test coverage, SLSA ציות, OpenSSF score, security incident frequency.",
+          "name": "نشر مراقبة الأمن والاستجابة للحوادث",
+          "text": "تنفيذ قدرات مراقبة الأمن والاستجابة في وقت التشغيل: تسجيل التطبيقات - تسجيل شامل لأحداث الأمن (محاولات المصادقة، فشل التفويض، الأنماط المشبوهة، الأخطاء). تجميع السجلات المركزي - جمع السجلات في تخزين آمن ومقاوم للتلاعب مع سياسة الاحتفاظ. مراقبة الأمن - التنبيه الآلي لـ: محاولات المصادقة المتكررة، أنماط الوصول غير العادية، استخدام API المشبوه، ارتفاعات معدل الخطأ. تكامل الاستجابة للحوادث - تنبيهات الأمن تطلق إجراءات الاستجابة للحوادث. لوحة معلومات مقاييس الأمن - تتبع: وقت اكتشاف/معالجة الثغرات، تغطية اختبار الأمن، الامتثال لـ SLSA، نقاط OpenSSF، تكرار حوادث الأمن.",
           "url": "https://hack23.com/discordian-secure-dev.html#tools"
         },
         {
           "@type": "HowToStep",
           "position": 9,
-          "name": "Maintain Security Posture Through Continuous Improvement",
-          "text": "Establish continuous security improvement cycle: Quarterly security reviews - assess threat landscape changes, review security metrics, update threat models. Security training - ongoing developer education on: emerging vulnerabilities, secure coding techniques, security tooling updates, incident lessons learned. Security retrospectives - post-incident reviews identifying root causes and preventive measures. Benchmark against industry standards - track SLSA level, OpenSSF score, vulnerability remediation SLAs. Community engagement - contribute security improvements to open source dependencies, share security learnings publicly, participate in coordinated disclosure.",
+          "name": "الحفاظ على وضعية الأمن من خلال التحسين المستمر",
+          "text": "إنشاء دورة تحسين أمن مستمرة: المراجعات الأمنية الفصلية - تقييم تغييرات مشهد التهديدات، مراجعة مقاييس الأمن، تحديث نماذج التهديدات. التدريب الأمني - التعليم المستمر للمطورين حول: الثغرات الناشئة، تقنيات الترميز الآمن، تحديثات أدوات الأمن، الدروس المستفادة من الحوادث. الاستعراضات الأمنية - مراجعات ما بعد الحوادث تحدد الأسباب الجذرية والتدابير الوقائية. المقارنة المعيارية مع معايير الصناعة - تتبع مستوى SLSA، نقاط OpenSSF، اتفاقيات مستوى الخدمة لمعالجة الثغرات. المشاركة المجتمعية - المساهمة بتحسينات الأمن في التبعيات مفتوحة المصدر، مشاركة تعلمات الأمن علنًا، المشاركة في الإفصاح المنسق.",
           "url": "https://hack23.com/discordian-secure-dev.html#conclusion"
         }
       ]
@@ -238,7 +239,11 @@
 }</script>
 
   <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-secure-dev_ar.html" />
   <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-secure-dev.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-secure-dev_he.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-secure-dev_sv.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-secure-dev_ko.html" />
   <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-secure-dev.html" />
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap" rel="stylesheet">
