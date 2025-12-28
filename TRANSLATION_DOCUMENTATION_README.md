@@ -63,7 +63,7 @@ This directory contains comprehensive translation guides and status files for al
 
 This enhancement ensures translation guides reflect actual usage patterns and provide translators with proven, validated terminology from existing high-quality translations.
 
-### 🎉 Major Translation Milestones (Q4 2025)
+## 🎉 Translation Milestones (Q4 2025)
 
 #### Swedish - Phase 1-5 Complete ✅
 **Swedish ISMS Policy Expansion (19 New Files):**
@@ -101,18 +101,21 @@ This enhancement ensures translation guides reflect actual usage patterns and pr
 
 #### Nordic Languages - Homepage Translation Updates (Dec 24, 2025) ✅
 **Danish, Finnish, Norwegian Homepage Improvements:**
-- **Danish (index_da.html):** 70.1% → **~80%** quality (+10%)
+- **Danish (index_da.html):** Quality improvement to ~80% (from 70.1% baseline)
   - Core English placeholders in visible sections replaced
   - Meta tags, hero sections, value propositions translated
   - Professional terminology: "Radikal gennemsigtighed", "Sikkerhed fremskynder innovation"
+  - Note: Overall file quality remains 70.1% (homepage represents subset of total files)
   
-- **Finnish (index_fi.html):** 71.6% → **~80%** quality (+8%)
+- **Finnish (index_fi.html):** Quality improvement to ~80% (from 71.6% baseline)
   - Main card headings and core paragraphs translated
   - Professional terminology: "Radikaali läpinäkyvyys", "Turvallisuus vauhdittaa innovaatioita"
+  - Note: Overall file quality remains 71.6% (homepage represents subset of total files)
   
-- **Norwegian (index_no.html):** 68.1% → **~78%** quality (+10%)
+- **Norwegian (index_no.html):** Quality improvement to ~78% (from 68.1% baseline)
   - Critical homepage headings and primary paragraphs translated
   - Professional terminology: "Radikal åpenhet", "Sikkerhet akselererer innovasjon"
+  - Note: Overall file quality remains 68.1% (homepage represents subset of total files)
 
 #### European Blog Infrastructure (3 High-Priority Posts) ✅
 **German, Spanish, French, Dutch - Blog Translation Foundation:**
@@ -312,7 +315,7 @@ graph TB
 **Primary:** DeepL Pro API
 - **Advantages:** Superior quality for European language pairs, context-aware, technical terminology
 - **Glossary Support:** Upload v3.1 vocabulary tables for consistency
-- **Cost:** ~€20-25 per million characters (volume discounts available)
+- **Cost:** ~€20-25 per million characters (December 2025 pricing, volume discounts available)
 - **Best For:** Technical content, ISMS policies, blog posts
 
 #### For RTL Languages (AR, HE)
@@ -382,6 +385,7 @@ graph TB
 - **Review:** Native speaker 20% spot-check (€0.08-0.12 per word)
 - **Final validation:** Quality assurance checklist (€0.02-0.03 per word)
 - **Total cost:** €0.12-0.18 per word (vs. €0.25-0.40 for full human translation)
+- **Note:** Pricing estimates as of December 2025, subject to market rates and volume discounts
 
 ## Blog Translation Status
 
