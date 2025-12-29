@@ -22,6 +22,13 @@
 - **discordian-secure-dev_da.html** ✅ NEW (Sikker Udvikling)
 - **discordian-vuln-mgmt_da.html** ✅ NEW (Sårbarhedsstyring)
 
+**Phase 2 Session 2 - ISMS Files Complete (December 29, 2025):**
+- **discordian-monitoring-logging_da.html** ✅ NEW (Overvågning & Logning)
+- **discordian-email-security_da.html** ✅ NEW (E-mail-sikkerhed)
+- **discordian-third-party_da.html** ✅ NEW (Tredjepartsstyring)
+- **discordian-security-training_da.html** ✅ NEW (Sikkerhedstræning)
+- **discordian-open-source_da.html** ✅ NEW (Open Source-politik)
+
 **Translation Approach:**
 - Professional web-search assisted translation with Danish-Translation-Guide.md v3.1 terminology
 - Native-quality business terminology for Danish cybersecurity market
@@ -35,15 +42,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇩🇰 Danish Translation Status ⚓"
-        A["📊 75/96 Files<br/>78.13% Complete ✅ "]
+        A["📊 80/96 Files<br/>83.33% Complete ✅ "]
         
         A --> B["🎯 Quality Analysis"]
-        B --> C["✅ Fully Translated: 51<br/>No English content"]
+        B --> C["✅ Fully Translated: 56<br/>No English content"]
         B --> D["⚡ Mostly Translated: 24<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 0<br/>No files"]
         B --> F["❌ Needs Translation: 0<br/>No files"]
         
-        A --> G["📝 Missing Files: 21"]
+        A --> G["📝 Missing Files: 16"]
         
         A --> H["🏆 Quality Score: 95.0%"]
         
@@ -63,10 +70,10 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇩🇰 Danish Files Exist** | 75 | **78.13%** | ✅ |
-| **❌ Missing Files** | 21 | 21.9% | 🔄 |
+| **🇩🇰 Danish Files Exist** | 80 | **83.33%** | ✅ |
+| **❌ Missing Files** | 16 | 16.7% | 🔄 |
 
-**Progress:** +5 files created in Phase 2 Session 1 (December 29, 2025)
+**Progress:** +10 files created in Phase 2 (Session 1: +5, Session 2: +5)
 
 ### 🎯 Translation Quality Analysis
 
@@ -74,16 +81,16 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 51 | 68.0% | No English content detected |
-| ⚡ **Mostly Translated** | 24 | 32.0% | Minimal English (technical terms only) |
+| ✅ **Fully Translated** | 56 | 70.0% | No English content detected |
+| ⚡ **Mostly Translated** | 24 | 30.0% | Minimal English (technical terms only) |
 | ⚠️  **Partially Translated** | 0 | 0.0% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
-**🏆 Quality Score:** 95.0% of existing files are fully/mostly translated (improved from 90.0%)
+**🏆 Quality Score:** 95.0% of existing files are fully/mostly translated (maintained excellence)
 
-**📈 Status:** ✅ Phase 2 Session 1 Complete - 5 ISMS files created
+**📈 Status:** ✅ Phase 2 Session 2 Complete - 10 ISMS files created total
 
-*Note: Percentages calculated as (count/75 files) × 100. Total: 51 + 24 = 75 files with translations. +5 files added in Phase 2 Session 1.*
+*Note: Percentages calculated as (count/80 files) × 100. Total: 56 + 24 = 80 files with translations. +10 files added in Phase 2 (Sessions 1-2).*
 
 ## 📊 Files by Category
 
@@ -171,12 +178,12 @@ Files analyzed for English content remaining:
 - ✅ `cia-triad-faq_da.html` ← `cia-triad-faq.html` **[95%+ Quality - Already excellent]**
 - ⚡ `compliance-manager_da.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (21 files)
+## ⚠️  Missing Translation Files (16 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (16 files)
+### ISMS Documentation (11 files)
 - ✅ `discordian-backup-recovery_da.html` ← `discordian-backup-recovery.html` **[NEW - Phase 2 Session 1]**
 - ❌ `discordian-business-value_da.html` ← `discordian-business-value.html`
 - ❌ `discordian-change-mgmt_da.html` ← `discordian-change-mgmt.html`
@@ -184,19 +191,19 @@ These English pages exist but have no corresponding translation file:
 - ❌ `discordian-cra-conformity_da.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_da.html` ← `discordian-cra.html`
 - ✅ `discordian-disaster-recovery_da.html` ← `discordian-disaster-recovery.html` **[NEW - Phase 2 Session 1]**
-- ❌ `discordian-email-security_da.html` ← `discordian-email-security.html`
+- ✅ `discordian-email-security_da.html` ← `discordian-email-security.html` **[NEW - Phase 2 Session 2]**
 - ❌ `discordian-llm-security_da.html` ← `discordian-llm-security.html`
 - ❌ `discordian-mobile-device_da.html` ← `discordian-mobile-device.html`
-- ❌ `discordian-monitoring-logging_da.html` ← `discordian-monitoring-logging.html`
-- ❌ `discordian-open-source_da.html` ← `discordian-open-source.html`
+- ✅ `discordian-monitoring-logging_da.html` ← `discordian-monitoring-logging.html` **[NEW - Phase 2 Session 2]**
+- ✅ `discordian-open-source_da.html` ← `discordian-open-source.html` **[NEW - Phase 2 Session 2]**
 - ❌ `discordian-physical-security_da.html` ← `discordian-physical-security.html`
 - ✅ `discordian-secure-dev_da.html` ← `discordian-secure-dev.html` **[NEW - Phase 2 Session 1]**
 - ❌ `discordian-security-metrics_da.html` ← `discordian-security-metrics.html`
 - ❌ `discordian-security-strategy_da.html` ← `discordian-security-strategy.html`
-- ❌ `discordian-security-training_da.html` ← `discordian-security-training.html`
+- ✅ `discordian-security-training_da.html` ← `discordian-security-training.html` **[NEW - Phase 2 Session 2]**
 - ❌ `discordian-stakeholders_da.html` ← `discordian-stakeholders.html`
 - ❌ `discordian-supplier-reality_da.html` ← `discordian-supplier-reality.html`
-- ❌ `discordian-third-party_da.html` ← `discordian-third-party.html`
+- ✅ `discordian-third-party_da.html` ← `discordian-third-party.html` **[NEW - Phase 2 Session 2]**
 - ✅ `discordian-vuln-mgmt_da.html` ← `discordian-vuln-mgmt.html` **[NEW - Phase 2 Session 1]**
 
 ### ISMS Policy Files (1 files)
