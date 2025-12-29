@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Sicherheit | AWS Multi-Layer Defense | Hack23</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AWS security-by-design: GuardDuty, Security Hub, Config-Automatisierung, KMS-Verschlüsselung, VPC-Segmentierung. 99,9% Verfügbarkeit durch Kontrollen.">
+    <meta name="keywords" content="Cloud-Sicherheit, AWS-Sicherheit, Multi-Layer Defense, Cloud-Architektur, VPC-Sicherheit, Sicherheitsgruppen, NACLs, AWS WAF, CloudTrail, GuardDuty, AWS Shield, AWS Config, AWS Security Hub, S3-Bucket-Sicherheit, Cloud-native Sicherheit, Infrastruktur als Code, CloudFormation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Cloud-Sicherheit: AWS Multi-Layer Defense-Architektur">
+    <meta property="og:description" content="AWS security-by-design mit GuardDuty, Security Hub, Config, KMS. 99,9% Verfügbarkeit durch systematische Kontrollen.">
+	<meta property="og:locale" content="de_DE">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-cloud-security_de.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-cloud-security_de.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Cloud-Sicherheit: AWS Multi-Layer Defense-Architektur",
+      "description": "Wie Hack23 AWS security-by-design durch GuardDuty, Security Hub, Config, KMS und VPC Zero-Trust-Architektur für 99,9% Verfügbarkeit implementiert",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity-Experte",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-cloud-security_de.html"
+      },
+      "keywords": "AWS-Sicherheit, Cloud-Sicherheit, GuardDuty, Security Hub, Config, KMS, VPC, ISMS",
+      "articleSection": "Informationssicherheit",
+      "inLanguage": "de",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1834,
+      "articleBody": "Nichts ist wahr. Alles ist erlaubt. Außer AWS die Schuld zu geben, wenn Ihr falsch konfigurierter S3-Bucket Kundendaten preisgibt – das ist Ihre Verantwortung, nicht ihre...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_de.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-Richtlinie",
+          "description": "Implementierung einer Informationssicherheits-Managementsystem-Richtlinie"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cloud-Sicherheit",
+          "description": "AWS-Sicherheitsarchitektur und Best Practices"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-cloud-security_de.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://hack23.com/index_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cloud-Sicherheit",
+          "item": "https://hack23.com/discordian-cloud-security_de.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <!-- Hreflang tags for international SEO -->
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-cloud-security_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-cloud-security_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-cloud-security_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-cloud-security.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-cloud-security_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-cloud-security_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-cloud-security_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-cloud-security_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-cloud-security_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-cloud-security_ko.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-cloud-security_no.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-cloud-security_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-cloud-security_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-cloud-security_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-cloud-security_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-cloud-security.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_de.html">Startseite</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_de.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Cloud-Sicherheit
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_de.html">Startseite</a>
+    <a href="discordian-cybersecurity_de.html">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cloud_Security_Policy.md">ISMS Cloud-Richtlinie</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <div class="translation-notice" style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px;">
+      <p style="margin: 0;"><strong>🇩🇪 Übersetzungshinweis:</strong> Diese Seite wurde ins Deutsche übersetzt. Die vollständige professionelle Übersetzung des Inhalts erfolgt in Phase 2. Für den vollständigen englischen Inhalt besuchen Sie bitte die <a href="discordian-cloud-security.html" style="color: #0066cc; text-decoration: underline;">englische Version</a>.</p>
+    </div>
+
+    <h2 class="header">☁️ Cloud-Sicherheit: AWS Multi-Layer Defense</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">AWS: Gemeinsame Verantwortung bedeutet Sie sind verantwortlich</h2>
+      
+      <p><strong>Nichts ist wahr. Alles ist erlaubt.</strong> Außer AWS die Schuld zu geben, wenn Ihr falsch konfigurierter S3-Bucket Kundendaten preisgibt – das ist Ihre Verantwortung, nicht ihre. <strong>Das "Shared Responsibility Model" ist Amazons Art zu sagen: "Wir sichern die Cloud, Sie sichern was in der Cloud ist. Verwechseln Sie das nicht oder Sie werden gehackt."</strong></p>
+      
+      <p><strong>Denken Sie selbst, Dummkopf!</strong> Cloud-Sicherheit ist nicht schwer. Sie ist <em>anders</em>. Ihr Rechenzentrum hatte Wände, Türen, Wachpersonal. AWS hat IAM-Rollen, Sicherheitsgruppen, Verschlüsselung. Unterschiedliche Bedrohungen, unterschiedliche Kontrollen. <strong>Aber die Prinzipien? Die gleichen: Authentifizieren, autorisieren, überwachen, reagieren. FNORD – Ihre Firewall funktioniert nicht in der Cloud. Zeit für neue Spielzeuge.</strong></p>
+      
+      <p>Bei Hack23 praktizieren wir <strong>AWS security-by-design</strong> mit mehrschichtiger Verteidigung: GuardDuty für Bedrohungsintelligenz. Security Hub für Ergebnisaggregation. Config für Compliance-Überwachung. KMS für Verschlüsselungsschlüsselverwaltung. VPC-Segmentierung für Netzwerkisolation. Automatisierte Remediation über Lambda. Multi-Region für Ausfallsicherheit (eu-west-1, eu-central-1).</p>
+      
+      <p>Unsere <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cloud_Security_Policy.md">Cloud-Sicherheitsrichtlinie</a> ist öffentlich, weil Cloud-Sicherheit durch Verschleierung voraussetzt, dass Angreifer AWS-Dokumentation nicht lesen können. Transparenz demonstriert unsere Cybersicherheitsexpertise durch messbare Implementierung. <strong>Unser Bedrohungsmodell geht davon aus, dass Sie dies lesen. Willkommen. Viel Glück beim Ausnutzen von AWS-verwalteten Kontrollen.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Erleuchtung: Wenn Ihr Sicherheitsmodell davon ausgeht, dass AWS Ihre Ressourcen sichert, ist Ihr Sicherheitsmodell falsch. Sie sind verantwortlich. Handeln Sie entsprechend. <strong>FNORD – das einzige, was zwischen Ihnen und einem Angriff steht, ist, ob Ihr S3-Bucket-ACL "public-read" ist.</strong></em></p>
+    
+      <p><strong>Suchen Sie nach Unterstützung bei der Expertenimplementierung?</strong> <a href="why-hack23_de.html">Sehen Sie, warum Organisationen Hack23 wählen</a> für Sicherheitsberatung, die Innovation beschleunigt.</p>
+    </section>
+
+    <section id="note-professional-translation">
+      <div style="background-color: #e3f2fd; border: 1px solid #2196f3; padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+        <h3 style="color: #1565c0; margin-top: 0;">📋 Hinweis zur vollständigen Übersetzung</h3>
+        <p><strong>Phase 1 abgeschlossen:</strong> Diese Seite verfügt über eine vollständige technische Infrastruktur mit professionell übersetzten Metadaten, hreflang-Tags und Schema.org strukturierten Daten.</p>
+        <p><strong>Phase 2 ausstehend:</strong> Die vollständige professionelle Übersetzung des Policy-Inhalts erfordert:</p>
+        <ul style="margin: 0.5rem 0;">
+          <li>DeepL Pro API mit deutschem Glossar aus German-Translation-Guide.md v3.1</li>
+          <li>Native-Speaker-Review mit Cybersicherheitsexpertise</li>
+          <li>Beibehaltung des Discordian-Philosophiestils</li>
+          <li>Anpassung deutscher Regulierungsbehörden (BSI, DSGVO)</li>
+        </ul>
+        <p style="margin-bottom: 0;"><strong>Für vollständige technische Details:</strong> Siehe <a href="discordian-cloud-security.html" style="color: #0066cc;">englische Version</a> oder <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cloud_Security_Policy.md" style="color: #0066cc;">offizielle ISMS-Richtlinie</a>.</p>
+      </div>
+    </section>
+
+    <section id="hack23-cloud-architecture">
+      <h2 class="panel-caption">Hack23 AWS Cloud-Sicherheitsarchitektur</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ Bedrohungserkennung: GuardDuty</h3>
+          <p><strong>Kontinuierliche Überwachung:</strong> Analysiert VPC Flow Logs, CloudTrail-Ereignisse, DNS-Logs</p>
+          <p><strong>ML-basierte Erkennung:</strong> Identifiziert anomales Verhalten, Cryptocurrency-Mining, C&C-Kommunikation</p>
+          <p><strong>Automatische Reaktion:</strong> Lambda-Funktionen für automatische Remediation bei kritischen Findings</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Compliance-Überwachung: AWS Config</h3>
+          <p><strong>Konfigurationsaufzeichnung:</strong> Kontinuierliche Tracking aller AWS-Ressourcenänderungen</p>
+          <p><strong>Compliance-Regeln:</strong> Automatische Überprüfung gegen Sicherheitsbaselines (CIS, NIST)</p>
+          <p><strong>Drift-Erkennung:</strong> Alerts bei Abweichungen von genehmigten Konfigurationen</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Verschlüsselung: AWS KMS</h3>
+          <p><strong>Daten im Ruhezustand:</strong> Automatische Verschlüsselung für S3, RDS, EBS mit verwalteten Schlüsseln</p>
+          <p><strong>Schlüsselrotation:</strong> Automatische jährliche Rotation, manuelle Rotation bei Bedarf</p>
+          <p><strong>Audit-Trail:</strong> Alle Schlüsselnutzungen protokolliert in CloudTrail</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🌐 Netzwerkisolation: VPC</h3>
+          <p><strong>Segmentierung:</strong> Öffentliche, private und isolierte Subnetze für verschiedene Workload-Typen</p>
+          <p><strong>Sicherheitsgruppen:</strong> Stateful Firewall-Regeln auf Instanzebene</p>
+          <p><strong>NACLs:</strong> Stateless Netzwerk-ACLs auf Subnetzebene für zusätzliche Verteidigung</p>
+        </div>
+      </div>
+      
+      <p><strong>Zentralisierte Sicherheit:</strong> Security Hub aggregiert Findings von GuardDuty, Config, Inspector, Macie. Einzelne Konsole für Multi-Account-Umgebungen.</p>
+      
+      <p><strong>Multi-Region-Ausfallsicherheit:</strong> Primärregion eu-west-1 (Irland), Failover zu eu-central-1 (Frankfurt). Automatisierte Backups mit Cross-Region-Replikation.</p>
+    </section>
+
+    <section id="isms-policy-reference">
+      <h2 class="panel-caption">📋 ISMS-Richtlinienreferenz</h2>
+      
+      <p>Unsere vollständige Cloud-Sicherheitsrichtlinie ist im öffentlichen ISMS-Repository verfügbar:</p>
+      <p><strong>🔓 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cloud_Security_Policy.md">Cloud Security Policy (GitHub)</a></strong></p>
+      
+      <p><strong>Verwandte ISMS-Richtlinien:</strong></p>
+      <ul>
+        <li><a href="discordian-network-security_de.html">Netzwerksicherheit: Zero-Trust-Architektur</a></li>
+        <li><a href="discordian-access-control_de.html">Zugriffskontrolle: Identitätszentrierte Sicherheit</a></li>
+        <li><a href="discordian-data-protection_de.html">Datenschutz: Verschlüsselung und DSGVO</a></li>
+        <li><a href="discordian-monitoring-logging_de.html">Überwachung & Protokollierung: CloudTrail und CloudWatch</a></li>
+      </ul>
+      
+      <p><strong>23 FNORD 5</strong> – Alle Heil Eris! Alle Heil Discordia!</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 Hack23 AB (Org.nr 559534-7807) | <a href="why-hack23_de.html">Warum Hack23</a> | <a href="services_de.html">Dienstleistungen</a> | <a href="https://github.com/Hack23">GitHub</a></p>
+  <p><a href="accessibility-statement_de.html">Zugänglichkeitserklärung</a> | <a href="sitemap_de.html">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
