@@ -13,15 +13,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇫🇮 Finnish Translation Status 🦌"
-        A["📊 87/96 Files<br/>90.6% Complete 🚀 APPROACHING COMPLETION!"]
+        A["📊 91/96 Files<br/>94.8% Complete 🎯 NEAR-COMPLETE!"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 47<br/>No English content"]
         B --> D["⚡ Mostly Translated: 21<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 2<br/>Some English remains"]
-        B --> F["🆕 New Files: 17<br/>Infrastructure ready"]
+        B --> F["🆕 New Files: 21<br/>Infrastructure ready"]
         
-        A --> G["📝 Missing Files: 9"]
+        A --> G["📝 Missing Files: 5"]
         
         A --> H["🏆 Quality Score: 92.7%"]
         
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇫🇮 Finnish Files Exist** | 87 | **90.6%** | 🚀 **APPROACHING COMPLETION** |
-| **❌ Missing Files** | 9 | 9.4% | 🔄 |
+| **🇫🇮 Finnish Files Exist** | 91 | **94.8%** | 🎯 **NEAR-COMPLETE** |
+| **❌ Missing Files** | 5 | 5.2% | 🔄 |
 
 ### 🎯 Translation Quality Analysis
 
@@ -57,7 +57,7 @@ Files analyzed for English content remaining:
 
 **🏆 Quality Score:** 92.7% of existing files are fully/mostly translated (improved from 90.9%)
 
-**📈 Status:** 🚀 **APPROACHING COMPLETION** - 90.6% achieved (only 9 files remaining!)
+**📈 Status:** 🎯 **NEAR-COMPLETE** - 94.8% achieved (only 5 files remaining!)
 
 ## 🎉 Recent Improvements (December 29, 2025)
 
@@ -72,6 +72,41 @@ Files analyzed for English content remaining:
 
 ### Session 2: Additional ISMS Files
 **Files Added:** 77/96 (80.2% completion)
+
+**New Files Created (+4):**
+- ✅ discordian-monitoring-logging_fi.html (Valvonta & Lokitus)
+- ✅ discordian-email-security_fi.html (Sähköpostiturvallisuus)
+- ✅ discordian-open-source_fi.html (Avoimen Lähdekoodin Käytäntö)
+- ✅ discordian-disaster-recovery_fi.html (Katastrofipalautus)
+
+### Session 3: 85% Target Exceeded
+**Files Added:** 82/96 (85.4% completion - TARGET EXCEEDED!)
+
+**New Files Created (+5):**
+- ✅ discordian-security-training_fi.html (Turvallisuustietoisuuskoulutus)
+- ✅ discordian-third-party_fi.html (Kolmannen Osapuolen Hallinta)
+- ✅ discordian-vuln-mgmt_fi.html (Haavoittuvuuksien Hallinta)
+- ✅ iso-27001-implementation-sweden_fi.html (ISO 27001 Toteutusopas)
+- ✅ iso-27001-implementation-mistakes_fi.html (ISO 27001 Virheet)
+
+### Session 4: Approaching Completion
+**Files Added:** 87/96 (90.6% completion)
+
+**New Files Created (+5):**
+- ✅ discordian-llm-security_fi.html (LLM-Turvallisuus)
+- ✅ discordian-mobile-device_fi.html (Mobiililaitteiden Hallinta)
+- ✅ discordian-physical-security_fi.html (Fyysinen Turvallisuus)
+- ✅ discordian-security-strategy_fi.html (Turvallisuusstrategia)
+- ✅ discordian-stakeholders_fi.html (Sidosryhmähallinta)
+
+### Session 5: Near-Complete
+**Files Added:** 91/96 (94.8% completion - NEAR-COMPLETE!)
+
+**New Files Created (+4):**
+- ✅ discordian-business-value_fi.html (Turvallisuusinvestoinnin ROI)
+- ✅ discordian-change-mgmt_fi.html (Muutostenhallinta)
+- ✅ discordian-cra-conformity_fi.html (EU:n Kyberasetus)
+- ✅ discordian-ai-policy_fi.html (AI-Käytäntö) **← LAST ISMS POLICY FILE!**
 
 **New Files Created (+4):**
 - ✅ discordian-monitoring-logging_fi.html (Valvonta & Lokitus)
@@ -188,11 +223,14 @@ Files analyzed for English content remaining:
 - ⚡ `discordian-access-control_fi.html` ← `discordian-access-control.html`
 - ⚡ `discordian-asset-mgmt_fi.html` ← `discordian-asset-mgmt.html`
 - 🆕 `discordian-backup-recovery_fi.html` ← `discordian-backup-recovery.html`
+- 🆕 `discordian-business-value_fi.html` ← `discordian-business-value.html`
 - ⚡ `discordian-business-continuity_fi.html` ← `discordian-business-continuity.html`
+- 🆕 `discordian-change-mgmt_fi.html` ← `discordian-change-mgmt.html`
 - ⚡ `discordian-classification_fi.html` ← `discordian-classification.html`
 - 🆕 `discordian-cloud-security_fi.html` ← `discordian-cloud-security.html`
 - ⚡ `discordian-compliance-frameworks_fi.html` ← `discordian-compliance-frameworks.html`
 - ⚡ `discordian-compliance_fi.html` ← `discordian-compliance.html`
+- 🆕 `discordian-cra-conformity_fi.html` ← `discordian-cra-conformity.html`
 - ⚡ `discordian-crypto_fi.html` ← `discordian-crypto.html`
 - ⚡ `discordian-cybersecurity_fi.html` ← `discordian-cybersecurity.html`
 - ⚡ `discordian-data-classification_fi.html` ← `discordian-data-classification.html`
@@ -221,6 +259,7 @@ Files analyzed for English content remaining:
 - 🆕 `discordian-vuln-mgmt_fi.html` ← `discordian-vuln-mgmt.html`
 
 ### ISMS Policy Files (1 files)
+- ✅ 🆕 `discordian-ai-policy_fi.html` ← `discordian-ai-policy.html` **ALL POLICY FILES COMPLETE!**
 - ⚡ `discordian-info-sec-policy_fi.html` ← `discordian-info-sec-policy.html`
 
 ### ISO 27001 Resources (3 files)
@@ -256,21 +295,18 @@ Files analyzed for English content remaining:
 - ⚡ `cia-triad-faq_fi.html` ← `cia-triad-faq.html`
 - ⚡ `compliance-manager_fi.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (9 files)
+## ⚠️  Missing Translation Files (5 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (6 files)
-- ❌ `discordian-business-value_fi.html` ← `discordian-business-value.html`
-- ❌ `discordian-change-mgmt_fi.html` ← `discordian-change-mgmt.html`
-- ❌ `discordian-cra-conformity_fi.html` ← `discordian-cra-conformity.html`
+### ISMS Documentation (3 files)
 - ❌ `discordian-cra_fi.html` ← `discordian-cra.html`
 - ❌ `discordian-security-metrics_fi.html` ← `discordian-security-metrics.html`
 - ❌ `discordian-supplier-reality_fi.html` ← `discordian-supplier-reality.html`
 
-### ISMS Policy Files (1 files)
-- ❌ `discordian-ai-policy_fi.html` ← `discordian-ai-policy.html`
+### ISMS Policy Files (0 files)
+**✅ ALL ISMS POLICY FILES COMPLETE!**
 
 ### ISO 27001 Resources (1 files)
 - ❌ `iso-27001-certification-costs-sweden_fi.html` ← `iso-27001-certification-costs-sweden.html`
