@@ -13,7 +13,7 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇳🇴 Norwegian Translation Status ⛷️"
-        A["📊 73/96 Files<br/>76.04% Complete ✅ "]
+        A["📊 76/96 Files<br/>79.17% Complete ✅ "]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 47<br/>No English content"]
@@ -21,7 +21,7 @@ graph TB
         B --> E["⚠️  Partially Translated: 2<br/>Some English remains"]
         B --> F["❌ Needs Translation: 0<br/>Significant English"]
         
-        A --> G["📝 Missing Files: 23"]
+        A --> G["📝 Missing Files: 20"]
         
         A --> H["🏆 Quality Score: 95%+"]
         
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇳🇴 Norwegian Files Exist** | 73 | **76.04%** | ✅ |
-| **❌ Missing Files** | 23 | 23.96% | ⚠️  |
+| **🇳🇴 Norwegian Files Exist** | 76 | **79.17%** | ✅ |
+| **❌ Missing Files** | 20 | 20.83% | ⚠️  |
 
 ### 🎯 Translation Quality Analysis
 
@@ -69,6 +69,11 @@ Files analyzed for English content remaining:
 2. ✅ **discordian-backup-recovery_no.html** - Norwegian skeleton with metadata
 3. ✅ **discordian-business-value_no.html** - Norwegian skeleton with metadata
 
+**New Skeleton Files Created (Batch 2 - 3 files):**
+4. ✅ **discordian-change-mgmt_no.html** - Change Management skeleton
+5. ✅ **discordian-cloud-security_no.html** - Cloud Security skeleton
+6. ✅ **discordian-cra_no.html** - CRA Conformity Assessment skeleton
+
 **Skeleton Features:**
 - ✅ Correct lang="no" attribute
 - ✅ Translated meta descriptions and titles
@@ -78,9 +83,9 @@ Files analyzed for English content remaining:
 - ⏳ Content translation pending (marked with 🚧)
 
 **Progress:**
-- **Files created:** 3 of 23 remaining (13.04%)
-- **New file coverage:** 73/96 (76.04%, up from 72.92%)
-- **Remaining:** 23 files
+- **Files created:** 6 of 20 remaining (30%)
+- **New file coverage:** 76/96 (79.17%, up from 72.92%)
+- **Remaining:** 20 files
 
 ### Priority Pages Translation Phase 1 - COMPLETED ✅
 
