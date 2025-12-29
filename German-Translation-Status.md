@@ -5,7 +5,7 @@
 **Language:** German (de)  
 **Flag:** 🇩🇪 **Icon:** 🦅  
 **Target Market:** Germany, Austria, Switzerland  
-**Last Updated:** December 29, 2025
+**Last Updated:** December 29, 2025 (3 HIGH priority files added)
 
 ## 📊 Visual Status Overview
 
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇩🇪 German Files Exist** | 78 | **81.25%** | ⚠️  |
-| **❌ Missing Files** | 18 | 18.75% | ⚠️  |
+| **🇩🇪 German Files Exist** | 81 | **84.38%** | ⚡ |
+| **❌ Missing Files** | 15 | 15.62% | ⚡ |
 
 ### 🎯 Translation Quality Analysis
 
@@ -152,21 +152,18 @@ Files analyzed for English content remaining:
 - ⚡ `cia-triad-faq_de.html` ← `cia-triad-faq.html`
 - ⚡ `compliance-manager_de.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (18 files)
+## ⚠️  Missing Translation Files (15 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (17 files remaining)
-- ❌ `discordian-cloud-security_de.html` ← `discordian-cloud-security.html`
+### ISMS Documentation (14 files remaining)
 - ❌ `discordian-cra-conformity_de.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_de.html` ← `discordian-cra.html`
 - ❌ `discordian-data-classification_de.html` ← `discordian-data-classification.html`
-- ❌ `discordian-data-protection_de.html` ← `discordian-data-protection.html`
 - ❌ `discordian-email-security_de.html` ← `discordian-email-security.html`
 - ❌ `discordian-open-source_de.html` ← `discordian-open-source.html`
 - ❌ `discordian-physical-security_de.html` ← `discordian-physical-security.html`
-- ❌ `discordian-privacy_de.html` ← `discordian-privacy.html`
 - ❌ `discordian-remote-access_de.html` ← `discordian-remote-access.html`
 - ❌ `discordian-risk-register_de.html` ← `discordian-risk-register.html`
 - ❌ `discordian-security-metrics_de.html` ← `discordian-security-metrics.html`
@@ -176,8 +173,11 @@ These English pages exist but have no corresponding translation file:
 - ❌ `discordian-third-party_de.html` ← `discordian-third-party.html`
 - ❌ `discordian-threat-modeling_de.html` ← `discordian-threat-modeling.html`
 
-### ✅ Recently Completed
-- ✅ `discordian-network-security_de.html` ← `discordian-network-security.html` (December 29, 2025)
+### ✅ Recently Completed (HIGH Priority - December 29, 2025)
+- ✅ `discordian-network-security_de.html` ← `discordian-network-security.html`
+- ✅ `discordian-cloud-security_de.html` ← `discordian-cloud-security.html`
+- ✅ `discordian-data-protection_de.html` ← `discordian-data-protection.html`
+- ✅ `discordian-privacy_de.html` ← `discordian-privacy.html`
 
 ### Other Pages (1 files)
 - ❌ `breadcrumb-example_de.html` ← `breadcrumb-example.html`
