@@ -13,15 +13,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#F57C00','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇫🇮 Finnish Translation Status 🦌"
-        A["📊 73/96 Files<br/>76.0% Complete 🎯"]
+        A["📊 77/96 Files<br/>80.2% Complete 🎯"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 47<br/>No English content"]
         B --> D["⚡ Mostly Translated: 21<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 2<br/>Some English remains"]
-        B --> F["🆕 New Files: 3<br/>Infrastructure ready"]
+        B --> F["🆕 New Files: 7<br/>Infrastructure ready"]
         
-        A --> G["📝 Missing Files: 23"]
+        A --> G["📝 Missing Files: 19"]
         
         A --> H["🏆 Quality Score: 92.7%"]
         
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇫🇮 Finnish Files Exist** | 73 | **76.0%** | 🎯 |
-| **❌ Missing Files** | 23 | 24.0% | ⚠️  |
+| **🇫🇮 Finnish Files Exist** | 77 | **80.2%** | 🎯 |
+| **❌ Missing Files** | 19 | 19.8% | 🔄 |
 
 ### 🎯 Translation Quality Analysis
 
@@ -57,54 +57,60 @@ Files analyzed for English content remaining:
 
 **🏆 Quality Score:** 92.7% of existing files are fully/mostly translated (improved from 90.9%)
 
-**📈 Status:** 🎯 Good Progress - 76% completion achieved
+**📈 Status:** 🎯 Excellent Progress - 80.2% completion achieved
 
 ## 🎉 Recent Improvements (December 29, 2025)
 
-### Session 1: Homepage Translation Enhanced
-**File:** index_fi.html  
-**Quality Improvement:** 72% → ~90%+ (18% increase)
+### Session 1: Homepage & Priority Pages
+**Files:** index_fi.html, why-hack23_fi.html  
+**Quality Improvement:** Homepage 72% → ~90%, why-hack23 80% → ~90%
 
 **Sections Completed:**
-- ✅ "Learn More About Hack23 AB" collapsible section
-- ✅ "Why Choose Hack23 AB?" value proposition section
-- ✅ "Information Security Governance" section
-- ✅ FAQ section, Security Assessment Checklist CTA, Contact section
+- ✅ Homepage value propositions, governance, FAQ, contact
+- ✅ why-hack23 open source, full-stack, enterprise results sections
 
-### Session 2: Priority Page Completion
-**File:** why-hack23_fi.html  
-**Quality Improvement:** ~80% → ~90%+ (10% increase)
+**New Files Created (+3):**
+- ✅ discordian-cloud-security_fi.html (Pilviturvallisuus)
+- ✅ discordian-backup-recovery_fi.html (Varmuuskopiointi & Palautus)
+- ✅ discordian-secure-dev_fi.html (Turvallinen Kehitys)
 
-**Sections Completed:**
-- ✅ "Why Open Source Matters" section
-- ✅ "Open Source Credentials" highlight box
-- ✅ "Why Full-Stack Matters" section
-- ✅ "Enterprise Client Results" section
+### Session 2: Additional ISMS Files
+**Files Added:** 77/96 (80.2% completion, +4.2%)
 
-### Session 3: New ISMS Files Created (+3 files)
-**Files Added:** 73/96 (76.0% completion, +3.1%)
+**New Files Created (+4):**
+1. ✅ **discordian-monitoring-logging_fi.html**
+   - Valvonta & Lokitus: AWS Cloud-Native SIEM
+   - CloudWatch Logs, CloudTrail, GuardDuty, Security Hub
 
-1. ✅ **discordian-cloud-security_fi.html**
-   - Pilviturvallisuus: AWS Monikerroksinen Puolustusarkkitehtuuri
-   - GuardDuty, Security Hub, Config, KMS, VPC nollaluottamus
+2. ✅ **discordian-email-security_fi.html**
+   - Sähköpostiturvallisuus: SPF/DKIM/DMARC + Laitteistopohjainen MFA
+   - Gmail Workspace, YubiKey 2FA, tietojenkalastelukoulutus
 
-2. ✅ **discordian-backup-recovery_fi.html**
-   - Varmuuskopiointi & Palautus: Palauta tai Kadu
-   - 3-2-1 sääntö, AWS S3 + Glacier, RTO/RPO strategia
+3. ✅ **discordian-open-source_fi.html**
+   - Avoimen Lähdekoodin Käytäntö: Luottamus Läpinäkyvyyden Kautta
+   - OpenSSF Scorecard, SLSA Level 3, CII Best Practices
 
-3. ✅ **discordian-secure-dev_fi.html**
-   - Turvallinen Kehitys: DevSecOps Kilpailuetuna
-   - STRIDE-uhkamallintaminen, SLSA 3, OpenSSF Scorecard
+4. ✅ **discordian-disaster-recovery_fi.html**
+   - Katastrofipalautus: AWS-Natiivi Joustovara Kaaostekniikalla
+   - AWS FIS, monialueen vikasietoisuus, kaaostekniikka
 
 **Professional Finnish Terminology Applied:**
 - Kyberturvallisuuskonsultointi (Cybersecurity Consulting)
 - Vaatimustenmukaisuus (Compliance)
 - Pilviturvallisuus (Cloud Security)
 - Varmuuskopiointi (Backup)
+- Valvonta & Lokitus (Monitoring & Logging)
+- Sähköpostiturvallisuus (Email Security)
+- Tietojenkalastelukoulutus (Phishing Training)
+- Laitteistopohjainen MFA (Hardware MFA)
+- Avoimen Lähdekoodin Käytäntö (Open Source Policy)
+- Katastrofipalautus (Disaster Recovery)
+- Kaaostekniikka (Chaos Engineering)
+- Joustovara (Resilience)
+- Vikasietoisuus (Fault Tolerance)
 - Uhkamallintaminen (Threat Modeling)
 - Nollaluottamus (Zero Trust)
-- Radikaali läpinäkyvyys (Radical transparency)
-- Turvallisuus vauhdittaa innovaatioita (Security accelerates innovation)
+- Radikaali läpinäkyvyys (Radical Transparency)
 
 **Cultural Adaptations:**
 - Maintained "Göteborg" localization (Swedish city name)
@@ -142,7 +148,7 @@ Files analyzed for English content remaining:
 - ⚡ `blog-trigram-combat_fi.html` ← `blog-trigram-combat.html`
 - ⚡ `blog-trigram-future_fi.html` ← `blog-trigram-future.html`
 
-### ISMS Documentation (23 files)
+### ISMS Documentation (27 files)
 - ⚡ `discordian-acceptable-use_fi.html` ← `discordian-acceptable-use.html`
 - ⚡ `discordian-access-control_fi.html` ← `discordian-access-control.html`
 - ⚡ `discordian-asset-mgmt_fi.html` ← `discordian-asset-mgmt.html`
@@ -156,10 +162,14 @@ Files analyzed for English content remaining:
 - ⚡ `discordian-cybersecurity_fi.html` ← `discordian-cybersecurity.html`
 - ⚡ `discordian-data-classification_fi.html` ← `discordian-data-classification.html`
 - ⚡ `discordian-data-protection_fi.html` ← `discordian-data-protection.html`
+- 🆕 `discordian-disaster-recovery_fi.html` ← `discordian-disaster-recovery.html`
+- 🆕 `discordian-email-security_fi.html` ← `discordian-email-security.html`
 - ⚡ `discordian-incident-response_fi.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_fi.html` ← `discordian-isms-review.html`
 - ⚡ `discordian-isms-transparency_fi.html` ← `discordian-isms-transparency.html`
+- 🆕 `discordian-monitoring-logging_fi.html` ← `discordian-monitoring-logging.html`
 - ⚡ `discordian-network-security_fi.html` ← `discordian-network-security.html`
+- 🆕 `discordian-open-source_fi.html` ← `discordian-open-source.html`
 - ⚡ `discordian-privacy_fi.html` ← `discordian-privacy.html`
 - ⚡ `discordian-remote-access_fi.html` ← `discordian-remote-access.html`
 - ⚡ `discordian-risk-assessment_fi.html` ← `discordian-risk-assessment.html`
@@ -201,22 +211,18 @@ Files analyzed for English content remaining:
 - ⚡ `cia-triad-faq_fi.html` ← `cia-triad-faq.html`
 - ⚡ `compliance-manager_fi.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (23 files)
+## ⚠️  Missing Translation Files (19 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (18 files)
+### ISMS Documentation (14 files)
 - ❌ `discordian-business-value_fi.html` ← `discordian-business-value.html`
 - ❌ `discordian-change-mgmt_fi.html` ← `discordian-change-mgmt.html`
 - ❌ `discordian-cra-conformity_fi.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_fi.html` ← `discordian-cra.html`
-- ❌ `discordian-disaster-recovery_fi.html` ← `discordian-disaster-recovery.html`
-- ❌ `discordian-email-security_fi.html` ← `discordian-email-security.html`
 - ❌ `discordian-llm-security_fi.html` ← `discordian-llm-security.html`
 - ❌ `discordian-mobile-device_fi.html` ← `discordian-mobile-device.html`
-- ❌ `discordian-monitoring-logging_fi.html` ← `discordian-monitoring-logging.html`
-- ❌ `discordian-open-source_fi.html` ← `discordian-open-source.html`
 - ❌ `discordian-physical-security_fi.html` ← `discordian-physical-security.html`
 - ❌ `discordian-security-metrics_fi.html` ← `discordian-security-metrics.html`
 - ❌ `discordian-security-strategy_fi.html` ← `discordian-security-strategy.html`
