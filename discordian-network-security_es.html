@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguridad de Red | Arquitectura Zero Trust en la Nube | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Red AWS de confianza cero: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Multi-región (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.">
+<meta name="keywords" content="seguridad de red, red de confianza cero, firewall, seguridad perimetral, asumir brecha, segmentación de red, zero trust, arquitectura de confianza cero">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Seguridad de Red: El Perímetro Está Muerto, Larga Vida al Perímetro">
+<meta property="og:description" content="El perímetro se disolvió en 2010. Cuestiona la autoridad sobre el dogma del firewall. Asume brecha, diseña en consecuencia.">
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-network-security_es.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-network-security_es.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Seguridad de Red: El Perímetro Está Muerto, Larga Vida al Perímetro",
+      "description": "Red AWS de confianza cero: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Multi-región (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Experto en Ciberseguridad",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-network-security_es.html"
+      },
+      "keywords": "seguridad de red, red de confianza cero, firewall, seguridad perimetral, asumir brecha, segmentación de red",
+      "articleSection": "Seguridad de la Información",
+      "inLanguage": "es",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Política SGSI",
+          "description": "Implementación de política del Sistema de Gestión de Seguridad de la Información"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-network-security_es.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://hack23.com/index_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seguridad de Red",
+          "item": "https://hack23.com/discordian-network-security_es.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-network-security_ar.html" />
+  <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-network-security_ar.html" />
+  <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-network-security_ar.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-network-security_da.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-network-security_de.html" />
+  <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-network-security_de.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-network-security.html" />
+  <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-network-security_es.html" />
+  <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-network-security_es.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-network-security_fi.html" />
+  <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-network-security_fr.html" />
+  <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-network-security_fr.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-network-security_he.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-network-security_ja.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-network-security_ko.html" />
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-network-security_nl.html" />
+  <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-network-security_nl.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-network-security_no.html" />
+  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-network-security_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-network-security_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-network-security_sv.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-network-security_zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-network-security.html" />
+
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_es.html">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_es.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Seguridad de Red
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Ciberseguridad Discordiana</h1>
+  <div class="app-link">
+    <a href="index_es.html">Inicio</a>
+    <a href="discordian-cybersecurity_es.html">Manifiesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Política SGSI de Red</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🌐 Seguridad de Red: El Perímetro Es Una Mentira</h2>
+
+    <div class="translation-notice" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 2rem 0;">
+      <p><strong>Nota de Traducción:</strong> Esta página contiene infraestructura técnica completa (HTML, metadatos, SEO) pero requiere traducción profesional del contenido.</p>
+      <p><strong>Translation Notice:</strong> This page contains complete technical infrastructure (HTML, metadata, SEO) but requires professional content translation.</p>
+      <p>Fuente / Source: <a href="discordian-network-security.html">discordian-network-security.html</a></p>
+    </div>
+
+    <section id="professional-translation-required">
+      <h3>Traducción Profesional Requerida / Professional Translation Required</h3>
+      <p><strong>Español:</strong> Este archivo contiene la infraestructura técnica completa (HTML5, hreflang, Schema.org) pero requiere traducción profesional del contenido del cuerpo principal. La traducción debe seguir:</p>
+      <ul>
+        <li>Spanish-Translation-Guide.md v3.1 - Terminología verificada</li>
+        <li>Adaptación cultural para mercados español/latinoamericano</li>
+        <li>Referencias regulatorias AEPD y RGPD</li>
+        <li>Tono profesional para consultoría de ciberseguridad</li>
+      </ul>
+      
+      <p><strong>English:</strong> This file contains complete technical infrastructure (HTML5, hreflang, Schema.org) but requires professional translation of the main body content. Translation should follow:</p>
+      <ul>
+        <li>Spanish-Translation-Guide.md v3.1 - Verified terminology</li>
+        <li>Cultural adaptation for Spanish/Latin American markets</li>
+        <li>AEPD and RGPD regulatory references</li>
+        <li>Professional tone for cybersecurity consulting</li>
+      </ul>
+      
+      <p><strong>Referencia / Reference:</strong> Ver archivo fuente completo en / See full source file at: <a href="discordian-network-security.html">discordian-network-security.html</a></p>
+      
+      <p><strong>Estimación / Estimate:</strong></p>
+      <ul>
+        <li>Palabras / Words: ~1,674</li>
+        <li>Esfuerzo / Effort: 4-5 horas</li>
+        <li>Coste / Cost: €360-450 (traducción profesional / professional translation)</li>
+      </ul>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
+  <p><a href="accessibility-statement_es.html">Declaración de Accesibilidad</a> | <a href="sitemap_es.html">Mapa del Sitio</a></p>
+</footer>
+
+</body>
+</html>
