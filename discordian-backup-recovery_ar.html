@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النسخ الاحتياطي والاسترداد | AWS Backup | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="النسخ الاحتياطي الآلي باستخدام AWS Backup. النسخ عبر المناطق. RPO: 24 ساعة، RTO: 4 ساعات. اختبار ربع سنوي.">
+<meta name="keywords" content="النسخ الاحتياطي, الاسترداد, AWS Backup, RPO, RTO, استرداد الكوارث">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="النسخ الاحتياطي والاسترداد: البيانات غير المدعومة = البيانات المفقودة">
+<meta property="og:description" content="نسخ احتياطي آلي مع AWS Backup. نسخ عبر المناطق. RPO: 24 ساعة، RTO: 4 ساعات. اختبار ربع سنوي للاسترداد.">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-backup-recovery_ar.html">
+<link rel="canonical" href="https://hack23.com/discordian-backup-recovery_ar.html">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "النسخ الاحتياطي والاسترداد", "inLanguage": "ar", "author": {"@type": "Person", "name": "James Pether Sörling"}, "datePublished": "2025-11-05"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<style>body { font-family: 'Noto Sans Arabic', sans-serif; }</style>
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-backup-recovery_ar.html" />
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-backup-recovery.html" />
+</head>
+<body>
+<header>
+  <h1>الأمن السيبراني الديسكوردي</h1>
+  <nav><a href="index_ar.html">الرئيسية</a></nav>
+</header>
+<main>
+  <article>
+    <h2>💾 النسخ الاحتياطي والاسترداد</h2>
+    <section>
+      <h3>البيانات غير المدعومة = البيانات المفقودة</h3>
+      <p><strong>فكر بنفسك!</strong> النسخ الاحتياطية غير المختبرة ليست نسخاً احتياطية - إنها وهم من الأمان. اختبر الاسترداد أو واجه الفشل.</p>
+    </section>
+    <section>
+      <h3>استراتيجية النسخ الاحتياطي</h3>
+      <div class="cards">
+        <div class="card">
+          <h4>⏱️ RPO: 24 ساعة</h4>
+          <p><strong>نقطة استرداد الهدف:</strong> الحد الأقصى لفقدان البيانات المقبول</p>
+          <p>النسخ الاحتياطي اليومي الآلي</p>
+        </div>
+        <div class="card">
+          <h4>🎯 RTO: 4 ساعات</h4>
+          <p><strong>وقت استرداد الهدف:</strong> الحد الأقصى لوقت التوقف المقبول</p>
+          <p>الاسترداد الآلي من النسخ الاحتياطية</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3>التنفيذ</h3>
+      <ul>
+        <li>☁️ <strong>AWS Backup:</strong> خطط آلية للنسخ الاحتياطي</li>
+        <li>🌍 <strong>النسخ عبر المناطق:</strong> eu-west-1 → eu-central-1</li>
+        <li>🔐 <strong>التشفير:</strong> AES-256 في حالة السكون</li>
+        <li>✅ <strong>الاختبار:</strong> استرداد ربع سنوي</li>
+      </ul>
+    </section>
+    <section>
+      <h3>مراجع ISMS</h3>
+      <ul>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Backup_Recovery_Policy.md">سياسة النسخ الاحتياطي والاسترداد</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+<footer><p>© 2008-2025 Hack23 AB</p></footer>
+</body>
+</html>
