@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パンくずナビゲーション例 | Hack23</title>
+  <meta name="description" content="パンくずナビゲーションの実装例：階層的なページ構造とWebサイト内でのユーザー位置を表示します。">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Multilingual SEO -->
+  
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="he_IL">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="zh_CN">
+<link rel="canonical" href="https://hack23.com/breadcrumb-example_ja.html" />
+  
+  <!-- Hreflang tags -->
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/breadcrumb-example_ja.html" />
+  <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/breadcrumb-example_ja.html" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "パンくずナビゲーション例",
+  "description": "WCAG 2.1 AA準拠のパンくずナビゲーション実装例",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB"
+  },
+  "datePublished": "2025-12-29",
+  "dateModified": "2025-12-29"
+}</script>
+
+</head>
+<body>
+  <header>
+    <h1>パンくずコンポーネント例</h1>
+    <p>WCAG 2.1 AA準拠のプロフェッショナルなパンくずナビゲーション</p>
+  </header>
+
+  <!-- 例1: 2レベルのパンくず (ホーム > 現在のページ) -->
+  <nav aria-label="パンくず">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        機能
+      </li>
+    </ol>
+  </nav>
+
+  <h2>2レベルのパンくず例</h2>
+  <p>シンプルなパンくず: ホーム > 機能 (現在のページ)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- 例2: 3レベルのパンくず -->
+  <nav aria-label="パンくず">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">Citizen Intelligence Agency</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        機能
+      </li>
+    </ol>
+  </nav>
+
+  <h2>3レベルのパンくず例</h2>
+  <p>より深いパンくず: ホーム > Citizen Intelligence Agency > 機能 (現在のページ)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- 例3: 4レベルのパンくず -->
+  <nav aria-label="パンくず">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">ブログ</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html#cia">CIA記事</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        CIAアーキテクチャ詳細
+      </li>
+    </ol>
+  </nav>
+
+  <h2>4レベルのパンくず例</h2>
+  <p>4階層のナビゲーション構造を持つより深いパンくずです。</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <h2>アクセシビリティ機能</h2>
+  <ul>
+    <li><strong>セマンティックHTML:</strong> <code>&lt;nav&gt;</code>要素に<code>aria-label="パンくず"</code>と<code>&lt;ol&gt;</code>リスト構造を使用</li>
+    <li><strong>ARIA属性:</strong> 現在のページは<code>aria-current="page"</code>でマーク</li>
+    <li><strong>キーボードナビゲーション:</strong> すべてのリンクはタブでアクセス可能で、フォーカスインジケーターが表示されます</li>
+    <li><strong>スクリーンリーダー対応:</strong> 適切なセマンティック構造でナビゲーションコンテキストを通知</li>
+    <li><strong>色のコントラスト:</strong> WCAG 2.1 AA基準（最低4.5:1）を満たします</li>
+    <li><strong>レスポンシブデザイン:</strong> モバイル、タブレット、デスクトップに対応</li>
+    <li><strong>テーマサポート:</strong> ライトモード、ダークモード、Black Trigramテーマに対応</li>
+  </ul>
+
+  <h2>使用方法</h2>
+  <pre style="background: #f6f8fa; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>&lt;nav aria-label="パンくず"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/"&gt;ホーム&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/section.html"&gt;セクション&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item" aria-current="page"&gt;
+      現在のページ
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h2>テストチェックリスト</h2>
+  <ul>
+    <li>✅ キーボードナビゲーション (Tab, Shift+Tab, Enter)</li>
+    <li>✅ スクリーンリーダーの通知 (NVDA, JAWS, VoiceOverでテスト)</li>
+    <li>✅ 色のコントラストがWCAG 2.1 AA基準を満たす (通常テキストで4.5:1)</li>
+    <li>✅ すべてのビューポートサイズでレスポンシブデザインが機能</li>
+    <li>✅ フォーカスインジケーターが明確に表示される</li>
+    <li>✅ ホバー状態でビジュアルフィードバックを提供</li>
+    <li>✅ ライトモードとダークモードで動作</li>
+    <li>✅ Black Trigramテーマで動作</li>
+  </ul>
+</body>
+</html>
