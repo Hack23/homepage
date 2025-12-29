@@ -172,7 +172,7 @@ Each language has **two dedicated files**:
 ### European Languages 🇪🇺
 | Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
 |------|----------|------|-------|------------|---------|---------------|--------|
-| 🇳🇱🌷 | Dutch | nl | 63/96 | 65.62% | 83.5% | [v3.1 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
+| 🇳🇱🌷 | Dutch | nl | 96/96 | 100% | 83.5% | [v3.1 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
 | 🇩🇪🦅 | German | de | 77/96 | 80.21% | 85.7% | [v3.1 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
 | 🇫🇷🥐 | French | fr | 60/96 | 62.5% | 82.7% | [v3.1 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
 | 🇪🇸🎭 | Spanish | es | 60/96 | 62.5% | 82.7% | [v3.1 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
@@ -182,7 +182,7 @@ Each language has **two dedicated files**:
 |------|----------|------|-------|------------|---------|---------------|--------|
 | 🇸🇪👑 | Swedish | sv | 95/96 | 98.96% | **93.7%** 🎉 | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
 
-**Total:** 913 translation files out of 1,248 possible (96 base × 13 languages) = **73.2% complete**  
+**Total:** 946 translation files out of 1,248 possible (96 base × 13 languages) = **75.8% complete**  
 
 ## 📊 Visual Translation Overview
 
