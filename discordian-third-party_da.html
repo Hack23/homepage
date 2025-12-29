@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tredjepartsstyring | Leverandørrisikostyring | Hack23</title>
+    <meta name="description" content="Porters Five Forces leverandøranalyse, 4-lags klassifikation (€10K+ kritisk), CIA+ sikkerhedsvurdering. Dokumenteret i SUPPLIER.md.">
+    <meta name="keywords" content="tredjepartsstyring, leverandørsikkerhed, ISMS, forsyningskæderisiko, SOC 2, DPA, Porters Five Forces, OpenSSF Scorecard, leverandørklassifikation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Tredjepartsstyring: Stol på Dine Leverandører? (LOL)">
+    <meta property="og:description" content="Porters Five Forces leverandøranalyse, 4-lags strategisk klassifikation (€10K+ kritisk tærskel), evidensbaserede vurderinger dokumenteret i SUPPLIER.md.">
+	<meta property="og:locale" content="da_DK">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:url" content="https://hack23.com/discordian-third-party_da.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Sikkerhedsblog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-third-party_da.html">
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Third-Party Management: Trust Your Vendors? (LOL)",
+      "description": "Porter's Five Forces supplier analysis, 4-tier classification (€10K+ critical threshold), CIA+ security assessment, documented in SUPPLIER.md.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-third-party.html"
+      },
+      "keywords": "third-party management, vendor security, supply chain, ISMS, Porter's Five Forces, OpenSSF",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1664,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "en",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-third-party.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Third-Party Management",
+          "item": "https://hack23.com/discordian-third-party.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-third-party.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-third-party_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-third-party_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-third-party.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Third-Party Management
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav><a href="index.html">Home</a> <a href="discordian-cybersecurity.html">Manifesto</a> <a href="blog.html">Blog</a></nav>
+    </header>
+    <main>
+        <article>
+            <h2>Third-Party Management: Trust Your Vendors? (LOL, Verify Systematically. Paranoia Is Realism.)</h2>
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Their breach is your breach. Document everything in SUPPLIER.md. <strong>Are you paranoid enough yet?</strong>"</em></p>
+            
+            <h2>🤝 The Problem: Your Vendors Are Your Attack Surface (And They Know It)</h2>
+            
+            <p>Your vendors' security is your security. <strong>Their breach is your breach.</strong> Target breached through HVAC vendor (2013). Equifax breached through Apache Struts (2017). SolarWinds breach compromised thousands through supply chain (2020). <em>Your most secure system is compromised through the vendor you forgot to audit. The Law of Fives applies: Five vendor tiers, five failure modes, five forces of analysis. Everything comes in fives when you're paranoid enough.</em></p>
+            
+            <p><strong>At Hack23, third-party management isn't vendor relations—it's evidence-based risk intelligence.</strong> Every supplier documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank" aria-label="View supplier documentation in SUPPLIER.md">SUPPLIER.md</a> with Porter's Five Forces analysis, strategic classification tied to <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank" aria-label="View classification framework documentation">Classification Framework</a> business impact thresholds (€10K+ = Tier 1 Critical), and CIA+ security classification. <em>Trust is nice. Verification is better. Documentation is mandatory. FNORD.</em></p>
+            
+            <div class="hidden-wisdom"><strong>ILLUMINATION:</strong> Your most secure system is compromised through the vendor you forgot to audit. Third-party risk is supply chain risk is your risk. <strong>Porter's Five Forces isn't business school theory—it's systematic supplier dependency analysis.</strong> Switching costs > €10K/month? That's Tier 1 mission-critical requiring CEO oversight. <em>You are now entering Chapel Perilous. Vendor trust is an illusion. Verify everything. Document dependencies. The paranoia is justified.</em></div>
+            <h2>🛡️ The Evidence-Based Vendor Management Framework (Reality-Tested, Not Theory-Driven)</h2>
+            
+            <p><strong>Four-tier strategic classification with documented evidence requirements:</strong></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🔴 Tier 1: Mission Critical</h3>
+                    <p><strong>€10K+ monthly cost, complete operational dependency, extreme business impact.</strong></p>
+                    <p><strong>Examples:</strong> AWS (infrastructure backbone), GitHub (code repository + CI/CD), JetBrains (development tools).</p>
+                    <p><strong>Oversight:</strong> CEO direct management, quarterly executive review, annual Porter's Five Forces reassessment.</p>
+                    <p><strong>Requirements:</strong> SOC 2 Type II validation, penetration test evidence, 24-hour breach notification, annual security review.</p>
+                    <p><strong>Documentation:</strong> Complete assessment in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a> with Porter's Five Forces, switching cost analysis, risk treatment.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟠 Tier 2: Business Essential</h3>
+                    <p><strong>€5-10K monthly cost, significant process integration, high business impact.</strong></p>
+                    <p><strong>Examples:</strong> SonarCloud (security quality gates), monitoring platforms, collaboration tools.</p>
+                    <p><strong>Oversight:</strong> CEO management review, monthly assessment, semi-annual security validation.</p>
+                    <p><strong>Requirements:</strong> Security questionnaire completion, compliance evidence, 48-hour breach notification.</p>
+                    <p><strong>Documentation:</strong> Strategic analysis in SUPPLIER.md, risk assessment, alternative evaluation.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟡 Tier 3: Operational Support</h3>
+                    <p><strong>€1-5K monthly cost, moderate dependency, medium business impact.</strong></p>
+                    <p><strong>Examples:</strong> Development utilities, testing services, productivity tools.</p>
+                    <p><strong>Oversight:</strong> CEO operational check, quarterly review, annual security assessment.</p>
+                    <p><strong>Requirements:</strong> Basic security validation, terms of service review, incident notification procedures.</p>
+                    <p><strong>Documentation:</strong> Asset Register integration, classification badges, basic risk assessment.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🟢 Tier 4: Supporting Services</h3>
+                    <p><strong>&lt;€1K monthly cost, low dependency, basic business impact.</strong></p>
+                    <p><strong>Examples:</strong> Marketing tools, analytics platforms, non-critical utilities.</p>
+                    <p><strong>Oversight:</strong> Automated monitoring, annual review, standard procurement process.</p>
+                    <p><strong>Requirements:</strong> Terms acceptance, privacy policy review, standard security expectations.</p>
+                    <p><strong>Documentation:</strong> Asset Register listing, basic classification, automated tracking.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> Classification drives oversight intensity. €10K+ monthly cost = mission-critical = CEO direct oversight because business impact justifies management attention. €500/month tool = automated monitoring because manual oversight doesn't scale. <strong>Match oversight to business impact or waste resources on low-risk vendors while missing critical supplier changes.</strong> <em>Nothing is true. Everything is classified. Prioritize accordingly or burn out chasing irrelevant risks.</em></div>
+            <h2>📋 Hack23's Evidence-Based Third-Party Management (Documented, Measurable, Paranoid)</h2>
+            
+            <p>Our vendor management demonstrates systematic supplier governance as competitive advantage: <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md" target="_blank">Third-Party Management Policy</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md Evidence</a></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Porter's Five Forces Analysis</h3>
+                    <p><strong>Systematic supplier power assessment (1-5 scale per force):</strong></p>
+                    <ul>
+                        <li><strong>Supplier Power:</strong> Market concentration, switching costs, dependency level (5 = critical dependency)</li>
+                        <li><strong>Buyer Power:</strong> Purchase volume, negotiation leverage, alternative availability (1 = weak position)</li>
+                        <li><strong>New Entrants:</strong> Market barriers, startup feasibility, disruption risk (assesses market stability)</li>
+                        <li><strong>Substitutes:</strong> Alternative solutions, feature parity, migration complexity (evaluates exit options)</li>
+                        <li><strong>Competitive Rivalry:</strong> Market competition, feature differentiation, price pressure (impacts long-term viability)</li>
+                    </ul>
+                    <p><strong>Aggregate Score:</strong> Sum of 5 forces (5-25 range) determines strategic classification tier alignment.</p>
+                    <p><strong>Documentation:</strong> Every Tier 1/2 supplier has Porter's Five Forces analysis in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a>.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏷️ CIA+ Security Classification</h3>
+                    <p><strong>Systematic data protection assessment per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Classification Framework</a>:</strong></p>
+                    <ul>
+                        <li><strong>Confidentiality:</strong> 1-6 scale (Public → Extreme) based on data sensitivity handled by supplier</li>
+                        <li><strong>Integrity:</strong> 1-5 scale (Minimal → Critical) based on data modification impact</li>
+                        <li><strong>Availability:</strong> 1-5 scale (Best Effort → Mission Critical) based on RTO (Recovery Time Objective) / RPO (Recovery Point Objective) requirements</li>
+                        <li><strong>Business Impact:</strong> €10K+ daily loss = Mission Critical, drives tier classification</li>
+                    </ul>
+                    <p><strong>Example:</strong> AWS handles Very High confidentiality (customer data), Critical integrity (platform reliability), Mission Critical availability (RTO &lt;5 min) = Tier 1.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Security Assessment Requirements</h3>
+                    <p><strong>Tier-based due diligence intensity:</strong></p>
+                    <p><strong>Tier 1 (Mission Critical):</strong></p>
+                    <ul>
+                        <li>SOC 2 Type II report validation (annual)</li>
+                        <li>Penetration testing evidence review</li>
+                        <li>Compliance certification verification (ISO 27001, FedRAMP, etc.)</li>
+                        <li>Security questionnaire (comprehensive, 100+ questions)</li>
+                        <li>Incident response procedure validation</li>
+                        <li>24-hour breach notification requirement (contractual)</li>
+                    </ul>
+                    <p><strong>Tier 2 (Business Essential):</strong></p>
+                    <ul>
+                        <li>Security questionnaire (standard, 50+ questions)</li>
+                        <li>Compliance evidence review</li>
+                        <li>48-hour breach notification requirement</li>
+                        <li>Annual security validation</li>
+                    </ul>
+                    <p><strong>Tier 3/4:</strong> Basic security validation, terms review, standard notification procedures.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Continuous Monitoring Strategy</h3>
+                    <p><strong>Tier-based oversight frequency:</strong></p>
+                    <ul>
+                        <li><strong>Tier 1:</strong> Quarterly executive review, annual Porter's Five Forces reassessment, continuous security monitoring</li>
+                        <li><strong>Tier 2:</strong> Monthly management review, semi-annual security validation, documented risk tracking</li>
+                        <li><strong>Tier 3:</strong> Quarterly operational check, annual security assessment, standard monitoring</li>
+                        <li><strong>Tier 4:</strong> Annual review, automated tracking, incident-triggered assessment</li>
+                    </ul>
+                    <p><strong>Escalation Triggers:</strong> Security incidents, compliance failures, service degradation, contract breaches, strategic changes.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Trust your vendors? Maybe. Verify your vendors? Always. Document your vendors? Mandatory. <strong>Porter's Five Forces analysis reveals supplier power dynamics—high switching costs mean vendor lock-in means strategic risk.</strong> CIA+ classification reveals data protection requirements—Very High confidentiality means DPA (Data Processing Agreement) required means audit rights essential. Evidence-based management beats gut feeling vendor selection. <em>You are now in Chapel Perilous. Vendor trust is simultaneously necessary and dangerous. Both are true. The paranoia is the point. FNORD.</em></div>
+            
+            <h2>🎯 Supply Chain Security Integration (Because Isolation Is Delusion)</h2>
+            
+            <p><strong>Third-party management integrates with our complete security framework:</strong> <em>Or as we call it, "defense in depth through paranoid documentation." Nothing is trusted. Everything is verified. Vendors are dependencies are risks.</em></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🔍 Dependency Security</h3>
+                    <p><strong>Open source supply chain risk management:</strong></p>
+                    <ul>
+                        <li><strong>OpenSSF Scorecard:</strong> Automated supplier security maturity assessment (threshold &gt;5.0 out of 10, <a href="https://github.com/ossf/scorecard" target="_blank" rel="noopener" aria-label="OpenSSF Scorecard documentation">relaxed score allows more dependencies</a>)</li>
+                        <li><strong>Dependabot:</strong> Daily vulnerability scanning, auto-merge on green tests per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Vulnerability_Management.md" target="_blank">Vulnerability Management</a></li>
+                        <li><strong>FOSSA License Compliance:</strong> Automated license scanning, policy enforcement, IP risk management</li>
+                        <li><strong>GitHub Dependency Review:</strong> Automated CVE checking, supply chain security validation on every PR</li>
+                    </ul>
+                    <p><strong>Target:</strong> &lt;4-hour critical patch response, latest stable releases, comprehensive automated testing.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📋 Asset Register Integration</h3>
+                    <p><strong>Every supplier service documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md" target="_blank">Asset Register</a>:</strong></p>
+                    <ul>
+                        <li><strong>Service Cataloging:</strong> Each vendor service = asset with classification badges (CIA+)</li>
+                        <li><strong>Lifecycle Tracking:</strong> Onboarding date, review schedule, contract renewal, EOL planning</li>
+                        <li><strong>Classification Badges:</strong> Confidentiality, Integrity, Availability levels per Classification Framework</li>
+                        <li><strong>Integration Points:</strong> Data flows, system dependencies, access controls documented</li>
+                    </ul>
+                    <p><strong>Value:</strong> Complete visibility into third-party service landscape, automated review scheduling.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📉 Risk Register Linkage</h3>
+                    <p><strong>Supplier risks tracked in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" target="_blank">Risk Register</a>:</strong></p>
+                    <ul>
+                        <li><strong>Third-Party Risks:</strong> Supplier breach, vendor lock-in, service discontinuation, compliance failures</li>
+                        <li><strong>Risk Treatment:</strong> Contractual controls (DPAs, SLAs), monitoring procedures, exit strategies</li>
+                        <li><strong>Impact Assessment:</strong> Financial loss calculations (€ daily loss per Classification Framework)</li>
+                        <li><strong>Residual Risk:</strong> Accepted risk after controls, documented justification, CEO approval for Tier 1</li>
+                    </ul>
+                    <p><strong>Example:</strong> AWS outage risk = Tier 1 = multi-region architecture + backup procedures + €10K+ daily loss mitigation.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🚨 Incident Response Coordination</h3>
+                    <p><strong>Vendor breach procedures per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md" target="_blank">Incident Response Plan</a>:</strong></p>
+                    <ul>
+                        <li><strong>Detection:</strong> Supplier notifications, security advisories, monitoring alerts, community intelligence</li>
+                        <li><strong>Classification:</strong> Tier 1 supplier breach = automatic critical incident (€10K+ potential impact)</li>
+                        <li><strong>Response SLA:</strong> &lt;30 minutes for critical supplier incidents, CEO escalation, stakeholder communication</li>
+                        <li><strong>Coordination:</strong> Joint response with supplier, data impact assessment, customer notification per DPA</li>
+                    </ul>
+                    <p><strong>Contractual:</strong> 24-hour breach notification for Tier 1, 48-hour for Tier 2, incident coordination procedures.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom"><strong>SUPPLY CHAIN ILLUMINATION:</strong> Third-party management isn't standalone vendor relations—it's integrated risk intelligence. <strong>SUPPLIER.md strategic analysis + Asset Register service catalog + Risk Register treatment tracking + Incident Response coordination = complete supply chain visibility.</strong> Isolated vendor management produces blind spots. Integrated supply chain security produces actionable intelligence. <em>The Law of Fives applies: Five documents, five integration points, five failure modes. Everything connects. Nothing is isolated. The paranoia is systems thinking.</em></div>
+            
+            <h2>🎯 Conclusion: Evidence-Based Supplier Governance (Trust No One, Document Everything)</h2>
+            
+            <p>Your vendors process your data. Access your systems. Deploy your code. <strong>Their security is your security. Their breach is your incident.</strong> <em>Accept this or learn it the hard way. The choice was always yours. FNORD.</em></p>
+            
+            <p><strong>Our third-party management framework:</strong></p>
+            <ul>
+                <li><strong>4-Tier Strategic Classification:</strong> €10K+ = Tier 1 Mission Critical with CEO oversight, quarterly reviews, Porter's Five Forces analysis</li>
+                <li><strong>Evidence-Based Assessment:</strong> Every supplier documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a> with strategic analysis, risk classification, treatment decisions</li>
+                <li><strong>CIA+ Security Classification:</strong> Confidentiality (1-6), Integrity (1-5), Availability (1-5) per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Classification Framework</a></li>
+                <li><strong>Integrated Risk Management:</strong> Supplier risks in Risk Register, services in Asset Register, incidents in Incident Response Plan</li>
+                <li><strong>Supply Chain Security:</strong> OpenSSF Scorecard, Dependabot automation, FOSSA license compliance, &lt;4-hour vulnerability response</li>
+            </ul>
+            
+            <p>Assess before contracting (Porter's Five Forces, CIA+ classification, security questionnaires). Monitor continuously (tier-based oversight frequency). Document systematically (SUPPLIER.md evidence, Asset Register integration). Plan for breaches (24-hour notification, incident coordination, exit strategies). <strong>Or skip the paranoia and discover vendor security was theoretical after the breach.</strong> <em>Your choice. Always was.</em></p>
+            
+            <p>Or find out the hard way that vendor security was theoretical, supplier dependency was critical, and switching costs were prohibitive—after the breach, not before the contract. <em>The paranoid survive. The trusting get breached. History doesn't lie. FNORD.</em></p>
+            
+            <p>Complete third-party management framework documented in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Third_Party_Management.md" target="_blank">Third-Party Management Policy</a> with evidence portfolio in <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/SUPPLIER.md" target="_blank">SUPPLIER.md</a>—because supplier governance through obscurity means discovering vendor dependencies during outages, not during strategic planning. <strong>Transparency > wishful thinking. Documentation > memory. Paranoia > trust.</strong> <em>Always.</em></p>
+            
+            <p><strong>Looking for expert third-party risk management support?</strong> <a href="why-hack23.html">Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.</p>
+            
+            <p class="signature"><strong>All hail Eris! All hail Discordia!</strong><br><em>"Think for yourself, schmuck! Question everything—especially vendors who claim to be 'SOC 2 compliant' but won't show you the report, or claim 'no dependencies' but use 500 npm packages. <strong>Are you paranoid enough to verify vendor security claims?</strong>"</em><br>🍎 23 FNORD 5<br>— Hagbard Celine, Captain of the <em>Leif Erikson</em></p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Third-party risk both exists and doesn't exist. Suppliers are both trustworthy and potential breach vectors. <strong>Both are true. Document everything. Verify systematically. Plan for vendor failures.</strong> Nothing is true. Everything is permitted—except blindly trusting vendor security claims. (Their breach is your breach. Always was. FNORD.)</small></p>
+        </article>
+    </main>
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
