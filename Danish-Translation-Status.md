@@ -233,6 +233,8 @@ All pages include complete hreflang tags for:
 - **⚠️  Needs Work:** 0 files (0.0%)
 - **🏆 Overall Quality:** 95.0%
 
+*Note: Percentages calculated as (count/70 files) × 100. Total: 46 + 24 = 70 files with translations.*
+
 ## 📝 December 2025 Translation Improvements
 
 ### Phase 1 Core Pages Enhancement - **COMPLETED** ✅
