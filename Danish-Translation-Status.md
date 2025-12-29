@@ -36,6 +36,13 @@
 - **iso-27001-certification-costs-sweden_da.html** ✅ NEW (Certificeringsomkostninger)
 - **iso-27001-implementation-mistakes_da.html** ✅ NEW (Implementeringsfejl)
 
+**Phase 2 Session 4 - Strategic ISMS Files Complete (December 29, 2025):**
+- **discordian-security-strategy_da.html** ✅ NEW (Sikkerhedsstrategi)
+- **discordian-security-metrics_da.html** ✅ NEW (Sikkerhedsmetrikker)
+- **discordian-llm-security_da.html** ✅ NEW (LLM-sikkerhed)
+- **discordian-ai-policy_da.html** ✅ NEW (AI-politik)
+- **discordian-business-value_da.html** ✅ NEW (Forretningsværdi)
+
 **Translation Approach:**
 - Professional web-search assisted translation with Danish-Translation-Guide.md v3.1 terminology
 - Native-quality business terminology for Danish cybersecurity market
@@ -49,15 +56,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇩🇰 Danish Translation Status ⚓"
-        A["📊 85/96 Files<br/>88.54% Complete ✅ "]
+        A["📊 90/96 Files<br/>93.75% Complete ✅ "]
         
         A --> B["🎯 Quality Analysis"]
-        B --> C["✅ Fully Translated: 61<br/>No English content"]
+        B --> C["✅ Fully Translated: 66<br/>No English content"]
         B --> D["⚡ Mostly Translated: 24<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 0<br/>No files"]
         B --> F["❌ Needs Translation: 0<br/>No files"]
         
-        A --> G["📝 Missing Files: 11"]
+        A --> G["📝 Missing Files: 6"]
         
         A --> H["🏆 Quality Score: 95.0%"]
         
@@ -77,10 +84,10 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇩🇰 Danish Files Exist** | 85 | **88.54%** | ✅ |
-| **❌ Missing Files** | 11 | 11.5% | 🔄 |
+| **🇩🇰 Danish Files Exist** | 90 | **93.75%** | ✅ |
+| **❌ Missing Files** | 6 | 6.25% | 🔄 |
 
-**Progress:** +15 files created in Phase 2 (Session 1: +5, Session 2: +5, Session 3: +5)
+**Progress:** +20 files created in Phase 2 (Session 1: +5, Session 2: +5, Session 3: +5, Session 4: +5)
 
 ### 🎯 Translation Quality Analysis
 
@@ -88,16 +95,16 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 61 | 71.8% | No English content detected |
-| ⚡ **Mostly Translated** | 24 | 28.2% | Minimal English (technical terms only) |
+| ✅ **Fully Translated** | 66 | 73.3% | No English content detected |
+| ⚡ **Mostly Translated** | 24 | 26.7% | Minimal English (technical terms only) |
 | ⚠️  **Partially Translated** | 0 | 0.0% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
 **🏆 Quality Score:** 95.0% of existing files are fully/mostly translated (maintained excellence)
 
-**📈 Status:** ✅ Phase 2 Session 3 Complete - 15 files created total (3 sessions)
+**📈 Status:** ✅ Phase 2 Session 4 Complete - 20 files created total (4 sessions)
 
-*Note: Percentages calculated as (count/85 files) × 100. Total: 61 + 24 = 85 files with translations. +15 files added in Phase 2 (Sessions 1-3).*
+*Note: Percentages calculated as (count/90 files) × 100. Total: 66 + 24 = 90 files with translations. +20 files added in Phase 2 (Sessions 1-4).*
 
 ## 📊 Files by Category
 
@@ -185,43 +192,44 @@ Files analyzed for English content remaining:
 - ✅ `cia-triad-faq_da.html` ← `cia-triad-faq.html` **[95%+ Quality - Already excellent]**
 - ⚡ `compliance-manager_da.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (11 files)
+## ⚠️  Missing Translation Files (6 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (6 files)
+### ISMS Documentation (3 files)
+- ✅ `discordian-ai-policy_da.html` ← `discordian-ai-policy.html` **[NEW - Phase 2 Session 4]**
 - ✅ `discordian-backup-recovery_da.html` ← `discordian-backup-recovery.html` **[NEW - Phase 2 Session 1]**
-- ❌ `discordian-business-value_da.html` ← `discordian-business-value.html`
+- ✅ `discordian-business-value_da.html` ← `discordian-business-value.html` **[NEW - Phase 2 Session 4]**
 - ❌ `discordian-change-mgmt_da.html` ← `discordian-change-mgmt.html`
 - ✅ `discordian-cloud-security_da.html` ← `discordian-cloud-security.html` **[NEW - Phase 2 Session 1]**
 - ❌ `discordian-cra-conformity_da.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_da.html` ← `discordian-cra.html`
 - ✅ `discordian-disaster-recovery_da.html` ← `discordian-disaster-recovery.html` **[NEW - Phase 2 Session 1]**
 - ✅ `discordian-email-security_da.html` ← `discordian-email-security.html` **[NEW - Phase 2 Session 2]**
-- ❌ `discordian-llm-security_da.html` ← `discordian-llm-security.html`
+- ✅ `discordian-llm-security_da.html` ← `discordian-llm-security.html` **[NEW - Phase 2 Session 4]**
 - ✅ `discordian-mobile-device_da.html` ← `discordian-mobile-device.html` **[NEW - Phase 2 Session 3]**
 - ✅ `discordian-monitoring-logging_da.html` ← `discordian-monitoring-logging.html` **[NEW - Phase 2 Session 2]**
 - ✅ `discordian-open-source_da.html` ← `discordian-open-source.html` **[NEW - Phase 2 Session 2]**
 - ✅ `discordian-physical-security_da.html` ← `discordian-physical-security.html` **[NEW - Phase 2 Session 3]**
 - ✅ `discordian-secure-dev_da.html` ← `discordian-secure-dev.html` **[NEW - Phase 2 Session 1]**
-- ❌ `discordian-security-metrics_da.html` ← `discordian-security-metrics.html`
-- ❌ `discordian-security-strategy_da.html` ← `discordian-security-strategy.html`
+- ✅ `discordian-security-metrics_da.html` ← `discordian-security-metrics.html` **[NEW - Phase 2 Session 4]**
+- ✅ `discordian-security-strategy_da.html` ← `discordian-security-strategy.html` **[NEW - Phase 2 Session 4]**
 - ✅ `discordian-security-training_da.html` ← `discordian-security-training.html` **[NEW - Phase 2 Session 2]**
 - ❌ `discordian-stakeholders_da.html` ← `discordian-stakeholders.html`
 - ❌ `discordian-supplier-reality_da.html` ← `discordian-supplier-reality.html`
 - ✅ `discordian-third-party_da.html` ← `discordian-third-party.html` **[NEW - Phase 2 Session 2]**
 - ✅ `discordian-vuln-mgmt_da.html` ← `discordian-vuln-mgmt.html` **[NEW - Phase 2 Session 1]**
 
-### ISMS Policy Files (1 files)
-- ❌ `discordian-ai-policy_da.html` ← `discordian-ai-policy.html`
+### ISMS Policy Files (0 files)
+- ✅ `discordian-ai-policy_da.html` ← `discordian-ai-policy.html` **[NEW - Phase 2 Session 4]**
 
 ### ISO 27001 Resources (0 files)
 - ✅ `iso-27001-certification-costs-sweden_da.html` ← `iso-27001-certification-costs-sweden.html` **[NEW - Phase 2 Session 3]**
 - ✅ `iso-27001-implementation-mistakes_da.html` ← `iso-27001-implementation-mistakes.html` **[NEW - Phase 2 Session 3]**
 - ✅ `iso-27001-implementation-sweden_da.html` ← `iso-27001-implementation-sweden.html` **[NEW - Phase 2 Session 3]**
 
-### Other Pages (1 files)
+### Other Pages (3 files)
 - ❌ `breadcrumb-example_da.html` ← `breadcrumb-example.html`
 
 
