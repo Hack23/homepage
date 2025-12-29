@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netzwerksicherheit | Zero-Trust Cloud-Architektur | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Zero-Trust AWS-Netzwerk: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Multi-Region (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.">
+<meta name="keywords" content="Netzwerksicherheit, Zero-Trust-Netzwerk, Firewall, Perimetersicherheit, Angriff annehmen, Netzwerksegmentierung, Cloud-Sicherheit, AWS-Sicherheit, ISMS">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Netzwerksicherheit: Der Perimeter ist tot, es lebe der Perimeter">
+<meta property="og:description" content="Der Perimeter ist seit 2010 aufgelöst. Hinterfragen Sie die Firewall-Dogmen der Autoritäten. Gehen Sie von einem Angriff aus und entwickeln Sie entsprechend.">
+	<meta property="og:locale" content="de_DE">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-network-security_de.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-network-security_de.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Netzwerksicherheit: Der Perimeter ist tot, es lebe der Perimeter",
+      "description": "Denken Sie selbst über Netzwerksicherheit nach. Der Perimeter ist seit 2010 aufgelöst. Hinterfragen Sie die Firewall-Dogmen der Autoritäten. Hack23s Zero-Trust AWS-Architektur: CloudFront+WAF DDoS-Schutz, GuardDuty Bedrohungserkennung, Security Hub Aggregation, Multi-Region-Resilienz.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity-Experte",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-network-security_de.html"
+      },
+      "keywords": "Netzwerksicherheit, Zero Trust, Firewall, ISMS, Cloud-Sicherheit, AWS",
+      "articleSection": "Informationssicherheit",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1674,
+      "articleBody": "Denken Sie selbst, Dummkopf! Netzwerksicherheit war früher einfach: harte Schale, weicher Kern. Die Firewall hält die Bösen draußen, alles innerhalb ist vertrauenswürdig...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_de.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "de",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-Richtlinie",
+          "description": "Implementierung einer Informationssicherheits-Managementsystem-Richtlinie"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-network-security_de.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://hack23.com/index_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_de.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Netzwerksicherheit",
+          "item": "https://hack23.com/discordian-network-security_de.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "So implementieren Sie Zero-Trust-Netzwerksicherheit in AWS",
+      "description": "Schritt-für-Schritt-Anleitung zur Implementierung einer Zero-Trust-Netzwerkarchitektur mit CloudFront, WAF, GuardDuty, Security Hub und Multi-Region-Resilienz",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT5H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "150"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudFront"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS WAF (Web Application Firewall)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Shield (DDoS-Schutz)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "VPC Flow Logs"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Route 53 mit DNSSEC"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Netzwerksicherheitsrichtlinie",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Traditionelles Perimeter-Denken aufgeben",
+          "text": "Erkennen Sie an, dass der Netzwerkperimeter tot ist. Entwickeln Sie unter der Annahme eines Angriffs – gehen Sie davon aus, dass Angreifer bereits im Inneren sind oder hineinkommen werden",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Der Perimeter ist mit Cloud Computing und Remote-Arbeit im Jahr 2010 aufgelöst worden. Hören Sie auf, so zu tun, als wäre es anders"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "CloudFront mit WAF bereitstellen",
+          "text": "Richten Sie AWS CloudFront als Ihr Content Delivery Network mit angehängter AWS WAF für DDoS-Schutz und Webanwendungssicherheit ein",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Konfigurieren Sie WAF-Regeln für SQL-Injection, XSS und Rate Limiting"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Aktivieren Sie AWS Shield Standard (automatisch) oder Shield Advanced für erweiterten DDoS-Schutz"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Richten Sie Geo-Blocking ein, falls für Compliance-Anforderungen erforderlich"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Multi-Region-Architektur implementieren",
+          "text": "Stellen Sie Ressourcen über mehrere AWS-Regionen hinweg bereit, um Resilienz zu gewährleisten. Verwenden Sie eu-west-1 (Irland) als primäre und eu-central-1 (Frankfurt) zur Redundanz",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Multi-Region schützt vor regionalen Ausfällen und bietet niedrigere Latenz für Benutzer"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "VPC Flow Logs aktivieren",
+          "text": "Aktivieren Sie VPC Flow Logs, um Metadaten des Netzwerkverkehrs zu erfassen. Protokollieren Sie den gesamten akzeptierten und abgelehnten Verkehr für die Sicherheitsanalyse",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Flow Logs ermöglichen forensische Analysen und Anomalieerkennung ohne Leistungsbeeinträchtigung"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "GuardDuty konfigurieren",
+          "text": "Aktivieren Sie AWS GuardDuty für intelligente Bedrohungserkennung. Konfigurieren Sie Ergebnisse für die Weiterleitung an Security Hub zur zentralisierten Überwachung",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "GuardDuty analysiert VPC Flow Logs, CloudTrail-Ereignisse und DNS-Logs"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Richten Sie SNS-Benachrichtigungen für Befunde hoher und kritischer Schweregrade ein"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Netzwerksegmentierung implementieren",
+          "text": "Erstellen Sie isolierte Netzwerksegmente mit VPCs und Subnetzen. Verwenden Sie Sicherheitsgruppen und NACLs für Mikrosegmentierung",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Öffentliches Subnetz: Nur internet-facing Load Balancer"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Privates Subnetz: Anwendungsserver ohne direkten Internetzugang"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Isoliertes Subnetz: Datenbanken mit strikten Zugriffskontrollen"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "DNSSEC auf Route 53 aktivieren",
+          "text": "Konfigurieren Sie DNSSEC-Signierung auf Route 53 Hosted Zones, um DNS-Spoofing und Cache-Poisoning-Angriffe zu verhindern",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "DNSSEC bietet kryptographische Authentifizierung von DNS-Antworten"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Nur TLS 1.2+ erzwingen",
+          "text": "Konfigurieren Sie CloudFront und ALB so, dass TLS 1.2 oder höher erforderlich ist. Deaktivieren Sie ältere Protokolle (SSL, TLS 1.0, TLS 1.1)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Ältere TLS-Versionen haben bekannte Schwachstellen. Moderne Browser unterstützen TLS 1.2+"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Netzwerküberwachung implementieren",
+          "text": "Richten Sie umfassende Überwachung mit Security Hub, GuardDuty-Ergebnissen, VPC Flow Logs-Analyse und CloudWatch-Alarmen ein",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Sichtbarkeit ist kritisch für Zero Trust – Sie können nicht schützen, was Sie nicht sehen können"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Richtlinie überprüfen und aktualisieren",
+          "text": "Führen Sie halbjährliche Überprüfungen der Netzwerksicherheitsarchitektur durch. Aktualisieren Sie basierend auf neuen Bedrohungen, AWS-Service-Updates oder Erkenntnissen aus Vorfällen"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <!-- Hreflang tags for international SEO -->
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-network-security_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-network-security_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-network-security_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-network-security.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-network-security_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-network-security_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-network-security_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-network-security_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-network-security_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-network-security_ko.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-network-security_no.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-network-security_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-network-security_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-network-security_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-network-security_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-network-security.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_de.html">Startseite</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_de.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Netzwerksicherheit
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_de.html">Startseite</a>
+    <a href="discordian-cybersecurity_de.html">Manifest</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">ISMS Netzwerkrichtlinie</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <div class="translation-notice" style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px;">
+      <p style="margin: 0;"><strong>🇩🇪 Übersetzungshinweis:</strong> Diese Seite wurde ins Deutsche übersetzt. Die vollständige professionelle Übersetzung des Inhalts erfolgt in Phase 2. Für den vollständigen englischen Inhalt besuchen Sie bitte die <a href="discordian-network-security.html" style="color: #0066cc; text-decoration: underline;">englische Version</a>.</p>
+    </div>
+
+    <h2 class="header">🌐 Netzwerksicherheit: Der Perimeter ist eine Lüge</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Castle-and-Moat-Sicherheit starb mit mobilen Geräten</h2>
+      
+      <p><strong>Denken Sie selbst, Dummkopf!</strong> Netzwerksicherheit war früher einfach: harte Schale, weicher Kern. Die Firewall hält die Bösen draußen, alles innerhalb ist vertrauenswürdig. <em>Das war immer eine Fantasie, aber es war eine bequeme Fantasie, die Führungskräfte verstehen und budgetieren konnten.</em></p>
+      
+      <p><strong>Dieses Modell ist tot.</strong> Es ist seit mobilen Geräten, Cloud-Diensten und Remote-Arbeit tot. Aber Berater verkaufen weiterhin Castle-and-Moat-Sicherheit, weil es einfach zu erklären ist für Führungskräfte, die Technologie nicht verstehen – und weil zuzugeben, dass der Perimeter eine Fiktion ist, bedeutet zuzugeben, dass sie Ihnen jahrzehntelang teure Lügen verkauft haben. <strong>FNORD – Ihre Firewall ist Sicherheitstheater, das so tut, als sei es Schutz. Die Angriffe kommen von innen. Das war immer so.</strong></p>
+      
+      <p><strong>Nichts ist wahr. Alles ist erlaubt.</strong> Einschließlich Angreifer, die bereits in Ihrem "sicheren" Netzwerk sind und dies lesen, während sie von ihrem kompromittierten Endpunkt aus Kaffee trinken. Planen Sie für einen Angriff. Entwickeln Sie für Eindämmung. Testen Sie Ihre Erkennung. <strong>Sind Sie paranoid genug, um anzunehmen, dass Sie bereits kompromittiert sind? Das sollten Sie sein. Statistisch gesehen sind Sie es wahrscheinlich.</strong></p>
+      
+      <p>Bei Hack23 praktizieren wir, was wir predigen: <strong>Zero-Trust AWS Cloud-native Architektur</strong> mit Defense-in-Depth. CloudFront+WAF für den Perimeter (DDoS-Schutz, OWASP-Regelsätze). GuardDuty für Bedrohungsintelligenz. Security Hub für Ergebnisaggregation. VPC Flow Logs für Verkehrsanalyse. Multi-Region-Bereitstellung (eu-west-1, eu-central-1) für Resilienz. DNSSEC-Verifizierung auf allen Domains. TLS 1.2+ überall erzwungen.</p>
+      
+      <p>Unsere <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Netzwerksicherheitsrichtlinie</a> ist öffentlich, weil Netzwerksicherheit durch Verschleierung voraussetzt, dass Angreifer keine Port-Scans durchführen können. Transparenz demonstriert unsere Cybersicherheitsberatungsexpertise durch messbare Implementierung. <strong>Unser Bedrohungsmodell geht davon aus, dass Sie dies lesen. Willkommen, Gegner. Genießen Sie die Dokumentation.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Erleuchtung: Wenn Ihr Sicherheitsmodell davon ausgeht, dass Angreifer draußen sind, ist Ihr Sicherheitsmodell von 1995. Aktualisieren Sie es oder werden Sie gehackt. Wir haben unseres aktualisiert – hier ist der Beweis. <strong>FNORD – das Einzige, was Sie von einem Angriff trennt, ist, ob der Angreifer schon Kaffee hatte.</strong></em></p>
+    
+      
+      <p><strong>Suchen Sie nach Unterstützung bei der Expertenimplementierung?</strong> <a href="why-hack23_de.html">Sehen Sie, warum Organisationen Hack23 wählen</a> für Sicherheitsberatung, die Innovation beschleunigt.</p>
+    </section>
+
+    <section id="note-professional-translation">
+      <div style="background-color: #e3f2fd; border: 1px solid #2196f3; padding: 1.5rem; margin: 2rem 0; border-radius: 4px;">
+        <h3 style="color: #1565c0; margin-top: 0;">📋 Hinweis zur vollständigen Übersetzung</h3>
+        <p><strong>Phase 1 abgeschlossen:</strong> Diese Seite verfügt über eine vollständige technische Infrastruktur mit professionell übersetzten Metadaten, hreflang-Tags und Schema.org strukturierten Daten.</p>
+        <p><strong>Phase 2 ausstehend:</strong> Die vollständige professionelle Übersetzung des Policy-Inhalts erfordert:</p>
+        <ul style="margin: 0.5rem 0;">
+          <li>DeepL Pro API mit deutschem Glossar aus German-Translation-Guide.md v3.1</li>
+          <li>Native-Speaker-Review mit Cybersicherheitsexpertise</li>
+          <li>Beibehaltung des Discordian-Philosophiestils</li>
+          <li>Anpassung deutscher Regulierungsbehörden (BSI, DSGVO)</li>
+        </ul>
+        <p style="margin-bottom: 0;"><strong>Geschätzte Phase 2:</strong> 1-1.5 Stunden pro Datei | €50-75 für professionelle Übersetzungsdienste</p>
+        <p><strong>Für vollständige technische Details:</strong> Siehe <a href="discordian-network-security.html" style="color: #0066cc;">englische Version</a> oder <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md" style="color: #0066cc;">offizielle ISMS-Richtlinie</a>.</p>
+      </div>
+    </section>
+
+    <section id="hack23-network-architecture">
+      <h2 class="panel-caption">Hack23 AWS Zero-Trust-Netzwerkarchitektur</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🌐 Perimeter-Schicht: CloudFront + WAF</h3>
+          <p><strong>DDoS-Schutz:</strong> AWS Shield Standard, CloudFront-Verteilung mit Caching, automatische Abwehr</p>
+          <p><strong>WAF-Regeln:</strong> OWASP Top 10 Schutz, Rate Limiting, Geo-Blocking bei Bedarf</p>
+          <p><strong>TLS-Erzwingung:</strong> TLS 1.2+ obligatorisch, <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com">SSL Labs A+ Bewertung</a></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ Anwendungsschicht: Private Subnetze</h3>
+          <p><strong>Lambda-Funktionen:</strong> Serverless Computing in privater VPC, keine direkte Internetexposition</p>
+          <p><strong>API Gateway:</strong> Rate Limiting, Authentifizierung, Request-Validierung vor Backend-Zugriff</p>
+          <p><strong>VPC-Endpoints:</strong> Private Konnektivität zu AWS-Diensten (S3, KMS, Systems Manager) ohne NAT</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>💾 Datenschicht: Isolierte Tier</h3>
+          <p><strong>RDS PostgreSQL:</strong> Nur private Subnetze, kein öffentlicher Zugriff, Verschlüsselung im Ruhezustand (KMS)</p>
+          <p><strong>S3-Buckets:</strong> VPC-Endpoints für internen Zugriff, öffentlicher Zugriff standardmäßig blockiert</p>
+          <p><strong>Secrets Management:</strong> AWS Secrets Manager mit automatischer Rotation, Least-Privilege-IAM</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 Management-Ebene: Sicherer Zugriff</h3>
+          <p><strong>Systems Manager:</strong> Sicherer Fernzugriff ohne SSH/RDP, Sitzungsprotokollierung zu CloudTrail</p>
+          <p><strong>CloudTrail:</strong> Alle API-Aufrufe protokolliert, unveränderliches Audit-Trail, SIEM-Integration bereit</p>
+          <p><strong>Multi-Faktor-Authentifizierung:</strong> AWS Identity Center mit obligatorischer MFA für allen Zugriff</p>
+        </div>
+      </div>
+      
+      <p><strong>Multi-Region-Resilienz:</strong> Primärregion eu-west-1 (Stockholm), Failover zu eu-central-1 (Frankfurt). AWS Backup regionsübergreifende Replikation. Route 53 Health Checks mit automatischem Failover.</p>
+      
+      <p><strong>Live-Beweise:</strong></p>
+      <ul>
+        <li>🌐 <a href="https://dnssec-debugger.verisignlabs.com/hack23.com">DNSSEC-Verifizierung: hack23.com</a></li>
+        <li>🔐 <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com">SSL Labs Test: A+ Bewertung</a></li>
+        <li>📧 <a href="https://mxtoolbox.com/spf.aspx?domain=hack23.com">SPF-Datensatz: Strikte Richtlinie</a></li>
+        <li>🛡️ <a href="https://mxtoolbox.com/dmarc.aspx?domain=hack23.com">DMARC: Reject-Richtlinie</a></li>
+      </ul>
+    </section>
+
+    <section id="isms-policy-reference">
+      <h2 class="panel-caption">📋 ISMS-Richtlinienreferenz</h2>
+      
+      <p>Unsere vollständige Netzwerksicherheitsrichtlinie ist im öffentlichen ISMS-Repository verfügbar:</p>
+      <p><strong>🔓 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy (GitHub)</a></strong></p>
+      
+      <p><strong>Verwandte ISMS-Richtlinien:</strong></p>
+      <ul>
+        <li><a href="discordian-access-control_de.html">Zugriffskontrolle: Zero Trust durch identitätszentrierte Sicherheit</a></li>
+        <li><a href="discordian-cloud-security_de.html">Cloud-Sicherheit: AWS Well-Architected Framework</a></li>
+        <li><a href="discordian-incident-response_de.html">Incident Response: Wenn (nicht falls) die Scheiße den Ventilator trifft</a></li>
+        <li><a href="discordian-monitoring-logging_de.html">Überwachung & Protokollierung: Wenn ein Baum fällt und niemand es protokolliert...</a></li>
+      </ul>
+      
+      <p><strong>23 FNORD 5</strong> – Alle Heil Eris! Alle Heil Discordia!</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 Hack23 AB (Org.nr 559534-7807) | <a href="why-hack23_de.html">Warum Hack23</a> | <a href="services_de.html">Dienstleistungen</a> | <a href="https://github.com/Hack23">GitHub</a></p>
+  <p><a href="accessibility-statement_de.html">Zugänglichkeitserklärung</a> | <a href="sitemap_de.html">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
