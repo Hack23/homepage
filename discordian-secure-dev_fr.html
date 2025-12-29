@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Développement Sécurisé | STRIDE + DevSecOps | Hack23</title>
+<meta name="description" content="Modélisation des menaces STRIDE + couverture de tests 80% + SLSA 3 + OpenSSF 7.0+. Documentation d'architecture de sécurité, tests automatisés, badges de preuve publique.">
+<meta name="keywords" content="développement sécurisé, DevSecOps, modélisation menaces STRIDE, SLSA 3, OpenSSF Scorecard, tests unitaires, tests E2E, SBOM, SGSI hack23, CNIL, RGPD, ANSSI">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Développement Sécurisé : Code Sans Backdoors (Intentionnellement)">
+<meta property="og:description" content="Modélisation menaces STRIDE + couverture tests 80% + attestations SLSA 3 + scorecard OpenSSF 7.0+. Documentation architecture sécurité, pipelines de tests automatisés, et badges de preuve publique.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-secure-dev_fr.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Blog Sécurité Hack23">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-secure-dev_fr.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Développement Sécurisé : DevSecOps Comme Avantage Concurrentiel",
+      "description": "Comment Hack23 utilise la sécurité by design avec modélisation menaces STRIDE, couverture tests 80%, attestations SLSA 3, et preuves sécurité publiques pour l'excellence DevSecOps",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "PDG / Expert en Cybersécurité",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-29",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-secure-dev_fr.html"
+      },
+      "keywords": "développement sécurisé, SDLC, codage sécurisé, SGSI, ANSSI, CNIL, RGPD",
+      "articleSection": "Sécurité de l'Information",
+      "inLanguage": "fr",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1561,
+      "articleBody": "Rien n'est vrai. Tout est permis. Sauf livrer du code sans modèles de menace—ce n'est pas du développement agile, c'est jouer avec les données de quelqu'un d'autre...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Blog Sécurité Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Politique SGSI",
+          "description": "Mise en œuvre de la politique du système de management de la sécurité de l'information"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-secure-dev_fr.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://hack23.com/index_fr.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_fr.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Développement Sécurisé",
+          "item": "https://hack23.com/discordian-secure-dev_fr.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <!-- Hreflang tags for international SEO -->
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-secure-dev_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-secure-dev_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-secure-dev_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-secure-dev_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-secure-dev_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-secure-dev.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-secure-dev_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-secure-dev_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-secure-dev_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-secure-dev_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-secure-dev_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-secure-dev_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-secure-dev_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-secure-dev_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-secure-dev_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-secure-dev_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-secure-dev_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-secure-dev_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-secure-dev_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-secure-dev_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-secure-dev_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-secure-dev.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Fil d'Ariane">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_fr.html">Accueil</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_fr.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Développement Sécurisé
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Logo Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>Cybersécurité Discordienne</h1>
+  <div class="app-link">
+    <a href="index_fr.html">Accueil</a>
+    <a href="discordian-cybersecurity_fr.html">Manifeste</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">Politique SGSI Développement</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h2 class="header">💻 Développement Sécurisé : Code Sans Backdoors (Intentionnellement)</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">DevSecOps N'est Pas Un Buzzword, C'est Une Discipline</h2>
+      
+      <p><strong>Rien n'est vrai. Tout est permis.</strong> Sauf livrer du code sans modèles de menace—ce n'est pas du développement agile, c'est jouer avec les données de quelqu'un d'autre en espérant avoir de la chance. Chaque ligne de code est une surface d'attaque potentielle. Chaque dépendance est une compromission latente. <strong>FNORD—votre pipeline CI/CD sans portes de sécurité est juste une usine d'automatisation de vulnérabilités.</strong></p>
+      
+      <p><strong>Pensez par vous-même.</strong> Le « shift-left » sécurité n'est pas de déplacer les audits de sécurité plus tôt dans le pipeline. C'est d'intégrer la pensée sécuritaire dans chaque décision de conception, chaque revue de code, chaque merge request. <strong>La sécurité n'est pas une phase. La sécurité est une discipline.</strong></p>
+      
+      <p>Chez Hack23, le développement sécurisé signifie <strong>preuves publiques, pas promesses privées</strong> conformément aux recommandations ANSSI et CNIL :</p>
+      
+      <ul>
+        <li>🎯 <strong>Modélisation des menaces STRIDE</strong> obligatoire avant le premier commit</li>
+        <li>📊 <strong>Couverture de tests minimale 80%</strong> avec rapports JaCoCo/Jest publics</li>
+        <li>🔐 <strong>Attestations de build SLSA 3</strong> pour la sécurité de la chaîne d'approvisionnement</li>
+        <li>🏗️ <strong>Documentation d'architecture de sécurité</strong> vivante avec diagrammes Mermaid</li>
+        <li>🤖 <strong>Portes de sécurité automatisées</strong> bloquant sur résultats critiques</li>
+        <li>🏆 <strong>OpenSSF Scorecard 7.0+</strong> avec badges publics</li>
+      </ul>
+      
+      <p>Notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">Politique de Développement Sécurisé</a> est publique parce que la sécurité par l'obscurité suppose que les attaquants ne peuvent pas lire votre code. Les référentiels open source supposent qu'ils le peuvent—et prouvent que la transparence améliore la qualité conformément aux principes RGPD de transparence.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination : Si vous ne pouvez pas le mesurer, vous ne pouvez pas le sécuriser. Si vous ne le publierez pas, vous cachez quelque chose. Nous mesurons tout. Nous publions tout. Bienvenue dans l'excellence DevSecOps systématique.</em></p>
+      
+      <p><strong>Vous cherchez une mise en œuvre DevSecOps experte ?</strong> <a href="why-hack23_fr.html">Découvrez pourquoi les organisations choisissent Hack23</a> pour intégrer la sécurité sans ralentir l'innovation.</p>
+    </section>
+
+    <section id="principles">
+      <h2 class="panel-caption">Cinq Piliers Du Développement Sécurisé Hack23</h2>
+      
+      <p><strong>Remettez en question l'autorité</strong> qui dit que la sécurité ralentit le développement. La sécurité <em>accélère</em> le développement en prévenant les réécritures coûteuses dues aux violations. Nos cinq piliers prouvent cela :</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎯 Modélisation des Menaces Obligatoire</h3>
+          <p><strong>STRIDE avant le code.</strong> Chaque projet nécessite THREAT_MODEL.md avec analyse complète : application du framework STRIDE, intégration MITRE ATT&CK, développement d'arbres d'attaque, évaluation quantitative des risques conforme ANSSI. Le CIA a obtenu un score OpenSSF de 7.2—les modèles de menace publics sont la preuve d'une pensée sécuritaire systématique, pas une conformité case à cocher.</p>
+          <p class="hidden-wisdom"><em>Le code sans modèles de menace est juste de la création de vulnérabilités avec optimisme et budget.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 📊 Couverture de Tests Minimale 80%</h3>
+          <p>Les tests complets ne sont pas optionnels. <strong>Minimum 80% de couverture de lignes, 70% de couverture de branches.</strong> Rapports JaCoCo/Jest/Vitest publics, exécution automatisée à chaque commit, suivi des tendances historiques conformément aux bonnes pratiques CNIL. Le CIA et Black Trigram maintiennent des tableaux de bord de couverture en direct—transparence plutôt que promesses, preuves plutôt que revendications.</p>
+          <p class="hidden-wisdom"><em>Si vous ne pouvez pas le mesurer, vous ne pouvez pas le sécuriser. Si vous ne le publierez pas, vous cachez quelque chose.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🔐 Attestations de Build SLSA 3</h3>
+          <p>Sécurité de la chaîne d'approvisionnement par provenance vérifiable. Attestations SLSA 3, artefacts signés, génération automatique de SBOM, preuves de build immuables conformes RGPD. Chaque version inclut une preuve cryptographique de ce qui a été construit, par qui, depuis quelle source. Faire confiance mais vérifier—nous fournissons les données de vérification.</p>
+          <p class="hidden-wisdom"><em>Les artefacts non signés sont des promesses. Les attestations signées sont des preuves. Nous traitons en preuves.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🏗️ Documentation d'Architecture de Sécurité</h3>
+          <p>Documentation vivante, pas PDF obsolètes. Chaque référentiel : SECURITY_ARCHITECTURE.md (état actuel), FUTURE_SECURITY_ARCHITECTURE.md (feuille de route), WORKFLOWS.md (automatisation CI/CD) conformément aux recommandations ANSSI. Diagrammes Mermaid, liens de preuve, alignement AWS Well-Architected. La documentation en tant que code signifie qu'elle reste à jour ou le CI échoue.</p>
+          <p class="hidden-wisdom"><em>Documentation obsolète est pire que pas de documentation. Vérification automatisée bat les promesses manuelles.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🤖 Portes de Sécurité Automatisées</h3>
+          <p>Les humains font des erreurs à 2h du matin. Les ordinateurs non. SAST (SonarCloud), SCA (Dependabot/FOSSA), DAST (OWASP ZAP), scan de secrets, CodeQL—tout automatisé, tout bloquant sur résultats critiques selon directives CNIL. Cibles OpenSSF Scorecard 7.0+ avec badges publics. Les portes de sécurité ne sont pas de la bureaucratie—c'est l'excellence systématique à l'échelle.</p>
+          <p class="hidden-wisdom"><em>Revue manuelle nécessaire mais insuffisante. Portes automatisées attrapent l'évident que les humains ratent quand épuisés.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sdlc">
+      <h2 class="panel-caption">SDLC Sécurisé : Intégration de Sécurité Guidée par Classification</h2>
+      
+      <p>Sécurité intégrée tout au long du développement en utilisant notre <a href="discordian-classification.html">framework de classification CIA+</a> conforme RGPD et CNIL :</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📋 Phase 1 : Planification & Conception</h3>
+          <ul>
+            <li><strong>Classification du Projet :</strong> Triade CIA, RTO/RPO, analyse d'impact métier selon Framework de Classification CNIL</li>
+            <li><strong>Modélisation des Menaces :</strong> Framework STRIDE + intégration MITRE ATT&CK obligatoire pour tous projets</li>
+            <li><strong>Architecture de Sécurité :</strong> SECURITY_ARCHITECTURE.md avec diagrammes Mermaid avant premier commit</li>
+            <li><strong>Analyse Coût-Bénéfice :</strong> Investissements sécurité alignés avec ROI de classification</li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💻 Phase 2 : Développement</h3>
+          <ul>
+            <li><strong>Standards de Codage Sécurisé :</strong> OWASP Top 10 + bonnes pratiques spécifiques au langage ANSSI</li>
+            <li><strong>Revue de Code :</strong> Revue par pairs axée sécurité pour composants critiques (basé classification)</li>
+            <li><strong>Gestion des Secrets :</strong> Aucune credential en dur—AWS Secrets Manager avec rotation systématique RGPD</li>
+            <li><strong>Sécurité Pilotée par Tests :</strong> Tests unitaires pour propriétés sécurité, minimum 80% couverture</li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧪 Phase 3 : Tests de Sécurité</h3>
+          <ul>
+            <li><strong>SAST :</strong> Intégration SonarCloud à chaque commit avec portes qualité appropriées à classification</li>
+            <li><strong>SCA :</strong> Scan automatisé dépendances avec génération SBOM (SLSA 3) conforme CNIL</li>
+            <li><strong>DAST :</strong> Scan OWASP ZAP en environnements staging selon niveaux classification ANSSI</li>
+            <li><strong>Scan de Secrets :</strong> Surveillance continue des credentials exposées avec remédiation SLA-basée</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p class="hidden-wisdom"><em>MÉTA-ILLUMINATION : Sécurité après déploiement est réponse aux incidents. Sécurité durant conception est avantage concurrentiel.</em></p>
+    </section>
+
+    <section id="tools">
+      <h2 class="panel-caption">Excellence Sécurité Automatisée : Portfolio de Preuves Publiques</h2>
+      
+      <p>Automatisation DevSecOps systématique avec vérification publique—transparence plutôt que promesses conformément RGPD :</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Citizen Intelligence Agency</h3>
+          <p><strong>Plateforme de transparence démocratique avec contrôles sécurité complets</strong></p>
+          <ul>
+            <li><strong>OpenSSF Scorecard :</strong> 7.2/10 — excellence sécurité chaîne d'approvisionnement</li>
+            <li><strong>Couverture Tests :</strong> <a href="https://hack23.github.io/cia/jacoco/">Résultats JaCoCo</a> | <a href="https://hack23.github.io/cia/surefire.html">Tests Unitaires</a></li>
+            <li><strong>Tests E2E :</strong> <a href="https://github.com/Hack23/cia/blob/master/E2ETestPlan.md">Plan E2E</a> avec couverture intégration</li>
+            <li><strong>Modèle Menace :</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">Analyse STRIDE</a></li>
+            <li><strong>Architecture Sécurité :</strong> <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">Actuelle</a></li>
+            <li><strong>Chaîne Approvisionnement :</strong> <a href="https://github.com/Hack23/cia/attestations">Attestations SLSA 3</a></li>
+          </ul>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🎮 Black Trigram</h3>
+          <p><strong>Plateforme de jeu avec architecture sécurisée TypeScript/React/PixiJS</strong></p>
+          <ul>
+            <li><strong>OpenSSF Scorecard :</strong> 7.0/10 — sécurité build et supply chain</li>
+            <li><strong>Tests Automatisés :</strong> Vitest + Playwright E2E avec rapports publics</li>
+            <li><strong>Modèle Menace :</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md">STRIDE Analysis</a></li>
+            <li><strong>Architecture :</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md">Documentation Sécurité</a></li>
+            <li><strong>SLSA 3 :</strong> <a href="https://github.com/Hack23/blacktrigram/attestations">Attestations Build</a></li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📋 CIA Compliance Manager</h3>
+          <p><strong>Outil d'évaluation conformité client-side avec sécurité browser-native</strong></p>
+          <ul>
+            <li><strong>Zéro Backend :</strong> 95% réduction surface d'attaque, pas de serveur = pas de breach serveur</li>
+            <li><strong>Modèle Menace :</strong> <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md">Analyse STRIDE</a></li>
+            <li><strong>Architecture :</strong> Client-side sécurité via isolation browser</li>
+            <li><strong>Tests :</strong> Vitest couverture + E2E validation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p><strong>Toutes les preuves publiques.</strong> Tous les badges vérifiables. Toute la transparence. C'est comme ça qu'on fait DevSecOps conformément aux recommandations ANSSI et CNIL.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Développement Sécurisé Est Avantage Concurrentiel</h2>
+      
+      <p><strong>Rien n'est vrai.</strong> La sécurité après déploiement n'est pas sécurité—c'est réponse aux incidents. <strong>FNORD—votre « Security Champion » qui révise le code une fois par trimestre n'est pas DevSecOps, c'est du théâtre de conformité.</strong></p>
+      
+      <p><strong>Tout est permis.</strong> Y compris intégrer la sécurité si profondément dans votre pipeline de développement qu'elle devient invisible—pas parce qu'elle est cachée, mais parce qu'elle est automatique. <strong>Excellence systématique bat intentions héroïques à chaque fois.</strong></p>
+      
+      <p><strong>Excellence développement sécurisé de Hack23 démontre expertise conseil en cybersécurité :</strong></p>
+      <ul>
+        <li>🎯 <strong>STRIDE Obligatoire :</strong> Modélisation menaces avant code—pensée sécurité systématique, pas compliance checkbox</li>
+        <li>📊 <strong>80% Couverture Tests :</strong> Rapports publics JaCoCo/Jest—transparence plutôt que promesses</li>
+        <li>🔐 <strong>SLSA 3 Attestations :</strong> Provenance vérifiable chaîne approvisionnement—confiance par preuve cryptographique</li>
+        <li>🏗️ <strong>Architecture Documentée :</strong> Documentation vivante avec CI failures—reste à jour ou échoue</li>
+        <li>🤖 <strong>Portes Automatisées :</strong> SAST/SCA/DAST/secrets—machines attrapent ce qu'humains ratent</li>
+        <li>🏆 <strong>OpenSSF 7.0+ :</strong> Badges publics—preuve mesurable, pas promesses marketing</li>
+      </ul>
+      
+      <p><strong>Salut à Eris ! Salut à la Discordia !</strong></p>
+      
+      <p>Lisez notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">Politique de Développement Sécurisé complète sur GitHub</a>. Modélisation menaces. Tests automatisés. Preuves publiques. Avec documentation technique démontrant l'implémentation DevSecOps conforme ANSSI, CNIL et RGPD. <strong>Nous ne promettons pas la sécurité. Nous la prouvons.</strong></p>
+      
+      <p class="hidden-wisdom"><strong>ILLUMINATION FINALE :</strong> <em>Le complexe développement-industriel vend des cours de « secure coding » et des certifications. Hack23 livre des preuves mesurables. Modèles menace publics. Résultats tests publics. Attestations build publiques. Badges sécurité publics. Parce que transparence bat promesses, preuves battent marketing, et excellence systématique bat intentions héroïques. Notre approche DevSecOps fait exactement cela—avec validation mesurable. <strong>FNORD—nous développons en supposant que vous lisez notre code. Parce que vous le pouvez. Open source, baby.</strong></em></p>
+      
+      <p class="signature">— Malaclypse le Jeune<br>Maître du Chaos<br><br><em>« Sécurité n'est pas phase. Sécurité est discipline. <strong>Rien n'est vrai. Tout est permis. Votre pipeline CI/CD n'est d'accord avec aucun des deux.</strong> »</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Politiques SGSI Connexes</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>🔍 Gestion des Vulnérabilités</h3>
+          <p>Scans continus, évaluation risques, remédiation selon ANSSI</p>
+          <p><a href="discordian-vuln-mgmt.html">Lire la Politique (EN) →</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>🎯 Modélisation des Menaces</h3>
+          <p>Framework STRIDE, arbres d'attaque, quantification risques</p>
+          <p><a href="discordian-threat-modeling.html">Lire la Politique (EN) →</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>🌐 Sécurité Réseau</h3>
+          <p>Architecture zéro confiance, défense en profondeur, surveillance</p>
+          <p><a href="discordian-network-security_fr.html">Lire la Politique →</a></p>
+        </div>
+        
+        <div class="card">
+          <h3>🔐 Contrôle d'Accès</h3>
+          <p>Zéro confiance, MFA obligatoire, révisions accès CNIL</p>
+          <p><a href="discordian-access-control_fr.html">Lire la Politique →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2 class="panel-caption">Ressources Techniques</h2>
+      
+      <ul>
+        <li>📖 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">Politique Développement Sécurisé (GitHub)</a></li>
+        <li>🛡️ <a href="https://github.com/Hack23/ISMS-PUBLIC">Référentiel SGSI Public</a></li>
+        <li>🎯 <a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+        <li>📋 <a href="https://www.cnil.fr/">CNIL - Directives Développement Sécurisé</a></li>
+        <li>🔐 <a href="https://www.ssi.gouv.fr/">ANSSI - Guides Développement Sécurisé</a></li>
+        <li>⚖️ <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees">RGPD - Protection Dès la Conception</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
+  <nav>
+    <a href="accessibility-statement_fr.html">Déclaration d'Accessibilité</a> |
+    <a href="sitemap_fr.html">Plan du Site</a> |
+    <a href="index_fr.html">Accueil</a>
+  </nav>
+</footer>
+
+</body>
+</html>
