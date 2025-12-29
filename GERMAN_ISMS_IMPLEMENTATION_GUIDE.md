@@ -233,7 +233,7 @@ Governance, compliance, and operational policies:
   </main>
 
   <footer>
-    <p>&copy; 2008-2025 Hack23 AB (Org.nr 5595347807) | <a href="why-hack23_de.html">Warum Hack23</a> | <a href="services_de.html">Dienstleistungen</a> | <a href="https://github.com/Hack23">GitHub</a></p>
+    <p>&copy; 2008-2025 Hack23 AB (Org.nr 559534-7807) | <a href="why-hack23_de.html">Warum Hack23</a> | <a href="services_de.html">Dienstleistungen</a> | <a href="https://github.com/Hack23">GitHub</a></p>
     <p><a href="accessibility-statement_de.html">Zugänglichkeitserklärung</a> | <a href="sitemap_de.html">Sitemap</a></p>
   </footer>
 </body>
