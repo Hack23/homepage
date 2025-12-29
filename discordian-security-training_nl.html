@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Training | Continuous Education | Hack23</title>
+    <meta name="description" content="Onboarding + quarterly + monthly phishing (5-10% click rate) + incident-triggered + role-specific. Continuous security education.">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://www.hack23.com/discordian-security-training.html">
+	<!-- Hreflang tags for language alternatives -->    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Security Awareness Training: Teaching Humans Not to Click Shit">
+    <meta property="og:description" content="Onboarding + quarterly + monthly phishing (5-10% click rate) + incident-triggered + role-specific. Continuous education, not annual theater.">
+	<meta property="og:locale" content="nl_NL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.hack23.com/discordian-security-training.html">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Security Awareness Training: Teaching Humans Not to Click Shit",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine"
+      },
+      "datePublished": "2025-11-05",
+      "description": "Onboarding + quarterly + monthly phishing (5-10% click rate) + incident-triggered + role-specific. Continuous education, not annual theater.",
+      "keywords": "security awareness, training, phishing, social engineering, human factor, ISMS, role-specific training, continuous education",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1884,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "nl",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI Security",
+          "description": "OWASP LLM Top 10 and AI model security"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-security-training_nl.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/index_nl.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_nl.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Security Awareness Training",
+          "item": "https://hack23.com/discordian-security-training.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-security-training.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-security-training_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-security-training_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-security-training.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Security Awareness Training
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Security Awareness Training: Teaching Humans Not to Click Shit (They'll Click It Anyway)</h2>
+            
+            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Don't click that link. (You're going to click it, aren't you? FNORD.)"</em></p>
+
+            <h2>🧠 The Problem: Humans (The Meatware Vulnerability)</h2>
+            
+            <p>Humans are the weakest link in security. Not because they're malicious—because they're <strong>predictably irrational meat computers</strong> running wetware vulnerable to social engineering exploits that predate electricity. They click links. They reuse passwords. They hold doors for strangers with badges. They want to be helpful.</p>
+            
+            <p><strong>Social engineering works because humans are social.</strong> Phishing works because emails look legit. USB drops work because curiosity kills. Training helps. Slightly. <em>Are you paranoid enough yet?</em></p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> Users will click anything. Train them anyway. Then assume they clicked it. <strong>Defense in depth means assuming users are already compromised</strong>—because statistically, someone is. Our 5-10% phishing simulation click rate is realistic, not aspirational—humans are human, not security appliances. <em>Welcome to Chapel Perilous. The paranoia is justified.</em>
+            </div>
+
+            <h2>🎓 The Five Topics Everyone Needs (To Ignore Before Clicking Anyway)</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Phishing Recognition</h3>
+                    <p><strong>That email from your CEO? Not your CEO.</strong></p>
+                    <p><strong>Training Content:</strong> Sender verification, URL inspection, urgent language red flags, attachment risks, social engineering tactics.</p>
+                    <p><strong>Real Example:</strong> "CEO" requesting wire transfer to new vendor. Verify via secondary channel (phone call, in-person).</p>
+                    <p><strong>Success Metric:</strong> &gt;80% of phishing simulations reported within 5 minutes.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Password Management</h3>
+                    <p><strong>Password123 is not secure. Actually use the password manager.</strong></p>
+                    <p><strong>Required Tools:</strong> Password manager (mandatory), MFA everywhere (enforced), biometric authentication (preferred).</p>
+                    <p><strong>Standards:</strong> 16+ character passwords, unique per service, no reuse, no sharing, no sticky notes.</p>
+                    <p><strong>Success Metric:</strong> 100% MFA enrollment, password manager adoption tracking.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Physical Security</h3>
+                    <p><strong>Don't let strangers follow you inside. Don't plug in random USBs.</strong></p>
+                    <p><strong>Home Office Security:</strong> Lock screens when away, secure WiFi (WPA3), physical device security, visitor awareness.</p>
+                    <p><strong>Real Threats:</strong> Tailgating, USB drops (BadUSB attacks), shoulder surfing, unattended devices.</p>
+                    <p><strong>Success Metric:</strong> Zero unattended unlocked devices, physical security incident reporting.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Data Handling</h3>
+                    <p><strong>Not everything goes to Dropbox. Understand classification.</strong></p>
+                    <p><strong>Classification Training:</strong> Public, Low, Moderate, High, Very High, Extreme per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md" target="_blank">Classification Framework</a>.</p>
+                    <p><strong>Handling Requirements:</strong> Classify before sharing, encrypt sensitive data, use approved storage, no shadow IT.</p>
+                    <p><strong>Success Metric:</strong> >90% correct classification in knowledge checks, zero data spillage incidents.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Incident Reporting</h3>
+                    <p><strong>Tell someone when things look weird. Early reporting limits damage.</strong></p>
+                    <p><strong>Reporting Channels:</strong> Security incident form, direct CEO contact, incident response email, automated detection systems.</p>
+                    <p><strong>What to Report:</strong> Suspicious emails, lost devices, potential breaches, security policy violations, anomalous behavior.</p>
+                    <p><strong>Response SLA (Service Level Agreement):</strong> &lt;30 minutes for critical incidents per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md" target="_blank">Incident Response Plan</a>.</p>
+                    <p><strong>Success Metric:</strong> &gt;95% of suspicious activities reported, &lt;5 minutes average report time.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Security training isn't about making users security experts—it's about making them aware enough to ask questions before clicking. <strong>Perfect security training produces users who question everything, including training.</strong> Teach skepticism, not blind obedience. <em>Think for yourself, schmuck! The bureaucracy is expanding to meet the needs of the expanding bureaucracy.</em>
+            </div>
+
+            <h2>🎣 Phishing Simulations: Test Reality, Measure Improvement (Spoiler: Reality Sucks)</h2>
+            
+            <p><strong>Monthly phishing simulations with immediate feedback and zero punishment.</strong> Click = education. Report = recognition. Punishment makes people hide mistakes. Education makes people learn from them.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>📊 Realistic Click Rate Expectations</h3>
+                    <p><strong>Target: 5-10% click rate (realistic, not aspirational)</strong></p>
+                    <p><strong>Why Not 0%?</strong> If click rate is 0%, simulations aren't realistic enough. Attackers use sophisticated tactics—training must match.</p>
+                    <p><strong>Measurement:</strong> Track click rates, report rates, time-to-report, repeat offenders, improvement trends.</p>
+                    <p><strong>Industry Benchmark:</strong> Average click rate 20-30%. We target &lt;10% through continuous training.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🎭 Simulation Scenarios</h3>
+                    <p><strong>Rotate realistic attack types monthly:</strong></p>
+                    <ul>
+                        <li><strong>CEO Fraud:</strong> Executive impersonation requesting urgent wire transfers</li>
+                        <li><strong>IT Helpdesk:</strong> "Your password expires today" with credential phishing</li>
+                        <li><strong>Invoice Scams:</strong> Fake vendor invoices with malicious attachments</li>
+                        <li><strong>Credential Phishing:</strong> Fake login pages for commonly used services</li>
+                        <li><strong>USB Drops:</strong> Physical USB devices in common areas (when applicable)</li>
+                    </ul>
+                </div>
+
+                <div class="value-card">
+                    <h3>⚡ Immediate Feedback Loop</h3>
+                    <p><strong>Click = instant education. Report = positive reinforcement.</strong></p>
+                    <p><strong>Click Response:</strong> Redirect to education page explaining attack indicators, provide learning resources, no shaming.</p>
+                    <p><strong>Report Response:</strong> Confirmation message, recognition of good security behavior, contribution to security metrics.</p>
+                    <p><strong>Dashboard:</strong> Personal security score (private), organization trends (aggregated), improvement tracking.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📈 Continuous Improvement</h3>
+                    <p><strong>Monthly review. Quarterly trend analysis. Annual program assessment.</strong></p>
+                    <p><strong>Success Indicators:</strong></p>
+                    <ul>
+                        <li>Declining click rates over time (realistic target: &lt;10%)</li>
+                        <li>Increasing report rates (target: >80% of phishing reported)</li>
+                        <li>Decreasing time-to-report (target: &lt;5 minutes)</li>
+                        <li>Fewer repeat offenders quarter-over-quarter</li>
+                    </ul>
+                    <p><strong>Action Threshold:</strong> >15% click rate triggers additional targeted training.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Good simulations are realistic scenarios with immediate feedback and learning resources. Bad simulations are trick questions with public shaming and no follow-up. <strong>We choose education over punishment—because security culture beats security theater.</strong> Also, punishment makes people hide breaches instead of reporting them. <em>Are you paranoid enough to question your own security assumptions?</em>
+            </div>
+
+            <h2>📅 Training Frequency: Continuous, Not Annual Theater (Because Humans Forget)</h2>
+            
+            <p><strong>Annual security training is compliance theater.</strong> People forget. Threats evolve. Training once per year is like brushing your teeth once per year—ineffective and gross. <em>The Law of Fives applies: Five training vectors, five user types, five failure modes. Everything comes in fives if you look hard enough.</em></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🎓 Onboarding (Day 1)</h3>
+                    <p><strong>Mandatory first-day completion. 100% required before system access.</strong></p>
+                    <p><strong>Duration:</strong> 60-90 minutes interactive training + policy acknowledgment.</p>
+                    <p><strong>Content:</strong> ISMS overview, classification framework, acceptable use, data handling, incident reporting.</p>
+                    <p><strong>Completion:</strong> Track in HR system, block system access until complete.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📅 Quarterly Refreshers (Every 3 Months)</h3>
+                    <p><strong>15-minute focused modules. Four topics per year.</strong></p>
+                    <p><strong>2025 Schedule:</strong></p>
+                    <ul>
+                        <li>Q1: Password management & MFA best practices</li>
+                        <li>Q2: Data classification & handling procedures</li>
+                        <li>Q3: Social engineering & phishing defense</li>
+                        <li>Q4: Incident response & reporting protocols</li>
+                    </ul>
+                    <p><strong>Delivery:</strong> Scenario-based learning, real-world examples, immediate knowledge check.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🎣 Monthly Phishing Sims (Every Month)</h3>
+                    <p><strong>Continuous awareness through realistic simulations.</strong></p>
+                    <p><strong>Frequency:</strong> First Monday of every month, randomized timing.</p>
+                    <p><strong>Scenarios:</strong> Rotate through CEO fraud, IT helpdesk, invoice scams, credential phishing.</p>
+                    <p><strong>Metrics:</strong> Click rate, report rate, time-to-report, repeat offenders.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🚨 Incident-Triggered (As Needed)</h3>
+                    <p><strong>Real attacks trigger organization-wide training within 24 hours.</strong></p>
+                    <p><strong>Trigger Events:</strong> External phishing campaigns targeting Hack23, industry-specific threats, zero-day vulnerabilities affecting our stack.</p>
+                    <p><strong>Content:</strong> Real attack breakdown, indicators of compromise, reporting procedures, lessons learned.</p>
+                    <p><strong>SLA:</strong> Training deployed &lt;24 hours after incident identification.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>👨‍💻 Role-Specific (Varies by Role)</h3>
+                    <p><strong>Different roles = different threats = different training.</strong></p>
+                    <p><strong>Developers:</strong> Secure coding (monthly), secrets management (quarterly), supply chain security (semi-annual).</p>
+                    <p><strong>CEO/Management:</strong> BEC defense (quarterly), wire transfer fraud (semi-annual), regulatory compliance (annual).</p>
+                    <p><strong>Everyone:</strong> Core security awareness + role-specific threats.</p>
+                </div>
+            </div>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION:</strong> Training once and expecting permanent behavior change is optimistic. Humans forget. Threats evolve. <strong>Train continuously or accept continuous risk.</strong> Annual training is security theater—continuous training is security culture. <em>You are now in Chapel Perilous. Security training both works and doesn't work. Both are true.</em>
+            </div>
+
+            <h2>📋 Hack23's Continuous Training Framework (Reality-Based, Not Fantasy)</h2>
+            
+            <p><strong>Security awareness at Hack23 is continuous, role-specific, and measurement-driven.</strong> Our training program is documented in our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" target="_blank">Information Security Policy</a> as an integrated component of our ISMS—because training isn't a checkbox, it's a culture.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🎓 Onboarding: Baseline for All</h3>
+                    <p><strong>Mandatory first-day training. 100% completion required.</strong></p>
+                    <p><strong>Topics:</strong> ISMS overview, classification framework, acceptable use, incident reporting, data handling, access control basics.</p>
+                    <p><strong>Delivery:</strong> Interactive modules + policy acknowledgment + initial phishing baseline test.</p>
+                    <p class="hidden-wisdom"><em>New hires complete security training before system access. No exceptions. <strong>Trust starts with education.</strong> Or more accurately: distrust starts with realistic assessment of human fallibility.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📅 Quarterly Modules: Focused Deep Dives</h3>
+                    <p><strong>15-minute targeted training sessions. Four topics per year.</strong></p>
+                    <p><strong>2025 Schedule:</strong> Q1 - Password management & MFA; Q2 - Data classification & handling; Q3 - Social engineering & phishing; Q4 - Incident response & reporting.</p>
+                    <p><strong>Format:</strong> Scenario-based learning, real-world examples, immediate knowledge check.</p>
+                    <p class="hidden-wisdom"><em>Short, frequent training beats annual marathon sessions. <strong>Humans forget.</strong> Train continuously.</em> <em>FNORD.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🎣 Monthly Phishing Simulations</h3>
+                    <p><strong>Realistic scenarios. Immediate feedback. No punishment.</strong></p>
+                    <p><strong>Target Click Rate:</strong> 5-10% (realistic expectation, not aspirational zero).</p>
+                    <p><strong>Scenarios:</strong> CEO fraud, IT helpdesk impersonation, invoice scams, credential phishing, USB drops.</p>
+                    <p><strong>Response:</strong> Click = immediate education module. Report = positive reinforcement.</p>
+                    <p class="hidden-wisdom"><em>0% click rate means unrealistic simulations. 5-10% means effective training that mirrors real threats. <strong>Perfect scores indicate broken tests, not perfect humans.</strong></em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🚨 Incident-Triggered Training</h3>
+                    <p><strong>Real phishing campaign detected? Everyone trains immediately.</strong></p>
+                    <p><strong>Trigger:</strong> Any external phishing campaign targeting Hack23 triggers organization-wide training within 24 hours.</p>
+                    <p><strong>Content:</strong> Real attack breakdown, indicators, reporting procedures, lessons learned.</p>
+                    <p class="hidden-wisdom"><em>Learn from actual attacks in real-time. <strong>Attackers provide free training content—use it.</strong> Every breach is a teachable moment. Every phishing campaign is intelligence gathering.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>👨‍💻 Role-Specific Content</h3>
+                    <p><strong>Developers ≠ Finance ≠ Executives. Training reflects reality.</strong></p>
+                    <p><strong>Developers:</strong> Secure coding, secrets management, code review, supply chain security.</p>
+                    <p><strong>CEO/Management:</strong> Business email compromise, executive impersonation, wire transfer fraud, regulatory compliance.</p>
+                    <p><strong>Everyone:</strong> Core security awareness + role-specific threats.</p>
+                    <p class="hidden-wisdom"><em>Generic training produces generic awareness. <strong>Role-specific training produces relevant behavior changes.</strong> Or at least, that's the theory. Reality is messier. Always.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>📊 Metrics-Driven Improvement</h3>
+                    <p><strong>Track everything. Improve what matters.</strong></p>
+                    <p><strong>Metrics:</strong> Training completion rates, phishing simulation click rates, time-to-report, incident frequency, knowledge check scores.</p>
+                    <p><strong>Reporting:</strong> Monthly dashboard review, quarterly trend analysis, annual program assessment.</p>
+                    <p><strong>Target:</strong> &gt;95% completion, 5-10% click rate, &lt;5 minutes report time, declining incident trend.</p>
+                    <p class="hidden-wisdom">
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Perfect security training produces users who question everything, including training. <strong>Teach skepticism, not blind obedience.</strong> <em>You are now leaving Chapel Perilous. Or entering it. Hard to tell which. The paranoia is the point.</em>
+            </div>
+
+            <h2>🎯 Conclusion: Train, Test, Measure, Repeat (Welcome to Sisyphus's Security Department)</h2>
+            
+            <p>Humans will never be perfect security controls. They'll click links. They'll reuse passwords. They'll hold doors. <strong>Train them anyway.</strong> <em>Because the alternative is worse. Probably. Nothing is certain except entropy and exploitable humans.</em></p>
+            
+            <p>Security awareness training isn't about eliminating human error—it's about reducing it enough that other controls can compensate. <strong>Defense in depth includes educated users who:</strong> (1) fail slightly less often, (2) report failures faster, (3) question suspicious requests occasionally. <em>Low bar? Yes. Realistic? Also yes.</em></p>
+            
+            <ul>
+                <li><strong>Recognize phishing</strong> with >80% accuracy and &lt;5 minute report time</li>
+                <li><strong>Use password managers</strong> with 100% MFA enrollment and unique passwords</li>
+                <li><strong>Handle data correctly</strong> with >90% classification accuracy and zero spillage</li>
+                <li><strong>Report incidents promptly</strong> with >95% suspicious activity reporting</li>
+                <li><strong>Question suspicious requests</strong> before acting, especially urgent wire transfers</li>
+            </ul>
+            
+            <p><strong>Our training framework:</strong> Onboarding (mandatory) + Quarterly modules (focused) + Monthly phishing sims (realistic) + Incident-triggered (timely) + Role-specific (relevant) + Metrics-driven (measurable).</p>
+            
+            <p>Train continuously. Test regularly. Measure rigorously. Don't punish mistakes—learn from them. And assume users are compromised anyway, because eventually they will be. <strong>That's why defense in depth includes both educated users AND compensating controls.</strong> <em>Trust no one. Not even yourself. Especially not yourself.</em></p>
+            
+            <p><strong>Training metrics we actually track:</strong></p>
+            <ul>
+                <li>📊 Training completion: >95% target for all mandatory modules</li>
+                <li>🎣 Phishing click rate: 5-10% realistic target (not aspirational 0%)</li>
+                <li>📢 Report rate: >80% of phishing simulations reported</li>
+                <li>⏱️ Time-to-report: &lt;5 minutes average for suspicious activities</li>
+                <li>📈 Improvement trend: Declining click rates, increasing report rates quarter-over-quarter</li>
+            </ul>
+            
+            <p>Full training framework integrated into our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" target="_blank">Information Security Policy</a>—because security through transparency means documenting how we actually train humans, not how we claim to. <strong>Reality > marketing.</strong> <em>All documentation is propaganda. This propaganda happens to be true. Probably.</em></p>
+            
+            <p><strong>Need expert guidance on security awareness programs?</strong> <a href="why-hack23.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially that urgent email from your boss asking for wire transfers to an unfamiliar account. <strong>Are you paranoid enough?</strong>"</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Security training both works and doesn't work. Both are true. Users are both educated and exploitable. <strong>Nothing is true. Everything is permitted—except clicking suspicious links.</strong> (But you'll click them anyway. We know. We measure. 5-10%. Statistically inevitable. FNORD.)</small></p>
+
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
