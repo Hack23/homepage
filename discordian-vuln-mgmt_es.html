@@ -3,36 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestión de Vulnerabilidades | Parches Críticos <4 Horas | Hack23</title>
+<title>Gestión de Vulnerabilidades | Parches Críticos &lt;4 Horas | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Versiones estables más recientes con respuesta a parches críticos <4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas, gestión proactiva de EOL.">
+<meta name="description" content="Versiones estables más recientes con respuesta a parches críticos &lt;4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas, gestión proactiva de EOL.">
 <meta name="keywords" content="gestión de vulnerabilidades, parches, OpenSSF, seguridad del software, EOL">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
 <meta property="og:title" content="Gestión de Vulnerabilidades: Viviendo en el Filo de la Navaja">
-<meta property="og:description" content="Versiones estables más recientes con respuesta a parches críticos <4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas.">
-<meta property="og:locale" content="es_ES">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:description" content="Versiones estables más recientes con respuesta a parches críticos &lt;4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas.">
+	<meta property="og:locale" content="es_ES">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/discordian-vuln-mgmt_es.html">
 <meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
 <link rel="canonical" href="https://hack23.com/discordian-vuln-mgmt_es.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Gestión de Vulnerabilidades: Viviendo en el Filo de la Navaja","description":"Versiones estables más recientes con respuesta a parches críticos <4 horas.","author":{"@type":"Person","name":"James Pether Sörling"},"publisher":{"@type":"Organization","name":"Hack23 AB"},"datePublished":"2025-11-05","inLanguage":"es","isPartOf":{"@type":"Blog","name":"Hack23 Security Blog"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hack23.com/index_es.html"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://hack23.com/blog_es.html"},{"@type":"ListItem","position":3,"name":"Gestión de Vulnerabilidades","item":"https://hack23.com/discordian-vuln-mgmt_es.html"}]}]}</script>
-<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-vuln-mgmt_de.html" />
-<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-vuln-mgmt.html" />
-<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-vuln-mgmt_es.html" />
-<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-vuln-mgmt_fr.html" />
-<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-vuln-mgmt_he.html" />
-<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-vuln-mgmt_ja.html" />
-<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-vuln-mgmt_ko.html" />
-<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-vuln-mgmt_nl.html" />
-<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-vuln-mgmt_sv.html" />
-<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-vuln-mgmt_zh.html" />
-<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-vuln-mgmt.html" />
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Gestión de Vulnerabilidades: Viviendo en el Filo de la Navaja",
+      "description": "Versiones estables más recientes con respuesta a parches críticos &lt;4 horas.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "jobTitle": "CEO / Experto en Ciberseguridad"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-29",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-vuln-mgmt_es.html"
+      },
+      "keywords": "gestión de vulnerabilidades, parches, OpenSSF, seguridad del software, EOL",
+      "articleSection": "Seguridad de la Información",
+      "inLanguage": "es",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-vuln-mgmt_es.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://hack23.com/index_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gestión de Vulnerabilidades",
+          "item": "https://hack23.com/discordian-vuln-mgmt_es.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+  <!-- Multilingual SEO -->
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-vuln-mgmt_ar.html" />
+  <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-vuln-mgmt_ar.html" />
+  <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-vuln-mgmt_ar.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-vuln-mgmt_da.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/discordian-vuln-mgmt_de.html" />
+  <link rel="alternate" hreflang="de-DE" href="https://hack23.com/discordian-vuln-mgmt_de.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-vuln-mgmt.html" />
+  <link rel="alternate" hreflang="es" href="https://hack23.com/discordian-vuln-mgmt_es.html" />
+  <link rel="alternate" hreflang="es-ES" href="https://hack23.com/discordian-vuln-mgmt_es.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-vuln-mgmt_fi.html" />
+  <link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-vuln-mgmt_fr.html" />
+  <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/discordian-vuln-mgmt_fr.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/discordian-vuln-mgmt_he.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-vuln-mgmt_ja.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-vuln-mgmt_ko.html" />
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-vuln-mgmt_nl.html" />
+  <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/discordian-vuln-mgmt_nl.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-vuln-mgmt_no.html" />
+  <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-vuln-mgmt_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-vuln-mgmt_sv.html" />
+  <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-vuln-mgmt_sv.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-vuln-mgmt_zh.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/discordian-vuln-mgmt_zh.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/discordian-vuln-mgmt_zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-vuln-mgmt.html" />
+
 </head>
 <body>
-<header><h1>Ciberseguridad Discordiana</h1></header>
-<main><article><h2>🔧 Gestión de Vulnerabilidades</h2><section><h3>Gestión Proactiva de Vulnerabilidades</h3><p>Versiones estables más recientes con respuesta a parches críticos en &lt;4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas, gestión proactiva EOL.</p><ul><li>Parches críticos &lt;4 horas</li><li>Escaneo continuo de dependencias</li><li>Gestión proactiva de fin de vida</li></ul></section><section><h3>Recursos</h3><ul><li><a href="discordian-secure-dev_es.html">Desarrollo Seguro</a></li><li><a href="why-hack23.html">Por Qué Hack23</a></li></ul></section></article></main>
-<footer><p>&copy; 2008-2025 James Pether Sörling. Hack23 AB.</p></footer>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_es.html">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="blog_es.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Gestión de Vulnerabilidades
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Ciberseguridad Discordiana</h1>
+  <div class="app-link">
+    <a href="index_es.html">Inicio</a>
+    <a href="discordian-cybersecurity_es.html">Manifiesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS Público</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🔧 Gestión de Vulnerabilidades</h2>
+    
+    <section id="introduccion">
+      <h3>Gestión Proactiva de Vulnerabilidades</h3>
+      <p>Versiones estables más recientes con respuesta a parches críticos en &lt;4 horas. Integración OpenSSF Scorecard, puertas de seguridad automatizadas, gestión proactiva EOL.</p>
+      <ul>
+        <li>Parches críticos &lt;4 horas</li>
+        <li>Escaneo continuo de dependencias</li>
+        <li>Gestión proactiva de fin de vida</li>
+      </ul>
+    </section>
+
+    <section id="recursos">
+      <h3>Recursos</h3>
+      <ul>
+        <li><a href="discordian-secure-dev_es.html">Desarrollo Seguro</a></li>
+        <li><a href="why-hack23.html">Por Qué Hack23</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
+  <p><a href="accessibility-statement_es.html">Declaración de Accesibilidad</a> | <a href="sitemap_es.html">Mapa del Sitio</a></p>
+</footer>
+
 </body>
 </html>
