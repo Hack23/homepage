@@ -178,37 +178,119 @@
   <article>
     <h2 class="header">🌐 Seguridad de Red: El Perímetro Es Una Mentira</h2>
 
-    <div class="translation-notice" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 2rem 0;">
-      <p><strong>Nota de Traducción:</strong> Esta página contiene infraestructura técnica completa (HTML, metadatos, SEO) pero requiere traducción profesional del contenido.</p>
-      <p><strong>Translation Notice:</strong> This page contains complete technical infrastructure (HTML, metadata, SEO) but requires professional content translation.</p>
-      <p>Fuente / Source: <a href="discordian-network-security.html">discordian-network-security.html</a></p>
-    </div>
+    <section id="introduccion">
+      <h3>El Perímetro de Red Ha Muerto</h3>
+      
+      <p><strong>¡Piensa por ti mismo!</strong> La seguridad de red solía ser simple: cáscara dura, interior blando. El firewall mantiene a los malos fuera, todo lo de dentro es confiable. <em>Eso siempre fue una fantasía, pero era una fantasía cómoda que los ejecutivos podían entender y presupuestar.</em></p>
+      
+      <p><strong>Ese modelo está muerto.</strong> Ha estado muerto desde que los dispositivos móviles, los servicios en la nube y el trabajo remoto lo asesinaron. Pero los consultores siguen vendiendo seguridad de castillo-y-foso porque es fácil de explicar a los ejecutivos que no entienden la tecnología, y porque admitir que el perímetro es ficción significa admitir que te vendieron mentiras caras durante décadas. <strong>FNORD: tu firewall es teatro de seguridad pretendiendo ser protección. Los ataques vienen de dentro de la casa. Siempre lo fueron.</strong></p>
+      
+      <p><strong>Nada es verdad. Todo está permitido.</strong> Incluyendo atacantes ya dentro de tu red "segura" leyendo esto mientras beben café desde su endpoint comprometido. Planifica para la brecha. Diseña para la contención. Prueba tu detección. <strong>¿Eres lo suficientemente paranoico como para asumir que ya estás comprometido? Deberías serlo. Estadísticamente, probablemente lo estés.</strong></p>
+      
+      <p>En Hack23, practicamos lo que predicamos: <strong>arquitectura nativa de nube AWS de confianza cero</strong> con defensa en profundidad. CloudFront+WAF para el perímetro (protección DDoS, conjuntos de reglas OWASP). GuardDuty para inteligencia de amenazas. Security Hub para agregación de hallazgos. VPC Flow Logs para análisis de tráfico. Implementación multi-región (eu-west-1, eu-central-1) para resiliencia. Verificación DNSSEC en todos los dominios. TLS 1.2+ aplicado en todas partes.</p>
+      
+      <p>Nuestra <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Política de Seguridad de Red</a> es pública porque la seguridad de red por oscuridad asume que los atacantes no pueden ejecutar escaneos de puertos. La transparencia demuestra nuestra experiencia en consultoría de ciberseguridad a través de implementación medible. <strong>Nuestro modelo de amenazas asume que estás leyendo esto. Bienvenido, adversario. Disfruta la documentación.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Iluminación: Si tu modelo de seguridad asume que los atacantes están afuera, tu modelo de seguridad es de 1995. Actualízalo o serás hackeado. Nosotros actualizamos el nuestro—aquí está la evidencia. <strong>FNORD: lo único que te separa de una brecha es si el atacante ya tomó café.</strong></em></p>
+    
+      <p><strong>¿Buscas apoyo experto en implementación?</strong> <a href="why-hack23.html">Descubre por qué las organizaciones eligen Hack23</a> para consultoría de seguridad que acelera la innovación.</p>
+    </section>
 
-    <section id="professional-translation-required">
-      <h3>Traducción Profesional Requerida / Professional Translation Required</h3>
-      <p><strong>Español:</strong> Este archivo contiene la infraestructura técnica completa (HTML5, hreflang, Schema.org) pero requiere traducción profesional del contenido del cuerpo principal. La traducción debe seguir:</p>
+    <section id="por-que-el-perimetro-es-mito">
+      <h3>Por Qué el Perímetro de Red es Fantasía</h3>
+      
+      <p><strong>Cuestiona la autoridad</strong> que todavía habla de redes "internas" y "externas":</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h4>1. Los Dispositivos Móviles Deambulan</h4>
+          <p>¿El portátil sale de la oficina? Está "afuera". ¿Vuelve? Está "adentro" otra vez. <strong>Con cualquier malware que haya recogido.</strong> La VPN no hace que los dispositivos sean confiables, solo cifra sus ataques.</p>
+          <p class="hidden-wisdom"><em>Iluminación: Cada dispositivo que cruza el perímetro es un potencial caballo de Troya. Los griegos enseñaron esta lección hace 3000 años.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h4>2. Los Servicios en la Nube Están "Afuera"</h4>
+          <p>¿Office 365? ¿AWS? ¿GitHub? <strong>Todo fuera de tu perímetro.</strong> Sin embargo, esenciales para el negocio. El perímetro no incluye lo que realmente usas.</p>
+          <p class="hidden-wisdom"><em>Iluminación: Defender un perímetro que no incluye tus datos es simular seguridad.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h4>3. Las Amenazas Internas Existen</h4>
+          <p>Internos maliciosos. Cuentas comprometidas. Ingeniería social. <strong>La amenaza ya está dentro.</strong> Tu firewall no detiene a Susana en contabilidad haciendo clic en enlaces de phishing.</p>
+          <p class="hidden-wisdom"><em>Iluminación: La llamada viene de dentro de la casa. Siempre lo fue.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h4>4. Compromisos de Cadena de Suministro</h4>
+          <p>El proveedor de confianza es hackeado. Envía actualización maliciosa. <strong>A través de tu firewall.</strong> Porque confías en actualizaciones firmadas desde "dentro" del perímetro. ¿SolarWinds, alguien?</p>
+          <p class="hidden-wisdom"><em>Iluminación: La confianza es cómo funcionan los ataques a la cadena de suministro. La confianza cero es cómo se detectan.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="arquitectura-confianza-cero">
+      <h3>Nuestra Arquitectura de Confianza Cero en AWS</h3>
+      
+      <p>Hack23 implementa defensa en profundidad con múltiples capas de seguridad:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h4>🌐 CloudFront + WAF</h4>
+          <p><strong>Protección perimetral DDoS.</strong> AWS CloudFront como CDN con AWS WAF adjunto. Reglas para inyección SQL, XSS, limitación de velocidad. AWS Shield Standard (automático) o Shield Advanced para protección DDoS mejorada.</p>
+          <p><strong>Implementación:</strong> Conjuntos de reglas OWASP, geo-bloqueo según sea necesario, políticas de seguridad de contenido.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h4>🛡️ GuardDuty + Security Hub</h4>
+          <p><strong>Detección inteligente de amenazas.</strong> GuardDuty analiza VPC Flow Logs, eventos de CloudTrail y registros DNS. Security Hub agrega hallazgos desde múltiples servicios de seguridad de AWS.</p>
+          <p><strong>Monitoreo:</strong> Notificaciones SNS para hallazgos de alta y crítica severidad. Respuesta automatizada a incidentes donde sea apropiado.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h4>🌍 Multi-Región</h4>
+          <p><strong>Resiliencia contra interrupciones regionales.</strong> Recursos desplegados en eu-west-1 (Irlanda) como primaria y eu-central-1 (Frankfurt) para redundancia. Proporciona menor latencia para usuarios europeos.</p>
+          <p><strong>Beneficio:</strong> Protección contra interrupciones regionales, cumplimiento de requisitos de residencia de datos.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h4>🔒 VPC Flow Logs</h4>
+          <p><strong>Análisis de tráfico de red.</strong> Captura metadatos de tráfico de red. Registra todo el tráfico aceptado y rechazado para análisis de seguridad sin impactar el rendimiento.</p>
+          <p><strong>Uso:</strong> Análisis forense, detección de anomalías, verificación de políticas de seguridad.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h4>🔐 DNSSEC + TLS 1.2+</h4>
+          <p><strong>Comunicación segura.</strong> DNSSEC en Route 53 previene envenenamiento de caché DNS. TLS 1.2+ aplicado en CloudFront y ALB. Protocolos más antiguos deshabilitados.</p>
+          <p><strong>Validación:</strong> Calificación SSL Labs A+, verificación DNSSEC en todos los dominios.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h4>🔍 Segmentación de Red</h4>
+          <p><strong>Microsegmentación con VPCs.</strong> Subredes aisladas: pública (balanceadores), privada (aplicaciones), aislada (bases de datos). Security Groups y NACLs para control de acceso estricto.</p>
+          <p><strong>Principio:</strong> Mínimo privilegio, acceso de red basado en roles, contención de brechas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="recursos">
+      <h3>Recursos y Documentación</h3>
+      
+      <p><strong>Documentación Pública:</strong></p>
       <ul>
-        <li>Spanish-Translation-Guide.md v3.1 - Terminología verificada</li>
-        <li>Adaptación cultural para mercados español/latinoamericano</li>
-        <li>Referencias regulatorias AEPD y RGPD</li>
-        <li>Tono profesional para consultoría de ciberseguridad</li>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Política de Seguridad de Red</a> - Política completa con controles implementados</li>
+        <li><a href="discordian-cybersecurity_es.html">Manifiesto de Ciberseguridad Discordiana</a> - Nuestra filosofía de seguridad</li>
+        <li><a href="why-hack23.html">Por Qué Hack23</a> - Consultoría de seguridad que acelera la innovación</li>
       </ul>
       
-      <p><strong>English:</strong> This file contains complete technical infrastructure (HTML5, hreflang, Schema.org) but requires professional translation of the main body content. Translation should follow:</p>
+      <p><strong>Controles Relacionados:</strong></p>
       <ul>
-        <li>Spanish-Translation-Guide.md v3.1 - Verified terminology</li>
-        <li>Cultural adaptation for Spanish/Latin American markets</li>
-        <li>AEPD and RGPD regulatory references</li>
-        <li>Professional tone for cybersecurity consulting</li>
-      </ul>
-      
-      <p><strong>Referencia / Reference:</strong> Ver archivo fuente completo en / See full source file at: <a href="discordian-network-security.html">discordian-network-security.html</a></p>
-      
-      <p><strong>Estimación / Estimate:</strong></p>
-      <ul>
-        <li>Palabras / Words: ~1,674</li>
-        <li>Esfuerzo / Effort: 4-5 horas</li>
-        <li>Coste / Cost: €360-450 (traducción profesional / professional translation)</li>
+        <li><a href="discordian-access-control_es.html">Control de Acceso</a> - Confianza cero centrada en identidad</li>
+        <li><a href="discordian-incident-response_es.html">Respuesta a Incidentes</a> - Plan de asunción de brecha</li>
+        <li><a href="discordian-monitoring-logging_es.html">Monitoreo y Registro</a> - Visibilidad de seguridad</li>
       </ul>
     </section>
 
