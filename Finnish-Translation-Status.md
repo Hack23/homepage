@@ -13,15 +13,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇫🇮 Finnish Translation Status 🦌"
-        A["📊 82/96 Files<br/>85.4% Complete 🎯 TARGET EXCEEDED!"]
+        A["📊 87/96 Files<br/>90.6% Complete 🚀 APPROACHING COMPLETION!"]
         
         A --> B["🎯 Quality Analysis"]
         B --> C["✅ Fully Translated: 47<br/>No English content"]
         B --> D["⚡ Mostly Translated: 21<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 2<br/>Some English remains"]
-        B --> F["🆕 New Files: 12<br/>Infrastructure ready"]
+        B --> F["🆕 New Files: 17<br/>Infrastructure ready"]
         
-        A --> G["📝 Missing Files: 14"]
+        A --> G["📝 Missing Files: 9"]
         
         A --> H["🏆 Quality Score: 92.7%"]
         
@@ -41,8 +41,8 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇫🇮 Finnish Files Exist** | 82 | **85.4%** | ✅ **TARGET EXCEEDED** |
-| **❌ Missing Files** | 14 | 14.6% | 🔄 |
+| **🇫🇮 Finnish Files Exist** | 87 | **90.6%** | 🚀 **APPROACHING COMPLETION** |
+| **❌ Missing Files** | 9 | 9.4% | 🔄 |
 
 ### 🎯 Translation Quality Analysis
 
@@ -57,7 +57,7 @@ Files analyzed for English content remaining:
 
 **🏆 Quality Score:** 92.7% of existing files are fully/mostly translated (improved from 90.9%)
 
-**📈 Status:** ✅ **TARGET EXCEEDED** - 85.4% completion achieved (target was 85%+)
+**📈 Status:** 🚀 **APPROACHING COMPLETION** - 90.6% achieved (only 9 files remaining!)
 
 ## 🎉 Recent Improvements (December 29, 2025)
 
@@ -83,27 +83,37 @@ Files analyzed for English content remaining:
 **Files Added:** 82/96 (85.4% completion) ✅
 
 **New Files Created (+5):**
-1. ✅ **discordian-security-training_fi.html**
-   - Turvallisuustietoisuuskoulutus: Ihmisten Opettaminen Olemaan Klikkaamatta Paskaa
-   - Perehdytys, neljännesvuosittainen, kuukausittainen tietojenkalastelu
+- ✅ discordian-security-training_fi.html (Turvallisuustietoisuuskoulutus)
+- ✅ discordian-third-party_fi.html (Kolmannen Osapuolen Hallinta)
+- ✅ discordian-vuln-mgmt_fi.html (Haavoittuvuuksien Hallinta)
+- ✅ iso-27001-implementation-sweden_fi.html (ISO 27001 Toteutusopas)
+- ✅ iso-27001-implementation-mistakes_fi.html (ISO 27001 Virheet)
 
-2. ✅ **discordian-third-party_fi.html**
-   - Kolmannen Osapuolen Hallinta: Luotatko Toimittajiisi?
-   - Porterin viiden voiman analyysi, toimittajariskin arviointi
+### Session 4: Approaching Completion! 🚀
+**Files Added:** 87/96 (90.6% completion)
 
-3. ✅ **discordian-vuln-mgmt_fi.html**
-   - Haavoittuvuuksien Hallinta: Elämistä Kärjessä
-   - &lt;4 tunnin kriittinen korjausvaste, OpenSSF Scorecard
+**New Files Created (+5):**
+1. ✅ **discordian-llm-security_fi.html**
+   - LLM-Turvallisuus: AI:n Kouluttaminen Olemaan Hallusinoimatta Salaisuuksiasi
+   - OWASP LLM Top 10, kehotehyökkäys, mallin myrkyttäminen
 
-4. ✅ **iso-27001-implementation-sweden_fi.html**
-   - ISO 27001 Toteutusopas Ruotsalaisille Yrityksille
-   - 90 päivän tiekartta, SWEDAC sertifiointielimet
+2. ✅ **discordian-mobile-device_fi.html**
+   - Mobiililaitteiden Hallinta: BYOD Tarkoittaa Tuo Oma Katastrofisi
+   - MFA pakollinen, täysi salaus, AWS Identity Center SSO
 
-5. ✅ **iso-27001-implementation-mistakes_fi.html**
-   - 5 Virhettä Vältettävä ISO 27001 Toteutuksessa
-   - Sudenkuopat ja käytännön oppeja
+3. ✅ **discordian-physical-security_fi.html**
+   - Fyysinen Turvallisuus: Lukot, Vartijat ja Älykäs Sosiaalinen Manipulointi
+   - Kotitoimiston turvallisuus, AES-256 levysalaus, WPA3 Wi-Fi
 
-**Professional Finnish Terminology Applied:**
+4. ✅ **discordian-security-strategy_fi.html**
+   - Turvallisuusstrategia Kilpailuetuna: ISMS Liiketoimintamallina
+   - Kuusi strategista pilaria, läpinäkyvyys kilpailuvaltauksena
+
+5. ✅ **discordian-stakeholders_fi.html**
+   - Sidosryhmähallinta: Kuka Välittää Turvallisuudestasi
+   - MSB/PTS/IMY sääntelyviranomaisyhteydet, CISM/CISSP
+
+**Professional Finnish Terminology Applied (Complete Library):**
 - Kyberturvallisuuskonsultointi (Cybersecurity Consulting)
 - Vaatimustenmukaisuus (Compliance)
 - Pilviturvallisuus (Cloud Security)
@@ -113,11 +123,20 @@ Files analyzed for English content remaining:
 - Turvallisuustietoisuuskoulutus (Security Awareness Training)
 - Tietojenkalastelukoulutus (Phishing Training)
 - Kolmannen Osapuolen Hallinta (Third-Party Management)
-- Toimittajariskin Arviointi (Vendor Risk Assessment)
 - Haavoittuvuuksien Hallinta (Vulnerability Management)
-- Kriittinen Korjausvaste (Critical Patch Response)
+- LLM-Turvallisuus (LLM Security)
+- Kehotehyökkäys (Prompt Injection)
+- Mallin Myrkyttäminen (Model Poisoning)
+- Mobiililaitteiden Hallinta (Mobile Device Management)
+- Fyysinen Turvallisuus (Physical Security)
+- Sosiaalinen Manipulointi (Social Engineering)
+- Turvallisuusstrategia (Security Strategy)
+- Kilpailuvaltaus (Competitive Moat)
+- Sidosryhmähallinta (Stakeholder Management)
 - ISO 27001 Toteutus (ISO 27001 Implementation)
-- Sertifiointielimet (Certification Bodies)
+- Katastrofipalautus (Disaster Recovery)
+- Kaaostekniikka (Chaos Engineering)
+- Radikaali läpinäkyvyys (Radical Transparency)
 - Toteutuksen Sudenkuopat (Implementation Pitfalls)
 - Katastrofipalautus (Disaster Recovery)
 - Kaaostekniikka (Chaos Engineering)
@@ -164,7 +183,7 @@ Files analyzed for English content remaining:
 - ⚡ `blog-trigram-combat_fi.html` ← `blog-trigram-combat.html`
 - ⚡ `blog-trigram-future_fi.html` ← `blog-trigram-future.html`
 
-### ISMS Documentation (32 files)
+### ISMS Documentation (37 files)
 - ⚡ `discordian-acceptable-use_fi.html` ← `discordian-acceptable-use.html`
 - ⚡ `discordian-access-control_fi.html` ← `discordian-access-control.html`
 - ⚡ `discordian-asset-mgmt_fi.html` ← `discordian-asset-mgmt.html`
@@ -183,15 +202,20 @@ Files analyzed for English content remaining:
 - ⚡ `discordian-incident-response_fi.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_fi.html` ← `discordian-isms-review.html`
 - ⚡ `discordian-isms-transparency_fi.html` ← `discordian-isms-transparency.html`
+- 🆕 `discordian-llm-security_fi.html` ← `discordian-llm-security.html`
+- 🆕 `discordian-mobile-device_fi.html` ← `discordian-mobile-device.html`
 - 🆕 `discordian-monitoring-logging_fi.html` ← `discordian-monitoring-logging.html`
 - ⚡ `discordian-network-security_fi.html` ← `discordian-network-security.html`
 - 🆕 `discordian-open-source_fi.html` ← `discordian-open-source.html`
+- 🆕 `discordian-physical-security_fi.html` ← `discordian-physical-security.html`
 - ⚡ `discordian-privacy_fi.html` ← `discordian-privacy.html`
 - ⚡ `discordian-remote-access_fi.html` ← `discordian-remote-access.html`
 - ⚡ `discordian-risk-assessment_fi.html` ← `discordian-risk-assessment.html`
 - ⚡ `discordian-risk-register_fi.html` ← `discordian-risk-register.html`
 - 🆕 `discordian-secure-dev_fi.html` ← `discordian-secure-dev.html`
+- 🆕 `discordian-security-strategy_fi.html` ← `discordian-security-strategy.html`
 - 🆕 `discordian-security-training_fi.html` ← `discordian-security-training.html`
+- 🆕 `discordian-stakeholders_fi.html` ← `discordian-stakeholders.html`
 - 🆕 `discordian-third-party_fi.html` ← `discordian-third-party.html`
 - ⚡ `discordian-threat-modeling_fi.html` ← `discordian-threat-modeling.html`
 - 🆕 `discordian-vuln-mgmt_fi.html` ← `discordian-vuln-mgmt.html`
@@ -232,22 +256,17 @@ Files analyzed for English content remaining:
 - ⚡ `cia-triad-faq_fi.html` ← `cia-triad-faq.html`
 - ⚡ `compliance-manager_fi.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (14 files)
+## ⚠️  Missing Translation Files (9 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (11 files)
+### ISMS Documentation (6 files)
 - ❌ `discordian-business-value_fi.html` ← `discordian-business-value.html`
 - ❌ `discordian-change-mgmt_fi.html` ← `discordian-change-mgmt.html`
 - ❌ `discordian-cra-conformity_fi.html` ← `discordian-cra-conformity.html`
 - ❌ `discordian-cra_fi.html` ← `discordian-cra.html`
-- ❌ `discordian-llm-security_fi.html` ← `discordian-llm-security.html`
-- ❌ `discordian-mobile-device_fi.html` ← `discordian-mobile-device.html`
-- ❌ `discordian-physical-security_fi.html` ← `discordian-physical-security.html`
 - ❌ `discordian-security-metrics_fi.html` ← `discordian-security-metrics.html`
-- ❌ `discordian-security-strategy_fi.html` ← `discordian-security-strategy.html`
-- ❌ `discordian-stakeholders_fi.html` ← `discordian-stakeholders.html`
 - ❌ `discordian-supplier-reality_fi.html` ← `discordian-supplier-reality.html`
 
 ### ISMS Policy Files (1 files)
