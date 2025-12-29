@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网络安全策略 | 零信任云架构 | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="零信任AWS网络：CloudFront+WAF、GuardDuty、Security Hub、VPC流日志。多区域（eu-west-1、eu-central-1）、DNSSEC、TLS 1.2+。">
+<meta name="keywords" content="网络安全, 零信任网络, 防火墙, 边界安全, 假定违规, 网络分段">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="网络安全：安全边界已消亡，零信任永存">
+<meta property="og:description" content="安全边界在2010年已消亡。质疑防火墙教条的权威。假定违规，相应设计。">
+	<meta property="og:locale" content="zh_CN">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-network-security_zh.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-network-security_zh.html">
+
+<!-- Hreflang tags for all language variants -->
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-network-security.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-network-security.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-network-security_sv.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-network-security_da.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-network-security_no.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-network-security_fi.html">
+<link rel="alternate" hreflang="de" href="https://hack23.com/discordian-network-security_de.html">
+<link rel="alternate" hreflang="nl" href="https://hack23.com/discordian-network-security_nl.html">
+<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-network-security_fr.html">
+<link rel="alternate" hreflang="es" href="https://hack23.com/discordian-network-security_es.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/discordian-network-security_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/discordian-network-security_ko.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/discordian-network-security_zh.html">
+<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-network-security_ar.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-network-security_he.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "网络安全：安全边界已消亡，零信任永存",
+      "description": "独立思考网络安全。安全边界在2010年已消亡。质疑防火墙教条的权威。Hack23的零信任AWS架构：CloudFront+WAF DDoS保护、GuardDuty威胁检测、Security Hub聚合、多区域弹性。",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-12-29",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-network-security_zh.html"
+      },
+      "keywords": "network security, zero trust, firewall, ISMS",
+      "articleSection": "信息安全",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "zh",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "信息安全管理系统策略实施"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-network-security_zh.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://hack23.com/index_zh.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "博客",
+          "item": "https://hack23.com/blog_zh.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "网络安全",
+          "item": "https://hack23.com/discordian-network-security_zh.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_zh.html">首页</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_zh.html">博客</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        网络安全
+      </li>
+    </ol>
+  </nav>
+
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>网络安全策略：安全边界已消亡，零信任永存</h1>
+  <div class="app-link">
+    <a href="index_zh.html" title="返回首页">首页</a>
+    <a href="discordian-cybersecurity_zh.html" title="返回宣言">宣言</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md" title="公开网络安全策略">ISMS策略</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <h2 class="header">🌐 网络安全策略：安全边界已消亡，零信任永存</h2>
+
+    <section id="intro">
+      <h2 class="panel-caption">为什么传统网络边界已经不存在了（以及为什么这很重要）</h2>
+      
+      <p><strong>独立思考，朋友！</strong> 网络安全曾经很简单：硬壳、软内部。防火墙把坏人挡在外面，内部的一切都是可信的。这一直是幻想，但它让人感到舒适且易于理解。然后云计算、远程工作和移动设备出现了。<strong>安全边界在2010年就消失了。</strong>但我们仍然像它还存在一样行事——资助边界防御、信任内部网络、假设防火墙可以阻止攻击者。<strong>剧透：它们不能。</strong> 攻击者已经在内部了，或者很快就会进来。<em>假定违规。相应设计。</em></p>
+      
+      <p><strong>质疑权威——尤其是网络安全权威：</strong> 那些推销"下一代防火墙"和"威胁防护"的同样的人告诉你，防火墙可以保护你。他们错了。防火墙是必要的——用于分段、过滤和合规检查框——但它们不是安全策略。<em>它们是控制点，而不是信任边界。</em> 零信任网络假设：<strong>网络是敌对的</strong>、身份验证是持续的、信任必须被赚取（并定期重新验证）。这不是偏执——这是操作现实。在云中，在有远程工作者的情况下，在有供应商访问的情况下——传统边界已经消失了。要么适应，要么被入侵。</p>
+      
+      <p><strong>没有什么是真实的。一切都是被允许的。</strong> 包括——尤其是——我们给自己的许可，即假设每个连接都是恶意的，直到被证明不是。我们在AWS上的<strong>零信任架构</strong>使用<strong>CloudFront + WAF</strong>进行DDoS保护和应用层过滤、<strong>GuardDuty</strong>进行智能威胁检测、<strong>Security Hub</strong>进行集中监控、<strong>VPC Flow Logs</strong>进行网络可见性、<strong>Route 53与DNSSEC</strong>防止DNS欺骗。我们在<strong>多个区域</strong>（eu-west-1、eu-central-1）部署以实现弹性。我们<strong>强制TLS 1.2+</strong>。我们不信任任何人——包括我们自己。<em>这不是偏执。这是工程。</em></p>
+      
+      <p class="hidden-wisdom"><em>觉悟：安全边界是心理安慰，而不是技术现实。攻击者不会在防火墙前停下来，征求进入许可。他们会在你最薄弱的地方突破——钓鱼、供应商妥协、错误配置、内部威胁——然后横向移动，直到他们拥有你想要的一切。零信任通过假设违规、设计深度防御、持续验证信任来操作。欢迎来到危险之堂（Chapel Perilous），在这里假设网络是敌对的比假装防火墙能保护你更安全。你是否足够谨慎，可以在可验证的安全卓越性而不是营销承诺和供应商批准的"最佳实践"上竞争？</em></p>
+      
+      <p><strong>23 FNORD 5</strong> — 网络边界死了。零信任永存。</p>
+    </section>
+
+    <section id="hack23-network-architecture">
+      <h2 class="panel-caption">🏗️ Hack23的零信任AWS网络架构</h2>
+      
+      <p>我们的网络安全不是理论。这是我们用于生产系统的<strong>可验证的、经过测试的架构</strong>：</p>
+      
+      <h3>CloudFront + WAF：DDoS保护和应用层安全</h3>
+      <ul>
+        <li><strong>CloudFront CDN：</strong> 全球边缘位置，减少延迟并吸收DDoS攻击</li>
+        <li><strong>AWS WAF：</strong> Web应用防火墙，规则用于SQL注入、XSS、速率限制</li>
+        <li><strong>AWS Shield Standard：</strong> 自动DDoS保护（包含在CloudFront中）</li>
+        <li><strong>地理封锁：</strong> 根据需要针对合规要求进行配置</li>
+      </ul>
+      
+      <h3>GuardDuty：智能威胁检测</h3>
+      <ul>
+        <li><strong>威胁检测：</strong> 分析VPC Flow Logs、CloudTrail事件、DNS日志</li>
+        <li><strong>机器学习：</strong> 异常检测和已知威胁识别</li>
+        <li><strong>集中告警：</strong> 路由到Security Hub进行统一监控</li>
+        <li><strong>自动响应：</strong> 高和严重严重性发现的SNS通知</li>
+      </ul>
+      
+      <h3>Security Hub：集中安全管理</h3>
+      <ul>
+        <li><strong>聚合发现：</strong> GuardDuty、Inspector、Macie、第三方工具</li>
+        <li><strong>合规仪表板：</strong> CIS AWS Foundations Benchmark、PCI DSS</li>
+        <li><strong>自动化修复：</strong> Lambda函数用于常见安全问题</li>
+        <li><strong>优先级排序：</strong> 严重性评分和上下文见解</li>
+      </ul>
+      
+      <h3>网络分段：VPC、子网、安全组</h3>
+      <ul>
+        <li><strong>公共子网：</strong> 仅面向互联网的负载均衡器</li>
+        <li><strong>私有子网：</strong> 应用服务器，无直接互联网访问</li>
+        <li><strong>隔离子网：</strong> 数据库，具有严格的访问控制</li>
+        <li><strong>安全组：</strong> 基于微分段的状态防火墙</li>
+        <li><strong>NACL：</strong> 子网级别的无状态过滤</li>
+      </ul>
+      
+      <h3>VPC Flow Logs：网络可见性</h3>
+      <ul>
+        <li><strong>捕获所有流量：</strong> 接受和拒绝的连接</li>
+        <li><strong>法医分析：</strong> 事件响应和异常检测</li>
+        <li><strong>合规审计：</strong> 网络通信的完整日志</li>
+        <li><strong>GuardDuty集成：</strong> 威胁检测数据源</li>
+      </ul>
+      
+      <h3>Route 53 + DNSSEC：DNS安全</h3>
+      <ul>
+        <li><strong>DNSSEC签名：</strong> 防止DNS欺骗和缓存中毒</li>
+        <li><strong>健康检查：</strong> 自动故障转移到健康端点</li>
+        <li><strong>地理路由：</strong> 低延迟和合规性</li>
+        <li><strong>隐私保护：</strong> 域注册和WHOIS隐私</li>
+      </ul>
+      
+      <h3>多区域弹性</h3>
+      <ul>
+        <li><strong>主区域：</strong> eu-west-1（爱尔兰）</li>
+        <li><strong>备份区域：</strong> eu-central-1（法兰克福）</li>
+        <li><strong>自动故障转移：</strong> Route 53健康检查和DNS故障转移</li>
+        <li><strong>数据复制：</strong> 跨区域S3复制和RDS只读副本</li>
+      </ul>
+      
+      <h3>TLS/SSL：强加密</h3>
+      <ul>
+        <li><strong>TLS 1.2+仅：</strong> 在CloudFront和ALB上禁用旧协议</li>
+        <li><strong>强密码套件：</strong> 现代、安全的加密算法</li>
+        <li><strong>证书管理：</strong> AWS Certificate Manager（ACM）自动续订</li>
+        <li><strong>HSTS：</strong> HTTP严格传输安全标头</li>
+      </ul>
+    </section>
+
+    <section id="chinese-compliance">
+      <h2 class="panel-caption">🇨🇳 中国网络安全法合规</h2>
+      
+      <p>对于在中国运营或为中国客户提供服务：</p>
+      
+      <h3>网络安全法（Cybersecurity Law）</h3>
+      <ul>
+        <li><strong>数据本地化：</strong> 中国境内收集的个人数据必须存储在中国</li>
+        <li><strong>安全评估：</strong> 关键信息基础设施的强制性安全审计</li>
+        <li><strong>实名制：</strong> 用户注册的真实身份验证</li>
+        <li><strong>内容监控：</strong> 非法内容的监控和过滤要求</li>
+      </ul>
+      
+      <h3>个人信息保护法（PIPL）</h3>
+      <ul>
+        <li><strong>数据保护原则：</strong> 最小化、透明度、目的限制</li>
+        <li><strong>同意要求：</strong> 明确、知情的用户同意进行数据收集</li>
+        <li><strong>数据传输：</strong> 跨境数据传输限制和批准</li>
+        <li><strong>数据主体权利：</strong> 访问、更正、删除个人数据</li>
+      </ul>
+      
+      <h3>GB/T 22080（ISO 27001的中国版本）</h3>
+      <ul>
+        <li><strong>ISMS框架：</strong> 信息安全管理系统要求</li>
+        <li><strong>风险评估：</strong> 系统的威胁识别和缓解</li>
+        <li><strong>安全控制：</strong> 技术和组织措施</li>
+        <li><strong>持续改进：</strong> 定期审计和更新</li>
+      </ul>
+    </section>
+
+    <section id="implementation-guide">
+      <h2 class="panel-caption">📋 实施指南：在AWS上构建零信任网络</h2>
+      
+      <h3>第1步：放弃传统边界思维</h3>
+      <p>承认网络边界已经死亡。设计防违规——假设攻击者已经在内部或将会进入内部。</p>
+      
+      <h3>第2步：部署CloudFront与WAF</h3>
+      <p>设置AWS CloudFront作为你的内容分发网络，附加AWS WAF用于DDoS保护和Web应用安全。</p>
+      
+      <h3>第3步：实施多区域架构</h3>
+      <p>在多个AWS区域部署资源以实现弹性。使用eu-west-1（爱尔兰）作为主区域，eu-central-1（法兰克福）用于冗余。</p>
+      
+      <h3>第4步：启用VPC Flow Logs</h3>
+      <p>激活VPC Flow Logs以捕获网络流量元数据。记录所有接受和拒绝的流量以进行安全分析。</p>
+      
+      <h3>第5步：配置GuardDuty</h3>
+      <p>启用AWS GuardDuty进行智能威胁检测。配置发现路由到Security Hub进行集中监控。</p>
+      
+      <h3>第6步：实施网络分段</h3>
+      <p>使用VPC和子网创建隔离的网络段。使用安全组和NACL进行微分段。</p>
+      
+      <h3>第7步：在Route 53上启用DNSSEC</h3>
+      <p>在Route 53托管区域上配置DNSSEC签名，以防止DNS欺骗和缓存中毒攻击。</p>
+      
+      <h3>第8步：强制TLS 1.2+仅</h3>
+      <p>配置CloudFront和ALB以要求TLS 1.2或更高版本。禁用旧协议（SSL、TLS 1.0、TLS 1.1）。</p>
+      
+      <h3>第9步：实施网络监控</h3>
+      <p>使用Security Hub、GuardDuty发现、VPC Flow Logs分析和CloudWatch告警设置全面监控。</p>
+      
+      <h3>第10步：持续改进</h3>
+      <p>定期审查安全发现、更新规则、测试响应程序。零信任是一个旅程，而不是目的地。</p>
+    </section>
+
+    <section id="resources">
+      <h2 class="panel-caption">📚 资源和参考</h2>
+      
+      <ul>
+        <li><strong>公开ISMS策略：</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">网络安全策略（GitHub）</a></li>
+        <li><strong>AWS安全最佳实践：</strong> <a href="https://docs.aws.amazon.com/security/">AWS安全文档</a></li>
+        <li><strong>零信任架构：</strong> <a href="https://www.nist.gov/publications/zero-trust-architecture">NIST SP 800-207</a></li>
+        <li><strong>中国网络安全法：</strong> <a href="http://www.cac.gov.cn/">中国网络空间管理局（CAC）</a></li>
+        <li><strong>GB/T 22080：</strong> <a href="http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=3EDFF2A5DFAA78BF3FBD57E4AB8E0C3C">中国信息安全标准</a></li>
+      </ul>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">🎯 结论：拥抱零信任，忘记边界</h2>
+      
+      <p><strong>独立思考</strong> 网络安全。安全边界已经消失了。防火墙是必要的控制，而不是信任边界。零信任假设违规、持续验证和最小权限访问。</p>
+      
+      <p><strong>质疑权威</strong> 关于网络防御。那些推销"下一代边界保护"的人正在销售过时的模型。攻击者已经在你的网络中了——设计得好像他们已经在那里一样。</p>
+      
+      <p><strong>没有什么是真实的。一切都是被允许的。</strong> 包括假设每个连接都是恶意的、每个用户都需要验证、每个网络段都需要监控的许可。零信任不是技术——它是思维方式。</p>
+      
+      <p><strong>23 FNORD 5</strong> — 安全边界死了。零信任永存。在可验证的安全卓越性上竞争，而不是营销承诺。</p>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Hack23 AB</h3>
+      <p>瑞典网络安全咨询</p>
+      <p>Org.nr: 5595347807</p>
+      <p>©2008-2025 James Pether Sörling</p>
+    </div>
+    
+    <div class="footer-section">
+      <h3>资源</h3>
+      <ul>
+        <li><a href="https://github.com/Hack23/ISMS-PUBLIC">公开ISMS</a></li>
+        <li><a href="blog_zh.html">博客</a></li>
+        <li><a href="services_zh.html">服务</a></li>
+        <li><a href="projects_zh.html">项目</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h3>联系方式</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/company/hack23/">LinkedIn</a></li>
+        <li><a href="https://github.com/Hack23">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>
+      <a href="accessibility-statement_zh.html">无障碍声明</a> |
+      <a href="sitemap_zh.html">网站地图</a> |
+      <a href="https://github.com/Hack23/ISMS-PUBLIC">安全策略</a>
+    </p>
+    <p>🍎 独立思考。质疑权威。23 FNORD 5 🍎</p>
+  </div>
+</footer>
+
+</body>
+</html>
