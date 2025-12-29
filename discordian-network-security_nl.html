@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netwerkbeveiliging | Zero Trust Cloud Architecture | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Zero-trust AWS-netwerk: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Multi-regio (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.">
+<meta name="keywords" content="network security, zero trust network, firewall, perimeter security, assume breach, network segmentation">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Netwerkbeveiliging: The Perimeter Is Dead, Long Live the Perimeter">
+<meta property="og:description" content="The perimeter dissolved in 2010. Bevraag autoriteit over firewall dogma. Assume breach, design accordingly.">
+	<meta property="og:locale" content="nl_NL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-network-security_nl.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Beveiligingsblog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-network-security_nl.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Network Security: The Perimeter Is Dead, Long Live the Perimeter",
+      "description": "Denk zelf over network security. The perimeter dissolved in 2010. Bevraag autoriteit over firewall dogma. Hack23's zero-trust AWS architecture: CloudFront+WAF DDoS protection, GuardDuty threat detection, Security Hub aggregation, multi-region resilience.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-network-security_nl.html"
+      },
+      "keywords": "network security, zero trust, firewall, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1674,
+      "articleBody": "Think for yourself, schmuck! Network security used to be simple: hard shell, soft interior. Firewall keeps bad guys out, everything inside is trusted. That was always fantasy, but it was comfortable f...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Beveiligingsblog"
+      },
+      "inLanguage": "nl",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-network-security_nl.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Network Security",
+          "item": "https://hack23.com/discordian-network-security_nl.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Zero Trust Network Security in AWS",
+      "description": "Step-by-step guide to implementing zero trust network architecture using CloudFront, WAF, GuardDuty, Security Hub, and multi-region resilience",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT5H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "150"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudFront"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS WAF (Web Application Firewall)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Shield (DDoS Protection)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "VPC Flow Logs"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Route 53 with DNSSEC"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Network Security Policy",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Abandon Traditional Perimeter Thinking",
+          "text": "Acknowledge that the network perimeter is dead. Design for breach - assume attackers are already inside or will get inside",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "The perimeter dissolved in 2010 with cloud computing and remote work. Stop pretending otherwise"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Deploy CloudFront with WAF",
+          "text": "Set up AWS CloudFront as your content delivery network with AWS WAF attached for DDoS protection and web application security",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Configure WAF rules for SQL injection, XSS, and rate limiting"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Enable AWS Shield Standard (automatic) or Shield Advanced for enhanced DDoS protection"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Set up geo-blocking if needed for compliance requirements"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Implement Multi-Region Architecture",
+          "text": "Deploy resources across multiple AWS regions for resilience. Use eu-west-1 (Ireland) as primary and eu-central-1 (Frankfurt) for redundancy",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Multi-region protects against regional outages and provides lower latency for users"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable VPC Flow Logs",
+          "text": "Activate VPC Flow Logs to capture network traffic metadata. Log all accepted and rejected traffic for security analysis",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Flow logs enable forensic analysis and anomaly detection without impacting performance"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Configure GuardDuty",
+          "text": "Enable AWS GuardDuty for intelligent threat detection. Configure findings to route to Security Hub for centralized monitoring",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "GuardDuty analyzes VPC Flow Logs, CloudTrail events, and DNS logs"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Set up SNS notifications for high and critical severity findings"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Implement Network Segmentation",
+          "text": "Create isolated network segments using VPCs and subnets. Use Security Groups and NACLs for microsegmentation",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Public subnet: Internet-facing load balancers only"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Private subnet: Application servers with no direct internet access"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Isolated subnet: Databases with strict access controls"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Enable DNSSEC on Route 53",
+          "text": "Configure DNSSEC signing on Route 53 hosted zones to prevent DNS spoofing and cache poisoning attacks",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "DNSSEC provides cryptographic authentication of DNS responses"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Enforce TLS 1.2+ Only",
+          "text": "Configure CloudFront and ALB to require TLS 1.2 or higher. Disable older protocols (SSL, TLS 1.0, TLS 1.1)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Older TLS versions have known vulnerabilities. Modern browsers support TLS 1.2+"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Implement Network Monitoring",
+          "text": "Set up comprehensive monitoring using Security Hub, GuardDuty findings, VPC Flow Logs analysis, and CloudWatch alarms",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Visibility is critical for zero trust - you can't protect what you can't see"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Review and Update Policy",
+          "text": "Conduct semi-annual reviews of network security architecture. Update based on new threats, AWS service updates, or incident learnings"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <!-- Hreflang tags for international SEO -->
+    <link rel="alternate" hreflang="da" href="https://hack23.com/discordian-network-security_da.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/discordian-network-security_nl.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-network-security_fi.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/discordian-network-security_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-network-security_no.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-network-security_nl.html">
+</head>
+<body>
+<div class="translation-notice" style="background-color: #fff3cd; border: 1px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px;">
+    <p><strong>🇳🇱 Nederlandse vertaling</strong> | <a href="discordian-network-security_nl.html">English version</a></p>
+    <p>Deze pagina is vertaald naar het Nederlands. Voor de meest actuele informatie, raadpleeg de Engelse versie.</p>
+</div>
+
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_nl.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Network Security
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index_nl.html">Home</a>
+    <a href="discordian-cybersecurity_nl.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">ISMS Network Policy</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h2 class="header">🌐 Network Security: The Perimeter Is a Lie</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Castle-and-Moat Security Died With Mobile Devices</h2>
+      
+      <p><strong>Think for yourself, schmuck!</strong> Network security used to be simple: hard shell, soft interior. Firewall keeps bad guys out, everything inside is trusted. <em>That was always fantasy, but it was comfortable fantasy executives could understand and budget for.</em></p>
+      
+      <p><strong>That model is dead.</strong> Has been dead since mobile devices, cloud services, and remote work murdered it. But consultants keep selling castle-and-moat security because it's easy to explain to executives who don't understand technology—and because admitting the perimeter is fiction means admitting they sold you expensive lies for decades. <strong>FNORD—your firewall is security theater pretending to be protection. The attacks are coming from inside the house. They always were.</strong></p>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including attackers already inside your "secure" network reading this while sipping coffee from their compromised endpoint. Plan for breach. Design for containment. Test your detection. <strong>Are you paranoid enough to assume you're already compromised? You should be. Statistically, you probably are.</strong></p>
+      
+      <p>At Hack23, we practice what we preach: <strong>zero-trust AWS cloud-native architecture</strong> with defense-in-depth. CloudFront+WAF for perimeter (DDoS protection, OWASP rule sets). GuardDuty for threat intelligence. Security Hub for finding aggregation. VPC Flow Logs for traffic analysis. Multi-region deployment (eu-west-1, eu-central-1) for resilience. DNSSEC verification on all domains. TLS 1.2+ enforced everywhere.</p>
+      
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy</a> is public because network security through obscurity assumes attackers can't run port scans. Transparency demonstrates our cybersecurity consulting expertise through measurable implementation. <strong>Our threat model assumes you're reading this. Welcome, adversary. Enjoy the documentation.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Illumination: If your security model assumes attackers are outside, your security model is from 1995. Update it or get pwned. We updated ours—here's the evidence. <strong>FNORD—the only thing separating you from breach is whether the attacker has coffee yet.</strong></em></p>
+    
+      
+      <p><strong>Looking for expert implementation support?</strong> <a href="why-hack23_nl.html">See why organizations choose Hack23</a> for security consulting that accelerates innovation.</p>
+    </section>
+
+    <section id="perimeter-myth">
+      <h2 class="panel-caption">Why the Network Perimeter Is Fantasy</h2>
+      
+      <p><strong>Question authority</strong> that still talks about "inside" and "outside" networks:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. Mobile Devices Roam</h3>
+          <p>Laptop leaves the office? It's "outside." Comes back? It's "inside" again. <strong>With whatever malware it picked up.</strong> VPN doesn't make devices trustworthy—it just encrypts their attacks.</p>
+          <p class="hidden-wisdom"><em>Illumination: Every device that crosses the perimeter is a potential Trojan horse. The Greeks taught this lesson 3000 years ago.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. Cloud Services Are "Outside"</h3>
+          <p>Office 365? AWS? GitHub? <strong>All outside your perimeter.</strong> Yet essential to business. The perimeter doesn't include what you actually use.</p>
+          <p class="hidden-wisdom"><em>Illumination: Defending a perimeter that doesn't include your data is LARPing security.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. Insider Threats Exist</h3>
+          <p>Malicious insiders. Compromised accounts. Social engineering. <strong>Threat is already inside.</strong> Your firewall doesn't stop Susan in accounting from clicking phishing links.</p>
+          <p class="hidden-wisdom"><em>Illumination: The call is coming from inside the house. It always was.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. Supply Chain Compromises</h3>
+          <p>Trusted vendor gets hacked. Pushes malicious update. <strong>Through your firewall.</strong> Because you trust signed updates from "inside" the perimeter. SolarWinds, anyone?</p>
+          <p class="hidden-wisdom"><em>Illumination: Trust is how supply chain attacks work. Zero trust is how they get detected.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. APTs Are Patient</h3>
+          <p>Advanced Persistent Threats don't bang on your firewall. They <strong>live inside for months</strong>. Quietly. The perimeter didn't save you—you're already compromised and don't know it.</p>
+          <p class="hidden-wisdom"><em>Illumination: The average dwell time for breaches is measured in months. Your perimeter failed months ago.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="zero-trust-network">
+      <h2 class="panel-caption">Zero Trust: Verify Everything, Trust Nothing</h2>
+      
+      <p><strong>Zero trust networking</strong> isn't paranoia. It's accepting reality and designing accordingly. At Hack23, zero-trust means cloud-native AWS architecture with layered defense:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🌐 Perimeter Layer: CloudFront + WAF</h3>
+          <p><strong>DDoS Protection:</strong> AWS Shield Standard, CloudFront distribution caching, automatic mitigation</p>
+          <p><strong>WAF Rules:</strong> OWASP Top 10 protection, rate limiting, geo-blocking where appropriate</p>
+          <p><strong>TLS Enforcement:</strong> TLS 1.2+ mandatory, <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com">SSL Labs A+ rating</a></p>
+          <p class="hidden-wisdom"><em>Evidence: CloudFront metrics show real-time attack mitigation. WAF logs available via CloudWatch.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ Application Layer: Private Subnets</h3>
+          <p><strong>Lambda Functions:</strong> Serverless compute in private VPC, no direct internet exposure</p>
+          <p><strong>API Gateway:</strong> Rate limiting, authentication, request validation before reaching backend</p>
+          <p><strong>VPC Endpoints:</strong> Private connectivity to AWS services (S3, KMS, Systems Manager) without NAT</p>
+          <p class="hidden-wisdom"><em>Microsegmentation prevents lateral movement—even if attacker breaches perimeter.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>💾 Data Layer: Isolated Tier</h3>
+          <p><strong>RDS PostgreSQL:</strong> Private subnets only, no public access, encrypted at rest (KMS)</p>
+          <p><strong>S3 Buckets:</strong> VPC endpoints for internal access, public access blocked by default</p>
+          <p><strong>Secrets Management:</strong> AWS Secrets Manager with automatic rotation, least privilege IAM</p>
+          <p class="hidden-wisdom"><em>Defense-in-depth: Even if application tier compromised, data layer requires separate breach.</em></p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 Management Plane: Secure Access</h3>
+          <p><strong>Systems Manager:</strong> Secure remote access without SSH/RDP, session logging to CloudTrail</p>
+          <p><strong>CloudTrail:</strong> All API calls logged, immutable audit trail, SIEM integration ready</p>
+          <p><strong>Multi-Factor Authentication:</strong> AWS Identity Center with MFA mandatory for all access</p>
+          <p class="hidden-wisdom"><em>Zero standing privileges—request elevated access when needed, automatically revoked.</em></p>
+        </div>
+      </div>
+      
+      <p><strong>Multi-Region Resilience:</strong> Primary region eu-west-1 (Stockholm), failover to eu-central-1 (Frankfurt). AWS Backup cross-region replication. Route 53 health checks with automatic failover.</p>
+      
+      <ul>
+        <li><strong>Authenticate every request</strong> — Location on network doesn't grant trust. Verify identity, device health, context every time.</li>
+        <li><strong>Authorize least privilege</strong> — Just because you're authenticated doesn't mean you get access to everything. Minimum required, time-limited when possible.</li>
+        <li><strong>Encrypt everything in transit</strong> — TLS 1.2+ everywhere. mTLS for service-to-service communication where applicable.</li>
+        <li><strong>Microsegment the network</strong> — Lateral movement is how breaches spread. Private subnets, security groups, VPC endpoints contain blast radius.</li>
+        <li><strong>Monitor all traffic</strong> — VPC Flow Logs, GuardDuty threat detection, Security Hub aggregation. Assume breach means detecting it fast.</li>
+      </ul>
+      
+      <p><strong>All hail Eris!</strong> Chaos teaches: trust enables betrayal. Verification prevents surprises. Our network security demonstrates this through public evidence.</p>
+      
+      <p><strong>Live Evidence:</strong></p>
+      <ul>
+        <li>🌐 <a href="https://dnssec-debugger.verisignlabs.com/hack23.com">DNSSEC Verification: hack23.com</a></li>
+        <li>🔐 <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com">SSL Labs Test: A+ Rating</a></li>
+        <li>📧 <a href="https://mxtoolbox.com/spf.aspx?domain=hack23.com">SPF Record: Strict Policy</a></li>
+        <li>🛡️ <a href="https://mxtoolbox.com/dmarc.aspx?domain=hack23.com">DMARC: Reject Policy</a></li>
+      </ul>
+    </section>
+
+    <section id="firewall-reality">
+      <h2 class="panel-caption">Firewalls: Necessary But Insufficient</h2>
+      
+      <p><strong>Firewalls aren't useless.</strong> They're just not sufficient:</p>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>✅ Firewalls Block Port Scans</h3>
+          <p>Deny-by-default is good. Reducing attack surface is good. Basic perimeter defense is <em>necessary</em>.</p>
+        </div>
+        
+        <div class="card">
+          <h3>❌ Firewalls Don't Stop Malware</h3>
+          <p>Malware uses allowed ports (80/443). Encrypted in TLS. Your firewall sees encrypted traffic and says "looks fine to me."</p>
+        </div>
+        
+        <div class="card">
+          <h3>✅ Firewalls Provide Defense in Depth</h3>
+          <p>Layer in a security stack. One control among many. <strong>Not</strong> the only control.</p>
+        </div>
+        
+        <div class="card">
+          <h3>❌ Firewalls Create False Confidence</h3>
+          <p>"We have a firewall, we're secure!" No. You have <em>one</em> control. You need twenty more.</p>
+        </div>
+      </div>
+      
+      <p><strong>Think for yourself.</strong> Firewalls are tools, not magic force fields. Use them. Don't worship them.</p>
+    </section>
+
+    <section id="segmentation">
+      <h2 class="panel-caption">Network Segmentation: Limit the Blast Radius</h2>
+      
+      <p><strong>Assume breach.</strong> Design so that when (not if) attackers get in, they can't move laterally:</p>
+      
+      <ul>
+        <li><strong>VLANs for different functions</strong> — Development, staging, production in different network segments</li>
+        <li><strong>Firewall rules between segments</strong> — Default deny. Explicit allow only what's needed.</li>
+        <li><strong>Jump boxes for admin access</strong> — No direct SSH/RDP to production. Through a logged, monitored, hardened jump host.</li>
+        <li><strong>Service mesh for microservices</strong> — mTLS between services. Network policy enforcement at pod level.</li>
+        <li><strong>Database in separate subnet</strong> — Application tier can reach it. Nothing else can. Principle of least privilege at network layer.</li>
+      </ul>
+      
+      <p class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> <em>Flat networks are how one compromised WordPress blog becomes a full domain admin compromise. Segment or suffer.</em></p>
+    </section>
+
+    <section id="monitoring">
+      <h2 class="panel-caption">Network Monitoring: Seeing the Invisible</h2>
+      
+      <p><strong>Can't defend what you can't see.</strong> Network monitoring isn't optional. At Hack23, comprehensive visibility through AWS-native services:</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔍 VPC Flow Logs</h3>
+          <p>All VPC traffic logged to CloudWatch. Source/destination IPs, ports, protocols, accept/reject decisions. Baseline normal traffic patterns, alert on anomalies.</p>
+          <p><strong>Response Time:</strong> Anomalous traffic investigation &lt;15 minutes per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md">Incident Response Plan</a></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ AWS GuardDuty</h3>
+          <p>Machine learning threat detection analyzing VPC Flow Logs, CloudTrail events, DNS logs. Identifies compromised instances, reconnaissance, backdoor communication.</p>
+          <p><strong>Integration:</strong> Findings aggregated in Security Hub, critical alerts trigger immediate investigation</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🎯 AWS Security Hub</h3>
+          <p>Centralized finding aggregation from GuardDuty, Inspector, IAM Access Analyzer. Automated compliance checks (CIS AWS Foundations Benchmark, PCI DSS).</p>
+          <p><strong>Dashboard:</strong> Single pane of glass for all security findings, prioritized by severity</p>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>📊 CloudWatch + CloudTrail</h3>
+          <p>All AWS API calls logged (CloudTrail). All service metrics collected (CloudWatch). Custom alarms for suspicious patterns: unusual API calls, failed auth attempts, config changes.</p>
+          <p><strong>Retention:</strong> 90 days hot storage, 1 year cold archive per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy</a></p>
+        </div>
+      </div>
+      
+      <ul>
+        <li><strong>Flow logs</strong> — Who's talking to who, when, how much. VPC Flow Logs capture all network traffic for analysis.</li>
+        <li><strong>Threat detection</strong> — GuardDuty continuously analyzes network behavior for indicators of compromise.</li>
+        <li><strong>DNS monitoring</strong> — Route 53 Resolver logs DNS queries. Exfiltration often uses DNS tunneling—monitor for anomalies.</li>
+        <li><strong>SIEM integration</strong> — CloudWatch Logs Insights for analysis. Security Hub for aggregation. Ready for external SIEM if needed.</li>
+      </ul>
+      
+      <p><strong>Question authority:</strong> If your network team says "we can't monitor that," ask why. Usually it's "we don't want to" not "we can't." AWS makes comprehensive monitoring default—no excuses.</p>
+      
+      <p><strong>Real-Time Threat Response:</strong></p>
+      <ul>
+        <li>🚨 <strong>DDoS Attacks:</strong> CloudFront metrics, real-time automatic mitigation</li>
+        <li>🔍 <strong>Anomalous Traffic:</strong> VPC Flow Logs, &lt;15 min response time</li>
+        <li>🛡️ <strong>Threat Intelligence:</strong> GuardDuty findings, immediate Security Hub alerts</li>
+        <li>📋 <strong>Compliance Checks:</strong> Security Hub automated controls, continuous validation</li>
+      </ul>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Network Security Is About Containment, Not Prevention</h2>
+      
+      <p><strong>Nothing is true.</strong> The perimeter isn't real. "Inside" isn't trusted. Firewalls aren't magic. <strong>FNORD—your network is already compromised. The question is: do you know it yet?</strong></p>
+      
+      <p><strong>Everything is permitted.</strong> Including designing networks that assume breach and minimize damage through systematic defense-in-depth. <strong>Are you paranoid enough to admit perfect prevention is impossible?</strong></p>
+      
+      <p><strong>Hack23's zero-trust implementation demonstrates cybersecurity consulting expertise:</strong></p>
+      <ul>
+        <li>🌐 <strong>CloudFront + WAF:</strong> Perimeter protection with DDoS mitigation, OWASP rules—because the perimeter is fiction but edge protection isn't</li>
+        <li>🛡️ <strong>GuardDuty + Security Hub:</strong> Continuous threat detection, finding aggregation—machines watching machines because humans are terrible at this</li>
+        <li>🔍 <strong>VPC Flow Logs:</strong> Complete traffic visibility, anomaly detection—trust nothing, log everything, investigate constantly</li>
+        <li>🌍 <strong>Multi-Region:</strong> eu-west-1 (Stockholm), eu-central-1 (Frankfurt) resilience—because single points of failure are for amateurs</li>
+        <li>🔐 <strong>TLS 1.2+ Everywhere:</strong> No unencrypted traffic, certificate validation enforced—encrypt it all or watch it leak</li>
+      </ul>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md">Network Security Policy on GitHub</a>. Zero trust. Segmented. Monitored. With public evidence demonstrating implementation. <strong>We're paranoid. You should be too.</strong></p>
+      
+      <p class="hidden-wisdom"><strong>FINAL ILLUMINATION:</strong> <em>The security-industrial complex sells firewalls and perimeter defense because they're easy to sell. "Buy this box, you're secure!" Reality: Network security is architecture, monitoring, and accepting that perfect prevention is impossible. Design for containment. Plan for detection. Respond with speed. Our AWS cloud-native architecture does exactly this—with measurable proof. <strong>FNORD—we're protecting against attackers who've already read this. Are you?</strong></em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br><br><em>"The perimeter is dead. Long live the perimeter-less architecture. <strong>Nothing is true. Everything is permitted. Your network agrees with neither.</strong>"</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="related">
+      <h2 class="panel-caption">Related ISMS Policies</h2>
+      <ul>
+        <li><a href="discordian-info-sec-policy_nl.html">Information Security Policy</a> — Comprehensive ISMS foundation and framework</li>
+        <li><a href="discordian-access-control_nl.html">Access Control Policy</a> — Zero trust identity and authentication</li>
+        <li><a href="discordian-crypto_nl.html">Cryptography Policy</a> — Encryption standards and key management</li>
+        <li><a href="discordian-cloud-security_nl.html">Cloud Security</a> — AWS architecture and security controls</li>
+        <li><a href="discordian-monitoring-logging_nl.html">Monitoring & Logging</a> — Detection and audit trails</li>
+      </ul>
+    </section>
+  </article>
+</main>
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services_nl.html">Security Consulting</a></li>
+            <li><a href="services_nl.html">Security Architecture</a></li>
+            <li><a href="services_nl.html">Cloud Security</a></li>
+            <li><a href="services_nl.html">DevSecOps Integration</a></li>
+            <li><a href="services_nl.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features_nl.html">Black Trigram</a></li>
+            <li><a href="cia-features_nl.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_nl.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog_nl.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity_nl.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq_nl.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap_nl.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23_nl.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement_nl.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code_nl.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code_nl.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_nl.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

@@ -83,9 +83,12 @@ jobs:
           echo "🔗 Checking internal links on localhost..."
           
           # Check links on localhost using global linkinator v6 (v7.5.2 has module resolution bug)
+          # Increased timeout and concurrency to handle large site crawls
           linkinator http://localhost:8080/ \
             --recurse \
             --skip "^(?!http://localhost:8080)" \
+            --timeout 30000 \
+            --concurrency 25 \
             --format json > internal-links-report.json || true
           
           # Kill server

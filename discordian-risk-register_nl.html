@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risicoregister | Living Document Tracking | Hack23</title>
+    <meta name="description" content="Living risk register with continuous updates: 48h threat intelligence integration, quarterly reviews, risk-based investment decisions tracked.">
+    <meta name="keywords" content="risk register, risk management, threat catalog, vulnerability tracking, ISMS risk, risk assessment, discordian security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Risicoregister: Living Document of What Keeps You Up at Night">
+    <meta property="og:description" content="Risk register management: Living document vs. audit artifact.">
+	<meta property="og:locale" content="nl_NL">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-risk-register_nl.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Beveiligingsblog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-risk-register_nl.html">
+	<!-- Hreflang tags for language alternatives -->    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Risk Register: Living Document of What Keeps You Up at Night",
+      "description": "Living risk register with continuous updates: 48h threat intelligence integration, quarterly reviews, risk-based investment decisions. Transparent communication with executive summaries",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-risk-register_nl.html"
+      },
+      "keywords": "risk register, risk management, threat tracking, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 956,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Beveiligingsblog"
+      },
+      "inLanguage": "nl",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-risk-register_nl.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/index_nl.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_nl.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Risk Register",
+          "item": "https://hack23.com/discordian-risk-register.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/discordian-risk-register_ar.html">
+<link rel="alternate" hreflang="da" href="https://hack23.com/discordian-risk-register_da.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-risk-register.html">
+<link rel="alternate" hreflang="fi" href="https://hack23.com/discordian-risk-register_fi.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/discordian-risk-register_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/discordian-risk-register_he.html">
+<link rel="alternate" hreflang="no" href="https://hack23.com/discordian-risk-register_no.html">
+<link rel="alternate" hreflang="nb" href="https://hack23.com/discordian-risk-register_no.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-risk-register_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-risk-register_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-risk-register.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_nl.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Risk Register
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h2>Risk Register: Living Document vs. Audit Theater</h2>
+  <div class="app-link">
+    <a href="index_nl.html" title="Back to Home">Home</a>
+    <a href="discordian-cybersecurity_nl.html" title="Back to Manifesto">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" title="Risk Register">ISMS</a>
+  </div>
+</header>
+
+    <main>
+        <article>
+            <h2>📋 Risk Register: Living Document of What Keeps You Up at Night</h2>
+            
+            <p class="subtitle"><em>"A risk register updated only for audits is just expensive fiction. Real risk registers change weekly."</em></p>
+
+            <h2>🍎 The Golden Apple: Dead Registers vs. Living Documents (or: Compliance Theater vs. Actual Risk Management)</h2>
+            
+            <p>Most organizations have risk registers. They're created for ISO 27001 audits, filled with generic threats copy-pasted from templates, assigned arbitrary likelihood/impact scores that make executives feel comfortable, and forgotten until next year's audit. <strong>It's security kabuki. Performance art for auditors.</strong></p>
+            
+            <p><strong>That's not risk management—that's compliance theater.</strong> <em>FNORD.</em> The risk register says "low risk of ransomware" while the CFO's laptop is already encrypted by REvil. Cognitive dissonance is a feature, not a bug.</p>
+            
+            <p>A <em>real</em> risk register is a living document (emphasis on living, not zombie). Updated when new threats emerge (weekly, because attackers don't wait for quarterly reviews). Revised when vulnerabilities are discovered (daily, if you're doing it right). Referenced when making security investment decisions (not vendor pitches or FUD). A working tool, not audit decoration. <strong>The difference between a living risk register and a dead one is whether you'd bet your job on its accuracy. Would you? Are you sure? FNORD.</strong></p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION FOR PSYCHONAUTS:</strong> If your risk register hasn't been updated in six months, it's not tracking risks—it's documenting history (badly). Threats evolve faster than annual audit cycles. Zero-days don't wait for your quarterly review meeting. The conspiracy is real and it's moving faster than your documentation process. <em>Welcome to Chapel Perilous. Update your risk register or the risk register updates you.</em>
+            </div>
+
+            <h2>🛡️ The Five Elements of an Effective Risk Register</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Identified Risks</h3>
+                    <p><strong>What can go wrong?</strong></p>
+                    <p>Threat sources, vulnerabilities, attack scenarios. Specific, not generic. "Ransomware via phishing" > "cyber attack." Update when new threats emerge.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Risk Assessment</h3>
+                    <p><strong>How bad is it?</strong></p>
+                    <p>Likelihood (how probable?). Impact (financial, operational, reputational). Risk score = Likelihood × Impact. Prioritizes treatment decisions.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Existing Controls</h3>
+                    <p><strong>What already mitigates this?</strong></p>
+                    <p>Technical controls (MFA, EDR, backups). Process controls (change management, access reviews). Residual risk after controls applied.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Treatment Plans</h3>
+                    <p><strong>What are you doing about it?</strong></p>
+                    <p>Accept (tolerate residual risk). Mitigate (add controls). Transfer (insurance). Avoid (eliminate risk source). Each decision requires owner and deadline.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Monitoring & Review</h3>
+                    <p><strong>Is risk changing?</strong></p>
+                    <p>Track risk trends over time. Reassess quarterly or when threat landscape changes. Review treatment effectiveness. Update as controls implemented.</p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>CHAOS ILLUMINATION:</strong> Risk assessment is prediction, not certainty. Assign likelihood/impact knowing they're educated guesses. Wrong numbers with right methodology beat no numbers with perfect methodology.
+            </div>
+
+            <h2>📋 Hack23's Risk Register Approach</h2>
+            
+            <p>Our risk register is public (sanitized version): <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">ISMS-PUBLIC Repository</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" target="_blank">Risk Register</a></p>
+            
+            <ul>
+                <li><strong>Continuous Updates:</strong> Risk register updated within 48 hours of new threat intelligence from CVE feeds, CISA alerts, industry reports</li>
+                <li><strong>Threat Intelligence Integration:</strong> Automated feeds trigger risk reviews, not annual audit cycles</li>
+                <li><strong>Quarterly Formal Reviews:</strong> Re-assess likelihood/impact scores every 3 months, validate existing controls, track treatment plan progress</li>
+                <li><strong>Risk-Based Investment:</strong> Security budget prioritized by risk register scores (not vendor pitches or "best practices")</li>
+                <li><strong>Transparent Communication:</strong> Executive summaries show top 10 risks, trend analysis (improving/worsening), treatment progress percentage</li>
+                <li><strong>Documented Rationale:</strong> Every risk score includes evidence-based reasoning, not arbitrary assignment</li>
+            </ul>
+
+            <div class="hidden-wisdom">
+                <strong>META-ILLUMINATION:</strong> Publishing a sanitized risk register publicly (like we do) forces intellectual honesty. Can't bullshit when the world can see your risk assessments.
+            </div>
+
+            <h2>🎯 Risk Register Anti-Patterns (What Not To Do)</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>❌ Annual-Only Updates</h3>
+                    <p><strong>The Problem:</strong> Threat landscape changes faster than audit cycles.</p>
+                    <p><strong>Reality:</strong> New zero-days, emerging attack techniques, industry breaches—all change risk profile continuously.</p>
+                    <p><strong>Fix:</strong> Quarterly reviews minimum, ad-hoc updates for major threats.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Generic Risk Descriptions</h3>
+                    <p><strong>The Problem:</strong> "Cyber attack" tells you nothing.</p>
+                    <p><strong>Reality:</strong> Ransomware via phishing vs. supply chain compromise vs. insider threat—different attacks, different mitigations.</p>
+                    <p><strong>Fix:</strong> Specific threat scenarios with attack paths.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Arbitrary Scoring</h3>
+                    <p><strong>The Problem:</strong> Likelihood/impact assigned without reasoning.</p>
+                    <p><strong>Reality:</strong> If you can't explain why ransomware is "High Likelihood," your assessment is fiction.</p>
+                    <p><strong>Fix:</strong> Document scoring rationale, cite evidence.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Treatment Plans Without Owners</h3>
+                    <p><strong>The Problem:</strong> "Implement MFA" without assigned owner or deadline.</p>
+                    <p><strong>Reality:</strong> Unowned tasks don't get done. No deadline means never.</p>
+                    <p><strong>Fix:</strong> Every treatment plan: owner, deadline, success criteria.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>❌ Ignoring Residual Risk</h3>
+                    <p><strong>The Problem:</strong> Assume controls eliminate risk completely.</p>
+                    <p><strong>Reality:</strong> MFA reduces phishing risk—doesn't eliminate it. Document what remains.</p>
+                    <p><strong>Fix:</strong> Calculate residual risk after controls, decide if acceptable.</p>
+                </div>
+            </div>
+
+            <h2>🔍 The Five Questions for Risk Register Quality</h2>
+
+            <ol>
+                <li><strong>When was it last updated?</strong> - >3 months = stale, >6 months = fiction, >12 months = audit prop</li>
+                <li><strong>Are risks specific or generic?</strong> - "Ransomware via RDP" > "cyber attack"</li>
+                <li><strong>Can you justify scores?</strong> - Explain likelihood/impact rationale or admit you're guessing</li>
+                <li><strong>Do treatment plans have owners?</strong> - Unowned work doesn't happen</li>
+                <li><strong>Does register drive decisions?</strong> - Security investment aligned with risk scores? If not, register is decoration</li>
+            </ol>
+
+            <div class="hidden-wisdom">
+                <strong>ULTIMATE ILLUMINATION:</strong> Risk registers reveal organizational priorities. If your register says ransomware is Critical but you haven't deployed EDR, your register is lies or your priorities are broken.
+            </div>
+
+            <h2>🎯 Risk Register vs. Risk Assessment</h2>
+
+            <p>These are different things:</p>
+
+            <ul>
+                <li><strong>Risk Assessment Methodology</strong> - How you identify, analyze, and evaluate risks (process definition)</li>
+                <li><strong>Risk Register</strong> - Catalog of identified risks, their scores, controls, and treatment plans (living data)</li>
+            </ul>
+
+            <p>Risk assessment methodology is relatively static. Risk register changes constantly. Methodology defines process. Register documents results.</p>
+
+            <h2>🎯 Conclusion: Keep Your Risk Register Alive</h2>
+            
+            <p>A risk register is only useful if it's current. <strong>Update continuously, review quarterly, use actively.</strong></p>
+            
+            <p>Identify specific threats. Score with evidence. Document existing controls. Plan treatments with owners and deadlines. Monitor trends over time.</p>
+
+            <p>A stale risk register is audit decoration. A living risk register drives security investment decisions.</p>
+            
+            <p><strong>Need expert guidance on risk management?</strong> <a href="why-hack23_nl.html">Discover Hack23's consulting approach</a> that treats security as an enabler, not a barrier.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question your risk scores—especially when they haven't changed in a year."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services_nl.html">Security Consulting</a></li>
+            <li><a href="services_nl.html">Security Architecture</a></li>
+            <li><a href="services_nl.html">Cloud Security</a></li>
+            <li><a href="services_nl.html">DevSecOps Integration</a></li>
+            <li><a href="services_nl.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features_nl.html">Black Trigram</a></li>
+            <li><a href="cia-features_nl.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_nl.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog_nl.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity_nl.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq_nl.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap_nl.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23_nl.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement_nl.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code_nl.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code_nl.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index_nl.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
