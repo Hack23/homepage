@@ -29,6 +29,13 @@
 - **discordian-security-training_da.html** ✅ NEW (Sikkerhedstræning)
 - **discordian-open-source_da.html** ✅ NEW (Open Source-politik)
 
+**Phase 2 Session 3 - ISMS + ISO 27001 Files Complete (December 29, 2025):**
+- **discordian-physical-security_da.html** ✅ NEW (Fysisk Sikkerhed)
+- **discordian-mobile-device_da.html** ✅ NEW (Mobilenhedssikkerhed)
+- **iso-27001-implementation-sweden_da.html** ✅ NEW (ISO 27001 Implementering)
+- **iso-27001-certification-costs-sweden_da.html** ✅ NEW (Certificeringsomkostninger)
+- **iso-27001-implementation-mistakes_da.html** ✅ NEW (Implementeringsfejl)
+
 **Translation Approach:**
 - Professional web-search assisted translation with Danish-Translation-Guide.md v3.1 terminology
 - Native-quality business terminology for Danish cybersecurity market
@@ -42,15 +49,15 @@
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
     subgraph "🇩🇰 Danish Translation Status ⚓"
-        A["📊 80/96 Files<br/>83.33% Complete ✅ "]
+        A["📊 85/96 Files<br/>88.54% Complete ✅ "]
         
         A --> B["🎯 Quality Analysis"]
-        B --> C["✅ Fully Translated: 56<br/>No English content"]
+        B --> C["✅ Fully Translated: 61<br/>No English content"]
         B --> D["⚡ Mostly Translated: 24<br/>Minimal English"]
         B --> E["⚠️  Partially Translated: 0<br/>No files"]
         B --> F["❌ Needs Translation: 0<br/>No files"]
         
-        A --> G["📝 Missing Files: 16"]
+        A --> G["📝 Missing Files: 11"]
         
         A --> H["🏆 Quality Score: 95.0%"]
         
@@ -70,10 +77,10 @@ graph TB
 | Metric | Count | Percentage | Status |
 |--------|-------|------------|--------|
 | **📚 English Base Files** | 96 | 100% | ✅ |
-| **🇩🇰 Danish Files Exist** | 80 | **83.33%** | ✅ |
-| **❌ Missing Files** | 16 | 16.7% | 🔄 |
+| **🇩🇰 Danish Files Exist** | 85 | **88.54%** | ✅ |
+| **❌ Missing Files** | 11 | 11.5% | 🔄 |
 
-**Progress:** +10 files created in Phase 2 (Session 1: +5, Session 2: +5)
+**Progress:** +15 files created in Phase 2 (Session 1: +5, Session 2: +5, Session 3: +5)
 
 ### 🎯 Translation Quality Analysis
 
@@ -81,16 +88,16 @@ Files analyzed for English content remaining:
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 56 | 70.0% | No English content detected |
-| ⚡ **Mostly Translated** | 24 | 30.0% | Minimal English (technical terms only) |
+| ✅ **Fully Translated** | 61 | 71.8% | No English content detected |
+| ⚡ **Mostly Translated** | 24 | 28.2% | Minimal English (technical terms only) |
 | ⚠️  **Partially Translated** | 0 | 0.0% | Some English content remains |
 | ❌ **Needs Translation** | 0 | 0.0% | Significant English placeholder content |
 
 **🏆 Quality Score:** 95.0% of existing files are fully/mostly translated (maintained excellence)
 
-**📈 Status:** ✅ Phase 2 Session 2 Complete - 10 ISMS files created total
+**📈 Status:** ✅ Phase 2 Session 3 Complete - 15 files created total (3 sessions)
 
-*Note: Percentages calculated as (count/80 files) × 100. Total: 56 + 24 = 80 files with translations. +10 files added in Phase 2 (Sessions 1-2).*
+*Note: Percentages calculated as (count/85 files) × 100. Total: 61 + 24 = 85 files with translations. +15 files added in Phase 2 (Sessions 1-3).*
 
 ## 📊 Files by Category
 
@@ -178,12 +185,12 @@ Files analyzed for English content remaining:
 - ✅ `cia-triad-faq_da.html` ← `cia-triad-faq.html` **[95%+ Quality - Already excellent]**
 - ⚡ `compliance-manager_da.html` ← `compliance-manager.html`
 
-## ⚠️  Missing Translation Files (16 files)
+## ⚠️  Missing Translation Files (11 files)
 
 These English pages exist but have no corresponding translation file:
 
 
-### ISMS Documentation (11 files)
+### ISMS Documentation (6 files)
 - ✅ `discordian-backup-recovery_da.html` ← `discordian-backup-recovery.html` **[NEW - Phase 2 Session 1]**
 - ❌ `discordian-business-value_da.html` ← `discordian-business-value.html`
 - ❌ `discordian-change-mgmt_da.html` ← `discordian-change-mgmt.html`
@@ -193,10 +200,10 @@ These English pages exist but have no corresponding translation file:
 - ✅ `discordian-disaster-recovery_da.html` ← `discordian-disaster-recovery.html` **[NEW - Phase 2 Session 1]**
 - ✅ `discordian-email-security_da.html` ← `discordian-email-security.html` **[NEW - Phase 2 Session 2]**
 - ❌ `discordian-llm-security_da.html` ← `discordian-llm-security.html`
-- ❌ `discordian-mobile-device_da.html` ← `discordian-mobile-device.html`
+- ✅ `discordian-mobile-device_da.html` ← `discordian-mobile-device.html` **[NEW - Phase 2 Session 3]**
 - ✅ `discordian-monitoring-logging_da.html` ← `discordian-monitoring-logging.html` **[NEW - Phase 2 Session 2]**
 - ✅ `discordian-open-source_da.html` ← `discordian-open-source.html` **[NEW - Phase 2 Session 2]**
-- ❌ `discordian-physical-security_da.html` ← `discordian-physical-security.html`
+- ✅ `discordian-physical-security_da.html` ← `discordian-physical-security.html` **[NEW - Phase 2 Session 3]**
 - ✅ `discordian-secure-dev_da.html` ← `discordian-secure-dev.html` **[NEW - Phase 2 Session 1]**
 - ❌ `discordian-security-metrics_da.html` ← `discordian-security-metrics.html`
 - ❌ `discordian-security-strategy_da.html` ← `discordian-security-strategy.html`
@@ -209,10 +216,10 @@ These English pages exist but have no corresponding translation file:
 ### ISMS Policy Files (1 files)
 - ❌ `discordian-ai-policy_da.html` ← `discordian-ai-policy.html`
 
-### ISO 27001 Resources (3 files)
-- ❌ `iso-27001-certification-costs-sweden_da.html` ← `iso-27001-certification-costs-sweden.html`
-- ❌ `iso-27001-implementation-mistakes_da.html` ← `iso-27001-implementation-mistakes.html`
-- ❌ `iso-27001-implementation-sweden_da.html` ← `iso-27001-implementation-sweden.html`
+### ISO 27001 Resources (0 files)
+- ✅ `iso-27001-certification-costs-sweden_da.html` ← `iso-27001-certification-costs-sweden.html` **[NEW - Phase 2 Session 3]**
+- ✅ `iso-27001-implementation-mistakes_da.html` ← `iso-27001-implementation-mistakes.html` **[NEW - Phase 2 Session 3]**
+- ✅ `iso-27001-implementation-sweden_da.html` ← `iso-27001-implementation-sweden.html` **[NEW - Phase 2 Session 3]**
 
 ### Other Pages (1 files)
 - ❌ `breadcrumb-example_da.html` ← `breadcrumb-example.html`
