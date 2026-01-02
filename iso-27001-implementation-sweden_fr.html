@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISO 27001 Implementation Guide for Swedish Companies | Complete 90-Day Roadmap | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="Complete guide to ISO 27001 implementation in Sweden: 90-day roadmap, cost analysis (€25,000-€50,000), SWEDAC certification bodies, and practical lessons from Hack23's public ISMS. Expert guidance for Swedish SMEs.">
+	<meta name="twitter:description" content="Complete guide to ISO 27001 implementation in Sweden: 90-day roadmap, cost analysis (€25,000-€50,000), SWEDAC certification bodies, and practical lessons from Hack23's public ISMS. Expert guidance for Swedish SMEs.">
+<meta name="keywords" content="ISO 27001 implementation Sweden, ISO 27001 certification Sweden, ISMS implementation, Swedish certification bodies, SWEDAC accredited, ISO 27001 costs Sweden, information security management, cybersecurity compliance Sweden, ISO 27001:2022, risk assessment Sweden">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="ISO 27001 Implementation: Complete Guide for Swedish Companies">
+<meta property="og:description" content="90-day implementation roadmap for ISO 27001 in Sweden. Costs, timelines, certification bodies, and real-world lessons from Hack23's public ISMS.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/iso-27001-implementation-sweden.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/iso-27001-implementation-sweden_fr.html">
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ISO 27001 Implementation: Complete Guide for Swedish Companies",
+      "description": "Comprehensive 3500+ word guide to ISO 27001:2022 implementation in Sweden: 90-day roadmap, cost analysis, certification body selection, and practical lessons from real implementation.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-12-01",
+      "dateModified": "2025-12-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/iso-27001-implementation-sweden.html"
+      },
+      "keywords": "ISO 27001, implementation guide, Sweden, ISMS, certification",
+      "articleSection": "Compliance & Security",
+      "inLanguage": "fr",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 3500
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ISO 27001 Implementation Guide",
+          "item": "https://hack23.com/iso-27001-implementation-sweden.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does ISO 27001 certification take in Sweden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Swedish SMEs, ISO 27001 certification typically takes 3-6 months from start to finish. Our recommended 90-day roadmap covers: Weeks 1-2 (Scoping & Planning), Weeks 3-4 (Risk Assessment), Weeks 5-10 (Control Implementation), and Weeks 11-12 (Audit Preparation). Add 4-8 weeks for the certification audit process (Stage 1 and Stage 2)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does ISO 27001 certification cost in Sweden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Total costs for Swedish SMEs typically range from €25,000-€50,000 including: Certification body fees (€8,000-€15,000 for initial certification), consultant support (€10,000-€25,000 if needed), internal time investment (100-200 hours valued at €5,000-€10,000), and tooling/software (€2,000-€5,000). Organizations with existing security maturity can achieve lower costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a consultant for ISO 27001 implementation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. Organizations with existing security expertise can implement ISO 27001 independently using frameworks like Hack23's public ISMS as reference. However, consultants accelerate implementation and reduce risk of audit findings. Consider DIY if you have: dedicated security staff, prior ISMS experience, and 6+ months timeline. Use consultants if you need: faster implementation (3 months), first-time certification, or limited internal security expertise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which SWEDAC-accredited certification bodies operate in Sweden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Major SWEDAC-accredited certification bodies in Sweden include: DNV (Det Norske Veritas), Bureau Veritas, BSI (British Standards Institution), TÜV (Nord, Süd, Rheinland), and LRQA (Lloyd's Register). Costs range from €8,000-€20,000 for SMEs depending on organization size and complexity."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+
+<!-- Hreflang tags for international SEO -->	<link rel="alternate" hreflang="ar" href="https://hack23.com/iso-27001-implementation-sweden_ar.html">
+<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/iso-27001-implementation-sweden_ar.html">
+<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/iso-27001-implementation-sweden_ar.html">
+<link rel="alternate" hreflang="en" href="https://hack23.com/iso-27001-implementation-sweden.html">
+<link rel="alternate" hreflang="he" href="https://hack23.com/iso-27001-implementation-sweden_he.html">
+<link rel="alternate" hreflang="he-IL" href="https://hack23.com/iso-27001-implementation-sweden_he.html">
+<link rel="alternate" hreflang="ja" href="https://hack23.com/iso-27001-implementation-sweden_ja.html">
+<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/iso-27001-implementation-sweden_ja.html">
+<link rel="alternate" hreflang="ko" href="https://hack23.com/iso-27001-implementation-sweden_ko.html">
+<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/iso-27001-implementation-sweden_ko.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/iso-27001-implementation-sweden_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/iso-27001-implementation-sweden_sv.html">
+<link rel="alternate" hreflang="zh" href="https://hack23.com/iso-27001-implementation-sweden_zh.html">
+<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/iso-27001-implementation-sweden_zh.html">
+<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/iso-27001-implementation-sweden_zh.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/iso-27001-implementation-sweden_zh.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/iso-27001-implementation-sweden.html">
+</head>
+
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        ISO 27001 Implementation Guide
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>ISO 27001 Implementation: Complete Guide for Swedish Companies</h1>
+  <p class="header-subtitle">90-Day Roadmap, Cost Analysis, and Real-World Lessons from Public ISMS</p>
+  <div class="app-link">
+    <a href="index.html" title="Back to Home">Home</a>
+    <a href="blog.html" title="Security Blog">Blog</a>
+    <a href="why-hack23.html" title="Get Expert Help">Consultation</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">🎯 Why ISO 27001 Matters for Swedish Companies</h2>
+      
+      <p><strong>ISO 27001 certification has become essential for Swedish companies targeting enterprise clients, international markets, and regulated industries.</strong> Whether you're a startup scaling to enterprise sales, a SaaS provider expanding globally, or a consulting firm competing for government contracts, ISO 27001 certification demonstrates your commitment to information security management.</p>
+      
+      <p>This comprehensive guide provides everything Swedish companies need to achieve ISO 27001:2022 certification: a practical 90-day implementation roadmap, realistic cost analysis based on the Swedish market, guidance on selecting SWEDAC-accredited certification bodies, and real-world lessons from <strong>Hack23's public ISMS implementation</strong>—one of the few completely transparent ISO 27001 implementations available for reference.</p>
+      
+      <div class="cards">
+        <div class="card success-card">
+          <h3>📊 What You'll Learn</h3>
+          <ul>
+            <li><strong>90-Day Implementation Roadmap:</strong> Detailed week-by-week plan for Swedish SMEs</li>
+            <li><strong>Cost & Resource Planning:</strong> Realistic budgets for the Swedish market (€25,000-€50,000)</li>
+            <li><strong>Certification Body Selection:</strong> How to choose among SWEDAC-accredited auditors</li>
+            <li><strong>Risk Assessment Framework:</strong> Practical approach to ISO 27001 risk management</li>
+            <li><strong>Control Implementation:</strong> Prioritizing the 93 Annex A controls effectively</li>
+            <li><strong>Common Mistakes:</strong> Pitfalls to avoid based on real experience</li>
+            <li><strong>Case Study:</strong> Lessons from Hack23's transparent ISMS implementation</li>
+          </ul>
+        </div>
+      </div>
+      
+      <p><strong>Who This Guide Is For:</strong> Swedish SMEs (10-500 employees) pursuing ISO 27001 certification for the first time, security managers tasked with ISMS implementation, consultants advising clients on compliance, and technical teams responsible for control implementation.</p>
+      
+      <p class="cta-box"><strong>Need expert guidance?</strong> <a href="why-hack23.html">Book a free consultation</a> to discuss your ISO 27001 implementation with experienced practitioners. We've implemented ISO 27001 ourselves and published our complete ISMS publicly as proof of expertise.</p>
+    </section>
+
+    <section id="understanding-iso-27001">
+      <h2 class="panel-caption">📚 Understanding ISO 27001:2022</h2>
+      
+      <h3>What is ISO 27001?</h3>
+      <p><strong>ISO/IEC 27001:2022 is the international standard for Information Security Management Systems (ISMS).</strong> It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.</p>
+      
+      <p>The standard applies to organizations of any size and industry, from startups to enterprises, covering both digital and physical information security. Unlike prescriptive security frameworks, ISO 27001 is risk-based—you implement controls appropriate to your specific threats and risk appetite.</p>
+      
+      <h3>Key Changes from ISO 27001:2013</h3>
+      <p>The 2022 revision brought significant updates that Swedish companies must understand:</p>
+      
+      <div class="cards">
+        <div class="card integrity-card">
+          <h3>🔄 Major Updates in 2022 Version</h3>
+          <ul>
+            <li><strong>93 Controls (vs. 114 in 2013):</strong> Consolidated and reorganized for clarity</li>
+            <li><strong>4 New Control Categories:</strong> Threat intelligence, cloud security, ICT readiness, physical security monitoring</li>
+            <li><strong>Attribute-Based Structure:</strong> Controls now tagged by type (preventive, detective, corrective), properties, and domains</li>
+            <li><strong>Enhanced Cloud Focus:</strong> Explicit controls for cloud services and supply chain security</li>
+            <li><strong>Simplified Language:</strong> Clearer requirements and reduced ambiguity</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3>The ISO 27001 Framework Structure</h3>
+      <p>ISO 27001 consists of two main components:</p>
+      
+      <p><strong>1. Main Standard (Clauses 4-10):</strong> Mandatory requirements for establishing, implementing, maintaining, and improving your ISMS:</p>
+      <ul>
+        <li><strong>Clause 4:</strong> Context of the organization (understanding stakeholders and scope)</li>
+        <li><strong>Clause 5:</strong> Leadership commitment and policy establishment</li>
+        <li><strong>Clause 6:</strong> Risk assessment and treatment planning</li>
+        <li><strong>Clause 7:</strong> Resource allocation and competence management</li>
+        <li><strong>Clause 8:</strong> Operational planning and control implementation</li>
+        <li><strong>Clause 9:</strong> Performance monitoring and measurement</li>
+        <li><strong>Clause 10:</strong> Continual improvement processes</li>
+      </ul>
+      
+      <p><strong>2. Annex A Controls (93 Controls):</strong> Comprehensive catalog of security controls organized into four themes:</p>
+      <ul>
+        <li><strong>Organizational (37 controls):</strong> Policies, asset management, human resources security, supplier relationships</li>
+        <li><strong>People (8 controls):</strong> Screening, terms of employment, awareness, disciplinary process</li>
+        <li><strong>Physical (14 controls):</strong> Secure areas, equipment security, clear desk/screen, disposal</li>
+        <li><strong>Technological (34 controls):</strong> Access control, cryptography, network security, logging, backup</li>
+      </ul>
+      
+      <h3>Benefits of ISO 27001 for Swedish Companies</h3>
+      <p>Swedish organizations report significant business value from ISO 27001 certification:</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <strong>🚀 Faster Enterprise Sales:</strong> ISO 27001 accelerates deal closure by pre-answering security questionnaires and demonstrating compliance maturity.
+        </div>
+        <div class="benefit-item">
+          <strong>🌍 Global Market Access:</strong> Required for many EU public sector contracts and international enterprise customers.
+        </div>
+        <div class="benefit-item">
+          <strong>🛡️ Reduced Security Incidents:</strong> Systematic risk management reduces likelihood and impact of breaches.
+        </div>
+        <div class="benefit-item">
+          <strong>⚖️ Regulatory Alignment:</strong> Supports GDPR, NIS2, and other Swedish/EU regulatory requirements.
+        </div>
+        <div class="benefit-item">
+          <strong>💰 Lower Insurance Premiums:</strong> Cyber insurance providers offer discounts for certified organizations.
+        </div>
+        <div class="benefit-item">
+          <strong>🤝 Customer Trust:</strong> Third-party validation of security claims builds confidence.
+        </div>
+      </div>
+      
+      <p class="info-box"><strong>Real-World Impact:</strong> Hack23 publishes its <a href="https://github.com/Hack23/ISMS-PUBLIC">complete ISMS publicly on GitHub</a>, demonstrating that ISO 27001 isn't just compliance theater—it's a practical framework for managing security at scale. Our implementation covers 30+ detailed policies aligned with ISO 27001, NIST CSF 2.0, and CIS Controls.</p>
+      
+      <p><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">→ Official ISO 27001:2022 Standard (ISO.org)</a></p>
+    </section>
+
+    <section id="implementation-roadmap">
+      <h2 class="panel-caption">🗺️ 90-Day Implementation Roadmap for Swedish SMEs</h2>
+      
+      <p><strong>This roadmap assumes a Swedish SME (10-100 employees) with basic security controls already in place.</strong> Larger organizations or those starting from scratch should adjust timelines accordingly. The roadmap follows a pragmatic, risk-based approach proven in real implementations.</p>
+      
+      <h3>Phase 1: Scoping and Planning (Weeks 1-2)</h3>
+      <div class="card confidentiality-card">
+        <h4>📋 Objectives</h4>
+        <ul>
+          <li>Define ISMS scope (which parts of the organization are covered)</li>
+          <li>Secure executive sponsorship and allocate resources</li>
+          <li>Establish project governance and working groups</li>
+          <li>Document organizational context and stakeholder requirements</li>
+        </ul>
+        
+        <h4>Key Activities</h4>
+        <p><strong>Week 1: Scope Definition</strong></p>
+        <ul>
+          <li>Identify which business units, locations, and systems are in scope</li>
+          <li>Document interfaces with out-of-scope systems and partners</li>
+          <li>Map information flows and identify critical assets</li>
+          <li>Define ISMS boundaries clearly to avoid scope creep</li>
+        </ul>
+        
+        <p><strong>Week 2: Governance Setup</strong></p>
+        <ul>
+          <li>Appoint Information Security Manager and ISMS team</li>
+          <li>Create project charter with timeline and success criteria</li>
+          <li>Establish steering committee with executive representation</li>
+          <li>Set up documentation repository and communication channels</li>
+        </ul>
+        
+        <h4>Deliverables</h4>
+        <ul>
+          <li>✅ ISMS Scope Statement (who/what/where is covered)</li>
+          <li>✅ Context of Organization document (business drivers, stakeholders)</li>
+          <li>✅ Project plan with resource allocation</li>
+          <li>✅ High-level asset inventory</li>
+        </ul>
+        
+        <p><strong>Swedish Context:</strong> For Swedish companies, consider regulatory requirements (GDPR, NIS2 if applicable) and customer security expectations in your scope definition. Many Swedish SMEs start with core IT operations and expand scope after initial certification.</p>
+      </div>
+      
+      <h3>Phase 2: Risk Assessment (Weeks 3-4)</h3>
+      <div class="card integrity-card">
+        <h4>🎯 Objectives</h4>
+        <ul>
+          <li>Identify and value information assets</li>
+          <li>Assess threats and vulnerabilities systematically</li>
+          <li>Calculate risk levels using consistent methodology</li>
+          <li>Make risk treatment decisions (accept, mitigate, transfer, avoid)</li>
+        </ul>
+        
+        <h4>Key Activities</h4>
+        <p><strong>Week 3: Asset Identification and Valuation</strong></p>
+        <ul>
+          <li>Create comprehensive asset inventory (information, systems, people, facilities)</li>
+          <li>Classify assets by confidentiality, integrity, and availability requirements</li>
+          <li>Assign asset owners responsible for security decisions</li>
+          <li>Document dependencies and data flows between assets</li>
+        </ul>
+        
+        <p><strong>Week 4: Threat and Vulnerability Assessment</strong></p>
+        <ul>
+          <li>Identify relevant threats (cyber attacks, human error, natural disasters, supply chain)</li>
+          <li>Assess vulnerabilities in current controls</li>
+          <li>Calculate risk = likelihood × impact for each asset/threat combination</li>
+          <li>Prioritize risks using risk matrix (typically 5×5)</li>
+          <li>Document risk treatment plan for all medium/high risks</li>
+        </ul>
+        
+        <h4>Deliverables</h4>
+        <ul>
+          <li>✅ Complete Asset Register with classifications</li>
+          <li>✅ Risk Assessment Report with risk scores</li>
+          <li>✅ Risk Treatment Plan with selected controls</li>
+          <li>✅ Statement of Applicability (SoA) - which Annex A controls apply</li>
+        </ul>
+      </div>
+      
+      <h3>Phase 3: Control Implementation (Weeks 5-10)</h3>
+      <div class="card availability-card">
+        <h4>🛠️ Objectives</h4>
+        <ul>
+          <li>Implement selected Annex A controls to treat identified risks</li>
+          <li>Document policies, procedures, and work instructions</li>
+          <li>Configure technical controls and security tooling</li>
+          <li>Train staff on new security procedures</li>
+        </ul>
+        
+        <h4>Key Activities by Control Theme</h4>
+        
+        <p><strong>Weeks 5-6: Organizational Controls</strong></p>
+        <ul>
+          <li>Draft core policies: Information Security Policy, Access Control, Acceptable Use</li>
+          <li>Define roles and responsibilities (RACI matrix)</li>
+          <li>Establish asset management procedures</li>
+          <li>Implement supplier security requirements</li>
+          <li>Create incident response procedures</li>
+        </ul>
+        
+        <p><strong>Weeks 7-8: Technical Controls</strong></p>
+        <ul>
+          <li>Configure access control and authentication (MFA, password policies)</li>
+          <li>Implement logging and monitoring (SIEM or log aggregation)</li>
+          <li>Enable encryption (data at rest and in transit)</li>
+          <li>Establish backup and recovery procedures</li>
+          <li>Deploy vulnerability scanning and patch management</li>
+          <li>Configure network security (firewalls, segmentation)</li>
+        </ul>
+        
+        <p><strong>Week 9: People and Physical Controls</strong></p>
+        <ul>
+          <li>Implement screening procedures for new hires</li>
+          <li>Roll out security awareness training program</li>
+          <li>Establish clear desk/clear screen policies</li>
+          <li>Secure physical access to facilities and server rooms</li>
+          <li>Implement equipment security (cable locks, secure disposal)</li>
+        </ul>
+        
+        <p><strong>Week 10: Documentation and Evidence Collection</strong></p>
+        <ul>
+          <li>Finalize all ISMS documentation (policies, procedures, templates)</li>
+          <li>Collect evidence of control implementation (screenshots, logs, attestations)</li>
+          <li>Update Statement of Applicability with implementation status</li>
+          <li>Prepare control effectiveness metrics</li>
+        </ul>
+        
+        <h4>Deliverables</h4>
+        <ul>
+          <li>✅ Complete Policy Framework (15-20 policies minimum)</li>
+          <li>✅ Technical Control Configurations (documented and tested)</li>
+          <li>✅ Training Records (all staff completed awareness training)</li>
+          <li>✅ Implementation Evidence Package</li>
+        </ul>
+        
+        <p class="warning-box"><strong>Common Mistake:</strong> Don't over-engineer controls. Implement proportionate controls that address real risks identified in your risk assessment. Auditors value controls that are actually followed over perfect-but-unused procedures.</p>
+      </div>
+      
+      <h3>Phase 4: Audit Preparation (Weeks 11-12)</h3>
+      <div class="card info-card">
+        <h4>✅ Objectives</h4>
+        <ul>
+          <li>Conduct internal audit to verify ISMS effectiveness</li>
+          <li>Perform management review of ISMS</li>
+          <li>Select and engage certification body</li>
+          <li>Prepare for Stage 1 certification audit</li>
+        </ul>
+        
+        <h4>Key Activities</h4>
+        <p><strong>Week 11: Internal Audit</strong></p>
+        <ul>
+          <li>Conduct internal audit covering all ISMS requirements (Clauses 4-10 and applicable Annex A controls)</li>
+          <li>Interview process owners and sample evidence</li>
+          <li>Document findings (observations, non-conformities)</li>
+          <li>Create corrective action plan for any non-conformities</li>
+          <li>Follow up on corrective actions before certification audit</li>
+        </ul>
+        
+        <p><strong>Week 12: Management Review and Certification Prep</strong></p>
+        <ul>
+          <li>Hold management review meeting (required by Clause 9.3)</li>
+          <li>Review ISMS performance metrics, internal audit results, and improvement opportunities</li>
+          <li>Finalize certification body selection and schedule Stage 1 audit</li>
+          <li>Prepare audit documentation package</li>
+          <li>Conduct mock audit/readiness assessment</li>
+        </ul>
+        
+        <h4>Deliverables</h4>
+        <ul>
+          <li>✅ Internal Audit Report with findings</li>
+          <li>✅ Corrective Action Log (closed before certification)</li>
+          <li>✅ Management Review Minutes</li>
+          <li>✅ Audit Documentation Package for certification body</li>
+        </ul>
+      </div>
+      
+      <h3>Certification Audit Process (Weeks 13-16)</h3>
+      <p>After completing the 90-day implementation, budget 4-8 additional weeks for the certification audit process:</p>
+      
+      <ul>
+        <li><strong>Stage 1 Audit (Week 13-14):</strong> Documentation review, verify ISMS scope and readiness, identify any gaps before Stage 2</li>
+        <li><strong>Gap Remediation (Week 15):</strong> Address any findings from Stage 1</li>
+        <li><strong>Stage 2 Audit (Week 16):</strong> On-site assessment of control implementation and effectiveness</li>
+        <li><strong>Certification Decision:</strong> If successful, receive ISO 27001 certificate (valid 3 years)</li>
+      </ul>
+      
+      <p><strong>Total Timeline:</strong> Expect 4-6 months from project kickoff to certificate in hand for most Swedish SMEs.</p>
+    </section>
+
+    <section id="cost-planning">
+      <h2 class="panel-caption">💰 Cost & Resource Planning for Swedish Market</h2>
+      
+      <p><strong>Realistic budgeting is critical for ISO 27001 implementation success.</strong> Based on Swedish market data and real implementations, here's what SMEs should expect:</p>
+      
+      <h3>Total Cost Range: €25,000 - €50,000</h3>
+      
+      <div class="cards">
+        <div class="card success-card">
+          <h3>💵 Cost Breakdown for Swedish SMEs</h3>
+          
+          <h4>1. Certification Body Fees: €8,000 - €15,000</h4>
+          <p>SWEDAC-accredited certification bodies charge based on organization size and complexity:</p>
+          <ul>
+            <li><strong>Small (10-25 employees):</strong> €8,000 - €12,000</li>
+            <li><strong>Medium (25-100 employees):</strong> €12,000 - €18,000</li>
+            <li><strong>Large (100+ employees):</strong> €15,000 - €25,000+</li>
+          </ul>
+          <p>This covers Stage 1 audit, Stage 2 audit, and initial certification. Annual surveillance audits cost approximately 30-40% of initial certification fee.</p>
+          
+          <h4>2. Consultant Support (Optional): €10,000 - €25,000</h4>
+          <p>External consultants accelerate implementation but aren't mandatory:</p>
+          <ul>
+            <li><strong>Full Implementation Support:</strong> €20,000 - €25,000 (includes gap analysis, documentation, control implementation guidance, audit prep)</li>
+            <li><strong>Documentation Package:</strong> €10,000 - €15,000 (policies, procedures, templates)</li>
+            <li><strong>Advisory/Coaching:</strong> €5,000 - €10,000 (monthly retainer for guidance)</li>
+          </ul>
+          <p><strong>DIY Alternative:</strong> Use public ISMS frameworks like <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's public ISMS</a> as templates (free). Requires internal security expertise.</p>
+          
+          <h4>3. Internal Time Investment: €5,000 - €10,000</h4>
+          <p>Staff time is often underestimated but represents significant cost:</p>
+          <ul>
+            <li><strong>Project Manager/Security Lead:</strong> 100-150 hours</li>
+            <li><strong>Technical Implementation:</strong> 50-100 hours</li>
+            <li><strong>Documentation & Policy Writing:</strong> 40-60 hours</li>
+            <li><strong>Training & Awareness:</strong> 20-30 hours</li>
+            <li><strong>Management & Stakeholder Time:</strong> 20-30 hours</li>
+          </ul>
+          <p><strong>Total:</strong> 230-370 hours (roughly 100-200 hours if using consultants)</p>
+          
+          <h4>4. Tools & Software: €2,000 - €5,000</h4>
+          <ul>
+            <li><strong>ISMS Management Platform:</strong> €1,000 - €3,000/year (optional)</li>
+            <li><strong>Security Tools:</strong> €500 - €1,500 (vulnerability scanning, SIEM, backup)</li>
+            <li><strong>Training Platform:</strong> €300 - €500</li>
+            <li><strong>Documentation/Collaboration:</strong> €200 - €500</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3>Cost Optimization Strategies</h3>
+      <p>Swedish SMEs can reduce costs without compromising certification quality:</p>
+      
+      <ol>
+        <li><strong>Leverage Existing Controls:</strong> Most organizations already have some security controls. Build on what works rather than starting from scratch.</li>
+        <li><strong>Right-Size Scope:</strong> Start with core IT operations. Expand scope in future surveillance audits as maturity grows.</li>
+        <li><strong>Use Open-Source Templates:</strong> Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS</a> provides 30+ policies you can adapt (saved consultant fees).</li>
+        <li><strong>Cloud-Native Tooling:</strong> Leverage AWS/Azure/GCP native security tools rather than expensive third-party platforms.</li>
+        <li><strong>Phased Implementation:</strong> Prioritize controls addressing highest risks first. Implement nice-to-have controls post-certification.</li>
+        <li><strong>Internal Audit DIY:</strong> Train internal staff rather than hiring external internal auditors.</li>
+      </ol>
+      
+      <h3>Return on Investment</h3>
+      <p>While costs are significant, Swedish companies report strong ROI:</p>
+      
+      <div class="roi-metrics">
+        <div class="roi-item">
+          <strong>Faster Deal Closure:</strong> 30-40% reduction in enterprise sales cycle length
+        </div>
+        <div class="roi-item">
+          <strong>Win Rate Improvement:</strong> 15-25% higher win rate for enterprise RFPs requiring certification
+        </div>
+        <div class="roi-item">
+          <strong>Reduced Questionnaires:</strong> 80% reduction in time spent on security questionnaires
+        </div>
+        <div class="roi-item">
+          <strong>Insurance Savings:</strong> 10-20% cyber insurance premium reduction
+        </div>
+        <div class="roi-item">
+          <strong>Breach Prevention:</strong> Reduced incident likelihood and impact (difficult to quantify but substantial)
+        </div>
+      </div>
+      
+      <p class="cta-box"><strong>Get a customized cost estimate:</strong> <a href="why-hack23.html">Contact Hack23</a> for a no-obligation quote based on your organization size and current security maturity.</p>
+    </section>
+
+    <section id="certification-bodies">
+      <h2 class="panel-caption">🏛️ Selecting an ISO 27001 Certification Body in Sweden</h2>
+      
+      <p><strong>Choosing the right certification body is crucial for a positive audit experience and credible certification.</strong> In Sweden, only SWEDAC-accredited certification bodies can issue valid ISO 27001 certificates recognized across the EU and globally.</p>
+      
+      <h3>SWEDAC-Accredited Certification Bodies</h3>
+      <p>Major certification bodies operating in Sweden include:</p>
+      
+      <div class="certifiers-list">
+        <div class="certifier-card">
+          <h4>DNV (Det Norske Veritas)</h4>
+          <p><strong>Strengths:</strong> Strong Nordic presence, experienced in tech sector, pragmatic audit approach</p>
+          <p><strong>Typical Cost:</strong> €12,000 - €18,000 for SMEs</p>
+        </div>
+        
+        <div class="certifier-card">
+          <h4>Bureau Veritas</h4>
+          <p><strong>Strengths:</strong> Global reach, multi-standard expertise, good for organizations with multiple ISO certifications</p>
+          <p><strong>Typical Cost:</strong> €10,000 - €16,000 for SMEs</p>
+        </div>
+        
+        <div class="certifier-card">
+          <h4>BSI (British Standards Institution)</h4>
+          <p><strong>Strengths:</strong> Created the original BS 7799, highly respected, thorough audit process</p>
+          <p><strong>Typical Cost:</strong> €14,000 - €20,000 for SMEs (premium pricing)</p>
+        </div>
+        
+        <div class="certifier-card">
+          <h4>TÜV (Nord, Süd, Rheinland)</h4>
+          <p><strong>Strengths:</strong> German engineering rigor, strong automotive and manufacturing experience</p>
+          <p><strong>Typical Cost:</strong> €11,000 - €17,000 for SMEs</p>
+        </div>
+        
+        <div class="certifier-card">
+          <h4>LRQA (Lloyd's Register)</h4>
+          <p><strong>Strengths:</strong> Maritime heritage, good for logistics/supply chain, integrated audits</p>
+          <p><strong>Typical Cost:</strong> €10,000 - €15,000 for SMEs</p>
+        </div>
+      </div>
+      
+      <h3>Selection Criteria</h3>
+      <p>Evaluate certification bodies on these factors:</p>
+      
+      <ol>
+        <li><strong>SWEDAC Accreditation:</strong> Non-negotiable. Verify current accreditation status at <a href="https://www.swedac.se" target="_blank" rel="noopener">www.swedac.se</a></li>
+        <li><strong>Industry Experience:</strong> Choose auditors familiar with your sector (SaaS, healthcare, manufacturing, etc.)</li>
+        <li><strong>Auditor Competence:</strong> Request auditor CVs. Look for technical depth, not just certification experience.</li>
+        <li><strong>Audit Approach:</strong> Some bodies are more consultative; others are strictly compliance-focused. Match your preference.</li>
+        <li><strong>Cost vs. Value:</strong> Cheapest isn't always best. Balance cost with audit quality and learning opportunity.</li>
+        <li><strong>Schedule Flexibility:</strong> Ensure they can meet your timeline constraints</li>
+        <li><strong>Geographic Coverage:</strong> On-site vs. remote audit options</li>
+        <li><strong>Multi-Standard Synergies:</strong> If pursuing multiple certifications (ISO 9001, 14001, etc.), consider integrated audits</li>
+      </ol>
+      
+      <h3>The Audit Process</h3>
+      <p><strong>Stage 1 (Documentation Review):</strong> 1-2 days, can be remote. Auditor reviews ISMS documentation, verifies scope, assesses readiness for Stage 2. No certification decision made yet. Typical outputs: Minor findings to address before Stage 2.</p>
+      
+      <p><strong>Stage 2 (Implementation Assessment):</strong> 2-5 days on-site depending on organization size. Auditor interviews staff, observes processes, samples evidence, tests controls. This is where certification decision is made. Typical outputs: Certificate (if no major non-conformities), or corrective actions required before certificate issuance.</p>
+      
+      <p><strong>Surveillance Audits:</strong> Annual 1-2 day audits during 3-year certificate validity period. Verify ISMS is maintained and improved. Less intensive than Stage 2 but still thorough.</p>
+      
+      <p><strong>Recertification:</strong> Every 3 years, similar depth to Stage 2 audit. Demonstrates continual ISMS maturity.</p>
+      
+      <h3>Red Flags to Avoid</h3>
+      <ul>
+        <li>❌ Not SWEDAC-accredited or accreditation expired</li>
+        <li>❌ Promises certification without proper audit ("pay and pass")</li>
+        <li>❌ Unwilling to provide auditor qualifications</li>
+        <li>❌ Pricing significantly below market (suggests corner-cutting)</li>
+        <li>❌ Combines consulting and certification (conflict of interest)</li>
+      </ul>
+    </section>
+
+    <section id="common-challenges">
+      <h2 class="panel-caption">⚠️ Common Challenges & Solutions</h2>
+      
+      <p><strong>ISO 27001 implementation is challenging even for experienced organizations.</strong> Here are the most common obstacles Swedish SMEs encounter and proven solutions:</p>
+      
+      <div class="cards">
+        <div class="card warning-card">
+          <h3>Challenge 1: Lack of Internal Security Expertise</h3>
+          <p><strong>Problem:</strong> Small organizations often lack dedicated security staff with ISMS experience. IT teams are stretched thin managing operations, leaving little bandwidth for ISO 27001 implementation.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Hire fractional/part-time security consultant for 6-month engagement</li>
+            <li>Use proven templates and frameworks (like Hack23's public ISMS) to reduce learning curve</li>
+            <li>Partner with managed security service provider (MSSP) for technical controls</li>
+            <li>Train existing IT staff on ISO 27001 fundamentals (PECB, ISACA courses)</li>
+          </ul>
+        </div>
+        
+        <div class="card warning-card">
+          <h3>Challenge 2: Resource Constraints and Competing Priorities</h3>
+          <p><strong>Problem:</strong> ISO 27001 competes with product development, customer delivery, and revenue-generating activities. Teams deprioritize ISMS work when deadlines loom.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Secure executive sponsorship with clear priority mandate</li>
+            <li>Use phased implementation—spread work over 90 days rather than attempting "big bang" approach</li>
+            <li>Dedicate specific team members part-time (20%) to ISMS work with protected time</li>
+            <li>Leverage external help for documentation heavy-lifting</li>
+            <li>Celebrate milestones to maintain momentum</li>
+          </ul>
+        </div>
+        
+        <div class="card warning-card">
+          <h3>Challenge 3: Overly Complex Documentation</h3>
+          <p><strong>Problem:</strong> Organizations create 200-page policy documents nobody reads. Procedures are disconnected from reality. Documentation becomes shelf-ware.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Keep policies concise (2-5 pages each). Write for practitioners, not auditors.</li>
+            <li>Document what you actually do, not aspirational "best practices"</li>
+            <li>Use templates and standardize document structure</li>
+            <li>Integrate procedures into existing workflows rather than creating parallel "compliance processes"</li>
+            <li>Review Hack23's lean policy approach—our public ISMS demonstrates practical, usable documentation</li>
+          </ul>
+        </div>
+        
+        <div class="card warning-card">
+          <h3>Challenge 4: Maintaining Post-Certification Momentum</h3>
+          <p><strong>Problem:</strong> After certification euphoria, ISMS maintenance becomes neglected. Annual surveillance audits reveal degraded controls. ISMS becomes compliance checkbox rather than security framework.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Schedule quarterly ISMS reviews (not just annual management review)</li>
+            <li>Assign clear ongoing responsibilities for each control</li>
+            <li>Automate monitoring and evidence collection where possible</li>
+            <li>Integrate ISMS into existing governance (board reporting, risk committee)</li>
+            <li>Treat surveillance audits as improvement opportunities, not compliance hoops</li>
+          </ul>
+        </div>
+        
+        <div class="card warning-card">
+          <h3>Challenge 5: Executive Buy-In and Budget Approval</h3>
+          <p><strong>Problem:</strong> Leadership views ISO 27001 as "nice to have" rather than business enabler. Budget requests are denied or delayed. Project lacks strategic support.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Build business case focused on revenue impact (faster enterprise sales) not just risk reduction</li>
+            <li>Quantify opportunity cost of NOT certifying (lost deals, extended sales cycles)</li>
+            <li>Present customer requirements for certification (RFP evidence)</li>
+            <li>Position as competitive differentiation, especially if competitors lack certification</li>
+            <li>Start with minimal scope to prove value, expand later</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-study">
+      <h2 class="panel-caption">📖 Case Study: Hack23's Public ISMS Implementation</h2>
+      
+      <p><strong>Hack23 AB publishes its complete ISMS publicly on GitHub</strong>—one of the few transparent ISO 27001 implementations available. Here's what we learned and how you can benefit from our experience.</p>
+      
+      <h3>Why We Made Our ISMS Public</h3>
+      <p>Most security consultancies hide their ISMS behind confidentiality stamps. We believe that approach is counterproductive:</p>
+      <ul>
+        <li><strong>Security through obscurity doesn't work:</strong> If your security depends on attackers not knowing your defenses, you don't have security—you have wishful thinking.</li>
+        <li><strong>Transparency builds trust:</strong> Potential clients can verify our claims by inspecting actual policies, not just marketing promises.</li>
+        <li><strong>Community benefit:</strong> Other organizations can learn from our implementation and adapt our templates.</li>
+        <li><strong>Continuous improvement:</strong> Public scrutiny helps us identify gaps and improve our ISMS.</li>
+      </ul>
+      
+      <h3>What's Included in Our Public ISMS</h3>
+      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC">GitHub repository</a> contains:</p>
+      <ul>
+        <li><strong>30+ Detailed Policies:</strong> Information Security Policy, Access Control, Cryptography, Incident Response, Secure Development, and more</li>
+        <li><strong>Compliance Mapping:</strong> ISO 27001:2022 (93 controls), NIST CSF 2.0, CIS Controls v8</li>
+        <li><strong>Risk Management Framework:</strong> Risk register, risk assessment methodology, treatment decisions</li>
+        <li><strong>Security Metrics:</strong> KPIs and measurement framework</li>
+        <li><strong>Threat Models:</strong> STRIDE analysis for each project (CIA, Black Trigram, Compliance Manager)</li>
+        <li><strong>Classification Framework:</strong> Business impact analysis and CIA triad assessment</li>
+      </ul>
+      
+      <p><strong>What's Redacted:</strong> 30% of content is redacted for operational security—specifically: access credentials, contract pricing, and customer-specific information. Everything else (frameworks, methodologies, control descriptions) is fully public.</p>
+      
+      <h3>Key Lessons from Our Implementation</h3>
+      
+      <div class="lessons-grid">
+        <div class="lesson-item">
+          <strong>Lesson 1: Start with Risk Assessment, Not Policies</strong>
+          <p>We initially focused on writing policies without understanding our risks. This led to generic, irrelevant controls. When we restarted with proper risk assessment, we identified controls that actually mattered for our threat landscape.</p>
+        </div>
+        
+        <div class="lesson-item">
+          <strong>Lesson 2: Lean Documentation Works Better</strong>
+          <p>Our first policy drafts were 50+ pages. Nobody read them. We condensed to 2-5 pages per policy, focusing on actionable requirements. Adoption improved dramatically.</p>
+        </div>
+        
+        <div class="lesson-item">
+          <strong>Lesson 3: Leverage Existing Tools</strong>
+          <p>We avoided expensive ISMS platforms. GitHub for version control, AWS native security tools, open-source monitoring. Total tooling cost under €2,000/year.</p>
+        </div>
+        
+        <div class="lesson-item">
+          <strong>Lesson 4: Internal Audit is Valuable</strong>
+          <p>We almost skipped internal audit to save time. It uncovered significant gaps that would have caused certification delays. Internal audit is worth the investment.</p>
+        </div>
+        
+        <div class="lesson-item">
+          <strong>Lesson 5: Transparency as Competitive Advantage</strong>
+          <p>Publishing our ISMS publicly differentiated us from competitors. Enterprise customers appreciate being able to verify our security claims. It's become a sales accelerator.</p>
+        </div>
+      </div>
+      
+      <h3>How to Use Our Public ISMS</h3>
+      <p>Organizations implementing ISO 27001 can leverage our work:</p>
+      <ol>
+        <li><strong>Browse Policies:</strong> See real-world examples of ISO 27001-aligned policies. Adapt language and structure to your context.</li>
+        <li><strong>Review Risk Register:</strong> Understand how we assess and treat risks. Use as template for your risk assessment.</li>
+        <li><strong>Check Compliance Mapping:</strong> See how we map Annex A controls to NIST and CIS. Accelerates your Statement of Applicability.</li>
+        <li><strong>Study Threat Models:</strong> Learn STRIDE methodology applied to real projects. Adapt approach to your systems.</li>
+        <li><strong>Understand Maturity Progression:</strong> Our documentation shows evolution from basic controls to advanced implementation.</li>
+      </ol>
+      
+      <p class="success-box"><strong>Repository Link:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC">https://github.com/Hack23/ISMS-PUBLIC</a></p>
+      
+      <p><strong>Fair Use:</strong> All content is available under open license. Fork, adapt, and improve. Attribution appreciated but not required. We believe security improves through knowledge sharing.</p>
+    </section>
+
+    <section id="faq">
+      <h2 class="panel-caption">❓ Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <h3>How long does ISO 27001 certification take in Sweden?</h3>
+        <p><strong>Answer:</strong> For Swedish SMEs, expect 3-6 months total. Our 90-day implementation roadmap covers preparation (12 weeks), followed by 4-8 weeks for certification audit process. Organizations with mature security programs can complete faster; those starting from scratch may need 6-9 months.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What does ISO 27001 certification cost in Sweden?</h3>
+        <p><strong>Answer:</strong> Total costs typically range from €25,000-€50,000 including certification body fees (€8,000-€15,000), optional consultant support (€10,000-€25,000), internal time (€5,000-€10,000), and tools (€2,000-€5,000). See <a href="#cost-planning">detailed cost breakdown</a> above.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Do I need a consultant for ISO 27001 implementation?</h3>
+        <p><strong>Answer:</strong> Not necessarily. Organizations with existing security expertise can implement independently using frameworks like Hack23's public ISMS. However, consultants accelerate implementation (3 vs. 6 months) and reduce risk of audit findings. Consider DIY if you have dedicated security staff and 6+ month timeline.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How do I choose a certification body in Sweden?</h3>
+        <p><strong>Answer:</strong> Verify SWEDAC accreditation (mandatory for valid certification), assess industry experience relevant to your sector, request auditor CVs to evaluate competence, and compare pricing (€8,000-€20,000 for SMEs). See our <a href="#certification-bodies">certification body guide</a> for detailed selection criteria.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What happens after certification?</h3>
+        <p><strong>Answer:</strong> Certificates are valid for 3 years. You'll have annual surveillance audits (1-2 days) to verify ISMS is maintained. After 3 years, undergo recertification audit. Ongoing costs are approximately 30-40% of initial certification annually.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Can I implement ISO 27001 myself without consultants?</h3>
+        <p><strong>Answer:</strong> Yes, if you have internal security expertise. Use Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS</a> as template (30+ policies), follow the <a href="#implementation-roadmap">90-day roadmap</a> above, and allocate 200-300 hours of internal time. DIY approach saves €10,000-€25,000 in consultant fees but takes longer.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What are the ongoing maintenance requirements?</h3>
+        <p><strong>Answer:</strong> ISO 27001 requires: annual management review, internal audit (at least annually), risk assessment updates (when changes occur), control effectiveness monitoring, and staff security awareness training. Budget 2-4 hours/week for ISMS maintenance activities.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How does ISO 27001 relate to GDPR and NIS2?</h3>
+        <p><strong>Answer:</strong> ISO 27001 complements but doesn't replace GDPR and NIS2. Many ISO 27001 controls support GDPR compliance (data protection, access control, incident response). NIS2 entities benefit from ISO 27001's risk management framework. However, GDPR requires additional privacy-specific controls beyond ISO 27001 scope.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What's the difference between ISO 27001 and SOC 2?</h3>
+        <p><strong>Answer:</strong> ISO 27001 is an international standard with certification; SOC 2 is an American attestation framework. ISO 27001 is broader (covers entire ISMS); SOC 2 focuses on service provider controls. European/global companies typically prefer ISO 27001; US SaaS companies often need both for different markets.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>How do I demonstrate ISO 27001 value to executive management?</h3>
+        <p><strong>Answer:</strong> Focus on business impact: faster enterprise sales cycles (30-40% reduction), higher win rates for certified RFPs (15-25% improvement), reduced security questionnaire burden (80% time savings), cyber insurance discounts (10-20%), and competitive differentiation. Quantify opportunity cost of NOT certifying using lost deal data.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>What's different in the 2022 version vs. 2013?</h3>
+        <p><strong>Answer:</strong> ISO 27001:2022 has 93 controls (vs. 114 in 2013), reorganized into 4 themes instead of 14 domains, added controls for threat intelligence and cloud security, and uses attribute-based tagging. Organizations certified to 2013 version have transition period until October 2025.</p>
+      </div>
+    </section>
+
+    <section id="next-steps">
+      <h2 class="panel-caption">🚀 Related Resources & Next Steps</h2>
+      
+      <h3>Downloadable Resources</h3>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h4>📋 ISMS Quick-Start Template</h4>
+          <p>Complete policy framework based on Hack23's public ISMS. Includes 15+ policies, risk register template, and Statement of Applicability.</p>
+          <p><a href="https://github.com/Hack23/ISMS-PUBLIC">Download from GitHub →</a></p>
+        </div>
+      </div>
+      
+      <h3>External Authoritative Sources</h3>
+      <ul>
+        <li><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">ISO/IEC 27001:2022 Official Standard (ISO.org)</a></li>
+        <li><a href="https://www.swedac.se" target="_blank" rel="noopener">SWEDAC (Swedish Accreditation Body)</a></li>
+        <li><a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener">ISO 27001 Family of Standards</a></li>
+      </ul>
+      
+      <h3>Get Expert Help</h3>
+      <div class="cta-card">
+        <h4>🤝 Free Consultation: ISO 27001 Implementation</h4>
+        <p>Ready to start your ISO 27001 journey? Hack23 offers pragmatic, cost-effective implementation support backed by our public ISMS as proof of expertise.</p>
+        <p><strong>What we offer:</strong></p>
+        <ul>
+          <li>Gap assessment and readiness evaluation</li>
+          <li>90-day implementation program tailored to Swedish SMEs</li>
+          <li>Documentation templates based on our public ISMS</li>
+          <li>Technical control implementation guidance</li>
+          <li>Internal audit and certification preparation</li>
+        </ul>
+        <p><a href="why-hack23.html" class="cta-button">Book Free Consultation →</a></p>
+      </div>
+      
+      <div class="info-box">
+        <h4>📚 Read More About ISO 27001 Implementation</h4>
+        <p>This is a comprehensive pillar guide. For more specific topics, we're developing cluster content covering:</p>
+        <ul>
+          <li><a href="iso-27001-2022-vs-2013.html">ISO 27001:2022 vs 2013: Detailed version comparison</a></li>
+          <li>Risk Assessment Templates for ISO 27001</li>
+          <li>Control Implementation Checklists</li>
+          <li><a href="iso-27001-certification-costs-sweden.html">Certification Cost Analysis for Sweden</a></li>
+          <li><a href="iso-27001-implementation-mistakes.html">Common Implementation Mistakes to Avoid</a></li>
+          <li>Certification Body Selection Guide</li>
+          <li>Internal Audit Preparation</li>
+          <li>Post-Certification ISMS Maintenance</li>
+        </ul>
+        <p>Check our <a href="blog.html">blog</a> for updates as we publish these guides.</p>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="services.html">Services</a> |
+    <a href="blog.html">Blog</a> |
+    <a href="https://github.com/Hack23/ISMS-PUBLIC">Public ISMS</a>
+  </p>
+</footer>
+
+</body>
+</html>
