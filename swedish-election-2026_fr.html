@@ -6,6 +6,7 @@
 <title>Élections Suédoises 2026 | Plateforme d'Intelligence en Direct | CIA OSINT | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Plateforme d'intelligence en direct pour les élections suédoises 2026 : Surveillance en temps réel, prévisions de coalitions, 45 règles de risque, analyse parlementaire complète. Programme pilote pour les organisations médiatiques.">
+	<meta name="twitter:description" content="Plateforme d'intelligence en direct pour les élections suédoises 2026 : Surveillance en temps réel, prévisions de coalitions, 45 règles de risque, analyse parlementaire complète. Programme pilote pour les organisations médiatiques.">
 <meta name="keywords" content="élections suédoises 2026, surveillance riksdag, prévision de coalition, intelligence politique, plateforme OSINT, analyse parlementaire, programme pilote médias, plateforme CIA, politique suédoise, surveillance électorale">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
@@ -60,15 +61,25 @@
       "@type": "Event",
       "name": "Élections Parlementaires Suédoises 2026",
       "description": "Plateforme d'intelligence en direct pour la surveillance des élections suédoises utilisant les capacités OSINT de la CIA. Analyse en temps réel de 349 députés, prévisions de coalitions et évaluation complète des risques.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "startDate": "2026-09",
       "endDate": "2026-09",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
-        "@type": "Country",
-        "name": "Sweden"
+        "@type": "Place",
+        "name": "Sweden",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SE"
+        }
       },
       "organizer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "performer": {
         "@type": "Organization",
         "name": "Hack23 AB",
         "url": "https://hack23.com"
@@ -76,11 +87,13 @@
       "offers": {
         "@type": "AggregateOffer",
         "name": "Swedish Election 2026 Pilot Program",
+        "url": "https://hack23.com/swedish-election-2026_fr.html#pilot-program",
         "lowPrice": "5000",
         "highPrice": "7500",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/LimitedAvailability",
         "offerCount": "15",
+        "validFrom": "2025-01-01",
         "offers": [
           {
             "@type": "Offer",
@@ -113,16 +126,50 @@
       "@type": "Product",
       "name": "Plateforme d'Intelligence CIA Élections Suédoises 2026",
       "description": "Plateforme d'intelligence politique complète pour la surveillance des élections suédoises avec 45 règles de risque, suivi des députés en temps réel et modèles de prévision de coalition.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "brand": {
         "@type": "Organization",
-        "name": "Hack23 AB"
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
       },
       "offers": {
         "@type": "Offer",
         "url": "https://hack23.com/swedish-election-2026_fr.html#pilot-program",
         "priceCurrency": "EUR",
         "price": "5000",
-        "availability": "https://schema.org/LimitedAvailability"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["SE", "NO", "DK", "FI"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "SE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
     },
     {

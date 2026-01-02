@@ -55,15 +55,25 @@
       "@type": "Event",
       "name": "Svensk Riksdagsvalg 2026",
       "description": "Live intelligensplattform for svensk valgovervåking ved hjelp av CIA OSINT-funksjoner. Sanntidsanalyse av 349 riksdagsmedlemmer, koalisjonsprognoser og omfattende risikovurdering.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "startDate": "2026-09",
       "endDate": "2026-09",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
-        "@type": "Country",
-        "name": "Sverige"
+        "@type": "Place",
+        "name": "Sverige",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SE"
+        }
       },
       "organizer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "performer": {
         "@type": "Organization",
         "name": "Hack23 AB",
         "url": "https://hack23.com"
@@ -71,11 +81,13 @@
       "offers": {
         "@type": "AggregateOffer",
         "name": "Svensk Valg 2026 Pilotprogram",
+        "url": "https://hack23.com/swedish-election-2026_no.html#pilot-program",
         "lowPrice": "5000",
         "highPrice": "7500",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/LimitedAvailability",
         "offerCount": "15",
+        "validFrom": "2025-01-01",
         "offers": [
           {
             "@type": "Offer",
@@ -108,16 +120,50 @@
       "@type": "Product",
       "name": "CIA Svensk Valg 2026 Intelligensplattform",
       "description": "Omfattende politisk intelligensplattform for svensk valgovervåking med 45 risikoregler, sanntidssporing av riksdagsmedlemmer og koalisjonsprognosemoduler.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "brand": {
         "@type": "Organization",
-        "name": "Hack23 AB"
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://hack23.com/swedish-election-2026.html#pilot-program",
+        "url": "https://hack23.com/swedish-election-2026_no.html#pilot-program",
         "priceCurrency": "EUR",
         "price": "5000",
-        "availability": "https://schema.org/LimitedAvailability"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["SE", "NO", "DK", "FI"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "SE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
     },
     {
