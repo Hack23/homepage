@@ -57,15 +57,25 @@
       "@type": "Event",
       "name": "瑞典议会选举2026",
       "description": "使用CIA OSINT功能进行瑞典选举监控的实时情报平台。实时分析349名议员、联盟预测和全面风险评估。",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "startDate": "2026-09",
       "endDate": "2026-09",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
-        "@type": "Country",
-        "name": "瑞典"
+        "@type": "Place",
+        "name": "瑞典",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SE"
+        }
       },
       "organizer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "performer": {
         "@type": "Organization",
         "name": "Hack23 AB",
         "url": "https://hack23.com"
@@ -73,27 +83,63 @@
       "offers": {
         "@type": "AggregateOffer",
         "name": "瑞典2026年选举试点项目",
+        "url": "https://hack23.com/swedish-election-2026_zh.html#pilot-program",
         "lowPrice": "5000",
         "highPrice": "7500",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/LimitedAvailability",
-        "offerCount": "15"
+        "offerCount": "15",
+        "validFrom": "2025-01-01"
       }
     },
     {
       "@type": "Product",
       "name": "CIA瑞典2026年选举情报平台",
       "description": "全面的政治情报平台，用于瑞典选举监控，包含45条风险规则、实时议员跟踪和联盟预测模型。",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "brand": {
         "@type": "Organization",
-        "name": "Hack23 AB"
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
       },
       "offers": {
         "@type": "Offer",
         "url": "https://hack23.com/swedish-election-2026_zh.html#pilot-program",
         "priceCurrency": "EUR",
         "price": "5000",
-        "availability": "https://schema.org/LimitedAvailability"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["SE", "NO", "DK", "FI"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "SE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
     },
     {

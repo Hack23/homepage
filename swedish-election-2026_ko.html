@@ -57,15 +57,25 @@
       "@type": "Event",
       "name": "스웨덴 의회 선거 2026",
       "description": "CIA OSINT 기능을 사용한 스웨덴 선거 모니터링 실시간 인텔리전스 플랫폼. 349명 의원 실시간 분석, 연정 예측, 종합적 위험 평가.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "startDate": "2026-09",
       "endDate": "2026-09",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "location": {
-        "@type": "Country",
-        "name": "스웨덴"
+        "@type": "Place",
+        "name": "스웨덴",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SE"
+        }
       },
       "organizer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "performer": {
         "@type": "Organization",
         "name": "Hack23 AB",
         "url": "https://hack23.com"
@@ -73,11 +83,13 @@
       "offers": {
         "@type": "AggregateOffer",
         "name": "스웨덴 선거 2026 파일럿 프로그램",
+        "url": "https://hack23.com/swedish-election-2026_ko.html#pilot-program",
         "lowPrice": "5000",
         "highPrice": "7500",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/LimitedAvailability",
         "offerCount": "15",
+        "validFrom": "2025-01-01"
         "offers": [
           {
             "@type": "Offer",
@@ -110,16 +122,50 @@
       "@type": "Product",
       "name": "CIA 스웨덴 선거 2026 인텔리전스 플랫폼",
       "description": "45개 위험 규칙, 실시간 의원 추적, 연정 예측 모델을 갖춘 스웨덴 선거 모니터링을 위한 종합 정치 인텔리전스 플랫폼.",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
       "brand": {
         "@type": "Organization",
-        "name": "Hack23 AB"
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
       },
       "offers": {
         "@type": "Offer",
         "url": "https://hack23.com/swedish-election-2026_ko.html#pilot-program",
         "priceCurrency": "EUR",
         "price": "5000",
-        "availability": "https://schema.org/LimitedAvailability"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["SE", "NO", "DK", "FI"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "SE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
     },
     {

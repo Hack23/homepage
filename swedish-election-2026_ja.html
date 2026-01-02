@@ -60,32 +60,98 @@
 <!-- Schema.org structured data -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "スウェーデン議会選挙2026",
-  "description": "CIAのOSINT機能を使用したスウェーデン総選挙監視のためのリアルタイム情報プラットフォーム。349名の国会議員のリアルタイム分析、連立予測、包括的なリスク評価。",
-  "inLanguage": "ja",
-  "startDate": "2026-09",
-  "endDate": "2026-09",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "location": {
-    "@type": "Country",
-    "name": "スウェーデン"
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Hack23 AB",
-    "url": "https://hack23.com"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "name": "スウェーデン総選挙2026パイロットプログラム",
-    "lowPrice": "5000",
-    "highPrice": "7500",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/LimitedAvailability",
-    "offerCount": "15"
-  }
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "スウェーデン議会選挙2026",
+      "description": "CIAのOSINT機能を使用したスウェーデン総選挙監視のためのリアルタイム情報プラットフォーム。349名の国会議員のリアルタイム分析、連立予測、包括的なリスク評価。",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "inLanguage": "ja",
+      "startDate": "2026-09",
+      "endDate": "2026-09",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "スウェーデン",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SE"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "performer": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "name": "スウェーデン総選挙2026パイロットプログラム",
+        "url": "https://hack23.com/swedish-election-2026_ja.html#pilot-program",
+        "lowPrice": "5000",
+        "highPrice": "7500",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/LimitedAvailability",
+        "offerCount": "15",
+        "validFrom": "2025-01-01"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "CIAスウェーデン総選挙2026情報プラットフォーム",
+      "description": "45のリスクルール、リアルタイムMP追跡、連立予測モデルを備えた、スウェーデン総選挙監視のための包括的な政治情報プラットフォーム。",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "brand": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hack23.com/swedish-election-2026_ja.html#pilot-program",
+        "priceCurrency": "EUR",
+        "price": "5000",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["SE", "NO", "DK", "FI"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "SE",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      }
+    }
+  ]
 }</script>
 
 </head>
