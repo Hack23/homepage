@@ -157,62 +157,62 @@
 
     <main>
         <article>
-            <h2>📊 Security Metrics: Measuring What Actually Matters</h2>
+            <h2>📊 מדדי אבטחה: מדידת מה שבאמת חשוב</h2>
             
-            <p class="subtitle"><em>"What gets measured gets managed. What doesn't get measured gets breached."</em> — Hagbard Celine</p>
+            <p class="subtitle"><em>"מה שנמדד מנוהל. מה שלא נמדד נפרץ."</em> — Hagbard Celine</p>
             
-            <p class="subtitle"><em>"If you can't measure it, you can't prove it works. If you measure the wrong thing, you prove nothing. If you only measure what makes you look good, you prove you're lying to yourself."</em></p>
+            <p class="subtitle"><em>"אם אינכם יכולים למדוד את זה, אינכם יכולים להוכיח שזה עובד. אם אתם מודדים את הדבר הלא נכון, אינכם מוכיחים כלום. אם אתם רק מודדים מה שגורם לכם להיראות טוב, אתם מוכיחים שאתם משקרים לעצמכם."</em></p>
 
-            <h2>🍎 The Golden Apple: Vanity Metrics vs. Real Security (or: How to Lie with Statistics While Feeling Secure)</h2>
+            <h2>🍎 התפוח הזהוב: מדדי יוהרה מול אבטחה אמיתית (או: איך לשקר בסטטיסטיקה תוך הרגשה מאובטחת)</h2>
             
-            <p>Security teams love metrics. Dashboards full of numbers. Colorful charts. Executive briefings with upward-trending lines. <strong>It's security theater with better production values.</strong></p>
+            <p>צוותי אבטחה אוהבים מדדים. לוחות מחוונים מלאי מספרים. תרשימים צבעוניים. תדריכים מנהלים עם קווים העולים כלפי מעלה. <strong>זה תיאטרון אבטחה עם ערכי ייצור טובים יותר.</strong></p>
             
-            <p><strong>Most security metrics measure the wrong things.</strong> <em>FNORD.</em> Are you measuring security or measuring the appearance of measuring security? (Asking for a friend. The friend is paranoia.)</p>
+            <p><strong>רוב מדדי האבטחה מודדים את הדברים הלא נכונים.</strong> <em>FNORD.</em> האם אתם מודדים אבטחה או מודדים את המראה של מדידת אבטחה? (שואל בשביל חבר. החבר הוא פרנויה.)</p>
             
-            <p>Number of policies written? Irrelevant if unenforced (PDF doesn't stop hackers). Security training completion rate? Useless if employees still click phishing links (compliance ≠ comprehension). Vulnerability scan count? Meaningless without patch deployment speed (scanning vulnerabilities you never fix is like diagnosing cancer and celebrating the diagnosis). <strong>The security-industrial complex sells tools that generate metrics that prove you bought tools. Circular reasoning is circular.</strong></p>
+            <p>מספר המדיניות שנכתבה? לא רלוונטי אם לא נאכף (PDF לא עוצר האקרים). אחוז השלמת הדרכת אבטחה? חסר תועלת אם עובדים עדיין לוחצים על קישורי דיוג (ציות ≠ הבנה). מספר סריקות פגיעות? חסר משמעות ללא מהירות פריסת תיקונים (סריקת פגיעות שמעולם לא תוקנו זה כמו לאבחן סרטן ולחגוג את האבחנה). <strong>תעשיית האבטחה-תעשייתית מוכרת כלים המייצרים מדדים המוכיחים שקניתם כלים. הנמקה מעגלית היא מעגלית.</strong></p>
             
-            <p><strong>Measure outcomes, not activities. Measure risk reduction, not effort expended.</strong> Or keep measuring inputs and wondering why outputs still suck. Your choice. Nothing is true.</p>
+            <p><strong>מדדו תוצאות, לא פעילויות. מדדו הפחתת סיכון, לא מאמץ שהושקע.</strong> או המשיכו למדוד קלטים ותתפלאו למה הפלטים עדיין גרועים. הבחירה שלכם. שום דבר לא נכון.</p>
             
             <div class="hidden-wisdom">
-                <strong>ILLUMINATION FOR THE INITIATED:</strong> Vanity metrics make executives feel good (dopamine hit from green dashboards). Real metrics reveal uncomfortable truths (like that your security posture is held together by hope and duct tape). Choose truth over comfort—security depends on it. But truth is painful. Which is why most organizations choose comfort. And get breached. <em>The cycle continues. FNORD.</em>
+                <strong>הארה למוסמכים:</strong> מדדי יוהרה גורמים למנהלים להרגיש טוב (דופמין מלוחות מחוונים ירוקים). מדדים אמיתיים חושפים אמיתות לא נעימות (כמו שתנוחת האבטחה שלכם מוחזקת ביחד באמצעות תקווה וסרט דבק). בחרו באמת על פני נוחות - האבטחה תלויה בכך. אבל האמת כואבת. זו הסיבה שרוב הארגונים בוחרים בנוחות. ונפרצים. <em>המעגל נמשך. FNORD.</em>
             </div>
 
-            <h2>🛡️ The Five Categories of Security Metrics That Matter</h2>
+            <h2>🛡️ חמש הקטגוריות של מדדי אבטחה שחשובים</h2>
             
             <div class="value-grid">
                 <div class="value-card">
-                    <h3>1. Detection &amp; Response</h3>
-                    <p><strong>How fast do you detect and stop attacks?</strong></p>
-                    <p><strong>MTTD:</strong> Mean Time To Detect (hours/days). <strong>MTTR:</strong> Mean Time To Respond (hours). <strong>MTTR:</strong> Mean Time To Recover (hours).</p>
+                    <h3>1. זיהוי ותגובה</h3>
+                    <p><strong>כמה מהר אתם מזהים ועוצרים התקפות?</strong></p>
+                    <p><strong>MTTD:</strong> זמן ממוצע לזיהוי (שעות/ימים). <strong>MTTR:</strong> זמן ממוצע לתגובה (שעות). <strong>MTTR:</strong> זמן ממוצע להתאוששות (שעות).</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>2. Vulnerability Management</h3>
-                    <p><strong>How fast do you patch critical risks?</strong></p>
-                    <p><strong>Time to patch critical CVEs:</strong> Days from disclosure to deployment. <strong>Open high/critical vulnerabilities:</strong> Absolute count, trending down.</p>
+                    <h3>2. ניהול פגיעויות</h3>
+                    <p><strong>כמה מהר אתם מתקנים סיכונים קריטיים?</strong></p>
+                    <p><strong>זמן לתיקון CVE קריטיים:</strong> ימים מהגילוי לפריסה. <strong>פגיעויות גבוה/קריטי פתוחות:</strong> ספירה מוחלטת, עם מגמת ירידה.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>3. Incident Trends</h3>
-                    <p><strong>Are you getting better or worse?</strong></p>
-                    <p><strong>Incidents per month:</strong> Trending down? <strong>Severity distribution:</strong> More critical or more informational? <strong>Repeat incidents:</strong> Learning from failures?</p>
+                    <h3>3. מגמות אירועים</h3>
+                    <p><strong>האם אתם משתפרים או מחמירים?</strong></p>
+                    <p><strong>אירועים לחודש:</strong> מגמת ירידה? <strong>חלוקת חומרה:</strong> יותר קריטיים או יותר אינפורמטיביים? <strong>אירועים חוזרים:</strong> לומדים מכשלונות?</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>4. Access Control</h3>
-                    <p><strong>Who has access to what?</strong></p>
-                    <p><strong>Accounts with excessive privileges:</strong> Count, review frequency. <strong>Unused accounts:</strong> Dormant credentials are risk. <strong>MFA coverage:</strong> Percentage of critical systems.</p>
+                    <h3>4. בקרת גישה</h3>
+                    <p><strong>למי יש גישה למה?</strong></p>
+                    <p><strong>חשבונות עם הרשאות מוגזמות:</strong> ספירה, תדירות סקירה. <strong>חשבונות לא בשימוש:</strong> אישורים רדומים הם סיכון. <strong>כיסוי MFA:</strong> אחוז מערכות קריטיות.</p>
                 </div>
 
                 <div class="value-card">
-                    <h3>5. Security Awareness</h3>
-                    <p><strong>Do users fall for attacks?</strong></p>
-                    <p><strong>Phishing simulation click rate:</strong> Percentage clicking malicious links. <strong>Reported suspicious emails:</strong> User vigilance indicator. <strong>Policy violations:</strong> Incidents from user mistakes.</p>
+                    <h3>5. מודעות אבטחה</h3>
+                    <p><strong>האם משתמשים נופלים להתקפות?</strong></p>
+                    <p><strong>שיעור קליקים בסימולצ יית דיוג:</strong> אחוז לוחצים על קישורים זדוניים. <strong>אימיילים חשודים שדווחו:</strong> מדד ערנות משתמשים. <strong>הפרות מדיניות:</strong> אירועים מטעויות משתמשים.</p>
                 </div>
             </div>
 
             <div class="hidden-wisdom">
-                <strong>CHAOS ILLUMINATION:</strong> Metrics drive behavior. Measure the wrong thing, get the wrong outcome. Measure vulnerabilities found? Teams stop looking. Measure vulnerabilities fixed? Teams hunt obsessively. <em>This is Campbell's Law in action—the observed statistical regularity tends to collapse once pressure is placed on it for control purposes.</em> Question every metric. Especially yours.
+                <strong>הארת כאוס:</strong> מדדים מניעים התנהגות. מדדו את הדבר הלא נכון, קבלו תוצאה לא נכונה. מדדו פגיעויות שנמצאו? צוותים מפסיקים לחפש. מדדו פגיעויות שתוקנו? צוותים צדים אובססיבית. <em>זהו חוק קמפבל בפעולה - הקביעות הסטטיסטיות שנצפו נוטות להתמוטט ברגע שמופעל עליהן לחץ למטרות בקרה.</em> הטילו ספק בכל מדד. במיוחד שלכם.
             </div>
 
             <h2>⏰ Leading vs. Lagging Indicators: The Paradox of Time</h2>
