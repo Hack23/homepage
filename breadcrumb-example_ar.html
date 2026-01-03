@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مثال على التنقل التفصيلي | Hack23</title>
+  <meta name="description" content="مثال على تنفيذ التنقل التفصيلي يوضح بنية الصفحة الهرمية وموقع المستخدم داخل الموقع.">
+	<meta name="twitter:description" content="مثال على تنفيذ التنقل التفصيلي يوضح بنية الصفحة الهرمية وموقع المستخدم داخل الموقع.">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Multilingual SEO -->
+  
+	<meta property="og:locale" content="ar_AR">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+<link rel="canonical" href="https://hack23.com/breadcrumb-example_ar.html" />
+  <link rel="alternate" hreflang="ar" href="https://hack23.com/breadcrumb-example_ar.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="da" href="https://hack23.com/breadcrumb-example_da.html" />
+  <link rel="alternate" hreflang="de" href="https://hack23.com/breadcrumb-example_de.html" />
+  <link rel="alternate" hreflang="es" href="https://hack23.com/breadcrumb-example_es.html" />
+  <link rel="alternate" hreflang="fi" href="https://hack23.com/breadcrumb-example_fi.html" />
+  <link rel="alternate" hreflang="fr" href="https://hack23.com/breadcrumb-example_fr.html" />
+  <link rel="alternate" hreflang="he" href="https://hack23.com/breadcrumb-example_he.html" />
+  <link rel="alternate" hreflang="ja" href="https://hack23.com/breadcrumb-example_ja.html" />
+  <link rel="alternate" hreflang="ko" href="https://hack23.com/breadcrumb-example_ko.html" />
+  <link rel="alternate" hreflang="nl" href="https://hack23.com/breadcrumb-example_nl.html" />
+  <link rel="alternate" hreflang="no" href="https://hack23.com/breadcrumb-example_no.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/breadcrumb-example_sv.html" />
+  <link rel="alternate" hreflang="zh" href="https://hack23.com/breadcrumb-example_zh.html" />
+
+</head>
+<body>
+  <header>
+    <h1>مثال على مكون التنقل التفصيلي</h1>
+    <p>التنقل التفصيلي الاحترافي مع الامتثال لمعيار WCAG 2.1 AA</p>
+  </header>
+
+  <!-- Example 1: Two-level breadcrumb (Home > Current Page) -->
+  <nav aria-label="التنقل التفصيلي">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">الرئيسية</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        الميزات
+      </li>
+    </ol>
+  </nav>
+
+  <h2>مثال على التنقل التفصيلي من مستويين</h2>
+  <p>هذا يوضح مسار تنقل تفصيلي بسيط: الرئيسية > الميزات (الصفحة الحالية)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- Example 2: Three-level breadcrumb -->
+  <nav aria-label="التنقل التفصيلي">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">الرئيسية</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">وكالة الاستخبارات المدنية</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        الميزات
+      </li>
+    </ol>
+  </nav>
+
+  <h2>مثال على التنقل التفصيلي من ثلاثة مستويات</h2>
+  <p>هذا يوضح مسار تنقل تفصيلي أعمق: الرئيسية > وكالة الاستخبارات المدنية > الميزات (الصفحة الحالية)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- Example 3: Four-level breadcrumb -->
+  <nav aria-label="التنقل التفصيلي">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">الرئيسية</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">المدونة</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html#cia">مقالات CIA</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        تحليل معماري عميق لـ CIA
+      </li>
+    </ol>
+  </nav>
+
+  <h2>مثال على التنقل التفصيلي من أربعة مستويات</h2>
+  <p>هذا يوضح مسار تنقل تفصيلي أكثر عمقًا مع أربعة مستويات من التسلسل الهرمي للتنقل.</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <h2>ميزات إمكانية الوصول</h2>
+  <ul>
+    <li><strong>HTML دلالي:</strong> يستخدم <code>&lt;nav&gt;</code> مع <code>aria-label="التنقل التفصيلي"</code> وبنية القائمة <code>&lt;ol&gt;</code></li>
+    <li><strong>سمات ARIA:</strong> الصفحة الحالية محددة بـ <code>aria-current="page"</code></li>
+    <li><strong>التنقل بلوحة المفاتيح:</strong> جميع الروابط يمكن الوصول إليها بزر Tab مع مؤشرات تركيز مرئية</li>
+    <li><strong>متوافق مع قارئ الشاشة:</strong> البنية الدلالية المناسبة تعلن عن سياق التنقل</li>
+    <li><strong>تباين الألوان:</strong> يلبي معايير WCAG 2.1 AA (4.5:1 كحد أدنى)</li>
+    <li><strong>التصميم المستجيب:</strong> يتكيف مع منافذ عرض الهاتف المحمول والأجهزة اللوحية وسطح المكتب</li>
+    <li><strong>دعم السمات:</strong> يعمل مع الوضع الفاتح والوضع الداكن وسمة Black Trigram</li>
+  </ul>
+
+  <h2>تعليمات الاستخدام</h2>
+  <pre dir="ltr" class="code-example"><code>&lt;nav aria-label="التنقل التفصيلي"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/"&gt;الرئيسية&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/section.html"&gt;القسم&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item" aria-current="page"&gt;
+      الصفحة الحالية
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h2>قائمة الاختبار</h2>
+  <ul>
+    <li>✅ التنقل بلوحة المفاتيح (Tab، Shift+Tab، Enter)</li>
+    <li>✅ إعلانات قارئ الشاشة (اختبر باستخدام NVDA أو JAWS أو VoiceOver)</li>
+    <li>✅ تباين الألوان يلبي معيار WCAG 2.1 AA (4.5:1 للنص العادي)</li>
+    <li>✅ التصميم المستجيب يعمل على جميع أحجام منافذ العرض</li>
+    <li>✅ مؤشرات التركيز واضحة ومرئية</li>
+    <li>✅ حالات التمرير توفر ردود فعل بصرية</li>
+    <li>✅ يعمل في الوضع الفاتح والوضع الداكن</li>
+    <li>✅ يعمل مع سمة Black Trigram</li>
+  </ul>
+</body>
+</html>
