@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Continuity | Surviving Chaos | Hack23</title>
+<title>Continuidad del Negocio | Sobreviviendo al Caos | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Five-phase BCP tested quarterly. Multi-region AWS, 47-minute critical recovery. Real disaster planning beyond consultant fantasy fiction.">
-	<meta name="twitter:description" content="Five-phase BCP tested quarterly. Multi-region AWS, 47-minute critical recovery. Real disaster planning beyond consultant fantasy fiction.">
-<meta name="keywords" content="business continuity planning, BCP, RTO RPO, crisis management, operational resilience, five-phase BCP, business impact analysis, alternative operations, crisis communication, AWS multi-region, chaos engineering, hack23 ISMS">
+<meta name="description" content="PCN de cinco fases probado trimestralmente. AWS multi-región, recuperación crítica en 47 minutos. Planificación real de desastres más allá de la ficción de consultores.">
+	<meta name="twitter:description" content="PCN de cinco fases probado trimestralmente. AWS multi-región, recuperación crítica en 47 minutos. Planificación real de desastres más allá de la ficción de consultores.">
+<meta name="keywords" content="planificación continuidad negocio, PCN, RTO RPO, gestión crisis, resiliencia operacional, PCN cinco fases, análisis impacto negocio, operaciones alternativas, comunicación crisis, AWS multi-región, ingeniería caos, SGSI hack23">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Business Continuity: Surviving Chaos When Everything Breaks">
-<meta property="og:description" content="Five-phase BCP process: Analysis, Strategy, Plan, Testing, Maintenance. Most BCPs are fiction—ours is tested quarterly. Multi-region AWS, alternative operations, 47-minute critical recovery. Systematic chaos acceptance.">
+<meta property="og:title" content="Continuidad del Negocio: Sobreviviendo al Caos Cuando Todo se Rompe">
+<meta property="og:description" content="Proceso PCN de cinco fases: Análisis, Estrategia, Plan, Pruebas, Mantenimiento. La mayoría de los PCN son ficción—el nuestro se prueba trimestralmente. AWS multi-región, operaciones alternativas, recuperación crítica en 47 minutos. Aceptación sistemática del caos.">
 	<meta property="og:locale" content="es_ES">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -37,14 +37,15 @@
 <meta name="twitter:creator" content="@jamessorling">
 
 <link rel="canonical" href="https://hack23.com/discordian-business-continuity_es.html">
-<!-- Hreflang tags for language alternatives --><script type="application/ld+json">{
+
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Business Continuity: Surviving Chaos When Everything Breaks",
-      "description": "Five-phase BCP tested quarterly. Multi-region AWS, 47-minute critical recovery. Real disaster planning beyond consultant fantasy fiction.",
+      "headline": "Continuidad del Negocio: Sobreviviendo al Caos Cuando Todo se Rompe",
+      "description": "PCN de cinco fases probado trimestralmente. AWS multi-región, recuperación crítica en 47 minutos. Planificación real de desastres más allá de la ficción de consultores.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
@@ -69,8 +70,8 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-business-continuity_es.html"
       },
-      "keywords": "business continuity planning, BCP, RTO RPO, crisis management, operational resilience, five-phase BCP, business impact analysis, alternative operations, crisis communication, AWS multi-region, chaos engineering, hack23 ISMS",
-      "articleSection": "Information Security",
+      "keywords": "planificación continuidad negocio, PCN, RTO RPO, gestión crisis, resiliencia operacional, PCN cinco fases, análisis impacto negocio, operaciones alternativas, comunicación crisis, AWS multi-región, ingeniería caos, SGSI hack23",
+      "articleSection": "Seguridad de la Información",
       "inLanguage": "es",
       "image": {
         "@type": "ImageObject",
@@ -86,8 +87,8 @@
       "about": [
         {
           "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
+          "name": "Política SGSI",
+          "description": "Implementación de política del Sistema de Gestión de Seguridad de la Información"
         }
       ]
     },
@@ -110,7 +111,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "ISMS Policy",
+          "name": "Política SGSI",
           "item": "https://hack23.com/discordian-business-continuity_es.html"
         }
       ]
@@ -131,36 +132,629 @@
 
 </head>
 <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_es.html">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Continuidad del Negocio
+      </li>
+    </ol>
+  </nav>
+
+
 <header>
-<nav>
-<ul>
-<li><a href="index_es.html">Inicio</a></li>
-<li><a href="blog_es.html">Blog</a></li>
-<li><a href="services_es.html">Servicios</a></li>
-</ul>
-</nav>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Logo de Hack23" class="logo" width="80" height="80">
+  </div>
+  <h1>Continuidad del Negocio: Sobreviviendo al Caos Cuando Todo se Rompe</h1>
+  <div class="app-link">
+    <a href="index_es.html" title="Volver a Inicio">Inicio</a>
+    <a href="discordian-cybersecurity.html" title="Volver al Manifiesto">Manifiesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md" title="PCN Público">PCN</a>
+  </div>
 </header>
 
 <main>
-<article>
-<h1>Business Continuity | Surviving Chaos | Hack23</h1>
+  <article>
+    <h2 class="header">🔄 Continuidad del Negocio: Cuando (No Si) Todo se Rompe</h2>
 
-<div class="translation-notice">
-<p><strong>Note:</strong> This page contains English content that requires professional translation. The technical infrastructure (HTML, metadata, SEO) is complete.</p>
-<p>Source: <a href="discordian-business-continuity.html">discordian-business-continuity.html</a></p>
-</div>
+    <section id="intro">
+      <h2 class="panel-caption">La Verdad Incómoda: La Mayoría de los PCN Son Ficción Costosa</h2>
+      
+      <p><strong>Nada es verdad. Todo está permitido.</strong> Incluyendo fallos completos de infraestructura, desastres simultáneos (pandemia + ransomware + interrupción de la cadena de suministro—sí, todo a la vez), y la incómoda verdad de que <strong>la mayoría de los documentos de PCN son ficción costosa escrita por consultores que nunca han experimentado un desastre real.</strong> Asumen fallos ordenados, personal disponible, infraestructura funcionando y toma de decisiones racional. <em>Chequeo de realidad: Los desastres reales son caóticos, irracionales, fallos compuestos donde nada funciona según lo planeado y la Ley de Murphy se compone exponencialmente.</em></p>
+      
+      <p><em>¡Piensa por ti mismo, idiota! Cuestiona la autoridad.</em> Especialmente tu PCN escrito por consultores que asistieron a un taller de dos días y copiaron plantillas de ISO 22301. <strong>FNORD.</strong> Cuestiona planes que asumen "el centro de datos se inunda pero el poder de respaldo funciona" (ambos fallan), "el personal clave está disponible" (están atrapados en el tráfico o enfermos), "los sistemas de comunicación funcionan" (también están caídos). <em>¿Cuándo fue la última vez que probaste si tu sitio alternativo tiene la misma vulnerabilidad que tu sitio primario? Nosotros lo hicimos—y descubrimos que ambos estaban con el mismo proveedor de nube. Ups.</em></p>
+      
+      <p>En Hack23, la continuidad del negocio no es esperanza disfrazada de documentación—es <strong>aceptación sistemática del caos mediante ingeniería de resiliencia operacional de cinco fases.</strong> Nuestro enfoque reconoce la verdad fundamental: <strong>Todo falla. Simultáneamente. De formas que no predijiste.</strong> La única pregunta es si has probado tu capacidad para sobrevivir desastres compuestos o solo has escrito ficción reconfortante para auditores.</p>
+      
+      <p class="hidden-wisdom"><em>ILUMINACIÓN: Has entrado en Chapel Perilous, donde las suposiciones del PCN se encuentran con la realidad del desastre. La mayoría de las organizaciones descubren que su plan es ficción durante crisis reales (tiempo promedio de realización: 47 minutos en el desastre cuando el "generador de respaldo" resulta ser teórico). Nosotros probamos trimestralmente con fallos compuestos—porque los desastres reales no se turnan educadamente. FNORD.</em></p>
+      
+      <p>Nuestro proceso de PCN de cinco fases va más allá del cumplimiento de casillas hacia <strong>realidad operacional probada</strong>: Análisis (identificando lo que realmente importa), Estrategia (planificando cuando todo falla simultáneamente), Plan (documentando procedimientos que funcionan durante el caos), Pruebas (probándolo trimestralmente), Mantenimiento (actualizando basado en lo que se rompió). Transparencia completa en nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md">Plan de Continuidad del Negocio público</a>. Sí, público. Porque la seguridad por oscuridad es teatro, no resiliencia.</p>
+    
+      
+      <p><strong>¿Listo para implementar cumplimiento ISO 27001?</strong> <a href="why-hack23.html">Conoce los servicios de consultoría en ciberseguridad de Hack23</a> y nuestro enfoque único de SGSI público.</p>
+    </section>
 
-<!-- CONTENT TO BE TRANSLATED -->
-<p>Professional translation of full ISMS policy content required.</p>
-<p>See English source file for complete content: <a href="discordian-business-continuity.html">discordian-business-continuity.html</a></p>
+    <section id="five-phase-bcp">
+      <h2 class="panel-caption">El Proceso PCN de Cinco Fases: Más Allá del Cumplimiento de Plantillas</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🎯 Análisis de Impacto en el Negocio (AIN)</h3>
+          <p><strong>Identificar Funciones Críticas:</strong> No lo que los ejecutivos piensan que es crítico—lo que realmente genera ingresos, satisface el cumplimiento, mantiene a los clientes de irse. En Hack23: Generación de Ingresos (entrega al cliente), Soporte al Cliente (obligaciones contractuales), Desarrollo (continuidad del producto), Seguridad (cumplimiento regulatorio), Finanzas (supervivencia del flujo de caja).</p>
+          <p><strong>Cuantificar Impacto:</strong> €10K+ pérdida diaria = Crítico (RTO &lt;1h). €5-10K = Alto (RTO 1-4h). €1-5K = Medio (RTO 4-24h). &lt;€1K = Estándar (RTO &gt;24h). No arbitrario—basado en análisis de costos reales incluyendo ingresos perdidos, multas regulatorias, daño a la reputación, gastos de recuperación.</p>
+          <p><strong>Chequeo de Realidad:</strong> El "todo es crítico" de tu CFO es por lo que tu PCN es inútil. Fuerza la priorización mediante impacto financiero real o admite que estás escribiendo ficción.</p>
+          <p class="hidden-wisdom"><em>Ley de los Cinco: Cinco funciones críticas, cinco categorías de impacto, cinco niveles de recuperación. ¿Sincronicidad o pensamiento sistemático? Ambos.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🛡️ Desarrollo de Estrategia de Recuperación</h3>
+          <p><strong>Arquitectura Multi-Región:</strong> AWS activo-pasivo a través de eu-north-1 (Estocolmo) primario → eu-west-1 (Irlanda) secundario. Chequeos de salud de Route 53 cada 30 segundos, conmutación por error automática tras 3 fallos consecutivos. ¿Por qué dos regiones? Porque la "redundancia" de una sola región no es redundancia—es esperar que el mismo centro de datos no falle completamente.</p>
+          <p><strong>Operaciones Alternativas:</strong> Infraestructura de trabajo remoto (ya predeterminada—preparación pandémica que valió la pena), coordinación de equipo distribuido vía Slack/GitHub (sin dependencia de oficina), procedimientos financieros manuales (cuando fallan los sistemas bancarios), modos de servicio degradados (funcionalidad reducida &gt; sin funcionalidad).</p>
+          <p><strong>Dependencias de Proveedores:</strong> Infraestructura en la nube (AWS) con conmutación multi-región, plataforma de desarrollo (GitHub) con mirrors de repositorio locales, servicios financieros (SEB) con procedimientos manuales, procesamiento de pagos (Stripe) con métodos alternativos. Cada uno tiene escenarios de fallo documentados y soluciones alternativas.</p>
+          <p class="hidden-wisdom"><em>La mejor estrategia asume que tu plan de respaldo también falla. ¿Cuál es tu plan de respaldo-respaldo? Tenemos cinco capas. Ley de los Cinco otra vez.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 📋 Desarrollo y Documentación del Plan</h3>
+          <p><strong>Procedimientos de Recuperación:</strong> Runbooks paso a paso, no directrices vagas. "Activar respaldo" no es un procedimiento—"1) Acceder a la Consola AWS mediante credenciales de emergencia 2) Navegar a Route 53 3) Actualizar umbral de chequeo de salud..." sí lo es. Nuestra conmutación de región AWS: 14 pasos documentados, tiempo promedio real de 47 minutos, probado trimestralmente.</p>
+          <p><strong>Plantillas de Comunicación:</strong> Notificaciones a partes interesadas pre-escritas por escenario (fallo de infraestructura, incidente de seguridad, interrupción de proveedor). Nadie escribe comunicación clara al cliente durante el pánico—prepárala de antemano con [VARIABLES] para detalles específicos del incidente.</p>
+          <p><strong>Listas de Contactos:</strong> Contactos de emergencia con múltiples métodos (teléfono, email, Slack, SMS). Incluye rutas de escalamiento de proveedores—porque "abrir un ticket de soporte" no funciona cuando necesitas recuperación en 47 minutos. Móvil directo del CEO, línea directa de soporte empresarial de AWS, procedimientos de escalamiento de GitHub.</p>
+          <p class="hidden-wisdom"><em>Momento Chapel Perilous: Las pruebas revelan que tus procedimientos documentados hacen referencia a sistemas que ya no existen. Actualiza planes continuamente o son ficción histórica.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🧪 Pruebas y Validación (El Revelador de Verdades)</h3>
+          <p><strong>Pruebas Trimestrales de PCN:</strong> T1 2025: Simulacro de conmutación de región AWS (52 minutos real vs 60 minutos objetivo—aprobado). T2: Validación de restauración de respaldo (100% éxito, 23 minutos restauración de base de datos). T3: Simulación de ransomware (tiempo de aislamiento: 18 minutos, recuperación: 3.2 horas). T4: Prueba de comunicación (todas las partes interesadas alcanzables en 30 minutos).</p>
+          <p><strong>Escenarios de Fallo Compuestos:</strong> No solo pruebes "el centro de datos falla"—prueba "centro de datos falla + personal clave no disponible + sistemas de comunicación caídos + son las 2am del sábado." Los desastres reales se componen. Tu PCN debe sobrevivir fallos compuestos o es pensamiento ilusorio.</p>
+          <p><strong>Resultados Documentados:</strong> Cada prueba genera tiempos de recuperación reales vs objetivos, puntos de fallo identificados, actualizaciones de procedimientos requeridas. La prueba del T1 reveló configuración incorrecta del chequeo de salud de AWS—corregida antes de que la interrupción de producción lo demostrara. Las pruebas no son cumplimiento de casillas—es validación de realidad.</p>
+          <p class="hidden-wisdom"><em>FNORD. Los PCN no probados son preparación de Schrödinger—simultáneamente adecuados e inútiles hasta que el desastre colapsa la función de onda. Probamos trimestralmente porque preferiríamos descubrir ficción durante simulacros que durante desastres.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 🔄 Mantenimiento y Mejora Continua</h3>
+          <p><strong>Revisiones Post-Prueba:</strong> Cada prueba → lecciones aprendidas → actualizaciones de procedimientos. La conmutación del T1 reveló propagación DNS más lenta de lo esperado—actualizado objetivo RTO y agregado procedimiento de limpieza de caché de CloudFront. La prueba de respaldo del T2 encontró una base de datos no en el alcance de respaldo—agregada y re-probada.</p>
+          <p><strong>Integración de Cambios:</strong> ¿Nuevos servicios AWS? Actualiza PCN. ¿Nuevo proveedor? Agrega a matriz de dependencias. ¿Cambios de personal? Actualiza listas de contactos. ¿Evolución de arquitectura? Revisa procedimientos de recuperación. El PCN no es documentación anual—es mantenimiento continuo o se pudre.</p>
+          <p><strong>Ejercicio Anual Completo:</strong> Escenario completo de interrupción empresarial con todas las partes interesadas. Ejercicio 2024: Centro de datos de Estocolmo simulado con fallo completo + restricciones de trabajo remoto nivel pandémico + ataque DDoS simultáneo. Resultado: Recuperación completa de 3.8 horas vs objetivo de 4 horas. Mejora identificada: Conmutación automática (implementada T2 2025).</p>
+          <p class="hidden-wisdom"><em>El Quinto Elemento del PCN: Evolución continua. Los planes estáticos son documentos históricos. Los planes vivos se adaptan a la realidad. ¿Cuál es el tuyo?</em></p>
+        </div>
+      </div>
+    </section>
 
-</article>
+    <section id="critical-functions">
+      <h2 class="panel-caption">Cinco Funciones Empresariales Críticas: Lo que Realmente Importa</h2>
+      
+      <table class="data-table">
+        <caption>Cinco Funciones Empresariales Críticas y Parámetros de Recuperación</caption>
+        <thead>
+          <tr>
+            <th>Función</th>
+            <th>Por qué es Crítica</th>
+            <th>Impacto de Pérdida Diaria</th>
+            <th>RTO/RPO</th>
+            <th>Estrategia de Recuperación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>💰 Generación de Ingresos</strong></td>
+            <td>Sistemas de entrega al cliente, servicios de consultoría, disponibilidad del producto. Sin ingresos = sin supervivencia del negocio.</td>
+            <td>€10K+ (pérdida directa de ingresos + cláusulas de penalización + fuga de clientes)</td>
+            <td>RTO &lt;1h / RPO 1h</td>
+            <td>AWS multi-región con conmutación automática, modos de servicio degradados, comunicación al cliente pre-negociada</td>
+          </tr>
+          <tr>
+            <td><strong>🤝 Soporte al Cliente</strong></td>
+            <td>Obligaciones contractuales de SLA, mantenimiento de confianza del cliente, coordinación de respuesta a incidentes.</td>
+            <td>€5-10K (penalizaciones SLA + daño a reputación + costos de escalamiento de soporte)</td>
+            <td>RTO 1-4h / RPO 1h</td>
+            <td>Múltiples canales de comunicación (email, teléfono, Slack), respaldo sistema de tickets, procedimientos de seguimiento manual</td>
+          </tr>
+          <tr>
+            <td><strong>🔧 Operaciones de Desarrollo</strong></td>
+            <td>Continuidad del producto, despliegue de parches de seguridad, capacidad de resolución de problemas del cliente.</td>
+            <td>€1-5K (correcciones retrasadas + pérdida de productividad + costo de oportunidad)</td>
+            <td>RTO 4-24h / RPO 4h</td>
+            <td>Mirrors locales de GitHub, redundancia CI/CD, snapshots de entorno de desarrollo, rutas de despliegue alternativas</td>
+          </tr>
+          <tr>
+            <td><strong>🔒 Seguridad y Cumplimiento</strong></td>
+            <td>Obligaciones regulatorias (RGPD, NIS2), respuesta a incidentes de seguridad, cumplimiento de auditoría.</td>
+            <td>€5-10K (multas regulatorias + costos de respuesta a incidentes + violaciones de cumplimiento)</td>
+            <td>RTO 1-4h / RPO 1h</td>
+            <td>Redundancia de monitoreo de seguridad, playbooks de respuesta a incidentes, respaldos de documentación de cumplimiento, procedimientos de notificación regulatoria</td>
+          </tr>
+          <tr>
+            <td><strong>💳 Gestión Financiera</strong></td>
+            <td>Mantenimiento de flujo de caja, procesamiento de nómina, facturación, informes financieros.</td>
+            <td>€5-10K (retrasos de pago + fallos en informes regulatorios + interrupción de flujo de caja)</td>
+            <td>RTO 1-4h / RPO 4h</td>
+            <td>Procedimientos manuales del sistema bancario, métodos de pago alternativos, exportaciones de datos financieros, generación manual de facturas</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>SINCRONICIDAD: Cinco funciones críticas. Cinco prioridades de recuperación. Cinco ciclos de prueba por año. Ley de los Cinco en todas partes donde mires—o lo estructuramos deliberadamente así. La realidad es lo que tú haces de ella.</em></p>
+    </section>
+
+    <section id="rto-rpo-reality">
+      <h2 class="panel-caption">Realidad RTO/RPO: Estableciendo Objetivos que Realmente Puedes Cumplir</h2>
+      
+      <p><strong>La Fantasía RTO/RPO:</strong> La mayoría de las organizaciones establecen objetivos basados en lo que suena bien en documentos de cumplimiento. "RTO de 4 horas para sistemas críticos" porque 4 horas suena razonable y cabe en la cuadrícula. <strong>Problema:</strong> Sin análisis del tiempo real de recuperación, sin pruebas para validar viabilidad, sin presupuesto asignado para lograrlo. Resultado: Los objetivos son ficción que los auditores aceptan y los desastres exponen.</p>
+      
+      <p><strong>Nuestro Enfoque Basado en Evidencia:</strong></p>
+      <ul>
+        <li><strong>Comenzar con Pruebas:</strong> Antes de establecer objetivos RTO, prueba el tiempo real de recuperación. Nuestra conmutación de región AWS: Primera prueba = 87 minutos. Después de automatización = 52 minutos. Después de optimización adicional = 47 minutos. Objetivo establecido en 60 minutos (búfer para Ley de Murphy durante desastres reales).</li>
+        <li><strong>Análisis Costo-Beneficio:</strong> RTO sub-hora requiere conmutación automática + despliegue multi-región + monitoreo continuo de salud. Costo: ~€500/mes. Beneficio: Evitar pérdida diaria de ingresos de €10K+. ROI justifica inversión. RTO de 4 horas para sistemas de prioridad media: Procedimientos manuales suficientes, costos de respaldo de €50/mes justificados por pérdida diaria de €1-5K.</li>
+        <li><strong>RPO Realista:</strong> RPO de 1 hora significa respaldos cada hora + replicación entre regiones. Costo: ~€200/mes. Alternativa: RPO de 4 horas con intervalos de respaldo de 4 horas. Costo: €50/mes. Elegimos 1 hora para sistemas críticos (pérdida de €10K+ justifica costo), 4 horas para prioridad media (pérdida de €1-5K no justifica 4x costo).</li>
+        <li><strong>Documentar Razonamiento:</strong> Cada objetivo RTO/RPO incluye: tiempo real de recuperación probado, costo para lograr objetivo, justificación de impacto empresarial, pérdida máxima aceptable. Los auditores aprecian evidencia sobre afirmaciones.</li>
+      </ul>
+      
+      <p><strong>Resultados de Pruebas RTO/RPO (2025):</strong></p>
+      <table class="data-table">
+        <caption>Resultados de Pruebas RTO/RPO - Rendimiento Trimestral 2025</caption>
+        <thead>
+          <tr>
+            <th>Sistema</th>
+            <th>RTO Objetivo</th>
+            <th>Recuperación Real (T1)</th>
+            <th>Recuperación Real (T2)</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conmutación Región AWS</td>
+            <td>60 minutos</td>
+            <td>52 minutos</td>
+            <td>47 minutos</td>
+            <td>✅ Supera objetivo</td>
+          </tr>
+          <tr>
+            <td>Restauración de Base de Datos</td>
+            <td>30 minutos</td>
+            <td>28 minutos</td>
+            <td>23 minutos</td>
+            <td>✅ Supera objetivo</td>
+          </tr>
+          <tr>
+            <td>Entorno de Desarrollo</td>
+            <td>4 horas</td>
+            <td>3.8 horas</td>
+            <td>3.2 horas</td>
+            <td>✅ Cumple objetivo</td>
+          </tr>
+          <tr>
+            <td>Sistemas de Comunicación</td>
+            <td>1 hora</td>
+            <td>42 minutos</td>
+            <td>38 minutos</td>
+            <td>✅ Supera objetivo</td>
+          </tr>
+          <tr>
+            <td>Sistema Financiero Modo Manual</td>
+            <td>2 horas</td>
+            <td>2.3 horas</td>
+            <td>1.8 horas</td>
+            <td>✅ Cumple objetivo (mejorando)</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p class="hidden-wisdom"><em>FNORD. La brecha entre objetivos RTO y recuperación real revela la realidad del PCN. Los objetivos sin pruebas son mentiras cómodas. Probamos trimestralmente y publicamos resultados porque la transparencia supera al teatro.</em></p>
+    </section>
+
+    <section id="alternative-operations">
+      <h2 class="panel-caption">Operaciones Alternativas: Cuando lo Normal se Rompe, ¿Cuál es el Plan B?</h2>
+      
+      <p><strong>La Falacia de Operaciones Alternativas:</strong> La mayoría de los PCN declaran "el personal trabajará desde ubicaciones alternativas" sin definir qué significa eso. ¿Qué ubicaciones? ¿Tienen acceso requerido? ¿Se mantienen los controles de seguridad? ¿Realmente puedes operar allí o es teórico? <em>Probamos haciendo que todo el equipo trabajara desde "ubicaciones alternativas" (sus hogares) durante una semana—descubrimos que la capacidad VPN era insuficiente. Corregido antes de que la pandemia forzara a todos al remoto.</em></p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🏠 Infraestructura de Trabajo Remoto</h3>
+          <p><strong>Preparación Pre-Pandemia:</strong> Ya implementamos operaciones primero-remoto antes de que COVID-19 forzara a todos a descubrir que su "capacidad de trabajo desde casa" era teórica. Resultado: Cero interrupción empresarial durante confinamientos pandémicos mientras los competidores luchaban.</p>
+          <p><strong>Infraestructura:</strong> VPN con capacidad para 150% del personal (sobreaprovisionado para aumento), cifrado de laptop obligatorio, MFA en todos los sistemas, herramientas de colaboración (Slack, GitHub, Zoom) probadas bajo carga, infraestructura de escritorio virtual para acceso seguro a sistemas sensibles.</p>
+          <p><strong>Procedimientos:</strong> Standups virtuales diarios, protocolos de comunicación asíncrona (documentados en wiki), compartición segura de archivos (no adjuntos de email), coordinación virtual de respuesta a incidentes (probada trimestralmente), monitoreo remoto de seguridad.</p>
+          <p class="hidden-wisdom"><em>Operaciones alternativas que nunca has probado son pánico justo-a-tiempo. Probamos trabajo remoto trimestralmente antes de que se volviera obligatorio. Preparación supera luchar.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💰 Procedimientos Financieros Manuales</h3>
+          <p><strong>Escenario de Fallo del Sistema Bancario:</strong> Sistemas de SEB (banco principal) caídos. Bokio (contabilidad) no disponible. Stripe (pagos) degradado. Ocurre más a menudo de lo que pensarías—último incidente T2 2024, interrupción de 6 horas.</p>
+          <p><strong>Procedimientos Manuales:</strong> CEO tiene app de banca móvil con límites de autorización suficientes, hoja de cálculo de registro manual de transacciones (plantillas preparadas), capacidad de generación de facturas en papel (exportaciones PDF almacenadas localmente), métodos de pago alternativos (transferencias bancarias directas, procesamiento manual de tarjetas), gestión de flujo de caja mediante informes exportados (actualizados semanalmente).</p>
+          <p><strong>Reconciliación de Recuperación:</strong> Una vez restaurados los sistemas, transacciones manuales reconciliadas con sistemas automatizados. Procedimiento documentado previene pagos duplicados o facturas perdidas. Probado T3 2024—identificada brecha de reconciliación, procedimiento corregido.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 Modo de Servicio Degradado</h3>
+          <p><strong>Realidad:</strong> La recuperación de funcionalidad completa puede ser imposible durante desastres. Mejor definir operación degradada aceptable que prometer capacidad completa que no puedes entregar.</p>
+          <p><strong>Modos Degradados de Hack23:</strong></p>
+          <ul>
+            <li><strong>Servicio Solo-Lectura:</strong> Los usuarios pueden acceder a datos pero no modificar. Aceptable a corto plazo (horas) hasta que se restaure capacidad de escritura.</li>
+            <li><strong>Capacidad Reducida:</strong> 50% del rendimiento normal mediante operación de una sola región. Aceptable durante conmutación multi-región.</li>
+            <li><strong>Flujo de Aprobación Manual:</strong> Procesos automatizados reemplazados con aprobación manual. Más lento pero mantiene controles críticos.</li>
+            <li><strong>Solo Contenido Estático:</strong> Características dinámicas deshabilitadas, contenido en caché servido. Mantiene presencia durante recuperación de backend.</li>
+          </ul>
+          <p><strong>Comunicación al Cliente:</strong> Mensajes de estado pre-escritos para cada modo degradado. Transparencia sobre limitaciones mejor que silencio o falsas promesas.</p>
+          <p class="hidden-wisdom"><em>Lo perfecto es enemigo de lo funcional. Operación degradada supera a ninguna operación. Tus clientes aceptarán servicio reducido mejor que interrupciones inexplicadas.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="crisis-communication">
+      <h2 class="panel-caption">Comunicación de Crisis: La Dimensión que la Mayoría de los PCN Ignoran</h2>
+      
+      <p><strong>La Comunicación es A Menudo el Punto de Fallo:</strong> La recuperación técnica funciona pero las partes interesadas no lo saben. Los clientes asumen lo peor porque quedaste en silencio. Los reguladores escalan porque no notificaste a tiempo. Los medios especulan porque no comunicaste proactivamente. <strong>El fallo de comunicación de crisis magnifica los fallos técnicos.</strong></p>
+      
+      <p><strong>Cinco Capas de Comunicación (Ley de los Cinco Aplicada):</strong></p>
+      
+      <table class="data-table">
+        <caption>Matriz de Comunicación de Crisis de Cinco Capas</caption>
+        <thead>
+          <tr>
+            <th>Capa</th>
+            <th>Partes Interesadas</th>
+            <th>Momento</th>
+            <th>Canal</th>
+            <th>Contenido del Mensaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Equipo Interno</strong></td>
+            <td>CEO, personal técnico, operaciones empresariales</td>
+            <td>Inmediato (&lt;15 min)</td>
+            <td>Canal de emergencia Slack, SMS</td>
+            <td>Alcance del incidente, evaluación de impacto, acciones iniciales, asignaciones de rol, cronograma de próxima actualización</td>
+          </tr>
+          <tr>
+            <td><strong>2. Clientes Activos</strong></td>
+            <td>Clientes con contratos activos, obligaciones SLA</td>
+            <td>Temprano (&lt;1 h)</td>
+            <td>Email, banner del sitio web, página de estado</td>
+            <td>Estado del servicio, tiempo esperado de resolución, métodos de acceso alternativos, compensación (si violación SLA), información de contacto</td>
+          </tr>
+          <tr>
+            <td><strong>3. Proveedores Críticos</strong></td>
+            <td>AWS, GitHub, servicios financieros</td>
+            <td>Contextual (si relevante)</td>
+            <td>Portal de soporte, escalamiento telefónico</td>
+            <td>Impacto en sus sistemas, soporte requerido, necesidades de escalamiento, coordinación de recuperación</td>
+          </tr>
+          <tr>
+            <td><strong>4. Organismos Regulatorios</strong></td>
+            <td>Autoridades RGPD, reguladores financieros, organismos industriales</td>
+            <td>Según requerido por regulación (típicamente 72h para violaciones de datos)</td>
+            <td>Canales de notificación formal, procedimientos documentados</td>
+            <td>Tipo de incidente, datos/sistemas afectados, acciones de contención, impacto estimado, cronograma de remediación</td>
+          </tr>
+          <tr>
+            <td><strong>5. Proveedor de Seguros</strong></td>
+            <td>Seguro de continuidad del negocio, ciberseguro</td>
+            <td>Temprano (&lt;4 h)</td>
+            <td>Notificación telefónica, seguimiento por email</td>
+            <td>Descripción del incidente, costos estimados, cronograma de recuperación, alcance potencial del reclamo</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Plantillas de Comunicación Pre-Escritas:</strong></p>
+      
+      <div class="cards">
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📧 Plantilla de Comunicación al Cliente</h3>
+          <pre style="background: #1a1a1a; padding: 15px; border-radius: 5px; color: #0f0;" role="region" aria-label="Plantilla de Email de Comunicación al Cliente">
+Asunto: &lt;GRAVEDAD&gt; Actualización de Estado del Servicio - Sistemas Hack23
+
+Actualmente estamos experimentando &lt;DESCRIPCIÓN BREVE&gt;
+
+Servicios Afectados: &lt;LISTA&gt;
+Estado Actual: &lt;INVESTIGANDO/RESPONDIENDO/RECUPERANDO&gt;
+Resolución Esperada: &lt;PLAZO&gt;
+Acceso Alternativo: &lt;SI DISPONIBLE&gt;
+
+Lo que Estamos Haciendo:
+- &lt;ACCIÓN 1&gt;
+- &lt;ACCIÓN 2&gt;
+- &lt;ACCIÓN 3&gt;
+
+Próxima Actualización: &lt;CRONOGRAMA&gt;
+Contacto: support@hack23.com
+
+Nos disculpamos por las molestias y agradecemos su paciencia.
+          </pre>
+          <p><em>Nadie escribe comunicación clara durante el pánico. Prepara plantillas con &lt;VARIABLES&gt; de antemano.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Plantilla de Notificación Regulatoria</h3>
+          <pre style="background: #1a1a1a; padding: 15px; border-radius: 5px; color: #0f0;" role="region" aria-label="Plantilla de Notificación Regulatoria">
+NOTIFICACIÓN DE INCIDENTE - Hack23 AB (Org.nr 5595347807)
+
+Tipo de Incidente: &lt;CLASIFICACIÓN&gt;
+Hora de Ocurrencia: &lt;MARCA DE TIEMPO&gt; (UTC)
+Hora de Detección: &lt;MARCA DE TIEMPO&gt; (UTC)
+Hora de Notificación: &lt;MARCA DE TIEMPO&gt; (UTC)
+
+Sistemas Afectados: &lt;ALCANCE&gt;
+Datos Afectados: &lt;TIPOS Y VOLÚMENES&gt;
+Individuos Afectados: &lt;SI APLICA&gt;
+
+Resumen del Incidente: &lt;DESCRIPCIÓN&gt;
+
+Acciones de Contención Tomadas:
+- &lt;ACCIÓN 1&gt;
+- &lt;ACCIÓN 2&gt;
+
+Impacto Potencial: &lt;EVALUACIÓN&gt;
+Resolución Estimada: &lt;PLAZO&gt;
+
+Información de Contacto:
+James Pether Sörling, CEO
+&lt;Detalles de contacto&gt;
+          </pre>
+        </div>
+      </div>
+      
+      <p><strong>Redundancia de Canales de Comunicación:</strong> Primario: Email (capacidad masiva), Respaldo: Redes sociales (Twitter/X, LinkedIn), Terciario: Banner del sitio web (HTML estático, sobrevive a la mayoría de fallos), Emergencia: Llamadas telefónicas directas (para clientes críticos). Probar canales de comunicación trimestralmente—prueba del T2 2024 reveló que el proveedor de email masivo tenía límites de envío insuficientes para notificación completa de base de clientes. Plan actualizado antes de necesidad real.</p>
+      
+      <p class="hidden-wisdom"><em>FNORD. La comunicación de crisis que no envías es el escándalo que otro escribe. Transparencia proactiva supera gestión de crisis reactiva. Comunicamos primero, a menudo y honestamente—incluso cuando las noticias son malas.</em></p>
+    </section>
+
+    <section id="bcp-theater">
+      <h2 class="panel-caption">Teatro PCN vs Realidad Probada: La Gran División</h2>
+      
+      <p><strong>Teatro PCN (Lo que la Mayoría de las Organizaciones Tienen):</strong></p>
+      <ul>
+        <li>📄 Documento de 150 páginas que nadie ha leído desde la auditoría de cumplimiento</li>
+        <li>🎯 Objetivos RTO/RPO basados en "lo que suena bien" no en pruebas reales</li>
+        <li>📞 Listas de contactos actualizadas por última vez hace 3 años con personas que ya no trabajan allí</li>
+        <li>🏢 "Sitio alternativo" que nunca se ha verificado que realmente funcione</li>
+        <li>💾 "Procedimientos de respaldo" que nunca han intentado una restauración completa</li>
+        <li>📋 Runbooks de recuperación que hacen referencia a sistemas desmantelados hace 2 años</li>
+        <li>🧪 "Pruebas anuales" que consisten en leer el documento en una sala de conferencias</li>
+        <li>✅ Cumplimiento de casillas que satisface auditores pero no sobreviviría desastres reales</li>
+      </ul>
+      
+      <p><strong>Realidad PCN Probada (Lo que Realmente Funciona):</strong></p>
+      <ul>
+        <li>📄 Documento vivo actualizado después de cada prueba y cambio tecnológico</li>
+        <li>🎯 Objetivos RTO/RPO validados trimestralmente con mediciones de tiempo real de recuperación</li>
+        <li>📞 Listas de contactos probadas mensualmente mediante simulacros de comunicación reales</li>
+        <li>🏢 Infraestructura AWS multi-región probada bajo carga con fallos compuestos</li>
+        <li>💾 Restauración de respaldo validada mensualmente con selección aleatoria de conjuntos de datos</li>
+        <li>📋 Procedimientos de recuperación ejecutables por cualquier miembro del equipo, no solo la persona que los escribió</li>
+        <li>🧪 Ingeniería de caos trimestral inyectando fallos reales (FIS, simulaciones manuales)</li>
+        <li>✅ Resiliencia basada en evidencia demostrada mediante resultados de prueba documentados</li>
+      </ul>
+      
+      <p><strong>La Brecha de Pruebas Revela la Verdad:</strong> La brecha entre procedimientos documentados y capacidad real es donde vive el teatro PCN. Medimos esta brecha trimestralmente:</p>
+      
+      <table class="data-table">
+        <caption>Análisis de Brecha de Pruebas PCN - Documentación vs Realidad</caption>
+        <thead>
+          <tr>
+            <th>Capacidad</th>
+            <th>Procedimiento Documentado Dice</th>
+            <th>Prueba T1 2025 Reveló</th>
+            <th>Acción Correctiva</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conmutación AWS</td>
+            <td>"Activar región de respaldo"</td>
+            <td>14 pasos manuales, tiempo real 52 minutos</td>
+            <td>Automatizado vía Lambda + EventBridge, ahora 7 minutos</td>
+          </tr>
+          <tr>
+            <td>Restauración Base Datos</td>
+            <td>"Restaurar desde respaldo"</td>
+            <td>¡Una base de datos no estaba en alcance de respaldo!</td>
+            <td>Agregada al plan AWS Backup, verificado en re-prueba T2</td>
+          </tr>
+          <tr>
+            <td>Notificación Clientes</td>
+            <td>"Notificar clientes afectados"</td>
+            <td>Límites de tasa de proveedor email impidieron envío masivo</td>
+            <td>Plan actualizado + agregado proveedor de respaldo</td>
+          </tr>
+          <tr>
+            <td>Procedimientos Financieros</td>
+            <td>"Usar procesos manuales"</td>
+            <td>Documentación procedimiento manual desactualizada</td>
+            <td>Plantillas actualizadas + cronograma de actualización trimestral</td>
+          </tr>
+          <tr>
+            <td>Disponibilidad Personal</td>
+            <td>"Personal clave disponible 24/7"</td>
+            <td>CEO no disponible durante prueba de sábado</td>
+            <td>Escalamiento documentado a CTO, respaldo entrenado cruzadamente</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><em>Cada prueba revela la brecha entre suposiciones cómodas y realidad incómoda. Pregunta: ¿Quieres descubrir ficción durante simulacros o durante desastres?</em></p>
+      
+      <p class="hidden-wisdom"><em>MOMENTO CHAPEL PERILOUS: Probar tu PCN revela que no funciona. ¿Haces: A) Actualizar procedimientos basados en realidad, o B) Declarar prueba "exitosa" y no cambiar nada? La mayoría de las organizaciones eligen B. Nosotros elegimos A. Por esto sobrevivimos cuando otros no.</em></p>
+    </section>
+
+    <section id="aws-architecture">
+      <h2 class="panel-caption">Arquitectura AWS Multi-Región: Resiliencia Mediante Redundancia</h2>
+      
+      <p><strong>Realidad de Redundancia Geográfica:</strong> "Multi-AZ" no es multi-región. Las Zonas de Disponibilidad fallan independientemente (usualmente), pero las regiones fallan catastróficamente (raramente pero completamente). Interrupción de región AWS Estocolmo de 4 horas en 2023 afectó despliegues multi-AZ "altamente disponibles". Nuestra arquitectura multi-región: no afectada. Conmutamos a Irlanda en 47 minutos y los clientes no lo notaron.</p>
+      
+      <p><strong>Componentes de Arquitectura:</strong></p>
+      <ul>
+        <li><strong>Región Primaria:</strong> eu-north-1 (Estocolmo) para baja latencia a operaciones suecas + cumplimiento RGPD (datos en UE)</li>
+        <li><strong>Región Secundaria:</strong> eu-west-1 (Irlanda) para residencia de datos UE + dominio de fallo independiente</li>
+        <li><strong>Configuración Activo-Pasivo:</strong> Primario maneja todo el tráfico, secundario listo para activación instantánea (no standby frío—standby cálido con datos actualizados)</li>
+        <li><strong>Chequeos de Salud Route 53:</strong> Intervalos de 30 segundos en endpoints de región primaria, 3 fallos consecutivos disparan conmutación DNS automática</li>
+        <li><strong>Replicación Entre Regiones:</strong> Réplicas de lectura RDS, CRR de S3, tablas globales DynamoDB, despliegue Lambda en ambas regiones</li>
+        <li><strong>Consistencia de Datos:</strong> RPO de 1 hora logrado mediante replicación automatizada + snapshots cada hora + respaldo entre regiones</li>
+      </ul>
+      
+      <p><strong>Flujo de Trabajo de Conmutación Automática:</strong></p>
+      <ol>
+        <li>Chequeo de salud Route 53 detecta fallos de endpoint de región primaria (3 fallos consecutivos sobre 90 segundos)</li>
+        <li>Route 53 actualiza DNS para apuntar a región secundaria (TTL 60 segundos para propagación rápida)</li>
+        <li>Distribución CloudFront usa automáticamente origen secundario (configuración multi-origen con prioridad)</li>
+        <li>Lambda@Edge redirige conexiones existentes a región secundaria</li>
+        <li>Réplica de lectura RDS en región secundaria promovida a primaria (automatizado vía API RDS)</li>
+        <li>Tablas globales DynamoDB manejan escrituras en región secundaria (automático)</li>
+        <li>Monitoreo alerta CEO + equipo técnico vía SNS → Slack + SMS</li>
+        <li>Página de estado del cliente actualizada automáticamente (disparador Lambda)</li>
+        <li>Documentación de recuperación: tiempo promedio de 47 minutos desde detección hasta operación completa de región secundaria</li>
+      </ol>
+      
+      <p><strong>Realidad de Costo:</strong> La resiliencia multi-región cuesta ~€500/mes (transferencia de datos entre regiones + infraestructura duplicada + monitoreo). Costo de fallo de una sola región: pérdida diaria de ingresos de €10K+ + daño a reputación. ROI: Positivo después de 1.5 días de interrupción prevenida. Aceptamos el costo porque la alternativa es discontinuidad del negocio.</p>
+      
+      <p class="hidden-wisdom"><em>ILUMINACIÓN: Multi-región no es paranoia—es aceptar que fallos catastróficos ocurren. "Alta disponibilidad" de una sola región es esperar que el centro de datos no se queme. Multi-región es planificar para cuando lo haga. Interrupción Estocolmo 2023: 4 horas. Nuestro impacto: conmutación de 47 minutos, cero tiempo de inactividad visible al cliente. ¿Paranoico? ¿O preparado?</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Bienvenido a Chapel Perilous: Edición PCN</h2>
+      
+      <p><strong>Nada es verdad. Todo está permitido.</strong> Incluyendo la incómoda realidad de que la mayoría de los planes de continuidad del negocio son ficción costosa que satisface marcos de cumplimiento pero no sobreviviría desastres reales. <strong>Asumen fallos ordenados. La realidad entrega caos.</strong></p>
+      
+      <p><strong>Las Cinco Verdades de la Realidad PCN:</strong></p>
+      <ol>
+        <li><strong>Todo Falla Simultáneamente:</strong> Los desastres reales se componen. Pandemia + ransomware + interrupción de cadena de suministro + fallo de comunicación—todo a la vez. Tu PCN debe sobrevivir caos compuesto, no fallos teóricos aislados.</li>
+        <li><strong>No Probado = Ficción:</strong> Procedimientos que nunca has probado son cuentos caros para dormir. Probamos trimestralmente con fallos reales (AWS FIS, inyección manual de caos) porque descubrir ficción durante desastres es demasiado tarde.</li>
+        <li><strong>Operaciones Alternativas Requieren Práctica:</strong> "Personal trabaja desde casa" no es un plan a menos que hayas verificado capacidad VPN, controles de seguridad, herramientas de comunicación y capacidad real. Probamos antes de la pandemia—los competidores lucharon.</li>
+        <li><strong>Comunicación Amplifica Fallos Técnicos:</strong> Recuperación perfecta con comunicación silenciosa = desastre percibido. Recuperación imperfecta con actualizaciones proactivas = crisis gestionada. Prepara plantillas de comunicación antes del pánico.</li>
+        <li><strong>RTO/RPO Debe Estar Basado en Evidencia:</strong> Objetivos sin pruebas son números arbitrarios que auditores aceptan y desastres exponen. Documentamos tiempos reales de recuperación, costos y justificaciones—luego cumplimos o superamos objetivos.</li>
+      </ol>
+      
+      <p><strong>Nuestro Marco de Continuidad del Negocio:</strong></p>
+      <ul>
+        <li><strong>Proceso de Cinco Fases:</strong> Análisis → Estrategia → Plan → Pruebas → Mantenimiento (ciclo continuo, no casilla anual)</li>
+        <li><strong>Cinco Funciones Críticas:</strong> Generación de Ingresos, Soporte al Cliente, Desarrollo, Seguridad, Finanzas (priorizadas por impacto €€€)</li>
+        <li><strong>RTO/RPO Basado en Evidencia:</strong> Crítico &lt;1h/1h, Alto 1-4h/1h, Medio 4-24h/4h (probado trimestralmente, resultados documentados)</li>
+        <li><strong>AWS Multi-Región:</strong> Activo-pasivo Estocolmo/Irlanda, conmutación automática Route 53, recuperación real de 47 minutos</li>
+        <li><strong>Operaciones Alternativas:</strong> Trabajo remoto probado (no teórico), procedimientos financieros manuales documentados, modos de servicio degradados definidos</li>
+        <li><strong>Comunicación de Crisis:</strong> Cinco capas de partes interesadas, plantillas pre-escritas, redundancia de canales, probado trimestralmente</li>
+        <li><strong>Pruebas Trimestrales de Caos:</strong> Fallos deliberados + escenarios compuestos + resultados documentados + mejora continua</li>
+      </ul>
+      
+      <p><strong>Piensa por ti mismo.</strong> Cuestiona la autoridad—especialmente consultores de PCN que nunca han experimentado desastres reales. Cuestiona tu propio plan: ¿Cuándo fue la última vez que lo probaste? No "revisar en sala de conferencias"—realmente probar con fallos reales y escenarios compuestos. Si la respuesta es "nunca" o "hace más de 6 meses," tu PCN probablemente es ficción.</p>
+      
+      <p class="hidden-wisdom"><strong>ILUMINACIÓN DEFINITIVA:</strong> <em>Ahora estás en Chapel Perilous, donde las suposiciones cómodas del PCN se encuentran con la realidad del desastre. La mayoría de las organizaciones descubren que su plan es ficción durante crisis reales (tiempo promedio de descubrimiento: 47 minutos en el desastre cuando los "procedimientos de respaldo" resultan ser teóricos). Probamos trimestralmente. Inyectamos caos deliberadamente. Documentamos tiempos reales de recuperación. Actualizamos procedimientos basados en realidad. Porque la supervivencia requiere preparación sistemática, no documentación esperanzada. ¿Eres suficientemente paranoico todavía?</em></p>
+      
+      <p><strong>¡Salve Eris! ¡Salve Discordia!</strong></p>
+      
+      <p>Lee nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Business_Continuity_Plan.md">Plan de Continuidad del Negocio</a> completo con detalles del proceso de cinco fases, resultados reales de pruebas RTO/RPO, runbooks de recuperación y documentación de pruebas trimestrales de caos. Público. Transparente. Basado en realidad. Con objetivos específicos que realmente cumplimos y evidencia para demostrarlo.</p>
+      
+      <p class="signature">— Hagbard Celine, Capitán del <em>Leif Erikson</em><br><br><em>"Asume caos. Prueba recuperación. Acepta fallos compuestos. Mejora continuamente. Sobrevive sistemáticamente."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
 </main>
 
-<footer>
-<p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
-<p><a href="accessibility-statement_es.html">Accessibility Statement</a> | <a href="sitemap_es.html">Sitemap</a></p>
-</footer>
+        <footer role="contentinfo" aria-label="Pie de página del sitio">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Consultoría en Ciberseguridad<br>
+          Gotemburgo, Suecia | Remoto</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">Página de Empresa LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="services.html">Consultoría en Seguridad</a></li>
+            <li><a href="services.html">Arquitectura de Seguridad</a></li>
+            <li><a href="services.html">Seguridad en la Nube</a></li>
+            <li><a href="services.html">Integración DevSecOps</a></li>
+            <li><a href="services.html">Cumplimiento y SGSI</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Productos</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="blog.html">Blog de Seguridad</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Blog Discordiano</a></li>
+            <li><a href="cia-triad-faq.html">FAQ Tríada CIA</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">SGSI Público</a></li>
+            <li><a href="sitemap.html">Mapa del Sitio</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="why-hack23.html">Acerca de Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Política de Seguridad</a></li>
+            <li><a href="SECURITY.md">Reportar Problema de Seguridad</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">Organización GitHub</a></li>
+            <li><a href="accessibility-statement.html">Accesibilidad</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Autores del Blog:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionario anarquista Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofía y Visión) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filósofo-ingeniero System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arquitectura y Patrones)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Realidad de Implementación:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Developer impulsado por el pánico que hace que realmente funcione" rel="noopener noreferrer" target="_blank">George Dorn</a> lucha con este hermoso caos para convertirlo en código funcional. Ve sus comentarios técnicos en
+          <a href="blog-george-dorn-cia-code.html">Arquitectura CIA</a>,
+          <a href="blog-george-dorn-trigram-code.html">Combate Black Trigram</a>, y
+          <a href="blog.html#george-dorn-developer-chronicles">Crónicas del Desarrollador</a> para los momentos de pánico, avances y huevos de pascua ocultos que hacen la filosofía desplegable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Todos los derechos reservados. | Licenciado bajo <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>

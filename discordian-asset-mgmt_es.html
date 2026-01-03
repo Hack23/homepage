@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asset Management | Track What You Protect | Hack23</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.">
-	<meta name="twitter:description" content="AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.">
-<meta name="keywords" content="asset management, AWS Config, shadow IT, asset inventory, CMDB, forgotten infrastructure, AWS discovery, GitHub repository tracking, asset classification, infrastructure archaeology, hack23 ISMS">
-<meta name="robots" content="index, follow">
-<meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Asset Management: You Can't Protect What You Don't Know You Have">
-<meta property="og:description" content="Shadow IT isn't innovation—it's shadow vulnerability waiting to become public breach. AWS Config + infrastructure archaeology + forgotten asset discovery.">
-	<meta property="og:locale" content="es_ES">
-	<meta property="og:locale:alternate" content="ar_SA">
-	<meta property="og:locale:alternate" content="da_DK">
-	<meta property="og:locale:alternate" content="de_DE">
-	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:locale:alternate" content="fi_FI">
-	<meta property="og:locale:alternate" content="fr_FR">
-	<meta property="og:locale:alternate" content="he_IL">
-	<meta property="og:locale:alternate" content="ja_JP">
-	<meta property="og:locale:alternate" content="ko_KR">
-	<meta property="og:locale:alternate" content="nl_NL">
-	<meta property="og:locale:alternate" content="nb_NO">
-	<meta property="og:locale:alternate" content="sv_SE">
-	<meta property="og:locale:alternate" content="zh_CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Activos | Rastrea Lo Que Proteges | Hack23</title>
+    <meta name="description" content="Descubrimiento automatizado AWS Config + seguimiento API GitHub. Shadow IT no es innovación—es vulnerabilidad en la sombra. El inventario de activos importa.">
+<meta name="twitter:description" content="Descubrimiento automatizado AWS Config + seguimiento API GitHub. Shadow IT no es innovación—es vulnerabilidad en la sombra. El inventario de activos importa.">
+    <meta name="keywords" content="gestión de activos, AWS Config, shadow IT, inventario de activos, CMDB, infraestructura olvidada, descubrimiento AWS, seguimiento repositorios GitHub, clasificación de activos, arqueología de infraestructura, hack23 SGSI">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Gestión de Activos: No Puedes Proteger Lo Que No Sabes Que Tienes">
+    <meta property="og:description" content="Shadow IT no es innovación—es vulnerabilidad en la sombra esperando convertirse en brecha pública. AWS Config + arqueología de infraestructura + descubrimiento de activos olvidados.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="he_IL">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="zh_CN">
 
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-asset-mgmt_es.html">
-<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-asset-mgmt_es.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:image:alt" content="Blog de Seguridad Hack23">
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
 <link rel="canonical" href="https://hack23.com/discordian-asset-mgmt_es.html">
-<!-- Hreflang tags for language alternatives --><script type="application/ld+json">{
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Asset Management: You Can't Protect What You Don't Know You Have",
-      "description": "AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.",
+      "headline": "Gestión de Activos: No Puedes Proteger Lo Que No Sabes Que Tienes",
+      "description": "Cómo Hack23 implementa la gestión sistemática de activos a través del descubrimiento automatizado de AWS Config, inventario de repositorios GitHub, arqueología de infraestructura y prioridades basadas en clasificación. Shadow IT no es innovación—es vulnerabilidad en la sombra esperando brecharse.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
         "url": "https://hack23.com",
-        "jobTitle": "CEO / Cybersecurity Expert",
+        "jobTitle": "CEO / Experto en Ciberseguridad",
         "sameAs": [
           "https://www.linkedin.com/in/jamessorling/",
           "https://github.com/Hack23"
@@ -63,14 +66,14 @@
           "url": "cia-icon-140.webp"
         }
       },
-      "datePublished": "2025-12-14",
-      "dateModified": "2025-12-14",
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-asset-mgmt_es.html"
       },
-      "keywords": "asset management, AWS Config, shadow IT, asset inventory, CMDB, forgotten infrastructure, AWS discovery, GitHub repository tracking, asset classification, infrastructure archaeology, hack23 ISMS",
-      "articleSection": "Information Security",
+      "keywords": "gestión de activos, AWS Config, inventario de activos, clasificación, SGSI",
+      "articleSection": "Seguridad de la Información",
       "inLanguage": "es",
       "image": {
         "@type": "ImageObject",
@@ -78,16 +81,18 @@
         "width": 1200,
         "height": 630
       },
+      "wordCount": 5446,
+      "articleBody": "Nada es verdad. Todo está permitido. Excepto olvidar que los activos existen—shadow IT no es innovación, es vulnerabilidad en la sombra esperando convertirse en brecha pública...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog"
+        "name": "Blog de Seguridad Hack23"
       },
       "about": [
         {
           "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
+          "name": "Política SGSI",
+          "description": "Implementación de política del Sistema de Gestión de Seguridad de la Información"
         }
       ]
     },
@@ -99,18 +104,18 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://hack23.com/index_es.html"
+          "item": "https://hack23.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://hack23.com/blog_es.html"
+          "item": "https://hack23.com/blog.html"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "ISMS Policy",
+          "name": "Gestión de Activos",
           "item": "https://hack23.com/discordian-asset-mgmt_es.html"
         }
       ]
@@ -131,36 +136,49 @@
 
 </head>
 <body>
-<header>
-<nav>
-<ul>
-<li><a href="index_es.html">Inicio</a></li>
-<li><a href="blog_es.html">Blog</a></li>
-<li><a href="services_es.html">Servicios</a></li>
-</ul>
-</nav>
-</header>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Gestión de Activos
+      </li>
+    </ol>
+  </nav>
 
-<main>
-<article>
-<h1>Asset Management | Track What You Protect | Hack23</h1>
-
-<div class="translation-notice">
-<p><strong>Note:</strong> This page contains English content that requires professional translation. The technical infrastructure (HTML, metadata, SEO) is complete.</p>
-<p>Source: <a href="discordian-asset-mgmt.html">discordian-asset-mgmt.html</a></p>
-</div>
-
-<!-- CONTENT TO BE TRANSLATED -->
-<p>Professional translation of full ISMS policy content required.</p>
-<p>See English source file for complete content: <a href="discordian-asset-mgmt.html">discordian-asset-mgmt.html</a></p>
-
-</article>
-</main>
-
-<footer>
-<p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
-<p><a href="accessibility-statement_es.html">Accessibility Statement</a> | <a href="sitemap_es.html">Sitemap</a></p>
-</footer>
-
-</body>
-</html>
+    <header>
+        <div class="logo-container">
+            <img src="cia-icon-140.webp" alt="Logo de Hack23" class="logo" width="80" height="80">
+        </div>
+        <h1>Ciberseguridad Discordiana</h1>
+        <div class="app-link">
+            <a href="index_es.html">Inicio</a>
+            <a href="discordian-cybersecurity_es.html">Manifiesto</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos SGSI</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2 class="header">💻 Gestión de Activos: Arqueología Digital de Tu Superficie de Ataque Real</h2>
+            
+            <section id="intro">
+                <h2 class="panel-caption">No Puedes Proteger Lo Que No Sabes Que Tienes: La Incómoda Arqueología de la Infraestructura Olvidada</h2>
+                
+                <p><strong>Nada es verdad. Todo está permitido.</strong> Excepto olvidar que los activos existen—shadow IT no es innovación, es vulnerabilidad en la sombra esperando convertirse en brecha pública. <em>¿Eres lo suficientemente paranoico? Bien.</em> Ahora pregúntate: ¿Qué está ejecutándose en tu cuenta de AWS AHORA MISMO que has olvidado que existe? ¿Esa instancia EC2 que alguien lanzó para "solo esta demo" en 2019? Aún ejecutándose. Con credenciales por defecto. Expuesta a internet. Ejecutando vulnerabilidades sin parchear desde 2015. <strong>¿Ese bucket S3 marcado "TEMP-DELETE-LATER"?</strong> Seis años después, aún es público. Aún contiene PII de clientes. Aún filtrando datos a cualquiera que conozca la URL. <strong>¿Esa función Lambda desplegada por el contratista que se fue hace tres años?</strong> Aún ejecutándose. Aún tiene permisos IAM de administrador. Aún no ha sido revisada. <strong>FNORD. Los activos que no rastreas son los que los atacantes exploit an primero.</strong> Ellos saben que tu inventario es mentira.</p>
+                
+                <p><em>¡Piensa por ti mismo, idiota! Cuestiona la autoridad.</em> Cuestiona por qué las organizaciones aceptan <strong>shadow IT</strong> (infraestructura no autorizada que definitivamente ya está comprometida), <strong>servidores de prueba olvidados</strong> (ejecutándose desde el POC de alguien en 2017), <strong>cuentas de nube abandonadas</strong> (de adquisiciones que nadie integró), <strong>registros DNS huérfanos</strong> (apuntando a infraestructura que ya no existe... ¿o sí?), <strong>certificados SSL expirados</strong> (en servicios que creías haber descomisionado), <strong>claves API zombis</strong> (para servicios que olvidaste que contrataste), y <strong>repositorios fantasma</strong> (conteniendo credenciales que nadie recuerda haber subido). Cuestiona por qué "inventario completo de activos" generalmente significa <strong>"hoja de cálculo Excel que alguien actualizó una vez en 2018 durante el último pánico de auditoría."</strong> <em>¿Eres lo suficientemente paranoico para darte cuenta de que tu registro de activos es ficción?</em> Tu infraestructura real es lo que los arqueólogos descubren durante la autopsia post-brecha.</p>
+                
+                <p>En Hack23, la gestión de activos no es teatro de hojas de cálculo—es <strong>arqueología sistemática de infraestructura mediante descubrimiento automatizado</strong>: monitoreo continuo de <strong>AWS Config</strong> (27 servicios activos rastreados), enumeración de repositorios vía <strong>API de GitHub</strong> (40+ repos inventariados), seguimiento DNS de <strong>Route 53</strong> (dominios con DNSSEC habilitado), <strong>revisiones trimestrales de acceso</strong> detectando cuentas inactivas (inactividad de 90 días dispara alertas), <strong>prioridad basada en clasificación</strong> según nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Marco de Clasificación</a> (activos Extremos revisión mensual, Alto trimestral, Moderado semestral). Revisión anual del registro (Versión 1.4, próxima: 2026-11-05). <strong>Demostramos excelencia en gestión de activos porque los clientes pueden auditar nuestro registro público de activos antes del compromiso.</strong></p>
+                
+                <p class="hidden-wisdom"><em>ILUMINACIÓN: El servidor que olvidaste está ejecutando Log4Shell sin parchear desde 2021. Ese bucket S3 marcado "temporal" en 2018 es tu mayor exposición RGPD. La función Lambda del contratista aún tiene acceso de administrador tres años después de que se fue. El inventario de activos previene que vulnerabilidades olvidadas se conviertan en brechas de titulares. Pero solo si tu inventario refleja la realidad en lugar de teatro de auditoría. AWS Config automatiza el descubrimiento para que los fallos de memoria humana no se conviertan en CVE. <strong>Verdad: La mayoría de "brechas de día cero" son realmente brechas "olvidé-que-existía".</strong> La vulnerabilidad siempre estuvo ahí. Simplemente no sabías que el activo existía. FNORD.</em></p>
+                
+                <p>Nuestro enfoque combina <strong>descubrimiento automatizado</strong> (AWS Config rastrea cada cambio de recurso), <strong>arqueología de infraestructura</strong> (descubriendo activos olvidados antes que los atacantes), y <strong>gestión basada en clasificación</strong> (protegiendo activos Críticos mensualmente, no anualmente), probando que el control sistemático de activos escala desde operaciones de una persona hasta compromisos empresariales. Implementación técnica completa en nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos público</a>—incluyendo la incómoda verdad sobre cuántos activos hemos descubierto que nadie recordaba haber creado.</p>
+            
+      
+      <p><strong>¿Buscas soporte experto de implementación?</strong> <a href="why-hack23_es.html">Ve por qué las organizaciones eligen Hack23</a> para consultoría de seguridad que acelera la innovación.</p>
+    </section>
