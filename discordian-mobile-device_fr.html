@@ -138,7 +138,7 @@
         <a href="/blog.html">Blog</a>
       </li>
       <li class="breadcrumb-item" aria-current="page">
-        Mobile Device Management
+        Gestion des Appareils Mobiles
       </li>
     </ol>
   </nav>
@@ -154,80 +154,80 @@
 
     <main>
         <article>
-            <h2>Mobile Device Management: BYOD Means Bring Your Own Disaster</h2>
+            <h2>Gestion des Appareils Mobiles : BYOD Signifie Apportez Votre Propre Désastre</h2>
             
-            <p class="subtitle"><em>"Nothing is true. Everything is permitted. Your phone bypasses the firewall."</em></p>
+            <p class="subtitle"><em>"Rien n'est vrai. Tout est permis. Votre téléphone contourne le pare-feu."</em></p>
 
-            <h2>📱 The Problem: Phones Are Computers (And You Carry Them Everywhere)</h2>
+            <h2>📱 Le Problème : Les Téléphones Sont des Ordinateurs (Et Vous Les Portez Partout)</h2>
             
-            <p>Mobile devices bypass perimeters. They roam networks. They install apps. They get lost. They get stolen. They access company email and then visit malicious websites. <strong>Every phone is a potential breach vector.</strong> <strong>FNORD—and you sleep next to it, unlock it with your face, and trust it with your darkest secrets.</strong></p>
+            <p>Les appareils mobiles contournent les périmètres. Ils parcourent les réseaux. Ils installent des applications. Ils se perdent. Ils se font voler. Ils accèdent aux e-mails d'entreprise puis visitent des sites Web malveillants. <strong>Chaque téléphone est un vecteur de violation potentiel.</strong> <strong>FNORD—et vous dormez à côté, le déverrouillez avec votre visage et lui confiez vos secrets les plus sombres.</strong></p>
             
-            <p><strong>BYOD means "Bring Your Own Disaster."</strong> Personal phones accessing corporate data. Unmanaged devices on corporate networks. Shadow IT in everyone's pocket. <strong>Are you paranoid enough? Because that TikTok app is reading your clipboard right now.</strong></p>
+            <p><strong>BYOD signifie "Apportez Votre Propre Désastre".</strong> Téléphones personnels accédant aux données d'entreprise. Appareils non gérés sur réseaux d'entreprise. Shadow IT dans la poche de chacun. <strong>Êtes-vous assez paranoïaque ? Parce que cette application TikTok lit votre presse-papiers en ce moment même.</strong></p>
             
-            <p>At Hack23, mobile device management reflects reality: <strong>single-person Swedish company with no employees.</strong> No corporate MDM deployment. No containerization platform. No fleet management. Just strong access controls, mandatory MFA, full device encryption, and systematic session management. <strong>Nothing is true—especially the myth that you need enterprise MDM to secure one person's devices.</strong></p>
+            <p>Chez Hack23, la gestion des appareils mobiles reflète la réalité : <strong>entreprise suédoise individuelle sans employés.</strong> Pas de déploiement MDM d'entreprise. Pas de plateforme de conteneurisation. Pas de gestion de flotte. Juste des contrôles d'accès stricts, MFA obligatoire, chiffrement complet des appareils et gestion systématique des sessions. <strong>Rien n'est vrai—surtout le mythe selon lequel vous avez besoin d'un MDM d'entreprise pour sécuriser les appareils d'une personne.</strong></p>
             
-            <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> demonstrates mobile security through authentication and authorization rather than device management—because you can't deploy MDM for one person. What you CAN do: enforce MFA everywhere, encrypt everything, timeout sessions appropriately. <strong>Everything is permitted—except accessing financial systems from an unencrypted device. That's just stupid.</strong></p>
+            <p>Notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Politique de Contrôle d'Accès</a> démontre la sécurité mobile par l'authentification et l'autorisation plutôt que par la gestion des appareils—parce que vous ne pouvez pas déployer MDM pour une personne. Ce que vous POUVEZ faire : imposer MFA partout, tout chiffrer, expirer les sessions de manière appropriée. <strong>Tout est permis—sauf accéder aux systèmes financiers depuis un appareil non chiffré. C'est juste stupide.</strong></p>
             
             <div class="hidden-wisdom">
-                <strong>ILLUMINATION:</strong> BYOD means "Bring Your Own Disaster"—unless you enforce strong authentication and encryption. For single-person companies, device management IS access control. Manage authentication, enforce encryption, timeout sessions. Corporate MDM is overkill when you're the only employee. <strong>FNORD—but that doesn't mean you can skip encryption. Paranoia is self-care for psychonauts.</strong>
+                <strong>ILLUMINATION :</strong> BYOD signifie "Apportez Votre Propre Désastre"—sauf si vous imposez authentification forte et chiffrement. Pour entreprises individuelles, gestion des appareils EST contrôle d'accès. Gérez authentification, imposez chiffrement, expirez sessions. MDM d'entreprise est excessif quand vous êtes le seul employé. <strong>FNORD—mais cela ne signifie pas que vous pouvez sauter le chiffrement. La paranoïa est l'auto-soin pour les psychonautes.</strong>
             </div>
 
-            <h2>🛡️ The Five Mobile Security Controls (Single-Person Edition)</h2>
+            <h2>🛡️ Les Cinq Contrôles de Sécurité Mobile (Édition Personne Seule)</h2>
             
             <div class="value-grid">
                 <div class="value-card">
-                    <h3>1. Multi-Factor Authentication</h3>
-                    <p><strong>MFA mandatory everywhere—100% coverage.</strong></p>
-                    <p>TOTP for development platforms. Hardware tokens for banking. Platform MFA for cloud services. AWS Identity Center with SSO.</p>
-                    <p class="hidden-wisdom"><em>Evidence: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> specifies MFA requirements by asset classification.</em></p>
+                    <h3>1. Authentification Multi-Facteurs</h3>
+                    <p><strong>MFA obligatoire partout—couverture 100%.</strong></p>
+                    <p>TOTP pour plateformes développement. Jetons matériels pour banque. MFA plateforme pour services cloud. AWS Identity Center avec SSO.</p>
+                    <p class="hidden-wisdom"><em>Preuve : <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Politique Contrôle d'Accès</a> spécifie exigences MFA par classification actif.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>2. Device Encryption</h3>
-                    <p><strong>Full disk encryption mandatory—no exceptions.</strong></p>
-                    <p>iOS native encryption, Android encryption, laptop FDE (AES-256). Lock screens with 15-minute timeout. Strong passphrases, not PINs.</p>
-                    <p class="hidden-wisdom"><em>Per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Physical Security Policy</a>—stolen devices must be encrypted.</em></p>
+                    <h3>2. Chiffrement des Appareils</h3>
+                    <p><strong>Chiffrement complet disque obligatoire—aucune exception.</strong></p>
+                    <p>Chiffrement natif iOS, chiffrement Android, FDE ordinateur portable (AES-256). Écrans de verrouillage avec délai 15 minutes. Phrases de passe fortes, pas de codes PIN.</p>
+                    <p class="hidden-wisdom"><em>Selon <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Politique Sécurité Physique</a>—appareils volés doivent être chiffrés.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>3. Session Management</h3>
-                    <p><strong>Timeout sessions by classification.</strong></p>
-                    <p>Financial systems: 1 hour. Development pipeline: 8 hours. Marketing platforms: 7 days. Automatic session termination enforced.</p>
-                    <p class="hidden-wisdom"><em>Classification-driven timeouts per <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">CIA+ framework</a>.</em></p>
+                    <h3>3. Gestion des Sessions</h3>
+                    <p><strong>Expiration sessions selon classification.</strong></p>
+                    <p>Systèmes financiers : 1 heure. Pipeline développement : 8 heures. Plateformes marketing : 7 jours. Terminaison automatique session appliquée.</p>
+                    <p class="hidden-wisdom"><em>Délais basés classification selon <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">framework CIA+</a>.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>4. Remote Wipe Capability</h3>
-                    <p><strong>Device lost? Wipe remotely.</strong></p>
-                    <p>iOS Find My iPhone with remote wipe. Android Device Manager with remote wipe. Immediate action on device loss report.</p>
-                    <p class="hidden-wisdom"><em>Single-person company: Self-service remote wipe. No IT department to call—you ARE the IT department.</em></p>
+                    <h3>4. Capacité d'Effacement à Distance</h3>
+                    <p><strong>Appareil perdu ? Effacez à distance.</strong></p>
+                    <p>iOS Find My iPhone avec effacement distance. Android Device Manager avec effacement distance. Action immédiate sur rapport perte appareil.</p>
+                    <p class="hidden-wisdom"><em>Entreprise individuelle : Effacement distance en libre-service. Pas de département IT à appeler—vous ÊTES le département IT.</em></p>
                 </div>
 
                 <div class="value-card">
-                    <h3>5. Access Review</h3>
-                    <p><strong>Regular review of device access.</strong></p>
-                    <p>Monthly for financial systems. Quarterly for development. Annual for marketing. Remove unnecessary permissions and apps.</p>
-                    <p class="hidden-wisdom"><em>Self-audit: Review your own device permissions quarterly. Remove what you don't need. Minimal attack surface.</em></p>
+                    <h3>5. Revue d'Accès</h3>
+                    <p><strong>Revue régulière accès appareils.</strong></p>
+                    <p>Mensuelle pour systèmes financiers. Trimestrielle pour développement. Annuelle pour marketing. Supprimez permissions et applications inutiles.</p>
+                    <p class="hidden-wisdom"><em>Auto-audit : Révisez vos propres permissions appareil trimestriellement. Supprimez ce dont vous n'avez pas besoin. Surface d'attaque minimale.</em></p>
                 </div>
             </div>
 
             <div class="hidden-wisdom">
-                <strong>CHAOS ILLUMINATION:</strong> Mobile devices are computers that bypass your firewall, install untrusted apps, and get left in taxis. For single-person companies, "management" means strong authentication + encryption + session controls. Corporate MDM is overkill. Strong access control is essential.
+                <strong>ILLUMINATION CHAOS :</strong> Les appareils mobiles sont des ordinateurs qui contournent votre pare-feu, installent applications non fiables et se font oublier dans les taxis. Pour entreprises individuelles, "gestion" signifie authentification forte + chiffrement + contrôles session. MDM d'entreprise est excessif. Contrôle d'accès fort est essentiel.
             </div>
 
-            <h2>📋 What Hack23 Actually Does</h2>
+            <h2>📋 Ce Que Fait Réellement Hack23</h2>
             
-            <p>Our mobile device strategy is public: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" target="_blank">Access Control Policy</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">Physical Security Policy</a></p>
+            <p>Notre stratégie appareils mobiles est publique : <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" target="_blank">Politique Contrôle d'Accès</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">Politique Sécurité Physique</a></p>
             
             <div class="cards">
                 <div class="card confidentiality-card">
                     <div class="scanner-effect"></div>
-                    <h3>🔐 100% MFA Coverage</h3>
-                    <p><strong>Every System, Every Time:</strong></p>
+                    <h3>🔐 Couverture MFA 100%</h3>
+                    <p><strong>Chaque Système, Chaque Fois :</strong></p>
                     <ul>
-                        <li><strong>Financial systems:</strong> Hardware token + SMS backup, 1-hour timeout</li>
-                        <li><strong>Development platforms:</strong> TOTP + SSH keys, 8-hour timeout</li>
-                        <li><strong>Cloud services:</strong> AWS Identity Center SSO + MFA, 4-24 hour timeout</li>
+                        <li><strong>Systèmes financiers :</strong> Jeton matériel + SMS secours, délai 1 heure</li>
+                        <li><strong>Plateformes développement :</strong> TOTP + clés SSH, délai 8 heures</li>
+                        <li><strong>Services cloud :</strong> AWS Identity Center SSO + MFA, délai 4-24 heures</li>
                         <li><strong>Marketing platforms:</strong> Platform MFA, 7-day timeout</li>
                     </ul>
                     <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md#mfa-implementation-matrix">View MFA Matrix →</a></p>
