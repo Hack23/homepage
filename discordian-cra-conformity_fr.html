@@ -318,49 +318,49 @@
           
           <p><strong>Exigences SBOM (Transparence Composants Complète) :</strong></p>
           <ul>
-            <li><strong>Format:</strong> SPDX (Software Package Data Exchange) or CycloneDX industry-standard formats</li>
-            <li><strong>Content:</strong> All software components (libraries, dependencies, frameworks), exact versions, license identifiers (SPDX license list), supplier information, cryptographic hashes for integrity verification</li>
-            <li><strong>Granularity:</strong> Direct dependencies + transitive dependencies (full dependency tree), third-party components + internal modules</li>
-            <li><strong>Update Frequency:</strong> New SBOM with every product release, updated SBOM when critical components patched</li>
+            <li><strong>Format :</strong> SPDX (Software Package Data Exchange) ou formats standards industrie CycloneDX</li>
+            <li><strong>Contenu :</strong> Tous composants logiciels (bibliothèques, dépendances, frameworks), versions exactes, identifiants licences (liste licences SPDX), informations fournisseur, hachages cryptographiques vérification intégrité</li>
+            <li><strong>Granularité :</strong> Dépendances directes + dépendances transitives (arbre dépendances complet), composants tiers + modules internes</li>
+            <li><strong>Fréquence Mise à Jour :</strong> Nouvelle SBOM avec chaque version produit, SBOM mise à jour quand composants critiques corrigés</li>
           </ul>
           
-          <p><strong>Supply Chain Provenance (SLSA Framework):</strong></p>
+          <p><strong>Provenance Chaîne Approvisionnement (Framework SLSA) :</strong></p>
           <ul>
-            <li><strong>SLSA Level 1:</strong> Build process documented</li>
-            <li><strong>SLSA Level 2:</strong> Build service generates provenance</li>
-            <li><strong>SLSA Level 3:</strong> Source and build platforms hardened, non-falsifiable provenance, cryptographically signed attestations</li>
-            <li><strong>CRA Alignment:</strong> SLSA 3 provides cryptographic proof of build integrity—exactly what CRA supply chain transparency requires</li>
+            <li><strong>SLSA Niveau 1 :</strong> Processus build documenté</li>
+            <li><strong>SLSA Niveau 2 :</strong> Service build génère provenance</li>
+            <li><strong>SLSA Niveau 3 :</strong> Plateformes source et build renforcées, provenance non falsifiable, attestations signées cryptographiquement</li>
+            <li><strong>Alignement LCR :</strong> SLSA 3 fournit preuve cryptographique intégrité build—exactement ce que transparence chaîne approvisionnement LCR exige</li>
           </ul>
           
           <p><strong>Hack23 Implementation:</strong></p>
           <ul>
-            <li><strong>Automated SBOM Generation:</strong> GitHub Actions generate SPDX + CycloneDX SBOM per release, included in release artifacts</li>
-            <li><strong>SLSA 3 Attestations:</strong> GitHub native build provenance, cryptographically signed, immutable: <a href="https://github.com/Hack23/cia/attestations">CIA</a> | <a href="https://github.com/Hack23/blacktrigram/attestations">Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/attestations">CIA Compliance Manager</a></li>
-            <li><strong>Supply Chain Scanning:</strong> Dependabot + Renovate automated dependency updates, SCA scanning catches vulnerable components before release</li>
-            <li><strong>OpenSSF Scorecard:</strong> 7.2+ scores demonstrating supply chain security best practices: <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA Score</a></li>
+            <li><strong>Génération SBOM Automatisée :</strong> GitHub Actions génèrent SBOM SPDX + CycloneDX par version, inclus dans artefacts version</li>
+            <li><strong>Attestations SLSA 3 :</strong> Provenance build native GitHub, signée cryptographiquement, immuable : <a href="https://github.com/Hack23/cia/attestations">CIA</a> | <a href="https://github.com/Hack23/blacktrigram/attestations">Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/attestations">CIA Compliance Manager</a></li>
+            <li><strong>Scan Chaîne Approvisionnement :</strong> Dependabot + Renovate mises à jour dépendances automatisées, scan SCA capture composants vulnérables avant version</li>
+            <li><strong>OpenSSF Scorecard :</strong> Scores 7.2+ démontrant meilleures pratiques sécurité chaîne approvisionnement : <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">Score CIA</a></li>
           </ul>
           
-          <p class="hidden-wisdom"><em>SBOM WISDOM: Supply chain attacks increased 742% (2019-2023). Log4Shell, SolarWinds, Codecov—all supply chain compromises. SBOM requirement forces transparency: know what you're shipping, track component vulnerabilities, respond to supply chain incidents. Organizations without SBOM already compromised—they just don't know which components yet. CRA mandates awareness. Finally.</em></p>
+          <p class="hidden-wisdom"><em>SAGESSE SBOM : Attaques chaîne approvisionnement augmenté 742% (2019-2023). Log4Shell, SolarWinds, Codecov—tous compromis chaîne approvisionnement. Exigence SBOM force transparence : savoir ce que vous expédiez, suivre vulnérabilités composants, répondre incidents chaîne approvisionnement. Organisations sans SBOM déjà compromises—elles ne savent juste pas encore quels composants. LCR mandate conscience. Finalement.</em></p>
         </div>
         
         <div class="card roi-high">
           <div class="scanner-effect"></div>
-          <h3>4. 🔄 Security Updates & Supported Lifetime (Annex I §2.4)</h3>
-          <p><strong>CRA Requirement:</strong> Security updates delivered automatically (or with user notification), supported lifetime disclosed to users, update mechanisms secure (signed updates, rollback capability), end-of-life communicated in advance.</p>
+          <h3>4. 🔄 Mises à Jour Sécurité & Durée Vie Supportée (Annexe I §2.4)</h3>
+          <p><strong>Exigence LCR :</strong> Mises à jour sécurité livrées automatiquement (ou avec notification utilisateur), durée vie supportée divulguée utilisateurs, mécanismes mise à jour sécurisés (mises à jour signées, capacité restauration), fin de vie communiquée avance.</p>
           
-          <p><strong>Secure Update Mechanisms:</strong></p>
+          <p><strong>Mécanismes Mise à Jour Sécurisés :</strong></p>
           <ul>
-            <li><strong>Automatic Updates:</strong> Critical security patches installed automatically (user consent for functionality updates), update check frequency appropriate to threat model (daily for exposed services, weekly for internal tools)</li>
-            <li><strong>Update Authentication:</strong> Digitally signed updates (code signing certificates), cryptographic verification before installation, man-in-the-middle attack prevention</li>
-            <li><strong>Rollback Capability:</strong> Failed updates revert to previous version, user data preserved during rollback, system remains operational even if update fails</li>
-            <li><strong>Update Notifications:</strong> Users informed of available updates, security vs feature update distinction, installation urgency communicated</li>
+            <li><strong>Mises à Jour Automatiques :</strong> Correctifs sécurité critiques installés automatiquement (consentement utilisateur pour mises à jour fonctionnalité), fréquence vérification appropriée modèle menaces (quotidien services exposés, hebdomadaire outils internes)</li>
+            <li><strong>Authentification Mise à Jour :</strong> Mises à jour signées numériquement (certificats signature code), vérification cryptographique avant installation, prévention attaques homme-milieu</li>
+            <li><strong>Capacité Restauration :</strong> Mises à jour échouées reviennent version précédente, données utilisateur préservées pendant restauration, système reste opérationnel même si mise à jour échoue</li>
+            <li><strong>Notifications Mise à Jour :</strong> Utilisateurs informés mises à jour disponibles, distinction mise à jour sécurité vs fonctionnalité, urgence installation communiquée</li>
           </ul>
           
-          <p><strong>Supported Lifetime Transparency:</strong></p>
+          <p><strong>Transparence Durée Vie Supportée :</strong></p>
           <ul>
-            <li><strong>Security Support Period:</strong> Minimum 5 years security updates for consumer products (Article 13), enterprise products often longer support commitments</li>
-            <li><strong>End-of-Life Communication:</strong> Users notified 6 months before support termination, migration path provided, security risks of continued use explained</li>
-            <li><strong>Extended Support:</strong> Optional paid extended support beyond standard lifetime, critical vulnerabilities patched even post-EOL (responsible vendor behavior)</li>
+            <li><strong>Période Support Sécurité :</strong> Minimum 5 ans mises à jour sécurité produits consommateurs (Article 13), produits entreprise souvent engagements support plus longs</li>
+            <li><strong>Communication Fin Vie :</strong> Utilisateurs notifiés 6 mois avant fin support, chemin migration fourni, risques sécurité utilisation continue expliqués</li>
+            <li><strong>Support Étendu :</strong> Support étendu payant optionnel au-delà durée vie standard, vulnérabilités critiques corrigées même post-EOL (comportement fournisseur responsable)</li>
           </ul>
           
           <p><strong>Hack23 Implementation:</strong></p>
@@ -371,27 +371,27 @@
             <li><strong>Automated Deployment:</strong> GitHub Actions + AWS CodePipeline, immutable infrastructure, blue-green deployments with automatic rollback</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>UPDATE MECHANISM WISDOM: Insecure update mechanisms = attack vector. Compromised update server = every user infected simultaneously. CRA mandates signed updates for good reason: update compromise scales faster than initial product compromise. Organizations shipping unsigned updates playing Russian roulette with user base. Eventually, the chamber isn't empty.</em></p>
+          <p class="hidden-wisdom"><em>SAGESSE MÉCANISME MISE À JOUR : Mécanismes mise à jour non sécurisés = vecteur attaque. Serveur mise à jour compromis = tous utilisateurs infectés simultanément. LCR mandate mises à jour signées pour bonne raison : compromis mise à jour évolue plus vite que compromis produit initial. Organisations expédiant mises à jour non signées jouent roulette russe avec base utilisateurs. Finalement, chambre n'est pas vide.</em></p>
         </div>
         
         <div class="card roi-moderate">
           <div class="scanner-effect"></div>
-          <h3>5. 📊 Security Monitoring & Post-Market Surveillance (Article 23)</h3>
-          <p><strong>CRA Requirement:</strong> Continuous security monitoring, incident detection capabilities, post-market surveillance of deployed products, threat intelligence integration, security posture tracking.</p>
+          <h3>5. 📊 Surveillance Sécurité & Surveillance Post-Commercialisation (Article 23)</h3>
+          <p><strong>Exigence LCR :</strong> Surveillance sécurité continue, capacités détection incidents, surveillance post-commercialisation produits déployés, intégration renseignement menaces, suivi posture sécurité.</p>
           
-          <p><strong>Post-Market Surveillance Obligations:</strong></p>
+          <p><strong>Obligations Surveillance Post-Commercialisation :</strong></p>
           <ul>
-            <li><strong>Vulnerability Monitoring:</strong> CVE feeds monitoring, GitHub Security Advisories, vendor security bulletins, component vulnerability tracking</li>
-            <li><strong>Incident Detection:</strong> Security event logging, anomaly detection, real-time alerting for suspicious activity, correlation analysis</li>
-            <li><strong>Threat Intelligence:</strong> Industry threat feeds (ENISA, CISA, vendor-specific), emerging vulnerability patterns, attack technique evolution tracking</li>
-            <li><strong>User Feedback:</strong> Security issue reporting channel, crash reports analysis, security metric collection (with privacy controls)</li>
+            <li><strong>Surveillance Vulnérabilités :</strong> Surveillance flux CVE, GitHub Security Advisories, bulletins sécurité fournisseurs, suivi vulnérabilités composants</li>
+            <li><strong>Détection Incidents :</strong> Journalisation événements sécurité, détection anomalies, alertes temps réel activité suspecte, analyse corrélation</li>
+            <li><strong>Renseignement Menaces :</strong> Flux menaces industrie (ENISA, CISA, spécifiques fournisseurs), modèles vulnérabilités émergentes, suivi évolution techniques attaque</li>
+            <li><strong>Retour Utilisateurs :</strong> Canal signalement problèmes sécurité, analyse rapports plantage, collecte métriques sécurité (avec contrôles confidentialité)</li>
           </ul>
           
-          <p><strong>ENISA Incident Reporting (Article 14):</strong></p>
+          <p><strong>Signalement Incidents ENISA (Article 14) :</strong></p>
           <ul>
-            <li><strong>Trigger Events:</strong> Actively exploited vulnerability, severe security incident, widespread impact across user base, critical infrastructure affected</li>
-            <li><strong>Reporting Timeline:</strong> Initial notification within 24 hours, intermediate reports during investigation, final report with root cause analysis</li>
-            <li><strong>Cooperation Duty:</strong> Market surveillance authorities can request information, manufacturers must provide technical details, remediation plans shared</li>
+            <li><strong>Événements Déclencheurs :</strong> Vulnérabilité activement exploitée, incident sécurité grave, impact généralisé base utilisateurs, infrastructures critiques affectées</li>
+            <li><strong>Calendrier Signalement :</strong> Notification initiale sous 24 heures, rapports intermédiaires pendant investigation, rapport final avec analyse cause racine</li>
+            <li><strong>Devoir Coopération :</strong> Autorités surveillance marché peuvent demander informations, fabricants doivent fournir détails techniques, plans remédiation partagés</li>
           </ul>
           
           <p><strong>Hack23 Implementation:</strong></p>
@@ -402,70 +402,70 @@
             <li><strong>Transparency Framework:</strong> Public security posture disclosure via <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/ISMS_Transparency_Plan.md">ISMS Transparency Plan</a></li>
           </ul>
           
-          <p class="hidden-wisdom"><em>SURVEILLANCE WISDOM: Post-market surveillance requirement recognizes reality: vulnerabilities discovered after product shipment. Zero-day exploits emerge continuously. CRA mandates ongoing vigilance, not just pre-market assessment. Organizations treating security as one-time certification event will fail CRA compliance. Security is process, not project. Continuous monitoring = continuous compliance.</em></p>
+          <p class="hidden-wisdom"><em>SAGESSE SURVEILLANCE : Exigence surveillance post-commercialisation reconnaît réalité : vulnérabilités découvertes après expédition produit. Exploits zero-day émergent continuellement. LCR mandate vigilance continue, pas seulement évaluation pré-commercialisation. Organisations traitant sécurité comme événement certification unique échoueront conformité LCR. Sécurité est processus, pas projet. Surveillance continue = conformité continue.</em></p>
         </div>
       </div>
     </section>
 
     <section id="self-assessment-vs-third-party">
-      <h2 class="panel-caption">⚖️ Self-Assessment vs Third-Party: Choosing Your Conformity Route</h2>
+      <h2 class="panel-caption">⚖️ Auto-Évaluation vs Tiers : Choisir Votre Route Conformité</h2>
       
-      <p><strong>CRA provides two conformity assessment routes:</strong> self-assessment (manufacturer documents compliance) vs third-party assessment (notified body validates compliance). Route depends on product classification. <em>Standard products = self-assessment. Class I/II = notified body required. Choose wisely—third-party assessment adds cost + timeline + external dependencies.</em></p>
+      <p><strong>LCR fournit deux routes évaluation conformité :</strong> auto-évaluation (fabricant documente conformité) vs évaluation tiers (organisme notifié valide conformité). Route dépend classification produit. <em>Produits standard = auto-évaluation. Classe I/II = organisme notifié requis. Choisissez judicieusement—évaluation tiers ajoute coût + délai + dépendances externes.</em></p>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>Assessment Route</th>
-            <th>Product Classification</th>
-            <th>Documentation Requirements</th>
-            <th>Timeline</th>
-            <th>Cost Impact</th>
+            <th>Route Évaluation</th>
+            <th>Classification Produit</th>
+            <th>Exigences Documentation</th>
+            <th>Délai</th>
+            <th>Impact Coût</th>
           </tr>
         </thead>
         <tbody>
           <tr class="roi-exceptional">
-            <td><strong>Self-Assessment</strong><br>(Article 24)</td>
-            <td><strong>Standard Products</strong><br>Most software products, web services, mobile apps, embedded systems (unless explicitly Class I/II)</td>
+            <td><strong>Auto-Évaluation</strong><br>(Article 24)</td>
+            <td><strong>Produits Standard</strong><br>Plupart produits logiciels, services web, applications mobiles, systèmes embarqués (sauf explicitement Classe I/II)</td>
             <td>
-              <strong>Manufacturer responsibilities:</strong>
+              <strong>Responsabilités fabricant :</strong>
               <ul class="text-left">
-                <li>Technical documentation per Annex V</li>
-                <li>Risk assessment documenting security measures</li>
-                <li>Annex I essential requirements compliance</li>
-                <li>EU Declaration of Conformity drafted</li>
-                <li>CE marking affixed to product/documentation</li>
+                <li>Documentation technique selon Annexe V</li>
+                <li>Évaluation risques documentant mesures sécurité</li>
+                <li>Conformité exigences essentielles Annexe I</li>
+                <li>Déclaration UE Conformité rédigée</li>
+                <li>Marquage CE apposé produit/documentation</li>
               </ul>
             </td>
-            <td><strong>2-6 months</strong> depending on product complexity and existing security documentation</td>
-            <td><strong>€50K-200K</strong> internal resources (documentation, testing, process establishment)</td>
+            <td><strong>2-6 mois</strong> selon complexité produit et documentation sécurité existante</td>
+            <td><strong>€50K-200K</strong> ressources internes (documentation, tests, établissement processus)</td>
           </tr>
           <tr class="roi-high">
-            <td><strong>Third-Party Assessment</strong><br>(Article 25)</td>
-            <td><strong>Class I Products</strong><br>Identity management, PAM, VPN, network security, endpoint protection, cryptographic products</td>
+            <td><strong>Évaluation Tiers</strong><br>(Article 25)</td>
+            <td><strong>Produits Classe I</strong><br>Gestion identité, PAM, VPN, sécurité réseau, protection endpoints, produits cryptographiques</td>
             <td>
-              <strong>Additional requirements:</strong>
+              <strong>Exigences additionnelles :</strong>
               <ul class="text-left">
-                <li>All self-assessment documentation</li>
-                <li>Notified body selection and application</li>
-                <li>External technical examination</li>
-                <li>Conformity certificate issued by notified body</li>
-                <li>Annual surveillance audits during validity</li>
+                <li>Toute documentation auto-évaluation</li>
+                <li>Sélection organisme notifié et candidature</li>
+                <li>Examen technique externe</li>
+                <li>Certificat conformité émis organisme notifié</li>
+                <li>Audits surveillance annuels pendant validité</li>
               </ul>
             </td>
-            <td><strong>6-12 months</strong> including notified body scheduling, examination, certification process</td>
-            <td><strong>€200K-500K</strong> including notified body fees (€50K-150K) + internal preparation + ongoing surveillance</td>
+            <td><strong>6-12 mois</strong> incluant planification organisme notifié, examen, processus certification</td>
+            <td><strong>€200K-500K</strong> incluant frais organisme notifié (€50K-150K) + préparation interne + surveillance continue</td>
           </tr>
           <tr class="roi-moderate">
-            <td><strong>Enhanced Third-Party</strong><br>(Article 25)</td>
-            <td><strong>Class II Products</strong><br>Operating systems, hypervisors, industrial control systems, smart grid management, critical infrastructure</td>
+            <td><strong>Tiers Renforcé</strong><br>(Article 25)</td>
+            <td><strong>Produits Classe II</strong><br>Systèmes exploitation, hyperviseurs, systèmes contrôle industriel, gestion réseau intelligent, infrastructures critiques</td>
             <td>
-              <strong>Highest scrutiny:</strong>
+              <strong>Scrutin maximum :</strong>
               <ul class="text-left">
-                <li>All Class I requirements</li>
-                <li>Enhanced technical documentation</li>
-                <li>Continuous monitoring by notified body</li>
-                <li>Incident reporting to notified body + ENISA</li>
-                <li>Quarterly surveillance audits</li>
+                <li>Toutes exigences Classe I</li>
+                <li>Documentation technique renforcée</li>
+                <li>Surveillance continue organisme notifié</li>
+                <li>Signalement incidents organisme notifié + ENISA</li>
+                <li>Audits surveillance trimestriels</li>
               </ul>
             </td>
             <td><strong>12-18 months</strong> initial certification, ongoing surveillance throughout product lifetime</td>
