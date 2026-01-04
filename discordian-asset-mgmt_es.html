@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asset Management | Track What You Protect | Hack23</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.">
-	<meta name="twitter:description" content="AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.">
-<meta name="keywords" content="asset management, AWS Config, shadow IT, asset inventory, CMDB, forgotten infrastructure, AWS discovery, GitHub repository tracking, asset classification, infrastructure archaeology, hack23 ISMS">
-<meta name="robots" content="index, follow">
-<meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Asset Management: You Can't Protect What You Don't Know You Have">
-<meta property="og:description" content="Shadow IT isn't innovation—it's shadow vulnerability waiting to become public breach. AWS Config + infrastructure archaeology + forgotten asset discovery.">
-	<meta property="og:locale" content="es_ES">
-	<meta property="og:locale:alternate" content="ar_SA">
-	<meta property="og:locale:alternate" content="da_DK">
-	<meta property="og:locale:alternate" content="de_DE">
-	<meta property="og:locale:alternate" content="en_US">
-	<meta property="og:locale:alternate" content="fi_FI">
-	<meta property="og:locale:alternate" content="fr_FR">
-	<meta property="og:locale:alternate" content="he_IL">
-	<meta property="og:locale:alternate" content="ja_JP">
-	<meta property="og:locale:alternate" content="ko_KR">
-	<meta property="og:locale:alternate" content="nl_NL">
-	<meta property="og:locale:alternate" content="nb_NO">
-	<meta property="og:locale:alternate" content="sv_SE">
-	<meta property="og:locale:alternate" content="zh_CN">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Activos | Rastrea Lo Que Proteges | Hack23</title>
+    <meta name="description" content="Descubrimiento automatizado AWS Config + seguimiento API GitHub. Shadow IT no es innovación—es vulnerabilidad en la sombra. El inventario de activos importa.">
+<meta name="twitter:description" content="Descubrimiento automatizado AWS Config + seguimiento API GitHub. Shadow IT no es innovación—es vulnerabilidad en la sombra. El inventario de activos importa.">
+    <meta name="keywords" content="gestión de activos, AWS Config, shadow IT, inventario de activos, CMDB, infraestructura olvidada, descubrimiento AWS, seguimiento repositorios GitHub, clasificación de activos, arqueología de infraestructura, hack23 SGSI">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Gestión de Activos: No Puedes Proteger Lo Que No Sabes Que Tienes">
+    <meta property="og:description" content="Shadow IT no es innovación—es vulnerabilidad en la sombra esperando convertirse en brecha pública. AWS Config + arqueología de infraestructura + descubrimiento de activos olvidados.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="da_DK">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="he_IL">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="nb_NO">
+<meta property="og:locale:alternate" content="sv_SE">
+<meta property="og:locale:alternate" content="zh_CN">
 
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://hack23.com/discordian-asset-mgmt_es.html">
-<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-asset-mgmt_es.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
-<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:image:alt" content="Blog de Seguridad Hack23">
 <meta name="twitter:site" content="@hack23ab">
 <meta name="twitter:creator" content="@jamessorling">
 
 <link rel="canonical" href="https://hack23.com/discordian-asset-mgmt_es.html">
-<!-- Hreflang tags for language alternatives --><script type="application/ld+json">{
+    <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Asset Management: You Can't Protect What You Don't Know You Have",
-      "description": "AWS Config automated discovery + GitHub API tracking. Shadow IT isn't innovation—it's shadow vulnerability. Asset inventory matters.",
+      "headline": "Gestión de Activos: No Puedes Proteger Lo Que No Sabes Que Tienes",
+      "description": "Cómo Hack23 implementa la gestión sistemática de activos a través del descubrimiento automatizado de AWS Config, inventario de repositorios GitHub, arqueología de infraestructura y prioridades basadas en clasificación. Shadow IT no es innovación—es vulnerabilidad en la sombra esperando brecharse.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
         "url": "https://hack23.com",
-        "jobTitle": "CEO / Cybersecurity Expert",
+        "jobTitle": "CEO / Experto en Ciberseguridad",
         "sameAs": [
           "https://www.linkedin.com/in/jamessorling/",
           "https://github.com/Hack23"
@@ -63,14 +66,14 @@
           "url": "cia-icon-140.webp"
         }
       },
-      "datePublished": "2025-12-14",
-      "dateModified": "2025-12-14",
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-asset-mgmt_es.html"
       },
-      "keywords": "asset management, AWS Config, shadow IT, asset inventory, CMDB, forgotten infrastructure, AWS discovery, GitHub repository tracking, asset classification, infrastructure archaeology, hack23 ISMS",
-      "articleSection": "Information Security",
+      "keywords": "gestión de activos, AWS Config, inventario de activos, clasificación, SGSI",
+      "articleSection": "Seguridad de la Información",
       "inLanguage": "es",
       "image": {
         "@type": "ImageObject",
@@ -78,16 +81,18 @@
         "width": 1200,
         "height": 630
       },
+      "wordCount": 5446,
+      "articleBody": "Nada es verdad. Todo está permitido. Excepto olvidar que los activos existen—shadow IT no es innovación, es vulnerabilidad en la sombra esperando convertirse en brecha pública...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog"
+        "name": "Blog de Seguridad Hack23"
       },
       "about": [
         {
           "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
+          "name": "Política SGSI",
+          "description": "Implementación de política del Sistema de Gestión de Seguridad de la Información"
         }
       ]
     },
@@ -110,7 +115,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "ISMS Policy",
+          "name": "Gestión de Activos",
           "item": "https://hack23.com/discordian-asset-mgmt_es.html"
         }
       ]
@@ -131,36 +136,371 @@
 
 </head>
 <body>
-<header>
-<nav>
-<ul>
-<li><a href="index_es.html">Inicio</a></li>
-<li><a href="blog_es.html">Blog</a></li>
-<li><a href="services_es.html">Servicios</a></li>
-</ul>
-</nav>
-</header>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_es.html">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_es.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Gestión de Activos
+      </li>
+    </ol>
+  </nav>
 
-<main>
-<article>
-<h1>Asset Management | Track What You Protect | Hack23</h1>
-
-<div class="translation-notice">
-<p><strong>Note:</strong> This page contains English content that requires professional translation. The technical infrastructure (HTML, metadata, SEO) is complete.</p>
-<p>Source: <a href="discordian-asset-mgmt.html">discordian-asset-mgmt.html</a></p>
-</div>
-
-<!-- CONTENT TO BE TRANSLATED -->
-<p>Professional translation of full ISMS policy content required.</p>
-<p>See English source file for complete content: <a href="discordian-asset-mgmt.html">discordian-asset-mgmt.html</a></p>
-
-</article>
-</main>
-
-<footer>
-<p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
-<p><a href="accessibility-statement_es.html">Accessibility Statement</a> | <a href="sitemap_es.html">Sitemap</a></p>
-</footer>
-
+    <header>
+        <div class="logo-container">
+            <img src="cia-icon-140.webp" alt="Logo de Hack23" class="logo" width="80" height="80">
+        </div>
+        <h1>Ciberseguridad Discordiana</h1>
+        <div class="app-link">
+            <a href="index_es.html">Inicio</a>
+            <a href="discordian-cybersecurity_es.html">Manifiesto</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos SGSI</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2 class="header">💻 Gestión de Activos: Arqueología Digital de Tu Superficie de Ataque Real</h2>
+            
+            <section id="intro">
+                <h2 class="panel-caption">No Puedes Proteger Lo Que No Sabes Que Tienes: La Incómoda Arqueología de la Infraestructura Olvidada</h2>
+                
+                <p><strong>Nada es verdad. Todo está permitido.</strong> Excepto olvidar que los activos existen—shadow IT no es innovación, es vulnerabilidad en la sombra esperando convertirse en brecha pública. <em>¿Eres lo suficientemente paranoico? Bien.</em> Ahora pregúntate: ¿Qué está ejecutándose en tu cuenta de AWS AHORA MISMO que has olvidado que existe? ¿Esa instancia EC2 que alguien lanzó para "solo esta demo" en 2019? Aún ejecutándose. Con credenciales por defecto. Expuesta a internet. Ejecutando vulnerabilidades sin parchear desde 2015. <strong>¿Ese bucket S3 marcado "TEMP-DELETE-LATER"?</strong> Seis años después, aún es público. Aún contiene PII de clientes. Aún filtrando datos a cualquiera que conozca la URL. <strong>¿Esa función Lambda desplegada por el contratista que se fue hace tres años?</strong> Aún ejecutándose. Aún tiene permisos IAM de administrador. Aún no ha sido revisada. <strong>FNORD. Los activos que no rastreas son los que los atacantes exploit an primero.</strong> Ellos saben que tu inventario es mentira.</p>
+                
+                <p><em>¡Piensa por ti mismo, idiota! Cuestiona la autoridad.</em> Cuestiona por qué las organizaciones aceptan <strong>shadow IT</strong> (infraestructura no autorizada que definitivamente ya está comprometida), <strong>servidores de prueba olvidados</strong> (ejecutándose desde el POC de alguien en 2017), <strong>cuentas de nube abandonadas</strong> (de adquisiciones que nadie integró), <strong>registros DNS huérfanos</strong> (apuntando a infraestructura que ya no existe... ¿o sí?), <strong>certificados SSL expirados</strong> (en servicios que creías haber descomisionado), <strong>claves API zombis</strong> (para servicios que olvidaste que contrataste), y <strong>repositorios fantasma</strong> (conteniendo credenciales que nadie recuerda haber subido). Cuestiona por qué "inventario completo de activos" generalmente significa <strong>"hoja de cálculo Excel que alguien actualizó una vez en 2018 durante el último pánico de auditoría."</strong> <em>¿Eres lo suficientemente paranoico para darte cuenta de que tu registro de activos es ficción?</em> Tu infraestructura real es lo que los arqueólogos descubren durante la autopsia post-brecha.</p>
+                
+                <p>En Hack23, la gestión de activos no es teatro de hojas de cálculo—es <strong>arqueología sistemática de infraestructura mediante descubrimiento automatizado</strong>: monitoreo continuo de <strong>AWS Config</strong> (27 servicios activos rastreados), enumeración de repositorios vía <strong>API de GitHub</strong> (40+ repos inventariados), seguimiento DNS de <strong>Route 53</strong> (dominios con DNSSEC habilitado), <strong>revisiones trimestrales de acceso</strong> detectando cuentas inactivas (inactividad de 90 días dispara alertas), <strong>prioridad basada en clasificación</strong> según nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Marco de Clasificación</a> (activos Extremos revisión mensual, Alto trimestral, Moderado semestral). Revisión anual del registro (Versión 1.4, próxima: 2026-11-05). <strong>Demostramos excelencia en gestión de activos porque los clientes pueden auditar nuestro registro público de activos antes del compromiso.</strong></p>
+                
+                <p class="hidden-wisdom"><em>ILUMINACIÓN: El servidor que olvidaste está ejecutando Log4Shell sin parchear desde 2021. Ese bucket S3 marcado "temporal" en 2018 es tu mayor exposición RGPD. La función Lambda del contratista aún tiene acceso de administrador tres años después de que se fue. El inventario de activos previene que vulnerabilidades olvidadas se conviertan en brechas de titulares. Pero solo si tu inventario refleja la realidad en lugar de teatro de auditoría. AWS Config automatiza el descubrimiento para que los fallos de memoria humana no se conviertan en CVE. <strong>Verdad: La mayoría de "brechas de día cero" son realmente brechas "olvidé-que-existía".</strong> La vulnerabilidad siempre estuvo ahí. Simplemente no sabías que el activo existía. FNORD.</em></p>
+                
+                <p>Nuestro enfoque combina <strong>descubrimiento automatizado</strong> (AWS Config rastrea cada cambio de recurso), <strong>arqueología de infraestructura</strong> (descubriendo activos olvidados antes que los atacantes), y <strong>gestión basada en clasificación</strong> (protegiendo activos Críticos mensualmente, no anualmente), probando que el control sistemático de activos escala desde operaciones de una persona hasta compromisos empresariales. Implementación técnica completa en nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos público</a>—incluyendo la incómoda verdad sobre cuántos activos hemos descubierto que nadie recordaba haber creado.</p>
+            
+      
+      <p><strong>¿Buscas soporte experto de implementación?</strong> <a href="why-hack23_es.html">Ve por qué las organizaciones eligen Hack23</a> para consultoría de seguridad que acelera la innovación.</p>
+    </section>
+            
+            <section id="five-categories">
+                <h2 class="panel-caption">Las Cinco Categorías de Activos: Ley de los Cinco Aplicada a la Realidad de Infraestructura</h2>
+                
+                <p><strong>Ley de los Cinco revelada:</strong> Toda infraestructura existe en cinco dimensiones, cada una requiriendo cinco niveles de protección, revisadas en cinco ciclos diferentes (diario/semanal/mensual/trimestral/anual), con cinco tipos de modos de fallo (olvidado/mal configurado/comprometido/expirado/huérfano). <em>La sincronicidad no es misticismo—es reconocimiento de patrones.</em> Cuenta tus categorías de activos. Siempre cinco. Cuenta tus frecuencias de revisión. Siempre cinco (o múltiplos de cinco). <strong>El universo habla en cincos. ¿Eres lo suficientemente paranoico para notarlo?</strong></p>
+                
+                <div class="cards">
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>1. ☁️ Infraestructura en la Nube: La Arqueología Olvidada</h3>
+                        <p><strong>Descubrimiento automatizado AWS Config.</strong> 27 servicios activos rastreados: instancias EC2 (¿recuerdas ese t2.micro de la demo de 2019?), funciones Lambda (el contratista desplegó 47, se fue hace 3 años, todas aún ejecutándose con IAM de administrador), buckets S3 (TEMP-DELETE-LATER desde 2018, aún público, aún filtrando), bases de datos RDS (base de datos de prueba con copia de datos de producción, nadie conoce la contraseña root), VPCs (cinco VPCs diferentes porque cada equipo creó la suya), grupos de seguridad (438 reglas, 127 permitiendo 0.0.0.0/0, "temporalmente" desde 2017). AWS Config monitorea continuamente <strong>antes de que la amnesia se convierta en CVE</strong>.</p>
+                        <p><strong>Realidad de Arqueología de Infraestructura:</strong> IaC CloudFormation asegura infraestructura con control de versiones (si la gente lo usa—los lanzamientos manuales de EC2 aún ocurren). Organización multi-cuenta con registro centralizado (probando que alguien lanzó esa instancia, incluso si lo han olvidado). Detección de anomalías de costos (así descubrimos la instancia de cripto-minería que nadie sabía que existía).</p>
+                        <p><strong>Historia de Horror:</strong> La organización descubre durante la brecha que el atacante había estado operando desde una instancia EC2 lanzada por un becario durante "semana de aprendizaje" 4 años antes. Nunca rastreada. Nunca parcheada. Nunca descomisionada. <strong>Las credenciales por defecto aún funcionaban.</strong> El atacante tuvo acceso root al VPC durante 18 meses antes de la detección de brecha. Costo para la organización: $4.2M en multas, $18M en remediación. Costo de lanzar EC2: $0.012/hora. <strong>Las matemáticas de fallo de inventario de activos no te favorecen.</strong></p>
+                        <p class="hidden-wisdom"><em>AWS Config significa inventario en tiempo real, no hojas de cálculo anuales que se convierten en artefactos arqueológicos ellos mismos. Cada instancia olvidada está ejecutando vulnerabilidades que no has parcheado porque no sabes que existe. FNORD. La instancia que olvidaste ya está comprometida. Pregunta: ¿Cuál es?</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>2. 📝 Código y Repositorios: Los Repos Fantasma Te Persiguen</h3>
+                        <p><strong>Inventario de repositorios GitHub vía automatización API.</strong> 40+ repositorios rastreados en la organización Hack23: CIA (plataforma OSINT Citizen Intelligence Agency), Black Trigram (simulador de combate de artes marciales coreanas), CIA Compliance Manager (herramienta de evaluación Tríada CIA), Lambda in Private VPC (arquitectura de resiliencia AWS), Sonar-CloudFormation Plugin (escaneo de seguridad IaC). La API de GitHub proporciona <strong>descubrimiento automatizado de repositorios antes de que los desarrolladores creen repos en la sombra</strong> en cuentas personales (sucede—siempre sucede).</p>
+                        <p><strong>Arqueología de Repositorios:</strong> SECURITY_ARCHITECTURE.md obligatorio en todos los repos (aplicado vía protección de rama). Repositorio SGSI público demostrando transparencia (70% de políticas públicas). Repositorios archivados rastreados (abandonados pero no eliminados, porque eliminación es pérdida de datos). Repositorios bifurcados monitoreados (¿cómo se propagan exactamente los parches de seguridad upstream?). <strong>Repositorios privados en organizaciones públicas</strong> (límites de nivel gratuito crean infraestructura en la sombra).</p>
+                        <p><strong>Horror de Repositorio Fantasma:</strong> Investigador de seguridad descubre credenciales en repositorio público creado hace 6 años durante un hackathon. Repositorio archivado. Nunca auditado. <strong>Claves de cuenta root de AWS comprometidas en 2018.</strong> Aún válidas (nadie las rotó). Investigador reporta vía divulgación responsable. La compañía descubre que han sido víctimas de cripto-minería durante 3 años. Archivos de estado Terraform en el repo contenían contraseñas de bases de datos (aún actuales). URLs de buckets S3 revelaron arquitectura interna. <strong>Un repositorio olvidado = compromiso completo de infraestructura.</strong></p>
+                        <p><strong>Realidad de Repositorio en la Sombra:</strong> Los desarrolladores crean cuentas GitHub personales para "pruebas" (con código de la compañía). Los contratistas suben a repos personales "para respaldo" (aún accesibles después de que termina el contrato). Las adquisiciones traen repositorios que nadie inventaría. Bifurcaciones de código abierto contienen personalizaciones de la compañía (y secretos). <strong>Tu inventario de repositorios está incompleto. Siempre. Pregunta: ¿Por cuánto?</strong></p>
+                        <p class="hidden-wisdom"><em>Los repositorios de código son activos. Los repos abandonados son superficies de ataque olvidadas que contienen contraseñas que aún son válidas (porque, ¿quién rota credenciales para repos que han olvidado que existían?). El inventario sistemático previene la proliferación de repositorios antes de que la proliferación se convierta en brecha. Pero solo si el inventario incluye repositorios que no sabías que tenías. ¿Cómo inventarías lo que no sabes que existe? <strong>Automatización. API de GitHub. Escaneos diarios. Acepta que el descubrimiento es arqueología continua, no auditoría única.</strong> FNORD.</em></p>
+                    </div>
+                    
+                    <div class="card availability-card">
+                        <div class="scanner-effect"></div>
+                        <h3>3. 👤 Identidad y Acceso: Las Cuentas Zombi Te Cazan</h3>
+                        <p><strong>AWS Identity Center + revisiones de acceso GitHub revelando privilegios zombi.</strong> Usuarios IAM (obsoletos—usando SSO ahora), roles IAM (427 rastreados, 89 sin usar &gt;180 días), políticas IAM (las políticas personalizadas proliferan como conejos), miembros de organización GitHub (revisiones trimestrales), conjuntos de permisos AWS (AWSAdministratorAccess, AWSPowerUserAccess, AWSReadOnlyAccess, AWSServiceCatalogAdminFullAccess). Detección de cuentas inactivas de 90 días según <a href="discordian-access-control_es.html">Política de Control de Acceso</a>. <strong>Las revisiones trimestrales de acceso aseguran higiene de privilegios antes de que los privilegios se conviertan en acceso persistente para empleados que se fueron.</strong></p>
+                        <p><strong>Arqueología de Cuenta Zombi:</strong> IAM Access Analyzer revela acceso entre cuentas (¿esa cuenta externa aún tiene lectura S3? ¿Desde cuándo?). AWS Organizations rastrea cuentas miembro (¿cuándo agregamos esta cuenta? ¿Quién la posee?). Aplicación MFA vía Identity Center (los humanos olvidan, la automatización aplica). Claves de acceso activamente usadas (¿esas claves de la integración API de 2019? Aún válidas. Aún usadas. ¿Por quién? Nadie lo sabe.). <strong>Las personas son activos. Los empleados que se fueron con acceso activo son vulnerabilidades con piernas.</strong></p>
+                        <p><strong>Horror de Cuenta Zombi:</strong> La revisión trimestral de acceso descubre que un contratista de 2020 aún tiene AWS AdministratorAccess. El contrato terminó en noviembre de 2020. Acceso nunca revocado. El contratista no ha iniciado sesión (¿o sí?—lagunas de registro durante migración CloudTrail). La investigación revela: Clave de acceso creada 2 semanas antes del fin del contrato. Nunca rotada. Usada esporádicamente desde IPs de Europa del Este. <strong>El contratista vendió el acceso a un grupo de ransomware.</strong> El grupo usó el acceso para reconocimiento (9 meses). Exfiltración de datos (3 meses). Despliegue de ransomware (1 día). Costo total de brecha: $12M. Fallo de gestión de activos: Invaluable. <strong>El acceso es activo. El acceso olvidado es vulnerabilidad persistente.</strong></p>
+                        <p><strong>Realidad de Acceso de Terceros:</strong> Las integraciones SaaS crean tokens OAuth (¿recuerdas esa herramienta de análisis que evaluaste en 2021? Aún tiene acceso de lectura). Cuentas de soporte de proveedores (abiertas para emergencia, nunca cerradas). Credenciales compartidas en DMs de Slack (¿rotadas cuándo exactamente?). Las cuentas de servicio proliferan (cada automatización crea nuevo rol IAM). <strong>Pregunta: ¿Cuántas identidades tienen acceso a tu infraestructura ahora mismo? Cuenta. Estarás equivocado. AWS dice la verdad.</strong></p>
+                        <p class="hidden-wisdom"><em>Las personas son activos. Las cuentas inactivas son escalaciones de privilegios retrasadas en el tiempo esperando activarse. Las revisiones trimestrales previenen que privilegios olvidados se conviertan en puertas traseras persistentes. Pero solo si las revisiones son reales (verificando registros, validando patrones de acceso, cuestionando anomalías) no teatro de cumplimiento de casillas de verificación (confirmando que todos se ven familiares en la lista). <strong>Los empleados que se fueron te cazan desde cuentas abandonadas.</strong> FNORD. ¿Cuántas cuentas de empleados que se fueron aún existen? Verifica ahora. Te sorprenderás. O te horrorizarás. Probablemente ambos.</em></p>
+                    </div>
+                    
+                    <div class="card confidentiality-card">
+                        <div class="scanner-effect"></div>
+                        <h3>4. 🏷️ Activos de Datos: Sin Clasificar Significa Sin Proteger</h3>
+                        <p><strong>Inventario de datos basado en clasificación.</strong> Bases de datos (PostgreSQL para aplicación CIA, RDS con respaldos automatizados, recuperación punto en el tiempo habilitada), buckets S3 (versionado habilitado, políticas de ciclo de vida configuradas, ¿pero ese bucket TEMP de 2018?), almacenamiento de archivos (adjuntos WorkMail, registros CloudWatch, archivos Glacier), clasificados según <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Marco de Clasificación</a>: activos Extremos (credenciales de clientes, claves de cifrado) revisión trimestral, Muy Alto/Alto (datos financieros, PII) trimestral, Moderado (docs internos) semestral, Público (materiales de marketing) anual. <strong>La clasificación impulsa la protección. Los datos sin clasificar obtienen controles genéricos—o ningún control. El inventario basado en clasificación significa protección apropiada al riesgo.</strong></p>
+                        <p><strong>Arqueología de Clasificación de Datos:</strong> S3 Intelligent-Tiering mueve datos automáticamente (¿pero a dónde? ¿Hot/Cold/Archive/Deep Archive?). El versionado S3 preserva archivos eliminados (¿ese doc sensible que creías haber eliminado? 47 versiones aún existen). Las instantáneas RDS proliferan (automatizadas diarias, retenidas 30 días, excepto cuando la retención cambió a 180 días, olvidaste cambiarla de vuelta). CloudWatch Logs Insights revela flujos de datos (los registros contienen más datos sensibles que las bases de datos). <strong>La clasificación de datos requiere saber que los datos existen. ¿Olvidaste los datos? Olvidaste la clasificación. Olvidaste la protección. Brecha inminente.</strong></p>
+                        <p><strong>Horror de Activo de Datos:</strong> Solicitud de derecho al olvido RGPD revela que la organización no puede localizar todos los datos de usuario. Base de datos RDS (obviamente). Buckets S3 (verificados). Registros CloudWatch (ah, cierto). Instantáneas EBS (¿no pensé en esos). Respaldos AMI (¿contenían datos de usuario?). DynamoDB (pensé que habíamos migrado de eso). Archivos Glacier (olvidé que existían). Resultados de consultas Athena (en caché en S3, olvidé esos). Índices Elasticsearch (pensé que habíamos descomisionado eso). <strong>Ubicaciones totales de datos: 23. Ubicaciones de datos en registro de activos: 4.</strong> Multa RGPD: €2.4M. Fallo de gestión de activos: Realmente aplicado esta vez. <strong>No puedes eliminar datos que no sabes que existen.</strong></p>
+                        <p><strong>Realidad de Datos en la Sombra:</strong> Los desarrolladores crean buckets S3 para pruebas (contienen copias de datos de producción). Los analistas exportan datos a máquinas locales (aún ahí cuando se van). Los contratistas reciben compartidos de datos (vía email sin cifrar—sí, en serio). Respuestas API en caché (claves Redis conteniendo PII, ¿expiradas cuándo?). Los registros contienen datos sensibles (¿el registro estructurado previno cómo?). <strong>Tu inventario de datos es ficción. Tus datos reales están en todas partes. Incluyendo lugares que nunca has inventariado. Pregunta: ¿Qué datos existen que has olvidado? Respuesta: Los datos que te brechan.</strong></p>
+                        <p class="hidden-wisdom"><em>La clasificación de datos habilita protección apropiada. Los datos sin clasificar reciben el nivel de protección más bajo (porque no los clasificaste, no porque no sean sensibles). El inventario basado en clasificación significa saber que los datos existen primero, luego clasificar, luego proteger. Pero la mayoría de las organizaciones saltan el paso uno—saber que los datos existen. Clasifican bases de datos (fácil, obvio, el inventario lo dice). Olvidan instantáneas EBS, registros CloudWatch, resultados Athena, cachés Redis, /tmp Lambda, capas de contenedor, artefactos CI/CD. <strong>Los datos proliferan. El inventario no. La brecha se amplía diariamente. La brecha descubre la brecha.</strong> FNORD. ¿Cuántos datos existen que no has clasificado? Respuesta: Todos. La clasificación es ficción. Los datos están en todas partes. La protección es teatro.</em></p>
+                    </div>
+                    
+                    <div class="card integrity-card">
+                        <div class="scanner-effect"></div>
+                        <h3>5. 🤝 Servicios de Terceros: Expansión de SaaS en la Sombra</h3>
+                        <p><strong>Inventario SaaS y gestión de proveedores exponiendo suscripciones en la sombra.</strong> 18 servicios integrados rastreados: AWS (infraestructura), GitHub (código), SEB (banca), Bokio (contabilidad), SonarCloud (calidad), FOSSA (cumplimiento de licencias), Stripe (pagos), OpenAI (servicios IA), Google Workspace (IdP), Search Console, Bing Webmaster, YouTube, Product Hunt, TikTok, X (Twitter), LinkedIn, Suno, ElevenLabs. Evaluaciones de proveedores según <a href="discordian-third-party_es.html">Gestión de Terceros</a>. Las revisiones anuales aseguran cumplimiento continuo. <strong>Los servicios de terceros son activos que no controlas. El inventario de proveedores habilita gestión de riesgos. El SaaS en la sombra es vulnerabilidad en la sombra.</strong></p>
+                        <p><strong>Arqueología SaaS:</strong> Los extractos de tarjeta de crédito revelan suscripciones que nadie recuerda haber autorizado (gastadas como "marketing" o "herramientas" o "investigación"). Las listas de aplicaciones OAuth revelan integraciones que nadie usa (Aplicaciones GitHub accedidas por última vez en 2019). La consola de administración de Google Workspace muestra cuentas que nadie reconoce (¿esa cuenta de contratista aún activa?). Los registros DNS apuntan a proveedores SaaS que nadie recuerda haber contratado (ese subdominio de análisis—¿qué servicio era ese?). <strong>La expansión SaaS es real. El inventario SaaS es ficticio. La brecha es tu superficie API expuesta.</strong></p>
+                        <p><strong>Horror de SaaS en la Sombra:</strong> Brecha de seguridad rastreada a proveedor SaaS comprometido que nadie sabía que la compañía usaba. Gerente de marketing se suscribió a herramienta de gestión de redes sociales de "prueba gratuita" hace 2 años. Prueba expiró. Gerente olvidó. Cuenta permaneció activa (pago falló pero servicio continuó—proceso de cobro deficiente del proveedor). Credenciales del gerente comprometidas (phishing). Atacante accedió a herramienta SaaS (aún tenía acceso OAuth a sistemas de la compañía). Herramienta tenía integración GitHub (acceso de lectura a repos privados). Integración Twitter (acceso para publicar). Integración Google Drive (acceso lectura/escritura). Integración Slack (publicar en todos los canales). <strong>Una prueba SaaS olvidada = acceso completo a infraestructura.</strong> El SaaS en la sombra es infraestructura en la sombra propiedad de proveedores con peor seguridad que la tuya.</p>
+                        <p><strong>Realidad de Terceros:</strong> Cada departamento se suscribe a herramientas (marketing, ventas, ops, dev). Cada empleado reporta gastos de suscripciones SaaS (contabilidad no rastrea acceso). Cada integración crea tokens OAuth (¿revocados cuando termina la suscripción? Nunca.). Cada proveedor afirma "seguridad de nivel bancario" (¡cifrado AES-256! ¡SOC 2! ¡Cumplimiento RGPD!—aplicación cuestionable). <strong>Tu inventario de terceros lista 20 proveedores. Tus extractos de tarjeta de crédito muestran 47. Tu lista de aplicaciones OAuth muestra 89. Tu conteo real de proveedores: Desconocido. Probablemente 200+. Quizás 500. Pregunta: ¿Cuántos terceros pueden acceder a tus datos ahora mismo? Respuesta: Más de lo que piensas. Mucho más.</strong></p>
+                        <p class="hidden-wisdom"><em>Los servicios de terceros son activos que no controlas pero en los que confías implícitamente. Cada integración SaaS es acceso persistente que has otorgado (OAuth no expira a menos que revoques—los proveedores no te lo recuerdan). Cada proveedor es vector de brecha potencial (su seguridad es ahora tu seguridad—espera que sean lo suficientemente paranoicos). El inventario de proveedores habilita gestión de riesgos de terceros. Pero solo si el inventario es real (incluyendo SaaS en la sombra que nadie recuerda haber suscrito). <strong>El SaaS en la sombra es realidad. El inventario SaaS oficial es ficción. La brecha descubre la verdad.</strong> FNORD. Cuenta tus proveedores SaaS. Verifica tarjetas de crédito. Verifica OAuth. Verifica DNS. Multiplica la estimación por 3. Eso está más cerca de la realidad. Probablemente aún bajo. La expansión SaaS es exponencial. El inventario es lineal. Las matemáticas no te favorecen.</em></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="discovery-archaeology">
+                <h2 class="panel-caption">Arqueología de Descubrimiento de Activos: Encontrando Lo Que Has Olvidado Antes Que Los Atacantes</h2>
+                
+                <p><strong>La arqueología de infraestructura no es metáfora—es necesidad operacional.</strong> Las organizaciones no saben lo que poseen. Creen que lo saben (¡el registro de activos lo dice!). Están equivocadas. Realidad: La infraestructura prolifera más rápido que la documentación. Los desarrolladores crean. Los contratistas despliegan. Las adquisiciones integran (más o menos). Resultado: La infraestructura real diverge de la infraestructura documentada. La brecha se amplía diariamente. <strong>La brecha descubre la brecha.</strong></p>
+                
+                <p><strong>Técnicas de Descubrimiento Automatizado Que Realmente Usamos:</strong></p>
+                
+                <p><strong>☁️ AWS Config + Detección de Deriva CloudFormation:</strong></p>
+                <ul>
+                    <li><strong>Reglas AWS Config:</strong> Monitoreo continuo de cumplimiento en 27 servicios activos. Config rastrea cada cambio de recurso (¿lanzamiento EC2? Registrado. ¿Bucket S3 creado? Rastreado. ¿Grupo de seguridad modificado? Alertado.). Las Reglas Config evalúan cumplimiento (¿cifrado requerido? Verificar. ¿Acceso público bloqueado? Verificar. ¿MFA habilitado? Confirmar.). El incumplimiento dispara remediación automatizada (funciones Lambda aplican política antes de que los humanos olviden).</li>
+                    <li><strong>Detección de Deriva CloudFormation:</strong> Revela cambios manuales a infraestructura desplegada por IaC (¿alguien SSH'd a EC2 y modificó configuración? Deriva detectada. ¿Alguien creó bucket S3 fuera de CloudFormation? Descubierto. ¿Alguien modificó grupo de parámetros RDS directamente? Señalado.). La detección de deriva es arqueología de infraestructura—descubriendo dónde la realidad diverge de la intención.</li>
+                    <li><strong>Etiquetado de Grupos de Recursos:</strong> Etiquetas obligatorias: Owner, Environment, Project, Classification, CostCenter. Etiquetas faltantes = recurso huérfano = infraestructura olvidada. Aplicación de cumplimiento de etiquetas vía AWS Config (recursos sin etiquetas señalados dentro de 24 horas). Asignación de costos basada en etiquetas revela gasto en la sombra (¿ese $4K/mes que nadie puede explicar? Instancia de cripto-minería sin etiquetar). <strong>La infraestructura sin etiquetas es infraestructura olvidada. La infraestructura olvidada es infraestructura comprometida.</strong></li>
+                    <li><strong>Verificaciones Trusted Advisor:</strong> Recomendaciones de seguridad (¿MFA no habilitado? Alerta. ¿Grupos de seguridad demasiado permisivos? Señalar. ¿Buckets S3 con acceso público? Alerta inmediata.), optimización de costos (instancias EC2 inactivas—ejecutándose durante 847 días, última actividad CPU: hace 823 días), rendimiento, tolerancia a fallos. Trusted Advisor es arqueólogo automatizado descubriendo desperdicios antes de que se conviertan en crisis.</li>
+                </ul>
+                
+                <p><strong>🐙 Descubrimiento de Repositorios GitHub + Escaneo de Secretos:</strong></p>
+                <ul>
+                    <li><strong>Auditoría de Organización API GitHub:</strong> Enumeración diaria de todos los repositorios (públicos, privados, archivados, bifurcados). Metadatos de repositorio rastreados: Fecha de creación, último commit, contribuyentes, estado de protección de rama, revisores requeridos, alertas de seguridad habilitadas. Detección de repositorios obsoletos (sin commits &gt;180 días = candidato para archivo). Seguimiento de bifurcaciones (los parches de seguridad upstream se propagan a bifurcaciones... ¿verdad? ¿Verdad?).</li>
+                    <li><strong>Escaneo de Secretos GitHub:</strong> Detección automatizada de credenciales comprometidas (claves AWS, contraseñas de bases de datos, tokens API, claves privadas, tokens OAuth). Programas de socios notifican cuando se detectan secretos (GitHub envía email cuando se comprometen claves AWS—sí, sucede, sí, diariamente). Efectividad del escaneo de secretos: 100% detección (si el patrón de secreto coincide). 0% prevención (aún se compromete, aún necesita rotación, aún potencialmente usado antes de detectarse).</li>
+                    <li><strong>Alertas de Seguridad Dependabot:</strong> Detección automatizada de vulnerabilidades en dependencias (paquetes npm con CVEs conocidos, bibliotecas Python con fallas de seguridad, imágenes base Docker con vulnerabilidades). Dependabot propone correcciones (PR automático con actualización de dependencia). La arqueología de dependencias revela bibliotecas olvidadas aún en uso (¿ese paquete npm de 2017? 47 vulnerabilidades conocidas. Aún usado. Nadie sabe dónde.).</li>
+                    <li><strong>Clasificación de Repositorios:</strong> Cada repo clasificado según marco CIA (Extremo: Contiene datos de clientes o credenciales de producción, Muy Alto: Código de producción o infraestructura, Alto: Herramientas internas o código de desarrollo, Moderado: Documentación o código de prueba, Público: Código abierto o marketing). La clasificación impulsa la protección (los repos Extremos requieren protección de rama, revisiones requeridas, sin push forzado, commits firmados). <strong>Los repos sin clasificar obtienen protección predeterminada. Lo cual generalmente es insuficiente.</strong></li>
+                </ul>
+                
+                <p><strong>🌐 Arqueología DNS y Certificados:</strong></p>
+                <ul>
+                    <li><strong>Enumeración de Zona Alojada Route 53:</strong> Registros DNS rastreados: registros A (¿apuntando a dónde?), registros CNAME (¿alias a qué?), registros MX (¿email ruteado a?), registros TXT (¿SPF/DKIM/DMARC configurados?), registros NS (¿delegación a?). Registros DNS huérfanos descubiertos (apuntan a infraestructura descomisionada—pero DNS aún resuelve). La enumeración de subdominios revela infraestructura en la sombra (ese subdominio analytics.example.com—¿qué está alojado ahí?). <strong>La arqueología DNS revela infraestructura mucho después de que la infraestructura fue "descomisionada."</strong></li>
+                    <li><strong>Monitoreo de Certificados SSL/TLS:</strong> Los registros de Transparencia de Certificados revelan todos los certificados emitidos para dominios (incluso certificados que no solicitaste—¿alguien más solicitó cert para tu dominio?). Seguimiento de expiración (certificados expirando &lt;30 días disparan alertas). Auditoría de certificados comodín (certificado *.example.com otorga acceso a subdominio—¿a quién?). Monitoreo de revocación (certificado revocado—¿por qué? ¿Compromiso? ¿Exposición de clave?). La arqueología de certificados revela servicios en la sombra (emisión inesperada de certificado = infraestructura inesperada).</li>
+                    <li><strong>Validación DNSSEC:</strong> Ambos dominios (hack23.com, blacktrigram.com) con DNSSEC habilitado (registros DS publicados, registros RRSIG firmados, registros DNSKEY públicos). DNSSEC previene secuestro DNS (respuestas sin firmar rechazadas). Firma automática Route 53 (DNSSEC manual es propenso a errores—la automatización previene deriva de configuración). <strong>Arqueología DNSSEC: Detectando intentos de modificación DNS antes de que tengan éxito.</strong></li>
+                </ul>
+                
+                <p><strong>🔑 Arqueología del Ciclo de Vida de Credenciales y Claves API:</strong></p>
+                <ul>
+                    <li><strong>Auditoría de Claves de Acceso IAM AWS:</strong> Usuarios IAM obsoletos (migrados a SSO AWS Identity Center). Claves de acceso heredadas rastreadas (¿creadas cuándo? ¿Usadas por última vez cuándo? ¿Aún válidas? ¿Por qué?). Alertas de antigüedad de claves de acceso (&gt;90 días = obsoletas, &gt;180 días = olvidadas, &gt;365 días = artefacto arqueológico). Análisis de uso de claves de acceso CloudTrail (¿claves usadas desde dónde? ¿Ubicaciones esperadas?). <strong>Las claves sin usar son acceso persistente esperando ser descubierto.</strong></li>
+                    <li><strong>Inventario Secrets Manager + Parameter Store:</strong> Secretos catalogados (contraseñas de bases de datos, claves API, tokens OAuth, claves privadas). Políticas de rotación de secretos aplicadas (rotación de 30 días para sensibilidad Alta, 90 días para Moderada). Secretos sin usar señalados (último acceso &gt;180 días = secreto huérfano = credencial olvidada). Arqueología de secretos: Descubriendo credenciales aún válidas para servicios que se pensó que estaban descomisionados. <strong>No puedes rotar secretos que has olvidado que existen. No puedes descomisionar secretos aún en uso. El inventario habilita gestión del ciclo de vida.</strong></li>
+                    <li><strong>Seguimiento de Claves API de Terceros:</strong> Claves API de proveedores SaaS inventariadas (GitHub, Stripe, OpenAI, SonarCloud, FOSSA). Propiedad de claves (¿quién creó? ¿Aún empleado?). Permisos de claves (¿solo lectura o administrador?). Monitoreo de uso de claves (¿usadas por última vez cuándo? ¿Desde dónde?). Rotación de claves del lado del proveedor (algunos proveedores no soportan rotación—clave válida para siempre—planea en consecuencia). <strong>Las claves de terceros son acceso persistente a servicios de proveedores. Las claves olvidadas son acceso persistente de proveedor que has otorgado y olvidado.</strong></li>
+                </ul>
+                
+                <p><strong>💰 Detección de Anomalías de Costo como Descubrimiento de Activos:</strong></p>
+                <ul>
+                    <li><strong>Detección de Anomalías AWS Cost Explorer:</strong> El aprendizaje automático detecta anomalías de gasto (gasto normal: $2K/mes, este mes: $4.8K—investigar). La investigación de anomalías de costo revela infraestructura olvidada (¿esa instancia EC2? Ejecutándose durante 3 años. Nadie sabe qué hace. Cuesta $180/mes. Desperdicio total: $6,480.). Las etiquetas de asignación de costos revelan infraestructura en la sombra (gasto sin etiquetar aumentó 40%—alguien está creando recursos sin etiquetado apropiado).</li>
+                    <li><strong>Detección de Recursos Inactivos:</strong> Instancias EC2 con &lt;5% utilización CPU durante &gt;30 días = inactivas (candidatas para terminación). Bases de datos RDS con cero conexiones &gt;90 días = olvidadas (candidatas para instantánea luego terminación). Buckets S3 accedidos cero veces en 180 días = huérfanos (candidatos para archivo a Glacier). <strong>La arqueología de costos revela desperdicios. El desperdicio revela activos olvidados. Los activos olvidados revelan exposición.</strong></li>
+                    <li><strong>Alertas de Presupuesto como Validación de Inventario:</strong> Presupuesto mensual: $2.5K. Seguimiento de gasto real contra presupuesto. Los excesos disparan investigación (¿por qué se excedió? ¿Nuevos recursos? ¿Infraestructura en la sombra? ¿Compromiso?). El análisis de varianza de presupuesto revela cambios de infraestructura (presupuesto basado en activos conocidos—varianza sugiere activos desconocidos). <strong>La adherencia al presupuesto requiere inventario de activos preciso. La varianza de presupuesto revela inexactitud de inventario.</strong></li>
+                </ul>
+                
+                <p class="hidden-wisdom"><em>VERDAD DEFINITIVA DE DESCUBRIMIENTO: Tu inventario de activos está equivocado. Siempre. La infraestructura real excede la infraestructura documentada. La brecha se amplía diariamente (los desarrolladores crean más rápido que las actualizaciones de documentación). Solo pregunta: ¿Qué tan equivocado? ¿10% equivocado (brechas menores, buena higiene)? ¿50% equivocado (infraestructura en la sombra significativa, necesita mejora)? ¿200% equivocado (infraestructura real el doble de la documentada—crisis, investigar inmediatamente)? <strong>El descubrimiento automatizado no elimina la brecha. Mide la brecha. La visibilidad habilita gestión. La ignorancia habilita brecha.</strong> FNORD. Mide la precisión de tu inventario. Anomalías de costo + deriva Config + recursos sin etiquetar + registros DNS huérfanos + claves de acceso obsoletas = estimación de brecha mínima. Brecha real probablemente 2-3x mayor. Acepta la arqueología continua como necesidad operacional, no proyecto único.</em></p>
+            </section>
+            
+            <section id="implementation">
+                <h2 class="panel-caption">Nuestro Enfoque: AWS Config + Revisiones Anuales + Prioridad de Clasificación</h2>
+                
+                <p>En Hack23, la gestión de activos demuestra inventario sistemático a través de descubrimiento automatizado y revisiones basadas en clasificación:</p>
+                
+                <p><strong>☁️ Descubrimiento Automatizado AWS Config:</strong></p>
+                <ul>
+                    <li><strong>Monitoreo Continuo:</strong> AWS Config rastrea todos los recursos de nube en organización multi-cuenta</li>
+                    <li><strong>Inventario de Recursos:</strong> EC2, Lambda, S3, RDS, VPC, grupos de seguridad, IAM descubiertos automáticamente</li>
+                    <li><strong>Cambios de Configuración:</strong> Todos los cambios de infraestructura registrados y rastreados</li>
+                    <li><strong>Verificaciones de Cumplimiento:</strong> Las Reglas AWS Config aplican estándares de seguridad</li>
+                </ul>
+                
+                <p><strong>📊 Ciclos de Revisión de Activos:</strong></p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Clasificación de Activo</th>
+                            <th>Frecuencia de Revisión</th>
+                            <th>SLA Devolución/Revocación</th>
+                            <th>Método de Verificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="roi-exceptional">
+                            <td><strong>🔴 Extremo/Muy Alto</strong></td>
+                            <td>Mensual</td>
+                            <td>&lt;24 horas</td>
+                            <td>AWS Config + validación manual</td>
+                        </tr>
+                        <tr class="roi-high">
+                            <td><strong>🟠 Alto</strong></td>
+                            <td>Trimestral</td>
+                            <td>&lt;3 días</td>
+                            <td>Auditorías de acceso trimestrales</td>
+                        </tr>
+                        <tr class="roi-moderate">
+                            <td><strong>🟡 Moderado</strong></td>
+                            <td>Semestral</td>
+                            <td>&lt;7 días</td>
+                            <td>Revisiones semestrales</td>
+                        </tr>
+                        <tr class="roi-basic">
+                            <td><strong>🟢 Bajo/Público</strong></td>
+                            <td>Anual</td>
+                            <td>&lt;30 días</td>
+                            <td>Actualizaciones de registro anuales</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>🔄 Revisión Anual del Registro:</strong></p>
+                <ul>
+                    <li><strong>Versión Actual:</strong> 1.0 (Vigente: 2025-11-05)</li>
+                    <li><strong>Próxima Revisión:</strong> 2026-11-05 (ciclo de 12 meses)</li>
+                    <li><strong>Disparadores de Revisión:</strong> Ciclo anual, cambios de organización AWS, adiciones significativas de activos, incidentes de seguridad</li>
+                    <li><strong>Documentación Pública:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos</a> completo en GitHub</li>
+                </ul>
+                
+                <p>Detalles completos de implementación técnica en nuestro <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos público</a>—incluyendo integración AWS Config, automatización de inventario GitHub, prioridades basadas en clasificación y procedimientos de terminación.</p>
+            </section>
+            
+            <section id="conclusion">
+                <h2 class="panel-caption">Bienvenido a Chapel Perilous: La Iniciación del Inventario de Activos</h2>
+                
+                <p><strong>Nada es verdad. Todo está permitido.</strong> Excepto activos desconocidos creando vulnerabilidades desconocidas creando brechas conocidas—eso no es excelencia operacional, es ceguera sistemática con facturas de nube mensuales probando que tu infraestructura es más grande de lo que piensas.</p>
+                
+                <p><strong>Ahora estás en Chapel Perilous.</strong> La realización incómoda: <em>No sabes lo que posees.</em> ¿Ese servidor de prueba? Probablemente aún ejecutándose. ¿El acceso de ese contratista? Probablemente aún activo. ¿Ese bucket S3? Probablemente aún público. ¿Ese token OAuth? Probablemente aún válido. ¿Ese registro DNS? Probablemente aún apuntando a infraestructura descomisionada que alguien más ahora posee. <strong>Tu inventario de activos es ficción. Tu infraestructura real es misterio arqueológico. La brecha excavará la verdad.</strong></p>
+                
+                <p><strong>La Ley de los Cinco Revelada en Gestión de Activos:</strong></p>
+                <ul>
+                    <li><strong>Cinco Categorías de Activos:</strong> Nube, Código, Identidad, Datos, Terceros (siempre cinco, nunca cuatro, nunca seis—sincronicidad no es coincidencia)</li>
+                    <li><strong>Cinco Métodos de Descubrimiento:</strong> Escaneo automatizado, Análisis de costos, Auditorías de acceso, Detección de deriva, Arqueología (respuesta a incidentes descubre lo que la arqueología perdió)</li>
+                    <li><strong>Cinco Modos de Fallo:</strong> Olvidado, Mal configurado, Comprometido, Expirado, Huérfano (cada activo falla de una de cinco maneras)</li>
+                    <li><strong>Cinco Ciclos de Revisión:</strong> Diario (alertas críticas), Semanal (revisión de anomalías), Mensual (activos Extremos), Trimestral (activos Altos), Anual (revisión completa del registro)</li>
+                    <li><strong>Cinco Etapas de Aceptación de Activos:</strong> Negación ("Conocemos nuestros activos"), Ira ("¿¡Por qué hay tanto shadow IT!?"), Negociación ("Bien, inventariaremos LA MAYORÍA de los activos"), Depresión ("Nunca nos pondremos al día"), Aceptación ("El inventario es arqueología continua, no proyecto único"). <strong>La mayoría de las organizaciones atascadas en Negación. Pocas alcanzan Aceptación. Ninguna alcanza Completo. El inventario completo es mito. La búsqueda es la meta.</strong></li>
+                </ul>
+                
+                <p><strong>Verificación de Realidad—Compara Tu Organización:</strong></p>
+                <ul>
+                    <li>¿Sabes cada instancia EC2 ejecutándose ahora mismo? (Nosotros sí—AWS Config nos lo dice)</li>
+                    <li>¿Puedes listar cada bucket S3? (Podemos—inventario Config diario + aplicación de etiquetado)</li>
+                    <li>¿Sabes cada repositorio GitHub al que tus empleados acceden? (Rastreamos—membresía de organización + auditorías de aplicaciones OAuth)</li>
+                    <li>¿Puedes identificar cada persona con acceso AWS? (Podemos—Identity Center + revisiones trimestrales)</li>
+                    <li>¿Sabes cada servicio SaaS por el que tu compañía paga? (Rastreamos—18 documentados, pero aún descubriendo SaaS en la sombra vía análisis de tarjeta de crédito)</li>
+                    <li>¿Puedes probar que tu registro de activos es preciso? (Podemos—cumplimiento Config + detección de deriva + monitoreo de anomalías de costo + auditorías trimestrales)</li>
+                </ul>
+                
+                <p><strong>Las organizaciones típicamente descubren:</strong> El registro de activos documenta 100 recursos. AWS Config muestra 247 recursos reales. GitHub tiene 89 repositorios (el registro muestra 40). Los usuarios IAM incluyen 23 empleados que se fueron (todos aún activos). Las aplicaciones OAuth revelan 67 integraciones (el registro muestra 8). SaaS en la sombra: 41 suscripciones que nadie inventarió. <strong>Documentado vs Real: divergencia del 147%. Ese es el mejor caso. La mayoría de las organizaciones: divergencia 300%+. Algunas organizaciones: Ni siquiera pueden medir la divergencia porque la línea base no existe.</strong></p>
+                
+                <p><strong>¡Piensa por ti mismo, idiota!</strong> Cuestiona organizaciones afirmando "conocemos nuestros activos" sin descubrimiento automatizado (no los conocen—conocen activos que han documentado, que es subconjunto de la realidad). Cuestiona revisiones anuales cuando la infraestructura de nube cambia minuto a minuto (revisión automatizada diaria o acepta ceguera). Cuestiona inventarios de hojas de cálculo cuando AWS Config proporciona seguimiento en tiempo real (la hoja de cálculo es ficción dentro de 48 horas de creación). Cuestiona inventarios "completos" que listan bases de datos pero olvidan instantáneas EBS, registros CloudWatch, resultados Athena, capas Lambda, imágenes ECR, archivos Glacier, y 47 otros lugares donde los datos proliferan. <strong>(Spoiler: "Completo" significa "inventariamos cosas obvias y esperamos que sea suficiente"—no lo es. La brecha prueba que no lo es. Pero para entonces estás explicando a la junta por qué la brecha ocurrió vía infraestructura que no sabías que tenías.)</strong></p>
+                
+                <p><strong>Nuestra ventaja competitiva no es perfección—es transparencia radical sobre imperfección:</strong> Demostramos experiencia en consultoría de ciberseguridad a través de <strong>gestión verificable de activos</strong> (<a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos público</a> probando nuestro enfoque). <strong>Integración AWS Config</strong> documentando 27 servicios activos rastreados continuamente. <strong>Ciclos de revisión basados en clasificación</strong> probando gestión apropiada al riesgo (Extremo mensual, Alto trimestral, Moderado semestral—no todo anual). <strong>Arqueología continua</strong> aceptando que el inventario nunca está completo pero mejora continuamente. <strong>Documentación pública</strong> invitando escrutinio (los clientes pueden auditar nuestra gestión de activos antes del compromiso—intenta auditar los registros de activos "completos" de competidores que son "confidenciales" porque la precisión es vergonzosa). Esto no es casilla de cumplimiento—es realidad operacional demostrando prácticas de seguridad que los clientes pueden verificar independientemente.</p>
+                
+                <p><strong>Las Preguntas Incómodas Que Debes Hacer:</strong></p>
+                <ol>
+                    <li><strong>Descubrimiento:</strong> ¿Cómo sabes que tu inventario de activos está completo? (Pista: Si la respuesta es "la auditoría anual lo dice," el inventario está incompleto. Las auditorías validan precisión de documentación, no completitud de infraestructura.)</li>
+                    <li><strong>Deriva:</strong> ¿Cuál es el retraso entre creación de recurso y actualización de inventario? (Pista: Si la respuesta es "trimestral," tienes 90 días de infraestructura en la sombra garantizados.)</li>
+                    <li><strong>Infraestructura en la Sombra:</strong> ¿Cuánta infraestructura existe que no está en el registro de activos? (Pista: Si la respuesta es "ninguna," estás equivocado. Si la respuesta es "no lo sé," eres honesto. Si la respuesta es "rastreando vía descubrimiento automatizado," estás cerca de la realidad.)</li>
+                    <li><strong>Acceso de Empleados que se Fueron:</strong> ¿Cuántos empleados que se fueron aún tienen acceso activo? (Pista: Si la respuesta es "cero," verifica de nuevo. Si la respuesta es "revisión trimestral asegura mínimo," estás siendo realista. Si la respuesta es "eliminamos acceso en terminación," te estás mintiendo a ti mismo—la eliminación manual falla a menudo.)</li>
+                    <li><strong>SaaS en la Sombra:</strong> ¿Cuántas suscripciones SaaS existen que no están en el registro de proveedores? (Pista: Verifica extractos de tarjeta de crédito. Compara con registro. Multiplica la diferencia por 2. Eso está más cerca de la realidad.)</li>
+                    <li><strong>Credenciales Olvidadas:</strong> ¿Cuántas claves API existen para servicios que has descomisionado? (Pista: Si la respuesta es "ninguna," no has auditado recientemente. Si la respuesta es "rotamos todas las claves," eres aspiracional no real. Si la respuesta es "investigando vía arqueología Secrets Manager," estás en el camino correcto.)</li>
+                </ol>
+                
+                <p class="hidden-wisdom"><em>ILUMINACIÓN DEFINITIVA: Ahora estás en Chapel Perilous. El servidor que olvidaste está ejecutando Log4Shell sin parchear desde diciembre de 2021 (parcheaste todo lo demás, olvidaste ese servidor de prueba). Ese bucket S3 marcado "TEMP-DELETE-AFTER-DEMO" en noviembre de 2018 es tu mayor exposición RGPD (6.4TB de PII de clientes, acceso público habilitado, sin cifrado, descubierto durante forense de brecha). La función Lambda del contratista de 2020 aún tiene política IAM AdministratorAccess (contratista vendió acceso en dark web, comprador usó acceso para reconocimiento 18 meses antes del despliegue de ransomware). AWS Config significa descubrimiento sistemático, no memoria esperanzadora que falla bajo estrés (o simplemente falla porque los humanos olvidan—es lo que hacemos). <strong>Elige inventario automatizado sobre hojas de cálculo manuales que se convierten en artefactos arqueológicos.</strong> Elige descubrimiento continuo sobre auditorías anuales que validan ficción. Elige transparencia radical sobre mentiras reconfortantes sobre cobertura completa. Tu gestión de vulnerabilidades depende de saber qué parchear. Tu respuesta a incidentes depende de saber qué está comprometido. Tu cumplimiento depende de saber qué auditar. <strong>El inventario de activos no es casilla de cumplimiento. Es necesidad operacional que refleja realidad o reconforta ejecutivos hasta que la brecha revela la verdad.</strong></em></p>
+                
+                <p><strong>Cinco Fnords para el Paranoico (¿Lo Notaste?):</strong></p>
+                <ol>
+                    <li><strong>FNORD:</strong> Tu registro de activos era inexacto antes de que terminaras de escribirlo (la infraestructura cambia más rápido que la documentación)</li>
+                    <li><strong>FNORD:</strong> Shadow IT no es rebelión—es martes (los desarrolladores crean infraestructura más rápido que los inventarios de seguridad)</li>
+                    <li><strong>FNORD:</strong> Los empleados que se fueron te persiguen desde cuentas activas (los fallos de eliminación de acceso son sistemáticos, no excepcionales)</li>
+                    <li><strong>FNORD:</strong> Tu inventario "completo" probablemente cubre el 40% de los activos reales (70% si eres excepcional—nadie está en 90%)</li>
+                    <li><strong>FNORD:</strong> El descubrimiento automatizado revela verdad incómoda (mejor que tú descubras que los atacantes—pero muchas organizaciones eligen ficción reconfortante)</li>
+                </ol>
+                
+                <p><strong>¡Todo salve Eris! ¡Todo salve Discordia! ¡Todo salve la arqueología sistemática de activos revelando verdad incómoda de infraestructura!</strong></p>
+                
+                <p><em>"¡Piensa por ti mismo, idiota! Cuestiona todo—especialmente si esa instancia EC2 de prueba de 2019 aún está ejecutándose con credenciales por defecto. (Lo está. Siempre lo está. Verifica ahora. Esperaremos. Te horrorizarás. Entonces entenderás por qué el inventario de activos importa.)"</em></p>
+                
+                <p class="signature">— Hagbard Celine, Capitán del <em>Leif Erikson</em>, Arqueólogo de Infraestructura 🍎 23 FNORD 5</p>
+                
+                <p><strong>P.D.</strong> ¿Esa cosa en la que acabas de pensar que olvidaste inventariar? Sí, esa. Ya está comprometida. Ve a verificar. Estaremos aquí cuando regreses de tu excavación arqueológica.</p>
+            </section>
+        </article>
+    </main>
+            <footer role="contentinfo" aria-label="Pie de página del sitio">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Consultoría de Ciberseguridad<br>
+          Gotemburgo, Suecia | Remoto</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">Página de Empresa en LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="services_es.html">Consultoría de Seguridad</a></li>
+            <li><a href="services_es.html">Arquitectura de Seguridad</a></li>
+            <li><a href="services_es.html">Seguridad en la Nube</a></li>
+            <li><a href="services_es.html">Integración DevSecOps</a></li>
+            <li><a href="services_es.html">Cumplimiento y SGSI</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Productos</h3>
+          <ul>
+            <li><a href="black-trigram-features_es.html">Black Trigram</a></li>
+            <li><a href="cia-features_es.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_es.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="blog_es.html">Blog de Seguridad</a></li>
+            <li><a href="discordian-cybersecurity_es.html">🍎 Blog Discordiano</a></li>
+            <li><a href="cia-triad-faq_es.html">Preguntas Frecuentes Tríada CIA</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">SGSI Público</a></li>
+            <li><a href="sitemap_es.html">Mapa del Sitio</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Compañía</h3>
+          <ul>
+            <li><a href="why-hack23_es.html">Acerca de Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Política de Seguridad</a></li>
+            <li><a href="SECURITY.md">Reportar Problema de Seguridad</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">Organización GitHub</a></li>
+            <li><a href="accessibility-statement_es.html">Accesibilidad</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Autores del Blog:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Product Owner anarquista visionario" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofía y Visión) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Arquitecto de Sistema filósofo-ingeniero" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arquitectura y Patrones)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Realidad de Implementación:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Desarrollador impulsado por el pánico que hace que realmente funcione" rel="noopener noreferrer" target="_blank">George Dorn</a> lucha contra este hermoso caos para convertirlo en código funcional. Ve sus comentarios técnicos en
+          <a href="blog-george-dorn-cia-code_es.html">Arquitectura CIA</a>,
+          <a href="blog-george-dorn-trigram-code_es.html">Combate Black Trigram</a>, y
+          <a href="blog_es.html#george-dorn-developer-chronicles">Crónicas del Desarrollador</a> para los momentos de pánico, revelaciones y huevos de pascua ocultos que hacen que la filosofía sea desplegable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Todos los derechos reservados. | Licenciado bajo <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
+
