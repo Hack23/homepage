@@ -66,7 +66,7 @@ All files translated with professional quality:
 - ✅ Meta descriptions translated in 24 files
 - ✅ OpenGraph tags translated in 17 files
 - ✅ Twitter descriptions translated in 14 files
-- ✅ Meta keywords translated in 12 files (300+ terms across 4 sessions)
+- ✅ Meta keywords translated in 13 files (320+ terms across 4 sessions + cannabis industry)
 - ✅ og:title tags translated in 5 files
 - ✅ Page titles enhanced in 1 file
 - ✅ Swedish content fixed to Finnish in 2 blog files
@@ -531,7 +531,7 @@ After completing Schema.org, meta descriptions, and OpenGraph translations, a co
 - [x] **Hreflang Tags:** Complete 14-variant configuration
 - [x] **Schema.org:** All structured data validated and translated
 - [x] **Translation Quality:** Excellent (98.0%)
-- [x] **Meta Keywords:** 100% Finnish (300+ terms translated)
+- [x] **Meta Keywords:** 100% Finnish (320+ terms translated, including cannabis industry)
 - [x] **Meta Descriptions:** 100% Finnish
 - [x] **OpenGraph Tags:** 100% Finnish
 - [x] **Twitter Tags:** 100% Finnish
