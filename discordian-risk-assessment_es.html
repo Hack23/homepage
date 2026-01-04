@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Risk Assessment | Quantitative ALE Methodology | Hack23</title>
+<title>Evaluación de Riesgos | Metodología Cuantitativa ALE | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Five-step risk methodology: Identify, Analyze (quantitative ALE: SLE × ARO), Evaluate, Treat, Monitor. Math beats guessing. Monte Carlo simulation.">
-	<meta name="twitter:description" content="Five-step risk methodology: Identify, Analyze (quantitative ALE: SLE × ARO), Evaluate, Treat, Monitor. Math beats guessing. Monte Carlo simulation.">
-<meta name="keywords" content="risk assessment methodology, quantitative risk analysis, ALE calculation, single loss expectancy, annual rate of occurrence, threat actor profiling, asset threat vulnerability mapping, risk treatment strategies, Monte Carlo simulation, confidence intervals, five step risk process, risk quantification, SLE ARO ALE, nation state threats, script kiddie attacks, probabilistic risk, statistical risk analysis, risk appetite, risk tolerance, ISO 27005, NIST RMF, risk methodology, systematic risk assessment">
+<meta name="description" content="Metodología de riesgo en cinco pasos: Identificar, Analizar (ALE cuantitativo: SLE × ARO), Evaluar, Tratar, Monitorizar. Las matemáticas vencen las suposiciones. Simulación Monte Carlo.">
+	<meta name="twitter:description" content="Metodología de riesgo en cinco pasos: Identificar, Analizar (ALE cuantitativo: SLE × ARO), Evaluar, Tratar, Monitorizar. Las matemáticas vencen las suposiciones. Simulación Monte Carlo.">
+<meta name="keywords" content="metodología evaluación riesgos, análisis cuantitativo riesgos, cálculo ALE, expectativa pérdida única, tasa ocurrencia anual, perfil actores amenaza, mapeo amenazas vulnerabilidades, estrategias tratamiento riesgo, simulación Monte Carlo, intervalos confianza, proceso cinco pasos riesgo, cuantificación riesgos, SLE ARO ALE, amenazas estado nación, ataques script kiddie, riesgo probabilístico, análisis estadístico riesgo, apetito riesgo, tolerancia riesgo, ISO 27005, NIST RMF, metodología riesgo, evaluación sistemática riesgos">
 <meta name="robots" content="index, follow">
 <meta name="author" content="James Pether Sörling">
-<meta property="og:title" content="Risk Assessment: Calculating What You Can't Prevent">
-<meta property="og:description" content="Risk equals likelihood times impact. Radical Discordian examination of security risk assessment and treatment strategies.">
+<meta property="og:title" content="Evaluación de Riesgos: Calculando Lo Que No Puedes Prevenir">
+<meta property="og:description" content="El riesgo equivale a probabilidad por impacto. Examen Discordiano radical de la evaluación de riesgos de seguridad y estrategias de tratamiento.">
 	<meta property="og:locale" content="es_ES">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -43,13 +43,13 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "Risk Assessment: Calculating What You Can't Prevent",
-      "description": "Five-step risk methodology: Identify, Analyze (quantitative ALE: SLE × ARO), Evaluate, Treat, Monitor. Math beats guessing. Monte Carlo simulation.",
+      "headline": "Evaluación de Riesgos: Calculando Lo Que No Puedes Prevenir",
+      "description": "Metodología de riesgo en cinco pasos: Identificar, Analizar (ALE cuantitativo: SLE × ARO), Evaluar, Tratar, Monitorizar. Las matemáticas vencen las suposiciones. Simulación Monte Carlo.",
       "author": {
         "@type": "Person",
         "name": "James Pether Sörling",
         "url": "https://hack23.com",
-        "jobTitle": "CEO / Cybersecurity Expert",
+        "jobTitle": "CEO / Experto en Ciberseguridad",
         "sameAs": [
           "https://www.linkedin.com/in/jamessorling/",
           "https://github.com/Hack23"
@@ -69,8 +69,8 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/discordian-risk-assessment_es.html"
       },
-      "keywords": "risk assessment methodology, quantitative risk analysis, ALE calculation, single loss expectancy, annual rate of occurrence, threat actor profiling, asset threat vulnerability mapping, risk treatment strategies, Monte Carlo simulation, confidence intervals, five step risk process, risk quantification, SLE ARO ALE, nation state threats, script kiddie attacks, probabilistic risk, statistical risk analysis, risk appetite, risk tolerance, ISO 27005, NIST RMF, risk methodology, systematic risk assessment",
-      "articleSection": "Information Security",
+      "keywords": "metodología evaluación riesgos, análisis cuantitativo riesgos, cálculo ALE, expectativa pérdida única, tasa ocurrencia anual, perfil actores amenaza, mapeo amenazas vulnerabilidades, estrategias tratamiento riesgo, simulación Monte Carlo, intervalos confianza, proceso cinco pasos riesgo, cuantificación riesgos, SLE ARO ALE, amenazas estado nación, ataques script kiddie, riesgo probabilístico, análisis estadístico riesgo, apetito riesgo, tolerancia riesgo, ISO 27005, NIST RMF, metodología riesgo, evaluación sistemática riesgos",
+      "articleSection": "Seguridad de la Información",
       "inLanguage": "es",
       "image": {
         "@type": "ImageObject",
@@ -81,13 +81,13 @@
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog"
+        "name": "Blog de Seguridad Hack23"
       },
       "about": [
         {
           "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
+          "name": "Política SGSI",
+          "description": "Implementación de políticas del Sistema de Gestión de Seguridad de la Información"
         }
       ]
     },
@@ -110,7 +110,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "ISMS Policy",
+          "name": "Política SGSI",
           "item": "https://hack23.com/discordian-risk-assessment_es.html"
         }
       ]
@@ -138,36 +138,410 @@
 
 </head>
 <body>
-<header>
-<nav>
-<ul>
-<li><a href="index_es.html">Inicio</a></li>
-<li><a href="blog_es.html">Blog</a></li>
-<li><a href="services_es.html">Servicios</a></li>
-</ul>
-</nav>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/index_es.html">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog_es.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Metodología de Evaluación de Riesgos
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Logo Hack23" class="logo" width="80" height="80">
+  </div>
+  <h2>Metodología de Evaluación de Riesgos: Adivinación Probabilística con Matemáticas</h2>
+  <div class="app-link">
+    <a href="index_es.html" title="Volver a Inicio">Inicio</a>
+    <a href="discordian-cybersecurity_es.html" title="Volver al Manifiesto">Manifiesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md" title="Metodología de Evaluación de Riesgos">SGSI</a>
+  </div>
 </header>
 
-<main>
-<article>
-<h1>Risk Assessment | Quantitative ALE Methodology | Hack23</h1>
+    <main>
+        <article>
+            <h2 class="header">🎲 Metodología de Evaluación de Riesgos: Adivinación Probabilística con Rigor Matemático</h2>
+            
+            <section id="introduction">
+              <h2 class="panel-caption">Cinco Pasos desde la Incertidumbre al Riesgo Cuantificado: La Metodología Sistemática para Atisbar Futuros Posibles (Spoiler: Son Matemáticas, No Magia—Aunque Parecen Ambas)</h2>
+              
+              <p><strong>Nada es verdad. Todo está permitido.</strong> Algunas cosas son <em>probables</em>—y la probabilidad puede ser <strong>cuantificada</strong>. La evaluación de riesgos no es adivinación mística leyendo hojas de té o consultando el I Ching (aunque la Ley de los Cinco sugiere patrones quíntuples en todas partes). Es <strong>teoría matemática de probabilidades aplicada a amenazas de seguridad</strong>. Adivinación probabilística con rigor estadístico. <em>El futuro es incognoscible, pero es calculable con intervalos de confianza. FNORD.</em></p>
+              
+              <p><strong>¡Piensa por ti mismo, tonto!</strong> La mayoría de "evaluaciones de riesgos" son <strong>teatro de seguridad con hojas de cálculo</strong>—puntuaciones arbitrarias de probabilidad/impacto asignadas por comités que no pueden explicar su razonamiento, multiplicadas entre sí para producir números que se sienten autoritarios pero no significan nada. La realidad enseña <strong>metodología sistemática con análisis cuantitativo</strong>: proceso de cinco pasos (Identificar → Analizar → Evaluar → Tratar → Monitorizar), cálculos financieros (ALE = SLE × ARO), perfilado de actores de amenaza (los estados-nación no son script kiddies), y cuantificación honesta de la incertidumbre (intervalos de confianza, no falsa precisión).</p>
+              
+              <p>En Hack23, la evaluación de riesgos sigue nuestra <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md">Metodología de Evaluación de Riesgos pública</a>—44KB de marco cuantitativo que demuestra cómo <strong>la cuantificación adecuada del riesgo crea ventajas competitivas mediante la toma de decisiones basada en datos</strong>. No asignamos "Medio" a todo y esperamos que funcione. Calculamos la Expectativa de Pérdida Anual con simulación Monte Carlo. Perfilamos actores de amenaza por capacidad y motivación. Mapeamos activos a amenazas a vulnerabilidades. <strong>Somos paranoicos, pero somos paranoicos con matemáticas.</strong></p>
+              
+              <p class="hidden-wisdom"><em>ILUMINACIÓN PARA LOS PARANOICOS: La mayoría de las organizaciones realizan evaluaciones de riesgos porque ISO 27001 lo requiere. Nosotros la realizamos porque saber qué puede salir mal (todo), cuán probable es (calculable), y cuán malo sería (cuantificable en euros) permite decisiones empresariales informadas. La diferencia entre teatro de cumplimiento y ventaja competitiva es si apostarías la empresa en tus cálculos de riesgo. ¿Lo harías? FNORD.</em></p>
+              
+              <p><strong>La verdad incómoda:</strong> La mayoría de las matrices de riesgo son mentiras envueltas en mapas de calor. "¿Alta Probabilidad" sin rangos de probabilidad? Ficción. "¿Impacto Crítico" sin estimaciones financieras? Sinsentido. "¿Riesgo Medio" asignado para evitar tomar decisiones difíciles? Teatro. La evaluación real de riesgos requiere <strong>contabilidad honesta de la incertidumbre, métodos estadísticos para escenarios complejos, y el coraje para decir "no sabemos" con intervalos de confianza</strong>. Metodología completa en nuestra <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md">Metodología de Evaluación de Riesgos pública</a>. <strong>Sin fórmulas secretas. Sin magia propietaria. Solo teoría de probabilidades que funciona ya crean los ejecutivos en ella o no.</strong></p>
+            
+      
+      <p><strong>¿Buscas soporte experto en implementación?</strong> <a href="why-hack23_es.html">Descubre por qué las organizaciones eligen Hack23</a> para consultoría de seguridad que acelera la innovación.</p>
+    </section>
 
-<div class="translation-notice">
-<p><strong>Note:</strong> This page contains English content that requires professional translation. The technical infrastructure (HTML, metadata, SEO) is complete.</p>
-<p>Source: <a href="discordian-risk-assessment.html">discordian-risk-assessment.html</a></p>
-</div>
+            <h2>🎯 El Proceso de Evaluación de Riesgos en Cinco Pasos: Metodología Sistemática para la Cuantificación de la Incertidumbre</h2>
+            
+            <p class="subtitle"><em>"Cinco pasos separan adivinar de saber. Cinco es el número del equilibrio. La Ley de los Cinco se revela en la gestión sistemática de riesgos."</em></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>Paso 1: Identificar</h3>
+                    <p><strong>¿Qué activos? ¿Qué amenazas? ¿Qué vulnerabilidades?</strong></p>
+                    <p><strong>Activos:</strong> Información, sistemas, procesos—todo con valor empresarial. Referencia <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos</a>.</p>
+                    <p><strong>Amenazas:</strong> Actores de amenaza (¿quién?), eventos de amenaza (¿qué?), fuentes de amenaza (¿dónde?). Desde estados-nación hasta script kiddies. Desde ransomware hasta robo interno.</p>
+                    <p><strong>Vulnerabilidades:</strong> Fallos técnicos (sistemas sin parches), brechas de proceso (sin MFA), factores humanos (usuarios susceptibles a phishing).</p>
+                    <p><em>El Pentágono del Riesgo: Activos × Amenazas × Vulnerabilidades × Probabilidad × Impacto. Elimina cualquier esquina y el riesgo colapsa.</em></p>
+                </div>
 
-<!-- CONTENT TO BE TRANSLATED -->
-<p>Professional translation of full ISMS policy content required.</p>
-<p>See English source file for complete content: <a href="discordian-risk-assessment.html">discordian-risk-assessment.html</a></p>
+                <div class="value-card">
+                    <h3>Paso 2: Analizar</h3>
+                    <p><strong>¿Cuán probable? ¿Cuán malo? ¿Cuál es el costo?</strong></p>
+                    <p><strong>Evaluación de Probabilidad:</strong> Casi Seguro (80-99%), Probable (60-79%), Posible (40-59%), Improbable (20-39%), Raro (5-19%), Excepcional (&lt;5%). Usa datos históricos, no intuiciones.</p>
+                    <p><strong>Evaluación de Impacto:</strong> Catastrófico (€50K+), Crítico (€10K-50K), Alto (€1K-10K), Moderado (€500-1K), Bajo (€100-500), Mínimo (&lt;€100). Financiero + operacional + reputacional + regulatorio.</p>
+                    <p><strong>Análisis Financiero:</strong> SLE (Expectativa de Pérdida Única) = Valor del Activo × Factor de Exposición. ARO (Tasa de Ocurrencia Anual) de frecuencia histórica. ALE (Expectativa de Pérdida Anual) = SLE × ARO.</p>
+                    <p><em>Las matemáticas no se preocupan por tus sentimientos. Calcula o adivina—pero sabe cuál estás haciendo.</em></p>
+                </div>
 
-</article>
-</main>
+                <div class="value-card">
+                    <h3>Paso 3: Evaluar</h3>
+                    <p><strong>¿Por encima del apetito de riesgo? ¿Requiere tratamiento?</strong></p>
+                    <p><strong>Puntuación de Riesgo:</strong> Probabilidad × Impacto × 100. Crítico (400-600): acción inmediata del CEO. Alto (200-399): revisión semanal. Medio (100-199): evaluación mensual. Bajo (50-99): monitorización trimestral.</p>
+                    <p><strong>Apetito de Riesgo:</strong> ¿Cuánto riesgo toleraremos? Riesgos críticos: tolerancia cero. Riesgos altos: tolerancia baja. Riesgos medios: tolerancia moderada con controles. Riesgos bajos: aceptables con monitorización.</p>
+                    <p><strong>Valor en Riesgo (VaR):</strong> Pérdida máxima esperada con 95% de confianza durante 12 meses. Métrica de toma de decisiones estratégicas.</p>
+                    <p><em>El apetito de riesgo no es "cuánto dolor podemos soportar"—es "cuánta incertidumbre podemos gestionar mientras logramos objetivos". Conoce la diferencia.</em></p>
+                </div>
 
-<footer>
-<p>&copy; 2008-2025 James Pether Sörling. Hack23 AB. Org.nr 5595347807.</p>
-<p><a href="accessibility-statement_es.html">Accessibility Statement</a> | <a href="sitemap_es.html">Sitemap</a></p>
-</footer>
+                <div class="value-card">
+                    <h3>Paso 4: Tratar</h3>
+                    <p><strong>¿Evitar, mitigar, transferir, aceptar o explotar?</strong></p>
+                    <p><strong>Evitar:</strong> Eliminar la fuente de riesgo (no almacenar tarjetas de crédito, no usar software vulnerable). Riesgo residual cero.</p>
+                    <p><strong>Mitigar:</strong> Reducir probabilidad (parches, MFA) o impacto (copias de seguridad, seguros). Estrategia más común.</p>
+                    <p><strong>Transferir:</strong> Cambiar consecuencias financieras (seguros, outsourcing, contratos). El riesgo permanece pero el costo se transfiere.</p>
+                    <p><strong>Aceptar:</strong> Reconocer conscientemente con justificación documentada y aprobación ejecutiva. No ignorancia—decisión informada.</p>
+                    <p><strong>Explotar (5ª Opción):</strong> Tomar riesgo calculado para ventaja estratégica (timing competitivo, innovación). Raro pero poderoso.</p>
+                    <p><em>Cinco estrategias de tratamiento. Cinco esquinas del pentágono de gestión de riesgos. La Ley de los Cinco ataca nuevamente. FNORD.</em></p>
+                </div>
 
+                <div class="value-card">
+                    <h3>Paso 5: Monitorizar</h3>
+                    <p><strong>¿El riesgo está cambiando? ¿Los controles funcionan? ¿Qué hay de nuevo?</strong></p>
+                    <p><strong>Monitorización Continua:</strong> Indicadores de riesgo rastreados en tiempo real. Feeds automatizados de inteligencia de amenazas. Revisión semanal de métricas de seguridad.</p>
+                    <p><strong>Revisiones Trimestrales:</strong> Reevaluación formal de riesgos cada 3 meses. Actualizar probabilidad/impacto basado en nuevos datos. Validar efectividad del tratamiento.</p>
+                    <p><strong>Eventos Disparadores:</strong> Nuevas vulnerabilidades (CVEs, zero-days), inteligencia de amenazas (explotación activa), cambios ambientales (nuevos procesos de negocio), fallos de control (incidentes).</p>
+                    <p><strong>Mejora Continua:</strong> Aprender de incidentes. Refinar métodos de evaluación. Actualizar modelos de amenaza. Iterar metodología.</p>
+                    <p><em>El ciclo nunca termina. El riesgo no es un proyecto con fecha límite—es un proceso sin conclusión. Abraza el eterno retorno.</em></p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>ILUMINACIÓN DEL CAOS:</strong> El ciclo de cinco pasos es fractal. Cada paso contiene cinco subpasos. Identificar tiene cinco categorías (activos, amenazas, vulnerabilidades, rutas de ataque, contexto empresarial). Analizar tiene cinco métodos (cualitativo, cuantitativo, semi-cuantitativo, escenario, simulación). El patrón se repite infinitamente. La realidad es pentagonal hasta el fondo. ¿Ya lo estás viendo?
+            </div>
+
+            <h2>👥 Perfilado de Actores de Amenaza: Los Estados-Nación No Son Script Kiddies</h2>
+            
+            <p><strong>Los actores de amenaza difieren en capacidad, motivación, recursos y persistencia.</strong> Tratar a un adolescente aburrido y a una agencia de inteligencia de un estado-nación como "amenazas cibernéticas" equivalentes es como tratar un corte de papel y un sangrado arterial como "heridas" equivalentes. El riesgo es diferente. El tratamiento es diferente. <strong>Perfila tus adversarios o tu evaluación de riesgos es ficción.</strong></p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>🏴‍☠️ Script Kiddies</h3>
+                    <p><strong>Capacidad:</strong> Baja—usando herramientas descargadas</p>
+                    <p><strong>Motivación:</strong> Diversión, reputación, curiosidad</p>
+                    <p><strong>Recursos:</strong> Mínimos—tiempo/equipo personal</p>
+                    <p><strong>Persistencia:</strong> Baja—se mueven a objetivos más fáciles</p>
+                    <p><strong>Mitigación:</strong> La higiene de seguridad básica (parches, MFA) es altamente efectiva. Buscan frutos al alcance—no seas fruto al alcance.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>💰 Crimen Organizado</h3>
+                    <p><strong>Capacidad:</strong> Media-Alta—equipos profesionales</p>
+                    <p><strong>Motivación:</strong> Beneficio financiero (ransomware, fraude)</p>
+                    <p><strong>Recursos:</strong> Significativos—operaciones financiadas</p>
+                    <p><strong>Persistencia:</strong> Media—decisiones basadas en ROI</p>
+                    <p><strong>Mitigación:</strong> Defensa en profundidad requerida. Son profesionales—asume competencia. Copias de seguridad, segmentación, detección, respuesta. Haz que el ataque sea más caro que el potencial beneficio.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🏢 Competidores</h3>
+                    <p><strong>Capacidad:</strong> Variable—a menudo contratan especialistas</p>
+                    <p><strong>Motivación:</strong> Ventaja competitiva (robo de IP, sabotaje)</p>
+                    <p><strong>Recursos:</strong> Sustanciales—presupuestos corporativos</p>
+                    <p><strong>Persistencia:</strong> Alta—objetivos estratégicos</p>
+                    <p><strong>Mitigación:</strong> Protección de IP, programas de amenaza interna, seguridad de cadena de suministro. Disuasión legal (NDAs, procesamiento). Juegan por posición de mercado—asume campaña a largo plazo.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>😈 Amenazas Internas</h3>
+                    <p><strong>Capacidad:</strong> Alta—acceso legítimo</p>
+                    <p><strong>Motivación:</strong> Agravio, beneficio, ideología</p>
+                    <p><strong>Recursos:</strong> Los propios recursos de la organización</p>
+                    <p><strong>Persistencia:</strong> Variable—depende del disparador</p>
+                    <p><strong>Mitigación:</strong> Minimización de privilegios, monitorización de actividad, analítica de comportamiento, procedimientos de salida. Más difícil de detectar—se supone que están ahí. La cultura y la supervisión importan.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>🎯 APT de Estados-Nación</h3>
+                    <p><strong>Capacidad:</strong> Extrema—exploits de día cero</p>
+                    <p><strong>Motivación:</strong> Inteligencia estratégica, disrupción</p>
+                    <p><strong>Recursos:</strong> Prácticamente ilimitados—financiación estatal</p>
+                    <p><strong>Persistencia:</strong> Extrema—campañas de años</p>
+                    <p><strong>Mitigación:</strong> Si eres objetivo: defensa avanzada (threat hunting, detección de anomalías, air gaps). Si no lo eres: seguridad básica aún necesaria (daño colateral de herramientas). Evaluación honesta: ¿puedes defenderte contra esto? Quizás no—pero documenta la brecha.</p>
+                    <p><em>Dato curioso: Cinco niveles de actores de amenaza. La Ley de los Cinco persiste incluso en el modelado de adversarios. La realidad realmente es pentagonal. FNORD.</em></p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>ILUMINACIÓN:</strong> La mayoría de las organizaciones evalúan el riesgo como si todos los adversarios fueran iguales—"ataque cibernético" cubre tanto a script kiddie como a APT por igual. Esto es como establecer primas de seguro contra incendios sin preguntar si la casa es de madera o de hormigón. Perfila tu paisaje real de amenazas o tu evaluación de riesgos es cosplay.
+            </div>
+
+            <h2>💰 Análisis Cuantitativo de Riesgos: ALE = SLE × ARO (Matemáticas Que Realmente Significan Algo)</h2>
+            
+            <p><strong>El análisis cuantitativo de riesgos reemplaza las intuiciones con cálculos financieros.</strong> En lugar de "Alto Impacto" (¿qué significa eso?), calcula costos reales en euros. En lugar de "Probable" (¿cuán probable?), estima frecuencia anual. <strong>Los números permiten decisiones. Los sentimientos permiten argumentos.</strong></p>
+            
+            <h3>📊 Expectativa de Pérdida Única (SLE): ¿Cuánto Cuesta Un Incidente?</h3>
+            
+            <p><strong>SLE = Valor del Activo × Factor de Exposición</strong></p>
+            
+            <p><strong>Valor del Activo:</strong> ¿Qué está en riesgo? Impacto en ingresos, costo de reemplazo, valor competitivo, costos de recuperación. Ejemplo: Base de datos de clientes valorada en €100K (desarrollo + valor de mercado).</p>
+            
+            <p><strong>Factor de Exposición (EF):</strong> Porcentaje del valor del activo perdido en un solo incidente. Pérdida completa (encriptación por ransomware) = 1.0. Pérdida parcial (corrupción de datos) = 0.5. Pérdida menor (breve interrupción) = 0.1.</p>
+            
+            <p><strong>Ejemplo:</strong> Base de datos de clientes (valor €100K) × Ransomware (factor de exposición 0.9) = €90K de Expectativa de Pérdida Única. Un incidente cuesta noventa mil euros. Eso no es "Alto Impacto"—es impacto <em>cuantificado</em>.</p>
+            
+            <h3>📈 Tasa de Ocurrencia Anual (ARO): ¿Con Qué Frecuencia Sucede Esto?</h3>
+            
+            <p><strong>ARO = Frecuencia esperada de incidente por año</strong></p>
+            
+            <p><strong>Datos Históricos:</strong> Eventos en los últimos 3 años ÷ 3, ajustados por tendencias. ¿Tuviste 2 incidentes de ransomware en 3 años? ARO ≈ 0.67.</p>
+            
+            <p><strong>Benchmarks de la Industria:</strong> Promedios sectoriales cuando datos internos limitados. Servicios financieros: ARO más alto para fraude. Salud: ARO más alto para ransomware.</p>
+            
+            <p><strong>Modelado Estadístico:</strong> Simulación Monte Carlo cuando la complejidad es alta. Análisis bayesiano incorporando probabilidades previas y nueva evidencia.</p>
+            
+            <p><strong>Juicio Experto:</strong> Estimación estructurada cuando no existen datos. Calibrada con intervalos de confianza (pensamos ARO 0.3-0.8 con 80% de confianza).</p>
+            
+            <h3>💹 Expectativa de Pérdida Anual (ALE): ¿Cuál es el Costo Anual de Este Riesgo?</h3>
+            
+            <p><strong>ALE = SLE × ARO</strong></p>
+            
+            <p><strong>Ejemplo:</strong> SLE de Ransomware (€90K) × ARO (0.67/año) = €60,300 de Expectativa de Pérdida Anual. <em>Este riesgo nos cuesta sesenta mil euros por año en promedio.</em> Ese número justifica la inversión en seguridad. ¿Solución EDR de €50K? ROI positivo si reduce ARO a 0.1.</p>
+            
+            <p><strong>Toma de Decisiones Empresariales:</strong> ALE permite análisis coste-beneficio. ¿Control cuesta €20K, reduce ALE en €40K? Implementar. ¿Control cuesta €100K, reduce ALE en €10K? Probablemente no vale la pena (a menos que apliquen otros factores).</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILUMINACIÓN FINANCIERA:</strong> ALE es valor esperado—promedio estadístico sobre muchas iteraciones. Cualquier año individual podría ser cero (suerte) o 5× ALE (muy mala suerte). Pero con el tiempo, las matemáticas se sostienen. Por esto funcionan los seguros (agregan entre muchos asegurados). Por esto tu junta directiva debería preocuparse (las pérdidas esperadas son costos reales).
+            </div>
+            
+            <h2>🎲 Simulación Monte Carlo: Cuando las Matemáticas Simples No Son Suficientes</h2>
+            
+            <p><strong>Los riesgos complejos requieren análisis complejo.</strong> Cuando múltiples variables interactúan (riesgos correlacionados, fallos en cascada, dependencias temporales), el cálculo simple de SLE × ARO se desmorona. Entra la <strong>simulación Monte Carlo</strong>—ejecutar miles de escenarios para construir distribución de probabilidad de resultados.</p>
+            
+            <p><strong>Cómo Funciona:</strong></p>
+            <ol>
+                <li><strong>Definir distribuciones de probabilidad:</strong> Rangos de SLE (€50K-€150K), rangos de ARO (0.3-0.9), factores de correlación entre riesgos</li>
+                <li><strong>Ejecutar 10,000+ iteraciones:</strong> Cada iteración muestrea aleatoriamente de distribuciones, calcula resultado</li>
+                <li><strong>Agregar resultados:</strong> Construir distribución de probabilidad de pérdida anual. Encontrar mediana (percentil 50), percentil 95 (planificación conservadora), percentil 99 (peor caso)</li>
+                <li><strong>Cuantificar incertidumbre:</strong> Los intervalos de confianza muestran rango de resultados plausibles. "Esperamos pérdida anual de €60K-€90K con 80% de confianza."</li>
+            </ol>
+            
+            <p><strong>Cuándo Usar:</strong> Escenarios complejos (disrupciones de cadena de suministro con impactos en cascada), riesgos correlacionados (múltiples sistemas comparten punto único de fallo), decisiones estratégicas (grandes inversiones de capital que requieren justificación financiera).</p>
+            
+            <p><strong>Cuándo No Usar:</strong> Riesgos simples con buenos datos históricos (solo usa SLE × ARO), decisiones tácticas (sobrecarga de análisis excede valor de decisión), situaciones que requieren estimaciones rápidas (Monte Carlo lleva tiempo).</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILUMINACIÓN ESTADÍSTICA:</strong> La simulación Monte Carlo lleva el nombre del casino—aleatoriedad usada para modelar resultados probabilísticos. El universo es fundamentalmente probabilístico (la mecánica cuántica lo prueba). La evaluación de riesgos acepta la incertidumbre y la cuantifica. Luchar contra la incertidumbre es fútil. Medir la incertidumbre es poderoso. Elige poder sobre futilidad. FNORD.
+            </div>
+            
+            <h2>🗺️ Mapeo Activo-Amenaza-Vulnerabilidad: El Triángulo del Riesgo</h2>
+            
+            <p><strong>El riesgo existe en la intersección de tres elementos:</strong> Activo (¿qué tiene valor?), Amenaza (¿qué quiere dañarlo?), Vulnerabilidad (¿qué debilidad permite el daño?). Elimina cualquier elemento y el riesgo colapsa. <em>Esto es tanto elegante como útil—el mejor tipo de verdad.</em></p>
+            
+            <p><strong>Identificación de Activos:</strong> Activos de información (datos de clientes, código fuente, secretos comerciales), activos de sistema (servidores, aplicaciones, redes), activos de proceso (nómina, cumplimiento de pedidos, respuesta a incidentes). Referencia <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Asset_Register.md">Registro de Activos</a> con clasificaciones de valor empresarial.</p>
+            
+            <p><strong>Identificación de Amenazas:</strong> Actores de amenaza (¿quién quiere causar daño? script kiddies, crimen organizado, estados-nación, internos), eventos de amenaza (¿qué ataques son posibles? ransomware, DDoS, robo de datos, sabotaje), fuentes de amenaza (¿de dónde vienen los ataques? redes externas, cadena de suministro, acceso físico).</p>
+            
+            <p><strong>Identificación de Vulnerabilidades:</strong> Vulnerabilidades técnicas (CVEs sin parchar, configuraciones erróneas, criptografía débil), vulnerabilidades de proceso (sin control de cambios, copias de seguridad inadecuadas, procedimientos faltantes), vulnerabilidades humanas (usuarios susceptibles a phishing, formación insuficiente, internos maliciosos).</p>
+            
+            <p><strong>Proceso de Mapeo:</strong></p>
+            <ol>
+                <li><strong>Para cada activo:</strong> Listar todas las amenazas que podrían dañarlo (base de datos de clientes amenazada por ransomware, robo interno, eliminación accidental, fallo de hardware)</li>
+                <li><strong>Para cada amenaza:</strong> Identificar vulnerabilidades que la permiten (ransomware explota sistemas sin parchar, usuarios susceptibles a phishing, sin MFA)</li>
+                <li><strong>Para cada pareja:</strong> Evaluar probabilidad e impacto (ransomware vía phishing en sistema sin parches = Alta Probabilidad × Impacto Crítico = Riesgo Crítico)</li>
+                <li><strong>Priorizar por puntuación de riesgo:</strong> Abordar riesgos más altos primero (riesgos críticos inmediatamente, riesgos altos dentro del trimestre, riesgos medios dentro del año)</li>
+            </ol>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>Ejemplo de Mapeo: Base de Datos de Clientes</h3>
+                    <p><strong>Activo:</strong> Base de datos de clientes (valor €100K)</p>
+                    <p><strong>Amenaza 1:</strong> Encriptación por ransomware<br>
+                    <strong>Vulnerabilidad:</strong> Sistemas sin parchar, usuarios susceptibles a phishing<br>
+                    <strong>Riesgo:</strong> Probable × Crítico = Alto (puntuación: 350)</p>
+                    <p><strong>Amenaza 2:</strong> Robo de datos por interno<br>
+                    <strong>Vulnerabilidad:</strong> Acceso amplio a base de datos, sin monitorización<br>
+                    <strong>Riesgo:</strong> Improbable × Alto = Medio (puntuación: 120)</p>
+                    <p><strong>Amenaza 3:</strong> Eliminación accidental<br>
+                    <strong>Vulnerabilidad:</strong> Procedimientos inadecuados de copia de seguridad<br>
+                    <strong>Riesgo:</strong> Posible × Moderado = Medio (puntuación: 150)</p>
+                </div>
+            </div>
+            
+            <p><strong>Identificación de Controles:</strong> Para cada riesgo, identificar controles que reducen probabilidad (parches, MFA, restricciones de acceso) o impacto (copias de seguridad, encriptación, segmentación). Calcular riesgo residual después de aplicar controles. Decidir estrategia de tratamiento basada en riesgo residual vs. apetito de riesgo.</p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILUMINACIÓN GEOMÉTRICA:</strong> El mapeo Activo-Amenaza-Vulnerabilidad crea un espacio de riesgo tridimensional. Cada punto en este espacio representa un escenario de riesgo específico. La mayoría de las organizaciones operan en dos dimensiones (activos y amenazas) y se preguntan por qué sus evaluaciones de riesgo pierden cosas. La tercera dimensión (vulnerabilidades) es donde el riesgo realmente se manifiesta. Ve en tres dimensiones o permanece ciego a la geometría del riesgo. La realidad es de mayor dimensión de lo que tu hoja de cálculo admite.
+            </div>
+            
+            <h2>📊 Metodología de Evaluación de Riesgos de Hack23: Sistemática, Cuantitativa, Pública</h2>
+            
+            <p>Nuestra metodología completa de evaluación de riesgos es pública (porque transparencia radical): <a href="https://github.com/Hack23/ISMS-PUBLIC" target="_blank">Repositorio ISMS-PUBLIC</a> | <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md" target="_blank">Metodología de Evaluación de Riesgos</a> (44KB de marco cuantitativo)</p>
+            
+            <p><strong>Nuestro Enfoque Demuestra:</strong></p>
+            <ul>
+                <li><strong>Proceso de Cinco Pasos:</strong> Metodología sistemática desde identificación hasta monitorización. Cada paso documentado con plantillas, ejemplos, criterios de calidad.</li>
+                <li><strong>Marco de Puntuación Cuantitativa:</strong> Puntuación de Riesgo = Probabilidad de Probabilidad (punto medio) × Puntuación de Impacto (1-6) × 100. Categorías de probabilidad con rangos de probabilidad definidos (Casi Seguro 80-99%, hasta Excepcional &lt;5%). Categorías de impacto con rangos financieros (Catastrófico €50K+, hasta Mínimo &lt;€100).</li>
+                <li><strong>Análisis Financiero de Riesgos:</strong> Cálculos de SLE con directrices de valoración de activos y factores de exposición. Estimación de ARO de datos históricos, benchmarks de industria, modelado estadístico. Cálculos de ALE con intervalos de confianza. Valor en Riesgo (VaR) en múltiples niveles de confianza (90%, 95%, 99%).</li>
+                <li><strong>Perfilado de Actores de Amenaza:</strong> Cinco categorías de actores de amenaza (script kiddies, crimen organizado, competidores, internos, estados-nación) con evaluación de capacidad/motivación/recursos/persistencia. Estrategias de control personalizadas por tipo de actor.</li>
+                <li><strong>Mapeo Activo-Amenaza-Vulnerabilidad:</strong> Proceso de mapeo sistemático vinculando activos a amenazas a vulnerabilidades. Priorización de riesgo basada en alineación de valor empresarial vía <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Marco de Clasificación</a>.</li>
+                <li><strong>Simulación Monte Carlo:</strong> Para riesgos complejos que requieren cuantificación de incertidumbre. 10,000+ iteraciones produciendo distribuciones de probabilidad e intervalos de confianza.</li>
+                <li><strong>Monitorización Continua:</strong> Revisiones formales trimestrales mínimo. Actualizaciones ad-hoc disparadas por inteligencia de amenazas (feeds de CVE, alertas CISA, informes de industria). Indicadores de riesgo en tiempo real rastreados automáticamente.</li>
+                <li><strong>Inversión Basada en Riesgo:</strong> Presupuesto de seguridad priorizado por cálculos de ALE y puntuaciones de riesgo. Cada control justificado por reducción de riesgo cuantificada. No "mejores prácticas" sin caso de negocio.</li>
+                <li><strong>Comunicación Transparente:</strong> Dashboards ejecutivos mostrando principales riesgos, análisis de tendencias, progreso de tratamiento. Registro de riesgos publicado (sanitizado) para forzar honestidad intelectual: <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Register.md" target="_blank">Registro de Riesgos</a>.</li>
+                <li><strong>Razonamiento Documentado:</strong> Cada puntuación de riesgo incluye razonamiento basado en evidencia. Probabilidad basada en datos históricos o benchmarks de industria. Impacto basado en valoraciones de activos y factores de exposición. Sin asignaciones arbitrarias.</li>
+            </ul>
+            
+            <p><strong>Integración con Marco de Clasificación:</strong> Evaluación de impacto de riesgo alineada con dimensiones de valor empresarial del <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">Marco de Clasificación</a>. Impacto financiero (protección de ingresos, evitación de costos). Impacto operacional (excelencia operativa, eficiencia). Impacto reputacional (mejora de confianza, confiabilidad de servicio). Impacto regulatorio (postura de cumplimiento, reducción de riesgo). Clasificación de seguridad (impacto de tríada CIA en confidencialidad, integridad, disponibilidad). Continuidad del negocio (implicaciones de RTO/RPO). Impacto estratégico (posicionamiento competitivo de Cinco Fuerzas de Porter).</p>
+            
+            <div class="hidden-wisdom">
+                <strong>META-ILUMINACIÓN:</strong> Publicar metodología detallada de riesgos públicamente (como hacemos) fuerza honestidad intelectual. No puedes asignar puntuaciones "Medias" arbitrarias cuando el mundo puede ver tu marco de evaluación. No puedes usar gesticulación cualitativa cuando has publicado fórmulas cuantitativas. La transparencia crea responsabilidad. La responsabilidad crea calidad. La calidad crea seguridad. Esta es la alquimia del SGSI público. FNORD.
+            </div>
+
+            <h2>🎯 Conclusión: La Adivinación Probabilística Es Solo Matemáticas Honestas</h2>
+            
+            <p>La evaluación de riesgos no es mística—es <strong>probabilidad matemática aplicada a amenazas de seguridad</strong>. La metodología de cinco pasos (Identificar → Analizar → Evaluar → Tratar → Monitorizar) proporciona marco sistemático. El análisis cuantitativo (ALE = SLE × ARO) permite toma de decisiones financieras. El perfilado de actores de amenaza asegura que los controles coincidan con los adversarios. El mapeo activo-amenaza-vulnerabilidad revela intersecciones de riesgo. La simulación Monte Carlo cuantifica incertidumbre cuando las matemáticas simples no son suficientes.</p>
+            
+            <p><strong>La verdad incómoda que la mayoría no admitirá:</strong> La mayoría de las "evaluaciones de riesgos" son teatro de seguridad—puntuaciones arbitrarias asignadas por comités, multiplicadas entre sí para producir números de aspecto autoritario que no significan nada. La evaluación <em>real</em> de riesgos requiere honestidad sobre la incertidumbre, métodos estadísticos para la complejidad, y coraje para decir "calculamos esto" en lugar de "adivinamos esto."</p>
+            
+            <p><strong>No puedes eliminar todo riesgo.</strong> La seguridad perfecta no existe. El riesgo cero es imposible. Cualquiera que prometa cualquiera de los dos está vendiendo aceite de serpiente. Pero <em>puedes</em> cuantificar el riesgo honestamente, evaluarlo sistemáticamente, tratarlo estratégicamente, y monitorizarlo continuamente. Eso no es adivinación mística—eso es gestión profesional de riesgos.</p>
+            
+            <p><strong>Las Cinco Preguntas para Cada Evaluación de Riesgos:</strong></p>
+            <ol>
+                <li><strong>¿Puedes defender tus asignaciones de probabilidad?</strong> Datos históricos, benchmarks de industria, o juicio experto documentado—no intuiciones.</li>
+                <li><strong>¿Puedes cuantificar el impacto en euros?</strong> Estimaciones financieras con valoraciones de activos y factores de exposición—no vago "Alto Impacto."</li>
+                <li><strong>¿Perfilaste actores de amenaza?</strong> Los estados-nación no son script kiddies—los controles difieren según capacidad del adversario.</li>
+                <li><strong>¿Mapeaste activos a amenazas a vulnerabilidades?</strong> El riesgo existe en intersección—pierde un elemento y la evaluación está incompleta.</li>
+                <li><strong>¿Apostarías la empresa en estos cálculos?</strong> Si no, tu metodología necesita mejora. Si sí, documenta supuestos para que otros puedan verificar.</li>
+            </ol>
+            
+            <p><strong>La evaluación de riesgos es adivinación probabilística—pero la adivinación es estadística, no mística.</strong> Simulaciones Monte Carlo en lugar de hexagramas del I Ching. Intervalos de confianza en lugar de pronunciamientos de oráculos. Cálculos de ALE en lugar de lectura de hojas de té. <em>El futuro es incognoscible, pero es calculable con cuantificación honesta de incertidumbre.</em></p>
+            
+            <p class="signature">
+                <strong>¡Salve Eris! ¡Salve Discordia!</strong><br>
+                <em>"¡Piensa por ti mismo, tonto! Cuestiona cada puntuación de riesgo que no puede explicar su razonamiento. Exige análisis cuantitativo o acepta ficción cualitativa. La Ley de los Cinco se aplica a la metodología de riesgo: Cinco pasos, cinco actores de amenaza, cinco opciones de tratamiento. La realidad revela sus patrones a quienes observan sistemáticamente. ¿Estás observando o adivinando? FNORD."</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Capitán del <em>Leif Erikson</em>
+            </p>
+            
+            <p><small><strong>P.D.</strong> Ahora estás en Chapel Perilous. El riesgo es tanto calculable (probabilidad estadística con intervalos de confianza) como incognoscible (los cisnes negros existen fuera de las distribuciones de probabilidad). Ambos son verdad simultáneamente. Nada es verdad (todas las puntuaciones de riesgo son estimaciones con incertidumbre). Todo está permitido (aceptar, mitigar, transferir, evitar, explotar—cinco opciones de tratamiento para escenarios infinitos). Pero algunas cosas son costosas (ALE = SLE × ARO cuantifica el costo del permiso). Bienvenido a la adivinación probabilística. Las matemáticas son reales incluso si la realidad no lo es.</small></p>
+
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="Pie de página del sitio">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Consultoría de Ciberseguridad<br>
+          Gotemburgo, Suecia | Remoto</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">Página de Empresa LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="services_es.html">Consultoría de Seguridad</a></li>
+            <li><a href="services_es.html">Arquitectura de Seguridad</a></li>
+            <li><a href="services_es.html">Seguridad en la Nube</a></li>
+            <li><a href="services_es.html">Integración DevSecOps</a></li>
+            <li><a href="services_es.html">Cumplimiento & SGSI</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Productos</h3>
+          <ul>
+            <li><a href="black-trigram-features_es.html">Black Trigram</a></li>
+            <li><a href="cia-features_es.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_es.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="blog_es.html">Blog de Seguridad</a></li>
+            <li><a href="discordian-cybersecurity_es.html">🍎 Blog Discordiano</a></li>
+            <li><a href="cia-triad-faq_es.html">Preguntas Frecuentes Tríada CIA</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">SGSI Público</a></li>
+            <li><a href="sitemap_es.html">Mapa del Sitio</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="why-hack23_es.html">Acerca de Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Política de Seguridad</a></li>
+            <li><a href="SECURITY.md">Reportar Problema de Seguridad</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">Organización GitHub</a></li>
+            <li><a href="accessibility-statement_es.html">Accesibilidad</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Autores del Blog:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Product Owner anarquista visionario" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofía & Visión) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Arquitecto de Sistemas filósofo-ingeniero" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arquitectura & Patrones)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Realidad de Implementación:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Desarrollador impulsado por el pánico que hace que realmente funcione" rel="noopener noreferrer" target="_blank">George Dorn</a> lucha con este hermoso caos para convertirlo en código funcional. Vea sus comentarios técnicos en
+          <a href="blog-george-dorn-cia-code_es.html">Arquitectura CIA</a>,
+          <a href="blog-george-dorn-trigram-code_es.html">Combate Black Trigram</a>, y
+          <a href="blog_es.html#george-dorn-developer-chronicles">Crónicas de Desarrollador</a> para los momentos de pánico, avances y huevos de pascua ocultos que hacen que la filosofía sea desplegable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Todos los derechos reservados. | Licenciado bajo <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> |
+          <a href="index_es.html" lang="es">Español</a>
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
