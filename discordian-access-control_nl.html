@@ -279,7 +279,7 @@
 </head>
 <body>
   <!-- Breadcrumb Navigation -->
-  <nav aria-label="Breadcrumb">
+  <nav aria-label="Broodkruimelnavigatie">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
         <a href="/">Home</a>
@@ -323,16 +323,16 @@
       <p><strong>Behoefte aan expert begeleiding voor implementatie van zero trust toegangscontrole?</strong> <a href="why-hack23_nl.html">Ontdek waarom organisaties Hack23 kiezen</a> voor transparante, praktijkgerichte cybersecurity consulting.</p>
     </section>
     <section id="zero-trust">
-      <h2 class="panel-caption">Five Reasons "Trust But Verify" Is Half Wrong (Hint: Skip The Trust Part)</h2>
+      <h2 class="panel-caption">Vijf Redenen Waarom "Vertrouw Maar Verifieer" Half Fout Is (Hint: Sla Het Vertrouwendeel Over)</h2>
       
-      <p>"Zero trust" sounds paranoid? GOOD. Paranoia is pattern-matching reality. Here's systematic implementation for psychonauts:</p>
+      <p>"Zero trust" klinkt paranoïde? GOED. Paranoia is patroonherkenning van de realiteit. Hier is systematische implementatie voor psychonauten:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🔐 Verify Every Request (Yes, EVERY)</h3>
-          <p><strong>AWS Identity Center SSO + MFA on EVERYTHING.</strong> No trust. No "you're on VPN so chill." No "but it's just dev." EVERY request challenged. ALWAYS. 100% MFA coverage monitored real-time. Hardware MFA for critical (AWS root, financial—YubiKey or bust). TOTP for high (dev pipeline—Authy works). Platform native for public (marketing—built-in is fine). The network perimeter is DEAD. Long live identity verification.</p>
-          <p class="hidden-wisdom"><em>The "zero" in zero trust is LITERAL. Network location = meaningless. VPN = encrypted untrust. Identity Center SSO = identity IS the perimeter. MFA = proof you're you. Are you paranoid enough to challenge yourself? FNORD.</em></p>
+          <h3>1. 🔐 Verifieer Elk Verzoek (Ja, ELK)</h3>
+          <p><strong>AWS Identity Center SSO + MFA op ALLES.</strong> Geen vertrouwen. Geen "je bent op VPN dus relax." Geen "maar het is maar dev." ELK verzoek uitgedaagd. ALTIJD. 100% MFA-dekking real-time gemonitord. Hardware MFA voor kritiek (AWS root, financieel—YubiKey of bust). TOTP voor hoog (dev pipeline—Authy werkt). Platform native voor publiek (marketing—ingebouwd is prima). De netwerkperimeter is DOOD. Lang leve identiteitsverificatie.</p>
+          <p class="hidden-wisdom"><em>De "zero" in zero trust is LETTERLIJK. Netwerklocatie = betekenisloos. VPN = encrypted untrust. Identity Center SSO = identiteit IS de perimeter. MFA = bewijs dat jij jij bent. Ben je paranoïde genoeg om jezelf uit te dagen? FNORD.</em></p>
         </div>
         
         <div class="card integrity-card">
@@ -418,58 +418,58 @@
         </tbody>
       </table>
       
-      <p><strong>Access Control Metrics (Real-Time Monitoring):</strong></p>
+      <p><strong>Toegangscontrole Metrieken (Real-Time Monitoring):</strong></p>
       <ul>
-        <li><strong>MFA Coverage:</strong> Target 100%, alert threshold &lt;100%, real-time monitoring</li>
-        <li><strong>Dormant Accounts:</strong> Target 0, unused >90 days, weekly reviews</li>
-        <li><strong>Failed Authentication:</strong> Alert on 5+ failures in 15 minutes (potential attack)</li>
-        <li><strong>Privilege Escalation:</strong> All changes logged and reviewed monthly</li>
-        <li><strong>Session Violations:</strong> Automatic logout on timeout (no extensions)</li>
+        <li><strong>MFA-Dekking:</strong> Doel 100%, waarschuwingsdrempel &lt;100%, real-time monitoring</li>
+        <li><strong>Slapende Accounts:</strong> Doel 0, ongebruikt >90 dagen, wekelijkse reviews</li>
+        <li><strong>Gefaalde Authenticatie:</strong> Waarschuwing bij 5+ fouten in 15 minuten (potentiële aanval)</li>
+        <li><strong>Privilege Escalatie:</strong> Alle wijzigingen gelogd en maandelijks gereviewed</li>
+        <li><strong>Sessie Overtredingen:</strong> Automatische logout bij timeout (geen extensies)</li>
       </ul>
       
-      <p class="hidden-wisdom"><em>META-ILLUMINATION: Classification-driven access means privileges match risk. Extreme assets get extreme controls. Public assets get reasonable controls. Not all systems need hardware MFA—but all need appropriate controls.</em></p>
+      <p class="hidden-wisdom"><em>META-VERLICHTING: Classificatie-gedreven toegang betekent privileges komen overeen met risico. Extreme assets krijgen extreme controls. Publieke assets krijgen redelijke controls. Niet alle systemen hebben hardware MFA nodig—maar alle hebben passende controls nodig.</em></p>
     </section>
     
     <section id="authentication">
-      <h2 class="panel-caption">Multi-Factor Authentication: Not Optional, Not Negotiable</h2>
+      <h2 class="panel-caption">Multi-Factor Authenticatie: Niet Optioneel, Niet Onderhandelbaar</h2>
       
-      <p><strong>MFA isn't optional.</strong> Passwords alone are security theater. At Hack23, we enforce MFA across all systems with classification-appropriate methods:</p>
+      <p><strong>MFA is niet optioneel.</strong> Alleen wachtwoorden zijn beveiligingstheater. Bij Hack23 dwingen we MFA af over alle systemen met classificatie-passende methoden:</p>
       
-      <p><strong>🔐 MFA Implementation by System Type:</strong></p>
+      <p><strong>🔐 MFA Implementatie per Systeemtype:</strong></p>
       <ul>
-        <li><strong>AWS Root Account:</strong> Hardware MFA (YubiKey) + recovery codes in secure vault. Never used for daily operations (Identity Center SSO instead).</li>
-        <li><strong>AWS Identity Center:</strong> Identity provider MFA + SSO. Central authentication point for all AWS accounts.</li>
-        <li><strong>GitHub Organizations:</strong> TOTP required (Authy/Google Authenticator) + SSH keys for git operations. Security keys supported.</li>
-        <li><strong>Financial Systems:</strong> Provider MFA (Stripe, payment gateways) + hardware/SMS backup. Monthly access reviews.</li>
-        <li><strong>Development Tools:</strong> Platform-native MFA (SonarCloud, Snyk, FOSSA). TOTP preferred, SMS acceptable.</li>
-        <li><strong>Marketing Platforms:</strong> Platform-native MFA. Annual reviews sufficient for public-classified systems.</li>
+        <li><strong>AWS Root Account:</strong> Hardware MFA (YubiKey) + herstelcodes in veilige kluis. Nooit gebruikt voor dagelijkse operaties (Identity Center SSO in plaats daarvan).</li>
+        <li><strong>AWS Identity Center:</strong> Identity provider MFA + SSO. Centraal authenticatiepunt voor alle AWS accounts.</li>
+        <li><strong>GitHub Organizations:</strong> TOTP vereist (Authy/Google Authenticator) + SSH keys voor git operaties. Security keys ondersteund.</li>
+        <li><strong>Financiële Systemen:</strong> Provider MFA (Stripe, payment gateways) + hardware/SMS backup. Maandelijkse toegangsreviews.</li>
+        <li><strong>Ontwikkeltools:</strong> Platform-native MFA (SonarCloud, Snyk, FOSSA). TOTP voorkeur, SMS acceptabel.</li>
+        <li><strong>Marketing Platforms:</strong> Platform-native MFA. Jaarlijkse reviews voldoende voor publiek-geclassificeerde systemen.</li>
       </ul>
       
-      <p><strong>The Five Factors of Not Getting Pwned:</strong></p>
+      <p><strong>De Vijf Factoren van Niet Gehackt Worden:</strong></p>
       <ul>
-        <li><strong>Something you know</strong> (password) — Easily stolen, phished, guessed. Never used alone.</li>
-        <li><strong>Something you have</strong> (hardware token) — YubiKey for AWS root. Better than SMS, losable but replaceable.</li>
-        <li><strong>Something you are</strong> (biometric) — Not used (can't change if compromised, privacy concerns).</li>
-        <li><strong>Somewhere you are</strong> (geolocation) — IP addresses lie. Not relied upon for authentication.</li>
-        <li><strong>Something you do</strong> (behavior patterns) — ML-based, fallible but useful for anomaly detection.</li>
+        <li><strong>Iets dat je weet</strong> (wachtwoord) — Gemakkelijk gestolen, gephisht, geraden. Nooit alleen gebruikt.</li>
+        <li><strong>Iets dat je hebt</strong> (hardware token) — YubiKey voor AWS root. Beter dan SMS, verliesbaar maar vervangbaar.</li>
+        <li><strong>Iets dat je bent</strong> (biometrisch) — Niet gebruikt (kan niet veranderen indien gecompromitteerd, privacy zorgen).</li>
+        <li><strong>Ergens waar je bent</strong> (geolocatie) — IP-adressen liegen. Niet vertrouwd voor authenticatie.</li>
+        <li><strong>Iets dat je doet</strong> (gedragspatronen) — ML-gebaseerd, feilbaar maar nuttig voor anomalie detectie.</li>
       </ul>
       
-      <p><strong>Use at least two factors.</strong> Three is better for critical systems (AWS Identity Center = IdP password + IdP MFA + SSO). One factor is negligence.</p>
+      <p><strong>Gebruik minimaal twee factoren.</strong> Drie is beter voor kritieke systemen (AWS Identity Center = IdP wachtwoord + IdP MFA + SSO). Eén factor is nalatigheid.</p>
     </section>
     <section id="conclusion">
-      <h2 class="panel-caption">Welkom bij Chapel Perilous: Access Control Is Authority Control</h2>
+      <h2 class="panel-caption">Welkom bij Chapel Perilous: Toegangscontrole Is Autoriteitscontrole</h2>
       
-      <p><strong>Niets is waar. Alles is toegestaan.</strong> Except access without identity verification, classification-appropriate MFA, and systematic audit logging—that's not zero trust, that's zero security.</p>
+      <p><strong>Niets is waar. Alles is toegestaan.</strong> Behalve toegang zonder identiteitsverificatie, classificatie-passende MFA, en systematische audit logging—dat is geen zero trust, dat is zero security.</p>
       
-      <p>Most organizations claim "zero trust" while running VPN-based perimeter security. They say "MFA required" but allow SMS fallback for everything. They perform annual access reviews when quarterly is minimum. They trust network location instead of identity verification.</p>
+      <p>De meeste organisaties claimen "zero trust" terwijl ze VPN-gebaseerde perimeter security draaien. Ze zeggen "MFA vereist" maar staan SMS fallback toe voor alles. Ze voeren jaarlijkse toegangsreviews uit wanneer kwartaal minimum is. Ze vertrouwen netwerklocatie in plaats van identiteitsverificatie.</p>
       
-      <p>We implement zero trust through systematic controls. <strong>AWS Identity Center SSO</strong> for centralized identity management. <strong>100% MFA coverage</strong> with classification-appropriate methods (hardware for critical, TOTP for high, platform native for public). <strong>90-day dormant account reviews</strong> with weekly monitoring and zero-tolerance targets. <strong>Semi-annual policy reviews</strong> (Version 2.2, next review: 2026-02-20). <strong>Classification-driven access matrix</strong> aligning privileges with business impact.</p>
+      <p>Wij implementeren zero trust door systematische controls. <strong>AWS Identity Center SSO</strong> voor gecentraliseerd identiteitsbeheer. <strong>100% MFA-dekking</strong> met classificatie-passende methoden (hardware voor kritiek, TOTP voor hoog, platform native voor publiek). <strong>90-dagen slapende account reviews</strong> met wekelijkse monitoring en zero-tolerance doelen. <strong>Semi-jaarlijkse beleidsreviews</strong> (Versie 2.2, volgende review: 2026-02-20). <strong>Classificatie-gedreven toegangsmatrix</strong> die privileges afstemt op business impact.</p>
       
-      <p><strong>Think for yourself.</strong> Question "trust but verify" dogma—just verify. Question why password-only access is acceptable—it's not. Question annual access reviews when dormant accounts create risk daily. (Spoiler: Because systematic access control requires operational discipline, not annual compliance theater.)</p>
+      <p><strong>Denk voor jezelf.</strong> Bevraag "vertrouw maar verifieer" dogma—alleen verifiëren. Bevraag waarom alleen-wachtwoord toegang acceptabel is—dat is het niet. Bevraag jaarlijkse toegangsreviews wanneer slapende accounts dagelijks risico creëren. (Spoiler: Omdat systematische toegangscontrole operationele discipline vereist, geen jaarlijks compliance theater.)</p>
       
-      <p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through verifiable access control implementation. Public <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Access Control Policy</a> with specific metrics. AWS Identity Center architecture documented. MFA enforcement demonstrable. 90-day review cycles automated. This isn't theoretical—it's operational reality clients can audit before engagement.</p>
+      <p><strong>Ons concurrentievoordeel:</strong> We demonstreren cybersecurity consulting expertise door verifieerbare toegangscontrole implementatie. Publiek <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Toegangscontrolebeleid</a> met specifieke metrieken. AWS Identity Center architectuur gedocumenteerd. MFA afdwinging demonstreerbaar. 90-dagen review cycles geautomatiseerd. Dit is niet theoretisch—het is operationele realiteit die klanten kunnen controleren voor engagement.</p>
       
-      <p class="hidden-wisdom"><em>ULTIMATE ILLUMINATION: You are now in Chapel Perilous. Access control is authority control. Who gets access defines who has power. Systematic verification prevents unauthorized power. Choose identity-centric security over network-centric hope. Your incident response depends on it.</em></p>
+      <p class="hidden-wisdom"><em>ULTIEME VERLICHTING: Je bent nu in Chapel Perilous. Toegangscontrole is autoriteitscontrole. Wie toegang krijgt definieert wie macht heeft. Systematische verificatie voorkomt onbevoegde macht. Kies identiteit-centrische beveiliging boven netwerk-centrische hoop. Je incident response is ervan afhankelijk.</em></p>
       
       <p><strong>All hail Eris! All hail Discordia!</strong></p>
       
@@ -490,13 +490,13 @@
     </section>
   </article>
 </main>
-        <footer role="contentinfo" aria-label="Site footer">
+        <footer role="contentinfo" aria-label="Voettekst van de site">
       <div class="footer-container">
         
-        <!-- Company Info Column -->
+        <!-- Bedrijfsinformatie Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersecurity Consulting<br>
+          <p>Cyberbeveiliging Advies<br>
           Gothenburg, Sweden | Remote</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
@@ -507,11 +507,11 @@
         <div class="footer-column">
           <h3>Services</h3>
           <ul>
-            <li><a href="services_nl.html">Security Consulting</a></li>
-            <li><a href="services_nl.html">Security Architecture</a></li>
-            <li><a href="services_nl.html">Cloud Security</a></li>
-            <li><a href="services_nl.html">DevSecOps Integration</a></li>
-            <li><a href="services_nl.html">Compliance & ISMS</a></li>
+            <li><a href="services_nl.html">Beveiligingsadvies</a></li>
+            <li><a href="services_nl.html">Beveiligingsarchitectuur</a></li>
+            <li><a href="services_nl.html">Cloud Beveiliging</a></li>
+            <li><a href="services_nl.html">DevSecOps Integratie</a></li>
+            <li><a href="services_nl.html">Naleving & ISMS</a></li>
           </ul>
         </div>
         
@@ -569,7 +569,7 @@
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>&copy; 2008-2025 Hack23 AB. Alle rechten voorbehouden. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
         <p>
           <a href="index_nl.html" lang="nl">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 

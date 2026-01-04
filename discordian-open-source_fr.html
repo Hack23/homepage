@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique Open Source | Standards OpenSSF & SLSA | Hack23</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta name="description" content="OpenSSF Scorecard ≥7.0, SLSA Niveau 3, CII Best Practices, portes SonarCloud. Badges publics démontrent excellence sécurité.">
+	<meta name="twitter:description" content="OpenSSF Scorecard ≥7.0, SLSA Niveau 3, CII Best Practices, portes SonarCloud. Badges publics démontrent excellence sécurité.">
+<meta name="keywords" content="politique open source, sécurité open source, transparence radicale, revue code, pensez par vous-même, questionnez logiciel propriétaire">
+<meta name="robots" content="index, follow">
+<meta name="author" content="James Pether Sörling">
+<meta property="og:title" content="Politique Open Source : Confiance Par La Transparence">
+<meta property="og:description" content="Questionnez l'autorité du code propriétaire. Pensez par vous-même sur sécurité open source. Transparence radicale développement logiciel.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hack23.com/discordian-open-source.html">
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-open-source_fr.html">
+	<!-- Hreflang tags for language alternatives -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Open Source Policy: Trust Through Transparency",
+      "description": "Question authority over proprietary code. Think for yourself about open source security. Radical transparency in software development.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-open-source.html"
+      },
+      "keywords": "open source, code review, transparency, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1230,
+      "articleBody": "Think for yourself, schmuck! When vendors say \"trust our security\" without providing evidence, they're selling faith, not capability. At Hack23, we provide public evidence you can verify yourself: Ope...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "fr",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-open-source.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Open Source Policy",
+          "item": "https://hack23.com/discordian-open-source.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-open-source.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-open-source_fr.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-open-source_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-open-source_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-open-source.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Fil d'Ariane">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Accueil</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Politique Open Source
+      </li>
+    </ol>
+  </nav>
+
+<header>
+  <div class="logo-container">
+    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+  </div>
+  <h1>Discordian Cybersecurity</h1>
+  <div class="app-link">
+    <a href="index.html">Accueil</a>
+    <a href="discordian-cybersecurity.html">Manifesto</a>
+    <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">ISMS Open Source</a>
+  </div>
+</header>
+<main>
+  <article>
+    <h2 class="header">🔓 Politique Open Source : Confiance Par La Transparence</h2>
+    
+    <section id="introduction">
+      <h2 class="panel-caption">Démontrer l'Excellence en Sécurité Par Des Preuves Publiques</h2>
+      
+      <p><strong>Pensez par vous-même !</strong> Quand les fournisseurs disent "faites confiance à notre sécurité" sans fournir de preuves, ils vendent la foi, pas la capacité. Chez Hack23, nous fournissons des preuves publiques que vous pouvez vérifier vous-même : OpenSSF Scorecard (≥7.0 signifie sécurité systématique, pas conformité cases à cocher), attestations SLSA Niveau 3 (preuve cryptographique que builds n'ont pas été altérés), badges CII Best Practices (maturité opérationnelle, pas promesses aspirationnelles), et portes qualité SonarCloud (zéro vulnérabilités high/critical ou pas de merge—aucune exception). <em>Ne faites pas confiance—vérifiez. Nous facilitons la vérification car nous n'avons rien à cacher et tout à prouver.</em></p>
+      
+      <p><strong>Rien n'est vrai. Tout est permis.</strong> Y compris vérifier nos affirmations de sécurité vous-même. Chaque dépôt a des badges publics démontrant validation sécurité continue. Pas affirmations marketing—preuves automatisées.</p>
+      
+      <p>Notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">Politique Open Source</a> n'est pas philosophie—c'est implémentation sécurité systématique avec résultats mesurables. Tous les dépôts Hack23 maintiennent SECURITY_ARCHITECTURE.md (état actuel), FUTURE_SECURITY_ARCHITECTURE.md (feuille de route), SECURITY.md (divulgation vulnérabilités), et WORKFLOWS.md (documentation CI/CD). Ceci démontre expertise conseil cybersécurité par implémentation transparente.</p>
+      
+      <p class="hidden-wisdom"><em>Illumination : "Faites-moi confiance" est ce que disent les fournisseurs sans preuves. "Voici le badge montrant OpenSSF Scorecard 7.2" est à quoi ressemble la confiance. Choisissez preuves vérifiables plutôt que marketing.</em></p>
+    
+      
+      <p><strong>Besoin de conseils experts pour implémenter votre SGSI ?</strong> <a href="why-hack23.html">Découvrez pourquoi les organisations choisissent Hack23</a> pour conseil cybersécurité transparent mené par des praticiens.</p>
+    </section>
+
+    <section id="security-badges">
+      <h2 class="panel-caption">Les Cinq Piliers de Preuves Sécurité Publiques</h2>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🏆 OpenSSF Scorecard ≥7.0</h3>
+          <p><strong>Évaluation sécurité chaîne d'approvisionnement.</strong> Évaluation automatisée pratiques sécurité : revue code, tests CI, SAST, gestion vulnérabilités, mises à jour dépendances, protection branches, permissions jetons. Score ≥7.0 démontre processus sécurité matures.</p>
+          <p><strong>Preuves en direct :</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA : 7.2</a> | <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram">Black Trigram</a> | <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a></p>
+          <p class="hidden-wisdom"><em>Illumination : OpenSSF Scorecard ne peut être manipulé. Il vérifie pratiques réelles, pas affirmations marketing. 7.0+ signifie sécurité systématique, pas théâtre sécurité.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🔒 SLSA Niveau 3 Provenance Build</h3>
+          <p><strong>Attestation intégrité chaîne d'approvisionnement.</strong> Attestations build signées cryptographiquement prouvant artefacts n'ont pas été altérés. SLSA Niveau 3 nécessite provenance non falsifiable, builds hermétiques, mapping source-binaire vérifié.</p>
+          <p><strong>Vérification :</strong> <a href="https://github.com/Hack23/cia/attestations">Attestations CIA</a> | <a href="https://github.com/Hack23/blacktrigram/attestations">Attestations Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/attestations">Attestations CIA CM</a></p>
+          <p class="hidden-wisdom"><em>Illumination : SLSA Niveau 3 signifie nous pouvons prouver les binaires que vous téléchargez proviennent de notre code source. Pas attaques substitution. Pas altération. Cryptographiquement vérifié.</em></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. ✅ CII Best Practices (Passing+)</h3>
+          <p><strong>Maturité sécurité open source.</strong> Badge Core Infrastructure Initiative nécessite documentation, tests, réponse sécurité, normes qualité. Niveau "Passing" démontre excellence baseline. Nos projets atteignent ceci par pratiques systématiques, pas conformité cases à cocher.</p>
+          <p><strong>Statut badge :</strong> <a href="https://bestpractices.coreinfrastructure.org/projects/770">CIA : Passing</a> | <a href="https://bestpractices.coreinfrastructure.org/projects/10777">Black Trigram : Passing</a> | <a href="https://bestpractices.coreinfrastructure.org/projects/10365">CIA CM : Passing</a></p>
+          <p class="hidden-wisdom"><em>Illumination : CII Best Practices nécessite pratiques réelles, pas plans. Tests automatisés. Processus documentés. Réponse vulnérabilités publique. Preuves plutôt que promesses.</em></p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 📊 Portes Qualité SonarCloud (Passed)</h3>
+          <p><strong>Validation qualité code et sécurité.</strong> Scan SAST automatisé à chaque commit. Porte qualité impose : zéro vulnérabilités high/critical, &lt;3% duplication, ≥80% couverture, hotspots sécurité révisés. Nos projets maintiennent statut "Passed" par application qualité continue.</p>
+          <p><strong>Statut qualité :</strong> <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia">CIA</a> | <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram">Black Trigram</a> | <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia-compliance-manager">CIA CM</a></p>
+          <p class="hidden-wisdom"><em>Illumination : Portes qualité qui filtrent vraiment. Build échoué = pas de merge. Aucune exception. Pas "on corrigera plus tard". Qualité maintenant ou pas de déploiement.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. ⚖️ Conformité Licences FOSSA</h3>
+          <p><strong>Scan licences automatisé.</strong> Surveillance continue toutes dépendances pour conformité licences. FOSSA génère SBOM (Software Bill of Materials), identifie conflits licences, assure seulement licences approuvées. Badge public signifie conformité automatisée, pas audits manuels qui deviennent obsolètes.</p>
+          <p><strong>Statut conformité :</strong> <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FHack23%2Fcia">CIA</a> | <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram">Black Trigram</a> | <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">CIA CM</a></p>
+          <p class="hidden-wisdom"><em>Illumination : Conformité licences par automation continue. Dépendances changent hebdomadairement. Audits manuels échouent mensuellement. Automation évolue. Manuel non.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mandatory-docs">
+      <h2 class="panel-caption">Documentation Sécurité Obligatoire : Pas Optionnel, Pas Suggestions</h2>
+      
+      <p><strong>Chaque dépôt Hack23 DOIT maintenir documentation sécurité complète selon notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md">Politique Développement Sécurisé</a> :</strong></p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Objectif</th>
+            <th>Exigences Contenu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="roi-high">
+            <td><strong>SECURITY_ARCHITECTURE.md</strong></td>
+            <td>Implémentation sécurité actuelle</td>
+            <td>Diagrammes Mermaid, flux authentification, protection données, atténuations menaces</td>
+          </tr>
+          <tr class="roi-high">
+            <td><strong>FUTURE_SECURITY_ARCHITECTURE.md</strong></td>
+            <td>Planned improvements roadmap</td>
+            <td>Enhancement timeline, migration paths, technical debt reduction plans</td>
+          </tr>
+          <tr class="roi-exceptional">
+            <td><strong>SECURITY.md</strong></td>
+            <td>Coordinated vulnerability disclosure</td>
+            <td>Reporting process, response SLAs, PGP keys, scope boundaries</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>WORKFLOWS.md</strong></td>
+            <td>CI/CD pipeline documentation</td>
+            <td>Security gates, test coverage, deployment procedures, rollback protocols</td>
+          </tr>
+          <tr class="roi-moderate">
+            <td><strong>THREAT_MODEL.md</strong></td>
+            <td>STRIDE threat analysis</td>
+            <td>Attack trees, threat scenarios, mitigation strategies, residual risks</td>
+          </tr>
+          <tr class="roi-basic">
+            <td><strong>CRA-ASSESSMENT.md</strong></td>
+            <td>EU Cyber Resilience Act compliance</td>
+            <td>Conformity assessment, security requirements, update mechanisms</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Evidence of compliance:</strong> Every major Hack23 project maintains these documents. <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">CIA</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md">Black Trigram</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md">CIA Compliance Manager</a></p>
+      
+      <p class="hidden-wisdom"><em>META-ILLUMINATION: Security documentation you never update is security theater. Living documents updated with every security change is operational reality. Our docs are versioned, reviewed, and continuously maintained.</em></p>
+    </section>
+    
+    <section id="our-approach">
+      <h2 class="panel-caption">Radical Transparency: Everything Open by Default</h2>
+      
+      <p><strong>At Hack23, transparency isn't philosophy—it's competitive advantage</strong> through demonstrable security excellence:</p>
+      
+      <ul>
+        <li><strong>All Projects Public:</strong> Every repository at <a href="https://github.com/Hack23">github.com/Hack23</a> demonstrates our security practices. Clients can verify our capabilities before engagement.</li>
+        <li><strong>All Policies Public:</strong> Complete ISMS at <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS-PUBLIC</a>. 33 policy documents. Zero proprietary security. Radical transparency builds trust.</li>
+        <li><strong>All Badges Public:</strong> OpenSSF Scorecard, SLSA, CII, SonarCloud, FOSSA—automated evidence, not marketing claims.</li>
+        <li><strong>All Architecture Public:</strong> SECURITY_ARCHITECTURE.md with Mermaid diagrams in every repo. Non-technical audiences get dedicated documentation portals.</li>
+        <li><strong>All Vulnerabilities Public:</strong> Security advisories, CVE disclosures, incident post-mortems (sanitized). Learn from our findings.</li>
+      </ul>
+      
+      <p><strong>Why this works:</strong> Attackers already have tools to analyze your systems. Hiding architecture from users doesn't hide it from attackers—it just prevents your users from understanding security. We choose transparency over security through obscurity.</p>
+      
+      <p><strong>All hail Eris!</strong> Chaos teaches: hiding your code prevents defense, not attacks. Public code enables community security review. Private code enables only vendor review (which vendors skip when deadlines loom).</p>
+      
+      <p class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> <em>The security-industrial complex sells "proprietary threat intelligence" about vulnerabilities everyone could already see if code were public. Transparency destroys their business model. That's feature, not bug. Question who benefits from code secrecy.</em></p>
+    </section>
+
+    <section id="conclusion">
+      <h2 class="panel-caption">Welcome to Chapel Perilous: Open Source as Competitive Advantage</h2>
+      
+      <p><strong>Nothing is true. Everything is permitted.</strong> Including verifying that Hack23's security claims are backed by public evidence. OpenSSF Scorecard ≥7.0. SLSA Level 3. CII Best Practices. SonarCloud quality gates passed. FOSSA license compliance. All visible. All automated. All verifiable.</p>
+      
+      <p>Most security vendors hide behind proprietary code and NDAs. They say "trust us." We say "verify us"—and provide the badges, documentation, and public repositories to do so. This isn't naive transparency. This is <strong>competitive advantage through demonstrable expertise</strong>.</p>
+      
+      <p><strong>Our open source approach:</strong></p>
+      <ul>
+        <li><strong>Five Public Security Badges</strong> per repository (OpenSSF, SLSA, CII, SonarCloud, FOSSA)</li>
+        <li><strong>Mandatory Security Documentation</strong> (SECURITY_ARCHITECTURE.md, THREAT_MODEL.md, SECURITY.md, WORKFLOWS.md)</li>
+        <li><strong>Automated Evidence Generation</strong> (badges update continuously, not quarterly audits)</li>
+        <li><strong>Supply Chain Transparency</strong> (SBOM generation, dependency scanning, build provenance)</li>
+        <li><strong>Public ISMS</strong> (33 policy documents demonstrating systematic security management)</li>
+      </ul>
+      
+      <p><strong>Think for yourself.</strong> Question vendors who say "our security is proprietary." Ask why attackers can't reverse engineer their binaries (they can). Ask why transparency threatens their security (it doesn't—it threatens their marketing). Choose vendors who show their work.</p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>You are now in Chapel Perilous. Security through obscurity relies on attacker laziness. Security through transparency relies on community vigilance. One scales. One doesn't. Attackers aren't lazy. Communities scale infinitely. Choose infinite scaling over hopeful obscurity.</em></p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Explore our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">complete Open Source Policy</a> with requirements, governance artifacts, security implementation standards, and badge requirements. Public. Verifiable. Living documentation updated continuously.</p>
+      
+      <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"Transparency is competitive advantage. Public evidence beats private promises. OpenSSF Scorecard ≥7.0 means systematic security, not security theater."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+
+    <section id="transparency-resistance">
+      <h2 class="panel-caption">Transparency as Resistance</h2>
+      
+      <p><strong>Question authority.</strong> Especially authority that insists code must be secret to be secure.</p>
+      
+      <p>Open source isn't perfect. But it's <strong>auditable</strong>. Verifiable. Forkable. Unfucked-with-able by single vendors or three-letter agencies.</p>
+      
+      <p><strong>All hail Eris! All hail Discordia!</strong></p>
+      
+      <p>Read our full <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md">Open Source Policy on GitHub</a>. Public. Auditable. Practice what we preach.</p>
+      
+      <p class="hidden-wisdom"><strong>ULTIMATE ILLUMINATION:</strong> <em>The question isn't "Is open source secure?" The question is "How do you audit security in software you can't see?" The answer: You don't. You trust. And trust is a vulnerability.</em></p>
+      
+      <p class="signature">— Hagbard Celine<br>Captain of the <em>Leif Erikson</em><br><br><em>"Code you can't audit is code you can't trust."</em><br><br>🍎 23 FNORD 5</p>
+    </section>
+  </article>
+</main>
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

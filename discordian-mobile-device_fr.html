@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sécurité des Appareils Mobiles | BYOD avec Contrôles Forts | Hack23</title>
+    <meta name="description" content="Stratégie mobile entreprise individuelle : MFA obligatoire (TOTP, jetons matériels), chiffrement complet, SSO AWS Identity Center. Pas de MDM d'entreprise nécessaire.">
+	<meta name="twitter:description" content="Stratégie mobile entreprise individuelle : MFA obligatoire (TOTP, jetons matériels), chiffrement complet, SSO AWS Identity Center. Pas de MDM d'entreprise nécessaire.">
+    <meta name="keywords" content="gestion appareils mobiles, MDM, BYOD, sécurité mobile, SGSI, sécurité discordienne">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling">
+    <meta property="og:title" content="Gestion des Appareils Mobiles : BYOD Signifie Apportez Votre Propre Désastre">
+    <meta property="og:description" content="Les appareils mobiles contournent les périmètres. Cinq contrôles MDM, conteneurisation.">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="sv_SE">
+	<meta property="og:locale:alternate" content="zh_CN">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hack23.com/discordian-mobile-device.html">
+    <meta property="og:image" content="https://hack23.com/blog.webp">
+    
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hack23.com/blog.webp">
+<meta name="twitter:image:alt" content="Hack23 Security Blog">
+<meta name="twitter:site" content="@hack23ab">
+<meta name="twitter:creator" content="@jamessorling">
+
+<link rel="canonical" href="https://hack23.com/discordian-mobile-device_fr.html">
+	<!-- Hreflang tags for language alternatives -->    <link rel="stylesheet" href="styles.css">
+    
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Gestion des Appareils Mobiles : BYOD Signifie Apportez Votre Propre Désastre",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-mobile-device.html"
+      },
+      "description": "Les appareils mobiles contournent les périmètres. Approche entreprise individuelle : MFA obligatoire (couverture 100%), chiffrement complet, SSO AWS Identity Center, délais d'expiration des sessions selon classification (1-24 heures). Pas de MDM d'entreprise pour opération individuelle.",
+      "keywords": "gestion appareils mobiles, MDM, BYOD, sécurité mobile, SGSI",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1044,
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "fr",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-mobile-device.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mobile Device Management",
+          "item": "https://hack23.com/discordian-mobile-device.html"
+        }
+      ]
+    }
+  ]
+}</script>
+	<link rel="alternate" hreflang="en" href="https://hack23.com/discordian-mobile-device.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/discordian-mobile-device_fr.html">
+<link rel="alternate" hreflang="sv" href="https://hack23.com/discordian-mobile-device_sv.html">
+<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/discordian-mobile-device_sv.html">
+<link rel="alternate" hreflang="x-default" href="https://hack23.com/discordian-mobile-device.html">
+</head>
+<body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Fil d'Ariane">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Accueil</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blog</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Gestion des Appareils Mobiles
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+        <h1>🍎 Hack23 Discordian Cybersecurity Blog</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="discordian-cybersecurity.html">Manifesto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Gestion des Appareils Mobiles : BYOD Signifie Apportez Votre Propre Désastre</h2>
+            
+            <p class="subtitle"><em>"Rien n'est vrai. Tout est permis. Votre téléphone contourne le pare-feu."</em></p>
+
+            <h2>📱 Le Problème : Les Téléphones Sont des Ordinateurs (Et Vous Les Portez Partout)</h2>
+            
+            <p>Les appareils mobiles contournent les périmètres. Ils parcourent les réseaux. Ils installent des applications. Ils se perdent. Ils se font voler. Ils accèdent aux e-mails d'entreprise puis visitent des sites Web malveillants. <strong>Chaque téléphone est un vecteur de violation potentiel.</strong> <strong>FNORD—et vous dormez à côté, le déverrouillez avec votre visage et lui confiez vos secrets les plus sombres.</strong></p>
+            
+            <p><strong>BYOD signifie "Apportez Votre Propre Désastre".</strong> Téléphones personnels accédant aux données d'entreprise. Appareils non gérés sur réseaux d'entreprise. Shadow IT dans la poche de chacun. <strong>Êtes-vous assez paranoïaque ? Parce que cette application TikTok lit votre presse-papiers en ce moment même.</strong></p>
+            
+            <p>Chez Hack23, la gestion des appareils mobiles reflète la réalité : <strong>entreprise suédoise individuelle sans employés.</strong> Pas de déploiement MDM d'entreprise. Pas de plateforme de conteneurisation. Pas de gestion de flotte. Juste des contrôles d'accès stricts, MFA obligatoire, chiffrement complet des appareils et gestion systématique des sessions. <strong>Rien n'est vrai—surtout le mythe selon lequel vous avez besoin d'un MDM d'entreprise pour sécuriser les appareils d'une personne.</strong></p>
+            
+            <p>Notre <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Politique de Contrôle d'Accès</a> démontre la sécurité mobile par l'authentification et l'autorisation plutôt que par la gestion des appareils—parce que vous ne pouvez pas déployer MDM pour une personne. Ce que vous POUVEZ faire : imposer MFA partout, tout chiffrer, expirer les sessions de manière appropriée. <strong>Tout est permis—sauf accéder aux systèmes financiers depuis un appareil non chiffré. C'est juste stupide.</strong></p>
+            
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION :</strong> BYOD signifie "Apportez Votre Propre Désastre"—sauf si vous imposez authentification forte et chiffrement. Pour entreprises individuelles, gestion des appareils EST contrôle d'accès. Gérez authentification, imposez chiffrement, expirez sessions. MDM d'entreprise est excessif quand vous êtes le seul employé. <strong>FNORD—mais cela ne signifie pas que vous pouvez sauter le chiffrement. La paranoïa est l'auto-soin pour les psychonautes.</strong>
+            </div>
+
+            <h2>🛡️ Les Cinq Contrôles de Sécurité Mobile (Édition Personne Seule)</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>1. Authentification Multi-Facteurs</h3>
+                    <p><strong>MFA obligatoire partout—couverture 100%.</strong></p>
+                    <p>TOTP pour plateformes développement. Jetons matériels pour banque. MFA plateforme pour services cloud. AWS Identity Center avec SSO.</p>
+                    <p class="hidden-wisdom"><em>Preuve : <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md">Politique Contrôle d'Accès</a> spécifie exigences MFA par classification actif.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>2. Chiffrement des Appareils</h3>
+                    <p><strong>Chiffrement complet disque obligatoire—aucune exception.</strong></p>
+                    <p>Chiffrement natif iOS, chiffrement Android, FDE ordinateur portable (AES-256). Écrans de verrouillage avec délai 15 minutes. Phrases de passe fortes, pas de codes PIN.</p>
+                    <p class="hidden-wisdom"><em>Selon <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">Politique Sécurité Physique</a>—appareils volés doivent être chiffrés.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>3. Gestion des Sessions</h3>
+                    <p><strong>Expiration sessions selon classification.</strong></p>
+                    <p>Systèmes financiers : 1 heure. Pipeline développement : 8 heures. Plateformes marketing : 7 jours. Terminaison automatique session appliquée.</p>
+                    <p class="hidden-wisdom"><em>Délais basés classification selon <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">framework CIA+</a>.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>4. Capacité d'Effacement à Distance</h3>
+                    <p><strong>Appareil perdu ? Effacez à distance.</strong></p>
+                    <p>iOS Find My iPhone avec effacement distance. Android Device Manager avec effacement distance. Action immédiate sur rapport perte appareil.</p>
+                    <p class="hidden-wisdom"><em>Entreprise individuelle : Effacement distance en libre-service. Pas de département IT à appeler—vous ÊTES le département IT.</em></p>
+                </div>
+
+                <div class="value-card">
+                    <h3>5. Revue d'Accès</h3>
+                    <p><strong>Revue régulière accès appareils.</strong></p>
+                    <p>Mensuelle pour systèmes financiers. Trimestrielle pour développement. Annuelle pour marketing. Supprimez permissions et applications inutiles.</p>
+                    <p class="hidden-wisdom"><em>Auto-audit : Révisez vos propres permissions appareil trimestriellement. Supprimez ce dont vous n'avez pas besoin. Surface d'attaque minimale.</em></p>
+                </div>
+            </div>
+
+            <div class="hidden-wisdom">
+                <strong>ILLUMINATION CHAOS :</strong> Les appareils mobiles sont des ordinateurs qui contournent votre pare-feu, installent applications non fiables et se font oublier dans les taxis. Pour entreprises individuelles, "gestion" signifie authentification forte + chiffrement + contrôles session. MDM d'entreprise est excessif. Contrôle d'accès fort est essentiel.
+            </div>
+
+            <h2>📋 Ce Que Fait Réellement Hack23</h2>
+            
+            <p>Notre stratégie appareils mobiles est publique : <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md" target="_blank">Politique Contrôle d'Accès</a> + <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md" target="_blank">Politique Sécurité Physique</a></p>
+            
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 Couverture MFA 100%</h3>
+                    <p><strong>Chaque Système, Chaque Fois :</strong></p>
+                    <ul>
+                        <li><strong>Systèmes financiers :</strong> Jeton matériel + SMS secours, délai 1 heure</li>
+                        <li><strong>Plateformes développement :</strong> TOTP + clés SSH, délai 8 heures</li>
+                        <li><strong>Services cloud :</strong> AWS Identity Center SSO + MFA, délai 4-24 heures</li>
+                        <li><strong>Marketing platforms:</strong> Platform MFA, 7-day timeout</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md#mfa-implementation-matrix">View MFA Matrix →</a></p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Full Device Encryption</h3>
+                    <p><strong>All Devices, All Storage:</strong></p>
+                    <ul>
+                        <li><strong>Mobile devices:</strong> iOS/Android native encryption enabled</li>
+                        <li><strong>Laptops:</strong> AES-256 FDE (FileVault/BitLocker/LUKS)</li>
+                        <li><strong>External storage:</strong> Encrypted volumes (VeraCrypt) for business data</li>
+                        <li><strong>Lock screens:</strong> 15-minute timeout, strong passphrase mandatory</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Physical_Security_Policy.md">View Physical Security Policy →</a></p>
+                </div>
+                
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>⏰ Classification-Driven Timeouts</h3>
+                    <p><strong>Session Management by Risk:</strong></p>
+                    <ul>
+                        <li><strong>Very High (Financial):</strong> 1 hour, monthly review</li>
+                        <li><strong>High (Development):</strong> 8 hours, quarterly review</li>
+                        <li><strong>Medium (Email/Docs):</strong> 24 hours, semi-annual review</li>
+                        <li><strong>Public (Marketing):</strong> 7 days, annual review</li>
+                    </ul>
+                    <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md">View Classification Framework →</a></p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗑️ Remote Wipe Ready</h3>
+                    <p><strong>Lost Device Protocol:</strong></p>
+                    <ul>
+                        <li><strong>iOS:</strong> Find My iPhone with remote wipe capability</li>
+                        <li><strong>Android:</strong> Device Manager with factory reset</li>
+                        <li><strong>Laptops:</strong> Remote wipe capability planned for future MDM deployment; currently manual retrieval and FDE protection only</li>
+                        <li><strong>Response time:</strong> Immediate upon loss detection</li>
+                    </ul>
+                    <p class="hidden-wisdom"><em>Single-person company: You are the incident responder. Set up remote wipe BEFORE device loss.</em></p>
+                </div>
+            </div>
+            
+            <p><strong>Why No Corporate MDM?</strong></p>
+            <ul>
+                <li>🏢 <strong>Single-person company:</strong> No employees to manage, CEO/Founder only</li>
+                <li>💰 <strong>Cost vs. Benefit:</strong> MDM platform costs more than manual device management for one person</li>
+                <li>🔐 <strong>Alternative Controls:</strong> MFA 100%, FDE 100%, session timeouts enforced</li>
+                <li>☁️ <strong>Cloud-Native:</strong> AWS Identity Center provides SSO/MFA without MDM</li>
+            </ul>
+            
+            <div class="hidden-wisdom"><strong>META-ILLUMINATION:</strong> Perfect mobile security is corporate-owned devices with full MDM control. Reality for single-person companies is personal devices with strong authentication. Compromise: MFA everywhere (100%), encryption everywhere (100%), session management by classification. Not perfect—but systematic and honest about limitations.</div>
+
+            <h2>🎯 Conclusion: Manage Through Authentication, Not Enrollment</h2>
+            
+            <p><strong>Mobile devices aren't going away. BYOD isn't optional for single-person companies. <strong>But you don't need corporate MDM to secure one person's devices.</strong> FNORD—you just need to be paranoid enough to actually do it.</strong></p>
+            
+            <p>What you DO need (for psychonauts navigating digital Chapel Perilous):</p>
+            <ul>
+                <li>✅ <strong>MFA everywhere:</strong> 100% coverage—no exceptions for any system (because your password is already on pastebin)</li>
+                <li>✅ <strong>Device encryption:</strong> Full disk encryption on all devices—phones, laptops, external storage (paranoia is rational when attackers exist)</li>
+                <li>✅ <strong>Session management:</strong> Timeouts by classification—1 hour for financial, 8 hours for development (because forgotten sessions are found sessions)</li>
+                <li>✅ <strong>Remote wipe:</strong> Capability configured before device loss (optimism is setting up recovery after disaster)</li>
+                <li>⚠️ <strong>Regular review:</strong> Self-audit device permissions quarterly (trust nothing, verify everything, delete aggressively)</li>
+            </ul>
+            
+            <p><strong>Hack23's mobile security demonstrates cybersecurity consulting pragmatism:</strong> Deploy controls that match organizational reality. For single-person companies, that means strong authentication and encryption over complex device management platforms. Systematic, not theatrical. <strong>Are you paranoid enough to enforce this on yourself? Most people aren't. That's why most people get breached.</strong></p>
+            
+            <p><strong>Need expert guidance implementing mobile device security?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+            
+            <p class="signature">
+                <strong>All hail Eris! All hail Discordia!</strong><br>
+                <em>"Think for yourself, schmuck! Question everything—especially that app you just installed that requests all permissions. And yes, you need MFA on that too. <strong>Nothing is true. Everything is permitted. Your unencrypted phone permits everything to everyone.</strong>"</em><br>
+                🍎 23 FNORD 5<br>
+                — Hagbard Celine, Captain of the <em>Leif Erikson</em>
+            </p>
+            
+            <p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your mobile device is either systematically secured or conveniently vulnerable. Both require discipline. Only one survives theft at Starbucks. <strong>Nothing is true—except the data breach report you'll file if that phone wasn't encrypted. FNORD—are you paranoid enough yet?</strong></small></p>
+        </article>
+    </main>
+
+            <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="services.html">Security Consulting</a></li>
+            <li><a href="services.html">Security Architecture</a></li>
+            <li><a href="services.html">Cloud Security</a></li>
+            <li><a href="services.html">DevSecOps Integration</a></li>
+            <li><a href="services.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="blog.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog Authors:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementation Reality:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in
+          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
+          <a href="blog.html#george-dorn-developer-chronicles">Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>

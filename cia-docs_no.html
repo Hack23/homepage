@@ -17,9 +17,9 @@
     /><link rel="canonical" href="https://hack23.com/cia-docs_no.html" />
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Citizen Intelligence Agency Architecture Dokumentasjon" />
-    <meta property="og:description" content="Åpen kildekode political transparency plattform architecture: C4-modeller, datadesign for riksdag/regjering overvåking, World Bank-integrasjon, OSINT-mønstre, API-dokumentasjon." />
-	<meta property="og:locale" content="nb_NO">
+    <meta property="og:title" content="Citizen Intelligence Agency Arkitekturdokumentasjon" />
+    <meta property="og:description" content="Åpen kildekode politisk åpenhetsplattform arkitektur: C4-modeller, datadesign for riksdag/regjering overvåking, World Bank-integrasjon, OSINT-mønstre, API-dokumentasjon." />
+	<meta property="og:locale" content="no_NO">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
 	<meta property="og:locale:alternate" content="de_DE">
@@ -37,7 +37,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hack23.com/cia-docs.html" />
     <meta property="og:image" content="https://cia.sourceforge.io/cia-logo.png" /><!-- Additional SEO keywords -->
-    <meta name="keywords" content="political data architecture Hack23, C4 architecture OSINT platform, OSINT system design patterns, open source transparency platform, Swedish government datavisualisering, riksdag API dokumentasjon, parliamentary data integration, political intelligence architecture, transparency platform design, democratic accountability system, OSINT platform architecture Sweden, open data architecture design, Swedish parliament monitoring system, government data analysis tools, parliamentary decision flow tracking, political activity monitoring, public sector transparency, democratic accountability management, political performance analysis, parliament members voting analysis, ministries performance monitoring, agencies effectiveness measurement, public finance analysis, political corruption detection, lobbying transparency, public procurement monitoring, EU policy tracking, World Bank indicators integration, democratic development measurements, governance quality indicators, political risk assessment, election analysis forecasting, opinion polls analysis, media monitoring politics, social media political analysis, fake news detection system, disinformation countermeasures tools, journalism investigation tools, civic monitoring tools, citizen participation platform, e-democracy solutions, open data initiatives, transparency index measurements, anti-corruption technology, political datavisualisering, democracy KPI dashboard, parliamentary voting records, government ansvarsmålinger, political transparency scoring, democratic oversight automatisering, civic engagement analytics, public sector performance measurement, government effectiveness indicators, political behavior analysis, policy impact assessment, legislative process tracking, political decision analytics, democratic institutions monitoring">
+    <meta name="keywords" content="politisk data arkitektur Hack23, C4 arkitektur OSINT plattform, OSINT system design mønstre, opensourceåpenhetplattform, Swedish regjerings datavisualisering, riksdag API dokumentasjon, parlamentariskdataintegration, politisketterretningarkitektur, åpenhetplattformdesign, demokratiskansvarlighetsystem, OSINT plattform arkitektur Sweden, opendataarkitekturdesign, Swedish parlaments overvåking system, regjeringsdataanalysetools, parlamentariskdecisionflowsporing, politiskactivityovervåking, offentligsektoråpenhet, demokratiskansvarlighetstyring, politiskytelseanalyse, parlamentsmembersstemmeanalyse, ministriesytelseovervåking, agencieseffektivitetmåling, offentligøkonomianalyse, politiskkorrupsjonoppdagelse, lobbyåpenhet, offentliganskaffelseovervåking, EU policy sporing, World Bank indikatorer integration, demokratiskutviklingmåling, styringqualityindikatorer, politiskrisikovurdering, electionanalyseprognose, opinionpollsanalyse, mediaovervåkingpolitics, socialmediapolitiskanalyse, fakenewsoppdagelsesystem, disinformationcountermeasurestools, journalisminvestigationtools, civicovervåkingtools, citizendeltagelseplattform, e-democracysolutions, opendatainitiatives, åpenhetindexmåling, anti-korrupsjonsteknologi, politiskdatavisualisering, demokrati KPI dashboard, parlamentariskstemmeoppføringer, regjeringsansvarsmålinger, politiskåpenhetscoring, demokratisktilsynautomatisering, civicengasjementanalytics, offentligsektorytelsemåling, regjeringseffektivitetindikatorer, politiskbehavioranalyse, policyimpactvurdering, legislativeprocesssporing, politiskdecisionanalytics, demokratiskinstitutionsovervåking">
     
     <!-- Schema.org structured data -->
     <script type="application/ld+json">{
@@ -241,8 +241,8 @@
             {
               "@type": "HowToStep",
               "position": 1,
-              "name": "Download CloudFormation Template",
-              "text": "Download the CloudFormation stack file from the GitHub repository",
+              "name": "Last ned CloudFormation-mal",
+              "text": "Last ned CloudFormation-stakkfilen fra GitHub-repositoriet",
               "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
             },
             {
@@ -326,8 +326,8 @@
             {
               "@type": "HowToStep",
               "position": 4,
-              "name": "Download og Install Package",
-              "text": "Download the Debian package from GitHub releases og install it",
+              "name": "Last ned og Installer Pakke",
+              "text": "Last ned Debian-pakken fra GitHub-utgivelser og installer den",
               "itemListElement": [
                 {
                   "@type": "HowToDirection",
@@ -1194,7 +1194,7 @@
           The Citizen Intelligence Agency can be deployed on AWS using our provided CloudFormation template:
         </p>
         <ol>
-          <li>Download the <a href="https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json">CloudFormation stack file</a></li>
+          <li>Last ned <a href="https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json">CloudFormation-stakkfilen</a></li>
           <li>Create a new stack in the AWS CloudFormation console</li>
           <li>Upload the template file og configure parameters</li>
           <li>Acknowledge IAM resource creation og launch the stack</li>
@@ -1220,7 +1220,7 @@ postgres=# CREATE DATABASE cia_dev;
 postgres=# GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;</code></pre>
           </li>
           <li>
-            Download og install the Debian package:
+            Last ned og installer Debian-pakken:
             <pre><code>wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb
 sudo dpkg -i cia-dist-deb-2025.1.2.all.deb</code></pre>
           </li>
