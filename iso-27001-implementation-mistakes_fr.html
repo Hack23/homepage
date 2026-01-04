@@ -158,66 +158,66 @@
       <p>Entreprise SaaS suédoise 50 personnes a initialement défini portée "toutes opérations entreprise incluant installations bureau, systèmes RH, développement, production et ventes". Cela signifiait :</p>
       <ul>
         <li>Sécurité physique pour 3 emplacements bureaux</li>
-        <li>HR data protection requirements</li>
-        <li>Sales CRM security (low-value but high-effort)</li>
-        <li>Development and production (high-value, high-effort)</li>
+        <li>Exigences protection données RH</li>
+        <li>Sécurité CRM ventes (faible valeur mais effort élevé)</li>
+        <li>Développement et production (haute valeur, effort élevé)</li>
       </ul>
-      <p><strong>Result:</strong> 8 months to implement, €45,000 total cost, burned-out team.</p>
+      <p><strong>Résultat :</strong> 8 mois implémentation, 45 000 € coût total, équipe épuisée.</p>
       
-      <h3>The Solution</h3>
-      <p><strong>Start with minimal viable scope:</strong> Core IT operations directly related to your main service delivery. For SaaS companies:</p>
+      <h3>La Solution</h3>
+      <p><strong>Commencez avec portée viable minimale :</strong> Opérations IT principales directement liées livraison service principal. Pour entreprises SaaS :</p>
       <ul>
-        <li>Production infrastructure (AWS/Azure environments)</li>
-        <li>Development systems directly feeding production</li>
-        <li>Core supporting services (authentication, monitoring, backup)</li>
+        <li>Infrastructure production (environnements AWS/Azure)</li>
+        <li>Systèmes développement alimentant directement production</li>
+        <li>Services support principaux (authentification, surveillance, sauvegarde)</li>
       </ul>
       
-      <p><strong>Exclude initially:</strong></p>
+      <p><strong>Excluez initialement :</strong></p>
       <ul>
-        <li>Office facilities (handle separately or exclude)</li>
-        <li>HR systems (unless you're a HR tech company)</li>
-        <li>Sales/marketing systems (low risk, high documentation burden)</li>
+        <li>Installations bureaux (gérez séparément ou excluez)</li>
+        <li>Systèmes RH (sauf si vous êtes entreprise tech RH)</li>
+        <li>Systèmes ventes/marketing (risque faible, charge documentation élevée)</li>
       </ul>
       
-      <p><strong>Expand later:</strong> Add scope during surveillance audits once you've achieved initial certification and have operational experience with the ISMS.</p>
+      <p><strong>Élargissez plus tard :</strong> Ajoutez portée pendant audits surveillance une fois certification initiale obtenue et expérience opérationnelle SGSI acquise.</p>
       
-      <p class="success-box"><strong>Impact:</strong> Same company rescoped to "AWS production infrastructure and related development systems." Implementation: 3 months, €28,000 cost, certification achieved on first audit attempt.</p>
+      <p class="success-box"><strong>Impact :</strong> Même entreprise redefini portée "infrastructure production AWS et systèmes développement associés". Implémentation : 3 mois, 28 000 € coût, certification obtenue première tentative audit.</p>
     </section>
 
     <section id="mistake-2">
-      <h2 class="panel-caption">❌ Mistake #2: Creating Unreadable Documentation</h2>
+      <h2 class="panel-caption">❌ Erreur #2 : Créer Documentation Illisible</h2>
       
-      <h3>The Problem</h3>
-      <p><strong>Organizations write policies FOR auditors instead of FOR staff.</strong> The result: 200-page policy documents nobody reads, complex procedures disconnected from reality, and "shelf-ware" that exists only for certification.</p>
+      <h3>Le Problème</h3>
+      <p><strong>Organisations écrivent politiques POUR auditeurs au lieu POUR personnel.</strong> Résultat : documents politiques 200 pages que personne lit, procédures complexes déconnectées réalité, et "logiciels étagères" qui existent seulement pour certification.</p>
       
-      <h3>Warning Signs</h3>
+      <h3>Signes Avertissement</h3>
       <ul>
-        <li>Information Security Policy is 50+ pages</li>
-        <li>Policies reference other policies that reference frameworks that reference standards</li>
-        <li>Staff can't explain policies in their own words</li>
-        <li>Procedures haven't been updated since certification</li>
-        <li>Controls described in documentation don't match actual practice</li>
+        <li>Politique Sécurité Information fait 50+ pages</li>
+        <li>Politiques référencent autres politiques qui référencent frameworks qui référencent normes</li>
+        <li>Personnel ne peut expliquer politiques avec propres mots</li>
+        <li>Procédures pas mises à jour depuis certification</li>
+        <li>Contrôles décrits documentation ne correspondent pas pratique réelle</li>
       </ul>
       
-      <h3>The Solution</h3>
-      <p><strong>Write for practitioners, not compliance theater:</strong></p>
+      <h3>La Solution</h3>
+      <p><strong>Écrivez pour praticiens, pas théâtre conformité :</strong></p>
       
       <ul>
-        <li><strong>Keep policies concise:</strong> 2-5 pages maximum per policy</li>
-        <li><strong>Use plain language:</strong> If junior developers can't understand it, it's too complex</li>
-        <li><strong>Document what you DO:</strong> Not what you wish you did or think you should do</li>
-        <li><strong>Integrate with workflows:</strong> Security procedures should fit existing processes, not create parallel compliance tracks</li>
-        <li><strong>Use examples:</strong> Show what good looks like, don't just mandate it</li>
+        <li><strong>Gardez politiques concises :</strong> 2-5 pages maximum par politique</li>
+        <li><strong>Utilisez langage simple :</strong> Si développeurs juniors ne peuvent comprendre, c'est trop complexe</li>
+        <li><strong>Documentez ce que vous FAITES :</strong> Pas ce que vous souhaitez faire ou pensez devoir faire</li>
+        <li><strong>Intégrez avec workflows :</strong> Procédures sécurité doivent correspondre processus existants, pas créer pistes conformité parallèles</li>
+        <li><strong>Utilisez exemples :</strong> Montrez ce qui est bon, ne mandatez pas juste</li>
       </ul>
       
-      <p><strong>Example - Bad vs Good:</strong></p>
+      <p><strong>Exemple - Mauvais vs Bon :</strong></p>
       
       <div class="comparison-table">
-        <h4>❌ Bad (Compliance Theater)</h4>
-        <p><em>"Access to information assets shall be restricted to authorized personnel based on business need-to-know principles as determined by asset owners through formal authorization workflows documented in the access management system in accordance with the least privilege principle..."</em></p>
+        <h4>❌ Mauvais (Théâtre Conformité)</h4>
+        <p><em>"Accès actifs informationnels doit être restreint personnel autorisé basé principes besoin savoir affaires déterminés propriétaires actifs via workflows autorisation formels documentés système gestion accès conformément principe moindre privilège..."</em></p>
         
-        <h4>✅ Good (Practical Guidance)</h4>
-        <p><em>"Access Control: Use AWS IAM with MFA required. Developers get read-only production access. Only SREs get write access. Review permissions quarterly. See AWS-Access-Playbook.md for step-by-step setup."</em></p>
+        <h4>✅ Bon (Guidance Pratique)</h4>
+        <p><em>"Contrôle Accès : Utilisez AWS IAM avec MFA requis. Développeurs obtiennent accès lecture seule production. Seulement SREs obtiennent accès écriture. Révisez permissions trimestriellement. Voir AWS-Access-Playbook.md pour configuration étape par étape."</em></p>
       </div>
       
       <p><strong>Reference:</strong> See <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's public ISMS</a> for examples of concise, practical policies (2-5 pages each).</p>
