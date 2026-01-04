@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exempel på Breadcrumb-navigering | Hack23</title>
+  <meta name="description" content="Implementeringsexempel för breadcrumb-navigering som visar hierarkisk sidstruktur och användarens plats inom webbplatsen.">
+	<meta name="twitter:description" content="Implementeringsexempel för breadcrumb-navigering som visar hierarkisk sidstruktur och användarens plats inom webbplatsen.">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Multilingual SEO -->
+  
+	<meta property="og:locale" content="sv_SE">
+	<meta property="og:locale:alternate" content="en_US">
+	<meta property="og:locale:alternate" content="ar_SA">
+	<meta property="og:locale:alternate" content="da_DK">
+	<meta property="og:locale:alternate" content="de_DE">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta property="og:locale:alternate" content="fi_FI">
+	<meta property="og:locale:alternate" content="fr_FR">
+	<meta property="og:locale:alternate" content="he_IL">
+	<meta property="og:locale:alternate" content="ja_JP">
+	<meta property="og:locale:alternate" content="ko_KR">
+	<meta property="og:locale:alternate" content="nl_NL">
+	<meta property="og:locale:alternate" content="nb_NO">
+	<meta property="og:locale:alternate" content="zh_CN">
+<link rel="canonical" href="https://hack23.com/breadcrumb-example_sv.html" />
+  <link rel="alternate" hreflang="en" href="https://hack23.com/breadcrumb-example.html" />
+  <link rel="alternate" hreflang="sv" href="https://hack23.com/breadcrumb-example_sv.html" />
+  <link rel="alternate" hreflang="x-default" href="https://hack23.com/breadcrumb-example.html" />
+
+</head>
+<body>
+  <header>
+    <h1>Exempel på Breadcrumb-komponent</h1>
+    <p>Professionell breadcrumb-navigering med WCAG 2.1 AA-kompatibilitet</p>
+  </header>
+
+  <!-- Exempel 1: Tvånivå breadcrumb (Hem > Aktuell sida) -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Funktioner
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Exempel på tvånivå breadcrumb</h2>
+  <p>Detta visar en enkel breadcrumb-spårning: Hem > Funktioner (aktuell sida)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- Exempel 2: Trenivå breadcrumb -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/cia-features.html">Citizen Intelligence Agency</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Funktioner
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Exempel på trenivå breadcrumb</h2>
+  <p>Detta visar en djupare breadcrumb-spårning: Hem > Citizen Intelligence Agency > Funktioner (aktuell sida)</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <!-- Exempel 3: Fyranivå breadcrumb -->
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">Hem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html">Blogg</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/blog.html#cia">CIA-artiklar</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        Djupdykning i CIA-arkitektur
+      </li>
+    </ol>
+  </nav>
+
+  <h2>Exempel på fyranivå breadcrumb</h2>
+  <p>Detta visar en ännu djupare breadcrumb-spårning med fyra nivåer av navigationshierarki.</p>
+
+  <hr style="margin: 2rem 0; border: 1px solid var(--border-color);">
+
+  <h2>Tillgänglighetsfunktioner</h2>
+  <ul>
+    <li><strong>Semantisk HTML:</strong> Använder <code>&lt;nav&gt;</code> med <code>aria-label="Breadcrumb"</code> och <code>&lt;ol&gt;</code> liststruktur</li>
+    <li><strong>ARIA-attribut:</strong> Aktuell sida markerad med <code>aria-current="page"</code></li>
+    <li><strong>Tangentbordsnavigering:</strong> Alla länkar är tabb-åtkomliga med synliga fokusindikatorer</li>
+    <li><strong>Skärmläsarvänlig:</strong> Korrekt semantisk struktur annonserar navigationskontext</li>
+    <li><strong>Färgkontrast:</strong> Uppfyller WCAG 2.1 AA-standarder (minst 4,5:1)</li>
+    <li><strong>Responsiv design:</strong> Anpassar sig till mobil-, surfplatte- och skrivbordsvisningar</li>
+    <li><strong>Temastöd:</strong> Fungerar med ljust läge, mörkt läge och Black Trigram-tema</li>
+  </ul>
+
+  <h2>Användningsinstruktioner</h2>
+  <pre style="background: #f6f8fa; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>&lt;nav aria-label="Breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/"&gt;Hem&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="/section.html"&gt;Sektion&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item" aria-current="page"&gt;
+      Aktuell sida
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+
+  <h2>Testchecklista</h2>
+  <ul>
+    <li>✅ Tangentbordsnavigering (Tab, Shift+Tab, Enter)</li>
+    <li>✅ Skärmläsarannonsering (testa med NVDA, JAWS eller VoiceOver)</li>
+    <li>✅ Färgkontrast uppfyller WCAG 2.1 AA (4,5:1 för normal text)</li>
+    <li>✅ Responsiv design fungerar på alla visningsstorlekar</li>
+    <li>✅ Fokusindikatorer är tydligt synliga</li>
+    <li>✅ Hovringstillstånd ger visuell feedback</li>
+    <li>✅ Fungerar i ljust läge och mörkt läge</li>
+    <li>✅ Fungerar med Black Trigram-tema</li>
+  </ul>
+</body>
+</html>
