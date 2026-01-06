@@ -144,8 +144,8 @@ Files analyzed for English content remaining:
 1. **Duplicate Meta Keywords Tag:** Fixed in discordian-cybersecurity_ja.html
 2. **English-only Keywords:** Translated to comprehensive Japanese in 39 files
 3. **Incomplete Meta Descriptions:** Enhanced with professional Japanese content
-4. **Open Graph Metadata:** Fully translated in all 39 enhanced files
-5. **Twitter Card Metadata:** Complete Japanese translations added
+4. **Open Graph Metadata:** Japanese translations added for the 39 enhanced files; a small number of blog posts still contain English titles/descriptions and are scheduled for update
+5. **Twitter Card Metadata:** Japanese translations added for the enhanced files; some legacy blog cards may still display English text
 
 **Example Enhancement (discordian-cybersecurity_ja.html):**
 - **Before:** "discordian cybersecurity, illuminatus trilogy, question authority..." (English, generic)
