@@ -104,7 +104,8 @@
 7. `black-trigram_ko.html` - Black Trigram game
 8. `black-trigram-docs_ko.html`
 9. `black-trigram-features_ko.html`
-10. `cia-triad-faq_ko.html` - CIA Triad FAQ
+
+**Note:** `cia-triad-faq_ko.html` is in Phase 1 as it's educational content with high traffic.
 
 ---
 
@@ -170,11 +171,12 @@
 
 #### 1. Preparation (2 min)
 ```bash
-# Open English source
-view /home/runner/work/homepage/homepage/[filename].html
+# Note: These are development environment commands, adjust for your setup
+# Open English source file for reference
+# Example: view /home/runner/work/homepage/homepage/[filename].html
 
-# Open Korean file
-view /home/runner/work/homepage/homepage/[filename]_ko.html
+# Open Korean file for editing
+# Example: view /home/runner/work/homepage/homepage/[filename]_ko.html
 ```
 
 #### 2. Verify SEO (1 min)
@@ -250,11 +252,12 @@ Check these are already in Korean (should be done):
 
 #### 6. Save & Test (2 min)
 ```bash
-# Save file
-edit /home/runner/work/homepage/homepage/[filename]_ko.html
+# Save file using your editor (nano, vim, VSCode, etc.)
+# Example workflow for this environment:
+# edit /home/runner/work/homepage/homepage/[filename]_ko.html
 
 # Quick HTML validation
-# (Check browser or use W3C validator)
+# Use browser developer tools or W3C validator: https://validator.w3.org/
 ```
 
 #### 7. Commit Progress
