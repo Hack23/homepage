@@ -225,13 +225,13 @@
           
           <p><strong>מבנה חבילות שנצפה:</strong></p>
           <ul>
-            <li><code>com.hack23.cia.service.*</code> - Service layer business logic</li>
-            <li><code>com.hack23.cia.model.*</code> - Domain models and entities</li>
-            <li><code>com.hack23.cia.web.*</code> - Web/UI layer (Vaadin components)</li>
-            <li><code>com.hack23.cia.testfoundation.*</code> - Test infrastructure and utilities</li>
+            <li><code>com.hack23.cia.service.*</code> - לוגיקה עסקית של שכבת שירות</li>
+            <li><code>com.hack23.cia.model.*</code> - מודלי דומיין וישויות</li>
+            <li><code>com.hack23.cia.web.*</code> - שכבת Web/UI (רכיבי Vaadin)</li>
+            <li><code>com.hack23.cia.testfoundation.*</code> - תשתית בדיקה ויוטיליטיז</li>
           </ul>
           
-          <p><strong>Technologies Confirmed in POMs:</strong></p>
+          <p><strong>טכנולוגיות שאושרו ב-POMs:</strong></p>
           <ul>
             <li><strong>Spring Framework</strong> - Dependency injection, transaction management</li>
             <li><strong>Spring Security</strong> - Authentication and authorization</li>
@@ -340,9 +340,9 @@
           <ul>
             <li><strong>Modular Architecture:</strong> 49 Maven modules = clean separation. Service layer doesn't know about web layer. Data access isolated. Good boundaries.</li>
             <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
-            <li><strong>Test Infrastructure:</strong> Dedicated <code>testfoundation</code> module for test utilities. Shared test infrastructure = consistent testing approach.</li>
-            <li><strong>Domain-Driven Design:</strong> Separate model modules for external data, internal data, application data. Clear domain boundaries.</li>
-            <li><strong>Automated Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Measurable quality metrics.</li>
+            <li><strong>תשתית בדיקה:</strong> מודול ייעודי <code>testfoundation</code> עבור יוטיליטי בדיקה. תשתית בדיקה משותפת = גישת בדיקה עקבית.</li>
+            <li><strong>עיצוב מונחה דומיין:</strong> מודולי מודל נפרדים לנתונים חיצוניים, נתונים פנימיים, נתוני אפליקציה. גבולות דומיין ברורים.</li>
+            <li><strong>שערי איכות אוטומטיים:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. מדדי איכות מדידים.</li>
           </ul>
         </div>
         
@@ -414,12 +414,12 @@
           <tr>
             <td><strong>OpenSSF Scorecard</strong></td>
             <td>7.2/10</td>
-            <td>Solid security practices, continuously improving</td>
+            <td>שיטות אבטחה מוצקות, משתפרות ללא הרף</td>
           </tr>
           <tr>
-            <td><strong>Database Tables</strong></td>
+            <td><strong>טבלאות מסד נתונים</strong></td>
             <td>60+ base + 30+ views</td>
-            <td>Complex data model, well-documented</td>
+            <td>מודל נתונים מורכב, מתועד היטב</td>
           </tr>
           <tr>
             <td><strong>External Integrations</strong></td>
