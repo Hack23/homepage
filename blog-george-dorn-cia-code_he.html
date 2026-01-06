@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, ניהול אבטחת מידע">
 <meta name="twitter:description" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, ניהול אבטחת מידע">
-<meta name="keywords" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, NIST CSF, ניהול אבטחת מידע">
+<meta name="keywords" content="אבטחת סייבר, ISMS, ייעוץ אבטחה, שקיפות, ציות, ISO 27001, NIST CSF, ניהול אבטחת מידע, אבטחת מידע, מערכת ניהול אבטחת מידע, הערכת סיכונים, תגובה לאירועים, ניהול פגיעויות, הגנה על מידע, בקרת גישה, אבטחת ענן, DevSecOps, שלישיית CIA, GDPR, NIS2, סודיות, שלמות, זמינות, ניהול סיכונים, ביקורת אבטחה, תכנון רציפות עסקית, התאוששות מאסון, אבטחת רשת, חומת אש, הצפנה, אימות, הרשאה, בדיקת חדירה, ניטור אבטחה, מודיעין איומים, תרבות אבטחה, הדרכת אבטחה, מדיניות אבטחה, מסגרת אבטחה, ממשל אבטחה, שירותי אבטחה, יועץ אבטחה, ארכיטקטורת אבטחה, פיתוח מאובטח, SDLC מאובטח, ניהול תצורה, ניהול תיקונים, גיבוי ושחזור, הגנה על קצה, אבטחה פיזית">
 <meta name="robots" content="index, follow">
 <meta name="author" content="George Dorn">
 <meta property="og:title" content="אבטחת סייבר וציות | Hack23">
@@ -202,10 +202,10 @@
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>🏗️ Maven Multi-Module Architecture</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM files</strong></p>
-          <p><strong>What This Means:</strong> The project is organized into 49 Maven modules. Not monolithic—modular separation of concerns across service layer, data access, web application, integration services, and parent POMs.</p>
+          <p><strong>ספירה בפועל:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 קבצי POM</strong></p>
+          <p><strong>משמעות הדבר:</strong> הפרויקט מאורגן ב-49 מודולי Maven. לא מונוליתי - הפרדת דאגות מודולרית על פני שכבת שירות, גישה לנתונים, יישום אינטרנט, שירותי אינטגרציה ו-POM אב.</p>
           
-          <p><strong>Key Modules Discovered:</strong></p>
+          <p><strong>מודולי מפתח שהתגלו:</strong></p>
           <ul>
             <li><code>service.api/</code> - Service layer API definitions</li>
             <li><code>service.data.impl/</code> - JPA/Hibernate data access implementation</li>
@@ -220,24 +220,24 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>☕ Java Source Files</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1,372 Java files</strong></p>
-          <p><strong>Lines of Code:</strong> Estimated 60,000+ lines across all modules (based on typical Java file averaging ~50-80 lines per file for service/data layer code)</p>
+          <p><strong>ספירה בפועל:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1,372 קבצי Java</strong></p>
+          <p><strong>שורות קוד:</strong> הערכה של 60,000+ שורות על פני כל המודולים (מבוסס על ממוצע של ~50-80 שורות לקובץ Java עבור קוד שכבת שירות/נתונים)</p>
           
-          <p><strong>Package Structure Observed:</strong></p>
+          <p><strong>מבנה חבילות שנצפה:</strong></p>
           <ul>
-            <li><code>com.hack23.cia.service.*</code> - Service layer business logic</li>
-            <li><code>com.hack23.cia.model.*</code> - Domain models and entities</li>
-            <li><code>com.hack23.cia.web.*</code> - Web/UI layer (Vaadin components)</li>
-            <li><code>com.hack23.cia.testfoundation.*</code> - Test infrastructure and utilities</li>
+            <li><code>com.hack23.cia.service.*</code> - לוגיקה עסקית של שכבת שירות</li>
+            <li><code>com.hack23.cia.model.*</code> - מודלי דומיין וישויות</li>
+            <li><code>com.hack23.cia.web.*</code> - שכבת Web/UI (רכיבי Vaadin)</li>
+            <li><code>com.hack23.cia.testfoundation.*</code> - תשתית בדיקה ויוטיליטיז</li>
           </ul>
           
-          <p><strong>Technologies Confirmed in POMs:</strong></p>
+          <p><strong>טכנולוגיות שאושרו ב-POMs:</strong></p>
           <ul>
-            <li><strong>Spring Framework</strong> - Dependency injection, transaction management</li>
-            <li><strong>Spring Security</strong> - Authentication and authorization</li>
-            <li><strong>JPA/Hibernate</strong> - Database ORM layer</li>
-            <li><strong>Vaadin</strong> - Server-side Java web framework for UI</li>
-            <li><strong>PostgreSQL</strong> - Primary database (confirmed in data model docs)</li>
+            <li><strong>Spring Framework</strong> - הזרקת תלויות, ניהול טרנזקציות</li>
+            <li><strong>Spring Security</strong> - אימות והרשאות</li>
+            <li><strong>JPA/Hibernate</strong> - שכבת ORM למסד נתונים</li>
+            <li><strong>Vaadin</strong> - מסגרת Java צד-שרת לממשק משתמש</li>
+            <li><strong>PostgreSQL</strong> - מסד נתונים ראשי (אושר במסמכי מודל הנתונים)</li>
           </ul>
           
           <p class="hidden-wisdom"><em>1,372 Java files = significant codebase requiring disciplined architecture. Without modular separation, this would be unmaintainable. The 49-module structure keeps complexity contained.</em></p>
@@ -270,17 +270,17 @@
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>🖥️ Core Platform</h3>
-          <p><strong>Language:</strong> Java (confirmed by 1,372 .java files)</p>
-          <p><strong>Build Tool:</strong> Maven (49 pom.xml files)</p>
-          <p><strong>Framework:</strong> Spring Framework + Spring Boot</p>
-          <p><strong>Web UI:</strong> Vaadin (server-side Java framework, no JavaScript required)</p>
-          <p><strong>Database:</strong> PostgreSQL with JPA/Hibernate ORM</p>
+          <p><strong>שפה:</strong> Java (אושרה על ידי 1,372 קבצי .java)</p>
+          <p><strong>כלי בנייה:</strong> Maven (49 קבצי pom.xml)</p>
+          <p><strong>מסגרת:</strong> Spring Framework + Spring Boot</p>
+          <p><strong>ממשק משתמש אינטרנטי:</strong> Vaadin (מסגרת Java צד-שרת, JavaScript לא נדרש)</p>
+          <p><strong>מסד נתונים:</strong> PostgreSQL עם JPA/Hibernate ORM</p>
           
-          <p><strong>Why This Stack?</strong></p>
+          <p><strong>מדוע ערימה זו?</strong></p>
           <ul>
-            <li><strong>Java:</strong> Type safety, mature ecosystem, enterprise stability</li>
-            <li><strong>Spring:</strong> Battle-tested dependency injection, transaction management, security</li>
-            <li><strong>Vaadin:</strong> Complex UI in Java without writing JavaScript—controversial but effective for data-heavy applications</li>
+            <li><strong>Java:</strong> בטיחות טיפוסים, אקוסיסטם בשל, יציבות ארגונית</li>
+            <li><strong>Spring:</strong> הזרקת תלויות מוכחת בקרב, ניהול טרנזקציות, אבטחה</li>
+            <li><strong>Vaadin:</strong> ממשק משתמש מורכב ב-Java מבלי לכתוב JavaScript - שנוי במחלוקת אך יעיל עבור יישומים עתירי נתונים</li>
             <li><strong>PostgreSQL:</strong> Open source, ACID ציות, excellent for relational political data</li>
           </ul>
         </div>
@@ -340,9 +340,9 @@
           <ul>
             <li><strong>Modular Architecture:</strong> 49 Maven modules = clean separation. Service layer doesn't know about web layer. Data access isolated. Good boundaries.</li>
             <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
-            <li><strong>Test Infrastructure:</strong> Dedicated <code>testfoundation</code> module for test utilities. Shared test infrastructure = consistent testing approach.</li>
-            <li><strong>Domain-Driven Design:</strong> Separate model modules for external data, internal data, application data. Clear domain boundaries.</li>
-            <li><strong>Automated Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Measurable quality metrics.</li>
+            <li><strong>תשתית בדיקה:</strong> מודול ייעודי <code>testfoundation</code> עבור יוטיליטי בדיקה. תשתית בדיקה משותפת = גישת בדיקה עקבית.</li>
+            <li><strong>עיצוב מונחה דומיין:</strong> מודולי מודל נפרדים לנתונים חיצוניים, נתונים פנימיים, נתוני אפליקציה. גבולות דומיין ברורים.</li>
+            <li><strong>שערי איכות אוטומטיים:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. מדדי איכות מדידים.</li>
           </ul>
         </div>
         
@@ -350,24 +350,24 @@
           <div class="scanner-effect"></div>
           <h3>⚠️ Complexity Challenges</h3>
           <ul>
-            <li><strong>Maven Module Coordination:</strong> 49 modules = version management complexity. Dependency changes ripple across modules.</li>
-            <li><strong>Vaadin Learning Curve:</strong> Server-side UI framework is unusual. Team members need Vaadin expertise, not just Java.</li>
-            <li><strong>PostgreSQL Schema Size:</strong> 90+ tables/views = complex data model. Understanding relationships requires DATA_MODEL.md study.</li>
-            <li><strong>Integration Brittleness:</strong> External APIs (Riksdag, World Bank) can change formats. Requires defensive parsing and version detection.</li>
-            <li><strong>Build Time:</strong> Multi-module Maven build likely takes 10-20+ minutes for full clean install. Iterative development needs incremental builds.</li>
+            <li><strong>תיאום מודולי Maven:</strong> 49 מודולים = מורכבות ניהול גרסאות. שינויי תלויות גולשים על פני מודולים.</li>
+            <li><strong>עקומת למידה של Vaadin:</strong> מסגרת UI צד-שרת היא יוצאת דופן. חברי צוות זקוקים למומחיות Vaadin, לא רק Java.</li>
+            <li><strong>גודל סכמת PostgreSQL:</strong> 90+ טבלאות/views = מודל נתונים מורכב. הבנת יחסים דורשת לימוד של DATA_MODEL.md.</li>
+            <li><strong>שבירות אינטגרציה:</strong> APIs חיצוניים (Riksdag, World Bank) יכולים לשנות פורמטים. דורש ניתוח הגנתי וזיהוי גרסה.</li>
+            <li><strong>זמן בנייה:</strong> בנייה רב-מודולית של Maven צפויה לקחת 10-20+ דקות להתקנה נקייה מלאה. פיתוח איטרטיבי זקוק לבניות מצטברות.</li>
           </ul>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>🎯 Developer Experience Insights</h3>
-          <p><strong>Getting Started:</strong></p>
+          <p><strong>תחילת העבודה:</strong></p>
           <ol>
             <li><code>git clone https://github.com/Hack23/cia.git</code></li>
-            <li><code>mvn clean install</code> (will take 15-20 minutes first time)</li>
-            <li>Read ARCHITECTURE.md to understand module structure</li>
-            <li>Read DATA_MODEL.md to understand database schema</li>
-            <li>Run <code>citizen-intelligence-agency</code> main application module</li>
+            <li><code>mvn clean install</code> (ייקח 15-20 דקות בפעם הראשונה)</li>
+            <li>קרא את ARCHITECTURE.md כדי להבין את מבנה המודולים</li>
+            <li>קרא את DATA_MODEL.md כדי להבין את סכמת מסד הנתונים</li>
+            <li>הפעל את מודול האפליקציה הראשי <code>citizen-intelligence-agency</code></li>
           </ol>
           
           <p><strong>Prerequisites:</strong></p>
@@ -390,36 +390,36 @@
       <table class="data-table">
         <thead>
           <tr>
-            <th>Metric</th>
-            <th>Value</th>
-            <th>Analysis</th>
+            <th>מדד</th>
+            <th>ערך</th>
+            <th>ניתוח</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Maven Modules</strong></td>
+            <td><strong>מודולי Maven</strong></td>
             <td>49</td>
-            <td>Well-structured modular architecture</td>
+            <td>ארכיטקטורה מודולרית מובנית היטב</td>
           </tr>
           <tr>
-            <td><strong>Java Files</strong></td>
+            <td><strong>קבצי Java</strong></td>
             <td>1,372</td>
-            <td>Significant codebase, requires good organization</td>
+            <td>בסיס קוד משמעותי, דורש ארגון טוב</td>
           </tr>
           <tr>
-            <td><strong>Documentation Files</strong></td>
+            <td><strong>קבצי תיעוד</strong></td>
             <td>10+ major MD files</td>
-            <td>Comprehensive technical documentation</td>
+            <td>תיעוד טכני מקיף</td>
           </tr>
           <tr>
             <td><strong>OpenSSF Scorecard</strong></td>
             <td>7.2/10</td>
-            <td>Solid security practices, continuously improving</td>
+            <td>שיטות אבטחה מוצקות, משתפרות ללא הרף</td>
           </tr>
           <tr>
-            <td><strong>Database Tables</strong></td>
+            <td><strong>טבלאות מסד נתונים</strong></td>
             <td>60+ base + 30+ views</td>
-            <td>Complex data model, well-documented</td>
+            <td>מודל נתונים מורכב, מתועד היטב</td>
           </tr>
           <tr>
             <td><strong>External Integrations</strong></td>
