@@ -78,53 +78,65 @@ Files analyzed for English content remaining:
 
 **Files Enhanced (34 content-specific):**
 
-**Core & Product Pages (4 files):**
-1. ✅ cia-project_ja.html - Enhanced with 10-15 strategic Japanese keywords
-2. ✅ black-trigram_ja.html - Complete keyword optimization
-3. ✅ compliance-manager_ja.html - Full Japanese SEO metadata
-4. ✅ projects_ja.html - Professional Japanese keywords
+**ISO Certification (1 file):**
+1. ✅ iso-27001-2022-vs-2013_ja.html - Version comparison with specific keywords (ISO 27001:2022, ISO 27001:2013, 移行, 管理策比較)
 
-**ISMS Policy Files (33 files) - COMPLETE SET:**
-5-37. All major ISMS policy files enhanced:
-   - discordian-access-control_ja.html
-   - discordian-asset-mgmt_ja.html
-   - discordian-business-continuity_ja.html
-   - discordian-business-value_ja.html
-   - discordian-change-mgmt_ja.html
-   - discordian-classification_ja.html
-   - discordian-cloud-security_ja.html
-   - discordian-compliance_ja.html
-   - discordian-cra-conformity_ja.html
-   - discordian-cra_ja.html
-   - discordian-crypto_ja.html
-   - discordian-cybersecurity_ja.html ⭐ (Fixed duplicate keywords tag)
-   - discordian-data-classification_ja.html
-   - discordian-data-protection_ja.html
-   - discordian-disaster-recovery_ja.html
-   - discordian-email-security_ja.html
-   - discordian-incident-response_ja.html
-   - discordian-llm-security_ja.html
-   - discordian-mobile-device_ja.html
-   - discordian-monitoring-logging_ja.html
-   - discordian-network-security_ja.html
-   - discordian-open-source_ja.html
-   - discordian-physical-security_ja.html
-   - discordian-privacy_ja.html
-   - discordian-remote-access_ja.html
-   - discordian-risk-register_ja.html
-   - discordian-secure-dev_ja.html
-   - discordian-security-training_ja.html
-   - discordian-stakeholders_ja.html
-   - discordian-supplier-reality_ja.html
-   - discordian-third-party_ja.html
-   - discordian-vuln-mgmt_ja.html
-   - discordian-acceptable-use_ja.html
+**Infrastructure & Network (2 files):**
+2. ✅ discordian-cloud-security_ja.html - Cloud-specific keywords (AWS, Azure, Kubernetes, マルチクラウド)
+3. ✅ discordian-network-security_ja.html - Network keywords (ゼロトラスト, ファイアウォール, 侵入検知)
 
-**ISO 27001 Resources (1 file):**
-38. ✅ iso-27001-2022-vs-2013_ja.html - Professional Japanese SEO
+**Training & Culture (2 files):**
+4. ✅ discordian-security-training_ja.html - Training keywords (セキュリティトレーニング, 従業員教育, 意識向上)
+5. ✅ discordian-threat-modeling_ja.html - Threat modeling keywords (脅威モデリング, STRIDE, 国家レベル脅威)
 
-**Industry Solutions (1 file):**
-39. ✅ industries-cannabis-security_ja.html - Complete Japanese keywords
+**AI & Emerging Technology (2 files):**
+6. ✅ discordian-llm-security_ja.html - LLM keywords (LLM, 大規模言語モデル, プロンプトインジェクション)
+7. ✅ discordian-ai-policy_ja.html - AI keywords (AI, 人工知能, 機械学習)
+
+**Vendor & Supply Chain (3 files):**
+8. ✅ discordian-third-party_ja.html - Third-party keywords (サードパーティ, ベンダー, パートナー)
+9. ✅ discordian-supplier-reality_ja.html - Supplier keywords (サプライヤー, サプライチェーン)
+10. ✅ discordian-stakeholders_ja.html - Stakeholder keywords (ステークホルダー, コミュニケーション)
+
+**Device & Data Management (5 files):**
+11. ✅ discordian-mobile-device_ja.html - Mobile keywords (モバイルデバイス, MDM, BYOD)
+12. ✅ discordian-data-protection_ja.html - Data protection keywords (GDPR, 個人情報保護法)
+13. ✅ discordian-data-classification_ja.html - Classification keywords (データ分類, 機密性)
+14. ✅ discordian-classification_ja.html - Asset classification keywords (情報分類, 資産分類)
+15. ✅ discordian-privacy_ja.html - Privacy keywords (プライバシー, 個人情報)
+
+**Development & Operations (4 files):**
+16. ✅ discordian-secure-dev_ja.html - Secure dev keywords (SSDLC, DevSecOps)
+17. ✅ discordian-change-mgmt_ja.html - Change management keywords (変更管理, 変更承認)
+18. ✅ discordian-open-source_ja.html - Open source keywords (OSS, ライセンス管理)
+19. ✅ blog-cia-workflows_ja.html - Workflow keywords (CI/CD, GitHub Actions, ワークフロー自動化)
+
+**Infrastructure & Access (3 files):**
+20. ✅ discordian-remote-access_ja.html - Remote access keywords (VPN, リモートワーク)
+21. ✅ discordian-monitoring-logging_ja.html - Monitoring keywords (SIEM, ログ記録)
+22. ✅ discordian-crypto_ja.html - Cryptography keywords (暗号化, TLS, 鍵管理)
+
+**Compliance & Regulations (2 files):**
+23. ✅ discordian-cra-conformity_ja.html - CRA conformity keywords (CRA適合性, CEマーキング)
+24. ✅ discordian-cra_ja.html - CRA keywords (サイバーレジリエンス法, EU規制)
+
+**Business Continuity & Backup (3 files):**
+25. ✅ discordian-business-value_ja.html - Business value keywords (ROI, セキュリティ投資)
+26. ✅ discordian-disaster-recovery_ja.html - Disaster recovery keywords (BCP, 事業継続)
+27. ✅ discordian-backup-recovery_ja.html - Backup keywords (RPO, RTO)
+
+**Security Management (3 files):**
+28. ✅ discordian-vuln-mgmt_ja.html - Vulnerability management keywords (CVE, セキュリティパッチ)
+29. ✅ discordian-security-metrics_ja.html - Metrics keywords (KPI, MTTD, MTTR)
+30. ✅ discordian-acceptable-use_ja.html - Usage policy keywords (利用規定, 適切な使用)
+
+**Industry Blog Posts (2 files):**
+31. ✅ blog-betting-gaming-cybersecurity_ja.html - Gaming industry keywords (MGAコンプライアンス, DDoS対策)
+32. ✅ blog-investment-firm-security_ja.html - Investment keywords (ヘッジファンド, SOC 2, MiFID II)
+
+**Industry Service Pages (2 files):**
+33. ✅ industries-betting-gaming_ja.html - Gaming industry keywords (UKGCセキュリティ, 責任あるギャンブル)
+34. ✅ industries-investment-fintech_ja.html - Fintech keywords (取引プラットフォーム, 証券取引)
 
 ### 🔧 Quality Issues Fixed
 
