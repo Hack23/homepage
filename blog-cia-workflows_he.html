@@ -265,7 +265,7 @@
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>🔄 Application Lifecycle States: Startup to Shutdown</h3>
+          <h3>🔄 מצבי מחזור חיי אפליקציה: מהפעלה ועד כיבוי</h3>
           <p><strong>Application existence modeled as states:</strong> <em>Startup</em> → <em>Initialized</em> (configuration loaded, services started, database connected) → <em>Ready</em> (accepting requests, processing data) → <em>Processing</em> (active workload) → <em>Shutdown</em> (graceful termination, resource cleanup). Not just "running" vs. "stopped"—explicit intermediate states handling initialization and cleanup.</p>
           <p><strong>Graceful degradation through state awareness:</strong> Application monitoring own state. Refusing new requests during shutdown. Completing in-flight processing before termination. Database connections closed cleanly. State machine enabling orderly lifecycle management—no abrupt terminations leaving corrupted data.</p>
           <p class="hidden-wisdom"><em>Applications as state machines. Lifecycle stages explicit. Transitions validated. Shutdown graceful. State awareness preventing resource leaks and data corruption through explicit lifecycle modeling.</em></p>
