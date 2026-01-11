@@ -69,7 +69,7 @@ Transform the current CI/CD pipeline into a **world-class secure software supply
 
 ```mermaid
 gantt
-    title CI/CD Enhancement Roadmap (2026-2027)
+    title CI/CD Enhancement Roadmap (2026)
     dateFormat YYYY-MM-DD
     
     section Security
