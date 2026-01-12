@@ -874,7 +874,7 @@ A comprehensive security assessment platform for the CIA triad (Confidentiality,
 
 **Links:**
 
-- 🚀 [Launch Application](https://hack23.github.io/cia-compliance-manager/)
+- 🚀 [Launch Application](https://ciacompliancemanager.com/)
 - 📖 [Documentation](cia-compliance-manager-docs.html)
 - ⭐ [Features](cia-compliance-manager-features.html)
 - 💾 [GitHub Repository](https://github.com/Hack23/cia-compliance-manager)
