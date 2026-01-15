@@ -1,1041 +1,493 @@
-# 🇰🇷 Korean Translation Guide 🏯
+# 🇰🇷 Korean (ko) Translation Guide
 
-> **Professional Cybersecurity Translation Guide**  
-> *For InfoSec, Cybersecurity, and Discordian Philosophy Documentation*
+**Version 6.0 - Expanded Hack23 Edition**  
+*Last Updated: January 2026*
+
+---
 
 ## 📋 Quick Reference
 
 | Attribute | Value |
 |-----------|-------|
-| **Language** | Korean (ko) |
-| **Flag & Icon** | 🇰🇷 🏯 |
-| **Locale** | ko_KR |
+| **Language Code** | `ko` |
+| **Locale** | `ko_KR` |
+| **Text Direction** | LTR (Left-to-Right) → |
 | **Currency** | KRW (₩) |
-| **Direction** | LTR (Left-to-Right) → |
-| **Files Translated** | 58/96 (60.4%) |
-| **Blog Posts Complete** | 26/26 (100%) ✅ |
-| **Quality Score** | 62.1% |
-| **Guide Version** | 6.0 (Post-Audit Standardized Edition)
-| **Last Updated** | December 18, 2025 |
-| **Terminology** | Fully standardized (200+ terms) |
-| **Quality** | 75%+ (improved from 62.1%) |
-
-## ✅ **Terminology Standardization Complete (December 2025)**
-
-A comprehensive terminology audit across all 68 Korean files identified and fixed inconsistencies. **100% terminology consistency** has been achieved.
-
-### 📋 Standardization Results
-
-**1. Spacing Standardization - COMPLETE:**
-- ✅ **사이버보안** (no space) - 228 occurrences, 100% consistent
-- ✅ **정보보안** (no space) - 182 occurrences, 100% consistent
-- ✅ **규정 준수** (with space) - 215 occurrences, 100% consistent
-
-**2. Konglish Reduction - COMPLETE:**
-- ✅ **위험** (proper Korean) - 395 occurrences, eliminated all 리스크
-
-**3. Regulatory Context Enhancement - COMPLETE:**
-- ✅ **K-ISMS** context added: 115+ mentions (was 33)
-- ✅ **PIPA (개인정보보호법)** context added: 115+ mentions (was 22)
-
-**4. Technical Fixes - COMPLETE:**
-- ✅ Schema.org `"inLanguage": "ko"` - 59/68 files (86.7% coverage)
-
-### 📊 Audit Summary
-
-- **Total fixes applied**: 150+ surgical changes
-- **Files standardized**: 96/96 (100%)
-- **File coverage**: 96/96 Korean files exist (100%)
-- **Quality improvement**: 62.1% → 75%+
-- **Terminology consistency**: 100% across all files
-
-**All 96 Korean files now follow standardized terminology guidelines.**
+| **Date Format** | `YYYY년 MM월 DD일` or `2026년 1월 1일` |
+| **Script** | Hangul (한글), with Hanja (漢字) occasionally |
 
 ---
 
-## 🎯 Translation Philosophy
-
-### The Discordian Approach to Translation
-
-Translation is not mere word replacement—it's the art of preserving meaning, tone, philosophy, and cultural context while adapting to a new linguistic framework. This guide embodies the Discordian principle: **"Think for Yourself"** — use these guidelines as a starting point, but apply critical thinking and cultural awareness.
-
-### Core Translation Principles
-
-#### 1. 💼 Professional Business Tone
-- Write for **C-level executives** and **technical decision-makers**
-- Maintain **formal business register** appropriate for cybersecurity consulting
-- Balance **technical precision** with **clear communication**
-- Use **industry-standard terminology** recognized in Korean
-
-#### 2. 🎯 Technical Consistency
-- **Preserve English terms** where widely accepted internationally:
-  - DevSecOps, CI/CD, GitHub, Docker, Kubernetes, API, REST
-- **Use established Korean terminology** for cybersecurity concepts
-- **Maintain consistency** across all translated pages
-- **Document translation choices** for complex or ambiguous terms
-
-#### 3. 🌍 Cultural Adaptation
-- **Adapt examples** to local market context and business practices
-- **Reference local regulations**: GDPR, NIS2, and Korean-specific laws
-- **Cite local authorities**: National cybersecurity agencies
-- **Adjust humor and references** to cultural norms while preserving Discordian spirit
-
-#### 4. 🎭 Discordian Style Preservation
-- **"Think for Yourself"** → Translate philosophy authentically
-- **FNORD references** → Preserve where culturally appropriate, adapt if needed
-- **"23 FNORD 5"** → Keep signature as cultural marker
-- **Philosophical concepts** → Adapt to local philosophical traditions
-
-## 📊 Visual Translation Workflow
+## 🔄 Visual Translation Workflow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#FFC107','fontSize':'14px'}}}%%
 graph LR
-    subgraph "📚 Korean Translation Workflow"
-        A["🎯 Start<br/>Select File"] --> B["📖 Read Guide<br/>Review Terminology"]
-        B --> C["✍️ Translate<br/>Content"]
-        C --> D["🔍 QA Check<br/>Validate"]
-        D --> E{✅ Pass?}
-        E -->|Yes| F["🎉 Complete<br/>Publish"]
-        E -->|No| C
-        
-        style A fill:#2196F3,stroke:#1565C0,color:#fff
-        style B fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style C fill:#FF9800,stroke:#F57C00,color:#fff
-        style D fill:#00BCD4,stroke:#00838F,color:#fff
-        style E fill:#FFC107,stroke:#F57C00,color:#000
-        style F fill:#4CAF50,stroke:#2E7D32,color:#fff
-    end
+    A[파일 선택] --> B[용어 검토]
+    B --> C[콘텐츠 번역]
+    C --> D[품질 검증]
+    D --> E{승인?}
+    E -->|예| F[게시]
+    E -->|아니오| C
 ```
 
-## 🏆 Quality Standards Pyramid
+## 🔄 Quality Standards Pyramid
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','fontSize':'14px'}}}%%
-graph TB
-    subgraph "🏆 Korean Translation Quality Pyramid"
-        A["👑 Excellence<br/>Native Speaker Review"]
-        B["✅ Professional<br/>Technical Accuracy"]
-        C["📋 Complete<br/>Full Translation"]
-        D["🔧 Infrastructure<br/>HTML & Meta Tags"]
-        
-        D --> C
-        C --> B
-        B --> A
-        
-        style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
-        style B fill:#8BC34A,stroke:#558B2F,color:#fff,stroke-width:2px
-        style C fill:#FFC107,stroke:#F57C00,color:#000,stroke-width:2px
-        style D fill:#9E9E9E,stroke:#616161,color:#fff
-    end
-```
-
-## 📚 Comprehensive Korean Cybersecurity Glossary
-
-### 🎯 Standardization Rules
-
-#### 1️⃣ Spacing Rules for Compound Terms
-
-Korean compound words follow specific spacing rules:
-
-**✅ NO SPACE (붙여쓰기)** - Technical Terms (Single Concepts):
-
-| English | Correct | ❌ Avoid | Rule |
-|---------|---------|---------|------|
-| Cybersecurity | **사이버보안** | ~~사이버 보안~~ | Established technical term |
-| Information Security | **정보보안** | ~~정보 보안~~ | Standard industry term |
-| Cloud Security | **클라우드보안** | ~~클라우드 보안~~ | Technical compound |
-| Network Security | **네트워크보안** | ~~네트워크 보안~~ | Single security domain |
-
-**✅ WITH SPACE (띄어쓰기)** - Action Phrases (Two Concepts):
-
-| English | Correct | ❌ Avoid | Rule |
-|---------|---------|---------|------|
-| Compliance | **규정 준수** | ~~규정준수~~ | Regulations + adherence |
-| Risk Assessment | **위험 평가** | ~~위험평가~~ | Action: assessing risk |
-| Risk Management | **위험 관리** | ~~위험관리~~ | Action: managing risk |
-| Access Control | **액세스 제어** | ~~액세스제어~~ | Action: controlling access |
-
-**Rule**: Single unified concepts use no space. Actions or relationships between concepts use spacing.
-
-#### 2️⃣ Konglish vs. Proper Korean
-
-**✅ Use Proper Korean** - Preferred:
-
-| English | ✅ Korean | ❌ Konglish |
-|---------|-----------|-------------|
-| Risk | **위험** | ~~리스크~~ |
-| Security | **보안** | ~~시큐리티~~ |
-| Management | **관리** | ~~매니지먼트~~ |
-
-**⚠️ Konglish Acceptable** - When no clear alternative:
-
-| English | Acceptable |
-|---------|------------|
-| Compliance (formal) | 컴플라이언스 |
-| Framework | 프레임워크 |
-| Dashboard | 대시보드 |
-
-#### 3️⃣ K-ISMS and PIPA Context
-
-Add Korean regulatory context alongside international standards:
-
-**Pattern 1: ISO 27001 + K-ISMS**
-```
-ISO 27001 및 K-ISMS 인증
-ISO 27001 및 K-ISMS(한국 정보보호관리체계)
-```
-
-**Pattern 2: GDPR + PIPA**
-```
-GDPR 및 개인정보보호법(PIPA) 준수
-개인정보보호법(PIPA) 및 GDPR 규정 준수
+graph TD
+    L1[기반: 기술적 정확성]
+    L2[중간: 문법과 유창성]
+    L3[정점: 문화적 적합성]
+    L1 --> L2 --> L3
 ```
 
 ---
 
-## 📚 Essential Vocabulary Reference
+## 📚 Comprehensive Vocabulary Reference
 
-*Standardized terms from 68 translated files with 100% consistency*
+### 🔥 Brand & Key Entities (Never Translate)
 
+| English | Korean | Notes |
+|---------|--------|-------|
+| Hack23 | Hack23 | Company name – never translate |
+| Hack23 AB | Hack23 AB | Swedish company designation |
+| Citizen Intelligence Agency | Citizen Intelligence Agency | Project name – keep English |
+| CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
+| Black Trigram | Black Trigram / 흑괘 (黑卦) | Game product – Korean name available |
+| 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 흑괘 | Chinese name for Black Trigram |
+| James Pether Sörling | James Pether Sörling | Founder name |
+| CISSP | CISSP | Certification |
+| CISM | CISM | Certification |
+| GitHub | GitHub | Platform name |
+| LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| CEO / Chief Executive Officer | CEO / 최고경영자 | |
+| Founder | 창업자 | |
+| CEO/Founder | CEO/창업자 | |
+| Application Security Officer | 애플리케이션 보안 담당자 | |
+| Information Security Officer | 정보 보안 담당자 | |
+| Senior Security Architect | 수석 보안 아키텍트 | |
+| Cloud Architect | 클라우드 아키텍트 | |
+| Security Consultant | 보안 컨설턴트 | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | 규정 준수 담당자 | |
+| Risk Manager | 리스크 매니저 | |
+| IT Security Manager | IT 보안 매니저 | |
+| Security Auditor | 보안 감사인 | |
+| Taekwondo Instructor | 태권도 사범 | |
+| System Developer | 시스템 개발자 | |
+| Software Engineer | 소프트웨어 엔지니어 | |
+| J2EE Developer | J2EE 개발자 | |
+| Unix Helpdesk | Unix 헬프데스크 | |
+| Teaching Assistant | 조교 | |
+| NBC Defence Group Leader | NBC 방호반장 | Military role |
+
+### 🏢 Hack23 Business & Services
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Cybersecurity Consulting Sweden | 스웨덴 사이버보안 컨설팅 | Main tagline |
+| Public ISMS | 공개 ISMS | Core differentiator |
+| Open ISMS Transparency | 개방형 ISMS 투명성 | |
+| Security Architecture & Strategy | 보안 아키텍처 및 전략 | Service line |
+| Cloud Security & DevSecOps | 클라우드 보안 및 DevSecOps | Service line |
+| Secure Development & Code Quality | 보안 개발 및 코드 품질 | Service line |
+| Compliance & Regulatory | 규정 준수 및 규제 | Service line |
+| Open Source Security | 오픈소스 보안 | Service line |
+| Security Culture & Training | 보안 문화 및 교육 | Service line |
+| Full-Stack Security | 풀스택 보안 | |
+| Current Practitioner | 현직 실무자 | Value proposition |
+| Transparent Security | 투명한 보안 | |
+| Developer-Friendly Security | 개발자 친화적 보안 | |
+| Security Excellence Through Transparency | 투명성을 통한 보안 우수성 | |
+| OSPO | OSPO | Open Source Program Office |
+| Gothenburg | 예테보리 | City in Sweden |
+| Sweden | 스웨덴 | |
+| Nordic Region | 북유럽 | |
+| Europe | 유럽 | |
+| Singapore | 싱가포르 | |
+| ASEAN Region | ASEAN 지역 | |
+
+### 🎮 Black Trigram (흑괘) Game Vocabulary
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Precision Combat Simulator | 정밀 전투 시뮬레이터 | |
+| Vital Points | 급소 | |
+| 70 Anatomical Vital Points | 70개의 해부학적 급소 | |
+| 70 Techniques | 70개의 기술 | |
+| Fighter Archetypes | 전사 아키타입 | |
+| Musa (Warrior) | 무사 (전사) | Korean term |
+| Amsalja (Assassin) | 암살자 | Korean term |
+| Hacker | 해커 | |
+| Jeongbo (Intelligence) | 정보원 | Korean term |
+| Jojik (Organization) | 조직 | Korean term |
+| Korean Martial Arts | 한국 무술 | |
+| Taekkyeon | 택견 | Traditional Korean martial art |
+| Hapkido | 합기도 | Korean martial art |
+| Taekwondo | 태권도 | Korean martial art |
+| Song Moo Kwan | 송무관 | Taekwondo school |
+| Kukkiwon | 국기원 | World Taekwondo HQ |
+| Black Belt | 흑띠 | |
+| 3rd Dan | 3단 | Rank |
+| Cultural Preservation | 문화 보존 | |
+| Educational Gaming | 교육 게임 | |
+| Unity Game | 유니티 게임 | |
+| Steam | Steam | Platform name |
+| itch.io | itch.io | Platform name |
+| I Ching | 주역 (周易) | |
+| Trigram | 괘 (卦) | |
+| Fighting | 격투 | Game genre |
+| Simulation | 시뮬레이션 | Game genre |
+| Educational | 교육적 | Game genre |
+| Cultural | 문화적 | Game genre |
+| Single-player | 싱글플레이어 | |
+| Multiplayer | 멀티플레이어 | |
+| Teen | 청소년 | Content rating |
+| Cross-platform | 크로스 플랫폼 | |
+| Open Source Game | 오픈소스 게임 | |
+
+### 🔍 Citizen Intelligence Agency Vocabulary
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Political Transparency | 정치적 투명성 | |
+| Political Intelligence Platform | 정치 인텔리전스 플랫폼 | |
+| OSINT Platform | OSINT 플랫폼 | |
+| Parliamentary Monitoring | 의회 모니터링 | |
+| Swedish Parliament Monitoring (Riksdag) | 스웨덴 의회 모니터링 (릭스다그) | |
+| Political Decision Tracking | 정치적 의사 결정 추적 | |
+| Governance Metrics & Rankings | 거버넌스 지표 및 순위 | |
+| Democratic Accountability Analysis | 민주적 책임 분석 | |
+| Voting Records | 투표 기록 | |
+| Voting Pattern Analysis | 투표 패턴 분석 | |
+| Party Performance Metrics | 정당 성과 지표 | |
+| Minister Activity Tracking | 장관 활동 추적 | |
+| Committee Work Analysis | 위원회 활동 분석 | |
+| Political Trend Visualization | 정치 트렌드 시각화 | |
+| Open Data Integration | 오픈 데이터 통합 | |
+| World Bank | 세계은행 | |
+| Swedish Government | 스웨덴 정부 | |
+| Accountability Metrics | 책임 지표 | |
+| Open Data | 오픈 데이터 | |
+| Civic Technology | 시빅 테크 | |
+| Swedish Parliament | 스웨덴 의회 | |
+| Data Visualization | 데이터 시각화 | |
+| Political Analytics | 정치 분석 | |
+| Citizens | 시민 | Audience |
+| Journalists | 기자 | Audience |
+| Researchers | 연구자 | Audience |
+| Policy Analysts | 정책 분석가 | Audience |
+| Political Scientists | 정치학자 | Audience |
+| Democracy Advocates | 민주주의 옹호자 | Audience |
+| Parliamentary Process Analysis | 의회 절차 분석 | |
+| OSINT Methodology | OSINT 방법론 | |
+| Swedish Governance System | 스웨덴 거버넌스 시스템 | |
+| Data-Driven Political Analysis | 데이터 기반 정치 분석 | |
+| Open Government Data Usage | 공공 데이터 활용 | |
+
+### 🔐 CIA Compliance Manager Vocabulary
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Security Assessment Platform | 보안 평가 플랫폼 | |
+| Enterprise Security Management | 기업 보안 관리 | |
+| CIA Triad Assessment | CIA 삼위일체 평가 | |
+| Business Impact Analysis | 비즈니스 영향 분석 | |
+| Multi-Framework Compliance | 다중 프레임워크 준수 | |
+| STRIDE Analysis | STRIDE 분석 | Threat model |
+| Threat Modeling | 위협 모델링 | |
+| Evidence Collection | 증거 수집 | |
+| Automated Compliance Reporting | 자동화된 규정 준수 보고 | |
+| Risk Register | 리스크 레지스터 | |
+| Controls Monitoring | 통제 모니터링 | |
+| CRA Assessment | CRA 평가 | Cyber Resilience Act |
+| Security Level Selection | 보안 수준 선택 | |
+| Cost Estimation | 비용 추정 | |
+| Implementation Guidance | 구현 지침 | |
+| Gap Analysis | 갭 분석 | |
+| Security Visualization | 보안 시각화 | |
+| Widget-Based Dashboard | 위젯 기반 대시보드 | |
+| Availability Impact Analysis | 가용성 영향 분석 | |
+| Integrity Impact Analysis | 무결성 영향 분석 | |
+| Confidentiality Impact Analysis | 기밀성 영향 분석 | |
+| Open Source Security Tool | 오픈소스 보안 도구 | |
+
+### 🎓 Education & Learning Terms
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Educational Use | 교육적 사용 | |
+| Self-Directed Learning | 자기 주도 학습 | |
+| Skill Development | 기술 개발 | |
+| Professional Development | 전문성 개발 | |
+| Teaches | 가르치다 | Schema.org property |
+| Accessibility Features | 접근성 기능 | |
+| Keyboard Navigation | 키보드 탐색 | |
+| High Contrast Mode | 고대비 모드 | |
+| Closed Captions | 자막 | |
+| Screen Reader Compatible | 스크린 리더 호환 | |
+
+### 🍎 Discordian Philosophy & ISMS Blog
+
+### 🍎 Discordian Philosophy & ISMS Blog
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Think for Yourself | 스스로 생각하라 | Core motto |
+| Question Authority | 권위에 의문을 제기하라 | |
+| FNORD | FNORD | Never translate |
+| Nothing is True | 아무것도 진실이 아니다 | |
+| Everything is Permitted | 모든 것이 허용된다 | |
+| Security Theater | 보안 연극 | Fake security |
+| Radical Transparency | 급진적 투명성 | |
+| Chapel Perilous | 위험한 예배당 | Keep English or translate |
+| Operation Mindfuck | Operation Mindfuck | Keep English |
+| Illuminatus Trilogy | 일루미나투스 삼부작 | |
+| Eris | 에리스 | Goddess of Chaos |
+| Discordia | 디스코디아 | |
+| Law of Fives | 5의 법칙 | |
+| Sacred Geometry | 신성 기하학 | |
+| Five-Layer Architecture | 5층 아키텍처 | |
+| Nation-State Surveillance | 국가 감시 | |
+| Crypto Backdoors | 암호화 백도어 | |
+| Security Through Obscurity | 모호함을 통한 보안 | Anti-pattern |
+| Information Hoarding | 정보 독점 | |
+| Knowledge Transparency | 지식 투명성 | |
+| Simon Moon | 사이먼 문 | Character reference |
+| Hagbard Celine | 하그바드 셀린 | Character reference |
+| George Dorn | 조지 돈 | Character reference |
 
 ### 🧭 Navigation & UI Elements
 
-*Essential interface terms that appear across all pages*
-
-
-| English | Translation |
-|---------|-------------|
-| Blog | 블로그 |
-| Collapse All | 모두 접기 |
-| Contact | 문의 |
-| Expand All | 모두 펼치기 |
+| English | Korean |
+|---------|--------|
 | Home | 홈 |
-| Products | 제품 |
+| About Us | 회사 소개 |
 | Services | 서비스 |
-| Why Hack23 | Hack23 소개 |
+| Products | 제품 |
+| Projects | 프로젝트 |
+| Contact | 연락처 |
+| Blog | 블로그 |
+| Search | 검색 |
+| Menu | 메뉴 |
+| Close | 닫기 |
+| Back | 뒤로 |
+| Next | 다음 |
+| Previous | 이전 |
+| Submit | 제출 |
+| Cancel | 취소 |
+| **Expand All** | **모두 펼치기** |
+| **Collapse All** | **모두 접기** |
+| Download | 다운로드 |
+| Read More | 더 읽기 |
+| View Details | 상세 보기 |
+| Privacy Policy | 개인정보처리방침 |
+| Terms of Service | 이용약관 |
+| Copyright | 저작권 |
+| Sitemap | 사이트맵 |
+| FAQ | 자주 묻는 질문 |
+| Why Hack23 | Hack23을 선택하는 이유 |
+| Accessibility Statement | 접근성 선언 |
+| Language | 언어 |
+| Share | 공유 |
+| Print | 인쇄 |
+| Save | 저장 |
+| Edit | 편집 |
+| Delete | 삭제 |
+| Confirm | 확인 |
+| Loading | 로딩 중 |
+| Error | 오류 |
+| Success | 성공 |
+| Warning | 경고 |
+
+### 🔐 CIA Triad & Core Security Principles
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| CIA Triad | CIA 삼요소 | |
+| CIA+ Framework | CIA+ 프레임워크 | Extended framework |
+| **Confidentiality** | **기밀성** | Data protection |
+| **Integrity** | **무결성** | Data accuracy |
+| **Availability** | **가용성** | System uptime |
+| Non-Repudiation | 부인 방지 | |
+| Authentication | 인증 | |
+| Authorization | 권한 부여 | |
 
 ### 🔒 Security & Cybersecurity Terminology
 
-*Core security concepts and cybersecurity terms*
+| English | Korean | Notes |
+|---------|--------|-------|
+| Cybersecurity | 사이버보안 | |
+| Information Security | 정보보안 | |
+| ISMS | 정보보안관리체계 | |
+| Security Policy | 보안 정책 | |
+| Risk Management | 리스크 관리 | |
+| Risk Assessment | 리스크 평가 | |
+| Threat | 위협 | |
+| Vulnerability | 취약점 | |
+| Exploit | 익스플로잇 | |
+| Patch | 패치 | |
+| Firewall | 방화벽 | |
+| Encryption | 암호화 | |
+| Decryption | 복호화 | |
+| Access Control | 접근 통제 | |
+| Multi-Factor Authentication (MFA) | 다요소 인증 | |
+| Single Sign-On (SSO) | 싱글 사인온 | |
+| Phishing | 피싱 | |
+| Ransomware | 랜섬웨어 | |
+| Malware | 멀웨어 | |
+| Zero Trust | 제로 트러스트 | |
+| Defense in Depth | 심층 방어 | |
+| Least Privilege | 최소 권한 | |
+| Incident Response | 침해 대응 | |
+| Data Breach | 데이터 유출 | |
+| Penetration Test | 모의 해킹 | |
+| Audit | 감사 | |
+| Compliance | 규정 준수 | |
+| Governance | 거버넌스 | |
+| Security Awareness | 보안 인식 | |
+| Backup | 백업 | |
+| Disaster Recovery | 재해 복구 | |
+| Business Continuity | 업무 연속성 | |
+| Supply Chain Security | 공급망 보안 | |
+| SLSA Level 3 | SLSA 레벨 3 | Supply chain security |
+| Container Security | 컨테이너 보안 | |
+| Serverless Security | 서버리스 보안 | |
+| API Security | API 보안 | |
+| Endpoint Security | 엔드포인트 보안 | |
 
+### 🏛️ Regulatory & Standards
 
-| English | Translation |
-|---------|-------------|
-| Access Control | 액세스 제어 |
-| Cloud Security | 클라우드 보안 |
-| Compliance | 규정 준수 |
-| Cybersecurity | 사이버 보안 |
-| DevSecOps | DevSecOps |
-| GDPR | GDPR |
-| Incident Response | 사고 대응 |
-| ISO 27001 | ISO 27001 |
-| Risk Assessment | 위험 평가 |
-| Security | 보안 |
-| Threat | 위협 |
-| Vulnerability | 취약점 |
-| ☁️ Cloud Security & DevSecOps | ☁️ 클라우드 보안 및 DevSecOps |
-| ⚡ Security Accelerates Innovation | 🛠️ 실용적 솔루션 |
-| 🌐 Open Source Security | 🌐 오픈 소스 보안 |
-| 🎓 Security Culture & Training | 🎓 보안 문화 및 교육 |
-| 🏆 Security & Quality Evidence | 🏆 보안 및 품질 증거 |
-| 🏗️ Security Architecture & Strategy | 🏗️ 보안 아키텍처 및 전략 |
-| 📋 Compliance & Regulatory | 📋 규정 준수 및 규제 |
-| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB 프리미엄 사이버보안 컨설팅 \| 스웨덴 유일의 공개 ISMS |
-| 🔑 Security Services | 🔑 보안 서비스 |
-| 🛡️ Security & Quality Standards | 🛡️ 보안 및 품질 기준 |
-
-
-### 🔐 CIA Triad & Core Principles
-
-*Confidentiality, Integrity, Availability framework*
-
-| English | Translation |
-|---------|-------------|
-| CIA Triad | CIA 3요소 |
-| Confidentiality | 기밀성 |
-| Integrity | 무결성 |
-| Availability | 가용성 |
-
-### 🏛️ ISMS & Governance Terminology
-
-*Information Security Management System and governance concepts*
-
-| English | Translation |
-|---------|-------------|
-| Information Security Management System | 정보보안 관리체계 |
-| Security Policy | 보안 정책 |
-| Risk Management | 위험 관리 |
-| Threat Modeling | 위협 모델링 |
-| Risk Register | 위험 등록부 |
-| Audit | 감사 |
-
-### 🍎 Discordian Philosophy & Terminology
-
-*Unique philosophical concepts from the Discordian approach to cybersecurity*
-
-| English | Translation |
-|---------|-------------|
-| FNORD | FNORD |
-| Think for Yourself | 스스로 생각하라 |
-| Question Authority | 권위에 의문을 제기하라 |
-| Chapel Perilous | Chapel Perilous |
-| Eris | 에리스 |
-| Law of Fives | 다섯의 법칙 |
-| Information Hoarding | 정보 독점 |
-| Transparency | 투명성 |
-| Security Theater | 보안 연극 |
-| Radical Transparency | 급진적 투명성 |
-
-### 🛡️ Advanced Security Concepts
-
-*Modern security practices and methodologies*
-
-| English | Translation |
-|---------|-------------|
-| Zero Trust | 제로 트러스트 |
-| Defense in Depth | 심층 방어 |
-| Least Privilege | 최소 권한 |
-| Penetration Test | 침투 테스트 |
-| Attack Surface | 공격 표면 |
-| Threat Actor | 위협 행위자 |
-| Security Incident | 보안 사고 |
-| Data Breach | 데이터 유출 |
-
-### 💻 Technical Terms & Development
-
-*Technical and development-related vocabulary*
-
-
-| English | Translation |
-|---------|-------------|
-| 🔧 Secure Development & Code Quality | 🔧 안전한 개발 및 코드 품질 |
+| English | Korean | Notes |
+|---------|--------|-------|
+| ISO 27001 | ISO 27001 | Keep as-is |
+| ISO 27001:2022 | ISO 27001:2022 | |
+| GDPR | GDPR / 일반 데이터 보호 규정 | EU regulation |
+| NIS2 | NIS2 지침 | EU directive |
+| NIST CSF | NIST 사이버보안 프레임워크 | |
+| CIS Controls | CIS 통제 | |
+| SOC2 | SOC2 | |
+| HIPAA | HIPAA | US healthcare |
+| EU Cyber Resilience Act (CRA) | EU 사이버 복원력법 | |
+| Annex A Controls | 부속서 A 통제 | ISO 27001 |
+| Statement of Applicability | 적용성 선언서 | |
+| KISA | 한국인터넷진흥원 | Korean regulator |
+| PIPC | 개인정보보호위원회 | Korean privacy authority |
 
 ### 💼 Business & Professional Terms
 
-*Business, consulting, and professional service terms*
-
-
-| English | Translation |
-|---------|-------------|
-| Breakdown | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
-| Certification | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
-| Choose | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| Companies | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| Complete | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| Complete | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
-| Consulting | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
-| Consulting | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
-| Consulting | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| Costs | 한국 ISO 27001 인증 비용: 전체 명세 \| Hack23 |
-| Cybersecurity | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
-| Cybersecurity | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
-| Cybersecurity | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| Guide | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| Implementation | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| ISMS | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| ISMS | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
-| Only | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| Open | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| Professional | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
-| Projects | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| Public | 왜 Hack23을 선택하는가? \| 스웨덴 유일의 공개 ISMS 사이버보안 컨설팅 |
-| Public | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
-| Roadmap | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| Security | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
-| Security | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| Services | 사이버보안 서비스 \| 전문 보안 컨설팅 \| Hack23 |
-| Source | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| Sweden | 스웨덴 사이버보안 컨설팅 \| 투명한 공개 ISMS \| Hack23 |
-| Swedish | ISO 27001:2022 구현 가이드（한국 기업）\| 90일 구현 로드맵 \| Hack23 |
-| Through | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| Transparency | 오픈 소스 프로젝트 \| 투명성을 통한 보안 \| Hack23 |
-| 🎯 Core Service Areas | 🎯 핵심 서비스 영역 |
-| 📋 Service Overview | 📋 서비스 개요 |
-
-### 📝 Blog Post Translation Vocabulary (December 2025)
-
-**Newly Added Terms from 26 Blog Post Translations:**
-
-| English | Korean Translation | Context |
-|---------|-------------------|---------|
-| Automated convergence | 자동화된 수렴 | AI/automation |
-| Self-healing software | 자가 치유 소프트웨어 | DevSecOps |
-| ISMS automation | ISMS 자동화 | Compliance |
-| Threat modeling | 위협 모델링 | Security architecture |
-| STRIDE | STRIDE | Keep as-is (framework name) |
-| Five-layer defense | 5단계 방어 | Security strategy |
-| Post-quantum cryptography | 포스트 양자 암호화 | Future security |
-| AWS Bedrock | AWS Bedrock | Keep as-is (service name) |
-| Zero trust | 제로 트러스트 | Security model |
-| Combat system | 전투 시스템 | Game development |
-| Hit detection | 히트 감지 | Game mechanics |
-| Vital points (kyusho) | 급소 | Martial arts |
-| Physics engine | 물리 엔진 | Game development |
-| Collision detection | 충돌 감지 | Game mechanics |
-| Procedural animation | 절차적 애니메이션 | Game development |
-| Combat AI | 전투 AI | Game development |
-| VR martial arts | VR 무술 | Gaming/training |
-| Motion control gaming | 모션 컨트롤 게임 | Gaming |
-| Cultural preservation | 문화 보존 | Heritage technology |
-| Intelligence-as-a-Service | Intelligence-as-a-Service | Business model (keep English) |
-| Parliamentary monitoring | 의회 모니터링 | Political intelligence |
-| Coalition analysis | 연정 분석 | Political analysis |
-| Behavioral risk rules | 행동 위험 규칙 | Risk assessment |
-| Data journalism | 데이터 저널리즘 | Media/journalism |
-| Alternative media | 대안 미디어 | Media landscape |
-| Discordian | 디스코디안 | Philosophy (transliterated) |
-| Chapel Perilous | Chapel Perilous | Keep as-is (philosophical concept) |
-| FNORD | FNORD | Keep as-is (Discordian term) |
-| Law of Fives | 5의 법칙 | Discordian philosophy |
-| Sacred geometry | 신성한 기하학 | Philosophy/mathematics |
-| Pentagon of security | 보안 오각형 | Security framework (metaphor) |
-| Golden ratio allocation | 황금 비율 할당 | Financial strategy |
-| AWS cost optimization | AWS 비용 최적화 | Cloud economics |
-| Context-aware security | 컨텍스트 인식 보안 | Adaptive security |
-| Adaptive recommendations | 적응형 권장사항 | ML/AI security |
-| Continuous compliance | 지속적 규정준수 | Compliance automation |
-| Business impact analysis | 비즈니스 영향 분석 | Risk management |
-| GRC platform | GRC 플랫폼 | Governance/risk/compliance |
-| Maven multi-module | Maven 멀티 모듈 | Java development |
-| Client-side architecture | 클라이언트 사이드 아키텍처 | Web development |
-| TypeScript React | TypeScript React | Keep as-is (tech stack) |
-| PixiJS | PixiJS | Keep as-is (library name) |
-| Browser combat system | 브라우저 전투 시스템 | Web gaming |
-| Medical cannabis | 의료용 대마초 | Healthcare |
-| Patient data protection | 환자 데이터 보호 | Healthcare security |
-| HIPAA | HIPAA | Keep as-is (regulation) |
-| Prescription data | 처방 데이터 | Healthcare |
-| Betting gaming | 베팅 게임 | Gaming industry |
-| Player protection | 플레이어 보호 | Gaming security |
-| Responsible gaming | 책임감 있는 게임 | Gaming ethics |
-| Cannabis cybersecurity | 대마초 사이버보안 | Industry-specific |
-| Tracking systems | 추적 시스템 | Compliance technology |
-
-### 📝 Translation Notes
-
-- **Consistency:** Always use the same translation for repeated terms
-- **Context:** Some terms may have multiple valid translations depending on context
-- **Updates:** Vocabulary extracted from 58 translated pages including all 26 blog posts (December 2025)
-- **Verification:** All translations should be verified by native speakers
-- **Blog Posts:** 100% complete with professional Korean SEO infrastructure
-
-### 📊 Additional Common Terms
-
-The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
-
-**Translation Principles:**
-- ✅ **Consistency is key**: Always use the same translation for a specific English term
-- ✅ **Context matters**: Some terms may require different translations in different contexts
-- ✅ **Native review**: All translations should be reviewed by native speakers
-- ✅ **Real-world validation**: Test translations with target audience feedback
-
-**Update History:**
-- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 92 real translated pages
-- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
-
-
-## 🏛️ Korean Regulatory & Standards Framework
-
-### National Regulatory Bodies
-
-**Data Protection:** PIPA  
-**Cybersecurity:** KISA  
-**Standards:** K-ISMS  
-
-
-### International Standards & Frameworks
-
-- **ISO 27001**: Information Security Management System
-- **ISO 27002**: Information Security Controls
-- **ISO 27005**: Information Security Risk Management
-- **ISO 22301**: Business Continuity Management
-- **ISO 27035**: Incident Security Management
-- **NIST CSF**: Cybersecurity Framework
-- **CIS Controls**: Critical Security Controls
-- **GDPR**: General Data Protection Regulation (EU)
-- **NIS2**: Network and Information Security Directive (EU)
-
-## 🔄 Complete Translation Process
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#2196F3','fontSize':'14px'}}}%%
-graph TD
-    subgraph "🔄 Translation Process Flow"
-        Start["🚀 Start Translation"] --> Prep["📋 Preparation<br/>• Read guide<br/>• Review terminology<br/>• Check status file"]
-        Prep --> Trans["✍️ Translation<br/>• Copy English file<br/>• Update meta tags<br/>• Translate content"]
-        Trans --> QA["🔍 Quality Assurance<br/>• HTML validation<br/>• Hreflang check<br/>• Content review"]
-        QA --> Test["🧪 Testing<br/>• Cross-browser<br/>• Mobile responsive<br/>• Accessibility"]
-        Test --> Review["👥 Peer Review<br/>• Native speaker<br/>• Technical accuracy<br/>• Cultural fit"]
-        Review --> Decision{✅ Approved?}
-        Decision -->|Yes| Publish["🎉 Publish<br/>Update status file"]
-        Decision -->|No| Revise["📝 Revise<br/>Address feedback"]
-        Revise --> Trans
-        
-        style Start fill:#2196F3,stroke:#1565C0,color:#fff
-        style Prep fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style Trans fill:#FF9800,stroke:#F57C00,color:#fff
-        style QA fill:#00BCD4,stroke:#00838F,color:#fff
-        style Test fill:#FFC107,stroke:#F57C00,color:#000
-        style Review fill:#673AB7,stroke:#4527A0,color:#fff
-        style Decision fill:#F44336,stroke:#C62828,color:#fff
-        style Publish fill:#4CAF50,stroke:#2E7D32,color:#fff
-        style Revise fill:#FF5722,stroke:#D84315,color:#fff
-    end
-```
-
-## ✅ Step-by-Step Translation Workflow
-
-### Step 1: 📋 Preparation & Planning
-
-**Actions:**
-1. ✅ Read this entire translation guide thoroughly
-2. ✅ Review the `Korean-Translation-Status.md` file
-3. ✅ Identify high-priority files (marked ❌ Missing)
-4. ✅ Gather reference materials:
-   - Terminology glossaries
-   - Previous translations
-   - Industry style guides
-5. ✅ Set up development environment:
-   - Text editor with Korean language support
-   - HTML validator
-   - Browser for testing
-
-**Quality Gates:**
-- [ ] Guide fully read and understood
-- [ ] Priority files identified
-- [ ] Reference materials collected
-- [ ] Environment configured
-
-### Step 2: ✍️ Translation Execution
-
-**Actions:**
-1. ✅ **Copy source file**: `page.html` → `page_ko.html`
-2. ✅ **Update HTML attributes**:
-   ```html
-   <html lang="ko">
-   ```
-3. ✅ **Translate meta tags**:
-   - `<title>` element
-   - `<meta name="description">`
-   - `<meta property="og:title">`
-   - `<meta property="og:description">`
-   - `<meta property="og:locale">` → `ko_KR`
-4. ✅ **Translate visible content**:
-   - Headers and headings
-   - Body text and paragraphs
-   - Lists and bullet points
-   - Buttons and CTAs
-   - Form labels and placeholders
-5. ✅ **Preserve technical elements**:
-   - HTML tags and structure
-   - CSS classes and IDs
-   - JavaScript code (translate comments only)
-   - Code examples (translate only comments)
-   - URLs and links
-6. ✅ **Update Schema.org**:
-   ```json
-   {
-     "@context": "https://schema.org",
-     "inLanguage": "ko"
-   }
-   ```
-7. ✅ **Translate navigation & footer**:
-   - Menu items
-   - Footer links
-   - Copyright notice
-   - Contact information
-8. ✅ **Add hreflang tags** (all 14 variants):
-   ```html
-   <link rel="alternate" hreflang="x-default" href="...">
-   <link rel="alternate" hreflang="en" href="...">
-   <link rel="alternate" hreflang="ko" href="...">
-   <!-- Add all 13 language variants -->
-   ```
-
-**Translation Guidelines:**
-- 🎯 **Accuracy first**: Technical precision over poetic flow
-- 🌍 **Cultural context**: Adapt examples to local market
-- 🔄 **Consistency**: Use established terminology from this guide
-- 📝 **Documentation**: Note any uncertain translations for review
-
-**Quality Gates:**
-- [ ] All visible text translated
-- [ ] Meta tags updated
-- [ ] HTML structure preserved
-- [ ] Schema.org localized
-- [ ] Hreflang tags complete
-
-### Step 3: 🔍 Quality Assurance & Validation
-
-**Technical Validation:**
-1. ✅ **HTML Validation**: https://validator.w3.org/
-   - No errors or warnings
-   - Well-formed markup
-2. ✅ **Schema.org Validation**: https://validator.schema.org/
-   - Structured data correct
-   - `inLanguage` set to `ko`
-3. ✅ **Hreflang Check**:
-   - All 14 variants present
-   - URLs correct and accessible
-   - `x-default` points to English
-4. ✅ **Accessibility**:
-   - WCAG 2.1 AA compliant
-   - Proper heading hierarchy
-   - Alt text translated
-   - ARIA labels localized
-
-**Content Review:**
-1. ✅ **Terminology consistency**:
-   - Cross-reference with this guide
-   - Check previous translations
-   - Verify technical terms
-2. ✅ **Grammar & spelling**:
-   - Use Korean spell checker
-   - Review sentence structure
-   - Check punctuation
-3. ✅ **Cultural appropriateness**:
-   - Examples relevant to Korean market
-   - Regulatory references correct
-   - Humor and idioms adapted
-4. ✅ **Discordian preservation**:
-   - Philosophy maintained
-   - FNORD references handled appropriately
-   - "Think for Yourself" spirit intact
-
-**Quality Gates:**
-- [ ] HTML valid
-- [ ] Schema.org valid
-- [ ] Hreflang complete
-- [ ] Accessibility compliant
-- [ ] Terminology consistent
-- [ ] Grammar correct
-- [ ] Culturally appropriate
-
-### Step 4: 🧪 Testing & Review
-
-**Browser Testing:**
-- ✅ Chrome/Chromium
-- ✅ Firefox
-- ✅ Safari (if available)
-- ✅ Edge
-
-**Device Testing:**
-- ✅ Desktop (1920x1080+)
-- ✅ Laptop (1366x768)
-- ✅ Tablet (768x1024)
-- ✅ Mobile (375x667, 414x896)
-
-**Functionality Testing:**
-- ✅ All links work
-- ✅ Forms function correctly
-- ✅ Navigation accessible
-- ✅ Search works (if present)
-- ✅ Images load properly
-
-**Peer Review:**
-1. ✅ **Native speaker review**:
-   - Fluency and naturalness
-   - Cultural appropriateness
-   - Technical accuracy
-2. ✅ **Technical review**:
-   - Security terminology correct
-   - Industry standards referenced properly
-   - Compliance requirements met
-3. ✅ **Final approval**:
-   - All feedback addressed
-   - Quality gates passed
-   - Ready for publication
-
-**Quality Gates:**
-- [ ] Cross-browser tested
-- [ ] Mobile responsive
-- [ ] Links functional
-- [ ] Native speaker approved
-- [ ] Technical review passed
-- [ ] Final approval obtained
-
-## 🛠️ Technical Implementation Details
-
-### HTML Structure Template
-
-```html
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>[Page Title in Korean]</title>
-    <meta name="description" content="[Meta description in Korean]">
-    <meta name="keywords" content="[keywords, in, korean]">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hack23.com/[page]_ko.html">
-    <meta property="og:title" content="[Title in Korean]">
-    <meta property="og:description" content="[Description in Korean]">
-    <meta property="og:locale" content="ko_KR">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hack23.com/[page]_ko.html">
-    <meta property="twitter:title" content="[Title in Korean]">
-    <meta property="twitter:description" content="[Description in Korean]">
-    
-    <!-- Hreflang Tags (All 14 variants) -->
-    <link rel="alternate" hreflang="x-default" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="en" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="ko" href="https://hack23.com/[page]_ko.html">
-    <link rel="alternate" hreflang="sv" href="https://hack23.com/[page]_sv.html">
-    <link rel="alternate" hreflang="da" href="https://hack23.com/[page]_da.html">
-    <link rel="alternate" hreflang="no" href="https://hack23.com/[page]_no.html">
-    <link rel="alternate" hreflang="fi" href="https://hack23.com/[page]_fi.html">
-    <link rel="alternate" hreflang="de" href="https://hack23.com/[page]_de.html">
-    <link rel="alternate" hreflang="nl" href="https://hack23.com/[page]_nl.html">
-    <link rel="alternate" hreflang="fr" href="https://hack23.com/[page]_fr.html">
-    <link rel="alternate" hreflang="es" href="https://hack23.com/[page]_es.html">
-    <link rel="alternate" hreflang="ja" href="https://hack23.com/[page]_ja.html">
-    <link rel="alternate" hreflang="zh" href="https://hack23.com/[page]_zh.html">
-    <link rel="alternate" hreflang="ar" href="https://hack23.com/[page]_ar.html">
-    <link rel="alternate" hreflang="he" href="https://hack23.com/[page]_he.html">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://hack23.com/[page]_ko.html">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "[Page Name in Korean]",
-        "description": "[Description in Korean]",
-        "inLanguage": "ko",
-        "url": "https://hack23.com/[page]_ko.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "Hack23",
-            "url": "https://hack23.com",
-            "inLanguage": "ko"
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "[Home in Korean]",
-                    "item": "https://hack23.com/index_ko.html"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "[Page Name in Korean]",
-                    "item": "https://hack23.com/[page]_ko.html"
-                }
-            ]
-        }
-    }
-    </script>
-</head>
-<body>
-    <!-- Translated content here -->
-</body>
-</html>
-```
-
-## 📊 Quality Assurance Standards
-
-### Professional Translation Requirements
-
-**Fluency & Naturalness:**
-- ✅ Sounds native, not translated
-- ✅ Idiomatic expressions used appropriately
-- ✅ Sentence structure follows Korean norms
-- ✅ Flow is smooth and readable
-
-**Technical Accuracy:**
-- ✅ Cybersecurity terms correct
-- ✅ Technical concepts preserved
-- ✅ Industry standards referenced properly
-- ✅ No ambiguity in security-critical content
-
-**Cultural Appropriateness:**
-- ✅ Examples relevant to Korean market
-- ✅ Regulatory references correct
-- ✅ Business context adapted
-- ✅ Humor and tone appropriate
-
-**Consistency:**
-- ✅ Terminology matches this guide
-- ✅ Style consistent across pages
-- ✅ Formatting uniform
-- ✅ Voice and tone maintained
-
-### Translation Quality Metrics
-
-| Level | Description | Characteristics |
-|-------|-------------|-----------------|
-| **🏆 Excellence** | Native-quality | Perfect fluency, zero errors, culturally perfect |
-| **✅ Professional** | Production-ready | Minor imperfections, technically accurate |
-| **⚡ Good** | Usable | Some awkwardness, meaning clear |
-| **⚠️  Adequate** | Infrastructure | HTML/meta tags correct, content needs work |
-| **❌ Poor** | Needs revision | Errors, unclear meaning, technical issues |
-
-**Target:** ✅ Professional or above for all published content
-
-## 🔍 Validation & Testing Procedures
-
-### Automated Validation Tools
-
-1. **HTML Validator**: https://validator.w3.org/
-   - Zero errors required
-   - Warnings acceptable if justified
-
-2. **Schema.org Validator**: https://validator.schema.org/
-   - All structured data must validate
-   - `inLanguage` must be `ko`
-
-3. **Hreflang Validator**: Google Search Console
-   - All 14 variants must be correct
-   - No broken links
-
-4. **Accessibility Checker**: WAVE or axe DevTools
-   - WCAG 2.1 AA compliant
-   - No critical or serious issues
-
-5. **Lighthouse Audit**: Chrome DevTools
-   - Accessibility: 95+ score
-   - SEO: 95+ score
-   - Best Practices: 90+ score
-
-### Manual Testing Checklist
-
-**Content Review:**
-- [ ] All text translated (no English remains)
-- [ ] Headers and navigation translated
-- [ ] Footer and copyright translated
-- [ ] Alt text for images translated
-- [ ] Form labels and placeholders translated
-- [ ] Error messages translated
-- [ ] Meta tags translated
-
-**Technical Review:**
-- [ ] HTML well-formed
-- [ ] lang="ko" set correctly
-- [ ] og:locale = ko_KR
-- [ ] All 14 hreflang tags present
-- [ ] Schema.org inLanguage = "ko"
-- [ ] Canonical URL correct
-- [ ] No broken links
-
-**Functionality Review:**
-- [ ] All links work
-- [ ] Navigation functional
-- [ ] Forms submit correctly
-- [ ] Search works (if present)
-- [ ] Mobile responsive
-- [ ] Cross-browser compatible
-
-**Quality Review:**
-- [ ] Professional translation quality
-- [ ] Terminology consistent with guide
-- [ ] Grammar and spelling correct
-- [ ] Cultural references appropriate
-- [ ] Technical accuracy verified
-- [ ] Native speaker approved
-
-## 📝 Best Practices & Guidelines
-
-### Do's ✅
-
-**Translation:**
-- ✅ Use this guide's terminology consistently
-- ✅ Preserve HTML structure and functionality
-- ✅ Test thoroughly before marking complete
-- ✅ Document uncertain translation choices
-- ✅ Get native speaker review
-- ✅ Update guide with new terminology
-
-**Technical:**
-- ✅ Validate all HTML and Schema.org
-- ✅ Include all 14 hreflang variants
-- ✅ Set correct lang and og:locale attributes
-- ✅ Test cross-browser and mobile
-- ✅ Check accessibility compliance
-- ✅ Verify all links work
-
-**Cultural:**
-- ✅ Adapt examples to local context
-- ✅ Reference local regulations
-- ✅ Use culturally appropriate humor
-- ✅ Maintain Discordian philosophy
-- ✅ Respect cultural sensitivities
-- ✅ Balance universal and local
-
-### Don'ts ❌
-
-**Translation:**
-- ❌ Use machine translation without review
-- ❌ Skip validation and testing
-- ❌ Ignore cultural context
-- ❌ Use informal or casual language
-- ❌ Translate code examples (only comments)
-- ❌ Change technical accuracy for flow
-
-**Technical:**
-- ❌ Change HTML structure or CSS
-- ❌ Remove or modify hreflang tags
-- ❌ Skip Schema.org localization
-- ❌ Ignore accessibility requirements
-- ❌ Break existing functionality
-- ❌ Use incorrect lang attributes
-
-**Cultural:**
-- ❌ Direct word-for-word translation
-- ❌ Use offensive or inappropriate content
-- ❌ Ignore local regulations
-- ❌ Force English idioms into Korean
-- ❌ Lose Discordian philosophy
-- ❌ Over-localize universal concepts
-
-## 📚 Additional Resources & References
-
-### Translation Resources
-
-**Korean Language:**
-- **Dictionary**: [Add recommended Korean dictionary]
-- **Grammar**: [Add Korean grammar reference]
-- **Style Guide**: [Add Korean business writing guide]
-
-**Cybersecurity Terminology:**
-- **NIST Glossary**: https://csrc.nist.gov/glossary
-- **ISO 27000 Series**: https://www.iso.org/isoiec-27001-information-security.html
-- **SANS Glossary**: https://www.sans.org/security-resources/glossary-of-terms/
-
-**Related Documentation:**
-- **Translation Status**: `Korean-Translation-Status.md`
-- **Master Documentation**: `TRANSLATION_DOCUMENTATION_README.md`
-- **English Source Files**: `*.html` (base files)
-- **Korean Translation Files**: `*_ko.html` (58 files)
-
-### Validation Tools
-
-- **HTML Validator**: https://validator.w3.org/
-- **Schema.org Validator**: https://validator.schema.org/
-- **Lighthouse**: Chrome DevTools
-- **WAVE**: https://wave.webaim.org/
-- **axe DevTools**: Browser extension
-- **Google Search Console**: Hreflang validation
-
-## 🤝 Contributing to This Guide
-
-### How to Improve This Guide
-
-When adding new translations or discovering better terminology:
-
-1. **Update Terminology Tables**:
-   - Replace `*[Verify from files]*` with actual translation
-   - Add context and notes where helpful
-   - Reference ISO standards or frameworks
-
-2. **Document Translation Choices**:
-   - Explain reasoning for complex terms
-   - Note regional variations
-   - Cite sources if available
-
-3. **Add Examples**:
-   - Provide sample translations
-   - Show before/after comparisons
-   - Highlight common mistakes
-
-4. **Improve Processes**:
-   - Suggest workflow improvements
-   - Add useful tools or resources
-   - Share tips and tricks
-
-5. **Update Status**:
-   - Mark files as complete in Translation-Status.md
-   - Update file counts and percentages
-   - Note quality improvements
-
-### Maintaining Translation Consistency
-
-**Version Control:**
-- Document guide version (currently 3.0)
-- Note major changes in updates
-- Keep changelog of terminology additions
-
-**Team Collaboration:**
-- Share translation decisions
-- Review each other's work
-- Build shared terminology database
-- Maintain style consistency
-
-**Continuous Improvement:**
-- Learn from feedback
-- Update based on user experience
-- Incorporate new cybersecurity terms
-- Refine cultural adaptations
-
-## 🎓 Discordian Translation Philosophy
-
-### "Think for Yourself" in Practice
-
-This guide provides structure, but **you** are the translator. Apply critical thinking:
-
-- **Question assumptions**: Is this the best Korean term?
-- **Consider context**: What does this mean to a Korean reader?
-- **Preserve intent**: Does my translation convey the original purpose?
-- **Adapt wisdom**: How can I make Discordian philosophy resonate in Korean culture?
-
-### The Five FNORDS of Translation
-
-1. **FNORD of Fidelity**: Stay true to original meaning
-2. **FNORD of Fluency**: Sound natural in target language
-3. **FNORD of Format**: Preserve technical structure
-4. **FNORD of Fun**: Maintain Discordian humor
-5. **FNORD of Feedback**: Seek and incorporate review
-
-### Remember
-
-> **"All statements are true in some sense, false in some sense, meaningless in some sense, true and false in some sense, true and meaningless in some sense, false and meaningless in some sense, and true and false and meaningless in some sense."**
-> — Principia Discordia
-
-Translation is both art and science. Use this guide wisely, think for yourself, and create excellent Korean content for the global cybersecurity community.
-
-**23 FNORD 5**
+| English | Korean |
+|---------|--------|
+| Consulting | 컨설팅 |
+| Enterprise | 기업 |
+| Strategy | 전략 |
+| Certification | 인증 |
+| Assessment | 평가 |
+| Implementation | 구현 |
+| Audit | 감사 |
+| Review | 검토 |
+| Gap Analysis | 갭 분석 |
+| Roadmap | 로드맵 |
+| Best Practices | 모범 사례 |
+| Case Study | 사례 연구 |
+| ROI | 투자수익률 |
+| KPI | 핵심 성과 지표 |
+| SLA | 서비스 수준 협약 |
+| Stakeholder | 이해관계자 |
+| Deliverable | 산출물 |
+| Milestone | 마일스톤 |
+
+### 📝 Blog Post Categories
+
+| English | Korean |
+|---------|--------|
+| Security Architecture | 보안 아키텍처 |
+| ISMS Policies | ISMS 정책 |
+| Compliance Frameworks | 규정 준수 프레임워크 |
+| Threat Modeling | 위협 모델링 |
+| Secure Development | 보안 개발 |
+| Cloud Security | 클라우드 보안 |
+| Access Control | 접근 통제 |
+| Cryptography | 암호학 |
+| Incident Response | 침해 대응 |
+| Vulnerability Management | 취약점 관리 |
+| Asset Management | 자산 관리 |
+| Network Security | 네트워크 보안 |
+| Email Security | 이메일 보안 |
+| Physical Security | 물리 보안 |
+| Mobile Device Security | 모바일 기기 보안 |
+| Remote Access Security | 원격 접근 보안 |
+| Monitoring & Logging | 모니터링 및 로깅 |
+| Security Metrics | 보안 지표 |
+| Third Party Risk | 제3자 리스크 |
+| Change Management | 변경 관리 |
+
+### 🏭 Industry-Specific Terms
+
+| English | Korean |
+|---------|--------|
+| Investment & FinTech | 투자 및 핀테크 |
+| Betting & Gaming | 베팅 및 게이밍 |
+| Cannabis Security | 대마 보안 |
+| Healthcare | 헬스케어 |
+| Government | 정부 |
+| Critical Infrastructure | 핵심 기반시설 |
+| Financial Services | 금융 서비스 |
+| E-commerce | 이커머스 |
 
 ---
 
-## 📋 Quick Reference Summary
+## 🔤 Korean-Specific Guidelines
 
-**Guide Information:**
-- **Language**: Korean (ko)
-- **Version**: 3.0 (Publication Edition)
-- **Last Updated**: December 2025
-- **Files**: 58/96 (60.4%)
-- **Status**: ⚠️ In Progress
+### Script Usage
+- **Hangul (한글)**: Primary script for all Korean text
+- **Hanja (漢字)**: Occasionally used for disambiguation
+- English terms can be kept or transliterated to Hangul
 
-**Key Attributes:**
-- Locale: ko_KR
-- Direction: LTR →
-- Currency: KRW (₩)
+### Spacing
+- Korean uses spaces between words (unlike Chinese/Japanese)
+- Particles are attached to preceding words without space
 
-**Essential Links:**
-- Status: `Korean-Translation-Status.md`
-- Documentation: `TRANSLATION_DOCUMENTATION_README.md`
-- Files: `*_ko.html`
+### Honorifics
+- Use formal/polite form (합니다체) for professional content
+- -님 suffix for addressing users respectfully
 
-**Contact:**
-- Issues: https://github.com/Hack23/homepage/issues
-- Discussions: https://github.com/Hack23/homepage/discussions
+### Formatting
+- Korean punctuation similar to English
+- Use Korean quotation marks where appropriate
 
 ---
 
-*This guide is part of the Hack23 Open Translation Initiative for Cybersecurity Documentation.*  
-*Licensed under Creative Commons BY-SA 4.0 for public use and adaptation.*  
-*Contributions welcome via GitHub pull requests.*
+## ✅ Translation Checklist
 
-**🌍 Making cybersecurity knowledge accessible worldwide, one translation at a time.**
+- [ ] `<html lang="ko">` attribute set
+- [ ] `<title>` translated
+- [ ] `<meta name="description">` translated
+- [ ] `og:locale` set to `ko_KR`
+- [ ] All hreflang tags present (14 languages)
+- [ ] Navigation menu translated
+- [ ] Footer translated
+- [ ] Brand names kept in English or Hangul
+- [ ] Proper spacing between words
+- [ ] Formal/polite language used
+
+---
+
+## 📝 Notes
+
+- Use **formal Korean** (합니다체 / 해요체)
+- KISA is the Korean cybersecurity agency
+- Black Trigram (흑괘) has Korean heritage - use Korean terminology where appropriate
+- Consider cultural context for Korean martial arts terms
+
+---
+
+*23 FNORD 5*
