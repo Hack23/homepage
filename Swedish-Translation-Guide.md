@@ -1,6 +1,6 @@
 # 🇸🇪 Swedish (sv) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -53,11 +53,41 @@ graph TD
 | Citizen Intelligence Agency | Citizen Intelligence Agency | Project name – keep English |
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
+| 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdagen | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Swedish | Notes |
+|---------|---------|-------|
+| CEO / Chief Executive Officer | VD / Verkställande direktör | |
+| Founder | Grundare | |
+| CEO/Founder | VD/Grundare | |
+| Application Security Officer | Applikationssäkerhetsansvarig | |
+| Information Security Officer | Informationssäkerhetsansvarig | |
+| Senior Security Architect | Senior säkerhetsarkitekt | |
+| Cloud Architect | Molnarkitekt | |
+| Security Consultant | Säkerhetskonsult | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | Efterlevnadsansvarig | |
+| Risk Manager | Riskansvarig | |
+| IT Security Manager | IT-säkerhetschef | |
+| Security Auditor | Säkerhetsrevisor | |
+| Taekwondo Instructor | Taekwondo-instruktör | |
+| System Developer | Systemutvecklare | |
+| Software Engineer | Mjukvaruingenjör | |
+| J2EE Developer | J2EE-utvecklare | |
+| Unix Helpdesk | Unix-helpdesk | |
+| Teaching Assistant | Undervisningsassistent | |
+| NBC Defence Group Leader | NBC-skyddsgruppcef | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -65,23 +95,25 @@ graph TD
 |---------|---------|-------|
 | Cybersecurity Consulting Sweden | Cybersäkerhetskonsulting Sverige | Main tagline |
 | Public ISMS | Publikt LIS | Core differentiator |
-| Security Architecture | Säkerhetsarkitektur | |
-| Security Strategy | Säkerhetsstrategi | |
-| Cloud Security | Molnsäkerhet | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | Säker utveckling | |
-| Code Quality | Kodkvalitet | |
-| Compliance & Regulatory | Regelefterlevnad | |
-| Open Source Security | Säkerhet för öppen källkod | |
-| Security Culture | Säkerhetskultur | |
-| Security Training | Säkerhetsutbildning | |
+| Open ISMS Transparency | Öppen LIS-transparens | |
+| Security Architecture & Strategy | Säkerhetsarkitektur och strategi | Service line |
+| Cloud Security & DevSecOps | Molnsäkerhet och DevSecOps | Service line |
+| Secure Development & Code Quality | Säker utveckling och kodkvalitet | Service line |
+| Compliance & Regulatory | Regelefterlevnad | Service line |
+| Open Source Security | Säkerhet för öppen källkod | Service line |
+| Security Culture & Training | Säkerhetskultur och utbildning | Service line |
 | Full-Stack Security | Fullstack-säkerhet | |
 | Current Practitioner | Aktiv utövare | Value proposition |
 | Transparent Security | Transparent säkerhet | |
 | Developer-Friendly Security | Utvecklarvänlig säkerhet | |
+| Security Excellence Through Transparency | Säkerhetsexcellens genom transparens | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | Göteborg | City in Sweden |
 | Sweden | Sverige | |
+| Nordic Region | Norden | |
+| Europe | Europa | |
+| Singapore | Singapore | |
+| ASEAN Region | ASEAN-regionen | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -90,6 +122,7 @@ graph TD
 | Precision Combat Simulator | Precisionsstridssimulator | |
 | Vital Points | Vitala punkter | |
 | 70 Anatomical Vital Points | 70 anatomiska vitala punkter | |
+| 70 Techniques | 70 tekniker | |
 | Fighter Archetypes | Kämparketyper | |
 | Musa (Warrior) | Musa (krigare) | Keep Korean term |
 | Amsalja (Assassin) | Amsalja (lönnmördare) | Keep Korean term |
@@ -100,6 +133,10 @@ graph TD
 | Taekkyeon | Taekkyeon | Traditional Korean martial art |
 | Hapkido | Hapkido | Korean martial art |
 | Taekwondo | Taekwondo | Korean martial art |
+| Song Moo Kwan | Song Moo Kwan | Taekwondo school |
+| Kukkiwon | Kukkiwon | World Taekwondo HQ |
+| Black Belt | Svart bälte | |
+| 3rd Dan | 3:e dan | Rank |
 | Cultural Preservation | Kulturbevarande | |
 | Educational Gaming | Pedagogiskt spelande | |
 | Unity Game | Unity-spel | |
@@ -107,27 +144,62 @@ graph TD
 | itch.io | itch.io | Platform name |
 | I Ching | I Ching | |
 | Trigram | Trigram | |
+| Fighting | Strid | Game genre |
+| Simulation | Simulering | Game genre |
+| Educational | Pedagogisk | Game genre |
+| Cultural | Kulturell | Game genre |
+| Single-player | Enspelar | |
+| Multiplayer | Flerspelar | |
+| Teen | Tonåring | Content rating |
+| Cross-platform | Plattformsoberoende | |
+| Open Source Game | Öppen källkod-spel | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Swedish | Notes |
 |---------|---------|-------|
 | Political Transparency | Politisk transparens | |
+| Political Intelligence Platform | Politisk underrättelseplattform | |
 | OSINT Platform | OSINT-plattform | |
 | Parliamentary Monitoring | Riksdagsövervakning | |
+| Swedish Parliament Monitoring (Riksdag) | Riksdagsövervakning | |
+| Political Decision Tracking | Spårning av politiska beslut | |
+| Governance Metrics & Rankings | Styrningsindikatorer och rankningar | |
+| Democratic Accountability Analysis | Demokratisk ansvarsanalys | |
 | Voting Records | Röstningsregister | |
+| Voting Pattern Analysis | Röstmönsteranalys | |
+| Party Performance Metrics | Partiprestandamått | |
+| Minister Activity Tracking | Ministeraktivitetsspårning | |
+| Committee Work Analysis | Utskottsarbetsanalys | |
+| Political Trend Visualization | Visualisering av politiska trender | |
+| Open Data Integration | Öppna data-integration | |
+| World Bank | Världsbanken | |
+| Swedish Government | Svenska regeringen | |
 | Accountability Metrics | Ansvarsmått | |
 | Open Data | Öppna data | |
 | Civic Technology | Medborgarteknologi | |
 | Swedish Parliament | Riksdagen | |
 | Data Visualization | Datavisualisering | |
 | Political Analytics | Politisk analys | |
+| Citizens | Medborgare | Audience |
+| Journalists | Journalister | Audience |
+| Researchers | Forskare | Audience |
+| Policy Analysts | Policyanalytiker | Audience |
+| Political Scientists | Statsvetare | Audience |
+| Democracy Advocates | Demokratiförespråkare | Audience |
+| Parliamentary Process Analysis | Riksdagsprocessanalys | |
+| OSINT Methodology | OSINT-metodik | |
+| Swedish Governance System | Svenskt styrningssystem | |
+| Data-Driven Political Analysis | Datadriven politisk analys | |
+| Open Government Data Usage | Användning av öppna myndighetsdata | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Swedish | Notes |
 |---------|---------|-------|
 | Security Assessment Platform | Säkerhetsbedömningsplattform | |
+| Enterprise Security Management | Företagssäkerhetshantering | |
+| CIA Triad Assessment | CIA-triadbedömning | |
 | Business Impact Analysis | Affärskonsekvensanalys | |
 | Multi-Framework Compliance | Efterlevnad av flera ramverk | |
 | STRIDE Analysis | STRIDE-analys | Threat model |
@@ -137,6 +209,33 @@ graph TD
 | Risk Register | Riskregister | |
 | Controls Monitoring | Kontrollövervakning | |
 | CRA Assessment | CRA-bedömning | Cyber Resilience Act |
+| Security Level Selection | Val av säkerhetsnivå | |
+| Cost Estimation | Kostnadsuppskattning | |
+| Implementation Guidance | Implementeringsvägledning | |
+| Gap Analysis | Gapanalys | |
+| Security Visualization | Säkerhetsvisualisering | |
+| Widget-Based Dashboard | Widgetbaserad instrumentpanel | |
+| Availability Impact Analysis | Tillgänglighetskonsekvensanalys | |
+| Integrity Impact Analysis | Integritetskonsekvensanalys | |
+| Confidentiality Impact Analysis | Konfidentialitetskonsekvensanalys | |
+| Open Source Security Tool | Säkerhetsverktyg med öppen källkod | |
+
+### 🎓 Education & Learning Terms
+
+| English | Swedish | Notes |
+|---------|---------|-------|
+| Educational Use | Pedagogisk användning | |
+| Self-Directed Learning | Självstudier | |
+| Skill Development | Kompetensutveckling | |
+| Professional Development | Professionell utveckling | |
+| Teaches | Undervisar | Schema.org property |
+| Accessibility Features | Tillgänglighetsfunktioner | |
+| Keyboard Navigation | Tangentbordsnavigering | |
+| High Contrast Mode | Högkontrastläge | |
+| Closed Captions | Undertexter | |
+| Screen Reader Compatible | Skärmläsarkompatibel | |
+
+### 🍎 Discordian Philosophy & ISMS Blog
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 
