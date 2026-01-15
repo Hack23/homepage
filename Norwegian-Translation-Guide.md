@@ -1,898 +1,394 @@
-# 🇳🇴 Norwegian Translation Guide ⛷️
+# 🇳🇴 Norwegian (no) Translation Guide
 
-> **Professional Cybersecurity Translation Guide**  
-> *For InfoSec, Cybersecurity, and Discordian Philosophy Documentation*
+**Version 5.0 - Comprehensive Hack23 Edition**  
+*Last Updated: January 2026*
+
+---
 
 ## 📋 Quick Reference
 
 | Attribute | Value |
 |-----------|-------|
-| **Language** | Norwegian (no) |
-| **Flag & Icon** | 🇳🇴 ⛷️ |
-| **Locale** | no_NO |
+| **Language Code** | `no` (Bokmål: `nb`, Nynorsk: `nn`) |
+| **Locale** | `nb_NO` (Bokmål) |
+| **Text Direction** | LTR (Left-to-Right) → |
 | **Currency** | NOK (kr) |
-| **Direction** | LTR (Left-to-Right) → |
-| **Files Translated** | 72/96 (75.0%) |
-| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
-| **Last Updated** | December 2025 |
+| **Date Format** | `DD.MM.YYYY` or `DD. månednavn ÅÅÅÅ` |
+| **Keyboard** | QWERTY with Æ, Ø, Å |
 
-## 🎯 Translation Philosophy
+---
 
-### The Discordian Approach to Translation
-
-Translation is not mere word replacement—it's the art of preserving meaning, tone, philosophy, and cultural context while adapting to a new linguistic framework. This guide embodies the Discordian principle: **"Think for Yourself"** — use these guidelines as a starting point, but apply critical thinking and cultural awareness.
-
-### Core Translation Principles
-
-#### 1. 💼 Professional Business Tone
-- Write for **C-level executives** and **technical decision-makers**
-- Maintain **formal business register** appropriate for cybersecurity consulting
-- Balance **technical precision** with **clear communication**
-- Use **industry-standard terminology** recognized in Norwegian
-
-#### 2. 🎯 Technical Consistency
-- **Preserve English terms** where widely accepted internationally:
-  - DevSecOps, CI/CD, GitHub, Docker, Kubernetes, API, REST
-- **Use established Norwegian terminology** for cybersecurity concepts
-- **Maintain consistency** across all translated pages
-- **Document translation choices** for complex or ambiguous terms
-
-#### 3. 🌍 Cultural Adaptation
-- **Adapt examples** to local market context and business practices
-- **Reference local regulations**: GDPR, NIS2, and Norwegian-specific laws
-- **Cite local authorities**: National cybersecurity agencies
-- **Adjust humor and references** to cultural norms while preserving Discordian spirit
-
-#### 4. 🎭 Discordian Style Preservation
-- **"Think for Yourself"** → Translate philosophy authentically
-- **FNORD references** → Preserve where culturally appropriate, adapt if needed
-- **"23 FNORD 5"** → Keep signature as cultural marker
-- **Philosophical concepts** → Adapt to local philosophical traditions
-
-## 📊 Visual Translation Workflow
+## 🔄 Visual Translation Workflow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#FFC107','fontSize':'14px'}}}%%
 graph LR
-    subgraph "📚 Norwegian Translation Workflow"
-        A["🎯 Start<br/>Select File"] --> B["📖 Read Guide<br/>Review Terminology"]
-        B --> C["✍️ Translate<br/>Content"]
-        C --> D["🔍 QA Check<br/>Validate"]
-        D --> E{✅ Pass?}
-        E -->|Yes| F["🎉 Complete<br/>Publish"]
-        E -->|No| C
-        
-        style A fill:#2196F3,stroke:#1565C0,color:#fff
-        style B fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style C fill:#FF9800,stroke:#F57C00,color:#fff
-        style D fill:#00BCD4,stroke:#00838F,color:#fff
-        style E fill:#FFC107,stroke:#F57C00,color:#000
-        style F fill:#4CAF50,stroke:#2E7D32,color:#fff
-    end
+    A[Velg fil] --> B[Gjennomgå termer]
+    B --> C[Oversett innhold]
+    C --> D[Kvalitetskontroll]
+    D --> E{Godkjent?}
+    E -->|Ja| F[Publiser]
+    E -->|Nei| C
 ```
 
-## 🏆 Quality Standards Pyramid
+## 🔄 Quality Standards Pyramid
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','fontSize':'14px'}}}%%
-graph TB
-    subgraph "🏆 Norwegian Translation Quality Pyramid"
-        A["👑 Excellence<br/>Native Speaker Review"]
-        B["✅ Professional<br/>Technical Accuracy"]
-        C["📋 Complete<br/>Full Translation"]
-        D["🔧 Infrastructure<br/>HTML & Meta Tags"]
-        
-        D --> C
-        C --> B
-        B --> A
-        
-        style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
-        style B fill:#8BC34A,stroke:#558B2F,color:#fff,stroke-width:2px
-        style C fill:#FFC107,stroke:#F57C00,color:#000,stroke-width:2px
-        style D fill:#9E9E9E,stroke:#616161,color:#fff
-    end
+graph TD
+    L1[Fundament: Teknisk nøyaktighet]
+    L2[Midt: Grammatikk og flyt]
+    L3[Topp: Kulturell tilpasning]
+    L1 --> L2 --> L3
 ```
 
-## 📚 Comprehensive Terminology Reference
-
+---
 
 ## 📚 Comprehensive Vocabulary Reference
 
-*Extracted from 4 categories of translated content*
+### 🔥 Brand & Key Entities (Never Translate)
 
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Hack23 | Hack23 | Company name – never translate |
+| Hack23 AB | Hack23 AB | Swedish company designation |
+| Citizen Intelligence Agency | Citizen Intelligence Agency | Project name – keep English |
+| CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
+| Black Trigram | Black Trigram | Game product – keep English |
+| James Pether Sörling | James Pether Sörling | Founder name |
+| CISSP | CISSP | Certification |
+| CISM | CISM | Certification |
+| GitHub | GitHub | Platform name |
+| LinkedIn | LinkedIn | Platform name |
+
+### 🏢 Hack23 Business & Services
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Cybersecurity Consulting Sweden | Cybersikkerhetsrådgivning Sverige | Main tagline |
+| Public ISMS | Offentlig ISMS | Core differentiator |
+| Security Architecture | Sikkerhetsarkitektur | |
+| Security Strategy | Sikkerhetsstrategi | |
+| Cloud Security | Skysikkerhet | |
+| DevSecOps | DevSecOps | Keep English |
+| Secure Development | Sikker utvikling | |
+| Code Quality | Kodekvalitet | |
+| Compliance & Regulatory | Overholdelse og regulering | |
+| Open Source Security | Åpen kildekode-sikkerhet | |
+| Security Culture | Sikkerhetskultur | |
+| Security Training | Sikkerhetsopplæring | |
+| Full-Stack Security | Full-stack sikkerhet | |
+| Current Practitioner | Aktiv praktiker | Value proposition |
+| Transparent Security | Transparent sikkerhet | |
+| Developer-Friendly Security | Utviklervennlig sikkerhet | |
+| OSPO | OSPO | Open Source Program Office |
+| Gothenburg | Göteborg | City in Sweden |
+| Sweden | Sverige | |
+
+### 🎮 Black Trigram Game Vocabulary
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Precision Combat Simulator | Presisjons kampsimulator | |
+| Vital Points | Vitale punkter | |
+| 70 Anatomical Vital Points | 70 anatomiske vitale punkter | |
+| Fighter Archetypes | Kjelpetyper | |
+| Musa (Warrior) | Musa (kriger) | Keep Korean term |
+| Amsalja (Assassin) | Amsalja (snikmorder) | Keep Korean term |
+| Hacker | Hacker | |
+| Jeongbo (Intelligence) | Jeongbo (etterretning) | Keep Korean term |
+| Jojik (Organization) | Jojik (organisasjon) | Keep Korean term |
+| Korean Martial Arts | Koreanske kampsporter | |
+| Taekkyeon | Taekkyeon | Traditional Korean martial art |
+| Hapkido | Hapkido | Korean martial art |
+| Taekwondo | Taekwondo | Korean martial art |
+| Cultural Preservation | Kulturell bevaring | |
+| Educational Gaming | Pedagogisk gaming | |
+| Unity Game | Unity-spill | |
+| Steam | Steam | Platform name |
+| itch.io | itch.io | Platform name |
+| I Ching | I Ching | |
+| Trigram | Trigram | |
+
+### 🔍 Citizen Intelligence Agency Vocabulary
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Political Transparency | Politisk åpenhet | |
+| OSINT Platform | OSINT-plattform | |
+| Parliamentary Monitoring | Parlamentsovervåking | |
+| Voting Records | Stemmeregistre | |
+| Accountability Metrics | Ansvarlighetsmålinger | |
+| Open Data | Åpne data | |
+| Civic Technology | Sivil teknologi | |
+| Swedish Parliament | Svenske Riksdagen | |
+| Data Visualization | Datavisualisering | |
+| Political Analytics | Politisk analyse | |
+
+### 🔐 CIA Compliance Manager Vocabulary
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Security Assessment Platform | Sikkerhetsvurderingsplattform | |
+| Business Impact Analysis | Forretningspåvirkningsanalyse | |
+| Multi-Framework Compliance | Fler-rammeverks samsvar | |
+| STRIDE Analysis | STRIDE-analyse | Threat model |
+| Threat Modeling | Trusselmodellering | |
+| Evidence Collection | Bevisinnsamling | |
+| Automated Compliance Reporting | Automatisert samsvarsrapportering | |
+| Risk Register | Risikoregister | |
+| Controls Monitoring | Kontrollsovervåking | |
+| CRA Assessment | CRA-vurdering | Cyber Resilience Act |
+
+### 🍎 Discordian Philosophy & ISMS Blog
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Think for Yourself | Tenk selv | Core motto |
+| Question Authority | Utfordre autoriteter | |
+| FNORD | FNORD | Never translate |
+| Nothing is True | Ingenting er sant | |
+| Everything is Permitted | Alt er tillatt | |
+| Security Theater | Sikkerhetsteater | Fake security |
+| Radical Transparency | Radikal åpenhet | |
+| Chapel Perilous | Chapel Perilous | Keep English |
+| Operation Mindfuck | Operation Mindfuck | Keep English |
+| Illuminatus Trilogy | Illuminatus-trilogien | |
+| Eris | Eris | Goddess of Chaos |
+| Discordia | Discordia | |
+| Law of Fives | De fems lov | |
+| Sacred Geometry | Hellig geometri | |
+| Five-Layer Architecture | Femlags arkitektur | |
+| Nation-State Surveillance | Statlig overvåking | |
+| Crypto Backdoors | Kryptobakdører | |
+| Security Through Obscurity | Sikkerhet gjennom uklarhet | Anti-pattern |
+| Information Hoarding | Informasjonshamstring | |
+| Knowledge Transparency | Kunnskapsåpenhet | |
+| Simon Moon | Simon Moon | Character reference |
+| Hagbard Celine | Hagbard Celine | Character reference |
+| George Dorn | George Dorn | Character reference |
 
 ### 🧭 Navigation & UI Elements
 
-*Essential interface terms that appear across all pages*
-
-
-| English | Translation |
-|---------|-------------|
-| Blog | Blogg |
-| Contact | Kontakt |
+| English | Norwegian |
+|---------|-----------|
 | Home | Hjem |
-| Products | Produkter |
+| About Us | Om oss |
 | Services | Tjenester |
+| Products | Produkter |
+| Projects | Prosjekter |
+| Contact | Kontakt |
+| Blog | Blogg |
+| Search | Søk |
+| Menu | Meny |
+| Close | Lukk |
+| Back | Tilbake |
+| Next | Neste |
+| Previous | Forrige |
+| Submit | Send inn |
+| Cancel | Avbryt |
+| **Expand All** | **Utvid alle** |
+| **Collapse All** | **Skjul alle** |
+| Download | Last ned |
+| Read More | Les mer |
+| View Details | Se detaljer |
+| Privacy Policy | Personvernserklæring |
+| Terms of Service | Vilkår for bruk |
+| Copyright | Opphavsrett |
+| Sitemap | Nettstedskart |
+| FAQ | Ofte stilte spørsmål |
 | Why Hack23 | Hvorfor Hack23 |
+| Accessibility Statement | Tilgjengelighetserklæring |
+| Language | Språk |
+| Share | Del |
+| Print | Skriv ut |
+| Save | Lagre |
+| Edit | Rediger |
+| Delete | Slett |
+| Confirm | Bekreft |
+| Loading | Laster |
+| Error | Feil |
+| Success | Suksess |
+| Warning | Advarsel |
+
+### 🔐 CIA Triad & Core Security Principles
+
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| CIA Triad | CIA-triaden | |
+| CIA+ Framework | CIA+-rammeverk | Extended framework |
+| **Confidentiality** | **Konfidensialitet** | Data protection |
+| **Integrity** | **Integritet** | Data accuracy |
+| **Availability** | **Tilgjengelighet** | System uptime |
+| Non-Repudiation | Ikke-fornektelse | |
+| Authentication | Autentisering | |
+| Authorization | Autorisasjon | |
 
 ### 🔒 Security & Cybersecurity Terminology
 
-*Core security concepts and cybersecurity terms*
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| Cybersecurity | Cybersikkerhet | |
+| Information Security | Informasjonssikkerhet | |
+| ISMS | ISMS | |
+| Security Policy | Sikkerhetspolicy | |
+| Risk Management | Risikostyring | |
+| Risk Assessment | Risikovurdering | |
+| Threat | Trussel | |
+| Vulnerability | Sårbarhet | |
+| Exploit | Utnyttelse | |
+| Patch | Oppdatering | |
+| Firewall | Brannmur | |
+| Encryption | Kryptering | |
+| Decryption | Dekryptering | |
+| Access Control | Tilgangskontroll | |
+| Multi-Factor Authentication (MFA) | Flerfaktor-autentisering | |
+| Single Sign-On (SSO) | Enkel pålogging | |
+| Phishing | Phishing | |
+| Ransomware | Løsepengevirus | |
+| Malware | Skadevare | |
+| Zero Trust | Null tillit | |
+| Defense in Depth | Dybdeforsvar | |
+| Least Privilege | Minste privilegium | |
+| Incident Response | Hendelseshåndtering | |
+| Data Breach | Datainnbrudd | |
+| Penetration Test | Penetrasjonstest | |
+| Audit | Revisjon | |
+| Compliance | Samsvar / Etterlevelse | |
+| Governance | Styring | |
+| Security Awareness | Sikkerhetsbevissthet | |
+| Backup | Sikkerhetskopiering | |
+| Disaster Recovery | Katastrofegjenoppretting | |
+| Business Continuity | Forretningskontinuitet | |
+| Supply Chain Security | Forsyningskjedesikkerhet | |
+| SLSA Level 3 | SLSA nivå 3 | Supply chain security |
+| Container Security | Containersikkerhet | |
+| Serverless Security | Serverløs sikkerhet | |
+| API Security | API-sikkerhet | |
+| Endpoint Security | Endepunktsikkerhet | |
 
+### 🏛️ Regulatory & Standards
 
-| English | Translation |
-|---------|-------------|
-| 45 Risk Rules Framework: Systematic Political Monitoring | 5. 🌐 Associated Press — Demokratiserad Underrättelse |
-| Access Control | Tilgangskontroll |
-| CIA Intelligence Products for Newsrooms: API, Analytics, Risk Assessments | 🎯 Målkunder: Fem Globala Nyhetsorganisationer |
-| Cloud Security | Skysikkerhet |
-| Compliance | Overholdelse |
-| Cybersecurity | Cybersikkerhet |
-| Decision Flow and Risk Assessments | Beslutningsflyt og risikovurderinger |
-| DevSecOps | DevSecOps |
-| Discordian Cybersecurity | Discordiansk Cybersäkerhet |
-| GDPR | GDPR |
-| Incident Response | Hendelseshåndtering |
-| ISO 27001 | ISO 27001 |
-| Risk Assessment | Risikovurdering |
-| Security | Sikkerhet |
-| Security Blog | Sikkerhetsblog |
-| Threat | Trussel |
-| Vulnerability | Sårbarhet |
-| ⚠️ Risk Assessment Feed: 45 Behavioral Rules | 3. 📡 Reuters — Nyhetsbyrå Distribution |
-| 🎯 Introduction: Why Security Certifications Matter for Investment Firms | [TO BE TRANSLATED - Article Title] |
-| 💼 Cybersecurity for Investment Firms: SOC 2 vs ISO 27001 | [TO BE TRANSLATED - Main Header] |
-| 🔐 Hack23 AB Premium Cybersecurity Consulting \| Sweden's Only Public ISMS | 🔐 Hack23 AB Premium Cybersikkerhet Rådgivning \| Sveriges Eneste Offentlige ISMS |
-| 🔐 Hack23 Security Blog | 🔐 Hack23 Sikkerhetsblog |
-| 🔑 Security Services | 🔑 Sikkerhetstjenester |
-| 🛡️ Security & Quality Standards | 🛡️ Sikkerhets- og Kvalitetsstandarder |
-
-
-### 🔐 CIA Triad & Core Principles
-
-*Confidentiality, Integrity, Availability framework*
-
-| English | Translation |
-|---------|-------------|
-| CIA Triad | CIA-triaden |
-| Confidentiality | Konfidensialitet |
-| Integrity | Integritet |
-| Availability | Tilgjengelighet |
-
-### 🏛️ ISMS & Governance Terminology
-
-*Information Security Management System and governance concepts*
-
-| English | Translation |
-|---------|-------------|
-| Information Security Management System | Informasjonssikkerhetsstyringssystem |
-| Security Policy | Sikkerhetspolicy |
-| Risk Management | Risikostyring |
-| Threat Modeling | Trusselmodellering |
-| Risk Register | Risikoregister |
-| Audit | Revisjon |
-
-### 🍎 Discordian Philosophy & Terminology
-
-*Unique philosophical concepts from the Discordian approach to cybersecurity*
-
-| English | Translation |
-|---------|-------------|
-| FNORD | FNORD |
-| Think for Yourself | Tenk selv |
-| Question Authority | Stille spørsmål ved autoritet |
-| Chapel Perilous | Chapel Perilous |
-| Eris | Eris |
-| Law of Fives | Femtallsloven |
-| Information Hoarding | Informasjonshamstring |
-| Transparency | Åpenhet |
-| Security Theater | Sikkerhetsteater |
-| Radical Transparency | Radikal åpenhet |
-
-### 🛡️ Advanced Security Concepts
-
-*Modern security practices and methodologies*
-
-| English | Translation |
-|---------|-------------|
-| Zero Trust | Null tillit |
-| Defense in Depth | Forsvar i dybden |
-| Least Privilege | Minste privilegium |
-| Penetration Test | Penetrasjonstest |
-| Attack Surface | Angrepsfläte |
-| Threat Actor | Trusselsaktør |
-| Security Incident | Sikkerhetshendelse |
-| Data Breach | Datalekkasje |
-
-### 💻 Technical Terms & Development
-
-*Technical and development-related vocabulary*
-
-
-| English | Translation |
-|---------|-------------|
-| Political Intelligence API | 1. 📊 The Economist — Analytisk Excellens |
+| English | Norwegian | Notes |
+|---------|-----------|-------|
+| ISO 27001 | ISO 27001 | Keep as-is |
+| ISO 27001:2022 | ISO 27001:2022 | |
+| GDPR | GDPR / Personvernforordningen | EU regulation |
+| NIS2 | NIS2-direktivet | EU directive |
+| NIST CSF | NIST Cybersecurity Framework | |
+| CIS Controls | CIS-kontroller | |
+| SOC2 | SOC2 | |
+| HIPAA | HIPAA | US healthcare |
+| EU Cyber Resilience Act (CRA) | EUs lov om cyberresiliens | |
+| Annex A Controls | Vedlegg A-kontroller | ISO 27001 |
+| Statement of Applicability | Anvendelighetserklæring | |
+| NSM | Nasjonal sikkerhetsmyndighet | Norwegian security authority |
+| Datatilsynet | Datatilsynet | Norwegian DPA |
 
 ### 💼 Business & Professional Terms
 
-*Business, consulting, and professional service terms*
-
-
-| English | Translation |
-|---------|-------------|
-| Arts | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| Black | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| Blog | [TO BE TRANSLATED] \| Hack23 |
-| Blog | Sikkerhetsblog \| Cybersikkerhetsindsigt \| Hack23 |
-| Business | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Case | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Choose | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| Combat | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| Consulting | Cybersikkerhet Konsulent Sverige \| Offentlig ISMS \| Hack23 |
-| Consulting | Cybersikkerhetstjenester \| Profesjonell Sikkerhetsrådgivning \| Hack23 |
-| Consulting | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| Cybersecurity | Cybersikkerhetstjenester \| Profesjonell Sikkerhetsrådgivning \| Hack23 |
-| Cybersecurity | Sikkerhetsblog \| Cybersikkerhetsindsigt \| Hack23 |
-| Cybersecurity | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| Cybersecurity | [TO BE TRANSLATED] \| Hack23 |
-| Cybersecurity | Cybersikkerhet Konsulent Sverige \| Offentlig ISMS \| Hack23 |
-| Features | CIA Funksjoner \| Svensk Riksdags-OSINT \| Hack23 |
-| Game | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| Global | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Insights | Sikkerhetsblog \| Cybersikkerhetsindsigt \| Hack23 |
-| Intelligence | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Investment | [TO BE TRANSLATED] \| Hack23 |
-| ISMS | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| ISMS | Cybersikkerhet Konsulent Sverige \| Offentlig ISMS \| Hack23 |
-| Journalism | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Korean | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| Martial | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| News | CIA Affärsfall för Globala Nyheter \| Underrättelse för Journalistik \| Hack23 |
-| Only | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| Open | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| OSINT | CIA Funksjoner \| Svensk Riksdags-OSINT \| Hack23 |
-| Parliament | CIA Funksjoner \| Svensk Riksdags-OSINT \| Hack23 |
-| Professional | Cybersikkerhetstjenester \| Profesjonell Sikkerhetsrådgivning \| Hack23 |
-| Projects | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| Public | Hvorfor Velge Hack23? \| Offentlig ISMS Cybersikkerhetsrådgivning |
-| Public | Cybersikkerhet Konsulent Sverige \| Offentlig ISMS \| Hack23 |
-| Security | Cybersikkerhetstjenester \| Profesjonell Sikkerhetsrådgivning \| Hack23 |
-| Security | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| Security | Sikkerhetsblog \| Cybersikkerhetsindsigt \| Hack23 |
-| Services | Cybersikkerhetstjenester \| Profesjonell Sikkerhetsrådgivning \| Hack23 |
-| Source | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| Sweden | Cybersikkerhet Konsulent Sverige \| Offentlig ISMS \| Hack23 |
-| Swedish | CIA Funksjoner \| Svensk Riksdags-OSINT \| Hack23 |
-| Through | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| Transparency | Åpen Kildekode Prosjekter \| Sikkerhet Gjennom Åpenhet \| Hack23 |
-| Trigram | Black Trigram (흑괘) \| Koreansk Kampsportsspill \| Hack23 |
-| 🎯 Core Service Areas | 🎯 Centrale Tjenesteområder |
-| 📋 Service Overview | 📋 Tjenesteoversigt |
-| 📰 CIA Business Case for Global News Outlets: Intelligence-as-a-Service for Democracy | 📰 CIA Affärsfall för Globala Nyheter: Underrättelse-som-Tjänst |
-
-### 📝 Translation Notes
-
-- **Consistency:** Always use the same translation for repeated terms
-- **Context:** Some terms may have multiple valid translations depending on context
-- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
-- **Verification:** All translations should be verified by native speakers
-
-### 📊 Additional Common Terms
-
-The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
-
-**Translation Principles:**
-- ✅ **Consistency is key**: Always use the same translation for a specific English term
-- ✅ **Context matters**: Some terms may require different translations in different contexts
-- ✅ **Native review**: All translations should be reviewed by native speakers
-- ✅ **Real-world validation**: Test translations with target audience feedback
-
-**Update History:**
-- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 116 real translated pages
-- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
-
-
-## 🏛️ Norwegian Regulatory & Standards Framework
-
-### National Regulatory Bodies
-
-**Data Protection:** Datatilsynet  
-**Cybersecurity:** NSM (Nasjonal sikkerhetsmyndighet)  
-**Certification:** NA  
-
-
-### International Standards & Frameworks
-
-- **ISO 27001**: Information Security Management System
-- **ISO 27002**: Information Security Controls
-- **ISO 27005**: Information Security Risk Management
-- **ISO 22301**: Business Continuity Management
-- **ISO 27035**: Incident Security Management
-- **NIST CSF**: Cybersecurity Framework
-- **CIS Controls**: Critical Security Controls
-- **GDPR**: General Data Protection Regulation (EU)
-- **NIS2**: Network and Information Security Directive (EU)
-
-## 🔄 Complete Translation Process
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#2196F3','fontSize':'14px'}}}%%
-graph TD
-    subgraph "🔄 Translation Process Flow"
-        Start["🚀 Start Translation"] --> Prep["📋 Preparation<br/>• Read guide<br/>• Review terminology<br/>• Check status file"]
-        Prep --> Trans["✍️ Translation<br/>• Copy English file<br/>• Update meta tags<br/>• Translate content"]
-        Trans --> QA["🔍 Quality Assurance<br/>• HTML validation<br/>• Hreflang check<br/>• Content review"]
-        QA --> Test["🧪 Testing<br/>• Cross-browser<br/>• Mobile responsive<br/>• Accessibility"]
-        Test --> Review["👥 Peer Review<br/>• Native speaker<br/>• Technical accuracy<br/>• Cultural fit"]
-        Review --> Decision{✅ Approved?}
-        Decision -->|Yes| Publish["🎉 Publish<br/>Update status file"]
-        Decision -->|No| Revise["📝 Revise<br/>Address feedback"]
-        Revise --> Trans
-        
-        style Start fill:#2196F3,stroke:#1565C0,color:#fff
-        style Prep fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style Trans fill:#FF9800,stroke:#F57C00,color:#fff
-        style QA fill:#00BCD4,stroke:#00838F,color:#fff
-        style Test fill:#FFC107,stroke:#F57C00,color:#000
-        style Review fill:#673AB7,stroke:#4527A0,color:#fff
-        style Decision fill:#F44336,stroke:#C62828,color:#fff
-        style Publish fill:#4CAF50,stroke:#2E7D32,color:#fff
-        style Revise fill:#FF5722,stroke:#D84315,color:#fff
-    end
-```
-
-## ✅ Step-by-Step Translation Workflow
-
-### Step 1: 📋 Preparation & Planning
-
-**Actions:**
-1. ✅ Read this entire translation guide thoroughly
-2. ✅ Review the `Norwegian-Translation-Status.md` file
-3. ✅ Identify high-priority files (marked ❌ Missing)
-4. ✅ Gather reference materials:
-   - Terminology glossaries
-   - Previous translations
-   - Industry style guides
-5. ✅ Set up development environment:
-   - Text editor with Norwegian language support
-   - HTML validator
-   - Browser for testing
-
-**Quality Gates:**
-- [ ] Guide fully read and understood
-- [ ] Priority files identified
-- [ ] Reference materials collected
-- [ ] Environment configured
-
-### Step 2: ✍️ Translation Execution
-
-**Actions:**
-1. ✅ **Copy source file**: `page.html` → `page_no.html`
-2. ✅ **Update HTML attributes**:
-   ```html
-   <html lang="no">
-   ```
-3. ✅ **Translate meta tags**:
-   - `<title>` element
-   - `<meta name="description">`
-   - `<meta property="og:title">`
-   - `<meta property="og:description">`
-   - `<meta property="og:locale">` → `no_NO`
-4. ✅ **Translate visible content**:
-   - Headers and headings
-   - Body text and paragraphs
-   - Lists and bullet points
-   - Buttons and CTAs
-   - Form labels and placeholders
-5. ✅ **Preserve technical elements**:
-   - HTML tags and structure
-   - CSS classes and IDs
-   - JavaScript code (translate comments only)
-   - Code examples (translate only comments)
-   - URLs and links
-6. ✅ **Update Schema.org**:
-   ```json
-   {
-     "@context": "https://schema.org",
-     "inLanguage": "no"
-   }
-   ```
-7. ✅ **Translate navigation & footer**:
-   - Menu items
-   - Footer links
-   - Copyright notice
-   - Contact information
-8. ✅ **Add hreflang tags** (all 14 variants):
-   ```html
-   <link rel="alternate" hreflang="x-default" href="...">
-   <link rel="alternate" hreflang="en" href="...">
-   <link rel="alternate" hreflang="no" href="...">
-   <!-- Add all 13 language variants -->
-   ```
-
-**Translation Guidelines:**
-- 🎯 **Accuracy first**: Technical precision over poetic flow
-- 🌍 **Cultural context**: Adapt examples to local market
-- 🔄 **Consistency**: Use established terminology from this guide
-- 📝 **Documentation**: Note any uncertain translations for review
-
-**Quality Gates:**
-- [ ] All visible text translated
-- [ ] Meta tags updated
-- [ ] HTML structure preserved
-- [ ] Schema.org localized
-- [ ] Hreflang tags complete
-
-### Step 3: 🔍 Quality Assurance & Validation
-
-**Technical Validation:**
-1. ✅ **HTML Validation**: https://validator.w3.org/
-   - No errors or warnings
-   - Well-formed markup
-2. ✅ **Schema.org Validation**: https://validator.schema.org/
-   - Structured data correct
-   - `inLanguage` set to `no`
-3. ✅ **Hreflang Check**:
-   - All 14 variants present
-   - URLs correct and accessible
-   - `x-default` points to English
-4. ✅ **Accessibility**:
-   - WCAG 2.1 AA compliant
-   - Proper heading hierarchy
-   - Alt text translated
-   - ARIA labels localized
-
-**Content Review:**
-1. ✅ **Terminology consistency**:
-   - Cross-reference with this guide
-   - Check previous translations
-   - Verify technical terms
-2. ✅ **Grammar & spelling**:
-   - Use Norwegian spell checker
-   - Review sentence structure
-   - Check punctuation
-3. ✅ **Cultural appropriateness**:
-   - Examples relevant to Norwegian market
-   - Regulatory references correct
-   - Humor and idioms adapted
-4. ✅ **Discordian preservation**:
-   - Philosophy maintained
-   - FNORD references handled appropriately
-   - "Think for Yourself" spirit intact
-
-**Quality Gates:**
-- [ ] HTML valid
-- [ ] Schema.org valid
-- [ ] Hreflang complete
-- [ ] Accessibility compliant
-- [ ] Terminology consistent
-- [ ] Grammar correct
-- [ ] Culturally appropriate
-
-### Step 4: 🧪 Testing & Review
-
-**Browser Testing:**
-- ✅ Chrome/Chromium
-- ✅ Firefox
-- ✅ Safari (if available)
-- ✅ Edge
-
-**Device Testing:**
-- ✅ Desktop (1920x1080+)
-- ✅ Laptop (1366x768)
-- ✅ Tablet (768x1024)
-- ✅ Mobile (375x667, 414x896)
-
-**Functionality Testing:**
-- ✅ All links work
-- ✅ Forms function correctly
-- ✅ Navigation accessible
-- ✅ Search works (if present)
-- ✅ Images load properly
-
-**Peer Review:**
-1. ✅ **Native speaker review**:
-   - Fluency and naturalness
-   - Cultural appropriateness
-   - Technical accuracy
-2. ✅ **Technical review**:
-   - Security terminology correct
-   - Industry standards referenced properly
-   - Compliance requirements met
-3. ✅ **Final approval**:
-   - All feedback addressed
-   - Quality gates passed
-   - Ready for publication
-
-**Quality Gates:**
-- [ ] Cross-browser tested
-- [ ] Mobile responsive
-- [ ] Links functional
-- [ ] Native speaker approved
-- [ ] Technical review passed
-- [ ] Final approval obtained
-
-## 🛠️ Technical Implementation Details
-
-### HTML Structure Template
-
-```html
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>[Page Title in Norwegian]</title>
-    <meta name="description" content="[Meta description in Norwegian]">
-    <meta name="keywords" content="[keywords, in, norwegian]">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hack23.com/[page]_no.html">
-    <meta property="og:title" content="[Title in Norwegian]">
-    <meta property="og:description" content="[Description in Norwegian]">
-    <meta property="og:locale" content="no_NO">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hack23.com/[page]_no.html">
-    <meta property="twitter:title" content="[Title in Norwegian]">
-    <meta property="twitter:description" content="[Description in Norwegian]">
-    
-    <!-- Hreflang Tags (All 14 variants) -->
-    <link rel="alternate" hreflang="x-default" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="en" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="no" href="https://hack23.com/[page]_no.html">
-    <link rel="alternate" hreflang="sv" href="https://hack23.com/[page]_sv.html">
-    <link rel="alternate" hreflang="da" href="https://hack23.com/[page]_da.html">
-    <link rel="alternate" hreflang="fi" href="https://hack23.com/[page]_fi.html">
-    <link rel="alternate" hreflang="de" href="https://hack23.com/[page]_de.html">
-    <link rel="alternate" hreflang="nl" href="https://hack23.com/[page]_nl.html">
-    <link rel="alternate" hreflang="fr" href="https://hack23.com/[page]_fr.html">
-    <link rel="alternate" hreflang="es" href="https://hack23.com/[page]_es.html">
-    <link rel="alternate" hreflang="ja" href="https://hack23.com/[page]_ja.html">
-    <link rel="alternate" hreflang="zh" href="https://hack23.com/[page]_zh.html">
-    <link rel="alternate" hreflang="ko" href="https://hack23.com/[page]_ko.html">
-    <link rel="alternate" hreflang="ar" href="https://hack23.com/[page]_ar.html">
-    <link rel="alternate" hreflang="he" href="https://hack23.com/[page]_he.html">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://hack23.com/[page]_no.html">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "[Page Name in Norwegian]",
-        "description": "[Description in Norwegian]",
-        "inLanguage": "no",
-        "url": "https://hack23.com/[page]_no.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "Hack23",
-            "url": "https://hack23.com",
-            "inLanguage": "no"
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "[Home in Norwegian]",
-                    "item": "https://hack23.com/index_no.html"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "[Page Name in Norwegian]",
-                    "item": "https://hack23.com/[page]_no.html"
-                }
-            ]
-        }
-    }
-    </script>
-</head>
-<body>
-    <!-- Translated content here -->
-</body>
-</html>
-```
-
-## 📊 Quality Assurance Standards
-
-### Professional Translation Requirements
-
-**Fluency & Naturalness:**
-- ✅ Sounds native, not translated
-- ✅ Idiomatic expressions used appropriately
-- ✅ Sentence structure follows Norwegian norms
-- ✅ Flow is smooth and readable
-
-**Technical Accuracy:**
-- ✅ Cybersecurity terms correct
-- ✅ Technical concepts preserved
-- ✅ Industry standards referenced properly
-- ✅ No ambiguity in security-critical content
-
-**Cultural Appropriateness:**
-- ✅ Examples relevant to Norwegian market
-- ✅ Regulatory references correct
-- ✅ Business context adapted
-- ✅ Humor and tone appropriate
-
-**Consistency:**
-- ✅ Terminology matches this guide
-- ✅ Style consistent across pages
-- ✅ Formatting uniform
-- ✅ Voice and tone maintained
-
-### Translation Quality Metrics
-
-| Level | Description | Characteristics |
-|-------|-------------|-----------------|
-| **🏆 Excellence** | Native-quality | Perfect fluency, zero errors, culturally perfect |
-| **✅ Professional** | Production-ready | Minor imperfections, technically accurate |
-| **⚡ Good** | Usable | Some awkwardness, meaning clear |
-| **⚠️  Adequate** | Infrastructure | HTML/meta tags correct, content needs work |
-| **❌ Poor** | Needs revision | Errors, unclear meaning, technical issues |
-
-**Target:** ✅ Professional or above for all published content
-
-## 🔍 Validation & Testing Procedures
-
-### Automated Validation Tools
-
-1. **HTML Validator**: https://validator.w3.org/
-   - Zero errors required
-   - Warnings acceptable if justified
-
-2. **Schema.org Validator**: https://validator.schema.org/
-   - All structured data must validate
-   - `inLanguage` must be `no`
-
-3. **Hreflang Validator**: Google Search Console
-   - All 14 variants must be correct
-   - No broken links
-
-4. **Accessibility Checker**: WAVE or axe DevTools
-   - WCAG 2.1 AA compliant
-   - No critical or serious issues
-
-5. **Lighthouse Audit**: Chrome DevTools
-   - Accessibility: 95+ score
-   - SEO: 95+ score
-   - Best Practices: 90+ score
-
-### Manual Testing Checklist
-
-**Content Review:**
-- [ ] All text translated (no English remains)
-- [ ] Headers and navigation translated
-- [ ] Footer and copyright translated
-- [ ] Alt text for images translated
-- [ ] Form labels and placeholders translated
-- [ ] Error messages translated
-- [ ] Meta tags translated
-
-**Technical Review:**
-- [ ] HTML well-formed
-- [ ] lang="no" set correctly
-- [ ] og:locale = no_NO
-- [ ] All 14 hreflang tags present
-- [ ] Schema.org inLanguage = "no"
-- [ ] Canonical URL correct
-- [ ] No broken links
-
-**Functionality Review:**
-- [ ] All links work
-- [ ] Navigation functional
-- [ ] Forms submit correctly
-- [ ] Search works (if present)
-- [ ] Mobile responsive
-- [ ] Cross-browser compatible
-
-**Quality Review:**
-- [ ] Professional translation quality
-- [ ] Terminology consistent with guide
-- [ ] Grammar and spelling correct
-- [ ] Cultural references appropriate
-- [ ] Technical accuracy verified
-- [ ] Native speaker approved
-
-## 📝 Best Practices & Guidelines
-
-### Do's ✅
-
-**Translation:**
-- ✅ Use this guide's terminology consistently
-- ✅ Preserve HTML structure and functionality
-- ✅ Test thoroughly before marking complete
-- ✅ Document uncertain translation choices
-- ✅ Get native speaker review
-- ✅ Update guide with new terminology
-
-**Technical:**
-- ✅ Validate all HTML and Schema.org
-- ✅ Include all 14 hreflang variants
-- ✅ Set correct lang and og:locale attributes
-- ✅ Test cross-browser and mobile
-- ✅ Check accessibility compliance
-- ✅ Verify all links work
-
-**Cultural:**
-- ✅ Adapt examples to local context
-- ✅ Reference local regulations
-- ✅ Use culturally appropriate humor
-- ✅ Maintain Discordian philosophy
-- ✅ Respect cultural sensitivities
-- ✅ Balance universal and local
-
-### Don'ts ❌
-
-**Translation:**
-- ❌ Use machine translation without review
-- ❌ Skip validation and testing
-- ❌ Ignore cultural context
-- ❌ Use informal or casual language
-- ❌ Translate code examples (only comments)
-- ❌ Change technical accuracy for flow
-
-**Technical:**
-- ❌ Change HTML structure or CSS
-- ❌ Remove or modify hreflang tags
-- ❌ Skip Schema.org localization
-- ❌ Ignore accessibility requirements
-- ❌ Break existing functionality
-- ❌ Use incorrect lang attributes
-
-**Cultural:**
-- ❌ Direct word-for-word translation
-- ❌ Use offensive or inappropriate content
-- ❌ Ignore local regulations
-- ❌ Force English idioms into Norwegian
-- ❌ Lose Discordian philosophy
-- ❌ Over-localize universal concepts
-
-## 📚 Additional Resources & References
-
-### Translation Resources
-
-**Norwegian Language:**
-- **Dictionary**: [Add recommended Norwegian dictionary]
-- **Grammar**: [Add Norwegian grammar reference]
-- **Style Guide**: [Add Norwegian business writing guide]
-
-**Cybersecurity Terminology:**
-- **NIST Glossary**: https://csrc.nist.gov/glossary
-- **ISO 27000 Series**: https://www.iso.org/isoiec-27001-information-security.html
-- **SANS Glossary**: https://www.sans.org/security-resources/glossary-of-terms/
-
-**Related Documentation:**
-- **Translation Status**: `Norwegian-Translation-Status.md`
-- **Master Documentation**: `TRANSLATION_DOCUMENTATION_README.md`
-- **English Source Files**: `*.html` (base files)
-- **Norwegian Translation Files**: `*_no.html` (72 files)
-
-### Validation Tools
-
-- **HTML Validator**: https://validator.w3.org/
-- **Schema.org Validator**: https://validator.schema.org/
-- **Lighthouse**: Chrome DevTools
-- **WAVE**: https://wave.webaim.org/
-- **axe DevTools**: Browser extension
-- **Google Search Console**: Hreflang validation
-
-## 🤝 Contributing to This Guide
-
-### How to Improve This Guide
-
-When adding new translations or discovering better terminology:
-
-1. **Update Terminology Tables**:
-   - Replace `*[Verify from files]*` with actual translation
-   - Add context and notes where helpful
-   - Reference ISO standards or frameworks
-
-2. **Document Translation Choices**:
-   - Explain reasoning for complex terms
-   - Note regional variations
-   - Cite sources if available
-
-3. **Add Examples**:
-   - Provide sample translations
-   - Show before/after comparisons
-   - Highlight common mistakes
-
-4. **Improve Processes**:
-   - Suggest workflow improvements
-   - Add useful tools or resources
-   - Share tips and tricks
-
-5. **Update Status**:
-   - Mark files as complete in Translation-Status.md
-   - Update file counts and percentages
-   - Note quality improvements
-
-### Maintaining Translation Consistency
-
-**Version Control:**
-- Document guide version (currently 3.0)
-- Note major changes in updates
-- Keep changelog of terminology additions
-
-**Team Collaboration:**
-- Share translation decisions
-- Review each other's work
-- Build shared terminology database
-- Maintain style consistency
-
-**Continuous Improvement:**
-- Learn from feedback
-- Update based on user experience
-- Incorporate new cybersecurity terms
-- Refine cultural adaptations
-
-## 🎓 Discordian Translation Philosophy
-
-### "Think for Yourself" in Practice
-
-This guide provides structure, but **you** are the translator. Apply critical thinking:
-
-- **Question assumptions**: Is this the best Norwegian term?
-- **Consider context**: What does this mean to a Norwegian reader?
-- **Preserve intent**: Does my translation convey the original purpose?
-- **Adapt wisdom**: How can I make Discordian philosophy resonate in Norwegian culture?
-
-### The Five FNORDS of Translation
-
-1. **FNORD of Fidelity**: Stay true to original meaning
-2. **FNORD of Fluency**: Sound natural in target language
-3. **FNORD of Format**: Preserve technical structure
-4. **FNORD of Fun**: Maintain Discordian humor
-5. **FNORD of Feedback**: Seek and incorporate review
-
-### Remember
-
-> **"All statements are true in some sense, false in some sense, meaningless in some sense, true and false in some sense, true and meaningless in some sense, false and meaningless in some sense, and true and false and meaningless in some sense."**
-> — Principia Discordia
-
-Translation is both art and science. Use this guide wisely, think for yourself, and create excellent Norwegian content for the global cybersecurity community.
-
-**23 FNORD 5**
+| English | Norwegian |
+|---------|-----------|
+| Consulting | Rådgivning |
+| Enterprise | Virksomhet |
+| Strategy | Strategi |
+| Certification | Sertifisering |
+| Assessment | Vurdering |
+| Implementation | Implementering |
+| Audit | Revisjon |
+| Review | Gjennomgang |
+| Gap Analysis | Gap-analyse |
+| Roadmap | Veikart |
+| Best Practices | Beste praksis |
+| Case Study | Casestudie |
+| ROI | Avkastning på investering |
+| KPI | Nøkkelindikatorer |
+| SLA | Tjenesteavtale |
+| Stakeholder | Interessent |
+| Deliverable | Leveranse |
+| Milestone | Milepæl |
+
+### 📝 Blog Post Categories
+
+| English | Norwegian |
+|---------|-----------|
+| Security Architecture | Sikkerhetsarkitektur |
+| ISMS Policies | ISMS-policyer |
+| Compliance Frameworks | Samsvarsrammeverk |
+| Threat Modeling | Trusselmodellering |
+| Secure Development | Sikker utvikling |
+| Cloud Security | Skysikkerhet |
+| Access Control | Tilgangskontroll |
+| Cryptography | Kryptografi |
+| Incident Response | Hendelseshåndtering |
+| Vulnerability Management | Sårbarhetshåndtering |
+| Asset Management | Aktivumforvaltning |
+| Network Security | Nettverkssikkerhet |
+| Email Security | E-postsikkerhet |
+| Physical Security | Fysisk sikkerhet |
+| Mobile Device Security | Mobilenhetssikkerhet |
+| Remote Access Security | Fjerntilgangssikkerhet |
+| Monitoring & Logging | Overvåking og logging |
+| Security Metrics | Sikkerhetsmålinger |
+| Third Party Risk | Tredjeparts risiko |
+| Change Management | Endringshåndtering |
+
+### 🏭 Industry-Specific Terms
+
+| English | Norwegian |
+|---------|-----------|
+| Investment & FinTech | Investering og FinTech |
+| Betting & Gaming | Betting og spill |
+| Cannabis Security | Cannabissikkerhet |
+| Healthcare | Helsevesen |
+| Government | Offentlig sektor |
+| Critical Infrastructure | Kritisk infrastruktur |
+| Financial Services | Finansielle tjenester |
+| E-commerce | E-handel |
 
 ---
 
-## 📋 Quick Reference Summary
+## 🔤 Norwegian-Specific Guidelines
 
-**Guide Information:**
-- **Language**: Norwegian (no)
-- **Version**: 3.0 (Publication Edition)
-- **Last Updated**: December 2025
-- **Files**: 72/96 (75.0%)
-- **Status**: 🎯 Excellent
+### Language Variants
+- **Bokmål**: Primary variant for business communication
+- **Nynorsk**: Alternative variant (consider if targeting specific regions)
+- This guide uses Bokmål
 
-**Key Attributes:**
-- Locale: no_NO
-- Direction: LTR →
-- Currency: NOK (kr)
+### Compound Words
+- Norwegian creates compound words freely
+- Keep compounds together: "sikkerhetsarkitektur" not "sikkerhets arkitektur"
 
-**Essential Links:**
-- Status: `Norwegian-Translation-Status.md`
-- Documentation: `TRANSLATION_DOCUMENTATION_README.md`
-- Files: `*_no.html`
+### Special Characters
+- Æ/æ, Ø/ø, Å/å are sorted at the end of the alphabet
+- Ensure proper encoding (UTF-8)
 
-**Contact:**
-- Issues: https://github.com/Hack23/homepage/issues
-- Discussions: https://github.com/Hack23/homepage/discussions
+### Formal Tone
+- Use polite "du" (informal you) which is standard in Norwegian
+- Avoid overly formal language – Norwegian business language is relatively informal
 
 ---
 
-*This guide is part of the Hack23 Open Translation Initiative for Cybersecurity Documentation.*  
-*Licensed under Creative Commons BY-SA 4.0 for public use and adaptation.*  
-*Contributions welcome via GitHub pull requests.*
+## ✅ Translation Checklist
 
-**🌍 Making cybersecurity knowledge accessible worldwide, one translation at a time.**
+- [ ] `<html lang="no">` attribute set (or `nb` for Bokmål)
+- [ ] `<title>` translated
+- [ ] `<meta name="description">` translated
+- [ ] `og:locale` set to `nb_NO`
+- [ ] All hreflang tags present (14 languages)
+- [ ] Navigation menu translated
+- [ ] Footer translated
+- [ ] Brand names kept in English
+- [ ] Compound words properly formed
+- [ ] Special characters (Æ, Ø, Å) display correctly
+
+---
+
+## 📝 Notes
+
+- Norwegian is closely related to **Swedish** and **Danish** – leverage similarities
+- NSM (Nasjonal sikkerhetsmyndighet) is the Norwegian security authority
+- Datatilsynet is the Norwegian Data Protection Authority
+- Be consistent with either Bokmål or Nynorsk throughout
+
+---
+
+*23 FNORD 5*

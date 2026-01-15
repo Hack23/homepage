@@ -1,863 +1,389 @@
-# 🇯🇵 Japanese Translation Guide 🗾
+# 🇯🇵 Japanese (ja) Translation Guide
 
-> **Professional Cybersecurity Translation Guide**  
-> *For InfoSec, Cybersecurity, and Discordian Philosophy Documentation*
+**Version 5.0 - Comprehensive Hack23 Edition**  
+*Last Updated: January 2026*
+
+---
 
 ## 📋 Quick Reference
 
 | Attribute | Value |
 |-----------|-------|
-| **Language** | Japanese (ja) |
-| **Flag & Icon** | 🇯🇵 🗾 |
-| **Locale** | ja_JP |
+| **Language Code** | `ja` |
+| **Locale** | `ja_JP` |
+| **Text Direction** | LTR (Left-to-Right) → |
 | **Currency** | JPY (¥) |
-| **Direction** | LTR (Left-to-Right) → |
-| **Files Translated** | 58/96 (60.4%) |
-| **Guide Version** | 3.1 (Enhanced Vocabulary Edition)
-| **Last Updated** | December 2025 |
+| **Date Format** | `YYYY年MM月DD日` or `2026年1月1日` |
+| **Scripts** | Kanji (漢字), Hiragana (ひらがな), Katakana (カタカナ) |
 
-## 🎯 Translation Philosophy
+---
 
-### The Discordian Approach to Translation
-
-Translation is not mere word replacement—it's the art of preserving meaning, tone, philosophy, and cultural context while adapting to a new linguistic framework. This guide embodies the Discordian principle: **"Think for Yourself"** — use these guidelines as a starting point, but apply critical thinking and cultural awareness.
-
-### Core Translation Principles
-
-#### 1. 💼 Professional Business Tone
-- Write for **C-level executives** and **technical decision-makers**
-- Maintain **formal business register** appropriate for cybersecurity consulting
-- Balance **technical precision** with **clear communication**
-- Use **industry-standard terminology** recognized in Japanese
-
-#### 2. 🎯 Technical Consistency
-- **Preserve English terms** where widely accepted internationally:
-  - DevSecOps, CI/CD, GitHub, Docker, Kubernetes, API, REST
-- **Use established Japanese terminology** for cybersecurity concepts
-- **Maintain consistency** across all translated pages
-- **Document translation choices** for complex or ambiguous terms
-
-#### 3. 🌍 Cultural Adaptation
-- **Adapt examples** to local market context and business practices
-- **Reference local regulations**: GDPR, NIS2, and Japanese-specific laws
-- **Cite local authorities**: National cybersecurity agencies
-- **Adjust humor and references** to cultural norms while preserving Discordian spirit
-
-#### 4. 🎭 Discordian Style Preservation
-- **"Think for Yourself"** → Translate philosophy authentically
-- **FNORD references** → Preserve where culturally appropriate, adapt if needed
-- **"23 FNORD 5"** → Keep signature as cultural marker
-- **Philosophical concepts** → Adapt to local philosophical traditions
-
-## 📊 Visual Translation Workflow
+## 🔄 Visual Translation Workflow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','secondaryColor':'#2196F3','tertiaryColor':'#FFC107','fontSize':'14px'}}}%%
 graph LR
-    subgraph "📚 Japanese Translation Workflow"
-        A["🎯 Start<br/>Select File"] --> B["📖 Read Guide<br/>Review Terminology"]
-        B --> C["✍️ Translate<br/>Content"]
-        C --> D["🔍 QA Check<br/>Validate"]
-        D --> E{✅ Pass?}
-        E -->|Yes| F["🎉 Complete<br/>Publish"]
-        E -->|No| C
-        
-        style A fill:#2196F3,stroke:#1565C0,color:#fff
-        style B fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style C fill:#FF9800,stroke:#F57C00,color:#fff
-        style D fill:#00BCD4,stroke:#00838F,color:#fff
-        style E fill:#FFC107,stroke:#F57C00,color:#000
-        style F fill:#4CAF50,stroke:#2E7D32,color:#fff
-    end
+    A[ファイル選択] --> B[用語確認]
+    B --> C[コンテンツ翻訳]
+    C --> D[品質検証]
+    D --> E{承認?}
+    E -->|はい| F[公開]
+    E -->|いいえ| C
 ```
 
-## 🏆 Quality Standards Pyramid
+## 🔄 Quality Standards Pyramid
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#4CAF50','fontSize':'14px'}}}%%
-graph TB
-    subgraph "🏆 Japanese Translation Quality Pyramid"
-        A["👑 Excellence<br/>Native Speaker Review"]
-        B["✅ Professional<br/>Technical Accuracy"]
-        C["📋 Complete<br/>Full Translation"]
-        D["🔧 Infrastructure<br/>HTML & Meta Tags"]
-        
-        D --> C
-        C --> B
-        B --> A
-        
-        style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
-        style B fill:#8BC34A,stroke:#558B2F,color:#fff,stroke-width:2px
-        style C fill:#FFC107,stroke:#F57C00,color:#000,stroke-width:2px
-        style D fill:#9E9E9E,stroke:#616161,color:#fff
-    end
+graph TD
+    L1[基盤: 技術的正確性]
+    L2[中間: 文法と流暢さ]
+    L3[頂点: 文化的適合性]
+    L1 --> L2 --> L3
 ```
 
-## 📚 Comprehensive Terminology Reference
-
+---
 
 ## 📚 Comprehensive Vocabulary Reference
 
-*Extracted from 3 categories of translated content*
+### 🔥 Brand & Key Entities (Never Translate)
 
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Hack23 | Hack23 | Company name – never translate |
+| Hack23 AB | Hack23 AB | Swedish company designation |
+| Citizen Intelligence Agency | Citizen Intelligence Agency | Project name – keep English |
+| CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
+| Black Trigram | Black Trigram / ブラックトライグラム | Game product |
+| 흑괘 | 흑괘 (黒卦) | Korean name for Black Trigram |
+| James Pether Sörling | James Pether Sörling | Founder name |
+| CISSP | CISSP | Certification |
+| CISM | CISM | Certification |
+| GitHub | GitHub | Platform name |
+| LinkedIn | LinkedIn | Platform name |
+
+### 🏢 Hack23 Business & Services
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Cybersecurity Consulting Sweden | スウェーデンのサイバーセキュリティコンサルティング | Main tagline |
+| Public ISMS | 公開ISMS | Core differentiator |
+| Security Architecture | セキュリティアーキテクチャ | |
+| Security Strategy | セキュリティ戦略 | |
+| Cloud Security | クラウドセキュリティ | |
+| DevSecOps | DevSecOps | Keep English |
+| Secure Development | セキュア開発 | |
+| Code Quality | コード品質 | |
+| Compliance & Regulatory | コンプライアンスと規制 | |
+| Open Source Security | オープンソースセキュリティ | |
+| Security Culture | セキュリティ文化 | |
+| Security Training | セキュリティトレーニング | |
+| Full-Stack Security | フルスタックセキュリティ | |
+| Current Practitioner | 現役プラクティショナー | Value proposition |
+| Transparent Security | 透明性のあるセキュリティ | |
+| Developer-Friendly Security | 開発者フレンドリーなセキュリティ | |
+| OSPO | OSPO | Open Source Program Office |
+| Gothenburg | ヨーテボリ | City in Sweden |
+| Sweden | スウェーデン | |
+
+### 🎮 Black Trigram Game Vocabulary
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Precision Combat Simulator | 精密戦闘シミュレーター | |
+| Vital Points | 急所 | |
+| 70 Anatomical Vital Points | 70の解剖学的急所 | |
+| Fighter Archetypes | 戦闘アーキタイプ | |
+| Musa (Warrior) | 武士（戦士） | |
+| Amsalja (Assassin) | 暗殺者 | |
+| Hacker | ハッカー | |
+| Jeongbo (Intelligence) | 情報員 | |
+| Jojik (Organization) | 組織 | |
+| Korean Martial Arts | 韓国武術 | |
+| Taekkyeon | テッキョン | Korean martial art |
+| Hapkido | ハプキドー | Korean martial art |
+| Cultural Preservation | 文化保存 | |
+| Educational Gaming | 教育ゲーム | |
+| Unity Game | Unityゲーム | |
+| Steam | Steam | Platform name |
+| itch.io | itch.io | Platform name |
+
+### 🔍 Citizen Intelligence Agency Vocabulary
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Political Transparency | 政治的透明性 | |
+| OSINT Platform | OSINTプラットフォーム | |
+| Parliamentary Monitoring | 議会モニタリング | |
+| Voting Records | 投票記録 | |
+| Accountability Metrics | 説明責任指標 | |
+| Open Data | オープンデータ | |
+| Civic Technology | シビックテック | |
+| Swedish Parliament | スウェーデン議会 | |
+| Data Visualization | データ可視化 | |
+| Political Analytics | 政治分析 | |
+
+### 🔐 CIA Compliance Manager Vocabulary
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Security Assessment Platform | セキュリティ評価プラットフォーム | |
+| Business Impact Analysis | ビジネスインパクト分析 | |
+| Multi-Framework Compliance | マルチフレームワークコンプライアンス | |
+| STRIDE Analysis | STRIDE分析 | Threat model |
+| Threat Modeling | 脅威モデリング | |
+| Evidence Collection | 証拠収集 | |
+| Automated Compliance Reporting | 自動コンプライアンスレポート | |
+| Risk Register | リスク登録簿 | |
+| Controls Monitoring | コントロール監視 | |
+| CRA Assessment | CRA評価 | Cyber Resilience Act |
+
+### 🍎 Discordian Philosophy & ISMS Blog
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Think for Yourself | 自分で考えろ | Core motto |
+| Question Authority | 権威を疑え | |
+| FNORD | FNORD | Never translate |
+| Nothing is True | 何も真実ではない | |
+| Everything is Permitted | すべては許される | |
+| Security Theater | セキュリティ劇場 | Fake security |
+| Radical Transparency | 徹底的な透明性 | |
+| Chapel Perilous | 危険な礼拝堂 | Keep English or translate |
+| Operation Mindfuck | Operation Mindfuck | Keep English |
+| Illuminatus Trilogy | イルミナティ三部作 | |
+| Eris | エリス | Goddess of Chaos |
+| Discordia | ディスコルディア | |
+| Law of Fives | 5の法則 | |
+| Sacred Geometry | 神聖幾何学 | |
+| Five-Layer Architecture | 5層アーキテクチャ | |
+| Nation-State Surveillance | 国家監視 | |
+| Crypto Backdoors | 暗号バックドア | |
+| Security Through Obscurity | 隠蔽によるセキュリティ | Anti-pattern |
+| Information Hoarding | 情報の囲い込み | |
+| Knowledge Transparency | 知識の透明性 | |
+| Simon Moon | サイモン・ムーン | Character reference |
+| Hagbard Celine | ハグバード・セリーヌ | Character reference |
+| George Dorn | ジョージ・ドーン | Character reference |
 
 ### 🧭 Navigation & UI Elements
 
-*Essential interface terms that appear across all pages*
-
-
-| English | Translation |
-|---------|-------------|
-| Black Trigram | 블랙 ート리그램 |
-| Blog | ブログ |
-| Contact | お問い合わせ |
-| FAQ | よくある質問 |
+| English | Japanese |
+|---------|----------|
 | Home | ホーム |
-| Products | 製品 |
+| About Us | 会社概要 |
 | Services | サービス |
-| Why Hack23 | Hack23について |
+| Products | 製品 |
+| Projects | プロジェクト |
+| Contact | お問い合わせ |
+| Blog | ブログ |
+| Search | 検索 |
+| Menu | メニュー |
+| Close | 閉じる |
+| Back | 戻る |
+| Next | 次へ |
+| Previous | 前へ |
+| Submit | 送信 |
+| Cancel | キャンセル |
+| **Expand All** | **すべて展開** |
+| **Collapse All** | **すべて折りたたむ** |
+| Download | ダウンロード |
+| Read More | 続きを読む |
+| View Details | 詳細を見る |
+| Privacy Policy | プライバシーポリシー |
+| Terms of Service | 利用規約 |
+| Copyright | 著作権 |
+| Sitemap | サイトマップ |
+| FAQ | よくある質問 |
+| Why Hack23 | なぜHack23か |
+| Accessibility Statement | アクセシビリティ声明 |
+| Language | 言語 |
+| Share | 共有 |
+| Print | 印刷 |
+| Save | 保存 |
+| Edit | 編集 |
+| Delete | 削除 |
+| Confirm | 確認 |
+| Loading | 読み込み中 |
+| Error | エラー |
+| Success | 成功 |
+| Warning | 警告 |
+
+### 🔐 CIA Triad & Core Security Principles
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| CIA Triad | CIAトライアド | |
+| CIA+ Framework | CIA+フレームワーク | Extended framework |
+| **Confidentiality** | **機密性** | Data protection |
+| **Integrity** | **完全性** | Data accuracy |
+| **Availability** | **可用性** | System uptime |
+| Non-Repudiation | 否認防止 | |
+| Authentication | 認証 | |
+| Authorization | 認可 | |
 
 ### 🔒 Security & Cybersecurity Terminology
 
-*Core security concepts and cybersecurity terms*
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Cybersecurity | サイバーセキュリティ | |
+| Information Security | 情報セキュリティ | |
+| ISMS | 情報セキュリティマネジメントシステム | |
+| Security Policy | セキュリティポリシー | |
+| Risk Management | リスク管理 | |
+| Risk Assessment | リスクアセスメント | |
+| Threat | 脅威 | |
+| Vulnerability | 脆弱性 | |
+| Exploit | エクスプロイト | |
+| Patch | パッチ | |
+| Firewall | ファイアウォール | |
+| Encryption | 暗号化 | |
+| Decryption | 復号化 | |
+| Access Control | アクセス制御 | |
+| Multi-Factor Authentication (MFA) | 多要素認証 | |
+| Single Sign-On (SSO) | シングルサインオン | |
+| Phishing | フィッシング | |
+| Ransomware | ランサムウェア | |
+| Malware | マルウェア | |
+| Zero Trust | ゼロトラスト | |
+| Defense in Depth | 多層防御 | |
+| Least Privilege | 最小権限 | |
+| Incident Response | インシデント対応 | |
+| Data Breach | データ侵害 | |
+| Penetration Test | ペネトレーションテスト | |
+| Audit | 監査 | |
+| Compliance | コンプライアンス | |
+| Governance | ガバナンス | |
+| Security Awareness | セキュリティ意識 | |
+| Backup | バックアップ | |
+| Disaster Recovery | 災害復旧 | |
+| Business Continuity | 事業継続 | |
+| Supply Chain Security | サプライチェーンセキュリティ | |
+| SLSA Level 3 | SLSAレベル3 | Supply chain security |
+| Container Security | コンテナセキュリティ | |
+| Serverless Security | サーバーレスセキュリティ | |
+| API Security | APIセキュリティ | |
+| Endpoint Security | エンドポイントセキュリティ | |
 
+### 🏛️ Regulatory & Standards
 
-| English | Translation |
-|---------|-------------|
-| Access Control | アクセス制御 |
-| Cloud Security | クラウドセキュリティ |
-| Compliance | コンプライアンス |
-| Cybersecurity | サイバーセキュリティ |
-| DevSecOps | DevSecOps |
-| GDPR | GDPR |
-| Incident Response | インシデント対応 |
-| ISO 27001 | ISO 27001 |
-| Risk Assessment | リスク評価 |
-| Security | セキュリティ |
-| Threat | 脅威 |
-| Vulnerability | 脆弱性 |
-| 🔒 CI/CD & Security | 🔗 アーキテクチャ & デザイン |
-| 🛡️ Security & Quality Standards | 🛡️ セキュリティと品質基準 |
-
-
-### 🔐 CIA Triad & Core Principles
-
-*Confidentiality, Integrity, Availability framework*
-
-| English | Translation |
-|---------|-------------|
-| CIA Triad | CIA三要素 |
-| Confidentiality | 機密性 |
-| Integrity | 完全性 |
-| Availability | 可用性 |
-
-### 🏛️ ISMS & Governance Terminology
-
-*Information Security Management System and governance concepts*
-
-| English | Translation |
-|---------|-------------|
-| Information Security Management System | 情報セキュリティマネジメントシステム |
-| Security Policy | セキュリティポリシー |
-| Risk Management | リスク管理 |
-| Threat Modeling | 脅威モデリング |
-| Risk Register | リスク台帳 |
-| Audit | 監査 |
-
-### 🍎 Discordian Philosophy & Terminology
-
-*Unique philosophical concepts from the Discordian approach to cybersecurity*
-
-| English | Translation |
-|---------|-------------|
-| FNORD | FNORD |
-| Think for Yourself | 自分で考える |
-| Question Authority | 権威に疑問を持つ |
-| Chapel Perilous | Chapel Perilous |
-| Eris | エリス |
-| Law of Fives | 5の法則 |
-| Information Hoarding | 情報の囲い込み |
-| Transparency | 透明性 |
-| Security Theater | セキュリティシアター |
-| Radical Transparency | 徹底的な透明性 |
-
-### 🛡️ Advanced Security Concepts
-
-*Modern security practices and methodologies*
-
-| English | Translation |
-|---------|-------------|
-| Zero Trust | ゼロトラスト |
-| Defense in Depth | 多層防御 |
-| Least Privilege | 最小権限の原則 |
-| Penetration Test | ペネトレーションテスト |
-| Attack Surface | 攻撃対象領域 |
-| Threat Actor | 脅威アクター |
-| Security Incident | セキュリティインシデント |
-| Data Breach | データ侵害 |
+| English | Japanese | Notes |
+|---------|----------|-------|
+| ISO 27001 | ISO 27001 | Keep as-is |
+| ISO 27001:2022 | ISO 27001:2022 | |
+| GDPR | GDPR / 一般データ保護規則 | EU regulation |
+| NIS2 | NIS2指令 | EU directive |
+| NIST CSF | NISTサイバーセキュリティフレームワーク | |
+| CIS Controls | CISコントロール | |
+| SOC2 | SOC2 | |
+| HIPAA | HIPAA | US healthcare |
+| EU Cyber Resilience Act (CRA) | EUサイバーレジリエンス法 | |
+| Annex A Controls | 附属書Aの管理策 | ISO 27001 |
+| Statement of Applicability | 適用宣言書 | |
+| NISC | 内閣サイバーセキュリティセンター | Japanese regulator |
+| JPCERT/CC | JPCERT/CC | Japanese CERT |
 
 ### 💼 Business & Professional Terms
 
-*Business, consulting, and professional service terms*
-
-
-| English | Translation |
-|---------|-------------|
-| Architecture | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-| Arts | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-| Avoid | ISO 27001実装時に避けるべき5つの失敗 \| Hack23 |
-| Black | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-| Choose | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Consulting | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Consulting | サイバーセキュリティコンサルティング スウェーデン \| 公開ISMS \| Hack23 |
-| Cybersecurity | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Cybersecurity | サイバーセキュリティコンサルティング スウェーデン \| 公開ISMS \| Hack23 |
-| During | ISO 27001実装時に避けるべき5つの失敗 \| Hack23 |
-| Hoarding | 情報の抱え込み \| 知識の透明性 \| Hack23 |
-| Implementation | ISO 27001実装時に避けるべき5つの失敗 \| Hack23 |
-| Information | 情報の抱え込み \| 知識の透明性 \| Hack23 |
-| ISMS | サイバーセキュリティコンサルティング スウェーデン \| 公開ISMS \| Hack23 |
-| ISMS | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Knowledge | 情報の抱え込み \| 知識の透明性 \| Hack23 |
-| Korean | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-| Martial | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-| Mistakes | ISO 27001実装時に避けるべき5つの失敗 \| Hack23 |
-| Only | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Open | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Projects | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Public | サイバーセキュリティコンサルティング スウェーデン \| 公開ISMS \| Hack23 |
-| Public | なぜHack23を選ぶのか？ \| スウェーデン唯一の公開ISMS サイバーセキュリティコンサルティング |
-| Security | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Source | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Sweden | サイバーセキュリティコンサルティング スウェーデン \| 公開ISMS \| Hack23 |
-| Through | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Transparency | 情報の抱え込み \| 知識の透明性 \| Hack23 |
-| Transparency | オープンソースプロジェクト \| 透明性によるセキュリティ \| Hack23 |
-| Trigram | ブラックトライグラム アーキテクチャ ドキュメント \| 韓国 武術 ゲーム 設計 \| Hack23 |
-
-### 📝 Translation Notes
-
-- **Consistency:** Always use the same translation for repeated terms
-- **Context:** Some terms may have multiple valid translations depending on context
-- **Updates:** This vocabulary is extracted from actual translated pages as of December 2025
-- **Verification:** All translations should be verified by native speakers
-
-### 📊 Additional Common Terms
-
-The following terms appear frequently across translated pages. For comprehensive terminology including cybersecurity-specific terms, regulatory references, and technical vocabulary, please refer to the specific category tables above.
-
-**Translation Principles:**
-- ✅ **Consistency is key**: Always use the same translation for a specific English term
-- ✅ **Context matters**: Some terms may require different translations in different contexts
-- ✅ **Native review**: All translations should be reviewed by native speakers
-- ✅ **Real-world validation**: Test translations with target audience feedback
-
-**Update History:**
-- **Version 3.1 (December 2025)**: Enhanced with vocabulary extracted from 76 real translated pages
-- **Version 3.0 (December 2025)**: Initial comprehensive publication edition
-
-
-## 🏛️ Japanese Regulatory & Standards Framework
-
-### National Regulatory Bodies
-
-**Data Protection:** APPI  
-**Cybersecurity:** NISC  
-**Standards:** JIS Q 27001  
-
-
-### International Standards & Frameworks
-
-- **ISO 27001**: Information Security Management System
-- **ISO 27002**: Information Security Controls
-- **ISO 27005**: Information Security Risk Management
-- **ISO 22301**: Business Continuity Management
-- **ISO 27035**: Incident Security Management
-- **NIST CSF**: Cybersecurity Framework
-- **CIS Controls**: Critical Security Controls
-- **GDPR**: General Data Protection Regulation (EU)
-- **NIS2**: Network and Information Security Directive (EU)
-
-## 🔄 Complete Translation Process
-
-```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#2196F3','fontSize':'14px'}}}%%
-graph TD
-    subgraph "🔄 Translation Process Flow"
-        Start["🚀 Start Translation"] --> Prep["📋 Preparation<br/>• Read guide<br/>• Review terminology<br/>• Check status file"]
-        Prep --> Trans["✍️ Translation<br/>• Copy English file<br/>• Update meta tags<br/>• Translate content"]
-        Trans --> QA["🔍 Quality Assurance<br/>• HTML validation<br/>• Hreflang check<br/>• Content review"]
-        QA --> Test["🧪 Testing<br/>• Cross-browser<br/>• Mobile responsive<br/>• Accessibility"]
-        Test --> Review["👥 Peer Review<br/>• Native speaker<br/>• Technical accuracy<br/>• Cultural fit"]
-        Review --> Decision{✅ Approved?}
-        Decision -->|Yes| Publish["🎉 Publish<br/>Update status file"]
-        Decision -->|No| Revise["📝 Revise<br/>Address feedback"]
-        Revise --> Trans
-        
-        style Start fill:#2196F3,stroke:#1565C0,color:#fff
-        style Prep fill:#9C27B0,stroke:#6A1B9A,color:#fff
-        style Trans fill:#FF9800,stroke:#F57C00,color:#fff
-        style QA fill:#00BCD4,stroke:#00838F,color:#fff
-        style Test fill:#FFC107,stroke:#F57C00,color:#000
-        style Review fill:#673AB7,stroke:#4527A0,color:#fff
-        style Decision fill:#F44336,stroke:#C62828,color:#fff
-        style Publish fill:#4CAF50,stroke:#2E7D32,color:#fff
-        style Revise fill:#FF5722,stroke:#D84315,color:#fff
-    end
-```
-
-## ✅ Step-by-Step Translation Workflow
-
-### Step 1: 📋 Preparation & Planning
-
-**Actions:**
-1. ✅ Read this entire translation guide thoroughly
-2. ✅ Review the `Japanese-Translation-Status.md` file
-3. ✅ Identify high-priority files (marked ❌ Missing)
-4. ✅ Gather reference materials:
-   - Terminology glossaries
-   - Previous translations
-   - Industry style guides
-5. ✅ Set up development environment:
-   - Text editor with Japanese language support
-   - HTML validator
-   - Browser for testing
-
-**Quality Gates:**
-- [ ] Guide fully read and understood
-- [ ] Priority files identified
-- [ ] Reference materials collected
-- [ ] Environment configured
-
-### Step 2: ✍️ Translation Execution
-
-**Actions:**
-1. ✅ **Copy source file**: `page.html` → `page_ja.html`
-2. ✅ **Update HTML attributes**:
-   ```html
-   <html lang="ja">
-   ```
-3. ✅ **Translate meta tags**:
-   - `<title>` element
-   - `<meta name="description">`
-   - `<meta property="og:title">`
-   - `<meta property="og:description">`
-   - `<meta property="og:locale">` → `ja_JP`
-4. ✅ **Translate visible content**:
-   - Headers and headings
-   - Body text and paragraphs
-   - Lists and bullet points
-   - Buttons and CTAs
-   - Form labels and placeholders
-5. ✅ **Preserve technical elements**:
-   - HTML tags and structure
-   - CSS classes and IDs
-   - JavaScript code (translate comments only)
-   - Code examples (translate only comments)
-   - URLs and links
-6. ✅ **Update Schema.org**:
-   ```json
-   {
-     "@context": "https://schema.org",
-     "inLanguage": "ja"
-   }
-   ```
-7. ✅ **Translate navigation & footer**:
-   - Menu items
-   - Footer links
-   - Copyright notice
-   - Contact information
-8. ✅ **Add hreflang tags** (all 14 variants):
-   ```html
-   <link rel="alternate" hreflang="x-default" href="...">
-   <link rel="alternate" hreflang="en" href="...">
-   <link rel="alternate" hreflang="ja" href="...">
-   <!-- Add all 13 language variants -->
-   ```
-
-**Translation Guidelines:**
-- 🎯 **Accuracy first**: Technical precision over poetic flow
-- 🌍 **Cultural context**: Adapt examples to local market
-- 🔄 **Consistency**: Use established terminology from this guide
-- 📝 **Documentation**: Note any uncertain translations for review
-
-**Quality Gates:**
-- [ ] All visible text translated
-- [ ] Meta tags updated
-- [ ] HTML structure preserved
-- [ ] Schema.org localized
-- [ ] Hreflang tags complete
-
-### Step 3: 🔍 Quality Assurance & Validation
-
-**Technical Validation:**
-1. ✅ **HTML Validation**: https://validator.w3.org/
-   - No errors or warnings
-   - Well-formed markup
-2. ✅ **Schema.org Validation**: https://validator.schema.org/
-   - Structured data correct
-   - `inLanguage` set to `ja`
-3. ✅ **Hreflang Check**:
-   - All 14 variants present
-   - URLs correct and accessible
-   - `x-default` points to English
-4. ✅ **Accessibility**:
-   - WCAG 2.1 AA compliant
-   - Proper heading hierarchy
-   - Alt text translated
-   - ARIA labels localized
-
-**Content Review:**
-1. ✅ **Terminology consistency**:
-   - Cross-reference with this guide
-   - Check previous translations
-   - Verify technical terms
-2. ✅ **Grammar & spelling**:
-   - Use Japanese spell checker
-   - Review sentence structure
-   - Check punctuation
-3. ✅ **Cultural appropriateness**:
-   - Examples relevant to Japanese market
-   - Regulatory references correct
-   - Humor and idioms adapted
-4. ✅ **Discordian preservation**:
-   - Philosophy maintained
-   - FNORD references handled appropriately
-   - "Think for Yourself" spirit intact
-
-**Quality Gates:**
-- [ ] HTML valid
-- [ ] Schema.org valid
-- [ ] Hreflang complete
-- [ ] Accessibility compliant
-- [ ] Terminology consistent
-- [ ] Grammar correct
-- [ ] Culturally appropriate
-
-### Step 4: 🧪 Testing & Review
-
-**Browser Testing:**
-- ✅ Chrome/Chromium
-- ✅ Firefox
-- ✅ Safari (if available)
-- ✅ Edge
-
-**Device Testing:**
-- ✅ Desktop (1920x1080+)
-- ✅ Laptop (1366x768)
-- ✅ Tablet (768x1024)
-- ✅ Mobile (375x667, 414x896)
-
-**Functionality Testing:**
-- ✅ All links work
-- ✅ Forms function correctly
-- ✅ Navigation accessible
-- ✅ Search works (if present)
-- ✅ Images load properly
-
-**Peer Review:**
-1. ✅ **Native speaker review**:
-   - Fluency and naturalness
-   - Cultural appropriateness
-   - Technical accuracy
-2. ✅ **Technical review**:
-   - Security terminology correct
-   - Industry standards referenced properly
-   - Compliance requirements met
-3. ✅ **Final approval**:
-   - All feedback addressed
-   - Quality gates passed
-   - Ready for publication
-
-**Quality Gates:**
-- [ ] Cross-browser tested
-- [ ] Mobile responsive
-- [ ] Links functional
-- [ ] Native speaker approved
-- [ ] Technical review passed
-- [ ] Final approval obtained
-
-## 🛠️ Technical Implementation Details
-
-### HTML Structure Template
-
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>[Page Title in Japanese]</title>
-    <meta name="description" content="[Meta description in Japanese]">
-    <meta name="keywords" content="[keywords, in, japanese]">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hack23.com/[page]_ja.html">
-    <meta property="og:title" content="[Title in Japanese]">
-    <meta property="og:description" content="[Description in Japanese]">
-    <meta property="og:locale" content="ja_JP">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://hack23.com/[page]_ja.html">
-    <meta property="twitter:title" content="[Title in Japanese]">
-    <meta property="twitter:description" content="[Description in Japanese]">
-    
-    <!-- Hreflang Tags (All 14 variants) -->
-    <link rel="alternate" hreflang="x-default" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="en" href="https://hack23.com/[page].html">
-    <link rel="alternate" hreflang="ja" href="https://hack23.com/[page]_ja.html">
-    <link rel="alternate" hreflang="sv" href="https://hack23.com/[page]_sv.html">
-    <link rel="alternate" hreflang="da" href="https://hack23.com/[page]_da.html">
-    <link rel="alternate" hreflang="no" href="https://hack23.com/[page]_no.html">
-    <link rel="alternate" hreflang="fi" href="https://hack23.com/[page]_fi.html">
-    <link rel="alternate" hreflang="de" href="https://hack23.com/[page]_de.html">
-    <link rel="alternate" hreflang="nl" href="https://hack23.com/[page]_nl.html">
-    <link rel="alternate" hreflang="fr" href="https://hack23.com/[page]_fr.html">
-    <link rel="alternate" hreflang="es" href="https://hack23.com/[page]_es.html">
-    <link rel="alternate" hreflang="zh" href="https://hack23.com/[page]_zh.html">
-    <link rel="alternate" hreflang="ko" href="https://hack23.com/[page]_ko.html">
-    <link rel="alternate" hreflang="ar" href="https://hack23.com/[page]_ar.html">
-    <link rel="alternate" hreflang="he" href="https://hack23.com/[page]_he.html">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://hack23.com/[page]_ja.html">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "[Page Name in Japanese]",
-        "description": "[Description in Japanese]",
-        "inLanguage": "ja",
-        "url": "https://hack23.com/[page]_ja.html",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "Hack23",
-            "url": "https://hack23.com",
-            "inLanguage": "ja"
-        },
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "[Home in Japanese]",
-                    "item": "https://hack23.com/index_ja.html"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "[Page Name in Japanese]",
-                    "item": "https://hack23.com/[page]_ja.html"
-                }
-            ]
-        }
-    }
-    </script>
-</head>
-<body>
-    <!-- Translated content here -->
-</body>
-</html>
-```
-
-## 📊 Quality Assurance Standards
-
-### Professional Translation Requirements
-
-**Fluency & Naturalness:**
-- ✅ Sounds native, not translated
-- ✅ Idiomatic expressions used appropriately
-- ✅ Sentence structure follows Japanese norms
-- ✅ Flow is smooth and readable
-
-**Technical Accuracy:**
-- ✅ Cybersecurity terms correct
-- ✅ Technical concepts preserved
-- ✅ Industry standards referenced properly
-- ✅ No ambiguity in security-critical content
-
-**Cultural Appropriateness:**
-- ✅ Examples relevant to Japanese market
-- ✅ Regulatory references correct
-- ✅ Business context adapted
-- ✅ Humor and tone appropriate
-
-**Consistency:**
-- ✅ Terminology matches this guide
-- ✅ Style consistent across pages
-- ✅ Formatting uniform
-- ✅ Voice and tone maintained
-
-### Translation Quality Metrics
-
-| Level | Description | Characteristics |
-|-------|-------------|-----------------|
-| **🏆 Excellence** | Native-quality | Perfect fluency, zero errors, culturally perfect |
-| **✅ Professional** | Production-ready | Minor imperfections, technically accurate |
-| **⚡ Good** | Usable | Some awkwardness, meaning clear |
-| **⚠️  Adequate** | Infrastructure | HTML/meta tags correct, content needs work |
-| **❌ Poor** | Needs revision | Errors, unclear meaning, technical issues |
-
-**Target:** ✅ Professional or above for all published content
-
-## 🔍 Validation & Testing Procedures
-
-### Automated Validation Tools
-
-1. **HTML Validator**: https://validator.w3.org/
-   - Zero errors required
-   - Warnings acceptable if justified
-
-2. **Schema.org Validator**: https://validator.schema.org/
-   - All structured data must validate
-   - `inLanguage` must be `ja`
-
-3. **Hreflang Validator**: Google Search Console
-   - All 14 variants must be correct
-   - No broken links
-
-4. **Accessibility Checker**: WAVE or axe DevTools
-   - WCAG 2.1 AA compliant
-   - No critical or serious issues
-
-5. **Lighthouse Audit**: Chrome DevTools
-   - Accessibility: 95+ score
-   - SEO: 95+ score
-   - Best Practices: 90+ score
-
-### Manual Testing Checklist
-
-**Content Review:**
-- [ ] All text translated (no English remains)
-- [ ] Headers and navigation translated
-- [ ] Footer and copyright translated
-- [ ] Alt text for images translated
-- [ ] Form labels and placeholders translated
-- [ ] Error messages translated
-- [ ] Meta tags translated
-
-**Technical Review:**
-- [ ] HTML well-formed
-- [ ] lang="ja" set correctly
-- [ ] og:locale = ja_JP
-- [ ] All 14 hreflang tags present
-- [ ] Schema.org inLanguage = "ja"
-- [ ] Canonical URL correct
-- [ ] No broken links
-
-**Functionality Review:**
-- [ ] All links work
-- [ ] Navigation functional
-- [ ] Forms submit correctly
-- [ ] Search works (if present)
-- [ ] Mobile responsive
-- [ ] Cross-browser compatible
-
-**Quality Review:**
-- [ ] Professional translation quality
-- [ ] Terminology consistent with guide
-- [ ] Grammar and spelling correct
-- [ ] Cultural references appropriate
-- [ ] Technical accuracy verified
-- [ ] Native speaker approved
-
-## 📝 Best Practices & Guidelines
-
-### Do's ✅
-
-**Translation:**
-- ✅ Use this guide's terminology consistently
-- ✅ Preserve HTML structure and functionality
-- ✅ Test thoroughly before marking complete
-- ✅ Document uncertain translation choices
-- ✅ Get native speaker review
-- ✅ Update guide with new terminology
-
-**Technical:**
-- ✅ Validate all HTML and Schema.org
-- ✅ Include all 14 hreflang variants
-- ✅ Set correct lang and og:locale attributes
-- ✅ Test cross-browser and mobile
-- ✅ Check accessibility compliance
-- ✅ Verify all links work
-
-**Cultural:**
-- ✅ Adapt examples to local context
-- ✅ Reference local regulations
-- ✅ Use culturally appropriate humor
-- ✅ Maintain Discordian philosophy
-- ✅ Respect cultural sensitivities
-- ✅ Balance universal and local
-
-### Don'ts ❌
-
-**Translation:**
-- ❌ Use machine translation without review
-- ❌ Skip validation and testing
-- ❌ Ignore cultural context
-- ❌ Use informal or casual language
-- ❌ Translate code examples (only comments)
-- ❌ Change technical accuracy for flow
-
-**Technical:**
-- ❌ Change HTML structure or CSS
-- ❌ Remove or modify hreflang tags
-- ❌ Skip Schema.org localization
-- ❌ Ignore accessibility requirements
-- ❌ Break existing functionality
-- ❌ Use incorrect lang attributes
-
-**Cultural:**
-- ❌ Direct word-for-word translation
-- ❌ Use offensive or inappropriate content
-- ❌ Ignore local regulations
-- ❌ Force English idioms into Japanese
-- ❌ Lose Discordian philosophy
-- ❌ Over-localize universal concepts
-
-## 📚 Additional Resources & References
-
-### Translation Resources
-
-**Japanese Language:**
-- **Dictionary**: [Add recommended Japanese dictionary]
-- **Grammar**: [Add Japanese grammar reference]
-- **Style Guide**: [Add Japanese business writing guide]
-
-**Cybersecurity Terminology:**
-- **NIST Glossary**: https://csrc.nist.gov/glossary
-- **ISO 27000 Series**: https://www.iso.org/isoiec-27001-information-security.html
-- **SANS Glossary**: https://www.sans.org/security-resources/glossary-of-terms/
-
-**Related Documentation:**
-- **Translation Status**: `Japanese-Translation-Status.md`
-- **Master Documentation**: `TRANSLATION_DOCUMENTATION_README.md`
-- **English Source Files**: `*.html` (base files)
-- **Japanese Translation Files**: `*_ja.html` (58 files)
-
-### Validation Tools
-
-- **HTML Validator**: https://validator.w3.org/
-- **Schema.org Validator**: https://validator.schema.org/
-- **Lighthouse**: Chrome DevTools
-- **WAVE**: https://wave.webaim.org/
-- **axe DevTools**: Browser extension
-- **Google Search Console**: Hreflang validation
-
-## 🤝 Contributing to This Guide
-
-### How to Improve This Guide
-
-When adding new translations or discovering better terminology:
-
-1. **Update Terminology Tables**:
-   - Replace `*[Verify from files]*` with actual translation
-   - Add context and notes where helpful
-   - Reference ISO standards or frameworks
-
-2. **Document Translation Choices**:
-   - Explain reasoning for complex terms
-   - Note regional variations
-   - Cite sources if available
-
-3. **Add Examples**:
-   - Provide sample translations
-   - Show before/after comparisons
-   - Highlight common mistakes
-
-4. **Improve Processes**:
-   - Suggest workflow improvements
-   - Add useful tools or resources
-   - Share tips and tricks
-
-5. **Update Status**:
-   - Mark files as complete in Translation-Status.md
-   - Update file counts and percentages
-   - Note quality improvements
-
-### Maintaining Translation Consistency
-
-**Version Control:**
-- Document guide version (currently 3.0)
-- Note major changes in updates
-- Keep changelog of terminology additions
-
-**Team Collaboration:**
-- Share translation decisions
-- Review each other's work
-- Build shared terminology database
-- Maintain style consistency
-
-**Continuous Improvement:**
-- Learn from feedback
-- Update based on user experience
-- Incorporate new cybersecurity terms
-- Refine cultural adaptations
-
-## 🎓 Discordian Translation Philosophy
-
-### "Think for Yourself" in Practice
-
-This guide provides structure, but **you** are the translator. Apply critical thinking:
-
-- **Question assumptions**: Is this the best Japanese term?
-- **Consider context**: What does this mean to a Japanese reader?
-- **Preserve intent**: Does my translation convey the original purpose?
-- **Adapt wisdom**: How can I make Discordian philosophy resonate in Japanese culture?
-
-### The Five FNORDS of Translation
-
-1. **FNORD of Fidelity**: Stay true to original meaning
-2. **FNORD of Fluency**: Sound natural in target language
-3. **FNORD of Format**: Preserve technical structure
-4. **FNORD of Fun**: Maintain Discordian humor
-5. **FNORD of Feedback**: Seek and incorporate review
-
-### Remember
-
-> **"All statements are true in some sense, false in some sense, meaningless in some sense, true and false in some sense, true and meaningless in some sense, false and meaningless in some sense, and true and false and meaningless in some sense."**
-> — Principia Discordia
-
-Translation is both art and science. Use this guide wisely, think for yourself, and create excellent Japanese content for the global cybersecurity community.
-
-**23 FNORD 5**
+| English | Japanese |
+|---------|----------|
+| Consulting | コンサルティング |
+| Enterprise | エンタープライズ |
+| Strategy | 戦略 |
+| Certification | 認証 |
+| Assessment | アセスメント |
+| Implementation | 実装 |
+| Audit | 監査 |
+| Review | レビュー |
+| Gap Analysis | ギャップ分析 |
+| Roadmap | ロードマップ |
+| Best Practices | ベストプラクティス |
+| Case Study | ケーススタディ |
+| ROI | 投資対効果 |
+| KPI | 主要業績評価指標 |
+| SLA | サービスレベル契約 |
+| Stakeholder | ステークホルダー |
+| Deliverable | 成果物 |
+| Milestone | マイルストーン |
+
+### 📝 Blog Post Categories
+
+| English | Japanese |
+|---------|----------|
+| Security Architecture | セキュリティアーキテクチャ |
+| ISMS Policies | ISMSポリシー |
+| Compliance Frameworks | コンプライアンスフレームワーク |
+| Threat Modeling | 脅威モデリング |
+| Secure Development | セキュア開発 |
+| Cloud Security | クラウドセキュリティ |
+| Access Control | アクセス制御 |
+| Cryptography | 暗号学 |
+| Incident Response | インシデント対応 |
+| Vulnerability Management | 脆弱性管理 |
+| Asset Management | 資産管理 |
+| Network Security | ネットワークセキュリティ |
+| Email Security | メールセキュリティ |
+| Physical Security | 物理セキュリティ |
+| Mobile Device Security | モバイルデバイスセキュリティ |
+| Remote Access Security | リモートアクセスセキュリティ |
+| Monitoring & Logging | モニタリングとログ |
+| Security Metrics | セキュリティ指標 |
+| Third Party Risk | サードパーティリスク |
+| Change Management | 変更管理 |
+
+### 🏭 Industry-Specific Terms
+
+| English | Japanese |
+|---------|----------|
+| Investment & FinTech | 投資とフィンテック |
+| Betting & Gaming | ベッティングとゲーミング |
+| Cannabis Security | 大麻セキュリティ |
+| Healthcare | ヘルスケア |
+| Government | 政府 |
+| Critical Infrastructure | 重要インフラ |
+| Financial Services | 金融サービス |
+| E-commerce | Eコマース |
 
 ---
 
-## 📋 Quick Reference Summary
+## 🔤 Japanese-Specific Guidelines
 
-**Guide Information:**
-- **Language**: Japanese (ja)
-- **Version**: 3.0 (Publication Edition)
-- **Last Updated**: December 2025
-- **Files**: 58/96 (60.4%)
-- **Status**: ⚠️ In Progress
+### Script Usage
+- **Kanji (漢字)**: Used for most nouns, verbs, adjectives
+- **Hiragana (ひらがな)**: Grammatical elements, native Japanese words
+- **Katakana (カタカナ)**: Foreign loanwords, technical terms, brand names
 
-**Key Attributes:**
-- Locale: ja_JP
-- Direction: LTR →
-- Currency: JPY (¥)
+### Formatting
+- No spaces between words in Japanese text
+- Use Japanese punctuation (。、！？)
+- Full-width numbers for Japanese context, half-width for technical
 
-**Essential Links:**
-- Status: `Japanese-Translation-Status.md`
-- Documentation: `TRANSLATION_DOCUMENTATION_README.md`
-- Files: `*_ja.html`
-
-**Contact:**
-- Issues: https://github.com/Hack23/homepage/issues
-- Discussions: https://github.com/Hack23/homepage/discussions
+### Honorifics
+- Use です/ます form (polite) for professional content
+- Avoid overly casual language
 
 ---
 
-*This guide is part of the Hack23 Open Translation Initiative for Cybersecurity Documentation.*  
-*Licensed under Creative Commons BY-SA 4.0 for public use and adaptation.*  
-*Contributions welcome via GitHub pull requests.*
+## ✅ Translation Checklist
 
-**🌍 Making cybersecurity knowledge accessible worldwide, one translation at a time.**
+- [ ] `<html lang="ja">` attribute set
+- [ ] `<title>` translated
+- [ ] `<meta name="description">` translated
+- [ ] `og:locale` set to `ja_JP`
+- [ ] All hreflang tags present (14 languages)
+- [ ] Navigation menu translated
+- [ ] Footer translated
+- [ ] Brand names kept in English or Katakana
+- [ ] Appropriate script usage (Kanji/Hiragana/Katakana)
+- [ ] Japanese punctuation used correctly
+
+---
+
+## 📝 Notes
+
+- Use **polite Japanese** (です/ます form)
+- Many technical terms use Katakana transliteration
+- NISC is the Japanese cybersecurity center
+- Keep consistency in technical term translations
+
+---
+
+*23 FNORD 5*
