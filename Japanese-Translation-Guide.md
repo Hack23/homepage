@@ -1,6 +1,6 @@
 # 🇯🇵 Japanese (ja) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -54,11 +54,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram / ブラックトライグラム | Game product |
 | 흑괘 | 흑괘 (黒卦) | Korean name for Black Trigram |
+| 黑卦 | 黒卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| CEO / Chief Executive Officer | CEO / 最高経営責任者 | |
+| Founder | 創業者 | |
+| CEO/Founder | CEO/創業者 | |
+| Application Security Officer | アプリケーションセキュリティ責任者 | |
+| Information Security Officer | 情報セキュリティ責任者 | |
+| Senior Security Architect | シニアセキュリティアーキテクト | |
+| Cloud Architect | クラウドアーキテクト | |
+| Security Consultant | セキュリティコンサルタント | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | コンプライアンス責任者 | |
+| Risk Manager | リスクマネージャー | |
+| IT Security Manager | ITセキュリティマネージャー | |
+| Security Auditor | セキュリティ監査人 | |
+| Taekwondo Instructor | テコンドーインストラクター | |
+| System Developer | システム開発者 | |
+| Software Engineer | ソフトウェアエンジニア | |
+| J2EE Developer | J2EE開発者 | |
+| Unix Helpdesk | Unixヘルプデスク | |
+| Teaching Assistant | ティーチングアシスタント | |
+| NBC Defence Group Leader | NBC防護グループリーダー | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -66,23 +95,25 @@ graph TD
 |---------|----------|-------|
 | Cybersecurity Consulting Sweden | スウェーデンのサイバーセキュリティコンサルティング | Main tagline |
 | Public ISMS | 公開ISMS | Core differentiator |
-| Security Architecture | セキュリティアーキテクチャ | |
-| Security Strategy | セキュリティ戦略 | |
-| Cloud Security | クラウドセキュリティ | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | セキュア開発 | |
-| Code Quality | コード品質 | |
-| Compliance & Regulatory | コンプライアンスと規制 | |
-| Open Source Security | オープンソースセキュリティ | |
-| Security Culture | セキュリティ文化 | |
-| Security Training | セキュリティトレーニング | |
+| Open ISMS Transparency | オープンISMS透明性 | |
+| Security Architecture & Strategy | セキュリティアーキテクチャと戦略 | Service line |
+| Cloud Security & DevSecOps | クラウドセキュリティとDevSecOps | Service line |
+| Secure Development & Code Quality | セキュア開発とコード品質 | Service line |
+| Compliance & Regulatory | コンプライアンスと規制 | Service line |
+| Open Source Security | オープンソースセキュリティ | Service line |
+| Security Culture & Training | セキュリティ文化とトレーニング | Service line |
 | Full-Stack Security | フルスタックセキュリティ | |
 | Current Practitioner | 現役プラクティショナー | Value proposition |
 | Transparent Security | 透明性のあるセキュリティ | |
 | Developer-Friendly Security | 開発者フレンドリーなセキュリティ | |
+| Security Excellence Through Transparency | 透明性によるセキュリティエクセレンス | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | ヨーテボリ | City in Sweden |
 | Sweden | スウェーデン | |
+| Nordic Region | 北欧地域 | |
+| Europe | ヨーロッパ | |
+| Singapore | シンガポール | |
+| ASEAN Region | ASEAN地域 | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -91,6 +122,7 @@ graph TD
 | Precision Combat Simulator | 精密戦闘シミュレーター | |
 | Vital Points | 急所 | |
 | 70 Anatomical Vital Points | 70の解剖学的急所 | |
+| 70 Techniques | 70の技 | |
 | Fighter Archetypes | 戦闘アーキタイプ | |
 | Musa (Warrior) | 武士（戦士） | |
 | Amsalja (Assassin) | 暗殺者 | |
@@ -100,32 +132,72 @@ graph TD
 | Korean Martial Arts | 韓国武術 | |
 | Taekkyeon | テッキョン | Korean martial art |
 | Hapkido | ハプキドー | Korean martial art |
+| Taekwondo | テコンドー | Korean martial art |
+| Song Moo Kwan | 松武館 | Taekwondo school |
+| Kukkiwon | 国技院 | World Taekwondo HQ |
+| Black Belt | 黒帯 | |
+| 3rd Dan | 三段 | Rank |
 | Cultural Preservation | 文化保存 | |
 | Educational Gaming | 教育ゲーム | |
 | Unity Game | Unityゲーム | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | 格闘 | Game genre |
+| Simulation | シミュレーション | Game genre |
+| Educational | 教育的 | Game genre |
+| Cultural | 文化的 | Game genre |
+| Single-player | シングルプレイヤー | |
+| Multiplayer | マルチプレイヤー | |
+| Teen | 青少年向け | Content rating |
+| Cross-platform | クロスプラットフォーム | |
+| Open Source Game | オープンソースゲーム | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Japanese | Notes |
 |---------|----------|-------|
 | Political Transparency | 政治的透明性 | |
+| Political Intelligence Platform | 政治インテリジェンスプラットフォーム | |
 | OSINT Platform | OSINTプラットフォーム | |
 | Parliamentary Monitoring | 議会モニタリング | |
+| Swedish Parliament Monitoring (Riksdag) | スウェーデン議会（リクスダーグ）モニタリング | |
+| Political Decision Tracking | 政治的意思決定追跡 | |
+| Governance Metrics & Rankings | ガバナンス指標とランキング | |
+| Democratic Accountability Analysis | 民主的説明責任分析 | |
 | Voting Records | 投票記録 | |
+| Voting Pattern Analysis | 投票パターン分析 | |
+| Party Performance Metrics | 政党パフォーマンス指標 | |
+| Minister Activity Tracking | 大臣活動追跡 | |
+| Committee Work Analysis | 委員会作業分析 | |
+| Political Trend Visualization | 政治トレンド可視化 | |
+| Open Data Integration | オープンデータ統合 | |
+| World Bank | 世界銀行 | |
+| Swedish Government | スウェーデン政府 | |
 | Accountability Metrics | 説明責任指標 | |
 | Open Data | オープンデータ | |
 | Civic Technology | シビックテック | |
 | Swedish Parliament | スウェーデン議会 | |
 | Data Visualization | データ可視化 | |
 | Political Analytics | 政治分析 | |
+| Citizens | 市民 | Audience |
+| Journalists | ジャーナリスト | Audience |
+| Researchers | 研究者 | Audience |
+| Policy Analysts | 政策アナリスト | Audience |
+| Political Scientists | 政治学者 | Audience |
+| Democracy Advocates | 民主主義提唱者 | Audience |
+| Parliamentary Process Analysis | 議会プロセス分析 | |
+| OSINT Methodology | OSINT方法論 | |
+| Swedish Governance System | スウェーデン統治システム | |
+| Data-Driven Political Analysis | データ駆動型政治分析 | |
+| Open Government Data Usage | オープンガバメントデータ活用 | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Japanese | Notes |
 |---------|----------|-------|
 | Security Assessment Platform | セキュリティ評価プラットフォーム | |
+| Enterprise Security Management | エンタープライズセキュリティ管理 | |
+| CIA Triad Assessment | CIAトライアド評価 | |
 | Business Impact Analysis | ビジネスインパクト分析 | |
 | Multi-Framework Compliance | マルチフレームワークコンプライアンス | |
 | STRIDE Analysis | STRIDE分析 | Threat model |
@@ -135,6 +207,31 @@ graph TD
 | Risk Register | リスク登録簿 | |
 | Controls Monitoring | コントロール監視 | |
 | CRA Assessment | CRA評価 | Cyber Resilience Act |
+| Security Level Selection | セキュリティレベル選択 | |
+| Cost Estimation | コスト見積もり | |
+| Implementation Guidance | 実装ガイダンス | |
+| Gap Analysis | ギャップ分析 | |
+| Security Visualization | セキュリティ可視化 | |
+| Widget-Based Dashboard | ウィジェットベースダッシュボード | |
+| Availability Impact Analysis | 可用性影響分析 | |
+| Integrity Impact Analysis | 完全性影響分析 | |
+| Confidentiality Impact Analysis | 機密性影響分析 | |
+| Open Source Security Tool | オープンソースセキュリティツール | |
+
+### 🎓 Education & Learning Terms
+
+| English | Japanese | Notes |
+|---------|----------|-------|
+| Educational Use | 教育利用 | |
+| Self-Directed Learning | 自己学習 | |
+| Skill Development | スキル開発 | |
+| Professional Development | 専門能力開発 | |
+| Teaches | 教える | Schema.org property |
+| Accessibility Features | アクセシビリティ機能 | |
+| Keyboard Navigation | キーボードナビゲーション | |
+| High Contrast Mode | ハイコントラストモード | |
+| Closed Captions | 字幕 | |
+| Screen Reader Compatible | スクリーンリーダー対応 | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

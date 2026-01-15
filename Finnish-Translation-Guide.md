@@ -1,6 +1,6 @@
 # 🇫🇮 Finnish (fi) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -53,11 +53,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Finnish | Notes |
+|---------|---------|-------|
+| CEO / Chief Executive Officer | Toimitusjohtaja | |
+| Founder | Perustaja | |
+| CEO/Founder | Toimitusjohtaja/perustaja | |
+| Application Security Officer | Sovellusturvallisuusvastaava | |
+| Information Security Officer | Tietoturvajohtaja | |
+| Senior Security Architect | Vanhempi turvallisuusarkkitehti | |
+| Cloud Architect | Pilviarkkitehti | |
+| Security Consultant | Turvallisuuskonsultti | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | Vaatimustenmukaisuusvastaava | |
+| Risk Manager | Riskipäällikkö | |
+| IT Security Manager | IT-turvallisuuspäällikkö | |
+| Security Auditor | Turvallisuusauditoija | |
+| Taekwondo Instructor | Taekwondo-ohjaaja | |
+| System Developer | Järjestelmäkehittäjä | |
+| Software Engineer | Ohjelmistoinsinööri | |
+| J2EE Developer | J2EE-kehittäjä | |
+| Unix Helpdesk | Unix-tukipalvelu | |
+| Teaching Assistant | Opetusassistentti | |
+| NBC Defence Group Leader | NBC-suojeluryhmän johtaja | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -65,23 +94,25 @@ graph TD
 |---------|---------|-------|
 | Cybersecurity Consulting Sweden | Kyberturvallisuuskonsultointi Ruotsissa | Main tagline |
 | Public ISMS | Julkinen ISMS | Core differentiator |
-| Security Architecture | Turvallisuusarkkitehtuuri | |
-| Security Strategy | Turvallisuusstrategia | |
-| Cloud Security | Pilviturvallisuus | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | Turvallinen kehitys | |
-| Code Quality | Koodin laatu | |
-| Compliance & Regulatory | Säännöstenmukaisuus ja sääntely | |
-| Open Source Security | Avoimen lähdekoodin turvallisuus | |
-| Security Culture | Turvallisuuskulttuuri | |
-| Security Training | Turvallisuuskoulutus | |
+| Open ISMS Transparency | Avoin ISMS-läpinäkyvyys | |
+| Security Architecture & Strategy | Turvallisuusarkkitehtuuri ja -strategia | Service line |
+| Cloud Security & DevSecOps | Pilviturvallisuus ja DevSecOps | Service line |
+| Secure Development & Code Quality | Turvallinen kehitys ja koodin laatu | Service line |
+| Compliance & Regulatory | Säännöstenmukaisuus ja sääntely | Service line |
+| Open Source Security | Avoimen lähdekoodin turvallisuus | Service line |
+| Security Culture & Training | Turvallisuuskulttuuri ja -koulutus | Service line |
 | Full-Stack Security | Full-stack-turvallisuus | |
 | Current Practitioner | Aktiivinen ammattilainen | Value proposition |
 | Transparent Security | Läpinäkyvä turvallisuus | |
 | Developer-Friendly Security | Kehittäjäystävällinen turvallisuus | |
+| Security Excellence Through Transparency | Turvallisuusosaaminen läpinäkyvyyden kautta | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | Göteborg | City in Sweden |
 | Sweden | Ruotsi | |
+| Nordic Region | Pohjoismaat | |
+| Europe | Eurooppa | |
+| Singapore | Singapore | |
+| ASEAN Region | ASEAN-alue | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -90,6 +121,7 @@ graph TD
 | Precision Combat Simulator | Tarkkuustaistelusimulattori | |
 | Vital Points | Elintärkeät pisteet | |
 | 70 Anatomical Vital Points | 70 anatomista elintärkeää pistettä | |
+| 70 Techniques | 70 tekniikkaa | |
 | Fighter Archetypes | Taistelija-arkkityypit | |
 | Musa (Warrior) | Musa (Soturi) | |
 | Amsalja (Assassin) | Amsalja (Salamurhaaja) | |
@@ -99,32 +131,72 @@ graph TD
 | Korean Martial Arts | Korealaiset kamppailulajit | |
 | Taekkyeon | Taekkyeon | Korean martial art |
 | Hapkido | Hapkido | Korean martial art |
+| Taekwondo | Taekwondo | Korean martial art |
+| Song Moo Kwan | Song Moo Kwan | Taekwondo school |
+| Kukkiwon | Kukkiwon | World Taekwondo HQ |
+| Black Belt | Musta vyö | |
+| 3rd Dan | 3. dan | Rank |
 | Cultural Preservation | Kulttuurinen säilyttäminen | |
 | Educational Gaming | Opetuspelit | |
 | Unity Game | Unity-peli | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | Taistelu | Game genre |
+| Simulation | Simulaatio | Game genre |
+| Educational | Opetuksellinen | Game genre |
+| Cultural | Kulttuurinen | Game genre |
+| Single-player | Yksinpeli | |
+| Multiplayer | Moninpeli | |
+| Teen | Nuoriso | Content rating |
+| Cross-platform | Monialustainen | |
+| Open Source Game | Avoimen lähdekoodin peli | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Finnish | Notes |
 |---------|---------|-------|
 | Political Transparency | Poliittinen läpinäkyvyys | |
+| Political Intelligence Platform | Poliittinen tiedustelualusta | |
 | OSINT Platform | OSINT-alusta | |
 | Parliamentary Monitoring | Parlamentin seuranta | |
+| Swedish Parliament Monitoring (Riksdag) | Ruotsin valtiopäivien seuranta | |
+| Political Decision Tracking | Poliittisten päätösten seuranta | |
+| Governance Metrics & Rankings | Hallintomittarit ja -sijoitukset | |
+| Democratic Accountability Analysis | Demokraattisen vastuullisuuden analyysi | |
 | Voting Records | Äänestysrekisterit | |
+| Voting Pattern Analysis | Äänestysmallianalyysi | |
+| Party Performance Metrics | Puolueiden suorituskykymittarit | |
+| Minister Activity Tracking | Ministerien toiminnan seuranta | |
+| Committee Work Analysis | Valiokuntatyön analyysi | |
+| Political Trend Visualization | Poliittisten trendien visualisointi | |
+| Open Data Integration | Avoimen datan integrointi | |
+| World Bank | Maailmanpankki | |
+| Swedish Government | Ruotsin hallitus | |
 | Accountability Metrics | Vastuullisuusmittarit | |
 | Open Data | Avoin data | |
 | Civic Technology | Kansalaisteknologia | |
 | Swedish Parliament | Ruotsin parlamentti | |
 | Data Visualization | Datan visualisointi | |
 | Political Analytics | Poliittinen analytiikka | |
+| Citizens | Kansalaiset | Audience |
+| Journalists | Toimittajat | Audience |
+| Researchers | Tutkijat | Audience |
+| Policy Analysts | Politiikka-analyytikot | Audience |
+| Political Scientists | Valtiotieteilijät | Audience |
+| Democracy Advocates | Demokratian puolestapuhujat | Audience |
+| Parliamentary Process Analysis | Parlamentaarisen prosessin analyysi | |
+| OSINT Methodology | OSINT-metodologia | |
+| Swedish Governance System | Ruotsin hallintojärjestelmä | |
+| Data-Driven Political Analysis | Dataohjattu poliittinen analyysi | |
+| Open Government Data Usage | Avoimen hallintodatan käyttö | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Finnish | Notes |
 |---------|---------|-------|
 | Security Assessment Platform | Turvallisuusarviointialusta | |
+| Enterprise Security Management | Yritystason turvallisuudenhallinta | |
+| CIA Triad Assessment | CIA-kolmion arviointi | |
 | Business Impact Analysis | Liiketoiminnan vaikutusanalyysi | |
 | Multi-Framework Compliance | Moniviitekehysten vaatimustenmukaisuus | |
 | STRIDE Analysis | STRIDE-analyysi | Threat model |
@@ -134,6 +206,31 @@ graph TD
 | Risk Register | Riskirekisteri | |
 | Controls Monitoring | Kontrollien seuranta | |
 | CRA Assessment | CRA-arviointi | Cyber Resilience Act |
+| Security Level Selection | Turvallisuustason valinta | |
+| Cost Estimation | Kustannusarvio | |
+| Implementation Guidance | Toteutusohjeistus | |
+| Gap Analysis | Puuteanalyysi | |
+| Security Visualization | Turvallisuusvisualisointi | |
+| Widget-Based Dashboard | Widget-pohjainen hallintapaneeli | |
+| Availability Impact Analysis | Saatavuusvaikutusanalyysi | |
+| Integrity Impact Analysis | Eheysvaikutusanalyysi | |
+| Confidentiality Impact Analysis | Luottamuksellisuusvaikutusanalyysi | |
+| Open Source Security Tool | Avoimen lähdekoodin turvallisuustyökalu | |
+
+### 🎓 Education & Learning Terms
+
+| English | Finnish | Notes |
+|---------|---------|-------|
+| Educational Use | Opetuskäyttö | |
+| Self-Directed Learning | Itseohjautuva oppiminen | |
+| Skill Development | Taitojen kehittäminen | |
+| Professional Development | Ammatillinen kehitys | |
+| Teaches | Opettaa | Schema.org property |
+| Accessibility Features | Saavutettavuusominaisuudet | |
+| Keyboard Navigation | Näppäimistönavigointi | |
+| High Contrast Mode | Korkean kontrastin tila | |
+| Closed Captions | Tekstitykset | |
+| Screen Reader Compatible | Ruudunlukijayhteensopiva | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

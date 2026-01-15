@@ -1,6 +1,6 @@
 # 🇸🇦 Arabic (ar) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -54,11 +54,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name – keep original |
 | CISSP | CISSP | Certification – never translate |
 | CISM | CISM | Certification – never translate |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Arabic | Notes |
+|---------|--------|-------|
+| CEO / Chief Executive Officer | الرئيس التنفيذي | |
+| Founder | المؤسس | |
+| CEO/Founder | الرئيس التنفيذي/المؤسس | |
+| Application Security Officer | مسؤول أمن التطبيقات | |
+| Information Security Officer | مسؤول أمن المعلومات | |
+| Senior Security Architect | كبير مهندسي الأمن | |
+| Cloud Architect | مهندس السحابة | |
+| Security Consultant | مستشار أمني | |
+| CISO | رئيس أمن المعلومات | Chief Information Security Officer |
+| Compliance Officer | مسؤول الامتثال | |
+| Risk Manager | مدير المخاطر | |
+| IT Security Manager | مدير أمن تكنولوجيا المعلومات | |
+| Security Auditor | مدقق الأمن | |
+| Taekwondo Instructor | مدرب تايكواندو | |
+| System Developer | مطور أنظمة | |
+| Software Engineer | مهندس برمجيات | |
+| J2EE Developer | مطور J2EE | |
+| Unix Helpdesk | مكتب مساعدة يونكس | |
+| Teaching Assistant | مساعد تدريس | |
+| NBC Defence Group Leader | قائد مجموعة الدفاع NBC | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -66,23 +95,25 @@ graph TD
 |---------|--------|-------|
 | Cybersecurity Consulting Sweden | استشارات الأمن السيبراني في السويد | Main tagline |
 | Public ISMS | نظام إدارة أمن المعلومات العام | Core differentiator |
-| Security Architecture | هندسة الأمن | |
-| Security Strategy | استراتيجية الأمن | |
-| Cloud Security | أمن السحابة | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | التطوير الآمن | |
-| Code Quality | جودة الشفرة | |
-| Compliance & Regulatory | الامتثال والتنظيم | |
-| Open Source Security | أمن المصدر المفتوح | |
-| Security Culture | ثقافة الأمن | |
-| Security Training | التدريب الأمني | |
+| Open ISMS Transparency | شفافية نظام إدارة أمن المعلومات المفتوح | |
+| Security Architecture & Strategy | هندسة الأمن والاستراتيجية | Service line |
+| Cloud Security & DevSecOps | أمن السحابة وDevSecOps | Service line |
+| Secure Development & Code Quality | التطوير الآمن وجودة الشفرة | Service line |
+| Compliance & Regulatory | الامتثال والتنظيم | Service line |
+| Open Source Security | أمن المصدر المفتوح | Service line |
+| Security Culture & Training | ثقافة الأمن والتدريب | Service line |
 | Full-Stack Security | الأمن الشامل | |
 | Current Practitioner | ممارس حالي | Value proposition |
 | Transparent Security | الأمن الشفاف | |
 | Developer-Friendly Security | أمن صديق للمطورين | |
+| Security Excellence Through Transparency | التميز الأمني من خلال الشفافية | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | غوتنبرغ | City in Sweden |
 | Sweden | السويد | |
+| Nordic Region | منطقة الشمال الأوروبي | |
+| Europe | أوروبا | |
+| Singapore | سنغافورة | |
+| ASEAN Region | منطقة آسيان | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -91,6 +122,7 @@ graph TD
 | Precision Combat Simulator | محاكي القتال الدقيق | |
 | Vital Points | النقاط الحيوية | |
 | 70 Anatomical Vital Points | ٧٠ نقطة حيوية تشريحية | |
+| 70 Techniques | ٧٠ تقنية | |
 | Fighter Archetypes | أنماط المقاتلين | |
 | Musa (Warrior) | موسا (المحارب) | |
 | Amsalja (Assassin) | أمسالجا (القاتل) | |
@@ -100,32 +132,71 @@ graph TD
 | Korean Martial Arts | الفنون القتالية الكورية | |
 | Taekkyeon | تايكيون | Korean martial art |
 | Hapkido | هابكيدو | Korean martial art |
+| Taekwondo | تايكواندو | Korean martial art |
+| Song Moo Kwan | سونغ مو كوان | Taekwondo school |
+| Kukkiwon | كوكيوون | World Taekwondo HQ |
+| Black Belt | الحزام الأسود | |
+| 3rd Dan | دان الثالث | Rank |
 | Cultural Preservation | الحفاظ على التراث الثقافي | |
 | Educational Gaming | الألعاب التعليمية | |
 | Unity Game | لعبة يونيتي | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | قتال | Game genre |
+| Simulation | محاكاة | Game genre |
+| Educational | تعليمي | Game genre |
+| Cultural | ثقافي | Game genre |
+| Single-player | لاعب واحد | |
+| Multiplayer | متعدد اللاعبين | |
+| Teen | للمراهقين | Content rating |
+| Cross-platform | عبر المنصات | |
+| Open Source Game | لعبة مفتوحة المصدر | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Arabic | Notes |
 |---------|--------|-------|
 | Political Transparency | الشفافية السياسية | |
+| Political Intelligence Platform | منصة الاستخبارات السياسية | |
 | OSINT Platform | منصة استخبارات المصادر المفتوحة | |
 | Parliamentary Monitoring | مراقبة البرلمان | |
+| Swedish Parliament Monitoring (Riksdag) | مراقبة البرلمان السويدي (ريكسداغ) | |
+| Political Decision Tracking | تتبع القرارات السياسية | |
+| Governance Metrics & Rankings | مقاييس الحوكمة والتصنيفات | |
+| Democratic Accountability Analysis | تحليل المساءلة الديمقراطية | |
 | Voting Records | سجلات التصويت | |
+| Voting Pattern Analysis | تحليل أنماط التصويت | |
+| Party Performance Metrics | مقاييس أداء الأحزاب | |
+| Minister Activity Tracking | تتبع نشاط الوزراء | |
+| Committee Work Analysis | تحليل عمل اللجان | |
+| Political Trend Visualization | تصور الاتجاهات السياسية | |
+| Open Data Integration | تكامل البيانات المفتوحة | |
+| World Bank | البنك الدولي | |
+| Swedish Government | الحكومة السويدية | |
 | Accountability Metrics | مقاييس المساءلة | |
 | Open Data | البيانات المفتوحة | |
 | Civic Technology | التكنولوجيا المدنية | |
-| Swedish Parliament | البرلمان السويدي | |
 | Data Visualization | تصور البيانات | |
 | Political Analytics | التحليلات السياسية | |
+| Citizens | المواطنون | Audience |
+| Journalists | الصحفيون | Audience |
+| Researchers | الباحثون | Audience |
+| Policy Analysts | محللو السياسات | Audience |
+| Political Scientists | علماء السياسة | Audience |
+| Democracy Advocates | دعاة الديمقراطية | Audience |
+| Parliamentary Process Analysis | تحليل العملية البرلمانية | |
+| OSINT Methodology | منهجية OSINT | |
+| Swedish Governance System | نظام الحوكمة السويدي | |
+| Data-Driven Political Analysis | التحليل السياسي القائم على البيانات | |
+| Open Government Data Usage | استخدام بيانات الحكومة المفتوحة | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Arabic | Notes |
 |---------|--------|-------|
 | Security Assessment Platform | منصة تقييم الأمن | |
+| Enterprise Security Management | إدارة أمن المؤسسات | |
+| CIA Triad Assessment | تقييم ثلاثية CIA | |
 | Business Impact Analysis | تحليل تأثير الأعمال | |
 | Multi-Framework Compliance | الامتثال متعدد الأطر | |
 | STRIDE Analysis | تحليل STRIDE | Threat model |
@@ -135,6 +206,31 @@ graph TD
 | Risk Register | سجل المخاطر | |
 | Controls Monitoring | مراقبة الضوابط | |
 | CRA Assessment | تقييم CRA | Cyber Resilience Act |
+| Security Level Selection | اختيار مستوى الأمان | |
+| Cost Estimation | تقدير التكلفة | |
+| Implementation Guidance | إرشادات التنفيذ | |
+| Gap Analysis | تحليل الفجوات | |
+| Security Visualization | تصور الأمان | |
+| Widget-Based Dashboard | لوحة تحكم قائمة على الودجات | |
+| Availability Impact Analysis | تحليل تأثير التوافر | |
+| Integrity Impact Analysis | تحليل تأثير السلامة | |
+| Confidentiality Impact Analysis | تحليل تأثير السرية | |
+| Open Source Security Tool | أداة أمان مفتوحة المصدر | |
+
+### 🎓 Education & Learning Terms
+
+| English | Arabic | Notes |
+|---------|--------|-------|
+| Educational Use | الاستخدام التعليمي | |
+| Self-Directed Learning | التعلم الذاتي | |
+| Skill Development | تطوير المهارات | |
+| Professional Development | التطوير المهني | |
+| Teaches | يعلم | Schema.org property |
+| Accessibility Features | ميزات إمكانية الوصول | |
+| Keyboard Navigation | التنقل بلوحة المفاتيح | |
+| High Contrast Mode | وضع التباين العالي | |
+| Closed Captions | التسميات التوضيحية المغلقة | |
+| Screen Reader Compatible | متوافق مع قارئ الشاشة | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

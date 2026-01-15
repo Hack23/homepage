@@ -1,6 +1,6 @@
 # 🇫🇷 French (fr) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -10,7 +10,7 @@
 | Attribute | Value |
 |-----------|-------|
 | **Language Code** | `fr` |
-| **Locale** | `fr_FR` (France), `fr_CA` (Canada) |
+| **Locale** | `fr_FR` (France), `fr_CA` (Canada), `fr_BE` (Belgium) |
 | **Text Direction** | LTR (Left-to-Right) → |
 | **Currency** | EUR (€), CAD ($) |
 | **Date Format** | `DD/MM/YYYY` or `1er janvier 2026` |
@@ -53,11 +53,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | French | Notes |
+|---------|--------|-------|
+| CEO / Chief Executive Officer | PDG / Directeur Général | |
+| Founder | Fondateur | |
+| CEO/Founder | PDG/Fondateur | |
+| Application Security Officer | Responsable sécurité applicative | |
+| Information Security Officer | Responsable sécurité de l'information | |
+| Senior Security Architect | Architecte sécurité senior | |
+| Cloud Architect | Architecte cloud | |
+| Security Consultant | Consultant en sécurité | |
+| CISO | RSSI | Responsable de la sécurité des systèmes d'information |
+| Compliance Officer | Responsable conformité | |
+| Risk Manager | Gestionnaire des risques | |
+| IT Security Manager | Responsable sécurité informatique | |
+| Security Auditor | Auditeur sécurité | |
+| Taekwondo Instructor | Instructeur de taekwondo | |
+| System Developer | Développeur système | |
+| Software Engineer | Ingénieur logiciel | |
+| J2EE Developer | Développeur J2EE | |
+| Unix Helpdesk | Support Unix | |
+| Teaching Assistant | Assistant d'enseignement | |
+| NBC Defence Group Leader | Chef de groupe défense NBC | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -65,23 +94,25 @@ graph TD
 |---------|--------|-------|
 | Cybersecurity Consulting Sweden | Conseil en cybersécurité en Suède | Main tagline |
 | Public ISMS | SMSI public | Core differentiator |
-| Security Architecture | Architecture de sécurité | |
-| Security Strategy | Stratégie de sécurité | |
-| Cloud Security | Sécurité cloud | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | Développement sécurisé | |
-| Code Quality | Qualité du code | |
-| Compliance & Regulatory | Conformité et réglementation | |
-| Open Source Security | Sécurité open source | |
-| Security Culture | Culture de sécurité | |
-| Security Training | Formation en sécurité | |
+| Open ISMS Transparency | Transparence SMSI ouvert | |
+| Security Architecture & Strategy | Architecture et stratégie de sécurité | Service line |
+| Cloud Security & DevSecOps | Sécurité cloud et DevSecOps | Service line |
+| Secure Development & Code Quality | Développement sécurisé et qualité du code | Service line |
+| Compliance & Regulatory | Conformité et réglementation | Service line |
+| Open Source Security | Sécurité open source | Service line |
+| Security Culture & Training | Culture de sécurité et formation | Service line |
 | Full-Stack Security | Sécurité full-stack | |
 | Current Practitioner | Praticien actif | Value proposition |
 | Transparent Security | Sécurité transparente | |
 | Developer-Friendly Security | Sécurité adaptée aux développeurs | |
+| Security Excellence Through Transparency | Excellence sécuritaire par la transparence | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | Göteborg | City in Sweden |
 | Sweden | Suède | |
+| Nordic Region | Région nordique | |
+| Europe | Europe | |
+| Singapore | Singapour | |
+| ASEAN Region | Région ASEAN | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -90,6 +121,7 @@ graph TD
 | Precision Combat Simulator | Simulateur de combat de précision | |
 | Vital Points | Points vitaux | |
 | 70 Anatomical Vital Points | 70 points vitaux anatomiques | |
+| 70 Techniques | 70 techniques | |
 | Fighter Archetypes | Archétypes de combattants | |
 | Musa (Warrior) | Musa (Guerrier) | |
 | Amsalja (Assassin) | Amsalja (Assassin) | |
@@ -99,32 +131,72 @@ graph TD
 | Korean Martial Arts | Arts martiaux coréens | |
 | Taekkyeon | Taekkyeon | Korean martial art |
 | Hapkido | Hapkido | Korean martial art |
+| Taekwondo | Taekwondo | Korean martial art |
+| Song Moo Kwan | Song Moo Kwan | Taekwondo school |
+| Kukkiwon | Kukkiwon | World Taekwondo HQ |
+| Black Belt | Ceinture noire | |
+| 3rd Dan | 3e dan | Rank |
 | Cultural Preservation | Préservation culturelle | |
 | Educational Gaming | Jeux éducatifs | |
 | Unity Game | Jeu Unity | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | Combat | Game genre |
+| Simulation | Simulation | Game genre |
+| Educational | Éducatif | Game genre |
+| Cultural | Culturel | Game genre |
+| Single-player | Solo | |
+| Multiplayer | Multijoueur | |
+| Teen | Adolescent | Content rating |
+| Cross-platform | Multiplateforme | |
+| Open Source Game | Jeu open source | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | French | Notes |
 |---------|--------|-------|
 | Political Transparency | Transparence politique | |
+| Political Intelligence Platform | Plateforme d'intelligence politique | |
 | OSINT Platform | Plateforme OSINT | |
 | Parliamentary Monitoring | Surveillance parlementaire | |
+| Swedish Parliament Monitoring (Riksdag) | Surveillance du parlement suédois (Riksdag) | |
+| Political Decision Tracking | Suivi des décisions politiques | |
+| Governance Metrics & Rankings | Métriques et classements de gouvernance | |
+| Democratic Accountability Analysis | Analyse de responsabilité démocratique | |
 | Voting Records | Registres de vote | |
+| Voting Pattern Analysis | Analyse des tendances de vote | |
+| Party Performance Metrics | Métriques de performance des partis | |
+| Minister Activity Tracking | Suivi de l'activité des ministres | |
+| Committee Work Analysis | Analyse du travail en commission | |
+| Political Trend Visualization | Visualisation des tendances politiques | |
+| Open Data Integration | Intégration des données ouvertes | |
+| World Bank | Banque mondiale | |
+| Swedish Government | Gouvernement suédois | |
 | Accountability Metrics | Métriques de responsabilité | |
 | Open Data | Données ouvertes | |
 | Civic Technology | Technologie civique | |
 | Swedish Parliament | Parlement suédois | |
 | Data Visualization | Visualisation de données | |
 | Political Analytics | Analytique politique | |
+| Citizens | Citoyens | Audience |
+| Journalists | Journalistes | Audience |
+| Researchers | Chercheurs | Audience |
+| Policy Analysts | Analystes politiques | Audience |
+| Political Scientists | Politologues | Audience |
+| Democracy Advocates | Défenseurs de la démocratie | Audience |
+| Parliamentary Process Analysis | Analyse du processus parlementaire | |
+| OSINT Methodology | Méthodologie OSINT | |
+| Swedish Governance System | Système de gouvernance suédois | |
+| Data-Driven Political Analysis | Analyse politique basée sur les données | |
+| Open Government Data Usage | Utilisation des données gouvernementales ouvertes | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | French | Notes |
 |---------|--------|-------|
 | Security Assessment Platform | Plateforme d'évaluation de sécurité | |
+| Enterprise Security Management | Gestion de sécurité d'entreprise | |
+| CIA Triad Assessment | Évaluation de la triade CIA | |
 | Business Impact Analysis | Analyse d'impact métier | |
 | Multi-Framework Compliance | Conformité multi-référentiel | |
 | STRIDE Analysis | Analyse STRIDE | Threat model |
@@ -134,6 +206,31 @@ graph TD
 | Risk Register | Registre des risques | |
 | Controls Monitoring | Surveillance des contrôles | |
 | CRA Assessment | Évaluation CRA | Cyber Resilience Act |
+| Security Level Selection | Sélection du niveau de sécurité | |
+| Cost Estimation | Estimation des coûts | |
+| Implementation Guidance | Conseils de mise en œuvre | |
+| Gap Analysis | Analyse des écarts | |
+| Security Visualization | Visualisation de sécurité | |
+| Widget-Based Dashboard | Tableau de bord basé sur des widgets | |
+| Availability Impact Analysis | Analyse d'impact sur la disponibilité | |
+| Integrity Impact Analysis | Analyse d'impact sur l'intégrité | |
+| Confidentiality Impact Analysis | Analyse d'impact sur la confidentialité | |
+| Open Source Security Tool | Outil de sécurité open source | |
+
+### 🎓 Education & Learning Terms
+
+| English | French | Notes |
+|---------|--------|-------|
+| Educational Use | Usage éducatif | |
+| Self-Directed Learning | Apprentissage autonome | |
+| Skill Development | Développement des compétences | |
+| Professional Development | Développement professionnel | |
+| Teaches | Enseigne | Schema.org property |
+| Accessibility Features | Fonctionnalités d'accessibilité | |
+| Keyboard Navigation | Navigation au clavier | |
+| High Contrast Mode | Mode contraste élevé | |
+| Closed Captions | Sous-titres | |
+| Screen Reader Compatible | Compatible lecteur d'écran | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

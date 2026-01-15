@@ -1,6 +1,6 @@
 # 🇮🇱 Hebrew (he) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -53,11 +53,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Hebrew | Notes |
+|---------|--------|-------|
+| CEO / Chief Executive Officer | מנכ״ל | |
+| Founder | מייסד | |
+| CEO/Founder | מנכ״ל/מייסד | |
+| Application Security Officer | קצין אבטחת יישומים | |
+| Information Security Officer | קצין אבטחת מידע | |
+| Senior Security Architect | ארכיטקט אבטחה בכיר | |
+| Cloud Architect | ארכיטקט ענן | |
+| Security Consultant | יועץ אבטחה | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | קצין תאימות | |
+| Risk Manager | מנהל סיכונים | |
+| IT Security Manager | מנהל אבטחת IT | |
+| Security Auditor | מבקר אבטחה | |
+| Taekwondo Instructor | מדריך טאקוונדו | |
+| System Developer | מפתח מערכות | |
+| Software Engineer | מהנדס תוכנה | |
+| J2EE Developer | מפתח J2EE | |
+| Unix Helpdesk | תמיכה Unix | |
+| Teaching Assistant | עוזר הוראה | |
+| NBC Defence Group Leader | מפקד צוות הגנה כימית | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -65,23 +94,25 @@ graph TD
 |---------|--------|-------|
 | Cybersecurity Consulting Sweden | ייעוץ אבטחת סייבר בשוודיה | Main tagline |
 | Public ISMS | מערכת ניהול אבטחת מידע ציבורית | Core differentiator |
-| Security Architecture | ארכיטקטורת אבטחה | |
-| Security Strategy | אסטרטגיית אבטחה | |
-| Cloud Security | אבטחת ענן | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | פיתוח מאובטח | |
-| Code Quality | איכות קוד | |
-| Compliance & Regulatory | תאימות ורגולציה | |
-| Open Source Security | אבטחת קוד פתוח | |
-| Security Culture | תרבות אבטחה | |
-| Security Training | הדרכות אבטחה | |
+| Open ISMS Transparency | שקיפות ISMS פתוחה | |
+| Security Architecture & Strategy | ארכיטקטורת ואסטרטגיית אבטחה | Service line |
+| Cloud Security & DevSecOps | אבטחת ענן ו-DevSecOps | Service line |
+| Secure Development & Code Quality | פיתוח מאובטח ואיכות קוד | Service line |
+| Compliance & Regulatory | תאימות ורגולציה | Service line |
+| Open Source Security | אבטחת קוד פתוח | Service line |
+| Security Culture & Training | תרבות אבטחה והדרכה | Service line |
 | Full-Stack Security | אבטחה מלאה | |
 | Current Practitioner | מומחה פעיל | Value proposition |
 | Transparent Security | אבטחה שקופה | |
 | Developer-Friendly Security | אבטחה ידידותית למפתחים | |
+| Security Excellence Through Transparency | מצוינות באבטחה דרך שקיפות | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | גטבורג | City in Sweden |
 | Sweden | שוודיה | |
+| Nordic Region | סקנדינביה | |
+| Europe | אירופה | |
+| Singapore | סינגפור | |
+| ASEAN Region | אזור ASEAN | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -90,6 +121,7 @@ graph TD
 | Precision Combat Simulator | סימולטור קרב מדויק | |
 | Vital Points | נקודות חיוניות | |
 | 70 Anatomical Vital Points | 70 נקודות חיוניות אנטומיות | |
+| 70 Techniques | 70 טכניקות | |
 | Fighter Archetypes | ארכיטיפים של לוחמים | |
 | Musa (Warrior) | מוסא (לוחם) | |
 | Amsalja (Assassin) | אמסלג׳ה (מתנקש) | |
@@ -99,32 +131,72 @@ graph TD
 | Korean Martial Arts | אומנויות לחימה קוריאניות | |
 | Taekkyeon | טאקיון | Korean martial art |
 | Hapkido | הפקידו | Korean martial art |
+| Taekwondo | טאקוונדו | Korean martial art |
+| Song Moo Kwan | סונג מו קוואן | Taekwondo school |
+| Kukkiwon | קוקיוון | World Taekwondo HQ |
+| Black Belt | חגורה שחורה | |
+| 3rd Dan | דאן 3 | Rank |
 | Cultural Preservation | שימור תרבותי | |
 | Educational Gaming | משחקים חינוכיים | |
 | Unity Game | משחק Unity | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | לחימה | Game genre |
+| Simulation | סימולציה | Game genre |
+| Educational | חינוכי | Game genre |
+| Cultural | תרבותי | Game genre |
+| Single-player | שחקן יחיד | |
+| Multiplayer | רב משתתפים | |
+| Teen | נוער | Content rating |
+| Cross-platform | חוצה פלטפורמות | |
+| Open Source Game | משחק קוד פתוח | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Hebrew | Notes |
 |---------|--------|-------|
 | Political Transparency | שקיפות פוליטית | |
+| Political Intelligence Platform | פלטפורמת מודיעין פוליטי | |
 | OSINT Platform | פלטפורמת OSINT | |
 | Parliamentary Monitoring | ניטור פרלמנטרי | |
+| Swedish Parliament Monitoring (Riksdag) | ניטור הפרלמנט השוודי (ריקסדאג) | |
+| Political Decision Tracking | מעקב אחר החלטות פוליטיות | |
+| Governance Metrics & Rankings | מדדי ודירוגי ממשל | |
+| Democratic Accountability Analysis | ניתוח אחריותיות דמוקרטית | |
 | Voting Records | רשומות הצבעה | |
+| Voting Pattern Analysis | ניתוח דפוסי הצבעה | |
+| Party Performance Metrics | מדדי ביצועי מפלגות | |
+| Minister Activity Tracking | מעקב אחר פעילות שרים | |
+| Committee Work Analysis | ניתוח עבודת ועדות | |
+| Political Trend Visualization | ויזואליזציה של מגמות פוליטיות | |
+| Open Data Integration | שילוב נתונים פתוחים | |
+| World Bank | הבנק העולמי | |
+| Swedish Government | ממשלת שוודיה | |
 | Accountability Metrics | מדדי אחריותיות | |
 | Open Data | נתונים פתוחים | |
 | Civic Technology | טכנולוגיה אזרחית | |
 | Swedish Parliament | הפרלמנט השוודי | |
 | Data Visualization | ויזואליזציה של נתונים | |
 | Political Analytics | אנליטיקה פוליטית | |
+| Citizens | אזרחים | Audience |
+| Journalists | עיתונאים | Audience |
+| Researchers | חוקרים | Audience |
+| Policy Analysts | מנתחי מדיניות | Audience |
+| Political Scientists | מדענים פוליטיים | Audience |
+| Democracy Advocates | תומכי דמוקרטיה | Audience |
+| Parliamentary Process Analysis | ניתוח תהליכים פרלמנטריים | |
+| OSINT Methodology | מתודולוגיית OSINT | |
+| Swedish Governance System | מערכת הממשל השוודית | |
+| Data-Driven Political Analysis | ניתוח פוליטי מבוסס נתונים | |
+| Open Government Data Usage | שימוש בנתונים ממשלתיים פתוחים | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Hebrew | Notes |
 |---------|--------|-------|
 | Security Assessment Platform | פלטפורמת הערכת אבטחה | |
+| Enterprise Security Management | ניהול אבטחה ארגוני | |
+| CIA Triad Assessment | הערכת משולש CIA | |
 | Business Impact Analysis | ניתוח השפעה עסקית | |
 | Multi-Framework Compliance | תאימות רב-מסגרתית | |
 | STRIDE Analysis | ניתוח STRIDE | Threat model |
@@ -134,6 +206,31 @@ graph TD
 | Risk Register | רישום סיכונים | |
 | Controls Monitoring | ניטור בקרות | |
 | CRA Assessment | הערכת CRA | Cyber Resilience Act |
+| Security Level Selection | בחירת רמת אבטחה | |
+| Cost Estimation | אומדן עלויות | |
+| Implementation Guidance | הנחיות יישום | |
+| Gap Analysis | ניתוח פערים | |
+| Security Visualization | ויזואליזציה של אבטחה | |
+| Widget-Based Dashboard | לוח מחוונים מבוסס ווידג׳טים | |
+| Availability Impact Analysis | ניתוח השפעה על זמינות | |
+| Integrity Impact Analysis | ניתוח השפעה על שלמות | |
+| Confidentiality Impact Analysis | ניתוח השפעה על סודיות | |
+| Open Source Security Tool | כלי אבטחת קוד פתוח | |
+
+### 🎓 Education & Learning Terms
+
+| English | Hebrew | Notes |
+|---------|--------|-------|
+| Educational Use | שימוש חינוכי | |
+| Self-Directed Learning | למידה עצמאית | |
+| Skill Development | פיתוח מיומנויות | |
+| Professional Development | פיתוח מקצועי | |
+| Teaches | מלמד | Schema.org property |
+| Accessibility Features | תכונות נגישות | |
+| Keyboard Navigation | ניווט מקלדת | |
+| High Contrast Mode | מצב ניגודיות גבוהה | |
+| Closed Captions | כתוביות | |
+| Screen Reader Compatible | תואם קורא מסך | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

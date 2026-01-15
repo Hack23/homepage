@@ -1,6 +1,6 @@
 # 🇰🇷 Korean (ko) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -54,11 +54,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram / 흑괘 (黑卦) | Game product – Korean name available |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 흑괘 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| CEO / Chief Executive Officer | CEO / 최고경영자 | |
+| Founder | 창업자 | |
+| CEO/Founder | CEO/창업자 | |
+| Application Security Officer | 애플리케이션 보안 담당자 | |
+| Information Security Officer | 정보 보안 담당자 | |
+| Senior Security Architect | 수석 보안 아키텍트 | |
+| Cloud Architect | 클라우드 아키텍트 | |
+| Security Consultant | 보안 컨설턴트 | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | 규정 준수 담당자 | |
+| Risk Manager | 리스크 매니저 | |
+| IT Security Manager | IT 보안 매니저 | |
+| Security Auditor | 보안 감사인 | |
+| Taekwondo Instructor | 태권도 사범 | |
+| System Developer | 시스템 개발자 | |
+| Software Engineer | 소프트웨어 엔지니어 | |
+| J2EE Developer | J2EE 개발자 | |
+| Unix Helpdesk | Unix 헬프데스크 | |
+| Teaching Assistant | 조교 | |
+| NBC Defence Group Leader | NBC 방호반장 | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -66,23 +95,25 @@ graph TD
 |---------|--------|-------|
 | Cybersecurity Consulting Sweden | 스웨덴 사이버보안 컨설팅 | Main tagline |
 | Public ISMS | 공개 ISMS | Core differentiator |
-| Security Architecture | 보안 아키텍처 | |
-| Security Strategy | 보안 전략 | |
-| Cloud Security | 클라우드 보안 | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | 보안 개발 | |
-| Code Quality | 코드 품질 | |
-| Compliance & Regulatory | 규정 준수 및 규제 | |
-| Open Source Security | 오픈소스 보안 | |
-| Security Culture | 보안 문화 | |
-| Security Training | 보안 교육 | |
+| Open ISMS Transparency | 개방형 ISMS 투명성 | |
+| Security Architecture & Strategy | 보안 아키텍처 및 전략 | Service line |
+| Cloud Security & DevSecOps | 클라우드 보안 및 DevSecOps | Service line |
+| Secure Development & Code Quality | 보안 개발 및 코드 품질 | Service line |
+| Compliance & Regulatory | 규정 준수 및 규제 | Service line |
+| Open Source Security | 오픈소스 보안 | Service line |
+| Security Culture & Training | 보안 문화 및 교육 | Service line |
 | Full-Stack Security | 풀스택 보안 | |
 | Current Practitioner | 현직 실무자 | Value proposition |
 | Transparent Security | 투명한 보안 | |
 | Developer-Friendly Security | 개발자 친화적 보안 | |
+| Security Excellence Through Transparency | 투명성을 통한 보안 우수성 | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | 예테보리 | City in Sweden |
 | Sweden | 스웨덴 | |
+| Nordic Region | 북유럽 | |
+| Europe | 유럽 | |
+| Singapore | 싱가포르 | |
+| ASEAN Region | ASEAN 지역 | |
 
 ### 🎮 Black Trigram (흑괘) Game Vocabulary
 
@@ -91,6 +122,7 @@ graph TD
 | Precision Combat Simulator | 정밀 전투 시뮬레이터 | |
 | Vital Points | 급소 | |
 | 70 Anatomical Vital Points | 70개의 해부학적 급소 | |
+| 70 Techniques | 70개의 기술 | |
 | Fighter Archetypes | 전사 아키타입 | |
 | Musa (Warrior) | 무사 (전사) | Korean term |
 | Amsalja (Assassin) | 암살자 | Korean term |
@@ -101,6 +133,10 @@ graph TD
 | Taekkyeon | 택견 | Traditional Korean martial art |
 | Hapkido | 합기도 | Korean martial art |
 | Taekwondo | 태권도 | Korean martial art |
+| Song Moo Kwan | 송무관 | Taekwondo school |
+| Kukkiwon | 국기원 | World Taekwondo HQ |
+| Black Belt | 흑띠 | |
+| 3rd Dan | 3단 | Rank |
 | Cultural Preservation | 문화 보존 | |
 | Educational Gaming | 교육 게임 | |
 | Unity Game | 유니티 게임 | |
@@ -108,27 +144,62 @@ graph TD
 | itch.io | itch.io | Platform name |
 | I Ching | 주역 (周易) | |
 | Trigram | 괘 (卦) | |
+| Fighting | 격투 | Game genre |
+| Simulation | 시뮬레이션 | Game genre |
+| Educational | 교육적 | Game genre |
+| Cultural | 문화적 | Game genre |
+| Single-player | 싱글플레이어 | |
+| Multiplayer | 멀티플레이어 | |
+| Teen | 청소년 | Content rating |
+| Cross-platform | 크로스 플랫폼 | |
+| Open Source Game | 오픈소스 게임 | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Korean | Notes |
 |---------|--------|-------|
 | Political Transparency | 정치적 투명성 | |
+| Political Intelligence Platform | 정치 인텔리전스 플랫폼 | |
 | OSINT Platform | OSINT 플랫폼 | |
 | Parliamentary Monitoring | 의회 모니터링 | |
+| Swedish Parliament Monitoring (Riksdag) | 스웨덴 의회 모니터링 (릭스다그) | |
+| Political Decision Tracking | 정치적 의사 결정 추적 | |
+| Governance Metrics & Rankings | 거버넌스 지표 및 순위 | |
+| Democratic Accountability Analysis | 민주적 책임 분석 | |
 | Voting Records | 투표 기록 | |
+| Voting Pattern Analysis | 투표 패턴 분석 | |
+| Party Performance Metrics | 정당 성과 지표 | |
+| Minister Activity Tracking | 장관 활동 추적 | |
+| Committee Work Analysis | 위원회 활동 분석 | |
+| Political Trend Visualization | 정치 트렌드 시각화 | |
+| Open Data Integration | 오픈 데이터 통합 | |
+| World Bank | 세계은행 | |
+| Swedish Government | 스웨덴 정부 | |
 | Accountability Metrics | 책임 지표 | |
 | Open Data | 오픈 데이터 | |
 | Civic Technology | 시빅 테크 | |
 | Swedish Parliament | 스웨덴 의회 | |
 | Data Visualization | 데이터 시각화 | |
 | Political Analytics | 정치 분석 | |
+| Citizens | 시민 | Audience |
+| Journalists | 기자 | Audience |
+| Researchers | 연구자 | Audience |
+| Policy Analysts | 정책 분석가 | Audience |
+| Political Scientists | 정치학자 | Audience |
+| Democracy Advocates | 민주주의 옹호자 | Audience |
+| Parliamentary Process Analysis | 의회 절차 분석 | |
+| OSINT Methodology | OSINT 방법론 | |
+| Swedish Governance System | 스웨덴 거버넌스 시스템 | |
+| Data-Driven Political Analysis | 데이터 기반 정치 분석 | |
+| Open Government Data Usage | 공공 데이터 활용 | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Korean | Notes |
 |---------|--------|-------|
 | Security Assessment Platform | 보안 평가 플랫폼 | |
+| Enterprise Security Management | 기업 보안 관리 | |
+| CIA Triad Assessment | CIA 삼위일체 평가 | |
 | Business Impact Analysis | 비즈니스 영향 분석 | |
 | Multi-Framework Compliance | 다중 프레임워크 준수 | |
 | STRIDE Analysis | STRIDE 분석 | Threat model |
@@ -138,6 +209,33 @@ graph TD
 | Risk Register | 리스크 레지스터 | |
 | Controls Monitoring | 통제 모니터링 | |
 | CRA Assessment | CRA 평가 | Cyber Resilience Act |
+| Security Level Selection | 보안 수준 선택 | |
+| Cost Estimation | 비용 추정 | |
+| Implementation Guidance | 구현 지침 | |
+| Gap Analysis | 갭 분석 | |
+| Security Visualization | 보안 시각화 | |
+| Widget-Based Dashboard | 위젯 기반 대시보드 | |
+| Availability Impact Analysis | 가용성 영향 분석 | |
+| Integrity Impact Analysis | 무결성 영향 분석 | |
+| Confidentiality Impact Analysis | 기밀성 영향 분석 | |
+| Open Source Security Tool | 오픈소스 보안 도구 | |
+
+### 🎓 Education & Learning Terms
+
+| English | Korean | Notes |
+|---------|--------|-------|
+| Educational Use | 교육적 사용 | |
+| Self-Directed Learning | 자기 주도 학습 | |
+| Skill Development | 기술 개발 | |
+| Professional Development | 전문성 개발 | |
+| Teaches | 가르치다 | Schema.org property |
+| Accessibility Features | 접근성 기능 | |
+| Keyboard Navigation | 키보드 탐색 | |
+| High Contrast Mode | 고대비 모드 | |
+| Closed Captions | 자막 | |
+| Screen Reader Compatible | 스크린 리더 호환 | |
+
+### 🍎 Discordian Philosophy & ISMS Blog
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

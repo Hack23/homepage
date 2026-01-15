@@ -1,6 +1,6 @@
 # 🇳🇱 Dutch (nl) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -53,11 +53,40 @@ graph TD
 | CIA Compliance Manager | CIA Compliance Manager | Product name – keep English |
 | Black Trigram | Black Trigram | Game product – keep English |
 | 흑괘 | 흑괘 | Korean name for Black Trigram |
+| 黑卦 | 黑卦 | Chinese name for Black Trigram |
 | James Pether Sörling | James Pether Sörling | Founder name |
 | CISSP | CISSP | Certification |
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Dutch | Notes |
+|---------|-------|-------|
+| CEO / Chief Executive Officer | CEO / Algemeen Directeur | |
+| Founder | Oprichter | |
+| CEO/Founder | CEO/Oprichter | |
+| Application Security Officer | Applicatiebeveiligingsfunctionaris | |
+| Information Security Officer | Informatiebeveiligingsfunctionaris | |
+| Senior Security Architect | Senior beveiligingsarchitect | |
+| Cloud Architect | Cloud-architect | |
+| Security Consultant | Beveiligingsconsultant | |
+| CISO | CISO | Chief Information Security Officer |
+| Compliance Officer | Compliance officer | |
+| Risk Manager | Risicomanager | |
+| IT Security Manager | IT-beveiligingsmanager | |
+| Security Auditor | Beveiligingsauditor | |
+| Taekwondo Instructor | Taekwondo-instructeur | |
+| System Developer | Systeemontwikkelaar | |
+| Software Engineer | Software-engineer | |
+| J2EE Developer | J2EE-ontwikkelaar | |
+| Unix Helpdesk | Unix-helpdesk | |
+| Teaching Assistant | Onderwijsassistent | |
+| NBC Defence Group Leader | NBC-defensiegroepsleider | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -65,23 +94,25 @@ graph TD
 |---------|-------|-------|
 | Cybersecurity Consulting Sweden | Cybersecurity consulting in Zweden | Main tagline |
 | Public ISMS | Openbaar ISMS | Core differentiator |
-| Security Architecture | Beveiligingsarchitectuur | |
-| Security Strategy | Beveiligingsstrategie | |
-| Cloud Security | Cloudbeveiliging | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | Veilige ontwikkeling | |
-| Code Quality | Codekwaliteit | |
-| Compliance & Regulatory | Compliance en regelgeving | |
-| Open Source Security | Open source beveiliging | |
-| Security Culture | Beveiligingscultuur | |
-| Security Training | Beveiligingstraining | |
+| Open ISMS Transparency | Open ISMS-transparantie | |
+| Security Architecture & Strategy | Beveiligingsarchitectuur en strategie | Service line |
+| Cloud Security & DevSecOps | Cloudbeveiliging en DevSecOps | Service line |
+| Secure Development & Code Quality | Veilige ontwikkeling en codekwaliteit | Service line |
+| Compliance & Regulatory | Compliance en regelgeving | Service line |
+| Open Source Security | Open source beveiliging | Service line |
+| Security Culture & Training | Beveiligingscultuur en training | Service line |
 | Full-Stack Security | Full-stack beveiliging | |
 | Current Practitioner | Actieve beoefenaar | Value proposition |
 | Transparent Security | Transparante beveiliging | |
 | Developer-Friendly Security | Ontwikkelaarsvriendelijke beveiliging | |
+| Security Excellence Through Transparency | Beveiligingsexcellentie door transparantie | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | Göteborg | City in Sweden |
 | Sweden | Zweden | |
+| Nordic Region | Scandinavië | |
+| Europe | Europa | |
+| Singapore | Singapore | |
+| ASEAN Region | ASEAN-regio | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -90,6 +121,7 @@ graph TD
 | Precision Combat Simulator | Precisie-gevechtssimulator | |
 | Vital Points | Vitale punten | |
 | 70 Anatomical Vital Points | 70 anatomische vitale punten | |
+| 70 Techniques | 70 technieken | |
 | Fighter Archetypes | Vechtersarchetypen | |
 | Musa (Warrior) | Musa (Krijger) | |
 | Amsalja (Assassin) | Amsalja (Moordenaar) | |
@@ -99,32 +131,71 @@ graph TD
 | Korean Martial Arts | Koreaanse vechtsporten | |
 | Taekkyeon | Taekkyeon | Korean martial art |
 | Hapkido | Hapkido | Korean martial art |
+| Taekwondo | Taekwondo | Korean martial art |
+| Song Moo Kwan | Song Moo Kwan | Taekwondo school |
+| Kukkiwon | Kukkiwon | World Taekwondo HQ |
+| Black Belt | Zwarte band | |
+| 3rd Dan | 3e dan | Rank |
 | Cultural Preservation | Cultureel behoud | |
 | Educational Gaming | Educatieve gaming | |
 | Unity Game | Unity-game | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | Vechten | Game genre |
+| Simulation | Simulatie | Game genre |
+| Educational | Educatief | Game genre |
+| Cultural | Cultureel | Game genre |
+| Single-player | Singleplayer | |
+| Multiplayer | Multiplayer | |
+| Teen | Tiener | Content rating |
+| Cross-platform | Cross-platform | |
+| Open Source Game | Open source-game | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Dutch | Notes |
 |---------|-------|-------|
 | Political Transparency | Politieke transparantie | |
+| Political Intelligence Platform | Politiek inlichtingenplatform | |
 | OSINT Platform | OSINT-platform | |
 | Parliamentary Monitoring | Parlementaire monitoring | |
+| Swedish Parliament Monitoring (Riksdag) | Monitoring Zweeds parlement (Riksdag) | |
+| Political Decision Tracking | Tracking van politieke besluiten | |
+| Governance Metrics & Rankings | Bestuursmaatstaven en rankings | |
+| Democratic Accountability Analysis | Analyse democratische verantwoording | |
 | Voting Records | Stemrecords | |
+| Voting Pattern Analysis | Analyse van stempatronen | |
+| Party Performance Metrics | Partijprestatiemetrieken | |
+| Minister Activity Tracking | Tracking van ministeractiviteit | |
+| Committee Work Analysis | Analyse van commissiewerk | |
+| Political Trend Visualization | Visualisatie van politieke trends | |
+| Open Data Integration | Integratie van open data | |
+| World Bank | Wereldbank | |
+| Swedish Government | Zweedse regering | |
 | Accountability Metrics | Verantwoordingsmetrieken | |
 | Open Data | Open data | |
 | Civic Technology | Burgertechnologie | |
-| Swedish Parliament | Zweeds parlement | |
 | Data Visualization | Datavisualisatie | |
 | Political Analytics | Politieke analyse | |
+| Citizens | Burgers | Audience |
+| Journalists | Journalisten | Audience |
+| Researchers | Onderzoekers | Audience |
+| Policy Analysts | Beleidsanalisten | Audience |
+| Political Scientists | Politicologen | Audience |
+| Democracy Advocates | Democratievoorvechters | Audience |
+| Parliamentary Process Analysis | Analyse van parlementair proces | |
+| OSINT Methodology | OSINT-methodologie | |
+| Swedish Governance System | Zweeds bestuurssysteem | |
+| Data-Driven Political Analysis | Datagedreven politieke analyse | |
+| Open Government Data Usage | Gebruik van open overheidsgegevens | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Dutch | Notes |
 |---------|-------|-------|
 | Security Assessment Platform | Beveiligingsbeoordelingsplatform | |
+| Enterprise Security Management | Enterprise beveiligingsbeheer | |
+| CIA Triad Assessment | CIA-triade-beoordeling | |
 | Business Impact Analysis | Bedrijfsimpactanalyse | |
 | Multi-Framework Compliance | Multi-framework compliance | |
 | STRIDE Analysis | STRIDE-analyse | Threat model |
@@ -134,6 +205,31 @@ graph TD
 | Risk Register | Risicoregister | |
 | Controls Monitoring | Controlemonitoring | |
 | CRA Assessment | CRA-beoordeling | Cyber Resilience Act |
+| Security Level Selection | Selectie beveiligingsniveau | |
+| Cost Estimation | Kostenraming | |
+| Implementation Guidance | Implementatierichtlijnen | |
+| Gap Analysis | Gap-analyse | |
+| Security Visualization | Beveiligingsvisualisatie | |
+| Widget-Based Dashboard | Widget-gebaseerd dashboard | |
+| Availability Impact Analysis | Beschikbaarheidsimpactanalyse | |
+| Integrity Impact Analysis | Integriteitsimpactanalyse | |
+| Confidentiality Impact Analysis | Vertrouwelijkheidsimpactanalyse | |
+| Open Source Security Tool | Open source-beveiligingstool | |
+
+### 🎓 Education & Learning Terms
+
+| English | Dutch | Notes |
+|---------|-------|-------|
+| Educational Use | Educatief gebruik | |
+| Self-Directed Learning | Zelfsturend leren | |
+| Skill Development | Vaardigheidsontwikkeling | |
+| Professional Development | Professionele ontwikkeling | |
+| Teaches | Onderwijst | Schema.org property |
+| Accessibility Features | Toegankelijkheidsfuncties | |
+| Keyboard Navigation | Toetsenbordnavigatie | |
+| High Contrast Mode | Hoog-contrastmodus | |
+| Closed Captions | Ondertiteling | |
+| Screen Reader Compatible | Schermlezercompatibel | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 

@@ -1,6 +1,6 @@
 # 🇨🇳 Chinese (zh) Translation Guide
 
-**Version 5.0 - Comprehensive Hack23 Edition**  
+**Version 6.0 - Expanded Hack23 Edition**  
 *Last Updated: January 2026*
 
 ---
@@ -59,6 +59,34 @@ graph TD
 | CISM | CISM | Certification |
 | GitHub | GitHub | Platform name |
 | LinkedIn | LinkedIn | Platform name |
+| OpenSSF | OpenSSF | Open Source Security Foundation |
+| CII Best Practices | CII Best Practices | Badge name |
+| Riksdag | Riksdag | Swedish Parliament |
+
+### 👔 Job Titles & Professional Roles
+
+| English | Chinese | Notes |
+|---------|---------|-------|
+| CEO / Chief Executive Officer | 首席执行官 | |
+| Founder | 创始人 | |
+| CEO/Founder | 首席执行官/创始人 | |
+| Application Security Officer | 应用安全官 | |
+| Information Security Officer | 信息安全官 | |
+| Senior Security Architect | 高级安全架构师 | |
+| Cloud Architect | 云架构师 | |
+| Security Consultant | 安全顾问 | |
+| CISO | 首席信息安全官 | Chief Information Security Officer |
+| Compliance Officer | 合规官 | |
+| Risk Manager | 风险经理 | |
+| IT Security Manager | IT安全经理 | |
+| Security Auditor | 安全审计员 | |
+| Taekwondo Instructor | 跆拳道教练 | |
+| System Developer | 系统开发人员 | |
+| Software Engineer | 软件工程师 | |
+| J2EE Developer | J2EE开发人员 | |
+| Unix Helpdesk | Unix帮助台 | |
+| Teaching Assistant | 助教 | |
+| NBC Defence Group Leader | NBC防御小组组长 | Military role |
 
 ### 🏢 Hack23 Business & Services
 
@@ -66,23 +94,25 @@ graph TD
 |---------|---------|-------|
 | Cybersecurity Consulting Sweden | 瑞典网络安全咨询 | Main tagline |
 | Public ISMS | 公开信息安全管理系统 | Core differentiator |
-| Security Architecture | 安全架构 | |
-| Security Strategy | 安全战略 | |
-| Cloud Security | 云安全 | |
-| DevSecOps | DevSecOps | Keep English |
-| Secure Development | 安全开发 | |
-| Code Quality | 代码质量 | |
-| Compliance & Regulatory | 合规与监管 | |
-| Open Source Security | 开源安全 | |
-| Security Culture | 安全文化 | |
-| Security Training | 安全培训 | |
+| Open ISMS Transparency | 开放ISMS透明度 | |
+| Security Architecture & Strategy | 安全架构与战略 | Service line |
+| Cloud Security & DevSecOps | 云安全与DevSecOps | Service line |
+| Secure Development & Code Quality | 安全开发与代码质量 | Service line |
+| Compliance & Regulatory | 合规与监管 | Service line |
+| Open Source Security | 开源安全 | Service line |
+| Security Culture & Training | 安全文化与培训 | Service line |
 | Full-Stack Security | 全栈安全 | |
 | Current Practitioner | 现任从业者 | Value proposition |
 | Transparent Security | 透明安全 | |
 | Developer-Friendly Security | 开发者友好的安全 | |
+| Security Excellence Through Transparency | 通过透明实现安全卓越 | |
 | OSPO | OSPO | Open Source Program Office |
 | Gothenburg | 哥德堡 | City in Sweden |
 | Sweden | 瑞典 | |
+| Nordic Region | 北欧地区 | |
+| Europe | 欧洲 | |
+| Singapore | 新加坡 | |
+| ASEAN Region | 东盟地区 | |
 
 ### 🎮 Black Trigram Game Vocabulary
 
@@ -91,6 +121,7 @@ graph TD
 | Precision Combat Simulator | 精准格斗模拟器 | |
 | Vital Points | 要害点 | |
 | 70 Anatomical Vital Points | 70个解剖学要害点 | |
+| 70 Techniques | 70种技术 | |
 | Fighter Archetypes | 战士原型 | |
 | Musa (Warrior) | 武士 (战士) | |
 | Amsalja (Assassin) | 暗杀者 | |
@@ -100,32 +131,71 @@ graph TD
 | Korean Martial Arts | 韩国武术 | |
 | Taekkyeon | 跆跟 | Korean martial art |
 | Hapkido | 合气道 | Korean martial art |
+| Taekwondo | 跆拳道 | Korean martial art |
+| Song Moo Kwan | 松武馆 | Taekwondo school |
+| Kukkiwon | 国技院 | World Taekwondo HQ |
+| Black Belt | 黑带 | |
+| 3rd Dan | 三段 | Rank |
 | Cultural Preservation | 文化保护 | |
 | Educational Gaming | 教育游戏 | |
 | Unity Game | Unity游戏 | |
 | Steam | Steam | Platform name |
 | itch.io | itch.io | Platform name |
+| Fighting | 格斗 | Game genre |
+| Simulation | 模拟 | Game genre |
+| Educational | 教育 | Game genre |
+| Cultural | 文化 | Game genre |
+| Single-player | 单人游戏 | |
+| Multiplayer | 多人游戏 | |
+| Teen | 青少年 | Content rating |
+| Cross-platform | 跨平台 | |
+| Open Source Game | 开源游戏 | |
 
 ### 🔍 Citizen Intelligence Agency Vocabulary
 
 | English | Chinese | Notes |
 |---------|---------|-------|
 | Political Transparency | 政治透明度 | |
+| Political Intelligence Platform | 政治情报平台 | |
 | OSINT Platform | 开源情报平台 | |
 | Parliamentary Monitoring | 议会监控 | |
+| Swedish Parliament Monitoring (Riksdag) | 瑞典议会监督 (Riksdag) | |
+| Political Decision Tracking | 政治决策追踪 | |
+| Governance Metrics & Rankings | 治理指标与排名 | |
+| Democratic Accountability Analysis | 民主问责分析 | |
 | Voting Records | 投票记录 | |
+| Voting Pattern Analysis | 投票模式分析 | |
+| Party Performance Metrics | 政党绩效指标 | |
+| Minister Activity Tracking | 部长活动追踪 | |
+| Committee Work Analysis | 委员会工作分析 | |
+| Political Trend Visualization | 政治趋势可视化 | |
+| Open Data Integration | 开放数据集成 | |
+| World Bank | 世界银行 | |
+| Swedish Government | 瑞典政府 | |
 | Accountability Metrics | 问责指标 | |
 | Open Data | 开放数据 | |
 | Civic Technology | 公民技术 | |
-| Swedish Parliament | 瑞典议会 | |
 | Data Visualization | 数据可视化 | |
 | Political Analytics | 政治分析 | |
+| Citizens | 公民 | Audience |
+| Journalists | 记者 | Audience |
+| Researchers | 研究人员 | Audience |
+| Policy Analysts | 政策分析师 | Audience |
+| Political Scientists | 政治学家 | Audience |
+| Democracy Advocates | 民主倡导者 | Audience |
+| Parliamentary Process Analysis | 议会流程分析 | |
+| OSINT Methodology | OSINT方法论 | |
+| Swedish Governance System | 瑞典治理体系 | |
+| Data-Driven Political Analysis | 数据驱动政治分析 | |
+| Open Government Data Usage | 开放政府数据使用 | |
 
 ### 🔐 CIA Compliance Manager Vocabulary
 
 | English | Chinese | Notes |
 |---------|---------|-------|
 | Security Assessment Platform | 安全评估平台 | |
+| Enterprise Security Management | 企业安全管理 | |
+| CIA Triad Assessment | CIA三元组评估 | |
 | Business Impact Analysis | 业务影响分析 | |
 | Multi-Framework Compliance | 多框架合规 | |
 | STRIDE Analysis | STRIDE分析 | Threat model |
@@ -135,6 +205,31 @@ graph TD
 | Risk Register | 风险登记册 | |
 | Controls Monitoring | 控制措施监控 | |
 | CRA Assessment | CRA评估 | Cyber Resilience Act |
+| Security Level Selection | 安全级别选择 | |
+| Cost Estimation | 成本估算 | |
+| Implementation Guidance | 实施指导 | |
+| Gap Analysis | 差距分析 | |
+| Security Visualization | 安全可视化 | |
+| Widget-Based Dashboard | 基于小部件的仪表板 | |
+| Availability Impact Analysis | 可用性影响分析 | |
+| Integrity Impact Analysis | 完整性影响分析 | |
+| Confidentiality Impact Analysis | 机密性影响分析 | |
+| Open Source Security Tool | 开源安全工具 | |
+
+### 🎓 Education & Learning Terms
+
+| English | Chinese | Notes |
+|---------|---------|-------|
+| Educational Use | 教育用途 | |
+| Self-Directed Learning | 自主学习 | |
+| Skill Development | 技能发展 | |
+| Professional Development | 专业发展 | |
+| Teaches | 教授 | Schema.org property |
+| Accessibility Features | 无障碍功能 | |
+| Keyboard Navigation | 键盘导航 | |
+| High Contrast Mode | 高对比度模式 | |
+| Closed Captions | 隐藏字幕 | |
+| Screen Reader Compatible | 屏幕阅读器兼容 | |
 
 ### 🍎 Discordian Philosophy & ISMS Blog
 
