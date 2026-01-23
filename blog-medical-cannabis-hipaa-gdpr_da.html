@@ -72,8 +72,8 @@
         "width": 1200,
         "height": 630
       },
-      "wordCount": 0,
-      "articleBody": "[TO BE TRANSLATED]",
+      "wordCount": 2450,
+      "articleBody": "Omfattende guide til databeskyttelse for medicinske cannabisoperationer. Dækker patientprivatliv, sundhedsinformationssikkerhed, tekniske kontroller (kryptering, adgangskontrol, MFA), organisatoriske politikker, tredjepartsstyring, patientrettigheder (adgang, rettelse, sletning, portabilitet), og databrudrespons. Inkluderer implementeringskøreplan, best practices tjekliste, og regulatoriske overvejelser for HIPAA, GDPR og andre rammer.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_da.html#blog",
@@ -154,100 +154,543 @@
   </nav>
 
 <header>
-  <div class="logo-container">
-    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
-  </div>
-  <h1>[TO BE TRANSLATED - Main Header]</h1>
-  <div class="app-link">
-    <a href="index_da.html">Hjem</a>
-    <a href="blog_da.html">Blog</a>
-    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
-  </div>
+<nav class="main-nav">
+<div class="logo-container">
+<a href="index_da.html">
+<img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="40" height="40" loading="eager">
+<span class="logo-text">Hack23</span>
+</a>
+</div>
+<ul class="nav-menu">
+<li><a href="index_da.html">Hjem</a></li>
+<li><a href="services_da.html">Tjenester</a></li>
+<li><a href="projects_da.html">Projekter</a></li>
+<li><a href="blog_da.html">Blog</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></li>
+</ul>
+</nav>
 </header>
+
 <main>
-  <article>
-    <h1 class="header">[TO BE TRANSLATED - Article Title]</h1>
-    
-    <!--
-    ==========================================
-    PROFESSIONAL TRANSLATOR INSTRUCTIONS
-    ==========================================
-    
-    Please translate all content sections below following these guidelines:
-    
-    1. MAINTAIN HTML STRUCTURE
-       - Keep all HTML tags intact
-       - Preserve CSS classes and IDs
-       - Do not modify technical elements
-    
-    2. TECHNICAL TERMINOLOGY
-       - Use Nordic terminology glossary provided
-       - Keep technical terms accurate (STRIDE, CIA Triad, DevSecOps)
-       - Preserve code examples in English
-    
-    3. CULTURAL ADAPTATION
-       - Adapt regulatory references to Nordic context
-       - Update authority names per country (see guide)
-       - Maintain professional consulting tone
-    
-    4. NARRATIVE VOICE
-       - Preserve author's style and voice
-       - Keep Discordian references where appropriate
-       - Maintain technical precision
-    
-    Reference: ISSUE_8_NORDIC_TECHNICAL_BLOGS_GUIDE.md
-    ==========================================
-    -->
+<article class="blog-post" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
 
-    <section id="introduction">
-      <h2 class="panel-caption">[TO BE TRANSLATED - Section Heading]</h2>
-      <p>[TO BE TRANSLATED - Introduction paragraph]</p>
-      <p>[TO BE TRANSLATED - Context and background]</p>
-    </section>
+<div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+<a href="index_da.html" class="text-link">Hjem</a> &gt; 
+<a href="blog_da.html" class="text-link">Blog</a> &gt; 
+<span>Medicinsk cannabis patientdatabeskyttelse</span>
+</div>
 
-    <section id="main-content">
-      <h2>[TO BE TRANSLATED - Main Section Title]</h2>
-      <p>[TO BE TRANSLATED - Main content paragraphs]</p>
-      
-      <h3>[TO BE TRANSLATED - Subsection]</h3>
-      <p>[TO BE TRANSLATED - Details and explanation]</p>
-      
-      <ul>
-        <li>[TO BE TRANSLATED - List item 1]</li>
-        <li>[TO BE TRANSLATED - List item 2]</li>
-        <li>[TO BE TRANSLATED - List item 3]</li>
-      </ul>
-    </section>
+<h1>🏥 Medicinsk cannabis patientdatabeskyttelse</h1>
 
-    <section id="technical-details">
-      <h2>[TO BE TRANSLATED - Technical Section]</h2>
-      <p>[TO BE TRANSLATED - Technical content]</p>
-      
-      <!-- CODE BLOCKS: Keep code in English, translate only comments -->
-      <pre><code>
-      // [TO BE TRANSLATED - Code comment]
-      // Technical code remains in English
-      </code></pre>
-    </section>
+<div style="color: var(--text-secondary); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);">
+<p><strong>Forfatter:</strong> James Pether Sörling | <strong>Publiceret:</strong> 27. november 2025 | <strong>Læsetid:</strong> 10 minutter</p>
+<p style="margin-top: 0.5rem;"><em>Virksomhedsdatabeskyttelsespraksis til privatliv og sikkerhed for patienter med medicinsk cannabis</em></p>
+</div>
 
-    <section id="conclusion">
-      <h2>[TO BE TRANSLATED - Conclusion]</h2>
-      <p>[TO BE TRANSLATED - Summary and key takeaways]</p>
-      <p>[TO BE TRANSLATED - Call to action or final thoughts]</p>
-    </section>
+<div style="background: rgba(220, 20, 60, 0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #DC143C;">
+<p><strong>⚠️ Vigtig ansvarsfraskrivelse:</strong> Denne guide giver generel databeskyttelse og cybersikkerhedsvejledning, der gælder for sundhedspleje og medicinske operationer. Vi yder ikke juridisk rådgivning eller gør krav på ekspertise i jurisdiktionsspecifikke sundhedsbestemmelser (HIPAA, GDPR eller andre rammer). For regulatorisk compliance-rådgivning specifik for medicinske cannabisoperationer, konsulter specialiseret juridisk rådgivning, der er fortrolig med sundhedsbestemmelser i din jurisdiktion.</p>
+</div>
 
-  </article>
+<h2>Hvorfor patientdata fra medicinsk cannabis kræver særlig beskyttelse</h2>
+
+<p>Medicinske cannabisoperationer håndterer nogle af de mest følsomme oplysninger: patienters sundhedstilstande, behandlingsplaner, recepthistorik og personlige identificerbare oplysninger. Dette skaber unikke databeskyttelsesansvar:</p>
+
+<ul>
+<li><strong>Følsomhed af sundhedsoplysninger:</strong> Patientmedicinske data kræver øget beskyttelse svarende til traditionel sundhedspleje</li>
+<li><strong>Forventninger til privatliv:</strong> Patienter forventer streng fortrolighed vedrørende deres medicinsk cannabisbrug</li>
+<li><strong>Regulatoriske krav:</strong> Mange jurisdiktioner anvender sundhedsdatabeskyttelsesbestemmelser på medicinsk cannabis</li>
+<li><strong>Konsekvenser af brud:</strong> Databrud kan skade patienter personligt, professionelt og økonomisk</li>
+<li><strong>Juridisk ansvar:</strong> Forkert datahåndtering kan resultere i betydelige juridiske og økonomiske sanktioner</li>
+</ul>
+
+<p>Uanset om du driver et medicinsk cannabisdispensarium, klinik, dyrkningsfacilitet eller teknologiplatform, er robust databeskyttelse essentiel.</p>
+
+<h2>Forståelse af patientdatatyper</h2>
+
+<h3>Personligt identificerbare oplysninger (PII)</h3>
+<ul>
+<li>Navn, fødselsdato, adresse, kontaktoplysninger</li>
+<li>Offentligt udstedte ID-numre</li>
+<li>Fotografier og biometriske data</li>
+<li>Økonomiske oplysninger (betalingsmetoder, bankkonti)</li>
+</ul>
+
+<h3>Beskyttede sundhedsoplysninger (PHI)</h3>
+<ul>
+<li>Medicinske tilstande og diagnoser, der begrunder medicinsk cannabisbrug</li>
+<li>Recept- og anbefalingsdetaljer</li>
+<li>Købshistorik og produktpræferencer</li>
+<li>Sundhedsudbyder oplysninger</li>
+<li>Behandlingseffektivitet og patientrapporterede resultater</li>
+</ul>
+
+<h3>Operationelle data</h3>
+<ul>
+<li>Verificering af medicinsk cannabisautorisation/recept</li>
+<li>Købsgrænser og sporing</li>
+<li>Loyalitetsprogramdata</li>
+<li>Konsultationsnotater (hvis du yder patientvejledning)</li>
+</ul>
+
+<h2>Grundlæggende databeskyttelsesprincpper</h2>
+
+<div class="stats-highlight">
+
+<h3>1. Dataminimering</h3>
+<p><strong>Indsaml kun hvad du har brug for:</strong></p>
+<ul>
+<li>Begræns dataindsamling til hvad der er nødvendigt for servicelevering og compliance</li>
+<li>Undgå at indsamle "rart at have" data, der øger risikoen uden klar værdi</li>
+<li>Gennemgå regelmæssigt dataindsamlingspraksis for at eliminere unødvendige elementer</li>
+<li>Dokumenter formålet og det juridiske grundlag for hvert indsamlet dataelement</li>
+</ul>
+
+<h3 class="mt-15">2. Formålsbegrænsning</h3>
+<p><strong>Brug kun data til angivne formål:</strong></p>
+<ul>
+<li>Kommuniker klart til patienter, hvordan deres data vil blive brugt</li>
+<li>Indhent eksplicit samtykke til databrug ud over primær servicelevering</li>
+<li>Genanvend ikke data uden patientsamtykke</li>
+<li>Begræns marketingbrug af patientdata (mange jurisdiktioner begrænser dette)</li>
+</ul>
+
+<h3 class="mt-15">3. Dataopbevaringsgrænser</h3>
+<p><strong>Opbevar kun data så længe det er nødvendigt:</strong></p>
+<ul>
+<li>Definer opbevaringsperioder for forskellige datatyper baseret på juridiske krav</li>
+<li>Implementer automatisk sletning af data efter opbevaringsperioder</li>
+<li>Giv patienter mulighed for at anmode om datasletning (ret til sletning)</li>
+<li>Slet sikkert data, når det ikke længere er nødvendigt (ikke blot sletning—overskriv/makuler)</li>
+</ul>
+
+<h3 class="mt-15">4. Gennemsigtighed</h3>
+<p><strong>Patienter skal forstå din datapraksis:</strong></p>
+<ul>
+<li>Giv klare, læsbare privatlivserklæringer (ikke blot juridisk boilerplate)</li>
+<li>Forklar hvilke data du indsamler, hvorfor, hvordan de beskyttes, og hvor længe du opbevarer dem</li>
+<li>Gør privatlivserklæringer let tilgængelige (hjemmeside, salgssted, indtagelsesformularer)</li>
+<li>Opdater patienter hvis datapraksis ændres væsentligt</li>
+</ul>
+
+</div>
+
+<h2>Tekniske sikkerhedskontroller</h2>
+
+<h3>Adgangskontrol</h3>
+
+<div class="stats-highlight">
+
+<h4>Rollebaseret adgangskontrol (RBAC)</h4>
+<ul>
+<li><strong>Princippet om mindst privilegium:</strong> Personale får kun adgang til data, der er nødvendige for deres specifikke rolle</li>
+<li><strong>Rolledefinitioner:</strong> Definer klart roller (budtender, manager, complianceofficer) med tilhørende tilladelser</li>
+<li><strong>Regelmæssige gennemgange:</strong> Kvartalsvise adgangsgennemgange for at fjerne unødvendige tilladelser</li>
+<li><strong>Funktionsadskillelse:</strong> Ingen enkelt person skal kontrollere alle aspekter af følsomme operationer</li>
+</ul>
+
+<h4>Autentificering og autorisation</h4>
+<ul>
+<li><strong>Unikke brugerkonti:</strong> Ingen delte logins—hvert personalemedlem har unikke legitimationsoplysninger</li>
+<li><strong>Stærke adgangskoder:</strong> Håndhæv adgangskodekompleksitet og regelmæssige ændringer</li>
+<li><strong>Multifaktorautentificering (MFA):</strong> Kræv MFA til systemer, der indeholder patientdata</li>
+<li><strong>Sessionsstyring:</strong> Automatisk logout efter inaktivitet, især på delte enheder</li>
+</ul>
+
+<h4>Revisionslogning</h4>
+<ul>
+<li><strong>Omfattende logning:</strong> Registrer al adgang til patientdata (hvem, hvad, hvornår)</li>
+<li><strong>Logbeskyttelse:</strong> Opbevar logs sikkert, forhindre manipulering</li>
+<li><strong>Regelmæssig gennemgang:</strong> Overvåg logs for uautoriseret adgang eller mistænkelige mønstre</li>
+<li><strong>Opbevaring:</strong> Opbevar revisionslogs i længere perioder (minimum 12+ måneder)</li>
+</ul>
+
+</div>
+
+<h3>Kryptering</h3>
+
+<div class="stats-highlight">
+
+<h4>Data i hvile</h4>
+<ul>
+<li><strong>Databasekryptering:</strong> Krypter databaser, der indeholder patientoplysninger (AES-256)</li>
+<li><strong>Filsystemkryptering:</strong> Krypter filsystemer på servere og arbejdsstationer</li>
+<li><strong>Backupkryptering:</strong> Krypter alle backupkopier af patientdata</li>
+<li><strong>Mobilenhedskryptering:</strong> Krypter laptops, tablets, telefoner, der får adgang til patientdata</li>
+</ul>
+
+<h4>Data under transmission</h4>
+<ul>
+<li><strong>TLS 1.3:</strong> Brug moderne krypteringsprotokoller til al netværkskommunikation</li>
+<li><strong>VPN til fjernadgang:</strong> Kræv VPN for fjerntpersonale, der får adgang til patientsystemer</li>
+<li><strong>Sikker e-mail:</strong> Brug krypteret e-mail til at sende patientoplysninger</li>
+<li><strong>Sikker filoverførsel:</strong> Brug SFTP eller sikker cloud-lagring (ikke e-mail-vedhæftninger)</li>
+</ul>
+
+<h4>Nøglestyring</h4>
+<ul>
+<li><strong>Nøgleopbevaring:</strong> Opbevar krypteringsnøgler separat fra krypterede data</li>
+<li><strong>Nøglerotation:</strong> Roter regelmæssigt krypteringsnøgler</li>
+<li><strong>Adgangskontrol:</strong> Begræns strengt hvem der kan få adgang til krypteringsnøgler</li>
+<li><strong>Katastrofegendannelse:</strong> Sikker backup af krypteringsnøgler til datagendannelse</li>
+</ul>
+
+</div>
+
+<h3>Fysisk sikkerhed</h3>
+
+<div class="stats-highlight">
+<ul>
+<li><strong>Sikre faciliteter:</strong> Lås serverrum, begræns fysisk adgang til systemer med patientdata</li>
+<li><strong>Ren skrivebordspolitik:</strong> Efterlad ikke patientoplysninger synlige på skriveborde eller skærme</li>
+<li><strong>Sikker bortskaffelse:</strong> Makuler papirregistre, slet elektronisk lagring før bortskaffelse</li>
+<li><strong>Besøgskontrol:</strong> Log og overvåg besøgende, især i områder med patientdataadgang</li>
+</ul>
+</div>
+
+<h2>Organisatoriske kontroller</h2>
+
+<h3>Privatlivstyring</h3>
+
+<div class="stats-highlight">
+
+<h4>Privatlivsofficer/Databeskyttelsesansvarlig</h4>
+<ul>
+<li>Udpeg ansvarlig person for databeskyttelsesoversigt</li>
+<li>Sikr tilstrækkelig autoritet og ressourcer til at udfylde rollen</li>
+<li>Regelmæssig rapportering til ledelsen om privatlivsprogramstatus</li>
+</ul>
+
+<h4>Politikker og procedurer</h4>
+<ul>
+<li><strong>Skriftlig privatlivspolitik:</strong> Dokumenter hvordan du håndterer patientdata</li>
+<li><strong>Databrudresponsplan:</strong> Procedurer til at opdage, indeholde og undersøge brud</li>
+<li><strong>Patientrettighedsprocedurer:</strong> Proces for patienter til at få adgang til, rette og slette deres data</li>
+<li><strong>Tredjepartsstyring:</strong> Krav til leverandører, der håndterer patientdata</li>
+</ul>
+
+<h4>Træning og bevidsthed</h4>
+<ul>
+<li><strong>Initial træning:</strong> Alt personale, der håndterer patientdata, modtager privatlivstræning før adgang</li>
+<li><strong>Årlig opdatering:</strong> Regelmæssige træningsopdateringer om privatlivskrav</li>
+<li><strong>Rollespecifik træning:</strong> Yderligere træning for roller med forhøjet adgang</li>
+<li><strong>Anerkendelse:</strong> Dokumenter personalets forståelse af privatlivsansvar</li>
+</ul>
+
+</div>
+
+<h3>Tredjepartsstyring</h3>
+
+<div class="stats-highlight">
+
+<h4>Leverandørvurdering</h4>
+<ul>
+<li>Evaluer databeskyttelsespraksis for POS-systemer, cloud-udbydere, betalingsprocessorer</li>
+<li>Gennemgå leverandørsikkerhedscertificeringer og compliance-attesteringer</li>
+<li>Forstå hvor leverandør opbevarer og behandler patientdata (jurisdiktion betyder noget)</li>
+</ul>
+
+<h4>Kontrakter og aftaler</h4>
+<ul>
+<li>Inkluder databeskyttelseskrav i leverandørkontrakter</li>
+<li>Definer ansvar for brudnotifikation</li>
+<li>Kræv at leverandør implementerer passende sikkerhedskontroller</li>
+<li>Inkluder ret til at revidere leverandørsikkerhedspraksis</li>
+</ul>
+
+<h4>Løbende overvågning</h4>
+<ul>
+<li>Gennemgå regelmæssigt leverandørsikkerhedsstatus</li>
+<li>Overvåg for leverandørdatabrud, der påvirker dine data</li>
+<li>Vedligehold fortegnelse over alle leverandører med patientdataadgang</li>
+</ul>
+
+</div>
+
+<h2>Patientrettigheder og dataanmodninger</h2>
+
+<p>Patienter har fundamentale rettigheder over deres data. Medicinske cannabisoperationer skal være forberedte på at opfylde:</p>
+
+<div class="stats-highlight">
+
+<h3>Ret til adgang</h3>
+<ul>
+<li>Patienter kan anmode om kopier af deres data</li>
+<li>Etabler proces til at opfylde anmodninger inden for rimelig tidsramme (typisk 30 dage)</li>
+<li>Lever data i tilgængeligt, læsbart format</li>
+<li>Verificer patientidentitet før frigivelse af data</li>
+</ul>
+
+<h3>Ret til rettelse</h3>
+<ul>
+<li>Patienter kan anmode om rettelse af unøjagtige data</li>
+<li>Implementer proces til at gennemgå og rette data efter behov</li>
+<li>Dokumenter årsager, hvis rettelsesanmodning afvises</li>
+</ul>
+
+<h3>Ret til sletning</h3>
+<ul>
+<li>Patienter kan anmode om sletning af deres data (med nogle undtagelser)</li>
+<li>Forstå juridiske opbevaringskrav (kan forhindre øjeblikkelig sletning)</li>
+<li>Slet data, når det ikke længere er juridisk påkrævet at opbevare</li>
+<li>Dokumenter sletningsanmodninger og handlinger taget</li>
+</ul>
+
+<h3>Ret til dataportabilitet</h3>
+<ul>
+<li>Patienter kan anmode om deres data i maskinlæsbart format</li>
+<li>Lever data i struktureret format (CSV, JSON) når det er muligt</li>
+<li>Gør det muligt for patienter at overføre data til en anden udbyder, hvis anmodet</li>
+</ul>
+
+</div>
+
+<h2>Databrudforebyggelse og -respons</h2>
+
+<h3>Forebyggelsesstrategier</h3>
+<ul>
+<li><strong>Dybdeforsvar:</strong> Flere lag af sikkerhed (netværk, applikation, data)</li>
+<li><strong>Sårbarhedsstyring:</strong> Regelmæssig sikkerhedsopdatering og sårbarhedsscanning</li>
+<li><strong>Penetrationstest:</strong> Periodiske sikkerhedsvurderinger af kvalificerede fagfolk</li>
+<li><strong>Sikkerhedsovervågning:</strong> Realtidsregistrering af mistænkelige aktiviteter</li>
+<li><strong>Insider-trusselstyring:</strong> Overvåg uautoriseret dataadgang af medarbejdere</li>
+</ul>
+
+<h3>Brudresponsplan</h3>
+
+<div class="stats-highlight">
+
+<h4>Opdagelse og inddæmning</h4>
+<ul>
+<li>Etabler overvågning til hurtigt at opdage potentielle brud</li>
+<li>Inddæm øjeblikkeligt brud for at forhindre yderligere datatab</li>
+<li>Bevar beviser til undersøgelse</li>
+</ul>
+
+<h4>Undersøgelse og vurdering</h4>
+<ul>
+<li>Bestem hvilke data der blev tilgået/stjålet</li>
+<li>Identificer grundårsag og angrebsvektor</li>
+<li>Vurder potentiel skade på berørte patienter</li>
+</ul>
+
+<h4>Notifikation</h4>
+<ul>
+<li><strong>Regulatorisk notifikation:</strong> Forstå rapporteringskrav og tidslinjer i din jurisdiktion</li>
+<li><strong>Patientnotifikation:</strong> Underret berørte patienter hurtigt, hvis deres data blev kompromitteret</li>
+<li><strong>Kommunikationsplan:</strong> Forbered klar, ærlig kommunikation om brud og afhjælpning</li>
+</ul>
+
+<h4>Afhjælpning og læring</h4>
+<ul>
+<li>Ret sårbarheder, der gjorde brud muligt</li>
+<li>Implementer yderligere kontroller for at forhindre gentagelse</li>
+<li>Dokumenter hændelse og respons til fremtidig forbedring</li>
+</ul>
+
+</div>
+
+<h2>Resumé af best practices</h2>
+
+<div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid var(--primary-color); margin: 2rem 0;">
+
+<h3>✓ Tekniske kontroller</h3>
+<ul class="list-unstyled">
+<li>☐ Implementer rollebaseret adgangskontrol (RBAC)</li>
+<li>☐ Kræv multifaktorautentificering (MFA)</li>
+<li>☐ Krypter data i hvile og under transmission</li>
+<li>☐ Aktiver omfattende revisionslogning</li>
+<li>☐ Regelmæssige sikkerhedsopdateringer</li>
+</ul>
+
+<h3 class="mt-15">✓ Organisatoriske kontroller</h3>
+<ul class="list-unstyled">
+<li>☐ Udpeg privatlivsofficer/databeskyttelsesansvarlig</li>
+<li>☐ Dokumenter privatlivspolitikker og procedurer</li>
+<li>☐ Udfør regelmæssig personaleprivatlivstræning</li>
+<li>☐ Implementer databrudresponsplan</li>
+<li>☐ Etabler proces til opfyldelse af patientrettigheder</li>
+</ul>
+
+<h3 class="mt-15">✓ Operationel praksis</h3>
+<ul class="list-unstyled">
+<li>☐ Praktiser dataminimering (indsaml kun hvad der er nødvendigt)</li>
+<li>☐ Definer og håndhæv dataopbevaringsperioder</li>
+<li>☐ Vurder og styr tredjepartsleverandørrisici</li>
+<li>☐ Regelmæssige privatlivsprogramvurderinger</li>
+<li>☐ Vedligehold gennemsigtighed med patienter om datapraksis</li>
+</ul>
+
+</div>
+
+<h2>Regulatoriske overvejelser</h2>
+
+<div style="background: rgba(255, 193, 7, 0.1); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #FFC107;">
+<p><strong>⚠️ Konsulter juridisk rådgiver:</strong></p>
+<p>Sundhedsdatabeskyttelsesbestemmelser varierer betydeligt efter jurisdiktion. Almindelige rammer inkluderer:</p>
+<ul>
+<li><strong>HIPAA (USA):</strong> Kan gælde for medicinske cannabisoperationer afhængigt af jurisdiktion og forretningsmodel</li>
+<li><strong>GDPR (EU):</strong> Gælder for behandling af EU-borgeres data, herunder sundhedsoplysninger</li>
+<li><strong>Stats-/provinsspecifikke privatlivslove:</strong> Mange regioner har yderligere krav til sundhedsprivatliv</li>
+</ul>
+<p class="mt-1"><strong>Vi anbefaler på det kraftigste at konsultere juridisk rådgiver med speciale i sundhedsdatabeskyttelse i din specifikke jurisdiktion for at sikre overholdelse af alle gældende bestemmelser.</strong></p>
+</div>
+
+<h2>Kom i gang: Databeskyttelseskøreplan</h2>
+
+<div style="background: rgba(0, 102, 51, 0.05); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+
+<h3>Fase 1: Fundament (Måned 1-2)</h3>
+<ul>
+<li>Lav fortegnelse over alle patientdata, du indsamler, og hvor de opbevares</li>
+<li>Udpeg privatlivsofficer eller databeskyttelsesleder</li>
+<li>Dokumenter nuværende datahåndteringspraksis</li>
+<li>Implementer grundlæggende tekniske kontroller (adgangskontrol, kryptering)</li>
+<li>Udarbejd initial privatlivspolitik og procedurer</li>
+</ul>
+
+<h3 class="mt-15">Fase 2: Implementering (Måned 3-4)</h3>
+<ul>
+<li>Udfør omfattende personaletræningsprogram</li>
+<li>Implementer revisionslogning og overvågning</li>
+<li>Etabler proces til opfyldelse af patientrettigheder</li>
+<li>Udvikl databrudresponsplan</li>
+<li>Vurder og adresser tredjepartsleverandørrisici</li>
+</ul>
+
+<h3 class="mt-15">Fase 3: Optimering (Måned 5-6)</h3>
+<ul>
+<li>Udfør privatlivseffektvurdering</li>
+<li>Test brudresponsprocedurer (bordøvelse)</li>
+<li>Implementer automatiseret dataopbevaring og sletning</li>
+<li>Etabler løbende complianceovervågning</li>
+<li>Planlæg årlig programvurdering og opdateringer</li>
+</ul>
+
+</div>
+
+<h2>Brug for ekspertvejledning?</h2>
+
+<p>Beskyttelse af medicinske cannabispatientdata kræver balance mellem privatliv, sikkerhed, operationel effektivitet og regulatorisk compliance. Det er udfordrende, men essentielt for at opbygge patienttillid og undgå dyre brud.</p>
+
+<p>Hack23 leverer virksomhedsdatabeskyttelsesrådgivning, der gælder for sundhedspleje og medicinske operationer. Vi fokuserer på praktiske, implementerbare sikkerhedskontroller, der beskytter patientprivatliv, mens de understøtter dine forretningsoperationer.</p>
+
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(0, 119, 68, 0.1)); border-radius: 12px;">
+<h3>Klar til at styrke patientdatabeskyttelsen?</h3>
+<p style="margin: 1rem 0;">Kontakt os for at diskutere virksomhedsdatabeskyttelse til dine medicinske cannabisoperationer.</p>
+<a href="https://www.linkedin.com/company/hack23/" style="display: inline-block; background: var(--primary-color); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem;">
+Kontakt os på LinkedIn →
+</a>
+</div>
+
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color);">
+<p><strong>Relaterede ressourcer:</strong></p>
+<ul>
+<li><a href="blog-cannabis-cybersecurity-guide_da.html">Komplet cannabis cybersikkerhedsguide</a></li>
+<li><a href="industries-cannabis-security_da.html">Cannabisindustri cybersikkerhedstjenester</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md">Databeskyttelsespolitik (Offentligt ISMS)</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Dataklassificeringsramme</a></li>
+<li><a href="blog_da.html">Sikkerhedsblog - Alle indlæg</a></li>
+</ul>
+</div>
+
+<div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 102, 51, 0.05); border-radius: 8px;">
+<p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+<strong>Om forfatteren:</strong> James Pether Sörling (CISSP, CISM, AWS Security Specialty) er CEO for Hack23 AB med 30+ års erfaring inden for cybersikkerhed og softwareudvikling. Han specialiserer sig i databeskyttelse, sikkerhedsarkitektur og virksomhedsinformationssikkerhed.
+</p>
+</div>
+
+</article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
-  <p>
-    <a href="index_da.html">Hjem</a> | 
-    <a href="blog_da.html">Blog</a> |
-    <a href="cia-project.html">CIA Project</a> |
-    <a href="compliance-manager.html">Compliance Manager</a>
-  </p>
-</footer>
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersikkerhedsrådgivning<br>
+          Göteborg, Sverige | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjenester</h3>
+          <ul>
+            <li><a href="services_da.html">Sikkerhedsrådgivning</a></li>
+            <li><a href="services_da.html">Sikkerhedsarkitektur</a></li>
+            <li><a href="services_da.html">Cloud-sikkerhed</a></li>
+            <li><a href="services_da.html">DevSecOps Integration</a></li>
+            <li><a href="services_da.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_da.html">Black Trigram</a></li>
+            <li><a href="cia-features_da.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_da.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Ressourcer</h3>
+          <ul>
+            <li><a href="blog_da.html">Sikkerhedsblog</a></li>
+            <li><a href="discordian-cybersecurity_da.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq_da.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_da.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Virksomhed</h3>
+          <ul>
+            <li><a href="why-hack23_da.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Sikkerhedspolitik</a></li>
+            <li><a href="SECURITY.md">Rapporter sikkerhedsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement_da.html">Tilgængelighed</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blog-forfattere:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mønstre)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsvirkelighed:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target="_blank">George Dorn</a> kæmper dette smukke kaos ind i fungerende kode. Se hans tekniske kommentarer i
+          <a href="blog-george-dorn-cia-code_da.html">CIA Architecture</a>,
+          <a href="blog-george-dorn-trigram-code_da.html">Black Trigram Combat</a>, og
+          <a href="blog_da.html#george-dorn-developer-chronicles">Developer Chronicles</a> for panikøjeblikke, gennembrud og skjulte påskeæg, der gør filosofi deployerbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licenseret under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="blog-medical-cannabis-hipaa-gdpr.html" lang="en">English</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_sv.html" lang="sv">Svenska</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_ko.html" lang="ko">한국어</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_fi.html" lang="fi">Suomi</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>
