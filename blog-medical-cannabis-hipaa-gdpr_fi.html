@@ -72,8 +72,8 @@
         "width": 1200,
         "height": 630
       },
-      "wordCount": 0,
-      "articleBody": "[TO BE TRANSLATED]",
+      "wordCount": 2200,
+      "articleBody": "Lääkekannabistoiminnot käsittelevät erittäin arkaluonteisia potilastietoja, jotka vaativat tehostettua suojaa. Tämä kattava opas tarjoaa yritystason tietosuojakäytäntöjä kattaen tekniset turvallisuuskontrollit (RBAC, MFA, salaus), organisatoriset kontrollit, potilaan oikeudet ja tietomurtojen estämisen lääkekannabistoimintaan.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_fi.html#blog",
@@ -154,100 +154,543 @@
   </nav>
 
 <header>
-  <div class="logo-container">
-    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
-  </div>
-  <h1>[TO BE TRANSLATED - Main Header]</h1>
-  <div class="app-link">
-    <a href="index_fi.html">Etusivu</a>
-    <a href="blog_fi.html">Blogi</a>
-    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
-  </div>
+<nav>
+<div class="logo-container">
+<a href="index_fi.html">
+<img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="40" height="40" loading="eager">
+<span class="logo-text">Hack23</span>
+</a>
+</div>
+<ul class="nav-menu">
+<li><a href="index_fi.html">Etusivu</a></li>
+<li><a href="services_fi.html">Palvelut</a></li>
+<li><a href="projects_fi.html">Projektit</a></li>
+<li><a href="blog_fi.html">Blogi</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a></li>
+</ul>
+</nav>
 </header>
+
 <main>
-  <article>
-    <h1 class="header">[TO BE TRANSLATED - Article Title]</h1>
-    
-    <!--
-    ==========================================
-    PROFESSIONAL TRANSLATOR INSTRUCTIONS
-    ==========================================
-    
-    Please translate all content sections below following these guidelines:
-    
-    1. MAINTAIN HTML STRUCTURE
-       - Keep all HTML tags intact
-       - Preserve CSS classes and IDs
-       - Do not modify technical elements
-    
-    2. TECHNICAL TERMINOLOGY
-       - Use Nordic terminology glossary provided
-       - Keep technical terms accurate (STRIDE, CIA Triad, DevSecOps)
-       - Preserve code examples in English
-    
-    3. CULTURAL ADAPTATION
-       - Adapt regulatory references to Nordic context
-       - Update authority names per country (see guide)
-       - Maintain professional consulting tone
-    
-    4. NARRATIVE VOICE
-       - Preserve author's style and voice
-       - Keep Discordian references where appropriate
-       - Maintain technical precision
-    
-    Reference: ISSUE_8_NORDIC_TECHNICAL_BLOGS_GUIDE.md
-    ==========================================
-    -->
+<article class="blog-post" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
 
-    <section id="introduction">
-      <h2 class="panel-caption">[TO BE TRANSLATED - Section Heading]</h2>
-      <p>[TO BE TRANSLATED - Introduction paragraph]</p>
-      <p>[TO BE TRANSLATED - Context and background]</p>
-    </section>
+<div class="breadcrumb" style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+<a href="index_fi.html" class="text-link">Etusivu</a> &gt; 
+<a href="blog_fi.html" class="text-link">Blogi</a> &gt; 
+<span>Lääkekannabiksen tietosuoja</span>
+</div>
 
-    <section id="main-content">
-      <h2>[TO BE TRANSLATED - Main Section Title]</h2>
-      <p>[TO BE TRANSLATED - Main content paragraphs]</p>
-      
-      <h3>[TO BE TRANSLATED - Subsection]</h3>
-      <p>[TO BE TRANSLATED - Details and explanation]</p>
-      
-      <ul>
-        <li>[TO BE TRANSLATED - List item 1]</li>
-        <li>[TO BE TRANSLATED - List item 2]</li>
-        <li>[TO BE TRANSLATED - List item 3]</li>
-      </ul>
-    </section>
+<h1>🏥 Lääkekannabiksen potilastietojen suojaaminen</h1>
 
-    <section id="technical-details">
-      <h2>[TO BE TRANSLATED - Technical Section]</h2>
-      <p>[TO BE TRANSLATED - Technical content]</p>
-      
-      <!-- CODE BLOCKS: Keep code in English, translate only comments -->
-      <pre><code>
-      // [TO BE TRANSLATED - Code comment]
-      // Technical code remains in English
-      </code></pre>
-    </section>
+<div style="color: var(--text-secondary); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);">
+<p><strong>Kirjoittaja:</strong> James Pether Sörling | <strong>Julkaistu:</strong> 27. marraskuuta 2025 | <strong>Lukuaika:</strong> 10 minuuttia</p>
+<p style="margin-top: 0.5rem;"><em>Yritystason tietosuojakäytännöt lääkekannabiksen potilaan yksityisyyden ja turvallisuuden varmistamiseksi</em></p>
+</div>
 
-    <section id="conclusion">
-      <h2>[TO BE TRANSLATED - Conclusion]</h2>
-      <p>[TO BE TRANSLATED - Summary and key takeaways]</p>
-      <p>[TO BE TRANSLATED - Call to action or final thoughts]</p>
-    </section>
+<div style="background: rgba(220, 20, 60, 0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #DC143C;">
+<p><strong>⚠️ Tärkeä vastuuvapauslauseke:</strong> Tämä opas tarjoaa yleistä tietosuoja- ja kyberturvallisuusohjeistusta, joka soveltuu terveydenhuolto- ja lääketieteellisiin toimintoihin. Emme tarjoa juridista neuvontaa emmekä väitä olevamme asiantuntijoita lainkäyttöaluekohtaisissa terveydenhuollon säädöksissä (HIPAA, GDPR tai muut kehykset). Lääkekannabistoimintoihin liittyvää säädösten noudattamista koskevaan neuvontaan, ota yhteyttä erikoistuneeseen lakiasiantuntijaan, joka tuntee terveydenhuollon säädökset lainkäyttöalueellasi.</p>
+</div>
 
-  </article>
+<h2>Miksi lääkekannabiksen potilastiedot vaativat erityissuojaa</h2>
+
+<p>Lääkekannabistoiminnot käsittelevät erittäin arkaluonteisia tietoja: potilaan terveydentiloja, hoitosuunnitelmia, reseptihistoriaa ja henkilökohtaisia tunnistetietoja. Tämä luo ainutlaatuisia tietosuojavastuita:</p>
+
+<ul>
+<li><strong>Terveystietojen arkaluonteisuus:</strong> Potilaan lääketieteelliset tiedot vaativat tehostettua suojaa, kuten perinteisessä terveydenhuollossa</li>
+<li><strong>Yksityisyyden odotukset:</strong> Potilaat odottavat tiukkaa luottamuksellisuutta lääkekannabiksen käyttöönsä liittyen</li>
+<li><strong>Sääntelyvaatimukset:</strong> Monet lainkäyttöalueet soveltavat terveydenhuollon tietosuojasäädöksiä lääkekannabistoimintaan</li>
+<li><strong>Tietomurron seuraukset:</strong> Tietomurrot voivat vahingoittaa potilaita henkilökohtaisesti, ammatillisesti ja taloudellisesti</li>
+<li><strong>Juridinen vastuu:</strong> Virheellinen tietojen käsittely voi johtaa merkittäviin juridisiin ja taloudellisiin seuraamuksiin</li>
+</ul>
+
+<p>Olipa kyse lääkekannabiksen apteekin, klinikan, viljelylaitoksen tai teknologia-alustan operoinnista, vankka tietosuoja on välttämätöntä.</p>
+
+<h2>Potilastietotyyppien ymmärtäminen</h2>
+
+<h3>Henkilökohtaiset tunnistetiedot (PII)</h3>
+<ul>
+<li>Nimi, syntymäaika, osoite, yhteystiedot</li>
+<li>Viranomaisen myöntämät henkilötunnusnumerot</li>
+<li>Valokuvat ja biometriset tiedot</li>
+<li>Taloudelliset tiedot (maksutavat, pankkitilit)</li>
+</ul>
+
+<h3>Suojatut terveystiedot (PHI)</h3>
+<ul>
+<li>Lääketieteelliset tilat ja diagnoosit, jotka perustelevat lääkekannabiksen käytön</li>
+<li>Resepti- ja suositustiedot</li>
+<li>Ostohistoria ja tuotepreferenssit</li>
+<li>Terveydenhuollon tarjoajien tiedot</li>
+<li>Hoidon tehokkuus ja potilaan raportoimat tulokset</li>
+</ul>
+
+<h3>Operatiiviset tiedot</h3>
+<ul>
+<li>Lääkekannabisluvan/reseptin vahvistus</li>
+<li>Ostorajojen seuranta</li>
+<li>Kanta-asiakasohjelman tiedot</li>
+<li>Konsultaatiomuistiinpanot (jos tarjoat potilasohjausta)</li>
+</ul>
+
+<h2>Tietosuojan perusperiaatteet</h2>
+
+<div class="stats-highlight">
+
+<h3>1. Tietojen minimointi</h3>
+<p><strong>Kerää vain mitä tarvitset:</strong></p>
+<ul>
+<li>Rajoita tietojen kerääminen vain palvelun toimittamisen ja säännösten noudattamisen kannalta välttämättömään</li>
+<li>Vältä "mukava tietää" -tietojen keräämistä, joka lisää riskiä ilman selkeää arvoa</li>
+<li>Tarkista säännöllisesti tiedonkeruukäytännöt tarpeettomien elementtien poistamiseksi</li>
+<li>Dokumentoi tarkoitus ja oikeusperusta jokaiselle kerätylle tietoelementille</li>
+</ul>
+
+<h3 class="mt-15">2. Tarkoitussidonnaisuus</h3>
+<p><strong>Käytä tietoja vain ilmoitettuihin tarkoituksiin:</strong></p>
+<ul>
+<li>Kerro selkeästi potilaille, miten heidän tietojaan käytetään</li>
+<li>Hanki nimenomainen suostumus tietojen käytölle, joka ylittää ensisijaisen palvelun toimittamisen</li>
+<li>Älä käytä tietoja uudelleen ilman potilaan suostumusta</li>
+<li>Rajoita potilastietojen markkinointikäyttöä (monet lainkäyttöalueet rajoittavat tätä)</li>
+</ul>
+
+<h3 class="mt-15">3. Tietojen säilytysajat</h3>
+<p><strong>Säilytä tietoja vain niin kauan kuin on tarpeen:</strong></p>
+<ul>
+<li>Määrittele säilytysajat eri tietotyypeille lakisääteisten vaatimusten perusteella</li>
+<li>Toteuta automaattinen poisto tiedoille, jotka ylittävät säilytysajan</li>
+<li>Tarjoa potilaille mahdollisuus pyytää tietojen poistoa (oikeus poistamiseen)</li>
+<li>Tuhoa tiedot turvallisesti, kun niitä ei enää tarvita (ei vain poistaminen—ylikirjoitus/silppuaminen)</li>
+</ul>
+
+<h3 class="mt-15">4. Läpinäkyvyys</h3>
+<p><strong>Potilaiden tulisi ymmärtää tietojen käsittelykäytäntösi:</strong></p>
+<ul>
+<li>Tarjoa selkeät, luettavat tietosuojailmoitukset (ei vain juridista muotojuttua)</li>
+<li>Selitä, mitä tietoja keräät, miksi, miten niitä suojataan ja kuinka kauan säilytät niitä</li>
+<li>Tee tietosuojailmoitukset helposti saatavilla (verkkosivusto, myyntipiste, sisäänottoasiakirjat)</li>
+<li>Päivitä potilaille tiedot, jos tietojenkäsittelykäytännöt muuttuvat olennaisesti</li>
+</ul>
+
+</div>
+
+<h2>Tekniset turvallisuuskontrollit</h2>
+
+<h3>Pääsynhallinta</h3>
+
+<div class="stats-highlight">
+
+<h4>Roolipohjainen pääsynhallinta (RBAC)</h4>
+<ul>
+<li><strong>Vähimmän oikeuksien periaate:</strong> Henkilökunta pääsee käsiksi vain roolin kannalta välttämättömiin tietoihin</li>
+<li><strong>Roolien määrittely:</strong> Määrittele selkeästi roolit (budtender, esimies, vaatimustenmukaisuusvastaava) liittyvine oikeuksineen</li>
+<li><strong>Säännölliset tarkastelut:</strong> Neljännesvuosittaiset pääsyoikeustarkastelut tarpeettomien oikeuksien poistamiseksi</li>
+<li><strong>Tehtävien erottelu:</strong> Yksikään henkilö ei saisi hallita kaikkia arkaluonteisten toimintojen näkökohtia</li>
+</ul>
+
+<h4>Tunnistautuminen ja valtuutus</h4>
+<ul>
+<li><strong>Yksilölliset käyttäjätilit:</strong> Ei jaettuja kirjautumisia—jokaisella henkilökunnalla on yksilölliset tunnukset</li>
+<li><strong>Vahvat salasanat:</strong> Pakota salasanan monimutkaisuus ja säännölliset vaihdot</li>
+<li><strong>Monivaiheinen tunnistautuminen (MFA):</strong> Vaadi MFA järjestelmiin, jotka sisältävät potilastietoja</li>
+<li><strong>Istuntohallinta:</strong> Automaattinen uloskirjautuminen toimettomuuden jälkeen, erityisesti jaetuilla laitteilla</li>
+</ul>
+
+<h4>Lokitus</h4>
+<ul>
+<li><strong>Kattava lokitus:</strong> Tallenna kaikki potilastietojen käyttö (kuka, mitä, milloin)</li>
+<li><strong>Lokien suojaus:</strong> Säilytä lokit turvallisesti, estä manipulointi</li>
+<li><strong>Säännöllinen tarkastelu:</strong> Valvo lokeja luvattoman käytön tai epäilyttävien mallien varalta</li>
+<li><strong>Säilytys:</strong> Säilytä auditointilokit pitkiä aikoja (vähintään 12+ kuukautta)</li>
+</ul>
+
+</div>
+
+<h3>Salaus</h3>
+
+<div class="stats-highlight">
+
+<h4>Levossa olevat tiedot</h4>
+<ul>
+<li><strong>Tietokantojen salaus:</strong> Salaa tietokannat, jotka sisältävät potilastietoja (AES-256)</li>
+<li><strong>Tiedostojärjestelmän salaus:</strong> Salaa tiedostojärjestelmät palvelimilla ja työasemilla</li>
+<li><strong>Varmuuskopioiden salaus:</strong> Salaa kaikki potilastietojen varmuuskopiot</li>
+<li><strong>Mobiililaitteiden salaus:</strong> Salaa kannettavat tietokoneet, tabletit, puhelimet, jotka käyttävät potilastietoja</li>
+</ul>
+
+<h4>Siirrettävät tiedot</h4>
+<ul>
+<li><strong>TLS 1.3:</strong> Käytä moderneja salausprotokolia kaikissa verkkotiedonsiirroissa</li>
+<li><strong>VPN etäkäyttöön:</strong> Vaadi VPN etätyöskentelyn henkilökunnalle, jotka käyttävät potilastietojärjestelmiä</li>
+<li><strong>Suojattu sähköposti:</strong> Käytä salattua sähköpostia potilastietojen lähettämiseen</li>
+<li><strong>Suojattu tiedostonsiirto:</strong> Käytä SFTP:tä tai suojattua pilvitallennusta (ei sähköpostin liitteitä)</li>
+</ul>
+
+<h4>Avainten hallinta</h4>
+<ul>
+<li><strong>Avainten säilytys:</strong> Säilytä salausavaimet erillään salatuista tiedoista</li>
+<li><strong>Avainten kierrätys:</strong> Kierrätä säännöllisesti salausavaimet</li>
+<li><strong>Pääsynhallinta:</strong> Rajoita tiukasti, ketkä voivat käyttää salausavaimia</li>
+<li><strong>Katastrofista palautuminen:</strong> Turvallinen salausavainten varmuuskopiointi tietojen palautusta varten</li>
+</ul>
+
+</div>
+
+<h3>Fyysinen turvallisuus</h3>
+
+<div class="stats-highlight">
+<ul>
+<li><strong>Turvalliset tilat:</strong> Lukitse palvelinhuoneet, rajoita fyysinen pääsy järjestelmiin, jotka sisältävät potilastietoja</li>
+<li><strong>Puhdas työpöytä -käytäntö:</strong> Älä jätä potilastietoja näkyviin pöydille tai näytöille</li>
+<li><strong>Turvallinen hävitys:</strong> Silppua paperiset asiakirjat, tyhjennä elektroninen tallennusväline ennen hävitystä</li>
+<li><strong>Vierailijoiden valvonta:</strong> Kirjaa ja valvo vierailijoita, erityisesti alueilla, joilla on pääsy potilastietoihin</li>
+</ul>
+</div>
+
+<h2>Organisatoriset kontrollit</h2>
+
+<h3>Tietosuojan hallinto</h3>
+
+<div class="stats-highlight">
+
+<h4>Tietosuojavastaava</h4>
+<ul>
+<li>Nimeä vastuuhenkilö tietosuojan valvonnasta</li>
+<li>Varmista riittävä auktoriteetti ja resurssit roolin täyttämiseksi</li>
+<li>Säännöllinen raportointi johdolle tietosuojaohjelman tilasta</li>
+</ul>
+
+<h4>Käytännöt ja toimintaohjeet</h4>
+<ul>
+<li><strong>Kirjallinen tietosuojakäytäntö:</strong> Dokumentoi, miten käsittelet potilastietoja</li>
+<li><strong>Tietomurron vastaussuunnitelma:</strong> Toimintaohjeet tietomurtojen havaitsemiseen, rajoittamiseen, tutkimiseen</li>
+<li><strong>Potilaan oikeuksien toimintaohjeet:</strong> Prosessi potilaille käyttää, korjata, poistaa tietojaan</li>
+<li><strong>Kolmannen osapuolen hallinta:</strong> Vaatimukset toimittajille, jotka käsittelevät potilastietoja</li>
+</ul>
+
+<h4>Koulutus ja tietoisuus</h4>
+<ul>
+<li><strong>Alkukoulutus:</strong> Kaikki potilastietoja käsittelevät henkilöt saavat tietosuojakoulutuksen ennen pääsyä</li>
+<li><strong>Vuosittainen päivitys:</strong> Säännölliset koulutuspäivitykset tietosuojavaatimuksista</li>
+<li><strong>Roolikohtainen koulutus:</strong> Lisäkoulutus rooleille, joilla on kohonnut pääsytaso</li>
+<li><strong>Vahvistus:</strong> Dokumentoi henkilökunnan ymmärrys tietosuojavastuista</li>
+</ul>
+
+</div>
+
+<h3>Kolmannen osapuolen hallinta</h3>
+
+<div class="stats-highlight">
+
+<h4>Toimittajan arviointi</h4>
+<ul>
+<li>Arvioi kassajärjestelmien, pilvipalveluiden, maksunkäsittelijöiden tietosuojakäytäntöjä</li>
+<li>Tarkista toimittajan turvallisuussertifikaatit ja vaatimustenmukaisuusvahvistukset</li>
+<li>Ymmärrä, missä toimittaja säilyttää ja käsittelee potilastietoja (lainkäyttöalue on tärkeä)</li>
+</ul>
+
+<h4>Sopimukset</h4>
+<ul>
+<li>Sisällytä tietosuojavaatimukset toimittajasopimuksiin</li>
+<li>Määrittele vastuut tietomurtoilmoituksista</li>
+<li>Vaadi toimittajaa toteuttamaan asianmukaiset turvallisuuskontrollit</li>
+<li>Sisällytä oikeus auditoida toimittajan turvallisuuskäytäntöjä</li>
+</ul>
+
+<h4>Jatkuva valvonta</h4>
+<ul>
+<li>Tarkista säännöllisesti toimittajan turvallisuusasema</li>
+<li>Valvo toimittajien tietomurtoja, jotka vaikuttavat tietoihisi</li>
+<li>Ylläpidä luetteloa kaikista toimittajista, joilla on pääsy potilastietoihin</li>
+</ul>
+
+</div>
+
+<h2>Potilaan oikeudet ja tietosubjektin pyynnöt</h2>
+
+<p>Potilailla on perusoikeudet tietoihinsa. Lääkekannabistoimintojen tulisi olla valmiita täyttämään:</p>
+
+<div class="stats-highlight">
+
+<h3>Oikeus käyttöön</h3>
+<ul>
+<li>Potilaat voivat pyytää kopioita tiedoistaan</li>
+<li>Luo prosessi pyyntöjen täyttämiseksi kohtuullisessa ajassa (yleensä 30 päivää)</li>
+<li>Tarjoa tiedot saatavassa, luettavassa muodossa</li>
+<li>Varmista potilaan henkilöllisyys ennen tietojen luovuttamista</li>
+</ul>
+
+<h3>Oikeus korjaukseen</h3>
+<ul>
+<li>Potilaat voivat pyytää virheellisten tietojen korjaamista</li>
+<li>Toteuta prosessi tietojen tarkistamiseen ja korjaamiseen tarpeen mukaan</li>
+<li>Dokumentoi syyt, jos korjauspyyntö hylätään</li>
+</ul>
+
+<h3>Oikeus poistamiseen</h3>
+<ul>
+<li>Potilaat voivat pyytää tietojensa poistamista (joitakin poikkeuksia)</li>
+<li>Ymmärrä lakisääteiset säilytysvaatimukset (voivat estää välittömän poistamisen)</li>
+<li>Poista tiedot, kun niitä ei enää lakisääteisesti vaadita säilytettäväksi</li>
+<li>Dokumentoi poistopyynnöt ja toteutetut toimenpiteet</li>
+</ul>
+
+<h3>Oikeus tietojen siirrettävyyteen</h3>
+<ul>
+<li>Potilaat voivat pyytää tietojaan koneluettavassa muodossa</li>
+<li>Tarjoa tiedot jäsennellyssä muodossa (CSV, JSON) kun mahdollista</li>
+<li>Mahdollista potilaiden tietojen siirtäminen toiselle palveluntarjoajalle pyynnöstä</li>
+</ul>
+
+</div>
+
+<h2>Tietomurtojen estäminen ja reagointi</h2>
+
+<h3>Estämisstrategiat</h3>
+<ul>
+<li><strong>Syvyyspuolustus:</strong> Useita turvallisuustasoja (verkko, sovellus, tiedot)</li>
+<li><strong>Haavoittuvuuksien hallinta:</strong> Säännöllinen turvallisuuden korjaaminen ja haavoittuvuuksien skannaus</li>
+<li><strong>Tunkeutumistestaus:</strong> Säännölliset turvallisuusarvioinnit pätevien ammattilaisten toimesta</li>
+<li><strong>Turvallisuuden valvonta:</strong> Reaaliaikainen epäilyttävien toimintojen havaitseminen</li>
+<li><strong>Sisäpiiriuhkien hallinta:</strong> Valvo työntekijöiden luvatonta tietojen käyttöä</li>
+</ul>
+
+<h3>Tietomurron vastaussuunnitelma</h3>
+
+<div class="stats-highlight">
+
+<h4>Havaitseminen ja rajoittaminen</h4>
+<ul>
+<li>Luo valvonta mahdollisten tietomurtojen nopeaan havaitsemiseen</li>
+<li>Rajoita välittömästi tietomurto estääksesi lisätietojen menetyksen</li>
+<li>Säilytä todisteet tutkimusta varten</li>
+</ul>
+
+<h4>Tutkimus ja arviointi</h4>
+<ul>
+<li>Selvitä, mitä tietoja käytettiin/varastettiin</li>
+<li>Tunnista perimmäinen syy ja hyökkäysvektori</li>
+<li>Arvioi mahdollinen haitta kärsineille potilaille</li>
+</ul>
+
+<h4>Ilmoitus</h4>
+<ul>
+<li><strong>Viranomaisten ilmoitus:</strong> Ymmärrä raportointivaatimukset ja aikataulut lainkäyttöalueellasi</li>
+<li><strong>Potilasilmoitus:</strong> Ilmoita kärsineille potilaille viipymättä, jos heidän tietonsa vaarantuivat</li>
+<li><strong>Viestintäsuunnitelma:</strong> Valmistele selkeä, rehellinen viestintä tietomurrosta ja korjauksesta</li>
+</ul>
+
+<h4>Korjaaminen ja opitut oppitunnit</h4>
+<ul>
+<li>Korjaa haavoittuvuudet, jotka mahdollistivat tietomurron</li>
+<li>Toteuta lisäkontrolleja toistumisen estämiseksi</li>
+<li>Dokumentoi tapahtuma ja reagointi tulevaa parantamista varten</li>
+</ul>
+
+</div>
+
+<h2>Parhaat käytännöt yhteenveto</h2>
+
+<div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid var(--primary-color); margin: 2rem 0;">
+
+<h3>✓ Tekniset kontrollit</h3>
+<ul class="list-unstyled">
+<li>☐ Toteuta roolipohjainen pääsynhallinta (RBAC)</li>
+<li>☐ Vaadi monivaiheinen tunnistautuminen (MFA)</li>
+<li>☐ Salaa levossa ja siirrossa olevat tiedot</li>
+<li>☐ Ota käyttöön kattava auditointilokitus</li>
+<li>☐ Säännöllinen turvallisuuden korjaaminen ja päivitykset</li>
+</ul>
+
+<h3 class="mt-15">✓ Organisatoriset kontrollit</h3>
+<ul class="list-unstyled">
+<li>☐ Nimeä tietosuojavastaava</li>
+<li>☐ Dokumentoi tietosuojakäytännöt ja -toimintaohjeet</li>
+<li>☐ Järjestä säännöllistä henkilökunnan tietosuojakoulutusta</li>
+<li>☐ Toteuta tietomurron vastaussuunnitelma</li>
+<li>☐ Luo prosessi potilaan oikeuksien täyttämiseksi</li>
+</ul>
+
+<h3 class="mt-15">✓ Operatiiviset käytännöt</h3>
+<ul class="list-unstyled">
+<li>☐ Harjoita tietojen minimointia (kerää vain mitä tarvitaan)</li>
+<li>☐ Määrittele ja valvo tietojen säilytysajat</li>
+<li>☐ Arvioi ja hallitse kolmannen osapuolen toimittajariskejä</li>
+<li>☐ Säännölliset tietosuojaohjelman arvioinnit</li>
+<li>☐ Ylläpidä läpinäkyvyyttä potilaille tietojenkäsittelykäytännöistä</li>
+</ul>
+
+</div>
+
+<h2>Sääntelynäkökulmat</h2>
+
+<div style="background: rgba(255, 193, 7, 0.1); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #FFC107;">
+<p><strong>⚠️ Konsultoi lakiasiantuntijaa:</strong></p>
+<p>Terveydenhuollon tietosuojasäädökset vaihtelevat merkittävästi lainkäyttöalueen mukaan. Yleisiä kehyksiä ovat:</p>
+<ul>
+<li><strong>HIPAA (Yhdysvallat):</strong> Saattaa koskea lääkekannabistoimintoja lainkäyttöalueen ja liiketoimintamallin mukaan</li>
+<li><strong>GDPR (Euroopan unioni):</strong> Koskee EU-asukkaiden tietojen käsittelyä, mukaan lukien terveystiedot</li>
+<li><strong>Osavaltio-/maakunnalliset tietosuojalait:</strong> Monilla alueilla on lisävaatimuksia terveydenhuollon yksityisyydelle</li>
+</ul>
+<p class="mt-1"><strong>Suosittelemme vahvasti konsultoimaan terveydenhuollon tietosuojaan erikoistunutta lakiasiantuntijaa lainkäyttöalueellasi varmistaaksesi kaikkien soveltuvien säädösten noudattamisen.</strong></p>
+</div>
+
+<h2>Aloittaminen: Tietosuojan tiekartta</h2>
+
+<div style="background: rgba(0, 102, 51, 0.05); padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+
+<h3>Vaihe 1: Perusta (kuukaudet 1-2)</h3>
+<ul>
+<li>Inventoi kaikki keräämäsi potilastiedot ja niiden säilytyspaikat</li>
+<li>Nimeä tietosuojavastaava tai tietosuojavastaava</li>
+<li>Dokumentoi nykyiset tietojenkäsittelykäytännöt</li>
+<li>Toteuta perustekniset kontrollit (pääsynhallinta, salaus)</li>
+<li>Laadi alustava tietosuojakäytäntö ja -toimintaohjeet</li>
+</ul>
+
+<h3 class="mt-15">Vaihe 2: Toteutus (kuukaudet 3-4)</h3>
+<ul>
+<li>Käynnistä kattava henkilökunnan koulutusohjelma</li>
+<li>Toteuta auditointilokitus ja valvonta</li>
+<li>Luo prosessi potilaan oikeuksien täyttämiseksi</li>
+<li>Kehitä tietomurron vastaussuunnitelma</li>
+<li>Arvioi ja käsittele kolmannen osapuolen toimittajariskit</li>
+</ul>
+
+<h3 class="mt-15">Vaihe 3: Optimointi (kuukaudet 5-6)</h3>
+<ul>
+<li>Suorita tietosuojan vaikutusarviointi</li>
+<li>Testaa tietomurron vastuutoimintoja (pöytäharjoitus)</li>
+<li>Toteuta automatisoitu tietojen säilytys ja poisto</li>
+<li>Luo jatkuva säännöstenmukaisuuden valvonta</li>
+<li>Suunnittele vuosittainen ohjelman arviointi ja päivitykset</li>
+</ul>
+
+</div>
+
+<h2>Tarvitsetko asiantuntija-apua?</h2>
+
+<p>Lääkekannabiksen potilastietojen suojaaminen vaatii tasapainon yksityisyyden, turvallisuuden, operatiivisen tehokkuuden ja säännöstenmukaisuuden välillä. Se on haastavaa mutta välttämätöntä potilasluottamuksen rakentamiseksi ja kalliiden tietomurtojen välttämiseksi.</p>
+
+<p>Hack23 tarjoaa yritystason tietosuojakonsultointia, joka soveltuu terveydenhuolto- ja lääketieteellisiin toimintoihin. Keskitymme käytännöllisiin, toteutettaviin turvallisuuskontrolleihin, jotka suojaavat potilaan yksityisyyttä ja tukevat samalla liiketoimintaasi.</p>
+
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(0, 119, 68, 0.1)); border-radius: 12px;">
+<h3>Valmiina vahvistamaan potilastietojen suojaa?</h3>
+<p style="margin: 1rem 0;">Ota yhteyttä keskustellaksesi yritystason tietosuojasta lääkekannabistoimintaasi varten.</p>
+<a href="https://www.linkedin.com/company/hack23/" style="display: inline-block; background: var(--primary-color); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem;">
+Ota yhteyttä LinkedInissä →
+</a>
+</div>
+
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border-color);">
+<p><strong>Aiheeseen liittyvät resurssit:</strong></p>
+<ul>
+<li><a href="blog-cannabis-cybersecurity-guide.html">Täydellinen kannabiksen kyberturvallisuusopas</a></li>
+<li><a href="industries-cannabis-security.html">Kannabisalan kyberturvallisuuspalvelut</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md">Tietosuojakäytäntö (julkinen ISMS)</a></li>
+<li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md">Tietojen luokittelukehys</a></li>
+<li><a href="blog_fi.html">Turvallisuusblogi - Kaikki artikkelit</a></li>
+</ul>
+</div>
+
+<div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 102, 51, 0.05); border-radius: 8px;">
+<p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">
+<strong>Kirjoittajasta:</strong> James Pether Sörling (CISSP, CISM, AWS Security Specialty) on Hack23 AB:n toimitusjohtaja, jolla on yli 30 vuoden kokemus kyberturvallisuudesta ja ohjelmistokehityksestä. Hän on erikoistunut tietosuojaan, turvallisuusarkkitehtuuriin ja yritystietoturvaan.
+</p>
+</div>
+
+</article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
-  <p>
-    <a href="index_fi.html">Etusivu</a> | 
-    <a href="blog_fi.html">Blogi</a> |
-    <a href="cia-project.html">CIA Project</a> |
-    <a href="compliance-manager.html">Compliance Manager</a>
-  </p>
-</footer>
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Kyberturvallisuuskonsultointi<br>
+          Göteborg, Ruotsi | Etätyö</p>
+          <p>Y-tunnus: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-yrityssivu</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">Toimitusjohtaja: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Palvelut</h3>
+          <ul>
+            <li><a href="services_fi.html">Turvallisuuskonsultointi</a></li>
+            <li><a href="services_fi.html">Turvallisuusarkkitehtuuri</a></li>
+            <li><a href="services_fi.html">Pilviturvallisuus</a></li>
+            <li><a href="services_fi.html">DevSecOps-integraatio</a></li>
+            <li><a href="services_fi.html">Vaatimustenmukaisuus ja ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Tuotteet</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurssit</h3>
+          <ul>
+            <li><a href="blog_fi.html">Turvallisuusblogi</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian-blogi</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad UKK</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Julkinen ISMS</a></li>
+            <li><a href="sitemap_fi.html">Sivukartta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Yritys</h3>
+          <ul>
+            <li><a href="why-hack23.html">Tietoja Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Turvallisuuskäytäntö</a></li>
+            <li><a href="SECURITY.md">Ilmoita turvallisuusongelmasta</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisaatio</a></li>
+            <li><a href="accessibility-statement_fi.html">Saavutettavuus</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogin kirjoittajat:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visioiva anarkistinen Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofia ja visio) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosofi-insinööri järjestelmäarkkitehti" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkkitehtuuri ja mallit)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Toteutuksen todellisuus:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Paniikkiohjattu kehittäjä, joka saa sen toimimaan" rel="noopener noreferrer" target="_blank">George Dorn</a> painii tämän kauniin kaaoksen toimivaksi koodiksi. Katso hänen tekniset kommentaarinsa artikkelissa
+          <a href="blog-george-dorn-cia-code.html">CIA-arkkitehtuuri</a>,
+          <a href="blog-george-dorn-trigram-code.html">Black Trigram-taistelu</a> ja
+          <a href="blog_fi.html#george-dorn-developer-chronicles">Kehittäjän kronikka</a> nähdäksesi paniikkihetket, läpimurrot ja piilotetut pääsiäismunat, jotka tekevät filosofiasta käyttöönotettavan.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Kaikki oikeudet pidätetään. | Lisensoitu <a href="LICENSE">Apache 2.0</a>:n mukaisesti</p>
+        <p>
+          <a href="blog-medical-cannabis-hipaa-gdpr.html" lang="en">English</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_sv.html" lang="sv">Svenska</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_ko.html" lang="ko">한국어</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_fi.html" lang="fi">Suomi</a> | 
+          <a href="blog-medical-cannabis-hipaa-gdpr_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>
