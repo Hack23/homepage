@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[TO BE TRANSLATED] | Hack23</title>
+<title>Compliance Manager-kode | Klientarkitektur | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="[TO BE TRANSLATED]">
-<meta name="twitter:description" content="[TO BE TRANSLATED]">
-<meta name="keywords" content="[TO BE TRANSLATED]">
+<meta name="description" content="CIA Compliance Manager kodeanalyse: TypeScript/React klient-side arkitektur, 220 kildefiler, nul backend-sikkerhedsdesign.">
+<meta name="twitter:description" content="CIA Compliance Manager-kodeanalyse: TypeScript/React-klientarkitektur, 220 kildekodefiler, nul backend-sikkerhedsdesign.">
+<meta name="keywords" content="Compliance Manager-kode, TypeScript React, klientarkitektur, CIA-triade-vurdering, George Dorn-analyse">
 <meta name="robots" content="index, follow">
-<meta name="author" content="Hack23">
-<meta property="og:title" content="[TO BE TRANSLATED]">
-<meta property="og:description" content="[TO BE TRANSLATED]">
+<meta name="author" content="George Dorn">
+<meta property="og:title" content="George Dorn: Compliance Manager-kodeanalyse - Klientvirkelighed">
+<meta property="og:description" content="Udvikler-deep dive i CIA Compliance Managers faktiske kodebase: 220 TypeScript-filer, nul backend, 95% angrebsflade elimineret.">
 	<meta property="og:locale" content="da_DK">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="de_DE">
@@ -43,8 +43,8 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "[TO BE TRANSLATED]",
-      "description": "[TO BE TRANSLATED]",
+      "headline": "George Dorn: Compliance Manager-kodeanalyse - Klientarkitektur",
+      "description": "Teknisk analyse af CIA Compliance Managers faktiske kodebase af George Dorn, udvikler hos Hack23",
       "author": {
         "@type": "Person",
         "name": "Hack23",
@@ -64,16 +64,16 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-george-dorn-compliance-code_da.html"
       },
-      "keywords": "[TO BE TRANSLATED]",
-      "articleSection": "[TO BE TRANSLATED]",
+      "keywords": "Compliance Manager, TypeScript, React, klientarkitektur, nul backend, udvikleranalyse, Hack23",
+      "articleSection": "Kodeanalyse",
       "image": {
         "@type": "ImageObject",
         "url": "https://hack23.com/blog.webp",
         "width": 1200,
         "height": 630
       },
-      "wordCount": 0,
-      "articleBody": "[TO BE TRANSLATED]",
+      "wordCount": 773,
+      "articleBody": "Klonede https://github.com/Hack23/cia-compliance-manager, analyserede TypeScript/React klient-side arkitekturen og undersøgte den faktiske implementering. 100% klient-side applikation. Nul backend. Nul serversårbarheder. Ingen backend = 95% angrebsflade elimineret. Revolutionerende sikkerhed gennem arkitektonisk forenkling.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_da.html#blog",
@@ -100,7 +100,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "[TO BE TRANSLATED]",
+          "name": "George Dorn: Compliance Manager-kodeanalyse",
           "item": "https://hack23.com/blog-george-dorn-compliance-code_da.html"
         }
       ]
@@ -148,7 +148,7 @@
         <a href="blog_da.html">Blog</a>
       </li>
       <li class="breadcrumb-item" aria-current="page">
-        [TO BE TRANSLATED]
+        George Dorn: Compliance Manager-kodeanalyse
       </li>
     </ol>
   </nav>
@@ -157,97 +157,400 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>[TO BE TRANSLATED - Main Header]</h1>
+  <h1>Udviklerens kodeanalyse</h1>
   <div class="app-link">
     <a href="index_da.html">Hjem</a>
     <a href="blog_da.html">Blog</a>
-    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
+    <a href="cia-compliance-manager-docs_da.html">Compliance Docs</a>
   </div>
 </header>
 <main>
   <article>
-    <h1 class="header">[TO BE TRANSLATED - Article Title]</h1>
+    <h1 class="header">🔐 George Dorns Compliance Manager-kodeanalyse: Klient-side sikkerhedsvirkelighed</h1>
     
-    <!--
-    ==========================================
-    PROFESSIONAL TRANSLATOR INSTRUCTIONS
-    ==========================================
-    
-    Please translate all content sections below following these guidelines:
-    
-    1. MAINTAIN HTML STRUCTURE
-       - Keep all HTML tags intact
-       - Preserve CSS classes and IDs
-       - Do not modify technical elements
-    
-    2. TECHNICAL TERMINOLOGY
-       - Use Nordic terminology glossary provided
-       - Keep technical terms accurate (STRIDE, CIA Triad, DevSecOps)
-       - Preserve code examples in English
-    
-    3. CULTURAL ADAPTATION
-       - Adapt regulatory references to Nordic context
-       - Update authority names per country (see guide)
-       - Maintain professional consulting tone
-    
-    4. NARRATIVE VOICE
-       - Preserve author's style and voice
-       - Keep Discordian references where appropriate
-       - Maintain technical precision
-    
-    Reference: ISSUE_8_NORDIC_TECHNICAL_BLOGS_GUIDE.md
-    ==========================================
-    -->
-
     <section id="introduction">
-      <h2 class="panel-caption">[TO BE TRANSLATED - Section Heading]</h2>
-      <p>[TO BE TRANSLATED - Introduction paragraph]</p>
-      <p>[TO BE TRANSLATED - Context and background]</p>
+      <h2 class="panel-caption">Nul backend-arkitektur: Analyse af repository-resultater</h2>
+      
+      <p><strong>Udviklernotat:</strong> Klonede <a href="https://github.com/Hack23/cia-compliance-manager">https://github.com/Hack23/cia-compliance-manager</a>, analyserede TypeScript/React klient-side arkitekturen og undersøgte den faktiske implementering.</p>
+      
+      <p><strong>Repository URL:</strong> <code>git clone https://github.com/Hack23/cia-compliance-manager.git</code></p>
+      <p><strong>Analysedato:</strong> 8. november 2025</p>
+      <p><strong>Kerneopdagelse:</strong> <strong>100% klient-side applikation. Nul backend. Nul serversårbarheder.</strong></p>
+      
+      <p class="hidden-wisdom"><em>Ingen backend = 95% angrebsflade elimineret. Revolutionerende sikkerhed gennem arkitektonisk forenkling.</em></p>
+    
+      
+      <p><strong>Klar til at implementere ISO 27001 compliance?</strong> <a href="why-hack23_da.html">Lær om Hack23s cybersikkerhedsrådgivning</a> og vores unikke offentlige ISMS-tilgang.</p>
     </section>
 
-    <section id="main-content">
-      <h2>[TO BE TRANSLATED - Main Section Title]</h2>
-      <p>[TO BE TRANSLATED - Main content paragraphs]</p>
+    <section id="repository-structure">
+      <h2 class="panel-caption">Repository-struktur: Klient-side compliance-motor</h2>
       
-      <h3>[TO BE TRANSLATED - Subsection]</h3>
-      <p>[TO BE TRANSLATED - Details and explanation]</p>
-      
-      <ul>
-        <li>[TO BE TRANSLATED - List item 1]</li>
-        <li>[TO BE TRANSLATED - List item 2]</li>
-        <li>[TO BE TRANSLATED - List item 3]</li>
-      </ul>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📁 Kildekodestatistik</h3>
+          <p><strong>Faktisk antal:</strong> <code>find src -name "*.ts*" | wc -l</code> = <strong>220 TypeScript-filer</strong></p>
+          
+          <p><strong>Mappeorganisation:</strong></p>
+          <ul>
+            <li><code>src/components/</code> - React UI-komponenter</li>
+            <li><code>src/application/</code> - Forretningslogiklag</li>
+            <li><code>src/services/</code> - Beregningstjenester</li>
+            <li><code>src/data/</code> - Framework-kortlægninger (NIST, ISO, CIS)</li>
+            <li><code>src/types/</code> - TypeScript typedefinitioner</li>
+            <li><code>src/utils/</code> - Hjælpefunktioner</li>
+            <li><code>src/hooks/</code> - React custom hooks</li>
+            <li><code>src/tests/</code> - Test suites</li>
+          </ul>
+          
+          <p class="hidden-wisdom"><em>Ren adskillelse: komponenter (UI), applikation (logik), tjenester (beregninger), data (framework-kortlægninger). Klient-side betyder ikke uorganiseret.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📦 Afhængigheder fra package.json</h3>
+          <p><strong>Runtime-afhængigheder (minimale):</strong></p>
+          <ul>
+            <li><strong>react: ^19.2.0</strong> - UI framework</li>
+            <li><strong>react-dom: ^19.2.0</strong> - DOM rendering</li>
+            <li><strong>chart.js</strong> - Datavisualisering</li>
+            <li><strong>react-error-boundary: ^6.0.0</strong> - Fejlhåndtering</li>
+          </ul>
+          
+          <p><strong>Nøglepunkt:</strong> Kun 4 hovedafhængigheder. Ingen backend frameworks. Ingen database-drivere. Ingen autentificeringsbiblioteker. <strong>Kun klient-side = minimal angrebsflade.</strong></p>
+          
+          <p><strong>Udviklingsafhængigheder:</strong></p>
+          <ul>
+            <li><strong>typescript: 5.9.3</strong> - Typesikkerhed</li>
+            <li><strong>vite</strong> - Build-værktøj</li>
+            <li><strong>vitest</strong> - Testramme</li>
+            <li><strong>eslint</strong> - Kodelinting</li>
+          </ul>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🗄️ Datalagring: IndexedDB</h3>
+          <p><strong>Klient-side persistens:</strong> Browser IndexedDB til lokal lagring</p>
+          <ul>
+            <li>Vurderingsdata gemt i browseren</li>
+            <li>Eksport til JSON/CSV for portabilitet</li>
+            <li>Import fra tidligere eksporter</li>
+            <li>Ingen cloud-synkronisering (valgfri fremtidig funktion)</li>
+            <li>Brugeren ejer data lokalt</li>
+          </ul>
+          
+          <p><strong>GDPR compliance by design:</strong></p>
+          <ul>
+            <li>Ret til adgang: Eksport-knap</li>
+            <li>Ret til sletning: Ryd database-knap</li>
+            <li>Ret til portabilitet: Standard JSON-format</li>
+            <li>Ret til berigtigelse: Rediger ethvert felt</li>
+            <li>Ingen server = ingen server-side privatlivsbekymringer</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="technical-details">
-      <h2>[TO BE TRANSLATED - Technical Section]</h2>
-      <p>[TO BE TRANSLATED - Technical content]</p>
+    <section id="architecture-analysis">
+      <h2 class="panel-caption">Klient-side arkitektur: Sådan fungerer det faktisk</h2>
       
-      <!-- CODE BLOCKS: Keep code in English, translate only comments -->
-      <pre><code>
-      // [TO BE TRANSLATED - Code comment]
-      // Technical code remains in English
-      </code></pre>
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🎯 CIA-triade vurderingsmotor</h3>
+          <p><strong>Kernelogik implementeret:</strong></p>
+          <ul>
+            <li><strong>3 CIA-principper:</strong> Fortrolighed, Integritet, Tilgængelighed</li>
+            <li><strong>4 modenhedsniveauer:</strong> Basis, Moderat, Høj, Meget høj</li>
+            <li><strong>12 kontrolpunkter:</strong> 3 × 4 = progressionsmatrix</li>
+            <li><strong>5 framework-kortlægninger:</strong> NIST SP 800-53, NIST CSF 2.0, ISO 27001, CIS Controls, PCI-DSS</li>
+          </ul>
+          
+          <p><strong>Beregningstjenester:</strong></p>
+          <ul>
+            <li>Modenhedsscore (vægtet aggregering)</li>
+            <li>Gap-analyse (mål vs. nuværende tilstand)</li>
+            <li>Risikokvantificering (sandsynlighed × indvirkning)</li>
+            <li>Kontrolkortlægning (framework krydsreference)</li>
+            <li>Trendanalyse (historisk modenhed)</li>
+          </ul>
+          
+          <p class="hidden-wisdom"><em>Alle beregninger kører i browseren. Ingen API-kald. Ingen serverbehandling. Rene TypeScript-funktioner = testbare, portable, pålidelige.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔒 Sikkerhed gennem arkitektur</h3>
+          <p><strong>Angrebsvektorer elimineret:</strong></p>
+          <ul>
+            <li>✅ <strong>Ingen SQL Injection</strong> - Ingen SQL-database</li>
+            <li>✅ <strong>Ingen SSRF</strong> - Ingen server-side requests</li>
+            <li>✅ <strong>Ingen RCE</strong> - Intet server execution environment</li>
+            <li>✅ <strong>Ingen Auth Bypass</strong> - Intet autentificeringssystem</li>
+            <li>✅ <strong>Ingen Privilege Escalation</strong> - Enkelt-bruger applikation</li>
+            <li>✅ <strong>Ingen Session Hijacking</strong> - Ingen serversessioner</li>
+          </ul>
+          
+          <p><strong>Resterende angrebsflade:</strong></p>
+          <ul>
+            <li>⚠️ XSS (mitigeret af Reacts automatiske escaping)</li>
+            <li>⚠️ CSRF (ikke relevant - ingen tilstandsændrende requests)</li>
+            <li>⚠️ Afhængighedssårbarheder (overvåget via Dependabot)</li>
+            <li>⚠️ Supply chain (SLSA attesteringer + OpenSSF Scorecard)</li>
+            <li>⚠️ Fysisk enhedsadgang (brugeransvar)</li>
+          </ul>
+          
+          <p><strong>Resultat:</strong> Fra 100+ typiske webappangrebsvektorer til 5. <strong>95% reduktion gennem arkitektur.</strong></p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Framework-kortlægningsimplementering</h3>
+          <p><strong>Opdaget i src/data/:</strong></p>
+          <p>Komplet kontrolkortlægningsfiler for større frameworks:</p>
+          <ul>
+            <li><strong>NIST SP 800-53 Rev. 5:</strong> 1.000+ kontroller kortlagt til CIA-triaden</li>
+            <li><strong>NIST CSF 2.0:</strong> Kernefunktioner → Kategorier → Kontroller</li>
+            <li><strong>ISO/IEC 27001:2022:</strong> Bilag A-kontroller kortlagt</li>
+            <li><strong>CIS Controls v8:</strong> Implementeringsgrupper → Sikkerhedsforanstaltninger</li>
+            <li><strong>PCI-DSS v4.0:</strong> Betalingskortkrav kortlagt</li>
+          </ul>
+          
+          <p><strong>Kortlægningsstrategi:</strong> Hvert CIA-kontrolpunkt linker til relevante framework-kontroller. Bruger vælger modenhedsniveau → app foreslår specifikke NIST/ISO/CIS-kontroller at implementere.</p>
+          
+          <p><strong>Dokumentation:</strong> control-mapping.md (35KB) indeholder komplette tovejs-kortlægninger</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech-decisions">
+      <h2 class="panel-caption">Teknologibeslutninger: Hvorfor kun klient-side?</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Beslutning</th>
+            <th>Begrundelse</th>
+            <th>Trade-off</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ingen backend</strong></td>
+            <td>Eliminerer 95% af angrebsfladen</td>
+            <td>Ingen centraliserede data, ingen multi-bruger som standard</td>
+          </tr>
+          <tr>
+            <td><strong>IndexedDB-lagring</strong></td>
+            <td>Browser-native, offline-capable</td>
+            <td>Lagringsbegrænsninger (~50MB-1GB afhængigt af browser)</td>
+          </tr>
+          <tr>
+            <td><strong>TypeScript</strong></td>
+            <td>Typesikkerhed forhindrer runtime-fejl</td>
+            <td>Build-trin påkrævet, lidt verbose</td>
+          </tr>
+          <tr>
+            <td><strong>React 19</strong></td>
+            <td>Moderne UI-framework, godt økosystem</td>
+            <td>Bundle-størrelse ~40KB (acceptabelt)</td>
+          </tr>
+          <tr>
+            <td><strong>Statisk hosting</strong></td>
+            <td>0 kr./måned, uendelig skalerbarhed</td>
+            <td>Ingen dynamiske server-side funktioner</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p><strong>Deployment:</strong> GitHub Pages (gratis), CloudFlare CDN (gratis), eller enhver statisk host. Ingen servere at vedligeholde. Ingen databaser at backup. Ingen infrastrukturomkostninger.</p>
+    </section>
+
+    <section id="code-quality">
+      <h2 class="panel-caption">Kodekvalitetsmålinger</h2>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Måling</th>
+            <th>Værdi</th>
+            <th>Analyse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>TypeScript-filer</strong></td>
+            <td>220</td>
+            <td>Velorganiseret til compliance-automatisering</td>
+          </tr>
+          <tr>
+            <td><strong>Runtime-afhængigheder</strong></td>
+            <td>4</td>
+            <td>Minimal - reducerer supply chain-risiko</td>
+          </tr>
+          <tr>
+            <td><strong>Build-tid</strong></td>
+            <td>~5 sekunder</td>
+            <td>Vite production build-hastighed</td>
+          </tr>
+          <tr>
+            <td><strong>Bundle-størrelse</strong></td>
+            <td>~890 KB gzipped</td>
+            <td>Rimelig for SPA med diagrammer</td>
+          </tr>
+          <tr>
+            <td><strong>Hostingomkostninger</strong></td>
+            <td>0 kr./måned</td>
+            <td>GitHub Pages / CloudFlare free tier</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="conclusion">
-      <h2>[TO BE TRANSLATED - Conclusion]</h2>
-      <p>[TO BE TRANSLATED - Summary and key takeaways]</p>
-      <p>[TO BE TRANSLATED - Call to action or final thoughts]</p>
+      <h2 class="panel-caption">Endelig dom: Revolutionerende sikkerhed gennem enkelhed</h2>
+      
+      <p><strong>Hvad jeg fandt:</strong> CIA Compliance Manager beviser, at compliance-automatisering ikke behøver backends. Klient-side arkitektur leverer:</p>
+      
+      <ul>
+        <li>✅ <strong>220 TypeScript-filer</strong> der implementerer compliance-logik</li>
+        <li>✅ <strong>Nul backend</strong> = 95% angrebsflade elimineret</li>
+        <li>✅ <strong>5 framework-kortlægninger</strong> (NIST, ISO, CIS, PCI-DSS, HIPAA)</li>
+        <li>✅ <strong>IndexedDB-lagring</strong> = offline-capable, privacy-first</li>
+        <li>✅ <strong>0 kr./måned hosting</strong> = bæredygtig økonomi</li>
+        <li>✅ <strong>Rene TypeScript-beregninger</strong> = testbare, portable</li>
+        <li>✅ <strong>React 19 UI</strong> = moderne, vedligeholdelig</li>
+        <li>✅ <strong>Eksport/import</strong> = bruger-dataejerskab</li>
+      </ul>
+      
+      <p><strong>Arkitektonisk innovation:</strong> De fleste compliance-værktøjer kræver backends til "datacentralisering". Dette værktøj sætter spørgsmålstegn ved den antagelse. Personlige compliance-vurderinger = personlige data. Hvorfor centralisere hvad der ikke behøver centralisering?</p>
+      
+      <p><strong>Sikkerhedsfilosofi:</strong> Bedste måde at forhindre serversårbarheder? Få ikke en server. Radikalt men effektivt.</p>
+      
+      <p><strong>Ville jeg ønske at arbejde på dette?</strong> Absolut. Ren arkitektur, moderne stack, interessant problemområde, og nul infrastrukturhovedpine.</p>
+      
+      <p class="signature"><em>— George Dorn<br>Udvikler / Arkitekturanalytiker / Klient-side fortaler<br>Hack23 AB<br><br>"Ingen backend = ingen backend-sårbarheder. Simpel matematik."<br><br>🔐 FNORD ⚖️</em></p>
     </section>
 
+    <section id="resources">
+      <h2 class="panel-caption">Udforsk koden selv</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>🔗 Repository og live demo</h3>
+          <ul>
+            <li><a href="https://github.com/Hack23/cia-compliance-manager">GitHub Repository</a></li>
+            <li><a href="https://ciacompliancemanager.com">Live applikation</a></li>
+            <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/docs/control-mapping.md">Framework-kortlægninger</a></li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <div class="scanner-effect"></div>
+          <h3>📚 Relateret læsning</h3>
+          <ul>
+            <li><a href="blog_da.html">Hack23 sikkerhedsblog</a></li>
+            <li><a href="blog-george-dorn-cia-code_da.html">CIA kodeanalyse</a></li>
+            <li><a href="blog-george-dorn-trigram-code_da.html">Black Trigram-analyse</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
-  <p>
-    <a href="index_da.html">Hjem</a> | 
-    <a href="blog_da.html">Blog</a> |
-    <a href="cia-project.html">CIA Project</a> |
-    <a href="compliance-manager.html">Compliance Manager</a>
-  </p>
-</footer>
-
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersikkerhedsrådgivning<br>
+          Göteborg, Sverige | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-virksomhedsside</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">Adm. direktør: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjenester</h3>
+          <ul>
+            <li><a href="services_da.html">Sikkerhedsrådgivning</a></li>
+            <li><a href="services_da.html">Sikkerhedsarkitektur</a></li>
+            <li><a href="services_da.html">Cloud-sikkerhed</a></li>
+            <li><a href="services_da.html">DevSecOps-integration</a></li>
+            <li><a href="services_da.html">Compliance og ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_da.html">Black Trigram</a></li>
+            <li><a href="cia-features_da.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_da.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Ressourcer</h3>
+          <ul>
+            <li><a href="blog_da.html">Sikkerhedsblog</a></li>
+            <li><a href="discordian-cybersecurity_da.html">🍎 Discordisk blog</a></li>
+            <li><a href="cia-triad-faq_da.html">CIA-triade FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_da.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Virksomhed</h3>
+          <ul>
+            <li><a href="why-hack23_da.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Sikkerhedspolitik</a></li>
+            <li><a href="SECURITY.md">Rapporter sikkerhedsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_da.html">Tilgængelighed</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogforfattere:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionær anarkistisk Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi og vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingeniør systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur og mønstre)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsvirkelighed:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdrevet udvikler der får det til at virke" rel="noopener noreferrer" target="_blank">George Dorn</a> kæmper dette smukke kaos ind i fungerende kode. Se hans tekniske kommentarer i
+          <a href="blog-george-dorn-cia-code_da.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code_da.html">Black Trigram-kamp</a>, og
+          <a href="blog_da.html#george-dorn-developer-chronicles">Udvikler-krøniker</a> for panikmomenter, gennembrud og skjulte påskeæg, der gør filosofi deployerbar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alle rettigheder forbeholdes. | Licenseret under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> |
+          <a href="index_da.html" lang="da">Dansk</a>
+        </p>
+      </div>
+    </footer>
 </body>
 </html>
