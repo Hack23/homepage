@@ -46,8 +46,14 @@
       "description": "STRIDE-uhkamallinnuksen ja turvallisuusarkkitehtuurin tutkiminen CIA Compliance Managerille",
       "author": {
         "@type": "Person",
-        "name": "Hack23",
-        "jobTitle": "Security Consultant"
+        "name": "Simon Moon",
+        "jobTitle": "Järjestelmäarkkitehti",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://hack23.com/jamespethersorling150.webp",
+          "width": 150,
+          "height": 150
+        }
       },
       "publisher": {
         "@type": "Organization",
@@ -71,8 +77,8 @@
         "width": 1200,
         "height": 630
       },
-      "wordCount": 0,
-      "articleBody": "[TO BE TRANSLATED]",
+      "wordCount": 1354,
+      "articleBody": "STRIDE-uhkamallinnus: Spoofing (väärentäminen), Tampering (manipulointi), Repudiation (kiistäminen), Information Disclosure (tiedon paljastuminen), Denial of Service (palvelunesto), Elevation of Privilege (käyttöoikeuksien korotus). Asiakaspuolen arkkitehtuuri eliminoi palvelinpuolen hyökkäysvektorit tarjoten viisikerroksisen puolustuksen: CSP-injektiopuolustus, SRI-riippuvuuksien luottamus, TypeScript-tyyppiturvallisus, IndexedDB-datasuojaus ja build-eheys.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_fi.html#blog",
@@ -156,97 +162,299 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>[TO BE TRANSLATED - Main Header]</h1>
+  <h1>Discordialainen kyberturvallisuus</h1>
   <div class="app-link">
     <a href="index_fi.html">Etusivu</a>
     <a href="blog_fi.html">Blogi</a>
-    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
+    <a href="cia-compliance-manager-docs_fi.html">Vaatimustenmukaisuusdokumentit</a>
   </div>
 </header>
 <main>
   <article>
-    <h1 class="header">[TO BE TRANSLATED - Article Title]</h1>
+    <h1 class="header">🛡️ Compliance Manager -turvallisuus: STRIDE viiden ulottuvuuden läpi</h1>
     
-    <!--
-    ==========================================
-    PROFESSIONAL TRANSLATOR INSTRUCTIONS
-    ==========================================
+    <section id="six-becomes-five">
+      <h2 class="panel-caption">Kun kuusi STRIDE-luokkaa kohtaa viisi puolustuskerrosta</h2>
+      
+      <p><strong>STRIDE-uhkamallinnus: Spoofing (väärentäminen), Tampering (manipulointi), Repudiation (kiistäminen), Information Disclosure (tiedon paljastuminen), Denial of Service (palvelunesto), Elevation of Privilege (käyttöoikeuksien luvaton korotus).</strong> Microsoftin kuusiluokkainen taksonomia systemaattiseen uhka-analyysiin. Toimialan standardi. Taistelussa testattu. Kattava—väitetysti.</p>
+      
+      <p><strong>Tässä numerologia kohtaa todellisuuden:</strong> STRIDE:n kartoittaminen <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a> -arkkitehtuuriin paljasti kuuden luokan tiivistyvän viiteen puolustusvaatimukseen. Palvelunesto (Denial of Service)? Kukistettu arkkitehtonisella yksinkertaisuudella (staattinen hosting eliminoi 90 % DoS-hyökkäyspinnasta). Jäljelle jäävät viisi uhkaa sopivat täydellisesti viiteen puolustuskerrokseen. Sattuma? Vai universumi paljastamassa optimaalista turvallisuusrakennetta rajoitteiden kautta?</p>
+      
+      <p><strong>Haasta perinteinen turvallisuusajattelu:</strong> Enemmän uhkaluokkia ei takaa kattavaa puolustusta. Päällekkäiset luokat luovat väärää kattavuusluottamusta. Viisikerroksinen puolustuksemme käsittelee kaikki kuusi STRIDE-uhkaa, koska kerrokset ovat <em>ortogonaaliset</em>—kukin suojaa pohjimmiltaan erilaisia hyökkäyspintoja. Kuvion tunnistus mahdollistaa puolustuksen tehokkuuden tyhjentävän luokittelun sijaan.</p>
+      
+      <p class="hidden-wisdom"><em>Valaistus: Kuuden STRIDE-luokan kartoittuminen viiteen puolustukseen paljastaa, mitkä uhat jakavat juurisyyt. Väärentäminen + käyttöoikeuksien korotus molemmat kukistetaan todennuksella. Manipulointi + kiistäminen molemmat kukistetaan eheysvalvonnalla. Kuvion tunnistus mahdollistaa puolustuksen tehokkuuden.</em></p>
     
-    Please translate all content sections below following these guidelines:
-    
-    1. MAINTAIN HTML STRUCTURE
-       - Keep all HTML tags intact
-       - Preserve CSS classes and IDs
-       - Do not modify technical elements
-    
-    2. TECHNICAL TERMINOLOGY
-       - Use Nordic terminology glossary provided
-       - Keep technical terms accurate (STRIDE, CIA Triad, DevSecOps)
-       - Preserve code examples in English
-    
-    3. CULTURAL ADAPTATION
-       - Adapt regulatory references to Nordic context
-       - Update authority names per country (see guide)
-       - Maintain professional consulting tone
-    
-    4. NARRATIVE VOICE
-       - Preserve author's style and voice
-       - Keep Discordian references where appropriate
-       - Maintain technical precision
-    
-    Reference: ISSUE_8_NORDIC_TECHNICAL_BLOGS_GUIDE.md
-    ==========================================
-    -->
-
-    <section id="introduction">
-      <h2 class="panel-caption">[TO BE TRANSLATED - Section Heading]</h2>
-      <p>[TO BE TRANSLATED - Introduction paragraph]</p>
-      <p>[TO BE TRANSLATED - Context and background]</p>
+      
+      <p><strong>Valmis toteuttamaan ISO 27001 -vaatimustenmukaisuutta?</strong> <a href="why-hack23_fi.html">Lue lisää Hack23:n kyberturvallisuuskonsultointipalveluista</a> ja ainutlaatuisesta julkisen ISMS:n lähestymistavastamme.</p>
     </section>
 
-    <section id="main-content">
-      <h2>[TO BE TRANSLATED - Main Section Title]</h2>
-      <p>[TO BE TRANSLATED - Main content paragraphs]</p>
+    <section id="client-side-advantage">
+      <h2 class="panel-caption">Asiakaspuolen turvallisuusetu</h2>
       
-      <h3>[TO BE TRANSLATED - Subsection]</h3>
-      <p>[TO BE TRANSLATED - Details and explanation]</p>
+      <p><strong>Perinteiset vaatimustenmukaisuustyökalut: palvelinpuolen SaaS.</strong> Käyttäjät lataavat arkaluonteista dataa. Palveluntarjoaja tallentaa sen. Palveluntarjoaja suojaa sen. Palveluntarjoaja myy "yritysturvallisuutta" kilpailuetuna.</p>
+      
+      <p><strong>Valitsimme toisin.</strong> Asiakaspuolen sovellus. IndexedDB-tallennus. Ei taustajärjestelmää. Data ei koskaan poistu käyttäjän selaimesta. Hyökkäyspinta: minimaalinen. <strong>Miksi?</strong></p>
+      
+      <p><strong>Viisi asiakaspuolen arkkitehtuurin etua vaatimustenmukaisuudelle:</strong></p>
+      
+      <ol>
+        <li><strong>Nolla palvelinhaavoittuvuuksia:</strong> Ei SQL-injektiota (ei SQL-palvelinta). Ei RCE:tä (ei komentojen suoritusta). Ei SSRF:ää (ei palvelinpuolen pyyntöjä). Ei XXE:tä (ei XML-jäsennystä). Koko OWASP Top 10 lähes irrelevantti. Hyökkäyspinta romahtanut.</li>
+        
+        <li><strong>Datasuvereniteetti oletuksena:</strong> Käyttäjän data käyttäjän selaimessa käyttäjän laitteella käyttäjän hallinnassa. Ei "tietosuojakäytäntömme sanoo..." -markkinointia. Matemaattinen yksityisyys arkkitehtuurin kautta. GDPR-vaatimustenmukaisuus automaattinen.</li>
+        
+        <li><strong>Offline-toiminta:</strong> Internet alhaalla? Vaatimustenmukaisuusarviointi jatkuu. Verkko vaarantunut? Arkaluonteinen data jo paikallisesti. Ilmarakoympäristöt? Asenna kerran, aja ikuisesti. Resilienssi riippumattomuuden kautta.</li>
+        
+        <li><strong>Läpinäkyvä turvallisuus:</strong> Asiakaspuolen JavaScript tarkoittaa, että käyttäjät voivat auditoida turvallisuuden. Näytä lähdekoodi. Lue koodi. Varmista kryptografiset toteutukset. Luottamus varmentamisen kautta, ei palveluntarjoajan lupausten.</li>
+        
+        <li><strong>Kustannusten vähennys:</strong> Ei palvelinkustannuksia = 0 €/kk hosting. GitHub Pages ilmainen. CloudFlare-ilmaistaso. Nolla hostingkuluja mahdollistaen ilmaisen avoimen lähdekoodin työkalun. Taloudellinen kestävyys arkkitehtonisen yksinkertaisuuden kautta.</li>
+      </ol>
+      
+      <p><strong>Kompromissit tunnustettu:</strong> Ei palvelinta = ei reaaliaikaista yhteistyötä (tiekartta: vertaisverkko WebRTC:n kautta). Ei keskitettyä varmuuskopiointia (tiekartta: salattu pilvivienti). Asiakaspuolen rajoitukset (tiekartta: Web Workerit raskaaseen laskentaan). Rehellinen kompromissien dokumentointi > markkinointispin.</p>
+      
+      <p class="hidden-wisdom"><em>Turvallisuusarkkitehtuuri, joka eliminoi kokonaisia hyökkäysluokkia, voittaa turvallisuusarkkitehtuurin, joka puolustaa jokaista hyökkäystä jokaisessa luokassa. Valitse yksinkertaisuus, joka mahdollistaa turvallisuuden monimutkaisuuden sijaan, joka vaatii turvallisuutta.</em></p>
+    </section>
+
+    <section id="five-defensive-layers">
+      <h2 class="panel-caption">Asiakaspuolen turvallisuusarkkitehtuuri: Puolustus yksinkertaisuuden kautta</h2>
+      
+      <p><strong>Jokainen turvallisuuskerros käsittelee tiettyjä uhkaluokkia.</strong> Asiakaspuolen arkkitehtuuri eliminoi perustavanlaatuisesti palvelinpuolen hyökkäysvektorit vaatien samalla huolellista selainpohjaisten uhkien puolustusta.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🌐 Content Security Policy: Injektiopuolustus</h3>
+          <p><strong>Torjutut uhat:</strong> Cross-site scripting (XSS), datan uloskaivaminen injektoiduilla skripteillä, luvaton resurssien lataus.</p>
+          <p><strong>CSP-direktiivit:</strong> Rajoittava käytäntö, joka rajoittaa skriptilähteitä, tyylilähteistä ja yhteyspisteistä. Konfiguraatio otetaan käyttöön GitHub Pages -otsikoilla.</p>
+          <p><strong>React-kehyksen suojaus:</strong> Automaattinen XSS-esto JSX-escapingin, DOM-manipulaation sanitisoinnin ja kontrolloidun prop-renderöinnin kautta.</p>
+          <p class="hidden-wisdom"><em>CSP, joka estää legitiimin toiminnallisuuden, epäonnistuu käytettävyydessä. CSP, joka sallii kaiken, epäonnistuu turvallisuudessa. Tasapaino minimivaatimusten direktiivien kautta todellisten sovellusvaatimusten perusteella.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🔐 Subresource Integrity: Riippuvuuksien luottamus</h3>
+          <p><strong>Torjuttu uhka:</strong> Vaarantunut CDN, joka tarjoilee haitallisia kirjastoversioita, toimitusketjuhyökkäykset ulkoisiin riippuvuuksiin.</p>
+          <p><strong>SRI-toteutus:</strong> Kryptografinen hash-validointi ulkoisille resursseille. Riippuvuuksien eheyden varmistus build-aikana.</p>
+          <p><strong>Toimitusketjun varmistus:</strong> Dependabot-automaatio turvallisuuspäivityksille, FOSSA-lisenssivaatimustenmukaisuusskannaus. Todisteet: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA-kojelauta</a>.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🛡️ Tyyppiturvallisus: Ajonaikaisten virheiden esto</h3>
+          <p><strong>Torjutut uhat:</strong> Tyyppisekaannushaavoittuvuudet, ajonaikaiset virheet aiheuttaen palveluneston, virheellisen datan käsittely.</p>
+          <p><strong>TypeScript strict-tila:</strong> Kattava tyyppitarkistus noImplicitAny-, strictNullChecks-, strictFunctionTypes-käännösasetuksilla. Tyyppivirheet estävät buildit.</p>
+          <p><strong>Build-aikainen validointi:</strong> ESLint-staattinen analyysi, TypeScript-kääntäjän tarkistukset, Vite build -optimointi tree-shakingilla käyttämättömän koodin poistamiseksi.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔒 Datasuojaus: Selaimen tallennusturvallisuus</h3>
+          <p><strong>Torjuttu uhka:</strong> Paikallisen tallennuksen vaarantuminen, luvaton datapääsy haitallisista laajennuksista tai rinnakkaisista hyökkäyksistä.</p>
+          <p><strong>Nykyinen toteutus:</strong> IndexedDB selaimen hiekkalaatikon sisällä. Luottaa käyttöjärjestelmätason levysalaukseen ja selaimen profiilin turvallisuuteen data-at-rest-suojauksessa.</p>
+          <p><strong>Tuleva parannus:</strong> Asiakaspuolen salaus SubtleCrypto API:lla lisänolla-tietoisuussuojauskerrokseen riippumattomana käyttöjärjestelmän turvallisuudesta.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 👁️ Build-eheys: Toimitusketjun vakuutus</h3>
+          <p><strong>Torjutut uhat:</strong> Vaarantunut build-putki, peukaloitu artefaktit, luvaton koodin injektointi.</p>
+          <p><strong>Mekanismit:</strong> Automatisoitu CI/CD GitHub Actionsin kautta, SLSA Level 3 -alkuperävakuutukset, muuttumattomat build-artefaktit, julkaisujen kryptografinen allekirjoitus.</p>
+          <p><strong>Validointi:</strong> OpenSSF Scorecard -seuranta (tarkista <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">nykyinen pistemäärä</a>), riippuvuuksien tarkistustyönkulku, CodeQL-turvallisuusskannaus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-scenarios">
+      <h2 class="panel-caption">Asiakaspuolen uhkanäkökohdat</h2>
+      
+      <p><strong>Asiakaspuolen arkkitehtuuri siirtää uhkafokusta</strong> palvelinpuolen hyökkäyksistä selainpohjaisiin haavoittuvuuksiin, DOM-manipulaatioriskeihin ja paikallisen tallennuksen turvallisuuteen.</p>
+      
+      <p><strong>Keskeiset turvallisuusnäkökohdat vaatimustenmukaisuustyökaluille:</strong></p>
       
       <ul>
-        <li>[TO BE TRANSLATED - List item 1]</li>
-        <li>[TO BE TRANSLATED - List item 2]</li>
-        <li>[TO BE TRANSLATED - List item 3]</li>
+        <li><strong>XSS-esto:</strong> React-kehys tarjoaa automaattisen escapingin. Lisänä DOMPurify-sanitisointi käyttäjien luomille arviointimuistiinpanoille. CSP-otsikot pakottavat rajoittavan skriptikäytännön.</li>
+        <li><strong>Datan luottamuksellisuus:</strong> Selaimen hiekkalaatikon eristys plus käyttöjärjestelmätason salaus. Tuleva tiekartta sisältää asiakaspuolen salauksen lisänolla-tietoisuussuojaukseen.</li>
+        <li><strong>Toimitusketjun turvallisuus:</strong> SRI-validointi ulkoisille riippuvuuksille. Automatisoidut Dependabot-päivitykset. SLSA Level 3 build -vakuutukset tarjoavat alkuperävarmennuksen.</li>
+        <li><strong>Tallennusturvallisuus:</strong> IndexedDB-pääsy rajoitettu samaan alkuperään. Ei palvelinpuolen datan siirtoa eliminoi verkkosieppausriskit.</li>
+        <li><strong>Build-putken eheys:</strong> GitHub Actions -automaatio turvallisuusskannauksella. CodeQL SAST -analyysi. Riippuvuuksien tarkistus estää haavoittuvat paketit.</li>
       </ul>
-    </section>
-
-    <section id="technical-details">
-      <h2>[TO BE TRANSLATED - Technical Section]</h2>
-      <p>[TO BE TRANSLATED - Technical content]</p>
       
-      <!-- CODE BLOCKS: Keep code in English, translate only comments -->
-      <pre><code>
-      // [TO BE TRANSLATED - Code comment]
-      // Technical code remains in English
-      </code></pre>
+      <p class="hidden-wisdom"><em>Uhkamallinnus, joka rehellisesti dokumentoi jäännösriskin ja arkkitehtoniset kompromissit, mahdollistaa tietoiset turvallisuuspäätökset. Läpinäkyvyys rajoituksista rakentaa luottamusta enemmän kuin täydellisen turvallisuuden markkinointi.</em></p>
     </section>
 
-    <section id="conclusion">
-      <h2>[TO BE TRANSLATED - Conclusion]</h2>
-      <p>[TO BE TRANSLATED - Summary and key takeaways]</p>
-      <p>[TO BE TRANSLATED - Call to action or final thoughts]</p>
+    <section id="supply-chain">
+      <h2 class="panel-caption">Toimitusketjun turvallisuus: Riippuvuuksien hallinta</h2>
+      
+      <p><strong>npm-riippuvuudet edustavat luottamuspäätöksiä.</strong> Miten varmistus toimii:</p>
+      
+      <ol>
+        <li><strong>Lisenssivaatimustenmukaisuus:</strong> FOSSA-skannaus varmistaa MIT/Apache-2.0/BSD-yhteensopivuuden. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Julkinen vaatimustenmukaisuusmerkki</a> tarjoaa läpinäkyvyyden.</li>
+        <li><strong>Haavoittuvuusskannaus:</strong> Dependabot-automaatio generoi turvallisuuspäivitys-PR:iä. GitHub-riippuvuuksien tarkistustyönkulku estää haavoittuvien pakettien esittelyn.</li>
+        <li><strong>Build-alkuperä:</strong> SLSA Level 3 -vakuutukset tarjoavat kryptografisen todisteen, joka linkittää artefaktit lähteeseen. Näytä <a href="https://github.com/Hack23/cia-compliance-manager/attestations">julkiset vakuutukset</a>.</li>
+        <li><strong>Jatkuva validointi:</strong> OpenSSF Scorecard mittaa turvallisuuskäytäntöjä. Tarkista <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">nykyinen pistemäärä</a> branch-suojaukselle, koodikatselmukselle ja riippuvuuspäivitystodistuksille.</li>
+        <li><strong>Staattinen analyysi:</strong> CodeQL-turvallisuusskannaus integroitu CI/CD:hen. ESLint-säännöt pakottavat turvalliset koodausmallit.</li>
+      </ol>
+      
+      <p><strong>Riippuvuuksien minimaalisointstrategia:</strong> Suosi alustapohjaisia API:ita kirjastojen sijaan missä käytännöllistä. React core tarjoaa huomattavan toiminnallisuuden vähentäen ulkoisten riippuvuuksien vaatimuksia.</p>
     </section>
 
+    <section id="future-security">
+      <h2 class="panel-caption">Turvallisuustiekartta: Progressiivinen parannus</h2>
+      
+      <p><strong>Turvallisuusevoluutio suunniteltu progressiivisen parannuksen kautta</strong> ylläpitäen taaksepäin yhteensopivuutta samalla kun lisätään puolustuskerroksia.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Vaihe 1: Parannettu todennus</h3>
+          <p>Valinnainen OAuth-integrointi monilaitesynkronointiin. GitHub/Google/Microsoft-identiteettitarjoajat. Istuntohallinta turvallisella tokenkäsittelyllä.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Vaihe 2: Asiakaspuolen salaus</h3>
+          <p>SubtleCrypto API -integrointi nolla-tietoisuusarkkitehtuuriin. AES-GCM-salaus arviointidatalle. Käyttäjän hallitsemat salausavaimet ei koskaan siirretty.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>Vuosi 3: Auditointilokitus</h3>
+          <p>Toimintoloki IndexedDB:ssä. Merkle-puun peukaloinnin todistus.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>Vuosi 4: WebAuthn-biometria</h3>
+          <p>Touch ID, Face ID, Windows Hello. Tietojenkalastelunkestävä.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Vuosi 5: Post-kvanttikryptografia</h3>
+          <p>Hilaveropohjainen salaus. Kvanttikestävä tulevaisuuskestävyys.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Turvallisuusviisaus: Viisi keskeistä oppituntia</h2>
+      
+      <ol>
+        <li><strong>Asiakaspuoli = puolustusetu.</strong> Ei palvelinta = ei palvelinhaavoittuvuuksia.</li>
+        <li><strong>Kuusi STRIDE-luokkaa → viisi puolustusta.</strong> Kuvion tunnistus mahdollistaa fokuksen.</li>
+        <li><strong>Tyyppiturvallissuus on turvallisuutta.</strong> Käännösaikainen varmistus = esikäyttöönoton bugien eliminointi.</li>
+        <li><strong>Automatisoidut todisteet > manuaalinen vakuutus.</strong> Kryptografinen todiste, ei lupaukset.</li>
+        <li><strong>Turvallisuustiekartat mahdollistavat läpinäkyvyyden.</strong> Näytä liikerata, ei vain tilannekuva.</li>
+      </ol>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Varmista turvallisuutemme</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">STRIDE-uhamalli</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Tuleva turvallisuus</a></li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">OpenSSF Scorecard 7.4/10</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA-vakuutukset</a></li>
+        <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA-raportti</a></li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, järjestelmäarkkitehti, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Asiakaspuolen turvallisuus on matemaattista turvallisuutta—hyökkäyspinta minimoitu arkkitehtonisen rajoitteen kautta."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Jatka matkaa</h2>
+      <p><strong>Edellinen:</strong> <a href="blog-compliance-architecture_fi.html">Compliance Manager -arkkitehtuuri</a></p>
+      <p><strong>Seuraava:</strong> <a href="blog-trigram-architecture_fi.html">Black Trigram -arkkitehtuuri</a></p>
+      <p><strong>Takaisin:</strong> <a href="blog_fi.html">Turvallisuusblogi</a></p>
+    </section>
   </article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
-  <p>
-    <a href="index_fi.html">Etusivu</a> | 
-    <a href="blog_fi.html">Blogi</a> |
-    <a href="cia-project.html">CIA Project</a> |
-    <a href="compliance-manager.html">Compliance Manager</a>
-  </p>
-</footer>
+        <footer role="contentinfo" aria-label="Sivuston alatunniste">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Kyberturvallisuuskonsultointi<br>
+          Göteborg, Ruotsi | Etätyö</p>
+          <p>Y-tunnus: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-yrityssivu</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">Toimitusjohtaja: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Palvelut</h3>
+          <ul>
+            <li><a href="services_fi.html">Turvallisuuskonsultointi</a></li>
+            <li><a href="services_fi.html">Turvallisuusarkkitehtuuri</a></li>
+            <li><a href="services_fi.html">Pilviturvallisuus</a></li>
+            <li><a href="services_fi.html">DevSecOps-integrointi</a></li>
+            <li><a href="services_fi.html">Vaatimustenmukaisuus ja ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Tuotteet</h3>
+          <ul>
+            <li><a href="black-trigram-features_fi.html">Black Trigram</a></li>
+            <li><a href="cia-features_fi.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_fi.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Resurssit</h3>
+          <ul>
+            <li><a href="blog_fi.html">Turvallisuusblogi</a></li>
+            <li><a href="discordian-cybersecurity_fi.html">🍎 Discordialainen blogi</a></li>
+            <li><a href="cia-triad-faq_fi.html">CIA-kolmion UKK</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Julkinen ISMS</a></li>
+            <li><a href="sitemap_fi.html">Sivukartta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Yritys</h3>
+          <ul>
+            <li><a href="why-hack23_fi.html">Tietoa Hack23:sta</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Turvallisuuspolitiikka</a></li>
+            <li><a href="SECURITY.md">Ilmoita turvallisuusongelmasta</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisaatio</a></li>
+            <li><a href="accessibility-statement_fi.html">Saavutettavuus</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogin kirjoittajat:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionäärinen anarkistinen tuoteomistaja" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofia ja visio) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosofi-insinööri-järjestelmäarkkitehti" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkkitehtuuri ja mallit)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Toteutuksen todellisuus:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikki-ajava kehittäjä, joka saa sen toimimaan" rel="noopener noreferrer" target="_blank">George Dorn</a> painii tämän kauniin kaaoksen toimivaksi koodiksi. Katso hänen tekniset kommentaarinsa
+          <a href="blog-george-dorn-cia-code_fi.html">CIA-arkkitehtuuri</a>,
+          <a href="blog-george-dorn-trigram-code_fi.html">Black Trigram -taistelu</a>, ja
+          <a href="blog_fi.html#george-dorn-developer-chronicles">Kehittäjäkronikka</a> panikoimishetkistä, läpimurroista ja piilotettuista pääsiäismunista, jotka tekevät filosofiasta käyttöönotettavan.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Kaikki oikeudet pidätetään. | Lisensoitu <a href="LICENSE">Apache 2.0</a>:lla</p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>

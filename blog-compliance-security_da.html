@@ -71,8 +71,8 @@
         "width": 1200,
         "height": 630
       },
-      "wordCount": 0,
-      "articleBody": "[TO BE TRANSLATED]",
+      "wordCount": 883,
+      "articleBody": "STRIDE-trusselmodellering kortlægges til fem forsvarslag i CIA Compliance Manager. Klient-side arkitektur eliminerer serversårbarheder gennem IndexedDB-lagring, Content Security Policy, Subresource Integrity og TypeScript-typesikkerhed. Supply chain-sikkerhed sikres gennem SLSA Niveau 3-attesteringer og OpenSSF Scorecard-overvågning.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_da.html#blog",
@@ -156,97 +156,300 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>[TO BE TRANSLATED - Main Header]</h1>
+  <h1>Discordian Cybersikkerhed</h1>
   <div class="app-link">
     <a href="index_da.html">Hjem</a>
     <a href="blog_da.html">Blog</a>
-    <a href="cia-compliance-manager-docs.html">Compliance Docs</a>
+    <a href="cia-compliance-manager-docs_da.html">Compliance-dokumentation</a>
   </div>
 </header>
 <main>
   <article>
-    <h1 class="header">[TO BE TRANSLATED - Article Title]</h1>
+    <h1 class="header">🛡️ Compliance Manager-sikkerhed: STRIDE gennem fem dimensioner</h1>
     
-    <!--
-    ==========================================
-    PROFESSIONAL TRANSLATOR INSTRUCTIONS
-    ==========================================
+    <section id="six-becomes-five">
+      <h2 class="panel-caption">Når seks STRIDE-kategorier møder fem forsvarslag</h2>
+      
+      <p><strong>STRIDE-trusselmodellering: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege.</strong> Microsofts seks-kategori-taksonomi til systematisk trusselanalyse. Industristandard. Kampafprøvet. Omfattende—angiveligt.</p>
+      
+      <p><strong>Her møder numerologi virkeligheden:</strong> Kortlægning af STRIDE til <a href="https://github.com/Hack23/cia-compliance-manager">CIA Compliance Manager</a>-arkitekturen afslørede seks kategorier komprimeret til fem defensive krav. Denial of Service? Besejret af arkitektonisk enkelhed (statisk hosting eliminerer 90% af DoS-angrebsfladen). De resterende fem trusler stemmer perfekt overens med fem forsvarslag. Tilfældighed? Eller universet der afslører optimal sikkerhedsstruktur gennem begrænsning?</p>
+      
+      <p><strong>Udfordring af konventionel sikkerhedstænkning:</strong> Flere trusselkategorier garanterer ikke omfattende forsvar. Overlappende kategorier skaber falsk tillid til dækning. Vores fem-lags forsvar adresserer alle seks STRIDE-trusler, fordi lagene er <em>ortogonale</em>—hvert beskytter fundamentalt forskellige angrebsflader. Mønstergenkendelse muliggør defensiv effektivitet frem for udtømmende kategorisering.</p>
+      
+      <p class="hidden-wisdom"><em>Oplysning: Seks STRIDE-kategorier, der kortlægges til fem forsvar, afslører, hvilke trusler der deler grundårsager. Spoofing + Elevation of Privilege besejres begge af autentificering. Tampering + Repudiation besejres begge af integritetskontroller. Mønstergenkendelse muliggør defensiv effektivitet.</em></p>
     
-    Please translate all content sections below following these guidelines:
-    
-    1. MAINTAIN HTML STRUCTURE
-       - Keep all HTML tags intact
-       - Preserve CSS classes and IDs
-       - Do not modify technical elements
-    
-    2. TECHNICAL TERMINOLOGY
-       - Use Nordic terminology glossary provided
-       - Keep technical terms accurate (STRIDE, CIA Triad, DevSecOps)
-       - Preserve code examples in English
-    
-    3. CULTURAL ADAPTATION
-       - Adapt regulatory references to Nordic context
-       - Update authority names per country (see guide)
-       - Maintain professional consulting tone
-    
-    4. NARRATIVE VOICE
-       - Preserve author's style and voice
-       - Keep Discordian references where appropriate
-       - Maintain technical precision
-    
-    Reference: ISSUE_8_NORDIC_TECHNICAL_BLOGS_GUIDE.md
-    ==========================================
-    -->
-
-    <section id="introduction">
-      <h2 class="panel-caption">[TO BE TRANSLATED - Section Heading]</h2>
-      <p>[TO BE TRANSLATED - Introduction paragraph]</p>
-      <p>[TO BE TRANSLATED - Context and background]</p>
+      
+      <p><strong>Klar til at implementere ISO 27001-compliance?</strong> <a href="why-hack23_da.html">Lær om Hack23s cybersikkerhedsrådgivningstjenester</a> og vores unikke offentlige ISMS-tilgang.</p>
     </section>
 
-    <section id="main-content">
-      <h2>[TO BE TRANSLATED - Main Section Title]</h2>
-      <p>[TO BE TRANSLATED - Main content paragraphs]</p>
+    <section id="client-side-advantage">
+      <h2 class="panel-caption">Klient-side sikkerhedsfordelen</h2>
       
-      <h3>[TO BE TRANSLATED - Subsection]</h3>
-      <p>[TO BE TRANSLATED - Details and explanation]</p>
+      <p><strong>Konventionelle complianceværktøjer: server-side SaaS.</strong> Brugere uploader følsomme data. Leverandøren opbevarer dem. Leverandøren sikrer dem. Leverandøren sælger "virksomhedssikkerhed" som konkurrencefordel.</p>
+      
+      <p><strong>Vi valgte anderledes.</strong> Klient-side applikation. IndexedDB-lagring. Ingen backend. Data forlader aldrig brugerens browser. Angrebsflade: minimal. <strong>Hvorfor?</strong></p>
+      
+      <p><strong>Fem fordele ved klient-side arkitektur til compliance:</strong></p>
+      
+      <ol>
+        <li><strong>Nul serversårbarheder:</strong> Ingen SQL-injektion (ingen SQL-server). Ingen RCE (ingen kommandoeksekvering). Ingen SSRF (ingen server-side anmodninger). Ingen XXE (ingen XML-parsing). Hele OWASP Top 10 er stort set irrelevant. Angrebsfladen kollapsede.</li>
+        
+        <li><strong>Datasuverænitet som standard:</strong> Brugerdata i brugerens browser på brugerens enhed under brugerens kontrol. Ingen "vores privatlivspolitik siger..." markedsføring. Matematisk privatlivsbeskyttelse gennem arkitektur. GDPR-compliance automatisk.</li>
+        
+        <li><strong>Offline-drift:</strong> Internet nede? Compliancevurderingen fortsætter. Netværk kompromitteret? Følsomme data allerede lokale. Air-gapped miljøer? Installer én gang, kør for evigt. Modstandsdygtighed gennem uafhængighed.</li>
+        
+        <li><strong>Transparent sikkerhed:</strong> Klient-side JavaScript betyder, at brugere kan revidere sikkerheden. Se kildekoden. Læs koden. Verificer kryptografiske implementeringer. Tillid gennem verifikation, ikke leverandørløfter.</li>
+        
+        <li><strong>Omkostningsreduktion:</strong> Ingen serveromkostninger = 0 kr./måned hosting. GitHub Pages gratis. CloudFlare gratis tier. Nul hostinggebyrer muliggør gratis open source-værktøj. Økonomisk bæredygtighed gennem arkitektonisk enkelhed.</li>
+      </ol>
+      
+      <p><strong>Afvejninger anerkendt:</strong> Ingen server = ingen realtidssamarbejde (køreplan: peer-to-peer via WebRTC). Ingen centraliseret backup (køreplan: krypteret cloud-eksport). Klient-side begrænsninger (køreplan: Web Workers til tung beregning). Ærlig afvejningsdokumentation > marketingspin.</p>
+      
+      <p class="hidden-wisdom"><em>Sikkerhedsarkitektur, der eliminerer hele angrebsklasser, slår sikkerhedsarkitektur, der forsvarer mod hvert angreb i hver klasse. Vælg enkelhed, der muliggør sikkerhed frem for kompleksitet, der kræver sikkerhed.</em></p>
+    </section>
+
+    <section id="five-defensive-layers">
+      <h2 class="panel-caption">Klient-side sikkerhedsarkitektur: Forsvar gennem enkelhed</h2>
+      
+      <p><strong>Hvert sikkerhedslag adresserer specifikke trusselkategorier.</strong> Klient-side arkitektur eliminerer fundamentalt server-side angrebsvektorer, mens den kræver omhyggelig forsvar af browser-baserede trusler.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>1. 🌐 Content Security Policy: Injektionsforsvar</h3>
+          <p><strong>Trusler afbødet:</strong> Cross-site scripting (XSS), dataeksfiltrering via injicerede scripts, uautoriseret ressourceindlæsning.</p>
+          <p><strong>CSP-direktiver:</strong> Restriktiv politik, der begrænser scriptkilder, stilkilder og forbindelsesendepunkter. Konfiguration implementeret via GitHub Pages-headere.</p>
+          <p><strong>React framework-beskyttelse:</strong> Automatisk XSS-forebyggelse gennem JSX-escaping, DOM-manipulationssanitisering og kontrolleret prop-rendering.</p>
+          <p class="hidden-wisdom"><em>CSP, der blokerer legitim funktionalitet, fejler brugervenlighed. CSP, der tillader alt, fejler sikkerhed. Balance gennem minimum nødvendige direktiver baseret på faktiske applikationskrav.</em></p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>2. 🔐 Subresource Integrity: Afhængighedstillid</h3>
+          <p><strong>Trussel afbødet:</strong> Kompromitteret CDN, der serverer ondsindede biblioteksversioner, supply chain-angreb på eksterne afhængigheder.</p>
+          <p><strong>SRI-implementering:</strong> Kryptografisk hash-validering for eksterne ressourcer. Afhængighedsintegritetsverifikation ved build-tid.</p>
+          <p><strong>Supply chain-verifikation:</strong> Dependabot-automatisering til sikkerhedsopdateringer, FOSSA-licenscompliancescanning. Bevis: <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA-dashboard</a>.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>3. 🛡️ Typesikkerhed: Runtime-fejlforebyggelse</h3>
+          <p><strong>Trusler afbødet:</strong> Typeforvekslingssårbarheder, runtime-fejl, der forårsager denial of service, misdannet databehandling.</p>
+          <p><strong>TypeScript strict mode:</strong> Omfattende typekontrol med noImplicitAny, strictNullChecks, strictFunctionTypes kompileringsflag. Typefejl blokerer builds.</p>
+          <p><strong>Build-time validering:</strong> ESLint statisk analyse, TypeScript-kompilerkontroller, Vite-build-optimering med tree-shaking, der fjerner ubrugt kode.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>4. 🔒 Databeskyttelse: Browser-lagringssikkerhed</h3>
+          <p><strong>Trussel afbødet:</strong> Lokal lagringskompromittering, uautoriseret dataadgang fra ondsindede udvidelser eller co-lokaliserede angreb.</p>
+          <p><strong>Nuværende implementering:</strong> IndexedDB inden for browser-sandbox. Stoler på OS-niveau diskkryptering og browser-profilsikkerhed til data-at-rest beskyttelse.</p>
+          <p><strong>Fremtidig forbedring:</strong> Klient-side kryptering ved hjælp af SubtleCrypto API til yderligere zero-knowledge beskyttelseslag uafhængigt af OS-sikkerhed.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>5. 👁️ Build-integritet: Supply chain-sikring</h3>
+          <p><strong>Trusler afbødet:</strong> Kompromitteret build-pipeline, manipulerede artefakter, uautoriseret kodeinjektion.</p>
+          <p><strong>Mekanismer:</strong> Automatiseret CI/CD gennem GitHub Actions, SLSA Niveau 3-proveniens-attesteringer, uforanderlige build-artefakter, kryptografisk signering af releases.</p>
+          <p><strong>Validering:</strong> OpenSSF Scorecard-overvågning (tjek <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">nuværende score</a>), afhængighedsgennemgangsworkflow, CodeQL-sikkerhedsscanning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="threat-scenarios">
+      <h2 class="panel-caption">Klient-side trusselsovervejelser</h2>
+      
+      <p><strong>Klient-side arkitektur flytter trusselsfokus</strong> fra server-side angreb til browser-baserede sårbarheder, DOM-manipulationsrisici og lokal lagringssikkerhed.</p>
+      
+      <p><strong>Centrale sikkerhedsovervejelser for complianceværktøjer:</strong></p>
       
       <ul>
-        <li>[TO BE TRANSLATED - List item 1]</li>
-        <li>[TO BE TRANSLATED - List item 2]</li>
-        <li>[TO BE TRANSLATED - List item 3]</li>
+        <li><strong>XSS-forebyggelse:</strong> React framework giver automatisk escaping. Yderligere DOMPurify-sanitisering til brugergenererede vurderingsnotater. CSP-headere håndhæver restriktive script-politikker.</li>
+        <li><strong>Datafortrolighed:</strong> Browser-sandbox-isolering plus OS-niveau kryptering. Fremtidig køreplan inkluderer klient-side kryptering til yderligere zero-knowledge beskyttelse.</li>
+        <li><strong>Supply chain-sikkerhed:</strong> SRI-validering for eksterne afhængigheder. Automatiserede Dependabot-opdateringer. SLSA Niveau 3 build-attesteringer giver proveniens-sikring.</li>
+        <li><strong>Lagringssikkerhed:</strong> IndexedDB-adgang begrænset til same-origin. Ingen server-side datatransmission eliminerer netværksaflytningsrisici.</li>
+        <li><strong>Build pipeline-integritet:</strong> GitHub Actions-automatisering med sikkerhedsscanning. CodeQL SAST-analyse. Afhængighedsgennemgang blokerer sårbare pakker.</li>
       </ul>
-    </section>
-
-    <section id="technical-details">
-      <h2>[TO BE TRANSLATED - Technical Section]</h2>
-      <p>[TO BE TRANSLATED - Technical content]</p>
       
-      <!-- CODE BLOCKS: Keep code in English, translate only comments -->
-      <pre><code>
-      // [TO BE TRANSLATED - Code comment]
-      // Technical code remains in English
-      </code></pre>
+      <p class="hidden-wisdom"><em>Trusselmodellering, der ærligt dokumenterer restrisiko og arkitektoniske afvejninger, muliggør informerede sikkerhedsbeslutninger. Gennemsigtighed om begrænsninger opbygger tillid mere end markedsføring af perfekt sikkerhed.</em></p>
     </section>
 
-    <section id="conclusion">
-      <h2>[TO BE TRANSLATED - Conclusion]</h2>
-      <p>[TO BE TRANSLATED - Summary and key takeaways]</p>
-      <p>[TO BE TRANSLATED - Call to action or final thoughts]</p>
+    <section id="supply-chain">
+      <h2 class="panel-caption">Supply chain-sikkerhed: Afhængighedsstyring</h2>
+      
+      <p><strong>npm-afhængigheder repræsenterer tillidsbeslutninger.</strong> Sådan fungerer verifikation:</p>
+      
+      <ol>
+        <li><strong>Licenscompliance:</strong> FOSSA-scanning sikrer MIT/Apache-2.0/BSD-kompatibilitet. <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">Offentligt compliance-badge</a> giver gennemsigtighed.</li>
+        <li><strong>Sårbarhhedsscanning:</strong> Dependabot-automatisering genererer sikkerhedsopdaterings-PR'er. GitHub afhængighedsgennemgangsworkflow blokerer sårbare pakkeintroduktioner.</li>
+        <li><strong>Build-proveniens:</strong> SLSA Niveau 3-attesteringer giver kryptografisk bevis, der forbinder artefakter til kildekode. Se <a href="https://github.com/Hack23/cia-compliance-manager/attestations">offentlige attesteringer</a>.</li>
+        <li><strong>Kontinuerlig validering:</strong> OpenSSF Scorecard måler sikkerhedspraksis. Tjek <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">nuværende score</a> for branch-beskyttelse, kodegennemgang og afhængighedsopdateringsbevis.</li>
+        <li><strong>Statisk analyse:</strong> CodeQL-sikkerhedsscanning integreret i CI/CD. ESLint-regler håndhæver sikre kodningsmønstre.</li>
+      </ol>
+      
+      <p><strong>Afhængighedsminimeringsstrategi:</strong> Foretrækker platform-API'er frem for biblioteker, hvor det er praktisk. React core leverer betydelig funktionalitet, der reducerer eksterne afhængighedskrav.</p>
     </section>
 
+    <section id="future-security">
+      <h2 class="panel-caption">Sikkerhedskøreplan: Progressiv forbedring</h2>
+      
+      <p><strong>Sikkerhedsudvikling planlagt gennem progressiv forbedring</strong> opretholder bagudkompatibilitet, mens forsvarslag tilføjes.</p>
+      
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <h3>Fase 1: Forbedret autentificering</h3>
+          <p>Valgfri OAuth-integration til multi-device sync. GitHub/Google/Microsoft-identitetsudbydere. Sessionsstyring med sikker token-håndtering.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>Fase 2: Klient-side kryptering</h3>
+          <p>SubtleCrypto API-integration for zero-knowledge arkitektur. AES-GCM-kryptering af vurderingsdata. Brugerstyrede krypteringsnøgler transmitteres aldrig.</p>
+        </div>
+        
+        <div class="card availability-card">
+          <h3>År 3: Revisionslogning</h3>
+          <p>Handlingslog i IndexedDB. Merkle-træ manipulationsbevis.</p>
+        </div>
+        
+        <div class="card confidentiality-card">
+          <h3>År 4: WebAuthn-biometri</h3>
+          <p>Touch ID, Face ID, Windows Hello. Phishing-resistent.</p>
+        </div>
+        
+        <div class="card integrity-card">
+          <h3>År 5: Post-quantum krypto</h3>
+          <p>Lattice-baseret kryptering. Kvante-resistent fremtidssikring.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons-learned">
+      <h2 class="panel-caption">Sikkerhedsvisdom: Fem nøgleerkendelser</h2>
+      
+      <ol>
+        <li><strong>Klient-side = defensiv fordel.</strong> Ingen server = ingen serversårbarheder.</li>
+        <li><strong>Seks STRIDE-kategorier → fem forsvar.</strong> Mønstergenkendelse muliggør fokus.</li>
+        <li><strong>Typesikkerhed er sikkerhed.</strong> Kompileringstidsverifikation = pre-deployment fejleliminering.</li>
+        <li><strong>Automatiseret bevis > manuel sikring.</strong> Kryptografisk bevis, ikke løfter.</li>
+        <li><strong>Sikkerhedskøreplaner muliggør gennemsigtighed.</strong> Vis udvikling, ikke kun øjebliksbillede.</li>
+      </ol>
+    </section>
+
+    <section id="invitation">
+      <h2 class="panel-caption">Verificer vores sikkerhed</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/THREAT_MODEL.md">STRIDE-trusselmodel</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/blob/master/FUTURE_SECURITY_ARCHITECTURE.md">Fremtidig sikkerhed</a></li>
+        <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager">OpenSSF Scorecard 7.4/10</a></li>
+        <li><a href="https://github.com/Hack23/cia-compliance-manager/attestations">SLSA-attesteringer</a></li>
+        <li><a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager">FOSSA-rapport</a></li>
+      </ul>
+      
+      <p class="hidden-wisdom"><em>Simon Moon, Systemarkitekt, Hack23 AB</em></p>
+      <p class="hidden-wisdom"><em>"Klient-side sikkerhed er matematisk sikkerhed—angrebsflade minimeret gennem arkitektonisk begrænsning."</em></p>
+    </section>
+
+    <section id="next-reading">
+      <h2 class="panel-caption">Fortsæt rejsen</h2>
+      <p><strong>Forrige:</strong> <a href="blog-compliance-architecture_da.html">Compliance Manager-arkitektur</a></p>
+      <p><strong>Næste:</strong> <a href="blog-trigram-architecture_da.html">Black Trigram-arkitektur</a></p>
+      <p><strong>Tilbage til:</strong> <a href="blog_da.html">Sikkerhedsblog</a></p>
+    </section>
   </article>
 </main>
 
-<footer>
-  <p>&copy; 2025 Hack23 AB. All rights reserved.</p>
-  <p>
-    <a href="index_da.html">Hjem</a> | 
-    <a href="blog_da.html">Blog</a> |
-    <a href="cia-project.html">CIA Project</a> |
-    <a href="compliance-manager.html">Compliance Manager</a>
-  </p>
-</footer>
+        <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersikkerhedsrådgivning<br>
+          Göteborg, Sverige | Fjernarbejde</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-virksomhedsside</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjenester</h3>
+          <ul>
+            <li><a href="services_da.html">Sikkerhedsrådgivning</a></li>
+            <li><a href="services_da.html">Sikkerhedsarkitektur</a></li>
+            <li><a href="services_da.html">Cloud-sikkerhed</a></li>
+            <li><a href="services_da.html">DevSecOps-integration</a></li>
+            <li><a href="services_da.html">Compliance & ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_da.html">Black Trigram</a></li>
+            <li><a href="cia-features_da.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_da.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>Ressourcer</h3>
+          <ul>
+            <li><a href="blog_da.html">Sikkerhedsblog</a></li>
+            <li><a href="discordian-cybersecurity_da.html">🍎 Discordian-blog</a></li>
+            <li><a href="cia-triad-faq_da.html">CIA-triade FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentligt ISMS</a></li>
+            <li><a href="sitemap_da.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Virksomhed</h3>
+          <ul>
+            <li><a href="why-hack23_da.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Sikkerhedspolitik</a></li>
+            <li><a href="SECURITY.md">Rapporter sikkerhedsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_da.html">Tilgængelighed</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Discordian Agents Section - Unique to Blog -->
+      <div class="footer-discordian">
+        <p class="discordian-authors">
+          <strong>✍️ Blogforfattere:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionær anarkistisk Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingeniør Systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mønstre)
+        </p>
+        <p class="discordian-implementation">
+          <strong>💻 Implementeringsvirkelighed:</strong>
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panik-drevet udvikler der får det til at virke" rel="noopener noreferrer" target="_blank">George Dorn</a> kæmper dette smukke kaos ind i fungerende kode. Se hans tekniske kommentarer i
+          <a href="blog-george-dorn-cia-code_da.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code_da.html">Black Trigram-kamp</a> og
+          <a href="blog_da.html#george-dorn-developer-chronicles">Udviklerhistorier</a> for panikøjeblikke, gennembrud og skjulte påskeæg, der gør filosofi deploybar.
+        </p>
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2025 Hack23 AB. Alle rettigheder forbeholdes. | Licenseret under <a href="LICENSE">Apache 2.0</a></p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> | 
+          <a href="index_da.html" lang="da">Dansk</a>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>
