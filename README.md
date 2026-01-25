@@ -133,7 +133,7 @@ Open-source and reference projects used as **live demonstrations of secure archi
 
 #### 🎮 Black Trigram (Security-Aware Game)
 
-Realistic 2D precision combat simulator based on traditional Korean martial arts, used as a **security-aware game and educational platform**.
+Realistic 3D precision combat simulator based on traditional Korean martial arts, used as a **security-aware game and educational platform**.
 
 - 🎮 **Overview:** https://hack23.com/black-trigram.html  
 - ⭐ **Features:** https://hack23.com/black-trigram-features.html  
@@ -761,14 +761,14 @@ This educational resource provides professional implementation guidance aligned 
 **Black Trigram Series:**
 - [Black Trigram Architecture: Five Fighters, Sacred Geometry](https://hack23.com/blog-trigram-architecture.html) - Five fighter archetypes discovered in the combat domain
 - [Black Trigram Combat: 70 Vital Points & Physics of Respect](https://hack23.com/blog-trigram-combat.html) - Traditional Korean martial arts biomechanics
-- [Black Trigram Future: VR Martial Arts & Immersive Combat](https://hack23.com/blog-trigram-future.html) - Five-year evolution from 2D fighter to VR training platform
+- [Black Trigram Future: VR Martial Arts & Immersive Combat](https://hack23.com/blog-trigram-future.html) - Five-year evolution from 3D fighter to VR training platform
 
 ### George Dorn's Code Analysis: Repository Deep-Dives
 
 *Repository analysis based on actual cloned code—not documentation or assumptions*
 
-- [CIA Code Analysis](https://hack23.com/blog-george-dorn-cia-code.html) - Java 17, Spring Boot, PostgreSQL: 49 Maven modules, 1,372 Java files, 60+ DB tables
-- [Black Trigram Code Analysis](https://hack23.com/blog-george-dorn-trigram-code.html) - TypeScript 5.9, React 19, PixiJS 8: 132 files, 70 vital points system
+- [CIA Code Analysis](https://hack23.com/blog-george-dorn-cia-code.html) - Java 25, Spring Framework, PostgreSQL: 49 Maven modules, 1,372 Java files, 60+ DB tables
+- [Black Trigram Code Analysis](https://hack23.com/blog-george-dorn-trigram-code.html) - TypeScript 5.9, React 19, ThreeJs 8: 132 files, 70 vital points system
 - [Compliance Manager Code Analysis](https://hack23.com/blog-george-dorn-compliance-code.html) - TypeScript 5.9, React 19, IndexedDB: 220 files, zero backend, 95% attack surface eliminated
 
 ### Foundation Policies
@@ -834,7 +834,7 @@ This educational resource provides professional implementation guidance aligned 
 
 🥋 **어둠의 무예로 완벽한 일격을 추구하라** - "Master the dark arts through the pursuit of the perfect strike"
 
-**🔥 Flagship Project** - A realistic 2D precision combat simulator inspired by traditional Korean martial arts, emphasizing anatomical targeting, realistic physics, and authentic techniques across 5 distinct fighter archetypes.
+**🔥 Flagship Project** - A realistic 3D precision combat simulator inspired by traditional Korean martial arts, emphasizing anatomical targeting, realistic physics, and authentic techniques across 5 distinct fighter archetypes.
 
 **Key Features:**
 
@@ -1074,7 +1074,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 ### 🏗️ Reference Implementations
 
 **Hack23 Security Architecture Examples:**
-- [🏛️ CIA Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) - Java/Spring Boot enterprise web application architecture
+- [🏛️ CIA Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) - Java/Spring Framework enterprise web application architecture
 - [🎮 Black Trigram Security Architecture](https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md) - React/Firebase gaming platform security
 - [📊 CIA Compliance Manager Security Architecture](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/SECURITY_ARCHITECTURE.md) - React/Supabase compliance platform architecture
 

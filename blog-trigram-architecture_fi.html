@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Black Trigram -pelin arkkitehtuuri: Unity-mallit, taistelujärjestelmän suunnittelu, kulttuurinen säilyttäminen pelaamisessa. C4-arkkitehtuurimallit.">
 <meta name="twitter:description" content="Black Trigram -peliarkkitehtuuri: Unity-mallit, taistelujärjestelmäsuunnittelu, kulttuurin säilyttäminen pelaamisen kautta. C4-arkkitehtuurimallit.">
-<meta name="keywords" content="Black Trigram arkkitehtuuri, peliarkkitehtuuri, taistelujärjestelmäsuunnittelu, korealainen kamppailulajisimulaatio, anatominen kohdistusjärjestelmä, elintärkeät pisteet kyusho, fysiikkamoottori, törmäystunnistus, pelimekaniikka, proseduraalinen animaatio, taistelu-AI, taistelupeliarkkitehtuuri, 2D-taistelusimulaatio, kamppailulajipelaaminen, kulttuurin säilyttämisteknologia">
+<meta name="keywords" content="Black Trigram arkkitehtuuri, peliarkkitehtuuri, taistelujärjestelmäsuunnittelu, korealainen kamppailulajisimulaatio, anatominen kohdistusjärjestelmä, elintärkeät pisteet kyusho, fysiikkamoottori, törmäystunnistus, pelimekaniikka, proseduraalinen animaatio, taistelu-AI, taistelupeliarkkitehtuuri, 3D-taistelusimulaatio, kamppailulajipelaaminen, kulttuurin säilyttämisteknologia">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Hack23">
 <meta property="og:title" content="Black Trigram -arkkitehtuuri: Viisi taistelijaa, pyhä geometria">
@@ -211,9 +211,9 @@
     </section>
 
     <section id="web-architecture">
-      <h2 class="panel-caption">React + PixiJS -arkkitehtuuri: Selainpohjainen taistelusimulaatio</h2>
+      <h2 class="panel-caption">React + ThreeJs -arkkitehtuuri: Selainpohjainen taistelusimulaatio</h2>
       
-      <p><strong>Verkkopohjainen taistelusimulaatio = demokratisoitu pääsy = vallankumous.</strong> Dokumentoitu <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>:ssä, Black Trigram toimii kokonaan selaimessa käyttäen React 19 + PixiJS 8 + TypeScript. Nolla backend. Nolla asennusta. Nolla alustariippuvuutta. <strong>Nolla keinotekoista pääsyn niukkuutta.</strong> Avaa selain → harjoittele kamppailulajeja. Tämä ei ole kompromissi mukavuuden vuoksi – se on <em>tarkoituksellinen saavutettavuusarkkitehtuuri poliittisena kannanottona.</em> Taistelupelit historiallisesti vartioineet kalliiden konsollaitteiden, aluelukoitettujen kasettien ja paikallisen moninpelin takana vaatien fyysistä läheisyyttä. <strong>Valitsimme sen sijaan yleisen pääsyn. Saavutettavuus kapinana peliteollisuuden louhintaa vastaan.</strong> Selaimesi on dojangsi. Internet-yhteytesi on sensesi. Maantiede ja tulot eivät enää vartio korealaisten kamppailalajien koulutusta.</p>
+      <p><strong>Verkkopohjainen taistelusimulaatio = demokratisoitu pääsy = vallankumous.</strong> Dokumentoitu <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>:ssä, Black Trigram toimii kokonaan selaimessa käyttäen React 19 + ThreeJs 8 + TypeScript. Nolla backend. Nolla asennusta. Nolla alustariippuvuutta. <strong>Nolla keinotekoista pääsyn niukkuutta.</strong> Avaa selain → harjoittele kamppailulajeja. Tämä ei ole kompromissi mukavuuden vuoksi – se on <em>tarkoituksellinen saavutettavuusarkkitehtuuri poliittisena kannanottona.</em> Taistelupelit historiallisesti vartioineet kalliiden konsollaitteiden, aluelukoitettujen kasettien ja paikallisen moninpelin takana vaatien fyysistä läheisyyttä. <strong>Valitsimme sen sijaan yleisen pääsyn. Saavutettavuus kapinana peliteollisuuden louhintaa vastaan.</strong> Selaimesi on dojangsi. Internet-yhteytesi on sensesi. Maantiede ja tulot eivät enää vartio korealaisten kamppailalajien koulutusta.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -227,8 +227,8 @@
         </div>
         
         <div class="card availability-card">
-          <h3>3. 🎨 PixiJS-renderöijä</h3>
-          <p>PixiJS 8 WebGL:llä 60fps 2D-grafiikalle. Hallinnoi hahmospritet (PlayerVisuals, EnemyVisuals), dojang-taustaa, partikke­lijärjestelmiä (HitEffectsLayer), UI-peittokuvia. @pixi/react-integraatio käärii PixiJS Applicationin React-komponentteihin.</p>
+          <h3>3. 🎨 ThreeJs-renderöijä</h3>
+          <p>ThreeJs 8 WebGL:llä 60fps 3D-grafiikalle. Hallinnoi hahmospritet (PlayerVisuals, EnemyVisuals), dojang-taustaa, partikke­lijärjestelmiä (HitEffectsLayer), UI-peittokuvia. @pixi/react-integraatio käärii ThreeJs Applicationin React-komponentteihin.</p>
         </div>
         
         <div class="card confidentiality-card">
@@ -244,7 +244,7 @@
       
       <p><strong>Täysi arkkitehtuurido­kumentaatio:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> sisältää C4 Container -diagrammit, Component-näkymät, Combat Flow -sekvenssit. TypeScript tarjoaa tyyppiturvallisuu­den kaikilla kerroksilla. Vite käsittelee rakentamisen optimoinnin tree-shakingilla.</p>
       
-      <p class="hidden-wisdom"><em>Verkkosovel­lukset ilman kerrosvalvontaa muuttuvat ylläpitämättömiksi. React UI:lle, PixiJS renderöinnille, TypeScript logiikalle – selkeä erottelu mahdollistaa luottavaisen refaktoroinnin rikkomatta järjestelmiä.</em></p>
+      <p class="hidden-wisdom"><em>Verkkosovel­lukset ilman kerrosvalvontaa muuttuvat ylläpitämättömiksi. React UI:lle, ThreeJs renderöinnille, TypeScript logiikalle – selkeä erottelu mahdollistaa luottavaisen refaktoroinnin rikkomatta järjestelmiä.</em></p>
     </section>
 
     <section id="synchronicities">

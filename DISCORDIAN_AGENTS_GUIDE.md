@@ -363,7 +363,7 @@ cat src/combat/VitalPoints.ts
 ```
 
 #### Step 2: Synthesize (What They'll Create)
-- **Current Reality**: Basic hit detection, 5 fighter types, 2D physics
+- **Current Reality**: Basic hit detection, 5 fighter types, 3D physics
 - **Vision**: 70 vital points system (7×5×2), anatomical precision, consciousness expansion
 - **Gap**: Need vital point mapping, damage calculation, educational component
 - **Inspiration**: Traditional Korean martial arts meets modern game design

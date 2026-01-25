@@ -906,7 +906,7 @@ Hack23 AB is a Swedish cybersecurity consulting company (Org.nr 5595347807) foun
 
 ### Key Projects
 
-1. **Black Trigram**: Realistic 2D precision combat simulator
+1. **Black Trigram**: Realistic 3D precision combat simulator
 2. **CIA Compliance Manager**: Security assessment platform
 3. **Citizen Intelligence Agency**: OSINT platform for Swedish political transparency
 4. **Lambda in Private VPC**: Multi-region resilient cloud architecture

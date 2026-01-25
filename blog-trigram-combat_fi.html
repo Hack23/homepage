@@ -194,7 +194,7 @@
     <section id="combat-system">
       <h2 class="panel-caption">Taistelujärjestelmän arkkitehtuuri: Osumantunnistus ja vahinko</h2>
       
-      <p><strong>Verkkopohjainen 2D-taistelu = kehittynyt osumantunnistus.</strong> Dokumentoitu <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>:ssä, PixiJS-pohjainen taistelujärjestelmä toteuttaa realistisen elintärkeän pisteen kohdistuksen:</p>
+      <p><strong>Verkkopohjainen 3D-taistelu = kehittynyt osumantunnistus.</strong> Dokumentoitu <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>:ssä, ThreeJs-pohjainen taistelujärjestelmä toteuttaa realistisen elintärkeän pisteen kohdistuksen:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -228,12 +228,12 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. 🎨 Visuaalinen palautejärjestelmä</h3>
-          <p><strong>PixiJS-partikkelitehosteet.</strong> Veren roiskeet, iskun kipinät, ki-energian visualisointi HitEffectsLayer.tsx:n kautta. Vahinkonumerot näytetään neon-tyylillä. Äänipaluate AudioManager.ts:n kautta soittaen luun murtumia, lihasiskuja, perinteisten korealaisten soittimien näytteitä.</p>
+          <p><strong>ThreeJs-partikkelitehosteet.</strong> Veren roiskeet, iskun kipinät, ki-energian visualisointi HitEffectsLayer.tsx:n kautta. Vahinkonumerot näytetään neon-tyylillä. Äänipaluate AudioManager.ts:n kautta soittaen luun murtumia, lihasiskuja, perinteisten korealaisten soittimien näytteitä.</p>
           <p><strong>Animaatiovaste:</strong> PlayerVisuals.tsx ja EnemyVisuals.tsx laukaisevat kipureaktioita, tasapainon menetysanimaatioita, tajuttomuuden romahtamisia CombatStats-tilasi­irtymien perusteella.</p>
         </div>
       </div>
       
-      <p><strong>Taistelujärjestelmän monimutkaisuus:</strong> TypeScript-moduulit koordinoivat osumantunnistuksen (HitDetection.ts), vahingonlaskennan (DamageCalculator.ts), elintärkeiden pisteiden datan (KoreanVitalPoints.ts, KoreanAnatomy.ts) ja visuaalisen palautteen (HitEffectsLayer.tsx). React + PixiJS -arkkitehtuuri mahdollistaa selainpohjaisen realistisen taistelun.</p>
+      <p><strong>Taistelujärjestelmän monimutkaisuus:</strong> TypeScript-moduulit koordinoivat osumantunnistuksen (HitDetection.ts), vahingonlaskennan (DamageCalculator.ts), elintärkeiden pisteiden datan (KoreanVitalPoints.ts, KoreanAnatomy.ts) ja visuaalisen palautteen (HitEffectsLayer.tsx). React + ThreeJs -arkkitehtuuri mahdollistaa selainpohjaisen realistisen taistelun.</p>
       
       <p class="hidden-wisdom"><em>Pelifysikka, joka tekee kompromissin realismista suorituskyvyn vuoksi tuottaa epätyydyttävää taistelua. Optimoimme algoritmin tehokkuutta, emme pelaamisen tarkkuutta. Kunnioitus fysiikkaa kohtaan = kunnioitus kamppailalajeja kohtaan.</em></p>
     </section>

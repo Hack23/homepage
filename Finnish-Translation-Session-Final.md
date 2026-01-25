@@ -28,7 +28,7 @@
 - ✅ HTML structure preserved
 - ✅ CSS classes unchanged
 - ✅ Code snippets untranslated
-- ✅ Technical terms maintained (Unity, React, PixiJS, TypeScript, WebGL, VR, ML, AI)
+- ✅ Technical terms maintained (Unity, React, ThreeJs, TypeScript, WebGL, VR, ML, AI)
 - ✅ Brand names preserved (Hack23, Black Trigram, Simon Moon)
 - ✅ Korean terms unchanged (Musa 무사, Amsalja 암살자, Hacker 해커)
 
@@ -52,7 +52,7 @@
 
 ### Black Trigram Architecture
 - Five fighter archetypes (Musa, Amsalja, Hacker, Jeongbo, Jojik)
-- React + PixiJS browser-based architecture
+- React + ThreeJs browser-based architecture
 - Sacred geometry: Law of Fives (Viiden laki)
 - 70 vital points = 7 × 5 × 2 numerology
 

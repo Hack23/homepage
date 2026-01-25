@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Black Trigram 게임 아키텍처: Unity 패턴, 전투 시스템 설계, 게임을 통한 문화 보존. C4 아키텍처 모델.">
 <meta name="twitter:description" content="Black Trigram 게임 아키텍처: Unity 패턴, 전투 시스템 설계, 게임을 통한 문화 보존. C4 아키텍처 모델.">
-<meta name="keywords" content="흑괘 아키텍처, 게임 아키텍처, 전투 시스템 설계, 한국 무술 시뮬레이션, 해부학적 타겟팅 시스템, 급소 kyusho, 물리 엔진, 충돌 감지, 게임 메커니즘, 절차적 애니메이션, 전투 AI, 격투 게임 아키텍처, 2D 전투 시뮬레이션, 무술 게임, 문화 보존 기술">
+<meta name="keywords" content="흑괘 아키텍처, 게임 아키텍처, 전투 시스템 설계, 한국 무술 시뮬레이션, 해부학적 타겟팅 시스템, 급소 kyusho, 물리 엔진, 충돌 감지, 게임 메커니즘, 절차적 애니메이션, 전투 AI, 격투 게임 아키텍처, 3D 전투 시뮬레이션, 무술 게임, 문화 보존 기술">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
 <meta property="og:title" content="Black Trigram 아키텍처: 다섯 전사, 신성 기하학">
@@ -226,9 +226,9 @@
     </section>
 
     <section id="web-architecture">
-      <h2 class="panel-caption">React + PixiJS 아키텍처: 브라우저 기반 전투 시뮬레이션</h2>
+      <h2 class="panel-caption">React + ThreeJs 아키텍처: 브라우저 기반 전투 시뮬레이션</h2>
       
-      <p><strong>웹 기반 전투 시뮬레이션 = 민주화된 접근 = 혁명.</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>에 문서화된 대로, Black Trigram은 React 19 + PixiJS 8 + TypeScript를 사용하여 완전히 브라우저에서 실행됩니다. 백엔드 없음. 설치 없음. 플랫폼 종속 없음. <strong>인위적인 접근 희소성 없음.</strong> 브라우저 열기 → 무술 훈련. 이것은 편의를 위한 타협이 아닙니다—<em>정치적 성명으로서의 의도적인 접근성 아키텍처입니다.</em> 격투 게임은 역사적으로 비싼 콘솔 하드웨어, 지역 잠금 카트리지, 물리적 근접성을 요구하는 로컬 멀티플레이어 뒤에 가려져 있었습니다. <strong>우리는 대신 보편적 접근을 선택했습니다. 게임 산업 착취에 대한 반역으로서의 접근성.</strong> 당신의 브라우저는 당신의 도장입니다. 당신의 인터넷 연결은 당신의 사범입니다. 지리와 소득은 더 이상 한국 무술 교육을 가로막지 않습니다.</p>
+      <p><strong>웹 기반 전투 시뮬레이션 = 민주화된 접근 = 혁명.</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>에 문서화된 대로, Black Trigram은 React 19 + ThreeJs 8 + TypeScript를 사용하여 완전히 브라우저에서 실행됩니다. 백엔드 없음. 설치 없음. 플랫폼 종속 없음. <strong>인위적인 접근 희소성 없음.</strong> 브라우저 열기 → 무술 훈련. 이것은 편의를 위한 타협이 아닙니다—<em>정치적 성명으로서의 의도적인 접근성 아키텍처입니다.</em> 격투 게임은 역사적으로 비싼 콘솔 하드웨어, 지역 잠금 카트리지, 물리적 근접성을 요구하는 로컬 멀티플레이어 뒤에 가려져 있었습니다. <strong>우리는 대신 보편적 접근을 선택했습니다. 게임 산업 착취에 대한 반역으로서의 접근성.</strong> 당신의 브라우저는 당신의 도장입니다. 당신의 인터넷 연결은 당신의 사범입니다. 지리와 소득은 더 이상 한국 무술 교육을 가로막지 않습니다.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -242,8 +242,8 @@
         </div>
         
         <div class="card availability-card">
-          <h3>3. 🎨 PixiJS 렌더러</h3>
-          <p>60fps 2D 그래픽을 위한 WebGL을 사용하는 PixiJS 8. 캐릭터 스프라이트(PlayerVisuals, EnemyVisuals), 도장 배경, 파티클 시스템(HitEffectsLayer), UI 오버레이를 관리합니다. @pixi/react 통합은 PixiJS Application을 React 컴포넌트로 래핑합니다.</p>
+          <h3>3. 🎨 ThreeJs 렌더러</h3>
+          <p>60fps 3D 그래픽을 위한 WebGL을 사용하는 ThreeJs 8. 캐릭터 스프라이트(PlayerVisuals, EnemyVisuals), 도장 배경, 파티클 시스템(HitEffectsLayer), UI 오버레이를 관리합니다. @pixi/react 통합은 ThreeJs Application을 React 컴포넌트로 래핑합니다.</p>
         </div>
         
         <div class="card confidentiality-card">
@@ -259,7 +259,7 @@
       
       <p><strong>Full architecture documentation:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> includes C4 Container diagrams, Component views, Combat Flow sequences. TypeScript provides type safety across all layers. Vite handles build optimization with tree-shaking.</p>
       
-      <p class="hidden-wisdom"><em>Web applications without layer enforcement become unmaintainable. React for UI, PixiJS for rendering, TypeScript for logic—clear separation enables confident refactoring without breaking systems.</em></p>
+      <p class="hidden-wisdom"><em>Web applications without layer enforcement become unmaintainable. React for UI, ThreeJs for rendering, TypeScript for logic—clear separation enables confident refactoring without breaking systems.</em></p>
     </section>
 
     <section id="synchronicities">

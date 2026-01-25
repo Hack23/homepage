@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Black Trigram-spelarkitektur: Unity-mönster, stridssystemdesign, kulturbevarande genom spelande. C4-arkitekturmodeller.">
 <meta name="twitter:description" content="Black Trigram-spelarkitektur: Unity-mönster, stridssystemdesign, kulturbevarande genom spelande. C4-arkitekturmodeller.">
-<meta name="keywords" content="Black Trigram-arkitektur, spelarkitektur, stridssystemdesign, koreansk kampsportssimulering, anatomiskt målsystem, vitala punkter kyusho, fysikmotor, kollisionsdetektering, spelmekanik, proceduranimation, strids-AI, kampspelsarkitektur, 2D-stridssimulering, kampsportsspel, kulturbevarande teknologi">
+<meta name="keywords" content="Black Trigram-arkitektur, spelarkitektur, stridssystemdesign, koreansk kampsportssimulering, anatomiskt målsystem, vitala punkter kyusho, fysikmotor, kollisionsdetektering, spelmekanik, proceduranimation, strids-AI, kampspelsarkitektur, 3D-stridssimulering, kampsportsspel, kulturbevarande teknologi">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
 <meta property="og:title" content="Black Trigram-arkitektur: Fem Krigare, Sakral Geometri">
@@ -223,9 +223,9 @@
     </section>
 
     <section id="web-architecture">
-      <h2 class="panel-caption">React + PixiJS-arkitektur: Webbläsarbaserad Stridssimulering</h2>
+      <h2 class="panel-caption">React + ThreeJs-arkitektur: Webbläsarbaserad Stridssimulering</h2>
       
-      <p><strong>Webbbaserad stridssimulering = demokratiserad åtkomst = revolution.</strong> Dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram körs helt i webbläsaren med React 19 + PixiJS 8 + TypeScript. Noll backend. Noll installation. Noll plattformslåsning. <strong>Noll konstgjord bristfällighet på tillgång.</strong> Öppna webbläsare → träna kampsport. Detta är inte kompromiss för bekvämlighet—det är <em>avsiktlig tillgänglighetsarkitektur som politiskt uttalande.</em> Kampspel historiskt gatekeepade bakom dyra konsolhårdvara, regionslåsta kassetter och lokal flerspelarfunktion som krävde fysisk närhet. <strong>Vi valde universell åtkomst istället. Tillgänglighet som uppror mot spelindustrins utvinning.</strong> Din webbläsare är ditt dojang. Din internetanslutning är din sensei. Geografi och inkomst gatekeepar inte längre koreansk kampsportsutbildning.</p>
+      <p><strong>Webbbaserad stridssimulering = demokratiserad åtkomst = revolution.</strong> Dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram körs helt i webbläsaren med React 19 + ThreeJs 8 + TypeScript. Noll backend. Noll installation. Noll plattformslåsning. <strong>Noll konstgjord bristfällighet på tillgång.</strong> Öppna webbläsare → träna kampsport. Detta är inte kompromiss för bekvämlighet—det är <em>avsiktlig tillgänglighetsarkitektur som politiskt uttalande.</em> Kampspel historiskt gatekeepade bakom dyra konsolhårdvara, regionslåsta kassetter och lokal flerspelarfunktion som krävde fysisk närhet. <strong>Vi valde universell åtkomst istället. Tillgänglighet som uppror mot spelindustrins utvinning.</strong> Din webbläsare är ditt dojang. Din internetanslutning är din sensei. Geografi och inkomst gatekeepar inte längre koreansk kampsportsutbildning.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -239,8 +239,8 @@
         </div>
         
         <div class="card availability-card">
-          <h3>3. 🎨 PixiJS-renderare</h3>
-          <p>PixiJS 8 med WebGL för 60fps 2D-grafik. Hanterar karaktärssprites (PlayerVisuals, EnemyVisuals), dojang-bakgrund, partikelsystem (HitEffectsLayer), UI-överlager. @pixi/react-integration omsluter PixiJS Application i React-komponenter.</p>
+          <h3>3. 🎨 ThreeJs-renderare</h3>
+          <p>ThreeJs 8 med WebGL för 60fps 3D-grafik. Hanterar karaktärssprites (PlayerVisuals, EnemyVisuals), dojang-bakgrund, partikelsystem (HitEffectsLayer), UI-överlager. @pixi/react-integration omsluter ThreeJs Application i React-komponenter.</p>
         </div>
         
         <div class="card confidentiality-card">
@@ -256,7 +256,7 @@
       
       <p><strong>Fullständig arkitekturdokumentation:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> inkluderar C4 Container-diagram, Component-vyer, Combat Flow-sekvenser. TypeScript tillhandahåller typsäkerhet över alla lager. Vite hanterar build-optimering med tree-shaking.</p>
       
-      <p class="hidden-wisdom"><em>Webbapplikationer utan lageråtertvinning blir ohanterliga. React för UI, PixiJS för rendering, TypeScript för logik—tydlig separation möjliggör säker refaktorering utan att bryta system.</em></p>
+      <p class="hidden-wisdom"><em>Webbapplikationer utan lageråtertvinning blir ohanterliga. React för UI, ThreeJs för rendering, TypeScript för logik—tydlig separation möjliggör säker refaktorering utan att bryta system.</em></p>
     </section>
 
     <section id="synchronicities">

@@ -108,7 +108,7 @@ These files previously all shared the same generic "CIA Compliance Manager: Ente
    - Now describes: DevSecOps sacred geometry with five CI/CD workflows
    
 9. **blog-george-dorn-cia-code**
-   - Now describes: CIA codebase analysis (Java/Spring Boot, 49 Maven modules)
+   - Now describes: CIA codebase analysis (Java/Spring Framework, 49 Maven modules)
    
 10. **blog-george-dorn-compliance-code**
     - Now describes: CIA Compliance Manager code analysis (TypeScript/React, 220 files)

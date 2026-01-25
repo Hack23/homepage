@@ -507,7 +507,7 @@ Enables Copilot access to:
 **SHA Pinning**:
 All actions pinned to specific commit SHAs:
 ```yaml
-uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
+uses: step-security/harden-runner@20cf305ff2073D973412fa9b1e3a4f227bda3c76 # v2.14.0
 uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
 ```

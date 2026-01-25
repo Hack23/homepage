@@ -31,14 +31,14 @@
 
 ### 2. blog-trigram-architecture_da.html
 - **Theme**: Black Trigram game architecture by Simon Moon
-- **Content**: Five fighter archetypes, React + PixiJS, sacred geometry
+- **Content**: Five fighter archetypes, React + ThreeJs, sacred geometry
 - **Words**: 1,556
 - **Size**: 33KB
 - **Special**: Numerological patterns, Korean martial arts authenticity
 
 ### 3. blog-trigram-future_da.html
 - **Theme**: Five-year VR/AR roadmap
-- **Content**: Evolution from 2D fighter to immersive training platform
+- **Content**: Evolution from 3D fighter to immersive training platform
 - **Words**: 1,713
 - **Size**: 31KB
 - **Special**: ML AI, motion control, cultural preservation technology
@@ -89,7 +89,7 @@
 ### Technical Accuracy ✅
 - HTML structure, classes, IDs unchanged across all 6 files
 - Code snippets preserved untranslated
-- Technical terms maintained: TypeScript, React, PixiJS, Unity, ISO 27001, ISMS
+- Technical terms maintained: TypeScript, React, ThreeJs, Unity, ISO 27001, ISMS
 - Brand names preserved: Hack23, CIA Compliance Manager, Black Trigram
 - Korean terms unchanged: 무사 (Musa), 암살자 (Amsalja), 해커 (Hacker)
 
@@ -183,7 +183,7 @@
 - ✅ Developer tooling and workflow
 
 ### Black Trigram Game
-- ✅ Game architecture (React + PixiJS)
+- ✅ Game architecture (React + ThreeJs)
 - ✅ Combat system design (70 vital points)
 - ✅ Fighter archetypes (5 unique characters)
 - ✅ AI difficulty progression (5 levels)

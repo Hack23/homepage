@@ -217,7 +217,7 @@ dd cybersäkerhetskonsultation.</p>
     <section id="combat-system">
       <h2 class="panel-caption">Stridssystemarkitektur: Träffdetektering & Skada</h2>
       
-      <p><strong>Webbaserad 2D-strid = sofistikerad träffdetektering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>, implementerar det PixiJS-baserade stridssystemet realistisk målning av vitala punkter:</p>
+      <p><strong>Webbaserad 3D-strid = sofistikerad träffdetektering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>, implementerar det ThreeJs-baserade stridssystemet realistisk målning av vitala punkter:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -255,14 +255,14 @@ tor och karaktärsbegränsningsrutor. Exakt avståndsmätning mellan slagets urs
           <h3>5. 🎨 Visuellt Feedback
 
 system</h3>
-          <p><strong>PixiJS partikeleffekter.</strong> Blodstänk, slaggnistor, ki-energivisualisering via HitEffectsLayer.tsx. Skadesiffror visas med neonstyling. Ljudfeedback genom AudioManager.ts som spelar benknäckningar, muskelslag, traditionella koreanska instrumentsamplingar.</p>
+          <p><strong>ThreeJs partikeleffekter.</strong> Blodstänk, slaggnistor, ki-energivisualisering via HitEffectsLayer.tsx. Skadesiffror visas med neonstyling. Ljudfeedback genom AudioManager.ts som spelar benknäckningar, muskelslag, traditionella koreanska instrumentsamplingar.</p>
           <p><strong>Animationssvar:</strong> PlayerVisuals.tsx och EnemyVisuals.tsx utlöser smärtreaktioner, balansförlustanimat
 
 ioner, medvetslöshetskollapser baserat på CombatStats tillståndsövergångar.</p>
         </div>
       </div>
       
-      <p><strong>Stridssystemkomplexitet:</strong> TypeScript-moduler koordinerar träffdetektering (HitDetection.ts), skadeberäkning (DamageCalculator.ts), vital punktdata (KoreanVitalPoints.ts, KoreanAnatomy.ts) och visuell feedback (HitEffectsLayer.tsx). React + PixiJS-arkitektur möjliggör webbläsarbaserad realistisk strid.</p>
+      <p><strong>Stridssystemkomplexitet:</strong> TypeScript-moduler koordinerar träffdetektering (HitDetection.ts), skadeberäkning (DamageCalculator.ts), vital punktdata (KoreanVitalPoints.ts, KoreanAnatomy.ts) och visuell feedback (HitEffectsLayer.tsx). React + ThreeJs-arkitektur möjliggör webbläsarbaserad realistisk strid.</p>
       
       <p class="hidden-wisdom"><em>Spelfysik som kompromissar realism för prestanda producerar otillfredsställande strid. Vi optimerar algoritmeffektivitet, inte spelnoggra
 

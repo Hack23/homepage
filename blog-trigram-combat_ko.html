@@ -202,7 +202,7 @@
     <section id="combat-system">
       <h2 class="panel-caption">전투 시스템 아키텍처: 히트 감지 및 데미지</h2>
       
-      <p><strong>웹 기반 2D 전투 = 정교한 히트 감지.</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>에 문서화된 대로, PixiJS 기반 전투 시스템은 현실적인 급소 타겟팅을 구현합니다:</p>
+      <p><strong>웹 기반 3D 전투 = 정교한 히트 감지.</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>에 문서화된 대로, ThreeJs 기반 전투 시스템은 현실적인 급소 타겟팅을 구현합니다:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -236,12 +236,12 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. 🎨 시각적 피드백 시스템</h3>
-          <p><strong>PixiJS 파티클 효과.</strong> HitEffectsLayer.tsx를 통한 피 튀김, 충격 불꽃, 기 에너지 시각화. 네온 스타일로 표시되는 데미지 숫자. AudioManager.ts를 통한 오디오 피드백으로 뼈 부러지는 소리, 근육 충격음, 전통 한국 악기 샘플 재생.</p>
+          <p><strong>ThreeJs 파티클 효과.</strong> HitEffectsLayer.tsx를 통한 피 튀김, 충격 불꽃, 기 에너지 시각화. 네온 스타일로 표시되는 데미지 숫자. AudioManager.ts를 통한 오디오 피드백으로 뼈 부러지는 소리, 근육 충격음, 전통 한국 악기 샘플 재생.</p>
           <p><strong>애니메이션 반응:</strong> PlayerVisuals.tsx 및 EnemyVisuals.tsx는 CombatStats 상태 전환에 기반한 고통 반응, 균형 상실 애니메이션, 의식 상실 붕괴를 트리거합니다.</p>
         </div>
       </div>
       
-      <p><strong>전투 시스템 복잡성:</strong> TypeScript 모듈이 히트 감지(HitDetection.ts), 데미지 계산(DamageCalculator.ts), 급소 데이터(KoreanVitalPoints.ts, KoreanAnatomy.ts), 시각적 피드백(HitEffectsLayer.tsx)을 조율합니다. React + PixiJS 아키텍처는 브라우저 기반 현실적 전투를 가능하게 합니다.</p>
+      <p><strong>전투 시스템 복잡성:</strong> TypeScript 모듈이 히트 감지(HitDetection.ts), 데미지 계산(DamageCalculator.ts), 급소 데이터(KoreanVitalPoints.ts, KoreanAnatomy.ts), 시각적 피드백(HitEffectsLayer.tsx)을 조율합니다. React + ThreeJs 아키텍처는 브라우저 기반 현실적 전투를 가능하게 합니다.</p>
       
       <p class="hidden-wisdom"><em>성능을 위해 현실성을 타협하는 게임 물리학은 불만족스러운 전투를 생산합니다. 우리는 게임플레이 정확도가 아니라 알고리즘 효율성을 최적화합니다. 물리학에 대한 존중 = 무술에 대한 존중.</em></p>
     </section>

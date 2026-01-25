@@ -202,7 +202,7 @@
     <section id="combat-system">
       <h2 class="panel-caption">Combat System Architecture: Hit Detection & Damage</h2>
       
-      <p><strong>Web-based 2D combat = sophisticated hit detection.</strong> As documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>, the PixiJS-based combat system implements realistic vital point targeting:</p>
+      <p><strong>Web-based 3D combat = sophisticated hit detection.</strong> As documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/COMBAT_ARCHITECTURE.md">COMBAT_ARCHITECTURE.md</a>, the ThreeJs-based combat system implements realistic vital point targeting:</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -236,12 +236,12 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. 🎨 Visual Feedback System</h3>
-          <p><strong>PixiJS particle effects.</strong> Blood splatter, impact sparks, ki energy visualization via HitEffectsLayer.tsx. Damage numbers displayed with neon styling. Audio feedback through AudioManager.ts playing bone cracks, muscle impacts, traditional Korean instrument samples.</p>
+          <p><strong>ThreeJs particle effects.</strong> Blood splatter, impact sparks, ki energy visualization via HitEffectsLayer.tsx. Damage numbers displayed with neon styling. Audio feedback through AudioManager.ts playing bone cracks, muscle impacts, traditional Korean instrument samples.</p>
           <p><strong>Animation response:</strong> PlayerVisuals.tsx and EnemyVisuals.tsx trigger pain reactions, balance loss animations, unconsciousness collapses based on CombatStats state transitions.</p>
         </div>
       </div>
       
-      <p><strong>Combat system complexity:</strong> TypeScript modules coordinate hit detection (HitDetection.ts), damage calculation (DamageCalculator.ts), vital point data (KoreanVitalPoints.ts, KoreanAnatomy.ts), and visual feedback (HitEffectsLayer.tsx). React + PixiJS architecture enables browser-based realistic combat.</p>
+      <p><strong>Combat system complexity:</strong> TypeScript modules coordinate hit detection (HitDetection.ts), damage calculation (DamageCalculator.ts), vital point data (KoreanVitalPoints.ts, KoreanAnatomy.ts), and visual feedback (HitEffectsLayer.tsx). React + ThreeJs architecture enables browser-based realistic combat.</p>
       
       <p class="hidden-wisdom"><em>Game physics that compromises realism for performance produces unsatisfying combat. We optimize algorithm efficiency, not gameplay accuracy. Respect for physics = respect for martial arts.</em></p>
     </section>

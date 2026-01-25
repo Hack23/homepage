@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Black Trigram Code | Unity Game Development | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Black Trigram codebase analysis: TypeScript/React/PixiJS, 132 source files, browser combat system. Korean martial arts game development.">
-<meta name="twitter:description" content="Black Trigram codebase analysis: TypeScript/React/PixiJS, 132 source files, browser combat system. Korean martial arts game development.">
-<meta name="keywords" content="Black Trigram code, TypeScript game, React PixiJS, combat system, Korean martial arts game, George Dorn analysis">
+<meta name="description" content="Black Trigram codebase analysis: TypeScript/React/ThreeJs, 132 source files, browser combat system. Korean martial arts game development.">
+<meta name="twitter:description" content="Black Trigram codebase analysis: TypeScript/React/ThreeJs, 132 source files, browser combat system. Korean martial arts game development.">
+<meta name="keywords" content="Black Trigram code, TypeScript game, React ThreeJs, combat system, Korean martial arts game, George Dorn analysis">
 <meta name="robots" content="index, follow">
 <meta name="author" content="George Dorn">
 <meta property="og:title" content="George Dorn: Black Trigram Code Analysis - TypeScript Combat Reality">
-<meta property="og:description" content="Developer deep-dive into Black Trigram's actual codebase: 132 TypeScript files, React 19 + PixiJS 8, 70 vital points combat system analyzed.">
+<meta property="og:description" content="Developer deep-dive into Black Trigram's actual codebase: 132 TypeScript files, React 19 + ThreeJs 8, 70 vital points combat system analyzed.">
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -72,7 +72,7 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-george-dorn-trigram-code_ja.html"
       },
-      "keywords": "Black Trigram, TypeScript, React, PixiJS, combat system, developer analysis, Hack23",
+      "keywords": "Black Trigram, TypeScript, React, ThreeJs, combat system, developer analysis, Hack23",
       "articleSection": "Developer Code Analysis",
       "image": {
         "@type": "ImageObject",
@@ -81,7 +81,7 @@
         "height": 630
       },
       "wordCount": 1388,
-      "articleBody": "Developer's Note: Cloned https://github.com/Hack23/blacktrigram, analyzed the TypeScript/React/PixiJS structure, examined package.json dependencies, and explored the actual combat system implementatio...",
+      "articleBody": "Developer's Note: Cloned https://github.com/Hack23/blacktrigram, analyzed the TypeScript/React/ThreeJs structure, examined package.json dependencies, and explored the actual combat system implementatio...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
@@ -179,11 +179,11 @@
     <section id="introduction">
       <h2 class="panel-caption">TypeScript Combat System: What The Repository Actually Contains</h2>
       
-      <p><strong>Developer's Note:</strong> Cloned <a href="https://github.com/Hack23/blacktrigram">https://github.com/Hack23/blacktrigram</a>, analyzed the TypeScript/React/PixiJS structure, examined package.json dependencies, and explored the actual combat system implementation.</p>
+      <p><strong>Developer's Note:</strong> Cloned <a href="https://github.com/Hack23/blacktrigram">https://github.com/Hack23/blacktrigram</a>, analyzed the TypeScript/React/ThreeJs structure, examined package.json dependencies, and explored the actual combat system implementation.</p>
       
       <p><strong>Repository URL:</strong> <code>git clone https://github.com/Hack23/blacktrigram.git</code></p>
       <p><strong>Analysis Date:</strong> November 8, 2025</p>
-      <p><strong>Core Tech:</strong> TypeScript 5.9.3, React 19.2.0, PixiJS 8.14.0, Vite 7.2.2</p>
+      <p><strong>Core Tech:</strong> TypeScript 5.9.3, React 19.2.0, ThreeJs 8.14.0, Vite 7.2.2</p>
       
       <p class="hidden-wisdom"><em>Browser-based fighting game = democratized access. No install, no console, no platform lock-in. Just JavaScript/TypeScript doing what people said couldn't be done.</em></p>
     
@@ -231,10 +231,10 @@
           <ul>
             <li><strong>react: ^19.2.0</strong> - Latest React for UI components</li>
             <li><strong>react-dom: ^19.2.0</strong> - DOM rendering</li>
-            <li><strong>pixi.js: ^8.14.0</strong> - WebGL/Canvas 2D rendering engine</li>
-            <li><strong>@pixi/react: ^8.0.3</strong> - React integration for PixiJS</li>
-            <li><strong>@pixi/sound: ^6.0.1</strong> - Audio system for PixiJS</li>
-            <li><strong>@pixi/ui: ^2.2.7</strong> - UI components for PixiJS</li>
+            <li><strong>pixi.js: ^8.14.0</strong> - WebGL/Canvas 3D rendering engine</li>
+            <li><strong>@pixi/react: ^8.0.3</strong> - React integration for ThreeJs</li>
+            <li><strong>@pixi/sound: ^6.0.1</strong> - Audio system for ThreeJs</li>
+            <li><strong>@pixi/ui: ^2.2.7</strong> - UI components for ThreeJs</li>
             <li><strong>@pixi/layout: ^3.2.0</strong> - Layout system</li>
             <li><strong>howler: ^2.2.4</strong> - Alternative audio library</li>
             <li><strong>react-error-boundary: ^6.0.0</strong> - Error handling</li>
@@ -293,7 +293,7 @@
             <li><strong>Trigram System</strong> - 8 trigram stances from I Ching philosophy</li>
             <li><strong>Vital-Point System</strong> - 70 vital points (Korean martial arts kyusho)</li>
             <li><strong>Audio System</strong> - Sound effects, music, spatial audio</li>
-            <li><strong>Rendering System</strong> - PixiJS sprite management and animations</li>
+            <li><strong>Rendering System</strong> - ThreeJs sprite management and animations</li>
           </ul>
           
           <p><strong>Game Loop Architecture:</strong></p>
@@ -301,7 +301,7 @@
             <li><strong>Input Processing</strong> - Keyboard/gamepad input handling</li>
             <li><strong>State Update</strong> - Game state transitions (120fps logic)</li>
             <li><strong>Physics/Collision</strong> - Hitbox-to-hurtbox detection</li>
-            <li><strong>Rendering</strong> - PixiJS renders at 60fps (separate from logic)</li>
+            <li><strong>Rendering</strong> - ThreeJs renders at 60fps (separate from logic)</li>
             <li><strong>Audio</strong> - Sound triggers based on game events</li>
           </ol>
           
@@ -346,9 +346,9 @@
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>🎨 Rendering Pipeline</h3>
-          <p><strong>PixiJS Integration:</strong></p>
+          <p><strong>ThreeJs Integration:</strong></p>
           <ul>
-            <li><strong>WebGL Backend:</strong> Hardware-accelerated 2D rendering</li>
+            <li><strong>WebGL Backend:</strong> Hardware-accelerated 3D rendering</li>
             <li><strong>Sprite Management:</strong> Character animations, backgrounds, effects</li>
             <li><strong>Particle Systems:</strong> Blood splatter, hit sparks, dust clouds</li>
             <li><strong>UI Overlays:</strong> Health bars, combo counters, round timers</li>
@@ -390,8 +390,8 @@
             <td>Latest React features for optimal performance and DX.</td>
           </tr>
           <tr>
-            <td><strong>PixiJS 8</strong></td>
-            <td>2D rendering engine</td>
+            <td><strong>ThreeJs 8</strong></td>
+            <td>3D rendering engine</td>
             <td>Battle-tested WebGL wrapper. 60fps achievable in browser.</td>
           </tr>
           <tr>
@@ -540,7 +540,7 @@
         <li>✅ <strong>132 TypeScript files</strong> implementing combat mechanics</li>
         <li>✅ <strong>70 vital points</strong> system from traditional Korean martial arts</li>
         <li>✅ <strong>5 fighter archetypes</strong> with distinct styles</li>
-        <li>✅ <strong>PixiJS rendering</strong> targeting 60fps</li>
+        <li>✅ <strong>ThreeJs rendering</strong> targeting 60fps</li>
         <li>✅ <strong>React 19 + TypeScript 5</strong> modern stack</li>
         <li>✅ <strong>AI integrations</strong> (ElevenLabs, OpenAI, AWS Bedrock)</li>
         <li>✅ <strong>Zero installation</strong> browser accessibility</li>
@@ -550,7 +550,7 @@
       <p><strong>Technical Achievements:</strong></p>
       <ul>
         <li>Implementing fighting game physics in TypeScript (non-trivial)</li>
-        <li>60fps browser rendering with PixiJS (impressive optimization)</li>
+        <li>60fps browser rendering with ThreeJs (impressive optimization)</li>
         <li>Cultural authenticity (Korean terminology, martial arts accuracy)</li>
         <li>Modern tooling (Vite, TypeScript 5, React 19)</li>
       </ul>
@@ -581,7 +581,7 @@
           <h3>📚 Related Reading</h3>
           <ul>
             <li><a href="blog.html">Hack23 Security Blog</a> - All blog entries</li>
-            <li><a href="blog-george-dorn-cia-code.html">CIA Code Analysis</a> - Java/Spring Boot analysis</li>
+            <li><a href="blog-george-dorn-cia-code.html">CIA Code Analysis</a> - Java/Spring Framework analysis</li>
             <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Analysis</a> - Client-side architecture</li>
           </ul>
         </div>

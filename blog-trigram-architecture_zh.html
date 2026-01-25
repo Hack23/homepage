@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <meta name="description" content="Black Trigram游戏架构：Unity模式、战斗系统设计、通过游戏进行文化保存。C4架构模型。">
 <meta name="twitter:description" content="Black Trigram游戏架构：Unity模式、战斗系统设计、通过游戏进行文化保存。C4架构模型。">
-<meta name="keywords" content="Black Trigram架构, 游戏架构, 战斗系统设计, 韩国武术模拟, 解剖学目标系统, 要穴急所, 物理引擎, 碰撞检测, 游戏机制, 程序化动画, 战斗AI, 格斗游戏架构, 2D战斗模拟, 武术游戏, 文化保存技术">
+<meta name="keywords" content="Black Trigram架构, 游戏架构, 战斗系统设计, 韩国武术模拟, 解剖学目标系统, 要穴急所, 物理引擎, 碰撞检测, 游戏机制, 程序化动画, 战斗AI, 格斗游戏架构, 3D战斗模拟, 武术游戏, 文化保存技术">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
 <meta property="og:title" content="Black Trigram架构：五位战士、神圣几何">
@@ -227,9 +227,9 @@
     </section>
 
     <section id="web-architecture">
-      <h2 class="panel-caption">React + PixiJS架构：基于浏览器的战斗模拟</h2>
+      <h2 class="panel-caption">React + ThreeJs架构：基于浏览器的战斗模拟</h2>
       
-      <p><strong>Web-based combat simulation = democratized access = revolution.</strong> Documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram runs entirely in-browser using React 19 + PixiJS 8 + TypeScript. Zero backend. Zero installation. Zero platform lock-in. <strong>Zero artificial scarcity of access.</strong> Open browser → train martial arts. This isn't compromise for convenience—it's <em>intentional accessibility architecture as political statement.</em> Fighting games historically gatekept behind expensive console hardware, region-locked cartridges, and local multiplayer requiring physical proximity. <strong>We chose universal access instead. Accessibility as rebellion against gaming industry extraction.</strong> Your browser is your dojang. Your internet connection is your sensei. Geography and income don't gatekeep Korean martial arts education anymore.</p>
+      <p><strong>Web-based combat simulation = democratized access = revolution.</strong> Documented in <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a>, Black Trigram runs entirely in-browser using React 19 + ThreeJs 8 + TypeScript. Zero backend. Zero installation. Zero platform lock-in. <strong>Zero artificial scarcity of access.</strong> Open browser → train martial arts. This isn't compromise for convenience—it's <em>intentional accessibility architecture as political statement.</em> Fighting games historically gatekept behind expensive console hardware, region-locked cartridges, and local multiplayer requiring physical proximity. <strong>We chose universal access instead. Accessibility as rebellion against gaming industry extraction.</strong> Your browser is your dojang. Your internet connection is your sensei. Geography and income don't gatekeep Korean martial arts education anymore.</p>
       
       <div class="cards">
         <div class="card confidentiality-card">
@@ -243,8 +243,8 @@
         </div>
         
         <div class="card availability-card">
-          <h3>3. 🎨 PixiJS渲染器</h3>
-          <p>PixiJS 8 with WebGL for 60fps 2D graphics. Manages character sprites (PlayerVisuals, EnemyVisuals), dojang background, particle systems (HitEffectsLayer), UI overlays. @pixi/react integration wraps PixiJS Application in React components.</p>
+          <h3>3. 🎨 ThreeJs渲染器</h3>
+          <p>ThreeJs 8 with WebGL for 60fps 3D graphics. Manages character sprites (PlayerVisuals, EnemyVisuals), dojang background, particle systems (HitEffectsLayer), UI overlays. @pixi/react integration wraps ThreeJs Application in React components.</p>
         </div>
         
         <div class="card confidentiality-card">
@@ -260,7 +260,7 @@
       
       <p><strong>Full architecture documentation:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> includes C4 Container diagrams, Component views, Combat Flow sequences. TypeScript provides type safety across all layers. Vite handles build optimization with tree-shaking.</p>
       
-      <p class="hidden-wisdom"><em>Web applications without layer enforcement become unmaintainable. React for UI, PixiJS for rendering, TypeScript for logic—clear separation enables confident refactoring without breaking systems.</em></p>
+      <p class="hidden-wisdom"><em>Web applications without layer enforcement become unmaintainable. React for UI, ThreeJs for rendering, TypeScript for logic—clear separation enables confident refactoring without breaking systems.</em></p>
     </section>
 
     <section id="synchronicities">

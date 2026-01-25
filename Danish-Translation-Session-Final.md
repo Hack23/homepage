@@ -28,7 +28,7 @@
 - ✅ HTML structure preserved
 - ✅ CSS classes unchanged
 - ✅ Code snippets untranslated
-- ✅ Technical terms maintained (TypeScript, React, PixiJS, Unity)
+- ✅ Technical terms maintained (TypeScript, React, ThreeJs, Unity)
 - ✅ Brand names preserved (Hack23, CIA Compliance Manager, Black Trigram)
 
 ### Localization
@@ -61,7 +61,7 @@
 
 ### Black Trigram Content
 - Five fighter archetypes with Korean authenticity
-- React + PixiJS browser architecture
+- React + ThreeJs browser architecture
 - VR/AR evolution roadmap
 - Cultural preservation through gaming
 

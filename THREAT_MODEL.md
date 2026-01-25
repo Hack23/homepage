@@ -977,8 +977,8 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 ### 🎯 Related Threat Models
 
 **Hack23 Reference Implementations:**
-- [🏛️ CIA Threat Model](https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md) - Java/Spring Boot enterprise web application STRIDE analysis
-- [🎮 Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md) - TypeScript/React/PixiJS gaming platform security
+- [🏛️ CIA Threat Model](https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md) - Java/Spring Framework enterprise web application STRIDE analysis
+- [🎮 Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md) - TypeScript/React/ThreeJs gaming platform security
 - [📊 CIA Compliance Manager Threat Model](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md) - React SPA client-side security
 
 ### 📋 Repository Documentation
