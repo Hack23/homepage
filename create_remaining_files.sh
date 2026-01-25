@@ -42,7 +42,7 @@ cat > discordian-stakeholders_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> Systematisches Stakeholder-Management für ISMS-Erfolg.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -89,7 +89,7 @@ cat > discordian-supplier-reality_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> Supply Chain Risk Management und Lieferantenbewertung.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -136,7 +136,7 @@ cat > discordian-third-party_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> Third-Party-Risikomanagement und Vendor Assessment.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -183,7 +183,7 @@ cat > discordian-threat-modeling_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> Systematische Bedrohungsmodellierung mit STRIDE und Attack Trees.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -230,7 +230,7 @@ cat > discordian-email-security_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> SPF, DKIM, DMARC konfiguriert für E-Mail-Authentifizierung und Phishing-Schutz.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -277,7 +277,7 @@ cat > discordian-cra-conformity_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> EU Cyber Resilience Act Compliance für Produktsicherheit.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF
@@ -324,7 +324,7 @@ cat > discordian-cra_de.html << 'EOF'
 <p><strong>Denken Sie selbst!</strong> EU Cyber Resilience Act - neue Cybersicherheitsanforderungen für digitale Produkte.</p>
 </section>
 </article></main>
-<footer><p>&copy; 2008-2025 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
+<footer><p>&copy; 2008-2026 Hack23 AB | <a href="why-hack23_de.html">Warum Hack23</a></p></footer>
 </body>
 </html>
 EOF

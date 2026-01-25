@@ -607,7 +607,7 @@ CEO/Founder of Hack23 AB (founded 2025), James is an experienced security profes
 - **Country:** Sweden
 - **Founded:** 2025
 - **Industry:** Cybersecurity Consulting & Gaming Innovation
-- **Copyright:** James Pether Sörling 2008-2025
+- **Copyright:** James Pether Sörling 2008-2026
 
 **Career Highlights:**
 - Founded Hack23 AB in 2025 as Swedish Innovation Hub for cybersecurity and gaming

@@ -75,7 +75,7 @@ The website now uses a comprehensive, SEO-optimized footer with improved navigat
   
   <!-- Footer Bottom Bar -->
   <div class="footer-bottom">
-    <p>&copy; 2008-2025 Hack23 AB. All rights reserved. | Licensed under <a href="LICENSE">Apache 2.0</a></p>
+    <p>&copy; 2008-2026 Hack23 AB. All rights reserved. </p>
     <p>
       <a href="index.html" lang="en">English</a> | 
       <a href="index_sv.html" lang="sv">Svenska</a> | 
@@ -194,7 +194,7 @@ Product pages and blog posts currently use a simpler footer format:
 
 ```html
 <footer>
-  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+  <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
     <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
     <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
     <a href="https://github.com/Hack23/ISMS-PUBLIC">ISMS</a> |
@@ -215,7 +215,7 @@ Product pages and blog posts currently use a simpler footer format:
 **Footer Structure:**
 ```html
 <footer>
-  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+  <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
     [Standard links]
   </p>
   <p>
@@ -233,7 +233,7 @@ Product pages and blog posts currently use a simpler footer format:
 **Footer Structure:**
 ```html
 <footer>
-  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+  <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
     [Standard links]
   </p>
   <p>
@@ -251,7 +251,7 @@ Product pages and blog posts currently use a simpler footer format:
 **Footer Structure:**
 ```html
 <footer>
-  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+  <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
     [Standard links]
   </p>
   <p>
@@ -268,7 +268,7 @@ Product pages and blog posts currently use a simpler footer format:
 **Footer Structure:**
 ```html
 <footer>
-  <p>&copy; 2008-2025 | Hack23 AB (Org.nr 5595347807) |
+  <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
     [Standard links including Swedish version]
   </p>
   <p class="discordian-authors" style="margin-top: 0.5rem; font-style: italic; font-size: 0.9rem;">
@@ -320,7 +320,7 @@ When updating footers:
 
 All footers should include these core links:
 
-1. **Copyright:** `© 2008-2025 Hack23 AB`
+1. **Copyright:** `© 2008-2026 Hack23 AB`
 2. **Company:** Organization number 5595347807
 3. **Personal LinkedIn:** James Pether Sörling
 4. **Company LinkedIn:** Hack23 company page
