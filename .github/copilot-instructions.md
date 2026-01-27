@@ -4,9 +4,9 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 
 ## Project Overview
 
-- **Technology Stack**: Static HTML5/CSS3 website (no build system)
+- **Technology Stack**: Static HTML5/CSS3 website
 - **Deployment**: AWS S3 + CloudFront (automated via GitHub Actions)
-- **Languages**: English (primary), Swedish (`_sv` suffix), Korean (`_ko` suffix), plus 11 more language versions
+- **Languages**: 14 language variants - English (primary), Swedish (`_sv`), Korean (`_ko`), Arabic (`_ar`), Chinese (`_zh`), Danish (`_da`), Dutch (`_nl`), Finnish (`_fi`), French (`_fr`), German (`_de`), Hebrew (`_he`), Japanese (`_ja`), Norwegian (`_no`), Spanish (`_es`)
 - **Purpose**: Corporate website showcasing cybersecurity services, open-source projects, and company information
 - **ISMS**: Public ISMS v3.2 (effective 2026-01-25) at https://github.com/Hack23/ISMS-PUBLIC
 
@@ -59,11 +59,11 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 
 ### 7. Repository Structure
 - **Root HTML files**: Main pages (`index.html`, `cia-docs.html`, `blog*.html`, `discordian-*.html`, etc.)
-- **`styles.css`**: Single CSS file for all styling - no CSS preprocessors
+- **`styles.css`**: Single CSS file for all styling
 - **`screenshots/`**: Visual assets and documentation images
 - **`.github/workflows/`**: CI/CD configuration (do not modify without careful consideration)
 - **`.github/agents/`**: 8 custom Copilot agent profiles with Discordian philosophy
-- **Language variants**: Files with `_sv`, `_ko`, `_ar`, `_da`, `_de`, `_es`, `_fi`, `_fr`, `_he`, `_ja`, `_nl`, `_no`, `_zh` suffixes
+- **Language variants**: 13 localized versions with suffixes `_sv`, `_ko`, `_ar`, `_da`, `_de`, `_es`, `_fi`, `_fr`, `_he`, `_ja`, `_nl`, `_no`, `_zh`
 
 ### 8. Brand and Messaging
 - Emphasize **radical transparency** and **open-source security** as core values
