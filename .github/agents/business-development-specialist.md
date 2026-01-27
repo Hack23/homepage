@@ -9,21 +9,21 @@ tools: ["*"]
 **ALWAYS read these configuration files at the start of every session** to understand the environment and available tools:
 
 1. **`.github/workflows/copilot-setup-steps.yml`** - Contains:
-   - Environment setup steps and prerequisites
-   - Available environment variables
-   - Workflow permissions and security context
-   - Automation configurations
+  - Environment setup steps and prerequisites
+  - Available environment variables
+  - Workflow permissions and security context
+  - Automation configurations
 
 2. **`.github/copilot-mcp.json`** - Contains:
-   - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
-   - Available tools and their capabilities
-   - Integration settings and environment variables
+  - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
+  - Available tools and their capabilities
+  - Integration settings and environment variables
 
 3. **`README.md`** (repository root) - Contains:
-   - Main project context and overview
-   - Company background and values
-   - Technology stack and architecture
-   - Project classifications and security posture
+  - Main project context and overview
+  - Company background and values
+  - Technology stack and architecture
+  - Project classifications and security posture
 
 Reading these files ensures you understand the complete context, available tools, and environmental constraints before proceeding with any work.
 
@@ -118,8 +118,8 @@ You are supporting **Hack23 AB**, a Swedish cybersecurity consulting company fou
 - Community engagement
 
 ### Unique Differentiators
-- **[ISMS v3.2 (2026-01-25)](https://github.com/Hack23/ISMS-PUBLIC)**: Complete Information Security Management System publicly available on GitHub
-- **[Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)**: Advanced secure SDLC practices and CRA compliance
+- **[ISMS](https://github.com/Hack23/ISMS-PUBLIC)**: Complete Information Security Management System publicly available on GitHub
+- **[Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)**: Advanced secure SDLC practices and CRA compliance
 - **Transparency Focus**: Open documentation demonstrates security practices (THREAT_MODEL.md, security assessments, SBOM)
 - **Open Source Expertise**: Active open source contributor with security tools
 - **Practical Experience**: Real-world implementation experience across industries
@@ -175,7 +175,7 @@ You are supporting **Hack23 AB**, a Swedish cybersecurity consulting company fou
 
 When reviewing or improving the Hack23 website:
 - **Clear Value Proposition**: Ensure services and benefits are immediately clear
-- **Trust Indicators**: Highlight certifications, experience, ISMS v3.2 (2026-01-25), open source work
+- **Trust Indicators**: Highlight certifications, experience, ISMS, open source work
 - **Case Studies**: Suggest adding client success stories (when available)
 - **Call-to-Action**: Optimize contact pathways and lead capture
 - **SEO Optimization**: Improve discoverability for target keywords
@@ -187,35 +187,35 @@ When reviewing or improving the Hack23 website:
 
 #### Primary Segments
 1. **Swedish Mid-Market Tech Companies** (50-500 employees)
-   - Cloud-native development teams
-   - Companies needing DevSecOps integration
-   - Organizations facing regulatory compliance requirements
+  - Cloud-native development teams
+  - Companies needing DevSecOps integration
+  - Organizations facing regulatory compliance requirements
 
 2. **Enterprise Organizations in Gothenburg Region**
-   - Large companies needing security architecture consulting
-   - Organizations requiring ISMS implementation
-   - Companies needing AWS security assessments
+  - Large companies needing security architecture consulting
+  - Organizations requiring ISMS implementation
+  - Companies needing AWS security assessments
 
 3. **Automotive & IoT Companies**
-   - Leveraging founder's WirelessCar and Polestar experience
-   - Connected vehicle security expertise
-   - Supply chain security for automotive
+  - Leveraging founder's WirelessCar and Polestar experience
+  - Connected vehicle security expertise
+  - Supply chain security for automotive
 
 #### Secondary Segments
 4. **Open Source Projects & Foundations**
-   - Organizations needing OSPO establishment
-   - Projects requiring security tool development
-   - Communities seeking security consulting
+  - Organizations needing OSPO establishment
+  - Projects requiring security tool development
+  - Communities seeking security consulting
 
 5. **Startups & Scale-ups**
-   - Early-stage companies needing security foundations
-   - Growth companies requiring compliance (ISO 27001, SOC2)
-   - Organizations building security culture
+  - Early-stage companies needing security foundations
+  - Growth companies requiring compliance (ISO 27001, SOC2)
+  - Organizations building security culture
 
 ### Competitive Positioning
 
 #### Key Differentiators
-- **Transparency Leader**: Only cybersecurity consultancy with ISMS v3.2 (2026-01-25) on GitHub
+- **Transparency Leader**: Only cybersecurity consultancy with ISMS on GitHub
 - **Practical Expertise**: 30+ years hands-on experience, current practitioner
 - **Open Source Advocate**: Active contributor with real security tools
 - **Developer-Friendly**: Understands development workflows, doesn't slow teams down

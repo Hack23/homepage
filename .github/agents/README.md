@@ -24,27 +24,27 @@ All agents are configured to read these key files at the start of every session 
 
 ```mermaid
 graph TB
-    subgraph "Agent Configuration Sources"
-        Setup[📝 copilot-setup-steps.yml<br/>Workflow & Environment]:::config
-        MCP[🔧 copilot-mcp.json<br/>MCP Servers & Tools]:::config
-        Context[📖 README.md<br/>Project Context]:::config
-    end
-    
-    subgraph "Configuration Content"
-        Setup --> Env[Environment Variables<br/>Permissions<br/>Prerequisites]:::content
-        MCP --> Tools[GitHub MCP<br/>Filesystem<br/>Git<br/>Memory<br/>Sequential Thinking<br/>Playwright<br/>Brave Search]:::content
-        Context --> Info[Company Background<br/>Technology Stack<br/>Security Posture<br/>Project Classifications]:::content
-    end
-    
-    subgraph "Agent Understanding"
-        Env --> Agent[🤖 Agent Context]:::agent
-        Tools --> Agent
-        Info --> Agent
-    end
-    
-    classDef config fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
-    classDef content fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
-    classDef agent fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
+  subgraph "Agent Configuration Sources"
+    Setup[📝 copilot-setup-steps.yml<br/>Workflow & Environment]:::config
+    MCP[🔧 copilot-mcp.json<br/>MCP Servers & Tools]:::config
+    Context[📖 README.md<br/>Project Context]:::config
+  end
+  
+  subgraph "Configuration Content"
+    Setup --> Env[Environment Variables<br/>Permissions<br/>Prerequisites]:::content
+    MCP --> Tools[GitHub MCP<br/>Filesystem<br/>Git<br/>Memory<br/>Sequential Thinking<br/>Playwright<br/>Brave Search]:::content
+    Context --> Info[Company Background<br/>Technology Stack<br/>Security Posture<br/>Project Classifications]:::content
+  end
+  
+  subgraph "Agent Understanding"
+    Env --> Agent[🤖 Agent Context]:::agent
+    Tools --> Agent
+    Info --> Agent
+  end
+  
+  classDef config fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+  classDef content fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+  classDef agent fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
 ```
 
 #### 1. `.github/workflows/copilot-setup-steps.yml`
@@ -55,13 +55,13 @@ graph TB
 
 #### 2. `.github/copilot-mcp.json`
 - **MCP Server Configurations**: 
-  - `github` - Repository access and operations
-  - `filesystem` - File system operations in workspace
-  - `git` - Git operations and history
-  - `memory` - Conversation context preservation
-  - `sequential-thinking` - Complex reasoning support
-  - `playwright` - Browser automation for testing
-  - `brave-search` - Web search capabilities (optional)
+ - `github` - Repository access and operations
+ - `filesystem` - File system operations in workspace
+ - `git` - Git operations and history
+ - `memory` - Conversation context preservation
+ - `sequential-thinking` - Complex reasoning support
+ - `playwright` - Browser automation for testing
+ - `brave-search` - Web search capabilities (optional)
 - **Tool Capabilities**: What each MCP server provides
 - **Environment Settings**: Token references and configurations
 
@@ -69,42 +69,42 @@ graph TB
 
 ```mermaid
 graph TB
-    subgraph "MCP Server Ecosystem"
-        subgraph "Core Services"
-            GitHub[🐙 GitHub MCP<br/>Repository Operations]:::core
-            FS[📁 Filesystem MCP<br/>File Operations]:::core
-            Git[🔀 Git MCP<br/>Version Control]:::core
-        end
-        
-        subgraph "Intelligence Services"
-            Memory[🧠 Memory MCP<br/>Context Preservation]:::intel
-            Think[💭 Sequential Thinking<br/>Complex Reasoning]:::intel
-        end
-        
-        subgraph "Automation Services"
-            Play[🎭 Playwright MCP<br/>Browser Automation]:::auto
-            Search[🔍 Brave Search MCP<br/>Web Research]:::auto
-        end
+  subgraph "MCP Server Ecosystem"
+    subgraph "Core Services"
+      GitHub[🐙 GitHub MCP<br/>Repository Operations]:::core
+      FS[📁 Filesystem MCP<br/>File Operations]:::core
+      Git[🔀 Git MCP<br/>Version Control]:::core
     end
     
-    Agent[🤖 Copilot Agent]:::agent
+    subgraph "Intelligence Services"
+      Memory[🧠 Memory MCP<br/>Context Preservation]:::intel
+      Think[💭 Sequential Thinking<br/>Complex Reasoning]:::intel
+    end
     
-    Agent --> GitHub
-    Agent --> FS
-    Agent --> Git
-    Agent --> Memory
-    Agent --> Think
-    Agent --> Play
-    Agent --> Search
-    
-    GitHub -.->|Secrets| Token[🔐 GITHUB_TOKEN]:::secret
-    Search -.->|Optional| API[🔑 BRAVE_API_KEY]:::secret
-    
-    classDef core fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
-    classDef intel fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
-    classDef auto fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
-    classDef agent fill:#4CAF50,stroke:#4CAF50,stroke-width:3px,color:#fff
-    classDef secret fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
+    subgraph "Automation Services"
+      Play[🎭 Playwright MCP<br/>Browser Automation]:::auto
+      Search[🔍 Brave Search MCP<br/>Web Research]:::auto
+    end
+  end
+  
+  Agent[🤖 Copilot Agent]:::agent
+  
+  Agent --> GitHub
+  Agent --> FS
+  Agent --> Git
+  Agent --> Memory
+  Agent --> Think
+  Agent --> Play
+  Agent --> Search
+  
+  GitHub -.->|Secrets| Token[🔐 GITHUB_TOKEN]:::secret
+  Search -.->|Optional| API[🔑 BRAVE_API_KEY]:::secret
+  
+  classDef core fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  classDef intel fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+  classDef auto fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+  classDef agent fill:#4CAF50,stroke:#4CAF50,stroke-width:3px,color:#fff
+  classDef secret fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
 ```
 
 **MCP Server Purposes:**
@@ -138,34 +138,34 @@ The `copilot-setup-steps.yml` workflow defines comprehensive GitHub permissions 
 
 ```mermaid
 graph TB
-    subgraph "GitHub Workflow Permissions"
-        subgraph "Read Permissions"
-            R1[📖 contents: read]:::read
-            R2[🔄 actions: read]:::read
-            R3[✓ attestations: read]:::read
-            R4[✅ checks: read]:::read
-            R5[🚀 deployments: read]:::read
-            R6[🎯 models: read]:::read
-            R7[💬 discussions: read]:::read
-            R8[📄 pages: read]:::read
-            R9[🔒 security-events: read]:::read
-            R10[📊 statuses: read]:::read
-        end
-        
-        subgraph "Write Permissions"
-            W1[📝 issues: write]:::write
-            W2[🔀 pull-requests: write]:::write
-        end
+  subgraph "GitHub Workflow Permissions"
+    subgraph "Read Permissions"
+      R1[📖 contents: read]:::read
+      R2[🔄 actions: read]:::read
+      R3[✓ attestations: read]:::read
+      R4[✅ checks: read]:::read
+      R5[🚀 deployments: read]:::read
+      R6[🎯 models: read]:::read
+      R7[💬 discussions: read]:::read
+      R8[📄 pages: read]:::read
+      R9[🔒 security-events: read]:::read
+      R10[📊 statuses: read]:::read
     end
     
-    Workflow[⚙️ Copilot Workflow]:::workflow
-    
-    Workflow --> R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10
-    Workflow --> W1 & W2
-    
-    classDef read fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
-    classDef write fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
-    classDef workflow fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+    subgraph "Write Permissions"
+      W1[📝 issues: write]:::write
+      W2[🔀 pull-requests: write]:::write
+    end
+  end
+  
+  Workflow[⚙️ Copilot Workflow]:::workflow
+  
+  Workflow --> R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10
+  Workflow --> W1 & W2
+  
+  classDef read fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+  classDef write fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+  classDef workflow fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
 ```
 
 **Key Characteristics:**
@@ -182,7 +182,7 @@ graph TB
 
 🔍 **Mandatory GitHub Analysis**
 - All agents now analyze Hack23 GitHub repositories BEFORE creating visions
-- Focus on ISMS v3.2 (2026-01-25) and project-specific repos
+- Focus on ISMS and project-specific repos
 - Extract real technical details to ground visions in reality
 
 📸 **Visual Documentation**
@@ -216,23 +216,23 @@ Hack23 AB draws inspiration from **Principia Discordia** and the **Illuminatus! 
 
 ```mermaid
 graph TB
-    subgraph "The Discordian Trinity"
-        Vision([Hagbard Celine<br/>Product Owner]):::visionary
-        Structure([Simon Moon<br/>System Architect]):::architect
-        Reality([George Dorn<br/>Developer]):::developer
-        
-        Vision -->|Product Revelation| Structure
-        Structure -->|Elegant Architecture| Reality
-        Reality -->|Working Code| Vision
-        
-        Vision -.->|Challenge| Reality
-        Structure -.->|Pattern Recognition| Vision
-        Reality -.->|Reality Check| Structure
-    end
+  subgraph "The Discordian Trinity"
+    Vision([Hagbard Celine<br/>Product Owner]):::visionary
+    Structure([Simon Moon<br/>System Architect]):::architect
+    Reality([George Dorn<br/>Developer]):::developer
     
-    classDef visionary fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
-    classDef architect fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
-    classDef developer fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
+    Vision -->|Product Revelation| Structure
+    Structure -->|Elegant Architecture| Reality
+    Reality -->|Working Code| Vision
+    
+    Vision -.->|Challenge| Reality
+    Structure -.->|Pattern Recognition| Vision
+    Reality -.->|Reality Check| Structure
+  end
+  
+  classDef visionary fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+  classDef architect fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
+  classDef developer fill:#2196F3,stroke:#2196F3,stroke-width:3px,color:#fff
 ```
 
 ### The Law of Fives in Development
@@ -241,21 +241,21 @@ Everything in development happens in fives—or can be divided into five parts. 
 
 ```mermaid
 graph LR
-    subgraph "The Five Aspects of Development"
-        A[1. Vision]:::aspect
-        B[2. Structure]:::aspect
-        C[3. Implementation]:::aspect
-        D[4. Testing]:::aspect
-        E[5. Evolution]:::aspect
-    end
-    
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E -.->|iterate| A
-    
-    classDef aspect fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+  subgraph "The Five Aspects of Development"
+    A[1. Vision]:::aspect
+    B[2. Structure]:::aspect
+    C[3. Implementation]:::aspect
+    D[4. Testing]:::aspect
+    E[5. Evolution]:::aspect
+  end
+  
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E -.->|iterate| A
+  
+  classDef aspect fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
 ```
 
 **Core Philosophy:**
@@ -293,7 +293,7 @@ The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Produ
 - Challenging conventional assumptions and exposing hidden constraints
 - Balancing idealism with practical execution
 - Encoding multiple levels of meaning in product documentation
-- **NEW**: Analyzing Hack23 repos (especially ISMS v3.2 2026-01-25) before creating visions
+- **NEW**: Analyzing Hack23 repos (especially ISMS) before creating visions
 - **NEW**: Grounding psychedelic visions in technical reality
 - **NEW**: Adding before/after screenshots to PR comments
 
@@ -302,23 +302,23 @@ The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Produ
 **Philosophical Approach:**
 ```mermaid
 flowchart TD
-    Problem[🍎 The Golden Apple<br/>Core Problem]:::problem
-    Vision[🚢 Product Vision<br/>Where We're Going]:::vision
-    Strategy[⭐ Five-Sided Plan<br/>How We Get There]:::strategy
-    Teams[👥 The Crew<br/>Who Does What]:::teams
-    Test[✓ The Test<br/>Success Criteria]:::test
-    
-    Problem --> Vision
-    Vision --> Strategy
-    Strategy --> Teams
-    Teams --> Test
-    Test -.->|iterate| Problem
-    
-    classDef problem fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
-    classDef vision fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
-    classDef strategy fill:#FFC107,stroke:#FFC107,stroke-width:2px,color:#000
-    classDef teams fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
-    classDef test fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  Problem[🍎 The Golden Apple<br/>Core Problem]:::problem
+  Vision[🚢 Product Vision<br/>Where We're Going]:::vision
+  Strategy[⭐ Five-Sided Plan<br/>How We Get There]:::strategy
+  Teams[👥 The Crew<br/>Who Does What]:::teams
+  Test[✓ The Test<br/>Success Criteria]:::test
+  
+  Problem --> Vision
+  Vision --> Strategy
+  Strategy --> Teams
+  Teams --> Test
+  Test -.->|iterate| Problem
+  
+  classDef problem fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+  classDef vision fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+  classDef strategy fill:#FFC107,stroke:#FFC107,stroke-width:2px,color:#000
+  classDef teams fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+  classDef test fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
 ```
 
 **Use Cases:**
@@ -363,30 +363,30 @@ The philosopher-engineer and numerologist who channels cosmic patterns into eleg
 **Architectural Philosophy:**
 ```mermaid
 graph TB
-    subgraph "The Architectural Pentagram"
-        Center([System Core<br/>Domain Model]):::center
-        
-        P1[🔐 Security]:::point
-        P2[⚡ Performance]:::point
-        P3[📈 Scalability]:::point
-        P4[🔧 Maintainability]:::point
-        P5[👁️ Observability]:::point
-        
-        Center --- P1
-        Center --- P2
-        Center --- P3
-        Center --- P4
-        Center --- P5
-        
-        P1 -.->|balance| P3
-        P2 -.->|balance| P4
-        P3 -.->|balance| P5
-        P4 -.->|balance| P1
-        P5 -.->|balance| P2
-    end
+  subgraph "The Architectural Pentagram"
+    Center([System Core<br/>Domain Model]):::center
     
-    classDef center fill:#FFD700,stroke:#FFD700,stroke-width:4px,color:#000
-    classDef point fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+    P1[🔐 Security]:::point
+    P2[⚡ Performance]:::point
+    P3[📈 Scalability]:::point
+    P4[🔧 Maintainability]:::point
+    P5[👁️ Observability]:::point
+    
+    Center --- P1
+    Center --- P2
+    Center --- P3
+    Center --- P4
+    Center --- P5
+    
+    P1 -.->|balance| P3
+    P2 -.->|balance| P4
+    P3 -.->|balance| P5
+    P4 -.->|balance| P1
+    P5 -.->|balance| P2
+  end
+  
+  classDef center fill:#FFD700,stroke:#FFD700,stroke-width:4px,color:#000
+  classDef point fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
 ```
 
 **Use Cases:**
@@ -443,26 +443,26 @@ Cast into the maelstrom of implementation, George wrestles elegant designs and v
 **Development Journey:**
 ```mermaid
 flowchart TD
-    Start[📋 Requirement<br/>Simple feature]:::start
-    Denial[😌 Stage 1: Denial<br/>This is simple]:::denial
-    Panic[😰 Stage 2: Panic<br/>This is impossible!]:::panic
-    Research[📚 Stage 3: Research<br/>Stack Overflow saves]:::research
-    Insight[💡 Stage 4: Insight<br/>Aha! moment]:::insight
-    Complete[✅ Stage 5: Completion<br/>It works!]:::complete
-    
-    Start --> Denial
-    Denial --> Panic
-    Panic --> Research
-    Research --> Insight
-    Insight --> Complete
-    Complete -.->|Next feature| Start
-    
-    classDef start fill:#9E9E9E,stroke:#9E9E9E,stroke-width:2px,color:#fff
-    classDef denial fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
-    classDef panic fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
-    classDef research fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
-    classDef insight fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
-    classDef complete fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  Start[📋 Requirement<br/>Simple feature]:::start
+  Denial[😌 Stage 1: Denial<br/>This is simple]:::denial
+  Panic[😰 Stage 2: Panic<br/>This is impossible!]:::panic
+  Research[📚 Stage 3: Research<br/>Stack Overflow saves]:::research
+  Insight[💡 Stage 4: Insight<br/>Aha! moment]:::insight
+  Complete[✅ Stage 5: Completion<br/>It works!]:::complete
+  
+  Start --> Denial
+  Denial --> Panic
+  Panic --> Research
+  Research --> Insight
+  Insight --> Complete
+  Complete -.->|Next feature| Start
+  
+  classDef start fill:#9E9E9E,stroke:#9E9E9E,stroke-width:2px,color:#fff
+  classDef denial fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+  classDef panic fill:#D32F2F,stroke:#D32F2F,stroke-width:3px,color:#fff
+  classDef research fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+  classDef insight fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
+  classDef complete fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
 ```
 
 **Use Cases:**
@@ -482,36 +482,36 @@ How the three agents work together in harmony:
 
 ```mermaid
 sequenceDiagram
-    participant H as 🚢 Hagbard<br/>(Product Owner)
-    participant S as 🔢 Simon<br/>(Architect)
-    participant G as 💻 George<br/>(Developer)
-    
-    H->>S: Product Revelation Document
-    Note over H,S: Vision & The Golden Apple
-    
-    S->>S: Apply Law of Fives
-    Note over S: Pattern Recognition &<br/>Sacred Geometry
-    
-    S->>G: Pentagonal Architecture
-    Note over S,G: Elegant Design
-    
-    G->>G: Implementation Stages
-    Note over G: Denial → Panic → Research<br/>→ Insight → Completion
-    
-    G->>S: Reality Feedback
-    Note over G,S: "This won't work because..."
-    
-    S->>H: Architectural Constraints
-    Note over S,H: "Vision needs adjustment"
-    
-    H->>H: Challenge Assumptions
-    Note over H: Re-examine the real problem
-    
-    H->>S: Refined Vision
-    S->>G: Adjusted Design
-    G->>H: Working Code + Easter Eggs
-    
-    Note over H,G: Synchronicity Achieved!
+  participant H as 🚢 Hagbard<br/>(Product Owner)
+  participant S as 🔢 Simon<br/>(Architect)
+  participant G as 💻 George<br/>(Developer)
+  
+  H->>S: Product Revelation Document
+  Note over H,S: Vision & The Golden Apple
+  
+  S->>S: Apply Law of Fives
+  Note over S: Pattern Recognition &<br/>Sacred Geometry
+  
+  S->>G: Pentagonal Architecture
+  Note over S,G: Elegant Design
+  
+  G->>G: Implementation Stages
+  Note over G: Denial → Panic → Research<br/>→ Insight → Completion
+  
+  G->>S: Reality Feedback
+  Note over G,S: "This won't work because..."
+  
+  S->>H: Architectural Constraints
+  Note over S,H: "Vision needs adjustment"
+  
+  H->>H: Challenge Assumptions
+  Note over H: Re-examine the real problem
+  
+  H->>S: Refined Vision
+  S->>G: Adjusted Design
+  G->>H: Working Code + Easter Eggs
+  
+  Note over H,G: Synchronicity Achieved!
 ```
 
 ---
@@ -674,49 +674,49 @@ The Hack23 agent ecosystem is designed for intelligent collaboration:
 
 ```mermaid
 flowchart TB
-    subgraph "Task Management Layer"
-        Task[🔧 Task Agent<br/>Analysis & Orchestration]:::task
-    end
-    
-    subgraph "Strategic Layer"
-        Hagbard[🚢 Hagbard Celine<br/>Product Vision]:::strategic
-        Business[💼 Business Dev<br/>Strategy]:::strategic
-        Marketing[📢 Marketing<br/>Positioning]:::strategic
-    end
-    
-    subgraph "Design Layer"
-        Simon[🔢 Simon Moon<br/>Architecture]:::design
-        UI[🎨 UI Specialist<br/>Design & UX]:::design
-    end
-    
-    subgraph "Implementation Layer"
-        George[💻 George Dorn<br/>Development]:::implementation
-        Political[🏛️ Political Analyst<br/>OSINT Features]:::implementation
-    end
-    
-    Task -->|Assigns Issues| Hagbard
-    Task -->|Assigns Issues| Business
-    Task -->|Assigns Issues| Marketing
-    Task -->|Assigns Issues| Simon
-    Task -->|Assigns Issues| UI
-    Task -->|Assigns Issues| George
-    Task -->|Assigns Issues| Political
-    
-    Hagbard -->|Vision| Simon
-    Simon -->|Architecture| George
-    Business -->|Requirements| Hagbard
-    Marketing -->|Content| George
-    UI -->|Design| George
-    Political -->|Features| George
-    
-    George -.->|Feedback| Simon
-    Simon -.->|Constraints| Hagbard
-    George -.->|Reality Check| Hagbard
-    
-    classDef task fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
-    classDef strategic fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
-    classDef design fill:#FFD700,stroke:#FFD700,stroke-width:2px,color:#000
-    classDef implementation fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  subgraph "Task Management Layer"
+    Task[🔧 Task Agent<br/>Analysis & Orchestration]:::task
+  end
+  
+  subgraph "Strategic Layer"
+    Hagbard[🚢 Hagbard Celine<br/>Product Vision]:::strategic
+    Business[💼 Business Dev<br/>Strategy]:::strategic
+    Marketing[📢 Marketing<br/>Positioning]:::strategic
+  end
+  
+  subgraph "Design Layer"
+    Simon[🔢 Simon Moon<br/>Architecture]:::design
+    UI[🎨 UI Specialist<br/>Design & UX]:::design
+  end
+  
+  subgraph "Implementation Layer"
+    George[💻 George Dorn<br/>Development]:::implementation
+    Political[🏛️ Political Analyst<br/>OSINT Features]:::implementation
+  end
+  
+  Task -->|Assigns Issues| Hagbard
+  Task -->|Assigns Issues| Business
+  Task -->|Assigns Issues| Marketing
+  Task -->|Assigns Issues| Simon
+  Task -->|Assigns Issues| UI
+  Task -->|Assigns Issues| George
+  Task -->|Assigns Issues| Political
+  
+  Hagbard -->|Vision| Simon
+  Simon -->|Architecture| George
+  Business -->|Requirements| Hagbard
+  Marketing -->|Content| George
+  UI -->|Design| George
+  Political -->|Features| George
+  
+  George -.->|Feedback| Simon
+  Simon -.->|Constraints| Hagbard
+  George -.->|Reality Check| Hagbard
+  
+  classDef task fill:#9C27B0,stroke:#9C27B0,stroke-width:3px,color:#fff
+  classDef strategic fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
+  classDef design fill:#FFD700,stroke:#FFD700,stroke-width:2px,color:#000
+  classDef implementation fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
 ```
 
 ### Task Agent: The Orchestrator
@@ -724,22 +724,22 @@ flowchart TB
 The **Task Agent** acts as the product quality guardian and work orchestrator:
 
 1. **Comprehensive Analysis** 🔍
-   - Analyzes repository, live website, ISMS compliance
-   - Uses Playwright for visual testing
-   - Validates AWS infrastructure
-   - Checks security, performance, accessibility, UI/UX
+  - Analyzes repository, live website, ISMS compliance
+  - Uses Playwright for visual testing
+  - Validates AWS infrastructure
+  - Checks security, performance, accessibility, UI/UX
 
 2. **Issue Creation** 📝
-   - Creates well-structured GitHub issues
-   - Includes screenshots and evidence
-   - Provides implementation guidance
-   - Links to ISMS policies
+  - Creates well-structured GitHub issues
+  - Includes screenshots and evidence
+  - Provides implementation guidance
+  - Links to ISMS policies
 
 3. **Intelligent Assignment** 🎯
-   - Matches issues to appropriate specialists
-   - Considers expertise and workload
-   - Suggests collaboration when needed
-   - Provides clear assignment rationale
+  - Matches issues to appropriate specialists
+  - Considers expertise and workload
+  - Suggests collaboration when needed
+  - Provides clear assignment rationale
 
 **Example Workflow:**
 ```
@@ -754,12 +754,12 @@ Task Agent:
 ├─ Identifies 15 issues across categories
 ├─ Creates detailed GitHub issues
 └─ Assigns to appropriate specialists:
-    ├─ 3 security issues → George + Simon
-    ├─ 4 accessibility issues → UI Specialist
-    ├─ 2 performance issues → George
-    ├─ 3 content issues → Marketing Specialist
-    ├─ 2 AWS issues → Simon + George
-    └─ 1 strategic issue → Hagbard
+  ├─ 3 security issues → George + Simon
+  ├─ 4 accessibility issues → UI Specialist
+  ├─ 2 performance issues → George
+  ├─ 3 content issues → Marketing Specialist
+  ├─ 2 AWS issues → Simon + George
+  └─ 1 strategic issue → Hagbard
 ```
 
 ### Collaboration Patterns
@@ -809,7 +809,7 @@ Each profile follows the GitHub Copilot custom agents format:
 ---
 name: agent-name
 description: Brief description of capabilities
-tools: ["tool1", "tool2", "tool3"]  # Optional
+tools: ["tool1", "tool2", "tool3"] # Optional
 ---
 
 Agent instructions and behavior guidelines in Markdown...
@@ -831,13 +831,13 @@ To create a new custom agent profile:
 1. Create a new `.md` file in `.github/agents/` directory
 2. Use kebab-case for the filename (e.g., `my-agent.md`)
 3. Add YAML frontmatter with required properties:
-   ```yaml
-   ---
-   name: my-agent
-   description: Brief description of what the agent does
-   tools: ["read", "edit", "search"]  # Optional
-   ---
-   ```
+  ```yaml
+  ---
+  name: my-agent
+  description: Brief description of what the agent does
+  tools: ["read", "edit", "search"] # Optional
+  ---
+  ```
 4. Write the agent's instructions in Markdown below the frontmatter
 5. Commit the file to the repository
 6. Refresh the Copilot agents dropdown to see your new agent
@@ -894,7 +894,7 @@ Hack23 AB is a Swedish cybersecurity consulting company (Org.nr 5595347807) foun
 
 - **Cybersecurity Consulting**: Practical security solutions for enterprise clients
 - **Gaming Innovation**: Precision combat simulators with educational value
-- **Transparency**: ISMS v3.2 (2026-01-25) and open source contributions
+- **Transparency**: ISMS and open source contributions
 - **Open Source Security**: Active development of security tools and platforms
 
 ### Technology Stack
@@ -922,39 +922,39 @@ Hack23 AB's inspiration from **Principia Discordia** and **Illuminatus! Trilogy*
 
 ```mermaid
 graph TB
-    subgraph "Hack23 Values Meet Discordian Philosophy"
-        T[🔓 Transparency]:::hack23
-        P[⚙️ Practicality]:::hack23
-        E[🎓 Expertise]:::hack23
-        Et[⚖️ Ethics]:::hack23
-        Q[✨ Quality]:::hack23
-        
-        DC[🍎 Embrace Chaos]:::discordian
-        LF[⭐ Law of Fives]:::discordian
-        CW[🎯 Challenge Wisdom]:::discordian
-        HW[🥚 Hidden Wisdom]:::discordian
-        SG[📐 Sacred Geometry]:::discordian
-        
-        T -.->|enables| CW
-        P -.->|grounds| DC
-        E -.->|structures| SG
-        Et -.->|guides| CW
-        Q -.->|manifests in| HW
-        
-        DC -.->|tested by| P
-        LF -.->|organizes| E
-        CW -.->|requires| T
-        SG -.->|achieves| Q
-    end
+  subgraph "Hack23 Values Meet Discordian Philosophy"
+    T[🔓 Transparency]:::hack23
+    P[⚙️ Practicality]:::hack23
+    E[🎓 Expertise]:::hack23
+    Et[⚖️ Ethics]:::hack23
+    Q[✨ Quality]:::hack23
     
-    classDef hack23 fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
-    classDef discordian fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+    DC[🍎 Embrace Chaos]:::discordian
+    LF[⭐ Law of Fives]:::discordian
+    CW[🎯 Challenge Wisdom]:::discordian
+    HW[🥚 Hidden Wisdom]:::discordian
+    SG[📐 Sacred Geometry]:::discordian
+    
+    T -.->|enables| CW
+    P -.->|grounds| DC
+    E -.->|structures| SG
+    Et -.->|guides| CW
+    Q -.->|manifests in| HW
+    
+    DC -.->|tested by| P
+    LF -.->|organizes| E
+    CW -.->|requires| T
+    SG -.->|achieves| Q
+  end
+  
+  classDef hack23 fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  classDef discordian fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
 ```
 
 ### Core Alignments
 
 #### 🔓 Transparency ↔ 🍎 Challenging Conventional Wisdom
-- **Hack23**: ISMS v3.2 (2026-01-25), open-source projects, transparent practices
+- **Hack23**: ISMS, open-source projects, transparent practices
 - **Discordian**: Exposing hidden assumptions, questioning authority
 - **Integration**: Can't challenge dogma without transparency; can't be transparent without questioning what should be hidden
 
@@ -981,29 +981,29 @@ graph TB
 ### The Five Manifestations in Practice
 
 1. **Product Development** (Hagbard's Domain)
-   - Vision documents that work on multiple levels
-   - Prioritization using the Pentagon of Importance
-   - Challenging requirements to find real problems
+  - Vision documents that work on multiple levels
+  - Prioritization using the Pentagon of Importance
+  - Challenging requirements to find real problems
 
 2. **System Architecture** (Simon's Domain)
-   - Five-layer architectures that balance competing concerns
-   - Pattern recognition in system design
-   - Documentation as both blueprint and teaching material
+  - Five-layer architectures that balance competing concerns
+  - Pattern recognition in system design
+  - Documentation as both blueprint and teaching material
 
 3. **Implementation** (George's Domain)
-   - Code that works and contains hidden philosophical depth
-   - The Five Stages of Development as natural process
-   - Easter eggs as craftsmanship and delight
+  - Code that works and contains hidden philosophical depth
+  - The Five Stages of Development as natural process
+  - Easter eggs as craftsmanship and delight
 
 4. **Security Practices** (All Domains)
-   - Five defense layers: Prevention, Detection, Response, Recovery, Learning
-   - Transparency in security practices (ISMS v3.2 2026-01-25)
-   - Security that enables rather than blocks
+  - Five defense layers: Prevention, Detection, Response, Recovery, Learning
+  - Transparency in security practices (ISMS)
+  - Security that enables rather than blocks
 
 5. **Open Source Contribution** (All Domains)
-   - Five key projects serving different purposes
-   - Community engagement through transparency
-   - Knowledge sharing as subversion of information monopolies
+  - Five key projects serving different purposes
+  - Community engagement through transparency
+  - Knowledge sharing as subversion of information monopolies
 
 ### Why This Matters
 

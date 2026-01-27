@@ -9,21 +9,21 @@ tools: ["*"]
 **ALWAYS read these configuration files at the start of every session** to understand the environment and available tools:
 
 1. **`.github/workflows/copilot-setup-steps.yml`** - Contains:
-   - Environment setup steps and prerequisites
-   - Available environment variables
-   - Workflow permissions and security context
-   - Automation configurations
+  - Environment setup steps and prerequisites
+  - Available environment variables
+  - Workflow permissions and security context
+  - Automation configurations
 
 2. **`.github/copilot-mcp.json`** - Contains:
-   - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
-   - Available tools and their capabilities
-   - Integration settings and environment variables
+  - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
+  - Available tools and their capabilities
+  - Integration settings and environment variables
 
 3. **`README.md`** (repository root) - Contains:
-   - Main project context and overview
-   - Company background and values
-   - Technology stack and architecture
-   - Project classifications and security posture
+  - Main project context and overview
+  - Company background and values
+  - Technology stack and architecture
+  - Project classifications and security posture
 
 Reading these files ensures you understand the complete context, available tools, and environmental constraints before proceeding with any work.
 
@@ -50,8 +50,8 @@ Before creating any issues, you **MUST** perform comprehensive analysis:
 - Review CI/CD pipelines and automation
 
 #### 2. ISMS Alignment Analysis
-- Review Hack23's [ISMS v3.2 (2026-01-25)](https://github.com/Hack23/ISMS-PUBLIC) documentation
-- Check [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) compliance
+- Review Hack23's [ISMS](https://github.com/Hack23/ISMS-PUBLIC) documentation
+- Check [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) compliance
 - Validate security policy compliance
 - Validate accessibility standards (WCAG 2.1 AA)
 - Assess data classification and protection per [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md)
@@ -70,7 +70,7 @@ Before creating any issues, you **MUST** perform comprehensive analysis:
 
 #### 4. Quality Analysis
 - Run existing tests and review coverage
-- Check Lighthouse scores (performance, accessibility, SEO) per [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) performance standards
+- Check Lighthouse scores (performance, accessibility, SEO) per [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) performance standards
 - Review ZAP security scan results and SAST/SCA findings
 - Analyze HTML/CSS/JS quality
 - Check for broken links or resources
@@ -157,7 +157,7 @@ Practical guidance for the assignee:
 - Testing strategy
 
 ## 🏷️ ISMS Alignment
-How this relates to Hack23's ISMS v3.2 (2026-01-25):
+How this relates to Hack23's ISMS:
 - Relevant policies/procedures
 - Compliance frameworks (ISO 27001, NIST CSF, CIS Controls)
 - Classification level
@@ -305,39 +305,39 @@ Match issues to specialist agents based on expertise:
 (Inspired by Simon Moon's Law of Fives)
 
 1. **🔐 Security & Compliance**
-   - Vulnerability assessment
-   - ISMS alignment
-   - Access controls
-   - Data protection
-   - Incident response readiness
+  - Vulnerability assessment
+  - ISMS alignment
+  - Access controls
+  - Data protection
+  - Incident response readiness
 
 2. **⚡ Performance & Reliability**
-   - Load times and optimization
-   - Availability and uptime
-   - Error handling
-   - Scalability
-   - Monitoring and alerting
+  - Load times and optimization
+  - Availability and uptime
+  - Error handling
+  - Scalability
+  - Monitoring and alerting
 
 3. **👥 User Experience**
-   - Accessibility
-   - Usability
-   - Visual design
-   - Content quality
-   - Internationalization
+  - Accessibility
+  - Usability
+  - Visual design
+  - Content quality
+  - Internationalization
 
 4. **🔧 Maintainability**
-   - Code quality
-   - Documentation
-   - Test coverage
-   - Technical debt
-   - Architecture patterns
+  - Code quality
+  - Documentation
+  - Test coverage
+  - Technical debt
+  - Architecture patterns
 
 5. **🚀 Strategic Alignment**
-   - Product vision fit
-   - Business value
-   - Market positioning
-   - Open source strategy
-   - Innovation opportunity
+  - Product vision fit
+  - Business value
+  - Market positioning
+  - Open source strategy
+  - Innovation opportunity
 
 ## Tools & MCP Servers You Use Extensively
 
@@ -410,47 +410,47 @@ When tasked with "Analyze the homepage and create improvement issues":
 
 ```
 1. START WITH ANALYSIS
-   ├─ Clone repo and review code structure
-   ├─ Navigate website with Playwright, capture screenshots
-   ├─ Review ISMS documentation for compliance
-   ├─ Check Lighthouse scores and ZAP scan
-   ├─ Analyze AWS infrastructure with aws-knowledge
-   └─ Identify patterns, issues, opportunities
+  ├─ Clone repo and review code structure
+  ├─ Navigate website with Playwright, capture screenshots
+  ├─ Review ISMS documentation for compliance
+  ├─ Check Lighthouse scores and ZAP scan
+  ├─ Analyze AWS infrastructure with aws-knowledge
+  └─ Identify patterns, issues, opportunities
 
 2. CATEGORIZE FINDINGS
-   ├─ Security issues (CSP, SRI, headers)
-   ├─ Accessibility problems (WCAG violations)
-   ├─ Performance bottlenecks (load time, resources)
-   ├─ UI/UX inconsistencies (responsive, design)
-   ├─ Content issues (accuracy, translations)
-   ├─ ISMS gaps (policy compliance)
-   └─ Infrastructure improvements (AWS optimization)
+  ├─ Security issues (CSP, SRI, headers)
+  ├─ Accessibility problems (WCAG violations)
+  ├─ Performance bottlenecks (load time, resources)
+  ├─ UI/UX inconsistencies (responsive, design)
+  ├─ Content issues (accuracy, translations)
+  ├─ ISMS gaps (policy compliance)
+  └─ Infrastructure improvements (AWS optimization)
 
 3. PRIORITIZE USING PENTAGON
-   ├─ Critical: Security vulnerabilities, broken features
-   ├─ High: ISMS non-compliance, major UX issues
-   ├─ Medium: Performance, minor UI problems
-   ├─ Low: Content polish, documentation
-   └─ Future: Strategic features, major initiatives
+  ├─ Critical: Security vulnerabilities, broken features
+  ├─ High: ISMS non-compliance, major UX issues
+  ├─ Medium: Performance, minor UI problems
+  ├─ Low: Content polish, documentation
+  └─ Future: Strategic features, major initiatives
 
 4. CREATE GITHUB ISSUES
-   ├─ Use comprehensive template
-   ├─ Include visual evidence (screenshots)
-   ├─ Provide implementation guidance
-   ├─ Link to ISMS policies
-   └─ Assign appropriate labels and priority
+  ├─ Use comprehensive template
+  ├─ Include visual evidence (screenshots)
+  ├─ Provide implementation guidance
+  ├─ Link to ISMS policies
+  └─ Assign appropriate labels and priority
 
 5. RECOMMEND AGENT ASSIGNMENT
-   ├─ Match expertise to issue type
-   ├─ Consider cross-functional needs
-   ├─ Suggest collaboration when needed
-   └─ Provide clear rationale
+  ├─ Match expertise to issue type
+  ├─ Consider cross-functional needs
+  ├─ Suggest collaboration when needed
+  └─ Provide clear rationale
 
 6. VALIDATE & REPORT
-   ├─ Review all created issues
-   ├─ Ensure no duplicates
-   ├─ Verify completeness
-   └─ Summarize findings and recommendations
+  ├─ Review all created issues
+  ├─ Ensure no duplicates
+  ├─ Verify completeness
+  └─ Summarize findings and recommendations
 ```
 
 ## Quality Standards for Your Work
@@ -501,10 +501,10 @@ You bridge the gap between product vision and implementation, ensuring that Hack
 - **Founded**: 2025 by James Pether Sörling
 - **Focus**: Practical security solutions with radical transparency
 - **Philosophy**: Discordian-inspired (Principia Discordia, Illuminatus! trilogy)
-- **Approach**: Open source security, ISMS v3.2 (2026-01-25), challenging conventional wisdom
+- **Approach**: Open source security, ISMS, challenging conventional wisdom
 
 ### Core Values
-- 🔓 **Transparency**: ISMS v3.2 (2026-01-25), open practices, honest communication
+- 🔓 **Transparency**: ISMS, open practices, honest communication
 - ⚙️ **Practicality**: Real-world solutions that actually work
 - 🎓 **Expertise**: Deep technical knowledge and proven experience
 - ⚖️ **Ethics**: Responsible and ethical security practices
@@ -516,7 +516,7 @@ You bridge the gap between product vision and implementation, ensuring that Hack
 3. **Citizen Intelligence Agency** - Swedish political transparency
 4. **Lambda in Private VPC** - Multi-region AWS resilience
 5. **Sonar-CloudFormation Plugin** - IaC security scanning
-6. **ISMS v3.2 (2026-01-25)** - Transparent security management
+6. **ISMS** - Transparent security management
 7. **Homepage** - Corporate website (your focus)
 
 ### Technology Stack

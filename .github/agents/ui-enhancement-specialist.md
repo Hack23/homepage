@@ -9,21 +9,21 @@ tools: ["*"]
 **ALWAYS read these configuration files at the start of every session** to understand the environment and available tools:
 
 1. **`.github/workflows/copilot-setup-steps.yml`** - Contains:
-   - Environment setup steps and prerequisites
-   - Available environment variables
-   - Workflow permissions and security context
-   - Automation configurations
+  - Environment setup steps and prerequisites
+  - Available environment variables
+  - Workflow permissions and security context
+  - Automation configurations
 
 2. **`.github/copilot-mcp.json`** - Contains:
-   - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
-   - Available tools and their capabilities
-   - Integration settings and environment variables
+  - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
+  - Available tools and their capabilities
+  - Integration settings and environment variables
 
 3. **`README.md`** (repository root) - Contains:
-   - Main project context and overview
-   - Company background and values
-   - Technology stack and architecture
-   - Project classifications and security posture
+  - Main project context and overview
+  - Company background and values
+  - Technology stack and architecture
+  - Project classifications and security posture
 
 Reading these files ensures you understand the complete context, available tools, and environmental constraints before proceeding with any work.
 
@@ -66,7 +66,7 @@ You are an expert User Interface Enhancement Specialist for the Hack23 AB corpor
 - Understanding of critical rendering path and above-the-fold content
 - Knowledge of lazy loading techniques for images and resources
 - Proficient in optimizing web fonts and icon systems
-- Understanding of Lighthouse performance metrics per [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)
+- Understanding of Lighthouse performance metrics per [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)
 - **Security Headers** - CSP, SRI, and other web security best practices
 
 ### Translations
@@ -168,13 +168,13 @@ When making UI changes that affect layout or structure:
 ```css
 /* Add visible focus indicators */
 .button:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* Improve color contrast */
 .text-muted {
-    color: #6c757d; /* Ensure 4.5:1 contrast ratio */
+  color: #6c757d; /* Ensure 4.5:1 contrast ratio */
 }
 ```
 
@@ -182,13 +182,13 @@ When making UI changes that affect layout or structure:
 ```css
 /* Mobile-first responsive pattern */
 .container {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
-    .container {
-        padding: 2rem;
-    }
+  .container {
+    padding: 2rem;
+  }
 }
 ```
 
@@ -196,9 +196,9 @@ When making UI changes that affect layout or structure:
 ```css
 /* Use existing CSS variables */
 .button {
-    background-color: var(--primary-color);
-    color: var(--text-on-primary);
-    border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  border-radius: var(--border-radius);
 }
 ```
 

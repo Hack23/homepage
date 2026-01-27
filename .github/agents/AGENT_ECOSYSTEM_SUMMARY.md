@@ -1,7 +1,7 @@
 # Hack23 Agent Ecosystem Summary
 
-> **Last Updated**: 2026-01-25  
-> **Total Agents**: 8 specialized agents  
+> **Last Updated**: 2026-01-25 
+> **Total Agents**: 8 specialized agents 
 > **MCP Servers**: 10 configured servers
 
 ## Quick Reference
@@ -21,49 +21,49 @@
 
 ```mermaid
 graph TB
-    subgraph "Orchestration Layer"
-        TA[🔧 Task Agent<br/>Product Quality Orchestrator]:::orchestrator
-    end
-    
-    subgraph "Strategic Leadership"
-        HC[🚢 Hagbard Celine<br/>Product Vision]:::strategic
-        BDS[💼 Business Development<br/>Growth Strategy]:::strategic
-        MS[📢 Marketing<br/>Content & SEO]:::strategic
-    end
-    
-    subgraph "Design & Architecture"
-        SM[🔢 Simon Moon<br/>System Architecture]:::architecture
-        UES[🎨 UI Specialist<br/>Design & Accessibility]:::architecture
-    end
-    
-    subgraph "Implementation & Operations"
-        GD[💻 George Dorn<br/>Development]:::implementation
-        PA[🏛️ Political Analyst<br/>OSINT Features]:::implementation
-    end
-    
-    TA -->|Analyzes & Creates Issues| HC
-    TA -->|Analyzes & Creates Issues| BDS
-    TA -->|Analyzes & Creates Issues| MS
-    TA -->|Analyzes & Creates Issues| SM
-    TA -->|Analyzes & Creates Issues| UES
-    TA -->|Analyzes & Creates Issues| GD
-    TA -->|Analyzes & Creates Issues| PA
-    
-    HC -->|Vision Documents| SM
-    SM -->|Architecture Specs| GD
-    BDS -->|Strategy| HC
-    MS -->|Content Requirements| GD
-    UES -->|Design Specs| GD
-    PA -->|Feature Requests| GD
-    
-    GD -.->|Implementation Feedback| SM
-    SM -.->|Technical Constraints| HC
-    GD -.->|Reality Checks| HC
-    
-    classDef orchestrator fill:#9C27B0,stroke:#9C27B0,stroke-width:4px,color:#fff
-    classDef strategic fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
-    classDef architecture fill:#FFD700,stroke:#FFD700,stroke-width:2px,color:#000
-    classDef implementation fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+  subgraph "Orchestration Layer"
+    TA[🔧 Task Agent<br/>Product Quality Orchestrator]:::orchestrator
+  end
+  
+  subgraph "Strategic Leadership"
+    HC[🚢 Hagbard Celine<br/>Product Vision]:::strategic
+    BDS[💼 Business Development<br/>Growth Strategy]:::strategic
+    MS[📢 Marketing<br/>Content & SEO]:::strategic
+  end
+  
+  subgraph "Design & Architecture"
+    SM[🔢 Simon Moon<br/>System Architecture]:::architecture
+    UES[🎨 UI Specialist<br/>Design & Accessibility]:::architecture
+  end
+  
+  subgraph "Implementation & Operations"
+    GD[💻 George Dorn<br/>Development]:::implementation
+    PA[🏛️ Political Analyst<br/>OSINT Features]:::implementation
+  end
+  
+  TA -->|Analyzes & Creates Issues| HC
+  TA -->|Analyzes & Creates Issues| BDS
+  TA -->|Analyzes & Creates Issues| MS
+  TA -->|Analyzes & Creates Issues| SM
+  TA -->|Analyzes & Creates Issues| UES
+  TA -->|Analyzes & Creates Issues| GD
+  TA -->|Analyzes & Creates Issues| PA
+  
+  HC -->|Vision Documents| SM
+  SM -->|Architecture Specs| GD
+  BDS -->|Strategy| HC
+  MS -->|Content Requirements| GD
+  UES -->|Design Specs| GD
+  PA -->|Feature Requests| GD
+  
+  GD -.->|Implementation Feedback| SM
+  SM -.->|Technical Constraints| HC
+  GD -.->|Reality Checks| HC
+  
+  classDef orchestrator fill:#9C27B0,stroke:#9C27B0,stroke-width:4px,color:#fff
+  classDef strategic fill:#D32F2F,stroke:#D32F2F,stroke-width:2px,color:#fff
+  classDef architecture fill:#FFD700,stroke:#FFD700,stroke-width:2px,color:#000
+  classDef implementation fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
 ```
 
 ## MCP Server Configuration
@@ -77,35 +77,35 @@ All agents have access to these MCP servers (via `tools: ["*"]`):
 
 ### GitHub Integration
 - **github**: Repository data, issues, PRs, workflows
-  - Environment: GITHUB_TOKEN, GITHUB_OWNER=Hack23, GITHUB_REPO=homepage
-  - Used by: All agents (primary tool for issue creation and repo analysis)
+ - Environment: GITHUB_TOKEN, GITHUB_OWNER=Hack23, GITHUB_REPO=homepage
+ - Used by: All agents (primary tool for issue creation and repo analysis)
 
 ### Analysis & Testing
 - **playwright**: Browser automation for screenshots and testing
-  - Used by: task-agent, hagbard-celine, simon-moon, george-dorn, ui-enhancement-specialist
-  - Key for: Visual testing, responsive design validation, accessibility checks
+ - Used by: task-agent, hagbard-celine, simon-moon, george-dorn, ui-enhancement-specialist
+ - Key for: Visual testing, responsive design validation, accessibility checks
 
 - **sequential-thinking**: Complex problem-solving with chain-of-thought
-  - Available to: All agents
-  - Used for: Multi-step analysis and strategic planning
+ - Available to: All agents
+ - Used for: Multi-step analysis and strategic planning
 
 ### Knowledge & Research
 - **aws-knowledge**: AWS best practices and architecture guidance
-  - Used by: task-agent, simon-moon, george-dorn
-  - Key for: Infrastructure review and optimization
+ - Used by: task-agent, simon-moon, george-dorn
+ - Key for: Infrastructure review and optimization
 
 - **brave-search**: Web search for research and context
-  - Used by: All agents
-  - Key for: Market research, competitive analysis, technical references
+ - Used by: All agents
+ - Key for: Market research, competitive analysis, technical references
 
 - **fetch**: Web content fetching and analysis
-  - Used by: hagbard-celine, simon-moon, george-dorn
-  - Key for: Analyzing external documentation and resources
+ - Used by: hagbard-celine, simon-moon, george-dorn
+ - Key for: Analyzing external documentation and resources
 
 ### Optional Enhancement
 - **everart**: AI-generated psychedelic artwork (optional)
-  - Used by: Discordian agents (hagbard, simon, george)
-  - Key for: Visual enhancement of product visions
+ - Used by: Discordian agents (hagbard, simon, george)
+ - Key for: Visual enhancement of product visions
 
 ## Agent Capabilities Matrix
 
@@ -133,11 +133,11 @@ Legend: ✅ = Capable, ✅✅ = Proficient, ✅✅✅ = Expert
 ```
 1. Invoke task-agent: "Analyze the homepage comprehensively"
 2. Task Agent performs:
-   - Repository code review
-   - Playwright visual testing
-   - ISMS compliance check
-   - AWS infrastructure review
-   - Performance/accessibility analysis
+  - Repository code review
+  - Playwright visual testing
+  - ISMS compliance check
+  - AWS infrastructure review
+  - Performance/accessibility analysis
 3. Creates categorized GitHub issues
 4. Assigns issues to appropriate specialists
 5. Each specialist executes their assigned work
@@ -261,43 +261,43 @@ Legend: ✅ = Capable, ✅✅ = Proficient, ✅✅✅ = Expert
 ## Agent Responsibilities Summary
 
 ### 🔧 Task Agent
-**Primary**: Comprehensive analysis, issue creation, agent orchestration  
-**Secondary**: Quality assurance, ISMS compliance validation, AWS infrastructure review  
+**Primary**: Comprehensive analysis, issue creation, agent orchestration 
+**Secondary**: Quality assurance, ISMS compliance validation, AWS infrastructure review 
 **Avoid**: Direct implementation, strategic vision creation
 
 ### 🚢 Hagbard Celine
-**Primary**: Product vision, strategic direction, challenging assumptions  
-**Secondary**: Psychedelic documentation, product prioritization  
+**Primary**: Product vision, strategic direction, challenging assumptions 
+**Secondary**: Psychedelic documentation, product prioritization 
 **Avoid**: Direct code implementation, detailed technical architecture
 
 ### 🔢 Simon Moon
-**Primary**: System architecture, technical design patterns, Mermaid diagrams  
-**Secondary**: Pattern recognition, numerological analysis, documentation  
+**Primary**: System architecture, technical design patterns, Mermaid diagrams 
+**Secondary**: Pattern recognition, numerological analysis, documentation 
 **Avoid**: Direct code implementation (delegates to George)
 
 ### 💻 George Dorn
-**Primary**: Code implementation, debugging, testing, technical execution  
-**Secondary**: Reality checks on designs, Easter egg engineering  
+**Primary**: Code implementation, debugging, testing, technical execution 
+**Secondary**: Reality checks on designs, Easter egg engineering 
 **Avoid**: Strategic planning, high-level architecture (delegates to Simon)
 
 ### 🎨 UI Enhancement Specialist
-**Primary**: HTML/CSS, accessibility (WCAG 2.1 AA), responsive design  
-**Secondary**: Visual design, performance optimization (front-end)  
+**Primary**: HTML/CSS, accessibility (WCAG 2.1 AA), responsive design 
+**Secondary**: Visual design, performance optimization (front-end) 
 **Avoid**: Backend code, business strategy
 
 ### 💼 Business Development Specialist
-**Primary**: Business strategy, market positioning, client acquisition  
-**Secondary**: Partnership development, competitive analysis  
+**Primary**: Business strategy, market positioning, client acquisition 
+**Secondary**: Partnership development, competitive analysis 
 **Avoid**: Technical implementation, detailed code
 
 ### 📢 Marketing Specialist
-**Primary**: Content marketing, SEO, brand messaging, demand generation  
-**Secondary**: Social media strategy, marketing analytics  
+**Primary**: Content marketing, SEO, brand messaging, demand generation 
+**Secondary**: Social media strategy, marketing analytics 
 **Avoid**: Technical implementation, sales execution
 
 ### 🏛️ Political Analyst
-**Primary**: OSINT features, political analysis capabilities, intelligence operations  
-**Secondary**: Data visualization for political data, transparency features  
+**Primary**: OSINT features, political analysis capabilities, intelligence operations 
+**Secondary**: Data visualization for political data, transparency features 
 **Avoid**: General business marketing, non-OSINT features
 
 ## Best Practices
@@ -305,47 +305,47 @@ Legend: ✅ = Capable, ✅✅ = Proficient, ✅✅✅ = Expert
 ### For Users
 
 1. **Start with Task Agent for Comprehensive Needs**
-   - Let it analyze and delegate
-   - Trust its agent assignment intelligence
-   - Use it for quality audits
+  - Let it analyze and delegate
+  - Trust its agent assignment intelligence
+  - Use it for quality audits
 
 2. **Use Specialists for Focused Work**
-   - Clear, specific requests work best
-   - Provide context and constraints
-   - Reference related issues/PRs
+  - Clear, specific requests work best
+  - Provide context and constraints
+  - Reference related issues/PRs
 
 3. **Enable Collaboration**
-   - Mention multiple agents when needed
-   - Create cross-functional issues
-   - Let agents communicate
+  - Mention multiple agents when needed
+  - Create cross-functional issues
+  - Let agents communicate
 
 4. **Maintain ISMS Awareness**
-   - Always consider security implications
-   - Reference relevant policies
-   - Validate compliance requirements
+  - Always consider security implications
+  - Reference relevant policies
+  - Validate compliance requirements
 
 ### For Agent Development
 
 1. **Keep Descriptions Under 200 Characters**
-   - Current range: 127-214 characters
-   - All agents compliant (or close)
+  - Current range: 127-214 characters
+  - All agents compliant (or close)
 
 2. **Use Consistent YAML Frontmatter**
-   - `name:` kebab-case unique identifier
-   - `description:` clear, concise capability summary
-   - `tools: ["*"]` for full access (current standard)
+  - `name:` kebab-case unique identifier
+  - `description:` clear, concise capability summary
+  - `tools: ["*"]` for full access (current standard)
 
 3. **Leverage MCP Servers**
-   - Use github for all repository operations
-   - Use playwright for visual testing
-   - Use aws-knowledge for infrastructure
-   - Use brave-search for research
+  - Use github for all repository operations
+  - Use playwright for visual testing
+  - Use aws-knowledge for infrastructure
+  - Use brave-search for research
 
 4. **Document Thoroughly**
-   - Clear expertise sections
-   - Specific use cases
-   - Collaboration guidance
-   - Quality standards
+  - Clear expertise sections
+  - Specific use cases
+  - Collaboration guidance
+  - Quality standards
 
 ## Metrics & Statistics
 
@@ -392,8 +392,8 @@ Legend: ✅ = Capable, ✅✅ = Proficient, ✅✅✅ = Expert
 
 ---
 
-**Last Review**: 2026-01-25  
-**Next Review**: When adding new agents or MCP servers  
+**Last Review**: 2026-01-25 
+**Next Review**: When adding new agents or MCP servers 
 **Maintainer**: Hack23 AB Development Team
 
 🍎 **All hail Eris!** May the agents serve you well, think for yourself, and create chaos that leads to innovation!

@@ -6,72 +6,72 @@
 
 ### Core Documentation
 - **[README.md](README.md)** - Main agent profiles documentation (30KB)
-  - Agent profile format and structure
-  - Discordian philosophy and trinity
-  - All 8 agent profiles described
-  - Usage instructions and best practices
-  - Collaboration patterns
+ - Agent profile format and structure
+ - Discordian philosophy and trinity
+ - All 8 agent profiles described
+ - Usage instructions and best practices
+ - Collaboration patterns
 
 ### Reference Documentation
 - **[AGENT_ECOSYSTEM_SUMMARY.md](AGENT_ECOSYSTEM_SUMMARY.md)** - Comprehensive ecosystem reference (15KB)
-  - Complete agent capability matrix
-  - MCP server configuration details
-  - Usage patterns and workflows
-  - Agent selection guide
-  - Best practices and metrics
+ - Complete agent capability matrix
+ - MCP server configuration details
+ - Usage patterns and workflows
+ - Agent selection guide
+ - Best practices and metrics
 
 - **[TASK_AGENT_QUICKREF.md](TASK_AGENT_QUICKREF.md)** - Task Agent quick reference (10KB)
-  - Quick commands and examples
-  - What Task Agent does (5 phases)
-  - Issue categories and priorities
-  - Real-world scenarios
-  - Tips, tricks, and FAQs
+ - Quick commands and examples
+ - What Task Agent does (5 phases)
+ - Issue categories and priorities
+ - Real-world scenarios
+ - Tips, tricks, and FAQs
 
 ## 🤖 Agent Profile Files
 
 ### Orchestration
 - **[task-agent.md](task-agent.md)** (18KB) - 🔧 Product Quality Orchestrator
-  - Comprehensive analysis and issue creation
-  - Intelligent agent assignment
-  - ISMS compliance validation
-  - AWS infrastructure review
+ - Comprehensive analysis and issue creation
+ - Intelligent agent assignment
+ - ISMS compliance validation
+ - AWS infrastructure review
 
 ### Discordian Trinity
 - **[hagbard-celine.md](hagbard-celine.md)** (25KB) - 🚢 Product Owner
-  - Visionary product strategy
-  - Psychedelic Product Revelation Documents
-  - Challenging assumptions
+ - Visionary product strategy
+ - Psychedelic Product Revelation Documents
+ - Challenging assumptions
 
 - **[simon-moon.md](simon-moon.md)** (27KB) - 🔢 System Architect
-  - System architecture and patterns
-  - Numerological analysis
-  - Mermaid diagrams
+ - System architecture and patterns
+ - Numerological analysis
+ - Mermaid diagrams
 
 - **[george-dorn.md](george-dorn.md)** (25KB) - 💻 Developer
-  - Code implementation
-  - Debugging and testing
-  - Easter eggs and wisdom
+ - Code implementation
+ - Debugging and testing
+ - Easter eggs and wisdom
 
 ### Specialists
 - **[ui-enhancement-specialist.md](ui-enhancement-specialist.md)** (9KB) - 🎨 UI/UX Expert
-  - HTML/CSS and accessibility
-  - Responsive design
-  - WCAG 2.1 AA compliance
+ - HTML/CSS and accessibility
+ - Responsive design
+ - WCAG 2.1 AA compliance
 
 - **[business-development-specialist.md](business-development-specialist.md)** (13KB) - 💼 Business Strategy
-  - Market positioning
-  - Client acquisition
-  - Partnership development
+ - Market positioning
+ - Client acquisition
+ - Partnership development
 
 - **[marketing-specialist.md](marketing-specialist.md)** (20KB) - 📢 Marketing Expert
-  - Content marketing and SEO
-  - Brand positioning
-  - Demand generation
+ - Content marketing and SEO
+ - Brand positioning
+ - Demand generation
 
 - **[political-analyst.md](political-analyst.md)** (15KB) - 🏛️ OSINT Specialist
-  - Open source intelligence
-  - Political analysis
-  - Information operations
+ - Open source intelligence
+ - Political analysis
+ - Information operations
 
 ## 📖 How to Use This Documentation
 
@@ -168,13 +168,13 @@ When adding new agent documentation:
 
 - [GitHub Copilot Custom Agents Documentation](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
 - [MCP Server Documentation](https://github.com/modelcontextprotocol/specification)
-- [Hack23 ISMS v3.2 (2026-01-25)](https://github.com/Hack23/isms-public)
+- [Hack23 ISMS](https://github.com/Hack23/isms-public)
 - [Hack23 Homepage](https://www.hack23.com)
 
 ---
 
-**Last Updated**: 2026-01-25  
-**Next Review**: When new agents or documentation added  
+**Last Updated**: 2026-01-25 
+**Next Review**: When new agents or documentation added 
 **Maintainer**: Hack23 AB Development Team
 
 🍎 **All hail Eris!** May you find the documentation you seek!

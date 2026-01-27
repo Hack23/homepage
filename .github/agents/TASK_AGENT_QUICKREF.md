@@ -39,30 +39,30 @@ Use the Task Agent when you need:
 
 ### Phase 1: Deep Analysis (Always First)
 1. **Repository Deep-Dive**
-   - Clone and analyze code structure
-   - Review recent commits and PRs
-   - Identify technical debt
+  - Clone and analyze code structure
+  - Review recent commits and PRs
+  - Identify technical debt
 
 2. **ISMS Alignment Check**
-   - Review ISMS v3.2 (2026-01-25) documentation
-   - Validate security policy compliance
-   - Check accessibility standards (WCAG 2.1 AA)
+  - Review ISMS documentation
+  - Validate security policy compliance
+  - Check accessibility standards (WCAG 2.1 AA)
 
 3. **Visual Testing (Playwright)**
-   - Navigate live website
-   - Capture screenshots
-   - Test responsive design
-   - Verify all language versions (EN/SV/KO)
+  - Navigate live website
+  - Capture screenshots
+  - Test responsive design
+  - Verify all language versions (EN/SV/KO)
 
 4. **Quality Assessment**
-   - Review Lighthouse scores
-   - Analyze ZAP security scans
-   - Check HTML/CSS/JS quality
+  - Review Lighthouse scores
+  - Analyze ZAP security scans
+  - Check HTML/CSS/JS quality
 
 5. **AWS Infrastructure Review**
-   - Use aws-knowledge MCP
-   - Validate S3/CloudFront configuration
-   - Check best practices compliance
+  - Use aws-knowledge MCP
+  - Validate S3/CloudFront configuration
+  - Check best practices compliance
 
 ### Phase 2: Issue Creation
 Creates structured GitHub issues with:
@@ -250,19 +250,19 @@ After Task Agent creates issues, these agents execute:
 
 ## Common Questions
 
-**Q: Should I use Task Agent or a specialist directly?**  
+**Q: Should I use Task Agent or a specialist directly?** 
 A: Use Task Agent when you need analysis and don't know what issues exist. Use specialists when you have a specific, known issue.
 
-**Q: Can Task Agent implement fixes?**  
+**Q: Can Task Agent implement fixes?** 
 A: No, Task Agent analyzes and creates issues. Specialists (like George, UI Specialist) implement.
 
-**Q: How often should I run Task Agent?**  
+**Q: How often should I run Task Agent?** 
 A: Monthly for general quality, before releases for critical checks, after major changes.
 
-**Q: What if I disagree with agent assignments?**  
+**Q: What if I disagree with agent assignments?** 
 A: Task Agent provides recommendations. You can reassign, but consider its rationale first.
 
-**Q: Can Task Agent work on other repos besides homepage?**  
+**Q: Can Task Agent work on other repos besides homepage?** 
 A: Yes, but it's optimized for Hack23 homepage. May need guidance for other repos.
 
 ## Quick Stats

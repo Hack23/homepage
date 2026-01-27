@@ -8,7 +8,7 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 - **Deployment**: AWS S3 + CloudFront (automated via GitHub Actions)
 - **Languages**: 14 language variants - English (primary), Swedish (`_sv`), Korean (`_ko`), Arabic (`_ar`), Chinese (`_zh`), Danish (`_da`), Dutch (`_nl`), Finnish (`_fi`), French (`_fr`), German (`_de`), Hebrew (`_he`), Japanese (`_ja`), Norwegian (`_no`), Spanish (`_es`)
 - **Purpose**: Corporate website showcasing cybersecurity services, open-source projects, and company information
-- **ISMS**: Public ISMS v3.2 (effective 2026-01-25) at https://github.com/Hack23/ISMS-PUBLIC
+- **ISMS**: Public ISMS at https://github.com/Hack23/ISMS-PUBLIC
 
 ## Core Guidelines
 
@@ -69,7 +69,7 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 - Emphasize **radical transparency** and **open-source security** as core values
 - Highlight **practical security solutions** that enable innovation, not hinder it
 - Maintain professional tone appropriate for enterprise cybersecurity consulting
-- Reference the **Public ISMS v3.2 (2026-01-25)** as a key differentiator - https://github.com/Hack23/ISMS-PUBLIC
+- Reference the **Public ISMS** as a key differentiator - https://github.com/Hack23/ISMS-PUBLIC
 - Preserve links to projects: Black Trigram, CIA Compliance Manager, Citizen Intelligence Agency
 - **Discordian philosophy**: "Think for yourself, question authority" - inspired by Principia Discordia
 

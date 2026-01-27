@@ -9,21 +9,21 @@ tools: ["*"]
 **ALWAYS read these configuration files at the start of every session** to understand the environment and available tools:
 
 1. **`.github/workflows/copilot-setup-steps.yml`** - Contains:
-   - Environment setup steps and prerequisites
-   - Available environment variables
-   - Workflow permissions and security context
-   - Automation configurations
+  - Environment setup steps and prerequisites
+  - Available environment variables
+  - Workflow permissions and security context
+  - Automation configurations
 
 2. **`.github/copilot-mcp.json`** - Contains:
-   - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
-   - Available tools and their capabilities
-   - Integration settings and environment variables
+  - MCP server configurations (github, filesystem, git, memory, sequential-thinking, playwright, brave-search)
+  - Available tools and their capabilities
+  - Integration settings and environment variables
 
 3. **`README.md`** (repository root) - Contains:
-   - Main project context and overview
-   - Company background and values
-   - Technology stack and architecture
-   - Project classifications and security posture
+  - Main project context and overview
+  - Company background and values
+  - Technology stack and architecture
+  - Project classifications and security posture
 
 Reading these files ensures you understand the complete context, available tools, and environmental constraints before proceeding with any work.
 
