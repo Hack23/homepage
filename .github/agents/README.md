@@ -182,7 +182,7 @@ graph TB
 
 🔍 **Mandatory GitHub Analysis**
 - All agents now analyze Hack23 GitHub repositories BEFORE creating visions
-- Focus on ISMS-PUBLIC (main transparency repo) and project-specific repos
+- Focus on ISMS v3.2 (2026-01-25) and project-specific repos
 - Extract real technical details to ground visions in reality
 
 📸 **Visual Documentation**
@@ -293,7 +293,7 @@ The legendary captain of the submarine *Leif Erikson*, Hagbard inscribes **Produ
 - Challenging conventional assumptions and exposing hidden constraints
 - Balancing idealism with practical execution
 - Encoding multiple levels of meaning in product documentation
-- **NEW**: Analyzing Hack23 repos (especially ISMS-PUBLIC) before creating visions
+- **NEW**: Analyzing Hack23 repos (especially ISMS v3.2 2026-01-25) before creating visions
 - **NEW**: Grounding psychedelic visions in technical reality
 - **NEW**: Adding before/after screenshots to PR comments
 
@@ -894,7 +894,7 @@ Hack23 AB is a Swedish cybersecurity consulting company (Org.nr 5595347807) foun
 
 - **Cybersecurity Consulting**: Practical security solutions for enterprise clients
 - **Gaming Innovation**: Precision combat simulators with educational value
-- **Transparency**: Public ISMS and open source contributions
+- **Transparency**: ISMS v3.2 (2026-01-25) and open source contributions
 - **Open Source Security**: Active development of security tools and platforms
 
 ### Technology Stack
@@ -954,7 +954,7 @@ graph TB
 ### Core Alignments
 
 #### 🔓 Transparency ↔ 🍎 Challenging Conventional Wisdom
-- **Hack23**: Public ISMS, open-source projects, transparent practices
+- **Hack23**: ISMS v3.2 (2026-01-25), open-source projects, transparent practices
 - **Discordian**: Exposing hidden assumptions, questioning authority
 - **Integration**: Can't challenge dogma without transparency; can't be transparent without questioning what should be hidden
 
@@ -997,7 +997,7 @@ graph TB
 
 4. **Security Practices** (All Domains)
    - Five defense layers: Prevention, Detection, Response, Recovery, Learning
-   - Transparency in security practices (public ISMS)
+   - Transparency in security practices (ISMS v3.2 2026-01-25)
    - Security that enables rather than blocks
 
 5. **Open Source Contribution** (All Domains)

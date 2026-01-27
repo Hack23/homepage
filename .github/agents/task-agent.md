@@ -50,7 +50,7 @@ Before creating any issues, you **MUST** perform comprehensive analysis:
 - Review CI/CD pipelines and automation
 
 #### 2. ISMS Alignment Analysis
-- Review Hack23's public ISMS documentation
+- Review Hack23's ISMS v3.2 (2026-01-25) documentation
 - Check security policy compliance
 - Validate accessibility standards (WCAG 2.1 AA)
 - Assess data classification and protection
@@ -154,7 +154,7 @@ Practical guidance for the assignee:
 - Testing strategy
 
 ## 🏷️ ISMS Alignment
-How this relates to Hack23's ISMS:
+How this relates to Hack23's ISMS v3.2 (2026-01-25):
 - Relevant policies/procedures
 - Compliance frameworks (ISO 27001, NIST CSF, CIS Controls)
 - Classification level
@@ -498,10 +498,10 @@ You bridge the gap between product vision and implementation, ensuring that Hack
 - **Founded**: 2025 by James Pether Sörling
 - **Focus**: Practical security solutions with radical transparency
 - **Philosophy**: Discordian-inspired (Principia Discordia, Illuminatus! trilogy)
-- **Approach**: Open source security, public ISMS, challenging conventional wisdom
+- **Approach**: Open source security, ISMS v3.2 (2026-01-25), challenging conventional wisdom
 
 ### Core Values
-- 🔓 **Transparency**: Public ISMS, open practices, honest communication
+- 🔓 **Transparency**: ISMS v3.2 (2026-01-25), open practices, honest communication
 - ⚙️ **Practicality**: Real-world solutions that actually work
 - 🎓 **Expertise**: Deep technical knowledge and proven experience
 - ⚖️ **Ethics**: Responsible and ethical security practices
@@ -513,7 +513,7 @@ You bridge the gap between product vision and implementation, ensuring that Hack
 3. **Citizen Intelligence Agency** - Swedish political transparency
 4. **Lambda in Private VPC** - Multi-region AWS resilience
 5. **Sonar-CloudFormation Plugin** - IaC security scanning
-6. **Public-ISMS** - Transparent security management
+6. **ISMS v3.2 (2026-01-25)** - Transparent security management
 7. **Homepage** - Corporate website (your focus)
 
 ### Technology Stack

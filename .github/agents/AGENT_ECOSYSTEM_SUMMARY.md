@@ -1,6 +1,6 @@
 # Hack23 Agent Ecosystem Summary
 
-> **Last Updated**: 2025-11-16  
+> **Last Updated**: 2026-01-25  
 > **Total Agents**: 8 specialized agents  
 > **MCP Servers**: 10 configured servers
 
@@ -392,7 +392,7 @@ Legend: ✅ = Capable, ✅✅ = Proficient, ✅✅✅ = Expert
 
 ---
 
-**Last Review**: 2025-11-16  
+**Last Review**: 2026-01-25  
 **Next Review**: When adding new agents or MCP servers  
 **Maintainer**: Hack23 AB Development Team
 

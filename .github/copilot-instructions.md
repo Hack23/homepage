@@ -1,13 +1,14 @@
 # GitHub Copilot Custom Instructions
 
-You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedish cybersecurity consulting company. This is a professional corporate website focused on clear security messaging, accessible design, and transparency.
+You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedish cybersecurity consulting company founded in 2025. This is a professional corporate website focused on clear security messaging, accessible design, and radical transparency.
 
 ## Project Overview
 
-- **Technology Stack**: Static HTML5/CSS3 website
+- **Technology Stack**: Static HTML5/CSS3 website (no build system)
 - **Deployment**: AWS S3 + CloudFront (automated via GitHub Actions)
-- **Languages**: English (primary), Swedish (`_sv` suffix), Korean (`_ko` suffix)
+- **Languages**: English (primary), Swedish (`_sv` suffix), Korean (`_ko` suffix), plus 11 more language versions
 - **Purpose**: Corporate website showcasing cybersecurity services, open-source projects, and company information
+- **ISMS**: Public ISMS v3.2 (effective 2026-01-25) at https://github.com/Hack23/ISMS-PUBLIC
 
 ## Core Guidelines
 
@@ -57,18 +58,20 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 - Check that changes don't break existing functionality
 
 ### 7. Repository Structure
-- **Root HTML files**: Main pages (`index.html`, `cia-docs.html`, etc.)
-- **`styles.css`**: Single CSS file for all styling
+- **Root HTML files**: Main pages (`index.html`, `cia-docs.html`, `blog*.html`, `discordian-*.html`, etc.)
+- **`styles.css`**: Single CSS file for all styling - no CSS preprocessors
 - **`screenshots/`**: Visual assets and documentation images
 - **`.github/workflows/`**: CI/CD configuration (do not modify without careful consideration)
-- **Language variants**: Files with `_sv` or `_ko` suffixes
+- **`.github/agents/`**: 8 custom Copilot agent profiles with Discordian philosophy
+- **Language variants**: Files with `_sv`, `_ko`, `_ar`, `_da`, `_de`, `_es`, `_fi`, `_fr`, `_he`, `_ja`, `_nl`, `_no`, `_zh` suffixes
 
 ### 8. Brand and Messaging
-- Emphasize **transparency** and **open-source security** as core values
-- Highlight **practical security solutions** that don't hinder innovation
+- Emphasize **radical transparency** and **open-source security** as core values
+- Highlight **practical security solutions** that enable innovation, not hinder it
 - Maintain professional tone appropriate for enterprise cybersecurity consulting
-- Reference the public ISMS (Information Security Management System) as a key differentiator
+- Reference the **Public ISMS v3.2 (2026-01-25)** as a key differentiator - https://github.com/Hack23/ISMS-PUBLIC
 - Preserve links to projects: Black Trigram, CIA Compliance Manager, Citizen Intelligence Agency
+- **Discordian philosophy**: "Think for yourself, question authority" - inspired by Principia Discordia
 
 ### 9. Common Tasks
 

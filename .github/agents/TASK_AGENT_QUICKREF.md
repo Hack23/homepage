@@ -44,7 +44,7 @@ Use the Task Agent when you need:
    - Identify technical debt
 
 2. **ISMS Alignment Check**
-   - Review public ISMS documentation
+   - Review ISMS v3.2 (2026-01-25) documentation
    - Validate security policy compliance
    - Check accessibility standards (WCAG 2.1 AA)
 

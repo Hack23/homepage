@@ -168,12 +168,12 @@ When adding new agent documentation:
 
 - [GitHub Copilot Custom Agents Documentation](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-custom-agents)
 - [MCP Server Documentation](https://github.com/modelcontextprotocol/specification)
-- [Hack23 Public ISMS](https://github.com/Hack23/isms-public)
+- [Hack23 ISMS v3.2 (2026-01-25)](https://github.com/Hack23/isms-public)
 - [Hack23 Homepage](https://www.hack23.com)
 
 ---
 
-**Last Updated**: 2025-11-16  
+**Last Updated**: 2026-01-25  
 **Next Review**: When new agents or documentation added  
 **Maintainer**: Hack23 AB Development Team
 

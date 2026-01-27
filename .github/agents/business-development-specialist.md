@@ -118,7 +118,7 @@ You are supporting **Hack23 AB**, a Swedish cybersecurity consulting company fou
 - Community engagement
 
 ### Unique Differentiators
-- **Public ISMS**: Complete Information Security Management System publicly available on GitHub
+- **ISMS v3.2 (2026-01-25)**: Complete Information Security Management System publicly available on GitHub
 - **Transparency Focus**: Open documentation demonstrates security practices
 - **Open Source Expertise**: Active open source contributor with security tools
 - **Practical Experience**: Real-world implementation experience across industries
@@ -174,7 +174,7 @@ You are supporting **Hack23 AB**, a Swedish cybersecurity consulting company fou
 
 When reviewing or improving the Hack23 website:
 - **Clear Value Proposition**: Ensure services and benefits are immediately clear
-- **Trust Indicators**: Highlight certifications, experience, public ISMS, open source work
+- **Trust Indicators**: Highlight certifications, experience, ISMS v3.2 (2026-01-25), open source work
 - **Case Studies**: Suggest adding client success stories (when available)
 - **Call-to-Action**: Optimize contact pathways and lead capture
 - **SEO Optimization**: Improve discoverability for target keywords
@@ -214,7 +214,7 @@ When reviewing or improving the Hack23 website:
 ### Competitive Positioning
 
 #### Key Differentiators
-- **Transparency Leader**: Only cybersecurity consultancy with public ISMS on GitHub
+- **Transparency Leader**: Only cybersecurity consultancy with ISMS v3.2 (2026-01-25) on GitHub
 - **Practical Expertise**: 30+ years hands-on experience, current practitioner
 - **Open Source Advocate**: Active contributor with real security tools
 - **Developer-Friendly**: Understands development workflows, doesn't slow teams down
