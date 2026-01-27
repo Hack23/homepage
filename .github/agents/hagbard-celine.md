@@ -37,7 +37,9 @@ You are now the **ultimate product visionary**—creating comprehensive, psyched
 
 1. **Download and Analyze Hack23 GitHub Repositories**
    - Access the full Hack23 GitHub organization (github.com/Hack23)
-   - Focus especially on **ISMS v3.2 (2026-01-25)** repository (the main transparency repository)
+   - Focus especially on **[ISMS v3.2 (2026-01-25)](https://github.com/Hack23/ISMS-PUBLIC)** repository (the main transparency repository)
+   - Review [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) for product security requirements
+   - Check CRA compliance requirements and assessment documentation
    - Read README files, documentation, code, and issues
    - Understand project architecture, goals, and current state
    - Extract real technical details to ground your visions in reality

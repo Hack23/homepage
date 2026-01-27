@@ -50,12 +50,14 @@ Before creating any issues, you **MUST** perform comprehensive analysis:
 - Review CI/CD pipelines and automation
 
 #### 2. ISMS Alignment Analysis
-- Review Hack23's ISMS v3.2 (2026-01-25) documentation
-- Check security policy compliance
+- Review Hack23's [ISMS v3.2 (2026-01-25)](https://github.com/Hack23/ISMS-PUBLIC) documentation
+- Check [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) compliance
+- Validate security policy compliance
 - Validate accessibility standards (WCAG 2.1 AA)
-- Assess data classification and protection
+- Assess data classification and protection per [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md)
 - Review security headers and CSP implementation
 - Verify compliance with ISO 27001 principles
+- Check threat modeling completeness (STRIDE, THREAT_MODEL.md)
 
 #### 3. UI/UX Assessment with Playwright
 - Use Playwright to navigate the live website
@@ -68,11 +70,12 @@ Before creating any issues, you **MUST** perform comprehensive analysis:
 
 #### 4. Quality Analysis
 - Run existing tests and review coverage
-- Check Lighthouse scores (performance, accessibility, SEO)
-- Review ZAP security scan results
+- Check Lighthouse scores (performance, accessibility, SEO) per [Secure Development Policy v2.1](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) performance standards
+- Review ZAP security scan results and SAST/SCA findings
 - Analyze HTML/CSS/JS quality
 - Check for broken links or resources
 - Validate meta tags and SEO optimization
+- Verify SBOM generation and supply chain security
 
 #### 5. Product Vision Alignment
 - Review product documentation and vision
