@@ -44,7 +44,7 @@ To root-level files:
 To root-level files:
 - ✅ `../../../../CLASSIFICATION.md#confidentiality-levels`
 - ✅ `../../../../Business_Strategy.md`
-- ✅ `../../../../Marketing_Strategy.md`  
+- ✅ `../../../../Marketing_Strategy.md`
 - ✅ `../../../../Marketing_Plan.md`
 - ✅ `../../../../AnnualReport2025/Annual_Report_2025.md`
 
@@ -58,7 +58,7 @@ To sibling Marketing directories:
 
 1. **Count directory depth** from root to your file
    - Example: `Hack23AB/Marketing/Linkedin/file.md` = 3 levels
-   
+
 2. **Use `../` for each level** to reach root
    - 3 levels = `../../../`
    - 4 levels = `../../../../`
