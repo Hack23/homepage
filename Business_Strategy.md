@@ -7,7 +7,7 @@ This document will contain the overall business strategy for Hack23 AB.
 ## Sections
 
 - Vision and Mission
-- Strategic Goals  
+- Strategic Goals
 - Market Analysis
 - Competitive Positioning
 - Growth Strategy

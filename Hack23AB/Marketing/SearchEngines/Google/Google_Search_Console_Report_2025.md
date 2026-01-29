@@ -16,7 +16,7 @@ This report provides Google Search Console analytics data for the year 2025.
 ## Related Documents
 
 - [Business Strategy](../../../../Business_Strategy.md) - Overall business strategy (placeholder)
-- [Marketing Strategy](../../../../Marketing_Strategy.md) - Marketing approach (placeholder)  
+- [Marketing Strategy](../../../../Marketing_Strategy.md) - Marketing approach (placeholder)
 - [Marketing Plan](../../../../Marketing_Plan.md) - Detailed marketing plan (placeholder)
 - [Annual Report 2025](../../../../AnnualReport2025/Annual_Report_2025.md) - Company annual report (placeholder)
 - [LinkedIn Analytics Report](../../Linkedin/LinkedIn_Analytics_Report_2025.md) - LinkedIn analytics data
