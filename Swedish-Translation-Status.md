@@ -55,16 +55,17 @@ graph TB
 
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
-| ✅ **Fully Translated** | 90 | 93.8% | No English content detected in meta or body |
-| ⚡ **Mostly Translated** | 6 | 6.2% | Minimal English (6 files with some English meta tags) |
+| ✅ **Fully Translated** | 89 | 92.7% | No English content detected in meta or body |
+| ⚡ **Mostly Translated** | 7 | 7.3% | Minimal English (7 files with some English in structured data) |
 
-**🏆 Quality Score:** 98.6% of files are fully/mostly translated 🎉 **100% COVERAGE ACHIEVED!**
+**🏆 Quality Score:** 98.5% of files are fully/mostly translated 🎉 **100% COVERAGE ACHIEVED!**
 - Formula: (Fully Translated + (Mostly Translated × 0.8)) / Total Files
-- (90 + (6 × 0.8)) / 96 = 98.6%
+- (89 + (7 × 0.8)) / 96 = 98.46% ≈ 98.5%
 
 **📈 Status:** 🎉 Excellent - Quality target (90%+) exceeded!
 
-**Files with minimal English remaining (6):**
+**Files with minimal English remaining (7):**
+- black-trigram_sv.html - English structured data (FAQ questions/answers for SEO)
 - black-trigram-docs_sv.html
 - blog-cia-business-case-global-news_sv.html
 - blog-compliance-architecture_sv.html
@@ -105,13 +106,14 @@ graph TB
 **Post-Phase 7 Quality Improvement (January 30, 2026):**
 - ✅ Completed blog-automated-convergence_sv.html body content translation
 - ✅ Translated 5 major content sections: Pentagon Issue ID, Objective Analysis, Related Resources, FAQ (4 Q&A pairs), Related Content
-- ✅ Completed black-trigram_sv.html full translation (all CTA buttons, navigation, breadcrumbs, footer)
+- ✅ Completed black-trigram_sv.html UI translation (all CTA buttons, navigation, breadcrumbs, footer)
 - ✅ Translated all UI elements: "Spela Nu", "Visa på GitHub", "Visa Källkod", "Tillbaka till Projekt"
 - ✅ Updated navigation links to Swedish versions (projects_sv.html, why-hack23_sv.html, compliance-manager_sv.html, cia-project_sv.html)
+- ✅ Fixed structured data @id references to use black-trigram_sv.html (BreadcrumbList, FAQPage)
 - ✅ Korean terms preserved in black-trigram_sv.html (흑괘, 무사, 암살자, 정보원, 조직원)
 - ✅ Product name "Black Trigram" kept in English as specified
-- ✅ Quality score improved from 98.5% to **98.6%** 🎉
-- ✅ Fully translated files increased from 89 to 90 (1 file improvement)
+- ℹ️ FAQ structured data kept in English for SEO (best practice for international discoverability)
+- ✅ Quality score maintained at **98.5%** (89 fully translated, 7 mostly translated)
 - ✅ All Swedish terminology follows Swedish-Translation-Guide.md v6.0
 
 **Phase 6: Homepage Translation Plan (pending index_sv.html update):**
@@ -211,7 +213,7 @@ graph TB
 ### Product Pages (10 files)
 - ⚠️  `black-trigram-docs_sv.html` ← `black-trigram-docs.html`
 - ✅ `black-trigram-features_sv.html` ← `black-trigram-features.html`
-- ✅ `black-trigram_sv.html` ← `black-trigram.html` **[FULLY TRANSLATED - January 30, 2026]**
+- ⚡ `black-trigram_sv.html` ← `black-trigram.html` **[MOSTLY TRANSLATED - January 30, 2026]**
 - ⚠️  `cia-compliance-manager-docs_sv.html` ← `cia-compliance-manager-docs.html`
 - ✅ `cia-compliance-manager-features_sv.html` ← `cia-compliance-manager-features.html`
 - ⚠️  `cia-docs_sv.html` ← `cia-docs.html`
