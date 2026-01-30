@@ -148,7 +148,7 @@ graph TB
 
 ### Core Pages (7 files)
 - ✅ `accessibility-statement_sv.html` ← `accessibility-statement.html`
-- ⚠️  `blog_sv.html` ← `blog.html`
+- ✅ `blog_sv.html` ← `blog.html` **[COMPLETE]**
 - ⚡ `index_sv.html` ← `index.html`
 - ✅ `projects_sv.html` ← `projects.html`
 - ✅ `services_sv.html` ← `services.html`
