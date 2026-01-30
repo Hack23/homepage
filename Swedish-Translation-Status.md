@@ -56,7 +56,7 @@ graph TB
 | Quality Level | Count | Percentage | Description |
 |--------------|-------|------------|-------------|
 | ✅ **Fully Translated** | 89 | 92.7% | No English content detected in meta or body |
-| ⚡ **Mostly Translated** | 7 | 7.3% | Minimal English (7 files with some English in structured data) |
+| ⚡ **Mostly Translated** | 7 | 7.3% | Minimal English (structured data and technical documentation content) |
 
 **🏆 Quality Score:** 98.5% of files are fully/mostly translated 🎉 **100% COVERAGE ACHIEVED!**
 - Formula: (Fully Translated + (Mostly Translated × 0.8)) / Total Files
