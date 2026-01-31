@@ -148,7 +148,7 @@ graph TB
 - ✅ `blog-cia-security_sv.html` ← `blog-cia-security.html`
 - ✅ `blog-cia-swedish-media-election-2026_sv.html` ← `blog-cia-swedish-media-election-2026.html`
 - ✅ `blog-cia-workflows_sv.html` ← `blog-cia-workflows.html`
-- ⚠️  `blog-compliance-architecture_sv.html` ← `blog-compliance-architecture.html`
+- ✅ `blog-compliance-architecture_sv.html` ← `blog-compliance-architecture.html`
 - ⚠️  `blog-compliance-future_sv.html` ← `blog-compliance-future.html`
 - ✅ `blog-compliance-security_sv.html` ← `blog-compliance-security.html`
 - ✅ `blog-george-dorn-cia-code_sv.html` ← `blog-george-dorn-cia-code.html` **[COMPLETE - January 2026]**
