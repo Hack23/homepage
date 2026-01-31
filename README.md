@@ -89,6 +89,59 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 
 ---
 
+## 🤖 GitHub Copilot Integration: Skills Library & Custom Agents
+
+This repository includes a comprehensive **GitHub Copilot ecosystem** for consistent, secure, and high-quality development:
+
+### 📚 Skills Library (14 Production-Ready Skills)
+
+Located in `.github/skills/`, our skills library provides automatic guidance for:
+
+**🔐 Security (4 skills)**
+- Secure Development - Security-by-design, input validation, authentication
+- Access Control - Least privilege, RBAC, session management
+- Data Classification - 4-level classification with handling requirements
+- Cryptography - AES-256, RSA-2048+, TLS 1.2+, key management
+
+**🏛️ Architecture (3 skills)**
+- C4 Modeling - Context, Container, Component, Code diagrams
+- Security Architecture - SECURITY_ARCHITECTURE.md requirements
+- Documentation Portfolio - 12-document C4 architecture portfolio
+
+**✅ Quality (3 skills)**
+- HTML/CSS Best Practices - Semantic HTML5, responsive design
+- Accessibility WCAG - WCAG 2.1 AA compliance requirements
+- SEO Optimization - Meta tags, structured data, multilingual SEO
+
+**☁️ Deployment (2 skills)**
+- AWS S3/CloudFront - Configuration, security headers, SSL/TLS
+- GitHub Actions CI/CD - Workflows, security scanning, Lighthouse
+
+**📋 Compliance (2 skills)**
+- ISO 27001 - Control implementation and documentation
+- GDPR - Privacy by design, data protection
+
+**[📖 Browse Skills Library](.github/skills/)** | **[📋 Skills Catalog](.github/skills/INDEX.md)**
+
+### 🎯 Custom Agents (8 Specialized Agents)
+
+Located in `.github/agents/`, our custom agents provide domain expertise:
+
+- **task-agent** - Task orchestration and issue creation with MCP Insiders
+- **ui-enhancement-specialist** - HTML/CSS/Accessibility expert
+- **marketing-specialist** - SEO and content optimization
+- **business-development-specialist** - Compliance and consultative selling
+- **political-analyst** - Ethical OSINT and GDPR compliance
+- **george-dorn** (Discordian) - Developer/implementation specialist
+- **hagbard-celine** (Discordian) - Product owner/vision specialist
+- **simon-moon** (Discordian) - Architect/patterns specialist
+
+**[🤖 Browse Custom Agents](.github/agents/)** | **[📊 Agent Improvements Summary](.github/agents/AGENT_IMPROVEMENTS_SUMMARY.md)**
+
+Skills auto-load via GitHub Copilot (December 2025 feature) to ensure consistency, security, and compliance across all development work.
+
+---
+
 ## 🗺️ Site Map Overview
 
 Hack23.com is a static, multi-language HTML/CSS site deployed to AWS S3 + CloudFront.  
