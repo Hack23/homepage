@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Black Trigram Code | Unity Game Development | Hack23</title>
+<title>Black Trigram Kod | Unity Spelutveckling | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Black Trigram codebase analysis: TypeScript/React/ThreeJs, 132 source files, browser combat system. Korean martial arts game development.">
-<meta name="twitter:description" content="Black Trigram codebase analysis: TypeScript/React/ThreeJs, 132 source files, browser combat system. Korean martial arts game development.">
-<meta name="keywords" content="Black Trigram code, TypeScript game, React ThreeJs, combat system, Korean martial arts game, George Dorn analysis">
+<meta name="description" content="Black Trigram kodbasanalys: TypeScript/React/ThreeJs, 132 källkodsfiler, webbläsarbaserat stridssystem. Koreansk kampsportsspelutveckling.">
+<meta name="twitter:description" content="Black Trigram kodbasanalys: TypeScript/React/ThreeJs, 132 källkodsfiler, webbläsarbaserat stridssystem. Koreansk kampsportsspelutveckling.">
+<meta name="keywords" content="Black Trigram kod, TypeScript spel, React ThreeJs, stridssystem, koreanskt kampsportsspel, George Dorn analys">
 <meta name="robots" content="index, follow">
 <meta name="author" content="George Dorn">
-<meta property="og:title" content="George Dorn: Black Trigram Code Analysis - TypeScript Combat Reality">
-<meta property="og:description" content="Developer deep-dive into Black Trigram's actual codebase: 132 TypeScript files, React 19 + ThreeJs 8, 70 vital points combat system analyzed.">
+<meta property="og:title" content="George Dorn: Black Trigram Kodanalys - TypeScript Stridsverklighet">
+<meta property="og:description" content="Utvecklares djupdykning i Black Trigrams faktiska kodbas: 132 TypeScript-filer, React 19 + ThreeJs 8, 70 vitala punkters stridssystem analyserat.">
 	<meta property="og:locale" content="sv_SE">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -28,7 +28,9 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/blog-george-dorn-trigram-code_sv.html">
-<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
 <meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
@@ -36,18 +38,19 @@
 <meta name="twitter:creator" content="@jamessorling">
 
 <link rel="canonical" href="https://hack23.com/blog-george-dorn-trigram-code_sv.html">
+	<!-- Hreflang tags for language alternatives -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "George Dorn: Black Trigram Code Analysis - TypeScript Combat System",
-      "description": "Technical analysis of Black Trigram's actual codebase by George Dorn, developer at Hack23",
+      "headline": "George Dorn: Black Trigram Kodanalys - TypeScript Stridssystem",
+      "description": "Teknisk analys av Black Trigrams faktiska kodbas av George Dorn, utvecklare på Hack23",
       "author": {
         "@type": "Person",
         "name": "George Dorn",
-        "jobTitle": "Developer",
+        "jobTitle": "Utvecklare",
         "image": {
           "@type": "ImageObject",
           "url": "https://hack23.com/jamespethersorling150.webp",
@@ -69,8 +72,8 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-george-dorn-trigram-code_sv.html"
       },
-      "keywords": "Black Trigram, TypeScript, React, ThreeJs, combat system, developer analysis, Hack23",
-      "articleSection": "Developer Code Analysis",
+      "keywords": "Black Trigram, TypeScript, React, ThreeJs, stridssystem, utvecklaranalys, Hack23",
+      "articleSection": "Utvecklares Kodanalys",
       "image": {
         "@type": "ImageObject",
         "url": "https://hack23.com/blog.webp",
@@ -78,7 +81,7 @@
         "height": 630
       },
       "wordCount": 1388,
-      "articleBody": "Developer's Note: Cloned https://github.com/Hack23/blacktrigram, analyzed the TypeScript/React/ThreeJs structure, examined package.json dependencies, and explored the actual combat system implementatio...",
+      "articleBody": "Utvecklarens anteckning: Klonade https://github.com/Hack23/blacktrigram, analyserade TypeScript/React/ThreeJs-strukturen, granskade package.json-beroenden och utforskade den faktiska stridssystemimplementeringen...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_sv.html#blog",
@@ -147,7 +150,7 @@
   <nav aria-label="Breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Hem</a>
+        <a href="/index_sv.html">Hem</a>
       </li>
       <li class="breadcrumb-item">
         <a href="/blog_sv.html">Blogg</a>
@@ -162,489 +165,489 @@
   <div class="logo-container">
     <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
   </div>
-  <h1>Developer Code Analysis</h1>
+  <h1>Utvecklares Kodanalys</h1>
   <div class="app-link">
     <a href="index_sv.html">Hem</a>
     <a href="blog_sv.html">Blogg</a>
-    <a href="black-trigram-docs.html">Black Trigram Docs</a>
+    <a href="black-trigram-docs_sv.html">Black Trigram Docs</a>
   </div>
 </header>
 <main>
   <article>
-    <h1 class="header">🥋 George Dorns Black Trigram Kodanalys: Browser-Based Combat Reality</h1>
+    <h1 class="header">🥋 George Dorns Black Trigram Kodanalys: Webbläsarbaserad Stridsverklighet</h1>
     
     <section id="introduction">
-      <h2 class="panel-caption">TypeScript Combat System: What The Repository Actually Contains</h2>
+      <h2 class="panel-caption">TypeScript Stridssystem: Vad Repositoryn Faktiskt Innehåller</h2>
       
-      <p><strong>Developer's Note:</strong> Cloned <a href="https://github.com/Hack23/blacktrigram">https://github.com/Hack23/blacktrigram</a>, analyzed the TypeScript/React/ThreeJs structure, examined package.json dependencies, and explored the actual combat system implementation.</p>
+      <p><strong>Utvecklarens anteckning:</strong> Klonade <a href="https://github.com/Hack23/blacktrigram">https://github.com/Hack23/blacktrigram</a>, analyserade TypeScript/React/ThreeJs-strukturen, granskade package.json-beroenden och utforskade den faktiska stridssystemimplementeringen.</p>
       
       <p><strong>Repository URL:</strong> <code>git clone https://github.com/Hack23/blacktrigram.git</code></p>
-      <p><strong>Analysis Date:</strong> November 8, 2025</p>
-      <p><strong>Core Tech:</strong> TypeScript 5.9.3, React 19.2.0, ThreeJs 8.14.0, Vite 7.2.2</p>
+      <p><strong>Analysdatum:</strong> 8 november 2025</p>
+      <p><strong>Kärnteknologi:</strong> TypeScript 5.9.3, React 19.2.0, ThreeJs 8.14.0, Vite 7.2.2</p>
       
-      <p class="hidden-wisdom"><em>Browser-based fighting game = democratized access. No install, no console, no platform lock-in. Just JavaScript/TypeScript doing what people said couldn't be done.</em></p>
+      <p class="hidden-wisdom"><em>Webbläsarbaserat kampsportspel = demokratiserad åtkomst. Ingen installation, ingen konsol, ingen plattformsbindning. Bara JavaScript/TypeScript som gör det folk sa inte gick att göra.</em></p>
     
       
-      <p><strong>Need expert guidance on security compliance?</strong> <a href="why-hack23.html">Explore Hack23's cybersecurity consulting services</a> backed by our fully public ISMS.</p>
+      <p><strong>Behöver du expertvägledning om säkerhetsefterlevnad?</strong> <a href="why-hack23_sv.html">Utforska Hack23s cybersäkerhetskonsulttjänster</a> stödda av vårt helt publika LIS.</p>
     </section>
 
     <section id="repository-structure">
-      <h2 class="panel-caption">Repository Structure: TypeScript Combat at 60fps</h2>
+      <h2 class="panel-caption">Repositorystruktur: TypeScript Strid på 60fps</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>📁 Source Directory Structure</h3>
-          <p><strong>Actual Count:</strong> <code>find src -name "*.ts*" | wc -l</code> = <strong>132 TypeScript files</strong></p>
+          <h3>📁 Källkodskatalogstruktur</h3>
+          <p><strong>Faktiskt antal:</strong> <code>find src -name "*.ts*" | wc -l</code> = <strong>132 TypeScript-filer</strong></p>
           
-          <p><strong>Directory Organization Discovered:</strong></p>
+          <p><strong>Katalogorganisation upptäckt:</strong></p>
           <ul>
-            <li><code>src/components/</code> - React components (game, training, combat, intro, screens, UI)</li>
-            <li><code>src/systems/</code> - Game logic systems (combat, trigram, vital-point, audio, rendering)</li>
-            <li><code>src/types/</code> - TypeScript type definitions and constants</li>
-            <li><code>src/utils/</code> - Utility functions and helpers</li>
-            <li><code>src/assets/</code> - Audio files, music, archetype themes</li>
-            <li><code>src/hooks/</code> - React custom hooks</li>
-            <li><code>src/audio/</code> - Sound system integration</li>
+            <li><code>src/components/</code> - React-komponenter (spel, träning, strid, intro, skärmar, UI)</li>
+            <li><code>src/systems/</code> - Spellogiska system (strid, trigram, vitalpunkt, ljud, rendering)</li>
+            <li><code>src/types/</code> - TypeScript typdefinitioner och konstanter</li>
+            <li><code>src/utils/</code> - Verktygsfunktioner och hjälpare</li>
+            <li><code>src/assets/</code> - Ljudfiler, musik, kämparketypteman</li>
+            <li><code>src/hooks/</code> - React anpassade hooks</li>
+            <li><code>src/audio/</code> - Ljudsystemintegration</li>
           </ul>
           
-          <p><strong>Component Categories:</strong></p>
+          <p><strong>Komponentkategorier:</strong></p>
           <ul>
-            <li><code>components/game/</code> - Main game loop and state management</li>
-            <li><code>components/training/</code> - Training mode UI and mechanics</li>
-            <li><code>components/combat/</code> - Combat screen and fight logic</li>
-            <li><code>components/intro/</code> - Intro sequence and character selection</li>
-            <li><code>components/screens/</code> - Screen management and routing</li>
-            <li><code>components/ui/base/</code> - Base UI components including korean-text rendering</li>
+            <li><code>components/game/</code> - Huvudspelloop och tillståndshantering</li>
+            <li><code>components/training/</code> - Träningsläge UI och mekanik</li>
+            <li><code>components/combat/</code> - Stridsskärm och kamplogik</li>
+            <li><code>components/intro/</code> - Introsekvens och karaktärsval</li>
+            <li><code>components/screens/</code> - Skärmhantering och routing</li>
+            <li><code>components/ui/base/</code> - Bas UI-komponenter inklusive korean-text rendering</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>Directory structure reveals architecture: components (UI), systems (logic), types (contracts). Clean separation = maintainable codebase.</em></p>
+          <p class="hidden-wisdom"><em>Katalogstrukturen avslöjar arkitekturen: komponenter (UI), system (logik), typer (kontrakt). Tydlig separation = underhållbar kodbas.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>📦 Dependency Analysis from package.json</h3>
-          <p><strong>Core Runtime Dependencies:</strong></p>
+          <h3>📦 Beroendeanalys från package.json</h3>
+          <p><strong>Centrala Runtime-beroenden:</strong></p>
           <ul>
-            <li><strong>react: ^19.2.0</strong> - Latest React for UI components</li>
-            <li><strong>react-dom: ^19.2.0</strong> - DOM rendering</li>
-            <li><strong>pixi.js: ^8.14.0</strong> - WebGL/Canvas 3D rendering engine</li>
-            <li><strong>@pixi/react: ^8.0.3</strong> - React integration for ThreeJs</li>
-            <li><strong>@pixi/sound: ^6.0.1</strong> - Audio system for ThreeJs</li>
-            <li><strong>@pixi/ui: ^2.2.7</strong> - UI components for ThreeJs</li>
-            <li><strong>@pixi/layout: ^3.2.0</strong> - Layout system</li>
-            <li><strong>howler: ^2.2.4</strong> - Alternative audio library</li>
-            <li><strong>react-error-boundary: ^6.0.0</strong> - Error handling</li>
+            <li><strong>react: ^19.2.0</strong> - Senaste React för UI-komponenter</li>
+            <li><strong>react-dom: ^19.2.0</strong> - DOM-rendering</li>
+            <li><strong>pixi.js: ^8.14.0</strong> - WebGL/Canvas 3D-renderingsmotor</li>
+            <li><strong>@pixi/react: ^8.0.3</strong> - React-integration för ThreeJs</li>
+            <li><strong>@pixi/sound: ^6.0.1</strong> - Ljudsystem för ThreeJs</li>
+            <li><strong>@pixi/ui: ^2.2.7</strong> - UI-komponenter för ThreeJs</li>
+            <li><strong>@pixi/layout: ^3.2.0</strong> - Layoutsystem</li>
+            <li><strong>howler: ^2.2.4</strong> - Alternativt ljudbibliotek</li>
+            <li><strong>react-error-boundary: ^6.0.0</strong> - Felhantering</li>
           </ul>
           
-          <p><strong>Development Dependencies (Selected):</strong></p>
+          <p><strong>Utvecklingsberoenden (Utvalda):</strong></p>
           <ul>
-            <li><strong>typescript: ^5.9.3</strong> - Type safety and tooling</li>
-            <li><strong>vite: ^7.2.2</strong> - Build tool and dev server</li>
-            <li><strong>@testing-library/react: ^16.3.0</strong> - Component testing</li>
-            <li><strong>eslint</strong> - Code linting</li>
-            <li><strong>@cypress/react: ^9.0.1</strong> - E2E testing</li>
+            <li><strong>typescript: ^5.9.3</strong> - Typsäkerhet och verktyg</li>
+            <li><strong>vite: ^7.2.2</strong> - Build-verktyg och dev-server</li>
+            <li><strong>@testing-library/react: ^16.3.0</strong> - Komponenttestning</li>
+            <li><strong>eslint</strong> - Kodlinting</li>
+            <li><strong>@cypress/react: ^9.0.1</strong> - E2E-testning</li>
           </ul>
           
-          <p><strong>AI Integration Dependencies:</strong></p>
+          <p><strong>AI-integrationsberoenden:</strong></p>
           <ul>
-            <li><strong>@elevenlabs/elevenlabs-js: ^2.22.0</strong> - Text-to-speech AI</li>
-            <li><strong>openai: ^6.8.1</strong> - OpenAI API integration</li>
+            <li><strong>@elevenlabs/elevenlabs-js: ^2.22.0</strong> - Text-till-tal AI</li>
+            <li><strong>openai: ^6.8.1</strong> - OpenAI API-integration</li>
             <li><strong>@aws-sdk/client-bedrock-runtime: ^3.927.0</strong> - AWS Bedrock AI</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>AI dependencies suggest future voice synthesis for characters or dynamic commentary. ElevenLabs + OpenAI + AWS Bedrock = multi-AI strategy for flexibility.</em></p>
+          <p class="hidden-wisdom"><em>AI-beroenden antyder framtida röstsyntes för karaktärer eller dynamisk kommentering. ElevenLabs + OpenAI + AWS Bedrock = multi-AI-strategi för flexibilitet.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>⚙️ Build Configuration</h3>
-          <p><strong>Build Tool:</strong> Vite 7.2.2 (modern, fast, ES modules)</p>
-          <p><strong>TypeScript Config:</strong> Strict mode enabled (verified in tsconfig.json)</p>
-          <p><strong>Testing:</strong> Vitest + Testing Library + Cypress</p>
-          <p><strong>Deployment:</strong> Static build output (dist/) deployable anywhere</p>
+          <h3>⚙️ Build-konfiguration</h3>
+          <p><strong>Build-verktyg:</strong> Vite 7.2.2 (modernt, snabbt, ES-moduler)</p>
+          <p><strong>TypeScript-konfiguration:</strong> Strikt läge aktiverat (verifierat i tsconfig.json)</p>
+          <p><strong>Testning:</strong> Vitest + Testing Library + Cypress</p>
+          <p><strong>Deployment:</strong> Statisk build-output (dist/) distribuerbar överallt</p>
           
-          <p><strong>Build Commands Discovered:</strong></p>
+          <p><strong>Build-kommandon upptäckta:</strong></p>
           <ul>
-            <li><code>npm run dev</code> - Development server with HMR</li>
-            <li><code>npm run build</code> - Production build (minified, optimized)</li>
-            <li><code>npm run test</code> - Run test suites</li>
-            <li><code>npm run lint</code> - ESLint code quality checks</li>
+            <li><code>npm run dev</code> - Utvecklingsserver med HMR</li>
+            <li><code>npm run build</code> - Produktionsbygge (minifierad, optimerad)</li>
+            <li><code>npm run test</code> - Kör testsviter</li>
+            <li><code>npm run lint</code> - ESLint kodkvalitetskontroller</li>
           </ul>
           
-          <p><strong>Bundle Size Budget:</strong> Checked for size-limit config—production bundle optimized for web delivery</p>
+          <p><strong>Bundle-storleksbudget:</strong> Kontrollerat för size-limit config—produktionsbundle optimerad för webbleverans</p>
         </div>
       </div>
     </section>
 
     <section id="combat-system">
-      <h2 class="panel-caption">Combat System Implementation: TypeScript Fighting Game Architecture</h2>
+      <h2 class="panel-caption">Stridssystemimplementering: TypeScript Kampsportspelsarkitektur</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>🎮 Systems Architecture</h3>
-          <p><strong>Core Systems Identified in src/systems/:</strong></p>
+          <h3>🎮 Systemarkitektur</h3>
+          <p><strong>Kärnasystem identifierade i src/systems/:</strong></p>
           <ul>
-            <li><strong>Combat System</strong> - Hit detection, damage calculation, combat state</li>
-            <li><strong>Trigram System</strong> - 8 trigram stances from I Ching philosophy</li>
-            <li><strong>Vital-Point System</strong> - 70 vital points (Korean martial arts kyusho)</li>
-            <li><strong>Audio System</strong> - Sound effects, music, spatial audio</li>
-            <li><strong>Rendering System</strong> - ThreeJs sprite management and animations</li>
+            <li><strong>Stridssystem</strong> - Träffdetektering, skadeberäkning, stridstillstånd</li>
+            <li><strong>Trigramsystem</strong> - 8 trigramställningar från I Ching-filosofi</li>
+            <li><strong>Vitalpunktsystem</strong> - 70 vitala punkter (koreansk kampsport kyusho)</li>
+            <li><strong>Ljudsystem</strong> - Ljudeffekter, musik, rumsljud</li>
+            <li><strong>Renderingssystem</strong> - ThreeJs sprite-hantering och animationer</li>
           </ul>
           
-          <p><strong>Game Loop Architecture:</strong></p>
+          <p><strong>Spellooparkitektur:</strong></p>
           <ol>
-            <li><strong>Input Processing</strong> - Keyboard/gamepad input handling</li>
-            <li><strong>State Update</strong> - Game state transitions (120fps logic)</li>
-            <li><strong>Physics/Collision</strong> - Hitbox-to-hurtbox detection</li>
-            <li><strong>Rendering</strong> - ThreeJs renders at 60fps (separate from logic)</li>
-            <li><strong>Audio</strong> - Sound triggers based on game events</li>
+            <li><strong>Inputbearbetning</strong> - Tangentbord/gamepad inputhantering</li>
+            <li><strong>Tillståndsuppdatering</strong> - Speltillståndsövergångar (120fps logik)</li>
+            <li><strong>Fysik/Kollision</strong> - Hitbox-till-hurtbox-detektering</li>
+            <li><strong>Rendering</strong> - ThreeJs renderar på 60fps (separat från logik)</li>
+            <li><strong>Ljud</strong> - Ljudtriggers baserade på spelhändelser</li>
           </ol>
           
-          <p class="hidden-wisdom"><em>Separating logic (120fps) from rendering (60fps) = smooth gameplay even under load. Classic game architecture pattern in TypeScript.</em></p>
+          <p class="hidden-wisdom"><em>Att separera logik (120fps) från rendering (60fps) = smidig gameplay även under belastning. Klassiskt spelsarkitekturmönster i TypeScript.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>⚔️ Combat Mechanics Implementation</h3>
-          <p><strong>Vital Point System:</strong> 70 points across body regions</p>
+          <h3>⚔️ Stridsmekanikimplementering</h3>
+          <p><strong>Vitalpunktsystem:</strong> 70 punkter över kroppsregioner</p>
           <ul>
-            <li>Head: 10 points (high damage multiplier)</li>
-            <li>Neck: 8 points (critical strikes)</li>
-            <li>Torso: 20 points (balanced damage)</li>
-            <li>Arms: 16 points (limb targeting)</li>
-            <li>Legs: 16 points (mobility disruption)</li>
+            <li>Huvud: 10 punkter (hög skademultiplikator)</li>
+            <li>Nacke: 8 punkter (kritiska slag)</li>
+            <li>Torso: 20 punkter (balanserad skada)</li>
+            <li>Armar: 16 punkter (extremitetsmålning)</li>
+            <li>Ben: 16 punkter (rörelseförstöring)</li>
           </ul>
           
-          <p><strong>Damage Calculation Formula:</strong></p>
-          <code>damage = baseDamage × vitalPointMultiplier × stanceModifier × balanceFactor</code>
+          <p><strong>Skadeberäkningsformel:</strong></p>
+          <code>skada = basskada × vitalpunktmultiplikator × ställningsmodifierare × balansfaktor</code>
           
-          <p><strong>Combat Stats Tracked:</strong></p>
+          <p><strong>Stridsstatistik spårad:</strong></p>
           <ul>
-            <li>Health (❤️) - HP remaining</li>
-            <li>Pain (😖) - Accumulated damage affecting performance</li>
-            <li>Balance (⚖️) - Stance stability</li>
-            <li>Consciousness (🧠) - Awareness level</li>
-            <li>BloodLoss (🩸) - Cumulative bleeding</li>
-            <li>Stamina (🔋) - Energy for actions</li>
+            <li>Hälsa (❤️) - HP kvar</li>
+            <li>Smärta (😖) - Ackumulerad skada som påverkar prestation</li>
+            <li>Balans (⚖️) - Ställningsstabilitet</li>
+            <li>Medvetande (🧠) - Medvetenhetsnivå</li>
+            <li>Blodförlust (🩸) - Kumulativ blödning</li>
+            <li>Stamina (🔋) - Energi för handlingar</li>
           </ul>
           
-          <p><strong>Krigararketyper:</strong> 5 distinct styles discovered in types/</p>
+          <p><strong>Kämparketyper:</strong> 5 distinkta stilar upptäckta i types/</p>
           <ol>
-            <li>무사 (Musa) - Traditional Warrior</li>
-            <li>암살자 (Amsalja) - Shadow Assassin</li>
-            <li>해커 (Hacker) - Cyber Warrior</li>
-            <li>정보요원 (Jeongbo Yowon) - Intelligence Operative</li>
-            <li>조직폭력배 (Jojik Pokryeokbae) - Organized Crime</li>
+            <li>무사 (Musa) - Traditionell krigare</li>
+            <li>암살자 (Amsalja) - Skugglönnmördare</li>
+            <li>해커 (Hacker) - Cyberkrigar</li>
+            <li>정보요원 (Jeongbo Yowon) - Underrättelseoperatör</li>
+            <li>조직폭력배 (Jojik Pokryeokbae) - Organiserad brottslighet</li>
           </ol>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>🎨 Rendering Pipeline</h3>
-          <p><strong>ThreeJs Integration:</strong></p>
+          <h3>🎨 Renderingspipeline</h3>
+          <p><strong>ThreeJs-integration:</strong></p>
           <ul>
-            <li><strong>WebGL Backend:</strong> Hardware-accelerated 3D rendering</li>
-            <li><strong>Sprite Management:</strong> Character animations, backgrounds, effects</li>
-            <li><strong>Particle Systems:</strong> Blood splatter, hit sparks, dust clouds</li>
-            <li><strong>UI Overlays:</strong> Health bars, combo counters, round timers</li>
+            <li><strong>WebGL Backend:</strong> Hårdvaruaccelererad 3D-rendering</li>
+            <li><strong>Sprite-hantering:</strong> Karaktärsanimationer, bakgrunder, effekter</li>
+            <li><strong>Partikelsystem:</strong> Blodstänk, träffsparkar, dammmoln</li>
+            <li><strong>UI-överlägg:</strong> Hälsostaplar, comboräknare, rundtimers</li>
           </ul>
           
-          <p><strong>Performance Optimizations Observed:</strong></p>
+          <p><strong>Prestandaoptimeringar observerade:</strong></p>
           <ul>
-            <li>Sprite atlases for reduced draw calls</li>
-            <li>Object pooling for particles</li>
-            <li>Texture compression</li>
-            <li>Batch rendering for similar sprites</li>
+            <li>Sprite-atlaser för reducerade draw calls</li>
+            <li>Objektpooling för partiklar</li>
+            <li>Texturkompression</li>
+            <li>Batchrendering för liknande sprites</li>
           </ul>
           
-          <p><strong>Target:</strong> 60fps on 5-year-old laptops (accessibility focus)</p>
+          <p><strong>Mål:</strong> 60fps på 5 år gamla laptops (tillgänglighetsfokus)</p>
         </div>
       </div>
     </section>
 
     <section id="tech-decisions">
-      <h2 class="panel-caption">Technology Decisions: Why This Stack?</h2>
+      <h2 class="panel-caption">Teknologibeslut: Varför Denna Stack?</h2>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>Technology</th>
-            <th>Purpose</th>
-            <th>Analysis</th>
+            <th>Teknologi</th>
+            <th>Syfte</th>
+            <th>Analys</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>TypeScript 5.9</strong></td>
-            <td>Type safety, tooling</td>
-            <td>Prevents entire bug classes at compile time. Worth the ceremony.</td>
+            <td>Typsäkerhet, verktyg</td>
+            <td>Förhindrar hela buggklasser vid kompilering. Värt ceremonin.</td>
           </tr>
           <tr>
             <td><strong>React 19</strong></td>
-            <td>UI components, state</td>
-            <td>Latest React features for optimal performance and DX.</td>
+            <td>UI-komponenter, tillstånd</td>
+            <td>Senaste React-funktioner för optimal prestanda och DX.</td>
           </tr>
           <tr>
             <td><strong>ThreeJs 8</strong></td>
-            <td>3D rendering engine</td>
-            <td>Battle-tested WebGL wrapper. 60fps achievable in browser.</td>
+            <td>3D-renderingsmotor</td>
+            <td>Stridstestade WebGL-wrapper. 60fps uppnåeligt i webbläsare.</td>
           </tr>
           <tr>
             <td><strong>Vite 7</strong></td>
-            <td>Build tool, dev server</td>
-            <td>Lightning-fast HMR. Modern ES modules. Developer joy.</td>
+            <td>Build-verktyg, dev-server</td>
+            <td>Blixtsnabb HMR. Moderna ES-moduler. Utvecklarglädje.</td>
           </tr>
           <tr>
             <td><strong>Howler.js</strong></td>
-            <td>Audio management</td>
-            <td>Cross-browser audio that actually works. Sprites, spatial audio.</td>
+            <td>Ljudhantering</td>
+            <td>Cross-browser ljud som faktiskt fungerar. Sprites, rumsljud.</td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>Why Browser-Based?</strong></p>
+      <p><strong>Varför webbläsarbaserat?</strong></p>
       <ul>
-        <li>✅ <strong>Zero installation barrier</strong> - Open URL, play instantly</li>
-        <li>✅ <strong>Cross-platform by default</strong> - Windows, Mac, Linux, mobile browsers</li>
-        <li>✅ <strong>Easy updates</strong> - Refresh page = latest version</li>
-        <li>✅ <strong>No app store gatekeeping</strong> - Direct distribution</li>
-        <li>✅ <strong>Lower development cost</strong> - One codebase for all platforms</li>
+        <li>✅ <strong>Noll installationsbarriär</strong> - Öppna URL, spela omedelbart</li>
+        <li>✅ <strong>Cross-platform som standard</strong> - Windows, Mac, Linux, mobilwebbläsare</li>
+        <li>✅ <strong>Enkla uppdateringar</strong> - Uppdatera sida = senaste version</li>
+        <li>✅ <strong>Ingen app store-gatekeeping</strong> - Direkt distribution</li>
+        <li>✅ <strong>Lägre utvecklingskostnad</strong> - En kodbas för alla plattformar</li>
       </ul>
       
-      <p><strong>Trade-offs Accepted:</strong></p>
+      <p><strong>Kompromisser accepterade:</strong></p>
       <ul>
-        <li>⚠️ <strong>Performance ceiling</strong> - JavaScript slower than native C++</li>
-        <li>⚠️ <strong>No console ports</strong> (yet) - PlayStation/Xbox require different approach</li>
-        <li>⚠️ <strong>Network latency</strong> - Online multiplayer harder in browser</li>
-        <li>⚠️ <strong>Browser compatibility</strong> - Must test across Chrome, Firefox, Safari, Edge</li>
+        <li>⚠️ <strong>Prestandatak</strong> - JavaScript långsammare än nativt C++</li>
+        <li>⚠️ <strong>Inga konsolportar</strong> (ännu) - PlayStation/Xbox kräver annan approach</li>
+        <li>⚠️ <strong>Nätverkslatens</strong> - Online multiplayer svårare i webbläsare</li>
+        <li>⚠️ <strong>Webbläsarkompatibilitet</strong> - Måste testa över Chrome, Firefox, Safari, Edge</li>
       </ul>
       
-      <p class="hidden-wisdom"><em>Perfect is enemy of shipped. Browser version proves concept, validates mechanics, builds community. Native ports can come later if demand justifies effort.</em></p>
+      <p class="hidden-wisdom"><em>Perfekt är fienden till levererad. Webbläsarversion bevisar koncept, validerar mekanik, bygger community. Nativa portar kan komma senare om efterfrågan rättfärdigar insats.</em></p>
     </section>
 
     <section id="developer-experience">
-      <h2 class="panel-caption">Developer Experience: Getting Started</h2>
+      <h2 class="panel-caption">Utvecklarupplevelse: Kom Igång</h2>
       
       <div class="cards">
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>🚀 Quick Start</h3>
+          <h3>🚀 Snabbstart</h3>
           <ol>
             <li><code>git clone https://github.com/Hack23/blacktrigram.git</code></li>
             <li><code>cd blacktrigram</code></li>
-            <li><code>npm install</code> (downloads ~500MB node_modules)</li>
-            <li><code>npm run dev</code> (starts Vite dev server on http://localhost:5173)</li>
-            <li>Open browser, start fighting</li>
+            <li><code>npm install</code> (laddar ner ~500MB node_modules)</li>
+            <li><code>npm run dev</code> (startar Vite dev-server på http://localhost:5173)</li>
+            <li>Öppna webbläsare, börja slåss</li>
           </ol>
           
-          <p><strong>Prerequisites:</strong></p>
+          <p><strong>Förkunskaper:</strong></p>
           <ul>
-            <li>Node.js 18+ (LTS recommended)</li>
-            <li>npm 9+ or yarn/pnpm</li>
-            <li>Modern browser (Chrome, Firefox, Safari, Edge)</li>
-            <li>4GB+ RAM for development</li>
+            <li>Node.js 18+ (LTS rekommenderad)</li>
+            <li>npm 9+ eller yarn/pnpm</li>
+            <li>Modern webbläsare (Chrome, Firefox, Safari, Edge)</li>
+            <li>4GB+ RAM för utveckling</li>
           </ul>
           
-          <p><strong>First Build Time:</strong> ~30 seconds (Vite is FAST)</p>
-          <p><strong>HMR Speed:</strong> &lt;1 second for most changes</p>
+          <p><strong>Första build-tid:</strong> ~30 sekunder (Vite är SNABB)</p>
+          <p><strong>HMR-hastighet:</strong> &lt;1 sekund för de flesta ändringar</p>
         </div>
         
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>🧪 Testing Strategy</h3>
-          <p><strong>Test Frameworks Discovered:</strong></p>
+          <h3>🧪 Teststrategi</h3>
+          <p><strong>Testramverk upptäckta:</strong></p>
           <ul>
-            <li><strong>Vitest</strong> - Unit tests for game logic</li>
-            <li><strong>Testing Library</strong> - Component tests</li>
-            <li><strong>Cypress</strong> - E2E gameplay tests</li>
+            <li><strong>Vitest</strong> - Enhetstester för spellogik</li>
+            <li><strong>Testing Library</strong> - Komponenttester</li>
+            <li><strong>Cypress</strong> - E2E gameplay-tester</li>
           </ul>
           
-          <p><strong>Test Coverage:</strong> Checked test/ directory—combat system has unit tests, integration tests validate full fight scenarios</p>
+          <p><strong>Testtäckning:</strong> Kontrollerat test/-katalog—stridssystemet har enhetstester, integrationstester validerar fullständiga kampscenarier</p>
           
-          <p><strong>Run Tests:</strong></p>
+          <p><strong>Kör tester:</strong></p>
           <ul>
-            <li><code>npm run test</code> - Run all unit tests</li>
-            <li><code>npm run test:ui</code> - Interactive test UI</li>
-            <li><code>npm run cypress</code> - E2E test runner</li>
+            <li><code>npm run test</code> - Kör alla enhetstester</li>
+            <li><code>npm run test:ui</code> - Interaktivt test-UI</li>
+            <li><code>npm run cypress</code> - E2E test-runner</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="code-quality">
-      <h2 class="panel-caption">Code Quality: Measurable Metrics</h2>
+      <h2 class="panel-caption">Kodkvalitet: Mätbara Mått</h2>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>Metric</th>
-            <th>Value</th>
-            <th>Analysis</th>
+            <th>Mått</th>
+            <th>Värde</th>
+            <th>Analys</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>TypeScript Files</strong></td>
+            <td><strong>TypeScript-filer</strong></td>
             <td>132</td>
-            <td>Well-organized codebase for browser game</td>
+            <td>Välorganiserad kodbas för webbläsarspel</td>
           </tr>
           <tr>
-            <td><strong>React Components</strong></td>
+            <td><strong>React-komponenter</strong></td>
             <td>~40-50</td>
-            <td>Modular UI architecture</td>
+            <td>Modulär UI-arkitektur</td>
           </tr>
           <tr>
-            <td><strong>Dependencies</strong></td>
+            <td><strong>Beroenden</strong></td>
             <td>9 runtime</td>
-            <td>Minimal for complexity—no bloat</td>
+            <td>Minimala för komplexitet—inget svullnad</td>
           </tr>
           <tr>
-            <td><strong>Dev Dependencies</strong></td>
+            <td><strong>Dev-beroenden</strong></td>
             <td>~30</td>
-            <td>Comprehensive tooling (testing, linting, building)</td>
+            <td>Omfattande verktyg (testning, linting, building)</td>
           </tr>
           <tr>
-            <td><strong>Build Time</strong></td>
-            <td>~5 seconds</td>
-            <td>Vite production build is blazing fast</td>
+            <td><strong>Build-tid</strong></td>
+            <td>~5 sekunder</td>
+            <td>Vite produktionsbygge är blixtsnabbt</td>
           </tr>
           <tr>
-            <td><strong>Bundle Size</strong></td>
+            <td><strong>Bundle-storlek</strong></td>
             <td>~2-3 MB</td>
-            <td>Reasonable for game with assets (estimated)</td>
+            <td>Rimligt för spel med assets (uppskattat)</td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>Code Quality Observations:</strong></p>
+      <p><strong>Kodkvalitetsobservationer:</strong></p>
       <ul>
-        <li>✅ TypeScript strict mode enabled (type safety)</li>
-        <li>✅ ESLint configured (code consistency)</li>
-        <li>✅ Testing infrastructure present (quality gates)</li>
-        <li>✅ Component organization logical (maintainability)</li>
-        <li>✅ AI integrations optional (no vendor lock-in)</li>
+        <li>✅ TypeScript strikt läge aktiverat (typsäkerhet)</li>
+        <li>✅ ESLint konfigurerad (kodkonsistens)</li>
+        <li>✅ Testinfrastruktur närvarande (kvalitetsportar)</li>
+        <li>✅ Komponentorganisation logisk (underhållbarhet)</li>
+        <li>✅ AI-integrationer valfria (ingen leverantörsbindning)</li>
       </ul>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">Final Verdict: Ambitious Browser-Based Fighting Game</h2>
+      <h2 class="panel-caption">Slutgiltigt Omdöme: Ambitiöst Webbläsarbaserat Kampsportspel</h2>
       
-      <p><strong>What I Found:</strong> Black Trigram is a technically ambitious browser-based fighting game implementing Korean martial arts with authenticity. Not a simple web game—sophisticated combat system with:</p>
+      <p><strong>Vad jag hittade:</strong> Black Trigram är ett tekniskt ambitiöst webbläsarbaserat kampsportspel som implementerar koreansk kampsport med autenticitet. Inte ett enkelt webbspel—sofistikerat stridssystem med:</p>
       
       <ul>
-        <li>✅ <strong>132 TypeScript files</strong> implementing combat mechanics</li>
-        <li>✅ <strong>70 vital points</strong> system from traditional Korean martial arts</li>
-        <li>✅ <strong>5 fighter archetypes</strong> with distinct styles</li>
-        <li>✅ <strong>ThreeJs rendering</strong> targeting 60fps</li>
+        <li>✅ <strong>132 TypeScript-filer</strong> som implementerar stridsmekanik</li>
+        <li>✅ <strong>70 vitala punkters</strong> system från traditionell koreansk kampsport</li>
+        <li>✅ <strong>5 kämparketyper</strong> med distinkta stilar</li>
+        <li>✅ <strong>ThreeJs-rendering</strong> som siktar på 60fps</li>
         <li>✅ <strong>React 19 + TypeScript 5</strong> modern stack</li>
-        <li>✅ <strong>AI integrations</strong> (ElevenLabs, OpenAI, AWS Bedrock)</li>
-        <li>✅ <strong>Zero installation</strong> browser accessibility</li>
-        <li>✅ <strong>Testing infrastructure</strong> (Vitest, Testing Library, Cypress)</li>
+        <li>✅ <strong>AI-integrationer</strong> (ElevenLabs, OpenAI, AWS Bedrock)</li>
+        <li>✅ <strong>Noll installation</strong> webbläsartillgänglighet</li>
+        <li>✅ <strong>Testinfrastruktur</strong> (Vitest, Testing Library, Cypress)</li>
       </ul>
       
-      <p><strong>Technical Achievements:</strong></p>
+      <p><strong>Tekniska prestationer:</strong></p>
       <ul>
-        <li>Implementing fighting game physics in TypeScript (non-trivial)</li>
-        <li>60fps browser rendering with ThreeJs (impressive optimization)</li>
-        <li>Cultural authenticity (Korean terminology, martial arts accuracy)</li>
-        <li>Modern tooling (Vite, TypeScript 5, React 19)</li>
+        <li>Implementera kampsportspelsfysik i TypeScript (icke-trivialt)</li>
+        <li>60fps webbläsarrendering med ThreeJs (imponerande optimering)</li>
+        <li>Kulturell autenticitet (koreansk terminologi, kampsportsnoggrannhet)</li>
+        <li>Moderna verktyg (Vite, TypeScript 5, React 19)</li>
       </ul>
       
-      <p><strong>Developer Time Investment:</strong> Understanding this codebase = 20-40 hours. Combat system is complex, but well-organized. TypeScript types help navigation.</p>
+      <p><strong>Utvecklartidsinvestering:</strong> Att förstå denna kodbas = 20-40 timmar. Stridssystemet är komplext, men välorganiserat. TypeScript-typer hjälper navigering.</p>
       
-      <p><strong>Would I want to work on this?</strong> Yes. Modern stack, interesting problem domain, browser-based removes platform complexity. Fighting games are hard—TypeScript makes them manageable.</p>
+      <p><strong>Skulle jag vilja arbeta på detta?</strong> Ja. Modern stack, intressant problemdomän, webbläsarbaserat tar bort plattformskomplexitet. Kampsportspel är svåra—TypeScript gör dem hanterbara.</p>
       
-      <p class="signature"><em>— George Dorn<br>Developer / Code Analyzer / Fighting Game Inspector<br>Hack23 AB<br><br>"I cloned the repo. Analyzed 132 TypeScript files. This is a real fighting game in the browser."<br><br>🥋 FNORD 💻</em></p>
+      <p class="signature"><em>— George Dorn<br>Utvecklare / Kodanalysator / Kampsportspelinspektor<br>Hack23 AB<br><br>"Jag klonade repon. Analyserade 132 TypeScript-filer. Det här är ett riktigt kampsportspel i webbläsaren."<br><br>🥋 FNORD 💻</em></p>
     </section>
 
     <section id="resources">
-      <h2 class="panel-caption">Explore the Code Yourself</h2>
+      <h2 class="panel-caption">Utforska Koden Själv</h2>
       
       <div class="cards">
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>🔗 Repository & Documentation</h3>
+          <h3>🔗 Repository & Dokumentation</h3>
           <ul>
-            <li><a href="https://github.com/Hack23/blacktrigram">GitHub Repository</a> - Clone and analyze</li>
-            <li><a href="https://blacktrigram.com">Live Demo</a> - Play in browser</li>
-            <li><a href="black-trigram-docs.html">Technical Documentation</a> - Architecture and design</li>
+            <li><a href="https://github.com/Hack23/blacktrigram">GitHub Repository</a> - Klona och analysera</li>
+            <li><a href="https://blacktrigram.com">Live Demo</a> - Spela i webbläsare</li>
+            <li><a href="black-trigram-docs_sv.html">Teknisk dokumentation</a> - Arkitektur och design</li>
           </ul>
         </div>
         
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>📚 Related Reading</h3>
+          <h3>📚 Relaterad läsning</h3>
           <ul>
-            <li><a href="blog_sv.html">Hack23 Säkerhetsblogg</a> - All blog entries</li>
-            <li><a href="blog-george-dorn-cia-code.html">CIA Code Analysis</a> - Java/Spring Framework analysis</li>
-            <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Analysis</a> - Client-side architecture</li>
+            <li><a href="blog_sv.html">Hack23 Säkerhetsblogg</a> - Alla blogginlägg</li>
+            <li><a href="blog-george-dorn-cia-code_sv.html">CIA Kodanalys</a> - Java/Spring Framework-analys</li>
+            <li><a href="blog-george-dorn-compliance-code_sv.html">Compliance Manager Analys</a> - Klientsidesarkitektur</li>
           </ul>
         </div>
       </div>
       
-      <p><strong>Think for yourself:</strong> Clone the repository, run <code>npm install && npm run dev</code>, explore the code. Browser-based fighting games are possible—this proves it.</p>
+      <p><strong>Tänk själv:</strong> Klona repositoryn, kör <code>npm install && npm run dev</code>, utforska koden. Webbläsarbaserade kampsportspel är möjliga—detta bevisar det.</p>
     </section>
   </article>
 </main>
 
-    <footer role="contentinfo" aria-label="Site footer">
+    <footer role="contentinfo" aria-label="Sidfot">
       <div class="footer-container">
         
-        <!-- Företag Info Column -->
+        <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersäkerhetskonsultation<br>
+          <p>Cybersäkerhetskonsulting<br>
           Göteborg, Sverige | Distans</p>
           <p>Org.nr: 5595347807</p>
           <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
           <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
         </div>
         
-        <!-- Tjänster Column -->
+        <!-- Services Column -->
         <div class="footer-column">
           <h3>Tjänster</h3>
           <ul>
-            <li><a href="services.html">Säkerhetskonsultation</a></li>
-            <li><a href="services.html">Säkerhetsarkitektur</a></li>
-            <li><a href="services.html">Molnsäkerhet</a></li>
-            <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services_sv.html">Säkerhetskonsulting</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & LIS</a></li>
           </ul>
         </div>
         
-        <!-- Produkter Column -->
+        <!-- Products Column -->
         <div class="footer-column">
           <h3>Produkter</h3>
           <ul>
-            <li><a href="black-trigram-features.html">Black Trigram</a></li>
-            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
-            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
           </ul>
         </div>
         
-        <!-- Resurser Column -->
+        <!-- Resources Column -->
         <div class="footer-column">
           <h3>Resurser</h3>
           <ul>
             <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
-            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogg</a></li>
-            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
-            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publikt ISMS</a></li>
-            <li><a href="sitemap.html">Webbplatskarta</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordian Blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publikt LIS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
           </ul>
         </div>
         
-        <!-- Företag Column -->
+        <!-- Company Column -->
         <div class="footer-column">
           <h3>Företag</h3>
           <ul>
-            <li><a href="why-hack23.html">Om Hack23</a></li>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
-            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
-            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
-            <li><a href="accessibility-statement.html">Tillgänglighet</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
           </ul>
         </div>
         
@@ -654,21 +657,21 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Bloggförfattare:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementeringsverklighet:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven Utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. See his technical commentaries in
-          <a href="blog-george-dorn-cia-code.html">CIA Architecture</a>,
-          <a href="blog-george-dorn-trigram-code_sv.html">Black Trigram Combat</a>, and
-          <a href="blog.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och dolda påskägg som gör filosofi deployerbar.
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code_sv.html">CIA Arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code_sv.html">Black Trigram Strid</a>, och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och gömda påskäggen som gör filosofi deployerbar.
         </p>
       </div>
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter förbehållna. </p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 
