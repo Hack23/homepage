@@ -103,7 +103,7 @@ graph TB
 - ✅ Quality score improved to **98.4%**
 - ✅ All Swedish translations complete! 🎉
 
-**Post-Phase 7 Quality Improvement (January 30, 2026):**
+**Post-Phase 7 Quality Improvement (January 31, 2026):**
 - ✅ Completed blog-automated-convergence_sv.html body content translation
 - ✅ Translated 5 major content sections: Pentagon Issue ID, Objective Analysis, Related Resources, FAQ (4 Q&A pairs), Related Content
 - ✅ Completed black-trigram_sv.html UI translation (all CTA buttons, navigation, breadcrumbs, footer)
@@ -113,6 +113,8 @@ graph TB
 - ✅ Korean terms preserved in black-trigram_sv.html (흑괘, 무사, 암살자, 정보원, 조직원)
 - ✅ Product name "Black Trigram" kept in English as specified
 - ℹ️ FAQ structured data kept in English for SEO (best practice for international discoverability)
+- ✅ Completed industries-betting-gaming_sv.html meta translations (38 lines: og:description, Twitter, Schema.org, FAQ structured data)
+- ✅ Completed industries-cannabis-security_sv.html meta translations (10 lines: og:description, Twitter, Schema.org)
 - ✅ Quality score maintained at **98.5%** (89 fully translated, 7 mostly translated)
 - ✅ All Swedish terminology follows Swedish-Translation-Guide.md v6.0
 
@@ -202,8 +204,8 @@ graph TB
 - ✅ `iso-27001-implementation-sweden_sv.html` ← `iso-27001-implementation-sweden.html` **[PHASE 3 COMPLETE]**
 
 ### Industry Solutions (3 files)
-- ✅ `industries-betting-gaming_sv.html` ← `industries-betting-gaming.html` **[PHASE 3 COMPLETE]**
-- ✅ `industries-cannabis-security_sv.html` ← `industries-cannabis-security.html` **[PHASE 3 COMPLETE]**
+- ✅ `industries-betting-gaming_sv.html` ← `industries-betting-gaming.html` **[FULLY TRANSLATED - January 2026]**
+- ✅ `industries-cannabis-security_sv.html` ← `industries-cannabis-security.html` **[FULLY TRANSLATED - January 2026]**
 - ✅ `industries-investment-fintech_sv.html` ← `industries-investment-fintech.html` **[PHASE 3 COMPLETE]**
 
 ### Other Pages (2 files)
