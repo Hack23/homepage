@@ -175,41 +175,6 @@ Clear guidance on when questions are appropriate:
 
 ---
 
-### 5. MCP Configuration Update (Not Implemented - For Reference)
-
-**Note**: MCP configuration updates are NOT included in this update because:
-1. MCP configuration is in `.github/copilot-mcp.json` (separate from agent files)
-2. Configuration changes require testing in actual Copilot environment
-3. Insiders API access needs validation and authentication setup
-
-**Recommended MCP Configuration** (for future implementation):
-```yaml
-mcp-servers:
-  github:
-    type: local
-    command: npx
-    args:
-      - "-y"
-      - "@modelcontextprotocol/server-github"
-      - "--toolsets"
-      - "all"
-      - "--tools"
-      - "*"
-    env:
-      GITHUB_TOKEN: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}
-      GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN }}
-      GITHUB_OWNER: Hack23
-      GITHUB_API_URL: https://api.githubcopilot.com/mcp/insiders
-    tools: ["*"]
-```
-
-**Key Changes**:
-- Added `GITHUB_API_URL` pointing to Insiders API endpoint
-- Maintained backward compatibility with existing configuration
-- Requires `COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN` secret
-
----
-
 ## 📊 Impact Assessment
 
 ### Quantitative Improvements
