@@ -1,11 +1,26 @@
 # GitHub Copilot Custom Agent Profiles
 
-This directory contains **8 specialized custom agent profiles** that enable domain-specific assistance from GitHub Copilot. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations, from product vision to implementation, from business strategy to technical excellence.
+This directory contains **8 specialized custom agent profiles** enhanced with a comprehensive **14-skill library** and ISMS compliance framework. Each profile provides deep expertise in a specific area relevant to Hack23 AB's operations, from product vision to implementation, from business strategy to technical excellence.
+
+## 🚀 **NEW: Comprehensive Agent and Skills Implementation**
+
+**✨ Major Improvements Delivered** (January 2026):
+- **14 Production-Ready Skills** covering Security, Architecture, Quality, Deployment, and Compliance
+- **Complete ISMS Integration** with 6 compliance frameworks (ISO 27001, NIST CSF, CIS, GDPR, NIS2, CRA)
+- **12-Document Architecture Portfolio** requirements enforced
+- **GitHub MCP Insiders Features** for advanced automation (task-agent)
+- **"Ask Less, Complete More"** guidance for increased agent autonomy
+- **7,527+ Lines** of high-quality documentation and enforcement rules
+
+📋 **[Read the Complete Implementation Report](../COMPREHENSIVE_AGENT_AND_SKILLS_IMPLEMENTATION.md)**  
+📊 **[View Detailed Agent Improvements](AGENT_IMPROVEMENTS_SUMMARY.md)**  
+🎯 **[Browse Skills Library](../skills/)**
 
 **Quick Navigation:**
-- [🎯 Task Agent](#-task-management--orchestration) - NEW! Product quality & issue creation orchestrator
+- [🎯 Task Agent](#-task-management--orchestration) - Product quality & issue creation orchestrator with MCP Insiders
 - [🍎 Discordian Agents](#-the-discordian-agents) - Product Owner, Architect, Developer trinity
 - [🛠️ Specialist Agents](#️-traditional-specialist-agents) - UI/UX, Business, Marketing, Political Analysis
+- [📚 Skills Library](#-skills-library-integration) - 14 comprehensive skills for consistency and compliance
 
 ## Agent Profile Format
 
@@ -173,6 +188,133 @@ graph TB
 - **Selective Write Access**: Only issues and pull-requests have write permissions
 - **Copilot Isolation**: Copilot receives its own token for operations
 - **Least Privilege**: Minimal permissions needed for agent functionality
+
+## 📚 Skills Library Integration
+
+**NEW**: All agents now integrate with a comprehensive **14-skill library** located in `.github/skills/`.
+
+### What Are Skills?
+
+GitHub Copilot Agent Skills are collections of instructions, rules, and examples that guide Copilot's behavior for specific tasks. They:
+- Automatically load when relevant to your task
+- Enforce security-by-design principles from Hack23 ISMS
+- Provide concrete code examples and patterns
+- Ensure consistency across all development work
+
+### Available Skills (14 Production-Ready)
+
+#### 🔐 Security Skills (4)
+1. **Secure Development** - Security-by-design, input validation, authentication patterns
+2. **Access Control** - Least privilege, RBAC, session management
+3. **Data Classification** - 4-level classification (Public, Internal, Confidential, Restricted)
+4. **Cryptography** - AES-256, RSA-2048+, TLS 1.2+, key management
+
+#### 🏛️ Architecture Skills (3)
+1. **C4 Modeling** - Context, Container, Component, Code diagrams with Mermaid
+2. **Security Architecture** - SECURITY_ARCHITECTURE.md and FUTURE_SECURITY_ARCHITECTURE.md
+3. **Documentation Portfolio** - 12-document C4 portfolio (current + future state)
+
+#### ✅ Quality Skills (3)
+1. **HTML/CSS Best Practices** - Semantic HTML5, responsive design, performance
+2. **Accessibility WCAG** - WCAG 2.1 AA compliance, ARIA, keyboard navigation
+3. **SEO Optimization** - Meta tags, structured data, multilingual SEO
+
+#### ☁️ Deployment Skills (2)
+1. **AWS S3/CloudFront** - Configuration, security headers, SSL/TLS
+2. **GitHub Actions CI/CD** - Workflows, security scanning, Lighthouse audits
+
+#### 📋 Compliance Skills (2)
+1. **ISO 27001** - Control implementation, documentation, audit preparation
+2. **GDPR** - Privacy by design, data protection, consent management
+
+### Skills Usage
+
+**For Developers**: Skills work automatically - just work on your code and Copilot applies relevant skills.
+
+**For Agents**: Each agent references specific skills in their "Skills Integration" section based on role expertise.
+
+**Documentation**: See [`.github/skills/README.md`](../skills/README.md) for complete guide and [`INDEX.md`](../skills/INDEX.md) for skills catalog.
+
+### Skills Architecture
+
+```mermaid
+graph TB
+    subgraph "Skills Library (.github/skills/)"
+        Security[🔐 Security Skills<br/>4 skills]:::security
+        Architecture[🏛️ Architecture Skills<br/>3 skills]:::architecture
+        Quality[✅ Quality Skills<br/>3 skills]:::quality
+        Deployment[☁️ Deployment Skills<br/>2 skills]:::deployment
+        Compliance[📋 Compliance Skills<br/>2 skills]:::compliance
+    end
+    
+    subgraph "Agents (.github/agents/)"
+        Task[🎯 Task Agent]:::agent
+        UI[🎨 UI Specialist]:::agent
+        Dev[💻 Developers]:::agent
+    end
+    
+    subgraph "ISMS Framework"
+        ISMS[📜 ISMS-PUBLIC<br/>41+ Policies]:::isms
+    end
+    
+    Security --> Task & UI & Dev
+    Architecture --> Task & Dev
+    Quality --> Task & UI
+    Deployment --> Task
+    Compliance --> Task & UI
+    
+    ISMS -.->|Informs| Security & Architecture & Compliance
+    
+    Task --> Code[✨ Consistent<br/>Secure<br/>Compliant Code]:::output
+    UI --> Code
+    Dev --> Code
+    
+    classDef security fill:#DC143C,stroke:#DC143C,stroke-width:2px,color:#fff
+    classDef architecture fill:#2196F3,stroke:#2196F3,stroke-width:2px,color:#fff
+    classDef quality fill:#4CAF50,stroke:#4CAF50,stroke-width:2px,color:#fff
+    classDef deployment fill:#FF9800,stroke:#FF9800,stroke-width:2px,color:#fff
+    classDef compliance fill:#9C27B0,stroke:#9C27B0,stroke-width:2px,color:#fff
+    classDef agent fill:#00BCD4,stroke:#00BCD4,stroke-width:2px,color:#fff
+    classDef isms fill:#FFD700,stroke:#FFD700,stroke-width:3px,color:#000
+    classDef output fill:#4CAF50,stroke:#4CAF50,stroke-width:3px,color:#fff
+```
+
+### ISMS Compliance Framework
+
+All skills align with **6 compliance frameworks**:
+
+| Framework | Coverage | Documentation |
+|-----------|----------|---------------|
+| **ISO 27001:2022** | 93 controls | [ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC) |
+| **NIST CSF 2.0** | 6 functions, 23 categories | Integrated in skills |
+| **CIS Controls v8.1** | 18 controls, 3 IGs | Referenced in security skills |
+| **GDPR** | 99 articles | Compliance skills + data classification |
+| **NIS2** | EU Directive 2022/2555 | Security architecture skills |
+| **EU CRA** | Product security | Secure development skill |
+
+### Required Documentation Portfolio
+
+All agents now enforce a **12-document C4 Architecture Portfolio**:
+
+**Current State (6 documents):**
+1. ARCHITECTURE.md - C4 models
+2. DATA_MODEL.md - Data structures
+3. FLOWCHART.md - Process flows
+4. STATEDIAGRAM.md - State transitions
+5. MINDMAP.md - Conceptual relationships
+6. SWOT.md - Strategic analysis
+
+**Future State (6 documents):**
+1. FUTURE_ARCHITECTURE.md
+2. FUTURE_DATA_MODEL.md
+3. FUTURE_FLOWCHART.md
+4. FUTURE_STATEDIAGRAM.md
+5. FUTURE_MINDMAP.md
+6. FUTURE_SWOT.md
+
+Plus **2 security documents**:
+- SECURITY_ARCHITECTURE.md
+- FUTURE_SECURITY_ARCHITECTURE.md
 
 ## 🚀 Enhanced Discordian Agents - Product Vision Specialists
 
