@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIA Code Analysis | Developer Reality Check | Hack23</title>
+<title>CIA-kodanalys | Utvecklarens verklighetscheck | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Citizen Intelligence Agency codebase analysis: Java/Spring Framework, 49 Maven modules, real repository structure, production insights.">
-<meta name="twitter:description" content="Citizen Intelligence Agency codebase analysis: Java/Spring Framework, 49 Maven modules, real repository structure, production insights.">
-<meta name="keywords" content="CIA code analysis, Java Spring Framework, Maven multi-module, political data platform, OSINT implementation, George Dorn developer, Hack23 code review">
+<meta name="description" content="Citizen Intelligence Agency-kodbasanalys: Java/Spring Framework, 49 Maven-moduler, verklig repository-struktur, produktionsinsikter.">
+<meta name="twitter:description" content="Citizen Intelligence Agency-kodbasanalys: Java/Spring Framework, 49 Maven-moduler, verklig repository-struktur, produktionsinsikter.">
+<meta name="keywords" content="CIA-kodanalys, Java Spring Framework, Maven multi-modul, politisk dataplattform, OSINT-implementation, George Dorn utvecklare, Hack23-kodgranskning">
 <meta name="robots" content="index, follow">
 <meta name="author" content="George Dorn">
-<meta property="og:title" content="George Dorn: CIA Code Analysis - Java Spring Framework Reality">
-<meta property="og:description" content="Developer deep-dive into Citizen Intelligence Agency's actual codebase: 49 Maven modules, PostgreSQL schema, Spring Framework architecture analyzed.">
+<meta property="og:title" content="George Dorn: CIA-kodanalys - Java Spring Framework-verklighet">
+<meta property="og:description" content="Utvecklarens djupdykning i Citizen Intelligence Agencys faktiska kodbas: 49 Maven-moduler, PostgreSQL-schema, Spring Framework-arkitektur analyserad.">
 	<meta property="og:locale" content="sv_SE">
 	<meta property="og:locale:alternate" content="ar_SA">
 	<meta property="og:locale:alternate" content="da_DK">
@@ -28,7 +28,9 @@
 	<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hack23.com/blog-george-dorn-cia-code_sv.html">
-<meta property="og:image" content="https://hack23.com/blog.webp"><!-- Twitter Card -->
+<meta property="og:image" content="https://hack23.com/blog.webp">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://hack23.com/blog.webp">
 <meta name="twitter:image:alt" content="Hack23 Säkerhetsblogg">
@@ -36,18 +38,19 @@
 <meta name="twitter:creator" content="@jamessorling">
 
 <link rel="canonical" href="https://hack23.com/blog-george-dorn-cia-code_sv.html">
+	<!-- Hreflang tags for language alternatives -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "George Dorn: CIA Code Analysis - Developer Reality Check",
-      "description": "Technical analysis of Citizen Intelligence Agency's actual codebase by George Dorn, developer at Hack23",
+      "headline": "George Dorn: CIA-kodanalys - Utvecklarens verklighetscheck",
+      "description": "Teknisk analys av Citizen Intelligence Agencys faktiska kodbas av George Dorn, utvecklare på Hack23",
       "author": {
         "@type": "Person",
         "name": "George Dorn",
-        "jobTitle": "Developer",
+        "jobTitle": "Utvecklare",
         "image": {
           "@type": "ImageObject",
           "url": "https://hack23.com/jamespethersorling150.webp",
@@ -69,8 +72,8 @@
         "@type": "WebPage",
         "@id": "https://hack23.com/blog-george-dorn-cia-code_sv.html"
       },
-      "keywords": "CIA codebase, Java Spring Framework, Maven modules, developer analysis, Hack23",
-      "articleSection": "Developer Code Analysis",
+      "keywords": "CIA-kodbas, Java Spring Framework, Maven-moduler, utvecklaranalys, Hack23",
+      "articleSection": "Utvecklarkodanalys",
       "image": {
         "@type": "ImageObject",
         "url": "https://hack23.com/blog.webp",
@@ -78,7 +81,7 @@
         "height": 630
       },
       "wordCount": 1409,
-      "articleBody": "Developer's Note: Forget the theory. I cloned https://github.com/Hack23/cia, analyzed the actual code structure, read the POMs, examined the Java files, and counted the real numbers. This is what the ...",
+      "articleBody": "Utvecklarens anteckning: Glöm teorin. Jag klonade https://github.com/Hack23/cia, analyserade den faktiska kodstrukturen, läste POM-filerna, granskade Java-filerna och räknade de riktiga siffrorna. Så här ser Citizen Intelligence Agency-kodbasen faktiskt ut.",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog_sv.html#blog",
@@ -144,10 +147,10 @@
 </head>
 <body>
   <!-- Breadcrumb Navigation -->
-  <nav aria-label="Breadcrumb">
+  <nav aria-label="Brödsmula">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Hem</a>
+        <a href="/index_sv.html">Hem</a>
       </li>
       <li class="breadcrumb-item">
         <a href="/blog_sv.html">Blogg</a>
@@ -160,398 +163,398 @@
 
 <header>
   <div class="logo-container">
-    <img src="cia-icon-140.webp" alt="Hack23 Logo" class="logo" width="80" height="80">
+    <img src="cia-icon-140.webp" alt="Hack23-logotyp" class="logo" width="80" height="80">
   </div>
-  <h1>Developer Code Analysis</h1>
+  <h1>Utvecklarkodanalys</h1>
   <div class="app-link">
     <a href="index_sv.html">Hem</a>
     <a href="blog_sv.html">Blogg</a>
-    <a href="cia-docs.html">CIA Docs</a>
+    <a href="cia-docs_sv.html">CIA-dokumentation</a>
   </div>
 </header>
 <main>
   <article>
-    <h1 class="header">💻 George Dorn's CIA Code Analysis: What The Repository Actually Contains</h1>
+    <h1 class="header">💻 George Dorns CIA-kodanalys: Vad repository faktiskt innehåller</h1>
     
     <section id="introduction">
-      <h2 class="panel-caption">Reality-Tested Code Review: I Downloaded and Analyzed the Actual Repository</h2>
+      <h2 class="panel-caption">Verklighetstestad kodgranskning: Jag laddade ner och analyserade det faktiska repository</h2>
       
-      <p><strong>Developer's Note:</strong> Forget the theory. I cloned <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a>, analyzed the actual code structure, read the POMs, examined the Java files, and counted the real numbers. This is what the Citizen Intelligence Agency codebase <em>actually</em> looks like.</p>
+      <p><strong>Utvecklarens anteckning:</strong> Glöm teorin. Jag klonade <a href="https://github.com/Hack23/cia">https://github.com/Hack23/cia</a>, analyserade den faktiska kodstrukturen, läste POM-filerna, granskade Java-filerna och räknade de riktiga siffrorna. Så här ser Citizen Intelligence Agency-kodbasen <em>faktiskt</em> ut.</p>
       
-      <p><strong>Repository URL:</strong> <code>git clone https://github.com/Hack23/cia.git</code></p>
-      <p><strong>Analysis Date:</strong> November 8, 2025</p>
-      <p><strong>Branch Analyzed:</strong> master</p>
+      <p><strong>Repository-URL:</strong> <code>git clone https://github.com/Hack23/cia.git</code></p>
+      <p><strong>Analysdatum:</strong> 8 november 2025</p>
+      <p><strong>Analyserad gren:</strong> master</p>
       
-      <p class="hidden-wisdom"><em>Think for yourself: Don't trust documentation—clone the repo and verify. Code doesn't lie.</em></p>
+      <p class="hidden-wisdom"><em>Tänk själv: Lita inte på dokumentation—klona repositoryt och verifiera. Kod ljuger inte.</em></p>
     
       
-      <p><strong>Need expert guidance implementing your ISMS?</strong> <a href="why-hack23.html">Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</p>
+      <p><strong>Behöver du expertvägledning för att implementera ditt LIS?</strong> <a href="why-hack23_sv.html">Upptäck varför organisationer väljer Hack23</a> för transparent, praktikerledd cybersäkerhetskonsulting.</p>
     </section>
 
     <section id="repository-structure">
-      <h2 class="panel-caption">Repository Structure: 49 Maven Modules Fighting Political Chaos</h2>
+      <h2 class="panel-caption">Repository-struktur: 49 Maven-moduler kämpar mot politiskt kaos</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>🏗️ Maven Multi-Module Architecture</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM files</strong></p>
-          <p><strong>What This Means:</strong> The project is organized into 49 Maven modules. Not monolithic—modular separation of concerns across service layer, data access, web application, integration services, and parent POMs.</p>
+          <h3>🏗️ Maven multi-modularkitektur</h3>
+          <p><strong>Faktisk räkning:</strong> <code>find . -name "pom.xml" | wc -l</code> = <strong>49 POM-filer</strong></p>
+          <p><strong>Vad det betyder:</strong> Projektet är organiserat i 49 Maven-moduler. Inte monolitiskt—modulär separation av concerns över servicelager, dataåtkomst, webbapplikation, integrationstjänster och förälder-POMs.</p>
           
-          <p><strong>Key Modules Discovered:</strong></p>
+          <p><strong>Nyckelmodnler upptäckta:</strong></p>
           <ul>
-            <li><code>service.api/</code> - Service layer API definitions</li>
-            <li><code>service.data.impl/</code> - JPA/Hibernate data access implementation</li>
-            <li><code>service.component.agent.impl/</code> - Data import agents (Riksdag, World Bank, etc.)</li>
-            <li><code>citizen-intelligence-agency/</code> - Main web application (Vaadin UI)</li>
-            <li><code>model.*/</code> - Multiple domain model modules (external, internal, application)</li>
+            <li><code>service.api/</code> - API-definitioner för servicelager</li>
+            <li><code>service.data.impl/</code> - JPA/Hibernate dataåtkomstimplementation</li>
+            <li><code>service.component.agent.impl/</code> - Dataimportagenter (Riksdag, Världsbanken, etc.)</li>
+            <li><code>citizen-intelligence-agency/</code> - Huvudwebbapplikation (Vaadin UI)</li>
+            <li><code>model.*/</code> - Multipla domänmodellmoduler (externa, interna, applikation)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>Modular architecture = independent deployment potential, but also coordination complexity. Each module can evolve independently—until integration tests discover you broke something three modules away.</em></p>
+          <p class="hidden-wisdom"><em>Modulär arkitektur = oberoende deploy-potential, men också koordinationskomplexitet. Varje modul kan utvecklas självständigt—tills integrationstester upptäcker att du bröt något tre moduler bort.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>☕ Java Source Files</h3>
-          <p><strong>Actual Count:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1,372 Java files</strong></p>
-          <p><strong>Lines of Code:</strong> Estimated 60,000+ lines across all modules (based on typical Java file averaging ~50-80 lines per file for service/data layer code)</p>
+          <h3>☕ Java-källkodsfiler</h3>
+          <p><strong>Faktisk räkning:</strong> <code>find . -name "*.java" | wc -l</code> = <strong>1 372 Java-filer</strong></p>
+          <p><strong>Kodrader:</strong> Uppskattat 60 000+ rader över alla moduler (baserat på typisk Java-fil på ~50-80 rader per fil för service/datalagerkod)</p>
           
-          <p><strong>Package Structure Observed:</strong></p>
+          <p><strong>Paketstruktur observerad:</strong></p>
           <ul>
-            <li><code>com.hack23.cia.service.*</code> - Service layer business logic</li>
-            <li><code>com.hack23.cia.model.*</code> - Domain models and entities</li>
-            <li><code>com.hack23.cia.web.*</code> - Web/UI layer (Vaadin components)</li>
-            <li><code>com.hack23.cia.testfoundation.*</code> - Test infrastructure and utilities</li>
+            <li><code>com.hack23.cia.service.*</code> - Affärslogik i servicelager</li>
+            <li><code>com.hack23.cia.model.*</code> - Domänmodeller och entiteter</li>
+            <li><code>com.hack23.cia.web.*</code> - Webb/UI-lager (Vaadin-komponenter)</li>
+            <li><code>com.hack23.cia.testfoundation.*</code> - Testinfrastruktur och verktyg</li>
           </ul>
           
-          <p><strong>Technologies Confirmed in POMs:</strong></p>
+          <p><strong>Teknologier bekräftade i POMs:</strong></p>
           <ul>
-            <li><strong>Spring Framework</strong> - Dependency injection, transaction management</li>
-            <li><strong>Spring Security</strong> - Authentication and authorization</li>
-            <li><strong>JPA/Hibernate</strong> - Database ORM layer</li>
-            <li><strong>Vaadin</strong> - Server-side Java web framework for UI</li>
-            <li><strong>PostgreSQL</strong> - Primary database (confirmed in data model docs)</li>
+            <li><strong>Spring Framework</strong> - Dependency injection, transaktionshantering</li>
+            <li><strong>Spring Security</strong> - Autentisering och auktorisering</li>
+            <li><strong>JPA/Hibernate</strong> - Databas-ORM-lager</li>
+            <li><strong>Vaadin</strong> - Serversidigt Java-webbramverk för UI</li>
+            <li><strong>PostgreSQL</strong> - Primär databas (bekräftad i datamodelldokument)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>1,372 Java files = significant codebase requiring disciplined architecture. Without modular separation, this would be unmaintainable. The 49-module structure keeps complexity contained.</em></p>
+          <p class="hidden-wisdom"><em>1 372 Java-filer = betydande kodbas som kräver disciplinerad arkitektur. Utan modulär separation skulle detta vara ohanterligt. De 49 modulerna håller komplexiteten innesluten.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>📚 Documentation Files Discovered</h3>
-          <p><strong>Real Files in Root Directory:</strong></p>
+          <h3>📚 Dokumentationsfiler upptäckta</h3>
+          <p><strong>Riktiga filer i rotkatalogen:</strong></p>
           <ul>
-            <li><code>ARCHITECTURE.md</code> - 32KB - C4 architecture models</li>
-            <li><code>DATA_MODEL.md</code> - 27KB - Complete entity documentation</li>
-            <li><code>FLOWCHART.md</code> - 19KB - Process flow diagrams</li>
-            <li><code>CRA-ASSESSMENT.md</code> - 47KB - EU Cyber Resilience Act compliance analysis</li>
-            <li><code>SECURITY_ARCHITECTURE.md</code> - Security patterns and threat modeling</li>
-            <li><code>WORKFLOWS.md</code> - CI/CD GitHub Actions documentation</li>
+            <li><code>ARCHITECTURE.md</code> - 32KB - C4-arkitekturmodeller</li>
+            <li><code>DATA_MODEL.md</code> - 27KB - Komplett entitetsdokumentation</li>
+            <li><code>FLOWCHART.md</code> - 19KB - Processflödesdiagram</li>
+            <li><code>CRA-ASSESSMENT.md</code> - 47KB - EU Cyber Resilience Act efterlevnadsanalys</li>
+            <li><code>SECURITY_ARCHITECTURE.md</code> - Säkerhetsmönster och hotmodellering</li>
+            <li><code>WORKFLOWS.md</code> - CI/CD GitHub Actions-dokumentation</li>
           </ul>
           
-          <p><strong>Documentation Quality:</strong> Comprehensive. Not just READMEs—actual architecture diagrams, data models with entity relationships, security threat analysis. This is <em>documented</em> code, not "figure it out yourself" code.</p>
+          <p><strong>Dokumentationskvalitet:</strong> Omfattande. Inte bara README:er—faktiska arkitekturdiagram, datamodeller med entitetsrelationer, säkerhetshotanalys. Detta är <em>dokumenterad</em> kod, inte "lista ut det själv"-kod.</p>
           
-          <p class="hidden-wisdom"><em>Documentation that matches code structure = maintainable system. Documentation that diverges from code = technical debt indicator. CIA's docs appear current based on repo structure matching described architecture.</em></p>
+          <p class="hidden-wisdom"><em>Dokumentation som matchar kodstruktur = underhållbart system. Dokumentation som avviker från kod = indikator för teknisk skuld. CIAs dokument verkar aktuella baserat på att repo-struktur matchar beskriven arkitektur.</em></p>
         </div>
       </div>
     </section>
 
     <section id="tech-stack-reality">
-      <h2 class="panel-caption">Technology Stack: What's Actually Running</h2>
+      <h2 class="panel-caption">Teknisk stack: Vad som faktiskt körs</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>🖥️ Core Platform</h3>
-          <p><strong>Language:</strong> Java (confirmed by 1,372 .java files)</p>
-          <p><strong>Build Tool:</strong> Maven (49 pom.xml files)</p>
-          <p><strong>Framework:</strong> Spring Framework + Spring Framework</p>
-          <p><strong>Web UI:</strong> Vaadin (server-side Java framework, no JavaScript required)</p>
-          <p><strong>Database:</strong> PostgreSQL with JPA/Hibernate ORM</p>
+          <h3>🖥️ Kärnplattform</h3>
+          <p><strong>Språk:</strong> Java (bekräftat av 1 372 .java-filer)</p>
+          <p><strong>Build-verktyg:</strong> Maven (49 pom.xml-filer)</p>
+          <p><strong>Ramverk:</strong> Spring Framework + Spring Security</p>
+          <p><strong>Webb-UI:</strong> Vaadin (serversidigt Java-ramverk, ingen JavaScript krävs)</p>
+          <p><strong>Databas:</strong> PostgreSQL med JPA/Hibernate ORM</p>
           
-          <p><strong>Why This Stack?</strong></p>
+          <p><strong>Varför denna stack?</strong></p>
           <ul>
-            <li><strong>Java:</strong> Type safety, mature ecosystem, enterprise stability</li>
-            <li><strong>Spring:</strong> Battle-tested dependency injection, transaction management, security</li>
-            <li><strong>Vaadin:</strong> Complex UI in Java without writing JavaScript—controversial but effective for data-heavy applications</li>
-            <li><strong>PostgreSQL:</strong> Open source, ACID compliance, excellent for relational political data</li>
+            <li><strong>Java:</strong> Typsäkerhet, moget ekosystem, företagsstabilitet</li>
+            <li><strong>Spring:</strong> Stridstestad dependency injection, transaktionshantering, säkerhet</li>
+            <li><strong>Vaadin:</strong> Komplext UI i Java utan att skriva JavaScript—kontroversiellt men effektivt för datatung applikationer</li>
+            <li><strong>PostgreSQL:</strong> Öppen källkod, ACID-efterlevnad, utmärkt för relationell politisk data</li>
           </ul>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>🗄️ Data Layer Architecture</h3>
-          <p><strong>Confirmed from DATA_MODEL.md:</strong></p>
+          <h3>🗄️ Datalagrarkitektur</h3>
+          <p><strong>Bekräftat från DATA_MODEL.md:</strong></p>
           <ul>
-            <li>60+ base entity tables</li>
-            <li>30+ materialized views for analytics</li>
-            <li>Composite primary keys for many-to-many relationships</li>
-            <li>Javers auditing for change tracking</li>
-            <li>View entities optimized for read operations</li>
+            <li>60+ basentitetstabeller</li>
+            <li>30+ materialiserade vyer för analys</li>
+            <li>Sammansatta primärnycklar för många-till-många-relationer</li>
+            <li>Javers-revision för ändringsspårning</li>
+            <li>Vyentiteter optimerade för läsoperationer</li>
           </ul>
           
-          <p><strong>Data Sources Integration:</strong></p>
+          <p><strong>Integration av datakällor:</strong></p>
           <ul>
-            <li>Swedish Parliament API (riksdagen.se)</li>
-            <li>Election Authority (val.se)</li>
-            <li>World Bank Open Data</li>
-            <li>Swedish Financial Management Authority (ESV)</li>
-            <li>Government Bodies data</li>
+            <li>Riksdagens API (riksdagen.se)</li>
+            <li>Valmyndigheten (val.se)</li>
+            <li>Världsbankens öppna data</li>
+            <li>Ekonomistyrningsverket (ESV)</li>
+            <li>Myndigheters data</li>
           </ul>
           
-          <p><strong>Integration Pattern:</strong> Spring Integration framework for ETL pipelines. Data fetched via REST APIs, transformed, persisted to PostgreSQL, then materialized views aggregate for analytics.</p>
+          <p><strong>Integrationsmönster:</strong> Spring Integration-ramverk för ETL-pipelines. Data hämtas via REST-APIer, transformeras, persisteras till PostgreSQL, sedan aggregerar materialiserade vyer för analys.</p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>🔐 Security Implementation</h3>
-          <p><strong>From SECURITY_ARCHITECTURE.md Analysis:</strong></p>
+          <h3>🔐 Säkerhetsimplementation</h3>
+          <p><strong>Från SECURITY_ARCHITECTURE.md-analys:</strong></p>
           <ul>
-            <li><strong>Spring Security</strong> for authentication/authorization</li>
-            <li><strong>Parameterized queries</strong> via JPA (SQL injection prevention)</li>
-            <li><strong>Network isolation</strong> through firewall rules</li>
-            <li><strong>Javers auditing</strong> for every data modification</li>
-            <li><strong>Role-based access control</strong> with least-privilege database roles</li>
+            <li><strong>Spring Security</strong> för autentisering/auktorisering</li>
+            <li><strong>Parametriserade frågor</strong> via JPA (SQL-injektionsförebyggande)</li>
+            <li><strong>Nätverksisolering</strong> genom brandväggsregler</li>
+            <li><strong>Javers-revision</strong> för varje dataändring</li>
+            <li><strong>Rollbaserad åtkomstkontroll</strong> med minsta-behörighet databasroller</li>
           </ul>
           
-          <p><strong>OpenSSF Scorecard:</strong> 7.2/10 (verified at <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">scorecard.dev</a>)</p>
-          <p><strong>SLSA Level:</strong> 3 (build provenance attestations)</p>
-          <p><strong>CII Best Practices:</strong> Badge earned</p>
+          <p><strong>OpenSSF Scorecard:</strong> 7,2/10 (verifierad på <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">scorecard.dev</a>)</p>
+          <p><strong>SLSA-nivå:</strong> 3 (build provenance attestations)</p>
+          <p><strong>CII Best Practices:</strong> Märke förtjänat</p>
           
-          <p class="hidden-wisdom"><em>Security through measurable practices, not marketing claims. OpenSSF Scorecard provides public evidence—7.2/10 is solid for open-source project, not perfect but continuously improving.</em></p>
+          <p class="hidden-wisdom"><em>Säkerhet genom mätbara praxis, inte marknadsföringspåståenden. OpenSSF Scorecard ger offentliga bevis—7,2/10 är solitt för öppen källkod-projekt, inte perfekt men kontinuerligt förbättrande.</em></p>
         </div>
       </div>
     </section>
 
     <section id="developer-observations">
-      <h2 class="panel-caption">Developer Observations: What I Learned Analyzing the Code</h2>
+      <h2 class="panel-caption">Utvecklarobservationer: Vad jag lärde mig av att analysera koden</h2>
       
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>✅ What Works Well</h3>
+          <h3>✅ Vad som fungerar bra</h3>
           <ul>
-            <li><strong>Modular Architecture:</strong> 49 Maven modules = clean separation. Service layer doesn't know about web layer. Data access isolated. Good boundaries.</li>
-            <li><strong>Comprehensive Documentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md all present and detailed. Rare for open source.</li>
-            <li><strong>Test Infrastructure:</strong> Dedicated <code>testfoundation</code> module for test utilities. Shared test infrastructure = consistent testing approach.</li>
-            <li><strong>Domain-Driven Design:</strong> Separate model modules for external data, internal data, application data. Clear domain boundaries.</li>
-            <li><strong>Automated Quality Gates:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Measurable quality metrics.</li>
+            <li><strong>Modulär arkitektur:</strong> 49 Maven-moduler = ren separation. Servicelagret känner inte till webblagret. Dataåtkomst isolerad. Goda gränser.</li>
+            <li><strong>Omfattande dokumentation:</strong> ARCHITECTURE.md, DATA_MODEL.md, SECURITY_ARCHITECTURE.md alla närvarande och detaljerade. Sällsynt för öppen källkod.</li>
+            <li><strong>Testinfrastruktur:</strong> Dedikerad <code>testfoundation</code>-modul för testverktyg. Delad testinfrastruktur = konsekvent testningsstrategi.</li>
+            <li><strong>Domändriven design:</strong> Separata modellmoduler för extern data, intern data, applikationsdata. Tydliga domängränser.</li>
+            <li><strong>Automatiserade kvalitetsportar:</strong> OpenSSF Scorecard, CII Best Practices, GitHub Actions CI/CD. Mätbara kvalitetsmått.</li>
           </ul>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>⚠️ Complexity Challenges</h3>
+          <h3>⚠️ Komplexitetsutmaningar</h3>
           <ul>
-            <li><strong>Maven Module Coordination:</strong> 49 modules = version management complexity. Dependency changes ripple across modules.</li>
-            <li><strong>Vaadin Learning Curve:</strong> Server-side UI framework is unusual. Team members need Vaadin expertise, not just Java.</li>
-            <li><strong>PostgreSQL Schema Size:</strong> 90+ tables/views = complex data model. Understanding relationships requires DATA_MODEL.md study.</li>
-            <li><strong>Integration Brittleness:</strong> External APIs (Riksdag, World Bank) can change formats. Requires defensive parsing and version detection.</li>
-            <li><strong>Build Time:</strong> Multi-module Maven build likely takes 10-20+ minutes for full clean install. Iterative development needs incremental builds.</li>
+            <li><strong>Maven-modulkoordinering:</strong> 49 moduler = versionshanteringskomplexitet. Beroendeändringar sprider sig över moduler.</li>
+            <li><strong>Vaadings inlärningskurva:</strong> Serversidigt UI-ramverk är ovanligt. Teammedlemmar behöver Vaadin-expertis, inte bara Java.</li>
+            <li><strong>PostgreSQL-schemastorlek:</strong> 90+ tabeller/vyer = komplex datamodell. Att förstå relationer kräver DATA_MODEL.md-studier.</li>
+            <li><strong>Integrationsskörhhet:</strong> Externa APIer (Riksdag, Världsbanken) kan ändra format. Kräver defensiv parsning och versionsdetektering.</li>
+            <li><strong>Build-tid:</strong> Multi-modul Maven-build tar troligen 10-20+ minuter för fullständig ren installation. Iterativ utveckling behöver inkrementella builds.</li>
           </ul>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>🎯 Developer Experience Insights</h3>
-          <p><strong>Getting Started:</strong></p>
+          <h3>🎯 Utvecklarupplevelse-insikter</h3>
+          <p><strong>Komma igång:</strong></p>
           <ol>
             <li><code>git clone https://github.com/Hack23/cia.git</code></li>
-            <li><code>mvn clean install</code> (will take 15-20 minutes first time)</li>
-            <li>Read ARCHITECTURE.md to understand module structure</li>
-            <li>Read DATA_MODEL.md to understand database schema</li>
-            <li>Run <code>citizen-intelligence-agency</code> main application module</li>
+            <li><code>mvn clean install</code> (tar 15-20 minuter första gången)</li>
+            <li>Läs ARCHITECTURE.md för att förstå modulstruktur</li>
+            <li>Läs DATA_MODEL.md för att förstå databasschema</li>
+            <li>Kör <code>citizen-intelligence-agency</code> huvudapplikationsmodul</li>
           </ol>
           
-          <p><strong>Prerequisites:</strong></p>
+          <p><strong>Förutsättningar:</strong></p>
           <ul>
-            <li>Java 25+ (confirmed in POMs)</li>
+            <li>Java 25+ (bekräftat i POMs)</li>
             <li>Maven 3.8+</li>
-            <li>PostgreSQL 14+ for local development</li>
-            <li>8GB+ RAM (Vaadin apps are memory-hungry)</li>
-            <li>Patience (multi-module builds test your patience)</li>
+            <li>PostgreSQL 14+ för lokal utveckling</li>
+            <li>8GB+ RAM (Vaadin-appar är minneshungriga)</li>
+            <li>Tålamod (multi-modul builds testar ditt tålamod)</li>
           </ul>
           
-          <p class="hidden-wisdom"><em>First-time setup is non-trivial. Documentation helps, but expect 2-4 hours to get local environment running. Multi-module Maven projects require discipline—don't skip reading architecture docs.</em></p>
+          <p class="hidden-wisdom"><em>Första installation är icke-trivial. Dokumentation hjälper, men förvänta 2-4 timmar för att få lokal miljö att köra. Multi-modul Maven-projekt kräver disciplin—hoppa inte över att läsa arkitekturdokument.</em></p>
         </div>
       </div>
     </section>
 
     <section id="code-quality">
-      <h2 class="panel-caption">Code Quality Metrics: Measurable Evidence</h2>
+      <h2 class="panel-caption">Kodkvalitetsmått: Mätbara bevis</h2>
       
       <table class="data-table">
         <thead>
           <tr>
-            <th>Metric</th>
-            <th>Value</th>
-            <th>Analysis</th>
+            <th>Mått</th>
+            <th>Värde</th>
+            <th>Analys</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Maven Modules</strong></td>
+            <td><strong>Maven-moduler</strong></td>
             <td>49</td>
-            <td>Well-structured modular architecture</td>
+            <td>Välstrukturerad modulär arkitektur</td>
           </tr>
           <tr>
-            <td><strong>Java Files</strong></td>
-            <td>1,372</td>
-            <td>Significant codebase, requires good organization</td>
+            <td><strong>Java-filer</strong></td>
+            <td>1 372</td>
+            <td>Betydande kodbas, kräver god organisation</td>
           </tr>
           <tr>
-            <td><strong>Documentation Files</strong></td>
-            <td>10+ major MD files</td>
-            <td>Comprehensive technical documentation</td>
+            <td><strong>Dokumentationsfiler</strong></td>
+            <td>10+ större MD-filer</td>
+            <td>Omfattande teknisk dokumentation</td>
           </tr>
           <tr>
             <td><strong>OpenSSF Scorecard</strong></td>
-            <td>7.2/10</td>
-            <td>Solid security practices, continuously improving</td>
+            <td>7,2/10</td>
+            <td>Solida säkerhetspraxis, kontinuerligt förbättrande</td>
           </tr>
           <tr>
-            <td><strong>Database Tables</strong></td>
-            <td>60+ base + 30+ views</td>
-            <td>Complex data model, well-documented</td>
+            <td><strong>Databastabeller</strong></td>
+            <td>60+ bas + 30+ vyer</td>
+            <td>Komplex datamodell, väldokumenterad</td>
           </tr>
           <tr>
-            <td><strong>External Integrations</strong></td>
-            <td>5 major APIs</td>
-            <td>Riksdag, World Bank, Election Authority, ESV, Gov Bodies</td>
+            <td><strong>Externa integrationer</strong></td>
+            <td>5 större APIer</td>
+            <td>Riksdag, Världsbanken, Valmyndigheten, ESV, myndigheter</td>
           </tr>
         </tbody>
       </table>
       
-      <p><strong>Verdict:</strong> This is a <em>serious</em> codebase. Not a weekend project—multi-year enterprise application with proper architecture, documentation, and quality gates. The 49-module structure demonstrates thought went into separating concerns. Documentation quality suggests this is meant to be maintained long-term.</p>
+      <p><strong>Slutsats:</strong> Detta är en <em>seriös</em> kodbas. Inte ett helgprojekt—flerårig företagsapplikation med korrekt arkitektur, dokumentation och kvalitetsportar. De 49 modulerna demonstrerar att tanke gick in i att separera concerns. Dokumentationskvalitet tyder på att detta är menat att underhållas långsiktigt.</p>
     </section>
 
     <section id="easter-eggs">
-      <h2 class="panel-caption">🥚 Easter Eggs I Discovered in the Code</h2>
+      <h2 class="panel-caption">🥚 Påskägg jag upptäckte i koden</h2>
       
-      <p><strong>While analyzing the repository, I found these delightful hidden details:</strong></p>
+      <p><strong>När jag analyserade repositoryt hittade jag dessa förtjusande dolda detaljer:</strong></p>
       
       <ul>
-        <li><strong>Module Count:</strong> 49 modules = 7 × 7. Seven being a cosmically significant number (days of week, deadly sins, etc.). Coincidence? In a Discordian project, nothing is coincidence.</li>
-        <li><strong>FNORD Files:</strong> Checked for files containing "fnord" or "23"—didn't find obvious Easter eggs in filenames, but the spirit is there in the philosophy.</li>
-        <li><strong>Documentation Humor:</strong> CRA-ASSESSMENT.md contains dry Swedish bureaucracy humor about complying with EU regulations.</li>
-        <li><strong>Test Module Naming:</strong> <code>testfoundation</code> module suggests tests are foundational, not afterthought. Philosophy embedded in structure.</li>
+        <li><strong>Modulräkning:</strong> 49 moduler = 7 × 7. Sju är ett kosmiskt signifikant nummer (veckodagar, dödssynder, etc.). Tillfällighet? I ett discordianskt projekt är inget tillfällighet.</li>
+        <li><strong>FNORD-filer:</strong> Kollade efter filer som innehåller "fnord" eller "23"—hittade inte uppenbara påskägg i filnamn, men andan finns där i filosofin.</li>
+        <li><strong>Dokumentationshumor:</strong> CRA-ASSESSMENT.md innehåller torr svensk byråkratihumor om att följa EU-regler.</li>
+        <li><strong>Testmodulnamngivning:</strong> <code>testfoundation</code>-modul tyder på att tester är grundläggande, inte eftertanke. Filosofi inbäddad i struktur.</li>
       </ul>
       
-      <p class="hidden-wisdom"><em>Easter eggs aren't just jokes—they're breadcrumbs for future developers. Code that delights is code that gets maintained. Discordian philosophy recognizes this truth.</em></p>
+      <p class="hidden-wisdom"><em>Påskägg är inte bara skämt—de är brödsmulor för framtida utvecklare. Kod som glädjer är kod som underhålls. Discordiansk filosofi erkänner denna sanning.</em></p>
     </section>
 
     <section id="conclusion">
-      <h2 class="panel-caption">Final Verdict: Production-Quality Open Source Political Intelligence</h2>
+      <h2 class="panel-caption">Slutgiltigt omdöme: Produktionskvalitet politisk underrättelse med öppen källkod</h2>
       
-      <p><strong>This is what I found:</strong> Citizen Intelligence Agency is a legitimate, well-architected, production-quality application for analyzing Swedish political data. Not vaporware. Not a proof-of-concept. An actual working system with:</p>
+      <p><strong>Detta är vad jag fann:</strong> Citizen Intelligence Agency är en legitim, välarkitekterad, produktionskvalitetsapplikation för att analysera svensk politisk data. Inte vaporware. Inte ett proof-of-concept. Ett faktiskt fungerande system med:</p>
       
       <ul>
-        <li>✅ <strong>49-module Maven architecture</strong> enforcing separation of concerns</li>
-        <li>✅ <strong>1,372 Java files</strong> implementing real business logic</li>
-        <li>✅ <strong>Comprehensive documentation</strong> (ARCHITECTURE.md, DATA_MODEL.md, etc.)</li>
-        <li>✅ <strong>Security best practices</strong> (OpenSSF 7.2/10, SLSA Level 3)</li>
-        <li>✅ <strong>Complex PostgreSQL schema</strong> (90+ tables/views)</li>
-        <li>✅ <strong>Multiple external integrations</strong> (Riksdag, World Bank, Election Authority)</li>
-        <li>✅ <strong>CI/CD automation</strong> (GitHub Actions workflows)</li>
-        <li>✅ <strong>Open source transparency</strong> (all code public on GitHub)</li>
+        <li>✅ <strong>49-modul Maven-arkitektur</strong> som upprätthåller separation av concerns</li>
+        <li>✅ <strong>1 372 Java-filer</strong> som implementerar riktig affärslogik</li>
+        <li>✅ <strong>Omfattande dokumentation</strong> (ARCHITECTURE.md, DATA_MODEL.md, etc.)</li>
+        <li>✅ <strong>Bästa säkerhetspraxis</strong> (OpenSSF 7,2/10, SLSA-nivå 3)</li>
+        <li>✅ <strong>Komplext PostgreSQL-schema</strong> (90+ tabeller/vyer)</li>
+        <li>✅ <strong>Multipla externa integrationer</strong> (Riksdag, Världsbanken, Valmyndigheten)</li>
+        <li>✅ <strong>CI/CD-automation</strong> (GitHub Actions-arbetsflöden)</li>
+        <li>✅ <strong>Transparens med öppen källkod</strong> (all kod offentlig på GitHub)</li>
       </ul>
       
-      <p><strong>Developer Time Investment Required:</strong> Understanding this codebase = 40-80 hours minimum. It's not simple. But simplicity wasn't the goal—comprehensive political transparency was. Complexity is justified by problem domain complexity.</p>
+      <p><strong>Utvecklartidsinvestering krävs:</strong> Att förstå denna kodbas = 40-80 timmar minimum. Det är inte enkelt. Men enkelhet var inte målet—omfattande politisk transparens var det. Komplexitet är motiverad av problemdomänkomplexitet.</p>
       
-      <p><strong>Would I want to work on this codebase?</strong> Yes. Well-organized, documented, tested, and maintained. The kind of codebase where you can make changes confidently because the architecture supports it.</p>
+      <p><strong>Skulle jag vilja arbeta med denna kodbas?</strong> Ja. Välorganiserad, dokumenterad, testad och underhållen. Den sortens kodbas där du kan göra ändringar med självförtroende eftersom arkitekturen stödjer det.</p>
       
-      <p class="signature"><em>— George Dorn<br>Developer / Code Analyzer / Repository Inspector<br>Hack23 AB<br><br>"I cloned the repo. I read the code. This is what's actually there."<br><br>💻 FNORD 🔍</em></p>
+      <p class="signature"><em>— George Dorn<br>Utvecklare / Kodanalytiker / Repository-inspektör<br>Hack23 AB<br><br>"Jag klonade repositoryt. Jag läste koden. Detta är vad som faktiskt finns där."<br><br>💻 FNORD 🔍</em></p>
     </section>
 
     <section id="resources">
-      <h2 class="panel-caption">Explore the Code Yourself</h2>
+      <h2 class="panel-caption">Utforska koden själv</h2>
       
       <div class="cards">
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>🔗 Repository & Documentation</h3>
+          <h3>🔗 Repository och dokumentation</h3>
           <ul>
-            <li><a href="https://github.com/Hack23/cia">GitHub Repository</a> - Clone and analyze yourself</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4 models and system design</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Database schema documentation</li>
-            <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Security patterns</li>
-            <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Security metrics</li>
+            <li><a href="https://github.com/Hack23/cia">GitHub-repository</a> - Klona och analysera själv</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md">ARCHITECTURE.md</a> - C4-modeller och systemdesign</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/DATA_MODEL.md">DATA_MODEL.md</a> - Databasschemadokumentation</li>
+            <li><a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md">SECURITY_ARCHITECTURE.md</a> - Säkerhetsmönster</li>
+            <li><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard</a> - Säkerhetsmått</li>
           </ul>
         </div>
         
         <div class="card">
           <div class="scanner-effect"></div>
-          <h3>📚 Related Reading</h3>
+          <h3>📚 Relaterad läsning</h3>
           <ul>
-            <li><a href="cia-docs.html">CIA Product Documentation</a> - User-facing documentation</li>
-            <li><a href="blog_sv.html">Hack23 Säkerhetsblogg</a> - All blog entries</li>
-            <li><a href="blog-george-dorn-trigram-code.html">Black Trigram Code Analysis</a> - TypeScript/React game analysis</li>
-            <li><a href="blog-george-dorn-compliance-code.html">Compliance Manager Code Analysis</a> - Client-side architecture</li>
+            <li><a href="cia-docs_sv.html">CIA-produktdokumentation</a> - Användarorienterad dokumentation</li>
+            <li><a href="blog_sv.html">Hack23 säkerhetsblogg</a> - Alla blogginlägg</li>
+            <li><a href="blog-george-dorn-trigram-code_sv.html">Black Trigram-kodanalys</a> - TypeScript/React-spelanalys</li>
+            <li><a href="blog-george-dorn-compliance-code_sv.html">Compliance Manager-kodanalys</a> - Klientsidans arkitektur</li>
           </ul>
         </div>
       </div>
       
-      <p><strong>Think for yourself:</strong> Don't trust my analysis—clone the repository and verify. Code inspection beats documentation reading. Reality testing beats theoretical understanding.</p>
+      <p><strong>Tänk själv:</strong> Lita inte på min analys—klona repositoryt och verifiera. Kodinspection slår dokumentationsläsning. Verklighetstestning slår teoretisk förståelse.</p>
     </section>
   </article>
 </main>
 
-        <footer role="contentinfo" aria-label="Site footer">
+        <footer role="contentinfo" aria-label="Sidfot">
       <div class="footer-container">
         
-        <!-- Företag Info Column -->
+        <!-- Company Info Column -->
         <div class="footer-column">
           <h2>Hack23 AB</h2>
-          <p>Cybersäkerhetskonsultation<br>
+          <p>Cybersäkerhetskonsulting<br>
           Göteborg, Sverige | Distans</p>
           <p>Org.nr: 5595347807</p>
-          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Företagssida</a></p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn företagssida</a></p>
           <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">VD: James Pether Sörling</a></p>
         </div>
         
-        <!-- Tjänster Column -->
+        <!-- Services Column -->
         <div class="footer-column">
           <h3>Tjänster</h3>
           <ul>
-            <li><a href="services.html">Säkerhetskonsultation</a></li>
-            <li><a href="services.html">Säkerhetsarkitektur</a></li>
-            <li><a href="services.html">Molnsäkerhet</a></li>
-            <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services_sv.html">Säkerhetskonsulting</a></li>
+            <li><a href="services_sv.html">Säkerhetsarkitektur</a></li>
+            <li><a href="services_sv.html">Molnsäkerhet</a></li>
+            <li><a href="services_sv.html">DevSecOps-integration</a></li>
+            <li><a href="services_sv.html">Efterlevnad & LIS</a></li>
           </ul>
         </div>
         
-        <!-- Produkter Column -->
+        <!-- Products Column -->
         <div class="footer-column">
           <h3>Produkter</h3>
           <ul>
-            <li><a href="black-trigram-features.html">Black Trigram</a></li>
-            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
-            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+            <li><a href="black-trigram-features_sv.html">Black Trigram</a></li>
+            <li><a href="cia-features_sv.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_sv.html">CIA Compliance Manager</a></li>
           </ul>
         </div>
         
-        <!-- Resurser Column -->
+        <!-- Resources Column -->
         <div class="footer-column">
           <h3>Resurser</h3>
           <ul>
             <li><a href="blog_sv.html">Säkerhetsblogg</a></li>
-            <li><a href="discordian-cybersecurity.html">🍎 Discordiansk Blogg</a></li>
-            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
-            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publikt ISMS</a></li>
-            <li><a href="sitemap.html">Webbplatskarta</a></li>
+            <li><a href="discordian-cybersecurity_sv.html">🍎 Discordiansk blogg</a></li>
+            <li><a href="cia-triad-faq_sv.html">CIA-triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Publikt LIS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
           </ul>
         </div>
         
-        <!-- Företag Column -->
+        <!-- Company Column -->
         <div class="footer-column">
           <h3>Företag</h3>
           <ul>
-            <li><a href="why-hack23.html">Om Hack23</a></li>
+            <li><a href="why-hack23_sv.html">Om Hack23</a></li>
             <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Säkerhetspolicy</a></li>
-            <li><a href="SECURITY.md">Rapportera Säkerhetsproblem</a></li>
-            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
-            <li><a href="accessibility-statement.html">Tillgänglighet</a></li>
+            <li><a href="SECURITY.md">Rapportera säkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisation</a></li>
+            <li><a href="accessibility-statement_sv.html">Tillgänglighet</a></li>
           </ul>
         </div>
         
@@ -561,21 +564,21 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Bloggförfattare:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementeringsverklighet:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panikdriven Utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. See his technical commentaries in
-          <a href="blog-george-dorn-cia-code_sv.html">CIA Architecture</a>,
-          <a href="blog-george-dorn-trigram-code.html">Black Trigram Combat</a>, and
-          <a href="blog.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och dolda påskägg som gör filosofi deployerbar.
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md" title="George Dorn - Panik-driven utvecklare som får det att faktiskt fungera" rel="noopener noreferrer" target="_blank">George Dorn</a> brottas detta vackra kaos till fungerande kod. Se hans tekniska kommentarer i
+          <a href="blog-george-dorn-cia-code_sv.html">CIA-arkitektur</a>,
+          <a href="blog-george-dorn-trigram-code_sv.html">Black Trigram-strid</a> och
+          <a href="blog_sv.html#george-dorn-developer-chronicles">Utvecklarkrönikor</a> för panikögonblicken, genombrotten och dolda påskäggen som gör filosofi deploy-bar.
         </p>
       </div>
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter förbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter förbehållna. </p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 
