@@ -116,9 +116,9 @@
 {
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "position": 1, "name": "ホーム", "item": "https://hack23.com/" },
+    { "position": 1, "name": "ホーム", "item": "https://hack23.com/index_ja.html" },
     { "position": 2, "name": "ブログ", "item": "https://hack23.com/blog_ja.html" },
-    { "position": 3, "name": "CIA Alternative Media Discordian 2026" }
+    { "position": 3, "name": "代替メディア向けCIA: ディスコーディアン選挙2026" }
   ]
 }
 ```
