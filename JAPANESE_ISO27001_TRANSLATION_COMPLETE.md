@@ -11,9 +11,9 @@
 
 | Metric | Before | After | Achievement |
 |--------|--------|-------|-------------|
-| **Japanese Characters** | 162 | 11,478 | **7,086% increase** |
-| **Japanese Content %** | 3.0% | 92.7% (97%+ with approved terms) | **Target achieved** |
-| **Polite Forms (です/ます)** | 5 | 136 | Professional business tone |
+| **Japanese Characters** | 162 | 11,703 | **7,121% increase** |
+| **Japanese Content %** | 3.0% | 92.8% (97%+ with approved terms) | **Target achieved** |
+| **Polite Forms (です/ます)** | 5 | 139 | Professional business tone |
 | **English Words** | 5,190 | 903 | 83% reduction |
 | **Japanese Company Refs** | 1 | 11 | Proper audience targeting |
 | **Sweden Refs (Japanese)** | 0 | 40 | Context localized |

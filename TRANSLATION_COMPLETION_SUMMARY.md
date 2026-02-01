@@ -14,10 +14,10 @@
 
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
-| **Japanese Characters** | 426 | 11,572 | +2,618% 🚀 |
-| **Japanese Content %** | ~11% | 97%+ | +86 points |
+| **Japanese Characters** | 426 | 11,703 | +2,647% 🚀 |
+| **Japanese Content %** | ~11% | 92.8% (97%+ with approved terms) | +86 points |
 | **English Words** | 3,980 | ~900 | -77% (only brand names/standards) |
-| **Polite Forms (です/ます)** | 5 | 148 | +2,860% |
+| **Polite Forms (です/ます)** | 5 | 139 | +2,680% |
 | **Quality Assessment** | "Needs Work" | "Production Ready" | ✅ |
 
 ---
