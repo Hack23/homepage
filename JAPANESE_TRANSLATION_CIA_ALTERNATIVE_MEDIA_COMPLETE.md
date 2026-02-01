@@ -54,7 +54,7 @@
 
 **Meta Tags:**
 ```html
-<title>CIA for Alternative Media: Discordian Election 2026 | Hack23</title>
+<title>代替メディア向けCIA: ディスコーディアン選挙2026 | Hack23</title>
 <meta name="description" content="スウェーデン代替メディアのためのCIAプラットフォーム: Fria Tider、Nya Dagbladet、ETC、Arbetaren。2026年議会選挙のためのディスコーディアン・インテリジェンス。体系的データを通じて自分で考え、権威に疑問を投げかける。">
 ```
 
@@ -94,7 +94,7 @@
 {
   "@type": "BlogPosting",
   "headline": "代替メディア向けCIA: ディスコーディアン選挙2026フューチャーズ",
-  "description": "2026年リクスダーグ選挙を対象としたスウェーデン代替メディア向けの包括的ディスコーディアン分析。体系的データインテリジェンスによるChapel Periousへの参入。",
+  "description": "2026年リクスダーグ選挙を対象としたスウェーデン代替メディア向けの包括的ディスコーディアン分析。体系的データインテリジェンスによるChapel Perilousへの参入。",
   "author": {
     "@type": "Person",
     "name": "ハグバード・セリーヌ",
