@@ -339,7 +339,7 @@ These files were verified or enhanced to have professional Japanese translations
 - ⚡ `discordian-business-continuity_ja.html` ← `discordian-business-continuity.html`
 - ⚡ `discordian-compliance-frameworks_ja.html` ← `discordian-compliance-frameworks.html`
 - ⚡ `discordian-compliance_ja.html` ← `discordian-compliance.html`
-- ⚡ `discordian-cybersecurity_ja.html` ← `discordian-cybersecurity.html`
+- ✅ `discordian-cybersecurity_ja.html` ← `discordian-cybersecurity.html` **[FULLY TRANSLATED - Jan 30, 2026]**
 - ⚡ `discordian-email-security_ja.html` ← `discordian-email-security.html`
 - ⚡ `discordian-incident-response_ja.html` ← `discordian-incident-response.html`
 - ⚡ `discordian-isms-review_ja.html` ← `discordian-isms-review.html`
