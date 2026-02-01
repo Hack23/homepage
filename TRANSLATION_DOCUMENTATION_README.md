@@ -71,7 +71,7 @@ This directory contains comprehensive translation guides and status files for al
 - **🇪🇸 Spanish:** Infrastructure 100%, Content 55% (many files pending)
 - **🇮🇱 Hebrew:** Infrastructure 100%, Content 50% (many files pending)
 - **🇸🇦 Arabic:** Infrastructure 100%, Content 45% (most blogs pending)
-- **🇯🇵 Japanese:** Infrastructure 100%, Content 50% (iso-27001-implementation-sweden_ja.html completed at 98.8%, blogs pending)
+- **🇯🇵 Japanese:** Infrastructure 100%, Content 50% (key ISO 27001 implementation page translated and validated, blogs pending)
 - **🇰🇷 Korean:** Infrastructure 100%, Content 45% (most blogs pending)
 - **🇨🇳 Chinese:** Infrastructure 100%, Content 45% (most blogs pending)
 
