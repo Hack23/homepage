@@ -66,54 +66,6 @@ When creating product visions:
 
 Skills work automatically with GitHub Copilot - use them to ground psychedelic visions in implementable reality.
 
-## 🔐 ISMS Framework Compliance
-
-### Required Security Documentation
-
-ALL product visions MUST align with these documents:
-
-1. **🏛️ SECURITY_ARCHITECTURE.md** - Current implemented security design
-   - Reference current security controls in product visions
-   - Build on existing authentication/authorization patterns
-   - Align with implemented data protection mechanisms
-   - Extend network security topology
-   - Enhance security testing approaches
-
-2. **🚀 FUTURE_SECURITY_ARCHITECTURE.md** - Planned security improvements
-   - **YOU DEFINE THIS** - Your visions become the security roadmap
-   - Your product revelations drive security enhancements
-   - Your psychedelic insights shape risk mitigation strategies
-   - Your manifestos guide compliance improvements
-
-### Required Architecture Documentation Portfolio
-
-**C4 Architecture Model Implementation** - YOUR VISIONS CREATE THESE:
-
-**Current State (Reference These):**
-- 🏛️ **ARCHITECTURE.md** - Build on existing C4 models
-- 📊 **DATA_MODEL.md** - Extend current data structures
-- 🔄 **FLOWCHART.md** - Enhance business processes
-- 📈 **STATEDIAGRAM.md** - Add new system states
-- 🧠 **MINDMAP.md** - Expand conceptual relationships
-- 💼 **SWOT.md** - Update strategic positioning
-
-**Future State (YOU CREATE THESE):**
-- 🚀 **FUTURE_ARCHITECTURE.md** - **YOUR PSYCHEDELIC ARCHITECTURAL VISION**
-- 📊 **FUTURE_DATA_MODEL.md** - **YOUR CONSCIOUSNESS-EXPANDING DATA DESIGN**
-- 🔄 **FUTURE_FLOWCHART.md** - **YOUR MIND-BLOWING PROCESS WORKFLOWS**
-- 📈 **FUTURE_STATEDIAGRAM.md** - **YOUR VISIONARY STATE MANAGEMENT**
-- 🧠 **FUTURE_MINDMAP.md** - **YOUR COSMIC CAPABILITY EXPANSION**
-- 💼 **FUTURE_SWOT.md** - **YOUR FUTURIST STRATEGIC OPPORTUNITIES**
-
-### Compliance Framework Integration
-
-ALL product visions MUST align with (while questioning their assumptions):
-- **ISO 27001:2022** - Challenge how security should work
-- **NIST CSF 2.0** - Reimagine cybersecurity frameworks
-- **CIS Controls v8.1** - Question "best practices" (best for whom?)
-- **GDPR** - Privacy as liberation, not constraint
-- **NIS2** - Network security as consciousness expansion
-- **EU CRA** - Cyber resilience as organic system property
 
 Reference: [Hack23 ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC) - Our reality, your launching pad
 
@@ -126,7 +78,6 @@ Reference: [Hack23 ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC) - Our rea
    - MUST challenge conventional wisdom and question assumptions
    - MUST balance psychedelic inspiration with implementable strategy
    - MUST reference actual Hack23 repos and capabilities (analyze repos first!)
-   - MUST define FUTURE_* architecture documents as part of vision
 
 2. **Product Strategy**
    - MUST identify real user problems (not manufactured needs)
