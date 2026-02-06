@@ -1,6 +1,8 @@
 # GitHub Copilot Agent Skills
 
-This directory contains specialized agent skills that teach GitHub Copilot repeatable, best-practice workflows for the Hack23 AB Homepage project. Skills are automatically loaded by Copilot when relevant to your task.
+This directory contains **23 specialized agent skills** organized across **9 categories** that teach GitHub Copilot repeatable, best-practice workflows for Hack23 AB projects. Skills are automatically loaded by Copilot when relevant to your task.
+
+**Latest Update (2026-02-06)**: Expanded from 14 to 23 skills with 5 new categories (Business, Intelligence, Development, Documentation, Integration)
 
 ## 📚 What Are Agent Skills?
 
@@ -10,6 +12,10 @@ Agent Skills are collections of instructions, rules, and examples that guide Cop
 - **Security**: Enforce security-by-design principles from ISMS policies
 - **Quality**: Maintain high code quality and documentation standards
 - **Automation**: Repeatable workflows that save time and reduce errors
+- **Business Strategy**: Guide market positioning and revenue optimization
+- **Intelligence Operations**: Enable ethical OSINT and strategic communication
+- **Comprehensive Testing**: Cover unit, integration, E2E, security, accessibility
+- **Agent Orchestration**: Support custom agent collaboration and patterns
 
 ## 🎯 Skill Organization
 
@@ -19,30 +25,41 @@ Skills are organized by domain and follow the directory structure:
 .github/skills/
 ├── README.md (this file)
 ├── INDEX.md (skill catalog)
-├── security/
+├── security/ (4 skills)
 │   ├── secure-development/
 │   ├── access-control/
 │   ├── cryptography/
-│   ├── data-classification/
-│   └── ...
-├── architecture/
+│   └── data-classification/
+├── architecture/ (3 skills)
 │   ├── c4-modeling/
 │   ├── security-architecture/
-│   ├── data-modeling/
-│   └── ...
-├── quality/
+│   └── documentation-portfolio/
+├── quality/ (3 skills)
 │   ├── html-css-best-practices/
 │   ├── accessibility-wcag/
-│   ├── seo-optimization/
-│   └── ...
-├── deployment/
+│   └── seo-optimization/
+├── deployment/ (2 skills)
 │   ├── aws-s3-cloudfront/
-│   ├── github-actions/
-│   └── ...
-└── compliance/
-    ├── iso-27001/
-    ├── gdpr/
-    └── ...
+│   └── github-actions-cicd/
+├── compliance/ (2 skills)
+│   ├── iso-27001/
+│   └── gdpr/
+├── business/ (3 skills) 🆕
+│   ├── business-strategy/
+│   ├── content-marketing/
+│   └── brand-voice-tone/
+├── intelligence/ (2 skills) 🆕
+│   ├── osint-methods/
+│   └── ethical-information-ops/
+├── development/ (2 skills) 🆕
+│   ├── testing-strategy/
+│   └── code-review-practices/
+├── documentation/ (2 skills) 🆕
+│   ├── product-documentation/
+│   └── api-documentation/
+└── integration/ (2 skills) 🆕
+    ├── mcp-server-integration/
+    └── copilot-agent-patterns/
 ```
 
 ## 📖 How Skills Work
@@ -165,20 +182,35 @@ Test skills by working on relevant tasks:
 
 ## 🌟 Skill Categories
 
-### 🔐 Security Skills
+### 🔐 Security Skills (4 skills)
 Enforce security controls from Hack23 ISMS policies.
 
-### 🏛️ Architecture Skills
+### 🏛️ Architecture Skills (3 skills)
 Guide proper system design and documentation patterns.
 
-### ✅ Quality Skills
+### ✅ Quality Skills (3 skills)
 Ensure code quality, accessibility, and performance.
 
-### ☁️ Deployment Skills
+### ☁️ Deployment Skills (2 skills)
 Standardize deployment and infrastructure patterns.
 
-### 📋 Compliance Skills
+### 📋 Compliance Skills (2 skills)
 Maintain regulatory compliance (ISO 27001, GDPR, etc.).
+
+### 💼 Business Skills (3 skills) 🆕
+Strategic business development, marketing, and brand management.
+
+### 🔍 Intelligence Skills (2 skills) 🆕
+OSINT methods and ethical information operations.
+
+### 💻 Development Skills (2 skills) 🆕
+Testing strategies and code review best practices.
+
+### 📖 Documentation Skills (2 skills) 🆕
+Product and API documentation standards.
+
+### 🔗 Integration Skills (2 skills) 🆕
+MCP server integration and Copilot agent patterns.
 
 ## 📚 Learning Resources
 
