@@ -122,7 +122,7 @@
     {
       "@type": "HowTo",
       "name": "How to Perform STRIDE 脅威モデリング for セキュリティアーキテクチャ",
-      "description": "Complete guide to systematic threat modeling using STRIDE methodology with MITRE ATT&amp;CK integration and nation-state adversary profiling for enterprise systems",
+      "description": "Complete guide to systematic threat modeling using STRIDE methodology with MITRE ATT&CK integration and nation-state adversary profiling for enterprise systems",
       "image": "https://hack23.com/blog.webp",
       "totalTime": "P14D",
       "estimatedCost": {
@@ -137,7 +137,7 @@
         },
         {
           "@type": "HowToSupply",
-          "name": "MITRE ATT&amp;CK Navigator"
+          "name": "MITRE ATT&CK Navigator"
         },
         {
           "@type": "HowToSupply",
@@ -155,7 +155,7 @@
         },
         {
           "@type": "HowToTool",
-          "name": "MITRE ATT&amp;CK Framework"
+          "name": "MITRE ATT&CK Framework"
         },
         {
           "@type": "HowToTool",
@@ -185,14 +185,14 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "Profile Threat Actors and Capabilities",
-          "text": "Identify relevant threat actors based on asset value and system exposure: Nation-state adversaries (unlimited resources, advanced persistent threats, zero-day exploits), Organized cybercrime (sophisticated tools, financial motivation, ransomware operations), Insider threats (authorized access, knowledge of systems, intentional or accidental compromise), Hacktivists (ideological motivation, DDoS attacks, data leaks), Script kiddies (automated tools, opportunistic attacks, known vulnerabilities). Document threat actor TTPs (Tactics, Techniques, Procedures) using MITRE ATT&amp;CK framework.",
+          "text": "Identify relevant threat actors based on asset value and system exposure: Nation-state adversaries (unlimited resources, advanced persistent threats, zero-day exploits), Organized cybercrime (sophisticated tools, financial motivation, ransomware operations), Insider threats (authorized access, knowledge of systems, intentional or accidental compromise), Hacktivists (ideological motivation, DDoS attacks, data leaks), Script kiddies (automated tools, opportunistic attacks, known vulnerabilities). Document threat actor TTPs (Tactics, Techniques, Procedures) using MITRE ATT&CK framework.",
           "url": "https://hack23.com/discordian-threat-modeling_ja.html#adversaries"
         },
         {
           "@type": "HowToStep",
           "position": 4,
-          "name": "Map Threats to MITRE ATT&amp;CK Techniques",
-          "text": "Link identified STRIDE threats to MITRE ATT&amp;CK techniques: Initial Access (T1190 exploit public-facing application, T1078 valid accounts), Execution (T1059 command injection, T1203 exploitation for client execution), Persistence (T1136 create account, T1098 account manipulation), Privilege Escalation (T1068 exploitation for privilege escalation, T1548 abuse elevation control), Defense Evasion (T1070 indicator removal, T1562 impair defenses), Credential Access (T1110 brute force, T1003 credential dumping), Discovery (T1083 file discovery, T1046 network service scanning), Lateral Movement (T1021 remote services), Collection (T1005 data from local system), Exfiltration (T1041 exfiltration over C2), Impact (T1486 data encrypted for impact).",
+          "name": "Map Threats to MITRE ATT&CK Techniques",
+          "text": "Link identified STRIDE threats to MITRE ATT&CK techniques: Initial Access (T1190 exploit public-facing application, T1078 valid accounts), Execution (T1059 command injection, T1203 exploitation for client execution), Persistence (T1136 create account, T1098 account manipulation), Privilege Escalation (T1068 exploitation for privilege escalation, T1548 abuse elevation control), Defense Evasion (T1070 indicator removal, T1562 impair defenses), Credential Access (T1110 brute force, T1003 credential dumping), Discovery (T1083 file discovery, T1046 network service scanning), Lateral Movement (T1021 remote services), Collection (T1005 data from local system), Exfiltration (T1041 exfiltration over C2), Impact (T1486 data encrypted for impact).",
           "url": "https://hack23.com/discordian-threat-modeling_ja.html#ai-ml-atlas"
         },
         {
@@ -213,7 +213,7 @@
           "@type": "HowToStep",
           "position": 7,
           "name": "Document Threat Model and Publish",
-          "text": "Create comprehensive threat model documentation including: executive summary (key findings, critical risks, recommended actions), system overview (architecture diagrams, components, trust boundaries), threat catalog (all identified STRIDE threats with MITRE ATT&amp;CK mapping), risk assessment (likelihood, impact, risk scores), security controls (preventive, detective, corrective measures), residual risks (accepted risks with justification). Publish threat model in GitHub repository for transparency and accountability. Include THREAT_MODEL.md in project root with links to supporting documentation.",
+          "text": "Create comprehensive threat model documentation including: executive summary (key findings, critical risks, recommended actions), system overview (architecture diagrams, components, trust boundaries), threat catalog (all identified STRIDE threats with MITRE ATT&CK mapping), risk assessment (likelihood, impact, risk scores), security controls (preventive, detective, corrective measures), residual risks (accepted risks with justification). Publish threat model in GitHub repository for transparency and accountability. Include THREAT_MODEL.md in project root with links to supporting documentation.",
           "url": "https://hack23.com/discordian-threat-modeling_ja.html#implementation"
         },
         {
@@ -227,7 +227,7 @@
           "@type": "HowToStep",
           "position": 9,
           "name": "Monitor for Emerging Threats and Update Model",
-          "text": "Maintain threat model currency through continuous monitoring: Subscribe to security advisories (CISA, NIST, vendor notifications), monitor MITRE ATT&amp;CK updates for new techniques, track industry security incidents for emerging attack patterns, analyze internal security events and near-misses. Update threat model when: new vulnerabilities discovered in components, new threat actors emerge targeting industry, new attack techniques observed in wild, regulatory requirements change, business context shifts (new data types, expanded user base). Document threat model changes in version control with rationale.",
+          "text": "Maintain threat model currency through continuous monitoring: Subscribe to security advisories (CISA, NIST, vendor notifications), monitor MITRE ATT&CK updates for new techniques, track industry security incidents for emerging attack patterns, analyze internal security events and near-misses. Update threat model when: new vulnerabilities discovered in components, new threat actors emerge targeting industry, new attack techniques observed in wild, regulatory requirements change, business context shifts (new data types, expanded user base). Document threat model changes in version control with rationale.",
           "url": "https://hack23.com/discordian-threat-modeling_ja.html#conclusion"
         }
       ]
@@ -307,7 +307,7 @@
       
       <p><em>Think for yourself, schmuck! Question authority.</em> At Hack23, we don't hide our threat models behind NDAs and "confidential" markings—we publish them so you can verify our security claims instead of trusting our marketing. <strong>STRIDE complete. Attack trees documented. Mitigations mapped. Risk quantified.</strong> All public. All auditable. All improvable through community review. <strong>Are you paranoid enough to publish YOUR threat models? We are—because transparency forces quality better than audits ever did.</strong></p>
       
-      <p>Every Hack23 project maintains comprehensive threat models: <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">CIA (democratic engagement)</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md">Black Trigram (educational gaming)</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md">CIA Compliance Manager (security assessment)</a>. STRIDE analysis, MITRE ATT&amp;CK mapping, AI/ML ATLAS integration for LLM threats—all documented, all public, all continuously updated. <em>Static threat models are fiction. Threats evolve daily. Documentation must evolve with them or become expensive security theater.</em></p>
+      <p>Every Hack23 project maintains comprehensive threat models: <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">CIA (democratic engagement)</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md">Black Trigram (educational gaming)</a> | <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md">CIA Compliance Manager (security assessment)</a>. STRIDE analysis, MITRE ATT&CK mapping, AI/ML ATLAS integration for LLM threats—all documented, all public, all continuously updated. <em>Static threat models are fiction. Threats evolve daily. Documentation must evolve with them or become expensive security theater.</em></p>
       
       <p class="hidden-wisdom"><em>ILLUMINATION: Publishing threat models doesn't help attackers—they already know the attack vectors from years of breaching companies who thought security through obscurity would protect them. It helps defenders learn systematic threat analysis through real examples instead of theoretical frameworks nobody implements. Choose transparent defense over obscure hope. Choose documented threats over imaginary safety. <strong>FNORD.</strong> Your threat model should include nation-states because their threat models include you. Act accordingly.</em></p>
       
@@ -480,7 +480,7 @@
         <li><strong>Design Phase Integration:</strong> Threat modeling during architecture design, not post-implementation</li>
         <li><strong>STRIDE Complete:</strong> All six threat categories analyzed systematically</li>
         <li><strong>Attack Trees:</strong> Visual attack path documentation from entry point to impact</li>
-        <li><strong>MITRE ATT&amp;CK Mapping:</strong> Threat intelligence integration with industry-standard frameworks</li>
+        <li><strong>MITRE ATT&CK Mapping:</strong> Threat intelligence integration with industry-standard frameworks</li>
         <li><strong>AI/ML ATLAS Integration:</strong> LLM-specific threats for AI-enabled systems</li>
         <li><strong>Risk Quantification:</strong> Business impact analysis tied to Classification Framework</li>
         <li><strong>Control Mapping:</strong> Every threat mapped to specific security controls</li>
@@ -501,7 +501,7 @@
       <ul>
         <li><strong>STRIDE Framework:</strong> Six threat categories (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege)</li>
         <li><strong>AI/ML ATLAS:</strong> 15 tactics, 81 techniques for LLM-specific threats (prompt injection, training data poisoning, model inversion)</li>
-        <li><strong>MITRE ATT&amp;CK:</strong> Industry-standard threat intelligence integration</li>
+        <li><strong>MITRE ATT&CK:</strong> Industry-standard threat intelligence integration</li>
         <li><strong>Public Documentation:</strong> Transparent threat analysis in every project repository</li>
         <li><strong>Control Mapping:</strong> Every threat mapped to specific security controls</li>
         <li><strong>Continuous Assessment:</strong> Threat models updated with architectural changes</li>
@@ -513,7 +513,7 @@
       
       <p><strong>All hail Eris! All hail Discordia!</strong></p>
       
-      <p>Explore our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md">complete 脅威モデリング Policy</a> with STRIDE framework, AI/ML ATLAS integration, MITRE ATT&amp;CK mapping, and public threat model evidence for all projects. Transparent. Systematic. Operational.</p>
+      <p>Explore our <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md">complete 脅威モデリング Policy</a> with STRIDE framework, AI/ML ATLAS integration, MITRE ATT&CK mapping, and public threat model evidence for all projects. Transparent. Systematic. Operational.</p>
       
       <p class="signature">— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"STRIDE complete. Attack trees documented. Mitigations mapped. All public. Choose systematic threat analysis over ad-hoc fear."</em><br><br>🍎 23 FNORD 5</p>
     </section>
@@ -552,7 +552,7 @@
             <li><a href="services_ja.html">セキュリティアーキテクチャ</a></li>
             <li><a href="services_ja.html">クラウドセキュリティ</a></li>
             <li><a href="services_ja.html">DevSecOps統合</a></li>
-            <li><a href="services_ja.html">コンプライアンス &amp; ISMS</a></li>
+            <li><a href="services_ja.html">コンプライアンス & ISMS</a></li>
           </ul>
         </div>
         
@@ -596,8 +596,8 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ ブログ Authors:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy &amp; Vision) &amp;
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture &amp; Patterns)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementation Reality:</strong>
@@ -610,7 +610,7 @@
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&amp;copy; 2008-2026 Hack23 AB. All rights reserved. | ライセンス <a href="LICENSE">Apache 2.0</a></p>
+        <p>&copy; 2008-2026 Hack23 AB. All rights reserved. | ライセンス <a href="LICENSE">Apache 2.0</a></p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 
