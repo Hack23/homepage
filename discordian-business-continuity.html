@@ -232,7 +232,7 @@
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
-          <h3>3. 📋 Plan Development & Documentation</h3>
+          <h3>3. 📋 Plan Development &amp; Documentation</h3>
           <p><strong>Recovery Procedures:</strong> Step-by-step runbooks, not vague guidelines. "Activate backup" isn't a procedure—"1) Access AWS Console via emergency credentials 2) Navigate to Route 53 3) Update health check threshold..." is. Our AWS region failover: 14 documented steps, 47-minute average actual time, quarterly tested.</p>
           <p><strong>Communication Templates:</strong> Pre-written stakeholder notifications by scenario (infrastructure failure, security incident, supplier outage). No one writes clear customer communication during panic—prepare it beforehand with [VARIABLES] for incident-specific details.</p>
           <p><strong>Contact Lists:</strong> Emergency contacts with multiple methods (phone, email, Slack, SMS). Includes supplier escalation paths—because "open a support ticket" doesn't work when you need recovery in 47 minutes. CEO direct mobile, AWS enterprise support hotline, GitHub escalation procedures.</p>
@@ -241,7 +241,7 @@
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🧪 Testing & Validation (The Truth Revealer)</h3>
+          <h3>4. 🧪 Testing &amp; Validation (The Truth Revealer)</h3>
           <p><strong>Quarterly BCP Testing:</strong> Q1 2025: AWS region failover drill (52 minutes actual vs 60-minute target—passed). Q2: Backup restoration validation (100% success, 23-minute database restore). Q3: Ransomware simulation (isolation time: 18 minutes, recovery: 3.2 hours). Q4: Communication test (all stakeholders reachable within 30 minutes).</p>
           <p><strong>Compounding Failure Scenarios:</strong> Don't just test "the datacenter fails"—test "datacenter fails + key personnel unavailable + communication systems down + it's 2am Saturday." Real disasters compound. Your BCP should survive compound failures or it's wishful thinking.</p>
           <p><strong>Documented Results:</strong> Every test generates actual recovery times vs. targets, failure points identified, procedure updates required. Q1 test revealed AWS health check misconfiguration—fixed before production outage proved it. Testing isn't checkbox compliance—it's reality validation.</p>
@@ -250,7 +250,7 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 🔄 Maintenance & Continuous Improvement</h3>
+          <h3>5. 🔄 Maintenance &amp; Continuous Improvement</h3>
           <p><strong>Post-Test Reviews:</strong> Every test → lessons learned → procedure updates. Q1 failover revealed DNS propagation slower than expected—updated RTO target and added CloudFront cache clearing procedure. Q2 backup test found one database not in backup scope—added and retested.</p>
           <p><strong>Change Integration:</strong> New AWS services? Update BCP. New supplier? Add to dependency matrix. Staff changes? Update contact lists. Architecture evolution? Revise recovery procedures. BCP isn't annual documentation—it's continuous maintenance or it rots.</p>
           <p><strong>Annual Full Exercise:</strong> Complete business disruption scenario with all stakeholders. 2024 exercise: Simulated Stockholm datacenter complete failure + pandemic-level remote work constraints + simultaneous DDoS attack. Result: 3.8-hour full recovery vs. 4-hour target. Identified improvement: Automated failover (implemented Q2 2025).</p>
@@ -296,7 +296,7 @@
             <td>GitHub local mirrors, CI/CD redundancy, development environment snapshots, alternative deployment paths</td>
           </tr>
           <tr>
-            <td><strong>🔒 Security & Compliance</strong></td>
+            <td><strong>🔒 Security &amp; Compliance</strong></td>
             <td>Regulatory obligations (GDPR, NIS2), security incident response, audit compliance.</td>
             <td>€5-10K (regulatory fines + incident response costs + compliance violations)</td>
             <td>RTO 1-4hr / RPO 1hr</td>
@@ -714,7 +714,7 @@ James Pether Sörling, CEO
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">Compliance &amp; ISMS</a></li>
           </ul>
         </div>
         
@@ -758,8 +758,8 @@ James Pether Sörling, CEO
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Blog Authors:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy &amp; Vision) &amp;
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture &amp; Patterns)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementation Reality:</strong>
@@ -772,7 +772,7 @@ James Pether Sörling, CEO
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2026 Hack23 AB. All rights reserved. </p>
+        <p>&amp;copy; 2008-2026 Hack23 AB. All rights reserved. </p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 

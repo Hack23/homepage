@@ -10,7 +10,7 @@
 <meta name="keywords" content="CIA security architecture, OSINT security, political data protection, Simon Moon, threat modeling, five-layer defense, transparency security">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
-<meta property="og:title" content="CIA Security: Defense Through Transparency & The 23 Enigma">
+<meta property="og:title" content="CIA Security: Defense Through Transparency &amp; The 23 Enigma">
 <meta property="og:description" content="Public political data demands public security architecture. The five defensive layers and the synchronicities that validate them.">
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:locale:alternate" content="ar_SA">
@@ -97,7 +97,7 @@
 </header>
 <main>
   <article>
-    <h1 class="header">🔐 CIA Security: Defense Through Transparency & The 23 Enigma</h1>
+    <h1 class="header">🔐 CIA Security: Defense Through Transparency &amp; The 23 Enigma</h1>
     
     <section id="paradox">
       <h2 class="panel-caption">The Transparency Paradox</h2>
@@ -135,7 +135,7 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. 🚪 Application Gateway: Authentication & Authorization</h3>
+          <h3>2. 🚪 Application Gateway: Authentication &amp; Authorization</h3>
           <p><strong>Spring Security framework.</strong> The authentication architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implements three security tiers: Anonymous (read-only public data access), User (authenticated access with bookmarking and tracking), and Admin (system management with elevated privileges).</p>
           <p><strong>Multi-Factor Authentication:</strong> Google Authenticator OTP integration for enhanced security. Brute force protection via login blocking with configurable thresholds per IP, session, and user.</p>
           <p><strong>Method-level security:</strong> @Secured annotations enforce role-based access control at the service layer. Complete session invalidation on logout with comprehensive audit logging via ApplicationSession tracking.</p>
@@ -161,7 +161,7 @@
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Data Protection: Encryption & Key Management</h3>
+          <h3>4. 🔒 Data Protection: Encryption &amp; Key Management</h3>
           <p><strong>AWS KMS encryption.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a>, data-at-rest encryption uses AWS KMS for databases, EBS volumes, and S3 buckets. TLS 1.3 for all client communications, TLS 1.2+ for internal service communication.</p>
           <p><strong>Secrets management:</strong> AWS Secrets Manager handles database credentials, API keys, and service accounts with automated rotation. Secure credential storage with just-in-time delivery to services.</p>
           <p><strong>Data classification system:</strong> Information categorized by sensitivity with appropriate protection controls. Minimal personal data collection (user accounts only). PostgreSQL SSL configuration enforces encrypted connections.</p>
@@ -171,7 +171,7 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Monitoring & Detection: Security Intelligence</h3>
+          <h3>5. 👁️ Monitoring &amp; Detection: Security Intelligence</h3>
           <p><strong>AWS security services integration.</strong> The monitoring architecture (documented in <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) combines multiple AWS services for comprehensive threat detection.</p>
           <p><strong>GuardDuty threat intelligence:</strong> Machine learning-based detection across CloudTrail logs, VPC Flow Logs, and DNS logs. Enhanced protection for EKS, Lambda, RDS, S3, and EC2 with malware scanning.</p>
           <p><strong>Security Hub aggregation:</strong> Centralized security findings from GuardDuty, Inspector, IAM Access Analyzer, and AWS Config. Automated evaluation against AWS Foundational Security Best Practices and CIS Benchmarks.</p>
@@ -185,7 +185,7 @@
     <section id="threat-model">
       <h2 class="panel-caption">STRIDE Threat Model: Systematic Risk Analysis</h2>
       
-      <p><strong>Comprehensive threat modeling using STRIDE framework.</strong> The <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> documents systematic threat analysis across all architecture elements, integrating STRIDE categorization with MITRE ATT&CK mapping for advanced threat intelligence.</p>
+      <p><strong>Comprehensive threat modeling using STRIDE framework.</strong> The <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> documents systematic threat analysis across all architecture elements, integrating STRIDE categorization with MITRE ATT&amp;CK mapping for advanced threat intelligence.</p>
       
       <p><strong>Priority threat scenarios documented:</strong> Web Application Compromise, Supply Chain Dependency Attack, Administrative Credential Compromise, Database Exfiltration, Import Pipeline Data Poisoning, and Distributed Denial of Service. Each scenario includes likelihood assessment, impact analysis (C/I/A), control implementation, and residual risk evaluation.</p>
       
@@ -222,7 +222,7 @@
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain Security: Build Integrity & Provenance</h2>
+      <h2 class="panel-caption">Supply Chain Security: Build Integrity &amp; Provenance</h2>
       
       <p><strong>Open source project = extensive dependency management.</strong> As documented in <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a>, supply chain security verification includes multiple automated layers:</p>
       
@@ -402,7 +402,7 @@
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">Compliance &amp; ISMS</a></li>
           </ul>
         </div>
         
@@ -446,8 +446,8 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Blog Authors:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy &amp; Vision) &amp;
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture &amp; Patterns)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementation Reality:</strong>
@@ -460,7 +460,7 @@
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2026 Hack23 AB. All rights reserved. </p>
+        <p>&amp;copy; 2008-2026 Hack23 AB. All rights reserved. </p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_sv.html" lang="sv">Svenska</a> | 

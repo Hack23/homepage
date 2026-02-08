@@ -10,7 +10,7 @@
 <meta name="keywords" content="CIA-sikkerhedsarkitektur, OSINT-sikkerhed, politisk dataskydd, Simon Moon, hotmodellering, femlagers forsvar, gennemsigtighedssikkerhed">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
-<meta property="og:title" content="CIA-sikkerhed: Forsvar Genom Gennemsigtighed & 23 Gåtan">
+<meta property="og:title" content="CIA-sikkerhed: Forsvar Genom Gennemsigtighed &amp; 23 Gåtan">
 <meta property="og:description" content="Offentlig politisk data kräver offentlig sikkerhedsarkitektur. De fem defensiva lagren og synkroniciteter som validerar dem.">
 	<meta property="og:locale" content="da_DK">
 	<meta property="og:locale:alternate" content="ar_SA">
@@ -44,7 +44,7 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "CIA-sikkerhed: Forsvar Genom Gennemsigtighed & 23 Gåtan",
+      "headline": "CIA-sikkerhed: Forsvar Genom Gennemsigtighed &amp; 23 Gåtan",
       "description": "Utforskar femlagers sikkerhedsarkitekturen for Citizen Intelligence Agency OSINT-plattformen",
       "author": {
         "@type": "Person",
@@ -173,7 +173,7 @@
 </header>
 <main>
   <article>
-    <h1 class="header">🔐 CIA-sikkerhed: Forsvar Genom Gennemsigtighed & 23 Gåtan</h1>
+    <h1 class="header">🔐 CIA-sikkerhed: Forsvar Genom Gennemsigtighed &amp; 23 Gåtan</h1>
     
     <section id="paradox">
       <h2 class="panel-caption">Gennemsigtighedsparadoxen</h2>
@@ -211,7 +211,7 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>2. 🚪 Applikationsgateway: Autentisering & Auktorisering</h3>
+          <h3>2. 🚪 Applikationsgateway: Autentisering &amp; Auktorisering</h3>
           <p><strong>Spring Security-ramverk.</strong> Autentiseringsarkitekturen (dokumenterad i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#authentication-architecture">SECURITY_ARCHITECTURE.md</a>) implementerar tre sikkerhedsnivåer: Anonym (skrivskyddad offentlig dataåtkomst), Användare (autentiserad åtkomst med bokmärkning og spårning) og Admin (systemhantering med forhöjda privilegier).</p>
           <p><strong>Multifaktorautentisering:</strong> Google Authenticator OTP-integration for forbättrad sikkerhed. Brute force-skydd via inloggningsblockering med konfigurerbara trösklar per IP, session og användare.</p>
           <p><strong>Metodn ivåsikkerhed:</strong> @Secured-anntoteringar upprätthåller rollbaserad åtkomstkontroll vid servicelagret. Komplett sessionsinvalidering vid utloggning med omfattande revisionsloggning via ApplicationSession-spårning.</p>
@@ -237,7 +237,7 @@
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. 🔒 Dataskydd: Kryptering & Nyckelhantering</h3>
+          <h3>4. 🔒 Dataskydd: Kryptering &amp; Nyckelhantering</h3>
           <p><strong>AWS KMS-kryptering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#data-protection">SECURITY_ARCHITECTURE.md</a> använder data-at-rest-kryptering AWS KMS for databaser, EBS-volymer og S3-buckets. TLS 1.3 for all klientkommunikation, TLS 1.2+ for intern servicekommunikation.</p>
           <p><strong>Hjemlighetshantering:</strong> AWS Secrets Manager hanterar databasreferenser, API-nycklar og servicekonton med automatiserad rotation. Säker autentiseringslagring med just-in-time-leverans till tjänster.</p>
           <p><strong>Dataklassificeringssystem:</strong> Information kategoriserad efter känslighet med lämpliga skyddskontroller. Minimal personlig datainsamling (endast användarkonton). PostgreSQL SSL-konfiguration upprätthåller krypterade anslutningar.</p>
@@ -247,7 +247,7 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>5. 👁️ Övervakning & Detektering: Sikkerhedsintelligens</h3>
+          <h3>5. 👁️ Övervakning &amp; Detektering: Sikkerhedsintelligens</h3>
           <p><strong>AWS-sikkerhedstjänstintegration.</strong> Övervakningsarkitekturen (dokumenterad i <a href="https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md#security-event-monitoring">SECURITY_ARCHITECTURE.md</a>) kombinerar flera AWS-tjänster for omfattande hotdetektering.</p>
           <p><strong>GuardDuty hotintelligens:</strong> Maskininlärningsbaserad detektering over CloudTrail-loggar, VPC Flow Logs og DNS-loggar. Förbättrat skydd for EKS, Lambda, RDS, S3 og EC2 med malware-skanning.</p>
           <p><strong>Security Hub-aggregering:</strong> Centraliserade sikkerhedsfynd från GuardDuty, Inspector, IAM Access Analyzer og AWS Config. Automatiserad utvärdering mot AWS Foundational Security Best Practices og CIS Benchmarks.</p>
@@ -261,7 +261,7 @@
     <section id="threat-model">
       <h2 class="panel-caption">STRIDE-hotmodell: Systematisk Riskanalys</h2>
       
-      <p><strong>Omfattande hotmodellering med STRIDE-ramverk.</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> dokumenterar systematisk hotanalys over alla arkitekturelement, integrerar STRIDE-kategorisering med MITRE ATT&CK-mappning for avancerad hotintelligens.</p>
+      <p><strong>Omfattande hotmodellering med STRIDE-ramverk.</strong> <a href="https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md">THREAT_MODEL.md</a> dokumenterar systematisk hotanalys over alla arkitekturelement, integrerar STRIDE-kategorisering med MITRE ATT&amp;CK-mappning for avancerad hotintelligens.</p>
       
       <p><strong>Prioriterade hotscenarier dokumenterade:</strong> Webbapplikationskompromiss, Supply Chain Dependency Attack, Administrativa Referenskompromiss, Databasexfiltration, Importpipeline Data Poisoning og Distributed Denial of Service. Varje scenario inkluderar sannolikhetsbedömning, påverkansanalys (C/I/A), kontrollimplementering og kvarstående riskvärdering.</p>
       
@@ -298,7 +298,7 @@
     </section>
 
     <section id="supply-chain">
-      <h2 class="panel-caption">Supply Chain-sikkerhed: Byggintegritet & Herkomst</h2>
+      <h2 class="panel-caption">Supply Chain-sikkerhed: Byggintegritet &amp; Herkomst</h2>
       
       <p><strong>Öppen källkodsprojekt = omfattande beroendehantering.</strong> Som dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md">CRA-ASSESSMENT.md</a> inkluderar supply chain-sikkerhedsverifiering flera automatiserade lager:</p>
       
@@ -434,7 +434,7 @@
 
     <section id="next-reading">
       <h2 class="panel-caption">Fortsätt Resan</h2>
-      <p><strong>Nästa:</strong> <a href="blog-cia-workflows_da.html">CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner</a> - Utforskar hur automatisering säkrar leveranspipeline</p>
+      <p><strong>Nästa:</strong> <a href="blog-cia-workflows_da.html">CIA-arbetsflöden: Fem-stegs CI/CD &amp; Tillståndsmaskiner</a> - Utforskar hur automatisering säkrar leveranspipeline</p>
       <p><strong>Relaterat:</strong> <a href="cia-docs_da.html">Fullständig CIA-dokumentation</a> - Alla sikkerhedsdiagram, hotmodeller og tekniska specifikationer</p>
       <p><strong>Tillbaka till:</strong> <a href="blog_da.html">Sikkerhedsblogg</a> - Alla discordianska inlägg</p>
     </section>
@@ -462,7 +462,7 @@
             <li><a href="services_da.html">Sikkerhedsarkitektur</a></li>
             <li><a href="services_da.html">Molnsikkerhed</a></li>
             <li><a href="services_da.html">DevSecOps Integration</a></li>
-            <li><a href="services_da.html">Efterlevnad & ISMS</a></li>
+            <li><a href="services_da.html">Efterlevnad &amp; ISMS</a></li>
           </ul>
         </div>
         
@@ -506,8 +506,8 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Blogforfattare:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi &amp; Vision) &amp;
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur &amp; Mönster)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementeringsverklighet:</strong>
@@ -520,7 +520,7 @@
       
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter forbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
+        <p>&amp;copy; 2008-2026 Hack23 AB. Alla rättigheter forbehållna. | Licensierad under <a href="LICENSE">Apache 2.0</a></p>
         <p>
           <a href="index.html" lang="en">English</a> | 
           <a href="index_da.html" lang="da">Dansk</a> | 
