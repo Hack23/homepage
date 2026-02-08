@@ -104,8 +104,7 @@ jobs:
             --exclude "*" \
             --include "*.js" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
+            --delete \
             --cache-control "public, max-age=31536000, immutable" \
             --content-type "application/javascript"
           
@@ -115,27 +114,12 @@ jobs:
             --exclude "*" \
             --include "*.css" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
+            --delete \
             --cache-control "public, max-age=31536000, immutable" \
             --content-type "text/css"
           
-          # Sync font files with immutable cache headers (1 year)
-          echo "🔤 Syncing font files..."
-          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
-            --exclude "*" \
-            --include "*.woff" \
-            --include "*.woff2" \
-            --include "*.ttf" \
-            --include "*.eot" \
-            --include "*.otf" \
-            --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
-            --cache-control "public, max-age=31536000, immutable"
-          
           # Sync image files with immutable cache headers (1 year)
-          echo "🖼️  Syncing image files..."
+          echo "🖼️  Syncing image files (including screenshots)..."
           aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
             --exclude "*" \
             --include "*.webp" \
@@ -146,8 +130,7 @@ jobs:
             --include "*.svg" \
             --include "*.ico" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
+            --delete \
             --cache-control "public, max-age=31536000, immutable"
           
           # Sync HTML files with short cache (1 hour) and must-revalidate
@@ -156,8 +139,7 @@ jobs:
             --exclude "*" \
             --include "*.html" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
+            --delete \
             --cache-control "public, max-age=3600, must-revalidate" \
             --content-type "text/html; charset=utf-8"
           
@@ -169,8 +151,7 @@ jobs:
             --include "*.json" \
             --include "*.txt" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only \
+            --delete \
             --cache-control "public, max-age=86400"
           
           # Catch-all sync for remaining files (no specific cache headers)
@@ -178,11 +159,6 @@ jobs:
           aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
             --exclude "*.js" \
             --exclude "*.css" \
-            --exclude "*.woff" \
-            --exclude "*.woff2" \
-            --exclude "*.ttf" \
-            --exclude "*.eot" \
-            --exclude "*.otf" \
             --exclude "*.webp" \
             --exclude "*.png" \
             --exclude "*.jpg" \
@@ -195,12 +171,11 @@ jobs:
             --exclude "*.json" \
             --exclude "*.txt" \
             --exclude ".git/*" \
-            --exclude "screenshots/*" \
-            --size-only
+            --delete
           
           echo "✅ Optimized S3 deployment completed"
           echo "ℹ️  Cache headers set at upload time - no second pass needed"
-          echo "ℹ️  Only changed files uploaded (--size-only flag)"
+          echo "ℹ️  Content-based sync ensures all changes are detected"
 
       # Invalidate CloudFront cache to ensure latest content is served
       - name: Invalidate CloudFront
