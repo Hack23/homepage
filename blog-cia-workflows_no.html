@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIA-arbeidsflyter | Fem-trinns CI/CD & Tilstandsmaskiner | Hack23</title>
+<title>CIA-arbeidsflyter | Fem-trinns CI/CD &amp; Tilstandsmaskiner | Hack23</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<meta name="description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiser & Slipp, CodeQL, Dependabot, Scorecard og ZAP-skanning for kontinuerlig sikkerhet i leveranspipeline.">
-<meta name="twitter:description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiser & Slipp, CodeQL, Dependabot, Scorecard og ZAP-skanning for kontinuerlig sikkerhet i leveranspipeline.">
+<meta name="description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiser &amp; Slipp, CodeQL, Dependabot, Scorecard og ZAP-skanning for kontinuerlig sikkerhet i leveranspipeline.">
+<meta name="twitter:description" content="Fem-stegs DevSecOps-automatisering med GitHub Actions: Verifiser &amp; Slipp, CodeQL, Dependabot, Scorecard og ZAP-skanning for kontinuerlig sikkerhet i leveranspipeline.">
 <meta name="keywords" content="CI/CD-arbetsflöden, DevSecOps, tillståndsmaskiner, GitHub Actions, automatisering">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Simon Moon">
-<meta property="og:title" content="CIA-arbeidsflyter: Fem-trinns CI/CD & Tilstandsmaskiner">
+<meta property="og:title" content="CIA-arbeidsflyter: Fem-trinns CI/CD &amp; Tilstandsmaskiner">
 <meta property="og:description" content="Manuella releaser är sikkerhetssårbarheter förklädd som process. Automatisering genom fem GitHub Actions-arbeidsflyter.">
 	<meta property="og:locale" content="no_NO">
 	<meta property="og:locale:alternate" content="ar_SA">
@@ -44,7 +44,7 @@
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      "headline": "CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner",
+      "headline": "CIA-arbetsflöden: Fem-stegs CI/CD &amp; Tillståndsmaskiner",
       "description": "Utforskar automatiseringsmönstren och heliga geometrin i kontinuerliga leveranspipelines",
       "author": {
         "@type": "Person",
@@ -80,7 +80,7 @@
         "height": 630
       },
       "wordCount": 1965,
-      "articleBody": "Manuella releaser är sikkerhetssårbarheter förklädd som process. Citizen Intelligence Agency automatiserar allt genom fem GitHub Actions-arbetsflöden: Verifiser & Slipp (bygg + deploy), CodeQL...",
+      "articleBody": "Manuella releaser är sikkerhetssårbarheter förklädd som process. Citizen Intelligence Agency automatiserar allt genom fem GitHub Actions-arbetsflöden: Verifiser &amp; Slipp (bygg + deploy), CodeQL...",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://hack23.com/blog.html#blog",
@@ -173,14 +173,14 @@
 </header>
 <main>
   <article>
-    <h1 class="header">🔄 CIA-arbetsflöden: Fem-stegs CI/CD & Tillståndsmaskiner</h1>
+    <h1 class="header">🔄 CIA-arbetsflöden: Fem-stegs CI/CD &amp; Tillståndsmaskiner</h1>
     
     <section id="automation-philosophy">
       <h2 class="panel-caption">Automatisering som Sikkerhetsprincip</h2>
       
       <p><strong>Manuella releaser är sikkerhetssårbarheter förklädd som process.</strong> Varje mänsklig inblandning introducerar fel. Varje manuell checklista glöms bort under press. Varje "snabb fix" som kringgår CI/CD är en incident som väntar på att hända.</p>
       
-      <p><strong><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> automatiserar allt.</strong> Fem GitHub Actions-arbetsflöden hanterar hela DevSecOps-pipelinen: Verifiser & Slipp (bygg + deploy), CodeQL-sikkerhetsskanning, Dependabot-sårbarhetsuppdateringar, OpenSSF Scorecard-validering och ZAP-penetrationstestning. Ingen release når produktion utan att passera alla fem portar.</p>
+      <p><strong><a href="https://github.com/Hack23/cia">Citizen Intelligence Agency</a> automatiserar allt.</strong> Fem GitHub Actions-arbetsflöden hanterar hela DevSecOps-pipelinen: Verifiser &amp; Slipp (bygg + deploy), CodeQL-sikkerhetsskanning, Dependabot-sårbarhetsuppdateringar, OpenSSF Scorecard-validering och ZAP-penetrationstestning. Ingen release når produktion utan att passera alla fem portar.</p>
       
       <p><strong>Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/WORKFLOWS.md">WORKFLOWS.md</a>:</strong> Fem arbetsflöden orchestrerar tjugo byggsteg, femtio sikkerhetskontroller och hundra kvalitetsportar. Femtals Lag manifesterad genom CI/CD-automation. Varje arbetsflöde oberoende. Varje arbetsflöde kritiskt. Systemet som övervakar sig självt.</p>
       
@@ -198,7 +198,7 @@
       <div class="cards">
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>1. 🚀 Verifiser & Slipp: Huvudpipeline</h3>
+          <h3>1. 🚀 Verifiser &amp; Slipp: Huvudpipeline</h3>
           <p><strong>Huvudarbetsflöde som hanterar hela releasecykeln.</strong> Dokumenterat i <a href="https://github.com/Hack23/cia/blob/master/.github/workflows/release.yml">release.yml</a>. Utlöses vid push till master eller manuellt via workflow_dispatch. Orkestrerar Maven-bygget, kör enhetstester, integrationstester och E2E-tester, genererar SBOM och SLSA Level 3-attestering, och deployer till miljöer.</p>
           <p><strong>Byggsteg i sekvens:</strong></p>
           <ul>
@@ -207,7 +207,7 @@
             <li>Maven verify (kompilera + test + paket)</li>
             <li>SonarCloud kvalitetsanalys</li>
             <li>SBOM-generering (CycloneDX format)</li>
-            <li>Docker image build & push</li>
+            <li>Docker image build &amp; push</li>
             <li>SLSA provenance attestation</li>
             <li>AWS deployment (via CloudFormation)</li>
           </ul>
@@ -352,13 +352,13 @@
     </section>
 
     <section id="metrics">
-      <h2 class="panel-caption">Metrics & Observability</h2>
+      <h2 class="panel-caption">Metrics &amp; Observability</h2>
       
       <p><strong>Fem arbetsflöden producerar fem metrikströmmar:</strong></p>
       
       <div class="cards">
         <div class="card availability-card">
-          <h3>📈 Byggtider & Frekvens</h3>
+          <h3>📈 Byggtider &amp; Frekvens</h3>
           <p><strong>Genomsnittlig byggtid: 23 minuter.</strong> Målmålsättning: Under 25 minuter. Maven-bygge + tester + paketering + SonarCloud. Spårat över tid för att identifiera regressionsprestanda. Långsamma byggnader signalerar teknisk skuld.</p>
           <p><strong>Release-frekvens: 2.3 releaser per månad.</strong> Målmålsättning: Veckoliga releaser. Nuvarande: varannan vecka. Förbättring kräver minskad manuell testning, ökad automation-förtroende.</p>
         </div>
@@ -458,7 +458,7 @@
             <li><a href="services_no.html">Sikkerhetsarkitektur</a></li>
             <li><a href="services_no.html">Molnsikkerhet</a></li>
             <li><a href="services_no.html">DevSecOps Integration</a></li>
-            <li><a href="services_no.html">Efterlevnad & ISMS</a></li>
+            <li><a href="services_no.html">Efterlevnad &amp; ISMS</a></li>
           </ul>
         </div>
         
@@ -502,8 +502,7 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Bloggförfattare:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur & Mönster)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionär anarkistisk produktägare" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Filosofi &amp; Vision) &amp;           <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Filosof-ingenjör systemarkitekt" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Arkitektur &amp; Mönster)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementeringsverklighet:</strong>

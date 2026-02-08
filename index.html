@@ -1941,7 +1941,7 @@
           const navToggle = document.querySelector('.nav-toggle');
           const navMenu = document.querySelector('.nav-menu');
           
-          if (navToggle && navMenu) {
+          if (navToggle &&amp; navMenu) {
             // Get focusable elements for focus trapping
             const getFocusableElements = function() {
               return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
@@ -1971,10 +1971,10 @@
                   const firstFocusable = focusableElements[0];
                   const lastFocusable = focusableElements[focusableElements.length - 1];
                   
-                  if (e.shiftKey && document.activeElement === firstFocusable) {
+                  if (e.shiftKey &&amp; document.activeElement === firstFocusable) {
                     e.preventDefault();
                     lastFocusable.focus();
-                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                  } else if (!e.shiftKey &&amp; document.activeElement === lastFocusable) {
                     e.preventDefault();
                     firstFocusable.focus();
                   }
@@ -1988,7 +1988,7 @@
                 // Close if click is on backdrop/padding, or completely outside menu and toggle
                 if (
                   e.target === navMenu ||
-                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
+                  (!navToggle.contains(e.target) &&amp; !navMenu.contains(e.target))
                 ) {
                   closeMenu();
                 }
@@ -2062,14 +2062,14 @@
           document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
               const href = this.getAttribute('href');
-              if (href && href !== '#') {
+              if (href &&amp; href !== '#') {
                 const target = document.querySelector(href);
                 if (target) {
                   e.preventDefault();
                   target.scrollIntoView({ behavior: 'smooth' });
                   
                   // Close mobile menu if open
-                  if (navMenu && navMenu.classList.contains('open')) {
+                  if (navMenu &&amp; navMenu.classList.contains('open')) {
                     closeMenu();
                   }
                 }

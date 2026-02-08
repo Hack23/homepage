@@ -644,7 +644,7 @@
         "GDPR Data Protection Assessment",
         "HIPAA Compliance Mapping",
         "SOC2 Controls Mapping",
-        "Risk Quantification & Reporting",
+        "Risk Quantification &amp; Reporting",
         "Automated Compliance Reports",
         "Security Control Gap Analysis"
       ],
@@ -739,7 +739,7 @@
       "featureList": [
         "Monitoreo Parlamentario Sueco (Riksdag)",
         "Political Decision Tracking",
-        "Governance Metrics & Rankings",
+        "Governance Metrics &amp; Rankings",
         "Democratic Accountability Analysis",
         "Open Data Integration (World Bank, Gobierno Sueco)",
         "Political Trend Visualization",
@@ -831,8 +831,8 @@
     {
       "@type": "Service",
       "@id": "https://hack23.com/services.html#service-security-architecture",
-      "serviceType": "Security Architecture & Strategy",
-      "name": "Security Architecture & Strategy",
+      "serviceType": "Security Architecture &amp; Strategy",
+      "name": "Security Architecture &amp; Strategy",
       "description": "Enterprise security architecture design, risk assessment and management, security strategy development, and governance framework design. We help organizations build robust security foundations aligned with business objectives.",
       "provider": {
         "@id": "https://hack23.com/#org"
@@ -860,8 +860,8 @@
     {
       "@type": "Service",
       "@id": "https://hack23.com/services.html#service-cloud-security",
-      "serviceType": "Cloud Security & DevSecOps",
-      "name": "Cloud Security & DevSecOps",
+      "serviceType": "Cloud Security &amp; DevSecOps",
+      "name": "Cloud Security &amp; DevSecOps",
       "description": "AWS security assessment and architecture, DevSecOps integration, infrastructure as code security, container and serverless security. Specializing in AWS with certified expertise.",
       "provider": {
         "@id": "https://hack23.com/#org"
@@ -889,8 +889,8 @@
     {
       "@type": "Service",
       "@id": "https://hack23.com/services.html#service-secure-development",
-      "serviceType": "Secure Development & Code Quality",
-      "name": "Secure Development & Code Quality",
+      "serviceType": "Secure Development &amp; Code Quality",
+      "name": "Secure Development &amp; Code Quality",
       "description": "Secure SDLC implementation, CI/CD security integration, code quality and security analysis, supply chain security with SLSA Level 3 compliance. Integrating security seamlessly into development workflows.",
       "provider": {
         "@id": "https://hack23.com/#org"
@@ -918,8 +918,8 @@
     {
       "@type": "Service",
       "@id": "https://hack23.com/services.html#service-compliance",
-      "serviceType": "Compliance & Regulatory",
-      "name": "Compliance & Regulatory",
+      "serviceType": "Compliance &amp; Regulatory",
+      "name": "Compliance &amp; Regulatory",
       "description": "GDPR, NIS2, ISO 27001 implementation, ISMS design and implementation, AI governance, and audit preparation. Demonstrating compliance through our own public ISMS.",
       "provider": {
         "@id": "https://hack23.com/#org"
@@ -976,8 +976,8 @@
     {
       "@type": "Service",
       "@id": "https://hack23.com/services.html#service-security-culture",
-      "serviceType": "Security Culture & Training",
-      "name": "Security Culture & Training",
+      "serviceType": "Security Culture &amp; Training",
+      "name": "Security Culture &amp; Training",
       "description": "Security awareness programs, developer security training, leadership security briefings, and incident response training. Building security-conscious organizations through education and culture change.",
       "provider": {
         "@id": "https://hack23.com/#org"
@@ -1018,7 +1018,7 @@
       "@type": "WebPage",
       "@id": "https://hack23.com/#homepage",
       "url": "https://hack23.com/",
-      "name": "Hack23 AB | Open ISMS Transparency & Cybersecurity Consulting",
+      "name": "Hack23 AB | Open ISMS Transparency &amp; Cybersecurity Consulting",
       "isPartOf": {
         "@id": "https://hack23.com/#website"
       },
@@ -1894,7 +1894,7 @@
           const navToggle = document.querySelector('.nav-toggle');
           const navMenu = document.querySelector('.nav-menu');
           
-          if (navToggle && navMenu) {
+          if (navToggle &&amp; navMenu) {
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -1936,14 +1936,14 @@
           document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
               const href = this.getAttribute('href');
-              if (href && href !== '#') {
+              if (href &&amp; href !== '#') {
                 const target = document.querySelector(href);
                 if (target) {
                   e.preventDefault();
                   target.scrollIntoView({ behavior: 'smooth' });
                   
                   // Close mobile menu if open
-                  if (navMenu && navMenu.classList.contains('open')) {
+                  if (navMenu &&amp; navMenu.classList.contains('open')) {
                     navMenu.classList.remove('open');
                     if (navToggle) {
                       navToggle.setAttribute('aria-expanded', 'false');

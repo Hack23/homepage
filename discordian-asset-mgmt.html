@@ -218,7 +218,7 @@
                     
                     <div class="card integrity-card">
                         <div class="scanner-effect"></div>
-                        <h3>2. 📝 Code & Repositories: Ghost Repos Haunt You</h3>
+                        <h3>2. 📝 Code &amp; Repositories: Ghost Repos Haunt You</h3>
                         <p><strong>GitHub repository inventory via API automation.</strong> 40+ repositories tracked in Hack23 organization: CIA (Citizen Intelligence Agency OSINT platform), Black Trigram (Korean martial arts combat simulator), CIA Compliance Manager (CIA Triad assessment tool), Lambda in Private VPC (AWS resilience architecture), Sonar-CloudFormation Plugin (IaC security scanning). GitHub API provides <strong>automated repository discovery before developers create shadow repos</strong> in personal accounts (it happens—always happens).</p>
                         <p><strong>Repository Archaeology:</strong> SECURITY_ARCHITECTURE.md mandatory in all repos (enforced via branch protection). Public ISMS repository demonstrating transparency (70% of policies public). Archived repositories tracked (abandoned but not deleted, because deletion is data loss). Forked repositories monitored (security patches upstream propagate how, exactly?). <strong>Private repositories in public organizations</strong> (free tier limits create shadow infrastructure).</p>
                         <p><strong>Ghost Repository Horror:</strong> Security researcher discovers credentials in public repository created 6 years prior during hackathon. Repository archived. Never audited. <strong>AWS root account keys committed in 2018.</strong> Still valid (nobody rotated). Researcher reports via responsible disclosure. Company discovers they've been cryptomining victims for 3 years. Terraform state files in repo contained database passwords (still current). S3 bucket URLs revealed internal architecture. <strong>One forgotten repository = complete infrastructure compromise.</strong></p>
@@ -228,7 +228,7 @@
                     
                     <div class="card availability-card">
                         <div class="scanner-effect"></div>
-                        <h3>3. 👤 Identity & Access: Zombie Accounts Hunt You</h3>
+                        <h3>3. 👤 Identity &amp; Access: Zombie Accounts Hunt You</h3>
                         <p><strong>AWS Identity Center + GitHub access reviews revealing zombie privileges.</strong> IAM users (deprecated—using SSO now), IAM roles (427 tracked, 89 unused &gt;180 days), IAM policies (custom policies proliferate like rabbits), GitHub organization members (quarterly reviews), AWS permission sets (AWSAdministratorAccess, AWSPowerUserAccess, AWSReadOnlyAccess, AWSServiceCatalogAdminFullAccess). 90-day dormant account detection per <a href="discordian-access-control.html">Access Control Policy</a>. <strong>Quarterly access reviews ensure privilege hygiene before privileges become persistent access for departed employees.</strong></p>
                         <p><strong>Zombie Account Archaeology:</strong> IAM Access Analyzer reveals cross-account access (that external account still has S3 read? Since when?). AWS Organizations tracks member accounts (when did we add this account? Who owns it?). MFA enforcement via Identity Center (humans forget, automation enforces). Access keys actively used (those keys from 2019 API integration? Still valid. Still used. By whom? Nobody knows.). <strong>People are assets. Departed employees with active access are vulnerabilities with legs.</strong></p>
                         <p><strong>Zombie Account Horror:</strong> Quarterly access review discovers contractor from 2020 still has AWS AdministratorAccess. Contract ended November 2020. Access never revoked. Contractor hasn't logged in (or have they?—logging gaps during CloudTrail migration). Investigation reveals: Access key created 2 weeks before contract end. Never rotated. Used sporadically from Eastern European IPs. <strong>Contractor sold access to ransomware group.</strong> Group used access for reconnaissance (9 months). Data exfiltration (3 months). Ransomware deployment (1 day). Total breach cost: $12M. Asset management failure: Priceless. <strong>Access is asset. Forgotten access is persistent vulnerability.</strong></p>
@@ -281,14 +281,14 @@
                     <li><strong>Repository Classification:</strong> Each repo classified per CIA framework (Extreme: Contains customer data or production credentials, Very High: Production code or infrastructure, High: Internal tools or development code, Moderate: Documentation or test code, Public: Open source or marketing). Classification drives protection (Extreme repos require branch protection, required reviews, no force push, signed commits). <strong>Unclassified repos get default protection. Which is usually insufficient.</strong></li>
                 </ul>
                 
-                <p><strong>🌐 DNS & Certificate Archaeology:</strong></p>
+                <p><strong>🌐 DNS &amp; Certificate Archaeology:</strong></p>
                 <ul>
                     <li><strong>Route 53 Hosted Zone Enumeration:</strong> DNS records tracked: A records (pointing where?), CNAME records (alias to what?), MX records (email routed to?), TXT records (SPF/DKIM/DMARC configured?), NS records (delegation to?). Orphaned DNS records discovered (points to decommissioned infrastructure—but DNS still resolves). Subdomain enumeration reveals shadow infrastructure (that analytics.example.com subdomain—what's hosted there?). <strong>DNS archaeology reveals infrastructure long after infrastructure "decommissioned."</strong></li>
                     <li><strong>SSL/TLS Certificate Monitoring:</strong> Certificate Transparency logs reveal all certificates issued for domains (even certificates you didn't request—someone else requested cert for your domain?). Expiration tracking (certificates expiring &lt;30 days trigger alerts). Wild-card certificate audit (*.example.com certificate grants subdomain access—to whom?). Revocation monitoring (certificate revoked—why? Compromise? Key exposure?). Certificate archaeology reveals shadow services (unexpected certificate issuance = unexpected infrastructure).</li>
                     <li><strong>DNSSEC Validation:</strong> Both domains (hack23.com, blacktrigram.com) DNSSEC-enabled (DS records published, RRSIG records signed, DNSKEY records public). DNSSEC prevents DNS hijacking (unsigned responses rejected). Route 53 automatic signing (manual DNSSEC is error-prone—automation prevents configuration drift). <strong>DNSSEC archaeology: Detecting DNS modification attempts before they succeed.</strong></li>
                 </ul>
                 
-                <p><strong>🔑 Credential & API Key Lifecycle Archaeology:</strong></p>
+                <p><strong>🔑 Credential &amp; API Key Lifecycle Archaeology:</strong></p>
                 <ul>
                     <li><strong>AWS IAM Access Key Audit:</strong> IAM users deprecated (migrated to AWS Identity Center SSO). Legacy access keys tracked (created when? Last used when? Still valid? Why?). Access key age alerts (&gt;90 days = stale, &gt;180 days = forgotten, &gt;365 days = archaeological artifact). Access key usage CloudTrail analysis (keys used from where? Expected locations?). <strong>Unused keys are persistent access waiting to be discovered.</strong></li>
                     <li><strong>Secrets Manager + Parameter Store Inventory:</strong> Secrets cataloged (database passwords, API keys, OAuth tokens, private keys). Secret rotation policies enforced (30-day rotation for High sensitivity, 90-day for Moderate). Unused secrets flagged (last accessed &gt;180 days = orphaned secret = forgotten credential). Secret archaeology: Discovering credentials still valid for services thought decommissioned. <strong>Can't rotate secrets you've forgotten exist. Can't decommission secrets still in use. Inventory enables lifecycle management.</strong></li>
@@ -451,7 +451,7 @@
             <li><a href="services.html">Security Architecture</a></li>
             <li><a href="services.html">Cloud Security</a></li>
             <li><a href="services.html">DevSecOps Integration</a></li>
-            <li><a href="services.html">Compliance & ISMS</a></li>
+            <li><a href="services.html">Compliance &amp; ISMS</a></li>
           </ul>
         </div>
         
@@ -495,8 +495,7 @@
       <div class="footer-discordian">
         <p class="discordian-authors">
           <strong>✍️ Blog Authors:</strong>
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy & Vision) &
-          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture & Patterns)
+          <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md" title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target="_blank">Hagbard Celine</a> (Philosophy &amp; Vision) &amp;           <a href="https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md" title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target="_blank">Simon Moon</a> (Architecture &amp; Patterns)
         </p>
         <p class="discordian-implementation">
           <strong>💻 Implementation Reality:</strong>

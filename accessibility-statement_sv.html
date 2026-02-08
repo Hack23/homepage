@@ -331,7 +331,7 @@
 				var navToggle = document.querySelector('.nav-toggle');
 				var navMenu = document.querySelector('.nav-menu');
 				
-				if (navToggle && navMenu) {
+				if (navToggle &&amp; navMenu) {
 					function closeMenu() {
 						navMenu.classList.remove('open');
 						navToggle.setAttribute('aria-expanded', 'false');
@@ -352,7 +352,7 @@
 					});
 					
 					document.addEventListener('keydown', function(e) {
-						if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+						if (e.key === 'Escape' &&amp; navMenu.classList.contains('open')) {
 							closeMenu();
 							navToggle.focus();
 						}
