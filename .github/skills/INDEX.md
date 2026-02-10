@@ -47,6 +47,25 @@ Based on ISO 27001, GDPR, and regulatory requirements:
 - **[ISO 27001](compliance/iso-27001/SKILL.md)** - ISO 27001:2022 requirements, control implementation, documentation, audit preparation
 - **[GDPR Compliance](compliance/gdpr/SKILL.md)** - Privacy by design, data protection, consent management, breach response
 
+### Operations Skills (4 skills) 🆕
+
+Based on [Hack23 ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC) operational policies:
+
+- **[🔄 Change Management](operations/change-management/SKILL.md)** - Risk-controlled change processes, CAB governance, rollback procedures, testing requirements
+- **[💾 Backup & Recovery](operations/backup-recovery/SKILL.md)** - Business impact-driven data protection, RTO/RPO alignment, recovery validation
+- **[🏢 Business Continuity](operations/business-continuity/SKILL.md)** - Business resilience framework, work area recovery, MTD-based prioritization
+- **[🔥 Disaster Recovery](operations/disaster-recovery/SKILL.md)** - AWS-native technical resilience, chaos engineering, FIS experiments, multi-region failover
+
+### Governance Skills (5 skills) 🆕
+
+Based on [Hack23 ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC) governance frameworks:
+
+- **[📊 Risk Assessment](governance/risk-assessment/SKILL.md)** - Quantified risk analysis, 5x5 risk matrices, likelihood/impact evaluation
+- **[📋 Risk Register](governance/risk-register/SKILL.md)** - Enterprise risk tracking, treatment planning, quarterly risk reviews
+- **[💼 Asset Management](governance/asset-management/SKILL.md)** - IT asset inventory, classification, lifecycle management, dependency tracking
+- **[🤝 Supplier Management](governance/supplier-management/SKILL.md)** - Vendor security assessment, due diligence, SLA monitoring, supply chain risk
+- **[👥 Stakeholder Registry](governance/stakeholder-registry/SKILL.md)** - External stakeholder engagement, regulatory relationships, breach notification coordination
+
 ### Business Skills (3 skills) 🆕
 
 Strategic business development and marketing expertise:
