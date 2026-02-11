@@ -95,12 +95,17 @@ Product and API documentation standards:
 - **[Product Documentation](documentation/product-documentation/SKILL.md)** - User guides, feature documentation, release notes, end-user communication
 - **[API Documentation](documentation/api-documentation/SKILL.md)** - OpenAPI/Swagger, endpoints, authentication, examples, error handling
 
-### Integration Skills (2 skills) 🆕
+### Integration Skills (7 skills) 🆕
 
-MCP servers and agent patterns:
+MCP servers, agent patterns, and GitHub Agentic Workflows:
 
 - **[MCP Server Integration](integration/mcp-server-integration/SKILL.md)** - Model Context Protocol server configuration, usage patterns, security
 - **[Copilot Agent Patterns](integration/copilot-agent-patterns/SKILL.md)** - Custom agent design patterns, collaboration workflows, orchestration
+- **[GitHub Agentic Workflows](integration/github-agentic-workflows/SKILL.md)** 🌟 - Core fundamentals, workflow structure, compilation, triggers, natural language automation
+- **[Agentic Workflow Security](integration/agentic-workflow-security/SKILL.md)** 🌟 - Defense-in-depth, safe inputs/outputs, threat detection, security best practices
+- **[Agentic Workflow Orchestration](integration/agentic-workflow-orchestration/SKILL.md)** 🌟 - Multi-agent coordination, orchestrator-worker patterns, complex workflows
+- **[Agentic Workflow Development](integration/agentic-workflow-development/SKILL.md)** 🌟 - CLI usage, compilation, testing, debugging, maintenance
+- **[Continuous AI Patterns](integration/continuous-ai-patterns/SKILL.md)** 🌟 - Documentation sync, code quality, triage, automated review patterns
 
 ## Skills by Agent
 
@@ -220,17 +225,19 @@ Links to project documentation
 
 ## Skills Statistics
 
-**Total Skills**: 23 skills (expanded from 14)
+**Total Skills**: 48 skills (expanded from 43)
 - Security: 4 skills
 - Architecture: 3 skills
 - Quality: 3 skills
 - Deployment: 2 skills
 - Compliance: 2 skills
-- Business: 3 skills (new)
-- Intelligence: 2 skills (new)
-- Development: 2 skills (new)
-- Documentation: 2 skills (new)
-- Integration: 2 skills (new)
+- Operations: 4 skills
+- Governance: 5 skills
+- Business: 3 skills
+- Intelligence: 2 skills
+- Development: 2 skills
+- Documentation: 2 skills
+- Integration: 7 skills (expanded with GitHub Agentic Workflows) 🌟
 
 ## Maintenance
 
@@ -248,7 +255,25 @@ Skills are maintained by:
 
 ## Version History
 
-- **2026-02-06**: Major skills expansion
+- **2026-02-11**: GitHub Agentic Workflows skills addition 🌟
+  - Added 5 comprehensive skills for GitHub Agentic Workflows
+  - Total skills: 48 (from 43)
+  - New skills:
+    - GitHub Agentic Workflows (core fundamentals)
+    - Agentic Workflow Security (defense-in-depth, threat detection)
+    - Agentic Workflow Orchestration (multi-agent coordination)
+    - Agentic Workflow Development (CLI, testing, debugging)
+    - Continuous AI Patterns (automation patterns, best practices)
+  - Based on latest 2026 GitHub Agentic Workflows features and documentation
+  - Covers complete lifecycle: design, security, orchestration, development, continuous AI
+
+- **2026-02-10**: Major skills library expansion
+  - Expanded from 23 to 43 skills across 11 categories
+  - New categories: Operations (4), Governance (5)
+  - Security expanded from 4 to 14 skills
+  - All skills reference ISMS-PUBLIC policies
+
+- **2026-02-06**: Mid-size skills expansion
   - Added 9 new skills across 5 new categories
   - Total skills: 23 (from 14)
   - New categories: Business (3), Intelligence (2), Development (2), Documentation (2), Integration (2)
