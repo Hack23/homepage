@@ -1,0 +1,340 @@
+# Automatic PR labeling configuration for Hack23 homepage
+# This configuration automatically applies labels to PRs based on changed files
+
+# 🚀 Features and Enhancements
+feature:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*feature*/**"
+              - "**/*feat*/**"
+      - title: "feat:*"
+      - title: "feature:*"
+      - title: "add:*"
+      - body: "- [x] 🚀 New Feature/Enhancement"
+
+enhancement:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*enhance*/**"
+              - "**/*improvement*/**"
+      - title: "enhance:*"
+      - title: "improvement:*"
+      - body: "- [x] 🚀 New Feature/Enhancement"
+
+# 🐛 Bug Fixes
+bug:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*fix*/**"
+              - "**/*bug*/**"
+      - title: "fix:*"
+      - title: "bug:*"
+      - body: "- [x] 🐛 Bug Fix"
+
+# 🎨 UI/UX Improvements
+ui:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*.css"
+              - "**/*.scss"
+              - "**/*.less"
+              - "**/styles*/**"
+              - "screenshots/**"
+      - title: "ui:*"
+      - title: "style:*"
+      - title: "design:*"
+      - body: "- [x] 🎨 UI/UX Improvements"
+
+# 🌐 Internationalization
+i18n:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*_ar.html"
+          - "**/*_da.html"
+          - "**/*_de.html"
+          - "**/*_es.html"
+          - "**/*_fi.html"
+          - "**/*_fr.html"
+          - "**/*_he.html"
+          - "**/*_ja.html"
+          - "**/*_ko.html"
+          - "**/*_nl.html"
+          - "**/*_no.html"
+          - "**/*_sv.html"
+          - "**/*_zh.html"
+          - "**/*Translation*.md"
+          - "**/*Translation*.py"
+
+# 🏗️ Infrastructure & DevOps
+infrastructure:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/workflows/**"
+              - ".github/copilot-*.yml"
+              - ".github/copilot-*.json"
+              - "scripts/**"
+              - "docker/**"
+              - ".dockerignore"
+              - ".gitignore"
+              - ".htmlhintrc"
+              - "budget.json"
+              - "robots.txt"
+              - "sitemap.xml"
+      - title: "infra:*"
+      - title: "ci:*"
+      - title: "cd:*"
+      - body: "- [x] 🏗️ Infrastructure & DevOps"
+
+deployment:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/main.yml"
+          - ".github/workflows/pullrequest.yml"
+
+performance:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*perf*/**"
+              - "**/*performance*/**"
+              - "**/*optimize*/**"
+              - "budget.json"
+      - title: "perf:*"
+      - title: "optimize:*"
+      - body: "- [x] ⚡ Performance"
+
+# 🔄 Code Quality & Refactoring
+refactor:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*refactor*/**"
+      - title: "refactor:*"
+      - body: "- [x] 🔄 Code Quality & Refactoring"
+
+# 🔒 Security & Compliance
+security:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*security*/**"
+              - "**/*SECURITY*/**"
+              - ".github/workflows/scorecards.yml"
+              - ".github/workflows/dependency-review.yml"
+              - "SECURITY.md"
+              - "SECURITY_ARCHITECTURE.md"
+              - "FUTURE_SECURITY_ARCHITECTURE.md"
+              - "THREAT_MODEL.md"
+              - "security-assessment-checklist*"
+              - "discordian-*security*.html"
+              - "discordian-*vuln*.html"
+              - "discordian-*incident*.html"
+      - title: "security:*"
+      - title: "fix-vuln:*"
+      - body: "- [x] 🔒 Security & Compliance"
+
+compliance:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*compliance*.html"
+          - "**/*isms*.html"
+          - "**/*iso-27001*.html"
+          - "CLASSIFICATION.md"
+          - "discordian-compliance*.html"
+          - "discordian-isms*.html"
+          - "discordian-risk*.html"
+          - "discordian-*-policy.html"
+
+accessibility:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "accessibility-statement*.html"
+          - "**/*accessibility*.html"
+
+# 📝 Documentation
+documentation:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "**/*.md"
+              - "docs/**"
+              - "LICENSE"
+              - "README.md"
+              - "**/*GUIDE*.md"
+              - "**/*DOCUMENTATION*.md"
+              - "**/*README*.md"
+      - title: "docs:*"
+      - title: "doc:*"
+      - body: "- [x] 📝 Documentation"
+
+# 📦 Dependencies
+dependencies:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "package.json"
+              - "package-lock.json"
+              - ".github/dependabot.yml"
+      - title: "build(deps):*"
+      - title: "deps:*"
+      - title: "dependency:*"
+      - title: "dependencies:*"
+      - body: "- [x] 📦 Dependencies Update"
+
+# 🤖 GitHub Copilot & AI
+copilot:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/copilot-*.md"
+          - ".github/copilot-*.json"
+          - ".github/copilot-*.yml"
+          - ".github/agents/**"
+          - ".github/skills/**"
+          - ".github/workflows/copilot-*.yml"
+
+agents:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/agents/**"
+
+skills:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/skills/**"
+
+# 📄 Content Types
+content-pages:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.html"
+          - "!**/*_*.html"
+
+content-blog:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "blog*.html"
+          - "blog-*.html"
+
+content-projects:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "black-trigram*.html"
+          - "cia-*.html"
+          - "compliance-manager*.html"
+          - "projects*.html"
+
+content-isms:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "discordian-*.html"
+
+content-services:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "services*.html"
+          - "industries-*.html"
+          - "iso-27001-*.html"
+
+# 🖼️ Assets
+assets:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "screenshots/**"
+          - "**/*.png"
+          - "**/*.jpg"
+          - "**/*.jpeg"
+          - "**/*.webp"
+          - "**/*.svg"
+          - "**/*.ico"
+          - "**/*.pdf"
+          - "**/*.docx"
+
+# 🔧 Configuration Files
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".htmlhintrc"
+          - ".gitignore"
+          - ".dockerignore"
+          - "CODEOWNERS"
+          - "budget.json"
+          - "techstack.yml"
+
+# 🧪 Testing & Quality
+quality-checks:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/quality-checks.yml"
+          - ".htmlhintrc"
+          - "**/*validate*.py"
+          - "**/*validate*.js"
+
+# 🎯 SEO & Analytics
+seo:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "sitemap*.xml"
+          - "sitemap*.html"
+          - "robots.txt"
+          - "**/*SEO*.md"
+          - "**/*seo*.py"
+          - "**/*sitemap*.py"
+
+# 🔍 Specific Areas
+area-homepage:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "index*.html"
+
+area-cia:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "cia-*.html"
+          - "**/*cia*.html"
+
+area-blacktrigram:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "black-trigram*.html"
+          - "**/*trigram*.html"
+
+area-compliance:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "compliance-manager*.html"
+          - "cia-compliance-*.html"
+
+# 📊 Size Labels (approximate)
+size-xs:
+  - changed-files:
+      - count:
+          gte: 1
+          lte: 10
+
+size-s:
+  - changed-files:
+      - count:
+          gte: 11
+          lte: 30
+
+size-m:
+  - changed-files:
+      - count:
+          gte: 31
+          lte: 100
+
+size-l:
+  - changed-files:
+      - count:
+          gte: 101
+          lte: 500
+
+size-xl:
+  - changed-files:
+      - count:
+          gte: 501

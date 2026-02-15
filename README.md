@@ -1123,6 +1123,7 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 - [.github/workflows/main.yml](.github/workflows/main.yml) - Deployment workflow with ZAP and Lighthouse scanning
 - [.github/workflows/scorecards.yml](.github/workflows/scorecards.yml) - OpenSSF Scorecard supply chain security
 - [.github/workflows/quality-checks.yml](.github/workflows/quality-checks.yml) - HTML validation and link checking
+- [.github/AUTOMATIC_LABELING.md](.github/AUTOMATIC_LABELING.md) - Automatic PR labeling system documentation
 
 ### 🏗️ Reference Implementations
 
