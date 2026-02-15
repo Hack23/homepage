@@ -8,11 +8,10 @@ on:
         type: boolean
         default: false
 
-# Enhanced permissions for label management
+# Minimal permissions for label management (least privilege)
 permissions:
   contents: read
   issues: write
-  pull-requests: write
 
 jobs:
   setup-labels:
@@ -150,8 +149,8 @@ jobs:
           echo "🔍 Validating labeler configuration..."
           if [[ -f ".github/labeler.yml" ]]; then
             echo "✅ Labeler configuration file exists"
-            # Count labels in config
-            label_count=$(grep -E "^[a-z].*:" .github/labeler.yml | wc -l)
+            # Count top-level, non-comment label keys in config
+            label_count=$(grep -E '^[^[:space:]#][^:]*:' .github/labeler.yml | wc -l)
             echo "📊 Found $label_count label definitions in config"
           else
             echo "❌ Labeler configuration file not found"

@@ -221,7 +221,7 @@ Add checkboxes to your PR description:
 1. Check that the **Setup Repository Labels** workflow has been run at least once
 2. Verify that the `.github/labeler.yml` file exists in the default branch
 3. Check the **Labeler** workflow logs in the Actions tab
-4. Ensure the PR is not from a fork (labeler only works on same-repo PRs for security)
+4. Confirm the labeler workflow run completed successfully for the PR (including fork PRs); the workflow uses `pull_request_target`, so it can label forks as long as it does **not** check out or execute untrusted PR code
 
 ### Need to add a new label?
 1. Add the label definition to `.github/workflows/setup-labels.yml`
@@ -250,9 +250,10 @@ The labeler workflow uses `pull_request_target` trigger which:
 - Runs in the context of the base repository (not the fork)
 - Has write access to apply labels
 - Is hardened with step-security/harden-runner for audit logging
-- Only has permissions for contents:read, pull-requests:write, issues:write
+- Uses minimal permissions: contents:read, pull-requests:write, issues:write
+- Does not check out or execute untrusted PR code
 
-This ensures safe operation even when processing PRs from untrusted forks.
+This ensures safe operation even when processing PRs from untrusted forks, as long as the workflow does not check out or run code from the PR.
 
 ## Maintenance
 

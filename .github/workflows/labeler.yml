@@ -11,12 +11,11 @@ jobs:
   labeler:
     name: Label Pull Request
     runs-on: ubuntu-latest
-    # Enhanced permissions for label management
+    # Minimal permissions for label management
     permissions:
       contents: read # Required to check out the code
       pull-requests: write # Required to apply labels to PRs
       issues: write # Required to create and manage labels
-      repository-projects: write # Required for repository management
     steps:
       - name: Harden the runner (Audit all outbound calls)
         uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
@@ -26,7 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
           fetch-depth: 1
 
       - name: Check if labels exist
@@ -56,13 +55,13 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Apply PR Labels
+        if: steps.check-labels.outputs.missing_labels != 'true'
         uses: actions/labeler@634933edcd8ababfe52f92936142cc22ac488b1b # v6.0.1
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           sync-labels: false # Don't sync labels to avoid permission issues
           configuration-path: .github/labeler.yml
           dot: true # Enable dotfiles processing
-        continue-on-error: true # Continue even if some labels can't be created
 
       - name: Label application status
         run: |
