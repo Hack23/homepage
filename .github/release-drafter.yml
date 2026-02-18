@@ -1,91 +1,218 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
-  - title: '🚀 Features'
+  - title: '🚀 Features & Enhancements'
     labels:
       - 'feature'
       - 'enhancement'
+
   - title: '🐛 Bug Fixes'
     labels:
       - 'fix'
       - 'bugfix'
       - 'bug'
-  - title: '🧰 Maintenance'
+
+  - title: '🏗️ Infrastructure & DevOps'
     labels:
-      - 'chore'
-      - 'maintenance'
-  - title: '📚 Documentation'
-    labels:
-      - 'documentation'
-      - 'docs'
-  - title: '🔒 Security'
+      - 'infrastructure'
+      - 'deployment'
+
+  - title: '🔒 Security & Compliance'
     labels:
       - 'security'
+      - 'compliance'
+
   - title: '♿ Accessibility'
     labels:
       - 'accessibility'
       - 'a11y'
+
   - title: '🌐 Internationalization'
     labels:
       - 'i18n'
       - 'translation'
+
+  - title: '🎨 UI/UX Improvements'
+    labels:
+      - 'ui'
+
   - title: '⚡ Performance'
     labels:
       - 'performance'
+
+  - title: '📚 Documentation'
+    labels:
+      - 'documentation'
+      - 'docs'
+
+  - title: '🔄 Code Quality & Refactoring'
+    labels:
+      - 'refactor'
+      - 'quality-checks'
+
+  - title: '📦 Dependencies'
+    labels:
+      - 'dependencies'
+
+  - title: '🤖 GitHub Copilot & AI'
+    labels:
+      - 'copilot'
+      - 'agents'
+      - 'skills'
+
+  - title: '🔍 Content & SEO'
+    labels:
+      - 'content-blog'
+      - 'content-pages'
+      - 'content-projects'
+      - 'content-services'
+      - 'seo'
+
+  - title: '🎯 Specific Areas'
+    labels:
+      - 'area-blacktrigram'
+      - 'area-cia'
+      - 'area-compliance'
+      - 'area-homepage'
+
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
+exclude-labels:
+  - 'skip-changelog'
+  - 'duplicate'
+  - 'invalid'
+  - 'wontfix'
 version-resolver:
   major:
     labels:
       - 'major'
+      - 'breaking'
   minor:
     labels:
       - 'minor'
+      - 'feature'
+      - 'enhancement'
   patch:
     labels:
       - 'patch'
+      - 'bug'
+      - 'security'
+      - 'dependencies'
   default: patch
+
+autolabeler:
+  - label: 'feature'
+    title:
+      - '/^feat(\([^)]+\))?:/i'
+  - label: 'bug'
+    title:
+      - '/^fix(\([^)]+\))?:/i'
+  - label: 'documentation'
+    title:
+      - '/^docs(\([^)]+\))?:/i'
+  - label: 'enhancement'
+    title:
+      - '/^enhance(\([^)]+\))?:/i'
+  - label: 'dependencies'
+    title:
+      - '/^build\(deps\):/i'
+  - label: 'security'
+    title:
+      - '/^security(\([^)]+\))?:/i'
+  - label: 'performance'
+    title:
+      - '/^perf(\([^)]+\))?:/i'
+  - label: 'refactor'
+    title:
+      - '/^refactor(\([^)]+\))?:/i'
+  - label: 'infrastructure'
+    title:
+      - '/^ci(\([^)]+\))?:/i'
+      - '/^cd(\([^)]+\))?:/i'
+
 template: |
-  ## What's Changed
+  # Highlights
   
   $CHANGES
   
-  ## 📊 Quality & Security
+  ## 🏆 Hack23 Quality & Security Badges
   
-  This release includes:
-  - ✅ **Build Attestations:** SLSA Build Level 3 provenance
-  - 📦 **SBOM:** Software Bill of Materials in SPDX format
-  - 🔒 **Security Scans:** OWASP ZAP baseline security scan
-  - ♿ **Accessibility:** WCAG 2.1 AA compliant (Lighthouse score: 100)
-  - ⚡ **Performance:** Lighthouse performance score > 90
-  - 📱 **Responsive:** Tested on mobile, tablet, and desktop
+  [![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://github.com/Hack23/homepage/attestations/)
+  [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
+  [![CLA assistant](https://cla-assistant.io/readme/badge/Hack23/homepage)](https://cla-assistant.io/Hack23/homepage)
   
-  ## 📚 Documentation
+  ### 📋 ISMS Public Policies
   
-  All release documentation is available in the `docs/` directory:
-  - HTML validation reports
-  - Lighthouse audit results
-  - Accessibility compliance reports
-  - Security scan summaries
+  Hack23 is committed to transparency and evidence-based security. All policies are publicly available:
   
-  ## 🌐 Deployment
+  [![ISMS Public](https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC)
+  [![Information Security Policy](https://img.shields.io/badge/Security-Policy-DC143C?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md)
+  [![Open Source Policy](https://img.shields.io/badge/Open_Source-Policy-28A745?style=for-the-badge&logo=opensource&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md)
+  [![Secure Development Policy](https://img.shields.io/badge/Secure-Development-667eea?style=for-the-badge&logo=codesandbox&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)
   
-  - **Primary:** https://hack23.com (S3 + CloudFront)
+  ## 📊 Quality & Security Reports
+  
+  This release includes comprehensive quality assurance and security validation:
+  
+  ### 🔒 Supply Chain Security (SLSA Build Level 3)
+  - ✅ **Build Provenance Attestation:** [View Attestations](https://github.com/Hack23/homepage/attestations/)
+  - 📦 **SBOM (SPDX format):** `homepage-v$RESOLVED_VERSION.spdx.json`
+  - 🔐 **GitHub OIDC Signing:** Ephemeral credentials, no long-lived secrets
+  - 🛡️ **Parameterless Build:** Reproducible builds from source
+  
+  ### 🧪 Test & Quality Reports (docs/ directory)
+  - ✅ **[HTML Validation](https://github.com/Hack23/homepage/blob/master/docs/html-validation.txt):** W3C standards compliance
+  - ⚡ **[Lighthouse Audit](https://github.com/Hack23/homepage/blob/master/docs/lighthouse-summary.html):** Performance, SEO, Best Practices
+  - ♿ **[Accessibility Report](https://github.com/Hack23/homepage/blob/master/docs/accessibility-report.html):** WCAG 2.1 AA compliant (Score: 100)
+  - 🔒 **[Security Scan](https://github.com/Hack23/homepage/blob/master/docs/security-report.html):** OWASP ZAP baseline scan
+  - 📚 **[Documentation Viewer](https://github.com/Hack23/homepage/blob/master/docs/index.html):** Comprehensive quality dashboard
+  
+  ### 📈 Quality Metrics
+  - **Lighthouse Performance:** > 90
+  - **Lighthouse Accessibility:** 100 (WCAG 2.1 AA)
+  - **Lighthouse SEO:** 100
+  - **Lighthouse Best Practices:** 100
+  - **HTML Validation:** Pass (W3C)
+  - **Security Score:** OpenSSF Scorecard tracked
+  
+  ### 🌐 Deployment Targets
+  - **Primary:** https://hack23.com (AWS S3 + CloudFront)
   - **Backup:** https://hack23.github.io/homepage/ (GitHub Pages)
+  - **Node.js Version:** 24 (LTS)
   
-  ## 🔐 Supply Chain Security
+  ## 🔐 Verify Release Artifacts
   
-  Verify release artifacts:
+  ### Verify Build Attestations
   ```bash
-  # Download the attestation bundle
+  # Install GitHub CLI (gh) if not already installed
+  # Download and verify the release artifact
   gh attestation verify homepage-v$RESOLVED_VERSION.zip --owner Hack23
   ```
   
-  View SBOM:
+  ### View SBOM (Software Bill of Materials)
   ```bash
-  # View the Software Bill of Materials
+  # Download SBOM attestation
+  gh attestation download --owner Hack23 --artifact homepage-v$RESOLVED_VERSION.zip
+  
+  # View SBOM in JSON format
   cat homepage-v$RESOLVED_VERSION.spdx.json | jq
+  
+  # Extract package list from SBOM
+  cat homepage-v$RESOLVED_VERSION.spdx.json | jq '.packages[] | {name, version}'
   ```
+  
+  ### Verify Release Signature
+  ```bash
+  # Verify the release was signed with GitHub's OIDC provider
+  gh attestation verify homepage-v$RESOLVED_VERSION.zip \
+    --owner Hack23 \
+    --signer-workflow Hack23/homepage/.github/workflows/release.yml
+  ```
+  
+  ## 🙏 Contributors
+  
+  Thanks to $CONTRIBUTORS for their contributions to this release!
   
   ---
   
