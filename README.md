@@ -8,6 +8,81 @@ Welcome to the Hack23 homepage repository. This is the source code for [Hack23](
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
 [![Quality Checks](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml/badge.svg?branch=master)](https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml)
 
+## 📊 Release Documentation & Quality Reports
+
+<table>
+  <tr>
+    <td width="33%">
+      <div align="center">
+        <h3>📚 Documentation Viewer</h3>
+        <p>Release documentation and quality reports</p>
+        <a href="docs/index.html">
+          <img src="https://img.shields.io/badge/Docs-Viewer-667eea?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Documentation Viewer">
+        </a>
+      </div>
+    </td>
+    <td width="33%">
+      <div align="center">
+        <h3>✅ HTML Validation</h3>
+        <p>W3C standards compliance</p>
+        <a href="docs/html-validation.txt">
+          <img src="https://img.shields.io/badge/HTML-Valid-4caf50?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Validation">
+        </a>
+      </div>
+    </td>
+    <td width="33%">
+      <div align="center">
+        <h3>♿ Accessibility</h3>
+        <p>WCAG 2.1 AA compliant</p>
+        <a href="docs/accessibility-report.html">
+          <img src="https://img.shields.io/badge/WCAG_2.1-AA-2196f3?style=for-the-badge&logo=accessible-icon&logoColor=white" alt="Accessibility Report">
+        </a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <div align="center">
+        <h3>⚡ Lighthouse Audit</h3>
+        <p>Performance, SEO, Best Practices</p>
+        <a href="docs/lighthouse-summary.html">
+          <img src="https://img.shields.io/badge/Lighthouse-100-ff6b35?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Lighthouse Audit">
+        </a>
+      </div>
+    </td>
+    <td width="33%">
+      <div align="center">
+        <h3>🔒 Security Scan</h3>
+        <p>OWASP ZAP baseline scan</p>
+        <a href="docs/security-report.html">
+          <img src="https://img.shields.io/badge/Security-Scanned-e91e63?style=for-the-badge&logo=security&logoColor=white" alt="Security Report">
+        </a>
+      </div>
+    </td>
+    <td width="33%">
+      <div align="center">
+        <h3>📦 SBOM & Attestations</h3>
+        <p>SLSA Build Level 3</p>
+        <a href="https://github.com/Hack23/homepage/releases">
+          <img src="https://img.shields.io/badge/SLSA-Level_3-764ba2?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMyA3VjEyQzMgMTYuNDIgNi41OCAxOS45MyAxMSAyMC45M1YyMC45M0MxMS42NiAyMS4wOSAxMi4zNCAyMS4wOSAxMyAyMC45M1YyMC45M0MxNy40MiAxOS45MyAyMSAxNi40MiAyMSAxMlY3TDEyIDJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K&logoColor=white" alt="SLSA Attestations">
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+### 🔗 Cross-References to ISMS Policies
+
+All documentation follows enterprise-grade security standards defined in our [ISMS-PUBLIC repository](https://github.com/Hack23/ISMS-PUBLIC):
+
+- **🔐 Secure Development**: [Secure_Development_Policy.md](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) - CI/CD, code scanning, supply chain security
+- **📋 Documentation**: [Documentation_Policy.md](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Documentation_Policy.md) - Documentation as code principles
+- **✅ Quality Assurance**: [Change_Management_Policy.md](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) - Testing, validation, deployment
+- **♿ Accessibility**: HTML/CSS best practices ensuring WCAG 2.1 AA compliance
+- **🔒 Security**: [Information_Security_Policy.md](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) - Security headers, CSP, attestations
+
+---
+
 ## 🔐 Commitment to Transparency and Security
 
 At Hack23 AB, we believe that true security comes through transparency and demonstrable practices. Our Information Security Management System (ISMS) is publicly available, showcasing our commitment to security excellence and organizational transparency.

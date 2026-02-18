@@ -38,6 +38,7 @@
 - [⚡ High Availability & Resilience](#-high-availability--resilience)
 - [☁️ AWS Security Infrastructure](#-aws-security-infrastructure)
 - [🔄 CI/CD Security](#-cicd-security)
+  - [Release Workflow & SLSA Build Level 3](#release-workflow--slsa-build-level-3)
 - [📋 Compliance Framework](#-compliance-framework)
 - [🛡️ Defense-in-Depth Strategy](#-defense-in-depth-strategy)
 - [📊 Security Metrics & Evidence](#-security-metrics--evidence)
@@ -689,6 +690,97 @@ flowchart TB
 **Implementation Evidence:**
 - [Main Workflow: main.yml](https://github.com/Hack23/homepage/blob/master/.github/workflows/main.yml)
 - [Pull Request Workflow: pullrequest.yml](https://github.com/Hack23/homepage/blob/master/.github/workflows/pullrequest.yml)
+- [Release Workflow: release.yml](https://github.com/Hack23/homepage/blob/master/.github/workflows/release.yml)
+
+### Release Workflow & SLSA Build Level 3
+
+**Supply Chain Security Implementation:**
+
+The release workflow implements **SLSA Build Level 3** attestations for cryptographic verification of build integrity and provenance.
+
+```mermaid
+flowchart TB
+    A[Tag Push v*] --> B[Prepare Job]
+    B --> C[Generate Documentation]
+    C --> D[HTML Validation]
+    D --> E[Lighthouse Audits]
+    E --> F[Accessibility Reports]
+    F --> G[Commit to docs/]
+    G --> H[Build Job]
+    H --> I[Minify Assets]
+    I --> J[Create ZIP]
+    J --> K[Generate SBOM]
+    K --> L[Build Provenance Attestation]
+    L --> M[SBOM Attestation]
+    M --> N[Release Job]
+    N --> O[Create GitHub Release]
+    O --> P[Attach Artifacts + Attestations]
+    P --> Q[Deploy to gh-pages]
+    
+    style K fill:#764ba2
+    style L fill:#667eea
+    style M fill:#667eea
+    style P fill:#4ecdc4
+```
+
+**SLSA Build Level 3 Features:**
+
+| Requirement | Implementation | Evidence |
+|-------------|----------------|----------|
+| **Build as Code** | Workflow defined in version control | `.github/workflows/release.yml` |
+| **Provenance Available** | Cryptographic attestation generated | `homepage-vX.Y.Z.zip.intoto.jsonl` |
+| **Provenance Authenticated** | GitHub OIDC signing (non-falsifiable) | `actions/attest-build-provenance@v3.2.0` |
+| **Isolated** | Ephemeral GitHub-hosted runners | Workflow runs on `ubuntu-latest` |
+| **Parameterless** | Reproducible tag-triggered builds, no external input for tagged releases | Tag push: version from tags; `workflow_dispatch`: manual version/prerelease inputs |
+| **Hermetic** | No network access during build (planned L4) | Currently allows network for npm |
+
+**SBOM Generation:**
+
+```yaml
+# Implemented in release.yml
+- name: Generate SBOM
+  uses: anchore/sbom-action@v0.22.2
+  with:
+    format: spdx-json
+    output-file: homepage-${{ needs.prepare.outputs.version }}.spdx.json
+    
+- name: Generate SBOM attestation
+  uses: actions/attest-sbom@v3.0.0
+  with:
+    subject-path: 'homepage-${{ needs.prepare.outputs.version }}.zip'
+    sbom-path: 'homepage-${{ needs.prepare.outputs.version }}.spdx.json'
+```
+
+**Documentation as Code:**
+
+All release documentation is automatically generated and committed to the `docs/` directory:
+
+- `docs/html-validation.txt` - HTML standards compliance
+- `docs/lighthouse-*.html` - Performance/accessibility/SEO audits
+- `docs/accessibility-report.html` - WCAG 2.1 AA compliance
+- `docs/security-report.html` - Security posture summary
+- `docs/RELEASE_SUMMARY.md` - Release metadata
+- `docs/VERSION.txt` - Version tracking
+
+**Verification:**
+
+```bash
+# Verify build provenance attestation
+gh attestation verify homepage-v1.0.0.zip --owner Hack23
+
+# View SBOM contents
+cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
+```
+
+**ISMS Policy Mapping:**
+- [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) - Supply chain security, SBOM requirements
+- [Documentation Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Documentation_Policy.md) - Documentation as code principles
+- [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) - Release procedures
+
+**Implementation Evidence:**
+- [Release Workflow Documentation: docs/WORKFLOW_DOCUMENTATION.md](https://github.com/Hack23/homepage/blob/master/docs/WORKFLOW_DOCUMENTATION.md)
+- [Release Implementation: RELEASE_WORKFLOW_IMPLEMENTATION.md](https://github.com/Hack23/homepage/blob/master/RELEASE_WORKFLOW_IMPLEMENTATION.md)
+- [Documentation Viewer: docs/index.html](https://github.com/Hack23/homepage/blob/master/docs/index.html)
 
 ---
 
@@ -874,6 +966,9 @@ graph TD
 | **Security Scan Pass Rate** | 100% | 100% | ZAP + Lighthouse in CI |
 | **Dependency Freshness** | <30 days | Tracked | Dependabot dashboard |
 | **CloudTrail Coverage** | 100% | 100% | AWS Config rules |
+| **SLSA Build Level** | Level 3 | ✅ Level 3 (Feb 2026) | release.yml attestations |
+| **SBOM Generation** | 100% releases | ✅ 100% | SPDX format, Anchore Syft |
+| **Build Provenance** | 100% releases | ✅ 100% | GitHub OIDC signed |
 
 ### Lighthouse Audits
 

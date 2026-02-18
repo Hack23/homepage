@@ -22,6 +22,7 @@
   - [4. Scorecard Supply-Chain Security (scorecards.yml)](#4-scorecard-supply-chain-security-scorecardsyml)
   - [5. Dependency Review (dependency-review.yml)](#5-dependency-review-dependency-reviewyml)
   - [6. Copilot Setup Steps (copilot-setup-steps.yml)](#6-copilot-setup-steps-copilot-setup-stepsyml)
+  - [7. Build, Attest and Release (release.yml)](#7-build-attest-and-release-releaseyml)
 - [Security Controls](#security-controls)
 - [Performance Optimization](#performance-optimization)
 - [Monitoring and Observability](#monitoring-and-observability)
@@ -476,6 +477,144 @@ Enables Copilot access to:
 
 ---
 
+### 7. Build, Attest and Release (release.yml)
+
+**Trigger**: Tag push (`v*`), manual (`workflow_dispatch`)  
+**Purpose**: Automated release with SLSA Build Level 3 attestations and documentation as code  
+**Permissions**: Minimal per job (read-all default)
+
+#### Workflow Architecture
+
+```mermaid
+graph TB
+    subgraph "Job 1: Prepare"
+        A[Checkout default branch] --> B[Generate Documentation]
+        B --> C[HTML Validation]
+        C --> D[Lighthouse Audits]
+        D --> E[Accessibility Reports]
+        E --> F[Commit to docs/]
+    end
+    
+    subgraph "Job 2: Build"
+        G[Minify Assets] --> H[Create ZIP]
+        H --> I[Generate SBOM]
+        I --> J[Build Provenance]
+        J --> K[SBOM Attestation]
+    end
+    
+    subgraph "Job 3: Release"
+        L[Create GitHub Release] --> M[Attach Artifacts]
+        M --> N[Deploy to gh-pages]
+    end
+    
+    F --> G
+    K --> L
+```
+
+#### Key Features
+
+**1. Documentation as Code**
+- **HTML Validation**: All pages validated with html-validate
+- **Lighthouse Audits**: Performance, accessibility, SEO reports for each page
+- **WCAG 2.1 AA Compliance**: Automated accessibility verification
+- **Security Reports**: OWASP ZAP baseline scan summaries
+- **Auto-Commit**: All reports committed to `docs/` directory
+
+**Artifacts Generated**:
+- `docs/html-validation.txt` - W3C standards compliance
+- `docs/lighthouse-*.html` - Individual page audits
+- `docs/lighthouse-summary.html` - Aggregated performance metrics
+- `docs/accessibility-report.html` - WCAG compliance summary
+- `docs/security-report.html` - Security posture
+- `docs/RELEASE_SUMMARY.md` - Release metadata
+- `docs/VERSION.txt` - Version tracking
+
+**2. SLSA Build Level 3 Attestations**
+- **Build Provenance**: Cryptographic attestation of build process
+  - File: `homepage-vX.Y.Z.zip.intoto.jsonl`
+  - Signed with GitHub OIDC (non-falsifiable)
+  - Includes: Builder identity, build parameters, dependencies
+  
+- **SBOM Attestation**: Software Bill of Materials
+  - File: `homepage-vX.Y.Z.spdx.json.intoto.jsonl`
+  - Format: SPDX 2.3
+  - Generator: Anchore Syft (v0.22.2)
+  - Contains: All dependencies, licenses, relationships
+
+**Verification**:
+```bash
+# Verify build provenance
+gh attestation verify homepage-v1.0.0.zip --owner Hack23
+
+# View SBOM
+cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
+```
+
+**3. Release Automation**
+- **Release Drafter**: Automated changelog generation
+  - Categorizes PRs: features, bugs, docs, security, etc.
+  - Semantic versioning: major/minor/patch detection
+  - Quality metrics: Test coverage, Lighthouse scores
+  
+- **Asset Publishing**:
+  - Release ZIP: Minified static site
+  - SBOM: `homepage-vX.Y.Z.spdx.json`
+  - Attestations: Build provenance + SBOM attestation
+  
+- **Dual Deployment**:
+  - **GitHub Pages**: Backup deployment at `hack23.github.io/homepage`
+  - **S3/CloudFront**: Primary deployment via `main.yml` on master
+
+**4. Security Hardening**
+- **Minimal Permissions**: Read-all default, write only where needed
+- **SHA-Pinned Actions**: All actions use commit SHAs
+- **Harden Runner**: Network egress auditing on all jobs
+- **Pre-release Detection**: Auto-detects pre-release from tag name
+
+#### Job Details
+
+**Job 1: Prepare (Runs ~5-10 minutes)**
+- Checks out default branch (not detached HEAD)
+- Generates comprehensive documentation reports
+- Commits reports to `docs/` directory
+- Sets up outputs for downstream jobs
+
+**Job 2: Build (Runs ~2-3 minutes)**
+- Minifies HTML/CSS/JS assets
+- Creates release ZIP artifact
+- Generates SBOM using Anchore SBOM Action
+- Creates attestations using GitHub's attest actions
+
+**Job 3: Release (Runs ~2-3 minutes)**
+- Creates GitHub Release with Release Drafter
+- Attaches ZIP, SBOM, and attestation files
+- Deploys minified artifact to GitHub Pages
+- Generates release summary
+
+#### Security Controls Mapping
+
+| Control | Implementation | ISMS Reference |
+|---------|----------------|----------------|
+| SC-28 (Data Integrity) | SLSA Build Level 3 attestations | [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) |
+| CM-3 (Change Control) | Release workflow with approval gates | [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) |
+| SA-15 (Development Process) | Documentation as code, SBOM | [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) |
+| SR-4 (Provenance) | Cryptographic build provenance | [Supply Chain Security](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md#supply-chain-security) |
+| SA-10 (Developer Testing) | Automated quality reports | [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) |
+
+#### Documentation References
+
+- **[docs/WORKFLOW_DOCUMENTATION.md](docs/WORKFLOW_DOCUMENTATION.md)** - Complete workflow usage guide
+- **[RELEASE_WORKFLOW_IMPLEMENTATION.md](RELEASE_WORKFLOW_IMPLEMENTATION.md)** - Implementation details
+- **[QUICKSTART_RELEASE.md](QUICKSTART_RELEASE.md)** - Quick start guide
+- **[docs/index.html](docs/index.html)** - Documentation viewer UI
+
+**Related Workflows**:
+- **main.yml**: Deploys to S3/CloudFront after release tag merged to master
+- **quality-checks.yml**: Validates quality before release
+- **scorecards.yml**: Verifies supply-chain security posture
+
+---
+
 ## Security Controls
 
 ### Network Security
@@ -604,6 +743,10 @@ Stored reports with 30-day retention:
 | link-checker-reports | quality-checks.yml | Internal/external link status |
 | SARIF file | scorecards.yml | Scorecard security analysis |
 | link-checker-report | pullrequest.yml | PR link verification |
+| Release documentation | release.yml | HTML validation, Lighthouse, accessibility reports (committed to docs/) |
+| SBOM | release.yml | Software Bill of Materials (SPDX format) |
+| Build provenance | release.yml | SLSA Build Level 3 attestation |
+| Release ZIP | release.yml | Minified static site bundle |
 
 ### External Monitoring
 
@@ -628,11 +771,14 @@ Stored reports with 30-day retention:
 |-------------|----------------|----------|
 | **Automated Testing** | HTML validation, link checking | quality-checks.yml, pullrequest.yml |
 | **Security Scanning** | ZAP, CodeQL, Scorecard | main.yml, pullrequest.yml, scorecards.yml |
-| **Dependency Management** | Dependency Review, Scorecard | dependency-review.yml |
-| **Change Control** | PR validation, quality gates | pullrequest.yml |
+| **Dependency Management** | Dependency Review, Scorecard, SBOM | dependency-review.yml, release.yml |
+| **Change Control** | PR validation, quality gates, release workflow | pullrequest.yml, release.yml |
 | **Infrastructure as Code** | CloudFormation for AWS resources | main.yml (stack-based CloudFront discovery) |
 | **Least Privilege** | OIDC IAM roles, minimal permissions | All workflows |
-| **Supply Chain Security** | SHA-pinned actions, Harden Runner | All workflows |
+| **Supply Chain Security** | SHA-pinned actions, Harden Runner, SLSA attestations | All workflows, release.yml |
+| **Documentation as Code** | Automated documentation generation | release.yml (docs/ directory) |
+| **Build Provenance** | SLSA Build Level 3 attestations | release.yml |
+| **SBOM Generation** | Automated Software Bill of Materials | release.yml (SPDX format) |
 
 ### NIST CSF 2.0 Mapping
 
@@ -676,6 +822,13 @@ Stored reports with 30-day retention:
 ---
 
 ## Changelog
+
+### 2026-02-18: Release Workflow Addition
+- Added comprehensive release workflow with SLSA Build Level 3 attestations
+- Documented SBOM generation and build provenance
+- Added documentation as code section
+- Updated artifacts and ISMS compliance mappings
+- Cross-referenced release documentation in docs/ directory
 
 ### 2026-01-11: Initial Documentation
 - Comprehensive documentation of all 6 workflows

@@ -309,32 +309,5 @@ area-compliance:
           - "compliance-manager*.html"
           - "cia-compliance-*.html"
 
-# 📊 Size Labels (approximate)
-size-xs:
-  - changed-files:
-      - count:
-          gte: 1
-          lte: 10
-
-size-s:
-  - changed-files:
-      - count:
-          gte: 11
-          lte: 30
-
-size-m:
-  - changed-files:
-      - count:
-          gte: 31
-          lte: 100
-
-size-l:
-  - changed-files:
-      - count:
-          gte: 101
-          lte: 500
-
-size-xl:
-  - changed-files:
-      - count:
-          gte: 501
+# Note: Size labels based on file count are not supported in actions/labeler v5+
+# Size-based labeling would need to be implemented using a different approach or custom action
