@@ -1,0 +1,195 @@
+<!doctype html><html lang=he dir=rtl><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>דוגמת איומים | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="Assume attackers with infinite resources exist—because they do. Threat model includes nation-states, because theirs includes you."><meta name=twitter:description content="Assume attackers with infinite resources exist—because they do. Threat model includes nation-states, because theirs includes you."><meta name=keywords content="דוגמת איומים, STRIDE, security architecture, תחשוב בעצמך, הטל ספק בסמכות, nation-state threats, hack23 ISMS, אבטחת סייבר, אבטחת מידע, מערכת ניהול אבטחת מידע, ISO 27001, הערכת סיכונים, תגובה לאירועים, ניהול פגיעויות, הגנה על מידע, בקרת גישה, אבטחת ענן, ציות, DevSecOps, שלישיית CIA, GDPR, NIS2, סודיות, שלמות, זמינות, ניהול סיכונים, ביקורת אבטחה, תכנון רציפות עסקית, התאוששות מאסון, אבטחת רשת, חומת אש, הצפנה, אימות, הרשאה, בדיקת חדירה, ניטור אבטחה, מודיעין איומים, תרבות אבטחה, הדרכת אבטחה, מדיניות אבטחה, מסגרת אבטחה, ממשל אבטחה, שירותי אבטחה, יועץ אבטחה, ארכיטקטורת אבטחה, פיתוח מאובטח, SDLC מאובטח, ניהול תצורה, ניהול תיקונים, גיבוי ושחזור"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="דוגמת איומים: Know Thy Enemy (They Already Know You)"><meta property=og:description content="Assume attackers with infinite resources exist—because they do. Your threat model should include nation-states."><meta property=og:locale content=he_IL><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-threat-modeling_he.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="בלוג אבטחה Hack23"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-threat-modeling_he.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "דוגמת איומים: Know Thy Enemy (They Already Know You)",
+      "description": "דוגמת איומים for systems that assume nation-state adversaries exist",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "מנכ\"ל / מומחה אבטחת סייבר",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-threat-modeling.html"
+      },
+      "keywords": "דוגמת איומים, STRIDE, security architecture, ISMS",
+      "articleSection": "אבטחת מידע",
+      "inLanguage": "he",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1203,
+      "articleBody": "Nothing is true. Everything is permitted. Including publishing your complete threat models publicly because security through obscurity is security through hoping adversaries are too lazy to look. They...",
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "אבטחת מידע Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-threat-modeling.html#ניווט",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "דוגמת איומים",
+          "item": "https://hack23.com/discordian-threat-modeling_he.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Perform STRIDE דוגמת איומים for Security Architecture",
+      "description": "Complete guide to systematic דוגמת איומים using STRIDE methodology with MITRE ATT&CK integration and nation-state adversary profiling for enterprise systems",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "P14D",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "8000"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "STRIDE דוגמת איומים Template"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "MITRE ATT&CK Navigator"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Threat Actor Profiling Worksheet"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Data Flow Diagram Templates"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Microsoft דוגמת איומים Tool"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "MITRE ATT&CK Framework"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "STRIDE Methodology"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "OWASP Threat Dragon"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define System Architecture and Boundaries",
+          "text": "Document system architecture including: components (web servers, databases, APIs, microservices), trust boundaries (internet-facing, internal networks, privileged zones), data flows (user requests, API calls, database queries, external integrations), entry points (public endpoints, admin interfaces, API gateways). Create data flow diagrams showing components, boundaries, and data movement. Identify assets requiring protection: customer data, authentication credentials, business logic, intellectual property.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#intro"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Apply STRIDE Framework to Identify Threats",
+          "text": "Systematically analyze system using STRIDE categories: (S)poofing - authentication bypass, credential theft, session hijacking. (T)ampering - data modification, code injection, configuration changes. (R)epudiation - log manipulation, transaction denial. (I)nformation Disclosure - data exposure, side-channel attacks, verbose errors. (D)enial of Service - resource exhaustion, algorithmic complexity attacks. (E)levation of Privilege - authorization bypass, privilege escalation, insecure defaults. Document specific threats for each STRIDE category per system component.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#stride-framework"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Profile Threat Actors and Capabilities",
+          "text": "Identify relevant threat actors based on asset value and system exposure: Nation-state adversaries (unlimited resources, advanced persistent threats, zero-day exploits), Organized cybercrime (sophisticated tools, financial motivation, ransomware operations), Insider threats (authorized access, knowledge of systems, intentional or accidental compromise), Hacktivists (ideological motivation, DDoS attacks, data leaks), Script kiddies (automated tools, opportunistic attacks, known vulnerabilities). Document threat actor TTPs (Tactics, Techniques, Procedures) using MITRE ATT&CK framework.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#adversaries"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Map Threats to MITRE ATT&CK Techniques",
+          "text": "Link identified STRIDE threats to MITRE ATT&CK techniques: Initial Access (T1190 exploit public-facing application, T1078 valid accounts), Execution (T1059 command injection, T1203 exploitation for client execution), Persistence (T1136 create account, T1098 account manipulation), Privilege Escalation (T1068 exploitation for privilege escalation, T1548 abuse elevation control), Defense Evasion (T1070 indicator removal, T1562 impair defenses), Credential Access (T1110 brute force, T1003 credential dumping), Discovery (T1083 file discovery, T1046 network service scanning), Lateral Movement (T1021 remote services), Collection (T1005 data from local system), Exfiltration (T1041 exfiltration over C2), Impact (T1486 data encrypted for impact).",
+          "url": "https://hack23.com/discordian-threat-modeling.html#ai-ml-atlas"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Assess Threat Likelihood and Impact",
+          "text": "Evaluate each identified threat using הערכת סיכונים: Likelihood assessment - consider threat actor capability, attack surface exposure, existing controls, historical precedent. Use scale: Very Low (1), Low (2), Medium (3), High (4), Very High (5). Impact assessment - evaluate confidentiality impact, integrity impact, availability impact, reputational damage, regulatory consequences. Use same 1-5 scale. Calculate risk score: Risk = Likelihood × Impact. Prioritize threats: Critical (20-25), High (15-19), Medium (10-14), Low (5-9), Very Low (1-4).",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Design Security Controls and Mitigations",
+          "text": "For each significant threat (Medium risk or higher), design appropriate security controls: Preventive controls (authentication, authorization, input validation, encryption), Detective controls (logging, monitoring, intrusion detection, anomaly detection), Corrective controls (תגובה לאירועים, backup restoration, failover mechanisms), Deterrent controls (legal agreements, warnings, audit trails). Document control effectiveness: Eliminated (threat completely prevented), Mitigated (threat likelihood/impact significantly reduced), Accepted (residual risk within risk appetite), Transferred (insurance, outsourcing). Map controls to STRIDE mitigation strategies.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Document Threat Model and Publish",
+          "text": "Create comprehensive threat model documentation including: executive summary (key findings, critical risks, recommended actions), system overview (architecture diagrams, components, trust boundaries), threat catalog (all identified STRIDE threats with MITRE ATT&CK mapping), הערכת סיכונים (likelihood, impact, risk scores), security controls (preventive, detective, corrective measures), residual risks (accepted risks with justification). Publish threat model in GitHub repository for transparency and accountability. Include THREAT_MODEL.md in project root with links to supporting documentation.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#implementation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Integrate דוגמת איומים into SDLC",
+          "text": "Establish דוגמת איומים as continuous practice: Initial threat model during design phase before development begins. Update threat model when architecture changes, new features added, or security incidents occur. Review threat model quarterly for emerging threats and evolving attack techniques. Integrate דוגמת איומים into security review gates: design review requires threat model, code review validates control implementation, security testing verifies mitigation effectiveness. Train development teams on STRIDE methodology and secure design principles.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#conclusion"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Monitor for Emerging Threats and Update Model",
+          "text": "Maintain threat model currency through continuous monitoring: Subscribe to security advisories (CISA, NIST, vendor notifications), monitor MITRE ATT&CK updates for new techniques, track industry security incidents for emerging attack patterns, analyze internal security events and near-misses. Update threat model when: new vulnerabilities discovered in components, new threat actors emerge targeting industry, new attack techniques observed in wild, regulatory requirements change, business context shifts (new data types, expanded user base). Document threat model changes in version control with rationale.",
+          "url": "https://hack23.com/discordian-threat-modeling.html#conclusion"
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/discordian-threat-modeling_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-threat-modeling_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-threat-modeling_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-threat-modeling_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-threat-modeling_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-threat-modeling_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-threat-modeling.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-threat-modeling_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-threat-modeling_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-threat-modeling_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-threat-modeling_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-threat-modeling_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-threat-modeling_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-threat-modeling_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-threat-modeling_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-threat-modeling_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-threat-modeling_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-threat-modeling_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-threat-modeling_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-threat-modeling_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-threat-modeling_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-threat-modeling_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-threat-modeling_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-threat-modeling_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-threat-modeling_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-threat-modeling_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-threat-modeling_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-threat-modeling_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-threat-modeling.html><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel=stylesheet><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=index_he.html>דף הבית</a><li class=breadcrumb-item><a href=blog_he.html>בלוג</a><li class=breadcrumb-item aria-current=page>דוגמת איומים</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="לוגו Hack23" class=logo width=80 height=80></div><h1>דוגמת איומים</h1><div class=app-link><a href=index_he.html>דף הבית</a> <a href=discordian-cybersecurity_he.html>המניפסט</a> <a href=https://github.com/Hack23/ISMS-PUBLIC title="ISMS ציבורי">ISMS</a></div></header><main><article><h2 class=header>🎯 דוגמת איומים: Know Thy Enemy (They Already Know You)</h2><section id=intro><h2 class=panel-caption>Public Threat Models: Every Project, Every Attack Vector, Every Mitigation</h2><p><strong>שום דבר לא אמיתי. הכל מותר.</strong> Including publishing your complete threat models publicly because security through obscurity is security through hoping adversaries are too lazy to look. <em>They're not lazy. They're patient. They're well-funded. They're already inside your perimeter that doesn't exist anymore.</em> Publishing threat models doesn't help attackers—they already know the attack vectors better than you do. It helps defenders learn systematic threat analysis instead of security through wishful thinking and vendor promises.<p><em>תחשוב בעצמך, schmuck! הטל ספק בסמכות.</em> At Hack23, we don't hide our threat models behind NDAs and "confidential" markings—we publish them so you can verify our security claims instead of trusting our marketing. <strong>STRIDE complete. Attack trees documented. Mitigations mapped. Risk quantified.</strong> All public. All auditable. All improvable through community review. <strong>האם אתה פרנואיד מספיק to publish YOUR threat models? We are—because transparency forces quality better than audits ever did.</strong><p>Every Hack23 project maintains comprehensive threat models: <a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md>CIA (democratic engagement)</a> | <a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md>Black Trigram (educational gaming)</a> | <a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md>CIA ציות Manager (security assessment)</a>. STRIDE analysis, MITRE ATT&CK mapping, AI/ML ATLAS integration for LLM threats—all documented, all public, all continuously updated. <em>Static threat models are fiction. Threats evolve daily. Documentation must evolve with them or become expensive security theater.</em><p class=hidden-wisdom><em>ILLUMINATION: Publishing threat models doesn't help attackers—they already know the attack vectors from years of breaching companies who thought security through obscurity would protect them. It helps defenders learn systematic threat analysis through real examples instead of theoretical frameworks nobody implements. Choose transparent defense over obscure hope. Choose documented threats over imaginary safety. <strong>FNORD.</strong> Your threat model should include nation-states because their threat models include you. Act accordingly.</em><p>Our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md>דוגמת איומים Policy</a> isn't theoretical—it's operational with public evidence across all projects. Security by design through systematic threat analysis.<p><strong>Ready to build a robust security program?</strong> <a href=why-hack23.html>Discover Hack23's consulting approach</a> that treats security as an enabler, not a barrier.</section><section id=stride-framework><h2 class=panel-caption>STRIDE Complete: Six Threat Categories, Systematic Analysis</h2><p><strong>All Hack23 projects apply STRIDE framework systematically:</strong><table class=data-table><thead><tr><th>Threat Type<th>Security Property<th>Hack23 Evidence<tbody><tr class=roi-exceptional><td><strong>S - Spoofing</strong><td>Authentication<td>Identity verification threats analyzed in all projects<tr class=roi-high><td><strong>T - Tampering</strong><td>Integrity<td>Data modification threats with control mapping<tr class=roi-moderate><td><strong>R - Repudiation</strong><td>Accountability<td>Non-deniable action threats with audit logging<tr class=roi-moderate><td><strong>I - Information Disclosure</strong><td>Confidentiality<td>Data exposure threats with encryption mitigations<tr class=roi-high><td><strong>D - Denial of Service</strong><td>Availability<td>Service disruption threats with resilience controls<tr class=roi-exceptional><td><strong>E - Elevation of Privilege</strong><td>Authorization<td>Permission escalation threats with RBAC enforcement</table><p><strong>Public STRIDE evidence:</strong><ul><li><strong>CIA Platform:</strong> <a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md#stride-threat-analysis>Complete STRIDE analysis</a> with attack trees<li><strong>Black Trigram:</strong> <a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md#gaming-specific-threats>Gaming-specific STRIDE</a> + cultural heritage protection<li><strong>CIA ציות Manager:</strong> <a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md#quantitative-risk-assessment>Quantified הערכת סיכונים</a> with control mapping</ul><p class=hidden-wisdom><em>STRIDE ILLUMINATION: Systematic threat categorization beats ad-hoc "what could go wrong" brainstorming. STRIDE ensures you check all six threat types. Missing one = vulnerability waiting to be exploited.</em></section><section id=adversaries><h2 class=panel-caption>Know Thy Enemy: Adversary Modeling</h2><p>Different adversaries, different capabilities, different motivations:<ul><li><strong>Script Kiddies</strong> — Low skill, automated tools, mass scans. Defend with basics.<li><strong>Cybercriminals</strong> — Financially motivated, targeted, patient. Ransomware, exfiltration, fraud.<li><strong>Insiders</strong> — Already have access. Your biggest threat that security teams ignore.<li><strong>Competitors</strong> — Corporate espionage. They want your IP, your customers, your secrets.<li><strong>Nation-States</strong> — Infinite resources, zero-days, supply chain access, legal compulsion. If they want in, they're in.</ul><p><strong>Your threat model should include the worst case</strong>—nation-state adversaries—because that sets your defensive baseline. If you can defend against APTs, script kiddies are noise.<p class=hidden-wisdom><em>CHAOS ILLUMINATION: If your threat model doesn't include nation-states, you're דוגמת איומים for 1995.</em></section><section id=ai-ml-atlas><h2 class=panel-caption>AI/ML ATLAS: 15 Tactics, 81 Techniques for LLM Threats</h2><p><strong>For LLM-based systems, STRIDE isn't enough. AI/ML attacks require specialized threat framework:</strong><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🔍 Reconnaissance (6 techniques)</h3><p>Search AI vulnerability databases, gather RAG-indexed targets, active scanning of ML endpoints. Attackers map your AI attack surface before striking.</div><div class="card integrity-card"><div class=scanner-effect></div><h3>🛠️ Resource Development (12 techniques)</h3><p>Acquire public AI artifacts, develop adversarial capabilities, publish poisoned datasets/models. Supply chain attacks on training data and model registries.</div><div class="card availability-card"><div class=scanner-effect></div><h3>⚡ Execution (4 techniques)</h3><p><strong>LLM Prompt Injection</strong> - Override system prompts. <strong>AI Agent Tool Invocation</strong> - Abuse autonomous agent capabilities. User execution via LLM-generated malicious content.<p class=hidden-wisdom><em>Prompt injection is SQL injection for LLMs. Same concept, new attack surface.</em></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>📤 Exfiltration (6 techniques)</h3><p><strong>LLM Data Leakage</strong> - Extract training data through careful prompting. <strong>Extract System Prompt</strong> - Reveal confidential instructions. Exfiltration via AI inference API, agent tool invocation.</div><div class="card integrity-card"><div class=scanner-effect></div><h3>💥 Impact (7 techniques)</h3><p><strong>Cost Harvesting</strong> - Burn API credits through expensive queries. <strong>Erode AI Model Integrity</strong> - Poison responses through adversarial inputs. <strong>External Harms</strong> - Reputation damage via model misbehavior.</div></div><p><strong>Hack23 AI/ML threat analysis:</strong> Our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/OWASP_LLM_Security_Policy.md>OWASP LLM Security Policy</a> integrates AI/ML ATLAS framework (15 tactics, 81 techniques) for systematic LLM דוגמת איומים. AWS Bedrock deployment (Q1 2026) includes complete AI/ML threat assessment.<p class=hidden-wisdom><em>AI/ML ILLUMINATION: Traditional דוגמת איומים misses LLM-specific attacks. Prompt injection, training data poisoning, model inversion—these require specialized frameworks. Choose AI/ML ATLAS for LLM systems.</em></section><section id=implementation><h2 class=panel-caption>Our Approach: Public Threat Models, Transparent Mitigations</h2><p><strong>Every Hack23 project maintains comprehensive public threat model:</strong><table class=data-table><thead><tr><th>Project<th>STRIDE<th>Attack Trees<th>Risk Quantification<th>Control Mapping<tbody><tr class=roi-exceptional><td><strong>CIA Platform</strong><td><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md>Complete</a><td><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md>Documented</a><td><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md>Quantified</a><td><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md>Mapped</a><tr class=roi-high><td><strong>Black Trigram</strong><td><a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md>Complete</a><td><a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md>Documented</a><td><a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md>Quantified</a><td><a href=https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md>Mapped</a><tr class=roi-moderate><td><strong>CIA ציות</strong><td><a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md>Complete</a><td><a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md>Documented</a><td><a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md>Quantified</a><td><a href=https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md>Mapped</a></table><p><strong>דוגמת איומים lifecycle at Hack23:</strong><ul><li><strong>Design Phase Integration:</strong> דוגמת איומים during architecture design, not post-implementation<li><strong>STRIDE Complete:</strong> All six threat categories analyzed systematically<li><strong>Attack Trees:</strong> Visual attack path documentation from entry point to impact<li><strong>MITRE ATT&CK Mapping:</strong> Threat intelligence integration with industry-standard frameworks<li><strong>AI/ML ATLAS Integration:</strong> LLM-specific threats for AI-enabled systems<li><strong>Risk Quantification:</strong> Business impact analysis tied to Classification Framework<li><strong>Control Mapping:</strong> Every threat mapped to specific security controls<li><strong>Public Documentation:</strong> Transparent threat analysis demonstrating expertise</ul><p>Full methodology in our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md>public דוגמת איומים Policy</a>—because security through obscurity is security through incompetence.</section><section id=conclusion><h2 class=panel-caption>Welcome to Chapel Perilous: דוגמת איומים as Competitive Advantage</h2><p><strong>שום דבר לא אמיתי. הכל מותר.</strong> Including publishing complete threat models because transparency demonstrates expertise, not vulnerability.<p>Most organizations hide threat models behind NDAs. We publish ours: <strong>STRIDE complete. Attack trees documented. Mitigations mapped. Risk quantified.</strong> All public. CIA Platform, Black Trigram, CIA ציות Manager—every project has comprehensive threat model.<p><strong>Our דוגמת איומים approach:</strong><ul><li><strong>STRIDE Framework:</strong> Six threat categories (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege)<li><strong>AI/ML ATLAS:</strong> 15 tactics, 81 techniques for LLM-specific threats (prompt injection, training data poisoning, model inversion)<li><strong>MITRE ATT&CK:</strong> Industry-standard threat intelligence integration<li><strong>Public Documentation:</strong> Transparent threat analysis in every project repository<li><strong>Control Mapping:</strong> Every threat mapped to specific security controls<li><strong>Continuous Assessment:</strong> Threat models updated with architectural changes</ul><p><strong>תחשוב בעצמך.</strong> Question vendors who hide threat models. Ask for public STRIDE analysis. Demand attack tree documentation. Choose transparent threat assessment over obscure hand-waving.<p class=hidden-wisdom><strong>ULTIMATE ILLUMINATION:</strong> <em>You are now in Chapel Perilous. Every system is attackable. Publishing threat models doesn't help attackers—they already know the attack vectors. It helps defenders learn systematic threat analysis. Choose transparency over obscurity.</em><p><strong>All hail Eris! All hail Discordia!</strong><p>Explore our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md>complete דוגמת איומים Policy</a> with STRIDE framework, AI/ML ATLAS integration, MITRE ATT&CK mapping, and public threat model evidence for all projects. Transparent. Systematic. Operational.<p class=signature>— Hagbard Celine, Captain of the <em>Leif Erikson</em><br><br><em>"STRIDE complete. Attack trees documented. Mitigations mapped. All public. Choose systematic threat analysis over ad-hoc fear."</em><br><br>🍎 23 FNORD 5</section><section id=related><h2 class=panel-caption>Related ISMS Policies</h2><ul><li><a href=discordian-secure-dev.html>פיתוח מאובטח Policy</a> — Code without backdoors (on purpose)<li><a href=discordian-incident-response.html>תגובה לאירועים Plan</a> — When (not if) shit hits the fan<li><a href=discordian-network-security.html>אבטחת רשת Policy</a> — The perimeter is dead<li><a href=discordian-cybersecurity_he.html>Back to Main המניפסט</a> — Everything you know about security is a lie</ul></section></article></main><footer role=contentinfo aria-label="Site footer"><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>אבטחת סייבר Consulting<br>Gothenburg, Sweden | Remote<p>Org.nr: 5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>LinkedIn Company Page</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>CEO: James Pether Sörling</a></div><div class=footer-column><h3>Services</h3><ul><li><a href=services.html>Security Consulting</a><li><a href=services.html>Security Architecture</a><li><a href=services.html>אבטחת ענן</a><li><a href=services.html>DevSecOps Integration</a><li><a href=services.html>ציות & ISMS</a></ul></div><div class=footer-column><h3>Products</h3><ul><li><a href=black-trigram-features.html>Black Trigram</a><li><a href=cia-features.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features.html>CIA ציות Manager</a></ul></div><div class=footer-column><h3>Resources</h3><ul><li><a href=blog.html>Security בלוג</a><li><a href=discordian-cybersecurity_he.html>🍎 Discordian בלוג</a><li><a href=cia-triad-faq.html>CIA Triad FAQ</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>ISMS ציבורי</a><li><a href=sitemap.html>Sitemap</a></ul></div><div class=footer-column><h3>Company</h3><ul><li><a href=why-hack23.html>About Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>Security Policy</a><li><a href=SECURITY.md>Report Security Issue</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>GitHub Organization</a><li><a href=accessibility-statement.html>נגישות</a></ul></div></div><div class=footer-discordian><p class=discordian-authors><strong>✍️ בלוג Authors:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target=_blank>Hagbard Celine</a> (Philosophy & Vision) & <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target=_blank>Simon Moon</a> (Architecture & Patterns)<p class=discordian-implementation><strong>💻 Implementation Reality:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target=_blank>George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in <a href=blog-george-dorn-cia-code.html>CIA Architecture</a>, <a href=blog-george-dorn-trigram-code.html>Black Trigram Combat</a>, and <a href=blog.html#george-dorn-developer-chronicles>Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.</div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB. All rights reserved.<p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> | <a href=index_no.html lang=no>Norsk</a></div></footer>

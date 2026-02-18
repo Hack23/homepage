@@ -1,0 +1,282 @@
+<!doctype html><html lang=fi><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Katastrofipalautus | AWS Kaaostekniikka | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="AWS FIS -kaaoskokeilut, monialueen vikasietoisuus, muuttumattomat varmuuskopiot, automaattinen validointi. &lt;5min RTO kuukausittainen testaus. Todistuspohjainen joustovara."><meta name=twitter:description content="AWS FIS -kaaoskokeilut, monialueen vikasietoisuus, muuttumattomat varmuuskopiot, automaattinen validointi. &lt;5min RTO kuukausittainen testaus. Todistuspohjainen joustovara."><meta name=keywords content="katastrofipalautus, AWS Resilience Hub, Fault Injection Service, kaaostekniikka, RTO RPO, AWS Backup, muuttumattomat varmuuskopiot, SSM-automaatio, CloudFormation, DynamoDB PITR, Route 53 vikasietoisuus, monialueen palautus, varmuuskopioiden validointi, palautustestaus, katastrofipalautustestaus, realistinen DR-testaus, todisteiden kerääminen, hack23 ISMS"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Katastrofipalautus: AWS-Natiivi Joustovara Kaaostekniikalla"><meta property=og:description content="AWS Resilience Hub + Fault Injection Service kriittisten järjestelmien &lt;5min RTO:lle. Kuukausittaiset kaaoskokeilut todistuvat palautuskyvyt auditoitavalla todisteella."><meta property=og:locale content=fi_FI><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-disaster-recovery_fi.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Turvallisuusblogi"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-disaster-recovery_fi.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Katastrofipalautus: AWS-Natiivi Joustovara Kaaostekniikalla",
+      "description": "Täydellinen tekninen katastrofipalautustoteutus AWS-natiiveilla työkaluilla: FIS-kaaoskokeilut SSM-automaatiolla, Route 53 monialueen vikasietoisuus, DynamoDB ajantasainen palautus, muuttumattomat varmuuskopiosäiliöt, CloudFormation infrastruktuuri-koodina, automaattinen palautusvalidointi ja realistinen katastrofitestaus Murphyn lain olosuhteissa (klo 3, heikentynyt verkko, puuttuva henkilöstö, vioittuneet varmuuskopiot). Kattaa viisi katastrofiskenaariota todistuspohjaisilla palautusmenettelyillä.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-disaster-recovery.html"
+      },
+      "keywords": "disaster recovery, AWS Resilience Hub, chaos engineering, FIS, RTO RPO, SSM automation, CloudFormation, DynamoDB PITR, Route 53 failover, backup validation, realistic disaster testing",
+      "articleSection": "Information Security",
+      "inLanguage": "fi",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 3500,
+      "articleBody": "Nothing is true. Everything is permitted. Including—especially—complete infrastructure failure, entire cloud regions burning, and vendors who promised \"five nines\" explaining why \"nines don't count during maintenance windows.\" This comprehensive technical guide covers five disaster scenarios (datacenter failure, cyberattack, accidental deletion, data corruption, catastrophic loss), AWS Systems Manager automation documents for automated recovery, FIS chaos experiment CloudFormation templates, Route 53 health check-driven multi-region failover, DynamoDB point-in-time recovery procedures, immutable backup vault configuration, automated restore validation with Lambda functions, evidence collection pipelines, and realistic disaster testing under Murphy's Law conditions. Complete with code examples, CloudFormation templates, and Python automation scripts...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-disaster-recovery.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Disaster Recovery",
+          "item": "https://hack23.com/discordian-disaster-recovery.html"
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/discordian-disaster-recovery_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-disaster-recovery_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-disaster-recovery_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-disaster-recovery_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-disaster-recovery_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-disaster-recovery_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-disaster-recovery.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-disaster-recovery_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-disaster-recovery_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-disaster-recovery_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-disaster-recovery_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-disaster-recovery_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-disaster-recovery_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-disaster-recovery_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-disaster-recovery_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-disaster-recovery_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-disaster-recovery_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-disaster-recovery_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-disaster-recovery_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-disaster-recovery_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-disaster-recovery_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-disaster-recovery_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-disaster-recovery_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-disaster-recovery_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-disaster-recovery_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-disaster-recovery_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-disaster-recovery_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-disaster-recovery_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-disaster-recovery.html><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=/ >Home</a><li class=breadcrumb-item><a href=/blog.html>Blog</a><li class=breadcrumb-item aria-current=page>Disaster Recovery</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="Hack23 Logo" class=logo width=80 height=80></div><h1>Disaster Recovery: AWS-Native Resilience with Chaos Engineering</h1><div class=app-link><a href=index.html title="Back to Home">Home</a> <a href=discordian-cybersecurity.html title="Back to Manifesto">Manifesto</a> <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md title="Public DR Plan">ISMS DR</a></div></header><main><article><h2 class=header>🆘 Disaster Recovery: Evidence-Based Resilience Through Chaos</h2><section id=intro><h2 class=panel-caption>AWS-Native Recovery: When (Not If) Everything Burns</h2><p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—complete infrastructure failure, entire cloud regions burning, and vendors who promised "five nines" explaining why "nines don't count during maintenance windows." Murphy was an optimist who never worked in ops. The question isn't "if everything burns"—it's "when everything burns" and "are you paranoid enough to have actually tested your escape plan instead of just hoping your backups work?" <em>Hope is not a recovery strategy. Tested procedures are. Choose accordingly.</em><p><em>Think for yourself, schmuck! Question authority.</em> Question disaster recovery plans gathering dust in SharePoint that nobody's read since the compliance audit. Question "backup strategies" that have never attempted an actual restore. Question RTO/RPO targets pulled from someone's ass during a compliance meeting because "4 hours sounds reasonable." <strong>FNORD.</strong> Your DR plan is probably a comfortable lie you tell auditors to make them go away. <em>Disaster recovery theater: expensive documentation pretending to be preparedness while actual disasters expose that nobody tested shit.</em><p>At Hack23, we're paranoid enough to assume everything fails. Disaster recovery isn't hypothetical documentation filed under "Things We Hope We Never Need"—it's <strong>continuously validated through automated chaos engineering</strong> because we're psychotic enough to deliberately break our own infrastructure monthly. AWS Fault Injection Service (FIS) terminates our databases. Crashes our APIs. Severs our network connections. We <strong>weaponize chaos</strong> to prove recovery automation works before disasters prove it doesn't.<p class=hidden-wisdom><em>ILLUMINATION: You've entered Chapel Perilous, the place where paranoia meets preparation. Untested DR plans are just bedtime stories CIOs tell themselves. We inject deliberate failures monthly—terminating databases, breaking networks, deleting volumes—because trusting unvalidated recovery is how you discover during actual disasters that your plan was fiction all along. Are you paranoid enough yet?</em><p>Our approach combines AWS-native resilience tooling (Resilience Hub, FIS, Backup) with systematic chaos engineering and paranoid-level recovery validation. Because in the reality tunnel we inhabit, everything fails. Clouds crash. Regions burn. Ransomware encrypts. The only question is whether you've <em>actually tested</em> your ability to survive it. Full technical details—because transparency beats security theater—in our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md>public Disaster Recovery Plan</a>. Yes, it's public. No, that doesn't help attackers. <strong>FNORD.</strong><p><strong>Need expert guidance implementing your ISMS?</strong> <a href=why-hack23.html>Discover why organizations choose Hack23</a> for transparent, practitioner-led cybersecurity consulting.</section><section id=five-disaster-scenarios><h2 class=panel-caption>The Five Disaster Scenarios: What Can (Will) Go Wrong</h2><p><strong>Nothing is true. Everything fails.</strong> Our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md>Disaster Recovery Plan</a> covers five distinct failure modes, each requiring different technical recovery approaches:<div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>1. 🔥 Datacenter/Region Failure</h3><p><strong>Complete AWS region unavailability.</strong> Natural disasters, power grid collapse, catastrophic hardware failure at datacenter level. Your primary region is smoking ruins (literally or figuratively).<p><strong>Recovery Strategy:</strong> Route 53 health check-driven DNS failover to standby region. RTO: &lt;5 minutes for critical systems. Multi-AZ deployment within region provides automatic failover; cross-region provides disaster survival.<p><strong>Technical Implementation:</strong> CloudFormation StackSets deploy identical infrastructure across eu-west-1 (Ireland) and eu-central-1 (Frankfurt). Route 53 weighted routing with health checks automatically shifts traffic when primary region health checks fail.<p class=hidden-wisdom><em>ILLUMINATION: Regions fail. AWS had a 2021 us-east-1 outage that took down half the internet. Multi-region isn't paranoia—it's memory.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>2. 🦠 Cyberattack/Ransomware</h3><p><strong>Malicious encryption, data destruction, account compromise.</strong> Ransomware encrypts production data. Attackers delete backups. IAM credentials compromised and used to destroy infrastructure.<p><strong>Recovery Strategy:</strong> Immutable backup vaults with vault lock preventing deletion. Separate AWS account for backup storage isolates from production compromise. Point-in-time recovery for DynamoDB (35 days continuous backup), RDS (automated snapshots), S3 versioning.<p><strong>Technical Implementation:</strong> AWS Backup central plans replicate to separate AWS account cross-region. Vault lock policy prevents deletion even by root account. CloudTrail monitored for suspicious deletion attempts triggering automated incident response.<p class=hidden-wisdom><em>FNORD: Ransomware gangs target backups first. Immutable storage means "nice try, ransomware" instead of "we're negotiating with criminals."</em></div><div class="card availability-card"><div class=scanner-effect></div><h3>3. 🗑️ Accidental Deletion</h3><p><strong>Human error, automation bugs, misconfigured scripts.</strong> Developer runs "DELETE FROM users" without WHERE clause. Automation script deletes production instead of staging. AWS console fat-finger deletes critical S3 bucket.<p><strong>Recovery Strategy:</strong> S3 versioning retains deleted object versions. DynamoDB point-in-time restore (PITR) to any second within 35-day window. RDS automated snapshots provide point-in-time recovery. Lambda function versioning with aliases enables instant rollback.<p><strong>Technical Implementation:</strong> S3 MFA Delete prevents accidental bucket deletion. DynamoDB PITR enabled on all tables. RDS Multi-AZ with automated backups. SSM automation documents (`AWSResilienceHub-RestoreDynamoDBTableToPointInTimeSOP_2020-04-01`) enable one-click restore.<p class=hidden-wisdom><em>Everyone deletes production data eventually. The question is whether you have 'undo' or just 'oh shit.'</em></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>4. 💀 Data Corruption</h3><p><strong>Application bugs, database corruption, silent data rot.</strong> Migration script corrupts data format. Database index corruption spreads. Application bug writes garbage data for hours before detection.<p><strong>Recovery Strategy:</strong> Point-in-time recovery to pre-corruption state. S3 versioning allows recovery of uncorrupted object versions. DynamoDB PITR restores table to exact second before corruption. Database integrity checks detect silent corruption early.<p><strong>Technical Implementation:</strong> Automated daily integrity validation (checksums, record counts, referential integrity). DynamoDB streams capture change log for forensic analysis. S3 Object Lock on critical data prevents overwrite. SSM automation triggers automated restore when corruption detected.<p class=hidden-wisdom><em>Chapel Perilous moment: Discovering your backups are corrupt because you're backing up corrupted data. Test restores catch this.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>5. ☠️ Catastrophic Loss</h3><p><strong>Total infrastructure destruction.</strong> AWS account compromise leading to complete resource deletion. Regulatory action forcing immediate shutdown. Complete organization failure requiring liquidation.<p><strong>Recovery Strategy:</strong> Infrastructure as Code (CloudFormation) enables complete environment reconstruction. All code in GitHub (version control external to AWS). Backup vaults in separate AWS account survived account-level attacks. Documentation public in ISMS-PUBLIC enables recovery by any competent engineer.<p><strong>Technical Implementation:</strong> Complete infrastructure defined in CloudFormation templates stored in GitHub. Backup vaults owned by separate AWS account immune to production account compromise. Public documentation means recovery doesn't require tribal knowledge. SSM Parameter Store exports enable configuration restoration.<p class=hidden-wisdom><em>ULTIMATE PARANOIA: Could a complete stranger rebuild your infrastructure using only public documentation? If not, you don't have disaster recovery—you have disaster dependency on specific humans.</em></div></div></section><section id=five-tiers><h2 class=panel-caption>The Five-Tier Recovery Architecture: Classification-Driven RTO/RPO</h2><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>1. 🔴 Mission Critical (5-60 min RTO)</h3><p><strong>API Gateway, Lambda, DynamoDB.</strong> Automated multi-AZ failover, real-time replication, 1-15 min RPO. 100% Resilience Hub compliance required for production deployment. Monthly FIS experiments validate recovery automation.<p><strong>Evidence:</strong> <a href=https://github.com/Hack23/cia>CIA project</a> with multi-AZ Lambda + DynamoDB, automated health checks, cross-region DNS failover.<p class=hidden-wisdom><em>Critical systems fail fast or recover fast. No middle ground.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>2. 🟠 High Priority (1-4 hr RTO)</h3><p><strong>RDS, S3, CloudFront.</strong> Cross-region replication, automated backups, hourly snapshots (1-4 hr RPO). 95% Resilience Hub compliance. Quarterly FIS validation of failover procedures.<p><strong>Implementation:</strong> RDS read replicas across AZs, S3 Cross-Region Replication, CloudFront multi-origin with automatic failover.<p class=hidden-wisdom><em>High priority means high automation. Manual recovery steps are failure points.</em></div><div class="card availability-card"><div class=scanner-effect></div><h3>3. 🟡 Standard (4-24 hr RTO)</h3><p><strong>DNS, monitoring, alarms.</strong> Daily backups (4-24 hr RPO), documented recovery procedures, 90% Resilience Hub compliance. Semi-annual recovery validation.<p><strong>Approach:</strong> Route 53 health checks, CloudWatch dashboards with automated failover, backup plan with 24hr retention.<p class=hidden-wisdom><em>Standard doesn't mean ignored. Just means acceptable recovery window is measured in hours, not minutes.</em></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>4. 🧪 AWS Fault Injection Service</h3><p><strong>Monthly chaos experiments prove recovery.</strong> Terminate EC2 instances, corrupt databases, break network connections, inject API errors. FIS experiments with SSM automation validate RTO/RPO claims with auditable evidence.<p><strong>Experiments:</strong> Database disaster (RDS termination), API unavailability (100% error injection), network partition (VPC connectivity loss), storage outage (EBS unavailability).<p class=hidden-wisdom><em>We don't hope our DR works. We deliberately break things monthly to prove it.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>5. ☁️ AWS Backup + Immutable Vaults</h3><p><strong>Cross-region immutable backups.</strong> Automated backup orchestration, point-in-time recovery, ransomware protection through vault lock. Backup Audit Manager provides compliance evidence.<p><strong>Configuration:</strong> Central backup plans, cross-region replication to separate AWS account, vault lock prevents deletion, automated restore validation.</div></div></section><section id=rto-matrix><h2 class=panel-caption>Resilience Hub Policy Matrix: Classification-Driven Recovery</h2><table class=data-table><thead><tr><th>Tier<th>RTO Target<th>RPO Target<th>Services<th>Resilience Hub Gate<th>FIS Validation<tbody><tr class=roi-exceptional><td><strong>🔴 Mission Critical</strong><td><strong>5-60 min</strong><td><strong>1-15 min</strong><td>API Gateway, Lambda, DynamoDB<td>100% compliance required<td>Monthly chaos experiments<tr class=roi-high><td><strong>🟠 High Priority</strong><td><strong>1-4 hours</strong><td><strong>1-4 hours</strong><td>RDS, S3, CloudFront<td>95% compliance required<td>Quarterly failover tests<tr class=roi-moderate><td><strong>🟡 Standard</strong><td><strong>4-24 hours</strong><td><strong>4-24 hours</strong><td>DNS, monitoring, alarms<td>90% compliance required<td>Semi-annual validation</table><p><strong>Deployment Gating:</strong> AWS Resilience Hub assesses application resilience before production deployment. Applications failing RTO/RPO compliance thresholds are blocked from deployment until resilience requirements are met. This ensures disaster recovery capabilities are architectural requirements, not operational afterthoughts.<p class=hidden-wisdom><em>GATE ILLUMINATION: Deployment gates enforce resilience at build time. Fix architecture before production, not after outages.</em></section><section id=ssm-automation><h2 class=panel-caption>SSM Automation: Recovery Procedures That Actually Execute</h2><p><strong>Manual runbooks are fiction.</strong> Under disaster conditions (panic, missing personnel, degraded systems), humans executing manual procedures fail spectacularly. AWS Systems Manager automation documents encode recovery procedures as executable code that works when humans can't think straight.<p><strong>🔧 Example: IAM Policy Injection for Chaos Testing</strong><p>Our FIS experiments use SSM automation to inject failures realistically. Here's how we temporarily deny Lambda access during API Gateway chaos testing:<pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>SsmAutomationIamAttachDetachDocument:
+  Type: AWS::SSM::Document
+  Properties:
+    Name: FISAPI-IamAttachDetach
+    DocumentType: Automation
+    Content:
+      schemaVersion: '0.3'
+      assumeRole: '{{ AutomationAssumeRole }}'
+      parameters:
+        TargetResourceDenyPolicyArn:
+          type: String
+          description: ARN of Deny IAM Policy for AWS Resource
+        Duration:
+          type: String
+          description: The Duration in ISO-8601 format
+        TargetApplicationRoleName:
+          type: String
+          description: The name of the Target Role
+      mainSteps:
+        - name: AttachDenyPolicy
+          action: 'aws:executeAwsApi'
+          inputs:
+            Service: iam
+            Api: AttachRolePolicy
+            RoleName: '{{TargetApplicationRoleName}}'
+            PolicyArn: '{{TargetResourceDenyPolicyArn}}'
+          description: Inject failure by attaching Deny policy
+        - name: ExperimentDurationSleep
+          action: 'aws:sleep'
+          inputs:
+            Duration: '{{Duration}}'
+          description: Maintain fault injection
+          onFailure: 'step:RollbackDetachPolicy'
+          onCancel: 'step:RollbackDetachPolicy'
+        - name: RollbackDetachPolicy
+          action: 'aws:executeAwsApi'
+          inputs:
+            Service: iam
+            Api: DetachRolePolicy
+            RoleName: '{{TargetApplicationRoleName}}'
+            PolicyArn: '{{TargetResourceDenyPolicyArn}}'
+          description: Automatically restore access
+</code></pre><p><strong>Why This Matters:</strong> SSM automation provides automatic rollback even if experiment fails. The <code>onFailure</code> and <code>onCancel</code> handlers ensure we don't leave production in broken state. When disaster strikes, this same automation pattern enables recovery procedures that execute reliably under chaos.<p><strong>🔄 Example: DynamoDB Point-in-Time Recovery</strong><p>Restoring corrupted DynamoDB table to exact second before corruption using AWS-native SSM automation:<pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>FisRecoverDynamodbTablePITRTemplate:
+  Type: AWS::FIS::ExperimentTemplate
+  Properties: 
+    Actions:
+      RecoverDynamodbTablePITR:  
+        ActionId: aws:ssm:start-automation-execution
+        Parameters:
+          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}::document/AWSResilienceHub-RestoreDynamoDBTableToPointInTimeSOP_2020-04-01'
+          documentParameters: !Sub |
+            {
+              "DynamoDBTableSourceName":"global-table",
+              "DynamoDBTableTargetName":"global-table-pitr",
+              "RecoveryPointDateTime":"${RecoveryPointDateTime}",
+              "CopyAllProperties": true,
+              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/AWSResilienceHub-RestoreDDBTblFromPointInTimeSOPAssumeRole"
+            }
+          maxDuration: "PT30M"
+    Description: Restore DynamoDB to specific point in time
+    RoleArn: !Sub 'arn:aws:iam::${AWS::AccountId}:role/FISAPI-FIS-Role'
+</code></pre><p><strong>Recovery Window:</strong> DynamoDB PITR maintains 35 days of continuous backup. You can restore to <em>any second</em> within that window. Data corruption detected at 10:37:23 UTC? Restore to 10:37:22 UTC before corruption began.<p class=hidden-wisdom><em>FNORD: Manual restore procedures require documentation, calm humans, and correct AWS console clicking under pressure. SSM automation requires one command: "execute this document." Choose accordingly.</em></section><section id=chaos-experiments><h2 class=panel-caption>Monthly Chaos Engineering: FIS Experiment Portfolio</h2><p><strong>We don't trust—we verify.</strong> Monthly FIS experiments deliberately inject failures to validate recovery automation:<p><strong>🔴 Critical System Experiments (Monthly):</strong><ul><li><strong>Database Disaster:</strong> RDS primary instance termination → validates automatic failover to read replica &lt; 5 min<li><strong>API Unavailability:</strong> 100% Lambda error rate injection → validates circuit breaker activation and graceful degradation<li><strong>Network Partition:</strong> VPC subnet isolation → validates cross-AZ redundancy and connection retry logic<li><strong>Regional Impairment:</strong> DNS resolution failure → validates Route 53 health check failover to backup region</ul><p><strong>🟠 High Priority Experiments (Quarterly):</strong><ul><li><strong>Storage Outage:</strong> EBS volume unavailability → validates backup volume mount and data recovery<li><strong>CDN Degradation:</strong> CloudFront cache invalidation → validates origin server direct access<li><strong>Compute Failure:</strong> EC2 instance termination → validates Auto Scaling group replacement</ul><p><strong>Evidence Collection:</strong> Every FIS experiment generates timestamped logs (CloudWatch, VPC Flow Logs, RDS events, Route 53 health checks). Experiment artifacts prove actual recovery time vs. RTO target. Failures trigger incident response and architectural remediation.<p><strong>🧪 Example: Complete FIS Experiment CloudFormation</strong><p>Here's actual CloudFormation defining API Gateway failure injection experiment:<pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>FisDenyApigatewayLambdaTemplate:
+  Type: AWS::FIS::ExperimentTemplate
+  Properties: 
+    Actions:
+      InjectAccessDenied:  
+        ActionId: aws:ssm:start-automation-execution
+        Description: Deny API Gateway Lambda access via IAM policy
+        Parameters:
+          documentArn: !Sub 'arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:document/FISAPI-IamAttachDetach'
+          documentParameters: !Sub |
+            {
+              "TargetResourceDenyPolicyArn":"${AwsFisApiPolicyDenyApiRoleLambda}", 
+              "Duration": "${FaultInjectionExperimentDuration}", 
+              "TargetApplicationRoleName":"${ApiRole}", 
+              "AutomationAssumeRole":"arn:aws:iam::${AWS::AccountId}:role/FISAPI-SSM-Automation-Role"
+            }
+          maxDuration: "PT8M"
+    Description: Test API resilience via Lambda access denial
+    RoleArn: !Sub 'arn:aws:iam::${AWS::AccountId}:role/FISAPI-FIS-Injection-ExperimentRole'
+    StopConditions:
+      - Source: none
+    Tags: 
+      Name: DENY-API-LAMBDA
+</code></pre><p><strong>What This Tests:</strong> Does your API gracefully degrade when Lambda backend fails? Do circuit breakers activate? Do health checks detect failure and reroute traffic? Does monitoring alert within SLA? Manual testing can't answer these questions reliably. Monthly automated chaos experiments can.<p class=hidden-wisdom><em>CHAOS ILLUMINATION: Chaos engineering in production proves resilience. Chaos engineering only in staging proves nothing about production.</em></section><section id=multi-region-recovery><h2 class=panel-caption>Multi-Region Recovery: Route 53 Health Checks Save Your Ass</h2><p><strong>Single-region deployment is single point of failure.</strong> AWS regions fail. Us-east-1 has failed multiple times, taking down half the internet each time. If your architecture assumes regions never fail, you're building on wishful thinking instead of engineering.<p><strong>Route 53 Health Check-Driven Failover:</strong><pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>HealthCheckApi: 
+  Type: 'AWS::Route53::HealthCheck'
+  Properties: 
+    HealthCheckConfig: 
+      Port: 443
+      Type: HTTPS
+      EnableSNI: True
+      ResourcePath: "v1/healthcheck"
+      FullyQualifiedDomainName: "api.hack23.com"
+      RequestInterval: 10
+      FailureThreshold: 2
+
+DeliveryApiRoute53RecordSetGroup:
+  Type: AWS::Route53::RecordSetGroup
+  Properties:
+    HostedZoneName: "hack23.com."
+    RecordSets:
+      - Name: "api.hack23.com."
+        Type: A
+        SetIdentifier: apizone1a
+        HealthCheckId: !Ref HealthCheckApi
+        Weight: '50'
+        AliasTarget:
+          HostedZoneId: !Ref RestApiDomainNameRegionalHostedZoneId
+          DNSName: !Ref RestApiDomainNameRegionalDomainName
+</code></pre><p><strong>How This Works:</strong> Route 53 health checks hit your API endpoint every 10 seconds. Two consecutive failures (20 seconds) marks endpoint unhealthy. DNS automatically routes traffic to healthy region. Total failover time: &lt;30 seconds including DNS propagation.<p><strong>Critical Detail:</strong> Health checks must validate actual functionality, not just "service responds 200 OK." Our <code>/v1/healthcheck</code> endpoint validates database connectivity, Lambda execution, DynamoDB access—proving the entire stack works, not just that nginx is running.<p class=hidden-wisdom><em>Think for yourself: Your health check returning 200 OK while database is on fire is useless. Test the whole stack or test nothing.</em></section><section id=backup-validation><h2 class=panel-caption>Backup Validation: Schrödinger's Backup Problem</h2><p><strong>A backup you haven't restored is both working and broken simultaneously.</strong> It exists in quantum superposition until disaster strikes and you attempt restore, collapsing the waveform into "oh thank god" or "we're completely fucked." Testing restores is how you collapse that waveform on <em>your</em> schedule instead of disaster's schedule.<p><strong>Automated Restore Testing:</strong><p>Monthly automated restore validation proves backups actually restore. Here's Lambda function that automatically validates DynamoDB backups:<pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>import boto3
+from datetime import datetime, timedelta
+
+def validate_backup(event, context):
+    dynamodb = boto3.client('dynamodb')
+    backup = boto3.client('backup')
+    
+    # List recent backups
+    backups = dynamodb.list_backups(
+        TableName='global-table',
+        TimeRangeLowerBound=datetime.utcnow() - timedelta(days=7)
+    )['BackupSummaries']
+    
+    if not backups:
+        raise Exception("No recent backups found!")
+    
+    latest_backup = sorted(backups, key=lambda x: x['BackupCreationDateTime'])[-1]
+    
+    # Restore to test table
+    restore_response = dynamodb.restore_table_from_backup(
+        TargetTableName=f"restore-test-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+        BackupArn=latest_backup['BackupArn']
+    )
+    
+    test_table = restore_response['TableDescription']['TableName']
+    
+    # Validate restore
+    waiter = dynamodb.get_waiter('table_exists')
+    waiter.wait(TableName=test_table)
+    
+    # Verify data integrity
+    response = dynamodb.describe_table(TableName=test_table)
+    item_count = response['Table']['ItemCount']
+    
+    # Cleanup test table
+    dynamodb.delete_table(TableName=test_table)
+    
+    return {
+        'statusCode': 200,
+        'backup_arn': latest_backup['BackupArn'],
+        'restore_validated': True,
+        'item_count': item_count,
+        'test_timestamp': datetime.utcnow().isoformat()
+    }
+</code></pre><p><strong>What This Validates:</strong> Backup exists. Backup can be restored. Restored table contains data. Entire restore process completes within RTO. Automated monthly execution means you discover backup problems during testing, not during disasters.<p class=hidden-wisdom><em>FNORD exists in every untested backup procedure. You can't see it until disaster reveals it. Test restores make FNORD visible.</em></section><section id=evidence-collection><h2 class=panel-caption>Evidence Collection: Audit Trail That Survives Disasters</h2><p><strong>Recovery without evidence is recovery you can't prove.</strong> Auditors, insurers, regulators, customers—they all want proof you can actually recover. Collecting evidence during recovery validates capabilities and provides compliance documentation.<p><strong>Automated Evidence Pipeline:</strong><pre style=background:#1e1e1e;color:#d4d4d4;padding:15px;border-radius:5px;overflow-x:auto;font-size:.9em><code>import json
+import boto3
+from datetime import datetime
+
+def collect_disaster_recovery_evidence(event, context):
+    fis = boto3.client('fis')
+    ssm = boto3.client('ssm')
+    backup = boto3.client('backup')
+    s3 = boto3.client('s3')
+    
+    evidence = {
+        'collection_date': datetime.utcnow().isoformat(),
+        'fis_experiments': collect_fis_experiments(fis),
+        'ssm_executions': collect_ssm_executions(ssm),
+        'backup_jobs': collect_backup_jobs(backup),
+        'compliance_status': validate_compliance()
+    }
+    
+    # Store in immutable Glacier storage
+    s3.put_object(
+        Bucket='hack23-audit-evidence',
+        Key=f'dr-evidence/{datetime.now().strftime("%Y-%m")}.json',
+        Body=json.dumps(evidence, indent=2),
+        StorageClass='GLACIER_IR'  # Immutable storage
+    )
+    
+    return evidence
+
+def collect_fis_experiments(fis_client):
+    """Collect last 30 days FIS experiment results"""
+    experiments = fis_client.list_experiments()['experiments']
+    return [{
+        'id': exp['id'],
+        'state': exp['state'],
+        'creation_time': exp['creationTime'].isoformat(),
+        'tags': exp.get('tags', {})
+    } for exp in experiments]
+
+def validate_compliance():
+    """Validate RTO/RPO compliance"""
+    return {
+        'rto_compliance': check_rto_targets(),
+        'rpo_compliance': check_rpo_targets(),
+        'backup_coverage': check_backup_coverage(),
+        'chaos_testing': check_chaos_testing_frequency(),
+        'timestamp': datetime.utcnow().isoformat()
+    }
+</code></pre><p><strong>Evidence Retention:</strong> All disaster recovery evidence stored in immutable Glacier storage for 3 years (regulatory requirement). Evidence includes: FIS experiment logs, SSM execution outputs, backup validation results, restore test outcomes, RTO/RPO achievement metrics.<p><strong>Why Immutable Storage:</strong> Regular S3 can be deleted by compromised credentials. Glacier with vault lock cannot be deleted even by root account. Ransomware encrypting evidence? Glacier doesn't care—evidence survives.<p class=hidden-wisdom><em>Chapel Perilous moment: Discovering during audit that you can't prove your DR capabilities because evidence was deleted. Immutable storage prevents this nightmare.</em></section><section id=implementation><h2 class=panel-caption>Our Approach: Automated Recovery Through AWS-Native Tooling</h2><p>At Hack23, disaster recovery is systematic implementation leveraging AWS managed services:<p><strong>🔰 AWS Resilience Hub Policy Enforcement:</strong><ul><li><strong>Resilience Policies:</strong> Define RTO/RPO requirements per application tier mapped to <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md>Classification Framework</a>.<li><strong>Application Assessment:</strong> Continuous resilience analysis identifies gaps, missing redundancy, single points of failure.<li><strong>Deployment Gating:</strong> Production releases require "GREEN" Resilience Hub assessment status.<li><strong>Evidence Documentation:</strong> Audit trail of resilience assessments, remediation actions, compliance validation.</ul><p><strong>🧪 AWS Fault Injection Service Integration:</strong><ul><li><strong>Experiment Templates:</strong> Pre-configured chaos scenarios (instance termination, API throttling, network blackhole).<li><strong>SSM Automation:</strong> FIS experiments trigger AWS Systems Manager documents for complex failure scenarios.<li><strong>Safeguards:</strong> CloudWatch alarm integration stops experiments if critical thresholds breached.<li><strong>Validation:</strong> Automated verification of recovery time vs. RTO target with pass/fail criteria.</ul><p><strong>💾 AWS Backup Orchestration:</strong><ul><li><strong>Central Backup Plans:</strong> Automated scheduling (hourly/daily/weekly) per data classification tier.<li><strong>Immutable Vaults:</strong> Vault lock prevents backup deletion for ransomware protection. Cross-region replication to separate AWS account.<li><strong>Point-in-Time Recovery:</strong> Continuous backups enable restoration to any point within retention window.<li><strong>Backup Audit Manager:</strong> Compliance reporting validates backup coverage, retention policies, restore testing.</ul><p><strong>☁️ Multi-Region Resilience Architecture:</strong><ul><li><strong>Route 53 Health Checks:</strong> Automated DNS failover when primary region health checks fail.<li><strong>Multi-AZ Deployment:</strong> Lambda, RDS, DynamoDB deployed across availability zones for automatic failover.<li><strong>S3 Cross-Region Replication:</strong> Critical data replicated asynchronously for regional disaster recovery.<li><strong>CloudFormation StackSets:</strong> Infrastructure-as-code deployed identically across regions for consistent recovery.</ul><p>Full technical implementation including FIS experiment templates, SSM automation documents, and Resilience Hub policies in our <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Disaster_Recovery_Plan.md>public Disaster Recovery Plan</a>.</section><section id=realistic-testing><h2 class=panel-caption>Testing Under Realistic Disaster Conditions: Murphy's Law Applied</h2><p><strong>Your DR plan works perfectly in the lab. Reality isn't a lab.</strong> Real disasters happen at 3 AM when the expert is on vacation, network is degraded, half your team is unreachable, and stress makes people stupid. Testing DR under comfortable conditions proves nothing about disaster performance.<p><strong>Realistic Disaster Testing Scenarios:</strong><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🌙 3 AM Weekend Recovery Test</h3><p><strong>Scenario:</strong> Trigger recovery procedure at 3 AM Saturday. No advance notice. On-call engineer woken from sleep must execute recovery using only documentation.<p><strong>What This Tests:</strong> Can someone execute recovery while cognitively impaired? Is documentation sufficient without expert guidance? Do automated procedures work when human judgment is degraded?<p><strong>Common Failures:</strong> Documentation assumes AWS console access (2FA locked out). Procedures require VPN (VPN server in failed region). Restoration assumes specific team member (on vacation).</div><div class="card integrity-card"><div class=scanner-effect></div><h3>🔥 Degraded Network Recovery Test</h3><p><strong>Scenario:</strong> Execute recovery with intentionally degraded network (50% packet loss, 500ms latency). Simulate disaster causing network issues alongside infrastructure failure.<p><strong>What This Tests:</strong> Do recovery procedures timeout with degraded connectivity? Can you restore when AWS console is barely responsive? Do automation scripts handle network failures gracefully?<p><strong>Common Failures:</strong> AWS CLI timeouts kill recovery scripts. Console operations fail silently. CloudFormation creates resources but doesn't wait for completion.</div><div class="card availability-card"><div class=scanner-effect></div><h3>👻 Missing Person Recovery Test</h3><p><strong>Scenario:</strong> Execute recovery with designated expert "unavailable" (simulating vacation, illness, or quit). Secondary team must complete recovery without expert guidance.<p><strong>What This Tests:</strong> Is knowledge documented or tribal? Can recovery succeed without specific humans? Are credentials shared or locked in someone's 1Password?<p><strong>Common Failures:</strong> Critical passwords known only to expert. Configuration details not documented. Recovery procedure assumes expert intuition to fill gaps.</div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>💀 Partial Backup Recovery Test</h3><p><strong>Scenario:</strong> Restore from backup with 20% of data randomly corrupted. Simulate backup system partially failing during disaster.<p><strong>What This Tests:</strong> Can you detect corrupted backup before full restore? Is there fallback to older backup? Do integrity checks exist? Can you restore partial data and rebuild remainder?<p><strong>Common Failures:</strong> Discover corruption only after full restore (wasted hours). No integrity validation. No fallback strategy. Application cannot handle partial data.</div><div class="card integrity-card"><div class=scanner-effect></div><h3>🎭 Full Simulation: Everything Wrong Simultaneously</h3><p><strong>Scenario:</strong> Primary region failed. Network degraded. Expert unavailable. Backup partially corrupt. Execute recovery 3 AM weekend. This is actual disaster conditions.<p><strong>What This Tests:</strong> Everything. Your ability to survive compound failures under maximum stress with degraded resources.<p><strong>Success Criteria:</strong> Recovery achieved within 2x normal RTO (stress penalty acceptable). All critical data restored. No manual intervention requiring expert knowledge.</div></div><p><strong>Testing Philosophy:</strong> Comfortable tests prove comfortable capabilities. Stressful tests prove actual disaster resilience. We test under Murphy's Law assumptions: everything that can go wrong will go wrong, simultaneously, at worst possible time. If recovery succeeds under these conditions, it'll probably succeed during actual disasters.<p class=hidden-wisdom><em>FNORD is invisible in comfortable testing. Stress reveals FNORD. Test under stress or discover FNORD during disaster.</em></section><section id=conclusion><h2 class=panel-caption>Welcome to Chapel Perilous: Chaos As Resilience Strategy</h2><p><strong>Nothing is true. Everything is permitted.</strong> Including—especially—your entire infrastructure burning to ash while you discover your "tested" DR plan was fiction. The only question is: are you paranoid enough to have <em>actually proven</em> you can recover, or are you trusting unvalidated hope?<p>Most organizations write disaster recovery plans, file them in SharePoint next to the business continuity plan nobody's read since the consultant delivered it, and pray to the infrastructure gods they never need them. They talk about RTO/RPO targets pulled from "industry best practices" (translation: someone's ass). They mention "high availability" (translation: we pay for multi-AZ but haven't tested failover). They claim "redundant architecture" (translation: we have backups somewhere, probably). None of it is tested. None of it is proven. It's hopeful fiction masquerading as operational capability. <strong>FNORD.</strong><p>We weaponize chaos because paranoia without action is just anxiety. <strong>Monthly FIS experiments</strong> deliberately terminate our databases, inject API errors, break our network connections—because if <em>we</em> don't break it first, reality will break it later when you're on vacation. <strong>AWS Resilience Hub gates</strong> block production deployments that don't meet RTO/RPO requirements—because shipping features that can't survive failures isn't velocity, it's technical debt with catastrophic interest rates. <strong>Immutable cross-region backups</strong> protect against ransomware—because trusting that attackers won't encrypt your backups is optimism we can't afford. <strong>SSM automation documents</strong> encode recovery procedures as executable code—because manual runbooks fail spectacularly when executed by panicked humans at 3 AM. <strong>Realistic disaster testing</strong> with degraded networks, missing personnel, and corrupted backups—because testing under comfortable conditions proves nothing about disaster performance. This isn't theory. It's continuously validated operational resilience. Or as we call it: applied paranoia.<p><strong>Think for yourself.</strong> Question DR plans that have never failed over. Question RTO targets without automation sophisticated enough to meet them. Question "disaster recovery" that's really "disaster hope with extra steps." Question backup strategies that have never attempted restore under realistic conditions (degraded network, stressed personnel, corrupted data). Question health checks that return 200 OK while database is on fire. Question multi-region architecture that's never tested cross-region failover. (Spoiler: Hope isn't a strategy. It's what you do when you don't have a strategy.)<p><strong>Our competitive advantage:</strong> We demonstrate cybersecurity consulting expertise through provable recovery capabilities that survive public scrutiny. &lt;5 min RTO for critical systems with monthly chaos validation and timestamped evidence. Resilience Hub deployment gating that blocks hope-based deployments. Public DR documentation with FIS experiment evidence, SSM automation templates, CloudFormation infrastructure-as-code, Lambda validation functions, and health check configurations because obscurity isn't security. Realistic disaster testing that proves recovery works under Murphy's Law conditions. This isn't DR theater performed for auditors. It's operational proof we're paranoid enough to survive reality.<p class=hidden-wisdom><em>ULTIMATE ILLUMINATION: You are now deep in Chapel Perilous, the place where all comfortable lies dissolve. You can continue hoping your untested DR plan works while filing it under "Things We'll Never Need." Or you can embrace paranoia, deliberately break your own infrastructure monthly with FIS experiments, encode recovery as SSM automation that executes reliably under chaos, test restoration under realistic disaster conditions (degraded network, missing personnel, corrupted backups), validate multi-region failover with Route 53 health checks, prove backup integrity with automated restore validation, and collect immutable evidence that survives disasters. Your systems. Your choice. Choose evidence over hope. Choose automation over manual procedures. Choose chaos engineering over wishful thinking. Choose realistic disaster testing over comfortable lab tests. Choose survival over comfortable delusion. Are you paranoid enough yet?</em><p><strong>All hail Eris! All hail Discordia!</strong><p><em>"Think for yourself, schmuck! Untested disaster recovery is disaster theater performed for compliance auditors. We inject deliberate chaos monthly with AWS Fault Injection Service to prove recovery works, encode procedures as SSM automation that executes under pressure, test multi-region failover with Route 53 health checks, validate backup restoration automatically, and test everything under realistic disaster conditions (3 AM, degraded network, missing personnel, corrupted data)—because in the reality tunnel we inhabit, everything fails eventually, Murphy's Law compounds failures simultaneously, and hope is what you feel right before learning your DR plan was comfortable fiction. Restore or regret. Test or discover. Your infrastructure. Your disaster. Your 3 AM phone call. Choose paranoia."</em><p class=signature>— Hagbard Celine, Captain of the <em>Leif Erikson</em> 🍎 23 FNORD 5</section><section id=related><h2 class=panel-caption>Related ISMS Policies</h2><ul><li><a href=discordian-business-continuity.html>Business Continuity Plan</a> — When everything fails at once<li><a href=discordian-incident-response.html>Incident Response Plan</a> — Classification-driven response SLAs<li><a href=discordian-backup-recovery.html>Backup Recovery Policy</a> — Immutable backups that actually restore<li><a href=discordian-cybersecurity.html>Back to Main Manifesto</a> — Everything you know about security is a lie</ul></section></article></main><footer role=contentinfo aria-label="Site footer"><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>Cybersecurity Consulting<br>Gothenburg, Sweden | Remote<p>Org.nr: 5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>LinkedIn Company Page</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>CEO: James Pether Sörling</a></div><div class=footer-column><h3>Services</h3><ul><li><a href=services.html>Security Consulting</a><li><a href=services.html>Security Architecture</a><li><a href=services.html>Cloud Security</a><li><a href=services.html>DevSecOps Integration</a><li><a href=services.html>Compliance & ISMS</a></ul></div><div class=footer-column><h3>Products</h3><ul><li><a href=black-trigram-features.html>Black Trigram</a><li><a href=cia-features.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features.html>CIA Compliance Manager</a></ul></div><div class=footer-column><h3>Resources</h3><ul><li><a href=blog.html>Security Blog</a><li><a href=discordian-cybersecurity.html>🍎 Discordian Blog</a><li><a href=cia-triad-faq.html>CIA Triad FAQ</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>Public ISMS</a><li><a href=sitemap.html>Sitemap</a></ul></div><div class=footer-column><h3>Company</h3><ul><li><a href=why-hack23.html>About Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>Security Policy</a><li><a href=SECURITY.md>Report Security Issue</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>GitHub Organization</a><li><a href=accessibility-statement.html>Accessibility</a></ul></div></div><div class=footer-discordian><p class=discordian-authors><strong>✍️ Blog Authors:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target=_blank>Hagbard Celine</a> (Philosophy & Vision) & <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target=_blank>Simon Moon</a> (Architecture & Patterns)<p class=discordian-implementation><strong>💻 Implementation Reality:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target=_blank>George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in <a href=blog-george-dorn-cia-code.html>CIA Architecture</a>, <a href=blog-george-dorn-trigram-code.html>Black Trigram Combat</a>, and <a href=blog.html#george-dorn-developer-chronicles>Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.</div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB. All rights reserved.<p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> | <a href=index_no.html lang=no>Norsk</a></div></footer>

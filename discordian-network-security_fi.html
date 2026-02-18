@@ -1,0 +1,80 @@
+<!doctype html><html lang=fi><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Verkkoturvallisuus | Zero Trust Cloud-arkkitehtuuri | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="Zero-trust AWS-verkko: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Moniregionaalinen (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+."><meta name=twitter:description content="Zero-trust AWS-verkko: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Moniregionaalinen (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+."><meta name=keywords content="network security, zero trust network, firewall, perimeter security, assume breach, network segmentation"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Verkkoturvallisuus: Perimetri on kuollut, kauan eläköön perimetri"><meta property=og:description content="Perimetri hajosi vuonna 2010. Kyseenalaista auktoriteetti palomuuridogman yli. Oleta murtautuminen, suunnittele sen mukaan."><meta property=og:locale content=fi_FI><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-network-security_fi.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Security Blog"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=alternate hreflang=ar href=https://hack23.com/discordian-network-security_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-network-security_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-network-security_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-network-security_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-network-security_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-network-security_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-network-security.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-network-security_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-network-security_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-network-security_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-network-security_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-network-security_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-network-security_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-network-security_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-network-security_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-network-security_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-network-security_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-network-security_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-network-security_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-network-security_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-network-security_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-network-security_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-network-security_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-network-security_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-network-security_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-network-security_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-network-security_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-network-security_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-network-security.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Verkkoturvallisuus: Perimetri on kuollut, kauan eläköön perimetri",
+      "description": "Zero-trust AWS-verkko: CloudFront+WAF, GuardDuty, Security Hub, VPC Flow Logs. Moniregionaalinen (eu-west-1, eu-central-1), DNSSEC, TLS 1.2+.",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Cybersecurity Expert",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-network-security_fi.html"
+      },
+      "keywords": "network security, zero trust, firewall, ISMS",
+      "articleSection": "Information Security",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_fi.html#blog",
+        "name": "Hack23 Security Blog"
+      },
+      "inLanguage": "fi",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-network-security_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://hack23.com/index_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogi",
+          "item": "https://hack23.com/blog_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Verkkoturvallisuus",
+          "item": "https://hack23.com/discordian-network-security_fi.html"
+        }
+      ]
+    }
+  ]
+}</script><nav role=navigation aria-label="Main navigation"><a href=index_fi.html>Etusivu</a> / <a href=blog_fi.html>Blogi</a> / <span aria-current=page>Verkkoturvallisuus</span></nav><article><h1>Verkkoturvallisuus: Perimetri on kuollut, kauan eläköön perimetri</h1><p><em>Ajattele itse, typerys! Verkkoturvallisuus oli ennen yksinkertaista: kova kuori, pehmeä sisältä. Palomuuri pitää pahikset ulkona, kaikki sisällä on luotettavaa. Se oli aina fantasiaa, mutta se oli mukavaa.</em><p>Hack23:n lähestymistapa verkkoturvallisuuteen perustuu zero-trust-periaatteisiin, jotka on toteutettu AWS-pilvi-infrastruktuurin kautta. Oletamme, että perimetri on jo vaarantunut, ja siksi suunnittelemme turvallisuutemme kerroksittain.<h2>AWS Zero-Trust Arkkitehtuuri</h2><p>Verkkoturvallisuutemme on toteutettu seuraavilla:<ul><li><strong>CloudFront + WAF</strong>: DDoS-suojaus ja sovelluskerroksen suodatus<li><strong>GuardDuty</strong>: Uhkien havaitseminen VPC Flow Logien, DNS-lokien ja CloudTrail-tapahtumien perusteella<li><strong>Security Hub</strong>: Keskitetty turvallisuusvalvonta ja vaatimustenmukaisuus<li><strong>VPC Flow Logs</strong>: Verkkoliikenteen analyysi poikkeavuuksien havaitsemiseksi<li><strong>Moniregionaalinen käyttöönotto</strong>: eu-west-1 (ensisijainen), eu-central-1 (varmuuskopio)</ul><h2>Avainperiaatteet</h2><ul><li><strong>Oleta murtautuminen</strong>: Suunnittele olettaen, että hyökkääjät ovat jo sisällä<li><strong>Zero trust</strong>: Älä luota mihinkään, vahvista kaikki<li><strong>Segmentointi</strong>: Eristä järjestelmät ja palvelut<li><strong>Salaus</strong>: TLS 1.2+ kaikelle liikenteelle<li><strong>Valvonta</strong>: Reaaliaikainen uhkien havaitseminen</ul><p>Yksityiskohtaisemman tiedon saamiseksi katso tämän politiikan <a href=discordian-network-security.html hreflang=en>englanninkielinen versio</a>.<hr><h2>ISO 27001:2022 Mapping</h2><p><strong>A.8.20</strong>: Network Security | <strong>A.8.21</strong>: Security of network services | <strong>A.8.22</strong>: Segregation of networks<p><strong>NIST CSF 2.0</strong>: PR.AC-5 (Network segmentation), DE.CM-1 (Network monitoring)<p><strong>CIS Controls v8.1</strong>: 12 (Network Infrastructure Management), 13 (Network Monitoring and Defense)</article><footer><p><strong>Language:</strong> <a href=discordian-network-security.html hreflang=en lang=en>English</a> | <a href=discordian-network-security_da.html hreflang=da lang=da>Dansk</a> | <a href=discordian-network-security_fi.html hreflang=fi lang=fi>Suomi</a> | <a href=discordian-network-security_no.html hreflang=nb lang=nb>Norsk</a></footer>

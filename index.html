@@ -1,0 +1,928 @@
+<!doctype html><html lang=en><title>Cybersecurity Consulting Sweden | Public ISMS | Hack23</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{--primary-color:#006633;--primary-light:#007744;--accent-color:#008838;--bg-color:#f8f9fa;--text-color:#1a1a1a;--text-secondary:#4a4a4a;--button-bg:#007744;--button-text:#fff;--spacing-md:1rem;--spacing-lg:1.5rem;--spacing-xl:2rem;--border-radius:8px;--border-radius-lg:12px}@media (prefers-color-scheme:dark){:root{--primary-color:#00cc66;--primary-light:#00ff88;--accent-color:#33eeff;--bg-color:#001a1a;--text-color:#f0f0f0;--text-secondary:#aaaaaa;--button-bg:#2188ff;--button-text:#e0e0e0}}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:var(--text-color);background-color:var(--bg-color);max-width:1200px;margin:0 auto;padding:var(--spacing-xl);font-size:16px;-webkit-font-smoothing:antialiased}header{text-align:center;margin-bottom:var(--spacing-xl);padding:var(--spacing-xl) var(--spacing-lg);border-radius:var(--border-radius-lg);min-height:400px;contain:layout}h1{margin-top:0;font-size:2.5rem;line-height:1.2;color:var(--primary-color);font-weight:600}.header-subtitle{display:block;font-size:1.1rem;font-weight:400;margin-top:.5rem;color:var(--text-secondary)}.hero-tagline{font-size:1.25rem;line-height:1.6;color:var(--text-color);margin:var(--spacing-lg) auto;max-width:800px;font-weight:500}.hero-subtitle{font-size:1rem;line-height:1.6;color:var(--text-secondary);margin:var(--spacing-md) auto var(--spacing-xl);max-width:700px}.hero-cta{display:flex;gap:var(--spacing-md);flex-wrap:wrap;justify-content:center;margin:var(--spacing-xl) 0;min-height:56px}.btn-primary-large,.btn-secondary{display:inline-block;padding:1rem 2rem;border-radius:var(--border-radius);text-decoration:none;font-weight:600;font-size:1rem;transition:all .3s cubic-bezier(.4, 0, .2, 1);min-height:48px;min-width:48px;line-height:1.5}.btn-primary-large{background:var(--button-bg);color:var(--button-text);box-shadow:0 4px 12px rgba(0,119,68,.3);border:1px solid transparent}.btn-primary-large:hover{background:var(--primary-color);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,119,68,.4)}.btn-secondary{background:0 0;color:var(--primary-color);border:2px solid var(--primary-color)}.btn-secondary:hover{background:var(--primary-color);color:#fff}.logo{width:80px;height:80px;border-radius:var(--border-radius-lg);box-shadow:0 4px 12px rgba(0,71,171,.15)}.logo-container{margin-bottom:var(--spacing-lg)}</style><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preconnect href=https://img.shields.io><link rel=dns-prefetch href=https://hack23.github.io><link rel=preload href=cia-icon-140.webp as=image type=image/webp fetchpriority=high><link rel=preload href=styles.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=styles.css></noscript><link rel=canonical href=https://hack23.com/ ><meta name=description content="Premium cybersecurity consulting in Sweden. Nation's only fully public ISMS. ISO 27001, GDPR/NIS2, AWS security. CISSP/CISM certified. Gothenburg."><meta name=keywords content="cybersecurity consulting Sweden, public ISMS, ISO 27001, GDPR compliance, NIS2, DevSecOps, AWS security, CISSP consultant, security architecture, cloud security, Gothenburg cybersecurity, compliance automation, zero trust"><meta name=robots content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=author content="James Pether Sörling, CISSP, CISM"><meta property=og:title content="Hack23 AB | Premium Cybersecurity Consulting Sweden"><meta property=og:description content="Sweden's only fully public ISMS. Expert ISO 27001, GDPR/NIS2, AWS security consulting. CISSP/CISM certified. 30 plus years experience. Gothenburg-based."><meta property=og:locale content=en_US><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=website><meta property=og:url content=https://hack23.com/ ><meta property=og:image content=cia-icon-140.webp><meta property=og:image:width content=140><meta property=og:image:height content=140><meta property=og:site_name content="Hack23 AB - Premium Cybersecurity Consulting"><meta property=og:image:alt content="Hack23 AB - Cybersecurity Excellence Through Transparency"><meta property=og:updated_time content=2025-11-07T00:00:00Z><meta name=twitter:card content=summary_large_image><meta name=twitter:title content="Hack23 AB | Premium Cybersecurity Consulting Sweden"><meta name=twitter:description content="Sweden's only public ISMS. ISO 27001, GDPR/NIS2, AWS security. CISSP/CISM certified. Practical security that accelerates innovation."><meta name=twitter:image content=cia-icon-140.webp><meta name=twitter:image:alt content="Hack23 AB - Security Excellence Through Transparency"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=preload href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Orbitron:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Orbitron:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel=stylesheet></noscript><meta name=application-name content="Hack23 AB"><meta name=theme-color content=#0066CC><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "name": "Hack23 AB",
+      "alternateName": "Hack23",
+      "slogan": "Security Excellence Through Transparent Innovation",
+      "legalName": "Hack23 AB",
+      "foundingDate": "2025-01-01",
+      "description": "Cybersecurity consulting firm operationalizing security excellence through radical transparency. Public ISMS, compliance automation, and security-enabled innovation across four business lines: cybersecurity consulting, CIA Compliance Manager, Citizen Intelligence Agency, and Black Trigram educational gaming.",
+      "industry": [
+        "Information Security",
+        "Cybersecurity Consulting",
+        "Compliance Automation",
+        "Game Development"
+      ],
+      "knowsAbout": [
+        "Information Security Management Systems",
+        "Public ISMS Sweden",
+        "Cybersecurity Consulting",
+        "ISO 27001 Implementation",
+        "CIA Triad Assessment",
+        "Compliance Automation",
+        "Security Architecture",
+        "Transparent Operations",
+        "Risk Management",
+        "Open Source Security",
+        "OSINT Methodology",
+        "Parliamentary Monitoring",
+        "Political Transparency",
+        "Swedish Government Analysis",
+        "DevSecOps",
+        "Cloud Security Architecture",
+        "OSPO Management",
+        "AWS Security",
+        "Enterprise Security Consulting",
+        "Supply Chain Security",
+        "SLSA Level 3 Compliance",
+        "Container Security",
+        "Serverless Security",
+        "Zero Trust Architecture",
+        "Security Culture Training",
+        "Korean Martial Arts Gaming",
+        "Cultural Preservation Technology"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Gothenburg",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Sweden"
+          }
+        },
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Israel"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "CISSP - Certified Information Systems Security Professional",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "(ISC)²"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "CISM - Certified Information Security Manager",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "ISACA"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "AWS Certified Security - Specialty",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Amazon Web Services"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "AWS Certified Solutions Architect - Professional",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Amazon Web Services"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressRegion": "Västra Götaland",
+        "addressCountry": "SE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "57.7089",
+        "longitude": "11.9746"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "00:00",
+          "closes": "00:00",
+          "description": "By appointment only"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "English",
+          "Swedish"
+        ]
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "givenName": "James Pether",
+        "familyName": "Sörling",
+        "additionalName": "pethers",
+        "jobTitle": "CEO / Founder",
+        "email": "pether@hack23.com",
+        "url": "https://www.linkedin.com/in/jamessorling/",
+        "description": "Cybersecurity leader with 20+ years of experience in information security, cloud architecture, and open source development. Founder of Hack23 AB, creator of CIA Compliance Manager, Citizen Intelligence Agency, and Black Trigram martial arts game.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Chalmers University of Technology"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Certification",
+            "name": "CISSP - Certified Information Systems Security Professional"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Certification",
+            "name": "CISM - Certified Information Security Manager"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Certification",
+            "name": "AWS Certified Security - Specialty"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional Certification",
+            "name": "AWS Certified Solutions Architect - Professional"
+          }
+        ],
+        "knowsAbout": [
+          "Cybersecurity",
+          "Cloud Security",
+          "Information Security Management",
+          "ISO 27001",
+          "NIST Cybersecurity Framework",
+          "AWS Security",
+          "DevSecOps",
+          "Open Source Security",
+          "Game Development",
+          "Korean Martial Arts",
+          "Taekwondo"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23",
+          "https://github.com/pethers",
+          "https://www.openhub.net/accounts/pether",
+          "https://slashdot.org/~pether",
+          "https://openprofile.dev/profile/pether"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/",
+        "https://blacktrigram.com",
+        "https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I"
+      ],
+      "hasPart": [
+        {
+          "@id": "https://blacktrigram.com/#blacktrigram"
+        },
+        {
+          "@id": "https://hack23.com/#cia-compliance-manager"
+        },
+        {
+          "@id": "https://hack23.com/#citizen-intelligence-agency"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@id": "https://hack23.com/services.html#service-security-architecture"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-cloud-security"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-secure-development"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-compliance"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-opensource-security"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-security-culture"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hack23.com/#website",
+      "url": "https://hack23.com/",
+      "name": "Hack23 AB",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://hack23.com/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://hack23.com/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "description": "Premier Swedish cybersecurity consulting with complete transparency. Public ISMS, ISO 27001 expertise, AWS security, and open-source intelligence."
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://blacktrigram.com/#blacktrigram",
+      "name": "Black Trigram",
+      "alternateName": [
+        "흑괘",
+        "Black Trigram Game"
+      ],
+      "url": "https://blacktrigram.com",
+      "downloadUrl": "https://github.com/Hack23/blacktrigram/releases",
+      "codeRepository": "https://github.com/Hack23/blacktrigram",
+      "image": "https://hack23.com/black-trigram-140.webp",
+      "screenshot": "https://hack23.com/black-trigram-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "Revolutionary 3D precision combat simulator inspired by traditional Korean martial arts focusing on anatomical targeting, realistic physics, and cultural preservation. Features 70 vital points, 5 combat archetypes, and authentic Taekkyeon/Hapkido techniques.",
+      "genre": [
+        "Fighting",
+        "Simulation",
+        "Educational",
+        "Cultural"
+      ],
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Fighting Game",
+      "operatingSystem": "Cross-platform",
+      "gamePlatform": [
+        "PC",
+        "Cross-platform",
+        "Web Browser"
+      ],
+      "contentRating": "Teen",
+      "programmingLanguage": [
+        "C#"
+      ],
+      "softwareRequirements": "Unity Engine",
+      "softwareVersion": "latest",
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "ko"
+      ],
+      "educationalUse": "Korean martial arts education and cultural preservation",
+      "teaches": [
+        "Korean Traditional Martial Arts",
+        "Taekkyeon Techniques",
+        "Hapkido Joint Locks",
+        "Cultural Heritage",
+        "Anatomical Vital Points",
+        "I Ching Principles"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "Martial Arts Enthusiasts",
+          "Cultural Heritage Students",
+          "Gamers",
+          "Korean Culture Learners"
+        ]
+      },
+      "playMode": [
+        "SinglePlayer",
+        "MultiPlayer"
+      ],
+      "accessibilityFeature": [
+        "Customizable controls",
+        "Visual and audio feedback",
+        "Educational tooltips for martial arts techniques",
+        "Adjustable difficulty settings"
+      ],
+      "featureList": [
+        "70 Anatomical Vital Points System",
+        "5 Combat Archetypes (Musa, Amsalja, Hacker, Jeongbo, Jojik)",
+        "Authentic Korean Martial Arts Techniques",
+        "Physics-Based Combat Simulation",
+        "Educational Gameplay",
+        "Cultural Preservation Focus",
+        "Open Source Development",
+        "Cross-platform Deployment",
+        "SLSA Level 3 Supply Chain Security"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source Game"
+      },
+      "isAccessibleForFree": true,
+      "keywords": "Black Trigram, Korean martial arts game, Taekkyeon, Hapkido, combat simulator, vital points, educational gaming, cultural preservation, Unity game, C#, open source game",
+      "sameAs": [
+        "https://github.com/Hack23/blacktrigram"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hack23.com/#cia-compliance-manager",
+      "name": "CIA Compliance Manager",
+      "alternateName": "Confidentiality Integrity Availability Compliance Manager",
+      "applicationCategory": "SecurityApplication",
+      "applicationSubCategory": "Enterprise Security Management",
+      "operatingSystem": "Cross-platform",
+      "softwareVersion": "latest",
+      "url": "https://ciacompliancemanager.com/",
+      "downloadUrl": "https://github.com/Hack23/cia-compliance-manager/releases",
+      "codeRepository": "https://github.com/Hack23/cia-compliance-manager",
+      "image": "https://hack23.com/cia-icon-140.webp",
+      "screenshot": "https://hack23.com/cia-icon-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "Advanced security assessment platform covering confidentiality, integrity and availability with business impact analysis, cost estimation, and compliance mapping to NIST, ISO 27001, GDPR, HIPAA, SOC2 frameworks.",
+      "featureList": [
+        "CIA Triad Security Assessment",
+        "Business Impact Analysis",
+        "NIST Framework Compliance Mapping",
+        "ISO 27001 Controls Implementation",
+        "GDPR Data Protection Assessment",
+        "HIPAA Compliance Mapping",
+        "SOC2 Controls Mapping",
+        "Risk Quantification & Reporting",
+        "Automated Compliance Reports",
+        "Security Control Gap Analysis"
+      ],
+      "programmingLanguage": [
+        "Java",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "runtimePlatform": "Java",
+      "softwareRequirements": "Java 11+, Maven",
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Chief Information Security Officers (CISOs)"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Compliance Officers"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "IT Security Managers"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Risk Management Professionals"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Security Auditors"
+        }
+      ],
+      "teaches": [
+        "CIA Triad Principles",
+        "NIST Cybersecurity Framework",
+        "ISO 27001 Controls",
+        "GDPR Compliance",
+        "HIPAA Security Requirements",
+        "SOC2 Trust Principles",
+        "Business Impact Analysis",
+        "Security Risk Management"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source Security Tool"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "keywords": "CIA Triad, security assessment, compliance management, NIST, ISO 27001, GDPR, HIPAA, SOC2, risk management",
+      "sameAs": [
+        "https://github.com/Hack23/cia-compliance-manager"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://hack23.com/#citizen-intelligence-agency",
+      "name": "Citizen Intelligence Agency",
+      "alternateName": "CIA Political Transparency Platform",
+      "applicationCategory": "DataVisualizationApplication",
+      "applicationSubCategory": "Political Intelligence Platform",
+      "operatingSystem": "Cross-platform",
+      "url": "https://github.com/Hack23/cia",
+      "downloadUrl": "https://github.com/Hack23/cia/releases",
+      "codeRepository": "https://github.com/Hack23/cia",
+      "image": "cia-logo.png",
+      "screenshot": "https://hack23.com/cia-icon-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "Open-source intelligence and political transparency platform providing data-driven governance insights, parliamentary monitoring, democratic accountability metrics, and real-time political analysis for Swedish democracy.",
+      "featureList": [
+        "Swedish Parliamentary Monitoring (Riksdag)",
+        "Political Decision Tracking",
+        "Governance Metrics & Rankings",
+        "Democratic Accountability Analysis",
+        "Open Data Integration (World Bank, Swedish Government)",
+        "Political Trend Visualization",
+        "Voting Pattern Analysis",
+        "Party Performance Metrics",
+        "Minister Activity Tracking",
+        "Committee Work Analysis"
+      ],
+      "programmingLanguage": [
+        "Java",
+        "JavaScript"
+      ],
+      "runtimePlatform": "Java",
+      "softwareRequirements": "Java 11+, PostgreSQL",
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "Citizens"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Journalists"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Researchers"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Policy Analysts"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Political Scientists"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "Democracy Advocates"
+        }
+      ],
+      "teaches": [
+        "Parliamentary Process Analysis",
+        "Democratic Accountability Metrics",
+        "Political Decision Tracking",
+        "OSINT Methodology",
+        "Swedish Governance System",
+        "Data-Driven Political Analysis",
+        "Open Government Data Usage"
+      ],
+      "browserRequirements": "Requires JavaScript. Recommended: Chrome, Firefox, Safari, Edge (latest versions)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "Open Source Political Intelligence Platform"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "sv"
+      ],
+      "isAccessibleForFree": true,
+      "keywords": "political transparency, Swedish parliament, Riksdag monitoring, democratic accountability, OSINT, open government data, political analysis",
+      "sameAs": [
+        "https://cia.sourceforge.io/",
+        "https://github.com/Hack23/cia"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-security-architecture",
+      "serviceType": "Security Architecture & Strategy",
+      "name": "Security Architecture & Strategy",
+      "description": "Enterprise security architecture design, risk assessment and management, security strategy development, and governance framework design. We help organizations build robust security foundations aligned with business objectives.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "Security architecture documentation, risk assessment reports, security strategy roadmap"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-cloud-security",
+      "serviceType": "Cloud Security & DevSecOps",
+      "name": "Cloud Security & DevSecOps",
+      "description": "AWS security assessment and architecture, DevSecOps integration, infrastructure as code security, container and serverless security. Specializing in AWS with certified expertise.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "Cloud security architecture, DevSecOps pipeline implementation, infrastructure security assessment"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-secure-development",
+      "serviceType": "Secure Development & Code Quality",
+      "name": "Secure Development & Code Quality",
+      "description": "Secure SDLC implementation, CI/CD security integration, code quality and security analysis, supply chain security with SLSA Level 3 compliance. Integrating security seamlessly into development workflows.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "Secure SDLC framework, automated security testing, supply chain security implementation"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-compliance",
+      "serviceType": "Compliance & Regulatory",
+      "name": "Compliance & Regulatory",
+      "description": "GDPR, NIS2, ISO 27001 implementation, ISMS design and implementation, AI governance, and audit preparation. Demonstrating compliance through our own public ISMS.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "ISMS documentation, compliance framework implementation, audit preparation materials"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-opensource-security",
+      "serviceType": "Open Source Security",
+      "name": "Open Source Security",
+      "description": "OSPO establishment and management, vulnerability management, security tool development, and community engagement. Leveraging our experience with multiple open-source security projects.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "OSPO strategy, vulnerability management process, security tooling"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-security-culture",
+      "serviceType": "Security Culture & Training",
+      "name": "Security Culture & Training",
+      "description": "Security awareness programs, developer security training, leadership security briefings, and incident response training. Building security-conscious organizations through education and culture change.",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        {
+          "@type": "Place",
+          "name": "Nordic Region"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        }
+      ],
+      "availableLanguage": [
+        "English",
+        "Swedish"
+      ],
+      "serviceOutput": "Training materials, security awareness program, incident response playbooks"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/#homepage",
+      "url": "https://hack23.com/",
+      "name": "Hack23 AB | Open ISMS Transparency & Cybersecurity Consulting",
+      "isPartOf": {
+        "@id": "https://hack23.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://blacktrigram.com/#blacktrigram"
+        }
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "cia-icon-140.webp"
+      },
+      "inLanguage": "en",
+      "breadcrumb": {
+        "@id": "https://hack23.com/#breadcrumb"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-11-17"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hack23.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes Hack23 different from other cybersecurity consultancies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hack23 AB operates Sweden's only fully public ISMS (Information Security Management System), with all policies, threat models, and security documentation available on GitHub. This radical transparency demonstrates our expertise while providing clients with proven, battle-tested frameworks. We combine 30 plus years of hands-on experience with CISSP/CISM certifications and current practitioner status (Application Security Officer at Stena Group IT), ensuring practical, implementable security advice—not just theory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does cybersecurity consulting cost in Sweden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cybersecurity consulting costs vary by engagement scope. Typical ranges: (1) Security Assessment: €5,000-€15,000 for 2-4 week comprehensive review; (2) ISO 27001 Implementation: €15,000-€30,000 for 3-6 month project; (3) DevSecOps Integration: €10,000-€25,000 for CI/CD security setup; (4) Hourly Consulting: €150-€250/hour for advisory services. We provide transparent pricing with no hidden fees. Contact us for a customized quote based on your organization's needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work remotely or require on-site presence in Gothenburg?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer both remote and in-person cybersecurity consulting. Remote services are available globally via video conferencing, screen sharing, and collaborative documentation tools—ideal for distributed teams and cost-effective engagements. In-person consulting is available in Gothenburg, Sweden, for clients preferring face-to-face interaction, hands-on workshops, or sensitive discussions requiring physical presence. Hybrid models combining remote and occasional on-site visits work well for many clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a public ISMS and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A public ISMS (Information Security Management System) is an open, transparent framework where security policies, procedures, threat models, and risk assessments are publicly available—unlike traditional ISMSs kept confidential. Hack23's public ISMS on GitHub (https://github.com/Hack23/ISMS-PUBLIC) demonstrates our security expertise through actual implementation, not just claims. This transparency: (1) Proves we follow our own recommendations, (2) Allows prospects to evaluate our methodology before engagement, (3) Provides free templates and examples for the security community, (4) Demonstrates confidence in our security posture. It's security through transparency, not security through obscurity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications do Hack23 consultants have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hack23 consultants hold industry-recognized certifications: (1) CISSP (Certified Information Systems Security Professional) - global standard for security expertise, (2) CISM (Certified Information Security Manager) - management-focused security certification, (3) AWS Certified Security - Specialty - cloud security expertise, (4) AWS Certified Solutions Architect - Professional - infrastructure design. Beyond certifications, our team brings 30 plus years of hands-on experience, current practitioner roles (Application Security Officer positions), and active open-source security contributions. We believe practical experience and continuous learning exceeds certifications alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an ISO 27001 implementation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISO 27001 implementation typically takes 3-6 months for small-to-medium Swedish organizations (10-50 employees). Timeline breakdown: (1) Scoping & Gap Analysis: 2-4 weeks, (2) ISMS Design & Risk Assessment: 3-4 weeks, (3) Control Implementation: 8-12 weeks, (4) Internal Audit & Management Review: 2-3 weeks, (5) Certification Audit Preparation: 1-2 weeks. Larger organizations (50 plus employees) may require 6-12 months. Factors affecting timeline: existing security maturity, resource availability, organizational complexity, and consultant involvement. Our public ISMS provides proven templates to accelerate implementation by 30-40%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hack23 serves diverse industries with cybersecurity consulting: (1) Technology & SaaS companies - DevSecOps, cloud security, secure SDLC, (2) Financial Services - GDPR, PSD2, MAS cybersecurity compliance, (3) Healthcare & Pharmaceuticals - ISO 27001, GDPR, patient data protection, (4) Manufacturing & Industrial - OT security, supply chain risk, ISO 27001, (5) E-commerce & Retail - PCI DSS, data protection, fraud prevention, (6) Professional Services - client data security, compliance frameworks. Industry-agnostic security principles apply universally, with sector-specific regulatory knowledge where needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with GDPR and NIS2 compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Hack23 provides comprehensive GDPR (General Data Protection Regulation) and NIS2 (Network and Information Security Directive 2) compliance consulting. GDPR services: data protection impact assessments (DPIA), privacy-by-design integration, consent management, data subject rights implementation, breach notification procedures. NIS2 services: essential/important entity classification, risk management frameworks, incident reporting procedures (24-hour notification), supply chain security, governance structure alignment. We integrate GDPR/NIS2 requirements into ISO 27001 implementations for unified compliance management. Practical, implementable solutions—not checkbox compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your approach to DevSecOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our DevSecOps approach: 'Security that enables, not blocks, innovation.' We integrate security into CI/CD pipelines without slowing development velocity. Key elements: (1) Automated Security Scanning: SAST/DAST/SCA tools in GitHub Actions/GitLab CI, (2) Infrastructure as Code Security: Terraform/CloudFormation scanning, policy-as-code, (3) Container Security: Image scanning, runtime protection, Kubernetes security policies, (4) Secret Management: HashiCorp Vault integration, no hardcoded credentials, (5) Security Gates: Non-blocking for low/medium findings, blocking for critical/high, (6) Developer Training: Security champions program, secure coding workshops. Result: faster, more secure releases with measurable risk reduction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide security architecture reviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Hack23 conducts comprehensive security architecture reviews covering: (1) Cloud Architecture: AWS/Azure/GCP security assessment, IAM review, network segmentation, secure configuration, (2) Application Architecture: Threat modeling (STRIDE analysis), authentication/authorization design, data flow security, API security, (3) Infrastructure Architecture: Zero-trust principles, defense-in-depth, attack surface analysis, security monitoring, (4) Compliance Alignment: ISO 27001, NIST CSF, CIS Controls mapping. Deliverables: detailed security architecture document, threat model, prioritized remediation roadmap, and implementation guidance. Reviews typically take 2-4 weeks depending on complexity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in a security consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Hack23 security consultation includes: (1) Initial Assessment: 30-60 minute discovery call to understand your security needs, challenges, and objectives, (2) Gap Analysis: Review of current security posture against industry standards (ISO 27001, NIST, CIS), (3) Threat Landscape: Identification of relevant threats specific to your industry and technology stack, (4) Recommendations: Prioritized, actionable security improvements with cost/benefit analysis, (5) Roadmap: Implementation timeline with milestones and resource requirements, (6) Follow-Up: Written report with findings and next steps. Free initial consultations available for qualified prospects. No obligation to proceed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started with Hack23?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Getting started is simple: (1) Contact Us: Email info@hack23.com, (2) Initial Call: 30-minute discovery call to discuss your security needs (free, no obligation), (3) Proposal: Custom proposal outlining scope, timeline, deliverables, and pricing, (4) Kickoff: Once approved, we begin with stakeholder interviews and documentation review, (5) Execution: Regular check-ins, transparent communication, and deliverable reviews throughout engagement. Typical response time: 24-48 hours for initial inquiry, 1 week for proposal delivery. Ready to improve your security posture? Reach out today."
+          }
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/index_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/index_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/index_ar.html><link rel=alternate hreflang=da href=https://hack23.com/index_da.html><link rel=alternate hreflang=de href=https://hack23.com/index_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/index_de.html><link rel=alternate hreflang=en href=https://hack23.com/index.html><link rel=alternate hreflang=es href=https://hack23.com/index_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/index_es.html><link rel=alternate hreflang=fi href=https://hack23.com/index_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/index_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/index_fr.html><link rel=alternate hreflang=he href=https://hack23.com/index_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/index_he.html><link rel=alternate hreflang=ja href=https://hack23.com/index_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/index_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/index_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/index_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/index_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/index_nl.html><link rel=alternate hreflang=no href=https://hack23.com/index_no.html><link rel=alternate hreflang=nb href=https://hack23.com/index_no.html><link rel=alternate hreflang=sv href=https://hack23.com/index_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/index_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/index_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/index.html><a href=#main-content class=skip-link>Skip to main content</a><nav class=sticky-nav role=navigation aria-label="Main navigation"><div class=nav-container><a href=index.html class=nav-logo aria-label="Hack23 AB Home"><span>Hack23</span> </a><button class=nav-toggle aria-label="Open navigation menu" aria-expanded=false aria-controls=nav-menu><span></span> <span></span> <span></span></button><ul class=nav-menu id=nav-menu aria-label="Navigation menu" aria-hidden=true><li><a href=why-hack23.html tabindex=-1>Why Hack23</a><li><a href=#security-services tabindex=-1>Services</a><li><a href=#products tabindex=-1>Products</a><li><a href=blog.html tabindex=-1>Blog</a><li><a href=#faq tabindex=-1>FAQ</a><li><a href=#contact class=btn-nav tabindex=-1>Contact</a></ul></div></nav><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item aria-current=page>Home</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="Hack23 AB - Premium Cybersecurity Consulting Sweden" class=logo width=80 height=80 fetchpriority=high decoding=sync></div><h1><span aria-hidden=true>🔐 </span>Hack23 AB <span class=header-subtitle>Premium Cybersecurity Consulting | Sweden's Only Public ISMS</span></h1><p class=hero-tagline>Security excellence through radical transparency. Expert ISO 27001, GDPR/NIS2, and AWS security consulting in Sweden.<p class=hero-subtitle>30 plus years expertise • CISSP/CISM certified • ISO 27001 proven • Gothenburg-based<div class=hero-cta><a href=services.html class=btn-primary-large>Explore Services</a> <a href=https://github.com/Hack23/ISMS-PUBLIC class=btn-secondary>View Public ISMS</a></div><details class=header-intro-details><summary>📖 Learn More About Hack23 AB</summary><div class=header-intro><p class=intro-tagline>At <strong>Hack23 AB</strong>, transparency operationalizes trust: every security control, risk assessment, and compliance decision is publicly documented through <strong>Sweden's only fully public ISMS</strong>, creating unprecedented credibility in cybersecurity consulting.<p class=intro-overview><strong>Founded in 2025</strong> and based in <strong>Gothenburg, Sweden</strong>, we deliver expert security services across four integrated business lines:<div class=business-lines><div class=business-line><strong>1. Cybersecurity Consulting</strong> <span>ISO 27001, GDPR, NIS2, AWS security architecture, DevSecOps integration</span></div><div class=business-line><strong>2. CIA Compliance Manager</strong> <span>Automated CIA Triad assessments with NIST/ISO 27001/GDPR/HIPAA/SOC2 compliance mapping</span></div><div class=business-line><strong>3. Citizen Intelligence Agency</strong> <span>Swedish parliamentary transparency and democratic accountability platform</span></div><div class=business-line><strong>4. Black Trigram</strong> <span>Educational Korean martial arts game demonstrating security best practices</span></div></div><p class=intro-leadership>Led by <strong>James Pether Sörling (Certified Information Systems Security Professional (CISSP), Certified Information Security Manager (CISM), AWS Security Specialty)</strong> with <strong>30 plus years of experience</strong>, Hack23 proves that security accelerates—rather than blocks—innovation when built on radical transparency.</div></details><div class=key-badges><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge alt="OpenSSF Scorecard" width=150 height=20> </a><a href=https://github.com/Hack23/homepage/actions/workflows/main.yml title="Deploy Status"><img src=https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg alt=Deploy width=100 height=20> </a><a href=https://github.com/Hack23 title="GitHub Profile"><img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub Hack23" width=120 height=20></a></div><details class=badge-showcase><summary><h2>🏆 Security &amp; Quality Evidence</h2><span class=summary-description>View our comprehensive security validation and quality metrics (15 plus badges)</span></summary><div class=badge-grid><div class=badge-category><h4>🔒 Security</h4><div class=badges><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge alt="OpenSSF Scorecard" width=150 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/scorecards.yml title="Scorecards Supply-chain Security"><img src=https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg alt=Scorecards width=120 height=20 loading=lazy> </a><a href=https://bestpractices.coreinfrastructure.org/projects/9771 title="OpenSSF Best Practices"><img src=https://bestpractices.coreinfrastructure.org/projects/9771/badge alt="OpenSSF Best Practices" width=200 height=20 loading=lazy></a></div></div><div class=badge-category><h4>🚀 Build Status</h4><div class=badges><a href=https://github.com/Hack23/homepage/actions/workflows/main.yml title="Deploy Status"><img src=https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg alt=Deploy width=100 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml title="Quality Checks"><img src=https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml/badge.svg alt="Quality Checks" width=140 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/dependency-review.yml title="Dependency Review"><img src=https://github.com/Hack23/homepage/actions/workflows/dependency-review.yml/badge.svg alt="Dependency Review" width=160 height=20 loading=lazy></a></div></div><div class=badge-category><h4>📋 Compliance</h4><div class=badges><a href=https://github.com/Hack23/ISMS-PUBLIC title="Public ISMS"><img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=flat&amp;logo=github&amp;logoColor=white" alt="ISMS Public" width=110 height=20 loading=lazy> </a><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title="Security Policy"><img src="https://img.shields.io/badge/Security-Policy-DC143C?style=flat&amp;logo=shield&amp;logoColor=white" alt="Security Policy" width=120 height=20 loading=lazy> </a><a href=https://hack23.com title="ISO 27001 Aligned"><img src="https://img.shields.io/badge/ISO_27001-Aligned-blue?style=flat" alt="ISO 27001" width=140 height=20 loading=lazy> </a><a href=https://hack23.com title="GDPR Compliant"><img src="https://img.shields.io/badge/GDPR-Compliant-green?style=flat" alt=GDPR width=140 height=20 loading=lazy></a></div></div><div class=badge-category><h4>🏢 Company</h4><div class=badges><a href=https://hack23.com title="Official Website"><img src="https://img.shields.io/badge/Website-hack23.com-00cc66?style=flat&amp;logo=firefox&amp;logoColor=white" alt=Website width=150 height=20 loading=lazy> </a><a href=https://github.com/Hack23 title="GitHub Profile"><img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub Hack23" width=120 height=20 loading=lazy> </a><a href=https://www.linkedin.com/company/hack23/ title="LinkedIn Company Page"><img src="https://img.shields.io/badge/LinkedIn-Company-0A66C2?style=flat&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn Company" width=150 height=20 loading=lazy> </a><a href=https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I title="Company Registration"><img src="https://img.shields.io/badge/Org.nr-5595347807-blue?style=flat" alt="Swedish Company Registration" width=160 height=20 loading=lazy> </a><a href=https://www.openhub.net/accounts/pether title="OpenHub Profile"><img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=flat&amp;logo=opensourceinitiative&amp;logoColor=white" alt="OpenHub Profile" width=140 height=20 loading=lazy></a></div></div></div></details><div class=app-link><a href=why-hack23.html title="Why Organizations Choose Hack23">🌟 Why Hack23?</a> <a href=black-trigram-features.html title="View Black Trigram Features">🥋 Black Trigram Game</a> <a href=cia-compliance-manager-features.html title="View Compliance Manager Features">🔒 CIA Compliance Manager</a> <a href=cia-features.html title="View Citizen Intelligence Agency Features">🔍 Citizen Intelligence Agency</a> <a href=blog.html title="Security Blog &amp; Discordian Cybersecurity">🍎 Security Blog</a> <a href=https://www.linkedin.com/company/hack23/ class=btn title="Follow on LinkedIn">Follow Company</a></div></header><main id=main-content><section id=value-proposition aria-labelledby=value-prop-heading><h2 id=value-prop-heading>🌟 Why Choose Hack23 AB?</h2><p class=value-prop-intro>Sweden's only cybersecurity consultancy with a fully public ISMS, demonstrating transparency and security excellence that accelerates innovation rather than hindering it.<h3 class=subsection-title>Core Differentiators</h3><div class=cards><div class="card card-transparency"><h3>🔓 Radical Transparency</h3><p><strong>Sweden's only fully public Information Security Management System (ISMS)</strong> with 93 ISO 27001 controls, redacted risk registers, and complete policy documentation openly available. See exactly how we implement security—no hidden practices, no security theater.<ul class=value-list><li>70% public / 30% responsibly redacted documentation<li>Live security metrics via OpenSSF Scorecard<li>Transparent risk assessments and treatment tracking</ul></div><div class="card card-expertise"><h3>🎯 Proven Expertise</h3><p><strong>30 plus years</strong> of hands-on software development and security architecture experience, backed by industry-leading certifications and real-world enterprise implementations.<ul class=value-list><li>Certified Information Systems Security Professional (CISSP), Certified Information Security Manager (CISM) certified security professional<li>AWS Security Specialty &amp; Solutions Architect Pro<li>Led security programs at Stena AB, Polestar, WirelessCar, and other major enterprises</ul></div><div class="card card-innovation"><h3>⚡ Security Accelerates Innovation</h3><p><strong>Security-enabled development</strong> that integrates seamlessly into DevSecOps workflows. We prove that proper security controls accelerate—not block—innovation and time-to-market.<ul class=value-list><li>SLSA Level 3 supply chain security implementations<li>Automated compliance validation &amp; CI/CD integration<li>Zero-trust architectures with real-world performance</ul></div></div><h3 class=subsection-title>Practical Value</h3><div class=cards><div class="card card-practical"><h3>🛠️ Practical Solutions</h3><p><strong>No security theater</strong>—only implementable solutions tested in production. Our open-source projects demonstrate security best practices with measurable outcomes.<ul class=value-list><li>Open-source security tools used in production<li>Documented threat models &amp; security architectures<li>Real-world AWS multi-region resilience patterns</ul></div><div class="card card-measurable"><h3>📊 Measurable Outcomes</h3><p><strong>Data-driven security</strong> with quantifiable risk metrics, automated compliance tracking, and continuous improvement demonstrated through public documentation.<ul class=value-list><li>Quantitative risk assessment methodologies<li>Security KPIs aligned to business objectives<li>Automated compliance mapping (ISO/NIST/GDPR/NIS2)</ul></div><div class="card card-nordic"><h3>🌍 Nordic Innovation Hub</h3><p><strong>Gothenburg-based</strong> cybersecurity expertise combining Swedish innovation culture with international enterprise experience across automotive, logistics, and technology sectors.<ul class=value-list><li>Remote or in-person consulting (Gothenburg)<li>English &amp; Swedish service delivery<li>GDPR/NIS2 compliance for Nordic market</ul></div></div></section><section id=information-security aria-labelledby=info-sec-heading><h2 id=info-sec-heading>🛡️ Information Security Governance</h2><p>Demonstrating security through transparency. Our public Information Security Management System (ISMS) shows how enterprise‑grade controls enable innovation, consulting delivery, and product development. Access the continuously improved documentation set and the governing Information Security Policy covering purpose, principles, roles, and our risk &amp; compliance model.<table role=presentation><tr><td><h3>📋 Public ISMS Repository</h3><p>Living documentation: policies, redacted registers, resilience &amp; secure development practices (~70% public / 30% responsibly redacted).</p><a href=https://github.com/Hack23/ISMS-PUBLIC title="Open the public ISMS documentation repository (policies, redacted registers)"><img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="ISMS Public Repository" width=125 height=20 loading=lazy></a><td><h3>🔒 Information Security Policy</h3><p>Core policy: purpose, scope, principles (Security by Design, Transparency, Continuous Improvement, Business Value), roles &amp; document map.</p><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title="Read the governing Information Security Policy"><img src="https://img.shields.io/badge/Security-Policy-DC143C?style=for-the-badge&amp;logo=shield&amp;logoColor=white" alt="Information Security Policy" width=140 height=20 loading=lazy></a></table></section><section id=security-services><h2>🔑 Security Services</h2><p>Professional cybersecurity consulting services delivered remotely or in-person in Gothenburg. Drawing from over three decades of experience in software development and security architecture, we deliver practical security solutions that integrate seamlessly into your development processes without hindering innovation.<div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🏗️ Security Architecture &amp; Strategy</h3><p>Enterprise security frameworks, risk assessment, and governance aligned with business objectives.<ul><li>Enterprise Security Architecture<li>Risk Assessment &amp; Management<li>Security Strategy Development</ul></div><div class="card integrity-card"><div class=scanner-effect></div><h3>☁️ Cloud Security &amp; DevSecOps</h3><p>AWS security assessment, Infrastructure as Code security, CI/CD integration.<ul><li>Secure Cloud Solutions (AWS Advanced)<li>DevSecOps Integration<li>Container &amp; Serverless Security</ul></div><div class="card availability-card"><div class=scanner-effect></div><h3>🔧 Secure Development &amp; Compliance</h3><p>SDLC security integration, ISO 27001, GDPR/NIS2 compliance, OSPO management.<ul><li>CI/CD Security Integration<li>Regulatory Compliance (GDPR, NIS2, ISO 27001)<li>Open Source Security</ul></div></div><div class=centered-cta><a href=services.html class=cta-button-large-primary>View All Services &amp; Expertise Areas →</a></div></section><section id=products><h2>🚀 Products</h2><p class=subtitle>Open source delivery model with full transparency in architecture and security documentation<div class=cards><div class="card card-red"><div class=scanner-effect></div><img src=black-trigram-140.webp alt="Black Trigram" width=140 height=94 class=img-responsive loading=lazy decoding=async><h3>🥋 Black Trigram</h3><p>Precision combat simulator with 70 vital points system, 5 archetypes, and authentic Korean martial arts techniques.<div class=card-actions><a href=black-trigram.html class=btn-primary title="Learn More">Learn More →</a> <a href=https://blacktrigram.com class=btn-action-primary title="Play Now">🎮 Play Now</a></div></div><div class="card card-purple"><div class=scanner-effect></div><img src=cia-icon-140.webp alt="CIA Compliance" width=80 height=80 loading=lazy decoding=async><h3>🔐 CIA Compliance Manager</h3><p>Security assessment platform with CIA Triad evaluation and compliance mapping to NIST, ISO 27001, GDPR, HIPAA, SOC2.<div class=card-actions><a href=compliance-manager.html class=btn-primary title="Learn More">Learn More →</a> <a href=https://ciacompliancemanager.com/ class=btn-action-secondary title="Try Demo">🚀 Try Demo</a></div></div><div class="card card-green"><div class=scanner-effect></div><picture><source type=image/webp srcset=cia-logo.webp><img src=cia-logo.png alt="CIA Project" width=80 height=80 loading=lazy decoding=async></picture><h3>🔍 Citizen Intelligence Agency</h3><p>Swedish political transparency OSINT platform with parliamentary monitoring and accountability metrics.<div class=card-actions><a href=cia-project.html class=btn-primary title="Learn More">Learn More →</a> <a href=cia-features.html title=Features>✨ Features</a></div></div></div><div class=centered-cta><a href=projects.html class=cta-button title="View All Projects">View All Projects &amp; Demos →</a></div></section><section id=about-developer><h2>💼 CEO James Pether Sörling</h2><h3 class=subsection-title>Leadership &amp; Expertise</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Company Leadership &amp; Security Expert</h3><figure><img src=jamespethersorling150.webp alt="James Pether Sörling, CEO of Hack23 AB" class=profile-image loading=lazy width=150 height=150></figure><p>CEO/Founder of Hack23 AB, James brings over 30 years of information technology experience, specializing in security architecture, cloud security, and compliance. Professional certifications include CISSP, CISM, AWS Security Specialty, and AWS Solutions Architect Professional.<h4>🎯 Key Qualifications:</h4><div class=cert-badges><span class="cert-badge cert-badge-cissp">CISSP</span> <span class="cert-badge cert-badge-cism">CISM</span> <span class="cert-badge cert-badge-aws">AWS Security Specialty</span> <span class="cert-badge cert-badge-aws">AWS Solutions Architect Pro</span></div><h4>🏢 Recent Leadership Roles:</h4><ul><li><strong>Jun 2025-Present:</strong> CEO / Founder, Hack23 AB<li><strong>Oct 2024-Jul 2025:</strong> Application Security Officer, Stena AB<li><strong>Mar 2022-Sep 2024:</strong> Information Security Officer, Polestar<li><strong>Jan 2018-Mar 2022:</strong> Senior Security Architect, WirelessCar</ul><div class=card-actions><a href=https://www.linkedin.com/in/jamessorling/ title="Professional LinkedIn">LinkedIn Profile</a> <a href=https://github.com/Hack23/talks title="Technical Presentations">Technical Talks</a> <a href=https://hack23.com/blog.html title="Security Blog">Security Blog</a></div></div><div class=card><div class=scanner-effect></div><h3>Recent Professional Experience</h3><p>Extensive leadership experience in enterprise security and cloud architecture across major organizations:<ul><li><strong>Jun 2025-Present:</strong> Chief Executive Officer, Hack23 AB - Swedish Innovation Hub Leadership, Game Development Strategy<li><strong>Oct 2024-Jul 2025:</strong> Application Security Officer, Stena AB - Risk Assessment, Cloud Security, AI Governance<li><strong>Mar 2022-Sep 2024:</strong> Information Security Officer, Polestar - ISMS Implementation, Security Compliance, OSPO Lead</ul></div><div class=card><div class=scanner-effect></div><h3>Martial Arts Background</h3><p>James has extensive experience in traditional Korean martial arts, bringing authentic knowledge to the Black Trigram project:<ul><li><strong>1999:</strong> Black Belt Song Moo Kwan Korea - Traditional Taekwondo certification<li><strong>2024:</strong> 3rd Dan Kukkiwon - World Taekwondo Headquarters certification<li><strong>2015-2017:</strong> Taekwondo Instructor, Tor Taekwondo klub - Teaching children's classes<li><strong>2002-2003:</strong> Taekwondo Instructor, Haga Taekwondo club - Community instruction<li><strong>1994-1996:</strong> Taekwondo Instructor, Hworangi Taekwondo - Early teaching experience</ul><p><strong>Martial Arts Philosophy:</strong> This deep understanding of Korean martial arts traditions directly influences the authentic techniques, cultural respect, and educational value integrated into Black Trigram's combat system.</div></div><h3 class=subsection-title>Career History</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Enterprise Architecture Experience</h3><p>Security architecture and consulting roles at leading technology companies:<ul><li><strong>Jan 2018-Mar 2022:</strong> Senior Security Architect, WirelessCar - Security Architecture, AWS Security, Secure Development<li><strong>Jan 2018-Nov 2018:</strong> Consultant, Omegapoint - Security Architect role at WirelessCar<li><strong>Mar 2017-Jan 2018:</strong> Consultant, Consid AB - Open Source Development, CI/CD, AWS<li><strong>2010-Mar 2017:</strong> Cloud Architect, Keypasco - Cloud Security Solutions, Multi-Tier Architecture</ul><p><strong>Key Achievements:</strong> Founded Hack23 AB in 2025, led Open Source Program Office at Polestar, implemented enterprise security architectures, spoke at Javaforum Göteborg, featured in Computer Sweden.</div><div class=card><div class=scanner-effect></div><h3>Software Development Background</h3><p>Foundation experiences in software engineering and system development:<ul><li><strong>2008-2009:</strong> Consultant, Redpill Linpro - Technical support and client assignments across Sweden, Norway, Denmark<li><strong>2007-2008:</strong> Consultant, Singlegrid (London) - Continuous integration and build management solutions<li><strong>2006-2007:</strong> System Developer, Sky (London) - J2EE projects using XP/Agile development<li><strong>2003-2005:</strong> J2EE Developer, Glu Mobile (London) - Mobile service products development<li><strong>2000-2002:</strong> Software Engineer, Volantis Systems (London) - Multi-channel server product design and implementation</ul></div><div class=card><div class=scanner-effect></div><h3>Early Career &amp; Military Service</h3><p>Foundation experiences that shaped leadership and technical expertise:<ul><li><strong>1999-2003:</strong> Unix Helpdesk/Teaching Assistant, Chalmers University of Technology - System administration and tutorial teaching<li><strong>Jun-Aug 1999:</strong> Visual C++ Programmer, IETV AB - Production control system development<li><strong>1996-1997:</strong> NBC-Defence Group Leader, Swedish Armed Forces - Leadership and security responsibilities<li><strong>1993-1996:</strong> Founder, Equal Rites BBS - Early networking and system administration (Fidonet node 2:203/454)</ul></div></div></section><section id=talks-presentations><h2>🎤 Technical Talks &amp; Presentations</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>🎙️ Javaforum Göteborg</h3><p>Presentation on secure architecture patterns and best practices for enterprise Java applications.</p><a href="https://www.youtube.com/watch?v=A_hq2Y03d6I" class=btn-youtube title="Watch Presentation">▶️ Watch Presentation</a></div><div class=card><div class=scanner-effect></div><h3>🎙️ Shift Left Like A Boss</h3><p>Security podcast guest appearance discussing DevSecOps practices and supply chain security.</p><a href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&amp;ab_channel=Soluble" class=btn-podcast title="Listen to Podcast">🎧 Listen to Podcast</a></div></div></section><section id=press-coverage><h2>Press Coverage</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>Computer Sweden</h3><p>This article highlights the innovative use of technology in revealing the activities of politicians. It features James Pether Sörling's work in leveraging data-driven insights to promote transparency in political processes.</p><a href=https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna title="Read Article">Read Article</a></div><div class=card><div class=scanner-effect></div><h3>Riksdag och Departement</h3><p>A Swedish publication that discusses the role of Citizen Intelligence Agency in monitoring politicians. It underscores James Pether Sörling's commitment to fostering accountability in politics through the strategic use of technology.</p><a href=https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/ title="Read Article">Read Article</a></div><div class=card><div class=scanner-effect></div><h3>National Democratic Institute</h3><p>A comprehensive survey report that underscores the importance of parliamentary monitoring organizations in Sweden. It acknowledges James Pether Sörling's significant contributions to these organizations, reinforcing his commitment to strengthening democratic processes.</p><a href=https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf title="View Report">View Report</a></div></div></section><section id=past-projects><h2>Past Projects</h2><div class=cards><div class="card availability-card"><div class=scanner-effect></div><h3>Sonar-CloudFormation-Plugin</h3><p>SonarQube plugin for analyzing AWS CloudFormation templates with security best practices based on NIST, CWE, and ISO standards.<div class="key-badges key-badges--start"><a href=https://bestpractices.coreinfrastructure.org/projects/4545 title="CII Best Practices"><img src=https://bestpractices.coreinfrastructure.org/projects/4545/badge alt="CII Best Practices" width=200 height=20 loading=lazy> </a><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge alt="OpenSSF Scorecard" width=150 height=20 loading=lazy></a></div><details class="badge-showcase badge-showcase--nested"><summary><h4>View All Badges</h4></summary><div class="badge-grid badge-grid--compact"><div class=badge-category><h5>Quality &amp; Security</h5><div class=badges><a href=https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt title=License><img src=https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg alt=License width=200 height=20 loading=lazy> </a><a href=https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin title="Maven Central"><img src=https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg alt="Maven Central" width=200 height=20 loading=lazy></a></div></div></div></details><div class=card-actions><a href=https://github.com/Hack23/sonar-cloudformation-plugin title="View GitHub Repository">GitHub</a> <a href=https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin title="Maven Central">Maven Central</a></div></div><div class=card><div class=scanner-effect></div><h3>CIA Dashboard</h3><p>Political activity dashboard for Sweden, offering comprehensive visualizations of parliamentary activity and political performance metrics.</p><a href=cia-docs.html title="View Documentation">View Documentation</a></div></div></section><section id=faq><h2>Frequently Asked Questions</h2><p class=faq-intro>Common questions about Hack23's cybersecurity services, public ISMS, and approach to security consulting.<div class=faq-controls><button type=button class=faq-control-btn id=faq-expand-all aria-label="Expand all FAQ items">Expand All</button> <button type=button class=faq-control-btn id=faq-collapse-all aria-label="Collapse all FAQ items">Collapse All</button></div><details class=faq-item><summary><h3>What makes Hack23 different from other cybersecurity consultancies?</h3></summary><div class=faq-answer><p>Hack23 AB operates Sweden's only fully public ISMS (Information Security Management System), with all policies, threat models, and security documentation available on GitHub. This radical transparency demonstrates our expertise while providing clients with proven, battle-tested frameworks. We combine 30 plus years of hands-on experience with CISSP/CISM certifications and current practitioner status (Application Security Officer at Stena Group IT), ensuring practical, implementable security advice—not just theory.</div></details><details class=faq-item><summary><h3>How much does cybersecurity consulting cost in Sweden?</h3></summary><div class=faq-answer><p>Cybersecurity consulting costs vary by engagement scope. Typical ranges: (1) Security Assessment: €5,000-€15,000 for 2-4 week comprehensive review; (2) ISO 27001 Implementation: €15,000-€30,000 for 3-6 month project; (3) DevSecOps Integration: €10,000-€25,000 for CI/CD security setup; (4) Hourly Consulting: €150-€250/hour for advisory services. We provide transparent pricing with no hidden fees. Contact us for a customized quote based on your organization's needs.</div></details><details class=faq-item><summary><h3>Do you work remotely or require on-site presence in Gothenburg?</h3></summary><div class=faq-answer><p>We offer both remote and in-person cybersecurity consulting. Remote services are available globally via video conferencing, screen sharing, and collaborative documentation tools—ideal for distributed teams and cost-effective engagements. In-person consulting is available in Gothenburg, Sweden, for clients preferring face-to-face interaction, hands-on workshops, or sensitive discussions requiring physical presence. Hybrid models combining remote and occasional on-site visits work well for many clients.</div></details><details class=faq-item><summary><h3>What is a public ISMS and why does it matter?</h3></summary><div class=faq-answer><p>A public ISMS (Information Security Management System) is an open, transparent framework where security policies, procedures, threat models, and risk assessments are publicly available—unlike traditional ISMSs kept confidential. Hack23's public ISMS on GitHub (<a href=https://github.com/Hack23/ISMS-PUBLIC>https://github.com/Hack23/ISMS-PUBLIC</a>) demonstrates our security expertise through actual implementation, not just claims. This transparency: (1) Proves we follow our own recommendations, (2) Allows prospects to evaluate our methodology before engagement, (3) Provides free templates and examples for the security community, (4) Demonstrates confidence in our security posture. It's security through transparency, not security through obscurity.</div></details><details class=faq-item><summary><h3>What certifications do Hack23 consultants have?</h3></summary><div class=faq-answer><p>Hack23 consultants hold industry-recognized certifications: (1) CISSP (Certified Information Systems Security Professional) - global standard for security expertise, (2) CISM (Certified Information Security Manager) - management-focused security certification, (3) AWS Certified Security - Specialty - cloud security expertise, (4) AWS Certified Solutions Architect - Professional - infrastructure design. Beyond certifications, our team brings 30 plus years of hands-on experience, current practitioner roles (Application Security Officer positions), and active open-source security contributions. We believe practical experience and continuous learning exceeds certifications alone.</div></details><details class=faq-item><summary><h3>How long does an ISO 27001 implementation take?</h3></summary><div class=faq-answer><p>ISO 27001 implementation typically takes 3-6 months for small-to-medium Swedish organizations (10-50 employees). Timeline breakdown: (1) Scoping &amp; Gap Analysis: 2-4 weeks, (2) ISMS Design &amp; Risk Assessment: 3-4 weeks, (3) Control Implementation: 8-12 weeks, (4) Internal Audit &amp; Management Review: 2-3 weeks, (5) Certification Audit Preparation: 1-2 weeks. Larger organizations (50 plus employees) may require 6-12 months. Factors affecting timeline: existing security maturity, resource availability, organizational complexity, and consultant involvement. Our public ISMS provides proven templates to accelerate implementation by 30-40%.</div></details><details class=faq-item><summary><h3>What industries do you serve?</h3></summary><div class=faq-answer><p>Hack23 serves diverse industries with cybersecurity consulting: (1) Technology &amp; SaaS companies - DevSecOps, cloud security, secure SDLC, (2) Financial Services - GDPR, PSD2, MAS cybersecurity compliance, (3) Healthcare &amp; Pharmaceuticals - ISO 27001, GDPR, patient data protection, (4) Manufacturing &amp; Industrial - OT security, supply chain risk, ISO 27001, (5) E-commerce &amp; Retail - PCI DSS, data protection, fraud prevention, (6) Professional Services - client data security, compliance frameworks. Industry-agnostic security principles apply universally, with sector-specific regulatory knowledge where needed.</div></details><details class=faq-item><summary><h3>Can you help with GDPR and NIS2 compliance?</h3></summary><div class=faq-answer><p>Yes, Hack23 provides comprehensive GDPR (General Data Protection Regulation) and NIS2 (Network and Information Security Directive 2) compliance consulting. GDPR services: data protection impact assessments (DPIA), privacy-by-design integration, consent management, data subject rights implementation, breach notification procedures. NIS2 services: essential/important entity classification, risk management frameworks, incident reporting procedures (24-hour notification), supply chain security, governance structure alignment. We integrate GDPR/NIS2 requirements into ISO 27001 implementations for unified compliance management. Practical, implementable solutions—not checkbox compliance.</div></details><details class=faq-item><summary><h3>What is your approach to DevSecOps?</h3></summary><div class=faq-answer><p>Our DevSecOps approach: 'Security that enables, not blocks, innovation.' We integrate security into CI/CD pipelines without slowing development velocity. Key elements: (1) Automated Security Scanning: SAST/DAST/SCA tools in GitHub Actions/GitLab CI, (2) Infrastructure as Code Security: Terraform/CloudFormation scanning, policy-as-code, (3) Container Security: Image scanning, runtime protection, Kubernetes security policies, (4) Secret Management: HashiCorp Vault integration, no hardcoded credentials, (5) Security Gates: Non-blocking for low/medium findings, blocking for critical/high, (6) Developer Training: Security champions program, secure coding workshops. Result: faster, more secure releases with measurable risk reduction.</div></details><details class=faq-item><summary><h3>Do you provide security architecture reviews?</h3></summary><div class=faq-answer><p>Yes, Hack23 conducts comprehensive security architecture reviews covering: (1) Cloud Architecture: AWS/Azure/GCP security assessment, IAM review, network segmentation, secure configuration, (2) Application Architecture: Threat modeling (STRIDE analysis), authentication/authorization design, data flow security, API security, (3) Infrastructure Architecture: Zero-trust principles, defense-in-depth, attack surface analysis, security monitoring, (4) Compliance Alignment: ISO 27001, NIST CSF, CIS Controls mapping. Deliverables: detailed security architecture document, threat model, prioritized remediation roadmap, and implementation guidance. Reviews typically take 2-4 weeks depending on complexity.</div></details><details class=faq-item><summary><h3>What is included in a security consultation?</h3></summary><div class=faq-answer><p>A Hack23 security consultation includes: (1) Initial Assessment: 30-60 minute discovery call to understand your security needs, challenges, and objectives, (2) Gap Analysis: Review of current security posture against industry standards (ISO 27001, NIST, CIS), (3) Threat Landscape: Identification of relevant threats specific to your industry and technology stack, (4) Recommendations: Prioritized, actionable security improvements with cost/benefit analysis, (5) Roadmap: Implementation timeline with milestones and resource requirements, (6) Follow-Up: Written report with findings and next steps. Free initial consultations available for qualified prospects. No obligation to proceed.</div></details><details class=faq-item><summary><h3>How do I get started with Hack23?</h3></summary><div class=faq-answer><p>Getting started is simple: (1) Contact Us: Email info@hack23.com, (2) Initial Call: 30-minute discovery call to discuss your security needs (free, no obligation), (3) Proposal: Custom proposal outlining scope, timeline, deliverables, and pricing, (4) Kickoff: Once approved, we begin with stakeholder interviews and documentation review, (5) Execution: Regular check-ins, transparent communication, and deliverable reviews throughout engagement. Typical response time: 24-48 hours for initial inquiry, 1 week for proposal delivery. Ready to improve your security posture? Reach out today.</div></details></section><section id=security-checklist-cta class=cta-section><h2>🔍 Free Security Assessment Checklist</h2><p>Download our comprehensive 95-point security assessment guide. Evaluate your organization's security posture across 7 critical domains: Architecture, Access Control, Data Protection, Network Security, Vulnerability Management, Incident Response, and Compliance.<p><strong>Based on ISO 27001, NIST CSF, and CIS Controls • Used by Enterprise Security Teams</strong></p><a href=security-assessment-checklist.html class=cta-button-large title="Download Free Security Assessment Checklist">Get Your Free Checklist</a></section><section id=contact class=contact-section><h2>📧 Get in Touch</h2><p>Have a question about our services or want to discuss your security needs? We'd love to hear from you!<div class=contact-alternatives><h3>Ways to Contact Us</h3><ul><li><strong>Email:</strong> <a href=mailto:info@hack23.com>info@hack23.com</a><li><strong>LinkedIn:</strong> <a href=https://www.linkedin.com/company/hack23/ target=_blank rel="noopener noreferrer">Hack23 Company Page</a><li><strong>LinkedIn:</strong> <a href=https://www.linkedin.com/in/jamessorling/ target=_blank rel="noopener noreferrer">CEO</a><li><strong>GitHub:</strong> <a href=https://github.com/Hack23 target=_blank rel="noopener noreferrer">Open Source Projects</a></ul></div></section></main><script>!function(){"use strict";const e=document.getElementById("faq-expand-all"),t=document.getElementById("faq-collapse-all");e&&e.addEventListener("click",function(){document.querySelectorAll(".faq-item").forEach(e=>e.open=!0)}),t&&t.addEventListener("click",function(){document.querySelectorAll(".faq-item").forEach(e=>e.open=!1)})}()</script><script>!function(){"use strict";function e(){const e=document.querySelector(".nav-toggle"),t=document.querySelector(".nav-menu");if(e&&t){const n=function(){return t.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')},o=function(){t.classList.remove("open"),e.setAttribute("aria-expanded","false"),e.setAttribute("aria-label","Open navigation menu"),t.setAttribute("aria-hidden","true"),document.body.style.overflow=""},i=function(i){if(t.classList.contains("open")&&("Escape"===i.key&&(o(),e.focus()),"Tab"===i.key)){const e=n(),t=e[0],o=e[e.length-1];i.shiftKey&&document.activeElement===t?(i.preventDefault(),o.focus()):i.shiftKey||document.activeElement!==o||(i.preventDefault(),t.focus())}},c=function(n){t.classList.contains("open")&&(n.target!==t&&(e.contains(n.target)||t.contains(n.target))||o())};e.addEventListener("click",function(){const e=t.classList.toggle("open");this.setAttribute("aria-expanded",e?"true":"false"),this.setAttribute("aria-label",e?"Close navigation menu":"Open navigation menu"),t.setAttribute("aria-hidden",e?"false":"true");if(t.querySelectorAll("a").forEach(t=>{t.setAttribute("tabindex",e?"0":"-1")}),e){document.body.style.overflow="hidden";const e=n();e.length>0&&e[0].focus()}else document.body.style.overflow=""}),document.addEventListener("keydown",i),document.addEventListener("click",c)}const n=document.querySelector(".back-to-top");if(n){let e=!1;window.addEventListener("scroll",function(){e||(window.requestAnimationFrame(function(){window.scrollY>300?(n.style.display="block",n.style.opacity="1"):(n.style.opacity="0",setTimeout(function(){window.scrollY<=300&&(n.style.display="none")},300)),e=!1}),e=!0)}),n.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})})}document.querySelectorAll('a[href^="#"]').forEach(function(e){e.addEventListener("click",function(e){const n=this.getAttribute("href");if(n&&"#"!==n){const o=document.querySelector(n);o&&(e.preventDefault(),o.scrollIntoView({behavior:"smooth"}),t&&t.classList.contains("open")&&closeMenu())}})})}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()}()</script><button class=back-to-top aria-label="Back to top">↑</button><footer role=contentinfo aria-label="Site footer"><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>Cybersecurity Consulting<br>Gothenburg, Sweden | Remote<p>Org.nr: 5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>LinkedIn Company Page</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>CEO: James Pether Sörling</a></div><div class=footer-column><h3>Services</h3><ul><li><a href=services.html>Security Consulting</a><li><a href=services.html>Security Architecture</a><li><a href=services.html>Cloud Security</a><li><a href=services.html>DevSecOps Integration</a><li><a href=services.html>Compliance &amp; ISMS</a></ul></div><div class=footer-column><h3>Products</h3><ul><li><a href=black-trigram-features.html>Black Trigram</a><li><a href=cia-features.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features.html>CIA Compliance Manager</a></ul></div><div class=footer-column><h3>Resources</h3><ul><li><a href=blog.html>Security Blog</a><li><a href=discordian-cybersecurity.html>🍎 Discordian Blog</a><li><a href=cia-triad-faq.html>CIA Triad FAQ</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>Public ISMS</a><li><a href=sitemap.html>Sitemap</a></ul></div><div class=footer-column><h3>Company</h3><ul><li><a href=why-hack23.html>About Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>Security Policy</a><li><a href=SECURITY.md>Report Security Issue</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>GitHub Organization</a><li><a href=accessibility-statement.html>Accessibility</a></ul></div></div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB. All rights reserved.<p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> <a href=index_no.html lang=no>Norsk</a> | <a href=index_ko.html lang=ko>한국어</a></div></footer>

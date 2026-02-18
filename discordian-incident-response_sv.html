@@ -1,0 +1,33 @@
+<!doctype html><html lang=sv><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Incidentrespons | Antag intrång, planera respons | Hack23</title><meta name=description content="Antag intrång. Planera respons. Sex-fas IR-process: upptäckt, inneslutning, utrotning, återställning, lärdomar. System kommer bli komprometterade."><meta name=twitter:description content="Antag intrång. Planera respons. Sex-fas IR-process: upptäckt, inneslutning, utrotning, återställning, lärdomar. System kommer bli komprometterade."><meta name=keywords content="incidentrespons, IR, säkerhetsincident, dataintrång, incident upptäckt, incident inneslutning, incident utrotning, incident återställning, post-incident granskning, SIEM, incident triagering, incident klassificering, incident hantering, incident rapportering, forensics, rotorsaksanalys, lärdomar"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Incidentrespons: När (inte om) skiten träffar fläkten"><meta property=og:description content="Antag intrång. Planera respons. Tänk själv om incidenthantering."><meta property=og:locale content=sv_SE><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-incident-response_sv.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Säkerhetsblogg"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-incident-response_sv.html><link rel=stylesheet href=styles.css><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Incidentrespons: När (inte om) skiten träffar fläkten",
+  "description": "Antag intrång. Planera respons. Tänk själv om incidenthantering. Ingenting är sant, allt är tillåtet—inklusive dina system som blir komprometterade.",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "VD / Cybersäkerhetsexpert",
+    "sameAs": [
+      "https://www.linkedin.com/in/jamessorling/",
+      "https://github.com/Hack23"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.com/logo.png"
+    }
+  },
+  "datePublished": "2025-11-08",
+  "inLanguage": "sv",
+  "keywords": "incidentrespons, säkerhetsincident, dataintrång, ISMS",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.webp",
+    "width": 1200,
+    "height": 630
+  }
+}</script><meta http-equiv=refresh content="0; url=discordian-incident-response.html"><link rel=alternate hreflang=ar href=https://hack23.com/discordian-incident-response_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-incident-response_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-incident-response_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-incident-response_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-incident-response_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-incident-response_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-incident-response.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-incident-response_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-incident-response_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-incident-response_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-incident-response_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-incident-response_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-incident-response_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-incident-response_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-incident-response_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-incident-response_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-incident-response_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-incident-response_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-incident-response_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-incident-response_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-incident-response_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-incident-response_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-incident-response_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-incident-response_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-incident-response_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-incident-response_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-incident-response_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-incident-response_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-incident-response.html><h1>Incidentresponsplan</h1><p>Svensk översättning kommer snart. Du omdirigeras till den engelska versionen...<p><a href=discordian-incident-response.html>Klicka här om du inte omdirigeras automatiskt</a>

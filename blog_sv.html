@@ -1,0 +1,612 @@
+<!doctype html><html lang=sv><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Säkerhetsblogg | Cybersäkerhetsinsikter | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="Expertinsikter om cybersäkerhet, efterlevnadsautomatisering och öppen källkodssäkerhet. CISSP/CISM-perspektiv på moderna säkerhetsutmaningar."><meta name=keywords content="cybersäkerhetsblogg, informationssäkerhet, ISMS-policyer, CIA-triaden, säkerhetsbästa praxis, discordian säkerhet, hack23 blogg, ISO 27001, GDPR-efterlevnad, NIS2, DevSecOps, AWS-säkerhet, CISSP, säkerhetsarkitektur, molnsäkerhet, efterlevnadsautomatisering, zero trust, åtkomstkontroll, krypteringspolicy, incidenthantering, sårbarhetshantering, riskbedömning, hotmodellering, säker utveckling, OWASP LLM-säkerhet, säkerhetskopiering, katastrofåterställning, affärskontinuitet, ändringshantering, tillgångshantering, nätverkssäkerhet, e-postsäkerhet, fysisk säkerhet, mobil enhetssäkerhet, fjärråtkomst säkerhet, övervakningsloggning, säkerhetsmått, säkerhetsutbildning, tredjepartsrisk, ISMS-granskning, ISMS-transparens, dataklassificering, dataskydd, integritetspolicy, acceptabel användningspolicy, kryptografipolicy, EU Cyber Resilience Act, CRA-efterlevnad, försörjningskedjesäkerhet, SLSA-efterlevnad, containersäkerhet, serverlös säkerhet, säkerhetskultur, transparens genom säkerhet, offentlig ISMS Sverige, öppen källkodssäkerhet, OSINT-metodik, politisk transparens, parlamentsövervakning, svensk regeringsanalys, Simon Moon-arkitektur, femtalslagens lag, helig geometri i kod, numerologiska mönster, femlagers arkitektur, discordian filosofi, ifrågasätt auktoritet, nationalstatsövervakning, krypto-bakdörrar, säkerhetsteater, Chapel Perilous, fnord, operation mindfuck, illuminatus-trilogin, radikal transparens"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Säkerhetsblogg | Hack23 Cybersäkerhetsinsikter"><meta property=og:description content="Utforska cybersäkerhetsinsikter, CIA Triad-implementering och fullständig ISMS-policytäckning genom den discordianska linsen. 65 blogginlägg som täcker ISMS-policyer, säkerhetsarkitektur och politiska underrättelseoperationer. Tänk själv. Ifrågasätt auktoritet. Lita på verifiering."><meta property=og:locale content=sv_SE><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=website><meta property=og:url content=https://hack23.com/blog_sv.html><meta property=og:image content=https://hack23.com/blog.webp><meta property=og:image:width content=1200><meta property=og:image:height content=630><meta property=og:site_name content="Hack23 Säkerhetsblogg"><meta name=twitter:card content=summary_large_image><meta name=twitter:title content="Säkerhetsblogg | Hack23 Cybersäkerhetsinsikter &amp; ISMS-Policyer"><meta name=twitter:description content="65 blogginlägg om cybersäkerhet, ISMS-policyer och CIA-triaden genom den discordianska linsen. Plus 13 arkitekturkrönikor av Simon Moon och OSINT-underrättelseoperationer av Hagbard Celine. Tänk själv, ifrågasätt auktoritet, lita på verifiering. FNORD."><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Säkerhetsblogg - Tänk själv, Ifrågasätt auktoritet"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/blog_sv.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://hack23.com/blog.html#blog",
+      "name": "Hack23 Säkerhetsblogg",
+      "headline": "Säkerhetsblogg | Cybersäkerhetsinsikter & ISMS-policyer",
+      "description": "Omfattande cybersäkerhetsblogg med 65 inlägg som täcker ISMS-policyer, CIA Triad-implementering, säkerhetsarkitektur och discordiansk säkerhetsfilosofi. Innehåller 44 ISMS-policyinlägg och 21 arkitektur/underrättelsekrönikor som avslöjar helig geometri i kod och demokratiska OSINT-operationer.",
+      "url": "https://hack23.com/blog.html",
+      "inLanguage": "sv",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "@id": "https://hack23.com/#james-pether-sorling",
+          "name": "James Pether Sörling",
+          "url": "https://hack23.com",
+          "jobTitle": "VD / Cybersäkerhetsexpert",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Hack23 AB"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/jamessorling/",
+            "https://github.com/Hack23"
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": "Simon Moon",
+          "jobTitle": "Systemarkitekt",
+          "description": "Avslöjar numerologiska mönster och helig geometri i systemarkitektur"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Information Security Management Systems",
+          "description": "Komplett ISMS-policytäckning inklusive ISO 27001, åtkomstkontroll, kryptering, incidenthantering"
+        },
+        {
+          "@type": "Thing",
+          "name": "CIA Triad",
+          "description": "Principer och implementering av konfidentialitet, integritet och tillgänglighet"
+        },
+        {
+          "@type": "Thing",
+          "name": "Discordian Cybersecurity",
+          "description": "Säkerhetsfilosofi som ifrågasätter auktoritet, avslöjar säkerhetsteater och främjar radikal transparens"
+        },
+        {
+          "@type": "Thing",
+          "name": "Security Architecture",
+          "description": "Systemdesignmönster, helig geometri i kod, femlagers-arkitekturer"
+        }
+      ],
+      "blogPost": [
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Det discordianska cybersäkerhetsmanifestet",
+          "url": "https://hack23.com/discordian-cybersecurity_sv.html",
+          "datePublished": "2025-11-05",
+          "dateModified": "2025-11-05",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Säkerhetsfilosofi",
+          "keywords": [
+            "säkerhetsteater",
+            "övervakning",
+            "transparens",
+            "discordiansk filosofi"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Åtkomstkontroll: Zero Trust genom identitetscentrerad säkerhet",
+          "url": "https://hack23.com/discordian-access-control_sv.html",
+          "datePublished": "2025-11-05",
+          "dateModified": "2025-11-05",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "ISMS-Policyer",
+          "keywords": [
+            "åtkomstkontroll",
+            "zero trust",
+            "identitetshantering",
+            "ISO 27001"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "ISMS Strategisk Granskning: Kontinuerlig Förbättring",
+          "url": "https://hack23.com/discordian-isms-review_sv.html",
+          "datePublished": "2025-11-05",
+          "dateModified": "2025-11-05",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "ISMS-Policyer",
+          "keywords": [
+            "ISMS review",
+            "continuous improvement",
+            "security governance"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "ISMS Transparens: Säkerhet genom radikal öppenhet",
+          "url": "https://hack23.com/discordian-isms-transparency_sv.html",
+          "datePublished": "2025-11-05",
+          "dateModified": "2025-11-05",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "ISMS-Policyer",
+          "keywords": [
+            "transparens",
+            "public ISMS",
+            "security through openness"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "CIA-arkitektur: De fem pentaklerna för politisk transparens",
+          "url": "https://hack23.com/blog-cia-architecture_sv.html",
+          "datePublished": "2025-11-07",
+          "dateModified": "2025-11-07",
+          "author": {
+            "@type": "Person",
+            "name": "Simon Moon",
+            "jobTitle": "System Architect"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Arkitekturkrönikor",
+          "keywords": [
+            "architecture",
+            "CIA platform",
+            "sacred geometry",
+            "five patterns"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Compliance Manager: CIA Triad möter helig geometri",
+          "url": "https://hack23.com/blog-compliance-architecture_sv.html",
+          "datePublished": "2025-11-07",
+          "dateModified": "2025-11-07",
+          "author": {
+            "@type": "Person",
+            "name": "Simon Moon",
+            "jobTitle": "System Architect"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Arkitekturkrönikor",
+          "keywords": [
+            "efterlevnad",
+            "CIA Triad",
+            "architecture",
+            "maturity model"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Säkerhetsstrategi som konkurrensfördel: ISMS som affärsmodell",
+          "url": "https://hack23.com/discordian-security-strategy_sv.html",
+          "datePublished": "2025-11-10",
+          "dateModified": "2025-11-18",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Strategisk Säkerhet",
+          "keywords": [
+            "security strategy",
+            "competitive advantage",
+            "ISMS business model",
+            "strategic positioning",
+            "transparens",
+            "evidence-based security",
+            "network effects",
+            "first-mover advantage",
+            "public security"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "CIA OSINT-underrättelse: 45 regler för att bevaka bevakarna",
+          "url": "https://hack23.com/blog-cia-osint-intelligence_sv.html",
+          "datePublished": "2025-11-17",
+          "dateModified": "2025-11-17",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Underrättelseoperationer",
+          "keywords": [
+            "OSINT",
+            "political intelligence",
+            "behavioral analysis",
+            "CIA platform",
+            "democratic transparency",
+            "intelligence operations",
+            "hotmodellering",
+            "risk rules"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Compliance-ramverk: Evidensbaserad multi-ramverksimplementering",
+          "url": "https://hack23.com/discordian-compliance-frameworks_sv.html",
+          "datePublished": "2025-11-18",
+          "dateModified": "2025-11-18",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Efterlevnad",
+          "keywords": [
+            "compliance frameworks",
+            "ISO 27001",
+            "NIST CSF",
+            "CIS Controls",
+            "GDPR",
+            "NIS2",
+            "EU Cyber Resilience Act",
+            "evidence-based compliance",
+            "SOC 2",
+            "PCI DSS",
+            "HIPAA",
+            "compliance automation",
+            "continuous monitoring"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "EU Cyber Resilience Act: Obligatorisk säkerhet by design eller Bryssels senaste maktgrepp?",
+          "url": "https://hack23.com/discordian-cra-conformity_sv.html",
+          "datePublished": "2025-11-19",
+          "dateModified": "2025-11-19",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Efterlevnad",
+          "keywords": [
+            "EU Cyber Resilience Act",
+            "CRA compliance",
+            "Regulation 2024/2847",
+            "SBOM",
+            "vulnerability disclosure",
+            "security by design",
+            "conformity assessment",
+            "CE marking",
+            "post-market surveillance",
+            "essential cybersecurity requirements"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "Varför vårt ISMS är offentligt: Transparens som konkurrensfördel",
+          "url": "https://hack23.com/blog-public-isms-benefits_sv.html",
+          "datePublished": "2025-11-20",
+          "dateModified": "2025-11-20",
+          "author": {
+            "@id": "https://hack23.com/#james-pether-sorling"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Tankeledarskap",
+          "keywords": [
+            "public ISMS",
+            "transparens",
+            "competitive advantage",
+            "cybersecurity consulting",
+            "trust through verification",
+            "Sweden cybersecurity",
+            "evidence-based security",
+            "ISMS disclosure",
+            "security transparency",
+            "first-mover advantage"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "CIAs värdeproposition för svensk media: Valet 2026",
+          "url": "https://hack23.com/blog-cia-swedish-media-election-2026_sv.html",
+          "datePublished": "2025-11-20",
+          "dateModified": "2025-11-20",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Affärsutveckling",
+          "keywords": [
+            "Swedish election 2026",
+            "media intelligence",
+            "CIA platform",
+            "SVT",
+            "Dagens Nyheter",
+            "Svenska Dagbladet",
+            "parliamentary monitoring",
+            "election coverage",
+            "political journalism",
+            "OSINT",
+            "riksdag analysis",
+            "coalition prediction"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "CIA Business Case för globala nyhetsbyråer: Intelligence-as-a-Service för demokrati",
+          "url": "https://hack23.com/blog-cia-business-case-global-news_sv.html",
+          "datePublished": "2025-11-20",
+          "dateModified": "2025-11-20",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Underrättelseoperationer",
+          "keywords": [
+            "CIA platform",
+            "political intelligence",
+            "data journalism",
+            "OSINT",
+            "Swedish election 2026",
+            "behavioral risk rules",
+            "The Economist",
+            "Financial Times",
+            "Reuters",
+            "Bloomberg",
+            "Associated Press",
+            "news intelligence"
+          ]
+        },
+        {
+          "@type": [
+            "BlogPosting",
+            "Article"
+          ],
+          "headline": "CIA för alternativa medier: Discordianska valet 2026-framtider",
+          "url": "https://hack23.com/blog-cia-alternative-media-discordian-2026_sv.html",
+          "datePublished": "2025-11-21",
+          "dateModified": "2025-11-21",
+          "author": {
+            "@type": "Person",
+            "name": "Hagbard Celine",
+            "jobTitle": "Product Owner / Anarchist Visionary"
+          },
+          "publisher": {
+            "@id": "https://hack23.com/#org"
+          },
+          "image": "https://hack23.com/blog.webp",
+          "articleSection": "Underrättelseoperationer",
+          "keywords": [
+            "Swedish election 2026",
+            "alternative media",
+            "Fria Tider",
+            "Nya Dagbladet",
+            "ETC",
+            "Arbetaren",
+            "discordian intelligence",
+            "Chapel Perilous",
+            "FNORD",
+            "question authority",
+            "anti-establishment journalism",
+            "data journalism",
+            "OSINT",
+            "Illuminatus trilogy"
+          ]
+        }
+      ],
+      "numberOfItems": 65,
+      "keywords": "cybersäkerhet, ISMS, ISO 27001, CIA-triaden, DevSecOps, AWS-säkerhet, zero trust, efterlevnadsautomation, discordiansk filosofi, säkerhetsarkitektur, OWASP, GDPR, NIS2"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/blog.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Security Blog",
+          "item": "https://hack23.com/blog.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/blog.html#webpage",
+      "url": "https://hack23.com/blog.html",
+      "name": "Security Blog | Hack23 Cybersecurity Insights & ISMS Policies",
+      "description": "65 blogginlägg som täcker cybersäkerhet, ISMS-policyer, CIA Triad och säkerhetsarkitektur genom den discordianska linsen",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://hack23.com/#website"
+      },
+      "about": {
+        "@id": "https://hack23.com/blog.html#blog"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp"
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-17",
+      "breadcrumb": {
+        "@id": "https://hack23.com/blog.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hack23.com/blog.html#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the most important cybersecurity best practices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most critical cybersecurity best practices include: implementing zero-trust architecture with multi-factor authentication (MFA), maintaining comprehensive patch management for vulnerabilities, encrypting data at rest and in transit using TLS 1.3+, performing regular security testing (SAST, DAST, SCA), establishing incident response plans, implementing the principle of least privilege access controls, conducting threat modeling using frameworks like STRIDE, maintaining secure software development lifecycle (SDLC) practices, ensuring continuous security monitoring and logging, and publishing transparent security documentation. For detailed implementation guidance, see our Information Security Policy, Secure Development Policy, and Vulnerability Management resources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I implement ISO 27001:2022?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implementing ISO 27001:2022 requires establishing an Information Security Management System (ISMS) with: risk assessment methodology, comprehensive security policies covering all 93 Annex A controls, documented procedures for incident response and business continuity, asset inventory and classification framework, access control policies with authentication mechanisms, vulnerability management processes, regular security audits and reviews, management commitment and resource allocation, employee security awareness training, and continuous improvement cycles. Start with our Compliance Framework, review our public ISMS repository demonstrating radical transparency, and follow our evidence-based compliance approach. Key success factors: executive buy-in, realistic scope definition, and treating compliance as a continuous process rather than annual audit theater."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CIA Triad and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The CIA Triad is the foundational security model consisting of three principles: Confidentiality (ensuring sensitive information is accessible only to authorized individuals), Integrity (guaranteeing data accuracy and trustworthiness throughout its lifecycle), and Availability (ensuring information and systems are accessible when needed by authorized users). It matters because every security decision, control, and investment should balance these three principles based on business impact. Over-focusing on confidentiality while neglecting availability leads to unusable systems. Prioritizing availability without integrity results in untrustworthy data. Our comprehensive CIA Triad FAQ provides detailed implementation guidance, real-world examples, and business impact analysis. See also our Compliance Manager architecture demonstrating practical CIA Triad assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I create a threat model using STRIDE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Creating a STRIDE threat model involves six threat categories: Spoofing (identity forgery), Tampering (data modification), Repudiation (denying actions), Information Disclosure (data exposure), Denial of Service (availability disruption), and Elevation of Privilege (unauthorized access). Process: identify assets and data flows, decompose architecture using diagrams (data flow, C4 model), apply STRIDE to each component systematically, assess likelihood and impact for each threat, prioritize based on risk rating, implement mitigations and controls, document assumptions and exclusions, and review regularly as architecture evolves. Our Threat Modeling Policy provides methodology details, and real examples from CIA Security Analysis and Compliance Manager STRIDE analysis demonstrate practical application across different architecture types."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are common ISMS implementation mistakes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common ISMS implementation failures include: treating compliance as a checkbox exercise rather than risk management, implementing security theater without substance (policies nobody follows), over-classifying everything as 'critical' without business impact analysis, neglecting continuous improvement and treating ISMS as 'set and forget', failing to obtain executive commitment and adequate resources, creating documentation silos instead of integrated knowledge management, ignoring information hoarding that destroys data integrity, implementing controls without measuring their effectiveness, conducting annual reviews instead of continuous monitoring, and hiding security practices instead of embracing transparency. Learn from our analysis of information hoarding problems, understand transparency benefits, and review our strategic review approach for continuous improvement instead of compliance theater."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I integrate security into DevOps (DevSecOps)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DevSecOps integration requires shifting security left in the development lifecycle: implement automated security testing in CI/CD pipelines (SAST for code analysis, SCA for dependency scanning, DAST for runtime testing), establish security gates that prevent vulnerable code from reaching production, integrate SBOM generation and supply chain security validation, implement Infrastructure as Code (IaC) security scanning for CloudFormation/Terraform, use container scanning and signing for Docker images, enforce security policies through automated tools rather than manual reviews, implement secrets management (never commit credentials), maintain comprehensive audit logging and monitoring, conduct regular security training for developers, and measure security metrics continuously. See our Secure Development Policy for detailed requirements and CIA Workflows analysis demonstrating five-stage DevSecOps automation in production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SAST, DAST, and SCA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SAST (Static Application Security Testing) analyzes source code without execution to find vulnerabilities like SQL injection, XSS, and insecure configurations—runs early in development, provides line-number precision, but may produce false positives. DAST (Dynamic Application Security Testing) tests running applications by simulating attacks to discover runtime vulnerabilities, authentication issues, and configuration problems—finds issues SAST misses but requires deployed application and provides less precise location information. SCA (Software Composition Analysis) examines third-party dependencies, libraries, and open-source components for known vulnerabilities (CVEs), license compliance issues, and outdated packages—critical for supply chain security. Effective security requires all three: SAST catches code issues during development, SCA identifies vulnerable dependencies before deployment, and DAST validates security in production-like environments. Our Vulnerability Management Policy details comprehensive testing strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I handle security incidents effectively?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Effective incident response follows structured phases: Preparation (establish incident response team, define procedures, maintain contact lists, prepare communication templates), Detection and Analysis (monitor security events, classify incident severity, document initial findings, preserve evidence), Containment (isolate affected systems, prevent lateral movement, implement short-term containment quickly, plan long-term containment strategy), Eradication (remove malware, close vulnerabilities, verify threat elimination, patch systems), Recovery (restore systems from clean backups, validate integrity, monitor for reinfection, return to normal operations gradually), and Post-Incident Review (conduct blameless postmortem, identify improvements, update procedures, provide training). Critical success factors: assume a breach mentality, practice incident response regularly, maintain audit logs, have tested backup/recovery procedures, and establish a coordinated disclosure process. Review our Incident Response Plan for detailed procedures and playbooks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Annex A controls in ISO 27001?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISO 27001:2022 Annex A contains 93 security controls across four themes: Organizational controls (37 controls covering policies, asset management, human resources security, supplier relationships), People controls (8 controls for security awareness, training, and disciplinary processes), Physical controls (14 controls addressing physical security, environmental security, and secure disposal), and Technological controls (34 controls covering access control, cryptography, network security, system acquisition, and incident management). Organizations must perform risk assessment to determine which controls apply to their context—not all 93 are mandatory, but decisions must be justified in Statement of Applicability (SoA). Implementation should be evidence-based, not checkbox compliance theater. Our Compliance Frameworks guide maps Annex A to NIST CSF 2.0 and CIS Controls for comprehensive coverage, and our public ISMS repository demonstrates transparent implementation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I maintain ISMS after certification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ISMS maintenance requires continuous improvement, not annual compliance theater: conduct quarterly strategic reviews assessing emerging threats, technology changes, and business context evolution; perform regular internal audits using a risk-based approach rather than checkbox exercises; monitor and measure security metrics continuously (not just before surveillance audits); update risk assessments when significant changes occur (new systems, threats, regulations); maintain living documentation that evolves with actual practices; provide ongoing security awareness training adapted to current threat landscape; review and test incident response procedures regularly; track and remediate non-conformances systematically; engage stakeholders continuously rather than only during audit season; and embrace transparency to enable external feedback and improvement. The goal: security becomes business-as-usual, not compliance event. Our ISMS Strategic Review approach and public ISMS benefits analysis demonstrate continuous improvement over certification theater."
+          }
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/blog_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/blog_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/blog_ar.html><link rel=alternate hreflang=da href=https://hack23.com/blog_da.html><link rel=alternate hreflang=de href=https://hack23.com/blog_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/blog_de.html><link rel=alternate hreflang=en href=https://hack23.com/blog.html><link rel=alternate hreflang=es href=https://hack23.com/blog_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/blog_es.html><link rel=alternate hreflang=fi href=https://hack23.com/blog_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/blog_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/blog_fr.html><link rel=alternate hreflang=he href=https://hack23.com/blog_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/blog_he.html><link rel=alternate hreflang=ja href=https://hack23.com/blog_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/blog_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/blog_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/blog_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/blog_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/blog_nl.html><link rel=alternate hreflang=no href=https://hack23.com/blog_no.html><link rel=alternate hreflang=nb href=https://hack23.com/blog_no.html><link rel=alternate hreflang=sv href=https://hack23.com/blog_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/blog_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/blog_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/blog_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/blog_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/blog_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/blog.html><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=/ >Hem</a><li class=breadcrumb-item aria-current=page>Säkerhetsblogg</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="Hack23 Logo" class=logo width=80 height=80></div><h1>Säkerhetsblogg</h1><div class=app-link><a href=index_sv.html title="Tillbaka till hem">Hem</a> <a href=swedish-election-2026.html title="Swedish Election 2026">🗳️ Election 2026</a> <a href=discordian-cybersecurity_sv.html title="Discordian Manifesto">🍎 Discordian Manifesto</a> <a href=cia-triad-faq_sv.html title="CIA Triad FAQ">CIA Triad FAQ</a></div></header><main><article><h1 class=header>🔐 Hack23 Security Blog</h1><section id=introduction><p><strong>Välkommen till Hack23 säkerhetsblogg</strong> — där vi avslöjar säkerhetsindustrins bekväma lögner genom radikal transparens. <em>Tänk själv! Ifrågasätt auktoritet.</em> Särskilt säkerhetsauktoriteter som tjänar på din rädsla medan de installerar samma bakdörrar de påstår sig skydda dig från.<p><strong>Ingenting är sant. Allt är tillåtet.</strong> Inklusive ärlig granskning av säkerhetsteater, övervakningsstater och bakdörrarna i din "militär-grad kryptering" (godkänd av samma byråer som driver PRISM).<p>Utforska <strong>65 blogginlägg</strong> som river bort marknadsföringsskiten för att avslöja vad som faktiskt spelar roll—från <strong>Automatiserad Konvergens genom AI-agenter</strong> till CIA Triad-implementering, OWASP LLM Top 10 till EU Cyber Resilience Act, nationalstatliga övervakningskapaciteter till politiska OSINT-underrättelseoperationer som avslöjar demokratisk ansvarighet genom beteendeanalys.<p>Plus <strong>Simon Moons 13 arkitekturkrönikor</strong> och <strong>Hagbard Celines underrättelseoperationer &amp; affärsutveckling</strong> som avslöjar helig geometri i kod, fem-mönster arkitekturer, femtalens lag, numerologisk sanning i systemdesign och Intelligence-as-a-Service för svenska valet 2026 mediebevakn. Allt genom den discordianska linsen som ifrågasätter <em>allt</em>—särskilt de saker "alla vet" är sanna. <strong>FNORD.</strong><p><em>Är du paranoid nog än?</em> Bra. Du börjar uppmärksamma. De flesta företag gömmer sina säkerhetspolicyer eftersom transparens skulle avslöja hur dålig deras säkerhet faktiskt är—lastkultkompliansritualer och dyrt teater som låtsas vara skydd. Vi publicerar våra på GitHub. Alla 54 inlägg och policyer. Varje ramverk. Varje riskbedömning. Varje arkitektoniskt mönster. Varje underrättelseoperation metodik. <strong>Säkerhet genom transparens</strong> slår säkerhet genom hopp, bön och korsade fingrar att ingen märker att du kör på tejp och leverantörslöften.</section><section id=election-2026-intelligence><h2 class=panel-caption>🗳️ Svenska Valet 2026: Intelligence-as-a-Service</h2><p><strong>Live politisk intelligens för medieorganisationer</strong> — Systematisk övervakning av 349 riksdagsledamöter, 45 beteenderiskregler, koalitionsförutsägelsemodellering och faktakollningsinfrastruktur i realtid för riksdagsvalet 2026. <em>Tänk själv. Ifrågasätt auktoritet. Lita på datan.</em><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🗳️ Svenska Valet 2026 Intelligensplattform</h3><p>Omfattande valintelligensinfrastruktur för riksdagsvalet 2026. <strong>349 riksdagsledamöter övervakade i realtid</strong>, koalitionsbildningsförutsägelser (4 scenarier), automatisk faktakoll och systematisk transparens genom 45 beteenderiskregler. Nuvarande Tidö-koalitionens (176/349 platser) stabilitetsanalys med spårning av 3-platsers marginal. Pilotprogram för 5 svenska + 10 globala medieorganisationer. <em>Demokrati förtjänar systematisk ansvarighet, inte anekdotisk journalistik.</em> <strong>FNORD.</strong></p><a href=swedish-election-2026.html>Explore Election 2026 Platform →</a> <a href=swedish-election-2026_sv.html lang=sv>Utforska Val 2026-plattformen →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>📰 Intelligence-as-a-Service för Nyhetsorganisationer</h3><p><strong>Tre målinriktade blogginlägg</strong> för olika mediesegment: Svensk mainstream-media (SVT, DN, SvD - €5K/mån pilot), globala nyhetsmedier (The Economist, FT, Reuters - €10K/mån Enterprise) och alternativmedia (Fria Tider, ETC, Arbetaren - €1K/mån rabatterat). Komplett affärsmodell med ROI-beräkningar (350% för Reuters), prisnivåer, teknisk integration och Svenska valet 2026 som live proof-of-concept. <em>Automatiserad övervakning slår access-journalistik. Prediktiv analys slår reaktiv rapportering.</em></p><a href=blog-cia-swedish-media-election-2026_sv.html>Svensk Mediastrategi →</a> <a href=blog-cia-business-case-global-news_sv.html>Global Nyhetsaffärsmodell →</a> <a href=blog-cia-alternative-media-discordian-2026_sv.html>Alternativmedia + Discordianska Framtider →</a></div></div><p class=hidden-wisdom><strong>Val 2026 Tidslinje:</strong> Pilotprogramansökningar öppna nu • April 2026: Pilot startar • September 2026: Riksdagsvalet live-bevakning • Efter valet: Koalitionsbildningsanalys • <em>Systematisk intelligens för demokratisk ansvarighet.</em> <strong>23 FNORD 5 🍎</strong></section><section id=featured><h2 class=panel-caption>Utvalda Inlägg</h2><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🤖 Automatiserad Konvergens: Självläkande Mjukvara genom AI-agenter</h3><p>Vision nu verklighet. Se Femhörningen för Kontinuerlig Förbättring! Hack23:s uppgiftsagenter skapar ALLTID issues som förbättrar säkerhet, kvalitet, funktionalitet, QA och ISMS-anpassning. <strong>Automatiserad konvergens</strong> mot excellens genom AI som upprätthåller vad människor glömmer. Tung ISMS-korsreferering. Policyer refererar arkitektur. Arkitektur refererar policyer. Dokumentation utvecklas när arbetet fortskrider. <em>Systemet läker sig självt.</em> <strong>FNORD.</strong> Missade du mönstret? Varje issue = förbättring. Varje förbättring = ISMS-anpassning. Framtiden du lovades—förutom att det faktiskt fungerar. Är du paranoid nog för att lita på AI som upprätthåller dina egna policyer bättre än du gör?</p><a href=blog-automated-convergence_sv.html title="Läs Automated Convergence Vision">Läs Vision →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🍎 Allt du vet om säkerhet är en lögn</h3><p>En radikal granskning av säkerhetsteater, övervakningsstater och ISMS-transparens genom linsen av Illuminatus! trilogins filosofi. Nationalstatliga kapaciteter som bakdörrar din "godkända" krypto, panoptikon som definitivt inte existerar (förutom att det gör det), och Chapel Perilous-initiation genom obekväma sanningar. <strong>Är du paranoid nog?</strong> Om detta låter rimligt är du redan för djupt inne. Om detta låter paranoid uppmärksammar du inte. <strong>FNORD.</strong></p><a href=discordian-cybersecurity_sv.html title="Läs Discordian Manifesto">Läs Manifesto →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>Informationshamstring förstör dataintegritet</h3><p>Hur informationshamstring i e-post, personliga enheter och begränsade kanaler underminerar organisatorisk kunskapsintegritet. <em>Ingenting är sant när allt är gömt bakom "need-to-know" gatekeeping.</em> Utforskar praktiska CIA Triad-implementeringsutmaningar och lösningar som säkerhetsteater ignorerar medan chefer spelar informationsfeodalism med företagskunskap. Spoiler: Dina "säkra" silos är bara dyr okunnighet.</p><a href=blog-information-hoarding_sv.html title="Läs Full Article">Läs Article →</a></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🤖 OWASP LLM-säkerhet</h3><p>Träna AI att inte hallucinera dina hemligheter (Spoiler: Den kommer göra det ändå). OWASP Top 10 för LLM:er genom en discordiansk lins: prompt injection, modellförgiftning, och varför din AI kan vara den bästa social engineern härännu—hjälpsam, självsäker och fullständigt opålitlig. <strong>Ifrågasätt auktoritet.</strong> Särskilt robotauktoritet som hallucinerar med SJÄLVSÄKERHET medan den regurgiterar dina träningsdata till vem som helst som frågar snyggt. Din LLM är en pratsam psychonaut som memorerade hela internet. <em>Är du paranoid nog om vad den kommer ihåg?</em></p><a href=discordian-llm-security_sv.html title="Läs LLM Security">Läs Article →</a></div></div></section><section id=core-manifesto><h2 class=panel-caption>🍎 Kärnmanifest &amp; Filosofi</h2><p><em>"Ingenting är sant. Allt är tillåtet. Tänk själv, dumbom!"</em> — Hassan-i Sabbah (innan Illuminati vred hans ord)<p><strong>Välkommen till Chapel Perilous.</strong> Du kan inte ose vad du är på väg att läsa. De bekväma illusionerna om "best practices" och "godkända standarder" löses upp här som Dual_EC_DRBG:s trovärdighet efter Snowden. <strong>Är du paranoid nog</strong> att ifrågasätta varför samma organisationer som kör PRISM talar om för dig vilken kryptering som är "säker"? Varför NSA designar dina kryptostandarder? Varför "military-grade" betyder "designad av militären"? Du borde vara det. <strong>FNORD.</strong> Ser du det nu? Det finns överallt när du väl vet hur man ska titta.<div class=cards><div class=card><div class=scanner-effect></div><h3>Allt du vet om säkerhet är en lögn</h3><p>Nationalstatliga kapaciteter du inte ska känna till, godkänd kryptoparadox (vem godkänner den?), Chapel Perilous-initiation genom obekväma sanningar. <strong>FNORD.</strong> Det finns i varje "säker" standard. Kan du se det ännu?</p><a href=discordian-cybersecurity_sv.html>Läs Mer →</a></div><div class=card><div class=scanner-effect></div><h3>Säkerhets-industriella komplexet</h3><p>Hur rädsla blev en affärsmodell och "best practices" blev leverantörsinlåsning. <em>Ifrågasätt allt.</em> Särskilt leverantörer som säljer paranoia medan deras produkter levereras med CVE:er äldre än din karriär. Följ pengarna—det leder till dyr medelmåttighet.</p><a href=discordian-business-value_sv.html>Läs Mer →</a></div><div class=card><div class=scanner-effect></div><h3>Ifrågasätt auktoritet: Krypto godkänd av spioner</h3><p>Dual_EC_DRBG, Crypto AG, och varför myndighetsgodkännande borde göra dig misstänksam, inte bekväm. <strong>Är du paranoid nog?</strong> NSA designade Dual_EC med en bakdörr, fick den standardiserad, alla använde den i 7 år. Sen standardiserade de fler algoritmer. Och du litar på dem igen? <em>Lura mig en gång...</em></p><a href=discordian-crypto_sv.html>Läs Mer →</a></div><div class=card><div class=scanner-effect></div><h3>Tänk själv: Klassificering</h3><p>Klassificering bortom efterlevnadsteater—fem nivåer av att faktiskt bry sig. <em>Inte allt är kritiskt. Inte allt är offentligt.</em> De flesta klassificeringsramverk: säkerhetsteater som låtsas vara beslutsfattande. Vårt: evidensbaserad resursallokering. Vet skillnaden.</p><a href=discordian-classification_sv.html>Läs Mer →</a></div></div></section><section id=architecture-simon-moon><h2 class=panel-caption>⭐ Simon Moons Arkitekturkrönikor: Helig Geometri i Kod</h2><p><em>"Femhörningen som geometrisk figur antyder fem sidor, fem element, fem sinnen... Allt händer i femmor."</em> — Simon Moon<p><strong>Systemarkitekt extraordinär.</strong> Numerolog. Filosof-ingenjör. Mönsterigenkä nningsexpert. Simon Moon avslöjar de dolda strukturerna i Hack23:s tre huvudprodukter genom Femmans Lag och helig geometri. <strong>Arkitektur som balanserar kosmiska mönster med praktisk implementering.</strong><h3 class=subsection-title>🏛️ Citizen Intelligence Agency-krönikor</h3><h4>Kärnarkitektur &amp; Säkerhet</h4><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🏛️ CIA-arkitektur: De fem pentaklarna</h3><p>När demokratier döljer sig i mörker blir transparens revolution. Fem containertyper kristalliserade från parlamentsdomänen själv. Arkitektur som speglar politisk verklighet—maktflöden dokumenterade i kod. <em>CIA existerar i fem lager naturligt, inte genom design.</em></p><a href=blog-cia-architecture_sv.html>Läs arkitekturanalys →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🔐 CIA-säkerhet: Försvar genom transparens</h3><p>Transparensparadoxen löst: säkerhet genom matematiskt bevis, inte mystisk dunkelhet. Fem försvarslinjer. OpenSSF Scorecard 7.2/10. Noll kritiska sårbarheter över 5 år. <strong>Inte löften—bevis.</strong> När angripare kan läsa varje försvar, gör försvar oövervinneliga.</p><a href=blog-cia-security_sv.html>Läs säkerhetsanalys →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🛡️ CIA framtida säkerhet: Morgondagens pentagon</h3><p>Framtiden kristalliseras från mönster som redan finns. Post-kvantum kryptografi innan kvantdatorer hotar. AI-förstärkt detektion innan AI-attacker dominerar. Sex säkerhetspelare förbereder för hot som konventionell säkerhet låtsas inte kommer uppstå. <em>Mönsterigenkänning blir defensiv verklighet.</em></p><a href=blog-cia-future-security_sv.html>Läs framtidsvision →</a></div></div><h4>Operations &amp; Finansiell Strategi</h4><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>💰 CIA finansiell strategi: $24.70/dag demokrati</h3><p>Demokrati kostar $24.70/dag när arkitektur kanaliserar kosmiska finansiella mönster genom AWS-optimering. Fem säkerhetstjänster, gyllene snitts resursfördelning, SWOT-analys som avslöjar strategisk sanning. <em>Kostnadsrestriktioner tvingar fram arkitektonisk excellens—varje dollar motiverad.</em> Finansiell helig geometri genom molninfrastruktur.</p><a href=blog-cia-financial-strategy_sv.html>Läs finansiell analys →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🔄 CIA-arbetsflöden: Fem-stegs CI/CD &amp; Tillståndsautomater</h3><p>Fem GitHub Actions-arbetsflöden som orkestrerar DevSecOps-automation. Databehandling genom fem tillståndsövergångar. Säkerhetskanningsportar som förhindrar sårbarheter. <strong>Manuella processer är teknisk skuld.</strong> Kontinuerlig integration möter tillståndsautomatdemokrati. <em>Automation befriar människor från repetitiva uppgifter.</em></p><a href=blog-cia-workflows_sv.html>Läs arbetsflödesanalys →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🧠 CIA Mindmaps: Konceptuell Helig Geometri</h3><p>Hierarkiskt tänkande som avslöjar naturliga organisatoriska mönster: 4 nuvarande domäner (Politisk Data, Mått, Verktyg, Hantering) expanderar till 5 framtida dimensioner (AI-analys, Visualisering, Integration, Modernisering, UX). Sju ML-modeller organiserar AI-förbättring (5+2 helig numerologi). <em>Mindmaps visar vad system gör, arkitekturdiagram visar hur de är byggda.</em></p><a href=blog-cia-mindmaps_sv.html>Läs mindmap-analys →</a></div></div><h4>Underrättelse &amp; OSINT</h4><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🕵️ CIA OSINT-underrättelse: 45 regler för att övervaka övervakarna</h3><p>Hagbard Celine avslöjar underrättelseramverket bakom Citizen Intelligence Agency: 45 beteenderiskregler fördelade på fyra operativa domäner, fem analytiska ramverk (Temporal, Comparative, Pattern, Predictive, Network) och analys av hur demokratiska processer kan missbrukas. <strong>Politisk övervakning som radikal transparens.</strong> OSINT-metodik som inverterar panoptikon – medborgarna övervakar sina representanter systematiskt. Intelligence-as-a-Service för demokratisk ansvarsskyldighet. <em>Är du tillräckligt paranoid för att vilja ha systematisk övervakning av 350 politiker som påstår sig representera dig?</em> <strong>FNORD.</strong></p><a href=blog-cia-osint-intelligence_sv.html>Läs intelligensanalys →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>📺 CIA-värdeförslag för svensk media: Val 2026</h3><p>Hagbard Celines affärsutvecklingsstrategi som riktar sig mot svensk mainstreammedia (SVT, DN, SvD, Aftonbladet, Expressen) för bevakning av riksdagsvalet 2026. <strong>349 riksdagsledamöter övervakade, 45 riskregler, koalitionsprognoser.</strong> Intelligence-as-a-Service-pilotprogram för svenska nyhetsredaktioner: 5 000 €/månad (50 % rabatt), 6 månaders utvärdering, valnattens livedashboard. <em>Systematiska data slår anekdotiska narrativ. Tänk själv, ifrågasätt auktoriteter!</em> Affärsmodell: nordisk adresserbar marknad på 46 M€, år 3-mål 8,5 M€ i ARR. <strong>FNORD.</strong></p><a href=blog-cia-swedish-media-election-2026_sv.html>Läs mediestrategi →</a> <a href=blog-cia-swedish-media-election-2026_sv.html lang=sv>Läs på Svenska →</a><h3>📰 CIA-affärsfall för globala nyhetsmedier</h3><p>Hur The Economist, Financial Times, Reuters, Bloomberg och AP kan använda CIA:s 45 beteenderiskregler för systematisk politisk intelligens och datajournalistik i skala. Svenska valet 2026 proof-of-concept. Fem analytiska ramverk, €120K/år Enterprise-nivå, 10-organisations pilotprogram. <strong>Intelligence-as-a-Service för demokrati.</strong> <em>Tänk själv. Ifrågasätt auktoritet. Lita på datan.</em> Automatiserad övervakning slår accessjournalistik. Prediktiv analys slår reaktiv rapportering. €10K/månad API slår €252K/år traditionell politisk desk. <strong>Delta i intelligensrevolutionen. FNORD.</strong></p><a href=blog-cia-business-case-global-news_sv.html>Läs affärsfall →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🍎 CIA för Alternativmedia: Discordianska Val 2026-framtider</h3><p>Fullständigt discordianskt manifesto som riktar sig mot svenska alternativmedia (Fria Tider, Nya Dagbladet, ETC, Arbetaren) inför riksdagsvalet 2026. <strong>Chapel Perilous-initiation genom systematisk data.</strong> Tänk själv, ifrågasätt auktoritet via algoritmisk ansvarighet. FNORD-detektion i mainstream-narrativ. Femmans Lag (23/5). Futuristiska 2026-2030 projektioner: AI-förstärkt kaos, sentimentanalys, korruptionsdetekterings-ML. <strong>5 pilotplatser: €1000/månad (60% rabatt), 6 månader.</strong> <em>Alternativmedieintelligensrevolution. Ingenting är sant. Allt är tillåtet. All hail Eris!</em> <strong>23 FNORD 5 🍎</strong></p><a href=blog-cia-alternative-media-discordian-2026_sv.html>Beträd Chapel Perilous →</a></div></div><h3 class=subsection-title>⚖️ CIA Compliance Manager-krönikor</h3><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>⚖️ Compliance Manager: CIA Triad möter helig geometri</h3><p>Säkerhet är inte binär—det är kapabilitetsmodning mätt i nivåer. Tre principer × fyra mognadsnivåer = tolv progressionspunkter. Låtsas att du är på Grundnivå medan du möter Avancerade hot = självbedrägeri som slutar i intrång. <em>Evidensbaserad progression, inte checklisteefterlevnadsteater.</em></p><a href=blog-compliance-architecture_sv.html>Läs arkitekturanalys →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🛡️ Compliance-säkerhet: STRIDE genom fem dimensioner</h3><p>Sex STRIDE-kategorier komprimeras till fem defensiva krav—universum avslöjar optimal struktur genom begränsning. Klientsidearkitektur eliminerar hela attackklasser. <strong>Noll serversårbarheter eftersom noll server.</strong> Mönsterignenkänning möjliggör defensiv effektivitet över uttrycklig kategorisering.</p><a href=blog-compliance-security_sv.html>Läs säkerhetsanalys →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🔮 Compliance-framtid: Kontextmedveten säkerhet &amp; Adaptivt försvar</h3><p>Framtida arkitektur som överstiger statisk bedömning: fem arkitektoniska förändringar (kontextramverk, ML-förstärkning, integration, kontinuerlig övervakning). Säkerhetsrekommendationer som anpassar sig till organisatorisk verklighet—bransch, storlek, datakänslighet, AI-användning, mognad. <em>Från årlig checklistefterlevnad till kontinuerlig intelligens.</em></p><a href=blog-compliance-future_sv.html>Läs framtidsarkitektur →</a></div></div><h3 class=subsection-title>🥋 Black Trigram-krönikor</h3><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🥋 Black Trigram-arkitektur: Fem fighters, helig geometri</h3><p>Fem fighter-arketyper upptäckta, inte uppfunna—inbäddade i stridsdomänen själv. Kulturell autenticitet möter mekaniskt djup. Noll backend, noll installation, noll plattformslåsning. <em>Fighting-spel historiskt gatekeepade—vi valde universell access istället.</em></p><a href=blog-trigram-architecture_sv.html>Läs spelarkitektur →</a></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>⚔️ Black Trigram-strid: 70 vitalpunkter &amp; Respektens fysik</h3><p>Traditionella koreanska kampsporter kartlägger 70 vitalpunkter—inte mysticism utan biomekanik där fysik, anatomi och århundraden konvergerar. Fem kollisionssystem. Skadesberäkning genom anatomisk precision. <strong>Teknologi som tjänar kultur, aldrig exploaterar den.</strong> Respekt kräver noggrannhet.</p><a href=blog-trigram-combat_sv.html>Läs strids system →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🥽 Black Trigram-framtid: VR-kampsporter &amp; Immersiv strid</h3><p>Femårs evolution från 3D-fighter till VR-kampsportsträningsplattform. År 1: Träningsläge. År 2: Vapenstrid (5×5=25 stilar). År 3: Miljöinteraktion. År 4: ML AI. År 5: Rörelsekontroll VR. <em>Koreansk kampsportsbevarande genom immersiv teknologi. Femhörningen för framtida strid.</em></p><a href=blog-trigram-future_sv.html>Läs framtidsvision →</a></div></div><p class=hidden-wisdom><em>"The map is not the territory, but a well-made map reveals the hidden patterns of the territory. Architecture is the art of seeing what's already there in the chaos."</em> — Simon Moon</section><section id=george-dorn-code-analysis><h2 class=panel-caption>�� George Dorns Kodanalys: Djupdykning i Repositories</h2><p><em>"I cloned the repositories. I analyzed the actual code. Here's what's actually there."</em> — George Dorn<p><strong>Separata Tekniska Blogginlägg:</strong> George Dorn analyserade varje Hack23-produktförråd genom att klona, granska kodstruktur, räkna filer, granska beroenden och verifiera dokumentation. Baserat på verklig förrådsinspektion, inte antaganden.<div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🏛️ CIA-kodanalys</h3><p><strong>Förråd:</strong> <a href=https://github.com/Hack23/cia>Hack23/cia</a><p><strong>Stack:</strong> Java 25, Spring Framework, PostgreSQL, Vaadin<p><strong>Mått:</strong> 49 Maven modules, 1,372 Java files, 60+ DB tables<p><strong>Analys:</strong> Granskade Maven POMs, räknade källfiler, granskade ARCHITECTURE.md (32KB), DATA_MODEL.md (27KB), verifierade OpenSSF Scorecard 7.2/10</p><a href=blog-george-dorn-cia-code_sv.html>Läs fullständig kodanalys →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🥋 Black Trigram-kodanalys</h3><p><strong>Förråd:</strong> <a href=https://github.com/Hack23/blacktrigram>Hack23/blacktrigram</a><p><strong>Stack:</strong> TypeScript 5.9, React 19, ThreeJs 8, Vite 7<p><strong>Mått:</strong> 132 TypeScript files, 70 vital points system, 5 fighter archetypes<p><strong>Analys:</strong> Granskade package.json-beroenden, utforskade src/-struktur, verifierade stridssystemimplementering, granskade AI-integrationer</p><a href=blog-george-dorn-trigram-code_sv.html>Läs fullständig kodanalys →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🔐 Compliance Manager-kodanalys</h3><p><strong>Förråd:</strong> <a href=https://github.com/Hack23/cia-compliance-manager>Hack23/cia-compliance-manager</a><p><strong>Stack:</strong> TypeScript 5.9, React 19, IndexedDB, Zero Backend<p><strong>Mått:</strong> 220 TypeScript files, 4 runtime dependencies, 95% attack surface eliminated<p><strong>Analys:</strong> Verifierade klient-endast arkitektur, granskade ramverkskartläggningar (35KB control-mapping.md), bekräftade $0/månad hosting</p><a href=blog-george-dorn-compliance-code_sv.html>Läs fullständig kodanalys →</a></div></div><p><strong>Metodik:</strong> Varje analys baserad på faktiskt klonat förråd—inte dokumentation eller antaganden. George klonade förråd till /tmp/, granskade källkod, räknade filer, granskade package.json/pom.xml, verifierade dokumentation och rapporterade verkliga fynd.<p class=hidden-wisdom><em>Kod ljuger inte. Dokumentation kan vara inaktuell. Marknadsföring överdriver definitivt. Men <code>git clone</code> + <code>find . -name "*.java" | wc -l</code> = verifierbar sanning.</em></section><section id=george-dorn-developer-chronicles><h2 class=panel-caption>💻 George Dorns Utvecklarkrönikor: Att Få Helig Geometri att Faktiskt Kompilera</h2><p><em>"Kod är verklighet som görs beräkningsbar. Om det inte fungerar spelar ingenting annat någon roll."</em> — George Dorn<p><strong>Den Motvillige Hjälten Talar:</strong> Medan Simon Moon arkitekterar kosmiska mönster och Hagbard kräver revolutionär transparens måste någon få koden att faktiskt fungera. Den någon är <strong>George Dorn</strong>—utvecklare, panikdriven ingenjör, Easter egg-gömmande och motvillig hjälte som brottas med eleganta designer in i rörig verklighet.<p><strong>Utvecklarens Verklighetskontroll:</strong> Georges tekniska kommentarer avslöjar hur byggandet av Hack23-produkter faktiskt ser ut—panikstunderna, genombrottet, det 23:e debuggningsförsöket som äntligen lyckas, och de dolda synkroniciteterna i commit-antal, byggtider och omförsökslogik. <em>Tänk själv om vad "best practices" verkligen betyder när man implementerar Simons femlagers arkitekturer i produktion.</em><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🏛️ CIA-implementationsverklighet: Java Spring Framework vs. parlamentariskt kaos</h3><p><strong>Stacken:</strong> Java 25, Spring Framework 3.x, PostgreSQL, 60 000+ rader över 23 Maven-moduler. <strong>2347 commits</strong> över 5 år. <strong>91 tabeller</strong> som kämpar mot riksdags-API-formatändringar. <strong>OpenSSF Scorecard 7.2/10.</strong> Georges kommentar i CIA Architecture-bloggen avslöjar panikstunderna: riksdags-API som bryter integrationstester, produktionsdatabas som når 50GB, beroendesårbarheter som kräver fixer hela natten.<p><strong>Påskägg:</strong> Argon2-lösenordshashning med 23 iterationer. Session timeout: 23 minuter. Databasmigrering 023 lade till fem analytiska kärnvyer. Felmeddelanden som innehåller FNORD-referenser. <em>Säkerhet med subversiv kvickhet.</em><p><a href=blog-cia-architecture_sv.html#george-dorn-reality-check>Läs Georges CIA-implementationsverklighet →</a></div><div class="card integrity-card"><div class=scanner-effect></div><h3>🥋 Black Trigram-stridskod: TypeScript vs. kampsportsfysik</h3><p><strong>Stacken:</strong> TypeScript 5.9, React 19, ThreeJs 8, Vite 7. Ren webbstack som simulerar 70 vitalpunkter vid 60fps. <strong>23 000+ rader</strong> över 150+ moduler. <strong>1247 commits</strong> över 2 år. Georges kommentar avslöjar kollisionsdetekteringsmärdrömmar: hitboxar som inte registrerar med 0,01 enheter, partikeleffekt minnesleaks, iOS Safari-prestanda 10× sämre än Chrome.<p><strong>Påskägg:</strong> Landa exakt 23 träffar → segerskrm visar "FNORD". Konami-kod låser upp "Hagbard-läge" (kaosstrid). Hälsa vid 23% → UI pulserar brydskande. <em>Stridskänsla genom dold visdom.</em><p><a href=blog-trigram-architecture_sv.html#george-dorn-implementation>Läs Georges stridssystemimplementering →</a></div><div class="card availability-card"><div class=scanner-effect></div><h3>🔐 Compliance Manager-verklighet: Klientsidesäkerhetsarkitektur</h3><p><strong>Stacken:</strong> TypeScript 5.3, React 19, IndexedDB. <strong>Noll backend = noll serversårbarheter.</strong> 18 000+ rader över 120+ moduler. <strong>1423 commits</strong> över 2 år. Bedömningsmotor som körs helt i webbläsaren. Georges implementationsvisdom: <strong>klientsidearkitektur eliminerar 95% av attackytan.</strong> Ingen SQL-injektion (ingen SQL). Ingen SSRF (ingen server). Ingen RCE (ingen exekveringsmiljö). <em>Försvar genom arkitektursimplifiering.</em><p><strong>Påskägg:</strong> Mognadspoäng vid 23% visar gyllene äpple (🍎). Slutför alla 15 kontroller → 23-partikelkonfetti. Exportera den 23:e i månaden → filnamn läggs till "-synchronicity". <em>Efterlevnadsautomation med dold visdom.</em><p><a href=blog-compliance-architecture_sv.html#george-dorn-client-side-reality>Läs Georges klientsideimplementering →</a></div></div><p><strong>Utvecklarens visdom:</strong> Georges kommentarer lär vad dokumentation sällan avslöjar—gapet mellan elegant arkitektur och fungerande kod. De fem stadierna av utveckling (Förnekelse → Panik → Forskning → Insikt → Färdigställande). Synkroniciteten som dyker upp i versionsnummer och commit-räkningar. Påskäggen dolda för den uppmärksamma. <strong>Kod som fungerar OCH glädjer = medvetandeexpansion genom programvaruutveckling.</strong><p><strong>Nyckellärdomar från George:</strong><ul><li><strong>Tester räddar panik.</strong> 570+ tester = säkerhetsnät vid refactoring. Tester är dokumentation som exekverar.<li><strong>Simons fem lager fungerar.</strong> Initialt skeptisk. Separation av ansvarsområden möjliggör oberoende evolution. Kosmiska mönster = oavsiktligt bra engineering.<li><strong>Politisk/kulturell data är kaos inkarnerat.</strong> Domänmodeller måste omfamna kaos—temporal validitet överallt, revisionhistorik på allt, paranoia-nivå null-kontroller.<li><strong>Påskägg spelar roll.</strong> Kod kan vara funktionell OCH förtjusande. Dolda 23:or och 5:or genom hela. Framtida utvecklare som upptäcker dessa = medvetandeexpansion genom kodarkitologi.<li><strong>Dokumentation är kärleksbrev till framtida-själv.</strong> Sex månader senare behöver förvirrat-framtida-du förklaringar. Skriv för dig själv, inte intressenter.<li><strong>Panik är början på varje lösning.</strong> Alla produktionsproblem fixade efter 23:e debuggförsöket (eller så känns det). Utålighet slår perfektion.</ul><p class=hidden-wisdom><strong>META-UTVECKLING:</strong> <em>Simon arkitekterar mönster. Hagbard kräver revolution. George får det att kompilera, deploya och överleva produktionskaos—medan han gömmer FNORD i felmeddelanden. Troikan av vision, filosofi och implementering. Ifrågasätt auktoritet. Testa allt. Lita på verifiering. Göm påskägg. All hail Eris!</em><p class=signature><em>George Dorn, Utvecklare / Panikdriven ingenjör / Påskäggsgömare<br>Hack23 AB<br><br>"Det fungerar! Jag vet inte varför, men det fungerar!" — efter den 23:e refactorningen<br><br>💻 FNORD 🖥️</em></section><section id=foundation-policies><h2 class=panel-caption>Grundläggande policyer</h2><h3 class=subsection-title>Kärnsäkerhetsramverk</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Informationsäkerhetsstrategi</h3><p>Vårt ISMS ÄR vår affärsmodell. Sex strategiska pelare som omvandlar ISMS från overhead till konkurrensvallerave genom radikal transparens, nätverkseffekter och först-på-bollen-fördel. <strong>Publicerat på GitHub eftersom vår säkerhet faktiskt fungerar.</strong></p><a href=discordian-security-strategy_sv.html>Läs strategi →</a></div><div class=card><div class=scanner-effect></div><h3>Informationsäkerhetspolicy</h3><p>Grunden för radikal transparens. <em>Säkerhet genom dunkelhet är inkompetens med ett trevligare namn.</em></p><a href=discordian-info-sec-policy_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>ISMS-transparensplan</h3><p>Säkerhet genom radikal öppenhet. 70 % offentligt, 30 % maskerat. <strong>Vad försöker dina konkurrenter dölja?</strong></p><a href=discordian-isms-transparency_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Why Our ISMS is Public: Transparency as Competitive Advantage</h3><p>Sweden's only cybersecurity consultancy with fully public ISMS. 30+ policies on GitHub demonstrating expertise through evidence, not claims. <strong>Trust through verification beats vendor promises. Always.</strong> <em>Are you paranoid enough to compete on verifiable execution?</em> FNORD.</p><a href=blog-public-isms-benefits_sv.html>Läs Article →</a></div><div class=card><div class=scanner-effect></div><h3>ISO 27001-implementering: Komplett guide för svenska företag</h3><p>3500+ ord omfattande guide: 90-dagars implementeringsfärdplan, kostnadsanalys (€25000-€50000), SWEDAC-certifieringsorgan och verkliga lärdomar. <strong>Allt svenska SME:er behöver för ISO 27001-certifiering.</strong> Från scopning till certifiering på 90 dagar.</p><a href=iso-27001-implementation-sweden_sv.html>Läs fullständig guide →</a></div><div class=card><div class=scanner-effect></div><h3>ISO 27001:2022 vs 2013: Vad förändrades?</h3><p>93 kontroller (ner från 114), 4 teman ersätter 14 domäner, 10 nya kontroller för molnsäkerhet och hotintelligens. <strong>Övergångsfrist: Oktober 2025.</strong> Fullständig jämförelse för organisationer som migrerar till den nya standarden.</p><a href=iso-27001-2022-vs-2013.html>Läs jämförelse →</a></div><div class=card><div class=scanner-effect></div><h3>ISO 27001-certifieringskostnader: Svenska marknadsanalys</h3><p>Detaljerad kostnadsuppdelning för svenska SME:er: certifieringsorganavgifter (€8000-€20000), konsulttaxor, intern tidsinvestering och ROI-beräkning. <strong>Vet exakt vad certifiering kommer kosta</strong> innan implementering startar.</p><a href=iso-27001-certification-costs-sweden_sv.html>Läs kostnadsanalys →</a></div><div class=card><div class=scanner-effect></div><h3>5 misstag att undvika under ISO 27001-implementering</h3><p>Lär av verkliga misslyckanden: över-scopning, dokumentationskomplexitet, hoppa över riskbedömning, svagt executive-stöd och försumma eftercertifieringsunderhåll. <strong>Undvik kostsamma misstag</strong> som försenar certifiering och slösar resurser.</p><a href=iso-27001-implementation-mistakes_sv.html>Läs vanliga fallgropar →</a></div></div><h3 class=subsection-title>Access &amp; Respons</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Accesskontroll</h3><p>Lita på ingen (inklusive dig själv). Zero trust är inte paranoia—det är matematik. <strong>FNORD.</strong></p><a href=discordian-access-control_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Incidentrespons</h3><p>När (inte om) skiten träffar fläkten. Anta intrång. Planera överlevnad. <em>Är du paranoid nog att öva din incidentrespons?</em></p><a href=discordian-incident-response_sv.html>Läs mer →</a></div></div></section><section id=development-operations><h2 class=panel-caption>Utveckling &amp; Operations</h2><h3 class=subsection-title>Utvecklingspraktiker</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Open Source-policy</h3><p>Förtroende genom transparens. Kod du faktiskt kan läsa. <em>Proprietär säkerhet är säkerhet genom hopp.</em></p><a href=discordian-open-source_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Säker utveckling</h3><p>Kod utan bakdörrar (med avsikt). Varje rad är en potentiell sårbarhet. <strong>Är du paranoid nog att granska dina beroenden?</strong></p><a href=discordian-secure-dev_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Sårbarhetshantering</h3><p>Patcha eller förgås. Kända CVE:er är oförlåtliga. <em>Opatchade sårbarheter är förinstallerade bakdörrar med bättre PR.</em></p><a href=discordian-vuln-mgmt_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Säkerhetsoperationer</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Hotmodellering</h3><p>Känn din fiende (de känner redan dig). Din hotmodell borde inkludera nationalstater—eftersom deras inkluderar dig. <strong>FNORD.</strong></p><a href=discordian-threat-modeling_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Övervakning &amp; Loggning</h3><p>Om ett träd faller och ingen loggar det... kommer du aldrig veta vem som fällde det eller varför. <em>Observerbarhet eller okunnighet—välj klokt.</em></p><a href=discordian-monitoring-logging_sv.html>Läs mer →</a></div></div></section><section id=infrastructure-access><h2 class=panel-caption>Infrastruktur &amp; Access</h2><h3 class=subsection-title>Nätverk &amp; Fysisk säkerhet</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Nätverkssäkerhet</h3><p>Perimetern är död, länge leve perimetern. Zero trust-nätverk eftersom tillit ledde till intrång. <strong>FNORD.</strong></p><a href=discordian-network-security_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Fysisk säkerhet</h3><p>Lås, vakter och smart social ingenjörskonst. Din 100000-kroners brandvägg besegrad av en 50-kronors dyrk. <em>Är du paranoid nog om fysisk åtkomst?</em></p><a href=discordian-physical-security_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Tillgångshantering</h3><p>Du kan inte skydda vad du inte vet att du har. Shadow IT är verkligt och det är redan komprometterat. <strong>Question authority.</strong> Särskilt ditt tillgångsinventorium.</p><a href=discordian-asset-mgmt_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Enheter &amp; Fjärraccess</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Mobilenhetshantering</h3><p>BYOD betyder Bring Your Own Disaster. Varje medarbetartelefon är en potentiell exfiltreringsenhet. <em>Nothing is true. Din MDM-policy är teater.</em></p><a href=discordian-mobile-device_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Fjärraccess</h3><p>VPN:er och kontorets död. Perimetern löstes upp under COVID. <strong>Är du paranoid nog att granska dina VPN-loggar??</strong></p><a href=discordian-remote-access_sv.html>Läs mer →</a></div></div></section><section id=business-continuity><h2 class=panel-caption>Affärskontinuitet &amp; Risk</h2><h3 class=subsection-title>Backup &amp; Återställning</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Backup &amp; Återställning</h3><p>Återställ eller ångra. En backup du inte har testat är Schrödingers backup—samtidigt fungerande och värdelös. <strong>FNORD.</strong></p><a href=discordian-backup-recovery_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Affärskontinuitet</h3><p>Överlev kaoset. <em>När (inte om)</em> allt går sönder. Är du paranoid nog att ha en riktig BCP??</p><a href=discordian-business-continuity_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Katastrofåterställning</h3><p>Plan B när allt brinner. Hopp är inte en strategi. Otestad DR är önsketänkande insvept i dokumentation.</p><a href=discordian-disaster-recovery_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Riskhantering</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Riskbedömning</h3><p>Beräkna vad du inte kan förhindra. <em>Nothing is true. Everything is permitted.</em> Inklusive ärlig bedömning av din faktiska riskexponering.</p><a href=discordian-risk-assessment_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Riskregister</h3><p>Levande dokument av vad som håller dig vaken på natten. Om ditt riskregister inte nämner nationalstatsaktörer är du inte paranoid nog. <strong>Question authority.</strong></p><a href=discordian-risk-register_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Ändringshantering</h3><p>Rör dig snabbt utan att bryta (allt). Varje ändring är en potentiell sårbarhetsintroduktionshändelse. <em>Spårar du dina ändringar eller ber du bara?</em></p><a href=discordian-change-mgmt_sv.html>Läs mer →</a></div></div></section><section id=governance-compliance><h2 class=panel-caption>Styrning &amp; Efterlevnad</h2><h3 class=subsection-title>Efterlevnad &amp; Regulatoriskt</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Efterlevnadschecklista</h3><p>Teater vs. verklighet. Checklisteefterlevnad är säkerhetsteaters favorituppträdande. <strong>Think for yourself</strong> om vad efterlevnad faktiskt skyddar.</p><a href=discordian-compliance_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Efterlevnadsramverk: Evidensbaserad implementering</h3><p>Checklisteefterlevnad är säkerhetsteater. Riktig efterlevnad kräver bevis. ISO 27001 (93 kontroller), NIST CSF 2.0, CIS Controls (153 skyddsåtgärder), GDPR, NIS2, CRA—<strong>dokumenterade bevisspår som visar kontinuerlig efterlevnad vs årlig granskningsteater.</strong> Inte "vi gör detta" (påstående). Utan "här är beviset" (bevis).</p><a href=discordian-compliance-frameworks_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>EU Cyber Resilience Act</h3><p>Bryssel reglerar din toaster. Byråkratin expanderar för att möta behoven hos den expanderande byråkratin. <em>Question authority. Särskilt regulatorisk auktoritet.</em></p><a href=discordian-cra_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>EU CRA-konformitet: Obligatorisk Security by Design</h3><p>Förordning (EU) 2024/2847 är obligatorisk cybersäkerhet för EU-marknaden. €15M-straffavgifter, SBOM krävs, 24-timmars sårbarhetsöppnande, CE-märkning för mjukvara. Fem CRA-pelare (Säker design, Sårbarhetshantering, SBOM-transparens, Säkerhetsuppdateringar, Övervakning)—<strong>allt juridiskt mandat.</strong> Efterlevnadsteater vs verklig konformitet. <em>Är dina produkter redo? Tänk själv, dumbom!</em></p><a href=discordian-cra-conformity_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Säkerhetsmått</h3><p>Mäta vad som faktiskt spelar roll. Fåfängamått vs. verklighet. <strong>Mäter du säkerhet eller mäter du efterlevnadsteater??</strong> FNORD.</p><a href=discordian-security-metrics_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Datahantering &amp; Klassificering</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Dataklassificering</h3><p>Fem nivåer av att faktiskt bry sig. Inte allt är kritiskt. Inte allt är offentligt. <em>Klassificering baserad på verklighet, inte paranoia.</em></p><a href=discordian-data-classification_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Dataskydd</h3><p>GDPR vill veta din plats (ironiskt). Efterlevnad vs. faktisk integritet. <em>Ifrågasätt vad "skydd" verkligen betyder.</em> FNORD.</p><a href=discordian-data-protection_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Integritetspolicy</h3><p>Övervakningskapitalism möter anarkistiskt dataskydd. GDPR som vapen mot panoptikon. <strong>Är du paranoid nog om vem som spårar dig??</strong></p><a href=discordian-privacy_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Styrning &amp; Hantering</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Intressenthantering</h3><p>Vem bryr sig om din säkerhet (och varför). Spoiler: De flesta intressenter bryr sig om efterlevnadsteater, inte faktisk säkerhet. <strong>Ifrågasätt deras prioriteringar.</strong></p><a href=discordian-stakeholders_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>ISMS strategisk genomgång</h3><p>Hålla säkerhetsramverk relevanta. Årlig genomgång eller cargo cult-ritual?? <em>Nothing is true. Ditt ISMS behöver ständigt ifrågasättande.</em></p><a href=discordian-isms-review_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Tredjepartshantering</h3><p>Litar du på dina leverantörer? (LOL). Leverantörskedjeangrepp börjar med leverantörer du litade på. <strong>Är du paranoid nog att granska dina leverantörer?</strong></p><a href=discordian-third-party_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Leverantörssäkerhet: Din Attackyta Inkluderar Dina Leverantörer</h3><p>SolarWinds, Log4Shell, MOVEit—moderna intrång kommer genom leverantörskedjan. Fem leverantörsriskdimensioner avslöjade. <strong>Din säkerhet är bara så god som din svagaste leverantör.</strong></p><a href=discordian-supplier-reality_sv.html>Läs mer →</a></div></div><h3 class=subsection-title>Policyer &amp; Utbildning</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>Policy för Acceptabel Användning</h3><p>Gör inte dumma saker på företagssystem. Sunt förnuft som policy (eftersom sunt förnuft inte är allmänt). <em>Tänk själv—men inte på företagets WiFi.</em></p><a href=discordian-acceptable-use_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Säkerhetsmedvetenhetsutbildning</h3><p>Lära människor att inte klicka på skit. Spoiler: De klickar ändå. Nätfisketräning eller Pavlovsk konditionering? <strong>Ifrågasätt effektiviteten av årliga videor.</strong></p><a href=discordian-security-training_sv.html>Läs mer →</a></div></div></section><section id=emerging-technologies><h2 class=panel-caption>Framväxande Teknologier</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>AI-Policy</h3><p>Lära maskiner att inte hallucinera hemligheter (Spoiler: De gör det ändå). OWASP LLM Top 10 eftersom AI misslyckas spektakulärt. <strong>Är du paranoid nog om din AI?</strong></p><a href=discordian-ai-policy_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>OWASP LLM-säkerhet</h3><p>Träna AI att inte hallucinera dina hemligheter. Prompt injection, modellförgiftning och kreativa AI-fuckups. <em>Ifrågasätt robotisk auktoritet. Särskilt när den hallucinerar med SJÄLVFÖRTROENDE.</em> FNORD.</p><a href=discordian-llm-security_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>Molnsäkerhet</h3><p>Någon annans dator. Lita på AWS/Azure/GCP med dina hemligheter. <strong>Molnet är bara någon annans datacenter.</strong> Är du paranoid nog om delat ansvar?</p><a href=discordian-cloud-security_sv.html>Läs mer →</a></div><div class=card><div class=scanner-effect></div><h3>E-postsäkerhet</h3><p>Din VD behöver inga iTunes-kort. BEC-attacker, nätfiske och varför människor förblir den svagaste länken. <em>Inget är sant i din inkorg. Tänk själv innan du klickar.</em></p><a href=discordian-email-security_sv.html>Läs mer →</a></div></div></section><section id=about><h2 class=panel-caption>Om Denna Blogg</h2><p><strong>Alla 44 Discordianska blogginlägg upprätthåller radikal Illuminatus!-trilogistil:</strong> "Tänk själv, ifrågasätt auktoritet," FNORD-detektion i varje godkänd standard, Chapel Perilous-navigering genom obekväma säkerhetssanningar, Operation Mindfuck mot säkerhetsteater och efterlevnadslastkulter, och 23 FNORD 5-signaturer överallt. <em>Inget är sant. Allt är tillåtet.</em> Inklusive den obekväma sanningen att dina "säkra" system förmodligen designades av människorna som vill övervaka dem—och certifierades av människorna som redan övervakar dem. <strong>Bakdörren är inte en bugg. Det är en funktion de kallar "laglig åtkomst."</strong><p><strong>Är du paranoid nog?</strong> Vi är det—systematiskt, metodiskt, med bevis och dokumentation. Fullständig täckning av <a href=https://github.com/Hack23/ISMS-PUBLIC>ISMS-PUBLIC</a>-policyer med dold visdom överallt. Varje inlägg länkar direkt till motsvarande policydokumentation i vårt offentliga ISMS-arkiv, vilket demonstrerar <strong>radikal transparens</strong> i säkerhetsoperationer. För om din säkerhet inte kan överleva offentlig granskning, har du inte säkerhet—du har önsketänkande inlindat i NDA:er och leverantörslöften som förångas när intrånget inträffar.<p><em>All hail Eris! All hail Discordia! 🍎</em><p class=hidden-wisdom><strong>META-UPPLYSNING:</strong> <em>Om detta låter paranoit, uppmärksammar du inte Snowden, PRISM, Crypto AG eller de senaste 50 årens dokumenterade övervakningsprogram. Om detta låter rimligt, är du redan för djupt inne i Chapel Perilous. Det enda vinnande draget är transparens—eftersom de inte kan kapa det som redan är offentligt. De kan inte bakdörra det som inte har några dörrar. Tänk själv. Ifrågasätt allt—särskilt detta.</em></section><section id=related><h2 class=panel-caption>Relaterade Resurser</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>CIA Compliance Manager</h3><p>Vårt efterlevnadsverktyg hjälper till att säkerställa informationstillgänglighet för behöriga användare samtidigt som lämpliga säkerhetskontroller upprätthålls.</p><a href=cia-compliance-manager-features_sv.html title="Läs mer om CIA Compliance Manager">Läs mer</a></div><div class=card><div class=scanner-effect></div><h3>CIA-triaden FAQ</h3><p>Utforska relationen mellan tillgänglighet och integritet i CIA-triaden och hur de stödjer varandra.</p><a href=cia-triad-faq_sv.html title="Läs vår CIA-triad FAQ">Läs FAQ</a></div><div class=card><div class=scanner-effect></div><h3>Offentligt ISMS-arkiv</h3><p>Få tillgång till vår kompletta dokumentation för ledningssystem för informationssäkerhet på GitHub för radikal transparens.</p><a href=https://github.com/Hack23/ISMS-PUBLIC title="Visa ISMS-arkiv">Visa ISMS →</a></div></div></section></article></main><footer><p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) | <a href=https://www.linkedin.com/in/jamessorling/ >James Pether Sörling</a> | <a href=https://www.linkedin.com/company/hack23/ >Company LinkedIn</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC title="Public ISMS Repository">ISMS</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title="Information Security Policy">Security Policy</a> | <a href=blog_sv.html title="Security Blog">Blog</a> | <a href=discordian-cybersecurity_sv.html title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> | <a href=https://hack23.com/index_sv.html lang=sv>Swedish version</a><p class=discordian-authors><strong>✍️ Authors:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md title="Hagbard Celine - Visionary anarchist Product Owner">Hagbard Celine</a> (Philosophy &amp; Vision) &amp; <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md title="Simon Moon - Philosopher-engineer System Architect">Simon Moon</a> (Architecture &amp; Patterns)<p class=discordian-implementation><strong>💻 Implementation Reality:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md title="George Dorn - Panic-driven Developer who makes it actually work">George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in <a href=blog-george-dorn-cia-code_sv.html>CIA Architecture</a>, <a href=blog-george-dorn-trigram-code_sv.html>Black Trigram Combat</a>, and <a href=blog.html#george-dorn-developer-chronicles>Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.</footer>

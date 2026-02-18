@@ -1,0 +1,342 @@
+<!doctype html><html lang=ja><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="CIAアーキテクチャドキュメント: C4モデル、スウェーデン議会/政府データ設計、世界銀行統合パターン、OSINTアーキテクチャ、開発者向け包括的APIドキュメント。"><title>CIA アーキテクチャドキュメント | OSINT Platform | Hack23</title><link rel=stylesheet href=styles.css><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Orbitron:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel=stylesheet><link rel=canonical href=https://hack23.com/cia-docs_ja.html><meta property=og:title content="Citizen Intelligence Agency アーキテクチャドキュメント"><meta property=og:description content="オープンソース透明性プラットフォームアーキテクチャ: C4モデル、リクスダーグ/政府監視のためのデータ設計、世界銀行統合、OSINTパターン、APIドキュメント。"><meta property=og:locale content=ja_JP><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=website><meta property=og:url content=https://hack23.com/cia-docs.html><meta property=og:image content=https://cia.sourceforge.io/cia-logo.png><meta name=keywords content="Citizen Intelligence Agency, OSINT, 政治透明性, 議会モニタリング, オープンソースインテリジェンス, Java, Spring Framework, PostgreSQL, スウェーデン政治, Hack23, 政治インテリジェンスプラットフォーム, OSINTプラットフォーム, 議会モニタリングシステム, 政治データ可視化, 民主的説明責任, オープンデータアーキテクチャ, リクスダーグAPI, 政治分析ツール, データ駆動型ジャーナリズム, 政治リスク評価"><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Citizen Intelligence Agency - アーキテクチャとシステムドキュメント",
+      "description": "開発者、ソリューションアーキテクト、クラウドアーキテクト、CIO向けの透明性プラットフォーム構築のための技術ドキュメント。C4アーキテクチャモデル、リクスダーグ/政府/機関監視のためのデータアーキテクチャ、世界銀行統合パターン、セキュリティアーキテクチャ、システムマインドマップ、SWOT分析、エンティティ関係を持つデータモデル、プロセスフローチャート、状態図、CI/CDワークフロー、APIドキュメントを含みます。民主的説明責任のための透明性のあるシステム設計を持つオープンソースOSINTプラットフォーム。",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-06",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cia.sourceforge.io/cia-logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/cia-docs.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Citizen Intelligence Agency",
+        "inLanguage": "ja",
+        "applicationCategory": "AnalyticsApplication",
+        "applicationSubCategory": "透明性プラットフォーム",
+        "operatingSystem": "Cross-platform"
+      },
+      "audience": [
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Developer",
+          "name": "ソフトウェア開発者とオープンソース貢献者"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Solution Architect",
+          "name": "ソリューションアーキテクトとクラウドアーキテクト"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "IT Professional",
+          "name": "最高情報責任者とITリーダー"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Data Architect",
+          "name": "データアーキテクトと分析プロフェッショナル"
+        }
+      ],
+      "featureList": [
+        "完全なC4アーキテクチャモデル（現在と将来の状態）",
+        "政治データアーキテクチャ（リクスダーグ、政府、機関、世界銀行）",
+        "政治データのためのセキュリティアーキテクチャ",
+        "システムマインドマップと将来のコンセプトマップ",
+        "戦略的SWOT分析（現在と将来）",
+        "エンティティドキュメントを含む包括的なデータモデル",
+        "プロセスフローチャートと状態図",
+        "CI/CDワークフローとDevOps統合",
+        "完全なAPIドキュメント",
+        "議会モニタリングダッシュボード",
+        "省庁と政府機関追跡",
+        "世界銀行国別指標統合",
+        "政治的意思決定フロー分析",
+        "ガバナンス指標とパフォーマンスランキング",
+        "民主的説明責任レポート",
+        "オープンソース貢献ガイドライン",
+        "15以上の技術図とドキュメントリソース"
+      ],
+      "teaches": [
+        "政治プラットフォームのためのC4アーキテクチャモデリング",
+        "政治データアーキテクチャ設計",
+        "OSINTシステム統合パターン",
+        "政府データ可視化技術",
+        "オープンデータAPI統合（リクスダーグ、世界銀行）",
+        "民主的説明責任指標設計",
+        "透明性プラットフォームアーキテクチャ",
+        "政治エンティティのためのシステムデータモデリング",
+        "オープンソースプロジェクトのためのCI/CD",
+        "オープンソース政治ツールへの貢献"
+      ],
+      "educationalLevel": "プロフェッショナル/上級",
+      "learningResourceType": [
+        "アーキテクチャドキュメント",
+        "システム設計パターン",
+        "データアーキテクチャガイド",
+        "技術リファレンス",
+        "APIドキュメント",
+        "オープンソース貢献ガイド"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": "透明性アーキテクチャ, C4モデル, OSINTプラットフォーム設計, リクスダーグデータアーキテクチャ, 政府データ可視化, オープンソース開発, ソリューションアーキテクチャ, クラウドアーキテクチャ, 民主的説明責任, オープンデータ統合, 世界銀行API, 政治分析",
+      "softwareRequirements": "ドキュメント用にモダンなWebブラウザ。開発: 貢献するにはJava、JavaScript、PostgreSQL、Docker。",
+      "browserRequirements": "JavaScriptが必要です。推奨: Chrome、Firefox、Safari、Edge（最新バージョン）",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "オープンソースドキュメント"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Swedish Riksdag Open Data API",
+          "url": "https://data.riksdagen.se/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "World Bank Open Data",
+          "url": "https://data.worldbank.org/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "C4 Model for Software Architecture",
+          "url": "https://c4model.com/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Open Source Intelligence (OSINT) Methodology",
+          "description": "透明性のための倫理的なOSINT実践"
+        }
+      ],
+      "hasPart": [
+        {
+          "@type": "TechArticle",
+          "name": "政治データアーキテクチャ",
+          "description": "リクスダーグ、政府、機関監視のためのデータモデル"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "OSINT統合パターン",
+          "description": "民主的説明責任のためのオープンデータAPI統合"
+        },
+        {
+          "@type": "TechArticle",
+          "name": "世界銀行指標統合",
+          "description": "国別指標データアーキテクチャと可視化"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Citizen Intelligence Agencyをデプロイして使用する方法",
+      "description": "AWSまたはDebian/UbuntuにCIAプラットフォームをデプロイし、スウェーデンの政治データの監視を開始するためのステップバイステップガイド",
+      "image": "https://cia.sourceforge.io/cia-logo.png",
+      "totalTime": "PT45M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWSアカウント（CloudFormationデプロイメント用）"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Debian/Ubuntu 24.04+（ローカルデプロイメント用）"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "OpenJDK 21"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "PostgreSQL 16"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "CloudFormationテンプレート",
+          "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "CIA Debianパッケージ",
+          "url": "https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToSection",
+          "name": "AWS CloudFormation デプロイメント",
+          "position": 1,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "CloudFormationテンプレートをダウンロード",
+              "text": "GitHubリポジトリからCloudFormationスタックファイルをダウンロード",
+              "url": "https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "CloudFormationスタックを作成",
+              "text": "AWS CloudFormationコンソールで新しいスタックを作成"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "アップロードと設定",
+              "text": "テンプレートファイルをアップロードし、デプロイメントのパラメータを設定"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "スタックを起動",
+              "text": "IAMリソース作成を確認してスタックを起動"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "アプリケーションにアクセス",
+              "text": "スタック出力のURLからアプリケーションにアクセス"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "Debian/Ubuntu ローカルインストール",
+          "position": 2,
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "前提条件をインストール",
+              "text": "apt-getを使用してOpenJDK 21、PostgreSQL 16、pgauditをインストール",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "PostgreSQLを設定",
+              "text": "設定ガイドに従ってPostgreSQLデータベースを設定",
+              "url": "https://github.com/Hack23/cia#postgresql-16-configuration-guide"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "データベースとユーザーを作成",
+              "text": "適切な権限を持つCIAデータベースとユーザーを作成",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo su - postgres"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "psql"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE USER eris WITH password 'discord';"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "CREATE DATABASE cia_dev;"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "パッケージをダウンロードしてインストール",
+              "text": "GitHubリリースからDebianパッケージをダウンロードしてインストール",
+              "itemListElement": [
+                {
+                  "@type": "HowToDirection",
+                  "text": "wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb"
+                },
+                {
+                  "@type": "HowToDirection",
+                  "text": "sudo dpkg -i cia-dist-deb-2025.1.2.all.deb"
+                }
+              ]
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "プラットフォームにアクセス",
+              "text": "https://localhost:28443/cia/でCIAプラットフォームにアクセス",
+              "url": "https://localhost:28443/cia/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/cia-docs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Citizen Intelligence Agency",
+          "item": "https://hack23.com/cia-features.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Citizen Intelligence Agency アーキテクチャドキュメント",
+          "item": "https://hack23.com/cia-docs.html"
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/cia-docs_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/cia-docs_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/cia-docs_ar.html><link rel=alternate hreflang=da href=https://hack23.com/cia-docs_da.html><link rel=alternate hreflang=de href=https://hack23.com/cia-docs_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/cia-docs_de.html><link rel=alternate hreflang=en href=https://hack23.com/cia-docs.html><link rel=alternate hreflang=es href=https://hack23.com/cia-docs_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/cia-docs_es.html><link rel=alternate hreflang=fi href=https://hack23.com/cia-docs_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/cia-docs_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/cia-docs_fr.html><link rel=alternate hreflang=he href=https://hack23.com/cia-docs_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/cia-docs_he.html><link rel=alternate hreflang=ja href=https://hack23.com/cia-docs_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/cia-docs_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/cia-docs_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/cia-docs_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/cia-docs_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/cia-docs_nl.html><link rel=alternate hreflang=no href=https://hack23.com/cia-docs_no.html><link rel=alternate hreflang=nb href=https://hack23.com/cia-docs_no.html><link rel=alternate hreflang=sv href=https://hack23.com/cia-docs_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/cia-docs_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/cia-docs_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/cia-docs_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/cia-docs_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/cia-docs_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/cia-docs.html><nav aria-label=パンくずリスト><ol class=breadcrumb><li class=breadcrumb-item><a href=/index_ja.html>ホーム</a><li class=breadcrumb-item><a href=/cia-features_ja.html>Citizen Intelligence Agency</a><li class=breadcrumb-item aria-current=page>Citizen Intelligence Agency アーキテクチャドキュメント</ol></nav><header><div class=logo-container><img src=https://cia.sourceforge.io/cia-logo.png alt="Citizen Intelligence Agency Logo" class=logo width=80 height=80></div><h1>Citizen Intelligence Agency ドキュメント <span class=app-version>最新版</span></h1><p>Citizen Intelligence Agencyの包括的なドキュメント - スウェーデンにおける政治的透明性のための独立したボランティア主導のOSINTプラットフォーム。<div class=badges><a href=https://github.com/Hack23/cia/releases title="GitHub Release"><img src=https://img.shields.io/github/v/release/Hack23/cia alt="GitHub Release"> </a><a href=https://bestpractices.coreinfrastructure.org/projects/770 title="CII Best Practices"><img src=https://bestpractices.coreinfrastructure.org/projects/770/badge alt="CII Best Practices"> </a><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge alt="OpenSSF Scorecard"> </a><a href=https://slsa.dev/spec/v1.0/levels title="SLSA Level 3"><img src=https://slsa.dev/images/gh-badge-level3.svg alt="SLSA 3"> </a><a href=https://github.com/Hack23/cia/actions/workflows/release.yml title="Deploy Status"><img src=https://github.com/Hack23/cia/actions/workflows/release.yml/badge.svg alt="Verify &amp; Release"> </a><a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Quality Gate Status"><img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&amp;metric=alert_status" alt="Quality Gate Status"> </a><a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Security Rating"><img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&amp;metric=security_rating" alt="Security Rating"> </a><a href=https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt title=License><img src=https://img.shields.io/github/license/Hack23/cia.svg alt=License></a></div><div class=app-link><a href=index_ja.html title=ホームへ移動>ホーム </a><a href=cia-features_ja.html title=プロジェクト機能を表示>プロジェクト機能 </a><a href=swedish-election-2026_ja.html title=スウェーデン選挙2026インテリジェンスプラットフォーム>🗳️ 選挙2026 </a><a href=https://github.com/Hack23/cia class=btn title=GitHubリポジトリを表示>GitHubリポジトリ</a></div></header><main><section id=overview><h2>プロジェクト概要</h2><p>Citizen Intelligence Agencyは、スウェーデンにおける政治活動の包括的な分析を提供する、ボランティア主導のオープンソースインテリジェンス（OSINT）プロジェクトです。主要な政治家や機関の高度なモニタリングを通じて、以下を提供します：<ul><li>財務パフォーマンス指標<li>リスクアセスメント分析<li>政治トレンド分析<li>政治家ランキングシステム<li>パフォーマンス比較<li>透明性に関する洞察</ul><p>私たちのイニシアチブは、厳密に独立かつ超党派的であり、情報に基づいた意思決定を促進し、民主的な参加を強化することに注力しています。</section><section id=features><h2>主要機能</h2><p>Citizen Intelligence Agencyは、政治的透明性と分析のための包括的な機能セットを提供します：<div class=cards><div class=card><div class=scanner-effect></div><h3>📊 インタラクティブダッシュボード</h3><p>スウェーデンの政治団体全体にわたる政治活動、ガバナンス指標、機関のパフォーマンスを可視化するリアルタイムダッシュボード。</div><div class=card><div class=scanner-effect></div><h3>🏆 政治スコアボードシステム</h3><p>客観的なパフォーマンス指標に基づいた、政治家、政党、機関の定量的評価とランキング。</div><div class=card><div class=scanner-effect></div><h3>📈 重要な分析ツール</h3><p>政治トレンド、投票パターン、ガバナンスの有効性に関する洞察を提供する高度なデータ分析機能。</div><div class=card><div class=scanner-effect></div><h3>🔍 透明性指標</h3><p>政府機関全体の透明性の標準化された測定で、強みの領域と改善の機会を強調。</div><div class=card><div class=scanner-effect></div><h3>⚖️ 説明責任の測定</h3><p>コミットメント、投票の一貫性、政治的約束と政策実装との整合性を追跡するツール。</div><div class=card><div class=scanner-effect></div><h3>📱 データ駆動型の洞察</h3><p>オープンデータソースを活用した、政治的パフォーマンスの客観的分析を提供する証拠に基づく評価。</div></div><p>利用可能な機能の詳細な概要（ダッシュボードのスクリーンショットと機能の詳細を含む）については、<a href=https://hack23.com/cia-features_ja.html>包括的な機能セット</a>をご覧ください。</section><section id=data-sources><h2>データソース</h2><p>私たちの分析は、信頼性の高いスウェーデン政府および国際的なデータソースによって支えられています：<table class=data-sources-table><thead><tr><th>ソース<th>説明<tbody><tr><td>🏛️ <a href=https://data.riksdagen.se/ >スウェーデン議会オープンデータ</a><td>議会メンバー、委員会、公式文書<tr><td>🗳️ <a href=https://www.val.se/ >スウェーデン選挙管理委員会</a><td>選挙データ、政党、投票結果<tr><td>🌍 <a href=https://data.worldbank.org/ >世界銀行オープンデータ</a><td>グローバル経済指標と人口統計データ<tr><td>💹 <a href=https://www.esv.se/ >スウェーデン財務管理庁</a><td>政府財政と経済トレンド</table></section><section id=runtime-environment><h2>ランタイム環境</h2><table class=runtime-table><thead><tr><th>JDKバージョン<th>ステータス<th>リリース情報<tbody><tr><td><img src=https://img.shields.io/badge/JDK-21-brightgreen.svg alt=JDK-21><td><span class=badge-success>サポート対象</span><td>LTSリリース<tr><td><img src=https://img.shields.io/badge/JDK-22-orange.svg alt=JDK-22><td><span class=badge-warning>互換性あり</span><td>機能リリース<tr><td><img src=https://img.shields.io/badge/JDK-23-orange.svg alt=JDK-23><td><span class=badge-warning>互換性あり</span><td>機能リリース<tr><td><img src=https://img.shields.io/badge/JDK-24-orange.svg alt=JDK-24><td><span class=badge-warning>互換性あり</span><td>機能リリース<tr><td><img src=https://img.shields.io/badge/JDK-25-brightgreen.svg alt=JDK-25><td><span class=badge-success>サポート対象</span><td>LTSリリース</table><p>技術ライフサイクル管理の詳細については、<a href=https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md>サポート終了戦略</a>をご覧ください。</section><section id=architecture-documentation><h2>アーキテクチャとドキュメント</h2><p>Citizen Intelligence Agencyプロジェクトの包括的なアーキテクチャドキュメント、システム図、技術リソースをご覧ください。<div class=cards><div class="card architecture-card"><div class=scanner-effect></div><h3>🏛️ 現在のアーキテクチャ</h3><p>現在のシステム構造、コンテナ、コンポーネント、関係を示すC4モデル。</p><a href=https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md title=現在のアーキテクチャを表示>アーキテクチャを表示</a></div><div class="card architecture-card"><div class=scanner-effect></div><h3>🏛️ 将来のアーキテクチャ</h3><p>将来のシステム構造とプラットフォームの計画的な拡張を示すC4モデル。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md title=将来のアーキテクチャを表示>将来のアーキテクチャを表示</a></div><div class="card architecture-card"><div class=scanner-effect></div><h3>🔐 セキュリティアーキテクチャ</h3><p>プラットフォームの包括的なセキュリティアーキテクチャ設計と実装パターン。</p><a href=https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md title=セキュリティアーキテクチャを表示>セキュリティアーキテクチャを表示</a></div><div class="card architecture-card"><div class=scanner-effect></div><h3>🔐 将来のセキュリティアーキテクチャ</h3><p>AI強化セキュリティ機能を組み込んだ高度なセキュリティアーキテクチャビジョン。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md title=将来のセキュリティアーキテクチャを表示>将来のセキュリティアーキテクチャを表示</a></div><div class="card concept-card"><div class=scanner-effect></div><h3>🧠 システムマインドマップ</h3><p>マインドマッピングを通じて可視化された、現在のシステムコンポーネントの関係と概念アーキテクチャ。</p><a href=https://github.com/Hack23/cia/blob/master/MINDMAP.md title=システムマインドマップを表示>マインドマップを表示</a></div><div class="card concept-card"><div class=scanner-effect></div><h3>🧠 将来のコンセプトマップ</h3><p>AI強化機能と将来のシステム拡張計画を含む進化のロードマップ。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md title=将来のマインドマップを表示>将来のコンセプトを表示</a></div><div class="card business-card"><div class=scanner-effect></div><h3>💼 SWOT分析</h3><p>プラットフォームの強み、弱み、機会、脅威の戦略的評価。</p><a href=https://github.com/Hack23/cia/blob/master/SWOT.md title=SWOT分析を表示>SWOT分析を表示</a></div><div class="card business-card"><div class=scanner-effect></div><h3>💼 将来のSWOT</h3><p>将来のプラットフォームポジショニングと開発機会の戦略的分析。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md title=将来のSWOT分析を表示>将来のSWOTを表示</a></div><div class="card data-card"><div class=scanner-effect></div><h3>📊 データモデル</h3><p>システムで使用される現在のデータ構造、関係、エンティティフレームワーク。</p><a href=https://github.com/Hack23/cia/blob/master/DATA_MODEL.md title=データモデルを表示>データモデルを表示 </a><a href=https://hack23.github.io/cia/service.data.impl/hbm3Doc/entities/index.html title=エンティティドキュメントを表示>エンティティドキュメントを表示</a></div><div class="card data-card"><div class=scanner-effect></div><h3>📊 将来のデータモデル</h3><p>将来のシステムイテレーション向けに計画された強化された政治データアーキテクチャ。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md title=将来のデータモデルを表示>将来のデータアーキテクチャを表示</a></div><div class="card process-card"><div class=scanner-effect></div><h3>🔄 プロセスフローチャート</h3><p>システムで使用される現在のデータ処理ワークフローとビジネスプロセスモデル。</p><a href=https://github.com/Hack23/cia/blob/master/FLOWCHART.md title=プロセスフローチャートを表示>フローチャートを表示</a></div><div class="card process-card"><div class=scanner-effect></div><h3>🔄 将来のフローチャート</h3><p>プラットフォームの将来の開発向けに計画されたAI駆動型の強化ワークフロー。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md title=将来のフローチャートを表示>将来のフローを表示</a></div><div class="card process-card"><div class=scanner-effect></div><h3>🔄 状態図</h3><p>現在のシステム状態遷移とプラットフォームコンポーネントの動作モデル。</p><a href=https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md title=状態図を表示>状態図を表示</a></div><div class="card process-card"><div class=scanner-effect></div><h3>🔄 将来の状態図</h3><p>将来のシステム実装向けに計画された強化された適応的状態遷移。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md title=将来の状態図を表示>将来の状態を表示</a></div><div class="card devops-card"><div class=scanner-effect></div><h3>🔧 CI/CDワークフロー</h3><p>現在の自動化プロセスと継続的インテグレーション/デプロイメントパイプライン。</p><a href=https://github.com/Hack23/cia/blob/master/WORKFLOWS.md title=CI/CDワークフローを表示>CI/CDワークフローを表示</a></div><div class="card devops-card"><div class=scanner-effect></div><h3>🔧 将来のワークフロー</h3><p>将来の開発向けに計画された機械学習機能を備えた強化CI/CD。</p><a href=https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md title=将来のワークフローを表示>将来のDevOpsを表示</a></div><div class="card business-card"><div class=scanner-effect></div><h3>📅 ライフサイクル管理</h3><p>プラットフォームの技術コンポーネントのメンテナンスとサポート終了計画。</p><a href=https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md title=サポート終了戦略を表示>EOL戦略を表示</a></div><div class="card process-card"><div class=scanner-effect></div><h3>💰 セキュリティ実装</h3><p>プラットフォームを安全にデプロイするためのコストとセキュリティ実装ガイドライン。</p><a href=https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md title=財務セキュリティプランを表示>セキュリティプランを表示</a></div><div class="card data-card"><div class=scanner-effect></div><h3>📊 APIドキュメント</h3><p>開発者とインテグレーター向けの詳細なAPIリファレンスと技術ドキュメント。</p><a href=https://hack23.github.io/cia/apidocs/index.html title=APIドキュメントを表示>APIドキュメントを表示</a></div><div class="card data-card"><div class=scanner-effect></div><h3>🖼️ 機能ショーケース</h3><p>プラットフォーム機能、ダッシュボード、政治分析機能の視覚的なショーケース。</p><a href=https://hack23.com/cia-features_ja.html title=機能ショーケースを表示>機能ショーケースを表示</a></div><div class="card architecture-card"><div class=scanner-effect></div><h3>🛡️ 証拠に基づく脅威モデル</h3><p>アタックツリー、リスク定量化、セキュリティ制御マッピングを含む包括的なSTRIDE脅威分析で、透明性のあるセキュリティプラクティスを実証。</p><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md title=脅威モデルドキュメントを表示><img src="https://img.shields.io/badge/Threat_Model-Public_Documentation-blue?style=flat-square&amp;logo=github&amp;logoColor=white" alt="脅威モデル: 公開ドキュメント"> </a><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md#stride-threat-analysis title=STRIDE分析を表示><img src="https://img.shields.io/badge/STRIDE-Complete_Analysis-green?style=flat-square&amp;logo=security&amp;logoColor=white" alt="STRIDE: 完全な分析"> </a><a href=https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md#attack-tree-analysis title=アタックツリーを表示><img src="https://img.shields.io/badge/Attack_Trees-Documented-orange?style=flat-square&amp;logo=tree&amp;logoColor=white" alt="アタックツリー: ドキュメント化済み"></a></div><div class="card process-card"><div class=scanner-effect></div><h3>🏛️ CRA評価実装</h3><p>透明性プラットフォームの完全なサイバーレジリエンス法（CRA）コンプライアンス評価で、民主的透明性システムの規制適合を実証。</p><a href=https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md title=CRA評価ドキュメントを表示><img src="https://img.shields.io/badge/CRA_Assessment-Complete-blue?style=flat-square&amp;logo=clipboard-check&amp;logoColor=white" alt="CRA評価: 完了"> </a><a href=https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md#product-classification title=製品分類を表示><img src="https://img.shields.io/badge/Classification-Standard_OSS-green?style=flat-square&amp;logo=tag&amp;logoColor=white" alt="分類: 標準OSS"> </a><a href=https://github.com/Hack23/cia/blob/master/CRA-ASSESSMENT.md#vulnerability-disclosure title=脆弱性管理を表示><img src="https://img.shields.io/badge/Vulnerability_Management-Implemented-orange?style=flat-square&amp;logo=shield&amp;logoColor=white" alt="脆弱性管理: 実装済み"></a></div></div></section><section id=documentation-map><h2>ドキュメントマップ</h2><p>このドキュメントマップは、Citizen Intelligence Agencyプロジェクトのすべての利用可能なドキュメントリソースの包括的な概要を提供します：<table class=documentation-map><thead><tr><th>ドキュメント<th>フォーカス<th>説明<th>ドキュメントリンク<tbody><tr><td><strong>アーキテクチャ</strong><td>🏛️ アーキテクチャ<td>現在のシステム構造を示すC4モデル<td><a href=https://github.com/Hack23/cia/blob/master/ARCHITECTURE.md>ソースを表示</a><tr><td><strong>将来のアーキテクチャ</strong><td>🏛️ アーキテクチャ<td>将来のシステム構造を示すC4モデル<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_ARCHITECTURE.md>ソースを表示</a><tr><td><strong>セキュリティアーキテクチャ</strong><td>🔐 セキュリティ<td>セキュリティアーキテクチャ設計とパターン<td><a href=https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md>ソースを表示</a><tr><td><strong>将来のセキュリティアーキテクチャ</strong><td>🔐 セキュリティ<td>AI強化を備えた将来のセキュリティアーキテクチャ<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md>ソースを表示</a><tr><td><strong>マインドマップ</strong><td>🧠 コンセプト<td>現在のシステムコンポーネントの関係<td><a href=https://github.com/Hack23/cia/blob/master/MINDMAP.md>ソースを表示</a><tr><td><strong>将来のマインドマップ</strong><td>🧠 コンセプト<td>将来の機能進化<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_MINDMAP.md>ソースを表示</a><tr><td><strong>SWOT分析</strong><td>💼 ビジネス<td>現在の戦略的評価<td><a href=https://github.com/Hack23/cia/blob/master/SWOT.md>ソースを表示</a><tr><td><strong>将来のSWOT分析</strong><td>💼 ビジネス<td>将来の戦略的機会<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_SWOT.md>ソースを表示</a><tr><td><strong>データモデル</strong><td>📊 データ<td>現在のデータ構造と関係<td><a href=https://github.com/Hack23/cia/blob/master/DATA_MODEL.md>ソースを表示</a><tr><td><strong>将来のデータモデル</strong><td>📊 データ<td>強化された政治データアーキテクチャ<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_DATA_MODEL.md>ソースを表示</a><tr><td><strong>フローチャート</strong><td>🔄 プロセス<td>現在のデータ処理ワークフロー<td><a href=https://github.com/Hack23/cia/blob/master/FLOWCHART.md>ソースを表示</a><tr><td><strong>将来のフローチャート</strong><td>🔄 プロセス<td>AI駆動型の強化ワークフロー<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_FLOWCHART.md>ソースを表示</a><tr><td><strong>状態図</strong><td>🔄 動作<td>現在のシステム状態遷移<td><a href=https://github.com/Hack23/cia/blob/master/STATEDIAGRAM.md>ソースを表示</a><tr><td><strong>将来の状態図</strong><td>🔄 動作<td>強化された適応的状態遷移<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_STATEDIAGRAM.md>ソースを表示</a><tr><td><strong>CI/CDワークフロー</strong><td>🔧 DevOps<td>現在の自動化プロセス<td><a href=https://github.com/Hack23/cia/blob/master/WORKFLOWS.md>ソースを表示</a><tr><td><strong>将来のワークフロー</strong><td>🔧 DevOps<td>ML搭載の強化CI/CD<td><a href=https://github.com/Hack23/cia/blob/master/FUTURE_WORKFLOWS.md>ソースを表示</a><tr><td><strong>サポート終了戦略</strong><td>📅 ライフサイクル<td>メンテナンスとEOL計画<td><a href=https://github.com/Hack23/cia/blob/master/End-of-Life-Strategy.md>ソースを表示</a><tr><td><strong>財務セキュリティプラン</strong><td>💰 セキュリティ<td>コストとセキュリティ実装<td><a href=https://github.com/Hack23/cia/blob/master/FinancialSecurityPlan.md>ソースを表示</a><tr><td><strong>CIA機能</strong><td>🚀 機能<td>プラットフォーム機能概要<td><a href=https://hack23.com/cia-features_ja.html>hack23.comで表示</a></table></section><section id=deployment-options><h2>デプロイメントオプション</h2><h3>AWS CloudFormation デプロイメント</h3><p>Citizen Intelligence Agencyは、提供されているCloudFormationテンプレートを使用してAWSにデプロイできます：<ol><li><a href=https://github.com/Hack23/cia/blob/master/cia-dist-cloudformation/src/main/resources/cia-dist-cloudformation.json>CloudFormationスタックファイル</a>をダウンロードします<li>AWS CloudFormationコンソールで新しいスタックを作成します<li>テンプレートファイルをアップロードし、パラメータを設定します<li>IAMリソースの作成を承認し、スタックを起動します<li>スタック出力のURLからアプリケーションにアクセスします</ol><h3>Debian/Ubuntu インストール</h3><p>Debian/Ubuntu 24.04+でのローカルまたはセルフホスト型デプロイメントの場合：<ol><li>前提条件をインストール：<pre><code>sudo apt-get install openjdk-21-jdk postgresql-16 postgresql-contrib postgresql-16-pgaudit</code></pre><li><a href=https://github.com/Hack23/cia#postgresql-16-configuration-guide>PostgreSQL設定ガイド</a>に詳述されているようにPostgreSQLを設定します。<li>データベースとユーザーを作成：<pre><code>sudo su - postgres
+psql
+postgres=# CREATE USER eris WITH password 'discord';
+postgres=# CREATE DATABASE cia_dev;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE cia_dev to eris;</code></pre><li>Debianパッケージをダウンロードしてインストール：<pre><code>wget https://github.com/Hack23/cia/releases/download/2025.1.2/cia-dist-deb-2025.1.2.all.deb
+sudo dpkg -i cia-dist-deb-2025.1.2.all.deb</code></pre><li><a href=https://localhost:28443/cia/ >https://localhost:28443/cia/</a>でサーバーにアクセスします</ol></section><section id=project-classification><h2>🏷️ Hack23フレームワークに基づくプロジェクト分類</h2><p>包括的なプロジェクト評価のための<a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md>Hack23分類および事業継続性フレームワーク</a>ガイドラインに従っています：<div class=cards><div class="card business-card"><div class=scanner-effect></div><h3>🎯 プロジェクト分類</h3><div class=badge-group><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications title="プロジェクトタイプ: データ分析プラットフォーム"><img src="https://img.shields.io/badge/Type-Data_Analytics-orange?style=for-the-badge&amp;logo=chart-line&amp;logoColor=white" alt="プロジェクトタイプ: データ分析" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications title="ビジネスプロセス: オペレーション"><img src="https://img.shields.io/badge/Process-Operations-brown?style=for-the-badge&amp;logo=cogs&amp;logoColor=white" alt="ビジネスプロセス: オペレーション" loading=lazy></a></div></div><div class="card architecture-card"><div class=scanner-effect></div><h3>🔒 セキュリティ分類</h3><div class=badge-group><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels title="機密性レベル: パブリック - 機密性要件なし"><img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&amp;logo=shield&amp;logoColor=black" alt="機密性: パブリック" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels title="完全性レベル: 高 - 自動検証、デジタル署名"><img src="https://img.shields.io/badge/Integrity-High-orange?style=for-the-badge&amp;logo=check-circle&amp;logoColor=white" alt="Integrity: High" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels title="Availability Level: Moderate - 99.5% uptime, manual failover"><img src="https://img.shields.io/badge/Availability-Moderate-yellow?style=for-the-badge&amp;logo=server&amp;logoColor=black" alt="Availability: Moderate" loading=lazy></a></div></div><div class="card process-card"><div class=scanner-effect></div><h3>⏱️ 事業継続性</h3><div class=badge-group><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications title="目標復旧時間: 1-4時間"><img src="https://img.shields.io/badge/RTO-High_(1--4hrs)-yellow?style=for-the-badge&amp;logo=clock&amp;logoColor=white" alt="RTO: 高（1-4時間）" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications title="目標復旧時点: 1-4時間"><img src="https://img.shields.io/badge/RPO-Hourly_(1--4hrs)-lightgreen?style=for-the-badge&amp;logo=database&amp;logoColor=white" alt="RPO: 時間単位（1-4時間）" loading=lazy></a></div></div><div class="card business-card"><div class=scanner-effect></div><h3>🛡️ セキュリティ投資のリターン</h3><div class=badge-group><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns title="ROIレベル: 中程度 - 60-80%のリスク削減"><img src="https://img.shields.io/badge/ROI-Moderate-yellow?style=for-the-badge&amp;logo=chart-line&amp;logoColor=black" alt="ROI: 中程度" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns title="リスク軽減: 55%削減"><img src="https://img.shields.io/badge/Risk_Mitigation-55%25_Reduction-yellow?style=for-the-badge&amp;logo=shield&amp;logoColor=black" alt="リスク軽減: 55%削減" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#security-investment-returns title="侵害防止: $5K節約"><img src="https://img.shields.io/badge/Breach_Prevention-$5K_Savings-yellow?style=for-the-badge&amp;logo=lock&amp;logoColor=black" alt="侵害防止: $5K節約" loading=lazy></a></div></div><div class="card concept-card"><div class=scanner-effect></div><h3>🎯 競争上の差別化</h3><div class=badge-group><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation title="市場ポジション: 市場リーダー"><img src="https://img.shields.io/badge/Position-Market_Leader-purple?style=for-the-badge&amp;logo=crown&amp;logoColor=white" alt="市場ポジション: 市場リーダー" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation title="顧客信頼: プレミアムスコア"><img src="https://img.shields.io/badge/Trust-Premium_scores-purple?style=for-the-badge&amp;logo=handshake&amp;logoColor=white" alt="顧客信頼: プレミアムスコア" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#competitive-differentiation title="規制アクセス: フルアクセス"><img src="https://img.shields.io/badge/Access-Full_access-purple?style=for-the-badge&amp;logo=key&amp;logoColor=white" alt="規制アクセス: フルアクセス" loading=lazy></a></div></div><div class="card data-card"><div class=scanner-effect></div><h3>📈 ポーターの5つの力の戦略的影響</h3><div class="badge-group porters-forces"><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces title="買い手の交渉力: 最小 - 95%以上の維持率"><img src="https://img.shields.io/badge/Buyer_Power-Minimal-success?style=flat-square&amp;logo=users&amp;logoColor=white" alt="買い手の交渉力: 最小" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces title="サプライヤーの交渉力: 最小 - 強力な交渉ポジション"><img src="https://img.shields.io/badge/Supplier_Power-Minimal-success?style=flat-square&amp;logo=handshake&amp;logoColor=white" alt="サプライヤーの交渉力: 最小" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces title="参入障壁: 非常に高い - 90%以上の防止"><img src="https://img.shields.io/badge/Entry_Barriers-Very_High-red?style=flat-square&amp;logo=shield-alt&amp;logoColor=white" alt="参入障壁: 非常に高い" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces title="代替品の脅威: 最小 - 強力な保護"><img src="https://img.shields.io/badge/Substitute_Threat-Minimal-success?style=flat-square&amp;logo=shield&amp;logoColor=white" alt="代替品の脅威: 最小" loading=lazy> </a><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#porters-five-forces title="競争上の敵対関係: 支配的優位性 - 明確な市場リーダー"><img src="https://img.shields.io/badge/Rivalry-Dominant_Advantage-darkblue?style=flat-square&amp;logo=trophy&amp;logoColor=white" alt="競争上の敵対関係: 支配的優位性" loading=lazy></a></div></div></div><h3>💰 ビジネスインパクト分析マトリックス</h3><p>CIAトライアド（機密性、完全性、可用性）にわたる潜在的なビジネスインパクトの包括的評価：<table class=documentation-map><thead><tr><th>影響カテゴリー<th>財務<th>運用<th>評判<th>規制<tbody><tr><td><strong>🔒 機密性</strong><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels title="無視できる程度 - 財務的影響なし"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&amp;logo=dollar-sign&amp;logoColor=black" alt="財務: 無視できる程度" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels title="無視できる程度 - 運用上の影響なし"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&amp;logo=exclamation-triangle&amp;logoColor=black" alt="運用: 無視できる程度" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels title="低 - 限定的な可視性、迅速な回復"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&amp;logo=newspaper&amp;logoColor=white" alt="評判: 低" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels title="低 - 警告、是正措置"><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&amp;logo=gavel&amp;logoColor=white" alt="規制: 低" loading=lazy></a><tr><td><strong>✅ 完全性</strong><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels title="無視できる程度 - 財務的影響なし"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&amp;logo=dollar-sign&amp;logoColor=black" alt="財務: 無視できる程度" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels title="高 - 主要なサービス劣化、40-60%の効率低下"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&amp;logo=trending-down&amp;logoColor=white" alt="運用: 高" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels title="高 - 全国報道、著しい信頼の低下"><img src="https://img.shields.io/badge/High-National_coverage-orange?style=for-the-badge&amp;logo=newspaper&amp;logoColor=white" alt="評判: 高" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels title="中程度 - 軽微な罰則、ドキュメントのギャップ"><img src="https://img.shields.io/badge/Moderate-Minor_penalties-yellow?style=for-the-badge&amp;logo=gavel&amp;logoColor=black" alt="規制: 中程度" loading=lazy></a><tr><td><strong>⏱️ 可用性</strong><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#financial-impact-levels title="無視できる程度 - 財務的影響なし"><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&amp;logo=dollar-sign&amp;logoColor=black" alt="財務: 無視できる程度" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#operational-impact-levels title="高 - 主要なサービス劣化、40-60%の効率低下"><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&amp;logo=stop-circle&amp;logoColor=white" alt="運用: 高" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#reputational-impact-levels title="低 - 限定的な可視性、迅速な回復"><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&amp;logo=newspaper&amp;logoColor=white" alt="評判: 低" loading=lazy></a><td><a href=https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#regulatory-impact-levels title="低 - 警告、是正措置"><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&amp;logo=gavel&amp;logoColor=white" alt="規制: 低" loading=lazy></a></table><p>この分類は、高い完全性要件と強力な競争力を持つ市場リーダーの透明性ソリューションとしてのプラットフォームの戦略的価値を示しています。この評価は、最適なリソース配分のためのセキュリティ投資の優先順位付けと事業継続計画を導きます。</section><section id=business-case><h2>💼 報道機関向けのビジネスケース</h2><h3>概要: メディアインテリジェンスのためのCIA</h3><p>Citizen Intelligence Agencyは、報道機関に対して、大規模な体系的な政治モニタリングを提供し、 これまでリソースの面で禁止的だったデータ駆動型ジャーナリズムを可能にします。5つの分析フレームワークにわたる45の行動リスクルールにより、 CIAは349名のスウェーデン政治家、年間10,000以上の投票、20,000以上の文書を包括的にカバーします。 このプラットフォームは、リアルタイムモニタリングとスウェーデン議会からの50年にわたる歴史データを組み合わせ、 政治分析に前例のない深さを提供します。実証済みの方法論とオープンソースの透明性により、信頼性と信用性が保証されます —これは、正確な報道に評判を賭ける報道機関にとって重要な要素です。<h3>インテリジェンス製品ポートフォリオ</h3><h4>政治インテリジェンスAPI</h4><p>OAuth 2.0認証と99.5%の稼働時間SLAを備えたRESTful API。349名の政治家プロファイル、年間10,000以上の投票、 20,000以上の文書に標準化されたエンドポイントを通じてアクセス。リアルタイム更新により、議会の決定後数分以内に投票結果を配信し、 毎日のリスク評価により新たな懸念事項を強調します。レート制限はティア選択に応じてスケールし、 包括的なドキュメントにより既存のニュースルームワークフローへの迅速な統合が保証されます。<h4>高度分析プラットフォーム</h4><p>非技術ユーザー向けに設計されたインタラクティブダッシュボードにより、ジャーナリストはプログラミング知識なしで政治データを探索できます。 カスタムレポート生成は、編集会議と出版のためにPDF、Excel、PowerPoint形式をサポートします。 電子メール、SMS、Slack経由の自動アラートにより、速報ニュースの機会を逃すことはありません。エンタープライズティアには ホワイトラベルブランディングオプションが含まれており、報道機関はCIAインテリジェンスを独自のブランドアイデンティティの下で提示できます。<h4>リスク評価フィード</h4><p>45の行動ルールが、4つの運用ドメインにわたって政治家、政党、委員会、省庁の活動を分析します。 重大度分類システム（MINOR: 10-49、MAJOR: 50-99、CRITICAL: 100+）は、調査の優先順位を付けます。 歴史的トレンド分析により時間経過のパターンが明らかになり、予測モデリングは連立の動態と政策の変化を予測します。 すべての45のルールが公開文書化されている透明性のある方法論により、編集チームはアラートをトリガーする内容を正確に理解でき、 防御可能なジャーナリズムをサポートします。<h3>価格とティア構造</h3><table class=documentation-map><thead><tr><th>ティア<th>月額料金<th>レート制限<th>機能<th>最適な対象<tbody><tr><td><strong>デベロッパー</strong><td>€0<td>100リクエスト/日<td>基本エンドポイント、歴史データ<td>学生、独立ジャーナリスト<tr><td><strong>プロフェッショナル</strong><td>€2,500<td>10,000リクエスト/日<td>フルAPI、リアルタイム更新<td>ジャーナリスト、小規模報道機関<tr><td><strong>エンタープライズ</strong><td>€10,000<td>無制限<td>カスタムエンドポイント、SLA 99.9%、ホワイトラベル<td>大手報道機関、通信社<tr><td><strong>アカデミック</strong><td>€1,500<td>5,000リクエスト/日<td>研究アクセス、一括ダウンロード<td>大学、研究機関</table><h4>追加収益源</h4><ul><li><strong>超過料金</strong>: ティア制限を超える1,000リクエストあたり€0.10<li><strong>カスタム開発</strong>: オーダーメイド統合のために€150-200/時間<li><strong>ホワイトラベルプラットフォーム</strong>: 組織あたり€100,000セットアップ + €20,000/年<li><strong>トレーニングワークショップ</strong>: ニュースルームトレーニングのために€5,000/日</ul><h3>メディア組織向けのROI計算</h3><div class=cards><div class="card business-card"><div class=scanner-effect></div><h4>例1: Reuters（通信社）</h4><p><strong>年間コスト</strong>: €120,000（エンタープライズティア）<p><strong>提供価値</strong>:<ul><li>2,000以上の自動化された通信記事（€60/記事 = €120,000）<li>速報ニュースのスピード優位性（24時間のリードタイム = €200,000の競争価値）<li>ファクトチェック効率: 年間2,000時間節約（€50/時間 = €100,000）</ul><p><strong>総価値</strong>: €420,000 | <strong>ROI: 350%</strong></div><div class="card business-card"><div class=scanner-effect></div><h4>例2: The Economist（週刊誌）</h4><p><strong>年間コスト</strong>: €120,000<p><strong>提供価値</strong>:<ul><li>500以上のデータ駆動型記事（€240/記事 = €120,000）<li>購読者維持の向上（+500購読者 × €150 = €75,000）<li>ファクトチェック節約: 2,000時間（€50/時間 = €100,000）</ul><p><strong>総価値</strong>: €295,000 | <strong>ROI: 246%</strong></div><div class="card business-card"><div class=scanner-effect></div><h4>例3: Svenska Dagbladet（スウェーデン新聞）</h4><p><strong>年間コスト</strong>: €30,000（プロフェッショナルティア）<p><strong>提供価値</strong>:<ul><li>200以上の選挙記事（€150/記事 = €30,000）<li>連立分析の独占記事（読者エンゲージメント = €20,000）<li>ファクトチェック効率: 500時間節約（€50/時間 = €25,000）</ul><p><strong>総価値</strong>: €75,000 | <strong>ROI: 250%</strong></div></div><h3>メディア組織タイプ別のユースケース</h3><h4>グローバルニュース組織（The Economist、FT、Reuters、Bloomberg、AP）</h4><ul><li>国家間の比較民主主義分析<li>投資決定のための政治リスク評価<li>24時間ニュースワイヤー向けの自動議会モニタリング<li>金融市場への連立安定性の影響<li>大規模な体系的ファクトチェックインフラ</ul><h4>スウェーデン主流メディア（SVT、DN、SvD、Aftonbladet、Expressen）</h4><ul><li>選挙2026の包括的カバレッジ<li>349名すべての政治家の自動化されたMP スコアカード<li>連立形成予測モデル<li>パターン検出からの調査ストーリーリード<li>リアルタイム選挙夜モニタリングダッシュボード</ul><h4>オルタナティブメディア（独立ブログ、ポッドキャスト、非営利ニュース）</h4><ul><li>体系的データで主流の物語に挑戦<li>アルゴリズムによる説明責任を伴う反体制ジャーナリズム<li>透明性のある方法論（45のルールすべてが公開文書化）<li>非営利割引利用可能（プロフェッショナルティアから50%オフ）</ul><h3>スウェーデン選挙2026パイロットプログラム</h3><div class="card architecture-card"><div class=scanner-effect></div><h4>限定枠：グローバル10組織+スウェーデン5組織</h4><p><strong>パイロット詳細：</strong><ul><li><strong>期間</strong>: 3-6ヶ月（グローバル向け7-9月2026、スウェーデン向け4-9月）<li><strong>価格</strong>:<ul><li>グローバルメディア: €7,500総額（75%割引、エンタープライズティア機能）<li>スウェーデンメディア: €5,000/月（50%割引、6ヶ月）</ul><li><strong>機能</strong>:<ul><li>フルエンタープライズAPIアクセス<li>スウェーデン固有のリスクルールと分析<li>専任統合サポートエンジニア<li>カスタムダッシュボード設定<li>ホワイトラベルブランディングオプション<li>リアルタイムアラートシステム<li>選挙夜ライブモニタリング<li>選挙後分析ワークショップ</ul></ul><p><strong>申請要件：</strong><ul><li>全国/グローバルなリーチを持つ報道機関<li>専任のデータジャーナリズムまたは政治チーム（2名以上のジャーナリスト）<li>API統合のための技術的能力（またはダッシュボード使用）<li>パイロット評価期間へのコミットメント<li>ケーススタディ参加への同意（匿名オプション利用可能）</ul><p><strong>成功基準：</strong><ul><li>CIAインテリジェンスを使用して50以上のデータ駆動型ストーリーを生成<li>政治的主張に対して90%以上のファクトチェック精度を達成<li>政治調査での測定可能な時間節約を実証<li>プラットフォーム改善のためのフィードバックを提供</ul><p><strong>申し込み方法：</strong><ol><li>訪問: <a href=https://hack23.com/swedish-election-2026_ja.html>https://hack23.com/swedish-election-2026_ja.html</a><li>メール: <a href=mailto:pether@hack23.com>pether@hack23.com</a><li>LinkedIn: <a href=https://www.linkedin.com/in/jamessorling/ >James Pether Sörling（CEO）</a><li>含める内容: 組織名、チーム規模、ユースケース説明</ol></div><h3>技術統合ガイド</h3><h4>API統合ステップ：</h4><ol><li>APIキーを登録（<a href=https://github.com/Hack23/cia>https://github.com/Hack23/cia</a>またはセールスに連絡）<li>APIドキュメントをレビュー（OpenAPI/Swagger仕様利用可能）<li>デベロッパーティアでテスト（€0、100リクエスト/日）<li>認証を実装（OAuth 2.0推奨）<li>エンドポイント統合を構築（REST/JSON、オプショナルGraphQL）<li>本番環境にデプロイ<li>使用状況を監視し、必要に応じてティアをアップグレード</ol><h4>ダッシュボードアクセス（コーディング不要）：</h4><ol><li>ダッシュボードアカウントを登録<li>組織ブランディングを設定（エンタープライズ/ホワイトラベルのみ）<li>アラートルールと通知を設定<li>カスタムレポートと可視化を作成<li>ダッシュボード使用についてチームをトレーニング<li>ニュースルームワークフローにデプロイ</ol><h4>サポートオプション：</h4><ul><li>ドキュメント: <a href=https://github.com/Hack23/cia>https://github.com/Hack23/cia</a>（包括的）<li>メールサポート: <a href=mailto:support@hack23.com>support@hack23.com</a>（エンタープライズティア: 24時間以内応答）<li>統合コンサルティング: €150-200/時間<li>トレーニングワークショップ: €5,000/日（オンサイトまたはバーチャル）</ul><h3>競合他社に対するCIAの優位性</h3><h4>独自の差別化要因：</h4><ul><li>✅ <strong>徹底的な透明性</strong>: 45のリスクルールすべてが公開文書化され、監査可能<li>✅ <strong>オープンソース</strong>: GitHubリポジトリ、コミュニティの監視、ベンダーロックインなし<li>✅ <strong>50年の歴史データ</strong>: 1971年以降のスウェーデン議会API、比類のない深さ<li>✅ <strong>実証済みの方法論</strong>: 学術研究で使用、Computer Swedenで特集<li>✅ <strong>再現可能なフレームワーク</strong>: あらゆる議会制民主主義に適用可能な方法論<li>✅ <strong>セキュリティ第一</strong>: STRIDE脅威モデリング、MITRE ATT&amp;CK防御、SLSAレベル3<li>✅ <strong>超党派</strong>: 客観的な行動分析、編集バイアスなし<li>✅ <strong>柔軟な価格設定</strong>: デベロッパーティア無料、非営利割引、学術料金</ul><h4>競合他社比較：</h4><table class=documentation-map><thead><tr><th>機能<th>CIA<th>従来のリサーチサービス<th>独自の政治データベンダー<tbody><tr><td>透明性<td>✅ すべてのルールが公開<td>❌ プロプライエタリ<td>❌ ブラックボックス<tr><td>オープンソース<td>✅ GitHub<td>❌ クローズド<td>❌ クローズド<tr><td>歴史的深さ<td>✅ 50年以上<td>⚠️ 10-20年<td>⚠️ 5-15年<tr><td>APIアクセス<td>✅ すべてのティア<td>❌ エンタープライズのみ<td>✅ ほとんどのティア<tr><td>価格<td>✅ €0-10K/月<td>⚠️ €15K+/月<td>⚠️ €20K+/月<tr><td>再現性<td>✅ あらゆる民主主義国家<td>❌ オーダーメイド<td>❌ 単一国</table><h3>お問い合わせ</h3><div class="card business-card"><div class=scanner-effect></div><h4>政治ジャーナリズムの変革の準備はできましたか？</h4><p><strong>連絡先情報：</strong><ul><li>📧 <strong>メール</strong>: <a href=mailto:pether@hack23.com>pether@hack23.com</a><li>🔗 <strong>LinkedIn</strong>: <a href=https://www.linkedin.com/in/jamessorling/ >James Pether Sörling（CEO）とつながる</a><li>💻 <strong>GitHub</strong>: <a href=https://github.com/Hack23/cia>https://github.com/Hack23/cia</a></ul><p><strong>ドキュメントリソース：</strong><ul><li>📄 <a href=https://github.com/Hack23/cia/blob/master/BUSINESS_PRODUCT_DOCUMENT.md>ビジネスケースドキュメント</a><li>📊 <a href=https://github.com/Hack23/cia/blob/master/DATA_ANALYSIS_INTOP_OSINT.md>OSINT方法論</a><li>📋 <a href=https://github.com/Hack23/cia/blob/master/RISK_RULES_INTOP_OSINT.md>45のリスクルールドキュメント</a></ul><p><strong>スウェーデン選挙2026パイロット</strong>: 限定枠（グローバル10組織+スウェーデン5組織）にお申し込みください<p><a href=mailto:pether@hack23.com class=btn title=メディアパートナーシップについて問い合わせる>メディアパートナーシップについて問い合わせる</a></div></section></main><footer><p>&copy; 2008-2026 | Hack23 AB (組織番号 5595347807) | <a href=https://www.linkedin.com/in/jamessorling/ >James Pether Sörling</a> | <a href=https://www.linkedin.com/company/hack23/ >企業LinkedIn</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC title=公開ISMSリポジトリ>ISMS</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title=情報セキュリティポリシー>セキュリティポリシー</a> | <a href=blog_ja.html title=セキュリティブログ>ブログ</a> | <a href=discordian-cybersecurity_ja.html title=ディスコーディアンサイバーセキュリティブログ>🍎 ディスコーディアンブログ</a><p><a href=cia-docs.html title=英語ドキュメント>英語ドキュメント</a> | <a href=cia-docs_sv.html title=スウェーデン語ドキュメント>スウェーデン語ドキュメント</a></footer>

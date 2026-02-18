@@ -1,0 +1,946 @@
+<!doctype html><html lang=zh><title>瑞典网络安全咨询 | 公开ISMS | Hack23</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{--primary-color:#006633;--primary-light:#007744;--accent-color:#008838;--bg-color:#f8f9fa;--text-color:#1a1a1a;--text-secondary:#4a4a4a;--button-bg:#007744;--button-text:#fff;--spacing-md:1rem;--spacing-lg:1.5rem;--spacing-xl:2rem;--border-radius:8px;--border-radius-lg:12px}@media (prefers-color-scheme:dark){:root{--primary-color:#00cc66;--primary-light:#00ff88;--accent-color:#33eeff;--bg-color:#001a1a;--text-color:#f0f0f0;--text-secondary:#aaaaaa;--button-bg:#2188ff;--button-text:#e0e0e0}}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;color:var(--text-color);background-color:var(--bg-color);max-width:1200px;margin:0 auto;padding:var(--spacing-xl);font-size:16px;-webkit-font-smoothing:antialiased}header{text-align:center;margin-bottom:var(--spacing-xl);padding:var(--spacing-xl) var(--spacing-lg);border-radius:var(--border-radius-lg);min-height:400px;contain:layout}h1{margin-top:0;font-size:2.5rem;line-height:1.2;color:var(--primary-color);font-weight:600}.header-subtitle{display:block;font-size:1.1rem;font-weight:400;margin-top:.5rem;color:var(--text-secondary)}.hero-tagline{font-size:1.25rem;line-height:1.6;color:var(--text-color);margin:var(--spacing-lg) auto;max-width:800px;font-weight:500}.hero-subtitle{font-size:1rem;line-height:1.6;color:var(--text-secondary);margin:var(--spacing-md) auto var(--spacing-xl);max-width:700px}.hero-cta{display:flex;gap:var(--spacing-md);flex-wrap:wrap;justify-content:center;margin:var(--spacing-xl) 0;min-height:56px}.btn-primary-large,.btn-secondary{display:inline-block;padding:1rem 2rem;border-radius:var(--border-radius);text-decoration:none;font-weight:600;font-size:1rem;transition:all .3s cubic-bezier(.4, 0, .2, 1);min-height:48px;min-width:48px;line-height:1.5}.btn-primary-large{background:var(--button-bg);color:var(--button-text);box-shadow:0 4px 12px rgba(0,119,68,.3);border:1px solid transparent}.btn-primary-large:hover{background:var(--primary-color);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,119,68,.4)}.btn-secondary{background:0 0;color:var(--primary-color);border:2px solid var(--primary-color)}.btn-secondary:hover{background:var(--primary-color);color:#fff}.logo{width:80px;height:80px;border-radius:var(--border-radius-lg);box-shadow:0 4px 12px rgba(0,71,171,.15)}.logo-container{margin-bottom:var(--spacing-lg)}</style><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preconnect href=https://img.shields.io><link rel=dns-prefetch href=https://hack23.github.io><link rel=preload href=cia-icon-140.webp as=image type=image/webp fetchpriority=high><link rel=preload href=styles.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=styles.css></noscript><link rel=canonical href=https://hack23.com/index_zh.html><meta name=description content="瑞典高级网络安全咨询。该国唯一完全公开的ISMS。ISO 27001、GDPR/NIS2、新加坡PDPA/MAS合规、AWS安全。CISSP/CISM认证。哥德堡。"><meta name=keywords content="瑞典网络安全咨询, 公开ISMS, ISO 27001, GDPR合规, NIS2, 新加坡PDPA, MAS网络安全, DevSecOps, AWS安全, CISSP顾问, 安全架构, 云安全, 哥德堡网络安全, 合规自动化, 零信任, 新加坡网络安全"><meta name=robots content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta name=author content="James Pether Sörling, CISSP, CISM"><meta property=og:title content="Hack23 AB | 瑞典高级网络安全咨询"><meta property=og:description content="瑞典唯一完全公开的ISMS。ISO 27001、GDPR/NIS2、新加坡PDPA/MAS合规、AWS安全专家咨询。CISSP/CISM认证。30多年经验。总部位于哥德堡。"><meta property=og:locale content=zh_CN><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:type content=website><meta property=og:url content=https://hack23.com/index_zh.html><meta property=og:image content=cia-icon-140.webp><meta property=og:image:width content=140><meta property=og:image:height content=140><meta property=og:site_name content="Hack23 AB - 高端网络安全咨询"><meta property=og:image:alt content="Hack23 AB - 通过透明度实现网络安全卓越"><meta property=og:updated_time content=2025-11-07T00:00:00Z><meta name=twitter:card content=summary_large_image><meta name=twitter:title content="Hack23 AB | 瑞典高级网络安全咨询"><meta name=twitter:description content="瑞典唯一公开ISMS。ISO 27001、GDPR/NIS2、新加坡PDPA/MAS合规、AWS安全。CISSP/CISM认证。加速创新的实用安全。"><meta name=twitter:image content=cia-icon-140.webp><meta name=twitter:image:alt content="Hack23 AB - 通过透明度实现网络安全卓越"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=preload href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel=stylesheet></noscript><meta name=application-name content="Hack23 AB"><meta name=theme-color content=#0066CC><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "name": "Hack23 AB",
+      "alternateName": "Hack23",
+      "slogan": "通过透明创新实现安全卓越",
+      "legalName": "Hack23 AB",
+      "foundingDate": "2025-01-01",
+      "description": "通过彻底透明度实现安全卓越的网络安全咨询公司。公开ISMS、合规自动化以及跨四个业务线的安全支持创新：网络安全咨询、CIA Compliance Manager、Citizen Intelligence Agency和Black Trigram教育游戏。",
+      "industry": [
+        "信息安全",
+        "网络安全咨询",
+        "合规自动化",
+        "游戏开发"
+      ],
+      "knowsAbout": [
+        "信息安全管理系统",
+        "瑞典公共ISMS",
+        "网络安全咨询",
+        "ISO 27001实施",
+        "CIA三要素评估",
+        "合规自动化",
+        "安全架构",
+        "透明运营",
+        "风险管理",
+        "开源安全",
+        "OSINT方法论",
+        "议会监督",
+        "政治透明度",
+        "瑞典政府分析",
+        "DevSecOps",
+        "云安全架构",
+        "OSPO管理",
+        "AWS安全",
+        "企业安全咨询",
+        "供应链安全",
+        "SLSA 3级合规",
+        "容器安全",
+        "无服务器安全",
+        "零信任架构",
+        "安全文化培训",
+        "新加坡PDPA合规",
+        "MAS网络安全指南",
+        "东盟监管合规",
+        "韩国武术游戏",
+        "文化保护技术"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "哥德堡",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "瑞典"
+          }
+        },
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        },
+        {
+          "@type": "Country",
+          "name": "美国"
+        },
+        {
+          "@type": "Country",
+          "name": "英国"
+        },
+        {
+          "@type": "Country",
+          "name": "以色列"
+        },
+        {
+          "@type": "Country",
+          "name": "加拿大"
+        },
+        {
+          "@type": "Country",
+          "name": "新加坡"
+        },
+        {
+          "@type": "Place",
+          "name": "东盟地区"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "专业认证",
+          "name": "CISSP - 认证信息系统安全专业人员",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "(ISC)²"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "专业认证",
+          "name": "CISM - 认证信息安全经理",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "ISACA"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "专业认证",
+          "name": "AWS认证安全专业",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Amazon Web Services"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "专业认证",
+          "name": "AWS认证解决方案架构师专业",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Amazon Web Services"
+          }
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "哥德堡",
+        "addressRegion": "Västra Götaland",
+        "addressCountry": "SE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "57.7089",
+        "longitude": "11.9746"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "00:00",
+          "closes": "00:00",
+          "description": "仅限预约"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "客户服务",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "英语",
+          "瑞典语"
+        ]
+      },
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "givenName": "James Pether",
+        "familyName": "Sörling",
+        "additionalName": "pethers",
+        "jobTitle": "首席执行官/创始人",
+        "email": "pether@hack23.com",
+        "url": "https://www.linkedin.com/in/jamessorling/",
+        "description": "网络安全领导者，拥有20多年信息安全、云架构和开源开发经验。Hack23 AB创始人，CIA Compliance Manager、Citizen Intelligence Agency和Black Trigram武术游戏的创建者。",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Hack23 AB",
+          "url": "https://hack23.com"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "查尔姆斯理工大学"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "专业认证",
+            "name": "CISSP - 认证信息系统安全专业人员"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "专业认证",
+            "name": "CISM - 认证信息安全经理"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "专业认证",
+            "name": "AWS认证安全专业"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "专业认证",
+            "name": "AWS认证解决方案架构师专业"
+          }
+        ],
+        "knowsAbout": [
+          "网络安全",
+          "云安全",
+          "信息安全管理",
+          "ISO 27001",
+          "NIST网络安全框架",
+          "AWS安全",
+          "DevSecOps",
+          "开源安全",
+          "游戏开发",
+          "韩国武术",
+          "跆拳道"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23",
+          "https://github.com/pethers",
+          "https://www.openhub.net/accounts/pether",
+          "https://slashdot.org/~pether",
+          "https://openprofile.dev/profile/pether"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/",
+        "https://blacktrigram.com",
+        "https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I"
+      ],
+      "hasPart": [
+        {
+          "@id": "https://blacktrigram.com/#blacktrigram"
+        },
+        {
+          "@id": "https://hack23.com/#cia-compliance-manager"
+        },
+        {
+          "@id": "https://hack23.com/#citizen-intelligence-agency"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@id": "https://hack23.com/services.html#service-security-architecture"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-cloud-security"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-secure-development"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-compliance"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-opensource-security"
+        },
+        {
+          "@id": "https://hack23.com/services.html#service-security-culture"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hack23.com/#website",
+      "url": "https://hack23.com/",
+      "name": "Hack23 AB",
+      "inLanguage": "zh",
+      "publisher": {
+        "@id": "https://hack23.com/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://hack23.com/?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "description": "具有完全透明度的瑞典网络安全咨询。公共ISMS、ISO 27001专业知识、AWS安全和开源情报。"
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://blacktrigram.com/#blacktrigram",
+      "name": "Black Trigram",
+      "alternateName": [
+        "흑괘",
+        "Black Trigram Game"
+      ],
+      "url": "https://blacktrigram.com",
+      "downloadUrl": "https://github.com/Hack23/blacktrigram/releases",
+      "codeRepository": "https://github.com/Hack23/blacktrigram",
+      "image": "https://hack23.com/black-trigram-140.webp",
+      "screenshot": "https://hack23.com/black-trigram-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "Revolutionary 3D precision combat simulator inspired by traditional Korean martial arts focusing on anatomical targeting, realistic physics, and cultural preservation. Features 70 vital points, 5 combat archetypes, and authentic Taekkyeon/Hapkido techniques.",
+      "genre": [
+        "Fighting",
+        "Simulation",
+        "Educational",
+        "Cultural"
+      ],
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "格斗游戏",
+      "operatingSystem": "跨平台",
+      "gamePlatform": [
+        "PC",
+        "跨平台",
+        "网页浏览器"
+      ],
+      "contentRating": "青少年",
+      "programmingLanguage": [
+        "C#"
+      ],
+      "softwareRequirements": "Unity Engine",
+      "softwareVersion": "latest",
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "ko"
+      ],
+      "educationalUse": "韩国武术教育和文化保护",
+      "teaches": [
+        "韩国传统武术",
+        "跜跛技术",
+        "合气道关节技",
+        "文化遗产",
+        "解剖学要害点位",
+        "易经原理"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "武术爱好者",
+          "文化遗产学生",
+          "游戏玩家",
+          "韩国文化学习者"
+        ]
+      },
+      "playMode": [
+        "单人游戏",
+        "多人游戏"
+      ],
+      "accessibilityFeature": [
+        "可自定义控制",
+        "视觉和音频反馈",
+        "武术技术教育提示",
+        "可调节难度设置"
+      ],
+      "featureList": [
+        "70个解剖学要害点位系统",
+        "5种格斗原型 (武士、刺客、黑客、情报、组织)",
+        "正宗韩国武术技术",
+        "基于物理的格斗模拟",
+        "教育性游戏玩法",
+        "文化保护重点",
+        "开源开发",
+        "跨平台部署",
+        "SLSA Level 3 供应链安全"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "开源游戏"
+      },
+      "isAccessibleForFree": true,
+      "keywords": "Black Trigram, 韩国武术游戏, 跜跛, 合气道, 格斗模拟器, 要害点位, 教育游戏, 文化保护, Unity游戏, C#, 开源游戏",
+      "sameAs": [
+        "https://github.com/Hack23/blacktrigram"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hack23.com/#cia-compliance-manager",
+      "name": "CIA Compliance Manager",
+      "alternateName": "Confidentiality Integrity Availability Compliance Manager",
+      "applicationCategory": "SecurityApplication",
+      "applicationSubCategory": "企业安全管理",
+      "operatingSystem": "跨平台",
+      "softwareVersion": "latest",
+      "url": "https://ciacompliancemanager.com/",
+      "downloadUrl": "https://github.com/Hack23/cia-compliance-manager/releases",
+      "codeRepository": "https://github.com/Hack23/cia-compliance-manager",
+      "image": "https://hack23.com/cia-icon-140.webp",
+      "screenshot": "https://hack23.com/cia-icon-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "先进的安全评估平台，涵盖机密性、完整性和可用性，提供业务影响分析、成本估算以及与NIST、ISO 27001、GDPR、HIPAA、SOC2框架的合规映射。",
+      "featureList": [
+        "CIA三元组安全评估",
+        "业务影响分析",
+        "NIST框架合规映射",
+        "ISO 27001控制实施",
+        "GDPR数据保护评估",
+        "HIPAA合规映射",
+        "SOC2控制映射",
+        "风险量化与报告",
+        "自动化合规报告",
+        "安全控制差距分析"
+      ],
+      "programmingLanguage": [
+        "Java",
+        "JavaScript",
+        "TypeScript"
+      ],
+      "runtimePlatform": "Java",
+      "softwareRequirements": "Java 11+, Maven",
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "首席信息安全官 (CISOs)"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "合规官"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "IT安全经理"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "风险管理专业人士"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "安全审计员"
+        }
+      ],
+      "teaches": [
+        "CIA三元组原则",
+        "NIST网络安全框架",
+        "ISO 27001控制",
+        "GDPR合规",
+        "HIPAA安全要求",
+        "SOC2信任原则",
+        "业务影响分析",
+        "安全风险管理"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "开源安全工具"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": "zh",
+      "isAccessibleForFree": true,
+      "keywords": "CIA三元组, 安全评估, 合规管理, NIST, ISO 27001, GDPR, HIPAA, SOC2, 风险管理",
+      "sameAs": [
+        "https://github.com/Hack23/cia-compliance-manager"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://hack23.com/#citizen-intelligence-agency",
+      "name": "Citizen Intelligence Agency",
+      "alternateName": "CIA 政治透明平台",
+      "applicationCategory": "DataVisualizationApplication",
+      "applicationSubCategory": "政治情报平台",
+      "operatingSystem": "跨平台",
+      "url": "https://github.com/Hack23/cia",
+      "downloadUrl": "https://github.com/Hack23/cia/releases",
+      "codeRepository": "https://github.com/Hack23/cia",
+      "image": "cia-logo.png",
+      "screenshot": "https://hack23.com/cia-icon-140.webp",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "description": "开源情报和政治透明平台，提供数据驱动的治理洞察、议会监督、民主问责指标以及瑞典民主的实时政治分析。",
+      "featureList": [
+        "瑞典议会监督 (Riksdag)",
+        "政治决策追踪",
+        "治理指标与排名",
+        "民主问责分析",
+        "开放数据集成 (世界银行, 瑞典政府)",
+        "政治趋势可视化",
+        "投票模式分析",
+        "政党绩效指标",
+        "部长活动追踪",
+        "委员会工作分析"
+      ],
+      "programmingLanguage": [
+        "Java",
+        "JavaScript"
+      ],
+      "runtimePlatform": "Java",
+      "softwareRequirements": "Java 11+, PostgreSQL",
+      "audience": [
+        {
+          "@type": "Audience",
+          "audienceType": "公民"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "记者"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "研究人员"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "政策分析师"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "政治学家"
+        },
+        {
+          "@type": "Audience",
+          "audienceType": "民主倡导者"
+        }
+      ],
+      "teaches": [
+        "议会流程分析",
+        "民主问责指标",
+        "政治决策追踪",
+        "OSINT方法论",
+        "瑞典治理体系",
+        "数据驱动政治分析",
+        "开放政府数据使用"
+      ],
+      "browserRequirements": "需要JavaScript。推荐: Chrome, Firefox, Safari, Edge (最新版本)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "category": "开源政治情报平台"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org",
+        "name": "Hack23 AB",
+        "email": "info@hack23.com"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling",
+        "name": "James Pether Sörling",
+        "email": "pether@hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "@id": "https://hack23.com/#james-pether-sorling"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "@id": "https://hack23.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "sv"
+      ],
+      "isAccessibleForFree": true,
+      "keywords": "政治透明, 瑞典议会, 议会监督, 民主问责, OSINT, 开放政府数据, 政治分析",
+      "sameAs": [
+        "https://cia.sourceforge.io/",
+        "https://github.com/Hack23/cia"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-security-architecture",
+      "serviceType": "安全架构与战略",
+      "name": "安全架构与战略",
+      "description": "企业安全架构设计、风险评估与管理、安全战略制定和治理框架设计。我们帮助组织建立与业务目标一致的强大安全基础。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "安全架构文档、风险评估报告、安全战略路线图"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-cloud-security",
+      "serviceType": "云安全与DevSecOps",
+      "name": "云安全与DevSecOps",
+      "description": "AWS安全评估与架构、DevSecOps集成、基础设施即代码安全、容器和无服务器安全。专注于AWS，拥有认证专业知识。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "云安全架构、DevSecOps管道实施、基础设施安全评估"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-secure-development",
+      "serviceType": "安全开发与代码质量",
+      "name": "安全开发与代码质量",
+      "description": "安全SDLC实施、CI/CD安全集成、代码质量和安全分析、符合SLSA Level 3的供应链安全。将安全无缝集成到开发工作流中。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "安全SDLC框架、自动化安全测试、供应链安全实施"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-compliance",
+      "serviceType": "合规与监管",
+      "name": "合规与监管",
+      "description": "GDPR、NIS2、ISO 27001、新加坡PDPA、MAS网络安全实施、ISMS设计与实施、AI治理以及审计准备。通过我们自己的公开ISMS展示合规性。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        },
+        {
+          "@type": "Country",
+          "name": "新加坡"
+        },
+        {
+          "@type": "Place",
+          "name": "东盟地区"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "ISMS文档、合规框架实施、审计准备材料"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-opensource-security",
+      "serviceType": "开源安全",
+      "name": "开源安全",
+      "description": "OSPO建立与管理、漏洞管理、安全工具开发和社区参与。利用我们在多个开源安全项目中的经验。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "OSPO战略、漏洞管理流程、安全工具"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hack23.com/services.html#service-security-culture",
+      "serviceType": "安全文化与培训",
+      "name": "安全文化与培训",
+      "description": "安全意识计划、开发人员安全培训、领导层安全简报和事件响应培训。通过教育和文化变革建立具有安全意识的组织。",
+      "provider": {
+        "@id": "https://hack23.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "瑞典"
+        },
+        {
+          "@type": "Place",
+          "name": "北欧地区"
+        },
+        {
+          "@type": "Place",
+          "name": "欧洲"
+        }
+      ],
+      "availableLanguage": [
+        "英语",
+        "瑞典语"
+      ],
+      "serviceOutput": "培训材料、安全意识计划、事件响应手册"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://hack23.com/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/#homepage",
+      "url": "https://hack23.com/",
+      "name": "Hack23 AB | 开放ISMS透明度与网络安全咨询",
+      "isPartOf": {
+        "@id": "https://hack23.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://blacktrigram.com/#blacktrigram"
+        }
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "cia-icon-140.webp"
+      },
+      "inLanguage": "zh",
+      "breadcrumb": {
+        "@id": "https://hack23.com/#breadcrumb"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-11-17"
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/index_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/index_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/index_ar.html><link rel=alternate hreflang=da href=https://hack23.com/index_da.html><link rel=alternate hreflang=de href=https://hack23.com/index_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/index_de.html><link rel=alternate hreflang=en href=https://hack23.com/index.html><link rel=alternate hreflang=es href=https://hack23.com/index_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/index_es.html><link rel=alternate hreflang=fi href=https://hack23.com/index_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/index_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/index_fr.html><link rel=alternate hreflang=he href=https://hack23.com/index_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/index_he.html><link rel=alternate hreflang=ja href=https://hack23.com/index_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/index_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/index_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/index_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/index_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/index_nl.html><link rel=alternate hreflang=no href=https://hack23.com/index_no.html><link rel=alternate hreflang=nb href=https://hack23.com/index_no.html><link rel=alternate hreflang=sv href=https://hack23.com/index_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/index_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/index_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/index_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/index.html><a href=#main-content class=skip-link>跳转到主要内容</a><nav class=sticky-nav role=navigation aria-label=主导航><div class=nav-container><a href=index_zh.html class=nav-logo aria-label="Hack23 AB 首页"><span>Hack23</span> </a><button class=nav-toggle aria-label=打开导航菜单 aria-expanded=false aria-controls=nav-menu><span></span> <span></span> <span></span></button><ul class=nav-menu id=nav-menu aria-label=导航菜单 aria-hidden=true><li><a href=why-hack23_zh.html tabindex=-1>为什么选择Hack23</a><li><a href=#security-services tabindex=-1>服务</a><li><a href=#products tabindex=-1>产品</a><li><a href=blog_zh.html tabindex=-1>博客</a><li><a href=#faq tabindex=-1>常见问题</a><li><a href=#contact class=btn-nav tabindex=-1>联系我们</a></ul></div></nav><nav aria-label=面包屑导航><ol class=breadcrumb><li class=breadcrumb-item aria-current=page>首页</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="Hack23 AB - 高端网络安全咨询 瑞典" class=logo width=80 height=80 fetchpriority=high decoding=sync></div><h1><span aria-hidden=true>🔐 </span>Hack23 AB <span class=header-subtitle>高端网络安全咨询 | 瑞典唯一的公共ISMS</span></h1><p class=hero-tagline>通过彻底透明实现安全卓越。瑞典ISO 27001、GDPR/NIS2、新加坡PDPA/MAS和AWS安全咨询专家。<p class=hero-subtitle>30+年专业知识 • CISSP/CISM认证 • ISO 27001验证 • 总部位于哥德堡<div class=hero-cta><a href=services_zh.html class=btn-primary-large>探索服务</a> <a href=https://github.com/Hack23/ISMS-PUBLIC class=btn-secondary>查看公开ISMS</a></div><details class=header-intro-details><summary>📖 了解更多关于Hack23 AB</summary><div class=header-intro><p class=intro-tagline>在<strong>Hack23 AB</strong>，透明度实现信任：每一项安全控制、风险评估和合规决策都通过<strong>瑞典唯一完全公开的ISMS</strong>得到公开记录，在网络安全咨询领域创造了前所未有的可信度。<p class=intro-overview><strong>2025年成立</strong>，总部位于<strong>瑞典哥德堡</strong>，我们通过四个集成业务线提供专业安全服务：<div class=business-lines><div class=business-line><strong>1. 网络安全咨询</strong> <span>ISO 27001、GDPR、NIS2、新加坡PDPA/MAS网络安全、AWS安全架构、DevSecOps集成</span></div><div class=business-line><strong>2. CIA Compliance Manager</strong> <span>自动化CIA三元组评估，支持NIST/ISO 27001/GDPR/HIPAA/SOC2/新加坡PDPA合规映射</span></div><div class=business-line><strong>3. Citizen Intelligence Agency</strong> <span>促进瑞典议会透明度和民主问责的平台</span></div><div class=business-line><strong>4. Black Trigram</strong> <span>展示安全最佳实践的教育性韩国武术游戏</span></div></div><p class=intro-leadership>由<strong>James Pether Sörling（CISSP认证信息系统安全专业人员、CISM认证信息安全经理、AWS安全专业认证）</strong>领导，拥有<strong>30多年经验</strong>，Hack23证明在彻底透明的基础上建立安全可以加速而不是阻碍创新。</div></details><div class=key-badges><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge alt="OpenSSF Scorecard" width=150 height=20> </a><a href=https://github.com/Hack23/homepage/actions/workflows/main.yml title="Deploy Status"><img src=https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg alt=Deploy width=100 height=20> </a><a href=https://github.com/Hack23 title="GitHub Profile"><img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=flat&logo=github&logoColor=white" alt="GitHub Hack23" width=120 height=20></a></div><details class=badge-showcase><summary><h2>🏆 安全与质量证据</h2><span class=summary-description>查看我们全面的安全验证和质量指标（15+徽章）</span></summary><div class=badge-grid><div class=badge-category><h4>🔒 安全</h4><div class=badges><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage title=OpenSSF计分卡><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge alt=OpenSSF计分卡 width=150 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/scorecards.yml title=计分卡供应链安全><img src=https://github.com/Hack23/homepage/actions/workflows/scorecards.yml/badge.svg alt=计分卡 width=120 height=20 loading=lazy> </a><a href=https://bestpractices.coreinfrastructure.org/projects/9771 title=OpenSSF最佳实践><img src=https://bestpractices.coreinfrastructure.org/projects/9771/badge alt=OpenSSF最佳实践 width=200 height=20 loading=lazy></a></div></div><div class=badge-category><h4>🚀 构建状态</h4><div class=badges><a href=https://github.com/Hack23/homepage/actions/workflows/main.yml title=部署状态><img src=https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg alt=部署 width=100 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml title=质量检查><img src=https://github.com/Hack23/homepage/actions/workflows/quality-checks.yml/badge.svg alt=质量检查 width=140 height=20 loading=lazy> </a><a href=https://github.com/Hack23/homepage/actions/workflows/dependency-review.yml title=依赖审查><img src=https://github.com/Hack23/homepage/actions/workflows/dependency-review.yml/badge.svg alt=依赖审查 width=160 height=20 loading=lazy></a></div></div><div class=badge-category><h4>📋 合规</h4><div class=badges><a href=https://github.com/Hack23/ISMS-PUBLIC title=公开ISMS><img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=flat&logo=github&logoColor=white" alt=公开ISMS width=110 height=20 loading=lazy> </a><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title=安全策略><img src="https://img.shields.io/badge/Security-Policy-DC143C?style=flat&logo=shield&logoColor=white" alt=安全策略 width=120 height=20 loading=lazy> </a><a href=https://hack23.com title="ISO 27001对齐"><img src="https://img.shields.io/badge/ISO_27001-对齐-blue?style=flat" alt="ISO 27001" width=140 height=20 loading=lazy> </a><a href=https://hack23.com title=GDPR合规><img src="https://img.shields.io/badge/GDPR-合规-green?style=flat" alt=GDPR width=140 height=20 loading=lazy></a></div></div><div class=badge-category><h4>🏢 公司</h4><div class=badges><a href=https://hack23.com title=官方网站><img src="https://img.shields.io/badge/网站-hack23.com-00cc66?style=flat&logo=firefox&logoColor=white" alt=网站 width=150 height=20 loading=lazy> </a><a href=https://github.com/Hack23 title=GitHub主页><img src="https://img.shields.io/badge/GitHub-Hack23-181717?style=flat&logo=github&logoColor=white" alt="GitHub Hack23" width=120 height=20 loading=lazy> </a><a href=https://www.linkedin.com/company/hack23/ title=LinkedIn公司主页><img src="https://img.shields.io/badge/LinkedIn-公司-0A66C2?style=flat&logo=linkedin&logoColor=white" alt=LinkedIn公司 width=150 height=20 loading=lazy> </a><a href=https://www.allabolag.se/foretag/hack23-ab/g%C3%B6teborg/konsulter/2KJBPZZI5YF3I title=公司注册><img src="https://img.shields.io/badge/组织号-5595347807-blue?style=flat" alt=瑞典公司注册 width=160 height=20 loading=lazy> </a><a href=https://www.openhub.net/accounts/pether title=OpenHub主页><img src="https://img.shields.io/badge/OpenHub-pether-3DA639?style=flat&logo=opensourceinitiative&logoColor=white" alt=OpenHub主页 width=140 height=20 loading=lazy></a></div></div></div></details><div class=app-link><a href=why-hack23_zh.html title=为什么组织选择Hack23>🌟 为什么选择Hack23？</a> <a href=black-trigram-features_zh.html title="查看Black Trigram功能">🥋 Black Trigram游戏</a> <a href=cia-compliance-manager-features_zh.html title=查看合规管理器功能>🔒 CIA Compliance Manager</a> <a href=cia-features_zh.html title="查看Citizen Intelligence Agency功能">🔍 Citizen Intelligence Agency</a> <a href=blog_zh.html title=安全博客与Discordian网络安全>🍎 安全博客</a> <a href=https://www.linkedin.com/company/hack23/ class=btn title=在LinkedIn上关注>关注公司</a></div></header><main id=main-content><section id=value-proposition aria-labelledby=value-prop-heading><h2 id=value-prop-heading>🌟 为什么选择Hack23 AB？</h2><p class=value-prop-intro>瑞典唯一拥有完全公开ISMS的网络安全咨询公司，展示透明度和安全卓越，加速而非阻碍创新。<h3 class=subsection-title>核心差异化优势</h3><div class=cards><div class="card card-transparency"><h3>🔓 激进透明</h3><p><strong>瑞典唯一完全公开的信息安全管理系统（ISMS）</strong>，拥有93项ISO 27001控制措施、编辑的风险登记册以及完整的政策文档公开可用。准确了解我们如何实施安全——没有隐藏的做法，没有安全剧场。<ul class=value-list><li>70%公开 / 30%负责任地编辑的文档<li>通过OpenSSF Scorecard实时安全指标<li>透明的风险评估和处理跟踪</ul></div><div class="card card-expertise"><h3>🎯 经验证的专业知识</h3><p><strong>30多年</strong>实践软件开发和安全架构经验，获得行业领先认证和真实世界企业实施的支持。<ul class=value-list><li>CISSP认证信息系统安全专业人员、CISM认证信息安全经理<li>AWS安全专业认证和解决方案架构师专业认证<li>在Stena AB、Polestar、WirelessCar等主要企业领导安全项目</ul></div><div class="card card-innovation"><h3>⚡ 安全加速创新</h3><p><strong>安全赋能的开发</strong>无缝集成到DevSecOps工作流中。我们证明适当的安全控制能够加速而非阻碍创新和上市时间。<ul class=value-list><li>SLSA 3级供应链安全实施<li>自动化合规验证和CI/CD集成<li>具有真实性能的零信任架构</ul></div></div><h3 class=subsection-title>实用价值</h3><div class=cards><div class="card card-practical"><h3>🛠️ 实用解决方案</h3><p><strong>没有安全剧场</strong>——只有经过生产环境测试的可实施解决方案。我们的开源项目展示了具有可衡量成果的安全最佳实践。<ul class=value-list><li>在生产环境中使用的开源安全工具<li>文档化的威胁模型和安全架构<li>真实世界的AWS多区域弹性模式</ul></div><div class="card card-measurable"><h3>📊 可衡量的成果</h3><p><strong>数据驱动的安全</strong>，具有可量化的风险指标、自动化合规跟踪和通过公开文档展示的持续改进。<ul class=value-list><li>定量风险评估方法<li>与业务目标一致的安全KPI<li>自动化合规映射（ISO/NIST/GDPR/NIS2）</ul></div><div class="card card-nordic"><h3>🌍 北欧创新中心</h3><p><strong>总部位于哥德堡</strong>的网络安全专业知识，结合瑞典创新文化与汽车、物流和技术领域的国际企业经验。<ul class=value-list><li>远程或现场咨询（哥德堡）<li>英语和瑞典语服务交付<li>北欧市场GDPR/NIS2合规</ul></div></div></section><section id=information-security aria-labelledby=info-sec-heading><h2 id=info-sec-heading>🛡️ 信息安全治理</h2><p>通过透明度展示安全性。我们的公开信息安全管理系统（ISMS）展示了企业级控制如何推动创新、咨询交付和产品开发。访问持续改进的文档集和管理信息安全政策，涵盖目的、原则、角色以及我们的风险和合规模型。<table role=presentation><tr><td><h3>📋 公开ISMS仓库</h3><p>活文档：政策、编辑的登记册、弹性和安全开发实践（约70%公开 / 30%负责任地编辑）。</p><a href=https://github.com/Hack23/ISMS-PUBLIC title=打开公开ISMS文档仓库（政策、编辑的登记册）><img src="https://img.shields.io/badge/ISMS-PUBLIC-0066CC?style=for-the-badge&logo=github&logoColor=white" alt=ISMS公开仓库 width=125 height=20 loading=lazy></a><td><h3>🔒 信息安全政策</h3><p>核心政策：目的、范围、原则（安全设计、透明度、持续改进、业务价值）、角色和文档地图。</p><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md title=阅读管理信息安全政策><img src="https://img.shields.io/badge/Security-Policy-DC143C?style=for-the-badge&logo=shield&logoColor=white" alt=信息安全政策 width=140 height=20 loading=lazy></a></table></section><section id=security-services><h2>🔑 安全服务</h2><p>专业网络安全咨询服务，可远程或在哥德堡现场提供。凭借三十多年的软件开发和安全架构经验，我们提供实用的安全解决方案，无缝集成到您的开发流程中，不会阻碍创新。<div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>🏗️ 安全架构与战略</h3><p>企业安全框架、风险评估和与业务目标一致的治理。<ul><li>企业安全架构<li>风险评估与管理<li>安全战略制定</ul></div><div class="card integrity-card"><div class=scanner-effect></div><h3>☁️ 云安全与DevSecOps</h3><p>AWS安全评估、基础设施即代码安全、CI/CD集成。<ul><li>安全云解决方案（AWS高级）<li>DevSecOps集成<li>容器和无服务器安全</ul></div><div class="card availability-card"><div class=scanner-effect></div><h3>🔧 安全开发与合规</h3><p>SDLC安全集成、ISO 27001、GDPR/NIS2合规、OSPO管理。<ul><li>CI/CD安全集成<li>监管合规（GDPR、NIS2、ISO 27001）<li>开源安全</ul></div></div><div class=centered-cta><a href=services_zh.html class=cta-button-large-primary>查看所有服务和专业领域 →</a></div></section><section id=products><h2>🚀 产品</h2><p class=subtitle>开源交付模式，架构和安全文档完全透明<div class=cards><div class="card card-red"><div class=scanner-effect></div><img src=black-trigram-140.webp alt="Black Trigram" width=140 height=94 class=img-responsive loading=lazy decoding=async><h3>🥋 Black Trigram</h3><p>精准格斗模拟器，包含70个要害点系统、5种原型和真实的韩国武术技术。<div class=card-actions><a href=black-trigram_zh.html class=btn-primary title=了解更多>了解更多 →</a> <a href=https://blacktrigram.com class=btn-action-primary title=立即游玩>🎮 立即游玩</a></div></div><div class="card card-purple"><div class=scanner-effect></div><img src=cia-icon-140.webp alt="CIA Compliance" width=80 height=80 loading=lazy decoding=async><h3>🔐 CIA Compliance Manager</h3><p>安全评估平台，提供CIA三元组评估和NIST、ISO 27001、GDPR、HIPAA、SOC2合规映射。<div class=card-actions><a href=compliance-manager_zh.html class=btn-primary title=了解更多>了解更多 →</a> <a href=https://ciacompliancemanager.com/ class=btn-action-secondary title=试用演示>🚀 试用演示</a></div></div><div class="card card-green"><div class=scanner-effect></div><picture><source type=image/webp srcset=cia-logo.webp><img src=cia-logo.png alt=CIA项目 width=80 height=80 loading=lazy decoding=async></picture><h3>🔍 Citizen Intelligence Agency</h3><p>瑞典政治透明度OSINT平台，提供议会监督和问责指标。<div class=card-actions><a href=cia-project_zh.html class=btn-primary title=了解更多>了解更多 →</a> <a href=cia-features_zh.html title=功能>✨ 功能</a></div></div></div><div class=centered-cta><a href=projects_zh.html class=cta-button title=查看所有项目>查看所有项目和演示 →</a></div></section><section id=about-developer><h2>💼 首席执行官 James Pether Sörling</h2><h3 class=subsection-title>领导层与专业知识</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>公司领导层与安全专家</h3><figure><img src=jamespethersorling150.webp alt="James Pether Sörling，Hack23 AB首席执行官" class=profile-image loading=lazy width=150 height=150></figure><p>Hack23 AB的首席执行官/创始人，James拥有30多年信息技术经验，专注于安全架构、云安全和合规。专业认证包括CISSP、CISM、AWS安全专业认证和AWS解决方案架构师专业认证。<h4>🎯 主要资质：</h4><div class=cert-badges><span class="cert-badge cert-badge-cissp">CISSP</span> <span class="cert-badge cert-badge-cism">CISM</span> <span class="cert-badge cert-badge-aws">AWS安全专业认证</span> <span class="cert-badge cert-badge-aws">AWS解决方案架构师专业认证</span></div><h4>🏢 近期领导职位：</h4><ul><li><strong>2025年6月至今：</strong> 首席执行官/创始人，Hack23 AB<li><strong>2024年10月-2025年7月：</strong> 应用安全官，Stena AB<li><strong>2022年3月-2024年9月：</strong> 信息安全官，Polestar<li><strong>2018年1月-2022年3月：</strong> 高级安全架构师，WirelessCar</ul><div class=card-actions><a href=https://www.linkedin.com/in/jamessorling/ title=LinkedIn专业资料>LinkedIn资料</a> <a href=https://github.com/Hack23/talks title=技术演讲>技术演讲</a> <a href=blog_zh.html title=安全博客>安全博客</a></div></div><div class=card><div class=scanner-effect></div><h3>近期专业经历</h3><p>在主要组织中拥有丰富的企业安全和云架构领导经验：<ul><li><strong>2025年6月至今：</strong> 首席执行官，Hack23 AB - 瑞典创新中心领导，游戏开发战略<li><strong>2024年10月-2025年7月：</strong> 应用安全官，Stena AB - 风险评估、云安全、AI治理<li><strong>2022年3月-2024年9月：</strong> 信息安全官，Polestar - ISMS实施、安全合规、OSPO负责人</ul></div><div class=card><div class=scanner-effect></div><h3>武术背景</h3><p>James拥有丰富的传统韩国武术经验，为Black Trigram项目带来真实的知识：<ul><li><strong>1999年：</strong> 韩国松武馆黑带 - 传统跆拳道认证<li><strong>2024年：</strong> 国技院三段 - 世界跆拳道联盟总部认证<li><strong>2015-2017年：</strong> 跆拳道教练，Tor跆拳道俱乐部 - 儿童课程教学<li><strong>2002-2003年：</strong> 跆拳道教练，Haga跆拳道俱乐部 - 社区教学<li><strong>1994-1996年：</strong> 跆拳道教练，Hworangi跆拳道 - 早期教学经验</ul><p><strong>武术哲学：</strong>这种对韩国武术传统的深入理解直接影响了Black Trigram格斗系统中所集成的真实技术、文化尊重和教育价值。</div></div><h3 class=subsection-title>职业历程</h3><div class=cards><div class=card><div class=scanner-effect></div><h3>企业架构经验</h3><p>在领先技术公司担任安全架构和咨询职位：<ul><li><strong>2018年1月-2022年3月：</strong> 高级安全架构师，WirelessCar - 安全架构、AWS安全、安全开发<li><strong>2018年1月-2018年11月：</strong> 顾问，Omegapoint - 在WirelessCar担任安全架构师<li><strong>2017年3月-2018年1月：</strong> 顾问，Consid AB - 开源开发、CI/CD、AWS<li><strong>2010-2017年3月：</strong> 云架构师，Keypasco - 云安全解决方案、多层架构</ul><p><strong>主要成就：</strong>2025年创立Hack23 AB，领导Polestar的开源项目办公室，实施企业安全架构，在Javaforum Göteborg发表演讲，被Computer Sweden报道。</div><div class=card><div class=scanner-effect></div><h3>软件开发背景</h3><p>软件工程和系统开发的基础经验：<ul><li><strong>2008-2009年：</strong> 顾问，Redpill Linpro - 瑞典、挪威、丹麦的技术支持和客户任务<li><strong>2007-2008年：</strong> 顾问，Singlegrid（伦敦） - 持续集成和构建管理解决方案<li><strong>2006-2007年：</strong> 系统开发人员，Sky（伦敦） - 使用XP/敏捷开发的J2EE项目<li><strong>2003-2005年：</strong> J2EE开发人员，Glu Mobile（伦敦） - 移动服务产品开发<li><strong>2000-2002年：</strong> 软件工程师，Volantis Systems（伦敦） - 多渠道服务器产品设计与实施</ul></div><div class=card><div class=scanner-effect></div><h3>早期职业生涯与军事服役</h3><p>塑造领导力和技术专业知识的基础经验：<ul><li><strong>1999-2003年：</strong> Unix帮助台/助教，查尔姆斯理工大学 - 系统管理和辅导教学<li><strong>1999年6-8月：</strong> Visual C++程序员，IETV AB - 生产控制系统开发<li><strong>1996-1997年：</strong> NBC防御小组组长，瑞典武装部队 - 领导和安全责任<li><strong>1993-1996年：</strong> 创始人，Equal Rites BBS - 早期网络和系统管理（Fidonet节点2:203/454）</ul></div></div></section><section id=talks-presentations><h2>🎤 技术演讲与演示</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>🎙️ Javaforum Göteborg</h3><p>关于企业Java应用程序安全架构模式和最佳实践的演讲。</p><a href="https://www.youtube.com/watch?v=A_hq2Y03d6I" class=btn-youtube title=观看演讲>▶️ 观看演讲</a></div><div class=card><div class=scanner-effect></div><h3>🎙️ Shift Left Like A Boss</h3><p>安全播客嘉宾出席，讨论DevSecOps实践和供应链安全。</p><a href="https://www.youtube.com/watch?v=aYwSd1Wu28Q&ab_channel=Soluble" class=btn-podcast title=收听播客>🎧 收听播客</a></div></div></section><section id=press-coverage><h2>📰 媒体报道</h2><div class=cards><div class=card><div class=scanner-effect></div><h3>Computer Sweden</h3><p>这篇文章强调了在揭示政治家活动方面创新性地使用技术。它介绍了James Pether Sörling利用数据驱动的洞察来促进政治过程透明度的工作。</p><a href=https://computersweden.idg.se/2.2683/1.229120/tekniken-som-avslojar-politikerna title=阅读文章>阅读文章</a></div><div class=card><div class=scanner-effect></div><h3>Riksdag och Departement</h3><p>一份瑞典出版物，讨论了Citizen Intelligence Agency在监督政治家方面的作用。它强调了James Pether Sörling致力于通过战略性地使用技术来促进政治问责制的承诺。</p><a href=https://web.archive.org/web/20090527045800/http:/www.rod.se/Artikelarkiv/2009/CIA-haller-koll-pa-riksdagsledamoterna/ title=阅读文章>阅读文章</a></div><div class=card><div class=scanner-effect></div><h3>National Democratic Institute</h3><p>一份全面的调查报告，强调了议会监督组织在瑞典的重要性。它认可了James Pether Sörling对这些组织的重大贡献，加强了他对加强民主进程的承诺。</p><a href=https://www.ndi.org/sites/default/files/governance-parliamentary-monitoring-organizations-survey-september-2011.pdf title=查看报告>查看报告</a></div></div></section><section id=past-projects><h2>📁 历史项目</h2><div class=cards><div class="card availability-card"><div class=scanner-effect></div><h3>Sonar-CloudFormation-Plugin</h3><p>SonarQube插件，用于分析AWS CloudFormation模板，基于NIST、CWE和ISO标准的安全最佳实践。<div class="key-badges key-badges--start"><a href=https://bestpractices.coreinfrastructure.org/projects/4545 title=CII最佳实践><img src=https://bestpractices.coreinfrastructure.org/projects/4545/badge alt=CII最佳实践 width=200 height=20 loading=lazy> </a><a href=https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin title="OpenSSF Scorecard"><img src=https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge alt="OpenSSF Scorecard" width=150 height=20 loading=lazy></a></div><details class="badge-showcase badge-showcase--nested"><summary><h4>查看所有徽章</h4></summary><div class="badge-grid badge-grid--compact"><div class=badge-category><h5>质量与安全</h5><div class=badges><a href=https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt title=许可证><img src=https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg alt=许可证 width=200 height=20 loading=lazy> </a><a href=https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin title="Maven Central"><img src=https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg alt="Maven Central" width=200 height=20 loading=lazy></a></div></div></div></details><div class=card-actions><a href=https://github.com/Hack23/sonar-cloudformation-plugin title=查看GitHub仓库>GitHub</a> <a href=https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin title="Maven Central">Maven Central</a></div></div><div class=card><div class=scanner-effect></div><h3>CIA仪表板</h3><p>瑞典政治活动仪表板，提供议会活动和政治绩效指标的全面可视化。</p><a href=cia-docs_zh.html title=查看文档>查看文档</a></div></div></section><section id=faq><h2>❓ 常见问题</h2><p class=faq-intro>关于Hack23网络安全服务、公开ISMS和安全咨询方法的常见问题。<div class=faq-controls><button type=button class=faq-control-btn id=faq-expand-all aria-label=展开所有FAQ项目>全部展开</button> <button type=button class=faq-control-btn id=faq-collapse-all aria-label=收起所有FAQ项目>全部收起</button></div><details class=faq-item><summary><h3>Hack23 AB与其他网络安全咨询公司有什么不同？</h3></summary><div class=faq-answer><p>Hack23 AB运营瑞典唯一的完全公开信息安全管理系统(ISMS)，所有政策、威胁模型和安全文档都可在GitHub上获取。这种激进透明度通过实际实施而非仅仅声明来展示我们的专业知识。我们结合30多年的实践经验、CISSP/CISM认证和现任从业者身份（Stena Group IT的应用安全官），确保提供实用、可实施的安全建议——而不仅仅是理论。</div></details><details class=faq-item><summary><h3>瑞典的网络安全咨询费用是多少？</h3></summary><div class=faq-answer><p>网络安全咨询费用因参与范围而异。典型范围：(1) 安全评估：2-4周全面审查€5,000-€15,000；(2) ISO 27001实施：3-6个月项目€15,000-€30,000；(3) DevSecOps集成：CI/CD安全设置€10,000-€25,000；(4) 小时咨询：咨询服务€150-€250/小时。我们提供透明定价，无隐藏费用。联系我们获取根据您组织需求定制的报价。</div></details><details class=faq-item><summary><h3>你们是远程工作还是需要在哥德堡现场？</h3></summary><div class=faq-answer><p>我们提供远程和现场网络安全咨询。远程服务通过视频会议、屏幕共享和协作文档工具在全球范围内提供——非常适合分布式团队和经济高效的参与。现场咨询可在瑞典哥德堡提供，适合偏好面对面互动、实践研讨会或需要实体场所进行敏感讨论的客户。结合远程和偶尔现场访问的混合模式对许多客户效果良好。</div></details><details class=faq-item><summary><h3>什么是公开ISMS，为什么它很重要？</h3></summary><div class=faq-answer><p>公开ISMS（信息安全管理系统）是一个开放、透明的框架，其中安全政策、程序、威胁模型和风险评估公开可用——与传统保密的ISMS不同。Hack23在GitHub上的公开ISMS（<a href=https://github.com/Hack23/ISMS-PUBLIC>https://github.com/Hack23/ISMS-PUBLIC</a>）通过实际实施展示我们的安全专业知识，而不仅仅是声明。这种透明度：(1) 证明我们遵循自己的建议，(2) 允许潜在客户在参与前评估我们的方法，(3) 为安全社区提供免费模板和示例，(4) 展示对我们安全状态的信心。这是通过透明度实现的安全，而不是通过隐蔽实现的安全。</div></details><details class=faq-item><summary><h3>Hack23顾问持有哪些认证？</h3></summary><div class=faq-answer><p>Hack23顾问持有行业认可的认证：(1) CISSP（认证信息系统安全专业人员）- 安全专业知识的全球标准，(2) CISM（认证信息安全经理）- 以管理为重点的安全认证，(3) AWS认证安全专业 - 云安全专业知识，(4) AWS认证解决方案架构师专业 - 基础设施设计。除认证外，我们的团队还带来30多年的实践经验、现任从业者角色（应用安全官职位）和积极的开源安全贡献。我们相信实践经验和持续学习超越仅凭认证。</div></details><details class=faq-item><summary><h3>ISO 27001实施需要多长时间？</h3></summary><div class=faq-answer><p>对于中小型瑞典组织（10-50名员工），ISO 27001实施通常需要3-6个月。时间线分解：(1) 范围界定和差距分析：2-4周，(2) ISMS设计和风险评估：3-4周，(3) 控制实施：8-12周，(4) 内部审计和管理评审：2-3周，(5) 认证审计准备：1-2周。较大组织（50+员工）可能需要6-12个月。影响时间线的因素：现有安全成熟度、资源可用性、组织复杂性和顾问参与程度。我们的公开ISMS提供经验证的模板，可将实施加速30-40%。</div></details><details class=faq-item><summary><h3>你们服务哪些行业？</h3></summary><div class=faq-answer><p>Hack23为多个行业提供网络安全咨询：(1) 技术和SaaS公司 - DevSecOps、云安全、安全SDLC，(2) 金融服务 - GDPR、PSD2、MAS网络安全合规，(3) 医疗保健和制药 - ISO 27001、GDPR、患者数据保护，(4) 制造和工业 - OT安全、供应链风险、ISO 27001，(5) 电子商务和零售 - PCI DSS、数据保护、欺诈预防，(6) 专业服务 - 客户数据安全、合规框架。行业无关的安全原则普遍适用，在需要时提供特定行业的监管知识。</div></details><details class=faq-item><summary><h3>你们能帮助GDPR和NIS2合规吗？</h3></summary><div class=faq-answer><p>是的，Hack23提供全面的GDPR（通用数据保护条例）和NIS2（网络和信息安全指令2）合规咨询。GDPR服务：数据保护影响评估（DPIA）、隐私设计集成、同意管理、数据主体权利实施、违规通知程序。NIS2服务：基本/重要实体分类、风险管理框架、事件报告程序（24小时通知）、供应链安全、治理结构对齐。我们将GDPR/NIS2要求集成到ISO 27001实施中，实现统一的合规管理。实用的、可实施的解决方案——而不是复选框合规。</div></details><details class=faq-item><summary><h3>你们的DevSecOps方法是什么？</h3></summary><div class=faq-answer><p>我们的DevSecOps方法："安全赋能而非阻碍创新。"我们将安全集成到CI/CD管道中，同时不降低开发速度。关键要素：(1) 自动化安全扫描：GitHub Actions/GitLab CI中的SAST/DAST/SCA工具，(2) 基础设施即代码安全：Terraform/CloudFormation扫描、策略即代码，(3) 容器安全：镜像扫描、运行时保护、Kubernetes安全策略，(4) 密钥管理：HashiCorp Vault集成、无硬编码凭据，(5) 安全门控：低/中发现非阻塞、关键/高阻塞，(6) 开发人员培训：安全冠军计划、安全编码研讨会。结果：更快、更安全的发布，可衡量的风险降低。</div></details><details class=faq-item><summary><h3>你们提供安全架构评审吗？</h3></summary><div class=faq-answer><p>是的，Hack23进行全面的安全架构评审，涵盖：(1) 云架构：AWS/Azure/GCP安全评估、IAM审查、网络分段、安全配置，(2) 应用架构：威胁建模（STRIDE分析）、身份验证/授权设计、数据流安全、API安全，(3) 基础设施架构：零信任原则、纵深防御、攻击面分析、安全监控，(4) 合规对齐：ISO 27001、NIST CSF、CIS Controls映射。交付成果：详细的安全架构文档、威胁模型、优先级修复路线图和实施指导。评审通常需要2-4周，具体取决于复杂性。</div></details><details class=faq-item><summary><h3>安全咨询包括什么？</h3></summary><div class=faq-answer><p>Hack23安全咨询包括：(1) 初步评估：30-60分钟发现电话，了解您的安全需求、挑战和目标，(2) 差距分析：根据行业标准（ISO 27001、NIST、CIS）审查当前安全状态，(3) 威胁态势：识别与您的行业和技术栈相关的特定威胁，(4) 建议：带有成本/收益分析的优先级、可操作的安全改进，(5) 路线图：包含里程碑和资源需求的实施时间线，(6) 后续跟进：包含发现和下一步的书面报告。为合格潜在客户提供免费初步咨询。无继续义务。</div></details><details class=faq-item><summary><h3>如何开始与Hack23合作？</h3></summary><div class=faq-answer><p>开始很简单：(1) 联系我们：发送电子邮件至info@hack23.com，(2) 初步电话：30分钟发现电话讨论您的安全需求（免费，无义务），(3) 提案：概述范围、时间线、交付成果和定价的定制提案，(4) 启动：批准后，我们从利益相关者访谈和文档审查开始，(5) 执行：在整个参与过程中定期检查、透明沟通和交付成果审查。典型响应时间：初次咨询24-48小时，提案交付1周。准备好改善您的安全状态了吗？今天就联系我们。</div></details></section><section id=security-checklist-cta class=cta-section><h2>🔍 免费安全评估检查清单</h2><p>下载我们全面的95点安全评估指南。在七个关键领域评估您组织的安全状态：架构、访问控制、数据保护、网络安全、漏洞管理、事件响应和合规。<p><strong>基于ISO 27001、NIST CSF和CIS Controls • 企业安全团队使用</strong></p><a href=security-assessment-checklist_zh.html class=cta-button-large title=下载免费安全评估检查清单>获取免费检查清单</a></section><section id=contact class=contact-section><h2>📧 联系我们</h2><p>对我们的服务有疑问或想讨论您的安全需求？我们很乐意收到您的来信！<div class=contact-alternatives><h3>联系方式</h3><ul><li><strong>电子邮件：</strong> <a href=mailto:info@hack23.com>info@hack23.com</a><li><strong>LinkedIn：</strong> <a href=https://www.linkedin.com/company/hack23/ target=_blank rel="noopener noreferrer">Hack23公司主页</a><li><strong>LinkedIn：</strong> <a href=https://www.linkedin.com/in/jamessorling/ target=_blank rel="noopener noreferrer">首席执行官</a><li><strong>GitHub：</strong> <a href=https://github.com/Hack23 target=_blank rel="noopener noreferrer">开源项目</a></ul></div></section></main><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hack23 AB与其他网络安全咨询公司有什么不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hack23 AB运营瑞典唯一的完全公开信息安全管理系统(ISMS)，所有政策、威胁模型和安全文档都可在GitHub上获取。这种激进透明度通过实际实施而非仅仅声明来展示我们的专业知识。我们结合30多年的实践经验、CISSP/CISM认证和现任从业者身份（Stena Group IT的应用安全官），确保提供实用、可实施的安全建议——而不仅仅是理论。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "瑞典的网络安全咨询费用是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "网络安全咨询费用因参与范围而异。典型范围：(1) 安全评估：2-4周全面审查€5,000-€15,000；(2) ISO 27001实施：3-6个月项目€15,000-€30,000；(3) DevSecOps集成：CI/CD安全设置€10,000-€25,000；(4) 小时咨询：咨询服务€150-€250/小时。我们提供透明定价，无隐藏费用。联系我们获取根据您组织需求定制的报价。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "你们是远程工作还是需要在哥德堡现场？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "我们提供远程和现场网络安全咨询。远程服务通过视频会议、屏幕共享和协作文档工具在全球范围内提供——非常适合分布式团队和经济高效的参与。现场咨询可在瑞典哥德堡提供，适合偏好面对面互动、实践研讨会或需要实体场所进行敏感讨论的客户。结合远程和偶尔现场访问的混合模式对许多客户效果良好。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什么是公开ISMS，为什么它很重要？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公开ISMS（信息安全管理系统）是一个开放、透明的框架，其中安全政策、程序、威胁模型和风险评估公开可用——与传统保密的ISMS不同。Hack23在GitHub上的公开ISMS（<a href=\"https://github.com/Hack23/ISMS-PUBLIC\">https://github.com/Hack23/ISMS-PUBLIC</a>）通过实际实施展示我们的安全专业知识，而不仅仅是声明。这种透明度：(1) 证明我们遵循自己的建议，(2) 允许潜在客户在参与前评估我们的方法，(3) 为安全社区提供免费模板和示例，(4) 展示对我们安全状态的信心。这是通过透明度实现的安全，而不是通过隐蔽实现的安全。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hack23顾问持有哪些认证？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hack23顾问持有行业认可的认证：(1) CISSP（认证信息系统安全专业人员）- 安全专业知识的全球标准，(2) CISM（认证信息安全经理）- 以管理为重点的安全认证，(3) AWS认证安全专业 - 云安全专业知识，(4) AWS认证解决方案架构师专业 - 基础设施设计。除认证外，我们的团队还带来30多年的实践经验、现任从业者角色（应用安全官职位）和积极的开源安全贡献。我们相信实践经验和持续学习超越仅凭认证。</p>
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ISO 27001实施需要多长时间？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "对于中小型瑞典组织（10-50名员工），ISO 27001实施通常需要3-6个月。时间线分解：(1) 范围界定和差距分析：2-4周，(2) ISMS设计和风险评估：3-4周，(3) 控制实施：8-12周，(4) 内部审计和管理评审：2-3周，(5) 认证审计准备：1-2周。较大组织（50+员工）可能需要6-12个月。影响时间线的因素：现有安全成熟度、资源可用性、组织复杂性和顾问参与程度。我们的公开ISMS提供经验证的模板，可将实施加速30-40%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "你们服务哪些行业？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hack23为多个行业提供网络安全咨询：(1) 技术和SaaS公司 - DevSecOps、云安全、安全SDLC，(2) 金融服务 - GDPR、PSD2、MAS网络安全合规，(3) 医疗保健和制药 - ISO 27001、GDPR、患者数据保护，(4) 制造和工业 - OT安全、供应链风险、ISO 27001，(5) 电子商务和零售 - PCI DSS、数据保护、欺诈预防，(6) 专业服务 - 客户数据安全、合规框架。行业无关的安全原则普遍适用，在需要时提供特定行业的监管知识。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "你们能帮助GDPR和NIS2合规吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，Hack23提供全面的GDPR（通用数据保护条例）和NIS2（网络和信息安全指令2）合规咨询。GDPR服务：数据保护影响评估（DPIA）、隐私设计集成、同意管理、数据主体权利实施、违规通知程序。NIS2服务：基本/重要实体分类、风险管理框架、事件报告程序（24小时通知）、供应链安全、治理结构对齐。我们将GDPR/NIS2要求集成到ISO 27001实施中，实现统一的合规管理。实用的、可实施的解决方案——而不是复选框合规。</p>
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "你们的DevSecOps方法是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "我们的DevSecOps方法：'安全赋能而非阻碍创新。'我们将安全集成到CI/CD管道中，同时不降低开发速度。关键要素：(1) 自动化安全扫描：GitHub Actions/GitLab CI中的SAST/DAST/SCA工具，(2) 基础设施即代码安全：Terraform/CloudFormation扫描、策略即代码，(3) 容器安全：镜像扫描、运行时保护、Kubernetes安全策略，(4) 密钥管理：HashiCorp Vault集成、无硬编码凭据，(5) 安全门控：低/中发现非阻塞、关键/高阻塞，(6) 开发人员培训：安全冠军计划、安全编码研讨会。结果：更快、更安全的发布，可衡量的风险降低。</p>
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "你们提供安全架构评审吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，Hack23进行全面的安全架构评审，涵盖：(1) 云架构：AWS/Azure/GCP安全评估、IAM审查、网络分段、安全配置，(2) 应用架构：威胁建模（STRIDE分析）、身份验证/授权设计、数据流安全、API安全，(3) 基础设施架构：零信任原则、纵深防御、攻击面分析、安全监控，(4) 合规对齐：ISO 27001、NIST CSF、CIS Controls映射。交付成果：详细的安全架构文档、威胁模型、优先级修复路线图和实施指导。评审通常需要2-4周，具体取决于复杂性。</p>
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "安全咨询包括什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hack23安全咨询包括：(1) 初步评估：30-60分钟发现电话，了解您的安全需求、挑战和目标，(2) 差距分析：根据行业标准（ISO 27001、NIST、CIS）审查当前安全状态，(3) 威胁态势：识别与您的行业和技术栈相关的特定威胁，(4) 建议：带有成本/收益分析的优先级、可操作的安全改进，(5) 路线图：包含里程碑和资源需求的实施时间线，(6) 后续跟进：包含发现和下一步的书面报告。为合格潜在客户提供免费初步咨询。无继续义务。</p>
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何开始与Hack23合作？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "开始很简单：(1) 联系我们：发送电子邮件至info@hack23.com，(2) 初步电话：30分钟发现电话讨论您的安全需求（免费，无义务），(3) 提案：概述范围、时间线、交付成果和定价的定制提案，(4) 启动：批准后，我们从利益相关者访谈和文档审查开始，(5) 执行：在整个参与过程中定期检查、透明沟通和交付成果审查。典型响应时间：初次咨询24-48小时，提案交付1周。准备好改善您的安全状态了吗？今天就联系我们。</p>
+      }
+    }
+  ]
+}</script><script>!function(){"use strict";const e=document.getElementById("faq-expand-all"),t=document.getElementById("faq-collapse-all");e&&e.addEventListener("click",function(){document.querySelectorAll(".faq-item").forEach(e=>e.open=!0)}),t&&t.addEventListener("click",function(){document.querySelectorAll(".faq-item").forEach(e=>e.open=!1)})}()</script><script>!function(){"use strict";function e(){const e=document.querySelector(".nav-toggle"),t=document.querySelector(".nav-menu");e&&t&&e.addEventListener("click",function(){const e=t.classList.toggle("open");this.setAttribute("aria-expanded",e?"true":"false")});const n=document.querySelector(".back-to-top");if(n){let e=!1;window.addEventListener("scroll",function(){e||(window.requestAnimationFrame(function(){window.scrollY>300?(n.style.display="block",n.style.opacity="1"):(n.style.opacity="0",setTimeout(function(){window.scrollY<=300&&(n.style.display="none")},300)),e=!1}),e=!0)}),n.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})})}document.querySelectorAll('a[href^="#"]').forEach(function(n){n.addEventListener("click",function(n){const o=this.getAttribute("href");if(o&&"#"!==o){const c=document.querySelector(o);c&&(n.preventDefault(),c.scrollIntoView({behavior:"smooth"}),t&&t.classList.contains("open")&&(t.classList.remove("open"),e&&e.setAttribute("aria-expanded","false")))}})})}"loading"===document.readyState?document.addEventListener("DOMContentLoaded",e):e()}()</script><button class=back-to-top aria-label=回到顶部>↑</button><footer role=contentinfo aria-label=网站页脚><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>网络安全咨询<br>瑞典哥德堡 | 远程<p>组织号：5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>LinkedIn公司主页</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>首席执行官：James Pether Sörling</a></div><div class=footer-column><h3>服务</h3><ul><li><a href=services_zh.html>安全咨询</a><li><a href=services_zh.html>安全架构</a><li><a href=services_zh.html>云安全</a><li><a href=services_zh.html>DevSecOps集成</a><li><a href=services_zh.html>合规与ISMS</a></ul></div><div class=footer-column><h3>产品</h3><ul><li><a href=black-trigram-features_zh.html>Black Trigram</a><li><a href=cia-features_zh.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features_zh.html>CIA Compliance Manager</a></ul></div><div class=footer-column><h3>资源</h3><ul><li><a href=blog_zh.html>安全博客</a><li><a href=discordian-cybersecurity_zh.html>🍎 Discordian博客</a><li><a href=cia-triad-faq_zh.html>CIA三元组常见问题</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>公开ISMS</a><li><a href=sitemap_zh.html>网站地图</a></ul></div><div class=footer-column><h3>公司</h3><ul><li><a href=why-hack23_zh.html>关于Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>安全政策</a><li><a href=SECURITY.md>报告安全问题</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>GitHub组织</a><li><a href=accessibility-statement_zh.html>无障碍声明</a></ul></div></div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB。保留所有权利。| 根据<a href=LICENSE>Apache 2.0</a>许可<p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> | <a href=index_no.html lang=no>Norsk</a> | <a href=index_zh.html lang=zh aria-current=page>中文</a></div></footer>

@@ -1,0 +1,85 @@
+<!doctype html><html lang=fi><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Kryptografiakäytäntö | AES-256, TLS 1.3 | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="Kryptografiastandardit: AES-256 levossa olevalle datalle, TLS 1.3 siirrettävälle datalle, AWS KMS, vuosittainen kierto, SSL Labs A+. Ei takaovia, ei vanhentuneita algoritmeja."><meta name=twitter:description content="Kryptografiastandardit: AES-256 levossa olevalle datalle, TLS 1.3 siirrettävälle datalle, AWS KMS, vuosittainen kierto, SSL Labs A+. Ei takaovia, ei vanhentuneita algoritmeja."><meta name=keywords content="kryptografia, salaus, TLS 1.3, AES-256, RSA 4096, avainten hallinta, AWS KMS avainten hallintapalvelu, varmenteiden hallinta, PKI julkisen avaimen infrastruktuuri, digitaaliset allekirjoitukset, hajautusalgoritmit, SHA-256, turvallinen viestintä, datan salaus, levossa olevan datan salaus, siirrettävän datan salaus, kryptografiset standardit, NIST kryptografia, päästä päähän -salaus, symmetrinen salaus, epäsymmetrinen salaus"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Kryptografiakäytäntö: AES-256, TLS 1.3, AWS KMS—Luottamus toteutuksen kautta"><meta property=og:description content="Järjestelmällinen kryptografinen toteutus AES-256:lla, TLS 1.3:lla, AWS KMS:llä, vuosittaisella avainkierrolla, SSL Labs A+ -luokituksella."><meta property=og:locale content=fi_FI><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-crypto_fi.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Turvallisuusblogi"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-crypto_fi.html><link rel=alternate hreflang=ar href=https://hack23.com/discordian-crypto_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-crypto_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-crypto_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-crypto_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-crypto_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-crypto_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-crypto.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-crypto_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-crypto_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-crypto_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-crypto_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-crypto_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-crypto_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-crypto_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-crypto_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-crypto_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-crypto_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-crypto_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-crypto_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-crypto_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-crypto_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-crypto_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-crypto_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-crypto_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-crypto_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-crypto_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-crypto_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-crypto_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-crypto.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Kryptografiakäytäntö: Luottamus toteutuksen erinomaisuuden kautta",
+      "description": "Kuinka Hack23 osoittaa kryptografista asiantuntemusta järjestelmällisen toteutuksen kautta: AES-256, TLS 1.3, AWS KMS, vuosittainen kierto",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Kyberturvallisuusasiantuntija",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-crypto_fi.html"
+      },
+      "keywords": "kryptografiakäytäntö, AES-256, TLS 1.3, AWS KMS, salausstandardit",
+      "articleSection": "Tietoturva",
+      "inLanguage": "fi",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog_fi.html#blog",
+        "name": "Hack23 Turvallisuusblogi"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS-käytäntö",
+          "description": "Tietoturvallisuuden hallintajärjestelmän käytännön toteutus"
+        },
+        {
+          "@type": "Thing",
+          "name": "Kryptografia",
+          "description": "Salausstandardit ja avainten hallinta"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-crypto_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://hack23.com/index_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogi",
+          "item": "https://hack23.com/blog_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kryptografiakäytäntö",
+          "item": "https://hack23.com/discordian-crypto_fi.html"
+        }
+      ]
+    }
+  ]
+}</script><header><nav><div class=nav-left><ul><li><a href=index_fi.html>Etusivu</a><li><a href=blog_fi.html class=active>Blogi</a></ul></div><div class=nav-right><select onchange="this.value&&(window.location.href=this.value)" aria-label="Valitse kieli"><option value="">🌐 Suomi<option value=discordian-crypto.html lang=en>English<option value=discordian-crypto_sv.html lang=sv>Svenska<option value=discordian-crypto_da.html lang=da>Dansk<option value=discordian-crypto_no.html lang=nb>Norsk</select></div></nav></header><nav class=breadcrumbs aria-label=Leivänmurut><a href=index_fi.html>Etusivu</a> &gt; <a href=blog_fi.html>Blogi</a> &gt; <span aria-current=page>Kryptografiakäytäntö</span></nav><main><article><h1>Kryptografiakäytäntö: Luottamus toteutuksen kautta</h1><p><strong>TL;DR:</strong> AES-256 levossa olevalle datalle. TLS 1.3 siirrettävälle datalle. AWS KMS avainten hallintaan. Vuosittainen kierto. SSL Labs A+. Ei takaovia, ei vanhentuneita algoritmeja. Toteutus todistaa asiantuntemuksen.<h2>Ajattele itse, tyhmyri! Kyseenalaista auktoriteetti</h2><p>Kyllä, jopa—<em>erityisesti</em>—ne viranomaiset, jotka hyväksyvät kryptografiset standardit. Mutta kun kyseenalaistat motiivit ja takaovihistorian, toteuta järjestelmällisesti.<p><strong>ISMS-kryptografia:</strong> Kryptografiakäytäntö—järjestelmällinen toteutus.<h2>Salausstandardit: Mitä me todella käytämme</h2><ul><li><strong>Levossa oleva data:</strong> AES-256-GCM (AEAD-salaus)<li><strong>Siirrettävä data:</strong> TLS 1.3 (vain modernit cipher-sarjat)<li><strong>Epäsymmetrinen salaus:</strong> RSA 4096-bitti / ECDSA P-384<li><strong>Avainten hallinta:</strong> AWS KMS (Hardware Security Modules)<li><strong>Hajautus:</strong> SHA-256 vähintään (SHA-3 kun saatavilla)<li><strong>Vuosittainen kierto:</strong> Kaikki pitkäikäiset avaimet</ul><h2>Toteutus: Asiantuntemuksen todiste</h2><p>Kaikki puhuvat salauksesta. Me toteutamme sen:<ul><li><strong>SSL Labs A+:</strong> Tarkistettu neljännesvuosittain<li><strong>Perfect Forward Secrecy:</strong> Käytössä kaikissa päätepisteissä<li><strong>Certificate Transparency:</strong> Valvottu CT-lokien kautta<li><strong>HSTS:</strong> Pakotettu 2 vuoden max-age-arvolla<li><strong>Ei SSL/TLS 1.0/1.1:</strong> Poistettu käytöstä ja testattu</ul><h2>Miksi nämä valinnat?</h2><p><strong>AES-256:</strong> Ei käytännön hyökkäyksiä. NIST-hyväksytty. Laajalti tuettu. Laitteistokiihdytetty moderneissa suorittimissa.<p><strong>TLS 1.3:</strong> Vähentynyt latenssi. Parantunut yksityisyys. Vähemmän cipher-sarjavirheitä. Pakollinen Perfect Forward Secrecy.<p><strong>AWS KMS:</strong> FIPS 140-2 Level 2+ -validoitu. Keskitetty tarkastuspolku. Tehtävien erottelu. Automaattinen kierto.<h2>Mitä emme käytä (ja miksi)</h2><ul><li><strong>Ei itse keksittyjä algoritmeja:</strong> Kryptografia on vaikeaa. Käytä standardeja.<li><strong>Ei vanhentuneita cipher-sarjoja:</strong> RC4, 3DES, MD5—ei.<li><strong>Ei epävarmoja satunnaisgeneraattoreita:</strong> Vain `/dev/urandom` / CSPRNG<li><strong>Ei kovakoodattuja avaimia:</strong> Avaimet KMS:ssä, ei koodissa</ul><h2>Avainten hallinta: Elinkaari</h2><ol><li><strong>Generointi:</strong> HSM-generoitu, ei koskaan paljastettu<li><strong>Jakelu:</strong> Salattu kanava, minimaalinen altistuminen<li><strong>Tallennus:</strong> KMS pääsynhallinnalla<li><strong>Kierto:</strong> Vuosittain vähintään, tapahtumien jälkeen<li><strong>Peruutus:</strong> Välitön, dokumentoitu<li><strong>Tuhoaminen:</strong> Turvallinen poisto, vahvistettu</ol><h2>Vaatimustenmukaisuus: Standardien risteys</h2><ul><li><strong>ISO 27001:2022 A.8.24:</strong> Kryptografia ✓<li><strong>NIST CSF PR.DS-1:</strong> Tietosuoja ✓<li><strong>CIS Controls 3.10:</strong> Salaa arkaluontoinen data ✓<li><strong>GDPR Art. 32:</strong> Asianmukaiset turvatoimet ✓</ul><h2>Diskordialainen lähestymistapa: Kysy miksi</h2><p>Miksi luotamme AES:ään? Koska 20 vuoden kryptoanalyysi ei ole murtanut sitä—vielä. Miksi AWS KMS? Koska emme voi rakentaa parempia HSM:iä itse. Miksi TLS 1.3? Koska TLS 1.2:ssa on liikaa legacy-ongelmia.<p><strong>Luottamus tulee toteutuksesta, ei väitteistä.</strong><h2>Testaa oma salauksesi</h2><p>Tarkista toteutuksemme:<ul><li><strong>SSL Labs:</strong> <a href="https://www.ssllabs.com/ssltest/analyze.html?d=hack23.com" target=_blank rel=noopener>Testaa hack23.com</a><li><strong>Security Headers:</strong> Tarkista HSTS, CSP, CT<li><strong>testssl.sh:</strong> Suorita oma auditointisi</ul><h2>Lisälukemista</h2><ul><li><a href=discordian-data-protection_fi.html>Tietosuojakäytäntö</a> - GDPR-vaatimustenmukaisuus<li><a href=discordian-info-sec-policy_fi.html>Tietoturvakäytäntö</a> - Yleinen viitekehys<li><a href=discordian-isms-transparency_fi.html>ISMS-läpinäkyvyyssuunnitelma</a> - Julkinen turvallisuus</ul></article></main><footer><p>&copy; 2025 Hack23 AB | <a href=index_fi.html>Etusivu</a> | <a href=blog_fi.html>Blogi</a></footer>

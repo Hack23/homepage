@@ -1,0 +1,45 @@
+<!doctype html><html lang=ja><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>バックアップと復旧ポリシー - Discordian ISMS | Hack23 AB</title><link rel=stylesheet href=styles.css><meta name=description content=データバックアップと復旧手順><meta name=twitter:description content=データバックアップと復旧手順><meta name=keywords content="バックアップ, 復旧, データ復旧, 3-2-1ルール, RPO, RTO, バックアップ戦略, ISMS, ISO 27001, Hack23"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content=バックアップと復旧ポリシー><meta property=og:description content=データバックアップと復旧手順><meta property=og:locale content=ja_JP><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-backup-recovery_ja.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Hack23 Security Blog"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-backup-recovery_ja.html><link rel=alternate hreflang=ar href=https://hack23.com/discordian-backup-recovery_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-backup-recovery_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-backup-recovery_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-backup-recovery_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-backup-recovery_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-backup-recovery_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-backup-recovery.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-backup-recovery_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-backup-recovery_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-backup-recovery_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-backup-recovery_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-backup-recovery_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-backup-recovery_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-backup-recovery_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-backup-recovery_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-backup-recovery_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-backup-recovery_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-backup-recovery_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-backup-recovery_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-backup-recovery_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-backup-recovery_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-backup-recovery_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-backup-recovery_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-backup-recovery_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-backup-recovery_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-backup-recovery_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-backup-recovery_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-backup-recovery_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-backup-recovery.html><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel=stylesheet><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "バックアップと復旧ポリシー",
+  "description": "データバックアップと復旧手順",
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Person",
+    "name": "James Pether Sörling",
+    "url": "https://hack23.com",
+    "jobTitle": "CEO / Cybersecurity Expert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hack23 AB",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hack23.com/cia-icon-140.webp"
+    }
+  },
+  "datePublished": "2025-12-29",
+  "dateModified": "2025-12-29",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hack23.com/discordian-backup-recovery_ja.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://hack23.com/blog.webp",
+    "width": 1200,
+    "height": 630
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "情報セキュリティマネジメントシステム",
+      "description": "情報セキュリティマネジメントシステム"
+    },
+    {
+      "@type": "Thing",
+      "name": "JIS Q 27001",
+      "description": "ISO 27001 日本規格"
+    }
+  ]
+}</script><header><nav><ul><li><a href=index_ja.html>ホーム</a><li><a href=blog_ja.html>ブログ</a></ul></nav></header><main><article><h1>バックアップと復旧ポリシー</h1><section class=policy-meta><p><strong>情報セキュリティマネジメントシステム</strong> | <strong>JIS Q 27001</strong> | <strong>個人情報保護法 (APPI)</strong></section><section class=policy-overview><h2>📋 概要</h2><p>このポリシーは、組織のセキュリティ体制を強化し、情報資産を保護するための要件を定義します。<p><em>"自分で考える"</em> - <em>"権威を疑う"</em></section><section class=policy-content><h2>📖 ポリシー内容</h2><p>このポリシーは、JIS Q 27001およびAPPI（個人情報保護法）に準拠した要件を定義します。<h3>🔑 主要要素</h3><ul><li>リスクベースのアプローチ<li>継続的な改善<li>定期的なレビューと更新<li>コンプライアンス要件の遵守</ul></section><section class=policy-compliance><h2>✅ コンプライアンス</h2><p>このポリシーは以下の規制基準に準拠しています：<ul><li><strong>JIS Q 27001</strong>: 情報セキュリティ管理<li><strong>個人情報保護法 (APPI)</strong>: 個人情報保護</ul></section><section class=policy-links><h2>🔗 関連ドキュメント</h2><ul><li><a href=discordian-info-sec-policy_ja.html>情報セキュリティマネジメントシステム メインポリシー</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC>ISMS-PUBLIC リポジトリ (英語)</a></ul></section><section class=discordian-footer><p><em>🍎 エリスを称えよ！ディスコーディアを称えよ！23 FNORD 5</em><p><em>"自分で考える" - "権威を疑う"</em></section></article></main><footer><p>&copy; 2025 Hack23 AB. All rights reserved.<p><a href=index_ja.html>ホーム</a> | <a href=blog_ja.html>ブログ</a></footer>

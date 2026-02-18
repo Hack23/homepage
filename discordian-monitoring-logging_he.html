@@ -1,0 +1,239 @@
+<!doctype html><html lang=he dir=rtl><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>ניטור ותיעוד | Hack23</title><meta name=description content="AWS monitoring: CloudWatch Logs, CloudTrail (all API calls), GuardDuty, Security Hub. 90 days hot, 1 year cold. &lt;15 min anomaly response."><meta name=twitter:description content="AWS monitoring: CloudWatch Logs, CloudTrail (all API calls), GuardDuty, Security Hub. 90 days hot, 1 year cold. &lt;15 min anomaly response."><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="בלוג אבטחה Hack23"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-monitoring-logging_he.html><link rel=stylesheet href=styles.css><meta property=og:title content="Monitoring & Logging: If a Tree Falls and Nobody Logs It..."><meta property=og:description content="Detection requires visibility. Radical Discordian examination of security monitoring and logging strategies."><meta property=og:locale content=he_IL><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=es_ES><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-monitoring-logging_he.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Monitoring & Logging: If a Tree Falls and Nobody Logs It...",
+      "author": {
+        "@type": "Person",
+        "name": "Hagbard Celine"
+      },
+      "datePublished": "2025-11-05",
+      "description": "Detection requires visibility. AWS cloud-native monitoring with CloudWatch, CloudTrail, GuardDuty, Security Hub. Five monitoring categories, 90-day hot retention, <15 min anomaly response. Log everything, review intelligently with automated threat detection.",
+      "keywords": "security monitoring, logging, SIEM, detection, incident response, ISMS",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1354,
+      "isPartOf": {
+        "@type": "בלוג",
+        "@id": "https://hack23.com/בלוג.html#בלוג",
+        "name": "בלוג אבטחה Hack23"
+      },
+      "inLanguage": "he",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "ISMS Policy",
+          "description": "Information Security Management System policy implementation"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-monitoring-logging.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "דף הבית",
+          "item": "https://hack23.com/index_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "בלוג",
+          "item": "https://hack23.com/blog_he.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Monitoring & Logging",
+          "item": "https://hack23.com/discordian-monitoring-logging.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Implement Comprehensive Security Monitoring and Logging",
+      "description": "Step-by-step guide to implementing AWS cloud-native monitoring with CloudWatch, CloudTrail, GuardDuty, and Security Hub with <15 minute anomaly response",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT4H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "75"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudWatch Logs"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudTrail"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS GuardDuty"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS Security Hub"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "VPC Flow Logs"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS SNS for alerting"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enable Comprehensive CloudTrail Logging",
+          "text": "Activate CloudTrail in all regions to log all API calls. Enable log file validation to detect tampering. Configure multi-region trail for complete visibility",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "CloudTrail captures WHO did WHAT, WHEN, from WHERE for every AWS API call"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Configure VPC Flow Logs",
+          "text": "Enable VPC Flow Logs for all VPCs to capture network traffic metadata. Log both accepted and rejected traffic to CloudWatch Logs",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Flow logs enable network forensics and anomaly detection"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Set Up CloudWatch Log Groups",
+          "text": "Create organized log groups for different log sources (application logs, system logs, security logs). Configure retention periods based on compliance requirements",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Hot storage: 90 days in CloudWatch Logs for fast querying"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Cold storage: 1 year in S3 Glacier for compliance retention"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Archive: 7 years in Glacier Deep Archive for legal requirements"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Enable AWS GuardDuty",
+          "text": "Activate GuardDuty for automated threat detection. Configure findings to route to Security Hub and SNS for alerting",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "GuardDuty uses machine learning to detect anomalous behavior and known threats"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Configure AWS Security Hub",
+          "text": "Set up Security Hub as your centralized security findings aggregator. Enable all available security standards and integrations",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Security Hub provides single-pane-of-glass view of security posture"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Define Five Monitoring Categories",
+          "text": "Organize monitoring into five priority categories with appropriate response times",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Security Events: Unauthorized access, privilege escalation - <15 min response"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "System Health: Resource utilization, errors - <30 min response"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Performance: Latency, throughput - <1 hour response"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Compliance: Policy violations, configuration drift - <24 hour response"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Business Metrics: User activity, transactions - <1 week review"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Configure Real-Time Alerting",
+          "text": "Set up CloudWatch Alarms for critical metrics. Use SNS to route alerts to appropriate channels (email, Slack, PagerDuty)",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Alert fatigue is real - tune thresholds to minimize false positives"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Implement Log Analysis",
+          "text": "Use CloudWatch Insights for ad-hoc log querying. Create saved queries for common security investigations and compliance checks",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Logs without analysis are just expensive storage - query them regularly"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Enable Automated Remediation",
+          "text": "Configure CloudWatch Events (EventBridge) to trigger automated remediation for common security issues. Use Lambda functions or Systems Manager Automation",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Automated remediation reduces response time from hours to seconds"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Conduct Regular Log Reviews",
+          "text": "Schedule weekly security log reviews. Look for trends, anomalies, and potential security issues. Document findings and update detection rules"
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/discordian-monitoring-logging_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-monitoring-logging_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-monitoring-logging_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-monitoring-logging_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-monitoring-logging_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-monitoring-logging_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-monitoring-logging.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-monitoring-logging_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-monitoring-logging_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-monitoring-logging_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-monitoring-logging_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-monitoring-logging_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-monitoring-logging_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-monitoring-logging_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-monitoring-logging_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-monitoring-logging_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-monitoring-logging_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-monitoring-logging_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-monitoring-logging_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-monitoring-logging_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-monitoring-logging_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-monitoring-logging_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-monitoring-logging_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-monitoring-logging_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-monitoring-logging_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-monitoring-logging_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-monitoring-logging_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-monitoring-logging_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-monitoring-logging.html><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap" rel=stylesheet><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=index_he.html>דף הבית</a><li class=breadcrumb-item><a href=blog_he.html>בלוג</a><li class=breadcrumb-item aria-current=page>Monitoring & Logging</ol></nav><header><h1>🍎 Hack23 Discordian Cybersecurity בלוג</h1><nav><a href=index_he.html>דף הבית</a> <a href=discordian-cybersecurity_he.html>המניפסט</a> <a href=blog_he.html>בלוג</a></nav></header><main><article><h2>Monitoring & Logging: If a Tree Falls and Nobody Logs It...</h2><p class=subtitle><em>"Nothing is true. Everything is permitted. But log everything anyway."</em><h2>🔍 The Problem: Security Events Nobody Sees (Until Too Late)</h2><p>If a tree falls in the forest and nobody logs it, <strong>it still fell</strong>. But you'll never prove it. You'll never know when. You'll never know why. And when the auditor asks, you'll look stupid. <strong>FNORD—and when the breach happens, you'll learn you had zero visibility into the compromise that happened six months ago.</strong><p>Detection requires visibility. Visibility requires logging. Logging requires storage. Storage requires money. Money requires justification. And around we go. <strong>Are you paranoid enough to log everything before you need it? Most people aren't. That's why most breaches surprise them.</strong><p>At Hack23, comprehensive monitoring is non-negotiable: <strong>AWS cloud-native observability stack.</strong> CloudWatch Logs for application and system events. CloudTrail for all AWS API calls (immutable audit trail). GuardDuty for ML-powered threat detection. Security Hub for finding aggregation. VPC Flow Logs for network traffic analysis. <strong>Nothing is true—especially claims of "no suspicious activity" when you're not even looking.</strong><p>Our monitoring strategy spans <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md>Network Security Policy</a>, <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md>Secure Development Policy</a>, and <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md>Security Metrics</a>—because monitoring isn't one policy, it's foundational to everything. <strong>Everything is permitted—including attackers operating undetected because you weren't watching.</strong><div class=hidden-wisdom><strong>ILLUMINATION:</strong> If a tree falls in the forest and nobody logs it, it still fell. But you'll never prove it. Log everything. Review intelligently. AWS makes this default—comprehensive logging is table stakes, not optional. <strong>FNORD—the attack you didn't log is the breach you can't explain. Are you paranoid enough to assume attackers are already inside? You should be.</strong></div><h2>📊 The Five Categories of "What to Watch" (AWS Edition)</h2><div class=value-grid><div class=value-card><h3>1. Authentication Events</h3><p><strong>Who's trying to get in?</strong><p>AWS Identity Center login attempts, MFA challenges, failed authentications. CloudTrail logs all IAM actions. GuardDuty detects credential compromise.<p class=hidden-wisdom><em>If someone's trying to become root at 3 AM, CloudWatch Alarms notify immediately.</em></div><div class=value-card><h3>2. Authorization Events</h3><p><strong>Who's accessing what?</strong><p>IAM policy evaluations, S3 bucket access, Lambda invocations. CloudTrail records all API calls with request/response details. Access denied events trigger investigation.<p class=hidden-wisdom><em>When attempts fail, logs show who tried and what they wanted. Success AND failure matter.</em></div><div class=value-card><h3>3. System Events</h3><p><strong>What's the infrastructure doing?</strong><p>Lambda function starts/stops, RDS instance changes, configuration modifications. CloudWatch Logs capture all application output. AWS Config tracks resource changes.<p class=hidden-wisdom><em>Servers don't reconfigure themselves (usually). Config drift detection identifies unauthorized changes.</em></div><div class=value-card><h3>4. Network Events</h3><p><strong>What's flowing where?</strong><p>VPC Flow Logs capture all network traffic. Source/destination IPs, ports, protocols, accept/reject decisions. GuardDuty analyzes flow patterns for threats.<p class=hidden-wisdom><em>50GB outbound to Romania at midnight? VPC Flow Logs + GuardDuty alert within minutes.</em></div><div class=value-card><h3>5. Application Events</h3><p><strong>What are your apps actually doing?</strong><p>Application logs to CloudWatch Logs. Transaction records, errors, security events. SQL injection attempts, authentication failures, API errors all logged.<p class=hidden-wisdom><em>Application-level security events show attacks that passed network controls. This is where attacks often appear first.</em></div></div><div class=hidden-wisdom><strong>CHAOS ILLUMINATION:</strong> The log you didn't think to collect is the one that would have shown the breach. AWS defaults to comprehensive logging—CloudTrail, VPC Flow Logs, CloudWatch all standard. Storage is cheaper than incident response. Enable everything.</div><h2>⚖️ The Logging Triad: Collect, Retain, Review</h2><h3>Collect Everything (AWS Makes This Easy)</h3><p>Log authentication (IAM, Identity Center), authorization (API calls), configuration changes (AWS Config), security events (GuardDuty), and errors (CloudWatch Logs). Don't log passwords or credit cards—that's just creating new problems. AWS services log to CloudWatch/CloudTrail by default.<h3>Retain Intelligently (By Classification)</h3><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>📦 Hot Storage: 90 Days</h3><p>CloudWatch Logs, immediately queryable. Active investigation and incident response. CloudWatch Logs Insights for analysis.<p><strong>Use Case:</strong> Security incidents, performance debugging, compliance checks</div><div class="card integrity-card"><div class=scanner-effect></div><h3>🧊 Cold Storage: 1 Year</h3><p>S3 archival, cost-optimized. Historical analysis and compliance audits. Glacier for long-term retention.<p><strong>Use Case:</strong> Annual audits, trend analysis, regulatory requirements</div><div class="card availability-card"><div class=scanner-effect></div><h3>♾️ Forever Storage: Not A Thing</h3><p>Unless you hate money. Retention policies enforce deletion. Compliance determines duration, not sentiment.<p><strong>Reality:</strong> Most logs have diminishing value after 1 year. Delete strategically.</div></div><h3>Review Actually (Automated Where Possible)</h3><p>GuardDuty analyzes logs automatically using machine learning. Security Hub aggregates findings from multiple sources. CloudWatch Alarms trigger on suspicious patterns. Manual review for complex investigations, but automated detection for known threats.<p><strong>Response Times (Per Incident Response Plan):</strong><ul><li>🚨 <strong>Critical incidents:</strong> &lt;30 minutes detection, &lt;4 hours resolution<li>🟠 <strong>High incidents:</strong> &lt;1 hour detection, &lt;24 hours resolution<li>🟡 <strong>Medium incidents:</strong> &lt;4 hours detection, &lt;72 hours resolution<li>🔵 <strong>Low incidents:</strong> &lt;24 hours detection, &lt;1 week resolution</ul><div class=hidden-wisdom><strong>ILLUMINATION:</strong> A SIEM that generates 10,000 alerts per day is an untuned SIEM. Signal requires noise reduction. GuardDuty reduces noise through ML. Tune CloudWatch Alarms. Prioritize by impact. Or drown in alerts nobody reads.</div><h2>🚨 Detection vs. Prevention: Both Required</h2><p>Prevention is ideal. Detection is necessary. You can't prevent everything—budget, complexity, and reality intervene. But you can detect everything if you log it.<p><strong>Prevention:</strong> Stop attacks before they succeed.<br><strong>Detection:</strong> Notice attacks while they're happening.<br><strong>Response:</strong> Stop attacks after they start.<br><strong>Recovery:</strong> Fix what broke.<p>You need all four. Prevention alone is optimism. Detection alone is archaeology. Choose balance.<h2>📋 What Hack23 Actually Does</h2><p>Our monitoring and logging strategy is distributed across policies: <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md target=_blank>Network Security</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md target=_blank>Secure Development</a> | <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Security_Metrics.md target=_blank>Security Metrics</a><div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>☁️ AWS CloudWatch</h3><p><strong>Application & System Logs:</strong><ul><li>Lambda function logs (all invocations)<li>Application logs (structured JSON)<li>System metrics (CPU, memory, disk, network)<li>Custom metrics (business KPIs, security events)<li>CloudWatch Logs Insights for querying</ul><p><strong>Retention:</strong> 90 days hot storage, then S3 archival</div><div class="card integrity-card"><div class=scanner-effect></div><h3>📋 AWS CloudTrail</h3><p><strong>API Audit Trail (Immutable):</strong><ul><li>All AWS API calls logged (no exceptions)<li>IAM actions, resource modifications, access attempts<li>Multi-region trail (all regions covered)<li>Log file integrity validation (tamper detection)<li>S3 bucket with versioning enabled</ul><p><strong>Retention:</strong> 90 days CloudTrail service, 1 year S3 archive</div><div class="card availability-card"><div class=scanner-effect></div><h3>🛡️ AWS GuardDuty</h3><p><strong>ML-Powered Threat Detection:</strong><ul><li>Analyzes VPC Flow Logs, CloudTrail, DNS logs<li>Detects compromised instances, reconnaissance, backdoors<li>Crypto mining detection, credential access attempts<li>Threat intelligence feeds integrated<li>Findings sent to Security Hub for aggregation</ul><p><strong>Response:</strong> Critical findings trigger immediate investigation per <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md>IR Plan</a></div><div class=card><div class=scanner-effect></div><h3>🎯 AWS Security Hub</h3><p><strong>Finding Aggregation & Compliance:</strong><ul><li>Centralized findings from GuardDuty, Inspector, IAM Access Analyzer<li>Automated compliance checks (CIS AWS Foundations, PCI DSS)<li>Security score and prioritized recommendations<li>Integration with CloudWatch Events for alerting<li>Single pane of glass for all security findings</ul><p><strong>Dashboard:</strong> Daily review, weekly trend analysis, monthly reporting</div></div><p><strong>Additional Monitoring Sources:</strong><ul><li>🌐 <strong>VPC Flow Logs:</strong> All network traffic captured, analyzed by GuardDuty<li>🔧 <strong>AWS Config:</strong> Resource configuration tracking, drift detection<li>🔍 <strong>AWS Inspector:</strong> Vulnerability scanning for compute resources<li>📊 <strong>X-Ray:</strong> Distributed tracing for application performance and errors</ul><div class=hidden-wisdom><strong>META-ILLUMINATION:</strong> If you're not reviewing logs, you're just collecting evidence for the attacker's trial. Detective controls require detection. Detection requires looking—automated where possible (GuardDuty), manual where necessary (complex investigations). AWS makes comprehensive monitoring default. Use it.</div><h2>🎯 Conclusion: See to Believe, Log to Prove</h2><p>You can't defend what you can't see. You can't see what you don't log. You can't log what you don't configure. And you can't respond to what you don't review.<p><strong>Monitoring and logging aren't optional—they're foundational.</strong> Prevention fails. Detection catches failure. Response limits damage. This is the cycle.<p><strong>Hack23's AWS cloud-native monitoring demonstrates systematic observability:</strong><ul><li>☁️ <strong>CloudWatch:</strong> All application/system logs, 90-day hot retention<li>📋 <strong>CloudTrail:</strong> All API calls logged, immutable audit trail, multi-region<li>🛡️ <strong>GuardDuty:</strong> ML threat detection, automated analysis of logs/traffic<li>🎯 <strong>Security Hub:</strong> Finding aggregation, compliance automation, single dashboard<li>🌐 <strong>VPC Flow Logs:</strong> Network traffic captured, &lt;15 min anomaly response</ul><p>Log everything. Review intelligently through automation. Respond quickly per classification-driven SLAs. Or find out the hard way that the breach happened six months ago and you never noticed because nobody was watching the logs.<p><strong>Ready to implement comprehensive security monitoring?</strong> <a href=why-hack23.html>Learn about Hack23's cybersecurity consulting services</a> and our unique public ISMS approach.<p class=signature><strong>All hail Eris! All hail Discordia!</strong><br><em>"תחשוב בעצמך, schmuck! Question everything—especially logs that show 'no suspicious activity' when you know there should be. AWS makes comprehensive logging default—use it or explain why your incident response plan starts with 'we have no idea when this happened.'"</em><br>🍎 23 FNORD 5<br>— Hagbard Celine, Captain of the <em>Leif Erikson</em><p><small><strong>P.S.</strong> You are now in Chapel Perilous. Your logs contain both truth and noise. Both are real. Neither is complete. GuardDuty reduces noise through ML. CloudWatch Alarms filter signal. Security Hub prioritizes findings. Nothing is true—but everything is logged. Question the logs—especially when they're silent.</small></article></main><footer role=contentinfo aria-label="Site footer"><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>Cybersecurity Consulting<br>Gothenburg, Sweden | Remote<p>Org.nr: 5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>LinkedIn Company Page</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>CEO: James Pether Sörling</a></div><div class=footer-column><h3>Services</h3><ul><li><a href=services.html>Security Consulting</a><li><a href=services.html>Security Architecture</a><li><a href=services.html>Cloud Security</a><li><a href=services.html>DevSecOps Integration</a><li><a href=services.html>Compliance & ISMS</a></ul></div><div class=footer-column><h3>Products</h3><ul><li><a href=black-trigram-features.html>Black Trigram</a><li><a href=cia-features.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features.html>CIA Compliance Manager</a></ul></div><div class=footer-column><h3>Resources</h3><ul><li><a href=blog.html>Security בלוג</a><li><a href=discordian-cybersecurity.html>🍎 Discordian בלוג</a><li><a href=cia-triad-faq.html>CIA Triad FAQ</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>Public ISMS</a><li><a href=sitemap.html>Sitemap</a></ul></div><div class=footer-column><h3>Company</h3><ul><li><a href=why-hack23.html>About Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>Security Policy</a><li><a href=SECURITY.md>Report Security Issue</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>GitHub Organization</a><li><a href=accessibility-statement.html>נגישות</a></ul></div></div><div class=footer-discordian><p class=discordian-authors><strong>✍️ בלוג Authors:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md title="Hagbard Celine - Visionary anarchist Product Owner" rel="noopener noreferrer" target=_blank>Hagbard Celine</a> (Philosophy & Vision) & <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md title="Simon Moon - Philosopher-engineer System Architect" rel="noopener noreferrer" target=_blank>Simon Moon</a> (Architecture & Patterns)<p class=discordian-implementation><strong>💻 Implementation Reality:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md title="George Dorn - Panic-driven Developer who makes it actually work" rel="noopener noreferrer" target=_blank>George Dorn</a> wrestles this beautiful chaos into working code. See his technical commentaries in <a href=blog-george-dorn-cia-code.html>CIA Architecture</a>, <a href=blog-george-dorn-trigram-code.html>Black Trigram Combat</a>, and <a href=blog.html#george-dorn-developer-chronicles>Developer Chronicles</a> for the panic moments, breakthroughs, and hidden Easter eggs that make philosophy deployable.</div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB. All rights reserved.<p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> | <a href=index_no.html lang=no>Norsk</a></div></footer>

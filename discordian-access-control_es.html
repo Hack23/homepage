@@ -1,0 +1,215 @@
+<!doctype html><html lang=es><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Control de Acceso | Seguridad de Identidad de Confianza Cero | Hack23</title><link rel=stylesheet href=styles.css><meta name=description content="AWS Identity Center SSO + MFA 100% + revisiones de cuentas inactivas cada 90 días. Seguridad centrada en identidad de confianza cero. Matriz de acceso basada en clasificación."><meta name=twitter:description content="AWS Identity Center SSO + MFA 100% + revisiones de cuentas inactivas cada 90 días. Seguridad centrada en identidad de confianza cero. Matriz de acceso basada en clasificación."><meta name=keywords content="control de acceso, arquitectura de confianza cero, principio de mínimo privilegio, AWS Identity Center, SSO inicio de sesión único, MFA autenticación multifactor, gestión de identidades, autenticación, autorización, RBAC control de acceso basado en roles, IAM gestión de acceso e identidades, acceso privilegiado, cuentas inactivas, revisión de acceso, gestión de credenciales, seguridad centrada en identidad, verificación continua, cuestiona la autoridad, transparencia radical"><meta name=robots content="index, follow"><meta name=author content="James Pether Sörling"><meta property=og:title content="Control de Acceso: No Confíes en Nadie (Incluido Tú Mismo)"><meta property=og:description content="AWS Identity Center SSO + MFA 100% + revisiones cada 90 días. Confianza cero a través de seguridad centrada en identidad."><meta property=og:locale content=es_ES><meta property=og:locale:alternate content=ar_SA><meta property=og:locale:alternate content=da_DK><meta property=og:locale:alternate content=de_DE><meta property=og:locale:alternate content=en_US><meta property=og:locale:alternate content=fi_FI><meta property=og:locale:alternate content=fr_FR><meta property=og:locale:alternate content=he_IL><meta property=og:locale:alternate content=ja_JP><meta property=og:locale:alternate content=ko_KR><meta property=og:locale:alternate content=nl_NL><meta property=og:locale:alternate content=nb_NO><meta property=og:locale:alternate content=sv_SE><meta property=og:locale:alternate content=zh_CN><meta property=og:type content=article><meta property=og:url content=https://hack23.com/discordian-access-control_es.html><meta property=og:image content=https://hack23.com/blog.webp><meta name=twitter:card content=summary_large_image><meta name=twitter:image content=https://hack23.com/blog.webp><meta name=twitter:image:alt content="Blog de Seguridad de Hack23"><meta name=twitter:site content=@hack23ab><meta name=twitter:creator content=@jamessorling><link rel=canonical href=https://hack23.com/discordian-access-control_es.html><script type=application/ld+json>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Control de Acceso: Confianza Cero a Través de Seguridad Centrada en Identidad",
+      "description": "Cómo Hack23 implementa arquitectura de confianza cero con AWS Identity Center SSO, cobertura MFA del 100%, revisiones de cuentas inactivas cada 90 días y control de acceso basado en clasificación demostrando excelencia sistemática en seguridad",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com",
+        "jobTitle": "CEO / Experto en Ciberseguridad",
+        "sameAs": [
+          "https://www.linkedin.com/in/jamessorling/",
+          "https://github.com/Hack23"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "cia-icon-140.webp"
+        }
+      },
+      "datePublished": "2025-11-05",
+      "dateModified": "2025-11-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/discordian-access-control_es.html"
+      },
+      "keywords": "control de acceso, confianza cero, AWS Identity Center, MFA, mínimo privilegio, SGSI",
+      "articleSection": "Seguridad de la Información",
+      "inLanguage": "es",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://hack23.com/blog.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "wordCount": 1573,
+      "articleBody": "¡Piensa por ti mismo! \"Confía pero verifica\" es una patraña corporativa diseñada para hacer que confiar en la gente parezca menos ingenuo. La realidad es: SOLO VERIFICA. Omite completamente la parte de confiar. AWS Identity Center S...",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://hack23.com/blog.html#blog",
+        "name": "Blog de Seguridad de Hack23"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Política SGSI",
+          "description": "Implementación de política del Sistema de Gestión de Seguridad de la Información"
+        },
+        {
+          "@type": "Thing",
+          "name": "Arquitectura de Confianza Cero",
+          "description": "Seguridad centrada en identidad con verificación continua"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/discordian-access-control_es.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://hack23.com/index_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://hack23.com/blog_es.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Control de Acceso",
+          "item": "https://hack23.com/discordian-access-control_es.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo Implementar Control de Acceso de Confianza Cero",
+      "description": "Guía paso a paso para implementar control de acceso de confianza cero usando AWS Identity Center, MFA y matrices de acceso basadas en clasificación",
+      "image": "https://hack23.com/blog.webp",
+      "totalTime": "PT2H",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "AWS Identity Center"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Autenticación Multifactor (MFA de hardware para sistemas críticos, TOTP para sistemas de alto valor)"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "AWS CloudTrail"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Marco de Clasificación",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Plantilla de Política de Control de Acceso",
+          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Habilitar AWS Identity Center SSO",
+          "text": "Configura AWS Identity Center (anteriormente AWS SSO) como tu sistema de autenticación centralizado para todas las cuentas y aplicaciones de AWS",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "La autenticación centralizada elimina credenciales dispersas y proporciona gestión de acceso desde un único panel"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Implementar Cobertura MFA del 100%",
+          "text": "Exige autenticación multifactor en cada cuenta sin excepciones. Usa MFA de hardware (YubiKey) para sistemas críticos, TOTP para sistemas de alto valor y nativo de plataforma para sistemas públicos",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Monitorea la cobertura MFA en tiempo real y alerta sobre cualquier cuenta sin MFA habilitado"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Crear Matriz de Acceso Basada en Clasificación",
+          "text": "Define controles de acceso basados en niveles de clasificación de datos (Extremo, Muy Alto, Alto, Moderado, Público) con períodos de tiempo de espera y frecuencias de revisión apropiadas",
+          "itemListElement": [
+            {
+              "@type": "HowToDirection",
+              "text": "Activos extremos: Identity Center + MFA de hardware + tiempo de espera de 4 horas + revisiones mensuales"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Muy Alto: MFA de proveedor + tiempo de espera de 1 hora + revisiones mensuales"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Alto: MFA de plataforma + tiempo de espera de 8 horas + revisiones trimestrales"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Moderado: tiempo de espera de 24 horas + revisiones semestrales"
+            },
+            {
+              "@type": "HowToDirection",
+              "text": "Público: tiempo de espera de 7 días + revisiones anuales"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Implementar Detección de Cuentas Inactivas de 90 Días",
+          "text": "Configura detección automatizada para cuentas sin uso por más de 90 días. Marca cuentas inactivas semanalmente y desprovisiona después de validación",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Objetivo: cero cuentas inactivas - las credenciales olvidadas se convierten en credenciales de adversario"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Habilitar Registro de Auditoría Completo",
+          "text": "Configura AWS CloudTrail, registros de Identity Center y registros de auditoría de GitHub para capturar QUIÉN accedió a QUÉ, CUÁNDO, desde DÓNDE para cada escalada de privilegios",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Registrar sin alertar es teatro de seguridad - asegura que los registros lleven a información accionable"
+            }
+          ]
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Programar Revisiones de Política Semestrales",
+          "text": "Revisa las políticas de control de acceso dos veces al año o cuando se desencadene por cambios regulatorios, incidentes, cambios organizacionales o actualizaciones de plataforma"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Verificar Cada Solicitud",
+          "text": "Desafía cada solicitud de acceso independientemente de la ubicación de red. El perímetro de red no tiene significado - la identidad es el nuevo perímetro"
+        }
+      ]
+    }
+  ]
+}</script><link rel=alternate hreflang=ar href=https://hack23.com/discordian-access-control_ar.html><link rel=alternate hreflang=ar-SA href=https://hack23.com/discordian-access-control_ar.html><link rel=alternate hreflang=ar-EG href=https://hack23.com/discordian-access-control_ar.html><link rel=alternate hreflang=da href=https://hack23.com/discordian-access-control_da.html><link rel=alternate hreflang=de href=https://hack23.com/discordian-access-control_de.html><link rel=alternate hreflang=de-DE href=https://hack23.com/discordian-access-control_de.html><link rel=alternate hreflang=en href=https://hack23.com/discordian-access-control.html><link rel=alternate hreflang=es href=https://hack23.com/discordian-access-control_es.html><link rel=alternate hreflang=es-ES href=https://hack23.com/discordian-access-control_es.html><link rel=alternate hreflang=fi href=https://hack23.com/discordian-access-control_fi.html><link rel=alternate hreflang=fr href=https://hack23.com/discordian-access-control_fr.html><link rel=alternate hreflang=fr-FR href=https://hack23.com/discordian-access-control_fr.html><link rel=alternate hreflang=he href=https://hack23.com/discordian-access-control_he.html><link rel=alternate hreflang=he-IL href=https://hack23.com/discordian-access-control_he.html><link rel=alternate hreflang=ja href=https://hack23.com/discordian-access-control_ja.html><link rel=alternate hreflang=ja-JP href=https://hack23.com/discordian-access-control_ja.html><link rel=alternate hreflang=ko href=https://hack23.com/discordian-access-control_ko.html><link rel=alternate hreflang=ko-KR href=https://hack23.com/discordian-access-control_ko.html><link rel=alternate hreflang=nl href=https://hack23.com/discordian-access-control_nl.html><link rel=alternate hreflang=nl-NL href=https://hack23.com/discordian-access-control_nl.html><link rel=alternate hreflang=no href=https://hack23.com/discordian-access-control_no.html><link rel=alternate hreflang=nb href=https://hack23.com/discordian-access-control_no.html><link rel=alternate hreflang=sv href=https://hack23.com/discordian-access-control_sv.html><link rel=alternate hreflang=sv-SE href=https://hack23.com/discordian-access-control_sv.html><link rel=alternate hreflang=zh href=https://hack23.com/discordian-access-control_zh.html><link rel=alternate hreflang=zh-CN href=https://hack23.com/discordian-access-control_zh.html><link rel=alternate hreflang=zh-SG href=https://hack23.com/discordian-access-control_zh.html><link rel=alternate hreflang=zh-Hans href=https://hack23.com/discordian-access-control_zh.html><link rel=alternate hreflang=x-default href=https://hack23.com/discordian-access-control.html><nav aria-label=Breadcrumb><ol class=breadcrumb><li class=breadcrumb-item><a href=/index_es.html>Inicio</a><li class=breadcrumb-item><a href=/blog_es.html>Blog</a><li class=breadcrumb-item aria-current=page>Control de Acceso</ol></nav><header><div class=logo-container><img src=cia-icon-140.webp alt="Logo de Hack23" class=logo width=80 height=80></div><h1>Ciberseguridad Discordiana</h1><div class=app-link><a href=index_es.html>Inicio</a> <a href=discordian-cybersecurity_es.html>Manifiesto</a> <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md>SGSI Control de Acceso</a></div></header><main><article><h2 class=header>🔑 Control de Acceso: No Confíes en Nadie (ESPECIALMENTE en Ti Mismo)</h2><section id=introduction><h2 class=panel-caption>Confianza Cero: No es Paranoia, Solo Matemáticas con Registros de Auditoría</h2><p><strong>¡Piensa por ti mismo!</strong> "Confía pero verifica" es una patraña corporativa diseñada para hacer que confiar en la gente parezca menos ingenuo. La realidad es: <strong>SOLO VERIFICA.</strong> Omite completamente la parte de confiar. AWS Identity Center SSO (autenticación centralizada o nada), MFA en TODO (sin excepciones, ni siquiera para "solo esta vez"), purgas de cuentas inactivas cada 90 días (credenciales olvidadas = futura brecha esperando a ocurrir), matrices de acceso basadas en clasificación. ¿Eres lo suficientemente paranoico? Bien. Los atacantes ciertamente lo son, y apuestan a que tú no lo eres.<p><strong>Nada es verdad. Todo está permitido.</strong> Excepto el acceso sin autenticación multifactor, autorización adecuada y registro completo. "Confianza cero" no es paranoia, es reconocer que el perímetro de red se disolvió en 2010 y pretender lo contrario es teatro de seguridad que te lleva a ser comprometido. El modelo de castillo y foso murió con el trabajo remoto por COVID. <strong>FNORD.</strong> Tu VPN es solo un túnel cifrado hacia dispositivos no confiables. Actúa en consecuencia.<p>En Hack23, el control de acceso no son buenas intenciones ni vibras positivas, es <strong>AWS Identity Center</strong> SSO (autenticación centralizada o nada), <strong>cobertura MFA del 100%</strong> (sin excepciones, ni siquiera para ti, especialmente no para ti), <strong>revisiones de cuentas inactivas cada 90 días</strong> (las credenciales olvidadas se convierten en credenciales de adversario), <strong>matrices de acceso basadas en clasificación</strong> según nuestro <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md>Marco de Clasificación</a> (los activos extremos obtienen controles extremos porque matemáticas). Revisiones de política semestrales (próxima: 2026-02-20) porque los patrones de acceso cambian más rápido que tu auditoría de cumplimiento anual. Versión 2.2 (efectiva: 2025-08-20) porque iteramos sobre fallas en lugar de ocultarlas.<p class=hidden-wisdom><em>Iluminación: La confianza es una VULNERABILIDAD disfrazada de colaboración. La verificación es un CONTROL disfrazado de paranoia. AWS Identity Center + MFA obligatorio = verificación a escala sin errores de juicio humano. El panóptico para identidades funciona mejor cuando todos saben que están siendo observados. Elige paranoia sistemática sobre ingenuidad cómoda. Elige controles documentados sobre seguridad a través de esperanza y cruzar los dedos.</em><p>Principios de confianza cero + gestión de identidades de nivel empresarial + transparencia de empresa unipersonal = prueba de que el control de acceso sistemático escala desde operaciones individuales hasta empresariales. Toda la paranoia técnica en nuestra <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md>Política pública de Control de Acceso</a>. Porque la oscuridad no es seguridad, es esperanza vistiendo una gabardina.<p><strong>¿Necesitas orientación experta para implementar control de acceso de confianza cero?</strong> <a href=why-hack23.html>Descubre por qué las organizaciones eligen Hack23</a> para consultoría transparente en ciberseguridad liderada por profesionales.</section><section id=zero-trust><h2 class=panel-caption>Cinco Razones por las que "Confía pero Verifica" Está Medio Equivocado (Pista: Omite la Parte de Confiar)</h2><p>¿"Confianza cero" suena paranoico? BIEN. La paranoia es reconocimiento de patrones en la realidad. Aquí está la implementación sistemática para psiconautas:<div class=cards><div class="card confidentiality-card"><div class=scanner-effect></div><h3>1. 🔐 Verifica Cada Solicitud (Sí, CADA UNA)</h3><p><strong>AWS Identity Center SSO + MFA en TODO.</strong> Sin confianza. Sin "estás en VPN así que relájate". Sin "pero es solo desarrollo". CADA solicitud desafiada. SIEMPRE. Cobertura MFA del 100% monitoreada en tiempo real. MFA de hardware para sistemas críticos (root de AWS, financiero—YubiKey o nada). TOTP para sistemas de alto valor (pipeline de desarrollo—Authy funciona). Nativo de plataforma para públicos (marketing—integrado está bien). El perímetro de red está MUERTO. Larga vida a la verificación de identidad.<p class=hidden-wisdom><em>El "cero" en confianza cero es LITERAL. Ubicación de red = sin significado. VPN = desconfianza cifrada. Identity Center SSO = la identidad ES el perímetro. MFA = prueba de que eres tú. ¿Eres lo suficientemente paranoico para desafiarte a ti mismo? FNORD.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>2. 📋 Acceso Basado en Clasificación (No Todos los Datos Son Iguales)</h3><p><strong>Matriz de acceso alineada con Marco de Clasificación.</strong> Activos extremos (infraestructura core de AWS) = Identity Center + MFA de hardware + tiempo de espera de 4 horas + revisiones MENSUALES. Muy Alto (financiero) = MFA de proveedor + tiempo de espera de 1 hora + revisiones mensuales. Alto (pipeline de desarrollo) = MFA de plataforma + tiempo de espera de 8 horas + revisiones trimestrales. Moderado = tiempo de espera de 24 horas + revisiones semestrales. Público = tiempo de espera de 7 días + revisiones anuales. La criticidad de los datos impulsa TODO.<p class=hidden-wisdom><em>Acceso de talla única = seguridad a través de la pereza. Los sistemas financieros necesitan revisiones mensuales. Marketing necesita anuales. Clasificación = paranoia basada en riesgo. Elige controles apropiados o elige eventual brecha.</em></div><div class="card availability-card"><div class=scanner-effect></div><h3>3. ⏰ Purgas de Cuentas Inactivas cada 90 Días (Acceso Olvidado = Futura Brecha)</h3><p><strong>Detección automatizada, validación manual, desaprovisionamiento despiadado.</strong> Cuentas sin uso >90 días = marcadas SEMANALMENTE. Objetivo: CERO cuentas inactivas (no "bajo", CERO). Alertas en tiempo real cuando se incumple. Las cuentas inactivas son escalada de privilegios esperando a ser explotada por ese contratista que se fue en 2019 pero todavía tiene acceso a consola de AWS. El monitoreo semanal previene que la arqueología se convierta en vectores de ataque.<p class=hidden-wisdom><em>Las cuentas inactivas son puertas traseras de Schrödinger—tanto comprometidas como bien hasta observadas durante respuesta a incidentes. Revisiones de 90 días = higiene de acceso sistemática. Limpiezas anuales = admitir que olvidaste durante 364 días.</em></div><div class="card confidentiality-card"><div class=scanner-effect></div><h3>4. 🔄 Revisiones de Política Semestrales (Porque las Amenazas No Esperan)</h3><p><strong>Versión 2.2 (Efectiva: 2025-08-20). Próxima revisión: 2026-02-20.</strong> Políticas revisadas DOS veces al año (no una, DOS). Disparadores de revisión: ciclo programado, cambios regulatorios (RGPD/NIS2), incidentes, cambios organizacionales, actualizaciones de AWS. Documentación viva que se adapta. No PDFs arqueológicos acumulando polvo digital. Políticas estáticas en un panorama de amenazas dinámico = eventual irrelevancia.<p class=hidden-wisdom><em>Revisiones semestrales = reconocer que la realidad cambia. AWS lanza nuevos servicios. Los atacantes encuentran nuevas técnicas. Los requisitos de cumplimiento cambian. ¿Tu política de acceso de 2019? Artefacto arqueológico, no control de seguridad.</em></div><div class="card integrity-card"><div class=scanner-effect></div><h3>5. 📊 Registro de Auditoría de TODO (El Panóptico es Real y Está Hecho de CloudTrail)</h3><p><strong>AWS CloudTrail + registros de Identity Center + registros de auditoría de GitHub.</strong> QUIÉN accedió a QUÉ, CUÁNDO, desde DÓNDE. Registros de auditoría para CADA escalada de privilegios. Registros retenidos según <a href=discordian-data-classification.html>política de clasificación</a>. Registrar sin alertar = teatro de seguridad. Registros que no revisas = acumulación de datos pretendiendo ser seguridad. Registros que no llevan a acción = casilla de cumplimiento desperdiciando almacenamiento.<p class=hidden-wisdom><em>Registros de auditoría = combustible para respuesta a incidentes. Sin registros = sin investigación = sin atribución = sin lecciones aprendidas. CloudTrail + registro centralizado = responsabilidad sistemática. El panóptico funciona mejor cuando los sujetos saben que existe. FNORD.</em></div></div></section><section id=access-matrix><h2 class=panel-caption>Matriz de Control de Acceso Basada en Clasificación</h2><p>Privilegios de acceso alineados con nuestro <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md>Marco de Clasificación</a> de análisis de impacto empresarial:<table class=data-table><thead><tr><th>Categoría de Activo<th>Clasificación<th>Requisito MFA<th>Tiempo de Espera de Sesión<th>Frecuencia de Revisión<tbody><tr class=roi-exceptional><td><strong>☁️ Infraestructura Core de AWS</strong><td>🔴 Extremo<td>Identity Center SSO + MFA de Hardware<td>4 horas<td>Mensual<tr class=roi-high><td><strong>💰 Sistemas Financieros</strong><td>🟠 Muy Alto<td>MFA de Proveedor + IdP + Hardware/SMS<td>1 hora<td>Mensual<tr class=roi-high><td><strong>📝 Pipeline de Desarrollo</strong><td>🟡 Alto<td>MFA de Plataforma + TOTP + Claves SSH<td>8 horas<td>Trimestral<tr class=roi-moderate><td><strong>📊 Inteligencia de Negocio</strong><td>🟢 Moderado<td>Integración SSO + TOTP<td>24 horas<td>Semestral<tr class=roi-basic><td><strong>📢 Plataformas de Marketing</strong><td>⚪ Público<td>MFA Nativo de Plataforma<td>7 días<td>Anual</table><p><strong>Métricas de Control de Acceso (Monitoreo en Tiempo Real):</strong><ul><li><strong>Cobertura MFA:</strong> Objetivo 100%, umbral de alerta &lt;100%, monitoreo en tiempo real<li><strong>Cuentas Inactivas:</strong> Objetivo 0, sin uso >90 días, revisiones semanales<li><strong>Autenticación Fallida:</strong> Alerta en 5+ fallas en 15 minutos (ataque potencial)<li><strong>Escalada de Privilegios:</strong> Todos los cambios registrados y revisados mensualmente<li><strong>Violaciones de Sesión:</strong> Cierre de sesión automático en tiempo de espera (sin extensiones)</ul><p class=hidden-wisdom><em>META-ILUMINACIÓN: El acceso basado en clasificación significa que los privilegios coinciden con el riesgo. Los activos extremos obtienen controles extremos. Los activos públicos obtienen controles razonables. No todos los sistemas necesitan MFA de hardware—pero todos necesitan controles apropiados.</em></section><section id=authentication><h2 class=panel-caption>Autenticación Multifactor: No es Opcional, No es Negociable</h2><p><strong>MFA no es opcional.</strong> Las contraseñas solas son teatro de seguridad. En Hack23, imponemos MFA en todos los sistemas con métodos apropiados según clasificación:<p><strong>🔐 Implementación MFA por Tipo de Sistema:</strong><ul><li><strong>Cuenta Root de AWS:</strong> MFA de hardware (YubiKey) + códigos de recuperación en bóveda segura. Nunca usado para operaciones diarias (Identity Center SSO en su lugar).<li><strong>AWS Identity Center:</strong> MFA de proveedor de identidad + SSO. Punto central de autenticación para todas las cuentas de AWS.<li><strong>Organizaciones de GitHub:</strong> TOTP requerido (Authy/Google Authenticator) + claves SSH para operaciones git. Claves de seguridad soportadas.<li><strong>Sistemas Financieros:</strong> MFA de proveedor (Stripe, pasarelas de pago) + respaldo hardware/SMS. Revisiones de acceso mensuales.<li><strong>Herramientas de Desarrollo:</strong> MFA nativo de plataforma (SonarCloud, Snyk, FOSSA). TOTP preferido, SMS aceptable.<li><strong>Plataformas de Marketing:</strong> MFA nativo de plataforma. Revisiones anuales suficientes para sistemas clasificados como públicos.</ul><p><strong>Los Cinco Factores de No Ser Comprometido:</strong><ul><li><strong>Algo que sabes</strong> (contraseña) — Fácilmente robada, phishing, adivinada. Nunca usada sola.<li><strong>Algo que tienes</strong> (token de hardware) — YubiKey para root de AWS. Mejor que SMS, perdible pero reemplazable.<li><strong>Algo que eres</strong> (biométrico) — No usado (no se puede cambiar si está comprometido, preocupaciones de privacidad).<li><strong>Donde estás</strong> (geolocalización) — Las direcciones IP mienten. No se confía para autenticación.<li><strong>Algo que haces</strong> (patrones de comportamiento) — Basado en ML, falible pero útil para detección de anomalías.</ul><p><strong>Usa al menos dos factores.</strong> Tres es mejor para sistemas críticos (AWS Identity Center = contraseña IdP + MFA IdP + SSO). Un factor es negligencia.</section><section id=conclusion><h2 class=panel-caption>Bienvenido a Chapel Perilous: El Control de Acceso es Control de Autoridad</h2><p><strong>Nada es verdad. Todo está permitido.</strong> Excepto el acceso sin verificación de identidad, MFA apropiado según clasificación y registro de auditoría sistemático—eso no es confianza cero, eso es cero seguridad.<p>La mayoría de organizaciones afirman "confianza cero" mientras ejecutan seguridad perimetral basada en VPN. Dicen "MFA requerido" pero permiten respaldo SMS para todo. Realizan revisiones de acceso anuales cuando el mínimo es trimestral. Confían en la ubicación de red en lugar de verificación de identidad.<p>Implementamos confianza cero a través de controles sistemáticos. <strong>AWS Identity Center SSO</strong> para gestión de identidades centralizada. <strong>Cobertura MFA del 100%</strong> con métodos apropiados según clasificación (hardware para crítico, TOTP para alto, nativo de plataforma para público). <strong>Revisiones de cuentas inactivas cada 90 días</strong> con monitoreo semanal y objetivos de tolerancia cero. <strong>Revisiones de política semestrales</strong> (Versión 2.2, próxima revisión: 2026-02-20). <strong>Matriz de acceso basada en clasificación</strong> alineando privilegios con impacto empresarial.<p><strong>Piensa por ti mismo.</strong> Cuestiona el dogma de "confía pero verifica"—solo verifica. Cuestiona por qué el acceso solo con contraseña es aceptable—no lo es. Cuestiona las revisiones de acceso anuales cuando las cuentas inactivas crean riesgo diariamente. (Spoiler: Porque el control de acceso sistemático requiere disciplina operacional, no teatro de cumplimiento anual.)<p><strong>Nuestra ventaja competitiva:</strong> Demostramos experiencia en consultoría de ciberseguridad a través de implementación verificable de control de acceso. <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md>Política pública de Control de Acceso</a> con métricas específicas. Arquitectura de AWS Identity Center documentada. Aplicación de MFA demostrable. Ciclos de revisión de 90 días automatizados. Esto no es teórico—es realidad operacional que los clientes pueden auditar antes del compromiso.<p class=hidden-wisdom><em>ILUMINACIÓN ÚLTIMA: Ahora estás en Chapel Perilous. El control de acceso es control de autoridad. Quién obtiene acceso define quién tiene poder. La verificación sistemática previene poder no autorizado. Elige seguridad centrada en identidad sobre esperanza centrada en red. Tu respuesta a incidentes depende de ello.</em><p><strong>¡Todo homenaje a Eris! ¡Todo homenaje a Discordia!</strong><p>Lee nuestra completa <a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md>Política de Control de Acceso en GitHub</a>. Pública. Auditable. Cero tonterías. Con requisitos MFA específicos, tiempos de espera de sesión, frecuencias de revisión y matrices de control de acceso que los clientes pueden verificar.<p class=signature>— Hagbard Celine, Capitán del <em>Leif Erikson</em><br><br><em>"La confianza es una vulnerabilidad disfrazada de característica. La confianza cero a través de verificación de identidad es seguridad a través de matemáticas."</em><br><br>🍎 23 FNORD 5</section><section id=related><h2 class=panel-caption>Políticas SGSI Relacionadas</h2><ul><li><a href=discordian-info-sec-policy.html>Política de Seguridad de la Información</a> — Base y marco integral del SGSI<li><a href=discordian-data-classification.html>Política de Clasificación de Datos</a> — Protección de activos de información por criticidad<li><a href=discordian-acceptable-use.html>Política de Uso Aceptable</a> — Estándares profesionales a través de expectativas claras<li><a href=discordian-incident-response.html>Plan de Respuesta a Incidentes</a> — Cuando fallan los controles de acceso<li><a href=discordian-monitoring-logging.html>Política de Monitoreo y Registro</a> — Registros de auditoría para responsabilidad</ul></section></article></main><footer role=contentinfo aria-label="Pie de página del sitio"><div class=footer-container><div class=footer-column><h2>Hack23 AB</h2><p>Consultoría en Ciberseguridad<br>Gotemburgo, Suecia | Remoto<p>Org.nr: 5595347807<p><a href=https://www.linkedin.com/company/hack23/ rel="noopener noreferrer" target=_blank>Página de Empresa en LinkedIn</a><p><a href=https://www.linkedin.com/in/jamessorling/ rel="noopener noreferrer" target=_blank>CEO: James Pether Sörling</a></div><div class=footer-column><h3>Servicios</h3><ul><li><a href=services_es.html>Consultoría de Seguridad</a><li><a href=services_es.html>Arquitectura de Seguridad</a><li><a href=services_es.html>Seguridad en la Nube</a><li><a href=services_es.html>Integración DevSecOps</a><li><a href=services_es.html>Cumplimiento y SGSI</a></ul></div><div class=footer-column><h3>Productos</h3><ul><li><a href=black-trigram-features_es.html>Black Trigram</a><li><a href=cia-features_es.html>Citizen Intelligence Agency</a><li><a href=cia-compliance-manager-features_es.html>CIA Compliance Manager</a></ul></div><div class=footer-column><h3>Recursos</h3><ul><li><a href=blog_es.html>Blog de Seguridad</a><li><a href=discordian-cybersecurity_es.html>🍎 Blog Discordiano</a><li><a href=cia-triad-faq_es.html>Preguntas Frecuentes Tríada CIA</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC rel="noopener noreferrer" target=_blank>SGSI Público</a><li><a href=sitemap_es.html>Mapa del Sitio</a></ul></div><div class=footer-column><h3>Empresa</h3><ul><li><a href=why-hack23_es.html>Acerca de Hack23</a><li><a href=https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md rel="noopener noreferrer" target=_blank>Política de Seguridad</a><li><a href=SECURITY.md>Reportar Problema de Seguridad</a><li><a href=https://github.com/Hack23 rel="noopener noreferrer" target=_blank>Organización en GitHub</a><li><a href=accessibility-statement_es.html>Accesibilidad</a></ul></div></div><div class=footer-discordian><p class=discordian-authors><strong>✍️ Autores del Blog:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/hagbard-celine.md title="Hagbard Celine - Product Owner anarquista visionario" rel="noopener noreferrer" target=_blank>Hagbard Celine</a> (Filosofía y Visión) & <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/simon-moon.md title="Simon Moon - Arquitecto de Sistemas filósofo-ingeniero" rel="noopener noreferrer" target=_blank>Simon Moon</a> (Arquitectura y Patrones)<p class=discordian-implementation><strong>💻 Realidad de Implementación:</strong> <a href=https://github.com/Hack23/homepage/blob/master/.github/agents/george-dorn.md title="George Dorn - Desarrollador impulsado por el pánico que hace que funcione realmente" rel="noopener noreferrer" target=_blank>George Dorn</a> lucha contra este hermoso caos para convertirlo en código funcional. Ve sus comentarios técnicos en <a href=blog-george-dorn-cia-code_es.html>Arquitectura CIA</a>, <a href=blog-george-dorn-trigram-code_es.html>Combate Black Trigram</a>, y <a href=blog_es.html#george-dorn-developer-chronicles>Crónicas del Desarrollador</a> para los momentos de pánico, avances y huevos de pascua ocultos que hacen que la filosofía sea desplegable.</div><div class=footer-bottom><p>&copy; 2008-2026 Hack23 AB. Todos los derechos reservados. | Licenciado bajo <a href=LICENSE>Apache 2.0</a><p><a href=index.html lang=en>English</a> | <a href=index_sv.html lang=sv>Svenska</a> | <a href=index_ko.html lang=ko>한국어</a> | <a href=index_fi.html lang=fi>Suomi</a> | <a href=index_no.html lang=no>Norsk</a></div></footer>
