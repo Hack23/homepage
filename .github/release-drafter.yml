@@ -78,15 +78,15 @@ template: |
   Verify release artifacts:
   ```bash
   # Download the attestation bundle
-  gh attestation verify homepage-$RESOLVED_VERSION.zip --owner Hack23
+  gh attestation verify homepage-v$RESOLVED_VERSION.zip --owner Hack23
   ```
   
   View SBOM:
   ```bash
   # View the Software Bill of Materials
-  cat homepage-$RESOLVED_VERSION.spdx.json | jq
+  cat homepage-v$RESOLVED_VERSION.spdx.json | jq
   ```
   
   ---
   
-  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...$RESOLVED_VERSION
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION

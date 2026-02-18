@@ -27,7 +27,7 @@ jobs:
       contents: write # Required for git auto-commit
     outputs:
       version: ${{ steps.get-version.outputs.version }}
-      is_prerelease: ${{ github.event.inputs.prerelease || 'false' }}
+      is_prerelease: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.prerelease) || contains(steps.get-version.outputs.version, '-') }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
@@ -38,6 +38,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Get version
         id: get-version
@@ -73,9 +74,8 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Set Version for release
-        if: github.event_name == 'workflow_dispatch'
         run: |
-          VERSION="${{ github.event.inputs.version }}"
+          VERSION="${{ steps.get-version.outputs.version }}"
           echo "📝 Setting version to ${VERSION}"
           echo "${VERSION}" > docs/VERSION.txt
           echo "Release: ${VERSION}" > docs/version.txt
@@ -261,7 +261,7 @@ jobs:
           
           **Release Date:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')
           **Commit:** \`${{ github.sha }}\`
-          **Pre-release:** ${{ steps.get-version.outputs.is_prerelease }}
+          **Pre-release:** ${{ needs.prepare.outputs.is_prerelease }}
           
           ## Documentation Generated
           
@@ -331,26 +331,11 @@ jobs:
         run: |
           echo "📦 Creating release package..."
           
-          # Create the zip file from the website root
-          zip -r homepage-${{ needs.prepare.outputs.version }}.zip \
-            *.html \
-            *.css \
-            *.js \
-            *.webp \
-            *.png \
-            *.jpg \
-            *.jpeg \
-            *.gif \
-            *.svg \
-            *.ico \
-            *.xml \
-            *.txt \
-            robots.txt \
-            sitemap.xml \
-            .well-known/ \
-            screenshots/ \
-            docs/ \
-            -x "*.md" "*.py" "*.sh" ".git/*" ".github/*" ".gitignore" "node_modules/*"
+          # Create the zip file from the website root, excluding non-release files
+          zip -r homepage-${{ needs.prepare.outputs.version }}.zip . \
+            -x "*.md" "*.py" "*.sh" ".git/*" ".github/*" ".gitignore" "node_modules/*" \
+               ".vscode/*" ".devcontainer/*" "__pycache__/*" "*.pyc" "*.pyo" \
+               "optimized-images/*" "*.backup-*"
           
           echo "✅ Release package created: homepage-${{ needs.prepare.outputs.version }}.zip"
           ls -lh homepage-${{ needs.prepare.outputs.version }}.zip
@@ -433,6 +418,13 @@ jobs:
           name: security-artifacts
           path: artifacts/security
 
+      - name: Prepare release artifacts for deployment
+        run: |
+          echo "📦 Extracting release artifact for deployment..."
+          mkdir -p release-deploy
+          unzip -q artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip -d release-deploy
+          echo "✅ Release artifact extracted to release-deploy/"
+
       - name: Draft Release Notes
         id: release-drafter
         uses: release-drafter/release-drafter@6db134d15f3909ccc9eefd369f02bd1e9cffdf97 # v6.2.0
@@ -467,7 +459,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
-          folder: .
+          folder: release-deploy
           target-folder: .
           branch: gh-pages
           clean: false
