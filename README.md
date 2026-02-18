@@ -100,7 +100,7 @@ The repository uses GitHub Actions workflows for all build and deployment operat
 - **Verify and Deploy:** `.github/workflows/main.yml` - Automated deployment to AWS S3/CloudFront
 - **Quality Checks:** `.github/workflows/quality-checks.yml` - HTML validation and link checking
 - **Release Workflow:** `.github/workflows/release.yml` - Release creation with SLSA Level 3 attestations
-- **Security Scanning:** OpenSSF Scorecard and OWASP ZAP baseline scans
+- **Security Scanning:** OpenSSF Scorecard and OWASP ZAP full scans
 
 ### 📊 Quality Standards
 
@@ -110,7 +110,7 @@ All releases must meet these thresholds:
 - **Lighthouse SEO:** 100
 - **Lighthouse Best Practices:** 100
 - **HTML Validation:** W3C compliant
-- **Security:** OWASP ZAP baseline pass
+- **Security:** OWASP ZAP full scan pass
 
 For detailed architecture and security documentation, see [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md).
 

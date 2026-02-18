@@ -149,14 +149,14 @@ template: |
   - ✅ **Build Provenance Attestation:** [View Attestations](https://github.com/Hack23/homepage/attestations/)
   - 📦 **SBOM (SPDX format):** `homepage-v$RESOLVED_VERSION.spdx.json`
   - 🔐 **GitHub OIDC Signing:** Ephemeral credentials, no long-lived secrets
-  - 🛡️ **Parameterless Build:** Reproducible builds from source
+  - 🛡️ **Tag-Triggered Parameterless Builds:** Reproducible builds from source tags (workflow_dispatch allows version parameter input)
   
   ### 🧪 Test & Quality Reports (docs/ directory)
-  - ✅ **[HTML Validation](https://github.com/Hack23/homepage/blob/master/docs/html-validation.txt):** W3C standards compliance
-  - ⚡ **[Lighthouse Audit](https://github.com/Hack23/homepage/blob/master/docs/lighthouse-summary.html):** Performance, SEO, Best Practices
-  - ♿ **[Accessibility Report](https://github.com/Hack23/homepage/blob/master/docs/accessibility-report.html):** WCAG 2.1 AA compliant (Score: 100)
-  - 🔒 **[Security Scan](https://github.com/Hack23/homepage/blob/master/docs/security-report.html):** OWASP ZAP baseline scan
-  - 📚 **[Documentation Viewer](https://github.com/Hack23/homepage/blob/master/docs/index.html):** Comprehensive quality dashboard
+  - ✅ **[HTML Validation](https://github.com/Hack23/homepage/blob/v$RESOLVED_VERSION/docs/html-validation.txt):** W3C standards compliance
+  - ⚡ **[Lighthouse Audit](https://github.com/Hack23/homepage/blob/v$RESOLVED_VERSION/docs/lighthouse-summary.html):** Performance, SEO, Best Practices
+  - ♿ **[Accessibility Report](https://github.com/Hack23/homepage/blob/v$RESOLVED_VERSION/docs/accessibility-report.html):** WCAG 2.1 AA compliant (Score: 100)
+  - 🔒 **[Security Scan](https://github.com/Hack23/homepage/blob/v$RESOLVED_VERSION/docs/security-report.html):** OWASP ZAP full scan
+  - 📚 **[Documentation Viewer](https://github.com/Hack23/homepage/blob/v$RESOLVED_VERSION/docs/index.html):** Comprehensive quality dashboard
   
   ### 📈 Quality Metrics
   - **Lighthouse Performance:** > 90
@@ -182,10 +182,10 @@ template: |
   
   ### View SBOM (Software Bill of Materials)
   ```bash
-  # Verify attestations (includes SBOM)
-  gh attestation verify homepage-v$RESOLVED_VERSION.zip --owner Hack23
+  # Download the SBOM from release assets
+  gh release download v$RESOLVED_VERSION --repo Hack23/homepage --pattern "homepage-v$RESOLVED_VERSION.spdx.json"
   
-  # View SBOM in JSON format (attestation file is generated during release)
+  # View SBOM in JSON format
   cat homepage-v$RESOLVED_VERSION.spdx.json | jq
   
   # Extract package list from SBOM
