@@ -128,7 +128,8 @@ All documentation is automatically generated and committed to the repository:
 ```
 docs/
 ├── index.html                    # Documentation viewer
-├── README.md                     # This file
+├── README.md                     # Documentation overview
+├── WORKFLOW_DOCUMENTATION.md     # This file
 ├── VERSION.txt                   # Current version
 ├── version.txt                   # Release metadata
 ├── html-validation.txt           # HTML validation results

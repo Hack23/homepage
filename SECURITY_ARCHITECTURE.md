@@ -731,7 +731,7 @@ flowchart TB
 | **Provenance Available** | Cryptographic attestation generated | `homepage-vX.Y.Z.zip.intoto.jsonl` |
 | **Provenance Authenticated** | GitHub OIDC signing (non-falsifiable) | `actions/attest-build-provenance@v3.2.0` |
 | **Isolated** | Ephemeral GitHub-hosted runners | Workflow runs on `ubuntu-latest` |
-| **Parameterless** | Reproducible builds, no external input | Version from tags, no manual params |
+| **Parameterless** | Reproducible tag-triggered builds, no external input for tagged releases | Tag push: version from tags; `workflow_dispatch`: manual version/prerelease inputs |
 | **Hermetic** | No network access during build (planned L4) | Currently allows network for npm |
 
 **SBOM Generation:**
@@ -739,13 +739,13 @@ flowchart TB
 ```yaml
 # Implemented in release.yml
 - name: Generate SBOM
-  uses: anchore/sbom-action@22f5bcb07eeea30e5ba0ab7ce8bd0eebba62b01e # v0.22.2
+  uses: anchore/sbom-action@v0.22.2
   with:
     format: spdx-json
     output-file: homepage-${{ needs.prepare.outputs.version }}.spdx.json
     
 - name: Generate SBOM attestation
-  uses: actions/attest-sbom@33e1d7e6f6db73291f59e53e5a08bfc29cf0e6bd # v3.0.0
+  uses: actions/attest-sbom@v3.0.0
   with:
     subject-path: 'homepage-${{ needs.prepare.outputs.version }}.zip'
     sbom-path: 'homepage-${{ needs.prepare.outputs.version }}.spdx.json'

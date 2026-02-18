@@ -48,6 +48,13 @@ jobs:
           else
             VERSION=${{ github.event.inputs.version }}
           fi
+          
+          # Enforce strict version format: vX.Y.Z or vX.Y.Z-prerelease
+          if [[ ! "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z\.-]+)?$ ]]; then
+            echo "❌ Error: Invalid version '$VERSION'. Expected format 'vX.Y.Z' or 'vX.Y.Z-prerelease'." >&2
+            exit 1
+          fi
+          
           echo "version=${VERSION}" >> $GITHUB_OUTPUT
           echo "📌 Version: ${VERSION}"
 
@@ -73,6 +80,11 @@ jobs:
             ${{ runner.os }}-npm-docs-
             ${{ runner.os }}-npm-
 
+      - name: Ensure docs directory exists
+        run: |
+          echo "📁 Ensuring docs directory exists..."
+          mkdir -p docs
+
       - name: Set Version for release
         run: |
           VERSION="${{ steps.get-version.outputs.version }}"
@@ -88,7 +100,6 @@ jobs:
           rm -rf docs/lighthouse-*.html docs/lighthouse-*.json || true
           rm -rf docs/html-validation.txt docs/accessibility-report.html || true
           rm -rf docs/security-report.html docs/security-scan.json || true
-          mkdir -p docs
 
       - name: Generate HTML validation report
         run: |
@@ -261,7 +272,7 @@ jobs:
           
           **Release Date:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')
           **Commit:** \`${{ github.sha }}\`
-          **Pre-release:** ${{ needs.prepare.outputs.is_prerelease }}
+          **Pre-release:** ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.prerelease == 'true' || contains(steps.get-version.outputs.version, '-') }}
           
           ## Documentation Generated
           
