@@ -29,11 +29,18 @@
 
 This document outlines the **future security architecture roadmap** for the Hack23 AB homepage, detailing planned enhancements to strengthen security posture, improve compliance alignment, and demonstrate security excellence through continuous improvement.
 
+**Current State (Feb 2026):**
+- ✅ **SLSA Build Level 3 Achieved** - Build provenance and SBOM attestations implemented via release.yml
+- ✅ **Documentation as Code** - Automated quality reports committed to repository
+- ✅ **Supply Chain Security** - SHA-pinned actions, Harden Runner, cryptographic verification
+
 **Guiding Principles:**
 - ✅ **Incremental Enhancement** - Small, testable improvements over time
 - ✅ **Evidence-Based Security** - Measurable security controls with public proof
 - ✅ **Compliance-Driven** - Align with ISO 27001, NIST CSF, CIS Controls
 - ✅ **Transparency First** - Public documentation of security investments
+
+**Next Major Milestone:** SLSA Build Level 4 (H1 2026) - See [FUTURE_WORKFLOWS.md](FUTURE_WORKFLOWS.md)
 
 ---
 
