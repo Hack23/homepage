@@ -8,8 +8,6 @@ categories:
 
   - title: '🐛 Bug Fixes'
     labels:
-      - 'fix'
-      - 'bugfix'
       - 'bug'
 
   - title: '🏗️ Infrastructure & DevOps'
@@ -25,12 +23,10 @@ categories:
   - title: '♿ Accessibility'
     labels:
       - 'accessibility'
-      - 'a11y'
 
   - title: '🌐 Internationalization'
     labels:
       - 'i18n'
-      - 'translation'
 
   - title: '🎨 UI/UX Improvements'
     labels:
@@ -43,7 +39,6 @@ categories:
   - title: '📚 Documentation'
     labels:
       - 'documentation'
-      - 'docs'
 
   - title: '🔄 Code Quality & Refactoring'
     labels:
@@ -79,23 +74,18 @@ change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 exclude-labels:
-  - 'skip-changelog'
   - 'duplicate'
   - 'invalid'
   - 'wontfix'
 version-resolver:
   major:
-    labels:
-      - 'major'
-      - 'breaking'
+    labels: []
   minor:
     labels:
-      - 'minor'
       - 'feature'
       - 'enhancement'
   patch:
     labels:
-      - 'patch'
       - 'bug'
       - 'security'
       - 'dependencies'
@@ -192,10 +182,10 @@ template: |
   
   ### View SBOM (Software Bill of Materials)
   ```bash
-  # Download SBOM attestation
-  gh attestation download --owner Hack23 --artifact homepage-v$RESOLVED_VERSION.zip
+  # Verify attestations (includes SBOM)
+  gh attestation verify homepage-v$RESOLVED_VERSION.zip --owner Hack23
   
-  # View SBOM in JSON format
+  # View SBOM in JSON format (attestation file is generated during release)
   cat homepage-v$RESOLVED_VERSION.spdx.json | jq
   
   # Extract package list from SBOM
