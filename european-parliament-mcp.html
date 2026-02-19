@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>European Parliament MCP Server | AI Data Access Platform | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">    <link rel="canonical" href="https://hack23.com/european-parliament-mcp.html">
+    
+    <meta name="description" content="European Parliament MCP Server: TypeScript/Node.js MCP server providing AI assistants with structured access to European Parliament open datasets. SLSA Level 3, 80%+ test coverage, ISMS-compliant.">
+    <meta name="twitter:description" content="European Parliament MCP Server: MCP protocol implementation for AI access to EU Parliament data. TypeScript, SLSA Level 3, ISO 27001, NIST CSF 2.0 compliant.">
+    <meta name="keywords" content="European Parliament MCP server, Model Context Protocol, EU Parliament data, AI assistant integration, TypeScript MCP, SLSA Level 3, MEPs data, plenary sessions, voting records, parliamentary data API">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="European Parliament MCP Server | AI Data Access Platform">
+    <meta property="og:description" content="TypeScript MCP server providing AI assistants with structured access to European Parliament open datasets. SLSA Level 3 security, 80%+ test coverage.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/european-parliament-mcp.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "description": "Sweden's only cybersecurity consultancy with fully public ISMS framework on GitHub. Led by a team with 30 plus years of expertise in security architecture, DevSecOps, and ISO 27001 compliance.",
+      "foundingDate": "2025-01-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressCountry": "SE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "English",
+          "Swedish"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "European Parliament MCP Server",
+      "applicationCategory": "DeveloperApplication",
+      "description": "TypeScript/Node.js Model Context Protocol (MCP) server providing AI assistants with structured access to European Parliament open datasets. Features full MCP tool implementation for MEPs, plenary sessions, voting records, committees, and parliamentary questions.",
+      "url": "https://github.com/Hack23/European-Parliament-MCP-Server",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "operatingSystem": "Node.js",
+      "softwareVersion": "latest",
+      "applicationSubCategory": "AI Integration Middleware",
+      "featureList": [
+        "Full MCP Protocol Implementation",
+        "EU Parliament Data Access (MEPs, Sessions, Voting, Committees)",
+        "TypeScript with Zod Schema Validation",
+        "SLSA Level 3 Supply Chain Security",
+        "80%+ Test Coverage (268 unit tests, 23 E2E tests)",
+        "ISO 27001, NIST CSF 2.0, CIS Controls v8.1, GDPR Compliance"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/european-parliament-mcp.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://hack23.com/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "European Parliament MCP Server",
+          "item": "https://hack23.com/european-parliament-mcp.html"
+        }
+      ]
+    }
+  ]
+}</script>
+    <link rel="alternate" hreflang="en" href="https://hack23.com/european-parliament-mcp.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/european-parliament-mcp.html">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="projects.html">Projects</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                European Parliament MCP Server
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html" title="Home">🏠 Hack23</a>
+            <a href="services.html" title="Services">Services</a>
+            <a href="projects.html" title="Projects">Projects</a>
+            <a href="why-hack23.html" title="Why Hack23">Why Hack23</a>
+            <a href="blog.html" title="Blog">Blog</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="european-parliament-mcp-hero" class="confidentiality-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h1 class="m-0">🇪🇺 European Parliament MCP Server</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">AI-Powered European Parliament Data Access Platform</p>
+                </div>
+            </div>
+            <p class="lead">TypeScript/Node.js <strong>Model Context Protocol (MCP) server</strong> providing AI assistants with structured access to European Parliament open datasets. Achieve transparency in EU democratic processes through AI-augmented data analysis.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub Repository" style="background: #0366d6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 8px rgba(3, 102, 214, 0.3);">📂 View on GitHub</a>
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm Package" class="btn-primary">📦 npm Package</a>
+                <a href="european-parliament-mcp-features.html" title="Features" class="btn-primary">✨ Features</a>
+                <a href="european-parliament-mcp-docs.html" title="Documentation" class="btn-primary">📚 Documentation</a>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section id="key-features">
+            <h2>🎯 Key Features</h2>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔌 Full MCP Implementation</h3>
+                    <p>Complete implementation of the <strong>Model Context Protocol</strong> enabling seamless integration with Claude, ChatGPT, and other AI assistants. 9 specialized tools for comprehensive EU Parliament data access.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ EU Parliament Data Access</h3>
+                    <p>Direct access to <strong>MEP profiles, plenary sessions, voting records, committee information, and parliamentary questions</strong> via the official European Parliament Open Data API.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📘 TypeScript & Zod Validation</h3>
+                    <p>Written in <strong>TypeScript</strong> with strict type safety and <strong>Zod schema validation</strong> for all API inputs and outputs. Rate limiting and security headers included out of the box.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🛡️ SLSA Level 3 Security</h3>
+                    <p>Supply chain security with <strong>SLSA Level 3</strong> build provenance attestations, OpenSSF Scorecard validation, and comprehensive security scanning via GitHub Actions.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🧪 High Test Coverage</h3>
+                    <p><strong>268 unit tests</strong> and <strong>23 E2E tests</strong> maintaining 80%+ code coverage. Automated CI/CD pipeline with security checks, dependency auditing, and quality gates.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 ISMS Compliance</h3>
+                    <p>Fully aligned with <strong>ISO 27001:2022, NIST CSF 2.0, CIS Controls v8.1, and GDPR</strong>. Complete ISMS documentation including threat models, security architecture, and CRA assessment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MCP Tools -->
+        <section id="mcp-tools">
+            <h2>🔧 Available MCP Tools</h2>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <h3>👤 get_meps</h3>
+                    <p>Retrieve <strong>Member of European Parliament (MEP)</strong> profiles with filtering by country, political group, and committee membership.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>📅 get_plenary_sessions</h3>
+                    <p>Access <strong>plenary session</strong> records, agendas, and proceedings with date-range filtering.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>🗳️ get_voting_records</h3>
+                    <p>Query detailed <strong>voting records</strong> including individual MEP votes, vote summaries, and legislative context.</p>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <h3>🔍 search_documents</h3>
+                    <p>Full-text search across <strong>parliamentary documents</strong>, reports, opinions, and legislative texts.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>🏛️ get_committee_info</h3>
+                    <p>Access <strong>committee structures</strong>, membership, mandates, and recent activities.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>❓ get_parliamentary_questions</h3>
+                    <p>Retrieve <strong>parliamentary questions</strong> with answers from MEPs and the European Commission.</p>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <h3>📊 analyze_voting_patterns</h3>
+                    <p><strong>Analyze voting patterns</strong> across political groups, countries, and legislative topics for deeper political intelligence.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>📋 track_legislation</h3>
+                    <p><strong>Track legislative procedures</strong> from proposal through committee review to final vote.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>📄 generate_report</h3>
+                    <p>Generate structured <strong>AI-ready reports</strong> on parliamentary activity, voting summaries, and MEP profiles.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Data Sources -->
+        <section id="data-sources">
+            <h2>📡 Data Sources</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🇪🇺 MEPs & Representatives</h3>
+                    <p>Complete profiles of all Members of the European Parliament including political group, country, committees, and contact information sourced from the official EU Parliament Open Data API.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Plenary Sessions</h3>
+                    <p>Full plenary session records including agendas, debate transcripts, and outcomes from the European Parliament's open data portal.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📁 Committees & Documents</h3>
+                    <p>Committee membership, reports, and opinions alongside the full parliamentary document repository for research and analysis.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>❓ Parliamentary Questions</h3>
+                    <p>Written and oral questions submitted by MEPs with official Commission and Council responses, enabling accountability tracking.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Stack -->
+        <section id="technology">
+            <h2>🛠️ Technology Stack</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>💻 Runtime</h3>
+                    <p><strong>TypeScript/Node.js</strong> — Type-safe implementation with full ES module support. Published to npm as <code>european-parliament-mcp-server</code>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📦 Protocol</h3>
+                    <p><strong>Model Context Protocol (MCP)</strong> — Standard protocol for AI assistant integrations. Compatible with Claude, ChatGPT, and any MCP-compatible AI client.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Security</h3>
+                    <p><strong>SLSA Level 3</strong> — Supply chain security with build provenance, reproducible builds, and security scanning. OpenSSF Scorecard validated. Rate limiting and Zod input validation.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality Badges -->
+        <section id="security-quality">
+            <h2>🛡️ Security &amp; Quality</h2>
+            <p>European Parliament MCP Server demonstrates enterprise-grade security practices for AI integration middleware.</p>
+            
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/releases" title="GitHub Releases">
+                    <img src="https://img.shields.io/github/v/release/Hack23/European-Parliament-MCP-Server?style=for-the-badge" alt="Release" width="200" height="28" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/LICENSE" title="License">
+                    <img src="https://img.shields.io/github/license/Hack23/European-Parliament-MCP-Server.svg?style=for-the-badge" alt="License" width="150" height="28" loading="lazy">
+                </a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" title="OpenSSF Scorecard">
+                    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/European-Parliament-MCP-Server/badge" alt="Security Score" width="150" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/attestations" title="SLSA Level 3">
+                    <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/release.yml" title="Release Workflow">
+                    <img src="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/release.yml/badge.svg" alt="Release" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm version">
+                    <img src="https://img.shields.io/npm/v/european-parliament-mcp-server?style=for-the-badge" alt="npm version" width="200" height="28" loading="lazy">
+                </a>
+            </div>
+        </section>
+        
+        <!-- Getting Started -->
+        <section id="getting-started">
+            <h2>🚀 Getting Started</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>1️⃣ Install via npm</h3>
+                    <p>Install the package globally or as a project dependency. Requires Node.js 18+ and an MCP-compatible AI client.</p>
+                    <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm Package" style="background: #cc3534; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">📦 View on npm</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>2️⃣ Configure AI Client</h3>
+                    <p>Add the MCP server to your AI client configuration (Claude Desktop, Continue, or any MCP-compatible client) to enable EU Parliament data queries.</p>
+                    <a href="https://github.com/Hack23/European-Parliament-MCP-Server#installation" title="Installation Guide" class="btn-primary d-inline-block mt-1">📖 Installation Guide</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>3️⃣ Query Parliament Data</h3>
+                    <p>Use natural language to query MEP profiles, voting records, plenary sessions, and more through your AI assistant. Fork and extend for custom workflows.</p>
+                    <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="Repository" class="btn-primary d-inline-block mt-1">📂 Repository</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Use Cases -->
+        <section id="use-cases">
+            <h2>💼 Use Cases</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Political Research</h3>
+                    <p>Academic and journalistic research on MEP voting patterns, political group alignment, and legislative activity using AI-powered analysis.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Transparency & Accountability</h3>
+                    <p>Track MEP performance, attendance, and voting consistency to hold representatives accountable to their constituents and campaign promises.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏢 Policy Analysis</h3>
+                    <p>Monitor legislative developments, committee activity, and policy trends relevant to specific industries or interest areas.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 Education</h3>
+                    <p>Teaching tool for European politics courses, demonstrating how open government data can be democratized through AI integration.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Projects -->
+        <section id="related-projects">
+            <h2>🔗 Related Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Citizen Intelligence Agency</h3>
+                    <p>Political transparency platform for Swedish parliamentary data, demonstrating data integrity and availability best practices at scale.</p>
+                    <a href="cia-project.html" title="CIA Project">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 CIA Compliance Manager</h3>
+                    <p>Enterprise security assessment platform for the CIA triad with multi-framework compliance mapping and automated reporting.</p>
+                    <a href="compliance-manager.html" title="CIA Compliance Manager">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥋 Black Trigram</h3>
+                    <p>Educational gaming project showcasing secure software development lifecycle and quality assurance practices.</p>
+                    <a href="black-trigram.html" title="Black Trigram">Learn More →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 Ready to Explore EU Parliament Data?</h2>
+            <p>Integrate AI-powered access to European Parliament open datasets into your research, journalism, or policy analysis workflow.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub" style="background: #0366d6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">📂 View on GitHub</a>
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm" class="cta-button">📦 npm Package</a>
+                <a href="european-parliament-mcp-docs.html" title="Documentation" class="cta-button">📚 Documentation</a>
+                <a href="projects.html" title="All Projects" class="cta-button">← Back to Projects</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+            <a href="blog.html" title="Security Blog">Blog</a> |
+            <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
+        </p>
+    </footer>
+</body>
+</html>
