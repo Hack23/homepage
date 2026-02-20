@@ -12,12 +12,17 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 
 ## 🎯 Skills Library Integration
 
-This repository has a **comprehensive 14-skill library** in `.github/skills/` that provides:
-- Security best practices (Secure Development, Access Control, Data Classification, Cryptography)
+This repository has a **comprehensive 58-skill library** in `.github/skills/` that provides:
+- Security best practices (Secure Development, Access Control, Data Classification, Cryptography, Incident Response, Secrets Management, Vulnerability Management, Input Validation)
 - Architecture patterns (C4 Modeling, Security Architecture, Documentation Portfolio)
 - Quality standards (HTML/CSS, Accessibility WCAG 2.1 AA, SEO Optimization)
 - Deployment guidelines (AWS S3/CloudFront, GitHub Actions CI/CD)
-- Compliance requirements (ISO 27001, GDPR)
+- Compliance requirements (ISO 27001, GDPR, NIST CSF 2.0, CIS Controls v8.1)
+- Operations (Change Management, Backup & Recovery, Business Continuity, Disaster Recovery)
+- Governance (Risk Assessment, Risk Register, Asset Management, Supplier Management, Stakeholder Registry, Information Security Strategy, Compliance Checklist)
+- Development (Testing Strategy, Code Review Practices, Secure Code Review)
+- Integration (MCP Server, Copilot Agent Patterns, GitHub Agentic Workflows)
+- Business & Intelligence (Brand Voice, Business Strategy, Content Marketing, OSINT, Ethical Info Ops)
 
 **YOU MUST:**
 - Follow the explicit MUST/MUST NOT rules defined in relevant skills
@@ -219,7 +224,7 @@ To work autonomously and efficiently:
 - **`styles.css`**: Single CSS file for all styling
 - **`screenshots/`**: Visual assets and documentation images
 - **`.github/workflows/`**: CI/CD configuration (do not modify without careful consideration)
-- **`.github/skills/`**: 14 production-ready skills for consistency and compliance
+- **`.github/skills/`**: 58 production-ready skills for consistency and compliance
 - **`.github/agents/`**: 8 specialized custom agents for delegation
 - **Language variants**: Files with `_sv`, `_ko`, `_ar`, etc. suffixes
 
@@ -268,6 +273,7 @@ To work autonomously and efficiently:
 - **CIS Controls v8.1** - Security best practices
 - **GDPR** - Privacy and data protection
 - **NIS2** - Network and information security
+- **EU CRA** - Cyber Resilience Act
 
 ### Required Documentation Portfolio
 
@@ -276,6 +282,64 @@ When making architectural changes, ensure these documents exist and are current:
 - **FUTURE_SECURITY_ARCHITECTURE.md** - Planned security improvements
 
 For major features, maintain C4 Architecture Portfolio (see Documentation Portfolio skill).
+
+## 🏢 Hack23 Organization - Repository Awareness
+
+This website is part of the Hack23 GitHub organization with 21 repositories. Understand the ecosystem:
+
+### Open Source Projects
+
+| Repository | Description | Tech Stack |
+|-----------|-------------|------------|
+| **[cia](https://github.com/Hack23/cia)** | Citizen Intelligence Agency - Political intelligence platform for Swedish Parliament | Java, Spring, Vaadin |
+| **[cia-compliance-manager](https://github.com/Hack23/cia-compliance-manager)** | CIA Compliance Manager - Security compliance assessment tool | TypeScript, React |
+| **[blacktrigram](https://github.com/Hack23/blacktrigram)** | Black Trigram - Korean martial arts combat simulator | TypeScript, Three.js |
+| **[game](https://github.com/Hack23/game)** | React + TypeScript + Three.js game template | TypeScript, React |
+| **[European-Parliament-MCP-Server](https://github.com/Hack23/European-Parliament-MCP-Server)** | MCP Server for European Parliament Open Data | TypeScript |
+| **[riksdagsmonitor](https://github.com/Hack23/riksdagsmonitor)** | Swedish Parliament monitoring intelligence platform | HTML, JavaScript |
+| **[euparliamentmonitor](https://github.com/Hack23/euparliamentmonitor)** | European Parliament Intelligence Platform | JavaScript |
+| **[homepage](https://github.com/Hack23/homepage)** | Corporate website - hack23.com | HTML, CSS |
+| **[lambda-in-private-vpc](https://github.com/Hack23/lambda-in-private-vpc)** | Multi-region AWS Lambda in VPC with Resilience Hub | AWS CDK |
+| **[ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC)** | Public ISMS documentation - security policies | Markdown |
+
+### Architecture Documentation Matrix
+
+**Every Hack23 repository MUST maintain comprehensive architectural documentation:**
+
+#### Required Security Documentation
+- 🏛️ `SECURITY_ARCHITECTURE.md` — Current implemented security design and controls
+- 🚀 `FUTURE_SECURITY_ARCHITECTURE.md` — Planned security improvements and roadmap
+
+#### Required C4 Architecture Documentation (Current State)
+- 🏛️ `ARCHITECTURE.md` — Complete C4 models (Context, Container, Component views)
+- 📊 `DATA_MODEL.md` — Data structures, entities, and relationships
+- 🔄 `FLOWCHART.md` — Business process and data flows
+- 📈 `STATEDIAGRAM.md` — System state transitions and lifecycles
+- 🧠 `MINDMAP.md` — System conceptual relationships
+- 💼 `SWOT.md` — Strategic analysis and positioning
+
+#### Required C4 Architecture Documentation (Future State)
+- 🚀 `FUTURE_ARCHITECTURE.md` — Architectural evolution roadmap
+- 📊 `FUTURE_DATA_MODEL.md` — Enhanced data architecture plans
+- 🔄 `FUTURE_FLOWCHART.md` — Improved process workflows
+- 📈 `FUTURE_STATEDIAGRAM.md` — Advanced state management
+- 🧠 `FUTURE_MINDMAP.md` — Capability expansion plans
+- 💼 `FUTURE_SWOT.md` — Future strategic opportunities
+
+#### Reference Implementations
+- **CIA**: [Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) | [Future Architecture](https://github.com/Hack23/cia/blob/master/FUTURE_SECURITY_ARCHITECTURE.md)
+- **Black Trigram**: [Security Architecture](https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md) | [Future Architecture](https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md)
+- **CIA Compliance Manager**: [Security Architecture](https://github.com/Hack23/cia-compliance-manager/blob/main/SECURITY_ARCHITECTURE.md) | [Future Architecture](https://github.com/Hack23/cia-compliance-manager/blob/main/FUTURE_SECURITY_ARCHITECTURE.md)
+- **ISMS-PUBLIC**: [Security Architecture](https://github.com/Hack23/ISMS-PUBLIC/blob/main/SECURITY_ARCHITECTURE.md)
+
+### Secure Development Policy
+
+All repositories follow [Hack23 Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) which mandates:
+- Security architecture documentation in every repository
+- Complete C4 architecture portfolio
+- Automated security scanning (CodeQL, Dependabot, Secret Scanning)
+- Vulnerability management with defined SLAs
+- SLSA Build Level 3 supply chain security
 
 ## Focus Areas
 
