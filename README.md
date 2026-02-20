@@ -1224,8 +1224,26 @@ SonarQube plugin for analyzing AWS CloudFormation templates with security best p
 - [CLASSIFICATION.md](CLASSIFICATION.md) - Homepage business impact classification and CIA triad assessment
 - [SECURITY.md](SECURITY.md) - Vulnerability disclosure policy and coordinated disclosure procedures
 
+**C4 Architecture Portfolio:**
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model (System Context, Container, Component views)
+- [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
+- [FLOWCHART.md](FLOWCHART.md) - CI/CD, deployment, and content management process flows
+- [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment pipeline and content lifecycle states
+- [MINDMAP.md](MINDMAP.md) - System conceptual relationships
+- [SWOT.md](SWOT.md) - Strategic analysis and positioning
+
+**Future State Documentation:**
+- [FUTURE_ARCHITECTURE.md](FUTURE_ARCHITECTURE.md) - Architectural evolution roadmap
+- [FUTURE_DATA_MODEL.md](FUTURE_DATA_MODEL.md) - Enhanced content model plans
+- [FUTURE_FLOWCHART.md](FUTURE_FLOWCHART.md) - Improved process workflows
+- [FUTURE_STATEDIAGRAM.md](FUTURE_STATEDIAGRAM.md) - Advanced state management
+- [FUTURE_MINDMAP.md](FUTURE_MINDMAP.md) - Capability expansion plans
+- [FUTURE_SWOT.md](FUTURE_SWOT.md) - Future strategic opportunities
+- [FUTURE_WORKFLOWS.md](FUTURE_WORKFLOWS.md) - CI/CD workflow improvements
+
 **Reference Guides:**
 - [ISMS_REFERENCE_GUIDE.md](ISMS_REFERENCE_GUIDE.md) - Blog-to-policy mapping for all 30+ security blog posts
+- [WORKFLOWS.md](WORKFLOWS.md) - GitHub Actions workflow documentation
 
 **CI/CD & Quality:**
 - [.github/workflows/main.yml](.github/workflows/main.yml) - Deployment workflow with ZAP and Lighthouse scanning

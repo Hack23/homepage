@@ -842,6 +842,14 @@ Use this checklist to ensure complete project template implementation:
 - [FUTURE_SECURITY_ARCHITECTURE.md](FUTURE_SECURITY_ARCHITECTURE.md) - Security enhancement roadmap
 - [README.md](README.md) - Project overview with classification badges
 
+**Architecture Documentation:**
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model
+- [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
+- [FLOWCHART.md](FLOWCHART.md) - Process flows and workflows
+- [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
+- [MINDMAP.md](MINDMAP.md) - System conceptual relationships
+- [SWOT.md](SWOT.md) - Strategic analysis and positioning
+
 ---
 
 **📋 Document Control:**  
