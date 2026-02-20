@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Riksdagsmonitor | Swedish Parliament Intelligence Platform | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/riksdagsmonitor.html">
+    
+    <meta name="description" content="Riksdagsmonitor: Open-source Swedish Parliament Intelligence Platform. Monitor Riksdag political activity with 50+ years historical data, 14 language support, and systematic transparency.">
+    <meta name="twitter:description" content="Riksdagsmonitor: Swedish Parliament monitoring platform with 50+ years of data, real-time analysis, and 14 language support. Built on CIA platform.">
+    <meta name="keywords" content="Swedish parliament monitoring, Riksdag transparency, political intelligence Sweden, MP tracking, voting records Sweden, parliamentary analytics, open data Sweden, interpellations, committee activity, Riksdag members, Swedish democracy, OSINT Sweden">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Riksdagsmonitor | Swedish Parliament Intelligence Platform">
+    <meta property="og:description" content="Open-source Swedish Parliament monitoring with 50+ years historical data, real-time analysis, and 14 language support.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fi_FI">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="nb_NO">
+    <meta property="og:locale:alternate" content="sv_SE">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/riksdagsmonitor.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "description": "Sweden's only cybersecurity consultancy with fully public ISMS framework on GitHub. Led by a team with 30 plus years of expertise in security architecture, DevSecOps, and ISO 27001 compliance.",
+      "foundingDate": "2025-01-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressCountry": "SE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "English",
+          "Swedish"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Riksdagsmonitor",
+      "applicationCategory": "WebApplication",
+      "description": "Open-source Swedish Parliament Intelligence Platform that monitors political activity with systematic transparency. Built on the Citizen Intelligence Agency (CIA) platform with 50+ years of historical data, real-time analysis, and support for 14 languages.",
+      "url": "https://hack23.com/riksdagsmonitor.html",
+      "image": "cia-icon-140.webp",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "operatingSystem": "Web Browser",
+      "applicationSubCategory": "Political Intelligence Platform",
+      "featureList": [
+        "Parliamentary Monitoring",
+        "Voting Records Analysis",
+        "Historical Data (50+ years)",
+        "Multi-language Support (14 languages)",
+        "Political Behavior Analytics",
+        "Transparency Metrics",
+        "Interpellation Tracking",
+        "Committee Activity Monitoring"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/riksdagsmonitor.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://hack23.com/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Riksdagsmonitor",
+          "item": "https://hack23.com/riksdagsmonitor.html"
+        }
+      ]
+    }
+  ]
+}</script>
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/riksdagsmonitor_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/riksdagsmonitor_ar.html">
+    <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/riksdagsmonitor_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/riksdagsmonitor_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/riksdagsmonitor_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/riksdagsmonitor_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/riksdagsmonitor.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/riksdagsmonitor_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/riksdagsmonitor_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/riksdagsmonitor_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/riksdagsmonitor_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/riksdagsmonitor_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/riksdagsmonitor_he.html">
+    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/riksdagsmonitor_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/riksdagsmonitor_ja.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/riksdagsmonitor_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/riksdagsmonitor_ko.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/riksdagsmonitor_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/riksdagsmonitor_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/riksdagsmonitor_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/riksdagsmonitor_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/riksdagsmonitor_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/riksdagsmonitor_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/riksdagsmonitor_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/riksdagsmonitor_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/riksdagsmonitor_zh.html">
+    <link rel="alternate" hreflang="zh-SG" href="https://hack23.com/riksdagsmonitor_zh.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/riksdagsmonitor_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/riksdagsmonitor.html">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="projects.html">Projects</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                Riksdagsmonitor
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html" title="Home">🏠 Hack23</a>
+            <a href="services.html" title="Services">Services</a>
+            <a href="projects.html" title="Projects">Projects</a>
+            <a href="why-hack23.html" title="Why Hack23">Why Hack23</a>
+            <a href="blog.html" title="Blog">Blog</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="riksdagsmonitor-hero" class="integrity-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h1 class="m-0">🏛️ Riksdagsmonitor</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">Swedish Parliament Intelligence Platform</p>
+                </div>
+            </div>
+            <p class="lead">Open-source Swedish Parliament Intelligence Platform monitoring Riksdag political activity with systematic transparency. Built on the Citizen Intelligence Agency (CIA) platform with 50+ years of historical data, real-time analysis, and support for 14 languages.</p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://riksdagsmonitor.com" title="Live Application" class="btn-primary" style="font-size: 1.1rem;">🌐 Visit Riksdagsmonitor</a>
+                <a href="https://github.com/Hack23/riksdagsmonitor" title="GitHub Repository" class="btn-primary">📂 View on GitHub</a>
+                <a href="riksdagsmonitor-features.html" title="Features" class="btn-primary">✨ Features</a>
+                <a href="riksdagsmonitor-docs.html" title="Documentation" class="btn-primary">📚 Documentation</a>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section id="key-features">
+            <h2>🎯 Key Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Parliamentary Monitoring</h3>
+                    <p>Real-time tracking of Swedish Riksdag activity including debates, proposals, committee work, and legislative processes. Comprehensive monitoring of all 349 MPs with detailed activity metrics.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗳️ Voting Records Analysis</h3>
+                    <p>Detailed analysis of all parliamentary votes with party alignment tracking, individual voting patterns, and coalition analysis. Full transparency in democratic decision-making.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📅 50+ Years Historical Data</h3>
+                    <p>Comprehensive historical archive spanning over 50 years of Swedish parliamentary activity. Track long-term political trends, policy evolution, and democratic development.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌍 14 Language Support</h3>
+                    <p>Full multi-language platform supporting 14 languages to make Swedish parliamentary data accessible to international researchers, journalists, and citizens worldwide.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Political Analytics</h3>
+                    <p>Advanced political behavior analysis with transparency metrics, party performance dashboards, and evidence-based accountability tracking.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>✅ Data Quality</h3>
+                    <p>Automated data validation with digital signatures ensuring data integrity. Sourced directly from official Riksdag open data APIs with continuous quality monitoring.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform Overview -->
+        <section id="platform-overview">
+            <h2>🎯 Platform Overview</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌟 Systematic Transparency</h3>
+                    <p>Empowering citizens, researchers, and journalists with systematic access to Swedish parliamentary information and accountability data.</p>
+                    <p><strong>Impact:</strong> Increased citizen engagement in democratic processes through better access to Riksdag data.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔄 Built on CIA Platform</h3>
+                    <p>Riksdagsmonitor is built on the proven <a href="cia-project.html" title="Citizen Intelligence Agency">Citizen Intelligence Agency (CIA) platform</a>, inheriting its robust data processing, security architecture, and political transparency features.</p>
+                    <p><strong>Foundation:</strong> Enterprise-grade open-source platform with SLSA Level 3 supply chain security.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Evidence-Based Politics</h3>
+                    <p>Providing objective data for researchers, journalists, and citizens to analyze political behavior and hold Riksdag representatives accountable.</p>
+                    <p><strong>Impact:</strong> More informed public discourse based on facts rather than rhetoric.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform Capabilities -->
+        <section id="capabilities">
+            <h2>⚙️ Platform Capabilities</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👤 MP Profiles</h3>
+                    <p>Comprehensive profiles for all Riksdag members including voting history, party affiliation, committee memberships, interpellations, and activity metrics.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Party Analysis</h3>
+                    <p>Party-level statistics and coalition analysis. Track party cohesion, voting discipline, and strategic positioning across issues and legislative periods.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 Committee Tracking</h3>
+                    <p>Follow committee work, proposals, and decisions through the legislative process. Track committee composition, activity levels, and policy influence.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>💬 Interpellation Monitoring</h3>
+                    <p>Track all interpellations (parliamentary questions) to ministers with full response history. Monitor accountability mechanisms and government responsiveness.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Custom Reports</h3>
+                    <p>Generate custom reports for specific time periods, politicians, or issues. Export data for research and analysis purposes.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Open Data Integration</h3>
+                    <p>Integration with official Swedish Riksdag open data sources. Automated updates and real-time synchronization with parliamentary systems.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality -->
+        <section id="security-quality">
+            <h2>🛡️ Security &amp; Quality</h2>
+            <p>Riksdagsmonitor demonstrates enterprise security practices with 99.998% availability target, comprehensive ISMS documentation, and full compliance with ISO 27001:2022, NIST CSF 2.0, and CIS Controls v8.1.</p>
+            
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                <a href="https://github.com/Hack23/riksdagsmonitor/releases" title="GitHub Releases">
+                    <img src="https://img.shields.io/github/v/release/Hack23/riksdagsmonitor?style=for-the-badge" alt="Release" width="180" height="28" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/blob/master/LICENSE" title="License">
+                    <img src="https://img.shields.io/github/license/Hack23/riksdagsmonitor.svg?style=for-the-badge" alt="License" width="150" height="28" loading="lazy">
+                </a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" title="OpenSSF Scorecard">
+                    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/riksdagsmonitor/badge" alt="Security Score" width="150" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/actions/workflows/release.yml" title="Release Workflow">
+                    <img src="https://github.com/Hack23/riksdagsmonitor/actions/workflows/release.yml/badge.svg?branch=master" alt="Release" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/actions/workflows/scorecards.yml" title="Supply Chain Security">
+                    <img src="https://github.com/Hack23/riksdagsmonitor/actions/workflows/scorecards.yml/badge.svg?branch=master" alt="Scorecard" width="220" height="20" loading="lazy">
+                </a>
+            </div>
+        </section>
+        
+        <!-- Use Cases -->
+        <section id="use-cases">
+            <h2>💼 Use Cases</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👥 Citizens &amp; Voters</h3>
+                    <p>Make informed voting decisions based on actual parliamentary behavior, not just campaign promises. Track your representatives' activity and accountability.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 Journalists &amp; Researchers</h3>
+                    <p>Access comprehensive parliamentary data for investigative journalism and academic research. Evidence-based reporting on Riksdag political behavior and trends.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Civil Society Organizations</h3>
+                    <p>Monitor specific policy areas and hold politicians accountable. Track legislative progress on issues that matter to your organization.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 Educators &amp; Students</h3>
+                    <p>Teaching tool for political science, civics education, and Swedish democratic processes. Real-world data for academic study of Riksdag operations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ISMS Compliance -->
+        <section id="isms-compliance">
+            <h2>🔐 ISMS Compliance</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 Compliance Frameworks</h3>
+                    <p>Full alignment with ISO 27001:2022, NIST CSF 2.0, CIS Controls v8.1, GDPR (public official data), and NIS2 requirements.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 Data Classification</h3>
+                    <p><strong>Confidentiality:</strong> Public | <strong>Integrity:</strong> High | <strong>Availability:</strong> High. Processes only public official data from Swedish Riksdag open data sources.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📚 Full Documentation</h3>
+                    <p>Comprehensive ISMS documentation including architecture diagrams, threat models, security assessments, and CRA compliance assessment publicly available on GitHub.</p>
+                    <a href="riksdagsmonitor-docs.html" title="View Documentation">View All Documentation →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Projects -->
+        <section id="related-projects">
+            <h2>🔗 Related Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Citizen Intelligence Agency</h3>
+                    <p>The foundational open-source OSINT platform for Swedish political transparency that powers Riksdagsmonitor.</p>
+                    <a href="cia-project.html" title="Citizen Intelligence Agency">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 CIA Compliance Manager</h3>
+                    <p>Security assessment platform demonstrating data integrity and compliance practices used in the platform.</p>
+                    <a href="compliance-manager.html" title="Compliance Manager">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥋 Black Trigram</h3>
+                    <p>Educational gaming project showcasing secure development practices and quality assurance methodologies.</p>
+                    <a href="black-trigram.html" title="Black Trigram">Learn More →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 Explore Swedish Parliamentary Data</h2>
+            <p>Access comprehensive parliamentary data and analytics for Swedish democracy. Open source platform for informed citizenship and systematic transparency.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://riksdagsmonitor.com" title="Live Application" class="cta-button" style="font-size: 1.1rem;">🌐 Visit Riksdagsmonitor</a>
+                <a href="https://github.com/Hack23/riksdagsmonitor" title="GitHub Repository" class="cta-button">📂 View on GitHub</a>
+                <a href="riksdagsmonitor-features.html" title="Features" class="cta-button">✨ Features</a>
+                <a href="projects.html" title="All Projects" class="cta-button">← Back to Projects</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
+            <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
+            <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
+            <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
+            <a href="blog.html" title="Security Blog">Blog</a> |
+            <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
+        </p>
+    </footer>
+</body>
+</html>
