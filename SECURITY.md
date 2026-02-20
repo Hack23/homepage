@@ -65,6 +65,8 @@ Thank you for helping us keep the project project and its users safe.
 **Repository Security Documentation:**
 - [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md) - Homepage security architecture and controls
 - [THREAT_MODEL.md](THREAT_MODEL.md) - STRIDE threat analysis and risk assessment
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model
+- [CLASSIFICATION.md](CLASSIFICATION.md) - Data classification framework
 - [README.md](README.md) - Project overview and security posture
 
 **Reference Implementations:**

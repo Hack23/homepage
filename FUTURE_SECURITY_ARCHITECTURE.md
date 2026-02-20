@@ -701,6 +701,13 @@ This roadmap evolves continuously. Updates are tracked in GitHub issues and revi
 - [CLASSIFICATION.md](CLASSIFICATION.md) - Homepage business impact classification
 - [SECURITY.md](SECURITY.md) - Vulnerability disclosure policy
 
+**Architecture Documentation:**
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model
+- [FUTURE_ARCHITECTURE.md](FUTURE_ARCHITECTURE.md) - Architecture evolution roadmap
+- [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
+- [FLOWCHART.md](FLOWCHART.md) - Process flows and workflows
+- [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
+
 **Reference Implementations:**
 - [🏛️ CIA Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) - Java/Spring Framework enterprise architecture
 - [🎮 Black Trigram Security Architecture](https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md) - React/Firebase gaming platform

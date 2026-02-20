@@ -1069,6 +1069,14 @@ graph TD
 - [SECURITY.md](SECURITY.md) - Vulnerability disclosure policy
 - [CLASSIFICATION.md](CLASSIFICATION.md) - Homepage business impact classification
 
+**Architecture Documentation:**
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model
+- [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
+- [FLOWCHART.md](FLOWCHART.md) - Process flows and workflows
+- [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
+- [MINDMAP.md](MINDMAP.md) - System conceptual relationships
+- [SWOT.md](SWOT.md) - Strategic analysis and positioning
+
 **General Documentation:**
 - [README.md](README.md) - Project overview and security posture
 - [ISMS_REFERENCE_GUIDE.md](ISMS_REFERENCE_GUIDE.md) - Blog-to-policy mapping

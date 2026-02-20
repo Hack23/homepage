@@ -989,6 +989,14 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 - [SECURITY.md](SECURITY.md) - Vulnerability disclosure policy
 - [CLASSIFICATION.md](CLASSIFICATION.md) - Homepage CIA triad classification
 
+**Architecture Documentation:**
+- [ARCHITECTURE.md](ARCHITECTURE.md) - C4 architecture model
+- [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
+- [FLOWCHART.md](FLOWCHART.md) - Process flows and workflows
+- [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
+- [MINDMAP.md](MINDMAP.md) - System conceptual relationships
+- [SWOT.md](SWOT.md) - Strategic analysis and positioning
+
 **Security Controls Implementation:**
 - [GitHub Issue #450](https://github.com/Hack23/homepage/issues/450) - Content Security Policy (CSP) implementation
 - [GitHub Issue #451](https://github.com/Hack23/homepage/issues/451) - Subresource Integrity (SRI) for external fonts
