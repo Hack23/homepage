@@ -130,7 +130,7 @@ stateDiagram-v2
     note right of Stale
         Auto-detected when
         English source changes
-        Flags all 13 language
+        Flags all 13 languages
         variants for update
     end note
 
