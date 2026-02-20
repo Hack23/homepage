@@ -104,6 +104,32 @@ Complete collection of security skills for GitHub Copilot, based on Hack23 AB's 
     - Supply chain vulnerabilities
     - Data leakage prevention
 
+### Incident Response & Vulnerability Management
+
+15. **🚨 incident-response** (3.0KB)
+    - Security incident classification and response
+    - NIST SP 800-61r2 alignment
+    - Containment and recovery procedures
+    - Post-incident lessons learned
+
+16. **🔑 secrets-management** (3.1KB)
+    - Zero-tolerance for hardcoded secrets
+    - Credential lifecycle management
+    - Secret rotation schedules
+    - Detection and prevention tools
+
+17. **🛡️ vulnerability-management** (3.0KB)
+    - Vulnerability lifecycle with SLAs
+    - CVSS severity classification
+    - Remediation strategies
+    - Risk acceptance process
+
+18. **🔍 input-validation** (2.8KB)
+    - Allowlist input validation
+    - Output encoding by context
+    - Content Security Policy
+    - Injection attack prevention
+
 ## �� Usage
 
 These skills are automatically available to GitHub Copilot when working in this repository. They provide:
@@ -145,8 +171,8 @@ Complete coverage of:
 
 ## 📊 Statistics
 
-- **Total Skills:** 14
-- **Total Documentation:** ~260 KB
+- **Total Skills:** 18
+- **Total Documentation:** ~272 KB
 - **Average Skill Size:** ~18 KB
 - **ISMS Policies Referenced:** 15+
 - **Code Examples:** 50+ practical implementations
