@@ -12,7 +12,7 @@ You are assisting with a static HTML/CSS website project for Hack23 AB, a Swedis
 
 ## 🎯 Skills Library Integration
 
-This repository has a **comprehensive 57-skill library** in `.github/skills/` that provides:
+This repository has a **comprehensive 58-skill library** in `.github/skills/` that provides:
 - Security best practices (Secure Development, Access Control, Data Classification, Cryptography, Incident Response, Secrets Management, Vulnerability Management, Input Validation)
 - Architecture patterns (C4 Modeling, Security Architecture, Documentation Portfolio)
 - Quality standards (HTML/CSS, Accessibility WCAG 2.1 AA, SEO Optimization)
@@ -224,7 +224,7 @@ To work autonomously and efficiently:
 - **`styles.css`**: Single CSS file for all styling
 - **`screenshots/`**: Visual assets and documentation images
 - **`.github/workflows/`**: CI/CD configuration (do not modify without careful consideration)
-- **`.github/skills/`**: 57 production-ready skills for consistency and compliance
+- **`.github/skills/`**: 58 production-ready skills for consistency and compliance
 - **`.github/agents/`**: 8 specialized custom agents for delegation
 - **Language variants**: Files with `_sv`, `_ko`, `_ar`, etc. suffixes
 

@@ -234,8 +234,8 @@ Links to project documentation
 
 ## Skills Statistics
 
-**Total Skills**: 57 skills (expanded from 48)
-- Security: 8 skills (expanded from 4 with incident-response, secrets-management, vulnerability-management, input-validation)
+**Total Skills**: 58 skills (expanded from 48)
+- Security: 18 skills (8 core + 10 policy-specific; expanded with incident-response, secrets-management, vulnerability-management, input-validation)
 - Architecture: 3 skills
 - Quality: 3 skills
 - Deployment: 2 skills
@@ -246,7 +246,7 @@ Links to project documentation
 - Intelligence: 2 skills
 - Development: 3 skills (expanded from 2 with secure-code-review)
 - Documentation: 2 skills
-- Integration: 7 skills (expanded with GitHub Agentic Workflows) 🌟
+- Integration: 7 skills
 
 ## Maintenance
 
@@ -266,7 +266,7 @@ Skills are maintained by:
 
 - **2026-02-20**: Cross-repository skills expansion
   - Added 9 cross-repo skills from Hack23 organization
-  - Total skills: 57 (from 48)
+  - Total skills: 58 (from 48)
   - New Security skills: incident-response, secrets-management, vulnerability-management, input-validation
   - New Compliance skills: nist-csf, cis-controls
   - New Governance skills: information-security-strategy, compliance-checklist
