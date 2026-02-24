@@ -34,6 +34,7 @@
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | Process flows (this document) |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
 | **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow details |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Flowchart](FUTURE_FLOWCHART.md)** | Roadmap | Planned process improvements |
 
 ---

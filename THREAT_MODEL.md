@@ -996,6 +996,7 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 - [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
 - [MINDMAP.md](MINDMAP.md) - System conceptual relationships
 - [SWOT.md](SWOT.md) - Strategic analysis and positioning
+- [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) - EU Cyber Resilience Act conformity assessment
 
 **Security Controls Implementation:**
 - [GitHub Issue #450](https://github.com/Hack23/homepage/issues/450) - Content Security Policy (CSP) implementation

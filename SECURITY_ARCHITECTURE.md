@@ -1076,6 +1076,7 @@ graph TD
 - [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
 - [MINDMAP.md](MINDMAP.md) - System conceptual relationships
 - [SWOT.md](SWOT.md) - Strategic analysis and positioning
+- [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) - EU Cyber Resilience Act conformity assessment
 
 **General Documentation:**
 - [README.md](README.md) - Project overview and security posture
