@@ -707,6 +707,7 @@ This roadmap evolves continuously. Updates are tracked in GitHub issues and revi
 - [DATA_MODEL.md](DATA_MODEL.md) - Content model and data structures
 - [FLOWCHART.md](FLOWCHART.md) - Process flows and workflows
 - [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
+- [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) - EU Cyber Resilience Act conformity assessment
 
 **Reference Implementations:**
 - [🏛️ CIA Security Architecture](https://github.com/Hack23/cia/blob/master/SECURITY_ARCHITECTURE.md) - Java/Spring Framework enterprise architecture

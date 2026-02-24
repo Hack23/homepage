@@ -34,6 +34,7 @@
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | Content and deployment workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Content and deployment lifecycle |
 | **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Security controls |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Data Model](FUTURE_DATA_MODEL.md)** | Roadmap | Planned content model enhancements |
 
 ---

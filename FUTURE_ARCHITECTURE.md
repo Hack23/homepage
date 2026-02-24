@@ -35,6 +35,7 @@
 | **[🚀 Future Security Architecture](FUTURE_SECURITY_ARCHITECTURE.md)** | Security Roadmap | Planned security enhancements |
 | **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | Current workflow documentation |
 | **[🚀 Future Workflows](FUTURE_WORKFLOWS.md)** | CI/CD Roadmap | Planned workflow improvements |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 
 ---
 

@@ -34,6 +34,7 @@
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | CI/CD and content workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
 | **[💼 SWOT](SWOT.md)** | Strategy | Strategic analysis |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Mindmap](FUTURE_MINDMAP.md)** | Roadmap | Capability expansion plans |
 
 ---

@@ -39,6 +39,7 @@
 | **[💼 SWOT](SWOT.md)** | Strategy | Strategic analysis and positioning |
 | **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow documentation |
 | **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE threat analysis |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🏷️ Classification](CLASSIFICATION.md)** | Data | Security classification framework |
 | **[🚀 Future Architecture](FUTURE_ARCHITECTURE.md)** | Roadmap | Architectural evolution plans |
 

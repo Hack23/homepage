@@ -1,13 +1,42 @@
-# GitHub Actions Workflows Documentation
+<p align="center">
+  <img src="https://hack23.com/icon-192.png" alt="Hack23 Logo" width="192" height="192">
+</p>
 
-**Document Control:**  
-**✅ Approved by:** James Pether Sörling, CEO  
-**📤 Distribution:** Public  
-**🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)  
-**📅 Effective Date:** 2026-01-11  
-**⏰ Next Review:** 2026-04-11 (Quarterly)  
-**🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-2022_Aligned-blue?style=flat-square&logo=iso&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-2.0_Aligned-green?style=flat-square&logo=nist&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![CIS Controls](https://img.shields.io/badge/CIS_Controls-v8.1_Aligned-orange?style=flat-square&logo=cisecurity&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md)  
-**🔗 Related Documents:** [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md), [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md), [THREAT_MODEL.md](THREAT_MODEL.md), [FUTURE_WORKFLOWS.md](FUTURE_WORKFLOWS.md), [ARCHITECTURE.md](ARCHITECTURE.md), [FLOWCHART.md](FLOWCHART.md), [STATEDIAGRAM.md](STATEDIAGRAM.md)
+<h1 align="center">🔄 Hack23 Homepage — CI/CD Workflows</h1>
+
+<p align="center">
+  <strong>GitHub Actions Pipeline: Build, Validate, Scan, Deploy</strong><br>
+  <em>DevSecOps Workflow Documentation for hack23.com</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
+</p>
+
+![License](https://img.shields.io/github/license/Hack23/homepage)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
+[![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
+
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-02-24 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-24
+**🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
+
+---
+
+## 📚 Related Architecture Documentation
+
+| Document | Focus | Description |
+|----------|-------|-------------|
+| **[🏛️ Architecture](ARCHITECTURE.md)** | C4 Model | System structure and deployment |
+| **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Defense-in-depth security controls |
+| **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE/MITRE ATT&CK threat analysis |
+| **[🔄 Flowchart](FLOWCHART.md)** | Processes | CI/CD and content workflows |
+| **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
+| **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
+| **[🚀 Future Workflows](FUTURE_WORKFLOWS.md)** | Roadmap | Planned workflow improvements |
 
 ---
 
