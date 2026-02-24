@@ -849,6 +849,7 @@ Use this checklist to ensure complete project template implementation:
 - [STATEDIAGRAM.md](STATEDIAGRAM.md) - Deployment and content lifecycle states
 - [MINDMAP.md](MINDMAP.md) - System conceptual relationships
 - [SWOT.md](SWOT.md) - Strategic analysis and positioning
+- [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) - EU Cyber Resilience Act conformity assessment
 
 ---
 
