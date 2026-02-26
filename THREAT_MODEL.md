@@ -11,16 +11,16 @@
 
 <p align="center">
   <a><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
-  <a><img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/></a>
-  <a><img src="https://img.shields.io/badge/Effective-2025--11--16-success?style=for-the-badge" alt="Effective Date"/></a>
+  <a><img src="https://img.shields.io/badge/Version-2.0-555?style=for-the-badge" alt="Version"/></a>
+  <a><img src="https://img.shields.io/badge/Effective-2026--02--26-success?style=for-the-badge" alt="Effective Date"/></a>
   <a><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
 </p>
 
 [![License](https://img.shields.io/github/license/Hack23/homepage)](https://github.com/Hack23/homepage/blob/master/LICENSE)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2025-11-16 (UTC)  
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-02-16  
+**📋 Document Owner:** CEO | **📄 Version:** 2.0 | **📅 Last Updated:** 2026-02-26 (UTC)  
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-26  
 **🏷️ Classification:** Public (Corporate Website)
 
 ---
@@ -60,6 +60,49 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 
 ---
 
+## 🎯 Multi-Strategy Threat Modeling Integration
+
+Following [Hack23 AB Five-Strategy Threat Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#integrated-threat-modeling-strategies) methodology:
+
+```mermaid
+mindmap
+  root)🎯 Threat Modeling Strategies(
+    (🎖️ Attacker-Centric)
+      [MITRE ATT&CK Mapping]
+      [Kill Chain Analysis]
+      [Attack Trees]
+      [Threat Agent Profiles]
+    (🏗️ Asset-Centric)
+      [Crown Jewel Analysis]
+      [Asset Inventory]
+      [Data Flow Threats]
+      [CIA Classification]
+    (🏛️ Architecture-Centric)
+      [STRIDE per Element]
+      [Trust Boundaries]
+      [DFD Threat Annotations]
+      [Defense-in-Depth Layers]
+    (🎯 Scenario-Centric)
+      [Misuse Cases]
+      [What-If Analysis]
+      [Persona-Based Threats]
+      [Attack Simulations]
+    (⚖️ Risk-Centric)
+      [Quantitative Risk Matrix]
+      [Business Impact Analysis]
+      [Likelihood Assessment]
+      [Residual Risk Tracking]
+```
+
+**Strategy Integration:** Each strategy provides complementary coverage ensuring no blind spots:
+- **🎖️ Attacker-Centric** → *Who* attacks and *how* (§4–§7)
+- **🏗️ Asset-Centric** → *What* to protect (§3)
+- **🏛️ Architecture-Centric** → *Where* vulnerabilities exist (§5–§6)
+- **🎯 Scenario-Centric** → *What could happen* in practice (§8)
+- **⚖️ Risk-Centric** → *How much* it matters to the business (§9)
+
+---
+
 ## 📊 System Classification & Operating Profile
 
 ### **🏷️ Security Classification Matrix**
@@ -78,6 +121,44 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 | **🇪🇺 CRA (EU Cyber Resilience Act)** | Standard (Non-commercial) | Static website with comprehensive security controls |
 | **📊 SLA Targets (Internal)** | 99% | CloudFront CDN reliability with AWS Shield |
 | **🔄 RPO / RTO** | RPO: Daily / RTO: >72h | Git version control; scheduled recovery acceptable |
+
+---
+
+## 🌐 Current Threat Landscape (ENISA TL 2024)
+
+Following [Hack23 AB Threat Landscape Integration](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#current-threat-landscape) methodology, aligned with **ENISA Threat Landscape 2024** priority categories:
+
+| # | ENISA Priority Threat | Relevance to Homepage | Risk Level | Key Controls | Status |
+|---|---|---|---|---|---|
+| 1 | **🔒 Ransomware** | Low — Static site with no persistent data; S3 versioning enables recovery | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](#) | S3 versioning, Git backup, CloudTrail | ✅ Mitigated |
+| 2 | **🦠 Malware** | Low — No file uploads or user-generated content; CSP blocks script injection | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](#) | CSP, SRI, static content only | ✅ Mitigated |
+| 3 | **🎣 Social Engineering** | Medium — GitHub account phishing could lead to repository compromise | [![Medium](https://img.shields.io/badge/Risk-Medium-yellow?style=flat-square)](#) | MFA enforcement, FIDO2 keys, security training | ⚠️ Residual |
+| 4 | **📊 Data Threats** | Low — All content is public by design; no sensitive data processed | [![Low](https://img.shields.io/badge/Risk-Low-green?style=flat-square)](#) | Public classification, no PII | ✅ Accepted |
+| 5 | **⚡ Availability Threats** | Medium — DDoS attacks against corporate website impact brand credibility | [![Medium](https://img.shields.io/badge/Risk-Medium-yellow?style=flat-square)](#) | AWS Shield, CloudFront CDN, DNS resilience | ✅ Mitigated |
+| 6 | **📰 Information Manipulation** | High — Cybersecurity consultancy website defacement = maximum reputational damage | [![High](https://img.shields.io/badge/Risk-High-orange?style=flat-square)](#) | Branch protection, CODEOWNERS, S3 versioning, audit trail | ⚠️ Residual |
+| 7 | **🔗 Supply Chain Attacks** | Medium — CI/CD pipeline and external dependencies (Google Fonts) present attack surface | [![Medium](https://img.shields.io/badge/Risk-Medium-yellow?style=flat-square)](#) | SRI, CSP, Dependabot, SHA-pinned Actions, OpenSSF Scorecard | ✅ Mitigated |
+
+### **📈 ENISA Threat Trend Alignment**
+
+```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#e3f2fd',
+      'primaryTextColor': '#01579b',
+      'lineColor': '#0288d1'
+    }
+  }
+}%%
+xychart-beta
+    title "Homepage Exposure to ENISA 2024 Priority Threats"
+    x-axis ["Ransomware", "Malware", "Social Eng.", "Data", "Availability", "Info Manip.", "Supply Chain"]
+    y-axis "Risk Level (1-5)" 1 --> 5
+    bar [1, 1, 3, 1, 3, 4, 3]
+```
+
+**Key Insight:** As a static website for a cybersecurity consultancy, **Information Manipulation** (website defacement) represents the highest ENISA-aligned threat due to disproportionate reputational impact. Supply chain and social engineering threats require ongoing vigilance.
 
 ---
 
@@ -597,13 +678,26 @@ graph LR
 
 **The Pentagon of Security:** Five defensive layers working in harmony, each supporting the next in a continuous cycle of protection.
 
+### **🏛️ STRIDE → Control Mapping Summary**
+
+Consolidated mapping of each STRIDE category to primary, secondary, and monitoring controls:
+
+| STRIDE Category | Primary Controls | Secondary Controls | Monitoring / Detection |
+|---|---|---|---|
+| **🔍 Spoofing** | MFA enforcement (FIDO2), OIDC federation, DNSSEC, CAA records | AWS Certificate Manager, HTTPS/TLS 1.3, HSTS preload | GitHub login alerts, CloudTrail API monitoring, certificate transparency logs |
+| **🛠️ Tampering** | S3 versioning, branch protection, CODEOWNERS, code review | CSP, SRI hashes, SHA-pinned Actions, private S3 bucket | CloudTrail data events, GitHub audit log, Dependabot alerts, ZAP scanning |
+| **🚫 Repudiation** | CloudTrail immutable logging, GitHub audit trail | S3 access logging, CloudFront access logs | Log integrity monitoring, CloudWatch alarms on log gaps |
+| **📢 Information Disclosure** | Secret scanning, OIDC (no long-lived creds), private S3 bucket | IAM least privilege, public-by-design classification | Dependabot secret alerts, IAM Access Analyzer, CloudTrail credential monitoring |
+| **⚡ Denial of Service** | AWS Shield Standard, CloudFront CDN caching, DNS resilience | GitHub Actions resource limits, cost monitoring alerts | CloudWatch DDoS metrics, CloudFront error rate alarms, uptime monitoring |
+| **👑 Elevation of Privilege** | IAM least privilege, OIDC short-lived tokens, minimal workflow permissions | Environment secrets isolation, Harden Runner, branch protection | IAM Access Analyzer, CloudTrail privilege escalation detection, Security Hub findings |
+
 ---
 
 ## 👥 Threat Actor Profiles
 
 ### **Threat Agent Classification**
 
-Following [Hack23 AB Threat Actor Analysis](https://github.com/Hack23/ISMS/blob/main/Threat_Modeling.md#threat-actor-profiles):
+Following [Hack23 AB Threat Actor Analysis](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#threat-agent-classification) methodology:
 
 | Actor Type | Motivation | Capability | Targeted Threats | Likelihood | Priority |
 |------------|-----------|------------|------------------|------------|----------|
@@ -613,6 +707,48 @@ Following [Hack23 AB Threat Actor Analysis](https://github.com/Hack23/ISMS/blob/
 | **🔗 Supply Chain Compromise** | Widespread impact, backdoor insertion | Medium-High | T-03, E-05 | Low | High |
 | **😈 Insider Threat** | Sabotage, theft, negligence | Medium | E-01, T-02, I-01 | Very Low | High |
 | **🤖 Automated Bots** | Spam, scraping, resource abuse | Low | D-01, D-04, I-06 | High | Low |
+
+### **👥 Detailed Threat Agent Profiles**
+
+#### **🎯 Profile 1: Opportunistic Attacker**
+- **Category:** External, Untargeted
+- **Motivation:** Notoriety, resume building, ego — defacing a cybersecurity company website provides maximum bragging rights
+- **Capability:** Low-Medium — uses publicly available tools (credential stuffing lists, automated scanners)
+- **Preferred Tactics:** Credential stuffing (T1078), website defacement (T1565.001), DDoS (T1498)
+- **Target Assets:** GitHub account, website content, DNS configuration
+- **Priority:** 🔴 **High** — Most likely threat actor for this type of target
+
+#### **🏢 Profile 2: Commercial Competitor**
+- **Category:** External, Targeted
+- **Motivation:** Market intelligence on ISMS methodology, sabotage consulting reputation
+- **Capability:** Medium — may employ professional penetration testers
+- **Preferred Tactics:** Source code review (T1213), SEO poisoning via content manipulation (T1565)
+- **Target Assets:** Consulting methodologies, client references, pricing information
+- **Priority:** 🟡 **Medium** — Limited value in public repository content
+
+#### **🌐 Profile 3: Nation-State Actor**
+- **Category:** External, Advanced Persistent Threat
+- **Motivation:** Infrastructure disruption, supply chain compromise of cybersecurity tools
+- **Capability:** High — sophisticated tooling, zero-day capabilities, social engineering expertise
+- **Preferred Tactics:** Supply chain compromise (T1195.002), cloud account takeover (T1078.004)
+- **Target Assets:** AWS infrastructure, CI/CD pipeline, downstream consumers
+- **Priority:** 🟢 **Low** — Static website provides minimal strategic value
+
+#### **🔗 Profile 4: Supply Chain Actor**
+- **Category:** External, Indirect
+- **Motivation:** Widespread impact through compromising shared dependencies
+- **Capability:** Medium-High — targets upstream providers (Google Fonts CDN, npm packages, GitHub Actions)
+- **Preferred Tactics:** Dependency confusion, CDN compromise (T1195.002), action hijacking (T1554)
+- **Target Assets:** External dependencies, CI/CD workflow, build pipeline
+- **Priority:** 🔴 **High** — Active and growing threat vector industry-wide
+
+#### **👤 Profile 5: Malicious Insider**
+- **Category:** Internal
+- **Motivation:** Sabotage, negligence, disgruntlement
+- **Capability:** Medium — direct access to repository and deployment credentials
+- **Preferred Tactics:** Credential abuse (T1078), unauthorized code changes (T1565.001)
+- **Target Assets:** Source code, AWS credentials, deployment pipeline
+- **Priority:** 🟢 **Low** — Small team, high trust, extensive audit logging
 
 ### **Attack Motivation Analysis**
 
@@ -712,6 +848,46 @@ Opportunistic attacker exploits weak GitHub account security (no MFA or reused p
 
 ---
 
+### **🎯 Misuse Cases (Persona-Based Threats)**
+
+Following [Hack23 AB Scenario-Centric Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#scenario-centric-threat-modeling) methodology:
+
+#### **Misuse Case 1: Disgruntled Ex-Client SEO Poisoning**
+- **Persona:** Former consulting client with knowledge of Hack23's CI/CD pipeline
+- **Goal:** Damage reputation by injecting hidden SEO spam or redirect links
+- **Attack Vector:** Social engineering current team member → PR with hidden meta tags or JavaScript redirects
+- **Impact:** Search engine ranking damage, client trust erosion
+- **Controls:** CODEOWNERS review, HTML validation in CI, ZAP scanning, visual diff monitoring
+- **Residual Risk:** 🟢 Low — Multi-layer review catches content changes
+
+#### **Misuse Case 2: Competitor Intelligence Gathering**
+- **Persona:** Rival cybersecurity consultancy performing competitive analysis
+- **Goal:** Extract consulting methodology, pricing strategies, client engagement patterns
+- **Attack Vector:** Systematic scraping of public ISMS documentation, analyzing commit history for internal processes
+- **Impact:** Competitive disadvantage, methodology copying
+- **Controls:** Public-by-design classification (accepted risk), rate limiting via CloudFront
+- **Residual Risk:** 🟡 Medium — Accepted as cost of transparency model
+
+#### **Misuse Case 3: Automated Credential Stuffing Campaign**
+- **Persona:** Botnet operator running mass credential stuffing against GitHub accounts
+- **Goal:** Compromise any accessible account for crypto mining, spam, or resale
+- **Attack Vector:** Leaked credential databases → automated login attempts against @pethers GitHub account
+- **Impact:** Repository compromise, website defacement, CI/CD abuse for crypto mining
+- **Controls:** GitHub MFA enforcement, FIDO2 hardware keys, login anomaly detection
+- **Residual Risk:** 🟢 Low — MFA blocks credential stuffing effectively
+
+### **🔮 What-If Analysis**
+
+| What If... | Impact | Likelihood | Current Mitigation | Gap |
+|---|---|---|---|---|
+| GitHub suffers a platform-wide breach exposing repository tokens? | 🔴 Critical — all repos potentially compromised | Very Low | OIDC federation (no stored tokens), short-lived credentials | None — architecture designed for this scenario |
+| Google Fonts CDN serves malicious content globally? | 🟠 Medium — client-side impact for site visitors | Very Low | SRI hash verification blocks modified content | Consider self-hosting fonts |
+| AWS us-east-1 region has extended outage? | 🟡 Medium — website unavailable during outage | Low | CloudFront edge caching serves stale content | No multi-region S3 replication |
+| A critical vulnerability is found in a GitHub Actions runner? | 🟠 Medium — CI/CD pipeline compromise | Low | SHA-pinned actions, Harden Runner, minimal permissions | Monitor GitHub security advisories |
+| DNS registrar account is compromised? | 🔴 Critical — complete domain takeover | Very Low | Registrar 2FA, domain lock, DNSSEC | Add secondary DNS provider |
+
+---
+
 ## 📈 Residual Risk & Risk Acceptance
 
 ### **Accepted Risks**
@@ -720,10 +896,10 @@ The following risks are **ACCEPTED** as part of normal business operations:
 
 | Risk ID | Risk Description | Business Justification | Acceptance Authority | Review Date |
 |---------|------------------|----------------------|---------------------|-------------|
-| **AR-01** | Email address harvesting from public contact info | Contact information must be accessible for business development | CEO | 2026-02-16 |
-| **AR-02** | Source code visibility in public repository | Transparency is a core value; no sensitive logic exposed | CEO | 2026-02-16 |
-| **AR-03** | Brief outages during AWS service incidents | Static website with 99% target acceptable for marketing | CEO | 2026-02-16 |
-| **AR-04** | CloudFront cache serving stale content | Users tolerate brief staleness; invalidation resolves quickly | CEO | 2026-02-16 |
+| **AR-01** | Email address harvesting from public contact info | Contact information must be accessible for business development | CEO | 2026-05-26 |
+| **AR-02** | Source code visibility in public repository | Transparency is a core value; no sensitive logic exposed | CEO | 2026-05-26 |
+| **AR-03** | Brief outages during AWS service incidents | Static website with 99% target acceptable for marketing | CEO | 2026-05-26 |
+| **AR-04** | CloudFront cache serving stale content | Users tolerate brief staleness; invalidation resolves quickly | CEO | 2026-05-26 |
 
 ### **Risks Requiring Additional Mitigation (Backlog)**
 
@@ -852,6 +1028,22 @@ pie title ATT&CK Tactic Coverage
 - 📋 [CISA Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 - 🎯 [Hack23 Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#mitre-attck-integration)
 
+### **🔪 Kill Chain Disruption Analysis**
+
+Following [Hack23 AB Kill Chain Analysis](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#attacker-centric-threat-modeling) methodology, mapping Cyber Kill Chain phases to homepage defensive controls:
+
+| Kill Chain Phase | Attacker Activity (Homepage Context) | Defensive Control | Detection Mechanism | Disruption Effectiveness |
+|---|---|---|---|---|
+| **1. Reconnaissance** | OSINT on public repo, DNS enumeration, technology fingerprinting | Public-by-design reduces value; minimal tech exposure via headers | GitHub audit logs, CloudFront access logs | [![Medium](https://img.shields.io/badge/Disruption-Medium-yellow?style=flat-square)](#) |
+| **2. Weaponization** | Craft malicious commit, create phishing page for GitHub creds | N/A — Occurs off-target; no direct prevention | Threat intelligence feeds, phishing detection | [![Low](https://img.shields.io/badge/Disruption-Low-red?style=flat-square)](#) |
+| **3. Delivery** | Credential stuffing on GitHub, phishing email to CEO, supply chain PR | MFA enforcement, FIDO2 keys, email security training | GitHub login alerts, failed auth monitoring | [![High](https://img.shields.io/badge/Disruption-High-green?style=flat-square)](#) |
+| **4. Exploitation** | Compromised GitHub account, malicious dependency update | Branch protection, CODEOWNERS review, Dependabot alerts | PR review notifications, dependency diff alerts | [![High](https://img.shields.io/badge/Disruption-High-green?style=flat-square)](#) |
+| **5. Installation** | Push malicious code to repository, modify CI/CD workflow | SHA-pinned Actions, workflow approval requirements, Harden Runner | GitHub Actions audit log, Step Security alerts | [![High](https://img.shields.io/badge/Disruption-High-green?style=flat-square)](#) |
+| **6. Command & Control** | Inject scripts via website for C2 communication | CSP blocks inline/external scripts, SRI integrity checks | CSP violation reports, CloudFront logs | [![Very High](https://img.shields.io/badge/Disruption-Very_High-darkgreen?style=flat-square)](#) |
+| **7. Actions on Objectives** | Website defacement, SEO poisoning, credential harvesting | S3 versioning enables rollback, CloudTrail provides forensics | CloudTrail alerts, uptime monitoring, visual diff checks | [![High](https://img.shields.io/badge/Disruption-High-green?style=flat-square)](#) |
+
+**Kill Chain Summary:** The homepage's strongest disruption points are at **Delivery** (MFA), **Exploitation** (branch protection), and **C2** (CSP). The weakest point is **Weaponization** which occurs off-target and cannot be directly prevented.
+
 ### **🌳 Attack Tree Analysis**
 
 ---
@@ -945,6 +1137,28 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 
 ---
 
+## 📚 Architecture Documentation Map
+
+Cross-reference to the complete Hack23 Homepage documentation portfolio:
+
+| Document | Purpose | Threat Model Relevance |
+|---|---|---|
+| [SECURITY_ARCHITECTURE.md](SECURITY_ARCHITECTURE.md) | Security controls and defense-in-depth design | Primary reference for implemented controls |
+| [FUTURE_SECURITY_ARCHITECTURE.md](FUTURE_SECURITY_ARCHITECTURE.md) | Security enhancement roadmap | Future threat mitigations |
+| [FUTURE_THREAT_MODEL.md](FUTURE_THREAT_MODEL.md) | Future state threat analysis | Evolution of threat landscape |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | C4 architecture model (Context, Container, Component) | System boundary and component identification |
+| [DATA_MODEL.md](DATA_MODEL.md) | Content model and data structures | Asset identification and data flow analysis |
+| [FLOWCHART.md](FLOWCHART.md) | Process flows and deployment workflows | Attack path and CI/CD pipeline analysis |
+| [STATEDIAGRAM.md](STATEDIAGRAM.md) | Deployment and content lifecycle states | State transition threat analysis |
+| [MINDMAP.md](MINDMAP.md) | System conceptual relationships | Holistic threat landscape visualization |
+| [SWOT.md](SWOT.md) | Strategic analysis and positioning | Business context for risk assessment |
+| [CLASSIFICATION.md](CLASSIFICATION.md) | CIA triad classification and business impact | Risk prioritization framework |
+| [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) | EU Cyber Resilience Act conformity | Regulatory compliance alignment |
+| [WORKFLOWS.md](WORKFLOWS.md) | CI/CD and operational workflows | Pipeline security analysis |
+| [SECURITY.md](SECURITY.md) | Vulnerability disclosure policy | Incident response integration |
+
+---
+
 ## 📚 Related Documents
 
 ### 🏛️ Hack23 ISMS Framework
@@ -980,6 +1194,9 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 - [🏛️ CIA Threat Model](https://github.com/Hack23/cia/blob/master/THREAT_MODEL.md) - Java/Spring Framework enterprise web application STRIDE analysis
 - [🎮 Black Trigram Threat Model](https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md) - TypeScript/React/ThreeJs gaming platform security
 - [📊 CIA Compliance Manager Threat Model](https://github.com/Hack23/cia-compliance-manager/blob/main/docs/architecture/THREAT_MODEL.md) - React SPA client-side security
+
+**Homepage Future State:**
+- [🔮 Future Threat Model](FUTURE_THREAT_MODEL.md) - Threat analysis for planned architecture evolution
 
 ### 📋 Repository Documentation
 
@@ -1028,10 +1245,10 @@ Following [Hack23 AB Threat Agent Classification](https://github.com/Hack23/ISMS
 **✅ Approved by:** James Pether Sörling, CEO  
 **📤 Distribution:** Public  
 **🏷️ Classification:** [![Confidentiality: Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Integrity: Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Availability: Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)  
-**📅 Effective Date:** 2025-11-16  
-**⏰ Next Review:** 2026-02-16 (Quarterly)  
+**📅 Effective Date:** 2026-02-26  
+**⏰ Next Review:** 2026-05-26 (Quarterly)  
 **🎯 Framework Compliance:** [![ISO 27001](https://img.shields.io/badge/ISO_27001-A.8.20_A.8.29-blue?style=flat-square&logo=iso&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![NIST CSF 2.0](https://img.shields.io/badge/NIST_CSF-ID.RA_PR.IP-green?style=flat-square&logo=nist&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md) [![CIS Controls](https://img.shields.io/badge/CIS_Controls-v8.1_Aligned-orange?style=flat-square&logo=cisecurity&logoColor=white)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Compliance_Checklist.md)  
-**🔗 Related Documents:** [Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md), [Security Architecture](SECURITY_ARCHITECTURE.md), [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md), [SECURITY.md](SECURITY.md)
+**🔗 Related Documents:** [Threat Modeling Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md), [Security Architecture](SECURITY_ARCHITECTURE.md), [Future Threat Model](FUTURE_THREAT_MODEL.md), [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md), [SECURITY.md](SECURITY.md)
 
 ---
 
