@@ -8,7 +8,7 @@ related_policies:
   - SUPPLIER.md
   - Third_Party_Management_Policy.md
   - Risk_Assessment_Methodology.md
-  - Data_Protection_Policy.md
+  - Privacy_Policy.md
 compliance_frameworks:
   - ISO 27001:2022 (A.5.19 Supplier Relationships, A.5.20 Supplier Agreements)
   - NIST CSF 2.0 (ID.SC-1 through ID.SC-5, GV.SC-1 through GV.SC-10)
@@ -1114,7 +1114,7 @@ def validate_deletion_certificate(certificate: str, supplier_id: str) -> dict:
 
 ### Risk and Compliance
 - [📊 Risk Assessment Methodology](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Risk_Assessment_Methodology.md) — Supplier risk evaluation framework
-- [🛡️ Data Protection Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md) — GDPR Article 28 processor requirements
+- [🛡️ Privacy Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md) — GDPR Article 28 processor requirements
 - [📝 Data Processing Agreement Template](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Processing_Agreement_Template.md) — Standard DPA clauses
 
 ### Operational Integration
