@@ -172,7 +172,7 @@ Sweden
 
 ### Related Documentation
 - [GDPR Breach Notification Procedure](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Incident_Response_Plan.md)
-- [Data Protection Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md)
+- [Privacy Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Privacy_Policy.md)
 - [External Stakeholder Registry Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/External_Stakeholder_Registry.md)
 - Breach Notification Template: `templates/imy-breach-notification-sv.md`
 - DPO Contact: dpo@hack23.com

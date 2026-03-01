@@ -545,7 +545,7 @@ function makeInsecureRequest(url) {
 ## Related ISMS Policies
 
 - **[Cryptographic Controls Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptographic_Controls_Policy.md)** - Primary policy for cryptography
-- **[Data Protection Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Protection_Policy.md)** - Encryption requirements
+- **[Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md)** - Data classification and encryption requirements
 - **[Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md)** - Cryptographic implementation in code
 
 ## Related Documentation
