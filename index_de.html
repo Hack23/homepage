@@ -1092,18 +1092,18 @@
 			<a href="index_de.html" class="nav-logo" aria-label="Hack23 AB Home">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Navigationsmenü öffnen" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
-				<li><a href="why-hack23_de.html">Warum Hack23</a></li>
-				<li><a href="#political-intelligence">KI-Nachrichten</a></li>
-				<li><a href="#security-services">Dienstleistungen</a></li>
-				<li><a href="#products">Produkte</a></li>
-				<li><a href="blog_de.html">Blog</a></li>
-				<li><a href="#faq">FAQ</a></li>
+			<ul class="nav-menu" id="nav-menu" aria-label="Navigationsmenü" aria-hidden="true">
+				<li><a href="why-hack23_de.html" tabindex="-1">Warum Hack23</a></li>
+				<li><a href="#political-intelligence" tabindex="-1">KI-Nachrichten</a></li>
+				<li><a href="#security-services" tabindex="-1">Dienstleistungen</a></li>
+				<li><a href="#products" tabindex="-1">Produkte</a></li>
+				<li><a href="blog_de.html" tabindex="-1">Blog</a></li>
+				<li><a href="#faq" tabindex="-1">FAQ</a></li>
 				<li><a href="#contact" class="btn-nav" tabindex="-1">Kontakt</a></li>
 			</ul>
 		</div>
@@ -2067,17 +2067,87 @@ te Innovation:</strong> Wir zeigen, dass angemessene Sicherheit Innovation besch
 		↑
 	</button>
 	
-    <footer>
-      <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">Company LinkedIn</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS Repository">ISMS</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Information Security Policy">Security Policy</a> |
-        <a href="blog_de.html" title="Security Blog">Blog</a> |
-        <a href="discordian-cybersecurity.html" title="Discordian Cybersecurity Blog">🍎 Discordian Blog</a> |
-        <a href="sitemap.html" title="Site Map">Site Map</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Swedish version</a>
-      </p>
+    <footer role="contentinfo" aria-label="Seitenfußzeile">
+      <div class="footer-container">
+        
+        <!-- Unternehmensinformationen -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersicherheitsberatung<br>
+          Göteborg, Schweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Unternehmensseite</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Dienstleistungen -->
+        <div class="footer-column">
+          <h3>Dienstleistungen</h3>
+          <ul>
+            <li><a href="services.html">Sicherheitsberatung</a></li>
+            <li><a href="services.html">Sicherheitsarchitektur</a></li>
+            <li><a href="services.html">Cloud-Sicherheit</a></li>
+            <li><a href="services.html">DevSecOps-Integration</a></li>
+            <li><a href="services.html">Compliance &amp; ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Produkte -->
+        <div class="footer-column">
+          <h3>Produkte</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Ressourcen -->
+        <div class="footer-column">
+          <h3>Ressourcen</h3>
+          <ul>
+            <li><a href="blog_de.html">Sicherheitsblog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA-Triade FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Öffentliches ISMS</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        
+        <!-- Unternehmen -->
+        <div class="footer-column">
+          <h3>Unternehmen</h3>
+          <ul>
+            <li><a href="why-hack23_de.html">Über Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Sicherheitsrichtlinie</a></li>
+            <li><a href="SECURITY.md">Sicherheitsproblem melden</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organisation</a></li>
+            <li><a href="accessibility-statement.html">Barrierefreiheit</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. Alle Rechte vorbehalten.</p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_de.html" lang="de" aria-current="page">Deutsch</a> | 
+          <a href="index_fr.html" lang="fr">Français</a> | 
+          <a href="index_es.html" lang="es">Español</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_da.html" lang="da">Dansk</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_ja.html" lang="ja">日本語</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_zh.html" lang="zh">中文</a> | 
+          <a href="index_ar.html" lang="ar">العربية</a> | 
+          <a href="index_he.html" lang="he">עברית</a>
+        </p>
+      </div>
     </footer>
 </body>
 </html>
