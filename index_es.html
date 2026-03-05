@@ -1091,18 +1091,18 @@
 			<a href="index_es.html" class="nav-logo" aria-label="Hack23 AB Home">
 				<span>Hack23</span>
 			</a>
-			<button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+			<button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
 				<span></span>
 				<span></span>
 				<span></span>
 			</button>
-			<ul class="nav-menu">
-				<li><a href="why-hack23_es.html">Por qué Hack23</a></li>
-				<li><a href="#political-intelligence">Noticias IA</a></li>
-				<li><a href="#security-services">Servicios</a></li>
-				<li><a href="#products">Productos</a></li>
-				<li><a href="blog_es.html">Blog</a></li>
-				<li><a href="#faq">Preguntas frecuentes</a></li>
+			<ul class="nav-menu" id="nav-menu" aria-label="Menú de navegación" aria-hidden="true">
+				<li><a href="why-hack23_es.html" tabindex="-1">Por qué Hack23</a></li>
+				<li><a href="#political-intelligence" tabindex="-1">Noticias IA</a></li>
+				<li><a href="#security-services" tabindex="-1">Servicios</a></li>
+				<li><a href="#products" tabindex="-1">Productos</a></li>
+				<li><a href="blog_es.html" tabindex="-1">Blog</a></li>
+				<li><a href="#faq" tabindex="-1">Preguntas frecuentes</a></li>
 				<li><a href="#contact" class="btn-nav" tabindex="-1">Contacto</a></li>
 			</ul>
 		</div>
@@ -2064,17 +2064,87 @@
 		↑
 	</button>
 	
-    <footer>
-      <p>&copy; 2008-2026 | Hack23 AB (Org.nr 5595347807) |
-        <a href="https://www.linkedin.com/in/jamessorling/">James Pether Sörling</a> |
-        <a href="https://www.linkedin.com/company/hack23/">LinkedIn de la Empresa</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Repositorio SGSI Público">SGSI</a> |
-        <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" title="Política de Seguridad de la Información">Política de Seguridad</a> |
-        <a href="blog_es.html" title="Blog de Seguridad">Blog</a> |
-        <a href="discordian-cybersecurity_es.html" title="Blog de Ciberseguridad Discordiano">🍎 Blog Discordiano</a> |
-        <a href="sitemap_es.html" title="Mapa del Sitio">Mapa del Sitio</a> |
-        <a href="https://hack23.com/index_sv.html" lang="sv">Versión en sueco</a>
-      </p>
+    <footer role="contentinfo" aria-label="Pie de página">
+      <div class="footer-container">
+        
+        <!-- Información de la Empresa -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Consultoría en Ciberseguridad<br>
+          Gotemburgo, Suecia | Remoto</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">Página de Empresa LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Servicios -->
+        <div class="footer-column">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="services.html">Consultoría de Seguridad</a></li>
+            <li><a href="services.html">Arquitectura de Seguridad</a></li>
+            <li><a href="services.html">Seguridad Cloud</a></li>
+            <li><a href="services.html">Integración DevSecOps</a></li>
+            <li><a href="services.html">Cumplimiento &amp; SGSI</a></li>
+          </ul>
+        </div>
+        
+        <!-- Productos -->
+        <div class="footer-column">
+          <h3>Productos</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Recursos -->
+        <div class="footer-column">
+          <h3>Recursos</h3>
+          <ul>
+            <li><a href="blog_es.html">Blog de Seguridad</a></li>
+            <li><a href="discordian-cybersecurity_es.html">🍎 Blog Discordiano</a></li>
+            <li><a href="cia-triad-faq.html">Preguntas frecuentes Tríada CIA</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">SGSI Público</a></li>
+            <li><a href="sitemap_es.html">Mapa del Sitio</a></li>
+          </ul>
+        </div>
+        
+        <!-- Empresa -->
+        <div class="footer-column">
+          <h3>Empresa</h3>
+          <ul>
+            <li><a href="why-hack23_es.html">Sobre Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Política de Seguridad</a></li>
+            <li><a href="SECURITY.md">Reportar Problema de Seguridad</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">Organización GitHub</a></li>
+            <li><a href="accessibility-statement.html">Accesibilidad</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. Todos los derechos reservados.</p>
+        <p>
+          <a href="index.html" lang="en">English</a> | 
+          <a href="index_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_de.html" lang="de">Deutsch</a> | 
+          <a href="index_fr.html" lang="fr">Français</a> | 
+          <a href="index_es.html" lang="es" aria-current="page">Español</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_da.html" lang="da">Dansk</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_ja.html" lang="ja">日本語</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_zh.html" lang="zh">中文</a> | 
+          <a href="index_ar.html" lang="ar">العربية</a> | 
+          <a href="index_he.html" lang="he">עברית</a>
+        </p>
+      </div>
     </footer>
 </body>
 </html>
