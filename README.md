@@ -1,6 +1,6 @@
 # Hack23 Homepage
 
-Welcome to the Hack23 homepage repository. This is the source code for [Hack23](https://hack23.com/), a Swedish innovation hub founded in 2025 by James Pether Sörling, focusing on precision gaming experiences, security, compliance, and transparency tools.
+Welcome to the Hack23 homepage repository. This is the source code for [Hack23](https://hack23.com/), a Swedish innovation hub founded in 2025 by James Pether Sörling, pioneering **AI-powered political intelligence media**, precision gaming experiences, cybersecurity consulting, and transparency tools.
 
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
@@ -198,7 +198,7 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 ---
 
 # 🔒 Hack23 AB
-### Swedish innovation hub specializing in creating immersive and precise game experiences alongside expert cybersecurity consulting and solutions.
+### Swedish innovation hub pioneering AI-powered political intelligence media and expert cybersecurity consulting — disrupting parliamentary journalism with autonomous AI news generation across Europe.
 
 <div align="center">
   <a href="https://hack23.com">https://hack23.com</a>
@@ -282,6 +282,80 @@ Explore information security, ISMS policies, and cybersecurity best practices th
 
 ---
 
+## 📰 AI-Powered Political Intelligence Media
+
+> *"While traditional newsrooms debate whether AI will replace journalists, Hack23 already runs fully autonomous political intelligence newsrooms — agentic workflows, 14 languages, zero human editors, and a publication schedule that would bankrupt any legacy outlet trying to keep up."*
+
+Hack23 is building the future of **AI-disrupted political journalism** through autonomous intelligence platforms that monitor parliamentary activity across Sweden and the European Union. Our agentic AI pipelines perform **deep political intelligence analysis** — not shallow summaries, but structured intelligence products with source verification, multi-party balance, and GDPR-compliant OSINT methodology.
+
+### 🧠 Why This Is Different
+
+| Traditional AI News | Hack23 Political Intelligence |
+|---|---|
+| Rewrites press releases | Deep political analysis with source verification |
+| Single language | 14 languages including Arabic & Hebrew RTL |
+| Manual editorial oversight | Fully autonomous with quality gates |
+| Generic content | Quantitative metrics: voting cohesion, attendance scoring, legislative productivity |
+| Data scraping | GDPR-compliant OSINT via official parliamentary APIs & MCP tools |
+
+### 🏗️ Platform Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AI Political Intelligence Empire              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  🇸🇪 Riksdagsmonitor          🇪🇺 EU Parliament Monitor          │
+│  ├─ 10 Agentic Workflows     ├─ Automated News Generation      │
+│  ├─ 349 MPs Monitored        ├─ Plenary + Committee Coverage   │
+│  ├─ 3.5M+ Vote Records       ├─ 14-Language Output             │
+│  ├─ 50+ Years Historical     ├─ Week Ahead Intelligence        │
+│  └─ 14 Languages             └─ Breaking News Analysis         │
+│                                                                  │
+│  🔌 European Parliament MCP Server                              │
+│  ├─ 61 MCP Tools (15 OSINT Intelligence)                       │
+│  ├─ MEP Influence Scoring (5-Dimension Model)                  │
+│  ├─ Coalition Dynamics & Anomaly Detection                     │
+│  └─ GDPR Article 30 Audit Logging                              │
+│                                                                  │
+│  🔍 Citizen Intelligence Agency (CIA Platform)                  │
+│  └─ Backend OSINT data engine powering all platforms            │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 📅 Autonomous Publication Schedule (Riksdagsmonitor)
+
+| Time (UTC) | Workflow | Coverage | Frequency |
+|---|---|---|---|
+| 🌅 04:00 | **Committee Reports** | Utskottsbetänkanden analysis, voting breakdowns | Mon–Fri |
+| 🌅 05:00 | **Propositions** | Government bills, legislative impact assessment | Mon–Fri |
+| ☀️ 06:00 | **Motions** | Opposition proposals, party strategy decoding | Mon–Fri |
+| ☀️ 07:00 | **Week Ahead** | Parliamentary calendar preview, agenda intelligence | Friday |
+| ☀️ 08:00 | **Month Ahead** | Strategic outlook, coalition forecasting | 1st of month |
+| 🔍 10:00 & 14:00 | **Realtime Monitor** | Breaking political developments, flash analysis | Mon–Fri (×2) |
+| 🌆 18:00 | **Evening Analysis** | Deep-dive intelligence synthesis | Mon–Sat |
+| 📊 09:00 | **Weekly Review** | Week-in-review scorecard, party performance | Saturday |
+| 📈 10:00 | **Monthly Review** | Comprehensive monthly intelligence assessment | 28th of month |
+
+> **Result**: Hundreds of localized intelligence products each month, generated autonomously with zero editorial intervention.
+
+### 🔮 Future Roadmap: From Agentic News to AGI-Powered Democratic Intelligence
+
+| Phase | Timeline | Key Milestones |
+|---|---|---|
+| **Phase 3: Foundation** | 2026 | ✅ 10 agentic workflows, 14 languages, dual deployment |
+| **Phase 4: Predictive Intelligence** | 2027–2029 | ML prediction models, Nordic parliament expansion, multi-modal content |
+| **Phase 5: EU-Wide Coverage** | 2030–2033 | 27 EU parliaments, 100 automation assets, global reach |
+| **Phase 6: AGI Era** | 2034–2037 | 195 parliaments monitored, predictive governance, democratic safeguards |
+
+**Deep-dive resources:**
+- 📋 [Riksdagsmonitor AI News Generation](https://github.com/Hack23/riksdagsmonitor#-ai-disrupted-news-generation)
+- 📋 [EU Parliament Monitor Agentic Intelligence](https://github.com/Hack23/euparliamentmonitor#-ai-disrupted-news-generation--agentic-intelligence)
+- 📋 [European Parliament MCP Server Future Roadmap](https://github.com/Hack23/European-Parliament-MCP-Server#-ai-disrupted-intelligence--future-roadmap)
+
+---
+
 ### 🗳️ Riksdagsmonitor
 
 <table>
@@ -295,7 +369,7 @@ Explore information security, ISMS policies, and cybersecurity best practices th
       </div>
     </td>
     <td>
-      <p><strong>Swedish Parliament Intelligence Platform</strong> monitoring political activity in Sweden's Riksdag with systematic transparency through real-time analysis and 50+ years of historical data (1971-2024).</p>
+      <p><strong>Swedish Parliament Intelligence Platform</strong> — the world's first fully AI-driven political intelligence newsroom for parliamentary monitoring. 10 agentic workflows autonomously produce deep political analysis in 14 languages, covering 349 MPs, 50+ years of historical data, and real-time OSINT intelligence.</p>
       <div>
         <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor">
           <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/riksdagsmonitor/badge" alt="OpenSSF Scorecard">
@@ -338,7 +412,7 @@ Explore information security, ISMS policies, and cybersecurity best practices th
       </div>
     </td>
     <td>
-      <p><strong>European Parliament Intelligence Platform</strong> — an automated multi-language news platform that monitors EU Parliament activities with 14-language support, covering plenary sessions, committee reports, propositions, and breaking news.</p>
+      <p><strong>European Parliament Intelligence Platform</strong> — automated AI-powered multi-language news platform monitoring EU Parliament activities with agentic intelligence. Generates deep political analysis covering plenary sessions, committee reports, propositions, and breaking news across 14 languages with zero human editors.</p>
       <div>
         <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor">
           <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/euparliamentmonitor/badge" alt="OpenSSF Scorecard">
@@ -381,7 +455,7 @@ Explore information security, ISMS policies, and cybersecurity best practices th
       </div>
     </td>
     <td>
-      <p><strong>Model Context Protocol Server for European Parliament Open Data</strong> — providing AI assistants with structured access to MEPs, plenary sessions, committees, legislative documents, and parliamentary questions through a secure, type-safe TypeScript implementation.</p>
+      <p><strong>Model Context Protocol Server for European Parliament Open Data</strong> — the data backbone of Hack23's AI political intelligence media empire. Provides AI assistants with structured access to MEPs, plenary sessions, committees, and legislative documents through 61 MCP tools including 15 OSINT intelligence tools for influence scoring, coalition analysis, and anomaly detection.</p>
       <div>
         <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server">
           <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/European-Parliament-MCP-Server/badge" alt="OpenSSF Scorecard">
