@@ -4,6 +4,58 @@
 
 This directory contains comprehensive translation guides and status files for all 13 languages supported by the Hack23 AB website.
 
+---
+
+## ⚠️ Translation Gap Analysis (March 2026 — Measured)
+
+> **Critical finding:** Prior quality scores of 75–99% measured *infrastructure completeness only* (hreflang tags, Schema.org, navigation elements). The table below reflects **actual measured body-content translation** across all 96 pages per language.
+
+| Flag | Language | Code | Infrastructure % | Body Content % | Files w/ English Body | Priority |
+|------|----------|------|-----------------|----------------|----------------------|----------|
+| 🇳🇱🌷 | Dutch | nl | 100% | **12%** | 84 / 96 | ⚡ CRITICAL |
+| 🇩🇰⚓ | Danish | da | 100% | **24%** | 73 / 96 | ⚡ CRITICAL |
+| 🇫🇮🦌 | Finnish | fi | 100% | **25%** | 72 / 96 | 🔴 HIGH |
+| 🇫🇷🥐 | French | fr | 100% | **28%** | 69 / 96 | 🔴 HIGH |
+| 🇸🇪👑 | Swedish | sv | 100% | **37%** | 60 / 96 | 🔴 HIGH |
+| 🇩🇪🦅 | German | de | 100% | **42%** | 56 / 96 | 🔴 HIGH |
+| 🇰🇷🏯 | Korean | ko | 100% | **43%** | 55 / 96 | 🔴 HIGH |
+| 🇪🇸🎭 | Spanish | es | 100% | **45%** | 53 / 96 | 🟠 MEDIUM |
+| 🇳🇴⛷️ | Norwegian | no | 100% | **46%** | 52 / 96 | 🟠 MEDIUM |
+| 🇮🇱✡️ | Hebrew | he | 100% | **48%** | 50 / 96 | 🟠 MEDIUM |
+| 🇸🇦🌙 | Arabic | ar | 100% | **59%** | 39 / 96 | 🟡 LOWER |
+| 🇨🇳🐉 | Chinese | zh | 100% | **66%** | 33 / 96 | 🟡 LOWER |
+| 🇯🇵🗾 | Japanese | ja | 100% | **68%** | 31 / 96 | 🟡 LOWER |
+
+**Across all languages:** Infrastructure completion = **100%** (1,248 / 1,248 files). Body content translated = **~32%** (~395 / 1,248 files).
+
+---
+
+## 📏 Measurement Methodology
+
+### What "Infrastructure %" Measures
+A file counts as *infrastructure-complete* when all of the following exist:
+- ✅ HTML file is present with valid HTML5 semantic structure
+- ✅ `hreflang` tags present (28 per file, covering all 14 language variants)
+- ✅ Schema.org structured data (`Organization`, `WebSite`, `BreadcrumbList`, etc.)
+- ✅ Localized metadata — `<title>`, `<meta name="description">`, `<meta name="keywords">`
+- ✅ Localized navigation labels, page headings, and footer elements
+- ✅ RTL `dir="rtl"` attribute for Arabic and Hebrew
+
+### What "Body Content %" Measures
+A file is counted as *body-translated* when its **main article / page body paragraphs are in the target language** — i.e., the human-readable prose that visitors actually read.
+
+Detection method: English-sentence patterns are searched in `<p>` elements using the heuristic:
+
+```
+<p>[A-Z][a-z]+ [a-z]+ [a-z]+
+```
+
+A file whose `<p>` blocks still match this pattern is classified as **body = English** and increments the "Files w/ English Body" counter. A file whose primary paragraphs do *not* match (because they are in the target script or a translated sentence structure) is counted as *body translated*.
+
+> **Summary:** Infrastructure metrics show *SEO plumbing* completeness. Body content metrics show *what visitors actually read*.
+
+---
+
 ### 🎉 Latest Update: Translation Infrastructure Complete (January 2026)
 
 **📊 STATUS UPDATE (January 13, 2026): Infrastructure Complete, Content Translation In Progress**
@@ -31,12 +83,12 @@ This directory contains comprehensive translation guides and status files for al
     - Norwegian: 27 blog files
     - Chinese: 27 blog files
 
-#### Revised Summary Statistics (January 13, 2026):
-- **Total Files Created:** 1,248/1,248 (100% infrastructure coverage)
-- **Fully Translated Files:** ~760-800 files (61-64%)
-- **Infrastructure-Only Files:** ~450-488 files (36-39%)
-- **Languages with Full Content Translation:** 3 languages (Swedish, German, English)
-- **Languages Needing Body Content Translation:** 10 languages
+#### Revised Summary Statistics (March 2026 — Measured Values):
+- **Total Files Created:** 1,248 / 1,248 (100% infrastructure coverage) ✅
+- **Body Content Translated:** ~395 / 1,248 files (~32% of all translation files)
+- **Infrastructure-Only Files:** ~853 / 1,248 files (~68% — HTML/hreflang/Schema.org complete, body still English)
+- **Languages with Full Content Translation:** 0 languages (none exceed 80% body content)
+- **Languages Needing Body Content Translation:** All 13 languages
 - **Infrastructure:** Complete hreflang tags, Schema.org metadata, and RTL support across all files ✅
 
 ### ⚠️ Translation Quality Clarification (January 13, 2026)
@@ -60,20 +112,20 @@ This directory contains comprehensive translation guides and status files for al
    - **Reality**: Infrastructure 100%, body content variable (30-100% depending on language and file type)
    - **Corrected approach**: Separate infrastructure and content metrics
 
-#### Revised Language Status:
-- **🇸🇪 Swedish:** Infrastructure 100%, Content 98% (EXCELLENT)
-- **🇩🇪 German:** Infrastructure 100%, Content 95% (EXCELLENT)
-- **🇳🇴 Norwegian:** Infrastructure 100%, Content 70% (ISMS good, blogs pending)
-- **🇩🇰 Danish:** Infrastructure 100%, Content 70% (ISMS good, blogs pending)
-- **🇫🇮 Finnish:** Infrastructure 100%, Content 70% (ISMS good, blogs pending)
-- **🇳🇱 Dutch:** Infrastructure 100%, Content 65% (ISMS partial, blogs pending)
-- **🇫🇷 French:** Infrastructure 100%, Content 60% (many files pending)
-- **🇪🇸 Spanish:** Infrastructure 100%, Content 55% (many files pending)
-- **🇮🇱 Hebrew:** Infrastructure 100%, Content 50% (many files pending)
-- **🇸🇦 Arabic:** Infrastructure 100%, Content 45% (most blogs pending)
-- **🇯🇵 Japanese:** Infrastructure 100%, Content 50% (key ISO 27001 implementation page translated and validated, blogs pending)
-- **🇰🇷 Korean:** Infrastructure 100%, Content 45% (most blogs pending)
-- **🇨🇳 Chinese:** Infrastructure 100%, Content 45% (most blogs pending)
+#### Revised Language Status (March 2026 — Actual Measured Values):
+- **🇳🇱 Dutch:** Infrastructure 100%, Body Content **12%** ⚠️ CRITICAL
+- **🇩🇰 Danish:** Infrastructure 100%, Body Content **24%** ⚠️ CRITICAL
+- **🇫🇮 Finnish:** Infrastructure 100%, Body Content **25%** 🚧 HIGH
+- **🇫🇷 French:** Infrastructure 100%, Body Content **28%** 🚧 HIGH
+- **🇸🇪 Swedish:** Infrastructure 100%, Body Content **37%** 🚧 HIGH
+- **🇩🇪 German:** Infrastructure 100%, Body Content **42%** 🚧 HIGH
+- **🇰🇷 Korean:** Infrastructure 100%, Body Content **43%** 🚧 HIGH
+- **🇪🇸 Spanish:** Infrastructure 100%, Body Content **45%** 🚧 MEDIUM
+- **🇳🇴 Norwegian:** Infrastructure 100%, Body Content **46%** 🚧 MEDIUM
+- **🇮🇱 Hebrew:** Infrastructure 100%, Body Content **48%** 🚧 MEDIUM
+- **🇸🇦 Arabic:** Infrastructure 100%, Body Content **59%** 🚧 LOWER
+- **🇨🇳 Chinese:** Infrastructure 100%, Body Content **66%** 🚧 LOWER
+- **🇯🇵 Japanese:** Infrastructure 100%, Body Content **68%** 🚧 LOWER
 
 #### Action Plan for Full Translation:
 **Option A** (Current): Accept infrastructure-complete state, document accurately
@@ -265,165 +317,205 @@ Each language has **two dedicated files**:
 ## Supported Languages (13)
 
 ### RTL Languages ←
-| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
-|------|----------|------|-------|------------|---------|---------------|--------|
-| 🇸🇦🌙 | Arabic | ar | 96/96 | 100% | **85.2%** 🎉 | [v3.1 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
-| 🇮🇱✡️ | Hebrew | he | 96/96 | 100% | **90.0%** 🎉 | [v4.0 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) \| [Analysis 📊](HEBREW_TRANSLATION_PRIORITY_ANALYSIS.md) |
+| Flag | Language | Code | Files | Infra % | Body % | Guide Version | Status |
+|------|----------|------|-------|---------|--------|---------------|--------|
+| 🇸🇦🌙 | Arabic | ar | 96/96 | 100% | **59%** 🚧 | [v3.1 📖](Arabic-Translation-Guide.md) | [Status 📊](Arabic-Translation-Status.md) |
+| 🇮🇱✡️ | Hebrew | he | 96/96 | 100% | **48%** 🚧 | [v4.0 📖](Hebrew-Translation-Guide.md) | [Status 📊](Hebrew-Translation-Status.md) \| [Analysis 📊](HEBREW_TRANSLATION_PRIORITY_ANALYSIS.md) |
 
 ### Asian Languages 🌏
-| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
-|------|----------|------|-------|------------|---------|---------------|--------|
-| 🇯🇵🗾 | Japanese | ja | 96/96 | 100% | 83.5% | [v3.1 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
-| 🇨🇳🐉 | Chinese | zh | 96/96 | 100% | **95.0%** 🎉 | [v3.1 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
-| 🇰🇷🏯 | Korean | ko | 96/96 | 100% | 75.0% | [v6.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
+| Flag | Language | Code | Files | Infra % | Body % | Guide Version | Status |
+|------|----------|------|-------|---------|--------|---------------|--------|
+| 🇯🇵🗾 | Japanese | ja | 96/96 | 100% | **68%** 🚧 | [v3.1 📖](Japanese-Translation-Guide.md) | [Status 📊](Japanese-Translation-Status.md) |
+| 🇨🇳🐉 | Chinese | zh | 96/96 | 100% | **66%** 🚧 | [v3.1 📖](Chinese-Translation-Guide.md) | [Status 📊](Chinese-Translation-Status.md) |
+| 🇰🇷🏯 | Korean | ko | 96/96 | 100% | **43%** 🚧 | [v6.0 📖](Korean-Translation-Guide.md) | [Status 📊](Korean-Translation-Status.md) |
 
 ### Nordic Languages ❄️
-| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
-|------|----------|------|-------|------------|---------|---------------|--------|
-| 🇩🇰⚓ | Danish | da | 96/96 | 100% | **95.0%** 🎉 | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
-| 🇫🇮🦌 | Finnish | fi | 96/96 | 100% | **98.0%** 🎉 | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
-| 🇳🇴⛷️ | Norwegian | no | 96/96 | 100% | **96.1%** 🎉 | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
+| Flag | Language | Code | Files | Infra % | Body % | Guide Version | Status |
+|------|----------|------|-------|---------|--------|---------------|--------|
+| 🇩🇰⚓ | Danish | da | 96/96 | 100% | **24%** ⚠️ | [v3.1 📖](Danish-Translation-Guide.md) | [Status 📊](Danish-Translation-Status.md) |
+| 🇫🇮🦌 | Finnish | fi | 96/96 | 100% | **25%** 🚧 | [v3.1 📖](Finnish-Translation-Guide.md) | [Status 📊](Finnish-Translation-Status.md) |
+| 🇳🇴⛷️ | Norwegian | no | 96/96 | 100% | **46%** 🚧 | [v3.1 📖](Norwegian-Translation-Guide.md) | [Status 📊](Norwegian-Translation-Status.md) |
 
 ### European Languages 🇪🇺
-| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
-|------|----------|------|-------|------------|---------|---------------|--------|
-| 🇳🇱🌷 | Dutch | nl | 96/96 | 100% | 83.5% | [v3.1 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
-| 🇩🇪🦅 | German | de | 96/96 | 100% | **98.9%** 🎉 | [v3.1 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
-| 🇫🇷🥐 | French | fr | 96/96 | 100% | **98.0%** 🎉 | [v3.1 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
-| 🇪🇸🎭 | Spanish | es | 96/96 | 100% | 88.0% | [v3.1 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
+| Flag | Language | Code | Files | Infra % | Body % | Guide Version | Status |
+|------|----------|------|-------|---------|--------|---------------|--------|
+| 🇳🇱🌷 | Dutch | nl | 96/96 | 100% | **12%** ⚠️ | [v3.1 📖](Dutch-Translation-Guide.md) | [Status 📊](Dutch-Translation-Status.md) |
+| 🇩🇪🦅 | German | de | 96/96 | 100% | **42%** 🚧 | [v3.1 📖](German-Translation-Guide.md) | [Status 📊](German-Translation-Status.md) |
+| 🇫🇷🥐 | French | fr | 96/96 | 100% | **28%** 🚧 | [v3.1 📖](French-Translation-Guide.md) | [Status 📊](French-Translation-Status.md) |
+| 🇪🇸🎭 | Spanish | es | 96/96 | 100% | **45%** 🚧 | [v3.1 📖](Spanish-Translation-Guide.md) | [Status 📊](Spanish-Translation-Status.md) |
 
 ### Base Language 👑
-| Flag | Language | Code | Files | Completion | Quality | Guide Version | Status |
-|------|----------|------|-------|------------|---------|---------------|--------|
-| 🇸🇪👑 | Swedish | sv | 96/96 | **100%** | **98.3%** 🎉 | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
+| Flag | Language | Code | Files | Infra % | Body % | Guide Version | Status |
+|------|----------|------|-------|---------|--------|---------------|--------|
+| 🇸🇪👑 | Swedish | sv | 96/96 | **100%** | **37%** 🚧 | [v3.1 📖](Swedish-Translation-Guide.md) | [Status 📊](Swedish-Translation-Status.md) |
 
-**Total:** 1,248 translation files out of 1,248 possible (96 base × 13 languages) = **100% complete** 🎉  
+**Total:** 1,248 translation files out of 1,248 possible (96 base × 13 languages) = **100% infrastructure complete** ✅ | **~32% body content translated** ⚠️
 
 ## 📊 Visual Translation Overview
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','primaryTextColor':'#fff','primaryBorderColor':'#2E7D32','lineColor':'#666','secondaryColor':'#2196F3','tertiaryColor':'#FFC107','fontSize':'16px'}}}%%
 graph TB
-    subgraph "🌍 Translation Status Overview - January 2026"
+    subgraph "🌍 Translation Status Overview — March 2026 (Two-Tier Metrics)"
         A["📚 96 Base English Files"] --> B{"🌐 13 Languages"}
         B --> C["❄️ Nordic Group<br/>🇩🇰🇫🇮🇳🇴🇸🇪"]
         B --> D["🇪🇺 European Group<br/>🇩🇪🇳🇱🇫🇷🇪🇸"]
         B --> E["🌏 Asian Group<br/>🇯🇵🇨🇳🇰🇷"]
         B --> F["← RTL Group<br/>🇸🇦🇮🇱"]
-        
-        C --> C1["🇸🇪👑 Swedish: 100%<br/>🏆 Quality: 98.3%"]
-        C --> C2["⚓🦌⛷️ DA/FI/NO: 100%<br/>🎯 Quality: 95.0-98.0%"]
-        
-        D --> D1["🇩🇪🦅 German: 100%<br/>🎉 Quality: 98.9%"]
-        D --> D2["🌷🥐🎭 Others: 100%<br/>✅ Quality: 83.5-98.0%"]
-        
-        E --> E1["🇨🇳🐉 Chinese: 100%<br/>🎉 Quality: 95.0%"]
-        E --> E2["🗾🏯 JA/KO: 100%<br/>✅ Quality: 75.0-83.5%"]
-        
-        F --> F1["🇮🇱✡️ Hebrew: 100%<br/>🎉 Quality: 90.0%"]
-        F --> F2["🇸🇦🌙 Arabic: 100%<br/>✅ Quality: 85.2%"]
-        
+
+        C --> C1["🇸🇪👑 Swedish\n100% Infra | 37% Body\n🚧 HIGH"]
+        C --> C2["🇩🇰⚓ Danish\n100% Infra | 24% Body\n⚠️ CRITICAL"]
+        C --> C3["🇫🇮🦌 Finnish\n100% Infra | 25% Body\n🚧 HIGH"]
+        C --> C4["🇳🇴⛷️ Norwegian\n100% Infra | 46% Body\n🚧 MEDIUM"]
+
+        D --> D1["🇩🇪🦅 German\n100% Infra | 42% Body\n🚧 HIGH"]
+        D --> D2["🇳🇱🌷 Dutch\n100% Infra | 12% Body\n⚠️ CRITICAL"]
+        D --> D3["🇫🇷🥐 French\n100% Infra | 28% Body\n🚧 HIGH"]
+        D --> D4["🇪🇸🎭 Spanish\n100% Infra | 45% Body\n🚧 MEDIUM"]
+
+        E --> E1["🇨🇳🐉 Chinese\n100% Infra | 66% Body\n🚧 LOWER"]
+        E --> E2["🇯🇵🗾 Japanese\n100% Infra | 68% Body\n🚧 LOWER"]
+        E --> E3["🇰🇷🏯 Korean\n100% Infra | 43% Body\n🚧 HIGH"]
+
+        F --> F1["🇮🇱✡️ Hebrew\n100% Infra | 48% Body\n🚧 MEDIUM"]
+        F --> F2["🇸🇦🌙 Arabic\n100% Infra | 59% Body\n🚧 LOWER"]
+
         style A fill:#4CAF50,stroke:#2E7D32,color:#fff,stroke-width:3px
         style B fill:#2196F3,stroke:#1565C0,color:#fff,stroke-width:3px
         style C fill:#00BCD4,stroke:#00838F,color:#fff,stroke-width:2px
         style D fill:#FF9800,stroke:#E65100,color:#fff,stroke-width:2px
         style E fill:#E91E63,stroke:#AD1457,color:#fff,stroke-width:2px
         style F fill:#9C27B0,stroke:#6A1B9A,color:#fff,stroke-width:2px
-        style C1 fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style C2 fill:#43A047,stroke:#2E7D32,color:#fff
-        style D1 fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style D2 fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
-        style E1 fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style E2 fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
-        style F1 fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style F2 fill:#2E7D32,stroke:#4CAF50,color:#fff,stroke-width:2px
+        style C1 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style C2 fill:#D32F2F,stroke:#B71C1C,color:#fff,stroke-width:3px
+        style C3 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style C4 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style D1 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style D2 fill:#D32F2F,stroke:#B71C1C,color:#fff,stroke-width:3px
+        style D3 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style D4 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style E1 fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
+        style E2 fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
+        style E3 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style F1 fill:#F57C00,stroke:#FF9800,color:#fff,stroke-width:2px
+        style F2 fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
     end
 ```
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#4CAF50','fontSize':'16px'}}}%%
 graph TB
-    subgraph "📊 Completion & Quality by Language - January 2026"
-        FI["🇫🇮🦌 Finnish<br/>100% Files | 98.0% Quality<br/>🎉 Excellent"]
-        DE["🇩🇪🦅 German<br/>100% Files | 98.9% Quality<br/>🎉 Excellent"]
-        SV["🇸🇪👑 Swedish<br/>100% Files | 98.3% Quality<br/>🎉 Excellent"]
-        FR["🇫🇷🥐 French<br/>100% Files | 98.0% Quality<br/>🎉 Excellent"]
-        
-        NO["🇳🇴⛷️ Norwegian<br/>100% Files | 96.1% Quality<br/>🎉 Excellent"]
-        DA["🇩🇰⚓ Danish<br/>100% Files | 95.0% Quality<br/>🎉 Excellent"]
-        ZH["🇨🇳🐉 Chinese<br/>100% Files | 95.0% Quality<br/>🎉 Excellent"]
-        HE["🇮🇱✡️ Hebrew<br/>100% Files | 90.0% Quality<br/>🎉 Excellent"]
-        
-        ES["🇪🇸🎭 Spanish<br/>100% Files | 88.0% Quality<br/>✅ Good"]
-        AR["🇸🇦🌙 Arabic<br/>100% Files | 85.2% Quality<br/>✅ Good"]
-        NL["🇳🇱🌷 Dutch<br/>100% Files | 83.5% Quality<br/>✅ Good"]
-        JA["🇯🇵🗾 Japanese<br/>100% Files | 83.5% Quality<br/>✅ Good"]
-        KO["🇰🇷🏯 Korean<br/>100% Files | 75.0% Quality<br/>⚠️ In Progress"]
-        
-        style FI fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style DE fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style SV fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style FR fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style NO fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style DA fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style ZH fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style HE fill:#1B5E20,stroke:#4CAF50,color:#fff,stroke-width:3px
-        style ES fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style AR fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style NL fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style JA fill:#2E7D32,stroke:#4CAF50,color:#fff
-        style KO fill:#F57C00,stroke:#FF9800,color:#fff
+    subgraph "📊 Body Content Translation % by Language — March 2026 (Worst → Best)"
+        NL["🇳🇱🌷 Dutch\n100% Infra | 12% Body\n⚠️ CRITICAL"]
+        DA["🇩🇰⚓ Danish\n100% Infra | 24% Body\n⚠️ CRITICAL"]
+        FI["🇫🇮🦌 Finnish\n100% Infra | 25% Body\n🚧 HIGH"]
+        FR["🇫🇷🥐 French\n100% Infra | 28% Body\n🚧 HIGH"]
+        SV["🇸🇪👑 Swedish\n100% Infra | 37% Body\n🚧 HIGH"]
+        DE["🇩🇪🦅 German\n100% Infra | 42% Body\n🚧 HIGH"]
+        KO["🇰🇷🏯 Korean\n100% Infra | 43% Body\n🚧 HIGH"]
+        ES["🇪🇸🎭 Spanish\n100% Infra | 45% Body\n🚧 MEDIUM"]
+        NO["🇳🇴⛷️ Norwegian\n100% Infra | 46% Body\n🚧 MEDIUM"]
+        HE["🇮🇱✡️ Hebrew\n100% Infra | 48% Body\n🚧 MEDIUM"]
+        AR["🇸🇦🌙 Arabic\n100% Infra | 59% Body\n🚧 LOWER"]
+        ZH["🇨🇳🐉 Chinese\n100% Infra | 66% Body\n🚧 LOWER"]
+        JA["🇯🇵🗾 Japanese\n100% Infra | 68% Body\n🚧 LOWER"]
+
+        style NL fill:#D32F2F,stroke:#B71C1C,color:#fff,stroke-width:3px
+        style DA fill:#D32F2F,stroke:#B71C1C,color:#fff,stroke-width:3px
+        style FI fill:#E64A19,stroke:#BF360C,color:#fff,stroke-width:2px
+        style FR fill:#E64A19,stroke:#BF360C,color:#fff,stroke-width:2px
+        style SV fill:#F57C00,stroke:#E65100,color:#fff,stroke-width:2px
+        style DE fill:#F57C00,stroke:#E65100,color:#fff,stroke-width:2px
+        style KO fill:#F57C00,stroke:#E65100,color:#fff,stroke-width:2px
+        style ES fill:#F9A825,stroke:#F57F17,color:#000,stroke-width:2px
+        style NO fill:#F9A825,stroke:#F57F17,color:#000,stroke-width:2px
+        style HE fill:#F9A825,stroke:#F57F17,color:#000,stroke-width:2px
+        style AR fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
+        style ZH fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
+        style JA fill:#FBC02D,stroke:#F9A825,color:#000,stroke-width:2px
     end
 ```
 
 
 **Base English Files:** 96  
-**Total Translation Files:** 1,248 out of 1,248 possible (**100% complete** 🎉)  
-**Last Updated:** January 4, 2026
+**Total Translation Files:** 1,248 out of 1,248 possible (**100% infrastructure complete** ✅ | **~32% body content translated** ⚠️)  
+**Last Updated:** March 2026
 
-## 📋 Priority Recommendations for Phase 7+
+## 📋 Priority Recommendations (Based on Measured Body-Content Gaps)
 
-### Top Priority Translation Tasks (Based on December 30, 2025 Status)
+> Priorities are ordered by **actual body-content translation percentage** (lowest first), as measured in March 2026.
 
-#### 1. Complete High-Value Partially Translated Pages 🔴 **HIGH**
-**Target Pages:** Files with 50-80% translation (infrastructure complete, content gaps)
-- **Swedish:** 8 files with minimal English (blog posts, product docs)
-- **German:** 1 remaining file + quality improvements on existing translations
-- **French:** 10 remaining ISMS files + quality improvements
-- **Estimated Impact:** Immediate SEO improvement, professional presentation
+### ⚡ CRITICAL — Translate First (Body Content < 25%)
 
-**Approach:**
-- Focus on user-facing content first (homepage, services, products)
-- Use existing terminology from translation guides v3.1-v6.0
-- Leverage AI translation tools with human review
-- Priority order: Homepage → Services → Products → Blog posts
+#### 1. Dutch (nl) — 12% body translated (84 / 96 files still English) 🔴
+- Most infrastructure-only language; only 12 files have translated body content
+- **Immediate action:** Focus on homepage, services, and product pages first
+- Estimated scope: ~72,000 words across 84 files
+- Recommended tooling: DeepL Pro API with v3.1 glossary
 
-#### 2. Complete Remaining ISMS Policy Files ✅ **MOSTLY COMPLETE**
-**Status Update:** PR #912 completed 278 files across 10 languages, including extensive ISMS policy coverage!
-- **✅ Completed:** Spanish (36 files), Dutch (33 files), German (18 files), Japanese (28 files), Chinese (28 files), Danish (all ISMS policies complete), Finnish (all ISMS policies complete), Norwegian (all ISMS policies complete)
-- **🚧 Remaining:** 
-  - **French:** 10 ISMS files still needed (86/96 complete)
-  - **Arabic:** 3 files still needed (93/96 complete)
-  - **Hebrew:** 2 files still needed (94/96 complete)
+#### 2. Danish (da) — 24% body translated (73 / 96 files still English) 🔴
+- Previously reported as "95% quality" — that score was infrastructure-only
+- Note: Check for Swedish-text contamination in existing translated files
+- **Immediate action:** ISMS policy pages + homepage content
+- Recommended tooling: DeepL Pro API with Nordic glossary
 
-**Recommended Batch Approach:**
-1. Create infrastructure first (HTML, hreflang, Schema.org) - Automated
-2. Translate metadata (titles, descriptions, keywords) - AI + human review
-3. Professional content translation - Native speaker review required
-4. Quality validation - Terminology consistency check
+### 🔴 HIGH Priority (Body Content 25–50%)
 
-#### 3. Blog Content Translation (European Languages) 🟢 **LOWER**
-**Status:** Infrastructure exists for 3 high-priority posts (DE/ES/FR/NL)
-- blog-public-isms-benefits, blog-automated-convergence, blog-information-hoarding
-- **Scope:** ~9,000 words per language (~36,000 words total for 4 languages)
-- **Effort:** 17-20 hours per language
-- **Budget Estimate:** €1,530-1,800 per language (€6,120-7,200 total)
+#### 3. Finnish (fi) — 25% body translated (72 / 96 files still English)
+- Note: Cross-check for Swedish-text contamination in template-derived files
+- Focus: ISMS discordian pages first (highest search value)
 
-**Professional Translation Requirements:**
-- Native-level proficiency with cybersecurity expertise
-- Business writing for executive audience (C-suite tone)
-- Discordian philosophical style preservation
-- Local regulatory body adaptations (BSI, AEPD, CNIL, AP)
+#### 4. French (fr) — 28% body translated (69 / 96 files still English)
+- Previously reported as "98% quality" — that was infrastructure only
+- Regulatory adaptation needed: CNIL, RGPD references
+- Focus: services, blog, ISMS policy pages
+
+#### 5. Swedish (sv) — 37% body translated (60 / 96 files still English)
+- Primary-market language; higher priority despite not being worst
+- Focus: remaining blog posts and newer product pages
+
+#### 6. German (de) — 42% body translated (56 / 96 files still English)
+- Previously reported as "98.9% quality" — that was infrastructure only
+- Regulatory adaptation: BSI, DSGVO references
+- Focus: blog content + newer product pages
+
+#### 7. Korean (ko) — 43% body translated (55 / 96 files still English)
+- K-ISMS/PIPA context already established in existing files; leverage as baseline
+
+### 🟠 MEDIUM Priority (Body Content 45–50%)
+
+#### 8. Spanish (es) — 45% body translated (53 / 96 files still English)
+- Regulatory: AEPD references required
+- Focus: services + blog posts first
+
+#### 9. Norwegian (no) — 46% body translated (52 / 96 files still English)
+- Previously reported as "96.1% quality" — that was infrastructure only
+- Check for Swedish-text contamination
+
+#### 10. Hebrew (he) — 48% body translated (50 / 96 files still English)
+- RTL layout already validated; body translation is the remaining gap
+- Phase 4 terminology standardisation complete — use as glossary foundation
+
+### 🟡 LOWER Priority (Body Content 59–68%)
+
+#### 11. Arabic (ar) — 59% body translated (39 / 96 files still English)
+- RTL layout solid; highest body-content coverage of RTL languages
+- Focus: remaining blog infrastructure pages
+
+#### 12. Chinese (zh) — 66% body translated (33 / 96 files still English)
+- Focus: remaining 33 files, prioritise product and service pages
+
+#### 13. Japanese (ja) — 68% body translated (31 / 96 files still English)
+- Best body-content coverage overall; focus on closing final 31 files
+
+---
+
+### 📋 Recommended Batch Approach
+
+**Phase 1 (CRITICAL — NL, DA):** Target first to eliminate the largest gaps
+**Phase 2 (HIGH — FI, FR, SV, DE, KO):** Maximum SEO impact for European + Asian markets
+**Phase 3 (MEDIUM — ES, NO, HE):** Round out key markets
+**Phase 4 (LOWER — AR, ZH, JA):** Polish remaining files to achieve >80% body translation
 
 ## 🤖 AI Translation Batch Processing Workflows
 
@@ -740,10 +832,10 @@ For questions about translation documentation:
 
 ---
 
-**Last Updated:** January 4, 2026  
+**Last Updated:** March 2026  
 **Guide Version:** 3.1 (Enhanced Vocabulary Edition)  
 **Maintainer:** Hack23 AB Translation Team  
-**Total Files:** 1,248 translation files (**100% complete** 🎉) | 29 documentation files (26 guides/status + 3 Swedish blog-specific)  
+**Total Files:** 1,248 translation files (**100% infrastructure complete** ✅ | **~32% body content translated** ⚠️) | 29 documentation files (26 guides/status + 3 Swedish blog-specific)  
 **Vocabulary Coverage:** 60-91 verified term pairs per language extracted from real translated content
 
 ---
