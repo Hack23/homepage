@@ -208,706 +208,706 @@
   <article>
     
     <section id="introduction">
-      <h2 class="panel-caption">🎯 Why ISO 27001 Matters for Swedish Companies</h2>
+      <h2 class="panel-caption">🎯 Hvorfor ISO 27001 er afgørende for svenske virksomheder</h2>
       
-      <p><strong>ISO 27001 certification has become essential for Swedish companies targeting enterprise clients, international markets, and regulated industries.</strong> Whether you're a startup scaling to enterprise sales, a SaaS provider expanding globally, or a consulting firm competing for government contracts, ISO 27001 certification demonstrates your commitment to information security management.</p>
+      <p><strong>ISO 27001-certificering er blevet uundværlig for svenske virksomheder, der retter sig mod enterprise-kunder, internationale markeder og regulerede industrier.</strong> Uanset om I er en startup, der skalerer til enterprise-salg, en SaaS-udbyder, der ekspanderer globalt, eller et konsulentfirma, der konkurrerer om offentlige kontrakter, dokumenterer ISO 27001-certificering jeres engagement i informationssikkerhedsledelse.</p>
       
-      <p>This comprehensive guide provides everything Swedish companies need to achieve ISO 27001:2022 certification: a practical 90-day implementation roadmap, realistic cost analysis based on the Swedish market, guidance on selecting SWEDAC-accredited certification bodies, and real-world lessons from <strong>Hack23's public ISMS implementation</strong>—one of the few completely transparent ISO 27001 implementations available for reference.</p>
+      <p>Denne omfattende vejledning indeholder alt, hvad svenske virksomheder har brug for til at opnå ISO 27001:2022-certificering: en praktisk 90-dages implementeringsvejledning, realistisk omkostningsanalyse baseret på det svenske marked, vejledning til valg af SWEDAC-akkrediterede certificeringsorganer og erfaringer fra den virkelige verden fra <strong>Hack23's offentlige ISMS-implementering</strong> – en af de få fuldstændig transparente ISO 27001-implementeringer, der er tilgængelige som reference.</p>
       
       <div class="cards">
         <div class="card success-card">
-          <h3>📊 What You'll Learn</h3>
+          <h3>📊 Hvad I lærer</h3>
           <ul>
-            <li><strong>90-Day Implementation Roadmap:</strong> Detailed week-by-week plan for Swedish SMEs</li>
-            <li><strong>Cost & Resource Planning:</strong> Realistic budgets for the Swedish market (€25,000-€50,000)</li>
-            <li><strong>Certification Body Selection:</strong> How to choose among SWEDAC-accredited auditors</li>
-            <li><strong>Risk Assessment Framework:</strong> Practical approach to ISO 27001 risk management</li>
-            <li><strong>Control Implementation:</strong> Prioritizing the 93 Annex A controls effectively</li>
-            <li><strong>Common Mistakes:</strong> Pitfalls to avoid based on real experience</li>
-            <li><strong>Case Study:</strong> Lessons from Hack23's transparent ISMS implementation</li>
+            <li><strong>90-dages implementeringsvejledning:</strong> Detaljeret uge-for-uge-plan for svenske SMV'er</li>
+            <li><strong>Omkostnings- og ressourceplanlægning:</strong> Realistiske budgetter for det svenske marked (€25.000-€50.000)</li>
+            <li><strong>Valg af certificeringsorgan:</strong> Sådan vælger I blandt SWEDAC-akkrediterede revisorer</li>
+            <li><strong>Risikovurderingsramme:</strong> Praktisk tilgang til ISO 27001-risikostyring</li>
+            <li><strong>Kontrolimplementering:</strong> Prioritering af de 93 Bilag A-kontroller effektivt</li>
+            <li><strong>Almindelige fejl:</strong> Faldgruber at undgå baseret på reel erfaring</li>
+            <li><strong>Casestudie:</strong> Erfaringer fra Hack23's transparente ISMS-implementering</li>
           </ul>
         </div>
       </div>
       
-      <p><strong>Who This Guide Is For:</strong> Swedish SMEs (10-500 employees) pursuing ISO 27001 certification for the first time, security managers tasked with ISMS implementation, consultants advising clients on compliance, and technical teams responsible for control implementation.</p>
+      <p><strong>Hvem denne vejledning er til:</strong> Svenske SMV'er (10-500 medarbejdere), der forfølger ISO 27001-certificering for første gang, sikkerhedschefer, der har fået til opgave at implementere ISMS, konsulenter, der rådgiver kunder om compliance, og tekniske teams, der er ansvarlige for kontrolimplementering.</p>
       
-      <p class="cta-box"><strong>Need expert guidance?</strong> <a href="why-hack23.html">Book a free consultation</a> to discuss your ISO 27001 implementation with experienced practitioners. We've implemented ISO 27001 ourselves and published our complete ISMS publicly as proof of expertise.</p>
+      <p class="cta-box"><strong>Har I brug for ekspertvejledning?</strong> <a href="why-hack23.html">Book en gratis konsultation</a> for at drøfte jeres ISO 27001-implementering med erfarne fagfolk. Vi har selv implementeret ISO 27001 og offentliggjort vores komplette ISMS offentligt som bevis på vores ekspertise.</p>
     </section>
 
     <section id="understanding-iso-27001">
-      <h2 class="panel-caption">📚 Understanding ISO 27001:2022</h2>
+      <h2 class="panel-caption">📚 Forståelse af ISO 27001:2022</h2>
       
-      <h3>What is ISO 27001?</h3>
-      <p><strong>ISO/IEC 27001:2022 is the international standard for Information Security Management Systems (ISMS).</strong> It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.</p>
+      <h3>Hvad er ISO 27001?</h3>
+      <p><strong>ISO/IEC 27001:2022 er den internationale standard for Informationssikkerhedsledelsessystemer (ISMS).</strong> Den giver en systematisk tilgang til styring af følsomme virksomhedsoplysninger og sikrer, at de forbliver sikre gennem medarbejder-, proces- og teknologikontroller.</p>
       
-      <p>The standard applies to organizations of any size and industry, from startups to enterprises, covering both digital and physical information security. Unlike prescriptive security frameworks, ISO 27001 is risk-based—you implement controls appropriate to your specific threats and risk appetite.</p>
+      <p>Standarden gælder for organisationer af enhver størrelse og branche, fra startups til store virksomheder, og dækker både digital og fysisk informationssikkerhed. I modsætning til preskriptive sikkerhedsrammer er ISO 27001 risikobaseret – I implementerer kontroller, der er hensigtsmæssige for jeres specifikke trusler og risikovillighed.</p>
       
-      <h3>Key Changes from ISO 27001:2013</h3>
-      <p>The 2022 revision brought significant updates that Swedish companies must understand:</p>
+      <h3>Vigtige ændringer fra ISO 27001:2013</h3>
+      <p>2022-revisionen medførte væsentlige opdateringer, som svenske virksomheder skal forstå:</p>
       
       <div class="cards">
         <div class="card integrity-card">
-          <h3>🔄 Major Updates in 2022 Version</h3>
+          <h3>🔄 Vigtige opdateringer i 2022-versionen</h3>
           <ul>
-            <li><strong>93 Controls (vs. 114 in 2013):</strong> Consolidated and reorganized for clarity</li>
-            <li><strong>4 New Control Categories:</strong> Threat intelligence, cloud security, ICT readiness, physical security monitoring</li>
-            <li><strong>Attribute-Based Structure:</strong> Controls now tagged by type (preventive, detective, corrective), properties, and domains</li>
-            <li><strong>Enhanced Cloud Focus:</strong> Explicit controls for cloud services and supply chain security</li>
-            <li><strong>Simplified Language:</strong> Clearer requirements and reduced ambiguity</li>
+            <li><strong>93 kontroller (mod 114 i 2013):</strong> Konsolideret og omorganiseret for klarhed</li>
+            <li><strong>4 nye kontrolkategorier:</strong> Trusselsintelligens, cloud-sikkerhed, ICT-beredskab, overvågning af fysisk sikkerhed</li>
+            <li><strong>Attributbaseret struktur:</strong> Kontroller er nu mærket efter type (forebyggende, detekterende, korrigerende), egenskaber og domæner</li>
+            <li><strong>Øget cloud-fokus:</strong> Eksplicitte kontroller for cloud-tjenester og forsyningskædesikkerhed</li>
+            <li><strong>Forenklet sprog:</strong> Klarere krav og reduceret tvetydighed</li>
           </ul>
         </div>
       </div>
       
-      <h3>The ISO 27001 Framework Structure</h3>
-      <p>ISO 27001 consists of two main components:</p>
+      <h3>ISO 27001-rammestrukturen</h3>
+      <p>ISO 27001 består af to hovedkomponenter:</p>
       
-      <p><strong>1. Main Standard (Clauses 4-10):</strong> Mandatory requirements for establishing, implementing, maintaining, and improving your ISMS:</p>
+      <p><strong>1. Hovedstandarden (klausulerne 4-10):</strong> Obligatoriske krav til etablering, implementering, vedligeholdelse og forbedring af jeres ISMS:</p>
       <ul>
-        <li><strong>Clause 4:</strong> Context of the organization (understanding stakeholders and scope)</li>
-        <li><strong>Clause 5:</strong> Leadership commitment and policy establishment</li>
-        <li><strong>Clause 6:</strong> Risk assessment and treatment planning</li>
-        <li><strong>Clause 7:</strong> Resource allocation and competence management</li>
-        <li><strong>Clause 8:</strong> Operational planning and control implementation</li>
-        <li><strong>Clause 9:</strong> Performance monitoring and measurement</li>
-        <li><strong>Clause 10:</strong> Continual improvement processes</li>
+        <li><strong>Klausul 4:</strong> Organisationens kontekst (forståelse af interessenter og scope)</li>
+        <li><strong>Klausul 5:</strong> Ledelsesforpligtelse og politiketablering</li>
+        <li><strong>Klausul 6:</strong> Risikovurdering og behandlingsplanlægning</li>
+        <li><strong>Klausul 7:</strong> Ressourceallokering og kompetencestyring</li>
+        <li><strong>Klausul 8:</strong> Operationel planlægning og kontrolimplementering</li>
+        <li><strong>Klausul 9:</strong> Performanceopfølgning og måling</li>
+        <li><strong>Klausul 10:</strong> Løbende forbedringsprocesser</li>
       </ul>
       
-      <p><strong>2. Annex A Controls (93 Controls):</strong> Comprehensive catalog of security controls organized into four themes:</p>
+      <p><strong>2. Bilag A-kontroller (93 kontroller):</strong> Omfattende katalog over sikkerhedskontroller organiseret i fire temaer:</p>
       <ul>
-        <li><strong>Organizational (37 controls):</strong> Policies, asset management, human resources security, supplier relationships</li>
-        <li><strong>People (8 controls):</strong> Screening, terms of employment, awareness, disciplinary process</li>
-        <li><strong>Physical (14 controls):</strong> Secure areas, equipment security, clear desk/screen, disposal</li>
-        <li><strong>Technological (34 controls):</strong> Access control, cryptography, network security, logging, backup</li>
+        <li><strong>Organisatoriske (37 kontroller):</strong> Politikker, aktivstyring, HR-sikkerhed, leverandørforhold</li>
+        <li><strong>Mennesker (8 kontroller):</strong> Screening, ansættelsesvilkår, bevidsthed, disciplinærproces</li>
+        <li><strong>Fysiske (14 kontroller):</strong> Sikre områder, udstyrssikkerhed, ryddesk/ryddeskærm, bortskaffelse</li>
+        <li><strong>Teknologiske (34 kontroller):</strong> Adgangskontrol, kryptografi, netværkssikkerhed, logning, backup</li>
       </ul>
       
-      <h3>Benefits of ISO 27001 for Swedish Companies</h3>
-      <p>Swedish organizations report significant business value from ISO 27001 certification:</p>
+      <h3>Fordele ved ISO 27001 for svenske virksomheder</h3>
+      <p>Svenske organisationer rapporterer betydelig forretningsværdi fra ISO 27001-certificering:</p>
       
       <div class="benefits-grid">
         <div class="benefit-item">
-          <strong>🚀 Faster Enterprise Sales:</strong> ISO 27001 accelerates deal closure by pre-answering security questionnaires and demonstrating compliance maturity.
+          <strong>🚀 Hurtigere enterprise-salg:</strong> ISO 27001 accelererer aftalelukker ved at besvare sikkerhedsspørgeskemaer på forhånd og demonstrere compliance-modenhed.
         </div>
         <div class="benefit-item">
-          <strong>🌍 Global Market Access:</strong> Required for many EU public sector contracts and international enterprise customers.
+          <strong>🌍 Global markedsadgang:</strong> Krævet til mange EU-offentlige sektorkontrakter og internationale enterprise-kunder.
         </div>
         <div class="benefit-item">
-          <strong>🛡️ Reduced Security Incidents:</strong> Systematic risk management reduces likelihood and impact of breaches.
+          <strong>🛡️ Færre sikkerhedshændelser:</strong> Systematisk risikostyring reducerer sandsynlighed for og konsekvenser af brud.
         </div>
         <div class="benefit-item">
-          <strong>⚖️ Regulatory Alignment:</strong> Supports GDPR, NIS2, and other Swedish/EU regulatory requirements.
+          <strong>⚖️ Regulatorisk tilpasning:</strong> Understøtter GDPR, NIS2 og andre svenske/EU-regulatoriske krav.
         </div>
         <div class="benefit-item">
-          <strong>💰 Lower Insurance Premiums:</strong> Cyber insurance providers offer discounts for certified organizations.
+          <strong>💰 Lavere forsikringspræmier:</strong> Cyberforsikringsudbydere tilbyder rabatter til certificerede organisationer.
         </div>
         <div class="benefit-item">
-          <strong>🤝 Customer Trust:</strong> Third-party validation of security claims builds confidence.
+          <strong>🤝 Kundernes tillid:</strong> Tredjeparts validering af sikkerhedspåstande opbygger tillid.
         </div>
       </div>
       
-      <p class="info-box"><strong>Real-World Impact:</strong> Hack23 publishes its <a href="https://github.com/Hack23/ISMS-PUBLIC">complete ISMS publicly on GitHub</a>, demonstrating that ISO 27001 isn't just compliance theater—it's a practical framework for managing security at scale. Our implementation covers 30+ detailed policies aligned with ISO 27001, NIST CSF 2.0, and CIS Controls.</p>
+      <p class="info-box"><strong>Effekt i den virkelige verden:</strong> Hack23 offentliggør sit <a href="https://github.com/Hack23/ISMS-PUBLIC">komplette ISMS offentligt på GitHub</a>, hvilket demonstrerer, at ISO 27001 ikke blot er et overholdelsesshow – det er en praktisk ramme til sikkerhedsstyring i stor skala. Vores implementering dækker 30+ detaljerede politikker afstemt med ISO 27001, NIST CSF 2.0 og CIS Controls.</p>
       
-      <p><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">→ Official ISO 27001:2022 Standard (ISO.org)</a></p>
+      <p><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">→ Officiel ISO 27001:2022-standard (ISO.org)</a></p>
     </section>
 
     <section id="implementation-roadmap">
-      <h2 class="panel-caption">🗺️ 90-Day Implementation Roadmap for Swedish SMEs</h2>
+      <h2 class="panel-caption">🗺️ 90-dages implementeringsvejledning for svenske SMV'er</h2>
       
-      <p><strong>This roadmap assumes a Swedish SME (10-100 employees) with basic security controls already in place.</strong> Larger organizations or those starting from scratch should adjust timelines accordingly. The roadmap follows a pragmatic, risk-based approach proven in real implementations.</p>
+      <p><strong>Denne vejledning forudsætter en svensk SMV (10-100 medarbejdere) med grundlæggende sikkerhedskontroller allerede på plads.</strong> Større organisationer eller dem, der starter fra bunden, bør justere tidslinjerne derefter. Vejledningen følger en pragmatisk, risikobaseret tilgang, der er afprøvet i virkelige implementeringer.</p>
       
-      <h3>Phase 1: Scoping and Planning (Weeks 1-2)</h3>
+      <h3>Fase 1: Scope og planlægning (ugerne 1-2)</h3>
       <div class="card confidentiality-card">
-        <h4>📋 Objectives</h4>
+        <h4>📋 Mål</h4>
         <ul>
-          <li>Define ISMS scope (which parts of the organization are covered)</li>
-          <li>Secure executive sponsorship and allocate resources</li>
-          <li>Establish project governance and working groups</li>
-          <li>Document organizational context and stakeholder requirements</li>
+          <li>Definer ISMS-scope (hvilke dele af organisationen er dækket)</li>
+          <li>Sikr ledelsesmæssig sponsorering og alloker ressourcer</li>
+          <li>Etabler projektgovernance og arbejdsgrupper</li>
+          <li>Dokumenter organisatorisk kontekst og interessentkrav</li>
         </ul>
         
-        <h4>Key Activities</h4>
-        <p><strong>Week 1: Scope Definition</strong></p>
+        <h4>Vigtige aktiviteter</h4>
+        <p><strong>Uge 1: Scopedefinition</strong></p>
         <ul>
-          <li>Identify which business units, locations, and systems are in scope</li>
-          <li>Document interfaces with out-of-scope systems and partners</li>
-          <li>Map information flows and identify critical assets</li>
-          <li>Define ISMS boundaries clearly to avoid scope creep</li>
+          <li>Identificer hvilke forretningsenheder, lokationer og systemer er inden for scope</li>
+          <li>Dokumenter grænseflader med systemer og partnere uden for scope</li>
+          <li>Kortlæg informationsstrømme og identificer kritiske aktiver</li>
+          <li>Definer ISMS-grænser klart for at undgå scope-udvidelse</li>
         </ul>
         
-        <p><strong>Week 2: Governance Setup</strong></p>
+        <p><strong>Uge 2: Governance-opsætning</strong></p>
         <ul>
-          <li>Appoint Information Security Manager and ISMS team</li>
-          <li>Create project charter with timeline and success criteria</li>
-          <li>Establish steering committee with executive representation</li>
-          <li>Set up documentation repository and communication channels</li>
+          <li>Udpeg informationssikkerhedschef og ISMS-team</li>
+          <li>Opret projektcharter med tidslinje og succeskriteerier</li>
+          <li>Etabler styrekomité med ledelsesrepræsentation</li>
+          <li>Opsæt dokumentationsrepository og kommunikationskanaler</li>
         </ul>
         
-        <h4>Deliverables</h4>
+        <h4>Leverancer</h4>
         <ul>
-          <li>✅ ISMS Scope Statement (who/what/where is covered)</li>
-          <li>✅ Context of Organization document (business drivers, stakeholders)</li>
-          <li>✅ Project plan with resource allocation</li>
-          <li>✅ High-level asset inventory</li>
+          <li>✅ ISMS-scopeerklæring (hvem/hvad/hvor er dækket)</li>
+          <li>✅ Kontekstdokument for organisationen (forretningsmæssige drivkræfter, interessenter)</li>
+          <li>✅ Projektplan med ressourceallokering</li>
+          <li>✅ Overordnet aktivopgørelse</li>
         </ul>
         
-        <p><strong>Swedish Context:</strong> For Swedish companies, consider regulatory requirements (GDPR, NIS2 if applicable) and customer security expectations in your scope definition. Many Swedish SMEs start with core IT operations and expand scope after initial certification.</p>
+        <p><strong>Dansk kontekst:</strong> For svenske virksomheder bør I overveje regulatoriske krav (GDPR, NIS2 hvis relevant) og kunders sikkerhedsforventninger i jeres scopedefinition. Mange svenske SMV'er starter med kernen af IT-drift og udvider scope efter den indledende certificering.</p>
       </div>
       
-      <h3>Phase 2: Risk Assessment (Weeks 3-4)</h3>
+      <h3>Fase 2: Risikovurdering (ugerne 3-4)</h3>
       <div class="card integrity-card">
-        <h4>🎯 Objectives</h4>
+        <h4>🎯 Mål</h4>
         <ul>
-          <li>Identify and value information assets</li>
-          <li>Assess threats and vulnerabilities systematically</li>
-          <li>Calculate risk levels using consistent methodology</li>
-          <li>Make risk treatment decisions (accept, mitigate, transfer, avoid)</li>
+          <li>Identificer og værdisæt informationsaktiver</li>
+          <li>Vurdér trusler og sårbarheder systematisk</li>
+          <li>Beregn risikoniveauer ved hjælp af ensartet metode</li>
+          <li>Træf risikobehandlingsbeslutninger (acceptér, afmildér, overfør, undgå)</li>
         </ul>
         
-        <h4>Key Activities</h4>
-        <p><strong>Week 3: Asset Identification and Valuation</strong></p>
+        <h4>Vigtige aktiviteter</h4>
+        <p><strong>Uge 3: Aktividentifikation og -værdisætning</strong></p>
         <ul>
-          <li>Create comprehensive asset inventory (information, systems, people, facilities)</li>
-          <li>Classify assets by confidentiality, integrity, and availability requirements</li>
-          <li>Assign asset owners responsible for security decisions</li>
-          <li>Document dependencies and data flows between assets</li>
+          <li>Opret en omfattende aktivopgørelse (information, systemer, mennesker, faciliteter)</li>
+          <li>Klassificér aktiver efter krav til fortrolighed, integritet og tilgængelighed</li>
+          <li>Tildel aktivejere, der er ansvarlige for sikkerhedsbeslutninger</li>
+          <li>Dokumentér afhængigheder og datastrømme mellem aktiver</li>
         </ul>
         
-        <p><strong>Week 4: Threat and Vulnerability Assessment</strong></p>
+        <p><strong>Uge 4: Trussel- og sårbarhedsvurdering</strong></p>
         <ul>
-          <li>Identify relevant threats (cyber attacks, human error, natural disasters, supply chain)</li>
-          <li>Assess vulnerabilities in current controls</li>
-          <li>Calculate risk = likelihood × impact for each asset/threat combination</li>
-          <li>Prioritize risks using risk matrix (typically 5×5)</li>
-          <li>Document risk treatment plan for all medium/high risks</li>
+          <li>Identificer relevante trusler (cyberangreb, menneskelige fejl, naturkatastrofer, forsyningskæde)</li>
+          <li>Vurdér sårbarheder i eksisterende kontroller</li>
+          <li>Beregn risiko = sandsynlighed × konsekvens for hver aktiv/trussel-kombination</li>
+          <li>Prioritér risici ved brug af risikomatrix (typisk 5×5)</li>
+          <li>Dokumentér risikobehandlingsplan for alle medium/høje risici</li>
         </ul>
         
-        <h4>Deliverables</h4>
+        <h4>Leverancer</h4>
         <ul>
-          <li>✅ Complete Asset Register with classifications</li>
-          <li>✅ Risk Assessment Report with risk scores</li>
-          <li>✅ Risk Treatment Plan with selected controls</li>
-          <li>✅ Statement of Applicability (SoA) - which Annex A controls apply</li>
+          <li>✅ Komplet aktivregister med klassifikationer</li>
+          <li>✅ Risikovurderingsrapport med risikoscorer</li>
+          <li>✅ Risikobehandlingsplan med valgte kontroller</li>
+          <li>✅ Anvendelseserklæring (SoA) – hvilke Bilag A-kontroller gælder</li>
         </ul>
       </div>
       
-      <h3>Phase 3: Control Implementation (Weeks 5-10)</h3>
+      <h3>Fase 3: Kontrolimplementering (ugerne 5-10)</h3>
       <div class="card availability-card">
-        <h4>🛠️ Objectives</h4>
+        <h4>🛠️ Mål</h4>
         <ul>
-          <li>Implement selected Annex A controls to treat identified risks</li>
-          <li>Document policies, procedures, and work instructions</li>
-          <li>Configure technical controls and security tooling</li>
-          <li>Train staff on new security procedures</li>
+          <li>Implementér valgte Bilag A-kontroller for at behandle identificerede risici</li>
+          <li>Dokumentér politikker, procedurer og arbejdsinstruktioner</li>
+          <li>Konfigurér tekniske kontroller og sikkerhedsværktøjer</li>
+          <li>Træn personale i nye sikkerhedsprocedurer</li>
         </ul>
         
-        <h4>Key Activities by Control Theme</h4>
+        <h4>Vigtige aktiviteter efter kontroltema</h4>
         
-        <p><strong>Weeks 5-6: Organizational Controls</strong></p>
+        <p><strong>Ugerne 5-6: Organisatoriske kontroller</strong></p>
         <ul>
-          <li>Draft core policies: Information Security Policy, Access Control, Acceptable Use</li>
-          <li>Define roles and responsibilities (RACI matrix)</li>
-          <li>Establish asset management procedures</li>
-          <li>Implement supplier security requirements</li>
-          <li>Create incident response procedures</li>
+          <li>Udkast til kernepolitikker: Informationssikkerhedspolitik, adgangskontrol, acceptabel brug</li>
+          <li>Definer roller og ansvarsområder (RACI-matrix)</li>
+          <li>Etabler aktivstyringsprocedurer</li>
+          <li>Implementér sikkerhedskrav for leverandører</li>
+          <li>Opret procedurer for hændelsesrespons</li>
         </ul>
         
-        <p><strong>Weeks 7-8: Technical Controls</strong></p>
+        <p><strong>Ugerne 7-8: Tekniske kontroller</strong></p>
         <ul>
-          <li>Configure access control and authentication (MFA, password policies)</li>
-          <li>Implement logging and monitoring (SIEM or log aggregation)</li>
-          <li>Enable encryption (data at rest and in transit)</li>
-          <li>Establish backup and recovery procedures</li>
-          <li>Deploy vulnerability scanning and patch management</li>
-          <li>Configure network security (firewalls, segmentation)</li>
+          <li>Konfigurér adgangskontrol og autentificering (MFA, adgangskodepolitikker)</li>
+          <li>Implementér logning og overvågning (SIEM eller logaggregering)</li>
+          <li>Aktivér kryptering (data i hvile og under overførsel)</li>
+          <li>Etabler procedurer for backup og gendannelse</li>
+          <li>Indfør sårbarhedsscanning og patchstyring</li>
+          <li>Konfigurér netværkssikkerhed (firewalls, segmentering)</li>
         </ul>
         
-        <p><strong>Week 9: People and Physical Controls</strong></p>
+        <p><strong>Uge 9: Menneske- og fysiske kontroller</strong></p>
         <ul>
-          <li>Implement screening procedures for new hires</li>
-          <li>Roll out security awareness training program</li>
-          <li>Establish clear desk/clear screen policies</li>
-          <li>Secure physical access to facilities and server rooms</li>
-          <li>Implement equipment security (cable locks, secure disposal)</li>
+          <li>Implementér screeningsprocedurer for nye ansatte</li>
+          <li>Udrull program for sikkerhedsbevidsthedstræning</li>
+          <li>Etabler politikker for ryddesk/ryddeskærm</li>
+          <li>Sikr fysisk adgang til faciliteter og serverrum</li>
+          <li>Implementér udstyrssikkerhed (kabellåse, sikker bortskaffelse)</li>
         </ul>
         
-        <p><strong>Week 10: Documentation and Evidence Collection</strong></p>
+        <p><strong>Uge 10: Dokumentation og indsamling af beviser</strong></p>
         <ul>
-          <li>Finalize all ISMS documentation (policies, procedures, templates)</li>
-          <li>Collect evidence of control implementation (screenshots, logs, attestations)</li>
-          <li>Update Statement of Applicability with implementation status</li>
-          <li>Prepare control effectiveness metrics</li>
+          <li>Færdiggør al ISMS-dokumentation (politikker, procedurer, skabeloner)</li>
+          <li>Indsaml beviser for kontrolimplementering (skærmbilleder, logfiler, attesteringer)</li>
+          <li>Opdatér anvendelseserklæringen med implementeringsstatus</li>
+          <li>Forbered målinger for kontroleffektivitet</li>
         </ul>
         
-        <h4>Deliverables</h4>
+        <h4>Leverancer</h4>
         <ul>
-          <li>✅ Complete Policy Framework (15-20 policies minimum)</li>
-          <li>✅ Technical Control Configurations (documented and tested)</li>
-          <li>✅ Training Records (all staff completed awareness training)</li>
-          <li>✅ Implementation Evidence Package</li>
+          <li>✅ Komplet politikramme (minimum 15-20 politikker)</li>
+          <li>✅ Tekniske kontrolkonfigurationer (dokumenteret og testet)</li>
+          <li>✅ Træningsjournaler (alt personale har gennemført bevidsthedstræning)</li>
+          <li>✅ Implementeringsbevisningspakke</li>
         </ul>
         
-        <p class="warning-box"><strong>Common Mistake:</strong> Don't over-engineer controls. Implement proportionate controls that address real risks identified in your risk assessment. Auditors value controls that are actually followed over perfect-but-unused procedures.</p>
+        <p class="warning-box"><strong>Almindelig fejl:</strong> Overingeniér ikke kontrollerne. Implementér forholdsmæssige kontroller, der imødegår reelle risici identificeret i jeres risikovurdering. Revisorer sætter pris på kontroller, der faktisk følges, frem for perfekte, men ubrugte procedurer.</p>
       </div>
       
-      <h3>Phase 4: Audit Preparation (Weeks 11-12)</h3>
+      <h3>Fase 4: Revisionsforberedelse (ugerne 11-12)</h3>
       <div class="card info-card">
-        <h4>✅ Objectives</h4>
+        <h4>✅ Mål</h4>
         <ul>
-          <li>Conduct internal audit to verify ISMS effectiveness</li>
-          <li>Perform management review of ISMS</li>
-          <li>Select and engage certification body</li>
-          <li>Prepare for Stage 1 certification audit</li>
+          <li>Gennemfør intern revision for at verificere ISMS-effektivitet</li>
+          <li>Udfør ledelsesgennemgang af ISMS</li>
+          <li>Vælg og engagér certificeringsorgan</li>
+          <li>Forbered til trin 1-certificeringsrevision</li>
         </ul>
         
-        <h4>Key Activities</h4>
-        <p><strong>Week 11: Internal Audit</strong></p>
+        <h4>Vigtige aktiviteter</h4>
+        <p><strong>Uge 11: Intern revision</strong></p>
         <ul>
-          <li>Conduct internal audit covering all ISMS requirements (Clauses 4-10 and applicable Annex A controls)</li>
-          <li>Interview process owners and sample evidence</li>
-          <li>Document findings (observations, non-conformities)</li>
-          <li>Create corrective action plan for any non-conformities</li>
-          <li>Follow up on corrective actions before certification audit</li>
+          <li>Gennemfør intern revision med dækning af alle ISMS-krav (klausulerne 4-10 og relevante Bilag A-kontroller)</li>
+          <li>Interviewe procesejere og stikprøvetag beviser</li>
+          <li>Dokumentér fund (observationer, afvigelser)</li>
+          <li>Opret plan for korrigerende handlinger for eventuelle afvigelser</li>
+          <li>Følg op på korrigerende handlinger inden certificeringsrevisionen</li>
         </ul>
         
-        <p><strong>Week 12: Management Review and Certification Prep</strong></p>
+        <p><strong>Uge 12: Ledelsesgennemgang og certificeringsforberedelse</strong></p>
         <ul>
-          <li>Hold management review meeting (required by Clause 9.3)</li>
-          <li>Review ISMS performance metrics, internal audit results, and improvement opportunities</li>
-          <li>Finalize certification body selection and schedule Stage 1 audit</li>
-          <li>Prepare audit documentation package</li>
-          <li>Conduct mock audit/readiness assessment</li>
+          <li>Afhold ledelsesgennemgangsmøde (kræves af klausul 9.3)</li>
+          <li>Gennemgå ISMS-performancemålinger, resultater fra intern revision og forbedringspotentialer</li>
+          <li>Færdiggør valg af certificeringsorgan og planlæg trin 1-revision</li>
+          <li>Forbered revisionsdokumentationspakke</li>
+          <li>Gennemfør mock-revision/revisionsparathedsvurdering</li>
         </ul>
         
-        <h4>Deliverables</h4>
+        <h4>Leverancer</h4>
         <ul>
-          <li>✅ Internal Audit Report with findings</li>
-          <li>✅ Corrective Action Log (closed before certification)</li>
-          <li>✅ Management Review Minutes</li>
-          <li>✅ Audit Documentation Package for certification body</li>
+          <li>✅ Intern revisionsrapport med fund</li>
+          <li>✅ Log over korrigerende handlinger (lukket inden certificering)</li>
+          <li>✅ Referat af ledelsesgennemgang</li>
+          <li>✅ Revisionsdokumentationspakke til certificeringsorganet</li>
         </ul>
       </div>
       
-      <h3>Certification Audit Process (Weeks 13-16)</h3>
-      <p>After completing the 90-day implementation, budget 4-8 additional weeks for the certification audit process:</p>
+      <h3>Certificeringsrevisionsproces (ugerne 13-16)</h3>
+      <p>Efter afslutning af 90-dages implementeringen bør I budgettere med 4-8 yderligere uger til certificeringsrevisionsprocessen:</p>
       
       <ul>
-        <li><strong>Stage 1 Audit (Week 13-14):</strong> Documentation review, verify ISMS scope and readiness, identify any gaps before Stage 2</li>
-        <li><strong>Gap Remediation (Week 15):</strong> Address any findings from Stage 1</li>
-        <li><strong>Stage 2 Audit (Week 16):</strong> On-site assessment of control implementation and effectiveness</li>
-        <li><strong>Certification Decision:</strong> If successful, receive ISO 27001 certificate (valid 3 years)</li>
+        <li><strong>Trin 1-revision (ugerne 13-14):</strong> Dokumentationsgennemgang, verificer ISMS-scope og -parathed, identificer eventuelle mangler inden trin 2</li>
+        <li><strong>Afhjælpning af mangler (uge 15):</strong> Imødegå eventuelle fund fra trin 1</li>
+        <li><strong>Trin 2-revision (uge 16):</strong> Vurdering på stedet af kontrolimplementering og -effektivitet</li>
+        <li><strong>Certificeringsbeslutning:</strong> Ved succes modtages ISO 27001-certifikat (gyldigt i 3 år)</li>
       </ul>
       
-      <p><strong>Total Timeline:</strong> Expect 4-6 months from project kickoff to certificate in hand for most Swedish SMEs.</p>
+      <p><strong>Samlet tidslinje:</strong> Forvent 4-6 måneder fra projektopstart til modtagelse af certifikat for de fleste svenske SMV'er.</p>
     </section>
 
     <section id="cost-planning">
-      <h2 class="panel-caption">💰 Cost & Resource Planning for Swedish Market</h2>
+      <h2 class="panel-caption">💰 Omkostnings- og ressourceplanlægning for det svenske marked</h2>
       
-      <p><strong>Realistic budgeting is critical for ISO 27001 implementation success.</strong> Based on Swedish market data and real implementations, here's what SMEs should expect:</p>
+      <p><strong>Realistisk budgettering er afgørende for succes med ISO 27001-implementering.</strong> Baseret på svenske markedsdata og reelle implementeringer er her, hvad SMV'er bør forvente:</p>
       
-      <h3>Total Cost Range: €25,000 - €50,000</h3>
+      <h3>Samlet omkostningsinterval: €25.000 - €50.000</h3>
       
       <div class="cards">
         <div class="card success-card">
-          <h3>💵 Cost Breakdown for Swedish SMEs</h3>
+          <h3>💵 Omkostningsfordeling for svenske SMV'er</h3>
           
-          <h4>1. Certification Body Fees: €8,000 - €15,000</h4>
-          <p>SWEDAC-accredited certification bodies charge based on organization size and complexity:</p>
+          <h4>1. Certificeringsorgangebyr: €8.000 - €15.000</h4>
+          <p>SWEDAC-akkrediterede certificeringsorganer beregner gebyrer baseret på organisationens størrelse og kompleksitet:</p>
           <ul>
-            <li><strong>Small (10-25 employees):</strong> €8,000 - €12,000</li>
-            <li><strong>Medium (25-100 employees):</strong> €12,000 - €18,000</li>
-            <li><strong>Large (100+ employees):</strong> €15,000 - €25,000+</li>
+            <li><strong>Lille (10-25 medarbejdere):</strong> €8.000 - €12.000</li>
+            <li><strong>Mellemstor (25-100 medarbejdere):</strong> €12.000 - €18.000</li>
+            <li><strong>Stor (100+ medarbejdere):</strong> €15.000 - €25.000+</li>
           </ul>
-          <p>This covers Stage 1 audit, Stage 2 audit, and initial certification. Annual surveillance audits cost approximately 30-40% of initial certification fee.</p>
+          <p>Dette dækker trin 1-revision, trin 2-revision og initial certificering. Årlige overvågningsrevisioner koster ca. 30-40% af det initiale certificeringsgebyr.</p>
           
-          <h4>2. Consultant Support (Optional): €10,000 - €25,000</h4>
-          <p>External consultants accelerate implementation but aren't mandatory:</p>
+          <h4>2. Konsulentbistand (valgfrit): €10.000 - €25.000</h4>
+          <p>Eksterne konsulenter accelererer implementeringen, men er ikke obligatoriske:</p>
           <ul>
-            <li><strong>Full Implementation Support:</strong> €20,000 - €25,000 (includes gap analysis, documentation, control implementation guidance, audit prep)</li>
-            <li><strong>Documentation Package:</strong> €10,000 - €15,000 (policies, procedures, templates)</li>
-            <li><strong>Advisory/Coaching:</strong> €5,000 - €10,000 (monthly retainer for guidance)</li>
+            <li><strong>Fuld implementeringsstøtte:</strong> €20.000 - €25.000 (inkl. gap-analyse, dokumentation, vejledning til kontrolimplementering, revisionsforberedelse)</li>
+            <li><strong>Dokumentationspakke:</strong> €10.000 - €15.000 (politikker, procedurer, skabeloner)</li>
+            <li><strong>Rådgivning/coaching:</strong> €5.000 - €10.000 (månedlig retainer for vejledning)</li>
           </ul>
-          <p><strong>DIY Alternative:</strong> Use public ISMS frameworks like <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's public ISMS</a> as templates (free). Requires internal security expertise.</p>
+          <p><strong>Gør-det-selv alternativ:</strong> Brug offentlige ISMS-rammer som <a href="https://github.com/Hack23/ISMS-PUBLIC">Hack23's offentlige ISMS</a> som skabeloner (gratis). Kræver intern sikkerhedsekspertise.</p>
           
-          <h4>3. Internal Time Investment: €5,000 - €10,000</h4>
-          <p>Staff time is often underestimated but represents significant cost:</p>
+          <h4>3. Intern tidsinvestering: €5.000 - €10.000</h4>
+          <p>Medarbejdertid undervurderes ofte, men repræsenterer en væsentlig omkostning:</p>
           <ul>
-            <li><strong>Project Manager/Security Lead:</strong> 100-150 hours</li>
-            <li><strong>Technical Implementation:</strong> 50-100 hours</li>
-            <li><strong>Documentation & Policy Writing:</strong> 40-60 hours</li>
-            <li><strong>Training & Awareness:</strong> 20-30 hours</li>
-            <li><strong>Management & Stakeholder Time:</strong> 20-30 hours</li>
+            <li><strong>Projektleder/sikkerhedsleder:</strong> 100-150 timer</li>
+            <li><strong>Teknisk implementering:</strong> 50-100 timer</li>
+            <li><strong>Dokumentation og politikskrivning:</strong> 40-60 timer</li>
+            <li><strong>Træning og bevidsthed:</strong> 20-30 timer</li>
+            <li><strong>Ledelse og interessenttid:</strong> 20-30 timer</li>
           </ul>
-          <p><strong>Total:</strong> 230-370 hours (roughly 100-200 hours if using consultants)</p>
+          <p><strong>I alt:</strong> 230-370 timer (ca. 100-200 timer ved brug af konsulenter)</p>
           
-          <h4>4. Tools & Software: €2,000 - €5,000</h4>
+          <h4>4. Værktøjer og software: €2.000 - €5.000</h4>
           <ul>
-            <li><strong>ISMS Management Platform:</strong> €1,000 - €3,000/year (optional)</li>
-            <li><strong>Security Tools:</strong> €500 - €1,500 (vulnerability scanning, SIEM, backup)</li>
-            <li><strong>Training Platform:</strong> €300 - €500</li>
-            <li><strong>Documentation/Collaboration:</strong> €200 - €500</li>
+            <li><strong>ISMS-styringsplatform:</strong> €1.000 - €3.000/år (valgfrit)</li>
+            <li><strong>Sikkerhedsværktøjer:</strong> €500 - €1.500 (sårbarhedsscanning, SIEM, backup)</li>
+            <li><strong>Træningsplatform:</strong> €300 - €500</li>
+            <li><strong>Dokumentation/samarbejde:</strong> €200 - €500</li>
           </ul>
         </div>
       </div>
       
-      <h3>Cost Optimization Strategies</h3>
-      <p>Swedish SMEs can reduce costs without compromising certification quality:</p>
+      <h3>Omkostningsoptimering</h3>
+      <p>Svenske SMV'er kan reducere omkostningerne uden at gå på kompromis med certificeringskvaliteten:</p>
       
       <ol>
-        <li><strong>Leverage Existing Controls:</strong> Most organizations already have some security controls. Build on what works rather than starting from scratch.</li>
-        <li><strong>Right-Size Scope:</strong> Start with core IT operations. Expand scope in future surveillance audits as maturity grows.</li>
-        <li><strong>Use Open-Source Templates:</strong> Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS</a> provides 30+ policies you can adapt (saved consultant fees).</li>
-        <li><strong>Cloud-Native Tooling:</strong> Leverage AWS/Azure/GCP native security tools rather than expensive third-party platforms.</li>
-        <li><strong>Phased Implementation:</strong> Prioritize controls addressing highest risks first. Implement nice-to-have controls post-certification.</li>
-        <li><strong>Internal Audit DIY:</strong> Train internal staff rather than hiring external internal auditors.</li>
+        <li><strong>Udnyt eksisterende kontroller:</strong> De fleste organisationer har allerede nogle sikkerhedskontroller. Byg videre på det, der virker, frem for at starte fra bunden.</li>
+        <li><strong>Tilpas scope:</strong> Start med kernen af IT-drift. Udvid scope i fremtidige overvågningsrevisioner, efterhånden som modenhed vokser.</li>
+        <li><strong>Brug åbne kildetemplates:</strong> Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">offentlige ISMS</a> indeholder 30+ politikker, I kan tilpasse (sparer konsulentgebyrer).</li>
+        <li><strong>Cloud-native værktøjer:</strong> Udnyt AWS/Azure/GCP's native sikkerhedsværktøjer frem for dyre tredjepartsplatforme.</li>
+        <li><strong>Faseopdelt implementering:</strong> Prioritér kontroller, der imødegår de højeste risici, først. Implementér nice-to-have kontroller efter certificeringen.</li>
+        <li><strong>Gør-det-selv intern revision:</strong> Træn interne medarbejdere frem for at hyre eksterne interne revisorer.</li>
       </ol>
       
-      <h3>Return on Investment</h3>
-      <p>While costs are significant, Swedish companies report strong ROI:</p>
+      <h3>Afkast af investering</h3>
+      <p>Selv om omkostningerne er betydelige, rapporterer svenske virksomheder et stærkt afkast af investering:</p>
       
       <div class="roi-metrics">
         <div class="roi-item">
-          <strong>Faster Deal Closure:</strong> 30-40% reduction in enterprise sales cycle length
+          <strong>Hurtigere aftaleafslutning:</strong> 30-40% reduktion i enterprise-salgscyklusens længde
         </div>
         <div class="roi-item">
-          <strong>Win Rate Improvement:</strong> 15-25% higher win rate for enterprise RFPs requiring certification
+          <strong>Forbedret vinsandsynlighed:</strong> 15-25% højere vinsandsynlighed for enterprise-udbud, der kræver certificering
         </div>
         <div class="roi-item">
-          <strong>Reduced Questionnaires:</strong> 80% reduction in time spent on security questionnaires
+          <strong>Færre spørgeskemaer:</strong> 80% reduktion i tid brugt på sikkerhedsspørgeskemaer
         </div>
         <div class="roi-item">
-          <strong>Insurance Savings:</strong> 10-20% cyber insurance premium reduction
+          <strong>Forsikringsbesparelser:</strong> 10-20% reduktion af cyberforsikringspræmier
         </div>
         <div class="roi-item">
-          <strong>Breach Prevention:</strong> Reduced incident likelihood and impact (difficult to quantify but substantial)
+          <strong>Brudforebyggelse:</strong> Reduceret sandsynlighed for og konsekvenser af hændelser (svær at kvantificere, men væsentlig)
         </div>
       </div>
       
-      <p class="cta-box"><strong>Get a customized cost estimate:</strong> <a href="why-hack23.html">Contact Hack23</a> for a no-obligation quote based on your organization size and current security maturity.</p>
+      <p class="cta-box"><strong>Få et tilpasset omkostningsestimat:</strong> <a href="why-hack23.html">Kontakt Hack23</a> for et uforpligtende tilbud baseret på jeres organisationsstørrelse og nuværende sikkerhedsmodenhed.</p>
     </section>
 
     <section id="certification-bodies">
-      <h2 class="panel-caption">🏛️ Selecting an ISO 27001 Certification Body in Sweden</h2>
+      <h2 class="panel-caption">🏛️ Valg af ISO 27001-certificeringsorgan i Sverige</h2>
       
-      <p><strong>Choosing the right certification body is crucial for a positive audit experience and credible certification.</strong> In Sweden, only SWEDAC-accredited certification bodies can issue valid ISO 27001 certificates recognized across the EU and globally.</p>
+      <p><strong>Valget af det rette certificeringsorgan er afgørende for en positiv revisionsoplevelse og troværdig certificering.</strong> I Sverige kan kun SWEDAC-akkrediterede certificeringsorganer udstede gyldige ISO 27001-certifikater anerkendt på tværs af EU og globalt.</p>
       
-      <h3>SWEDAC-Accredited Certification Bodies</h3>
-      <p>Major certification bodies operating in Sweden include:</p>
+      <h3>SWEDAC-akkrediterede certificeringsorganer</h3>
+      <p>Større certificeringsorganer, der opererer i Sverige, inkluderer:</p>
       
       <div class="certifiers-list">
         <div class="certifier-card">
           <h4>DNV (Det Norske Veritas)</h4>
-          <p><strong>Strengths:</strong> Strong Nordic presence, experienced in tech sector, pragmatic audit approach</p>
-          <p><strong>Typical Cost:</strong> €12,000 - €18,000 for SMEs</p>
+          <p><strong>Styrker:</strong> Stærk nordisk tilstedeværelse, erfaring i tech-sektoren, pragmatisk revisionstilgang</p>
+          <p><strong>Typisk omkostning:</strong> €12.000 - €18.000 for SMV'er</p>
         </div>
         
         <div class="certifier-card">
           <h4>Bureau Veritas</h4>
-          <p><strong>Strengths:</strong> Global reach, multi-standard expertise, good for organizations with multiple ISO certifications</p>
-          <p><strong>Typical Cost:</strong> €10,000 - €16,000 for SMEs</p>
+          <p><strong>Styrker:</strong> Global rækkevidde, ekspertise inden for flere standarder, velegnet til organisationer med flere ISO-certificeringer</p>
+          <p><strong>Typisk omkostning:</strong> €10.000 - €16.000 for SMV'er</p>
         </div>
         
         <div class="certifier-card">
           <h4>BSI (British Standards Institution)</h4>
-          <p><strong>Strengths:</strong> Created the original BS 7799, highly respected, thorough audit process</p>
-          <p><strong>Typical Cost:</strong> €14,000 - €20,000 for SMEs (premium pricing)</p>
+          <p><strong>Styrker:</strong> Skabte den originale BS 7799, høj anseelse, grundig revisionsproces</p>
+          <p><strong>Typisk omkostning:</strong> €14.000 - €20.000 for SMV'er (premiumprisning)</p>
         </div>
         
         <div class="certifier-card">
           <h4>TÜV (Nord, Süd, Rheinland)</h4>
-          <p><strong>Strengths:</strong> German engineering rigor, strong automotive and manufacturing experience</p>
-          <p><strong>Typical Cost:</strong> €11,000 - €17,000 for SMEs</p>
+          <p><strong>Styrker:</strong> Tysk ingeniørmæssig stringens, stærk erfaring inden for bilindustri og produktion</p>
+          <p><strong>Typisk omkostning:</strong> €11.000 - €17.000 for SMV'er</p>
         </div>
         
         <div class="certifier-card">
           <h4>LRQA (Lloyd's Register)</h4>
-          <p><strong>Strengths:</strong> Maritime heritage, good for logistics/supply chain, integrated audits</p>
-          <p><strong>Typical Cost:</strong> €10,000 - €15,000 for SMEs</p>
+          <p><strong>Styrker:</strong> Maritime baggrund, velegnet til logistik/forsyningskæde, integrerede revisioner</p>
+          <p><strong>Typisk omkostning:</strong> €10.000 - €15.000 for SMV'er</p>
         </div>
       </div>
       
-      <h3>Selection Criteria</h3>
-      <p>Evaluate certification bodies on these factors:</p>
+      <h3>Udvælgelseskriterier</h3>
+      <p>Vurdér certificeringsorganer på følgende faktorer:</p>
       
       <ol>
-        <li><strong>SWEDAC Accreditation:</strong> Non-negotiable. Verify current accreditation status at <a href="https://www.swedac.se" target="_blank" rel="noopener">www.swedac.se</a></li>
-        <li><strong>Industry Experience:</strong> Choose auditors familiar with your sector (SaaS, healthcare, manufacturing, etc.)</li>
-        <li><strong>Auditor Competence:</strong> Request auditor CVs. Look for technical depth, not just certification experience.</li>
-        <li><strong>Audit Approach:</strong> Some bodies are more consultative; others are strictly compliance-focused. Match your preference.</li>
-        <li><strong>Cost vs. Value:</strong> Cheapest isn't always best. Balance cost with audit quality and learning opportunity.</li>
-        <li><strong>Schedule Flexibility:</strong> Ensure they can meet your timeline constraints</li>
-        <li><strong>Geographic Coverage:</strong> On-site vs. remote audit options</li>
-        <li><strong>Multi-Standard Synergies:</strong> If pursuing multiple certifications (ISO 9001, 14001, etc.), consider integrated audits</li>
+        <li><strong>SWEDAC-akkreditering:</strong> Ufravigelig. Verificér aktuel akkrediteringsstatus på <a href="https://www.swedac.se" target="_blank" rel="noopener">www.swedac.se</a></li>
+        <li><strong>Brancheerfaring:</strong> Vælg revisorer med kendskab til jeres sektor (SaaS, sundhed, produktion osv.)</li>
+        <li><strong>Revisorernes kompetencer:</strong> Anmod om revisor-CV'er. Led efter teknisk dybde, ikke kun certificeringserfaring.</li>
+        <li><strong>Revisionstilgang:</strong> Nogle organer er mere rådgivende; andre er strengt compliance-fokuserede. Tilpas til jeres præferencer.</li>
+        <li><strong>Omkostning vs. værdi:</strong> Det billigste er ikke altid bedst. Afvej omkostninger mod revisionskvalitet og læringsmuligheder.</li>
+        <li><strong>Fleksibilitet i tidsplanlægning:</strong> Sikr, at de kan overholde jeres tidslinjeforpligtelser</li>
+        <li><strong>Geografisk dækning:</strong> Muligheder for revision på stedet vs. fjernadgang</li>
+        <li><strong>Synergier med flere standarder:</strong> Hvis I forfølger flere certificeringer (ISO 9001, 14001 osv.), overvej integrerede revisioner</li>
       </ol>
       
-      <h3>The Audit Process</h3>
-      <p><strong>Stage 1 (Documentation Review):</strong> 1-2 days, can be remote. Auditor reviews ISMS documentation, verifies scope, assesses readiness for Stage 2. No certification decision made yet. Typical outputs: Minor findings to address before Stage 2.</p>
+      <h3>Revisionsprocessen</h3>
+      <p><strong>Trin 1 (Dokumentationsgennemgang):</strong> 1-2 dage, kan gennemføres eksternt. Revisoren gennemgår ISMS-dokumentation, verificerer scope og vurderer parathed til trin 2. Ingen certificeringsbeslutning træffes endnu. Typiske resultater: Mindre fund, der skal imødegås inden trin 2.</p>
       
-      <p><strong>Stage 2 (Implementation Assessment):</strong> 2-5 days on-site depending on organization size. Auditor interviews staff, observes processes, samples evidence, tests controls. This is where certification decision is made. Typical outputs: Certificate (if no major non-conformities), or corrective actions required before certificate issuance.</p>
+      <p><strong>Trin 2 (Implementeringsvurdering):</strong> 2-5 dage på stedet afhængigt af organisationens størrelse. Revisoren interviewer medarbejdere, observerer processer, stikprøvetager beviser og tester kontroller. Her træffes certificeringsbeslutningen. Typiske resultater: Certifikat (hvis ingen alvorlige afvigelser), eller korrigerende handlinger kræves inden udstedelse af certifikat.</p>
       
-      <p><strong>Surveillance Audits:</strong> Annual 1-2 day audits during 3-year certificate validity period. Verify ISMS is maintained and improved. Less intensive than Stage 2 but still thorough.</p>
+      <p><strong>Overvågningsrevisioner:</strong> Årlige 1-2 dages revisioner i 3-årig certifikatgyldighedsperiode. Verificerer, at ISMS vedligeholdes og forbedres. Mindre intensive end trin 2, men stadig grundige.</p>
       
-      <p><strong>Recertification:</strong> Every 3 years, similar depth to Stage 2 audit. Demonstrates continual ISMS maturity.</p>
+      <p><strong>Gencertificering:</strong> Hvert 3. år, lignende dybde som trin 2-revisionen. Dokumenterer løbende ISMS-modenhed.</p>
       
-      <h3>Red Flags to Avoid</h3>
+      <h3>Advarselstegn at undgå</h3>
       <ul>
-        <li>❌ Not SWEDAC-accredited or accreditation expired</li>
-        <li>❌ Promises certification without proper audit ("pay and pass")</li>
-        <li>❌ Unwilling to provide auditor qualifications</li>
-        <li>❌ Pricing significantly below market (suggests corner-cutting)</li>
-        <li>❌ Combines consulting and certification (conflict of interest)</li>
+        <li>❌ Ikke SWEDAC-akkrediteret eller akkreditering udløbet</li>
+        <li>❌ Lover certificering uden ordentlig revision ("betal og bestå")</li>
+        <li>❌ Uvillig til at oplyse revisorers kvalifikationer</li>
+        <li>❌ Prisstruktur væsentligt under markedet (antyder genveje)</li>
+        <li>❌ Kombinerer konsulentvirksomhed og certificering (interessekonflikt)</li>
       </ul>
     </section>
 
     <section id="common-challenges">
-      <h2 class="panel-caption">⚠️ Common Challenges & Solutions</h2>
+      <h2 class="panel-caption">⚠️ Almindelige udfordringer og løsninger</h2>
       
-      <p><strong>ISO 27001 implementation is challenging even for experienced organizations.</strong> Here are the most common obstacles Swedish SMEs encounter and proven solutions:</p>
+      <p><strong>ISO 27001-implementering er udfordrende selv for erfarne organisationer.</strong> Her er de mest almindelige hindringer, svenske SMV'er støder på, og afprøvede løsninger:</p>
       
       <div class="cards">
         <div class="card warning-card">
-          <h3>Challenge 1: Lack of Internal Security Expertise</h3>
-          <p><strong>Problem:</strong> Small organizations often lack dedicated security staff with ISMS experience. IT teams are stretched thin managing operations, leaving little bandwidth for ISO 27001 implementation.</p>
-          <p><strong>Solution:</strong></p>
+          <h3>Udfordring 1: Manglende intern sikkerhedsekspertise</h3>
+          <p><strong>Problem:</strong> Mindre organisationer mangler ofte dedikeret sikkerhedspersonale med ISMS-erfaring. IT-teams er overbelastede med driftsopgaver og har lidt båndbredde til ISO 27001-implementering.</p>
+          <p><strong>Løsning:</strong></p>
           <ul>
-            <li>Hire fractional/part-time security consultant for 6-month engagement</li>
-            <li>Use proven templates and frameworks (like Hack23's public ISMS) to reduce learning curve</li>
-            <li>Partner with managed security service provider (MSSP) for technical controls</li>
-            <li>Train existing IT staff on ISO 27001 fundamentals (PECB, ISACA courses)</li>
+            <li>Ansæt en freelance/deltidskonsulent på 6-måneders engagement</li>
+            <li>Brug afprøvede skabeloner og rammer (som Hack23's offentlige ISMS) for at reducere indlæringskurven</li>
+            <li>Samarbejd med en Managed Security Service Provider (MSSP) om tekniske kontroller</li>
+            <li>Træn eksisterende IT-medarbejdere i ISO 27001-grundprincipper (PECB, ISACA-kurser)</li>
           </ul>
         </div>
         
         <div class="card warning-card">
-          <h3>Challenge 2: Resource Constraints and Competing Priorities</h3>
-          <p><strong>Problem:</strong> ISO 27001 competes with product development, customer delivery, and revenue-generating activities. Teams deprioritize ISMS work when deadlines loom.</p>
-          <p><strong>Solution:</strong></p>
+          <h3>Udfordring 2: Ressourcebegrænsninger og konkurrerende prioriteter</h3>
+          <p><strong>Problem:</strong> ISO 27001 konkurrerer med produktudvikling, kundeleverancer og indtægtsgenererende aktiviteter. Teams nedprioriterer ISMS-arbejde, når deadlines nærmer sig.</p>
+          <p><strong>Løsning:</strong></p>
           <ul>
-            <li>Secure executive sponsorship with clear priority mandate</li>
-            <li>Use phased implementation—spread work over 90 days rather than attempting "big bang" approach</li>
-            <li>Dedicate specific team members part-time (20%) to ISMS work with protected time</li>
-            <li>Leverage external help for documentation heavy-lifting</li>
-            <li>Celebrate milestones to maintain momentum</li>
+            <li>Sikr ledelsesmæssig opbakning med klar prioriteringsmandat</li>
+            <li>Brug faseopdelt implementering – spred arbejdet over 90 dage frem for en "big bang"-tilgang</li>
+            <li>Dedikér specifikke teammedlemmer deltids (20%) til ISMS-arbejde med beskyttet tid</li>
+            <li>Udnyt ekstern hjælp til dokumentationstunge opgaver</li>
+            <li>Fejr milepæle for at opretholde momentum</li>
           </ul>
         </div>
         
         <div class="card warning-card">
-          <h3>Challenge 3: Overly Complex Documentation</h3>
-          <p><strong>Problem:</strong> Organizations create 200-page policy documents nobody reads. Procedures are disconnected from reality. Documentation becomes shelf-ware.</p>
-          <p><strong>Solution:</strong></p>
+          <h3>Udfordring 3: Overdrevent kompleks dokumentation</h3>
+          <p><strong>Problem:</strong> Organisationer udarbejder 200-siders politikdokumenter, som ingen læser. Procedurer er afkoblet fra virkeligheden. Dokumentation bliver hyldevarer.</p>
+          <p><strong>Løsning:</strong></p>
           <ul>
-            <li>Keep policies concise (2-5 pages each). Write for practitioners, not auditors.</li>
-            <li>Document what you actually do, not aspirational "best practices"</li>
-            <li>Use templates and standardize document structure</li>
-            <li>Integrate procedures into existing workflows rather than creating parallel "compliance processes"</li>
-            <li>Review Hack23's lean policy approach—our public ISMS demonstrates practical, usable documentation</li>
+            <li>Hold politikker kortfattede (2-5 sider hver). Skriv til praktikere, ikke til revisorer.</li>
+            <li>Dokumentér, hvad I faktisk gør, ikke aspirerende "bedste praksis"</li>
+            <li>Brug skabeloner og standardisér dokumentstruktur</li>
+            <li>Integrer procedurer i eksisterende arbejdsgange frem for at skabe parallelle "compliance-processer"</li>
+            <li>Gennemgå Hack23's leanpolitiktilgang – vores offentlige ISMS demonstrerer praktisk, anvendelig dokumentation</li>
           </ul>
         </div>
         
         <div class="card warning-card">
-          <h3>Challenge 4: Maintaining Post-Certification Momentum</h3>
-          <p><strong>Problem:</strong> After certification euphoria, ISMS maintenance becomes neglected. Annual surveillance audits reveal degraded controls. ISMS becomes compliance checkbox rather than security framework.</p>
-          <p><strong>Solution:</strong></p>
+          <h3>Udfordring 4: Vedligeholdelse af momentum efter certificering</h3>
+          <p><strong>Problem:</strong> Efter certificeringseuforien forsømmes ISMS-vedligeholdelse. Årlige overvågningsrevisioner afslører forværrede kontroller. ISMS bliver et compliance-afkrydsningsfelt frem for en sikkerhedsramme.</p>
+          <p><strong>Løsning:</strong></p>
           <ul>
-            <li>Schedule quarterly ISMS reviews (not just annual management review)</li>
-            <li>Assign clear ongoing responsibilities for each control</li>
-            <li>Automate monitoring and evidence collection where possible</li>
-            <li>Integrate ISMS into existing governance (board reporting, risk committee)</li>
-            <li>Treat surveillance audits as improvement opportunities, not compliance hoops</li>
+            <li>Planlæg kvartalsvise ISMS-gennemgange (ikke kun den årlige ledelsesgennemgang)</li>
+            <li>Tildel klare løbende ansvarsområder for hver kontrol</li>
+            <li>Automatisér overvågning og indsamling af beviser, hvor det er muligt</li>
+            <li>Integrer ISMS i eksisterende governance (bestyrelsesrapportering, risikokomité)</li>
+            <li>Behandl overvågningsrevisioner som forbedringsmuligheder, ikke compliance-forhindringer</li>
           </ul>
         </div>
         
         <div class="card warning-card">
-          <h3>Challenge 5: Executive Buy-In and Budget Approval</h3>
-          <p><strong>Problem:</strong> Leadership views ISO 27001 as "nice to have" rather than business enabler. Budget requests are denied or delayed. Project lacks strategic support.</p>
-          <p><strong>Solution:</strong></p>
+          <h3>Udfordring 5: Ledelsesmæssig opbakning og budgetgodkendelse</h3>
+          <p><strong>Problem:</strong> Ledelsen betragter ISO 27001 som "rart at have" frem for en forretningsfremmer. Budgetanmodninger afvises eller forsinkes. Projektet mangler strategisk støtte.</p>
+          <p><strong>Løsning:</strong></p>
           <ul>
-            <li>Build business case focused on revenue impact (faster enterprise sales) not just risk reduction</li>
-            <li>Quantify opportunity cost of NOT certifying (lost deals, extended sales cycles)</li>
-            <li>Present customer requirements for certification (RFP evidence)</li>
-            <li>Position as competitive differentiation, especially if competitors lack certification</li>
-            <li>Start with minimal scope to prove value, expand later</li>
+            <li>Opbyg et forretningscase fokuseret på omsætningseffekt (hurtigere enterprise-salg), ikke blot risikoreduktion</li>
+            <li>Kvantificér alternativomkostningen ved IKKE at certificere (tabte aftaler, forlængede salgscyklusser)</li>
+            <li>Præsentér kundekrav til certificering (dokumentation fra udbud)</li>
+            <li>Positionér som konkurrencemæssig differentiering, især hvis konkurrenter mangler certificering</li>
+            <li>Start med minimalt scope for at bevise værdi, udvid senere</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="case-study">
-      <h2 class="panel-caption">📖 Case Study: Hack23's Public ISMS Implementation</h2>
+      <h2 class="panel-caption">📖 Casestudie: Hack23's offentlige ISMS-implementering</h2>
       
-      <p><strong>Hack23 AB publishes its complete ISMS publicly on GitHub</strong>—one of the few transparent ISO 27001 implementations available. Here's what we learned and how you can benefit from our experience.</p>
+      <p><strong>Hack23 AB offentliggør sit komplette ISMS på GitHub</strong> – en af de få transparente ISO 27001-implementeringer, der er tilgængelige. Her er, hvad vi har lært, og hvordan I kan drage fordel af vores erfaring.</p>
       
-      <h3>Why We Made Our ISMS Public</h3>
-      <p>Most security consultancies hide their ISMS behind confidentiality stamps. We believe that approach is counterproductive:</p>
+      <h3>Hvorfor vi offentliggjorde vores ISMS</h3>
+      <p>De fleste sikkerhedskonsulenter skjuler deres ISMS bag fortrolighedsstempler. Vi mener, at denne tilgang er kontraproduktiv:</p>
       <ul>
-        <li><strong>Security through obscurity doesn't work:</strong> If your security depends on attackers not knowing your defenses, you don't have security—you have wishful thinking.</li>
-        <li><strong>Transparency builds trust:</strong> Potential clients can verify our claims by inspecting actual policies, not just marketing promises.</li>
-        <li><strong>Community benefit:</strong> Other organizations can learn from our implementation and adapt our templates.</li>
-        <li><strong>Continuous improvement:</strong> Public scrutiny helps us identify gaps and improve our ISMS.</li>
+        <li><strong>Sikkerhed gennem uigennemsigtighed virker ikke:</strong> Hvis jeres sikkerhed afhænger af, at angribere ikke kender jeres forsvar, har I ikke sikkerhed – I har ønsketænkning.</li>
+        <li><strong>Transparens opbygger tillid:</strong> Potentielle kunder kan verificere vores påstande ved at inspicere faktiske politikker, ikke blot markedsføringsløfter.</li>
+        <li><strong>Fællesskabsudbytte:</strong> Andre organisationer kan lære af vores implementering og tilpasse vores skabeloner.</li>
+        <li><strong>Løbende forbedring:</strong> Offentlig granskning hjælper os med at identificere mangler og forbedre vores ISMS.</li>
       </ul>
       
-      <h3>What's Included in Our Public ISMS</h3>
-      <p>Our <a href="https://github.com/Hack23/ISMS-PUBLIC">GitHub repository</a> contains:</p>
+      <h3>Hvad vores offentlige ISMS indeholder</h3>
+      <p>Vores <a href="https://github.com/Hack23/ISMS-PUBLIC">GitHub-repository</a> indeholder:</p>
       <ul>
-        <li><strong>30+ Detailed Policies:</strong> Information Security Policy, Access Control, Cryptography, Incident Response, Secure Development, and more</li>
-        <li><strong>Compliance Mapping:</strong> ISO 27001:2022 (93 controls), NIST CSF 2.0, CIS Controls v8</li>
-        <li><strong>Risk Management Framework:</strong> Risk register, risk assessment methodology, treatment decisions</li>
-        <li><strong>Security Metrics:</strong> KPIs and measurement framework</li>
-        <li><strong>Threat Models:</strong> STRIDE analysis for each project (CIA, Black Trigram, Compliance Manager)</li>
-        <li><strong>Classification Framework:</strong> Business impact analysis and CIA triad assessment</li>
+        <li><strong>30+ detaljerede politikker:</strong> Informationssikkerhedspolitik, adgangskontrol, kryptografi, hændelsesrespons, sikker udvikling og mere</li>
+        <li><strong>Compliancemapping:</strong> ISO 27001:2022 (93 kontroller), NIST CSF 2.0, CIS Controls v8</li>
+        <li><strong>Risikostyringsramme:</strong> Risikoregister, risikovurderingsmetode, behandlingsbeslutninger</li>
+        <li><strong>Sikkerhedsmålinger:</strong> KPI'er og måleramme</li>
+        <li><strong>Trusselmodeller:</strong> STRIDE-analyse for hvert projekt (CIA, Black Trigram, Compliance Manager)</li>
+        <li><strong>Klassifikationsramme:</strong> Analyse af forretningspåvirkning og CIA-triadevaluering</li>
       </ul>
       
-      <p><strong>What's Redacted:</strong> 30% of content is redacted for operational security—specifically: access credentials, contract pricing, and customer-specific information. Everything else (frameworks, methodologies, control descriptions) is fully public.</p>
+      <p><strong>Hvad der er redigeret bort:</strong> 30% af indholdet er redigeret af hensyn til operationel sikkerhed – specifikt: adgangsoplysninger, kontraktpriser og kundespecifikke oplysninger. Alt andet (rammer, metoder, kontrolbeskrivelser) er fuldt offentligt.</p>
       
-      <h3>Key Lessons from Our Implementation</h3>
+      <h3>Vigtigste erfaringer fra vores implementering</h3>
       
       <div class="lessons-grid">
         <div class="lesson-item">
-          <strong>Lesson 1: Start with Risk Assessment, Not Policies</strong>
-          <p>We initially focused on writing policies without understanding our risks. This led to generic, irrelevant controls. When we restarted with proper risk assessment, we identified controls that actually mattered for our threat landscape.</p>
+          <strong>Erfaring 1: Start med risikovurdering, ikke politikker</strong>
+          <p>Vi fokuserede indledningsvis på at skrive politikker uden at forstå vores risici. Dette førte til generiske, irrelevante kontroller. Da vi genstartet med en ordentlig risikovurdering, identificerede vi kontroller, der faktisk betød noget for vores trussellandskab.</p>
         </div>
         
         <div class="lesson-item">
-          <strong>Lesson 2: Lean Documentation Works Better</strong>
-          <p>Our first policy drafts were 50+ pages. Nobody read them. We condensed to 2-5 pages per policy, focusing on actionable requirements. Adoption improved dramatically.</p>
+          <strong>Erfaring 2: Lean dokumentation virker bedre</strong>
+          <p>Vores første politikudkast var på 50+ sider. Ingen læste dem. Vi kondenserede til 2-5 sider pr. politik med fokus på handlingsrettede krav. Adoptionen forbedredes dramatisk.</p>
         </div>
         
         <div class="lesson-item">
-          <strong>Lesson 3: Leverage Existing Tools</strong>
-          <p>We avoided expensive ISMS platforms. GitHub for version control, AWS native security tools, open-source monitoring. Total tooling cost under €2,000/year.</p>
+          <strong>Erfaring 3: Udnyt eksisterende værktøjer</strong>
+          <p>Vi undgik dyre ISMS-platforme. GitHub til versionsstyring, AWS native sikkerhedsværktøjer, open source-overvågning. Samlet værktøjsomkostning under €2.000/år.</p>
         </div>
         
         <div class="lesson-item">
-          <strong>Lesson 4: Internal Audit is Valuable</strong>
-          <p>We almost skipped internal audit to save time. It uncovered significant gaps that would have caused certification delays. Internal audit is worth the investment.</p>
+          <strong>Erfaring 4: Intern revision er værdifuld</strong>
+          <p>Vi var tæt på at springe intern revision over for at spare tid. Den afslørede væsentlige mangler, der ville have forårsaget certificeringsforsinkelser. Intern revision er investeringen værd.</p>
         </div>
         
         <div class="lesson-item">
-          <strong>Lesson 5: Transparency as Competitive Advantage</strong>
-          <p>Publishing our ISMS publicly differentiated us from competitors. Enterprise customers appreciate being able to verify our security claims. It's become a sales accelerator.</p>
+          <strong>Erfaring 5: Transparens som konkurrencemæssig fordel</strong>
+          <p>Offentliggørelsen af vores ISMS differentierede os fra konkurrenterne. Enterprise-kunder sætter pris på muligheden for at verificere vores sikkerhedspåstande. Det er blevet en salgsakcellerator.</p>
         </div>
       </div>
       
-      <h3>How to Use Our Public ISMS</h3>
-      <p>Organizations implementing ISO 27001 can leverage our work:</p>
+      <h3>Sådan bruger I vores offentlige ISMS</h3>
+      <p>Organisationer, der implementerer ISO 27001, kan drage fordel af vores arbejde:</p>
       <ol>
-        <li><strong>Browse Policies:</strong> See real-world examples of ISO 27001-aligned policies. Adapt language and structure to your context.</li>
-        <li><strong>Review Risk Register:</strong> Understand how we assess and treat risks. Use as template for your risk assessment.</li>
-        <li><strong>Check Compliance Mapping:</strong> See how we map Annex A controls to NIST and CIS. Accelerates your Statement of Applicability.</li>
-        <li><strong>Study Threat Models:</strong> Learn STRIDE methodology applied to real projects. Adapt approach to your systems.</li>
-        <li><strong>Understand Maturity Progression:</strong> Our documentation shows evolution from basic controls to advanced implementation.</li>
+        <li><strong>Gennemse politikker:</strong> Se virkelige eksempler på ISO 27001-afstemmede politikker. Tilpas sprog og struktur til jeres kontekst.</li>
+        <li><strong>Gennemgå risikoregisteret:</strong> Forstå, hvordan vi vurderer og behandler risici. Brug som skabelon til jeres risikovurdering.</li>
+        <li><strong>Tjek compliancemappingen:</strong> Se, hvordan vi kortlægger Bilag A-kontroller til NIST og CIS. Accelererer jeres anvendelseserklæring.</li>
+        <li><strong>Studer trusselmodeller:</strong> Lær STRIDE-metoden anvendt på rigtige projekter. Tilpas tilgangen til jeres systemer.</li>
+        <li><strong>Forstå modenhedsprogression:</strong> Vores dokumentation viser evolution fra grundlæggende kontroller til avanceret implementering.</li>
       </ol>
       
-      <p class="success-box"><strong>Repository Link:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC">https://github.com/Hack23/ISMS-PUBLIC</a></p>
+      <p class="success-box"><strong>Repository-link:</strong> <a href="https://github.com/Hack23/ISMS-PUBLIC">https://github.com/Hack23/ISMS-PUBLIC</a></p>
       
-      <p><strong>Fair Use:</strong> All content is available under open license. Fork, adapt, and improve. Attribution appreciated but not required. We believe security improves through knowledge sharing.</p>
+      <p><strong>Retfærdig brug:</strong> Alt indhold er tilgængeligt under åben licens. Fork, tilpas og forbedre. Attribution sættes pris på, men er ikke påkrævet. Vi tror på, at sikkerhed forbedres gennem videndeling.</p>
     </section>
 
     <section id="faq">
-      <h2 class="panel-caption">❓ Frequently Asked Questions</h2>
+      <h2 class="panel-caption">❓ Ofte stillede spørgsmål</h2>
       
       <div class="faq-item">
-        <h3>How long does ISO 27001 certification take in Sweden?</h3>
-        <p><strong>Answer:</strong> For Swedish SMEs, expect 3-6 months total. Our 90-day implementation roadmap covers preparation (12 weeks), followed by 4-8 weeks for certification audit process. Organizations with mature security programs can complete faster; those starting from scratch may need 6-9 months.</p>
+        <h3>Hvor lang tid tager ISO 27001-certificering i Sverige?</h3>
+        <p><strong>Svar:</strong> For svenske SMV'er bør I forvente 3-6 måneder i alt. Vores 90-dages implementeringsvejledning dækker forberedelse (12 uger), efterfulgt af 4-8 uger til certificeringsrevisionsprocessen. Organisationer med modne sikkerhedsprogrammer kan gennemføre hurtigere; dem, der starter fra bunden, kan have brug for 6-9 måneder.</p>
       </div>
       
       <div class="faq-item">
-        <h3>What does ISO 27001 certification cost in Sweden?</h3>
-        <p><strong>Answer:</strong> Total costs typically range from €25,000-€50,000 including certification body fees (€8,000-€15,000), optional consultant support (€10,000-€25,000), internal time (€5,000-€10,000), and tools (€2,000-€5,000). See <a href="#cost-planning">detailed cost breakdown</a> above.</p>
+        <h3>Hvad koster ISO 27001-certificering i Sverige?</h3>
+        <p><strong>Svar:</strong> Samlede omkostninger spænder typisk fra €25.000-€50.000, herunder certificeringsorgangebyr (€8.000-€15.000), valgfri konsulentbistand (€10.000-€25.000), intern tid (€5.000-€10.000) og værktøjer (€2.000-€5.000). Se <a href="#cost-planning">detaljeret omkostningsfordeling</a> ovenfor.</p>
       </div>
       
       <div class="faq-item">
-        <h3>Do I need a consultant for ISO 27001 implementation?</h3>
-        <p><strong>Answer:</strong> Not necessarily. Organizations with existing security expertise can implement independently using frameworks like Hack23's public ISMS. However, consultants accelerate implementation (3 vs. 6 months) and reduce risk of audit findings. Consider DIY if you have dedicated security staff and 6+ month timeline.</p>
+        <h3>Har jeg brug for en konsulent til ISO 27001-implementering?</h3>
+        <p><strong>Svar:</strong> Ikke nødvendigvis. Organisationer med eksisterende sikkerhedsekspertise kan implementere selvstændigt ved hjælp af rammer som Hack23's offentlige ISMS. Konsulenter accelererer dog implementeringen (3 vs. 6 måneder) og reducerer risikoen for revisionsfund. Overvej gør-det-selv, hvis I har dedikeret sikkerhedspersonale og en tidslinje på 6+ måneder.</p>
       </div>
       
       <div class="faq-item">
-        <h3>How do I choose a certification body in Sweden?</h3>
-        <p><strong>Answer:</strong> Verify SWEDAC accreditation (mandatory for valid certification), assess industry experience relevant to your sector, request auditor CVs to evaluate competence, and compare pricing (€8,000-€20,000 for SMEs). See our <a href="#certification-bodies">certification body guide</a> for detailed selection criteria.</p>
+        <h3>Hvordan vælger jeg et certificeringsorgan i Sverige?</h3>
+        <p><strong>Svar:</strong> Verificér SWEDAC-akkreditering (obligatorisk for gyldig certificering), vurdér brancheerfaring relevant for jeres sektor, anmod om revisor-CV'er for at evaluere kompetencer, og sammenlign priser (€8.000-€20.000 for SMV'er). Se vores <a href="#certification-bodies">guide til certificeringsorganer</a> for detaljerede udvælgelseskriterier.</p>
       </div>
       
       <div class="faq-item">
-        <h3>What happens after certification?</h3>
-        <p><strong>Answer:</strong> Certificates are valid for 3 years. You'll have annual surveillance audits (1-2 days) to verify ISMS is maintained. After 3 years, undergo recertification audit. Ongoing costs are approximately 30-40% of initial certification annually.</p>
+        <h3>Hvad sker der efter certificeringen?</h3>
+        <p><strong>Svar:</strong> Certifikater er gyldige i 3 år. I vil have årlige overvågningsrevisioner (1-2 dage) for at verificere, at ISMS vedligeholdes. Efter 3 år gennemgår I en gencertificeringsrevision. Løbende omkostninger er ca. 30-40% af den initiale certificering årligt.</p>
       </div>
       
       <div class="faq-item">
-        <h3>Can I implement ISO 27001 myself without consultants?</h3>
-        <p><strong>Answer:</strong> Yes, if you have internal security expertise. Use Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">public ISMS</a> as template (30+ policies), follow the <a href="#implementation-roadmap">90-day roadmap</a> above, and allocate 200-300 hours of internal time. DIY approach saves €10,000-€25,000 in consultant fees but takes longer.</p>
+        <h3>Kan jeg implementere ISO 27001 selv uden konsulenter?</h3>
+        <p><strong>Svar:</strong> Ja, hvis I har intern sikkerhedsekspertise. Brug Hack23's <a href="https://github.com/Hack23/ISMS-PUBLIC">offentlige ISMS</a> som skabelon (30+ politikker), følg <a href="#implementation-roadmap">90-dagesvejledningen</a> ovenfor, og afsæt 200-300 timers intern tid. Gør-det-selv-tilgangen sparer €10.000-€25.000 i konsulentgebyrer, men tager længere tid.</p>
       </div>
       
       <div class="faq-item">
-        <h3>What are the ongoing maintenance requirements?</h3>
-        <p><strong>Answer:</strong> ISO 27001 requires: annual management review, internal audit (at least annually), risk assessment updates (when changes occur), control effectiveness monitoring, and staff security awareness training. Budget 2-4 hours/week for ISMS maintenance activities.</p>
+        <h3>Hvad er de løbende vedligeholdelseskrav?</h3>
+        <p><strong>Svar:</strong> ISO 27001 kræver: årlig ledelsesgennemgang, intern revision (mindst årligt), opdateringer af risikovurdering (ved ændringer), overvågning af kontroleffektivitet og træning af personale i sikkerhedsbevidsthed. Budgettér 2-4 timer/uge til ISMS-vedligeholdelsesaktiviteter.</p>
       </div>
       
       <div class="faq-item">
-        <h3>How does ISO 27001 relate to GDPR and NIS2?</h3>
-        <p><strong>Answer:</strong> ISO 27001 complements but doesn't replace GDPR and NIS2. Many ISO 27001 controls support GDPR compliance (data protection, access control, incident response). NIS2 entities benefit from ISO 27001's risk management framework. However, GDPR requires additional privacy-specific controls beyond ISO 27001 scope.</p>
+        <h3>Hvordan relaterer ISO 27001 sig til GDPR og NIS2?</h3>
+        <p><strong>Svar:</strong> ISO 27001 supplerer, men erstatter ikke GDPR og NIS2. Mange ISO 27001-kontroller understøtter GDPR-overholdelse (databeskyttelse, adgangskontrol, hændelsesrespons). NIS2-enheder drager fordel af ISO 27001's risikostyringsramme. GDPR kræver dog yderligere privatlivsspecifikke kontroller ud over ISO 27001's scope.</p>
       </div>
       
       <div class="faq-item">
-        <h3>What's the difference between ISO 27001 and SOC 2?</h3>
-        <p><strong>Answer:</strong> ISO 27001 is an international standard with certification; SOC 2 is an American attestation framework. ISO 27001 is broader (covers entire ISMS); SOC 2 focuses on service provider controls. European/global companies typically prefer ISO 27001; US SaaS companies often need both for different markets.</p>
+        <h3>Hvad er forskellen mellem ISO 27001 og SOC 2?</h3>
+        <p><strong>Svar:</strong> ISO 27001 er en international standard med certificering; SOC 2 er en amerikansk attesteringsramme. ISO 27001 er bredere (dækker hele ISMS); SOC 2 fokuserer på tjenesteudbyderkontroller. Europæiske/globale virksomheder foretrækker typisk ISO 27001; amerikanske SaaS-virksomheder har ofte brug for begge til forskellige markeder.</p>
       </div>
       
       <div class="faq-item">
-        <h3>How do I demonstrate ISO 27001 value to executive management?</h3>
-        <p><strong>Answer:</strong> Focus on business impact: faster enterprise sales cycles (30-40% reduction), higher win rates for certified RFPs (15-25% improvement), reduced security questionnaire burden (80% time savings), cyber insurance discounts (10-20%), and competitive differentiation. Quantify opportunity cost of NOT certifying using lost deal data.</p>
+        <h3>Hvordan dokumenterer jeg ISO 27001-værdien over for den øverste ledelse?</h3>
+        <p><strong>Svar:</strong> Fokusér på forretningseffekt: hurtigere enterprise-salgscyklusser (30-40% reduktion), højere vinsandsynlighed for certificerede udbud (15-25% forbedring), reduceret sikkerhedsspørgeskemabyrde (80% tidsbesparelse), cyberforsikringsrabatter (10-20%) og konkurrencemæssig differentiering. Kvantificér alternativomkostningen ved IKKE at certificere ved hjælp af data om tabte aftaler.</p>
       </div>
       
       <div class="faq-item">
-        <h3>What's different in the 2022 version vs. 2013?</h3>
-        <p><strong>Answer:</strong> ISO 27001:2022 has 93 controls (vs. 114 in 2013), reorganized into 4 themes instead of 14 domains, added controls for threat intelligence and cloud security, and uses attribute-based tagging. Organizations certified to 2013 version have transition period until October 2025.</p>
+        <h3>Hvad er anderledes i 2022-versionen vs. 2013?</h3>
+        <p><strong>Svar:</strong> ISO 27001:2022 har 93 kontroller (mod 114 i 2013), omorganiseret i 4 temaer i stedet for 14 domæner, tilføjet kontroller for trusselsintelligens og cloud-sikkerhed, og anvender attributbaseret mærkning. Organisationer certificeret til 2013-versionen har overgangsperiode indtil oktober 2025.</p>
       </div>
     </section>
 
     <section id="next-steps">
-      <h2 class="panel-caption">🚀 Related Resources & Next Steps</h2>
+      <h2 class="panel-caption">🚀 Relaterede ressourcer og næste skridt</h2>
       
-      <h3>Downloadable Resources</h3>
+      <h3>Ressourcer til download</h3>
       <div class="resources-grid">
         <div class="resource-card">
-          <h4>📋 ISMS Quick-Start Template</h4>
-          <p>Complete policy framework based on Hack23's public ISMS. Includes 15+ policies, risk register template, and Statement of Applicability.</p>
-          <p><a href="https://github.com/Hack23/ISMS-PUBLIC">Download from GitHub →</a></p>
+          <h4>📋 ISMS Quick-Start skabelon</h4>
+          <p>Komplet politikramme baseret på Hack23's offentlige ISMS. Inkluderer 15+ politikker, risikoregisterskabelon og anvendelseserklæring.</p>
+          <p><a href="https://github.com/Hack23/ISMS-PUBLIC">Download fra GitHub →</a></p>
         </div>
       </div>
       
-      <h3>External Authoritative Sources</h3>
+      <h3>Eksterne autoritative kilder</h3>
       <ul>
-        <li><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">ISO/IEC 27001:2022 Official Standard (ISO.org)</a></li>
-        <li><a href="https://www.swedac.se" target="_blank" rel="noopener">SWEDAC (Swedish Accreditation Body)</a></li>
-        <li><a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener">ISO 27001 Family of Standards</a></li>
+        <li><a href="https://www.iso.org/standard/82875.html" target="_blank" rel="noopener">ISO/IEC 27001:2022 officiel standard (ISO.org)</a></li>
+        <li><a href="https://www.swedac.se" target="_blank" rel="noopener">SWEDAC (Svensk akkrediteringsorgan)</a></li>
+        <li><a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener">ISO 27001-standardfamilien</a></li>
       </ul>
       
-      <h3>Get Expert Help</h3>
+      <h3>Få eksperthjælp</h3>
       <div class="cta-card">
-        <h4>🤝 Free Consultation: ISO 27001 Implementation</h4>
-        <p>Ready to start your ISO 27001 journey? Hack23 offers pragmatic, cost-effective implementation support backed by our public ISMS as proof of expertise.</p>
-        <p><strong>What we offer:</strong></p>
+        <h4>🤝 Gratis konsultation: ISO 27001-implementering</h4>
+        <p>Klar til at starte jeres ISO 27001-rejse? Hack23 tilbyder pragmatisk, omkostningseffektiv implementeringsstøtte understøttet af vores offentlige ISMS som bevis på ekspertise.</p>
+        <p><strong>Hvad vi tilbyder:</strong></p>
         <ul>
-          <li>Gap assessment and readiness evaluation</li>
-          <li>90-day implementation program tailored to Swedish SMEs</li>
-          <li>Documentation templates based on our public ISMS</li>
-          <li>Technical control implementation guidance</li>
-          <li>Internal audit and certification preparation</li>
+          <li>Gap-vurdering og parathedsevaluering</li>
+          <li>90-dages implementeringsprogram skræddersyet til svenske SMV'er</li>
+          <li>Dokumentationsskabeloner baseret på vores offentlige ISMS</li>
+          <li>Vejledning til teknisk kontrolimplementering</li>
+          <li>Intern revision og certificeringsforberedelse</li>
         </ul>
-        <p><a href="why-hack23.html" class="cta-button">Book Free Consultation →</a></p>
+        <p><a href="why-hack23.html" class="cta-button">Book gratis konsultation →</a></p>
       </div>
       
       <div class="info-box">
-        <h4>📚 Read More About ISO 27001 Implementation</h4>
-        <p>This is a comprehensive pillar guide. For more specific topics, we're developing cluster content covering:</p>
+        <h4>📚 Læs mere om ISO 27001-implementering</h4>
+        <p>Dette er en omfattende pillarguide. For mere specifikke emner er vi ved at udvikle klyngeindhold, der dækker:</p>
         <ul>
-          <li><a href="iso-27001-2022-vs-2013.html">ISO 27001:2022 vs 2013: Detailed version comparison</a></li>
-          <li>Risk Assessment Templates for ISO 27001</li>
-          <li>Control Implementation Checklists</li>
-          <li><a href="iso-27001-certification-costs-sweden.html">Certification Cost Analysis for Sweden</a></li>
-          <li><a href="iso-27001-implementation-mistakes.html">Common Implementation Mistakes to Avoid</a></li>
-          <li>Certification Body Selection Guide</li>
-          <li>Internal Audit Preparation</li>
-          <li>Post-Certification ISMS Maintenance</li>
+          <li><a href="iso-27001-2022-vs-2013.html">ISO 27001:2022 vs. 2013: Detaljeret versionssammenligning</a></li>
+          <li>Risikovurderingsskabeloner til ISO 27001</li>
+          <li>Tjeklister til kontrolimplementering</li>
+          <li><a href="iso-27001-certification-costs-sweden.html">Certificeringsomkostningsanalyse for Sverige</a></li>
+          <li><a href="iso-27001-implementation-mistakes.html">Almindelige implementeringsfejl at undgå</a></li>
+          <li>Guide til valg af certificeringsorgan</li>
+          <li>Forberedelse til intern revision</li>
+          <li>ISMS-vedligeholdelse efter certificering</li>
         </ul>
-        <p>Check our <a href="blog.html">blog</a> for updates as we publish these guides.</p>
+        <p>Tjek vores <a href="blog.html">blog</a> for opdateringer, efterhånden som vi offentliggør disse vejledninger.</p>
       </div>
     </section>
 
