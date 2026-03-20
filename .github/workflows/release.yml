@@ -348,8 +348,12 @@ jobs:
                ".vscode/*" ".devcontainer/*" "__pycache__/*" "*.pyc" "*.pyo" \
                "optimized-images/*" "*.backup-*"
           
+          # Create checksums
+          sha256sum homepage-${{ needs.prepare.outputs.version }}.zip > homepage-${{ needs.prepare.outputs.version }}.zip.sha256
+          
           echo "✅ Release package created: homepage-${{ needs.prepare.outputs.version }}.zip"
           ls -lh homepage-${{ needs.prepare.outputs.version }}.zip
+          cat homepage-${{ needs.prepare.outputs.version }}.zip.sha256
 
       - name: Upload build artifact
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
@@ -357,6 +361,7 @@ jobs:
           name: build-artifacts
           path: |
             homepage-${{ needs.prepare.outputs.version }}.zip
+            homepage-${{ needs.prepare.outputs.version }}.zip.sha256
           if-no-files-found: error
 
       - name: Generate SBOM
@@ -436,6 +441,29 @@ jobs:
           unzip -q artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip -d release-deploy
           echo "✅ Release artifact extracted to release-deploy/"
 
+      - name: Verify release artifacts exist
+        run: |
+          echo "🔍 Verifying all release artifacts exist..."
+          MISSING=0
+          for f in \
+            "artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip" \
+            "artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip.sha256" \
+            "artifacts/security/homepage-${{ needs.prepare.outputs.version }}.spdx.json" \
+            "artifacts/security/homepage-${{ needs.prepare.outputs.version }}.zip.intoto.jsonl" \
+            "artifacts/security/homepage-${{ needs.prepare.outputs.version }}.spdx.json.intoto.jsonl"; do
+            if [ -f "$f" ]; then
+              echo "  ✅ Found: $f ($(stat -c%s "$f") bytes)"
+            else
+              echo "  ❌ MISSING: $f"
+              MISSING=1
+            fi
+          done
+          if [ "$MISSING" -eq 1 ]; then
+            echo "❌ Some release artifacts are missing!"
+            exit 1
+          fi
+          echo "✅ All release artifacts verified"
+
       - name: Draft Release Notes
         id: release-drafter
         uses: release-drafter/release-drafter@139054aeaa9adc52ab36ddf67437541f039b88e2 # v7.1.1
@@ -454,13 +482,31 @@ jobs:
         with:
           tag: ${{ needs.prepare.outputs.version }}
           name: Hack23 Homepage ${{ needs.prepare.outputs.version }}
-          body: ${{ steps.release-drafter.outputs.body }}
+          body: |
+            ${{ steps.release-drafter.outputs.body }}
+            
+            ## 📦 Release Artifacts
+            
+            - `homepage-${{ needs.prepare.outputs.version }}.zip` - Complete website package (minified HTML/CSS/JS)
+            - `homepage-${{ needs.prepare.outputs.version }}.zip.sha256` - Checksum for verification
+            - `homepage-${{ needs.prepare.outputs.version }}.spdx.json` - SBOM (Software Bill of Materials)
+            - `*.intoto.jsonl` - SLSA Build Provenance Attestations
+            
+            ## 🔐 Security
+            
+            All artifacts include SLSA Build Provenance attestations and SBOM for supply chain security.
+            Verify attestations using the GitHub CLI:
+            
+            ```bash
+            gh attestation verify homepage-${{ needs.prepare.outputs.version }}.zip -R Hack23/homepage
+            ```
           generateReleaseNotes: false
-          makeLatest: true
+          immutableCreate: true
           draft: false
           prerelease: ${{ needs.prepare.outputs.is_prerelease }}
           artifacts: |
             artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip
+            artifacts/build/homepage-${{ needs.prepare.outputs.version }}.zip.sha256
             artifacts/security/homepage-${{ needs.prepare.outputs.version }}.spdx.json
             artifacts/security/homepage-${{ needs.prepare.outputs.version }}.zip.intoto.jsonl
             artifacts/security/homepage-${{ needs.prepare.outputs.version }}.spdx.json.intoto.jsonl
