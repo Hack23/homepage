@@ -495,9 +495,13 @@ jobs:
             ## 🔐 Security
             
             All artifacts include SLSA Build Provenance attestations and SBOM for supply chain security.
-            Verify attestations using the GitHub CLI:
+            Verify artifacts using the GitHub CLI:
             
             ```bash
+            # Verify checksum
+            sha256sum -c homepage-${{ needs.prepare.outputs.version }}.zip.sha256
+            
+            # Verify build attestation
             gh attestation verify homepage-${{ needs.prepare.outputs.version }}.zip -R Hack23/homepage
             ```
           generateReleaseNotes: false
