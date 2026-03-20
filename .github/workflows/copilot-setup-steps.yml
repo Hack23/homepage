@@ -42,24 +42,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      # Start Xvfb early for Playwright/Chrome
-      - name: Start Xvfb
-        run: |
-          echo "🖥️ Starting Xvfb virtual display..."
-          Xvfb :99 -screen 0 1920x1080x24 &
-          sleep 2
-          echo "DISPLAY=:99" >> $GITHUB_ENV
-          echo "✅ Xvfb started on display :99"
-
-      # Cache APT packages for faster installs
-      - name: Cache APT packages
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
-        with:
-          path: /var/cache/apt/archives
-          key: ${{ runner.os }}-apt-${{ hashFiles('.github/workflows/copilot-setup-steps.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-
-
       # Setup complete Web test environment
       - name: Setup Web Test Environment (Chrome + Xvfb + Dependencies)
         run: |
@@ -104,16 +86,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
-          node-version: "24"
+          node-version: "25"
   
-      - name: Cache dependencies
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       # Pre-install MCP server packages globally
       - name: Install MCP server packages globally
         run: |
@@ -128,18 +102,6 @@ jobs:
           npm install -g @playwright/mcp
           
           echo "✅ Node.js MCP server packages installed globally"
-
-      # Cache global npm packages for MCP servers
-      - name: Cache global npm packages
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
-        with:
-          path: |
-            ~/.npm
-            /usr/local/lib/node_modules
-            /usr/local/bin/mcp-server-*
-          key: ${{ runner.os }}-mcp-servers-v4-${{ hashFiles('.github/copilot-mcp.json') }}
-          restore-keys: |
-            ${{ runner.os }}-mcp-servers-v4-
 
       # Verify all MCP server installations
       - name: Verify MCP server installations
@@ -163,9 +125,3 @@ jobs:
           echo "=== HTTP MCP Servers ==="
           echo "📍 GitHub MCP Server: Using HTTP endpoint (https://api.githubcopilot.com/mcp/insiders)"         
           echo "✅ MCP server verification complete"
-
-      - name: Install Playwright browsers (and OS deps)
-        run: npx playwright install --with-deps
-        env:
-          DISPLAY: ":99"
-          PLAYWRIGHT_BROWSERS_PATH: "0"
