@@ -57,7 +57,7 @@ gh-aw enforces defense-in-depth with five security layers:
 - Define `on:` trigger(s) with appropriate event types and activity filters
 - Set `permissions:` with specific resource scopes (e.g., `issues: read`, `contents: read`)
 - Configure `tools:` with specific toolsets (e.g., `github:` with `toolsets: [issues, labels]`)
-- Include `safe-outputs:` for all write operations with `max:` limits
+- Include `safe-outputs:` for all write operations, using a hard limit where the output type supports it (e.g., `max`, `max-size`) or an allowlist where it does not (e.g., `allowed`)
 - Set `timeout-minutes:` to prevent runaway workflows
 
 **MUST NOT:**
@@ -98,7 +98,7 @@ gh-aw enforces defense-in-depth with five security layers:
 
 **MUST:**
 - Choose appropriate trigger(s):
-  - `issue:` with `types: [opened, reopened]` for issue automation
+  - `issues:` with `types: [opened, reopened]` for issue automation
   - `pull_request:` for PR-related automation
   - `schedule:` with human-friendly syntax (`daily`, `weekly on monday`) or cron
   - `workflow_dispatch:` for manual execution
@@ -170,14 +170,13 @@ safe-outputs:
 
 # Issue Triage Agent
 
-List open issues in ${{ github.repository }} that have no labels.
-For each unlabeled issue, analyze the title and body, then add one of the
-allowed labels: `bug`, `feature`, `enhancement`, `documentation`, `question`,
-`help-wanted`, or `good-first-issue`.
+Analyze the triggering issue (${{ github.event.issue.number }}) title and body,
+then add one of the allowed labels: `bug`, `feature`, `enhancement`,
+`documentation`, `question`, `help-wanted`, or `good-first-issue`.
 
-Skip issues that:
-- Already have any of these labels
-- Have been assigned to any user (especially non-bot users)
+Skip the issue if it:
+- Already has any of these labels
+- Has been assigned to any user (especially non-bot users)
 
 Do research on the issue in the context of the codebase and, after adding
 the label, mention the issue author in a comment explaining why the label
@@ -249,6 +248,7 @@ timeout-minutes: 10
 permissions:
   contents: read
   pull-requests: read
+  security-events: read
 tools:
   github:
     toolsets: [pull-requests, code-scanning]
