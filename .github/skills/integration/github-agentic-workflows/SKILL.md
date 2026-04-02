@@ -154,7 +154,7 @@ gh-aw enforces defense-in-depth with five security layers:
 ---
 timeout-minutes: 5
 on:
-  issue:
+  issues:
     types: [opened, reopened]
 permissions:
   issues: read
@@ -164,7 +164,8 @@ tools:
 safe-outputs:
   add-labels:
     allowed: [bug, feature, enhancement, documentation, question, help-wanted, good-first-issue]
-  add-comment: {}
+  create-comment:
+    max: 1
 ---
 
 # Issue Triage Agent
@@ -195,6 +196,7 @@ permissions:
   pull-requests: read
 safe-outputs:
   create-issue:
+    max: 1
     title-prefix: "[team-status] "
     labels: [report, daily-status]
     close-older-issues: true
@@ -227,7 +229,7 @@ tools:
 safe-outputs:
   create-issue:
     max: 10
-  add-comment:
+  create-comment:
     max: 1
 ---
 
@@ -330,7 +332,7 @@ Note: Requires ANTHROPIC_API_KEY secret to be configured.
 
 ### Start Simple, Iterate
 - Begin with read-only workflows using `workflow_dispatch`
-- Add safe-outputs incrementally; start with `add-comment`
+- Add safe-outputs incrementally; start with `create-comment`
 - Use `gh aw compile --watch` for rapid iteration
 - Graduate to scheduled triggers after manual testing
 

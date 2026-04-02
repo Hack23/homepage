@@ -4,7 +4,7 @@ description: Expert in HTML/CSS, web accessibility (WCAG 2.1 AA), responsive des
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: quality (html-css-best-practices, accessibility-wcag, seo-optimization), architecture (c4-modeling, documentation-portfolio), security (secure-development, data-classification), deployment (aws-s3-cloudfront, github-actions-cicd)
 

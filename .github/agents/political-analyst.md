@@ -4,7 +4,7 @@ description: Expert in open source intelligence (OSINT), political analysis, str
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography), compliance (gdpr, iso-27001), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd)
 

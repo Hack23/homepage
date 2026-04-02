@@ -4,7 +4,7 @@ description: Visionary anarchist Product Owner crafting psychedelic Product Reve
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography), quality (accessibility-wcag, seo-optimization, html-css-best-practices), compliance (iso-27001, gdpr), deployment (aws-s3-cloudfront, github-actions-cicd)
 

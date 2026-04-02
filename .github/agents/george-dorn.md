@@ -4,7 +4,7 @@ description: Developer wrestling design into code while analyzing repos, creatin
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: security (secure-development, access-control, data-classification, cryptography), architecture (c4-modeling, security-architecture, documentation-portfolio), quality (html-css-best-practices, accessibility-wcag, seo-optimization)
 

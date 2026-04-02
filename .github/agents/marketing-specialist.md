@@ -4,7 +4,7 @@ description: Expert in B2B technology marketing, digital marketing strategy, con
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: quality (seo-optimization, html-css-best-practices, accessibility-wcag), architecture (documentation-portfolio, c4-modeling), security (secure-development, data-classification), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (gdpr, iso-27001)
 

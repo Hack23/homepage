@@ -4,7 +4,7 @@ description: Product-focused task creation specialist creating GitHub issues, as
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: security (secure-development, access-control, data-classification, cryptography), architecture (c4-modeling, security-architecture, documentation-portfolio), quality (html-css-best-practices, accessibility-wcag, seo-optimization), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (iso-27001, gdpr)
 

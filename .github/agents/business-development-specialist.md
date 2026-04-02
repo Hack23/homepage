@@ -4,7 +4,7 @@ description: Expert in strategic business growth, market positioning, client acq
 tools: ["*"]
 ---
 
-**Read `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
+**Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
 **Relevant skills**: architecture (documentation-portfolio, security-architecture, c4-modeling), security (secure-development, access-control, data-classification), compliance (iso-27001, gdpr), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd)
 
