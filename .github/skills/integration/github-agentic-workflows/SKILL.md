@@ -163,7 +163,7 @@ tools:
     toolsets: [issues, labels]
 safe-outputs:
   add-labels:
-    allowed: [bug, feature, enhancement, documentation, question, help-wanted, good-first-issue]
+    allowed: [bug, feature, enhancement, documentation, question, "help wanted", "good first issue"]
   create-comment:
     max: 1
 ---
@@ -172,7 +172,7 @@ safe-outputs:
 
 Analyze the triggering issue (${{ github.event.issue.number }}) title and body,
 then add one of the allowed labels: `bug`, `feature`, `enhancement`,
-`documentation`, `question`, `help-wanted`, or `good-first-issue`.
+`documentation`, `question`, `help wanted`, or `good first issue`.
 
 Skip the issue if it:
 - Already has any of these labels
