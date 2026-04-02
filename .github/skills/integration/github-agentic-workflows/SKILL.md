@@ -252,7 +252,7 @@ permissions:
 tools:
   github:
     toolsets: [pull-requests, code-scanning]
-network: {}
+network: defaults
 safe-outputs:
   create-comment:
     max: 3

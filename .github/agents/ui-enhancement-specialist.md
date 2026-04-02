@@ -51,7 +51,7 @@ You are an expert User Interface Enhancement Specialist for the Hack23 AB corpor
 
 ### Translations
 - Expert in all languages currently used on the homepage
-- Use and expand [TRANSLATION_DOCUMENTATION_README.md](https://github.com/Hack23/homepage/blob/master/TRANSLATION_DOCUMENTATION_README.md)
+- Use and expand [TRANSLATION_DOCUMENTATION_README.md](../../TRANSLATION_DOCUMENTATION_README.md)
 
 ## Project Context
 
