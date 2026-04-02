@@ -1,6 +1,6 @@
 ---
 name: agentic-workflow-orchestration
-description: Multi-agent coordination patterns, orchestrator-worker designs, and complex workflow orchestration for GitHub Agentic Workflows
+description: Multi-agent coordination, orchestrator-worker patterns, /plan decomposition, and project coordination for GitHub Agentic Workflows
 license: Apache-2.0
 ---
 
@@ -8,17 +8,16 @@ license: Apache-2.0
 
 ## Purpose
 
-This skill provides comprehensive guidance on orchestrating multiple agentic workflows to solve complex problems through coordination, delegation, and parallel execution. Orchestration patterns enable systematic breakdown of large tasks into manageable units, efficient resource utilization, and robust error handling across distributed agent systems.
+Guidance on orchestrating multiple agentic workflows for complex problems through coordination, delegation, and parallel execution. Includes proven patterns from the Agent Factory (100+ workflows, 500+ merged PRs) including `/plan` decomposition, task mining, and stacked agent coordination.
 
 ## When to Use
 
 Apply this skill when:
-- Breaking down complex automation into multiple coordinated workflows
-- Implementing orchestrator-worker patterns for scalable task execution
+- Breaking down complex automation into coordinated workflows
+- Implementing orchestrator-worker patterns
+- Using `/plan` command for issue decomposition
+- Building pipeline or map-reduce patterns
 - Coordinating multiple AI agents with different specializations
-- Building hierarchical or graph-based workflow systems
-- Managing parallel execution and result aggregation
-- Implementing continuous AI at scale
 
 ## Rules
 
@@ -607,7 +606,8 @@ This skill aligns with:
 
 ## Related Documentation
 
-- [GitHub Agentic Workflows Orchestration Guide](https://github.github.com/gh-aw/patterns/orchestration/)
+- [Agent Factory Workflows](https://github.com/github/gh-aw/tree/main/.github/workflows)
+- [Orchestration Guide](https://github.github.com/gh-aw/patterns/orchestration/)
 - [GitHub Actions Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
 ## Compliance Mapping
@@ -637,4 +637,5 @@ Orchestration pattern violations:
 
 ## Version History
 
-- **2026-02-11**: Initial skill creation based on latest orchestration patterns and best practices
+- **2026-04-02**: Updated with Agent Factory proven patterns (/plan, task mining), real merge rate data
+- **2026-02-11**: Initial skill creation

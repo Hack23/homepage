@@ -1,6 +1,6 @@
 ---
 name: continuous-ai-patterns
-description: Continuous AI automation patterns for documentation sync, code quality, issue triage, and automated review using GitHub Agentic Workflows
+description: Continuous AI patterns from Agent Factory - issue triage, documentation sync, code quality, security scanning, and project coordination
 license: Apache-2.0
 ---
 
@@ -868,4 +868,5 @@ Continuous AI pattern violations:
 
 ## Version History
 
-- **2026-02-11**: Initial skill creation based on latest Continuous AI patterns and best practices
+- **2026-04-02**: Updated description with Agent Factory category references
+- **2026-02-11**: Initial skill creation
