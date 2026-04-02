@@ -1,6 +1,6 @@
 ---
 name: agentic-workflow-security
-description: Security best practices, defense-in-depth architecture, threat detection, and safe operations for GitHub Agentic Workflows
+description: 5-layer defense-in-depth security for GitHub Agentic Workflows - safe outputs, threat detection, AWF firewall, and zero-trust patterns
 license: Apache-2.0
 ---
 
@@ -8,73 +8,69 @@ license: Apache-2.0
 
 ## Purpose
 
-This skill provides comprehensive security guidance for GitHub Agentic Workflows, implementing defense-in-depth architecture to protect against prompt injection, rogue MCP servers, malicious agents, and unauthorized actions. Security operates across multiple layers: compilation-time validation, runtime isolation, permission separation, network controls, and output sanitization.
+Comprehensive security guidance for GitHub Agentic Workflows implementing the official 5-layer defense-in-depth architecture: read-only tokens, zero secrets in agent, containerized execution with Agent Workflow Firewall (AWF), safe outputs with guardrails, and agentic threat detection.
 
 ## When to Use
 
 Apply this skill when:
-- Designing secure agentic workflows that handle sensitive operations
-- Implementing defense-in-depth security controls
-- Configuring safe inputs and safe outputs
-- Setting up threat detection and monitoring
-- Establishing security review processes for AI-generated content
+- Designing secure agentic workflows
+- Configuring safe-inputs, safe-outputs, and threat detection
+- Setting up network firewall rules (AWF)
+- Implementing integrity filtering for public repositories
 - Responding to security incidents in agentic workflows
 
 ## Rules
 
-### Defense-in-Depth Architecture
+### 5-Layer Defense-in-Depth Architecture
 
-**MUST:**
-- Implement security controls at every layer:
-  - **Compilation**: Validate workflow structure, tools, permissions
-  - **Runtime**: Isolate agent execution, sandbox operations
-  - **Permission**: Enforce least privilege, separate concerns
-  - **Network**: Control external access, allowlist domains
-  - **Output**: Sanitize and validate before applying changes
-- Use multiple overlapping security controls
-- Design for graceful degradation if one control fails
-- Assume breach mentality (one layer may be compromised)
-- Log all security-relevant events
+**MUST implement all five official security layers:**
+
+1. **Read-only tokens** — Agent receives only read-scoped GitHub token; cannot push, create PRs, or delete files
+2. **Zero secrets in agent** — Write tokens and API keys exist only in separate, isolated post-agent jobs
+3. **Containerized with AWF** — Agent Workflow Firewall routes all outbound traffic through Squid proxy with domain allowlist; kernel-level blocking
+4. **Safe outputs with guardrails** — Agent produces structured artifacts; separate gated job applies only explicitly permitted actions with hard limits
+5. **Agentic threat detection** — AI-powered scan checks for prompt injection, leaked credentials, and malicious code before any write
 
 **MUST NOT:**
-- Rely on single security control
-- Skip security layers for convenience
+- Rely on any single security layer
+- Bypass safe-outputs for convenience
 - Assume AI agents are inherently trustworthy
-- Bypass security controls for speed
 
 ### Principle of Least Privilege
 
 **MUST:**
-- Start with `permissions: read-all` as default
-- Grant write permissions only through safe-outputs
-- Use fine-grained Personal Access Tokens with minimal scopes
-- Time-limit elevated permissions
+- Use specific resource permissions (e.g., `issues: read`, `contents: read`) not `read-all`
+- Grant write operations only through safe-outputs with `max:` limits
+- Use fine-grained PATs with minimal scopes
+- Set `timeout-minutes:` on all workflows
 - Audit permission usage regularly
-- Document justification for elevated permissions
 
 **MUST NOT:**
-- Use `permissions: write-all` without explicit security review
-- Grant repository-wide write access to workflows
+- Use `permissions: write-all` without security review
 - Use classic PATs instead of fine-grained tokens
 - Allow unrestricted network access
-- Bypass permission checks
 
-### Safe Outputs (Write Operations Without Write Permissions)
+### Safe Outputs (Write Operations via Gated Jobs)
 
 **MUST:**
-- Configure all write operations in `safe-outputs:` section
-- Set reasonable limits with `max:` parameter
+- Configure all write operations in `safe-outputs:` with specific constraints:
+  - `max:` — Hard limit per operation per run
+  - `title-prefix:` — Required prefix for created issues/PRs
+  - `labels:` — Required/allowed labels
+  - `allowed:` — Allowlist of label values for `add-labels`
+  - `close-older-issues:` — Auto-close previous reports
+  - `branch:` — Target branch for asset uploads
+  - `max-size:` — File size limits for uploads
+  - `allowed-exts:` — Permitted file extensions
+- Enable `threat-detection:` with `action: block` for all production workflows
 - Use separate permission-controlled jobs to execute safe outputs
-- Validate AI-generated content before applying
 - Include human review gates for critical operations
-- Log all safe output executions
 
 **MUST NOT:**
 - Grant direct write permissions when safe-outputs can be used
 - Set excessive `max:` limits without justification
-- Skip validation of AI-generated content
-- Auto-merge AI-generated pull requests without review
-- Bypass safe output mechanisms
+- Auto-merge AI-generated PRs without review
+- Skip threat detection for write operations
 
 ### Safe Inputs (Custom Tools)
 
@@ -110,23 +106,20 @@ Apply this skill when:
 - Auto-approve flagged outputs
 - Skip investigation of security alerts
 
-### Network Security
+### Network Security (Agent Workflow Firewall)
 
 **MUST:**
-- Use `network:` configuration to control external access
-- Start with `network: {}` (no external access) for sensitive workflows
-- Use `network: defaults` for common development infrastructure
-- Explicitly allowlist required domains
-- Document why external access is needed
+- Use `network: {}` for zero external access (most secure)
+- Use `network: defaults` for GitHub-only access (github.com, api.github.com)
+- Explicitly allowlist required domains when external access is needed
 - Use HTTPS for all external communications
-- Validate SSL/TLS certificates
+- Understand that AWF uses Squid proxy with kernel-level blocking
 
 **MUST NOT:**
 - Allow unrestricted internet access without justification
 - Use HTTP for sensitive communications
 - Trust external APIs without validation
 - Bypass certificate validation
-- Access untrusted domains
 
 ### Secret Management
 
@@ -600,9 +593,11 @@ This skill implements requirements from:
 
 ## Related Documentation
 
-- [GitHub Agentic Workflows Security Guide](https://githubnext.github.io/gh-aw/guides/security/)
+- [GitHub Agentic Workflows Security Architecture](https://github.github.com/gh-aw/introduction/architecture/)
+- [Safe Outputs Reference](https://github.github.com/gh-aw/reference/safe-outputs/)
+- [Threat Detection Reference](https://github.github.com/gh-aw/reference/threat-detection/)
+- [Integrity Filtering](https://github.github.com/gh-aw/reference/integrity/)
 - [GitHub Actions Security Best Practices](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)
-- [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/)
 
 ## Compliance Mapping
 
@@ -638,4 +633,5 @@ Security violations in agentic workflows:
 
 ## Version History
 
-- **2026-02-11**: Initial skill creation based on latest GitHub Agentic Workflows security features
+- **2026-04-02**: Major update with official 5-layer architecture, AWF firewall details, safe-output constraint types, integrity filtering, updated documentation links
+- **2026-02-11**: Initial skill creation

@@ -1,6 +1,6 @@
 ---
 name: github-agentic-workflows
-description: Fundamentals of GitHub Agentic Workflows - structure, compilation, triggers, and natural language automation
+description: GitHub Agentic Workflows (gh-aw) - markdown-based AI automation with 5-layer security, safe outputs, and Continuous AI patterns
 license: Apache-2.0
 ---
 
@@ -8,297 +8,275 @@ license: Apache-2.0
 
 ## Purpose
 
-This skill provides comprehensive guidance on GitHub Agentic Workflows, a revolutionary approach to repository automation that uses AI to understand context, make decisions, and take autonomous actions through natural language instructions. Unlike traditional workflows with fixed if/then logic, agentic workflows interpret context and adapt behavior based on specific situations.
+This skill provides comprehensive guidance on GitHub Agentic Workflows (gh-aw), a Go-based GitHub CLI extension that enables writing agentic workflows in natural language using Markdown files and running them as GitHub Actions workflows. Developed by GitHub Next and Microsoft Research, gh-aw delivers repository automation with strong guardrails, safe outputs, and sandboxed execution.
 
-GitHub Agentic Workflows enables **Continuous AI** - systematic, automated application of AI to software collaboration tasks like triaging issues, maintaining documentation, improving code quality, and automating reviews.
+gh-aw augments existing deterministic CI/CD with **Continuous AI** capabilities — systematic, automated application of AI to software collaboration tasks like triaging issues, maintaining documentation, improving code quality, and automating reviews.
 
 ## When to Use
 
 Apply this skill when:
-- Creating AI-powered repository automation workflows
-- Converting deterministic GitHub Actions to intelligent, context-aware workflows
-- Implementing continuous AI patterns for issue triage, documentation sync, or code review
-- Building workflows that require judgment, synthesis, or content generation
-- Automating tasks that traditionally require human decision-making
+- Writing AI-powered repository automation as Markdown workflows
+- Implementing Continuous AI patterns (issue triage, documentation sync, code review, quality improvement)
+- Leveraging safe-outputs for write operations without granting direct write permissions
+- Using multiple AI engines (Copilot, Claude, Codex) for event-triggered and scheduled jobs
+- Building orchestrator-worker patterns for complex multi-agent coordination
+- Automating tasks that traditionally require human judgment
+
+## 5-Layer Security Architecture
+
+gh-aw enforces defense-in-depth with five security layers:
+
+1. **Read-only tokens** — Agent receives only read-scoped GitHub token
+2. **Zero secrets in agent** — Write tokens/API keys exist only in separate isolated jobs
+3. **Containerized with network firewall** — Agent Workflow Firewall (AWF) routes all outbound traffic through Squid proxy with domain allowlist
+4. **Safe outputs with guardrails** — Agent produces structured artifacts; a separate gated job applies only permitted actions
+5. **Agentic threat detection** — AI-powered scan of proposed changes before any write; blocks prompt injection, leaked credentials, malicious code
 
 ## Rules
 
 ### Workflow Structure
 
 **MUST:**
-- Create workflow files as Markdown (`.md`) in `.github/workflows/` directory
-- Include YAML frontmatter between `---` markers at the top of the file
+- Create workflow files as Markdown (`.md`) in `.github/workflows/`
+- Include YAML frontmatter between `---` markers at the top
 - Write natural language instructions below the frontmatter
-- Compile Markdown workflows to `.lock.yml` files using `gh aw compile`
-- Commit both `.md` (source) and `.lock.yml` (compiled) files to version control
-- Use declarative, clear, imperative task descriptions in natural language
-- Separate configuration (frontmatter) from instructions (markdown body)
+- Compile to `.lock.yml` files using `gh aw compile`
+- Commit both `.md` (source) and `.lock.yml` (compiled) files
+- Use clear, imperative task descriptions in natural language
+- Separate configuration (frontmatter) from instructions (body)
 
 **MUST NOT:**
-- Write complex YAML conditionals or programming logic in workflow files
-- Rely solely on `.lock.yml` files (they are generated artifacts)
-- Mix configuration and instructions in the same section
-- Use traditional GitHub Actions YAML syntax for agentic workflows
+- Manually edit `.lock.yml` files (regenerate via compile)
+- Push `.md` changes without recompiling
+- Write complex YAML conditionals in workflow files
 - Skip compilation step before deployment
 
 ### Frontmatter Configuration
 
 **MUST:**
-- Define `on:` trigger(s) for when the workflow runs
-- Set `permissions:` (default to `read-all` for security)
-- Configure `tools:` that the AI agent can use
-- Specify `engine:` if not using default GitHub Copilot
-- Include `safe-outputs:` for any write operations
+- Define `on:` trigger(s) with appropriate event types and activity filters
+- Set `permissions:` with specific resource scopes (e.g., `issues: read`, `contents: read`)
+- Configure `tools:` with specific toolsets (e.g., `github:` with `toolsets: [issues, labels]`)
+- Include `safe-outputs:` for all write operations with `max:` limits
+- Set `timeout-minutes:` to prevent runaway workflows
 
 **MUST NOT:**
-- Grant unnecessary write permissions
-- Use `permissions: write-all` without explicit justification
-- Omit critical configuration fields
+- Use `permissions: write-all` without explicit security review
+- Omit `safe-outputs:` for workflows that create/modify resources
 - Hard-code secrets in frontmatter
+- Grant unrestricted tool access
 
 ### Natural Language Instructions
 
 **MUST:**
-- Write clear, specific, actionable task descriptions
-- Use imperative mood ("Analyze this issue", not "You should analyze")
-- Include context about what the workflow should accomplish
-- Define success criteria and constraints
-- Specify expected outputs (comments, PRs, issues)
-- Break complex tasks into clear phases
-- Provide examples of expected behavior
+- Write as if explaining a task to a colleague
+- Use imperative mood ("Analyze this issue", "Create a summary")
+- Include context, success criteria, and constraints
+- Define expected outputs (comments, PRs, issues)
+- Break complex tasks into clear numbered phases
+- Specify what NOT to do when relevant
+- Include examples of desired output format
 
 **MUST NOT:**
 - Write vague instructions ("Do something helpful")
-- Assume the AI knows implicit context
-- Include implementation details (let AI determine approach)
-- Write instruction text that looks like code or YAML
+- Assume the AI knows implicit repository context
+- Mix code/YAML in instruction text
 
 ### Engines (AI Models)
 
 **MUST:**
-- Use GitHub Copilot as default engine (no explicit configuration needed)
-- Configure appropriate secrets for alternative engines:
-  - Claude: `ANTHROPIC_API_KEY` secret
-  - Codex: `OPENAI_API_KEY` secret
-- Test workflows with chosen engine before production deployment
+- Use GitHub Copilot as default (no explicit `engine:` needed)
+- For Claude: set `engine: claude` and configure `ANTHROPIC_API_KEY` secret
+- For Codex: set `engine: codex` and configure `OPENAI_API_KEY` secret
+- Test with chosen engine before production deployment
 
 **MUST NOT:**
 - Mix multiple engines in same workflow
-- Assume all engines have identical capabilities
-- Skip engine-specific setup documentation
+- Assume identical capabilities across engines
 
 ### Triggers
 
 **MUST:**
-- Choose appropriate trigger(s) for workflow purpose:
-  - `issues:` for issue-related automation
+- Choose appropriate trigger(s):
+  - `issue:` with `types: [opened, reopened]` for issue automation
   - `pull_request:` for PR-related automation
-  - `schedule:` for periodic tasks
+  - `schedule:` with human-friendly syntax (`daily`, `weekly on monday`) or cron
   - `workflow_dispatch:` for manual execution
-  - `slash_command:` for comment-triggered actions
-- Use human-friendly schedule syntax: `daily`, `weekly on monday`
+  - `slash_command:` with `command:` for comment-triggered actions (e.g., `/plan`, `/analyze`)
 - Consider rate limits and costs for scheduled workflows
-- Test manual triggers before enabling automated triggers
+- Test with `workflow_dispatch` before enabling automatic triggers
 
 **MUST NOT:**
 - Use overly frequent schedules that waste resources
-- Trigger on every event type without considering necessity
-- Use fixed cron times (prefer scattered schedule syntax)
+- Trigger on every event type without necessity
 
 ### Tools and MCP Integration
 
 **MUST:**
-- Explicitly configure tools in frontmatter under `tools:` section
-- Use `github:` tool for GitHub API operations (issues, PRs, comments)
-- Configure network permissions when external API access is needed
-- Use `safe-inputs:` for custom lightweight tools
-- Use `edit:` tool for file modifications
-- Use `bash:` tool for shell commands when needed
-- Use `web-search:` or `web-fetch:` for external information
-- Document tool purpose and constraints
+- Configure tools in frontmatter with specific toolsets:
+  ```yaml
+  tools:
+    github:
+      toolsets: [issues, labels, pull-requests]
+  ```
+- Use `safe-inputs:` for custom lightweight inline functions
+- Use `edit:` tool for file modifications, `bash:` for shell commands
+- Use `web-search:` or `web-fetch:` for external information with network restrictions
+- Set `network:` allowlists when external access is needed
+- Use `min-integrity:` for public repos to control event visibility
 
 **MUST NOT:**
 - Grant unrestricted tool access without review
-- Use tools without understanding their security implications
-- Bypass tool allowlists
-- Ignore network access controls
+- Bypass tool allowlists or network access controls
 
-### Compilation Process
+### Compilation and Setup
 
 **MUST:**
-- Install gh-aw CLI extension: `gh extension install github/gh-aw`
-- Compile workflows: `gh aw compile` (generates `.lock.yml` files)
-- Use `gh aw compile --watch` for iterative development
-- Review generated `.lock.yml` for security hardening
-- Validate compilation errors before pushing changes
-- Keep `.md` and `.lock.yml` files synchronized
+- Install: `gh extension install github/gh-aw`
+- Initialize: `gh aw init` for new repositories
+- Compile: `gh aw compile` (generates `.lock.yml`)
+- Watch mode: `gh aw compile --watch` for development
+- Test: `gh aw run <workflow-name>` for manual testing
+- Logs: `gh aw logs <workflow-name>` for debugging
+- Add community workflows: `gh aw add-wizard <url>`
+- Use fine-grained PATs with minimal scopes
 
 **MUST NOT:**
-- Manually edit `.lock.yml` files (regenerate with compile)
-- Push `.md` changes without recompiling
-- Ignore compilation warnings or errors
-- Skip validation of generated Actions workflow
-
-### Repository Setup
-
-**MUST:**
-- Run `gh aw init` to initialize repository for agentic workflows
-- Configure required secrets (engine API keys, tokens)
-- Set up fine-grained Personal Access Tokens with minimal permissions
-- Document secrets configuration in repository README
-- Test workflow execution with `gh aw run <workflow-name>`
-
-**MUST NOT:**
-- Skip initialization steps
 - Use classic PATs instead of fine-grained tokens
-- Grant excessive permissions to workflow tokens
+- Skip `gh aw init` for new repositories
 - Commit secrets to version control
 
 ## Examples
 
-### Example 1: Simple Issue Triage Workflow
+### Example 1: Issue Triage (Real-World Pattern from Agent Factory)
 
 ```markdown
 ---
-on: issues
-permissions: read-all
+timeout-minutes: 5
+on:
+  issue:
+    types: [opened, reopened]
+permissions:
+  issues: read
 tools:
   github:
+    toolsets: [issues, labels]
 safe-outputs:
-  create-comment:
-    max: 1
+  add-labels:
+    allowed: [bug, feature, enhancement, documentation, question, help-wanted, good-first-issue]
+  add-comment: {}
 ---
 
-# Issue Triage
+# Issue Triage Agent
 
-Analyze new issues and provide helpful triage information:
+List open issues in ${{ github.repository }} that have no labels.
+For each unlabeled issue, analyze the title and body, then add one of the
+allowed labels: `bug`, `feature`, `enhancement`, `documentation`, `question`,
+`help-wanted`, or `good-first-issue`.
 
-1. Assess if the issue description is clear and actionable
-2. Check if it's a duplicate of existing issues
-3. Suggest appropriate labels based on content
-4. If the issue is unclear, politely ask for clarification
+Skip issues that:
+- Already have any of these labels
+- Have been assigned to any user (especially non-bot users)
 
-Provide your analysis as a comment on the issue.
+Do research on the issue in the context of the codebase and, after adding
+the label, mention the issue author in a comment explaining why the label
+was added and give a brief summary of how the issue may be addressed.
 ```
 
-### Example 2: Documentation Sync Workflow
+### Example 2: Daily Status Report
 
 ```markdown
 ---
-on: daily
-permissions: read-all
-tools:
-  github:
-  edit:
-safe-outputs:
-  create-pull-request:
-    max: 1
----
-
-# Daily Documentation Sync
-
-Check if repository documentation is up to date:
-
-1. Review README.md and compare with actual codebase structure
-2. Check if API documentation matches current endpoints
-3. Verify example code still works with current version
-4. Update changelog if recent commits aren't documented
-
-If updates are needed, create a pull request with:
-- Clear description of documentation changes
-- Reference to relevant code changes
-- Explanation of why updates were necessary
-```
-
-### Example 3: Code Review Assistant
-
-```markdown
----
-on: pull_request
-permissions: read-all
-tools:
-  github:
-safe-outputs:
-  create-comment:
-    max: 5
----
-
-# Code Review Assistant
-
-Provide constructive code review feedback:
-
-1. Check for common security issues (SQL injection, XSS, secrets in code)
-2. Identify code style inconsistencies
-3. Suggest performance improvements if obvious
-4. Check test coverage for new code
-5. Verify documentation is updated for API changes
-
-Post review comments on specific lines where issues are found.
-Be constructive and educational in your feedback.
-```
-
-### Example 4: Weekly Repository Status Report
-
-```markdown
----
-on: weekly on monday
-permissions: read-all
-tools:
-  github:
+on:
+  schedule: daily
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
 safe-outputs:
   create-issue:
-    max: 1
+    title-prefix: "[team-status] "
+    labels: [report, daily-status]
+    close-older-issues: true
 ---
 
-# Weekly Repository Health Report
+## Daily Issues Report
 
-Generate a comprehensive repository status report:
+Create an upbeat daily status report for the team as a GitHub issue.
 
-## Analysis Areas
+## What to include
 
-1. **Pull Requests**: Count open PRs, age of oldest PR, stale PRs
-2. **Issues**: Count open issues, recently closed issues, issue velocity
-3. **Activity**: Commits this week, contributors this month
-4. **Dependencies**: Any security alerts or outdated dependencies
-
-Create an issue with the report titled "Weekly Status Report - [DATE]".
-Include actionable recommendations for repository maintainers.
+- Recent repository activity (issues, PRs, discussions, releases, code changes)
+- Progress tracking, goal reminders and highlights
+- Project status and recommendations
+- Actionable next steps for maintainers
 ```
 
-### Example 5: Slash Command Workflow
+### Example 3: Plan Command (Slash Command)
 
 ```markdown
 ---
 on:
   slash_command:
-    command: /analyze
-permissions: read-all
+    command: /plan
+permissions:
+  issues: read
 tools:
   github:
-  web-search:
+    toolsets: [issues]
 safe-outputs:
-  create-comment:
+  create-issue:
+    max: 10
+  add-comment:
     max: 1
 ---
 
-# Issue Analysis Command
+# Plan Command
 
-When triggered with `/analyze` command on an issue:
-
-1. Search for similar issues in other repositories
-2. Find relevant Stack Overflow discussions
-3. Check if this is a known issue in dependencies
-4. Provide links to relevant documentation
-
-Respond with findings as a comment on the issue.
+Break down the current issue into actionable sub-tasks.
+Create child issues for each sub-task and link them.
+Post a comment summarizing the plan with links to all created sub-issues.
 ```
 
-### Example 6: Custom Tool with Safe Inputs
+### Example 4: Network-Restricted Security Review
+
+```markdown
+---
+on: pull_request
+timeout-minutes: 10
+permissions:
+  contents: read
+  pull-requests: read
+tools:
+  github:
+    toolsets: [pull-requests, code-scanning]
+network: {}
+safe-outputs:
+  create-comment:
+    max: 3
+  threat-detection:
+    enabled: true
+    action: block
+---
+
+# Security-Focused PR Review
+
+Review pull request for security issues. No external network access allowed.
+
+Focus on:
+- Hard-coded secrets or credentials
+- Unsafe input handling
+- Missing authentication checks
+- Injection vulnerabilities
+```
+
+### Example 5: Safe Inputs with Custom Tool
 
 ```markdown
 ---
 on: issues
-permissions: read-all
+permissions:
+  issues: read
 tools:
   github:
 safe-inputs:
@@ -312,7 +290,7 @@ safe-inputs:
         if (labels.includes('security')) score += 8;
         if (labels.includes('bug')) score += 5;
         if (body.toLowerCase().includes('production')) score += 3;
-        return score;
+        return Math.min(score, 10);
       }
 safe-outputs:
   create-comment:
@@ -325,41 +303,14 @@ Use the calculate_priority tool to assess issue priority.
 Post a comment with the priority score and recommended action timeline.
 ```
 
-### Example 7: Network-Restricted Workflow
-
-```markdown
----
-on: pull_request
-permissions: read-all
-tools:
-  github:
-network:
-  defaults:
-    - github.com
-    - api.github.com
-safe-outputs:
-  create-comment:
-    max: 1
----
-
-# Security-Focused PR Review
-
-Review pull request for security issues.
-Only access GitHub APIs - no external network calls allowed.
-
-Focus on:
-- Hard-coded secrets or credentials
-- Unsafe input handling
-- Missing authentication checks
-```
-
-### Example 8: Multi-Engine Configuration
+### Example 6: Multi-Engine Configuration
 
 ```markdown
 ---
 on: workflow_dispatch
-engine: claude  # Use Anthropic Claude instead of Copilot
-permissions: read-all
+engine: claude
+permissions:
+  contents: read
 tools:
   github:
 safe-outputs:
@@ -375,93 +326,73 @@ Create an issue with findings and recommendations.
 Note: Requires ANTHROPIC_API_KEY secret to be configured.
 ```
 
-## Workflow Best Practices
+## Best Practices
 
 ### Start Simple, Iterate
-- Begin with read-only workflows
-- Test with `workflow_dispatch` before enabling automatic triggers
-- Add safe-outputs incrementally
+- Begin with read-only workflows using `workflow_dispatch`
+- Add safe-outputs incrementally; start with `add-comment`
 - Use `gh aw compile --watch` for rapid iteration
+- Graduate to scheduled triggers after manual testing
 
 ### Clear Instructions Win
-- Write as if explaining task to a human colleague
-- Include examples of desired output
+- Write as if explaining to a human colleague
+- Include examples of desired output format
 - Define constraints and guardrails explicitly
 - Specify what NOT to do when relevant
 
 ### Security First
-- Use minimal permissions (read-all by default)
-- Leverage safe-outputs instead of direct write permissions
-- Review AI-generated content before merging
-- Monitor workflow costs and usage
+- Use specific permissions (e.g., `issues: read`) not `read-all`
+- Use safe-outputs constraints: `title-prefix`, `labels`, `allowed`, `max`
+- Use `network: {}` for zero external access, `network: defaults` for GitHub-only
+- Enable `threat-detection` for all safe-outputs workflows
+- Use `min-integrity:` in public repos for event visibility control
 
-### Test Before Deploy
-- Use `gh aw run` for manual testing
-- Review logs with `gh aw logs`
-- Test with real repository data
-- Validate safe-outputs are appropriate
+### Agent Factory Patterns (Proven at Scale)
+The GitHub Next team operates 100+ workflows. Key learnings:
+- **Customized agents beat generic ones** — tailor to your repo's context
+- **Incremental improvement beats heroic efforts** — small daily PRs
+- **Observability is essential** — track success rates and merge rates
+- **Meta-analysis reveals hidden patterns** — use AI to analyze AI behavior
+- **Task decomposition enables coordination** — `/plan` command + sub-issues
 
 ### Monitor and Improve
-- Track workflow success rates
-- Gather feedback from generated outputs
+- Track workflow success/merge rates
+- Review AI output quality regularly
 - Refine instructions based on actual behavior
-- Update workflows as repository evolves
+- Use `gh aw logs` and GitHub Actions logs
 
-## Compilation and Deployment Flow
+## Compilation Flow
 
 ```
-1. Author Workflow
-   └─ Create .github/workflows/my-workflow.md
-
-2. Compile
-   └─ Run: gh aw compile
-   └─ Generates: .github/workflows/my-workflow.lock.yml
-
-3. Commit Both Files
-   └─ git add .github/workflows/my-workflow.md
-   └─ git add .github/workflows/my-workflow.lock.yml
-   └─ git commit -m "Add my-workflow"
-
-4. Push to GitHub
-   └─ git push
-
-5. Configure Secrets
-   └─ Add required API keys/tokens in repository settings
-
-6. Test
-   └─ Run: gh aw run my-workflow
-   └─ Or: Trigger from GitHub Actions tab
-
-7. Monitor
-   └─ Check: gh aw logs
-   └─ Review: GitHub Actions logs
+1. Author:   .github/workflows/my-workflow.md
+2. Compile:  gh aw compile → generates .lock.yml
+3. Commit:   git add *.md *.lock.yml && git commit
+4. Push:     git push
+5. Secrets:  Configure API keys in repository settings
+6. Test:     gh aw run my-workflow
+7. Monitor:  gh aw logs my-workflow
 ```
+
+## Safe Outputs Reference
+
+| Output Type | Key Constraints | Example |
+|------------|----------------|---------|
+| `create-issue` | `title-prefix`, `labels`, `max`, `close-older-issues` | Status reports |
+| `create-comment` | `max` | Triage analysis |
+| `add-labels` | `allowed` list | Issue classification |
+| `create-pull-request` | `max`, `title-prefix` | Code improvements |
+| `create-code-scanning-alert` | `max` | Security scanning |
+| `upload-asset` | `branch`, `max-size`, `allowed-exts` | Screenshots |
 
 ## Troubleshooting
 
-### Compilation Fails
-- Check YAML frontmatter syntax
-- Verify all required fields are present
-- Review error messages carefully
-- Ensure gh-aw CLI is up to date: `gh extension upgrade gh-aw`
-
-### Workflow Doesn't Trigger
-- Verify trigger configuration in frontmatter
-- Check that `.lock.yml` file exists and is committed
-- Review GitHub Actions logs for errors
-- Ensure workflow file name matches Actions expectations
-
-### AI Output Quality Issues
-- Refine instructions for clarity and specificity
-- Add examples of desired outputs
-- Include constraints and guardrails
-- Consider switching engine if persistent issues
-
-### Permission Errors
-- Review permissions in frontmatter
-- Check if safe-outputs are properly configured
-- Verify secrets are correctly set up
-- Ensure token has required scopes
+| Symptom | Solution |
+|---------|----------|
+| Compilation fails | Check YAML frontmatter syntax; run `gh aw compile --verbose` |
+| Workflow doesn't trigger | Verify `.lock.yml` is committed; check trigger config |
+| AI output quality issues | Make instructions more specific; add examples; try different engine |
+| Permission errors | Review `permissions:` and `safe-outputs:` config; check token scopes |
+| Network timeout | Add domain to `network:` allowlist; check AWF firewall logs |
 
 ## Related ISMS Policies
 
@@ -483,9 +414,12 @@ This skill aligns with:
 
 ## Related Documentation
 
-- [GitHub Agentic Workflows Official Documentation](https://github.github.com/gh-aw/)
+- [GitHub Agentic Workflows Official Site](https://github.github.com/gh-aw/)
+- [Abridged LLM Documentation](https://github.github.com/gh-aw/llms-small.txt)
+- [Full LLM Documentation](https://github.github.com/gh-aw/llms-full.txt)
+- [Agent Factory Blog Series](https://github.github.com/gh-aw/_llms-txt/agentic-workflows.txt)
+- [GitHub Blog: Automate Repository Tasks](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Model Context Protocol Specification](https://modelcontextprotocol.io/)
 
 ## Compliance Mapping
 
@@ -506,12 +440,14 @@ This skill aligns with:
 
 ## Enforcement
 
-Violations of GitHub Agentic Workflows rules:
-- **Critical**: Hard-coded secrets, unrestricted permissions - Block deployment
-- **High**: Missing compilation, unsafe tool configuration - Require remediation before merge
-- **Medium**: Unclear instructions, missing documentation - Create improvement tickets
-- **Low**: Style inconsistencies, optimization opportunities - Optional improvements
+| Severity | Violation | Action |
+|----------|-----------|--------|
+| Critical | Hard-coded secrets, `write-all` permissions | Block deployment |
+| High | Missing compilation, unsafe tool config | Require remediation |
+| Medium | Unclear instructions, missing docs | Create improvement ticket |
+| Low | Style inconsistencies | Optional improvement |
 
 ## Version History
 
-- **2026-02-11**: Initial skill creation based on latest GitHub Agentic Workflows features and documentation
+- **2026-04-02**: Major update with latest gh-aw v0.45+ features, 5-layer security architecture, real-world Agent Factory patterns, safe-outputs reference table
+- **2026-02-11**: Initial skill creation

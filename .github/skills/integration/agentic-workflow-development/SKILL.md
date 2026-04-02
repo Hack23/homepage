@@ -1,6 +1,6 @@
 ---
 name: agentic-workflow-development
-description: CLI usage, compilation, testing, debugging, and maintenance practices for GitHub Agentic Workflows
+description: gh-aw CLI usage, compilation, testing, debugging, add-wizard, and CI/CD practices for GitHub Agentic Workflows
 license: Apache-2.0
 ---
 
@@ -8,17 +8,16 @@ license: Apache-2.0
 
 ## Purpose
 
-This skill provides comprehensive guidance on the development lifecycle for GitHub Agentic Workflows, including CLI usage, compilation, testing, debugging, version control, and maintenance practices. It focuses on developer productivity, rapid iteration, and reliable deployment of agentic automation.
+Development lifecycle guidance for GitHub Agentic Workflows: CLI setup, compilation, testing, debugging, sharing workflows via `add-wizard`, version control, and CI/CD integration.
 
 ## When to Use
 
 Apply this skill when:
-- Setting up development environment for agentic workflows
+- Setting up gh-aw development environment
 - Creating, testing, and debugging workflows
+- Sharing workflows via `gh aw add-wizard`
 - Implementing CI/CD for workflow deployment
 - Troubleshooting workflow execution issues
-- Maintaining and upgrading existing workflows
-- Collaborating on workflow development with teams
 
 ## Rules
 
@@ -484,45 +483,40 @@ echo "All workflows tested successfully!"
 
 ## CLI Command Reference
 
-### Essential Commands
-
 ```bash
-# Initialize repository
-gh aw init
+# Setup
+gh extension install github/gh-aw    # Install
+gh extension upgrade gh-aw            # Update
+gh aw init                           # Initialize repository
 
-# Compile workflows
-gh aw compile                    # Compile all
-gh aw compile <workflow>         # Compile specific
-gh aw compile --watch            # Watch mode
-gh aw compile --check            # Check only (CI)
+# Development
+gh aw compile                        # Compile all workflows
+gh aw compile <name>                 # Compile specific workflow
+gh aw compile --watch                # Watch mode (auto-recompile)
+gh aw compile --check                # Validate only (CI)
 
-# Run workflows
-gh aw run <workflow>             # Run manually
-gh aw run <workflow> --debug     # Run with debug
+# Execution
+gh aw run <name>                     # Run workflow manually
+gh aw run <name> --debug             # Run with debug output
 
-# View logs
-gh aw logs                       # All recent logs
-gh aw logs <workflow>            # Specific workflow
-gh aw logs <workflow> --tail 100 # Last 100 lines
+# Monitoring
+gh aw logs                           # All recent logs
+gh aw logs <name>                    # Specific workflow logs
+gh aw logs <name> --tail 100         # Last 100 lines
+gh aw status                         # Workflow health
 
-# Status and health
-gh aw status                     # All workflows
-gh aw status <workflow>          # Specific workflow
-gh aw doctor                     # Diagnose issues
+# Sharing
+gh aw add <url>                      # Add workflow from URL
+gh aw add-wizard <url>               # Add with guided setup
 
-# Workflow management
-gh aw add <url>                  # Add workflow from URL
-gh aw add-wizard <url>           # Add with guided setup
-gh aw upgrade                    # Upgrade workflows
-gh aw check-updates              # Check for updates
+# Diagnostics
+gh aw doctor                         # Diagnose issues
+gh aw validate <name>                # Validate structure
+gh aw security-check                 # Security audit
 
-# Validation and security
-gh aw validate <workflow>        # Validate structure
-gh aw security-check             # Security audit
-
-# Version control
-gh aw version                    # Show version
-gh extension upgrade gh-aw       # Upgrade CLI
+# Upgrades
+gh aw upgrade                        # Upgrade workflows
+gh aw check-updates                  # Check for updates
 ```
 
 ## Best Practices Checklist
@@ -627,9 +621,10 @@ This skill aligns with:
 
 ## Related Documentation
 
-- [GitHub Agentic Workflows CLI Documentation](https://github.github.com/gh-aw/setup/cli/)
+- [gh-aw Quick Start](https://github.github.com/gh-aw/setup/quick-start/)
+- [Creating Workflows](https://github.github.com/gh-aw/setup/creating-workflows/)
+- [gh-aw CLI Reference](https://github.github.com/gh-aw/setup/cli/)
 - [GitHub CLI Documentation](https://cli.github.com/manual/)
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
 
 ## Compliance Mapping
 
@@ -658,4 +653,5 @@ Development practice violations:
 
 ## Version History
 
-- **2026-02-11**: Initial skill creation based on latest gh-aw CLI and development practices
+- **2026-04-02**: Updated with add-wizard sharing, latest CLI commands, and Agent Factory learnings
+- **2026-02-11**: Initial skill creation
