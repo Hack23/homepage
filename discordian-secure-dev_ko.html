@@ -39,205 +39,7 @@
 
 <link rel="canonical" href="https://hack23.com/discordian-secure-dev_ko.html">
 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Secure Development: DevSecOps as Competitive Advantage",
-      "description": "How Hack23 weaponizes security-by-design with STRIDE threat modeling, 80% test coverage, SLSA 3 attestations, and public security evidence for DevSecOps excellence",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "url": "https://hack23.com",
-        "jobTitle": "CEO / Cybersecurity Expert",
-        "sameAs": [
-          "https://www.linkedin.com/in/jamessorling/",
-          "https://github.com/Hack23"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "datePublished": "2025-11-05",
-      "dateModified": "2025-11-05",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-secure-dev.html"
-      },
-      "keywords": "secure development, SDLC, secure coding, ISMS",
-      "articleSection": "Information Security",
-      "inLanguage": "ko",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp",
-        "width": 1200,
-        "height": 630
-      },
-      "wordCount": 1561,
-      "articleBody": "진실은 없다. 모든 것이 허용된다. Except shipping code without threat models—that's not agile development, that's gambling with someone else's data and hoping you're lucky. Every line of code ...",
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog.html#blog",
-        "name": "Hack23 Security Blog"
-      },
-      "about": [
-        {
-          "@type": "Thing",
-          "name": "ISMS Policy",
-          "description": "Information Security Management System policy implementation"
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-secure-dev.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "홈",
-          "item": "https://hack23.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "블로그",
-          "item": "https://hack23.com/blog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Secure Development",
-          "item": "https://hack23.com/discordian-secure-dev.html"
-        }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "name": "How to Implement Secure DevSecOps with SLSA Level 3 and 80% Test Coverage",
-      "description": "Comprehensive guide to implementing security-by-design with STRIDE threat modeling, automated testing pipelines, SLSA 3 attestations, and OpenSSF Scorecard 7.0+ for modern development teams",
-      "image": "https://hack23.com/blog.webp",
-      "totalTime": "P60D",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "EUR",
-        "value": "20000"
-      },
-      "supply": [
-        {
-          "@type": "HowToSupply",
-          "name": "Secure SDLC Documentation Templates"
-        },
-        {
-          "@type": "HowToSupply",
-          "name": "보안 아키텍처 Documentation"
-        },
-        {
-          "@type": "HowToSupply",
-          "name": "Code Review Checklist"
-        },
-        {
-          "@type": "HowToSupply",
-          "name": "Security Testing Plan"
-        }
-      ],
-      "tool": [
-        {
-          "@type": "HowToTool",
-          "name": "GitHub Actions for CI/CD automation"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "SonarCloud for code quality and security analysis"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "Dependabot for dependency management"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "OWASP ZAP for security testing"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "SLSA Framework for supply chain security"
-        }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Establish Security-by-Design Foundation",
-          "text": "Integrate security into development lifecycle from inception: Define security requirements during product planning phase. Create threat models before writing code using STRIDE methodology. Document security architecture (authentication, authorization, data protection, encryption). Establish secure coding standards (OWASP Top 10, CWE Top 25). Define security review gates: design review with threat model, code review with security checklist, security testing before deployment. Train development team on secure coding practices and common vulnerabilities.",
-          "url": "https://hack23.com/discordian-secure-dev.html#intro"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Implement Automated Security Testing in CI/CD",
-          "text": "Build comprehensive security testing pipeline integrated with CI/CD: Static Application Security Testing (SAST) using SonarCloud analyzing code for vulnerabilities, code smells, security hotspots. Dependency vulnerability scanning using Dependabot and GitHub Security Advisories. Software Composition Analysis (SCA) generating SBOM (Software Bill of Materials) for transparency. Dynamic Application Security Testing (DAST) using OWASP ZAP for runtime vulnerability detection. Configure automated testing to run on every pull request and block merge if critical issues found.",
-          "url": "https://hack23.com/discordian-secure-dev.html#tools"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Achieve 80% Test Coverage with Security Focus",
-          "text": "Establish comprehensive testing strategy with security validation: Unit tests covering individual functions, edge cases, and input validation. Integration tests validating component interactions, authentication flows, authorization checks. End-to-end tests simulating user journeys including security scenarios (authentication, session management, access control). Security-specific tests: SQL injection attempts, XSS payloads, CSRF token validation, authentication bypass attempts, authorization checks. Target minimum 80% code coverage measured by tools like Jest, PyTest, or JaCoCo. Configure CI/CD to fail builds below coverage threshold.",
-          "url": "https://hack23.com/discordian-secure-dev.html#five-practices"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Implement SLSA Level 3 Supply Chain Security",
-          "text": "Achieve SLSA (Supply chain Levels for Software Artifacts) Level 3 compliance: Build provenance - generate cryptographically signed attestations for every build showing source repository, commit hash, build process, dependencies. Source integrity - ensure builds are created from version-controlled source with no manual steps. Build isolation - use ephemeral build environments (GitHub Actions runners) preventing tampering. Dependency pinning - lock all dependencies to specific versions with hash verification. Automated release process - no manual artifact modifications post-build. Publish SLSA provenance to GitHub attestations for verification.",
-          "url": "https://hack23.com/discordian-secure-dev.html#supply-chain"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Achieve OpenSSF Scorecard 7.0+ Rating",
-          "text": "Implement OpenSSF (Open Source Security Foundation) best practices for 7.0+ score: Branch protection - require pull request reviews, status checks, prevent force pushes. Signed commits - enforce commit signature verification. Security policy - publish SECURITY.md with vulnerability disclosure process. Dependency updates - automated Dependabot updates for vulnerabilities. Code review - require approvals from code owners. CI tests - comprehensive automated testing in CI/CD. SAST tools - integrated static analysis in pipeline. Dangerous workflow prevention - no untrusted code execution in workflows. Token permissions - minimal GitHub Actions token permissions. Pinned dependencies - all actions and dependencies pinned to specific versions.",
-          "url": "https://hack23.com/discordian-secure-dev.html#supply-chain"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Establish Secure Dependency Management",
-          "text": "Implement systematic dependency security management: Dependency inventory - maintain complete SBOM listing all direct and transitive dependencies. Vulnerability monitoring - automated scanning via Dependabot, GitHub Security Advisories, Snyk. Update strategy - apply security patches within 7 days for critical vulnerabilities, 30 days for high severity. Dependency review - evaluate new dependencies for: security track record, active maintenance, license compatibility, supply chain risk. Pin dependencies to specific versions with cryptographic hash verification. Regular dependency updates (monthly) balancing security with stability.",
-          "url": "https://hack23.com/discordian-secure-dev.html#dependencies"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 7,
-          "name": "Implement Security Code Review Process",
-          "text": "Establish mandatory security-focused code review: Security review checklist covering: input validation and sanitization, output encoding and escaping, authentication and session management, authorization and access control, cryptographic implementations, error handling and logging, secure configuration, sensitive data handling. Require minimum 2 approvals for security-sensitive changes. Security expert review for: authentication changes, authorization logic, cryptographic code, external integrations, privilege escalation paths. Automated review tools: pre-commit hooks for secret detection, IDE security plugins, PR-triggered security scans.",
-          "url": "https://hack23.com/discordian-secure-dev.html#sdlc"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 8,
-          "name": "Deploy Security Monitoring and Incident Response",
-          "text": "Implement runtime security monitoring and response capabilities: Application logging - comprehensive security event logging (authentication attempts, authorization failures, suspicious patterns, errors). Centralized log aggregation - collect logs in secure, tamper-proof storage with retention policy. Security monitoring - automated alerting for: repeated authentication failures, unusual access patterns, suspicious API usage, error rate spikes. Incident response integration - security alerts trigger incident response procedures. Security metrics dashboard - track: vulnerability discovery/remediation time, security test coverage, SLSA compliance, OpenSSF score, security incident frequency.",
-          "url": "https://hack23.com/discordian-secure-dev.html#tools"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 9,
-          "name": "Maintain Security Posture Through Continuous Improvement",
-          "text": "Establish continuous security improvement cycle: Quarterly security reviews - assess threat landscape changes, review security metrics, update threat models. Security training - ongoing developer education on: emerging vulnerabilities, secure coding techniques, security tooling updates, incident lessons learned. Security retrospectives - post-incident reviews identifying root causes and preventive measures. Benchmark against industry standards - track SLSA level, OpenSSF score, vulnerability remediation SLAs. Community engagement - contribute security improvements to open source dependencies, share security learnings publicly, participate in coordinated disclosure.",
-          "url": "https://hack23.com/discordian-secure-dev.html#conclusion"
-        }
-      ]
-    }
-  ]
-}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Secure Development: DevSecOps as Competitive Advantage", "description": "How Hack23 weaponizes security-by-design with STRIDE threat modeling, 80% test coverage, SLSA 3 attestations, and public security evidence for DevSecOps excellence", "author": {"@type": "Person", "name": "James Pether Sörling", "url": "https://hack23.com", "jobTitle": "CEO / Cybersecurity Expert", "sameAs": ["https://www.linkedin.com/in/jamessorling/", "https://github.com/Hack23"]}, "publisher": {"@type": "Organization", "name": "Hack23 AB", "logo": {"@type": "ImageObject", "url": "cia-icon-140.webp"}}, "datePublished": "2025-11-05", "dateModified": "2026-04-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hack23.com/discordian-secure-dev_ko.html"}, "keywords": "secure development, SDLC, secure coding, ISMS", "articleSection": "Information Security", "inLanguage": "ko", "image": {"@type": "ImageObject", "url": "https://hack23.com/blog.webp", "width": 1200, "height": 630}, "wordCount": 1170, "articleBody": "진실은 없다. 모든 것이 허용된다. Except shipping code without threat models—that's not agile development, that's gambling with someone else's data and hoping you're lucky. Every line of code ...", "isPartOf": {"@type": "Blog", "@id": "https://hack23.com/blog_ko.html#blog", "name": "Hack23 Security Blog"}, "about": [{"@type": "Thing", "name": "ISMS Policy", "description": "Information Security Management System policy implementation"}]}, {"@type": "BreadcrumbList", "@id": "https://hack23.com/discordian-secure-dev_ko.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://hack23.com/index_ko.html"}, {"@type": "ListItem", "position": 2, "name": "블로그", "item": "https://hack23.com/blog_ko.html"}, {"@type": "ListItem", "position": 3, "name": "Secure Development", "item": "https://hack23.com/discordian-secure-dev_ko.html"}]}]}</script>
 
   <!-- Multilingual SEO -->
   <link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-secure-dev_ar.html">
@@ -331,21 +133,18 @@
           <div class="scanner-effect"></div>
           <h3>1. 🎯 필수 위협 모델링</h3>
           <p><strong>코드 전 STRIDE.</strong> 모든 프로젝트는 포괄적인 분석이 포함된 THREAT_MODEL.md가 필요하다: STRIDE 프레임워크 적용, MITRE ATT&CK 통합, 공격 트리 개발, 정량적 위험 평가. CIA는 OpenSSF 7.2점을 획득—공개 위협 모델은 체크박스 준수가 아닌 체계적인 보안 사고의 증거다.</p>
-          <p class="hidden-wisdom"><em>위협 모델 없는 코드는 낙관주의와 예산을 가진 취약점 생성일 뿐이다.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>2. 📊 최소 80% 테스트 커버리지</h3>
           <p>포괄적인 테스트는 선택 사항이 아니다. <strong>최소 80% 라인 커버리지, 70% 분기 커버리지.</strong> 공개 JaCoCo/Jest/Vitest 보고서, 모든 커밋에서 자동 실행, 과거 추세 추적. CIA와 Black Trigram은 실시간 커버리지 대시보드를 유지한다—약속보다 투명성, 주장보다 증거.</p>
-          <p class="hidden-wisdom"><em>측정할 수 없으면 보안할 수 없다. 공개하지 않으면 무언가를 숨기는 것이다.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. 🔐 SLSA 3 빌드 증명</h3>
           <p>검증 가능한 출처를 통한 공급망 보안. SLSA 3 증명, 서명된 아티팩트, 자동화된 SBOM 생성, 불변 빌드 증거. 모든 릴리스에는 무엇이, 누구에 의해, 어떤 소스에서 빌드되었는지에 대한 암호화 증명이 포함된다. 신뢰하되 검증하라—우리는 검증 데이터를 제공한다.</p>
-          <p class="hidden-wisdom"><em>서명되지 않은 아티팩트는 약속이다. 서명된 증명은 증거다. 우리는 증거로 거래한다.</em></p>
         </div>
         
         <div class="card confidentiality-card">
@@ -359,7 +158,6 @@
           <div class="scanner-effect"></div>
           <h3>5. 🤖 자동화된 보안 게이트</h3>
           <p>인간은 새벽 2시에 실수한다. 컴퓨터는 그렇지 않다. SAST (SonarCloud), SCA (Dependabot/FOSSA), DAST (OWASP ZAP), 비밀 스캔, CodeQL—모두 자동화되고, 모두 중대한 발견 시 차단. 공개 배지가 있는 OpenSSF Scorecard 7.0+ 목표. 보안 게이트는 관료주의가 아니라—규모에서의 체계적 우수성이다.</p>
-          <p class="hidden-wisdom"><em>수동 검토는 필요하지만 불충분하다. 자동화된 게이트는 피곤할 때 인간이 놓치는 명백한 것들을 잡아낸다.</em></p>
         </div>
       </div>
     </section>
@@ -404,7 +202,6 @@
         </div>
       </div>
       
-      <p class="hidden-wisdom"><em>메타-깨달음: 배포 후 보안은 인시던트 대응이다. 설계 중 보안은 경쟁 우위다.</em></p>
     </section>
 
     <section id="tools">
@@ -431,22 +228,6 @@
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
-          <h3>🎮 Black Trigram</h3>
-          <p><strong>전문화된 보안 분석을 갖춘 교육용 게임 플랫폼</strong></p>
-          <ul>
-            <li><strong>OpenSSF Scorecard:</strong> 7.0+ 목표로 지속적인 개선</li>
-            <li><strong>테스트 커버리지:</strong> <a href="https://blacktrigram.com/test-results/">Jest 커버리지</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/UnitTestPlan.md">테스트 계획</a></li>
-            <li><strong>E2E 테스트:</strong> <a href="https://blacktrigram.com/cypress/mochawesome/">Cypress 결과</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/E2ETestPlan.md">E2E 계획</a></li>
-            <li><strong>위협 모델:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/THREAT_MODEL.md">게임 특화 보안 분석</a></li>
-            <li><strong>보안 아키텍처:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/SECURITY_ARCHITECTURE.md">현재</a> | <a href="https://github.com/Hack23/blacktrigram/blob/main/FUTURE_SECURITY_ARCHITECTURE.md">미래</a></li>
-            <li><strong>성능:</strong> <a href="https://github.com/Hack23/blacktrigram/blob/main/performance-testing.md">Lighthouse 90+ 점수</a></li>
-            <li><strong>공급망:</strong> <a href="https://github.com/Hack23/blacktrigram/attestations">SLSA 3 증명</a></li>
-            <li><strong>코드 품질:</strong> <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram">SonarCloud 대시보드</a></li>
-          </ul>
-        </div>
-        
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
           <h3>📊 CIA Compliance Manager</h3>
           <p><strong>포괄적인 검증을 갖춘 보안 평가 플랫폼</strong></p>
           <ul>
@@ -464,57 +245,8 @@
       
       <p><strong>공개 증거 포트폴리오가 보여주는 것:</strong> 우리는 DevSecOps에 대해 말만 하는 것이 아니라—체계적으로 구현하고, 지속적으로 측정하며, 결과를 투명하게 공개한다. 모든 배지는 검증 가능한 증거로 연결되는 라이브 링크다.</p>
       
-      <p class="hidden-wisdom"><em>혼돈 깨달음: 대부분의 회사는 보안 태세를 숨긴다. 우리는 우리 것을 공개한다. 투명성이 신뢰를 구축한다. 신뢰가 비즈니스를 구축한다.</em></p>
     </section>
 
-    <section id="dependencies">
-      <h2 class="panel-caption">테스트 우수성: 80% 커버리지 + E2E 검증</h2>
-      
-      <p><strong>포괄적인 테스트는 선택 사항이 아니라—경쟁 우위다:</strong></p>
-      
-      <div class="cards">
-        <div class="card confidentiality-card">
-          <div class="scanner-effect"></div>
-          <h3>📊 단위 테스트 요구사항</h3>
-          <ul>
-            <li><strong>커버리지 임계값:</strong> 최소 80% 라인 커버리지, 70% 분기 커버리지</li>
-            <li><strong>자동화된 실행:</strong> 모든 커밋 및 풀 리퀘스트에서 테스트 실행</li>
-            <li><strong>추세 분석:</strong> 과거 커버리지 추적, 회귀 방지</li>
-            <li><strong>문서화:</strong> 각 저장소에 대한 포괄적인 UnitTestPlan.md</li>
-            <li><strong>공개 보고:</strong> 공개적으로 접근 가능한 JaCoCo, Jest, Vitest 결과</li>
-          </ul>
-          <p class="hidden-wisdom"><em>테스트할 수 없으면 보안할 수 없다. 결과를 공개하지 않으면 실패를 숨기는 것이다.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>🌐 E2E 테스트 전략</h3>
-          <ul>
-            <li><strong>중요 경로 커버리지:</strong> 모든 사용자 여정 및 비즈니스 워크플로 테스트</li>
-            <li><strong>테스트 계획 문서화:</strong> 각 프로젝트에 대한 포괄적인 E2ETestPlan.md</li>
-            <li><strong>공개 결과:</strong> 투명성을 위해 접근 가능한 Mochawesome 보고서</li>
-            <li><strong>브라우저 테스트:</strong> 주요 브라우저 플랫폼에서 검증</li>
-            <li><strong>성능 단언:</strong> E2E 테스트 내에서 응답 시간 검증</li>
-          </ul>
-          <p class="hidden-wisdom"><em>단위 테스트는 구성 요소가 작동함을 증명한다. E2E 테스트는 시스템이 작동함을 증명한다. 둘 다 필요하지 않으면 자신을 속이는 것이다.</em></p>
-        </div>
-        
-        <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>⚡ 성능 테스트</h3>
-          <ul>
-            <li><strong>Lighthouse 감사:</strong> 자동화된 성능, 접근성, SEO 점수 평가</li>
-            <li><strong>부하 테스트:</strong> 예상 및 피크 트래픽에서 K6 성능 검증</li>
-            <li><strong>성능 예산:</strong> 페이지 로드 시간 및 리소스에 대한 정의된 임계값</li>
-            <li><strong>실제 사용자 모니터링:</strong> 프로덕션 성능 추적 및 알림</li>
-            <li><strong>문서화:</strong> 벤치마크 및 분석이 포함된 performance-testing.md</li>
-          </ul>
-          <p class="hidden-wisdom"><em>사용성을 희생한 보안은 아무도 사용하지 않는 보안이다. 빠르고 안전한 것이 느리고 안전한 것을 이긴다.</em></p>
-        </div>
-      </div>
-      
-      <p><strong>약속보다 증거:</strong> 모든 프로젝트는 공개 결과와 함께 살아있는 테스트 문서를 유지한다. 우리는 80% 커버리지를 주장하지 않는다—이를 증명하는 JaCoCo 보고서에 링크한다.</p>
-    </section>
 
     <section id="supply-chain">
       <h2 class="panel-caption">공급망 보안: SLSA 3 + SBOM + EU CRA 준수</h2>
@@ -534,17 +266,6 @@
         </div>
         
         <div class="card integrity-card">
-          <div class="scanner-effect"></div>
-          <h3>🔍 OpenSSF Scorecard 우수성</h3>
-          <ul>
-            <li><strong>CIA 목표:</strong> 7.2/10 달성—8.0+를 향한 지속적인 개선</li>
-            <li><strong>포괄적인 검사:</strong> 분기 보호, 종속성 업데이트, SAST, 위험한 워크플로, 코드 리뷰</li>
-            <li><strong>공개 대시보드:</strong> <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">CIA Scorecard</a></li>
-            <li><strong>CII 모범 사례:</strong> <a href="https://bestpractices.coreinfrastructure.org/projects/770">CIA 배지</a> | <a href="https://bestpractices.coreinfrastructure.org/projects/10777">Black Trigram 배지</a></li>
-          </ul>
-        </div>
-        
-        <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>🛡️ EU 사이버 복원력 법(CRA) 준비</h3>
           <ul>
