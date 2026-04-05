@@ -12,10 +12,10 @@ This directory contains comprehensive translation guides and status files for al
 
 | Flag | Language | Code | Infrastructure % | Body Content % | Files w/ English Body | Priority |
 |------|----------|------|-----------------|----------------|----------------------|----------|
-| 🇳🇱🌷 | Dutch | nl | 100% | **12%** | 84 / 96 | ⚡ CRITICAL |
-| 🇩🇰⚓ | Danish | da | 100% | **24%** | 73 / 96 | ⚡ CRITICAL |
-| 🇫🇮🦌 | Finnish | fi | 100% | **25%** | 72 / 96 | 🔴 HIGH |
-| 🇫🇷🥐 | French | fr | 100% | **28%** | 69 / 96 | 🔴 HIGH |
+| 🇳🇱🌷 | Dutch | nl | 100% | **15%** | 82 / 96 | ⚡ CRITICAL |
+| 🇩🇰⚓ | Danish | da | 100% | **27%** | 70 / 96 | ⚡ CRITICAL |
+| 🇫🇮🦌 | Finnish | fi | 100% | **29%** | 68 / 96 | 🔴 HIGH |
+| 🇫🇷🥐 | French | fr | 100% | **30%** | 67 / 96 | 🔴 HIGH |
 | 🇸🇪👑 | Swedish | sv | 100% | **37%** | 60 / 96 | 🔴 HIGH |
 | 🇩🇪🦅 | German | de | 100% | **42%** | 56 / 96 | 🔴 HIGH |
 | 🇰🇷🏯 | Korean | ko | 100% | **43%** | 55 / 96 | 🔴 HIGH |
@@ -113,10 +113,10 @@ A file whose `<p>` blocks still match this pattern is classified as **body = Eng
    - **Corrected approach**: Separate infrastructure and content metrics
 
 #### Revised Language Status (March 2026 — Actual Measured Values):
-- **🇳🇱 Dutch:** Infrastructure 100%, Body Content **12%** ⚠️ CRITICAL
-- **🇩🇰 Danish:** Infrastructure 100%, Body Content **24%** ⚠️ CRITICAL
-- **🇫🇮 Finnish:** Infrastructure 100%, Body Content **25%** 🚧 HIGH
-- **🇫🇷 French:** Infrastructure 100%, Body Content **28%** 🚧 HIGH
+- **🇳🇱 Dutch:** Infrastructure 100%, Body Content **15%** ⚠️ CRITICAL
+- **🇩🇰 Danish:** Infrastructure 100%, Body Content **27%** ⚠️ CRITICAL
+- **🇫🇮 Finnish:** Infrastructure 100%, Body Content **29%** 🚧 HIGH
+- **🇫🇷 French:** Infrastructure 100%, Body Content **30%** 🚧 HIGH
 - **🇸🇪 Swedish:** Infrastructure 100%, Body Content **37%** 🚧 HIGH
 - **🇩🇪 German:** Infrastructure 100%, Body Content **42%** 🚧 HIGH
 - **🇰🇷 Korean:** Infrastructure 100%, Body Content **43%** 🚧 HIGH
