@@ -38,273 +38,7 @@
 
 <link rel="canonical" href="https://hack23.com/discordian-network-security_fr.html">
 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Sécurité Réseau : Le Périmètre Est Mort, Vive le Périmètre",
-      "description": "Pensez par vous-même sur la sécurité réseau. Le périmètre a disparu en 2010. Remettez en question l'autorité sur le dogme du pare-feu. Architecture AWS zéro confiance de Hack23 : Protection DDoS CloudFront+WAF, détection des menaces GuardDuty, agrégation Security Hub, résilience multi-régions.",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "url": "https://hack23.com",
-        "jobTitle": "PDG / Expert en Cybersécurité",
-        "sameAs": [
-          "https://www.linkedin.com/in/jamessorling/",
-          "https://github.com/Hack23"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "datePublished": "2025-11-05",
-      "dateModified": "2025-12-29",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-network-security_fr.html"
-      },
-      "keywords": "sécurité réseau, zéro confiance, pare-feu, SGSI, CNIL, RGPD, ANSSI",
-      "articleSection": "Sécurité de l'Information",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp",
-        "width": 1200,
-        "height": 630
-      },
-      "wordCount": 1674,
-      "articleBody": "Pensez par vous-même ! La sécurité réseau était simple : coque dure, intérieur mou. Le pare-feu empêche les méchants d'entrer, tout ce qui est à l'intérieur est de confiance...",
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog.html#blog",
-        "name": "Blog Sécurité Hack23"
-      },
-      "inLanguage": "fr",
-      "about": [
-        {
-          "@type": "Thing",
-          "name": "Politique SGSI",
-          "description": "Mise en œuvre de la politique du système de management de la sécurité de l'information"
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-network-security_fr.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://hack23.com/index_fr.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://hack23.com/blog_fr.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sécurité Réseau",
-          "item": "https://hack23.com/discordian-network-security_fr.html"
-        }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "name": "Comment Implémenter la Sécurité Réseau Zero Trust dans AWS",
-      "description": "Guide étape par étape pour implémenter une architecture réseau zéro confiance utilisant CloudFront, WAF, GuardDuty, Security Hub et la résilience multi-régions",
-      "image": "https://hack23.com/blog.webp",
-      "totalTime": "PT5H",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "EUR",
-        "value": "150"
-      },
-      "tool": [
-        {
-          "@type": "HowToTool",
-          "name": "AWS CloudFront"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS WAF (Pare-feu d'Application Web)"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS Shield (Protection DDoS)"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS GuardDuty"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS Security Hub"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "Journaux de Flux VPC"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "Route 53 avec DNSSEC"
-        }
-      ],
-      "supply": [
-        {
-          "@type": "HowToSupply",
-          "name": "Politique de Sécurité Réseau",
-          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
-        }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Abandonner la Pensée Périmétrique Traditionnelle",
-          "text": "Reconnaître que le périmètre réseau est mort. Concevoir pour la compromission - supposer que les attaquants sont déjà à l'intérieur ou qu'ils y entreront",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Le périmètre a disparu en 2010 avec le cloud computing et le travail à distance. Arrêtez de prétendre le contraire"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Déployer CloudFront avec WAF",
-          "text": "Configurer AWS CloudFront comme réseau de distribution de contenu avec AWS WAF attaché pour la protection DDoS et la sécurité des applications web",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "Configurer les règles WAF pour l'injection SQL, XSS et la limitation de débit"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Activer AWS Shield Standard (automatique) ou Shield Advanced pour une protection DDoS améliorée"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Configurer le géo-blocage si nécessaire pour les exigences de conformité RGPD/CNIL"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Implémenter une Architecture Multi-Régions",
-          "text": "Déployer les ressources dans plusieurs régions AWS pour la résilience. Utiliser eu-west-1 (Irlande) comme région principale et eu-central-1 (Francfort) pour la redondance",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Le multi-régions protège contre les pannes régionales et offre une latence plus faible pour les utilisateurs"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Activer les Journaux de Flux VPC",
-          "text": "Activer les journaux de flux VPC pour capturer les métadonnées du trafic réseau. Journaliser tout le trafic accepté et rejeté pour l'analyse de sécurité",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Les journaux de flux permettent l'analyse forensique et la détection d'anomalies sans impact sur les performances"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Configurer GuardDuty",
-          "text": "Activer AWS GuardDuty pour la détection intelligente des menaces. Configurer les résultats pour les acheminer vers Security Hub pour une surveillance centralisée",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "GuardDuty analyse les journaux de flux VPC, les événements CloudTrail et les journaux DNS"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Configurer les notifications SNS pour les résultats de gravité haute et critique"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Implémenter la Segmentation Réseau",
-          "text": "Créer des segments réseau isolés en utilisant des VPC et des sous-réseaux. Utiliser les groupes de sécurité et les NACL pour la microsegmentation",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "Sous-réseau public : équilibreurs de charge face à Internet uniquement"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Sous-réseau privé : serveurs d'application sans accès Internet direct"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Sous-réseau isolé : bases de données avec contrôles d'accès stricts"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 7,
-          "name": "Activer DNSSEC sur Route 53",
-          "text": "Configurer la signature DNSSEC sur les zones hébergées Route 53 pour prévenir l'usurpation DNS et les attaques d'empoisonnement du cache",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "DNSSEC fournit une authentification cryptographique des réponses DNS"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 8,
-          "name": "Imposer TLS 1.2+ Uniquement",
-          "text": "Configurer CloudFront et ALB pour exiger TLS 1.2 ou supérieur. Désactiver les anciens protocoles (SSL, TLS 1.0, TLS 1.1)",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Les anciennes versions TLS ont des vulnérabilités connues. Les navigateurs modernes supportent TLS 1.2+"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 9,
-          "name": "Implémenter la Surveillance Réseau",
-          "text": "Configurer une surveillance complète utilisant Security Hub, les résultats GuardDuty, l'analyse des journaux de flux VPC et les alarmes CloudWatch conformément aux recommandations ANSSI",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "La visibilité est critique pour le zéro confiance - vous ne pouvez pas protéger ce que vous ne voyez pas"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 10,
-          "name": "Réviser et Mettre à Jour la Politique",
-          "text": "Effectuer des révisions semestrielles de l'architecture de sécurité réseau conformément au RGPD et aux directives CNIL. Mettre à jour en fonction de nouvelles menaces, des mises à jour de services AWS ou des enseignements d'incidents"
-        }
-      ]
-    }
-  ]
-}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Sécurité Réseau : Le Périmètre Est Mort, Vive le Périmètre", "description": "Pensez par vous-même sur la sécurité réseau. Le périmètre a disparu en 2010. Remettez en question l'autorité sur le dogme du pare-feu. Architecture AWS zéro confiance de Hack23 : Protection DDoS CloudFront+WAF, détection des menaces GuardDuty, agrégation Security Hub, résilience multi-régions.", "author": {"@type": "Person", "name": "James Pether Sörling", "url": "https://hack23.com", "jobTitle": "PDG / Expert en Cybersécurité", "sameAs": ["https://www.linkedin.com/in/jamessorling/", "https://github.com/Hack23"]}, "publisher": {"@type": "Organization", "name": "Hack23 AB", "logo": {"@type": "ImageObject", "url": "cia-icon-140.webp"}}, "datePublished": "2025-11-05", "dateModified": "2026-04-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hack23.com/discordian-network-security_fr.html"}, "keywords": "sécurité réseau, zéro confiance, pare-feu, SGSI, CNIL, RGPD, ANSSI", "articleSection": "Sécurité de l'Information", "image": {"@type": "ImageObject", "url": "https://hack23.com/blog.webp", "width": 1200, "height": 630}, "wordCount": 2017, "articleBody": "Pensez par vous-même ! La sécurité réseau était simple : coque dure, intérieur mou. Le pare-feu empêche les méchants d'entrer, tout ce qui est à l'intérieur est de confiance...", "isPartOf": {"@type": "Blog", "@id": "https://hack23.com/blog.html#blog", "name": "Blog Sécurité Hack23"}, "inLanguage": "fr", "about": [{"@type": "Thing", "name": "Politique SGSI", "description": "Mise en œuvre de la politique du système de management de la sécurité de l'information"}]}, {"@type": "BreadcrumbList", "@id": "https://hack23.com/discordian-network-security_fr.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://hack23.com/index_fr.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://hack23.com/blog_fr.html"}, {"@type": "ListItem", "position": 3, "name": "Sécurité Réseau", "item": "https://hack23.com/discordian-network-security_fr.html"}]}]}</script>
 
     <!-- Hreflang tags for international SEO -->
     	<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-network-security_ar.html">
@@ -397,35 +131,30 @@
           <div class="scanner-effect"></div>
           <h3>1. Les Appareils Mobiles Errent</h3>
           <p>L'ordinateur portable quitte le bureau ? Il est « à l'extérieur ». Il revient ? Il est « à l'intérieur » à nouveau. <strong>Avec tous les malwares qu'il a récupérés.</strong> Le VPN ne rend pas les appareils dignes de confiance—il crypte simplement leurs attaques.</p>
-          <p class="hidden-wisdom"><em>Illumination : Chaque appareil qui traverse le périmètre est un cheval de Troie potentiel. Les Grecs ont enseigné cette leçon il y a 3000 ans.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>2. Les Services Cloud Sont « À L'extérieur »</h3>
           <p>Office 365 ? AWS ? GitHub ? <strong>Tous à l'extérieur de votre périmètre.</strong> Pourtant essentiels à l'entreprise. Le périmètre n'inclut pas ce que vous utilisez réellement.</p>
-          <p class="hidden-wisdom"><em>Illumination : Défendre un périmètre qui n'inclut pas vos données, c'est jouer à la sécurité.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. Les Menaces Internes Existent</h3>
           <p>Initiés malveillants. Comptes compromis. Ingénierie sociale. <strong>La menace est déjà à l'intérieur.</strong> Votre pare-feu n'empêche pas Suzanne de la comptabilité de cliquer sur des liens de phishing.</p>
-          <p class="hidden-wisdom"><em>Illumination : L'appel vient de l'intérieur de la maison. Il l'a toujours été.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
           <h3>4. Compromissions de la Chaîne d'Approvisionnement</h3>
           <p>Un fournisseur de confiance se fait pirater. Pousse une mise à jour malveillante. <strong>À travers votre pare-feu.</strong> Parce que vous faites confiance aux mises à jour signées venant de « l'intérieur » du périmètre. SolarWinds, ça vous dit quelque chose ?</p>
-          <p class="hidden-wisdom"><em>Illumination : La confiance est ce qui fait fonctionner les attaques de chaîne d'approvisionnement. Le zéro confiance est ce qui les détecte.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>5. Les APT Sont Patients</h3>
           <p>Les menaces persistantes avancées ne cognent pas à votre pare-feu. Elles <strong>vivent à l'intérieur pendant des mois</strong>. Tranquillement. Le périmètre ne vous a pas sauvé—vous êtes déjà compromis et vous ne le savez pas.</p>
-          <p class="hidden-wisdom"><em>Illumination : Le temps de séjour moyen des compromissions se mesure en mois. Votre périmètre a échoué il y a des mois.</em></p>
         </div>
       </div>
     </section>
@@ -451,7 +180,6 @@
           <p><strong>Fonctions Lambda :</strong> Calcul serverless dans VPC privé, pas d'exposition Internet directe</p>
           <p><strong>API Gateway :</strong> Limitation de débit, authentification, validation des requêtes avant d'atteindre le backend</p>
           <p><strong>Points de Terminaison VPC :</strong> Connectivité privée aux services AWS (S3, KMS, Systems Manager) sans NAT</p>
-          <p class="hidden-wisdom"><em>La microsegmentation empêche le mouvement latéral—même si l'attaquant viole le périmètre.</em></p>
         </div>
         
         <div class="card availability-card">
@@ -460,7 +188,6 @@
           <p><strong>RDS PostgreSQL :</strong> Sous-réseaux privés uniquement, pas d'accès public, chiffrement au repos (KMS) conforme RGPD</p>
           <p><strong>Buckets S3 :</strong> Points de terminaison VPC pour accès interne, accès public bloqué par défaut selon les recommandations CNIL</p>
           <p><strong>Gestion des Secrets :</strong> AWS Secrets Manager avec rotation automatique, IAM au moindre privilège</p>
-          <p class="hidden-wisdom"><em>Défense en profondeur : Même si le niveau application est compromis, le niveau données nécessite une violation séparée.</em></p>
         </div>
         
         <div class="card">
@@ -469,7 +196,6 @@
           <p><strong>Systems Manager :</strong> Accès à distance sécurisé sans SSH/RDP, journalisation des sessions dans CloudTrail</p>
           <p><strong>CloudTrail :</strong> Tous les appels API journalisés, piste d'audit immuable, prêt pour l'intégration SIEM conforme aux directives ANSSI</p>
           <p><strong>Authentification Multi-Facteurs :</strong> AWS Identity Center avec MFA obligatoire pour tous les accès</p>
-          <p class="hidden-wisdom"><em>Zéro privilège permanent—demander un accès élevé si nécessaire, révoqué automatiquement.</em></p>
         </div>
       </div>
       
@@ -494,35 +220,6 @@
       </ul>
     </section>
 
-    <section id="firewall-reality">
-      <h2 class="panel-caption">Pare-Feux : Nécessaires Mais Insuffisants</h2>
-      
-      <p><strong>Les pare-feux ne sont pas inutiles.</strong> Ils ne sont simplement pas suffisants :</p>
-      
-      <div class="cards">
-        <div class="card">
-          <h3>✅ Les Pare-Feux Bloquent Les Scans de Ports</h3>
-          <p>Refuser par défaut est bien. Réduire la surface d'attaque est bien. La défense périmétrique de base est <em>nécessaire</em>.</p>
-        </div>
-        
-        <div class="card">
-          <h3>❌ Les Pare-Feux N'arrêtent Pas Les Malwares</h3>
-          <p>Les malwares utilisent les ports autorisés (80/443). Chiffrés en TLS. Votre pare-feu voit du trafic chiffré et dit « ça a l'air bien pour moi ».</p>
-        </div>
-        
-        <div class="card">
-          <h3>✅ Les Pare-Feux Fournissent Une Défense en Profondeur</h3>
-          <p>Couche dans une pile de sécurité. Un contrôle parmi beaucoup. <strong>Pas</strong> le seul contrôle.</p>
-        </div>
-        
-        <div class="card">
-          <h3>❌ Les Pare-Feux Créent Une Fausse Confiance</h3>
-          <p>« Nous avons un pare-feu, nous sommes en sécurité ! » Non. Vous avez <em>un</em> contrôle. Vous en avez besoin de vingt autres.</p>
-        </div>
-      </div>
-      
-      <p><strong>Pensez par vous-même.</strong> Les pare-feux sont des outils, pas des champs de force magiques. Utilisez-les. Ne les vénérez pas.</p>
-    </section>
 
     <section id="segmentation">
       <h2 class="panel-caption">Segmentation Réseau : Limiter Le Rayon D'explosion</h2>
@@ -537,7 +234,6 @@
         <li><strong>Base de données dans sous-réseau séparé</strong> — Le niveau application peut l'atteindre. Rien d'autre ne le peut. Principe du moindre privilège au niveau réseau conforme RGPD.</li>
       </ul>
       
-      <p class="hidden-wisdom"><strong>ILLUMINATION DU CHAOS :</strong> <em>Les réseaux plats sont comment un blog WordPress compromis devient une compromission d'admin de domaine complète. Segmentez ou souffrez.</em></p>
     </section>
 
     <section id="monitoring">
@@ -561,13 +257,6 @@
         </div>
         
         <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>🎯 AWS Security Hub</h3>
-          <p>Agrégation centralisée des résultats de GuardDuty, Inspector, IAM Access Analyzer. Vérifications de conformité automatisées (CIS AWS Foundations Benchmark, PCI DSS, RGPD).</p>
-          <p><strong>Tableau de Bord :</strong> Vue unique pour tous les résultats de sécurité, priorisés par gravité</p>
-        </div>
-        
-        <div class="card">
           <div class="scanner-effect"></div>
           <h3>📊 CloudWatch + CloudTrail</h3>
           <p>Tous les appels API AWS journalisés (CloudTrail). Toutes les métriques de service collectées (CloudWatch). Alarmes personnalisées pour modèles suspects : appels API inhabituels, tentatives d'auth échouées, changements de config conformes CNIL.</p>

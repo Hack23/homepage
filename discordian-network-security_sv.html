@@ -39,273 +39,7 @@
 
 <link rel="canonical" href="https://hack23.com/discordian-network-security_sv.html">
 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Nätverkssäkerhet: Perimetern är död, länge leve perimetern",
-      "description": "Tänk själv om nätverkssäkerhet. Perimetern upplöstes 2010. Ifrågasätt auktoritet över brandväggsdogmer. Hack23:s nolltillit AWS-arkitektur: CloudFront+WAF DDoS-skydd, GuardDuty hotdetektering, Security Hub-aggregering, multiregionell resiliens.",
-      "author": {
-        "@type": "Person",
-        "name": "James Pether Sörling",
-        "url": "https://hack23.com",
-        "jobTitle": "VD / Cybersäkerhetsexpert",
-        "sameAs": [
-          "https://www.linkedin.com/in/jamessorling/",
-          "https://github.com/Hack23"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hack23 AB",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "cia-icon-140.webp"
-        }
-      },
-      "datePublished": "2025-11-05",
-      "dateModified": "2025-11-05",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://hack23.com/discordian-network-security_sv.html"
-      },
-      "keywords": "nätverkssäkerhet, nolltillit, brandvägg, ISMS",
-      "articleSection": "Informationssäkerhet",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://hack23.com/blog.webp",
-        "width": 1200,
-        "height": 630
-      },
-      "wordCount": 1674,
-      "articleBody": "Tänk själv, dumbom! Nätverkssäkerhet brukade vara enkelt: hårt skal, mjukt inre. Brandvägg håller ute skurkarna, allt inuti är pålitligt. Det var alltid fantasi, men det var bekväm f...",
-      "isPartOf": {
-        "@type": "Blog",
-        "@id": "https://hack23.com/blog_sv.html#blog",
-        "name": "Hack23 Säkerhetsblogg"
-      },
-      "inLanguage": "sv",
-      "about": [
-        {
-          "@type": "Thing",
-          "name": "ISMS-policy",
-          "description": "Implementation av ledningssystem för informationssäkerhet"
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://hack23.com/discordian-network-security_sv.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Hem",
-          "item": "https://hack23.com/index_sv.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blogg",
-          "item": "https://hack23.com/blog_sv.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Nätverkssäkerhet",
-          "item": "https://hack23.com/discordian-network-security_sv.html"
-        }
-      ]
-    },
-    {
-      "@type": "HowTo",
-      "name": "Hur man implementerar nolltillit nätverkssäkerhet i AWS",
-      "description": "Steg-för-steg-guide för att implementera nolltillit nätverksarkitektur med CloudFront, WAF, GuardDuty, Security Hub och multiregionell resiliens",
-      "image": "https://hack23.com/blog.webp",
-      "totalTime": "PT5H",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "SEK",
-        "value": "1500"
-      },
-      "tool": [
-        {
-          "@type": "HowToTool",
-          "name": "AWS CloudFront"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS WAF (Web Application Firewall)"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS Shield (DDoS Protection)"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS GuardDuty"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "AWS Security Hub"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "VPC Flow Logs"
-        },
-        {
-          "@type": "HowToTool",
-          "name": "Route 53 with DNSSEC"
-        }
-      ],
-      "supply": [
-        {
-          "@type": "HowToSupply",
-          "name": "Nätverkssäkerhetspolicy",
-          "url": "https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md"
-        }
-      ],
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Överge traditionellt perimetertänkande",
-          "text": "Erkänn att nätverksperimetern är död. Designa för intrång - förutsätt att angripare redan är inne eller kommer att ta sig in",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Perimetern upplöstes 2010 med molntjänster och distansarbete. Sluta låtsas annat"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Distribuera CloudFront med WAF",
-          "text": "Konfigurera AWS CloudFront som ditt innehållsleveransnätverk med AWS WAF kopplad för DDoS-skydd och webbapplikationssäkerhet",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "Konfigurera WAF-regler för SQL-injektion, XSS och hastighetsbegränsning"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Aktivera AWS Shield Standard (automatiskt) eller Shield Advanced för förbättrat DDoS-skydd"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Konfigurera geo-blockering om det behövs för efterlevnadskrav"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Implementera multiregionarkitektur",
-          "text": "Distribuera resurser över flera AWS-regioner för resiliens. Använd eu-west-1 (Irland) som primär och eu-central-1 (Frankfurt) för redundans",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Multiregion skyddar mot regionala avbrott och ger lägre latens för användare"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Aktivera VPC-flödesloggar",
-          "text": "Aktivera VPC-flödesloggar för att fånga metadata om nätverkstrafik. Logga all accepterad och avvisad trafik för säkerhetsanalys",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Flödesloggar möjliggör forensisk analys och anomalidetektering utan att påverka prestanda"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Konfigurera GuardDuty",
-          "text": "Aktivera AWS GuardDuty för intelligent hotdetektering. Konfigurera fynd att dirigeras till Security Hub för centraliserad övervakning",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "GuardDuty analyserar VPC-flödesloggar, CloudTrail-händelser och DNS-loggar"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Konfigurera SNS-notifieringar för fynd med hög och kritisk allvarlighetsgrad"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 6,
-          "name": "Implementera nätverkssegmentering",
-          "text": "Skapa isolerade nätverkssegment med hjälp av VPC:er och subnät. Använd säkerhetsgrupper och NACL för mikrosegmentering",
-          "itemListElement": [
-            {
-              "@type": "HowToDirection",
-              "text": "Publikt subnät: Endast internetvända lastbalanserare"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Privat subnät: Applikationsservrar utan direkt internetåtkomst"
-            },
-            {
-              "@type": "HowToDirection",
-              "text": "Isolerat subnät: Databaser med strikt åtkomstkontroll"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 7,
-          "name": "Aktivera DNSSEC på Route 53",
-          "text": "Konfigurera DNSSEC-signering på Route 53 hosted zones för att förhindra DNS-förfalskning och cache poisoning-attacker",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "DNSSEC tillhandahåller kryptografisk autentisering av DNS-svar"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 8,
-          "name": "Framtvinga endast TLS 1.2+",
-          "text": "Konfigurera CloudFront och ALB att kräva TLS 1.2 eller högre. Inaktivera äldre protokoll (SSL, TLS 1.0, TLS 1.1)",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Äldre TLS-versioner har kända sårbarheter. Moderna webbläsare stöder TLS 1.2+"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 9,
-          "name": "Implementera nätverksövervakning",
-          "text": "Konfigurera omfattande övervakning med Security Hub, GuardDuty-fynd, VPC-flödeslogganalys och CloudWatch-larm",
-          "itemListElement": [
-            {
-              "@type": "HowToTip",
-              "text": "Synlighet är kritiskt för nolltillit - du kan inte skydda det du inte ser"
-            }
-          ]
-        },
-        {
-          "@type": "HowToStep",
-          "position": 10,
-          "name": "Granska och uppdatera policy",
-          "text": "Genomför halvårliga granskningar av nätverkssäkerhetsarkitekturen. Uppdatera baserat på nya hot, AWS-tjänstuppdateringar eller lärdomar från incidenter"
-        }
-      ]
-    }
-  ]
-}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Nätverkssäkerhet: Perimetern är död, länge leve perimetern", "description": "Tänk själv om nätverkssäkerhet. Perimetern upplöstes 2010. Ifrågasätt auktoritet över brandväggsdogmer. Hack23:s nolltillit AWS-arkitektur: CloudFront+WAF DDoS-skydd, GuardDuty hotdetektering, Security Hub-aggregering, multiregionell resiliens.", "author": {"@type": "Person", "name": "James Pether Sörling", "url": "https://hack23.com", "jobTitle": "VD / Cybersäkerhetsexpert", "sameAs": ["https://www.linkedin.com/in/jamessorling/", "https://github.com/Hack23"]}, "publisher": {"@type": "Organization", "name": "Hack23 AB", "logo": {"@type": "ImageObject", "url": "cia-icon-140.webp"}}, "datePublished": "2025-11-05", "dateModified": "2026-04-05", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://hack23.com/discordian-network-security_sv.html"}, "keywords": "nätverkssäkerhet, nolltillit, brandvägg, ISMS", "articleSection": "Informationssäkerhet", "image": {"@type": "ImageObject", "url": "https://hack23.com/blog.webp", "width": 1200, "height": 630}, "wordCount": 1453, "articleBody": "Tänk själv, dumbom! Nätverkssäkerhet brukade vara enkelt: hårt skal, mjukt inre. Brandvägg håller ute skurkarna, allt inuti är pålitligt. Det var alltid fantasi, men det var bekväm f...", "isPartOf": {"@type": "Blog", "@id": "https://hack23.com/blog_sv.html#blog", "name": "Hack23 Säkerhetsblogg"}, "inLanguage": "sv", "about": [{"@type": "Thing", "name": "ISMS-policy", "description": "Implementation av ledningssystem för informationssäkerhet"}]}, {"@type": "BreadcrumbList", "@id": "https://hack23.com/discordian-network-security_sv.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Hem", "item": "https://hack23.com/index_sv.html"}, {"@type": "ListItem", "position": 2, "name": "Blogg", "item": "https://hack23.com/blog_sv.html"}, {"@type": "ListItem", "position": 3, "name": "Nätverkssäkerhet", "item": "https://hack23.com/discordian-network-security_sv.html"}]}]}</script>
 
     <!-- Hreflang tags for international SEO -->
     	<link rel="alternate" hreflang="ar" href="https://hack23.com/discordian-network-security_ar.html">
@@ -398,35 +132,24 @@
           <div class="scanner-effect"></div>
           <h3>1. Mobile Devices Roam</h3>
           <p>Laptop leaves the office? It's "outside." Comes back? It's "inside" again. <strong>With whatever malware it picked up.</strong> VPN doesn't make devices trustworthy—it just encrypts their attacks.</p>
-          <p class="hidden-wisdom"><em>Illumination: Every device that crosses the perimeter is a potential Trojan horse. The Greeks taught this lesson 3000 years ago.</em></p>
         </div>
         
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>2. Cloud Services Are "Outside"</h3>
           <p>Office 365? AWS? GitHub? <strong>All outside your perimeter.</strong> Yet essential to business. The perimeter doesn't include what you actually use.</p>
-          <p class="hidden-wisdom"><em>Illumination: Defending a perimeter that doesn't include your data is LARPing security.</em></p>
         </div>
         
         <div class="card availability-card">
           <div class="scanner-effect"></div>
           <h3>3. Insider Threats Exist</h3>
           <p>Malicious insiders. Compromised accounts. Social engineering. <strong>Threat is already inside.</strong> Your firewall doesn't stop Susan in accounting from clicking phishing links.</p>
-          <p class="hidden-wisdom"><em>Illumination: The call is coming from inside the house. It always was.</em></p>
         </div>
         
         <div class="card confidentiality-card">
           <div class="scanner-effect"></div>
-          <h3>4. Supply Chain Compromises</h3>
-          <p>Trusted vendor gets hacked. Pushes malicious update. <strong>Through your firewall.</strong> Because you trust signed updates from "inside" the perimeter. SolarWinds, anyone?</p>
-          <p class="hidden-wisdom"><em>Illumination: Trust is how supply chain attacks work. Zero trust is how they get detected.</em></p>
-        </div>
-        
-        <div class="card integrity-card">
-          <div class="scanner-effect"></div>
           <h3>5. APTs Are Patient</h3>
           <p>Advanced Persistent Threats don't bang on your firewall. They <strong>live inside for months</strong>. Quietly. The perimeter didn't save you—you're already compromised and don't know it.</p>
-          <p class="hidden-wisdom"><em>Illumination: The average dwell time for breaches is measured in months. Your perimeter failed months ago.</em></p>
         </div>
       </div>
     </section>
@@ -452,7 +175,6 @@
           <p><strong>Lambda Functions:</strong> Serverless compute in private VPC, no direct internet exposure</p>
           <p><strong>API Gateway:</strong> Rate limiting, authentication, request validation before reaching backend</p>
           <p><strong>VPC Endpoints:</strong> Private connectivity to AWS services (S3, KMS, Systems Manager) without NAT</p>
-          <p class="hidden-wisdom"><em>Microsegmentation prevents lateral movement—even if attacker breaches perimeter.</em></p>
         </div>
         
         <div class="card availability-card">
@@ -461,7 +183,6 @@
           <p><strong>RDS PostgreSQL:</strong> Private subnets only, no public access, encrypted at rest (KMS)</p>
           <p><strong>S3 Buckets:</strong> VPC endpoints for internal access, public access blocked by default</p>
           <p><strong>Secrets Management:</strong> AWS Secrets Manager with automatic rotation, least privilege IAM</p>
-          <p class="hidden-wisdom"><em>Defense-in-depth: Even if application tier compromised, data layer requires separate breach.</em></p>
         </div>
         
         <div class="card">
@@ -470,7 +191,6 @@
           <p><strong>Systems Manager:</strong> Secure remote access without SSH/RDP, session logging to CloudTrail</p>
           <p><strong>CloudTrail:</strong> All API calls logged, immutable audit trail, SIEM integration ready</p>
           <p><strong>Multi-Factor Authentication:</strong> AWS Identity Center with MFA mandatory for all access</p>
-          <p class="hidden-wisdom"><em>Zero standing privileges—request elevated access when needed, automatically revoked.</em></p>
         </div>
       </div>
       
@@ -495,35 +215,6 @@
       </ul>
     </section>
 
-    <section id="firewall-reality">
-      <h2 class="panel-caption">Firewalls: Necessary But Insufficient</h2>
-      
-      <p><strong>Firewalls aren't useless.</strong> They're just not sufficient:</p>
-      
-      <div class="cards">
-        <div class="card">
-          <h3>✅ Firewalls Block Port Scans</h3>
-          <p>Deny-by-default is good. Reducing attack surface is good. Basic perimeter defense is <em>necessary</em>.</p>
-        </div>
-        
-        <div class="card">
-          <h3>❌ Firewalls Don't Stop Malware</h3>
-          <p>Malware uses allowed ports (80/443). Encrypted in TLS. Your firewall sees encrypted traffic and says "looks fine to me."</p>
-        </div>
-        
-        <div class="card">
-          <h3>✅ Firewalls Provide Defense in Depth</h3>
-          <p>Layer in a security stack. One control among many. <strong>Not</strong> the only control.</p>
-        </div>
-        
-        <div class="card">
-          <h3>❌ Firewalls Create False Confidence</h3>
-          <p>"We have a firewall, we're secure!" No. You have <em>one</em> control. You need twenty more.</p>
-        </div>
-      </div>
-      
-      <p><strong>Think for yourself.</strong> Firewalls are tools, not magic force fields. Use them. Don't worship them.</p>
-    </section>
 
     <section id="segmentation">
       <h2 class="panel-caption">Network Segmentation: Limit the Blast Radius</h2>
@@ -538,7 +229,6 @@
         <li><strong>Database in separate subnet</strong> — Application tier can reach it. Nothing else can. Principle of least privilege at network layer.</li>
       </ul>
       
-      <p class="hidden-wisdom"><strong>CHAOS ILLUMINATION:</strong> <em>Flat networks are how one compromised WordPress blog becomes a full domain admin compromise. Segment or suffer.</em></p>
     </section>
 
     <section id="monitoring">
@@ -562,13 +252,6 @@
         </div>
         
         <div class="card availability-card">
-          <div class="scanner-effect"></div>
-          <h3>🎯 AWS Security Hub</h3>
-          <p>Centralized finding aggregation from GuardDuty, Inspector, IAM Access Analyzer. Automated compliance checks (CIS AWS Foundations Benchmark, PCI DSS).</p>
-          <p><strong>Dashboard:</strong> Single pane of glass for all security findings, prioritized by severity</p>
-        </div>
-        
-        <div class="card">
           <div class="scanner-effect"></div>
           <h3>📊 CloudWatch + CloudTrail</h3>
           <p>All AWS API calls logged (CloudTrail). All service metrics collected (CloudWatch). Custom alarms for suspicious patterns: unusual API calls, failed auth attempts, config changes.</p>
