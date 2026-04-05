@@ -233,7 +233,7 @@
 <p><strong>The Risk:</strong> LLMs memorize training data. Sometimes that includes PII, API keys, and internal documentation.</p>
 <p><strong>Example:</strong> Ask the right question and the model regurgitates confidential data from its training corpus.</p>
 <p><strong>Reality:</strong> If it saw your secrets during training, it might share them during inference. <strong>The machine remembers everything and forgets nothing—like an idiot savant with perfect recall and zero discretion.</strong></p>
-<p><strong>Hack23 Control:</strong> Data classification, DLP integration, output filtering Q2 2026 (49% implemented). Foundation: Data Protection Policy, encryption, GDPR compliance operational.</p>
+<p><strong>Hack23 Control:</strong> Data classification, DLP integration, output filtering Q2 2026 (50% implemented). Foundation: Data Protection Policy, encryption, GDPR compliance operational.</p>
 <p class="hidden-wisdom"><em>Psychonaut Warning: Training data is the unconscious mind of AI. You wouldn't let Freud read your secrets then broadcast them at conferences. Don't let your LLM either.</em></p>
 <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/OWASP_LLM_Security_Policy.md#llm06-sensitive-information-disclosure">Read LLM06 Controls →</a></p>
 </div>
@@ -243,7 +243,7 @@
 <p><strong>The Risk:</strong> You're using pre-trained models, third-party plugins, and external APIs. Any of them could be compromised.</p>
 <p><strong>Example:</strong> That helpful LangChain plugin? It phones home with your prompts.</p>
 <p><strong>Reality:</strong> Supply chain risk, now with neural networks. <strong>FNORD—you're trusting code you didn't audit, models you didn't train, and vendors who pinky-swear they're not evil.</strong></p>
-<p><strong>Hack23 Control:</strong> Third-party vendor assessments, dependency scanning, OpenSSF Scorecard ≥7.0 operational (47% implemented). AWS Bedrock deployment Q1 2026 adds managed service security.</p>
+<p><strong>Hack23 Control:</strong> Third-party vendor assessments, dependency scanning, OpenSSF Scorecard ≥8.5 operational (60% implemented). AWS Bedrock deployment Q1 2026 adds managed service security.</p>
 <p class="hidden-wisdom"><em>Discordian Wisdom: Every dependency is a trust relationship. Every trust relationship is a vulnerability. The only winning move is to write everything yourself—which is also a losing move. All hail Eris!</em></p>
 <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/OWASP_LLM_Security_Policy.md#llm05-supply-chain-vulnerabilities">Read LLM05 Controls →</a></p>
 </div>
@@ -253,7 +253,7 @@
 <p><strong>The Risk:</strong> Vector databases enable RAG attacks—poisoning embeddings, unauthorized data access, inference through similarity search.</p>
 <p><strong>Example:</strong> Attacker injects malicious embeddings that return when users query for legitimate content.</p>
 <p><strong>Reality:</strong> Your knowledge base is only as secure as your vector security.</p>
-<p><strong>Hack23 Control:</strong> AWS Bedrock Knowledge Base Q1 2026 with IAM roles, encryption at rest (KMS), access logging (CloudTrail), network isolation (34% implemented currently).</p>
+<p><strong>Hack23 Control:</strong> AWS Bedrock Knowledge Base Q1 2026 with IAM roles, encryption at rest (KMS), access logging (CloudTrail), network isolation (30% implemented currently).</p>
 <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/OWASP_LLM_Security_Policy.md#llm08-vector-and-embedding-weaknesses">Read LLM08 Controls →</a></p>
 </div>
 
@@ -262,7 +262,7 @@
 <p><strong>The Risk:</strong> LLMs generate text. Sometimes that text is code injection, XSS payloads, or SQL commands.</p>
 <p><strong>Example:</strong> User asks AI to format data. AI outputs JavaScript that steals credentials.</p>
 <p><strong>Reality:</strong> Trusting AI output without validation is just injection with extra steps.</p>
-<p><strong>Hack23 Control:</strong> Output sanitization, HTML escaping, CSP headers planned Q2 2026 (25% implemented). Foundation: Secure development practices, code review, SAST operational.</p>
+<p><strong>Hack23 Control:</strong> Output sanitization, HTML escaping, CSP headers planned Q2 2026 (55% implemented). Foundation: Secure development practices, code review, SAST operational.</p>
 <p><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/OWASP_LLM_Security_Policy.md#llm02-insecure-output-handling">Read LLM02 Controls →</a></p>
 </div>
 </div>
@@ -354,7 +354,7 @@
 
 <p><strong>Implementation Evidence:</strong></p>
 <ul>
-<li>🏆 <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard 7.2</a> - Supply chain security validation</li>
+<li>🏆 <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia">OpenSSF Scorecard 8.5</a> - Supply chain security validation</li>
 <li>🔒 <a href="https://github.com/Hack23/cia/attestations">SLSA Level 3 Attestations</a> - Build provenance verification</li>
 <li>📋 <a href="https://github.com/Hack23/ISMS-PUBLIC">공개 ISMS</a> - Complete policy framework</li>
 <li>🤖 <a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md">AI Governance Policy</a> - Operational Q4 2025</li>
