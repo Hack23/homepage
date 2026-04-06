@@ -150,7 +150,7 @@ jobs:
             fi
           done
 
-          if [ -n "$(git status --porcelain .github/workflows/*.lock.yml 2>/dev/null)" ]; then
+          if [ -n "$(git diff --name-only .github/workflows/*.lock.yml 2>/dev/null)" ]; then
             echo ""
             echo "❌ Lock files are out of date."
             echo "Run 'gh aw compile' locally and commit the updated .lock.yml files."

@@ -105,7 +105,7 @@ For every translated file, validate:
 After translating and validating the batch:
 
 1. Create a single pull request with all translated files
-2. PR title: `[i18n] Daily translation improvement — {date} ({N} files across {M} languages)`
+2. PR title: `[i18n] Daily translation improvement — YYYY-MM-DD (N files across M languages)` where N is the total file count and M is the number of languages translated
 3. PR body should include:
    - Summary table of files translated per language
    - Quality validation results (pass/fail per check)
