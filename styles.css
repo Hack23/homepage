@@ -2047,6 +2047,36 @@ footer {
   padding: var(--spacing-2xl) var(--spacing-xl);
   margin-top: var(--spacing-2xl);
   color: var(--text-secondary);
+  overflow-wrap: break-word;
+}
+
+/* Simple footer paragraph styling (pages without .footer-container) */
+footer > p {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: center;
+  padding: var(--spacing-xs) 0;
+}
+
+footer > p a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+footer > p a:hover {
+  background-color: rgba(0, 102, 51, 0.1);
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+footer > p a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .footer-container {
@@ -2158,6 +2188,16 @@ footer {
   .footer-bottom {
     border-top: 1px solid rgba(0, 204, 102, 0.3);
   }
+
+  /* Dark mode simple footer link contrast */
+  footer > p a {
+    color: var(--link-color);
+  }
+
+  footer > p a:hover {
+    background-color: rgba(0, 204, 102, 0.15);
+    color: var(--link-hover);
+  }
 }
 
 /* Responsive footer adjustments */
@@ -2178,6 +2218,31 @@ footer {
   
   .footer-bottom {
     font-size: 0.8rem;
+  }
+}
+
+/* Extra-small screen footer adjustments */
+@media (max-width: 480px) {
+  footer {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+
+  .footer-bottom p {
+    line-height: 1.8;
+  }
+
+  footer > p {
+    font-size: 0.8rem;
+    line-height: 2;
   }
 }
 
@@ -3535,6 +3600,36 @@ footer {
   .faq-answer {
     display: block !important;
     padding: 0 var(--spacing-lg) var(--spacing-lg) !important;
+  }
+}
+
+/* Print Styles - Footer */
+@media print {
+  footer {
+    background: none !important;
+    color: #000 !important;
+    border-top: 1px solid #999;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  footer a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  .footer-container {
+    display: block;
+  }
+
+  .footer-column {
+    margin-bottom: 0.75rem;
+    page-break-inside: avoid;
+  }
+
+  .footer-discordian {
+    background: none !important;
+    border-color: #999;
   }
 }
 
@@ -6663,6 +6758,12 @@ html[lang="he"] {
 [lang="he"] footer p {
   direction: rtl;
   text-align: right;
+}
+
+/* RTL Footer Column link hover direction */
+[lang="ar"] .footer-column a:hover,
+[lang="he"] .footer-column a:hover {
+  transform: translateX(-3px);
 }
 
 /* RTL Breadcrumb Navigation */
