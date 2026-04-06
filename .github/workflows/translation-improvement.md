@@ -21,22 +21,18 @@ tools:
   github:
     toolsets: [issues, pull_requests, repos]
   edit:
-  bash:
+  bash: true
 network:
   allowed:
-    - github.com
-    - api.github.com
-    - raw.githubusercontent.com
+    - github
 safe-outputs:
   create-pull-request:
     max: 1
     title-prefix: "[i18n] "
     labels: [i18n, translation-improvement, copilot]
-  create-comment:
-    max: 1
+  add-comment: {}
   threat-detection:
     enabled: true
-    actions: block
 ---
 
 # Daily Translation Improvement Agent
