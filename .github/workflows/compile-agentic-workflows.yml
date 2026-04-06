@@ -140,6 +140,17 @@ jobs:
             fi
           done
 
+          ACTIONS_LOCK=".github/aw/actions-lock.json"
+          if [ ! -f "$ACTIONS_LOCK" ]; then
+            echo "  ❌ Missing required generated actions lock file: $ACTIONS_LOCK"
+            missing_or_untracked=1
+          elif git ls-files --error-unmatch "$ACTIONS_LOCK" >/dev/null 2>&1; then
+            echo "  ✅ Generated actions lock file exists and is tracked: $ACTIONS_LOCK"
+          else
+            echo "  ❌ Generated actions lock file exists but is not committed: $ACTIONS_LOCK"
+            missing_or_untracked=1
+          fi
+
           if [ "$missing_or_untracked" -ne 0 ]; then
             echo ""
             echo "❌ Every agentic workflow markdown file must have a committed .lock.yml file."
