@@ -4,9 +4,13 @@ on:
   push:
     paths:
       - '.github/workflows/*.md'
+      - '.github/workflows/*.lock.yml'
+      - '.github/aw/actions-lock.json'
   pull_request:
     paths:
       - '.github/workflows/*.md'
+      - '.github/workflows/*.lock.yml'
+      - '.github/aw/actions-lock.json'
   workflow_dispatch:
 
 jobs:
@@ -116,7 +120,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Verify lock files are current
-        if: github.event_name == 'pull_request'
         run: |
           echo "🔒 Checking lock file status..."
 
