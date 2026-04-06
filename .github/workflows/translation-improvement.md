@@ -19,11 +19,11 @@ permissions:
   pull-requests: read
 tools:
   github:
-    toolsets: [issues, pull-requests, contents]
+    toolsets: [issues, pull_requests, repos]
   edit:
   bash:
 network:
-  defaults:
+  allowed:
     - github.com
     - api.github.com
     - raw.githubusercontent.com
@@ -36,7 +36,7 @@ safe-outputs:
     max: 1
   threat-detection:
     enabled: true
-    action: block
+    actions: block
 ---
 
 # Daily Translation Improvement Agent
