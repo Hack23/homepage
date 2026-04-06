@@ -1,7 +1,7 @@
 ---
 timeout-minutes: 30
 on:
-  schedule: daily at 2am
+  schedule: daily around 2am
   workflow_dispatch:
     inputs:
       languages:
