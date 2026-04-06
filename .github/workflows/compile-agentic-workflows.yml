@@ -120,22 +120,42 @@ jobs:
         run: |
           echo "🔒 Checking lock file status..."
 
+          missing_or_untracked=0
+
           for workflow in .github/workflows/*.md; do
             [ -f "$workflow" ] || continue
             LOCK="${workflow%.md}.lock.yml"
 
-            if [ -f "$LOCK" ]; then
-              echo "  ✅ Lock file exists: $LOCK"
+            if [ ! -f "$LOCK" ]; then
+              echo "  ❌ Missing required lock file for: $workflow"
+              missing_or_untracked=1
+              continue
+            fi
+
+            if git ls-files --error-unmatch "$LOCK" >/dev/null 2>&1; then
+              echo "  ✅ Lock file exists and is tracked: $LOCK"
             else
-              echo "  ℹ️ No lock file for: $workflow (will be generated on first compile)"
+              echo "  ❌ Lock file exists but is not committed: $LOCK"
+              missing_or_untracked=1
             fi
           done
 
-          # Check if compile changed any tracked lock files (stale)
-          if [ -n "$(git diff --name-only .github/workflows/*.lock.yml 2>/dev/null)" ]; then
+          if [ "$missing_or_untracked" -ne 0 ]; then
             echo ""
-            echo "❌ Lock files are out of date."
-            echo "Run 'gh aw compile' locally and commit the updated .lock.yml files."
+            echo "❌ Every agentic workflow markdown file must have a committed .lock.yml file."
+            echo "Run 'gh aw compile' locally and commit the resulting .lock.yml files."
+            exit 1
+          fi
+
+          # Check if compile changed any tracked generated artifacts (stale)
+          CHANGED_GENERATED_FILES="$(git diff --name-only -- .github/workflows/*.lock.yml .github/aw/actions-lock.json 2>/dev/null)"
+          if [ -n "$CHANGED_GENERATED_FILES" ]; then
+            echo ""
+            echo "❌ Compiled workflow artifacts are out of date."
+            echo "The following generated files changed after 'gh aw compile':"
+            echo "$CHANGED_GENERATED_FILES"
+            echo ""
+            echo "Run 'gh aw compile' locally and commit the updated generated files."
             exit 1
           fi
 

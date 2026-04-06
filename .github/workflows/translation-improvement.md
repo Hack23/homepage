@@ -8,7 +8,7 @@ on:
         description: "Comma-separated language codes to translate (default: all)"
         default: "nl,da,fi,fr,sv,de,ko,es,no,he,ar,zh,ja"
       batch_size:
-        description: "Number of files per language to translate per run"
+        description: "Total number of files to translate per run (across all languages)"
         default: "5"
       priority:
         description: "Page priority group to translate (product, seo, blog, discordian, all)"
@@ -65,7 +65,7 @@ For each target language (from inputs or config), identify pages that still have
    - **Arabic/Hebrew** (ar, he): Body is untranslated if `<p>` elements lack Arabic/Hebrew script characters
    - **Latin-script languages** (nl, da, fi, fr, sv, de, es, no): Compare body `<p>` content against the English source file — if the body text is identical to the English version, the file is untranslated. Also check for common English function words ("the", "and", "with", "for", "that") appearing at high frequency
 4. Prioritize files according to `translation-config.json` page_priority groups
-5. Select up to `batch_size` files per language (default: 5) from the highest-priority untranslated pages
+5. Select up to `batch_size` files total across all languages (default: 5) from the highest-priority untranslated pages, distributing evenly across languages when possible
 
 ## Phase 2: Translate Each Page
 
@@ -88,7 +88,7 @@ For every translated file, validate:
 1. **HTML structure preserved**: Same number of tags, same nesting depth, same class/id attributes
 2. **Schema.org markup intact**: JSON-LD `@type` values remain in English ("Blog", "BreadcrumbList", "Organization", etc.)
 3. **aria-labels remain English**: All `aria-label` attributes stay in English for accessibility tooling
-4. **hreflang tags preserved**: All 28 hreflang link tags remain unchanged
+4. **hreflang tags preserved**: All hreflang link tags remain unchanged
 5. **RTL attributes preserved**: For Arabic (`ar`) and Hebrew (`he`), `dir="rtl"` attributes are maintained
 6. **No mixed-language content**: Body paragraphs should be consistently in the target language
 7. **Proper encoding**: UTF-8 encoding, correct characters for the target language/script
