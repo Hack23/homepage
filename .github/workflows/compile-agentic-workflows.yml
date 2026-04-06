@@ -138,7 +138,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           echo "🔒 Checking lock file status..."
-          STALE=0
 
           for workflow in .github/workflows/*.md; do
             [ -f "$workflow" ] || continue
@@ -153,6 +152,9 @@ jobs:
 
           if [ -n "$(git status --porcelain .github/workflows/*.lock.yml 2>/dev/null)" ]; then
             echo ""
-            echo "⚠️ Lock files may be out of date."
+            echo "❌ Lock files are out of date."
             echo "Run 'gh aw compile' locally and commit the updated .lock.yml files."
+            exit 1
           fi
+
+          echo "✅ Lock files are current"

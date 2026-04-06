@@ -64,7 +64,10 @@ For each target language (from inputs or config), identify pages that still have
 
 1. List all `*_{lang}.html` files in the repository root
 2. For each file, check if the `<main>` or `<article>` body paragraphs (`<p>` elements) contain English text
-3. English detection heuristic: paragraphs matching `[A-Z][a-z]+ [a-z]+ [a-z]+` patterns in Latin-script languages; for CJK/Arabic/Hebrew, check if content is NOT in the target script
+3. English detection heuristics by script type:
+   - **CJK languages** (ja, zh, ko): Body is untranslated if `<p>` elements contain predominantly Latin characters instead of CJK script
+   - **Arabic/Hebrew** (ar, he): Body is untranslated if `<p>` elements lack Arabic/Hebrew script characters
+   - **Latin-script languages** (nl, da, fi, fr, sv, de, es, no): Compare body `<p>` content against the English source file — if the body text is identical to the English version, the file is untranslated. Also check for common English function words ("the", "and", "with", "for", "that") appearing at high frequency
 4. Prioritize files according to `translation-config.json` page_priority groups
 5. Select up to `batch_size` files per language (default: 5) from the highest-priority untranslated pages
 
@@ -79,8 +82,8 @@ For each identified untranslated page:
    - Translate all `<p>`, `<h1>`-`<h6>`, `<li>`, `<figcaption>`, `<blockquote>`, and `<summary>` text content within `<main>` or `<article>`
    - Keep the existing HTML structure, classes, IDs, and attributes exactly as they are
    - Preserve all `<code>`, `<pre>`, and technical terms that should not be translated
-   - Preserve all `<a href="...">` link URLs (do NOT translate URLs)
-   - Localize internal navigation links: `why-hack23.html` → `why-hack23_{lang}.html`, `index.html` → `index_{lang}.html`, etc.
+   - Preserve all external `<a href="...">` link URLs — do NOT translate external URLs
+   - Localize internal navigation links within body content: `why-hack23.html` → `why-hack23_{lang}.html`, `index.html` → `index_{lang}.html`, `blog.html` → `blog_{lang}.html`, etc.
 
 ## Phase 3: Quality Validation
 
