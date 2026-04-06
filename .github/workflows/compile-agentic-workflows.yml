@@ -8,15 +8,6 @@ on:
     paths:
       - '.github/workflows/*.md'
   workflow_dispatch:
-    inputs:
-      compile_mode:
-        description: 'Compilation mode'
-        required: false
-        default: 'check'
-        type: choice
-        options:
-          - check
-          - compile
 
 jobs:
   compile:
@@ -114,21 +105,11 @@ jobs:
       - name: Compile agentic workflows
         run: |
           echo "⚙️ Compiling agentic workflows..."
-          MODE="${{ inputs.compile_mode || 'check' }}"
 
-          if [ "$MODE" = "check" ]; then
-            echo "Running in check mode (validation only)..."
-            gh aw compile --check || {
-              echo "❌ Compilation check failed. Run 'gh aw compile' locally to fix."
-              exit 1
-            }
-          else
-            echo "Running in compile mode..."
-            gh aw compile || {
-              echo "❌ Compilation failed."
-              exit 1
-            }
-          fi
+          gh aw compile || {
+            echo "❌ Compilation failed. Run 'gh aw compile' locally to fix."
+            exit 1
+          }
 
           echo "✅ Agentic workflow compilation complete"
         env:
@@ -150,6 +131,7 @@ jobs:
             fi
           done
 
+          # Check if compile changed any tracked lock files (stale)
           if [ -n "$(git diff --name-only .github/workflows/*.lock.yml 2>/dev/null)" ]; then
             echo ""
             echo "❌ Lock files are out of date."
