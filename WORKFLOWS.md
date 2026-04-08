@@ -136,6 +136,18 @@ graph TB
         AK --> AL[Quality Reports]
         AL --> AM[Artifacts Stored]
     end
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class K danger
+    class Q success
+    class W success
+    class X danger
+    class AG danger
 ```
 
 ### Pipeline Flow
@@ -169,6 +181,13 @@ graph LR
     F --> G[CloudFront Invalidation]
     G --> H[Lighthouse Audit]
     H --> I[ZAP Scan]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Key Features
@@ -266,6 +285,13 @@ graph TB
     
     A6 --> C1
     B9 --> C1
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Job 1: HTML Validation
@@ -329,6 +355,14 @@ graph LR
     G --> H{All Pass?}
     H -->|Yes| I[Allow Merge]
     H -->|No| J[Block Merge]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class J danger
 ```
 
 #### Key Features
@@ -389,6 +423,13 @@ graph TB
     F --> G[Upload Artifact]
     G --> H[Upload to Security Dashboard]
     H --> I[Publish to OpenSSF API]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Scorecard Checks
@@ -440,6 +481,14 @@ graph LR
     E --> F{Vulnerabilities?}
     F -->|Yes| G[Comment in PR + Block]
     F -->|No| H[Allow Merge]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class G danger
 ```
 
 #### Key Features
@@ -490,6 +539,13 @@ graph LR
     A[Workflow Dispatch] --> B[Checkout]
     B --> C[Setup Environment]
     C --> D[Copilot Agent Ready]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Key Features
@@ -546,6 +602,14 @@ graph TB
     
     F --> G
     K --> L
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class N success
 ```
 
 #### Key Features
