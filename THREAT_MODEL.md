@@ -65,6 +65,7 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 Following [Hack23 AB Five-Strategy Threat Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#integrated-threat-modeling-strategies) methodology:
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root)🎯 Threat Modeling Strategies(
     (🎖️ Attacker-Centric)
@@ -261,13 +262,13 @@ flowchart TB
     end
     
     subgraph TRUST_BOUNDARY_3["🔒 AWS S3 Trust Boundary"]
-        S3[📦 S3 Bucket (Private)]
+        S3["📦 S3 Bucket (Private)"]
         VERSIONING[🔄 S3 Versioning]
         LOGS[📋 Access Logs]
     end
     
     subgraph TRUST_BOUNDARY_4["🔧 GitHub Trust Boundary"]
-        REPO[📂 GitHub Repository (Public)]
+        REPO["📂 GitHub Repository (Public)"]
         ACTIONS[⚙️ GitHub Actions CI/CD]
         SECRETS[🔐 Environment Secrets]
     end

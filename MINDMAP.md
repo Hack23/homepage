@@ -42,6 +42,7 @@
 ## 🌐 Hack23 Homepage Overview
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((hack23.com<br/>Cybersecurity<br/>Consulting))
     🏢 Company
@@ -145,6 +146,7 @@ mindmap
 ## 🔧 Technical Architecture Concepts
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Technical Stack))
     Frontend
@@ -217,6 +219,7 @@ mindmap
 ## 📝 Content Structure Concepts
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Content Model))
     Page Types

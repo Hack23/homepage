@@ -45,6 +45,7 @@ This document analyzes future strategic opportunities and threats for the Hack23
 ## 📊 Future SWOT Quadrant
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"quadrant1Fill": "#1565C0", "quadrant2Fill": "#2E7D32", "quadrant3Fill": "#FF9800", "quadrant4Fill": "#D32F2F", "quadrantTitleFill": "#1a1a2e", "quadrantPointFill": "#ffffff", "quadrantPointTextFill": "#ffffff", "quadrantXAxisTextFill": "#455A64", "quadrantYAxisTextFill": "#455A64"}, "quadrantChart": {"chartWidth": 600, "chartHeight": 600, "pointLabelFontSize": 12}}}%%
 quadrantChart
     title Hack23 Homepage Future SWOT (H2 2026)
     x-axis "Weakness" --> "Strength"

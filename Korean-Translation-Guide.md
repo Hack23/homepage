@@ -21,6 +21,7 @@
 ## 🔄 Visual Translation Workflow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[파일 선택] --> B[용어 검토]
     B --> C[콘텐츠 번역]
@@ -33,6 +34,7 @@ graph LR
 ## 🔄 Quality Standards Pyramid
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     L1[기반: 기술적 정확성]
     L2[중간: 문법과 유창성]

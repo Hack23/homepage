@@ -21,6 +21,7 @@
 ## 🔄 Visual Translation Workflow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph RL
     F[نشر] --> E{موافق؟}
     E -->|نعم| D[التحقق]
@@ -33,6 +34,7 @@ graph RL
 ## 🔄 Quality Standards Pyramid
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     L1[القاعدة: الدقة التقنية]
     L2[الوسط: القواعد والسلاسة]

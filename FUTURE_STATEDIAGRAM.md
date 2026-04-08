@@ -45,6 +45,7 @@ This document outlines planned enhancements to the Hack23 homepage state managem
 ## 🚀 Enhanced Deployment States (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Idle: System Ready
 
@@ -109,6 +110,7 @@ stateDiagram-v2
 ## 🌍 Translation Lifecycle States (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Current: Translation Complete
 
@@ -146,6 +148,7 @@ stateDiagram-v2
 ## 📊 Enhanced Monitoring States (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Monitoring: System Active
 

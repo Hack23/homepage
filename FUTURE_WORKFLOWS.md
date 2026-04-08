@@ -69,6 +69,7 @@ Transform the current CI/CD pipeline into a **world-class secure software supply
 ## Strategic Roadmap
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0", "gridColor": "#90A4AE", "todayLineColor": "#D32F2F"}}}%%
 gantt
     title CI/CD Enhancement Roadmap (2026)
     dateFormat YYYY-MM-DD
@@ -197,6 +198,7 @@ environment:
 #### Workflow Enhancement
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Code Commit] --> B[SAST: Semgrep]
     B --> C[Dependency: Snyk]
@@ -273,6 +275,7 @@ graph TB
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[GitHub Actions] --> B[Vault Agent]
     B --> C{Vault}
@@ -443,6 +446,7 @@ jobs:
 #### Workflow DAG
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Checkout] --> B1[ZAP Scan]
     A --> B2[Semgrep Scan]
@@ -650,6 +654,7 @@ static:
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[GitHub Actions] --> B[GitHub API]
     B --> C[CloudWatch]
@@ -892,6 +897,7 @@ graph LR
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Commit to master] --> B[Deploy to Staging]
     B --> C[Smoke Tests]

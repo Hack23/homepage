@@ -81,6 +81,7 @@ fn check_vital_point_strike(&self, attacker: &Fighter, defender: &Fighter) -> Vi
 
 **Example Architecture Vision**:
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "The Consciousness Expansion Architecture"
         Universe([Universal Consciousness]):::universe

@@ -21,6 +21,7 @@
 ## 🔄 Visual Translation Workflow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Välj fil] --> B[Granska termer]
     B --> C[Översätt innehåll]
@@ -33,6 +34,7 @@ graph LR
 ## 🔄 Quality Standards Pyramid
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     L1[Grund: Teknisk noggrannhet]
     L2[Mitten: Grammatik och flyt]

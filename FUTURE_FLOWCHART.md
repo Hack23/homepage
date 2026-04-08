@@ -46,6 +46,7 @@ This document outlines planned improvements to the Hack23 homepage process workf
 ## 🌍 Automated Translation Pipeline (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Change([📝 English Content Changed]) --> Detect[🔍 Detect Changed Sections]
     Detect --> Compare[📊 Compare with Translations]
@@ -76,6 +77,7 @@ flowchart TD
 ## 🛡️ Enhanced Security Pipeline (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Push([📝 Code Push]) --> Harden[🔒 Harden Runner]
     Harden --> SRI[🔏 Verify SRI Hashes]
@@ -112,6 +114,7 @@ flowchart TD
 ## 📊 Enhanced Quality Gates (Planned)
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     Input[📄 Content] --> Lint[🔍 HTMLHint]
     Lint --> Validate[✅ HTML5 W3C]

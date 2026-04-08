@@ -129,6 +129,7 @@ Deploy CSP in report-only mode to gather violation data before enforcing.
 **Implementation Phases:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     A[Phase 1: Report-Only] --> B[Phase 2: Analysis]
     B --> C[Phase 3: Policy Refinement]
@@ -258,6 +259,7 @@ Configure CloudFront origin failover to secondary S3 bucket for improved resilie
 **Architecture:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[CloudFront] --> B{Origin Health Check}
     B -->|Healthy| C[Primary S3 Bucket<br/>us-east-1]
@@ -541,6 +543,7 @@ Create public security dashboard showing real-time security metrics.
 **Metrics to Display:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     A[Security Dashboard] --> B[OpenSSF Scorecard]
     A --> C[Deployment Frequency]

@@ -92,6 +92,7 @@ Per [Hack23 ISMS Classification Framework](https://github.com/Hack23/ISMS-PUBLIC
 ## 🎨 C4 Architecture Diagram
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Context
   title Hack23 Homepage Security Architecture - System Context
   
@@ -121,6 +122,7 @@ C4Context
 ```
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Container
   title Hack23 Homepage Security Architecture - Container Diagram
   
@@ -472,6 +474,7 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 **Recovery Procedures:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     A[Disaster Event] --> B{Scope Assessment}
     B --> |S3 Corruption| C[Deploy from Git]
@@ -655,6 +658,7 @@ Permissions: Least privilege (S3 + CloudFront only)
 **Secure Deployment Pipeline:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TB
     A[Git Push to master] --> B[Harden Runner activated]
     B --> C[Code Checkout]
@@ -699,6 +703,7 @@ flowchart TB
 The release workflow implements **SLSA Build Level 3** attestations for cryptographic verification of build integrity and provenance.
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TB
     A[Tag Push v*] --> B[Prepare Job]
     B --> C[Generate Documentation]
@@ -832,6 +837,7 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 **Framework Functions Mapping:**
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "NIST CSF 2.0 Coverage"
         A[GOVERN] --> A1[GV.OC-01: Strategy established]
@@ -884,6 +890,7 @@ graph TB
 ### Six Security Layers
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     subgraph "Layer 1: Perimeter"
         L1A[CloudFront CDN] --> L1B[AWS Shield DDoS]

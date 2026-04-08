@@ -84,6 +84,7 @@ The Hack23 homepage repository implements a comprehensive CI/CD pipeline using G
 ## CI/CD Pipeline Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Development Phase"
         A[Developer Push] --> B{Branch?}
@@ -158,6 +159,7 @@ graph TB
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Checkout] --> B[Cache Setup]
     B --> C[AWS OIDC Auth]
@@ -236,6 +238,7 @@ Three-layer caching approach (see [WORKFLOW_CACHING_GUIDE.md](WORKFLOW_CACHING_G
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Job 1: HTML Validation"
         A1[Checkout] --> A2[Setup Node.js 24]
@@ -315,6 +318,7 @@ Consolidates results from both jobs and lists available artifacts.
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Harden Runner] --> B[HTML5 Validation]
     B --> C[Link Checking]
@@ -375,6 +379,7 @@ graph LR
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Scheduled/Triggered] --> B[Harden Runner]
     B --> C[Checkout]
@@ -426,6 +431,7 @@ The OpenSSF Scorecard evaluates **18 security checks**:
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[PR Opened] --> B[Harden Runner]
     B --> C[Checkout]
@@ -479,6 +485,7 @@ graph LR
 #### Workflow Configuration
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Workflow Dispatch] --> B[Checkout]
     B --> C[Setup Environment]
@@ -515,6 +522,7 @@ Enables Copilot access to:
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Job 1: Prepare"
         A[Checkout default branch] --> B[Generate Documentation]

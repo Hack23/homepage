@@ -62,6 +62,7 @@
 ## 🌐 Future System Context
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Context
     title Future System Context - Hack23 Homepage (H2 2026)
 
@@ -100,6 +101,7 @@ C4Context
 ### Enhanced Caching Strategy
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     Request[🧑 Request] --> CF{CloudFront}
     CF -->|Cache Hit| Edge[Edge Cache<br/>TTL: 24h]
