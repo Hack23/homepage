@@ -54,7 +54,7 @@ graph TD
     classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
     classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
     classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
-    class L3 success
+
 ```
 
 ---
