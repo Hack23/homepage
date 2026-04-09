@@ -48,6 +48,7 @@ This document provides comprehensive flowcharts for the Hack23 homepage, documen
 ## 🚀 Main Deployment Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Start([📝 Code Push to Main]) --> Checkout[Checkout Repository]
     Checkout --> Setup[Setup Node.js 24]
@@ -83,6 +84,7 @@ flowchart TD
 ## 🔀 Pull Request Verification Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     PR([🔀 Pull Request Opened]) --> Harden[🔒 Harden Runner]
     Harden --> Checkout[📥 Checkout Code]
@@ -120,6 +122,7 @@ flowchart TD
 ## 📝 Content Update Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Start([📝 Content Change Needed]) --> Identify{Change Type}
 
@@ -156,6 +159,7 @@ flowchart TD
 ## 🛡️ Security Scanning Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Trigger([🔄 Scheduled / Push]) --> Scorecard[📊 OpenSSF Scorecard]
     Trigger --> CodeQL[🔍 CodeQL Analysis]
@@ -190,6 +194,7 @@ flowchart TD
 ## 📊 Quality Assurance Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     Input[📄 HTML Pages] --> Lint[🔍 HTMLHint<br/>Syntax Check]
     Lint --> Validate[✅ HTML5 Validator<br/>W3C Compliance]
@@ -212,6 +217,7 @@ flowchart LR
 ## 🏗️ Release Build Flow
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Tag([🏷️ Tag Push / Manual]) --> Checkout[📥 Checkout]
     Checkout --> Setup[⚙️ Setup Node.js 24]

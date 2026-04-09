@@ -47,6 +47,7 @@ This document outlines planned enhancements to the Hack23 homepage content model
 ### Planned Entity Additions
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#e3f2fd", "primaryTextColor": "#01579b", "lineColor": "#0288d1", "secondaryColor": "#f1f8e9", "tertiaryColor": "#fff8e1"}}}%%
 erDiagram
     WEBSITE ||--o{ PAGE : contains
     PAGE ||--o{ TRANSLATION : "has_variants"
@@ -98,6 +99,7 @@ erDiagram
 ### Translation Pipeline Enhancement
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Source[📝 English Source Changed] --> Detect[🔍 Detect Affected Sections]
     Detect --> Flag[🚩 Flag Stale Translations]

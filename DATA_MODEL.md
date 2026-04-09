@@ -56,6 +56,7 @@ The Hack23 homepage is a static HTML/CSS website with no backend database. The "
 ## 📐 Content Entity Model
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#e3f2fd", "primaryTextColor": "#01579b", "lineColor": "#0288d1", "secondaryColor": "#f1f8e9", "tertiaryColor": "#fff8e1"}}}%%
 erDiagram
     WEBSITE ||--o{ PAGE : contains
     PAGE ||--o{ TRANSLATION : "has_variants"
@@ -135,6 +136,7 @@ erDiagram
 Each open-source project follows a three-page pattern:
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     P[Project Overview<br/>project.html] --> F[Features Page<br/>project-features.html]
     P --> D[Documentation Page<br/>project-docs.html]
@@ -186,6 +188,7 @@ graph TD
 ### Schema.org Types Used
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     Org[Organization<br/>hack23.com] --> WP[WebPage<br/>Every page]
     WP --> BL[BreadcrumbList<br/>Navigation path]

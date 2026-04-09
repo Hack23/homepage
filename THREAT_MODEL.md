@@ -65,6 +65,7 @@ Integrated with [🎯 Hack23 AB Threat Modeling Policy](https://github.com/Hack2
 Following [Hack23 AB Five-Strategy Threat Modeling](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Threat_Modeling.md#integrated-threat-modeling-strategies) methodology:
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root)🎯 Threat Modeling Strategies(
     (🎖️ Attacker-Centric)
@@ -261,13 +262,13 @@ flowchart TB
     end
     
     subgraph TRUST_BOUNDARY_3["🔒 AWS S3 Trust Boundary"]
-        S3[📦 S3 Bucket (Private)]
+        S3["📦 S3 Bucket (Private)"]
         VERSIONING[🔄 S3 Versioning]
         LOGS[📋 Access Logs]
     end
     
     subgraph TRUST_BOUNDARY_4["🔧 GitHub Trust Boundary"]
-        REPO[📂 GitHub Repository (Public)]
+        REPO["📂 GitHub Repository (Public)"]
         ACTIONS[⚙️ GitHub Actions CI/CD]
         SECRETS[🔐 Environment Secrets]
     end
@@ -1076,6 +1077,13 @@ flowchart LR
     INTEG --> MON[📊 Monitoring & Metrics]
     MON --> REVIEW[🔄 Quarterly Review]
     REVIEW --> THREATS
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 ### **📅 Assessment Lifecycle**

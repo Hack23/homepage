@@ -84,6 +84,7 @@ The Hack23 homepage repository implements a comprehensive CI/CD pipeline using G
 ## CI/CD Pipeline Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Development Phase"
         A[Developer Push] --> B{Branch?}
@@ -135,6 +136,18 @@ graph TB
         AK --> AL[Quality Reports]
         AL --> AM[Artifacts Stored]
     end
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class K danger
+    class Q success
+    class W success
+    class X danger
+    class AG danger
 ```
 
 ### Pipeline Flow
@@ -158,6 +171,7 @@ graph TB
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Checkout] --> B[Cache Setup]
     B --> C[AWS OIDC Auth]
@@ -167,6 +181,13 @@ graph LR
     F --> G[CloudFront Invalidation]
     G --> H[Lighthouse Audit]
     H --> I[ZAP Scan]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Key Features
@@ -236,6 +257,7 @@ Three-layer caching approach (see [WORKFLOW_CACHING_GUIDE.md](WORKFLOW_CACHING_G
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Job 1: HTML Validation"
         A1[Checkout] --> A2[Setup Node.js 24]
@@ -263,6 +285,13 @@ graph TB
     
     A6 --> C1
     B9 --> C1
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Job 1: HTML Validation
@@ -315,6 +344,7 @@ Consolidates results from both jobs and lists available artifacts.
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Harden Runner] --> B[HTML5 Validation]
     B --> C[Link Checking]
@@ -325,6 +355,14 @@ graph LR
     G --> H{All Pass?}
     H -->|Yes| I[Allow Merge]
     H -->|No| J[Block Merge]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class J danger
 ```
 
 #### Key Features
@@ -375,6 +413,7 @@ graph LR
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Scheduled/Triggered] --> B[Harden Runner]
     B --> C[Checkout]
@@ -384,6 +423,13 @@ graph TB
     F --> G[Upload Artifact]
     G --> H[Upload to Security Dashboard]
     H --> I[Publish to OpenSSF API]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Scorecard Checks
@@ -426,6 +472,7 @@ The OpenSSF Scorecard evaluates **18 security checks**:
 #### Workflow Steps
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[PR Opened] --> B[Harden Runner]
     B --> C[Checkout]
@@ -434,6 +481,14 @@ graph LR
     E --> F{Vulnerabilities?}
     F -->|Yes| G[Comment in PR + Block]
     F -->|No| H[Allow Merge]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class G danger
 ```
 
 #### Key Features
@@ -479,10 +534,18 @@ graph LR
 #### Workflow Configuration
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[Workflow Dispatch] --> B[Checkout]
     B --> C[Setup Environment]
     C --> D[Copilot Agent Ready]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Key Features
@@ -515,6 +578,7 @@ Enables Copilot access to:
 #### Workflow Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Job 1: Prepare"
         A[Checkout default branch] --> B[Generate Documentation]
@@ -538,6 +602,14 @@ graph TB
     
     F --> G
     K --> L
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class N success
 ```
 
 #### Key Features

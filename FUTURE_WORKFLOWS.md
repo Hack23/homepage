@@ -69,6 +69,7 @@ Transform the current CI/CD pipeline into a **world-class secure software supply
 ## Strategic Roadmap
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0", "gridColor": "#90A4AE", "todayLineColor": "#D32F2F"}}}%%
 gantt
     title CI/CD Enhancement Roadmap (2026)
     dateFormat YYYY-MM-DD
@@ -197,6 +198,7 @@ environment:
 #### Workflow Enhancement
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Code Commit] --> B[SAST: Semgrep]
     B --> C[Dependency: Snyk]
@@ -208,6 +210,15 @@ graph TB
     H --> I{All Clear?}
     I -->|Yes| J[Deploy]
     I -->|No| K[Block & Alert]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class J success
+    class K danger
 ```
 
 #### New Security Layers
@@ -273,6 +284,7 @@ graph TB
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[GitHub Actions] --> B[Vault Agent]
     B --> C{Vault}
@@ -280,6 +292,13 @@ graph LR
     C --> E[Database Credentials]
     C --> F[API Keys]
     D --> G[S3/CloudFront]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Implementation
@@ -443,6 +462,7 @@ jobs:
 #### Workflow DAG
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Checkout] --> B1[ZAP Scan]
     A --> B2[Semgrep Scan]
@@ -464,6 +484,15 @@ graph TB
     D --> F[Deploy Gate]
     E --> F
     F --> G[Deploy to Production]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class F success
+    class G success
 ```
 
 #### Expected Performance
@@ -650,6 +679,7 @@ static:
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph LR
     A[GitHub Actions] --> B[GitHub API]
     B --> C[CloudWatch]
@@ -660,6 +690,13 @@ graph LR
     
     G[Logs] --> H[CloudWatch Logs]
     H --> D
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 #### Key Metrics
@@ -892,6 +929,7 @@ graph LR
 #### Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     A[Commit to master] --> B[Deploy to Staging]
     B --> C[Smoke Tests]
@@ -903,6 +941,18 @@ graph TB
     H --> I{Healthy?}
     I -->|Yes| J[Success]
     I -->|No| K[Auto Rollback]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
+    class A success
+    class F danger
+    class G success
+    class J success
+    class K danger
 ```
 
 #### Implementation

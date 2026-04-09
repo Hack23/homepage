@@ -45,6 +45,7 @@ This document outlines the planned capability expansion for the Hack23 homepage,
 ## 🔮 Future Capabilities
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((hack23.com<br/>Future Vision<br/>H2 2026))
     🛡️ Enhanced Security
@@ -136,6 +137,7 @@ mindmap
 ## 🏢 Business Expansion Concepts
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Business Growth))
     Market Expansion

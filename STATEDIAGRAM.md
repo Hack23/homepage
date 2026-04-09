@@ -48,6 +48,7 @@ This document provides comprehensive state diagrams for the Hack23 homepage, doc
 ## 🚀 Deployment Pipeline States
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Idle: Repository Ready
 
@@ -105,6 +106,7 @@ stateDiagram-v2
 ## 📝 Content Lifecycle States
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Draft: Create Content
 
@@ -147,6 +149,7 @@ stateDiagram-v2
 ## 🔒 Security Scanning States
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Scheduled: Cron / Push Trigger
 
@@ -197,6 +200,7 @@ stateDiagram-v2
 ## 🔀 Pull Request States
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Open: Create PR
 
@@ -233,6 +237,7 @@ stateDiagram-v2
 ## ☁️ AWS Infrastructure States
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 stateDiagram-v2
     [*] --> Healthy: Normal Operation
 

@@ -60,6 +60,7 @@
 ## 🌐 System Context
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Context
     title System Context - Hack23 Homepage (hack23.com)
 
@@ -85,6 +86,7 @@ C4Context
 ## 🏢 Container View
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Container
     title Container View - Hack23 Homepage
 
@@ -121,6 +123,7 @@ C4Container
 ## 🧩 Component View
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#ffffff", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800", "primaryBorderColor": "#1565C0"}}}%%
 C4Component
     title Component View - Hack23 Homepage Content
 
@@ -199,6 +202,7 @@ hack23-homepage/
 ## 🔄 Deployment Architecture
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart LR
     subgraph GitHub["🔧 GitHub"]
         repo[Repository] --> actions[GitHub Actions]
@@ -214,6 +218,13 @@ flowchart LR
     end
 
     edge --> visitor[🧑 Visitor]
+
+    classDef default fill:#e3f2fd,stroke:#1565C0,stroke-width:2px,color:#1a1a2e
+    classDef primary fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#ffffff
+    classDef success fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#ffffff
+    classDef warning fill:#FF9800,stroke:#F57C00,stroke-width:2px,color:#ffffff
+    classDef danger fill:#D32F2F,stroke:#B71C1C,stroke-width:2px,color:#ffffff
+    classDef info fill:#455A64,stroke:#263238,stroke-width:2px,color:#ffffff
 ```
 
 ---

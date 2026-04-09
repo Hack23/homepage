@@ -49,6 +49,7 @@
 ## SWOT Quadrant
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"quadrant1Fill": "#1565C0", "quadrant2Fill": "#2E7D32", "quadrant3Fill": "#FF9800", "quadrant4Fill": "#D32F2F", "quadrantTitleFill": "#1a1a2e", "quadrantPointFill": "#ffffff", "quadrantPointTextFill": "#ffffff", "quadrantXAxisTextFill": "#455A64", "quadrantYAxisTextFill": "#455A64"}, "quadrantChart": {"chartWidth": 600, "chartHeight": 600, "pointLabelFontSize": 12}}}%%
 quadrantChart
     title Hack23 Homepage SWOT Analysis
     x-axis "Weakness" --> "Strength"
@@ -76,6 +77,7 @@ quadrantChart
 ## 💪 Strengths
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Strengths))
     ISMS Transparency
@@ -120,6 +122,7 @@ mindmap
 ## 🔻 Weaknesses
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Weaknesses))
     No CMS Backend
@@ -158,6 +161,7 @@ mindmap
 ## 🌟 Opportunities
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Opportunities))
     NIS2 Compliance Demand
@@ -200,6 +204,7 @@ mindmap
 ## ⚠️ Threats
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#4CAF50", "tertiaryColor": "#FF9800"}}}%%
 mindmap
   root((Threats))
     Larger Competitor Marketing
@@ -252,6 +257,7 @@ Based on the SWOT analysis, the following strategic focus areas emerge:
 ## 📊 Implementation Prioritization
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TD
     subgraph "Immediate Priorities"
         IP1[Maintain Security Posture]
