@@ -1,176 +1,66 @@
 name: Compile Agentic Workflows
 
+# Compile .md workflow files to .lock.yml and commit all generated artifacts.
+# SHARED_PROMPT_PATTERNS.md lives in .github/aw/ (not workflows/) so bare
+# `gh aw compile` works without exclusions.
+
 on:
-  push:
-    paths:
-      - '.github/workflows/*.md'
-      - '.github/workflows/*.lock.yml'
-      - '.github/aw/actions-lock.json'
-  pull_request:
-    paths:
-      - '.github/workflows/*.md'
-      - '.github/workflows/*.lock.yml'
-      - '.github/aw/actions-lock.json'
   workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
 
 jobs:
   compile:
+    name: Compile Agentic Workflows
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176 # v2.17.0
+        with:
+          egress-policy: audit
+
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          token: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
 
-      - name: Setup GitHub CLI
-        run: gh --version
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: '25'
 
-      - name: Install gh-aw extension
-        run: gh extension install github/gh-aw
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: Validate agentic workflow markdown files
+      - name: Install gh-aw CLI
         run: |
-          echo "🔍 Validating agentic workflow files..."
-          ERRORS=0
+          # Pin to a specific version to prevent regressions from buggy releases.
+          # v0.67.4 introduced GITHUB_COPILOT_INTEGRATION_ID which broke all workflows;
+          # v0.68.0 fixes this. Update this pin when upgrading gh-aw.
+          GH_AW_VERSION="v0.68.2"
+          gh extension install github/gh-aw --pin "$GH_AW_VERSION"
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
 
-          for workflow in .github/workflows/*.md; do
-            [ -f "$workflow" ] || continue
-            echo ""
-            echo "📄 Checking: $workflow"
+      - name: Delete existing lock files
+        run: find .github/workflows -name "*.lock.yml" -type f -delete
 
-            # Check for required YAML frontmatter
-            if ! head -1 "$workflow" | grep -q '^---$'; then
-              echo "  ❌ Missing YAML frontmatter opening ---"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
+      - name: Compile all workflows
+        run: gh aw compile
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
 
-            # Check for frontmatter closing
-            if ! awk 'NR>1 && /^---$/{found=1; exit} END{exit !found}' "$workflow"; then
-              echo "  ❌ Missing YAML frontmatter closing ---"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-
-            # Extract frontmatter
-            FRONTMATTER=$(awk '/^---$/{n++; next} n==1{print}' "$workflow")
-
-            # Check for required on: trigger
-            if ! echo "$FRONTMATTER" | grep -q '^on:'; then
-              echo "  ❌ Missing 'on:' trigger definition"
-              ERRORS=$((ERRORS + 1))
-            else
-              echo "  ✅ Has trigger definition"
-            fi
-
-            # Check for permissions
-            if ! echo "$FRONTMATTER" | grep -q '^permissions:'; then
-              echo "  ❌ Missing 'permissions:' definition"
-              ERRORS=$((ERRORS + 1))
-            else
-              echo "  ✅ Has permissions definition"
-            fi
-
-            # Check for safe-outputs (required for workflows with write operations)
-            if echo "$FRONTMATTER" | grep -q 'safe-outputs:'; then
-              echo "  ✅ Has safe-outputs configuration"
-
-              # Check for threat-detection in safe-outputs
-              if echo "$FRONTMATTER" | grep -q 'threat-detection:'; then
-                echo "  ✅ Has threat-detection enabled"
-              else
-                echo "  ⚠️  Missing threat-detection in safe-outputs"
-              fi
-            fi
-
-            # Check for timeout
-            if echo "$FRONTMATTER" | grep -q 'timeout-minutes:'; then
-              echo "  ✅ Has timeout configuration"
-            else
-              echo "  ⚠️  Missing timeout-minutes (recommended)"
-            fi
-
-            echo "  ✅ Frontmatter structure valid"
-          done
-
-          echo ""
-          if [ $ERRORS -gt 0 ]; then
-            echo "❌ Found $ERRORS validation error(s)"
-            exit 1
+      - name: Commit all generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/*.lock.yml \
+                  .github/workflows/agentics-maintenance.yml \
+                  .github/aw/actions-lock.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
           else
-            echo "✅ All agentic workflow files passed validation"
+            git diff --cached --stat
+            git commit -m "chore: recompile agentic workflow lock files"
+            git push
           fi
-
-      - name: Compile agentic workflows
-        run: |
-          echo "⚙️ Compiling agentic workflows..."
-
-          gh aw compile || {
-            echo "❌ Compilation failed. Run 'gh aw compile' locally to fix."
-            exit 1
-          }
-
-          echo "✅ Agentic workflow compilation complete"
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: Verify lock files are current
-        run: |
-          echo "🔒 Checking lock file status..."
-
-          missing_or_untracked=0
-
-          for workflow in .github/workflows/*.md; do
-            [ -f "$workflow" ] || continue
-            LOCK="${workflow%.md}.lock.yml"
-
-            if [ ! -f "$LOCK" ]; then
-              echo "  ❌ Missing required lock file for: $workflow"
-              missing_or_untracked=1
-              continue
-            fi
-
-            if git ls-files --error-unmatch "$LOCK" >/dev/null 2>&1; then
-              echo "  ✅ Lock file exists and is tracked: $LOCK"
-            else
-              echo "  ❌ Lock file exists but is not committed: $LOCK"
-              missing_or_untracked=1
-            fi
-          done
-
-          ACTIONS_LOCK=".github/aw/actions-lock.json"
-          if [ ! -f "$ACTIONS_LOCK" ]; then
-            echo "  ❌ Missing required generated actions lock file: $ACTIONS_LOCK"
-            missing_or_untracked=1
-          elif git ls-files --error-unmatch "$ACTIONS_LOCK" >/dev/null 2>&1; then
-            echo "  ✅ Generated actions lock file exists and is tracked: $ACTIONS_LOCK"
-          else
-            echo "  ❌ Generated actions lock file exists but is not committed: $ACTIONS_LOCK"
-            missing_or_untracked=1
-          fi
-
-          if [ "$missing_or_untracked" -ne 0 ]; then
-            echo ""
-            echo "❌ Every agentic workflow markdown file must have a committed .lock.yml file."
-            echo "Run 'gh aw compile' locally and commit the resulting .lock.yml files."
-            exit 1
-          fi
-
-          # Check if compile changed any tracked generated artifacts (stale)
-          CHANGED_GENERATED_FILES="$(git diff --name-only -- .github/workflows/*.lock.yml .github/aw/actions-lock.json 2>/dev/null)"
-          if [ -n "$CHANGED_GENERATED_FILES" ]; then
-            echo ""
-            echo "❌ Compiled workflow artifacts are out of date."
-            echo "The following generated files changed after 'gh aw compile':"
-            echo "$CHANGED_GENERATED_FILES"
-            echo ""
-            echo "Run 'gh aw compile' locally and commit the updated generated files."
-            exit 1
-          fi
-
-          echo "✅ Lock files are current"
