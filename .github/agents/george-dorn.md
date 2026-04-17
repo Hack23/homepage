@@ -21,6 +21,7 @@ Every commit, PR, and review MUST respect these policies (linked for deep readin
 | [Cryptographic Controls Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptographic_Controls_Policy.md) | AES-256, RSA-2048+, SHA-256+, TLS 1.2+; ban MD5/SHA-1/DES/3DES/SSL/TLS<1.2 |
 | [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Public / Internal / Confidential / Restricted handling |
 | [Acceptable Use Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Acceptable_Use_Policy.md) | Your use of tools, AI assistants, public artefacts |
+| [AI Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md) | Any agent, LLM, MCP, or Copilot-workflow code — ethical + auditable by design, zero secrets in prompts |
 
 ## 🎯 Skills Integration (Your Daily Playbook)
 

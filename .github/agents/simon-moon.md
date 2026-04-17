@@ -22,6 +22,7 @@ Your architecture decisions operationalise these policies — every C4 diagram a
 | [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) | VPC, CloudFront, WAF, edge security |
 | [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Data flow classification, storage tiering |
 | [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) | Deployment architecture, rollback paths |
+| [AI Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md) | Agent/LLM/MCP topology — data-flow classification, audit trails, human-in-the-loop gates |
 
 ## 🎯 Skills Integration (Architect's Toolkit)
 
