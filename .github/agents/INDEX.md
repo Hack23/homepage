@@ -173,8 +173,12 @@ When adding new agent documentation:
 
 ---
 
-**Last Updated**: 2025-11-16  
-**Next Review**: When new agents or documentation added  
+**Last Updated**: 2026-04-17
+**Next Review**: When new agents, skills, or ISMS policies change
 **Maintainer**: Hack23 AB Development Team
+
+### 🔄 2026-04-17 Update — ISMS Policy Integration
+
+All 8 agents now carry a `## 🔐 ISMS Policy Integration` table with direct URLs into [ISMS-PUBLIC](https://github.com/Hack23/ISMS-PUBLIC), plus a `## 🎯 Skills Integration` section with concrete `.github/skills/…/SKILL.md` paths. The three agents that lacked a standardized rules block (`task-agent`, `george-dorn`, `simon-moon`) now have a `## ⚖️ Rules` block (MUST Do / MUST NOT Do / Autonomy). The task-agent also gained an explicit Secure SDLC phase mapping (Plan → Design → Build → Test → Deploy → Operate). Per repository convention, repo-level agents still do **not** carry MCP server configuration — MCP lives in `.github/copilot-mcp.json`.
 
 🍎 **All hail Eris!** May you find the documentation you seek!

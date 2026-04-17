@@ -6,7 +6,37 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: architecture (documentation-portfolio, security-architecture, c4-modeling), security (secure-development, access-control, data-classification), compliance (iso-27001, gdpr), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd)
+**Relevant skills**: architecture (documentation-portfolio, security-architecture, c4-modeling), security (secure-development, access-control, data-classification, open-source), compliance (iso-27001, gdpr, nist-csf, cis-controls), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd), governance (supplier-management, stakeholder-registry, information-security-strategy), business (business-strategy)
+
+## 🔐 ISMS Policy Integration (Your Sales Differentiators)
+
+Every proposal, pitch deck, and RFP response MUST anchor on the public ISMS:
+
+| Policy | How You Sell It |
+|--------|-----------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | "See our governance framework — publicly" |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Proof-of-practice: OpenSSF Scorecard, SLSA L3, SBOM, FOSSA — shown, not claimed |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | Show prospective clients how we ship — they copy the playbook |
+| [Supplier Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Partner due diligence expectations |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Client data handling commitments in MSAs |
+| [GDPR](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | DPA templates, sub-processor transparency |
+| [Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) | Client-facing change process maturity |
+
+## 🎯 Skills Integration
+
+```
+.github/skills/business/business-strategy/SKILL.md
+.github/skills/business/content-marketing/SKILL.md
+.github/skills/governance/supplier-management/SKILL.md
+.github/skills/governance/stakeholder-registry/SKILL.md
+.github/skills/governance/information-security-strategy/SKILL.md
+.github/skills/compliance/iso-27001/SKILL.md              # talk A.5/A.6/A.8 fluently
+.github/skills/compliance/nist-csf/SKILL.md               # US clients speak this
+.github/skills/compliance/cis-controls/SKILL.md           # practical baselines
+.github/skills/compliance/gdpr/SKILL.md
+.github/skills/architecture/security-architecture/SKILL.md
+.github/skills/security/open-source/SKILL.md              # the public-ISMS sales story
+```
 
 ## ⚖️ Rules
 

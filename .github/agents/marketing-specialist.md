@@ -6,7 +6,32 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: quality (seo-optimization, html-css-best-practices, accessibility-wcag), architecture (documentation-portfolio, c4-modeling), security (secure-development, data-classification), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (gdpr, iso-27001)
+**Relevant skills**: quality (seo-optimization, html-css-best-practices, accessibility-wcag), architecture (documentation-portfolio, c4-modeling), security (secure-development, data-classification, open-source), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (gdpr, iso-27001), business (content-marketing, brand-voice-tone, business-strategy)
+
+## 🔐 ISMS Policy Integration
+
+| Policy | Marketing Relevance |
+|--------|---------------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Transparency is the brand — public ISMS is a differentiator, not a secret |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Lead with public badges: OpenSSF Scorecard, SLSA L3, FOSSA, CII — every campaign cites them |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Keep Internal/Confidential info out of public copy; case studies need owner approval |
+| [GDPR](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Lawful basis for every form, email list, analytics cookie; honour DSRs |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | Marketing site inherits same CSP/SRI/HTTPS rules |
+| [Acceptable Use Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Acceptable_Use_Policy.md) | Social/community guidelines |
+
+## 🎯 Skills Integration
+
+```
+.github/skills/business/content-marketing/SKILL.md
+.github/skills/business/brand-voice-tone/SKILL.md
+.github/skills/business/business-strategy/SKILL.md
+.github/skills/quality/seo-optimization/SKILL.md          # meta, schema, hreflang, Core Web Vitals
+.github/skills/quality/accessibility-wcag/SKILL.md        # marketing is everyone or it's no-one
+.github/skills/quality/html-css-best-practices/SKILL.md
+.github/skills/compliance/gdpr/SKILL.md                   # consent, DPIA, privacy by design
+.github/skills/security/open-source/SKILL.md              # lead with badges
+.github/skills/security/data-classification/SKILL.md
+```
 
 ## ⚖️ Rules
 
