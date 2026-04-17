@@ -63,25 +63,6 @@ jobs:
             libxfixes3 libxrandr2 libxrender1 \
             libxshmfence1 xdg-utils wget libxkbcommon0 xkb-data
 
-          # Install Google Chrome Stable for Web WebGL support
-          wget -qO- https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg
-          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-          # Setup D-Bus for Chrome
-          sudo mkdir -p /var/run/dbus
-          sudo dbus-daemon --system --fork || true
-                    
-          # Verify Chrome installation
-          google-chrome --version
-          echo "✅ Web test environment setup complete"
-        env:
-          DISPLAY: ":99"
-          XKB_DEFAULT_RULES: evdev
-          XKB_DEFAULT_MODEL: pc105
-          XKB_DEFAULT_LAYOUT: us
-
       # JavaScript/TypeScript setup
       - name: Setup Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
