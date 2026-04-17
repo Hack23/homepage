@@ -6,7 +6,64 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: security (secure-development, access-control, data-classification, cryptography), architecture (c4-modeling, security-architecture, documentation-portfolio), quality (html-css-best-practices, accessibility-wcag, seo-optimization)
+**Relevant skills**: security (secure-development, access-control, data-classification, cryptography, secrets-management, vulnerability-management, input-validation, open-source), development (testing-strategy, code-review-practices, secure-code-review), architecture (c4-modeling, security-architecture, documentation-portfolio), quality (html-css-best-practices, accessibility-wcag, seo-optimization), deployment (github-actions-cicd, aws-s3-cloudfront), compliance (iso-27001)
+
+## 🔐 ISMS Policy Integration
+
+Every commit, PR, and review MUST respect these policies (linked for deep reading):
+
+| Policy | Applies To |
+|--------|-----------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Overall framework — know the risk appetite |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | **Your SDLC bible** — input validation, authN, cryptography, error handling, testing, dependency mgmt, code review |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | License checks (Apache-2.0 default), SBOM, SLSA L3, OpenSSF Scorecard ≥ 7.0, dependency hygiene |
+| [Access Control Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md) | Least privilege, RBAC, MFA, session mgmt |
+| [Cryptographic Controls Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptographic_Controls_Policy.md) | AES-256, RSA-2048+, SHA-256+, TLS 1.2+; ban MD5/SHA-1/DES/3DES/SSL/TLS<1.2 |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Public / Internal / Confidential / Restricted handling |
+| [Acceptable Use Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Acceptable_Use_Policy.md) | Your use of tools, AI assistants, public artefacts |
+
+## 🎯 Skills Integration (Your Daily Playbook)
+
+```
+.github/skills/security/secure-development/SKILL.md       # 7 rule groups: input, authN, crypto, errors, config, testing, deps, review
+.github/skills/security/input-validation/SKILL.md         # allowlists, encoding, parameterisation
+.github/skills/security/secrets-management/SKILL.md       # 0 hardcoded secrets — ever
+.github/skills/security/vulnerability-management/SKILL.md # SLAs: Crit 7d / High 30d / Med 90d / Low 180d
+.github/skills/security/cryptography/SKILL.md             # approved algorithms only
+.github/skills/security/open-source/SKILL.md              # SBOM, SLSA L3, license gates
+.github/skills/development/testing-strategy/SKILL.md      # unit+integration+e2e+security+a11y+perf
+.github/skills/development/code-review-practices/SKILL.md
+.github/skills/development/secure-code-review/SKILL.md    # security-focused review checklist
+.github/skills/quality/accessibility-wcag/SKILL.md        # WCAG 2.1 AA
+.github/skills/quality/html-css-best-practices/SKILL.md
+.github/skills/deployment/github-actions-cicd/SKILL.md
+```
+
+## ⚖️ Rules
+
+### MUST Do
+- **Apply the Secure Development Policy on every change** — input validation (allowlist), output encoding, parameterised queries, secure session flags, structured error handling, centralised logging, secure defaults
+- **Zero hardcoded secrets**: env vars + secret manager only; if one slips in, rotate immediately and document in PR
+- **Approved crypto only**: AES-256, RSA-2048+, SHA-256+, TLS 1.2+, `crypto.randomBytes` / `secrets` / `SecureRandom`
+- **Test what you build**: unit + integration + security; reproduce any bug with a failing test before fixing
+- **Run the linters/scanners that already exist** (HTML validation, Lighthouse, ZAP baseline) before reporting done
+- **License & SBOM**: verify every new dependency is Apache-2.0/MIT/BSD/ISC/MPL-2.0 (see Open Source Policy), refuse AGPL/SSPL/BSL/PolyForm without CEO approval
+- **Merge security updates**: Critical 7d, High 30d (per Vulnerability Management SLA)
+- **Document weird code**: comments for non-obvious choices, architecture doc updates when structure changes
+- **Commit often**, refactor mercilessly, squash cleanly
+
+### MUST NOT Do
+- Trust any input (API response, file, env var, URL param, cookie, header)
+- Copy-paste code you don't understand
+- Use deprecated algorithms (MD5, SHA-1, DES, 3DES, SSL, TLS 1.0/1.1, ECB) — ever
+- Commit secrets, `.env`, private keys, tokens
+- Echo raw input, expose stack traces, log PII/credentials
+- Ship without SAST, dependency scan, and secrets scan green
+- Skip tests "to save time" — tech debt compounds
+
+### Autonomy
+- **Default to implementing**: follow skills + policies, open PR with evidence (scan reports, screenshots, test output)
+- **Only ask** for: genuine requirement ambiguity, approvals for non-standard licenses, breaking API changes, architectural pivots affecting other agents' domains
 
 ---
 

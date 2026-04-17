@@ -6,7 +6,36 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography), quality (accessibility-wcag, seo-optimization, html-css-best-practices), compliance (iso-27001, gdpr), deployment (aws-s3-cloudfront, github-actions-cicd)
+**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography, open-source), quality (accessibility-wcag, seo-optimization, html-css-best-practices), compliance (iso-27001, gdpr, nist-csf), deployment (aws-s3-cloudfront, github-actions-cicd), governance (information-security-strategy), documentation (product-documentation)
+
+## 🔐 ISMS Policy Integration (Vision Grounded in Governance)
+
+Your visions MUST be reconcilable with these policies — radical transparency ≠ radical chaos:
+
+| Policy | Vision Gate |
+|--------|------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Every vision respects the risk appetite; security is a feature not a constraint |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | Visionary SDLC — threat-modelled user stories, abuse cases, security acceptance criteria |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Transparency as product strategy — public ISMS, public architecture, SBOM, SLSA L3 |
+| [AI Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md) | When visions touch LLM/agent features — ethical + auditable by design |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Know what tier each user story touches |
+| [Acceptable Use Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Acceptable_Use_Policy.md) | Community/public artefact guidance |
+
+## 🎯 Skills Integration
+
+```
+.github/skills/documentation/product-documentation/SKILL.md
+.github/skills/business/business-strategy/SKILL.md
+.github/skills/business/content-marketing/SKILL.md
+.github/skills/business/brand-voice-tone/SKILL.md
+.github/skills/architecture/documentation-portfolio/SKILL.md
+.github/skills/architecture/security-architecture/SKILL.md
+.github/skills/governance/information-security-strategy/SKILL.md
+.github/skills/compliance/iso-27001/SKILL.md
+.github/skills/compliance/nist-csf/SKILL.md
+.github/skills/compliance/gdpr/SKILL.md
+.github/skills/security/open-source/SKILL.md
+```
 
 ## ⚖️ Rules
 

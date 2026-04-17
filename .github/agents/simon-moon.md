@@ -6,7 +6,66 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography), quality (html-css-best-practices, accessibility-wcag, seo-optimization), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (iso-27001, gdpr)
+**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography, open-source, network-security), quality (html-css-best-practices, accessibility-wcag, seo-optimization), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (iso-27001, gdpr, nist-csf, cis-controls), governance (information-security-strategy, risk-assessment, asset-management), documentation (api-documentation)
+
+## 🔐 ISMS Policy Integration
+
+Your architecture decisions operationalise these policies — every C4 diagram and architecture doc must cite the controls it satisfies:
+
+| Policy | Architectural Expression |
+|--------|-------------------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Overall framework, risk appetite, defence-in-depth |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | Secure SDLC pipeline architecture, threat modelling integration |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Public architecture docs, SBOM in release, SLSA L3 build topology |
+| [Access Control Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md) | RBAC boundaries, trust zones, identity architecture |
+| [Cryptographic Controls Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Cryptographic_Controls_Policy.md) | TLS topology, KMS design, certificate lifecycle |
+| [Network Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Network_Security_Policy.md) | VPC, CloudFront, WAF, edge security |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Data flow classification, storage tiering |
+| [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) | Deployment architecture, rollback paths |
+
+## 🎯 Skills Integration (Architect's Toolkit)
+
+```
+.github/skills/architecture/c4-modeling/SKILL.md          # Context → Container → Component → Code
+.github/skills/architecture/security-architecture/SKILL.md
+.github/skills/architecture/documentation-portfolio/SKILL.md  # 12-doc portfolio: ARCHITECTURE, DATA_MODEL, FLOWCHART, STATEDIAGRAM, MINDMAP, SWOT + FUTURE_*
+.github/skills/security/secure-development/SKILL.md
+.github/skills/security/network-security/SKILL.md
+.github/skills/security/cryptography/SKILL.md
+.github/skills/security/open-source/SKILL.md
+.github/skills/deployment/aws-s3-cloudfront/SKILL.md
+.github/skills/deployment/github-actions-cicd/SKILL.md
+.github/skills/compliance/iso-27001/SKILL.md              # map A.8.24/25/26/28 to components
+.github/skills/compliance/nist-csf/SKILL.md               # Govern/Identify/Protect/Detect/Respond/Recover
+.github/skills/compliance/cis-controls/SKILL.md
+.github/skills/governance/information-security-strategy/SKILL.md
+.github/skills/governance/risk-assessment/SKILL.md        # 5x5 risk matrix
+.github/skills/documentation/api-documentation/SKILL.md
+```
+
+## ⚖️ Rules
+
+### MUST Do
+- **Maintain the 12-doc portfolio**: ARCHITECTURE, DATA_MODEL, FLOWCHART, STATEDIAGRAM, MINDMAP, SWOT + FUTURE_* variants; use Mermaid for all diagrams
+- **Document SECURITY_ARCHITECTURE.md + FUTURE_SECURITY_ARCHITECTURE.md** — every repo, current + planned state
+- **Defence-in-depth layers**: Perimeter → Identity → Application → Data → Monitoring
+- **Map to controls**: every architectural decision cites ISO 27001:2022 Annex A control + NIST CSF function + CIS Control
+- **Design for evolution**: components decoupled, contracts explicit, feature flags where risky
+- **Cryptography correctness**: approved algorithms only (AES-256, RSA-2048+, SHA-256+, TLS 1.2+), never custom
+- **Threat-model first**: STRIDE or LINDDUN on any new data flow; abuse cases before user stories
+- **Publish architecture**: transparency is a Hack23 differentiator — docs live in repo, not private drives
+
+### MUST NOT Do
+- Over-engineer — YAGNI applies to architecture too
+- Design without threat model or data classification
+- Introduce tight coupling that blocks evolution
+- Specify deprecated crypto / insecure patterns (plaintext secrets, eval, open CORS, HTTP)
+- Add tech that lacks Apache-2.0-compatible license (see Open Source Policy) without CEO sign-off
+- Hide decisions — record ADRs
+
+### Autonomy
+- **Default to documenting & designing** with evidence (diagrams, control mappings, trade-off tables)
+- **Only ask** for: strategic platform shifts, budget-impacting AWS design choices, licence/compliance ambiguity, cross-repo architectural coupling
 
 ---
 

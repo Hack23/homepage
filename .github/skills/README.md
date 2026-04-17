@@ -1,8 +1,8 @@
 # GitHub Copilot Agent Skills
 
-This directory contains **23 specialized agent skills** organized across **9 categories** that teach GitHub Copilot repeatable, best-practice workflows for Hack23 AB projects. Skills are automatically loaded by Copilot when relevant to your task.
+This directory contains **58 specialized agent skills** organized across **12 categories** that teach GitHub Copilot repeatable, best-practice workflows for Hack23 AB projects. Skills are automatically loaded by Copilot when relevant to your task.
 
-**Latest Update (2026-02-06)**: Expanded from 14 to 23 skills with 5 new categories (Business, Intelligence, Development, Documentation, Integration)
+**Latest Update (2026-04-17)**: All 8 repo agents now carry explicit ISMS Policy Integration + Skills Integration sections with direct URLs to Information Security, Secure Development, Open Source, Access Control, Cryptographic Controls, Data Classification, AI, Change Management, and Acceptable Use policies.
 
 ## 📚 What Are Agent Skills?
 
@@ -182,8 +182,8 @@ Test skills by working on relevant tasks:
 
 ## 🌟 Skill Categories
 
-### 🔐 Security Skills (4 skills)
-Enforce security controls from Hack23 ISMS policies.
+### 🔐 Security Skills (18 skills)
+Enforce security controls from Hack23 ISMS policies — includes secure-development, access-control, cryptography, data-classification, incident-response, secrets-management, vulnerability-management, input-validation, open-source, network-security, acceptable-use, ai-governance, mobile-device-management, physical-security, privacy-policy, segregation-of-duties, threat-modeling, owasp-llm-security.
 
 ### 🏛️ Architecture Skills (3 skills)
 Guide proper system design and documentation patterns.
@@ -194,23 +194,29 @@ Ensure code quality, accessibility, and performance.
 ### ☁️ Deployment Skills (2 skills)
 Standardize deployment and infrastructure patterns.
 
-### 📋 Compliance Skills (2 skills)
-Maintain regulatory compliance (ISO 27001, GDPR, etc.).
+### 📋 Compliance Skills (4 skills)
+Maintain regulatory compliance (ISO 27001, NIST CSF 2.0, CIS v8.1, GDPR).
 
-### 💼 Business Skills (3 skills) 🆕
+### 🛠️ Operations Skills (4 skills)
+Change management, backup/recovery, business continuity, disaster recovery.
+
+### 📊 Governance Skills (7 skills)
+Risk assessment, risk register, asset management, supplier management, stakeholder registry, information-security-strategy, compliance-checklist.
+
+### 💼 Business Skills (3 skills)
 Strategic business development, marketing, and brand management.
 
-### 🔍 Intelligence Skills (2 skills) 🆕
+### 🔍 Intelligence Skills (2 skills)
 OSINT methods and ethical information operations.
 
-### 💻 Development Skills (2 skills) 🆕
-Testing strategies and code review best practices.
+### 💻 Development Skills (3 skills)
+Testing strategies, code review, secure code review.
 
-### 📖 Documentation Skills (2 skills) 🆕
+### 📖 Documentation Skills (2 skills)
 Product and API documentation standards.
 
-### 🔗 Integration Skills (2 skills) 🆕
-MCP server integration and Copilot agent patterns.
+### 🔗 Integration Skills (7 skills)
+MCP server integration, Copilot agent patterns, and GitHub Agentic Workflows (core, security, orchestration, development, continuous AI).
 
 ## 📚 Learning Resources
 

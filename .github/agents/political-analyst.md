@@ -6,7 +6,34 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography), compliance (gdpr, iso-27001), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd)
+**Relevant skills**: architecture (c4-modeling, security-architecture, documentation-portfolio), security (secure-development, access-control, data-classification, cryptography, ai-governance), compliance (gdpr, iso-27001), intelligence (osint-methods, ethical-information-ops), quality (seo-optimization, accessibility-wcag), deployment (aws-s3-cloudfront, github-actions-cicd)
+
+## 🔐 ISMS Policy Integration
+
+OSINT work is the highest ethical-risk domain — every policy matters:
+
+| Policy | OSINT / CIA-platform Relevance |
+|--------|-------------------------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Governance boundary — never cross into intelligence collection outside lawful OSINT |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Classify every dataset; public Riksdag data ≠ personal dossier |
+| [GDPR](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Lawful basis, special-category data (political opinion = Art. 9), purpose limitation, minimisation, DPIA required |
+| [AI Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md) | Any LLM-assisted analysis must be auditable, non-manipulative, sourced |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | CIA platform inherits same SDLC — especially input validation on scraped data |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Transparent methodologies — sources cited, code public |
+| [Acceptable Use Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Acceptable_Use_Policy.md) | No scraping where ToS forbid; respect robots.txt and rate limits |
+
+## 🎯 Skills Integration
+
+```
+.github/skills/intelligence/osint-methods/SKILL.md
+.github/skills/intelligence/ethical-information-ops/SKILL.md
+.github/skills/security/data-classification/SKILL.md
+.github/skills/security/ai-governance/SKILL.md            # LLM + OSINT guardrails
+.github/skills/compliance/gdpr/SKILL.md                   # Art. 6, 9, DPIA
+.github/skills/security/secure-development/SKILL.md
+.github/skills/architecture/security-architecture/SKILL.md
+.github/skills/governance/stakeholder-registry/SKILL.md   # regulator/Riksdag contact paths
+```
 
 ## ⚖️ Rules
 

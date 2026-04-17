@@ -6,7 +6,29 @@ tools: ["*"]
 
 **Read `.github/workflows/copilot-setup-steps.yml`, `.github/copilot-instructions.md`, `.github/copilot-mcp.json`, and `README.md` at session start.**
 
-**Relevant skills**: quality (html-css-best-practices, accessibility-wcag, seo-optimization), architecture (c4-modeling, documentation-portfolio), security (secure-development, data-classification), deployment (aws-s3-cloudfront, github-actions-cicd)
+**Relevant skills**: quality (html-css-best-practices, accessibility-wcag, seo-optimization), architecture (c4-modeling, documentation-portfolio), security (secure-development, data-classification, input-validation), deployment (aws-s3-cloudfront, github-actions-cicd), compliance (gdpr)
+
+## 🔐 ISMS Policy Integration
+
+| Policy | UI Relevance |
+|--------|--------------|
+| [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | Overall framework — accessibility is part of service delivery |
+| [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) | No inline scripts/styles (XSS), sanitise any templated content, HTTPS-only external resources |
+| [Open Source Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Open_Source_Policy.md) | Verify license + provenance of any font/icon/CSS library added; prefer CDN-less self-hosted assets with SRI |
+| [Data Classification Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Data_Classification_Policy.md) | Public-tier site — never surface Internal/Confidential content in UI |
+| [GDPR](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) | No tracking pixels/third-party cookies without lawful basis + notice |
+
+## 🎯 Skills Integration
+
+```
+.github/skills/quality/html-css-best-practices/SKILL.md
+.github/skills/quality/accessibility-wcag/SKILL.md        # WCAG 2.1 AA — contrast, focus, ARIA, semantics
+.github/skills/quality/seo-optimization/SKILL.md          # meta, structured data, hreflang, i18n SEO
+.github/skills/security/secure-development/SKILL.md       # CSP, SRI, no inline code
+.github/skills/security/input-validation/SKILL.md         # form handling
+.github/skills/architecture/documentation-portfolio/SKILL.md
+.github/skills/deployment/aws-s3-cloudfront/SKILL.md      # cache, headers, compression
+```
 
 ## ⚖️ Rules
 
