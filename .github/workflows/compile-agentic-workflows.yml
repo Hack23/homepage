@@ -37,7 +37,7 @@ jobs:
           # Pin to a specific version to prevent regressions from buggy releases.
           # v0.67.4 introduced GITHUB_COPILOT_INTEGRATION_ID which broke all workflows;
           # v0.68.0 fixes this. Update this pin when upgrading gh-aw.
-          GH_AW_VERSION="v0.68.2"
+          GH_AW_VERSION="v0.68.7"
           gh extension install github/gh-aw --pin "$GH_AW_VERSION"
         env:
           GH_TOKEN: ${{ secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
