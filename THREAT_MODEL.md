@@ -11,16 +11,16 @@
 
 <p align="center">
   <a><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
-  <a><img src="https://img.shields.io/badge/Version-2.0-555?style=for-the-badge" alt="Version"/></a>
-  <a><img src="https://img.shields.io/badge/Effective-2026--02--26-success?style=for-the-badge" alt="Effective Date"/></a>
+  <a><img src="https://img.shields.io/badge/Version-2.1-555?style=for-the-badge" alt="Version"/></a>
+  <a><img src="https://img.shields.io/badge/Effective-2026--04--21-success?style=for-the-badge" alt="Effective Date"/></a>
   <a><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
 </p>
 
 [![License](https://img.shields.io/github/license/Hack23/homepage)](https://github.com/Hack23/homepage/blob/master/LICENSE)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 2.0 | **📅 Last Updated:** 2026-02-26 (UTC)  
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-26  
+**📋 Document Owner:** CEO | **📄 Version:** 2.1 | **📅 Last Updated:** 2026-04-21 (UTC)  
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21  
 **🏷️ Classification:** Public (Corporate Website)
 
 ---
@@ -43,7 +43,7 @@ This threat model demonstrates **🛡️ cybersecurity consulting expertise** th
 
 ### **🔍 Scope Definition**
 **Included Systems:**
-- 🌐 Static website (74 HTML files, 1 CSS file, minimal JavaScript)
+- 🌐 Static website (1,353 HTML files = 105 English source pages + 13 language variants × 96 pages, 1 CSS file, minimal JavaScript)
 - ☁️ AWS S3 bucket (private, origin access only)
 - 🚀 AWS CloudFront CDN (global distribution)
 - 🔄 GitHub Actions CI/CD pipeline (minification, security scanning, deployment)
@@ -388,7 +388,7 @@ graph TB
 
 | Component | Access Level | Attack Vectors | Mitigations |
 |-----------|-------------|----------------|-------------|
-| **74 HTML Pages** | Public (read-only) | XSS, clickjacking, content injection | CSP headers, input validation, static content |
+| **1,353 HTML Pages** (105 EN × 14 langs) | Public (read-only) | XSS, clickjacking, content injection | CSP headers, input validation, static content |
 | **1 CSS File** | Public (read-only) | CSS injection, exfiltration | SRI hashes, CSP style-src restrictions |
 | **Google Fonts** | External (third-party) | Supply chain compromise, privacy tracking | SRI hashes (#451), CSP restrictions (#450) |
 | **CloudFront Distribution** | Public (CDN edge) | DDoS, cache poisoning | AWS Shield, cache control headers, HTTPS-only |
@@ -1162,7 +1162,10 @@ Cross-reference to the complete Hack23 Homepage documentation portfolio:
 | [SWOT.md](SWOT.md) | Strategic analysis and positioning | Business context for risk assessment |
 | [CLASSIFICATION.md](CLASSIFICATION.md) | CIA triad classification and business impact | Risk prioritization framework |
 | [CRA-ASSESSMENT.md](CRA-ASSESSMENT.md) | EU Cyber Resilience Act conformity | Regulatory compliance alignment |
-| [WORKFLOWS.md](WORKFLOWS.md) | CI/CD and operational workflows | Pipeline security analysis |
+| [WORKFLOWS.md](WORKFLOWS.md) | CI/CD and operational workflows (10 workflows) | Pipeline security analysis |
+| [BCPPlan.md](BCPPlan.md) | Business Continuity Plan, BIA, RTO/RPO, DR playbooks | Resilience controls for availability threats |
+| [FinancialSecurityPlan.md](FinancialSecurityPlan.md) | Infrastructure cost & security investment | Cost-justified risk treatment |
+| [End-of-Life-Strategy.md](End-of-Life-Strategy.md) | Technology lifecycle management | Long-term threat-surface evolution |
 | [SECURITY.md](SECURITY.md) | Vulnerability disclosure policy | Incident response integration |
 
 ---

@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Effective-2026--02--24-success?style=for-the-badge" alt="Effective Date"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Effective-2026--04--21-success?style=for-the-badge" alt="Effective Date"/></a>
   <a href="#"><img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/></a>
 </p>
 
@@ -20,8 +20,8 @@
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-24 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-24
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -48,7 +48,10 @@ As a cybersecurity consulting company, Hack23 AB applies the same rigorous asses
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
 | **[🧠 Mindmap](MINDMAP.md)** | Concepts | System conceptual relationships |
 | **[💼 SWOT](SWOT.md)** | Strategy | Strategic analysis |
-| **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow documentation |
+| **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow documentation (10 workflows) |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[💰 Financial & Security Plan](FinancialSecurityPlan.md)** | Cost | TCO & security investment |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle management |
 | **[🏷️ Classification](CLASSIFICATION.md)** | Data | Security classification framework |
 
 ---
@@ -76,7 +79,7 @@ The following Hack23 AB projects demonstrate completed CRA assessments:
 | 🏷️ Version | Continuous deployment from main branch |
 | 🔗 Repository | https://github.com/Hack23/homepage |
 | 📧 Security Contact | security@hack23.org |
-| 🎯 Purpose | Corporate website showcasing Hack23 AB's cybersecurity consulting services, open-source projects, and public ISMS documentation across 14 languages |
+| 🎯 Purpose | Corporate website (1,353 HTML files = 105 English source pages localised across 14 languages) showcasing Hack23 AB's cybersecurity consulting services, 7 open-source projects, and the public ISMS portfolio (transparency-by-design) |
 
 **📋 Evidence Links:**
 - **🏗️ System Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md) — Complete C4 model architecture

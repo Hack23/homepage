@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,8 +19,8 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-20 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-20
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -33,6 +33,9 @@
 | **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Security controls and infrastructure |
 | **[🧠 Mindmap](MINDMAP.md)** | Concepts | System conceptual relationships |
 | **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE threat analysis |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[💰 Financial & Security Plan](FinancialSecurityPlan.md)** | Cost | TCO & security investment |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future SWOT](FUTURE_SWOT.md)** | Roadmap | Future strategic opportunities |
 
@@ -40,7 +43,7 @@
 
 ## 📊 Strategic Overview
 
-**Current Status**: Production — Serving 14 languages across 74+ pages
+**Current Status**: Production — Serving 14 languages across 105 English source pages (1,353 HTML files total)
 **Strategic Focus**: Transparency-first cybersecurity consulting brand
 **Differentiator**: Public ISMS documentation with open-source security tools
 
@@ -154,7 +157,7 @@ mindmap
 | W3 | **Manual Translation Process** | 🟡 Medium | AI-assisted but requires review for each language |
 | W4 | **No Dynamic Features** | 🟡 Medium | No contact forms, search, or interactive demos |
 | W5 | **Limited Analytics** | 🟡 Medium | Privacy-first approach limits tracking capabilities |
-| W6 | **Large Page Count** | 🟡 Low | 74+ pages across 14 languages increases maintenance |
+| W6 | **Large Page Count** | 🟡 Low | 1,353 HTML files (105 EN × 14 languages) increases maintenance overhead |
 
 ---
 

@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,9 +19,10 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
+[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev/spec/v1.0/levels)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-20 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-20
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -40,6 +41,9 @@
 | **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow documentation |
 | **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE threat analysis |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[💰 Financial & Security Plan](FinancialSecurityPlan.md)** | Cost | Infrastructure cost & security investment |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle management |
 | **[🏷️ Classification](CLASSIFICATION.md)** | Data | Security classification framework |
 | **[🚀 Future Architecture](FUTURE_ARCHITECTURE.md)** | Roadmap | Architectural evolution plans |
 
@@ -93,11 +97,11 @@ C4Container
     Person(visitor, "Website Visitor", "Browser user")
 
     System_Boundary(website, "Hack23 Homepage") {
-        Container(html, "📄 HTML Pages", "HTML5", "74+ pages across 14 languages: project showcases, blog posts, services, ISMS documentation")
+        Container(html, "📄 HTML Pages", "HTML5", "1,353 pages — 105 English source pages × 14 languages: project showcases, blog posts, services, ISMS docs, sitemaps")
         Container(css, "🎨 Stylesheet", "CSS3", "Single styles.css with responsive design, CSS custom properties, dark theme")
         Container(sitemap, "🗺️ Sitemap", "XML", "SEO sitemap with hreflang tags for 14 languages")
         Container(robots, "🤖 Robots.txt", "Text", "Search engine crawling directives")
-        Container(schema, "📋 Schema.org", "JSON-LD", "Structured data for SEO: Organization, WebPage, FAQPage, BreadcrumbList")
+        Container(schema, "📋 Schema.org", "JSON-LD", "Structured data for SEO: Organization, WebPage, FAQPage, BreadcrumbList, Service")
     }
 
     System_Boundary(infra, "AWS Infrastructure") {
@@ -129,12 +133,12 @@ C4Component
 
     Container_Boundary(content, "Website Content") {
         Component(index, "🏠 Homepage", "HTML", "Main landing page with services overview")
-        Component(projects, "📦 Project Pages", "HTML", "CIA, Compliance Manager, Black Trigram, EU Parliament MCP, Riksdagsmonitor, EU Parliament Monitor")
-        Component(docs, "📚 Documentation Pages", "HTML", "6 project documentation pages with ISMS cards")
-        Component(features, "⭐ Feature Pages", "HTML", "6 project feature showcase pages")
-        Component(blog, "📝 Blog Posts", "HTML", "Security, compliance, Discordian framework articles")
+        Component(projects, "📦 Project Pages", "HTML", "7 product portfolio: CIA, CIA Compliance Manager, Black Trigram, EU Parliament MCP Server, Riksdagsmonitor, EU Parliament Monitor, Homepage")
+        Component(docs, "📚 Documentation Pages", "HTML", "Project documentation pages with ISMS cards")
+        Component(features, "⭐ Feature Pages", "HTML", "Project feature showcase pages")
+        Component(blog, "📝 Blog Posts", "HTML", "26 English blog articles on security, compliance, AI, Discordian framework")
         Component(services, "💼 Services", "HTML", "Consulting services and offerings")
-        Component(i18n, "🌍 Translations", "HTML", "13+ language variants with _suffix naming")
+        Component(i18n, "🌍 Translations", "HTML", "13 language variants × 96 pages each (sv, ko, ar, zh, de, fi, fr, es, ja, he, nl, da, no)")
     }
 
     Container_Boundary(seo, "SEO & Metadata") {
@@ -154,29 +158,50 @@ C4Component
 
 ```
 hack23-homepage/
-├── 📄 index.html                    # Main landing page
-├── 📄 *-project.html                # Project overview pages (6)
-├── 📄 *-features.html               # Project feature pages (6)
-├── 📄 *-docs.html                   # Project documentation pages (6)
-├── 📄 blog-*.html                   # Blog articles
+├── 📄 index.html                    # Main landing page (and 12 lang variants)
+├── 📄 *-project.html / *.html       # 7 product overview pages (CIA, CIA Compliance Manager,
+│                                    # Black Trigram, EU Parliament MCP Server, Riksdagsmonitor,
+│                                    # EU Parliament Monitor, Hack23 Homepage)
+├── 📄 *-features.html               # Project feature pages
+├── 📄 *-docs.html                   # Project documentation pages
+├── 📄 blog-*.html                   # 26 English blog articles (+ translations)
 ├── 📄 services.html                 # Services page
-├── 📄 why-hack23.html               # About/differentiators
-├── 📄 *_{lang}.html                 # Translated pages (13+ languages)
-├── 🎨 styles.css                    # Single stylesheet
+├── 📄 why-hack23.html               # About / differentiators
+├── 📄 *_{lang}.html                 # Translated pages — 13 languages × 96 pages
+│                                    # (sv, ko, ar, zh, de, fi, fr, es, ja, he, nl, da, no)
+├── 🎨 styles.css                    # Single stylesheet (responsive, dark theme)
 ├── 🗺️ sitemap.xml                   # XML sitemap with hreflang
 ├── 📄 sitemap_*.html                # HTML sitemaps per language
 ├── 🤖 robots.txt                    # Crawling directives
 ├── 📄 budget.json                   # Lighthouse performance budgets
 ├── 📄 .htmlhintrc                   # HTML linting configuration
-├── 📁 screenshots/                  # Visual assets
+├── 📁 screenshots/                  # Visual assets and product screenshots
+├── 📁 docs/                         # Auto-generated release docs (Lighthouse, a11y, security reports)
 ├── 📁 .github/
-│   ├── 📁 workflows/                # CI/CD pipeline definitions
-│   ├── 📁 skills/                   # 58 skills library
-│   └── 📁 agents/                   # 8 custom Copilot agents
-├── 📄 SECURITY_ARCHITECTURE.md      # Security design
+│   ├── 📁 workflows/                # 10 workflow YAMLs + agentic workflow markdown templates
+│   ├── 📁 skills/                   # 58 Copilot skills (12 categories)
+│   ├── 📁 agents/                   # 8 custom Copilot agents
+│   ├── 📁 aw/                       # Agentic workflow shared prompts
+│   └── 📄 copilot-mcp.json          # MCP server configuration
 ├── 📄 ARCHITECTURE.md               # C4 architecture (this file)
-├── 📄 THREAT_MODEL.md               # Threat analysis
+├── 📄 SECURITY_ARCHITECTURE.md      # Security design
+├── 📄 THREAT_MODEL.md               # STRIDE / MITRE ATT&CK threat analysis
+├── 📄 CRA-ASSESSMENT.md             # EU Cyber Resilience Act conformity
+├── 📄 BCPPlan.md                    # Business Continuity Plan
+├── 📄 FinancialSecurityPlan.md      # Cost & security investment
+├── 📄 End-of-Life-Strategy.md       # Technology lifecycle
+├── 📄 DATA_MODEL.md                 # Content & data model
+├── 📄 FLOWCHART.md                  # Process flows
+├── 📄 STATEDIAGRAM.md               # Lifecycle states
+├── 📄 MINDMAP.md                    # Conceptual relationships
+├── 📄 SWOT.md                       # Strategic analysis
 ├── 📄 WORKFLOWS.md                  # CI/CD documentation
+├── 📄 FUTURE_ARCHITECTURE.md        # Architectural roadmap
+├── 📄 FUTURE_SECURITY_ARCHITECTURE.md # Security enhancement roadmap
+├── 📄 FUTURE_WORKFLOWS.md           # CI/CD evolution
+├── 📄 CLASSIFICATION.md             # Data classification per ISMS
+├── 📄 ISMS_REFERENCE_GUIDE.md       # Blog-to-policy mapping
+├── 📄 SECURITY.md                   # Vulnerability disclosure policy
 └── 📄 README.md                     # Project overview
 ```
 
@@ -187,15 +212,19 @@ hack23-homepage/
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
 | **Content** | HTML5 | Semantic markup with Schema.org structured data |
-| **Styling** | CSS3 | Responsive design with custom properties |
-| **Hosting** | AWS S3 | Static website hosting with versioning |
-| **CDN** | AWS CloudFront | Global edge delivery with HTTPS |
-| **DNS** | AWS Route53 | Domain management |
+| **Styling** | CSS3 | Responsive design with custom properties; single `styles.css` |
+| **Hosting** | AWS S3 (private bucket) | Static website hosting with versioning + AES-256 encryption |
+| **CDN** | AWS CloudFront | Global edge delivery (450+ PoPs) with HTTPS, security headers, OAC |
+| **DNS** | AWS Route53 | Domain management with health-check based DR failover |
 | **TLS** | AWS ACM | Certificate management (TLS 1.3) |
-| **CI/CD** | GitHub Actions | Automated build, test, deploy pipeline |
-| **Security** | CodeQL, ZAP, Scorecard | Multi-layer security scanning |
-| **Quality** | HTMLHint, Lighthouse, html5validator | Content validation and performance |
-| **Supply Chain** | SLSA Build Level 3 | Build provenance and attestation |
+| **DR Hosting** | GitHub Pages | Free fallback origin via Route53 health-check failover |
+| **CI/CD** | GitHub Actions (10 workflows) | Automated build, validate, scan, deploy, release pipeline |
+| **Security Scanning** | CodeQL, OWASP ZAP, OpenSSF Scorecard, Dependency Review | Multi-layer security scanning |
+| **Quality** | HTMLHint, Lighthouse CI, html5validator, Linkinator | Content validation and performance |
+| **Build Hardening** | StepSecurity Harden Runner | Runtime egress filtering and process monitoring |
+| **Supply Chain** | SLSA Build Level 3, Anchore Syft (SBOM), GitHub Attestations | Build provenance, SBOM, signed releases |
+| **Build Tooling** | Node.js (LTS), `dra1ex/minify-action` | HTML/CSS/JS minification |
+| **AI Tooling** | GitHub Copilot, 58 skills, 8 custom agents, MCP servers | DevSecOps assistance |
 
 ---
 
