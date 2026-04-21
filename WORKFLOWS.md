@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.2-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,9 +19,10 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 [![Verify and Deploy](https://github.com/Hack23/homepage/actions/workflows/main.yml/badge.svg)](https://github.com/Hack23/homepage/actions/workflows/main.yml)
+[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev/spec/v1.0/levels)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-02-24 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-24
+**📋 Document Owner:** CEO | **📄 Version:** 1.2 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -35,6 +36,9 @@
 | **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE/MITRE ATT&CK threat analysis |
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | CI/CD and content workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[💰 Financial & Security Plan](FinancialSecurityPlan.md)** | Cost | Infrastructure cost & security investment |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle management |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Workflows](FUTURE_WORKFLOWS.md)** | Roadmap | Planned workflow improvements |
 
@@ -52,6 +56,9 @@
   - [5. Dependency Review (dependency-review.yml)](#5-dependency-review-dependency-reviewyml)
   - [6. Copilot Setup Steps (copilot-setup-steps.yml)](#6-copilot-setup-steps-copilot-setup-stepsyml)
   - [7. Build, Attest and Release (release.yml)](#7-build-attest-and-release-releaseyml)
+  - [8. Pull Request Automatic Labeler (labeler.yml)](#8-pull-request-automatic-labeler-labeleryml)
+  - [9. Setup Repository Labels (setup-labels.yml)](#9-setup-repository-labels-setup-labelsyml)
+  - [10. Compile Agentic Workflows (compile-agentic-workflows.yml)](#10-compile-agentic-workflows-compile-agentic-workflowsyml)
 - [Security Controls](#security-controls)
 - [Performance Optimization](#performance-optimization)
 - [Monitoring and Observability](#monitoring-and-observability)
@@ -61,7 +68,7 @@
 
 ## Overview
 
-The Hack23 homepage repository implements a comprehensive CI/CD pipeline using GitHub Actions to ensure secure, high-quality deployments of the static website to AWS S3 + CloudFront. The pipeline integrates multiple security scanning tools, quality checks, and automated deployment processes aligned with the [Hack23 Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md).
+The Hack23 homepage repository implements a comprehensive CI/CD pipeline using **10 GitHub Actions workflows** to ensure secure, high-quality deployments of the static website to AWS S3 + CloudFront. The pipeline integrates multiple security scanning tools, quality checks, and automated deployment processes aligned with the [Hack23 Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md).
 
 ### Key Objectives
 
@@ -716,6 +723,86 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 
 ---
 
+### 8. Pull Request Automatic Labeler (labeler.yml)
+
+**Trigger**: `pull_request_target` (`opened`, `synchronize`, `reopened`, `edited`)
+**Purpose**: Automatically apply category labels to pull requests based on title, branch, body, and changed file paths
+**Permissions**: Default `read-all`; per-job `pull-requests: write`, `issues: write`, `contents: read` (least privilege)
+
+#### Workflow Steps
+
+1. **Harden the runner** (StepSecurity) — egress audit
+2. **Checkout repository** (`actions/checkout` SHA-pinned)
+3. **Apply labels** using a SHA-pinned labeler action driven by `.github/labeler.yml` and the repository labels seeded by `setup-labels.yml`
+4. **Reactions** — adds emoji reactions on triage labels for visibility
+
+#### Security Controls
+
+- ✅ Uses `pull_request_target` only for label management; no untrusted code is checked out at write privilege
+- ✅ SHA-pinned actions to defeat tag-hijacking
+- ✅ Step-level `permissions:` block (no inherited write tokens)
+- ✅ Egress audit prevents data exfiltration
+
+#### ISMS Mapping
+
+- [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) — consistent triage labelling for changes
+- [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) — workflow least-privilege
+
+---
+
+### 9. Setup Repository Labels (setup-labels.yml)
+
+**Trigger**: `workflow_dispatch` (manual; with optional `recreate_all` boolean)
+**Purpose**: One-shot / on-demand reconciliation of the repository's standard label palette so triage automation (`labeler.yml`, Copilot agent triage) operates against a known schema
+**Permissions**: `contents: read`, `issues: write` (least privilege)
+
+#### Workflow Steps
+
+1. **Harden Runner** — egress audit
+2. **Checkout repository**
+3. **Apply label set** from a curated, version-controlled JSON / YAML descriptor; `recreate_all=true` deletes and recreates each label
+
+#### Security Controls
+
+- ✅ Manual-only trigger eliminates automation-induced label churn
+- ✅ Minimal permissions (no `contents: write`, no `pull-requests: write`)
+- ✅ Idempotent by default; destructive mode is opt-in
+
+#### ISMS Mapping
+
+- [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) — controlled metadata baseline
+- [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) — repository governance hygiene
+
+---
+
+### 10. Compile Agentic Workflows (compile-agentic-workflows.yml)
+
+**Trigger**: `workflow_dispatch` (manual)
+**Purpose**: Compile `.md` agentic workflow definitions in `.github/aw/` and `.github/workflows/*.md` into executable `.lock.yml` artefacts using the `gh aw` CLI, then commit the generated artefacts back to the repository
+**Permissions**: `contents: write`, `actions: write` (required for committing compiled artefacts and re-registering workflows)
+
+#### Workflow Steps
+
+1. **Harden Runner** — egress audit
+2. **Checkout repository** with full token to allow commit-back
+3. **Install `gh aw` CLI**
+4. **Run `gh aw compile`** — converts agentic Markdown workflow definitions into deterministic `.lock.yml` files (note: `SHARED_PROMPT_PATTERNS.md` lives in `.github/aw/` rather than `.github/workflows/` so the bare command needs no exclusions)
+5. **Commit & push** generated `.lock.yml` files if they differ from committed versions
+
+#### Security Controls
+
+- ✅ Manual-only trigger; cannot be poisoned by external PRs
+- ✅ Egress audit captures all network activity during compile
+- ✅ Commit-back uses the workflow's GITHUB_TOKEN (audited via GitHub audit log)
+- ✅ Generated `.lock.yml` files are reviewable in PRs before activation
+
+#### ISMS Mapping
+
+- [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) — code-as-config integrity
+- [AI Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/AI_Policy.md) — agentic workflow lifecycle and approval
+
+---
+
 ## Security Controls
 
 ### Network Security
@@ -923,6 +1010,12 @@ Stored reports with 30-day retention:
 ---
 
 ## Changelog
+
+### 2026-04-21: Workflow Catalog Completion
+- Added documentation for `labeler.yml`, `setup-labels.yml`, and `compile-agentic-workflows.yml`
+- Catalog now reflects all **10** GitHub Actions workflow files in `.github/workflows/`
+- Refreshed action SHA references and document control dates
+- Cross-referenced new ISMS lifecycle docs (BCPPlan, FinancialSecurityPlan, End-of-Life-Strategy)
 
 ### 2026-02-18: Release Workflow Addition
 - Added comprehensive release workflow with SLSA Build Level 3 attestations
