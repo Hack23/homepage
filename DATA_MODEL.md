@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,8 +19,8 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-20 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-20
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -33,7 +33,11 @@
 | **[📊 Data Model](DATA_MODEL.md)** | Data | Content model (this document) |
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | Content and deployment workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Content and deployment lifecycle |
+| **[🧠 Mindmap](MINDMAP.md)** | Concepts | System conceptual relationships |
 | **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Security controls |
+| **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE / MITRE ATT&CK analysis |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle management |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Data Model](FUTURE_DATA_MODEL.md)** | Roadmap | Planned content model enhancements |
 
@@ -74,8 +78,10 @@ erDiagram
     WEBSITE {
         string domain "hack23.com"
         string hosting "AWS S3 + CloudFront"
-        int pageCount "74+"
+        int totalHtmlFiles "1353"
+        int englishSourcePages "105"
         int languageCount "14"
+        int translatedPagesPerLanguage "96"
     }
 
     PAGE {
@@ -117,19 +123,26 @@ erDiagram
 
 ## 📄 Page Types
 
-### Page Hierarchy
+**Total HTML files in repository:** **1,353** (105 English source pages + 13 language variants × 96 pages each)
 
-| Type | Count | Pattern | Description |
-|------|-------|---------|-------------|
+### Page Hierarchy (English source counts)
+
+| Type | Count (EN) | Pattern | Description |
+|------|-----------|---------|-------------|
 | **Homepage** | 1 | `index.html` | Main landing page |
-| **Project Overview** | 6 | `{project}.html` | Project showcase pages |
+| **Project Overview** | 6 | `{project}.html` / `{project}-project.html` | Product showcase pages (CIA, CIA Compliance Manager, Black Trigram, EU Parliament MCP Server, Riksdagsmonitor, EU Parliament Monitor) |
 | **Project Features** | 6 | `{project}-features.html` | Feature detail pages |
-| **Project Docs** | 6 | `{project}-docs.html` | Documentation with ISMS cards |
-| **Blog Posts** | 20+ | `blog-{topic}.html` | Security and compliance articles |
-| **Service Pages** | 3 | `services.html`, etc. | Consulting offerings |
-| **Translations** | 50+ | `*_{lang}.html` | Localized page variants |
-| **Sitemaps** | 14 | `sitemap_{lang}.html` | Per-language HTML sitemaps |
-| **Utility** | 5 | `404.html`, etc. | Error pages, robots.txt |
+| **Project Docs** | 6 | `{project}-docs.html` | Documentation pages with ISMS cards |
+| **Projects Index** | 1 | `projects.html` | Portfolio landing page (the Hack23 Homepage repo is the 7th project in the portfolio, documented via this README/site) |
+| **Blog Posts** | 26 | `blog-*.html` | Security, compliance, AI, Discordian framework articles |
+| **Discordian ISMS Pages** | 41 | `discordian-*.html` | Discordian-framed ISMS topic explainers |
+| **Industry Pages** | 3 | `industries-*.html` | Vertical-specific consulting offerings |
+| **ISO 27001 Articles** | 4 | `iso-27001-*.html` | Long-form thought leadership |
+| **Service / Company Pages** | 4 | `services.html`, `why-hack23.html`, `accessibility-statement.html`, `security-assessment-checklist.html` | Consulting offerings & company info |
+| **FAQ / Examples** | 2 | `cia-triad-faq.html`, `breadcrumb-example.html` | Helper / reference pages |
+| **Topical Articles** | 2 | `swedish-election-2026.html`, `blog.html` (index) | Topical / aggregator pages |
+| **Sitemap (HTML)** | 1 | `sitemap.html` | HTML sitemap (XML in `sitemap.xml`) |
+| **Translated pages** | 96 × 13 = 1,248 | `*_{lang}.html` | Localised variants for sv, ko, ar, zh, de, fi, fr, es, ja, he, nl, da, no |
 
 ### Project Page Structure
 
@@ -147,16 +160,19 @@ graph TD
     style D fill:#FFD600,stroke:#F57F17,color:#000
 ```
 
-### Projects Documented
+### Projects Documented (Hack23 Product Portfolio)
 
-| Project | Overview | Features | Docs |
-|---------|----------|----------|------|
-| **CIA** | `cia-project.html` | `cia-features.html` | `cia-docs.html` |
-| **CIA Compliance Manager** | `compliance-manager.html` | `cia-compliance-manager-features.html` | `cia-compliance-manager-docs.html` |
-| **Black Trigram** | `black-trigram.html` | `black-trigram-features.html` | `black-trigram-docs.html` |
-| **EU Parliament MCP** | `european-parliament-mcp.html` | `european-parliament-mcp-features.html` | `european-parliament-mcp-docs.html` |
-| **Riksdagsmonitor** | `riksdagsmonitor.html` | `riksdagsmonitor-features.html` | `riksdagsmonitor-docs.html` |
-| **EU Parliament Monitor** | `euparliamentmonitor.html` | `euparliamentmonitor-features.html` | `euparliamentmonitor-docs.html` |
+The Hack23 product portfolio currently spans **7 projects**, with 6 having dedicated 3-page (overview / features / docs) site sections and the 7th being the Hack23 Homepage repository itself (documented via this site, README, and ISMS docs):
+
+| Project | Overview | Features | Docs | Repository |
+|---------|----------|----------|------|------------|
+| **🔍 Citizen Intelligence Agency (CIA)** | `cia-project.html` | `cia-features.html` | `cia-docs.html` | [Hack23/cia](https://github.com/Hack23/cia) |
+| **📊 CIA Compliance Manager** | `compliance-manager.html` | `cia-compliance-manager-features.html` | `cia-compliance-manager-docs.html` | [Hack23/cia-compliance-manager](https://github.com/Hack23/cia-compliance-manager) |
+| **🎮 Black Trigram (흑괘)** | `black-trigram.html` | `black-trigram-features.html` | `black-trigram-docs.html` | [Hack23/blacktrigram](https://github.com/Hack23/blacktrigram) |
+| **🔌 European Parliament MCP Server** | `european-parliament-mcp.html` | `european-parliament-mcp-features.html` | `european-parliament-mcp-docs.html` | [Hack23/European-Parliament-MCP-Server](https://github.com/Hack23/European-Parliament-MCP-Server) |
+| **🗳️ Riksdagsmonitor** | `riksdagsmonitor.html` | `riksdagsmonitor-features.html` | `riksdagsmonitor-docs.html` | [Hack23/riksdagsmonitor](https://github.com/Hack23/riksdagsmonitor) |
+| **🇪🇺 EU Parliament Monitor** | `euparliamentmonitor.html` | `euparliamentmonitor-features.html` | `euparliamentmonitor-docs.html` | [Hack23/euparliamentmonitor](https://github.com/Hack23/euparliamentmonitor) |
+| **🌐 Hack23 Homepage** | `index.html`, `projects.html` | `why-hack23.html` | `README.md`, this `DATA_MODEL.md`, full ISMS portfolio | [Hack23/homepage](https://github.com/Hack23/homepage) |
 
 ---
 
@@ -193,11 +209,16 @@ graph TD
     Org[Organization<br/>hack23.com] --> WP[WebPage<br/>Every page]
     WP --> BL[BreadcrumbList<br/>Navigation path]
     WP --> FAQ[FAQPage<br/>FAQ sections]
-    Org --> WS[WebSite<br/>Site metadata]
+    WP --> SVC[Service<br/>Consulting offerings]
+    WP --> Article[Article / BlogPosting<br/>blog-*.html]
+    WP --> SR[SoftwareApplication / SoftwareSourceCode<br/>Project pages]
+    Org --> WS[WebSite<br/>Site metadata + SearchAction]
 
     style Org fill:#2979FF,stroke:#0D47A1,color:#fff
     style WP fill:#00C853,stroke:#00796B,color:#fff
     style FAQ fill:#FFD600,stroke:#F57F17,color:#000
+    style SVC fill:#FF9800,stroke:#E65100,color:#fff
+    style Article fill:#9C27B0,stroke:#4A148C,color:#fff
 ```
 
 ---

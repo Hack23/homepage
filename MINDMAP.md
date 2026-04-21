@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,8 +19,8 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-20 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-20
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -33,7 +33,12 @@
 | **[📊 Data Model](DATA_MODEL.md)** | Data | Content model and data structures |
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | CI/CD and content workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | Deployment and content lifecycle |
+| **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Defense-in-depth controls |
+| **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE / MITRE ATT&CK analysis |
 | **[💼 SWOT](SWOT.md)** | Strategy | Strategic analysis |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery |
+| **[💰 Financial & Security Plan](FinancialSecurityPlan.md)** | Cost | TCO and security investment |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Technology lifecycle |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future Mindmap](FUTURE_MINDMAP.md)** | Roadmap | Capability expansion plans |
 
@@ -63,46 +68,53 @@ mindmap
         Innovation
     🌐 Website
       Static HTML5 CSS3
-        74+ Pages
+        1353 HTML Files Total
+        105 English Source Pages
+        96 Pages Per Language
         Responsive Design
         WCAG 2.1 AA
         Dark Theme
       14 Languages
         English Primary
-        Swedish
-        Korean
-        Arabic RTL
-        10 More Languages
+        Swedish Korean Arabic RTL
+        Chinese German Finnish
+        French Spanish Japanese
+        Hebrew RTL Dutch
+        Danish Norwegian
       SEO Optimized
         Schema.org JSON LD
         Open Graph
         Hreflang Tags
         Sitemap XML
-    📦 Open Source Projects
+    📦 Open Source Projects (7)
       CIA
         Political Intelligence
         Swedish Parliament
-        Java Spring Boot
+        Java Spring Boot AWS
       CIA Compliance Manager
         Security Assessment
         Compliance Tool
-        React TypeScript
+        React TypeScript Supabase
       Black Trigram
         Korean Combat Sim
-        Three.js WebGL
+        Three.js WebGL R3F
         Educational Gaming
-      EU Parliament MCP
-        MCP Server
-        European Parliament
-        Open Data API
+      EU Parliament MCP Server
+        Model Context Protocol
+        European Parliament Open Data
+        TypeScript
       Riksdagsmonitor
         Swedish Parliament
-        Monitoring Platform
-        Data Visualization
+        AI News Generation
+        Static Site
       EU Parliament Monitor
         European Parliament
         Intelligence Platform
         Multi Language
+      Hack23 Homepage
+        This Repository
+        Static HTML CSS Marketing Site
+        ISMS Transparency
     ☁️ Infrastructure
       AWS
         S3 Static Hosting
@@ -165,26 +177,34 @@ mindmap
         Project Pages
         Service Descriptions
         ISMS Documentation
-    CI CD Pipeline
+    CI CD Pipeline (10 Workflows)
       GitHub Actions
-        Pull Request Checks
-        Deploy Workflow
-        Quality Checks
-        Security Scanning
+        main.yml Verify and Deploy
+        pullrequest.yml PR Verification
+        quality-checks.yml Continuous Quality
+        scorecards.yml Supply Chain Security
+        dependency-review.yml SCA
+        release.yml SLSA Level 3 Release
+        copilot-setup-steps.yml Copilot Env
+        labeler.yml PR Auto Labelling
+        setup-labels.yml Repo Label Baseline
+        compile-agentic-workflows.yml Agentic Compile
       Validation
         HTMLHint Linting
         HTML5 W3C Validator
         Linkinator Links
-        Lighthouse Audits
+        Lighthouse Audits Perf 90 plus A11y 100 SEO 100
       Security
         CodeQL SAST
-        ZAP DAST
+        ZAP DAST Baseline
         Scorecard Supply Chain
         Dependency Review
+        StepSecurity Harden Runner Egress Allowlist
       Build
-        HTML Minification
-        CSS Minification
-        SLSA Attestation
+        HTML CSS JS Minification
+        SLSA Level 3 Build Provenance
+        SBOM Anchore Syft SPDX 2.3
+        SBOM Attestation
         Release Drafting
     Deployment
       AWS S3

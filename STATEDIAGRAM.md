@@ -11,7 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Owner-CEO-0A66C2?style=for-the-badge" alt="Owner"/>
-  <img src="https://img.shields.io/badge/Version-1.0-555?style=for-the-badge" alt="Version"/>
+  <img src="https://img.shields.io/badge/Version-1.1-555?style=for-the-badge" alt="Version"/>
   <img src="https://img.shields.io/badge/Status-Current-success?style=for-the-badge" alt="Status"/>
   <img src="https://img.shields.io/badge/Review-Quarterly-orange?style=for-the-badge" alt="Review Cycle"/>
 </p>
@@ -19,8 +19,8 @@
 ![License](https://img.shields.io/github/license/Hack23/homepage)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Hack23/homepage/badge)](https://scorecard.dev/viewer/?uri=github.com/Hack23/homepage)
 
-**📋 Document Owner:** CEO | **📄 Version:** 1.0 | **📅 Last Updated:** 2026-02-20 (UTC)
-**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-05-20
+**📋 Document Owner:** CEO | **📄 Version:** 1.1 | **📅 Last Updated:** 2026-04-21 (UTC)
+**🔄 Review Cycle:** Quarterly | **⏰ Next Review:** 2026-07-21
 **🏷️ Classification:** [![Public](https://img.shields.io/badge/C-Public-lightgrey?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#confidentiality-levels) [![Low](https://img.shields.io/badge/I-Low-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#integrity-levels) [![Standard](https://img.shields.io/badge/A-Standard-lightgreen?style=flat-square)](https://github.com/Hack23/ISMS-PUBLIC/blob/main/CLASSIFICATION.md#availability-levels)
 
 ---
@@ -33,7 +33,12 @@
 | **[📊 Data Model](DATA_MODEL.md)** | Data | Content model and data structures |
 | **[🔄 Flowchart](FLOWCHART.md)** | Processes | CI/CD and content workflows |
 | **[📈 State Diagram](STATEDIAGRAM.md)** | States | State transitions (this document) |
-| **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow details |
+| **[🧠 Mindmap](MINDMAP.md)** | Concepts | System conceptual relationships |
+| **[🔄 Workflows](WORKFLOWS.md)** | CI/CD | GitHub Actions workflow details (10 workflows) |
+| **[🛡️ Security Architecture](SECURITY_ARCHITECTURE.md)** | Security | Defense-in-depth controls |
+| **[🎯 Threat Model](THREAT_MODEL.md)** | Threats | STRIDE / MITRE ATT&CK analysis |
+| **[🔄 BCP Plan](BCPPlan.md)** | Resilience | Business continuity & recovery states |
+| **[🔚 End-of-Life Strategy](End-of-Life-Strategy.md)** | Lifecycle | Lifecycle / sunset states |
 | **[🛡️ CRA Assessment](CRA-ASSESSMENT.md)** | Compliance | EU Cyber Resilience Act conformity |
 | **[🚀 Future State Diagram](FUTURE_STATEDIAGRAM.md)** | Roadmap | Planned state improvements |
 
