@@ -704,10 +704,10 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 | Control | Implementation | ISMS Reference |
 |---------|----------------|----------------|
 | SC-28 (Data Integrity) | SLSA Build Level 3 attestations | [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) |
-| CM-3 (Change Control) | Release workflow with approval gates | [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) |
+| CM-3 (Change Control) | Release workflow with approval gates | [Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md) |
 | SA-15 (Development Process) | Documentation as code, SBOM | [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) |
 | SR-4 (Provenance) | Cryptographic build provenance | [Supply Chain Security](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md#supply-chain-security) |
-| SA-10 (Developer Testing) | Automated quality reports | [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) |
+| SA-10 (Developer Testing) | Automated quality reports | [Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md) |
 
 #### Documentation References
 
@@ -726,26 +726,27 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 ### 8. Pull Request Automatic Labeler (labeler.yml)
 
 **Trigger**: `pull_request_target` (`opened`, `synchronize`, `reopened`, `edited`)
-**Purpose**: Automatically apply category labels to pull requests based on title, branch, body, and changed file paths
+**Purpose**: Automatically apply category labels to pull requests based on changed file paths defined in `.github/labeler.yml`
 **Permissions**: Default `read-all`; per-job `pull-requests: write`, `issues: write`, `contents: read` (least privilege)
 
 #### Workflow Steps
 
 1. **Harden the runner** (StepSecurity) — egress audit
-2. **Checkout repository** (`actions/checkout` SHA-pinned)
-3. **Apply labels** using a SHA-pinned labeler action driven by `.github/labeler.yml` and the repository labels seeded by `setup-labels.yml`
-4. **Reactions** — adds emoji reactions on triage labels for visibility
+2. **Checkout repository** (`actions/checkout` SHA-pinned) with `persist-credentials: false`
+3. **Check if required labels exist** — verifies the label palette seeded by `setup-labels.yml` before attempting to apply
+4. **Apply labels** using a SHA-pinned `actions/labeler` action driven by `.github/labeler.yml` (changed-path globs)
+5. **Summary output** — prints a summary of label-existence checks and labels applied for visibility
 
 #### Security Controls
 
 - ✅ Uses `pull_request_target` only for label management; no untrusted code is checked out at write privilege
 - ✅ SHA-pinned actions to defeat tag-hijacking
 - ✅ Step-level `permissions:` block (no inherited write tokens)
-- ✅ Egress audit prevents data exfiltration
+- ✅ Egress audit logs outbound network access for visibility and review
 
 #### ISMS Mapping
 
-- [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) — consistent triage labelling for changes
+- [Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md) — consistent triage labelling for changes
 - [Secure Development Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Secure_Development_Policy.md) — workflow least-privilege
 
 ---
@@ -760,7 +761,7 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 
 1. **Harden Runner** — egress audit
 2. **Checkout repository**
-3. **Apply label set** from a curated, version-controlled JSON / YAML descriptor; `recreate_all=true` deletes and recreates each label
+3. **Apply label set** from the label definitions currently maintained inline in the workflow's shell logic (`create_or_update_label` function); `recreate_all=true` deletes and recreates each label
 
 #### Security Controls
 
@@ -770,7 +771,7 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 
 #### ISMS Mapping
 
-- [Change Management Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management_Policy.md) — controlled metadata baseline
+- [Change Management](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Change_Management.md) — controlled metadata baseline
 - [Information Security Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md) — repository governance hygiene
 
 ---
@@ -784,17 +785,18 @@ cat homepage-v1.0.0.spdx.json | jq '.packages[] | {name, version, licenses}'
 #### Workflow Steps
 
 1. **Harden Runner** — egress audit
-2. **Checkout repository** with full token to allow commit-back
-3. **Install `gh aw` CLI**
-4. **Run `gh aw compile`** — converts agentic Markdown workflow definitions into deterministic `.lock.yml` files (note: `SHARED_PROMPT_PATTERNS.md` lives in `.github/aw/` rather than `.github/workflows/` so the bare command needs no exclusions)
-5. **Commit & push** generated `.lock.yml` files if they differ from committed versions
+2. **Checkout repository** with a write-enabled token (`secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN` when available, otherwise the workflow `GITHUB_TOKEN`) to allow commit-back
+3. **Install `gh aw` CLI** (version-pinned to `v0.68.7`)
+4. **Delete existing `.lock.yml` files** then **run `gh aw compile`** — converts agentic Markdown workflow definitions into deterministic `.lock.yml` files (note: `SHARED_PROMPT_PATTERNS.md` lives in `.github/aw/` rather than `.github/workflows/` so the bare command needs no exclusions)
+5. **Commit & push** generated `.lock.yml` files (and `.github/aw/actions-lock.json`) directly to the triggering branch when they differ from committed versions
 
 #### Security Controls
 
-- ✅ Manual-only trigger; cannot be poisoned by external PRs
-- ✅ Egress audit captures all network activity during compile
-- ✅ Commit-back uses the workflow's GITHUB_TOKEN (audited via GitHub audit log)
-- ✅ Generated `.lock.yml` files are reviewable in PRs before activation
+- ✅ Manual-only trigger (`workflow_dispatch`); cannot be poisoned by external PRs
+- ✅ Egress audit logs outbound network access for visibility and review
+- ✅ Commit-back uses a GitHub credential with auditability; depending on secret availability this may be `secrets.COPILOT_MCP_GITHUB_PERSONAL_ACCESS_TOKEN` or the workflow `GITHUB_TOKEN` (both are captured in the GitHub audit log)
+- ✅ `gh aw` CLI is version-pinned (`v0.68.7`) to defeat upstream regressions
+- ⚠️ Generated `.lock.yml` files are deterministic and visible in repository history, but this workflow pushes changes directly to the triggering branch, so PR review is **not** inherently enforced by the compile path — reviewers must inspect the resulting commit post-hoc
 
 #### ISMS Mapping
 

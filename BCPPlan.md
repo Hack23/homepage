@@ -204,7 +204,7 @@ flowchart LR
 | HTML/CSS source | Git repository on GitHub | Continuous (per commit) | Indefinite | Minutes (re-deploy) |
 | Local CEO clone | `git clone` on workstation | Per `git fetch` | Indefinite | Manual |
 | S3 objects | S3 Versioning enabled | Per object change | Indefinite (lifecycle policy: keep 30 days non-current) | Minutes |
-| CloudFront config | Defined as CloudFormation in `cloudformation/` (or AWS console snapshot) | Per change | Versioned | Hours |
+| CloudFront config | Exported from AWS CloudFront via AWS CLI/console and retained with change records | Per change | Versioned | Hours |
 | Release artefacts (zip + SBOM + attestations) | GitHub Releases + `gh-pages` branch | Per release | Indefinite | Minutes |
 | Documentation reports (`docs/`) | Committed by `release.yml` | Per release | Indefinite | Minutes (Git checkout) |
 | AWS account recovery | AWS root account, MFA hardware key, recovery phone | Per credential rotation | Per [Access Control Policy](https://github.com/Hack23/ISMS-PUBLIC/blob/main/Access_Control_Policy.md) | Hours |

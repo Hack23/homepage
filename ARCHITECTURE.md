@@ -178,7 +178,7 @@ hack23-homepage/
 ├── 📁 screenshots/                  # Visual assets and product screenshots
 ├── 📁 docs/                         # Auto-generated release docs (Lighthouse, a11y, security reports)
 ├── 📁 .github/
-│   ├── 📁 workflows/                # 10 CI/CD workflow files
+│   ├── 📁 workflows/                # 10 workflow YAMLs + agentic workflow markdown templates
 │   ├── 📁 skills/                   # 58 Copilot skills (12 categories)
 │   ├── 📁 agents/                   # 8 custom Copilot agents
 │   ├── 📁 aw/                       # Agentic workflow shared prompts

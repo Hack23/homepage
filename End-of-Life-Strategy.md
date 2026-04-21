@@ -96,9 +96,9 @@ mindmap
       🏠 GitHub Pages (DR)
         ⏰ EOL: GitHub-managed
     (🔨 Build & Validation Tooling)
-      ☕ Node.js (LTS)
+      ☕ Node.js (LTS baseline + current-version compatibility testing)
         ⏰ Lifecycle: Node release schedule
-        🔄 LTS rotation tracked annually
+        🔄 LTS rotation tracked annually; selected workflows may also use newer major releases (e.g., v24/v25) for forward-compatibility validation
       📦 npm + npx
         ⏰ Bundled with Node.js
       ⚙️ GitHub Actions
