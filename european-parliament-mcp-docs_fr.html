@@ -8,12 +8,12 @@
       content="Documentation European Parliament MCP Server&nbsp;: architecture des 62&nbsp;outils MCP, 1&nbsp;130+&nbsp;tests unitaires, 71&nbsp;tests E2E, 80%+ de couverture. SLSA niveau&nbsp;3, OpenSSF Scorecard 7,2/10, modèles C4, modèles de menace, documentation SMSI."
     />
     <title>Architecture European Parliament MCP Server | Documentation 62&nbsp;outils MCP | Hack23</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- NOSONAR -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
-    />
+    /> <!-- NOSONAR -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="canonical" href="https://hack23.com/european-parliament-mcp-docs_fr.html" />
     
@@ -148,34 +148,9 @@
   ]
 }</script>
 
-    <link rel="alternate" hreflang="ar" href="https://hack23.com/european-parliament-mcp-docs_ar.html">
-    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/european-parliament-mcp-docs_ar.html">
-    <link rel="alternate" hreflang="da" href="https://hack23.com/european-parliament-mcp-docs_da.html">
-    <link rel="alternate" hreflang="de" href="https://hack23.com/european-parliament-mcp-docs_de.html">
-    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/european-parliament-mcp-docs_de.html">
     <link rel="alternate" hreflang="en" href="https://hack23.com/european-parliament-mcp-docs.html">
-    <link rel="alternate" hreflang="en-US" href="https://hack23.com/european-parliament-mcp-docs.html">
-    <link rel="alternate" hreflang="en-GB" href="https://hack23.com/european-parliament-mcp-docs.html">
-    <link rel="alternate" hreflang="es" href="https://hack23.com/european-parliament-mcp-docs_es.html">
-    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/european-parliament-mcp-docs_es.html">
-    <link rel="alternate" hreflang="fi" href="https://hack23.com/european-parliament-mcp-docs_fi.html">
     <link rel="alternate" hreflang="fr" href="https://hack23.com/european-parliament-mcp-docs_fr.html">
     <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/european-parliament-mcp-docs_fr.html">
-    <link rel="alternate" hreflang="he" href="https://hack23.com/european-parliament-mcp-docs_he.html">
-    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/european-parliament-mcp-docs_he.html">
-    <link rel="alternate" hreflang="ja" href="https://hack23.com/european-parliament-mcp-docs_ja.html">
-    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/european-parliament-mcp-docs_ja.html">
-    <link rel="alternate" hreflang="ko" href="https://hack23.com/european-parliament-mcp-docs_ko.html">
-    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/european-parliament-mcp-docs_ko.html">
-    <link rel="alternate" hreflang="nl" href="https://hack23.com/european-parliament-mcp-docs_nl.html">
-    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/european-parliament-mcp-docs_nl.html">
-    <link rel="alternate" hreflang="no" href="https://hack23.com/european-parliament-mcp-docs_no.html">
-    <link rel="alternate" hreflang="nb" href="https://hack23.com/european-parliament-mcp-docs_no.html">
-    <link rel="alternate" hreflang="sv" href="https://hack23.com/european-parliament-mcp-docs_sv.html">
-    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/european-parliament-mcp-docs_sv.html">
-    <link rel="alternate" hreflang="zh" href="https://hack23.com/european-parliament-mcp-docs_zh.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/european-parliament-mcp-docs_zh.html">
-    <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/european-parliament-mcp-docs_zh.html">
     <link rel="alternate" hreflang="x-default" href="https://hack23.com/european-parliament-mcp-docs.html">
 </head>
   <body>
@@ -294,10 +269,10 @@
       <section id="overview">
         <h2>Vue d'ensemble du projet</h2>
         <p>
-          L'European Parliament MCP Server est une implémentation TypeScript/Node.js du Model Context Protocol (MCP) conçue pour offrir aux assistants IA un accès structuré et programmatique aux jeux de données ouverts du Parlement européen. Le serveur se connecte à l'API officielle des données ouvertes du Parlement européen et expose 9&nbsp;outils dédiés permettant d'interroger les eurodéputés, les séances plénières, les relevés de vote, les commissions et les questions parlementaires.
+          L'European Parliament MCP Server est une implémentation TypeScript/Node.js du Model Context Protocol (MCP) conçue pour offrir aux assistants IA un accès structuré et programmatique aux jeux de données ouverts du Parlement européen. Le serveur se connecte à l'API officielle des données ouvertes du Parlement européen et expose 62&nbsp;outils MCP permettant d'interroger les eurodéputés, les séances plénières, les relevés de vote, les commissions et les questions parlementaires.
         </p>
         <p>
-          Le projet atteint la sécurité de chaîne d'approvisionnement <strong>SLSA niveau&nbsp;3</strong>, maintient une <strong>couverture de tests de 80%+</strong> avec 268&nbsp;tests unitaires et 23&nbsp;tests E2E, et inclut une documentation SMSI complète alignée sur ISO&nbsp;27001:2022, NIST CSF&nbsp;2.0, CIS Controls v8.1 et le RGPD.
+          Le projet atteint la sécurité de chaîne d'approvisionnement <strong>SLSA niveau&nbsp;3</strong>, maintient une <strong>couverture de tests de 80%+</strong> avec 1&nbsp;130+&nbsp;tests unitaires et 71&nbsp;tests E2E, et inclut une documentation SMSI complète alignée sur ISO&nbsp;27001:2022, NIST CSF&nbsp;2.0, CIS Controls v8.1 et le RGPD.
         </p>
         
         <!-- Badges du projet -->
@@ -324,7 +299,7 @@
             <div class="scanner-effect"></div>
             <h3>🔌 Protocole MCP</h3>
             <p>
-              Implémentation complète du Model Context Protocol avec 9&nbsp;outils spécialisés pour l'accès aux données du Parlement européen.
+              Implémentation complète du Model Context Protocol avec 62&nbsp;outils MCP pour l'accès aux données du Parlement européen.
             </p>
           </div>
           <div class="card">
@@ -352,7 +327,7 @@
             <div class="scanner-effect"></div>
             <h3>🧪 Couverture de tests</h3>
             <p>
-              268&nbsp;tests unitaires et 23&nbsp;tests E2E maintenant une couverture de code de 80%+ avec des barrières qualité CI automatisées.
+              1&nbsp;130+&nbsp;tests unitaires et 71&nbsp;tests E2E maintenant une couverture de code de 80%+ avec des barrières qualité CI automatisées.
             </p>
           </div>
           <div class="card">
@@ -609,7 +584,7 @@
           <div class="scanner-effect"></div>
           <h3>🧪 Tests unitaires</h3>
           <p>
-            Résultats des 268&nbsp;tests unitaires et rapports de couverture démontrant 80%+ de couverture de la base de code avec des barrières qualité automatisées.
+            Résultats des 1&nbsp;130+&nbsp;tests unitaires et rapports de couverture démontrant 80%+ de couverture de la base de code avec des barrières qualité automatisées.
           </p>
           <a
             href="https://hack23.github.io/European-Parliament-MCP-Server/docs/test-results/"
@@ -642,7 +617,7 @@
         <div class="card integrity-card">
           <div class="scanner-effect"></div>
           <h3>🔍 Tests système E2E</h3>
-          <p>Rapports de tests de bout en bout illustrant la validation complète du système avec 23&nbsp;tests E2E couvrant tous les outils MCP.</p>
+          <p>Rapports de tests de bout en bout illustrant la validation complète du système avec 71&nbsp;tests E2E couvrant tous les outils MCP.</p>
           <a
             href="https://hack23.github.io/European-Parliament-MCP-Server/docs/e2e-results/"
             title="Voir le rapport des tests E2E"
