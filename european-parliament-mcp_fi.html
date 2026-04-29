@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title>European Parliament MCP Server | 62 tekoälytyökalua EU-parlamentin datalle | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/european-parliament-mcp_fi.html">
+    
+    <meta name="description" content="European Parliament MCP Server: 62 MCP-työkalua (15 OSINT-tiedustelu + 47 datakäyttö), 9 resurssia, 7 kehotetta. 1 130+ yksikkötestiä, 71 E2E-testiä, 80%+ kattavuus. SLSA-taso 3, OpenSSF Scorecard 7.2/10.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="European Parliament MCP Server | 62 tekoälytyökalua EU-parlamentin datalle">
+    <meta property="og:description" content="62 MCP-työkalua (15 OSINT + 47 datakäyttö), 1 130+ yksikkötestiä, 71 E2E-testiä, 80%+ kattavuus. SLSA-taso 3, OpenSSF Scorecard 7.2/10.">
+    <meta property="og:locale" content="fi_FI">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="nb_NO">
+    <meta property="og:locale:alternate" content="sv_SE">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/european-parliament-mcp_fi.html">
+    <meta property="og:image" content="https://hack23.com/cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "European Parliament MCP Server",
+      "applicationCategory": "DeveloperApplication",
+      "description": "TypeScript/Node.js Model Context Protocol (MCP) -palvelin, joka tarjoaa 62 MCP-työkalua (15 OSINT-tiedustelu + 47 datakäyttö), 9 resurssia ja 7 kehotetta tekoälyavustajille Euroopan parlamentin avoimen datan käyttöön. MEP-vaikutusvaltapisteytys, koalitioanalyysi, äänestyskaaviot, lainsäädäntöseuranta.",
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "url": "https://github.com/Hack23/European-Parliament-MCP-Server",
+      "inLanguage": "fi",
+      "featureList": [
+        "62 MCP-työkalua (15 OSINT-tiedustelu + 47 datakäyttö)",
+        "9 resurssia tekoälyn kontekstienhallintaan",
+        "7 kehotetta ohjattuun analyysiin",
+        "MEP-vaikutusvaltapisteytys ja koalitioanalyysi",
+        "SLSA-taso 3 toimitusketjun turvallisuus",
+        "1 130+ yksikkötestiä, 71 E2E-testiä, 80%+ kattavuus",
+        "OpenSSF Scorecard 7.2/10, ISO 27001 -vaatimustenmukaisuus"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/european-parliament-mcp_fi.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Etusivu",
+          "item": "https://hack23.com/index_fi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projektit",
+          "item": "https://hack23.com/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "European Parliament MCP Server",
+          "item": "https://hack23.com/european-parliament-mcp_fi.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/european-parliament-mcp_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/european-parliament-mcp_ar.html">
+    <link rel="alternate" hreflang="ar-EG" href="https://hack23.com/european-parliament-mcp_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/european-parliament-mcp_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/european-parliament-mcp_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/european-parliament-mcp_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/european-parliament-mcp.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/european-parliament-mcp_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/european-parliament-mcp_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/european-parliament-mcp_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/european-parliament-mcp_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/european-parliament-mcp_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/european-parliament-mcp_he.html">
+    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/european-parliament-mcp_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/european-parliament-mcp_ja.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/european-parliament-mcp_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/european-parliament-mcp_ko.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/european-parliament-mcp_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/european-parliament-mcp_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/european-parliament-mcp_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/european-parliament-mcp_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/european-parliament-mcp_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/european-parliament-mcp_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/european-parliament-mcp_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-SG" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/european-parliament-mcp.html">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index_fi.html">Etusivu</a></li>
+            <li class="breadcrumb-item"><a href="projects.html">Projektit</a></li>
+            <li class="breadcrumb-item" aria-current="page">European Parliament MCP Server</li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Päänavigaatio">
+            <a href="index_fi.html" title="Etusivu">🏠 Hack23</a>
+            <a href="services_fi.html" title="Palvelut">Palvelut</a>
+            <a href="projects.html" title="Projektit">Projektit</a>
+            <a href="why-hack23_fi.html" title="Miksi Hack23">Miksi Hack23</a>
+            <a href="blog_fi.html" title="Blogi">Blogi</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Julkinen ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="european-parliament-mcp-hero" class="confidentiality-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h1 class="m-0">🇪🇺 European Parliament MCP Server</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">62 MCP-työkalua • 9 resurssia • 7 kehotetta | OpenSSF Scorecard 7.2/10</p>
+                </div>
+            </div>
+            <p class="lead">TypeScript/Node.js <strong>Model Context Protocol (MCP) -palvelin</strong>, joka tehostaa EU Parliament Monitor -alustaa <strong>62 MCP-työkalulla</strong> (15 OSINT-tiedustelu + 47 datakäyttö), <strong>9 resurssilla</strong> ja <strong>7 kehotteella</strong>. <strong>1 130+ yksikkötestiä, 71 E2E-testiä, 80%+ kattavuus.</strong> SLSA-taso 3 toimitusketjun turvallisuus.</p>
+            
+            <!-- Project Badges -->
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml/badge.svg" alt="CodeQL Security" width="90" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async">
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/european-parliament-mcp-server" alt="npm-versio" width="100" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/LICENSE" target="_blank" rel="noopener"><img src="https://img.shields.io/github/license/Hack23/European-Parliament-MCP-Server" alt="Lisenssi Apache-2.0" width="100" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki" width="80" height="20" loading="lazy" decoding="async"></a>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub-repositorio" style="background: #0366d6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 8px rgba(3, 102, 214, 0.3);">📂 Katso GitHubissa</a>
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm-paketti" class="btn-primary">📦 npm-paketti</a>
+                <a href="european-parliament-mcp-features_fi.html" title="Ominaisuudet" class="btn-primary">✨ Ominaisuudet</a>
+                <a href="european-parliament-mcp-docs_fi.html" title="Dokumentaatio" class="btn-primary">📚 Dokumentaatio</a>
+            </div>
+        </section>
+        
+        <!-- Live Resources -->
+        <section id="live-resources" style="background: var(--surface-secondary); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h2 style="margin-top: 0; font-size: 1.3rem;">🌐 Reaaliaikaiset resurssit</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📦 <span>npm-paketti</span></a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📂 <span>GitHub-repositorio</span></a>
+                <a href="https://hack23.github.io/European-Parliament-MCP-Server/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📖 <span>TypeDoc API</span></a>
+                <a href="https://hack23.github.io/European-Parliament-MCP-Server/coverage/lcov-report/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📈 <span>Koodikattavuus</span></a>
+                <a href="https://hack23.github.io/European-Parliament-MCP-Server/playwright-report/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">🎭 <span>E2E-raportti</span></a>
+                <a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📚 <span>DeepWiki-dokumentaatio</span></a>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section id="key-features">
+            <h2>🎯 Tärkeimmät ominaisuudet</h2>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔌 62 MCP-työkalua</h3>
+                    <p><strong>15 OSINT-tiedustelutyökalua</strong> (MEP-vaikutusvaltapisteytys, koalitioanalyysi, äänestyskaaviot) + <strong>47 datakäyttötyökalua</strong> Claudelle, ChatGPT:lle ja kaikille MCP-yhteensopiville tekoälyavustajille.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ EU-parlamentin datakäyttö</h3>
+                    <p>Suora pääsy <strong>MEP-profiileihin, täysistuntoihin, äänestyspöytäkirjoihin, valiokuntiin ja parlamentaarisiin kysymyksiin</strong> virallisen Euroopan parlamentin avoimen datan API:n kautta.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📘 TypeScript ja Zod-validointi</h3>
+                    <p>Kirjoitettu <strong>TypeScriptillä</strong> tiukalla tyyppiturvallisuudella ja <strong>Zod-skeemavalidoinnilla</strong> kaikille API-syötteille ja -tulosteille. Nopeusrajoitus ja turvallisuusotsikot sisäänrakennettuna.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🛡️ SLSA-taso 3 -turvallisuus</h3>
+                    <p>Toimitusketjun turvallisuus <strong>SLSA-taso 3</strong> -rakennusprovenanssin todistuksineen, OpenSSF Scorecard -validoinnilla ja kattavalla tietoturvaskannauksella GitHub Actionsin kautta.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🧪 1 130+ yksikkötestiä</h3>
+                    <p><strong>1 130+ yksikkötestiä</strong> ja <strong>71 E2E-testiä</strong> ylläpitäen 80%+ koodikattavuutta. Automatisoitu CI/CD-putki SLSA-taso 3 -provenanssin todistuksilla ja laadun portailla.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 OpenSSF Scorecard 7.2/10</h3>
+                    <p>Täysin yhdenmukainen <strong>ISO 27001:2022:n, NIST CSF 2.0:n, CIS Controls v8.1:n ja GDPR:n</strong> kanssa. OpenSSF Scorecard <strong>7.2/10</strong>, SLSA-taso 3, täydellinen ISMS-dokumentaatio.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MCP Tools -->
+        <section id="mcp-tools">
+            <h2>🔧 Korostettuja MCP-työkaluja (62 yhteensä)</h2>
+            <p class="lead" style="margin-bottom: 2rem;"><strong>15 OSINT-tiedustelutyökalua</strong> syvään poliittiseen analyysiin + <strong>47 datakäyttötyökalua</strong> kattavaan EU-parlamentin dataan. Tässä joitakin kohokohtia:</p>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <h3>👤 get_meps</h3>
+                    <p>Hae <strong>Euroopan parlamentin jäsenten (MEP)</strong> profiilit suodattamalla maan, poliittisen ryhmän ja valiokunnan jäsenyyden mukaan.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>📅 get_plenary_sessions</h3>
+                    <p>Käytä <strong>täysistuntopöytäkirjoja</strong>, agendoja ja käsittelyjä päivämääräsuodatuksella.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>🗳️ get_voting_records</h3>
+                    <p>Kysy yksityiskohtaisia <strong>äänestyspöytäkirjoja</strong>, mukaan lukien yksittäiset MEP-kannat, äänestystulokset ja lainsäädäntöyhteys.</p>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <h3>🔍 search_documents</h3>
+                    <p>Kokotekstihaku kaikista <strong>parlamenttiasiakirjoista</strong>, raporteista, lausunnoista ja lainsäädäntöteksteistä.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>🏛️ get_committee_info</h3>
+                    <p>Käytä <strong>valiokuntarakenteita</strong>, jäsenyyksiä, mandaatteja ja viimeaikaisia toimintoja.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>❓ get_parliamentary_questions</h3>
+                    <p>Hae <strong>parlamentaarisia kysymyksiä</strong> vastauksilla MEP:iltä ja Euroopan komissiolta.</p>
+                </div>
+                
+                <div class="card confidentiality-card">
+                    <h3>📊 analyze_voting_patterns</h3>
+                    <p><strong>Analysoi äänestyskaavioita</strong> poliittisten ryhmien, maiden ja lainsäädäntöaiheiden välillä syvemmälle poliittiselle tiedustelulle.</p>
+                </div>
+                
+                <div class="card integrity-card">
+                    <h3>📋 track_legislation</h3>
+                    <p><strong>Seuraa lainsäädäntömenettelyjä</strong> ehdotuksesta valiokunnan käsittelyn kautta lopulliseen äänestykseen.</p>
+                </div>
+                
+                <div class="card availability-card">
+                    <h3>📄 generate_report</h3>
+                    <p>Luo jäsenneltyjä <strong>tekoälyvalmisteluraportteja</strong> parlamentin toiminnasta, äänestystiivistelmistä ja MEP-profiileista.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Data Sources -->
+        <section id="data-sources">
+            <h2>📡 Datalähteet</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🇪🇺 MEP:t ja edustajat</h3>
+                    <p>Täydelliset profiilit kaikista Euroopan parlamentin jäsenistä, mukaan lukien poliittinen ryhmä, maa, valiokunnat ja yhteystiedot virallisesta EU:n parlamentin avoimen datan API:sta.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Täysistunnot</h3>
+                    <p>Täydelliset täysistuntopöytäkirjat, mukaan lukien agendot, väittelytallenteet ja tulokset Euroopan parlamentin avoimen datan portaalista.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📁 Valiokunnat ja asiakirjat</h3>
+                    <p>Valiokunnan jäsenyys, raportit ja lausunnot sekä koko parlamenttiasiakirjavarasto tutkimukseen ja analyysiin.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>❓ Parlamentaariset kysymykset</h3>
+                    <p>MEP:ien esittämät kirjalliset ja suulliset kysymykset virallisilla komission ja neuvoston vastauksilla, mahdollistaen vastuullisuuden seurannan.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Stack -->
+        <section id="technology">
+            <h2>🛠️ Teknologiapino</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>💻 Suoritusympäristö</h3>
+                    <p><strong>TypeScript/Node.js</strong> — Tyyppiturvallinen toteutus täydellä ES-moduulituella. Julkaistu npm:ään pakettina <code>european-parliament-mcp-server</code>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📦 Protokolla</h3>
+                    <p><strong>Model Context Protocol (MCP)</strong> — Standardiprotokolla tekoälyavustajaintegraatioille. Yhteensopiva Clauden, ChatGPT:n ja minkä tahansa MCP-yhteensopivan tekoälyasiakkaan kanssa.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔒 Turvallisuus</h3>
+                    <p><strong>SLSA-taso 3</strong> — Toimitusketjun turvallisuus rakennusprovenanssin, toistettavien rakennuksien ja tietoturvaskannauksella. OpenSSF Scorecard -validoitu. Nopeusrajoitus ja Zod-syötevalidointi.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Getting Started -->
+        <section id="getting-started">
+            <h2>🚀 Aloittaminen</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>1️⃣ Asenna npm:n kautta</h3>
+                    <p>Asenna paketti globaalisti tai projektiriippuvuutena. Vaatii Node.js 18+ ja MCP-yhteensopivan tekoälyasiakkaan.</p>
+                    <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm-paketti" style="background: #cc3534; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">📦 Näytä npm:ssä</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>2️⃣ Määritä tekoälyasiakas</h3>
+                    <p>Lisää MCP-palvelin tekoälyasiakkaasi konfiguraatioon (Claude Desktop, Continue tai mikä tahansa MCP-yhteensopiva asiakas) EU-parlamentin datakysymysten mahdollistamiseksi.</p>
+                    <a href="https://github.com/Hack23/European-Parliament-MCP-Server#installation" title="Asennusopas" class="btn-primary d-inline-block mt-1">📖 Asennusopas</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>3️⃣ Kysy parlamentin dataa</h3>
+                    <p>Käytä luonnollista kieltä kysellessäsi MEP-profiileja, äänestyspöytäkirjoja, täysistuntoja ja muuta tekoälyavustajasi kautta.</p>
+                    <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="Repositorio" class="btn-primary d-inline-block mt-1">📂 Repositorio</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Use Cases -->
+        <section id="use-cases">
+            <h2>💼 Käyttötapaukset</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Poliittinen tutkimus</h3>
+                    <p>Akateeminen ja journalistinen tutkimus MEP:ien äänestyskaavioista, poliittisen ryhmän linjautumisesta ja lainsäädäntöaktiivisuudesta tekoälypohjaisen analyysin avulla.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Läpinäkyvyys ja vastuullisuus</h3>
+                    <p>Seuraa MEP-suoritusta, läsnäoloa ja äänestyksen johdonmukaisuutta pitääksesi edustajat vastuullisina äänestäjilleen ja kampanjalupauksilleen.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏢 Politiikka-analyysi</h3>
+                    <p>Seuraa lainsäädäntökehitystä, valiokuntatoimintaa ja politiikkatrendejä tietyille toimialoille tai etupiireille relevantteja.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 Koulutus</h3>
+                    <p>Opetusväline Euroopan politiikan kursseille, joka demonstroi, miten avoimet hallintodatan voidaan demokratisoida tekoälyintegraation kautta.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ecosystem -->
+        <section id="ecosystem" style="background: linear-gradient(135deg, var(--surface-secondary), var(--surface-primary)); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h2 style="margin-top: 0;">🌐 Osa Hack23:n poliittisen tiedustelun ekosysteemiä</h2>
+            <p>EP MCP Server tehostaa tekoälyavustajia jäsennellyllä pääsyllä Euroopan parlamentin dataan laajempaan poliittisen tiedustelun ekosysteemiin.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="euparliamentmonitor_fi.html" style="padding: 0.75rem 1.25rem; background: var(--accent-purple); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🇪🇺 EU Parliament Monitor</a>
+                <a href="riksdagsmonitor_fi.html" style="padding: 0.75rem 1.25rem; background: var(--accent-green); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🇸🇪 Riksdagsmonitor</a>
+                <a href="cia-project.html" style="padding: 0.75rem 1.25rem; background: var(--accent-primary); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🔍 Citizen Intelligence Agency</a>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">Kaikki projektit: Apache-2.0-lisensoitu • OpenSSF Scorecard 7.0+ • SLSA-taso 3 provenance • CodeQL puhdas</p>
+        </section>
+        
+        <!-- CTA -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 Valmis tutustumaan EU-parlamentin dataan?</h2>
+            <p>Integroi tekoälypohjainen pääsy Euroopan parlamentin avoimiin tietokantoihin tutkimus-, journalismi- tai politiikka-analyysityönkulkuusi.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub" style="background: #0366d6; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">📂 Katso GitHubissa</a>
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm" class="cta-button">📦 npm-paketti</a>
+                <a href="european-parliament-mcp-docs_fi.html" title="Dokumentaatio" class="cta-button">📚 Dokumentaatio</a>
+                <a href="projects.html" title="Kaikki projektit" class="cta-button">← Takaisin projekteihin</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo" aria-label="Sivuston alatunniste">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Kyberturvallisuuskonsultointi<br>Göteborg, Ruotsi | Etä</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-yrityssivu</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">Toimitusjohtaja: James Pether Sörling</a></p>
+        </div>
+        <div class="footer-column">
+          <h3>Palvelut</h3>
+          <ul>
+            <li><a href="services_fi.html">Turvallisuuskonsultointi</a></li>
+            <li><a href="services_fi.html">Turvallisuusarkkitehtuuri</a></li>
+            <li><a href="services_fi.html">Pilviturvallisuus</a></li>
+            <li><a href="services_fi.html">DevSecOps-integraatio</a></li>
+            <li><a href="services_fi.html">Vaatimustenmukaisuus &amp; ISMS</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Tuotteet</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Resurssit</h3>
+          <ul>
+            <li><a href="blog_fi.html">Turvallisuusblogi</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Julkinen ISMS</a></li>
+            <li><a href="sitemap.html">Sivukartta</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Yritys</h3>
+          <ul>
+            <li><a href="why-hack23_fi.html">Tietoa Hack23:sta</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Turvallisuuspolitiikka</a></li>
+            <li><a href="SECURITY.md">Ilmoita tietoturvaongelmasta</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisaatio</a></li>
+            <li><a href="accessibility-statement_fi.html">Saavutettavuus</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. Kaikki oikeudet pidätetään.</p>
+        <p>
+          <a href="european-parliament-mcp.html" lang="en">English</a> | 
+          <a href="european-parliament-mcp_sv.html" lang="sv">Svenska</a> | 
+          <a href="european-parliament-mcp_de.html" lang="de">Deutsch</a> | 
+          <a href="european-parliament-mcp_fr.html" lang="fr">Français</a> | 
+          <a href="european-parliament-mcp_es.html" lang="es">Español</a> | 
+          <a href="european-parliament-mcp_nl.html" lang="nl">Nederlands</a> | 
+          <a href="european-parliament-mcp_da.html" lang="da">Dansk</a> | 
+          <a href="european-parliament-mcp_no.html" lang="no">Norsk</a> | 
+          <a href="european-parliament-mcp_fi.html" lang="fi" aria-current="page">Suomi</a> | 
+          <a href="european-parliament-mcp_ja.html" lang="ja">日本語</a> | 
+          <a href="european-parliament-mcp_ko.html" lang="ko">한국어</a> | 
+          <a href="european-parliament-mcp_zh.html" lang="zh">中文</a> | 
+          <a href="european-parliament-mcp_ar.html" lang="ar">العربية</a> | 
+          <a href="european-parliament-mcp_he.html" lang="he">עברית</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
