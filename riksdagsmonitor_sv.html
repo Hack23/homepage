@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title>Riksdagsmonitor | AI-driven riksdagsövervakning | Hack23</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/riksdagsmonitor_sv.html">
+    
+    <meta name="description" content="Riksdagsmonitor: AI-driven riksdagsövervakning med 11 agentiska arbetsflöden, 349 riksdagsledamöter, 2 494 historiska politiker, 3,5M+ röster, 109 000+ dokument och 14 språk. Världens första helt autonoma politiska nyhetsredaktion.">
+    <meta name="twitter:description" content="AI-driven riksdagsövervakning: 11 agentiska arbetsflöden, 349 riksdagsledamöter, 3,5M+ röster, 45-reglers riskvärmekarta. Noll mänskliga redaktörer — helt autonom nyhetsgeneration.">
+    <meta name="keywords" content="riksdagsövervakning, AI politisk underrättelse, riksdagens transparens, agentisk AI-nyhetsredaktion, 11 arbetsflöden, 349 riksdagsledamöter, 3,5M röster, riksdagsanalys, öppna data Sverige, svensk demokrati, OSINT Sverige, autonom nyhetsgeneration">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="James Pether Sörling, CISSP, CISM">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Riksdagsmonitor | AI-driven riksdagsövervakning">
+    <meta property="og:description" content="Världens första helt autonoma AI-politiska nyhetsredaktion: 11 agentiska arbetsflöden, 349 riksdagsledamöter, 3,5M+ röster, 109 000+ dokument på 14 språk.">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fi_FI">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="nb_NO">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/riksdagsmonitor_sv.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://hack23.com/#org",
+      "name": "Hack23 AB",
+      "url": "https://hack23.com/",
+      "logo": "cia-icon-140.webp",
+      "description": "Sweden's only cybersecurity consultancy with fully public ISMS framework on GitHub. Led by a team with 30 plus years of expertise in security architecture, DevSecOps, and ISO 27001 compliance.",
+      "foundingDate": "2025-01-01",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gothenburg",
+        "addressCountry": "SE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://www.linkedin.com/company/hack23/",
+        "availableLanguage": [
+          "English",
+          "Swedish"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/Hack23",
+        "https://www.linkedin.com/company/hack23/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Riksdagsmonitor",
+      "applicationCategory": "WebApplication",
+      "description": "AI-powered Riksdagen Intelligence Platform with 11 agentiska arbetsflöden producing autonomous political news in 14 språk. Built on the Citizen Intelligence Agency (CIA) platform — 349 riksdagsledamöter, 2 494 historiska politiker, 3,5M+ röster, 109 000+ dokument. Noll mänskliga redaktörer krävs.",
+      "url": "https://hack23.com/riksdagsmonitor.html",
+      "image": "cia-icon-140.webp",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling"
+      },
+      "operatingSystem": "Web Browser",
+      "applicationSubCategory": "Politisk underrättelse Platform",
+      "featureList": [
+        "11 Agentisk AI Workflows (91 skills)",
+        "349 Current MPs, 2,494 Historical Politicians",
+        "3.5M+ Vote Records, 109,000+ Documents",
+        "45-Rule × 349-MP Riskvärmekarta",
+        "Tidö Coalition Tracker",
+        "Multi-language Support (14 språk)",
+        "Political Behavior Analytics",
+        "Transparency Metrics",
+        "Interpellation Tracking",
+        "Committee Activity Monitoring"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/riksdagsmonitor.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://hack23.com/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Riksdagsmonitor",
+          "item": "https://hack23.com/riksdagsmonitor.html"
+        }
+      ]
+    }
+  ]
+}</script>
+                                                                                                                        <link rel="alternate" hreflang="ar" href="https://hack23.com/riksdagsmonitor_ar.html">
+	<link rel="alternate" hreflang="ar-SA" href="https://hack23.com/riksdagsmonitor_ar.html">
+	<link rel="alternate" hreflang="ar-EG" href="https://hack23.com/riksdagsmonitor_ar.html">
+	<link rel="alternate" hreflang="da" href="https://hack23.com/riksdagsmonitor_da.html">
+	<link rel="alternate" hreflang="de" href="https://hack23.com/riksdagsmonitor_de.html">
+	<link rel="alternate" hreflang="de-DE" href="https://hack23.com/riksdagsmonitor_de.html">
+	<link rel="alternate" hreflang="en" href="https://hack23.com/riksdagsmonitor.html">
+	<link rel="alternate" hreflang="es" href="https://hack23.com/riksdagsmonitor_es.html">
+	<link rel="alternate" hreflang="es-ES" href="https://hack23.com/riksdagsmonitor_es.html">
+	<link rel="alternate" hreflang="fi" href="https://hack23.com/riksdagsmonitor_fi.html">
+	<link rel="alternate" hreflang="fr" href="https://hack23.com/riksdagsmonitor_fr.html">
+	<link rel="alternate" hreflang="fr-FR" href="https://hack23.com/riksdagsmonitor_fr.html">
+	<link rel="alternate" hreflang="he" href="https://hack23.com/riksdagsmonitor_he.html">
+	<link rel="alternate" hreflang="he-IL" href="https://hack23.com/riksdagsmonitor_he.html">
+	<link rel="alternate" hreflang="ja" href="https://hack23.com/riksdagsmonitor_ja.html">
+	<link rel="alternate" hreflang="ja-JP" href="https://hack23.com/riksdagsmonitor_ja.html">
+	<link rel="alternate" hreflang="ko" href="https://hack23.com/riksdagsmonitor_ko.html">
+	<link rel="alternate" hreflang="ko-KR" href="https://hack23.com/riksdagsmonitor_ko.html">
+	<link rel="alternate" hreflang="nl" href="https://hack23.com/riksdagsmonitor_nl.html">
+	<link rel="alternate" hreflang="nl-NL" href="https://hack23.com/riksdagsmonitor_nl.html">
+	<link rel="alternate" hreflang="no" href="https://hack23.com/riksdagsmonitor_no.html">
+	<link rel="alternate" hreflang="nb" href="https://hack23.com/riksdagsmonitor_no.html">
+	<link rel="alternate" hreflang="sv" href="https://hack23.com/riksdagsmonitor_sv.html">
+	<link rel="alternate" hreflang="sv-SE" href="https://hack23.com/riksdagsmonitor_sv.html">
+	<link rel="alternate" hreflang="zh" href="https://hack23.com/riksdagsmonitor_zh.html">
+	<link rel="alternate" hreflang="zh-CN" href="https://hack23.com/riksdagsmonitor_zh.html">
+	<link rel="alternate" hreflang="zh-SG" href="https://hack23.com/riksdagsmonitor_zh.html">
+	<link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/riksdagsmonitor_zh.html">
+	<link rel="alternate" hreflang="x-default" href="https://hack23.com/riksdagsmonitor.html">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index_sv.html">Hem</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="projects_sv.html">Projekt</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                Riksdagsmonitor
+            </li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index_sv.html" title="Hem">🏠 Hack23</a>
+            <a href="services_sv.html" title="Tjänster">Tjänster</a>
+            <a href="projects_sv.html" title="Projekt">Projekt</a>
+            <a href="why-hack23_sv.html" title="Varför Hack23">Varför Hack23</a>
+            <a href="blog_sv.html" title="Blogg">Blogg</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="Public ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="riksdagsmonitor-hero" class="integrity-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h1 class="m-0">🏛️ Riksdagsmonitor</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">AI-driven riksdagsövervakning</p>
+                </div>
+            </div>
+            <p class="lead">Världens första helt autonoma AI-politiska nyhetsredaktion for Riksdagen. <strong>11 agentiska arbetsflöden</strong> produce djupgående politisk analys — inte grunda sammanfattningar, utan strukturerad OSINT-underrättelse covering 349 riksdagsledamöter, 2 494 historiska politiker, 3,5M+ röster, and 109 000+ dokument in 14 språk. Noll mänskliga redaktörer krävs.</p>
+            
+            <!-- Project Badges -->
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="https://github.com/Hack23/riksdagsmonitor/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/riksdagsmonitor/actions/workflows/codeql.yml/badge.svg" alt="CodeQL Security" width="90" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/riksdagsmonitor?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async">
+                <a href="https://github.com/Hack23/riksdagsmonitor/blob/master/LICENSE" target="_blank" rel="noopener"><img src="https://img.shields.io/github/license/Hack23/riksdagsmonitor" alt="License Apache-2.0" width="100" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://deepwiki.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki" width="80" height="20" loading="lazy" decoding="async"></a>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://riksdagsmonitor.com" title="Live Application" class="btn-primary" style="font-size: 1.1rem;">🌐 Visit Riksdagsmonitor</a>
+                <a href="https://github.com/Hack23/riksdagsmonitor" title="GitHub Repository" class="btn-primary">📂 View on GitHub</a>
+                <a href="riksdagsmonitor-features_sv.html" title="Funktioner" class="btn-primary">✨ Funktioner</a>
+                <a href="riksdagsmonitor-docs_sv.html" title="Dokumentation" class="btn-primary">📚 Dokumentation</a>
+            </div>
+        </section>
+        
+        <!-- 🌐 Live Resurser -->
+        <section id="live-resources" style="background: var(--surface-secondary); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <h2 style="margin-top: 0; font-size: 1.3rem;">🌐 Live Resurser</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <a href="https://riksdagsmonitor.com/news/index.html" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📰 <span>AI-nyhetsflöde</span></a>
+                <a href="https://riksdagsmonitor.com/news/political-intelligence/index.html" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">🎯 <span>Politisk underrättelse</span></a>
+                <a href="https://riksdagsmonitor.com/news/dashboard.html" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📊 <span>Live-instrumentpanel</span></a>
+                <a href="https://riksdagsmonitor.com/news/sitemap.xml" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">🗺️ <span>Webbplatskarta</span></a>
+                <a href="https://riksdagsmonitor.com/news/rss.xml" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📡 <span>RSS Feed</span></a>
+                <a href="https://hack23.github.io/cia/apidocs/index.html" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📖 <span>API JavaDocs</span></a>
+                <a href="https://hack23.github.io/cia/jacoco-aggregate/index.html" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📈 <span>Code Coverage</span></a>
+                <a href="https://deepwiki.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: var(--surface-primary); border-radius: 6px; text-decoration: none;">📚 <span>DeepWiki Docs</span></a>
+            </div>
+        </section>
+        
+        <!-- Key Features -->
+        <section id="key-features">
+            <h2>🎯 Key Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🤖 11 Agentisk AI Workflows</h3>
+                    <p>Fully autonom nyhetsgeneration with 91 skills. AI workflows produce djupgående politisk analys including daily summaries, MP profiles, party analyses, committee reports, and Tidö coalition tracking — zero human editors in the loop.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🗳️ 3.5M+ Vote Records</h3>
+                    <p>Comprehensive analysis of 3.5M+ parliamentary votes with 349 current MPs and 2 494 historiska politiker. Party alignment tracking, voting anomaly detection, and 45-rule × 349-MP riskvärmekarta.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📄 109,000+ Documents</h3>
+                    <p>Full-text analysis of 109,000+ parliamentary documents including motions, interpellations, committee reports, and legislation. AI-powered summarization and cross-referencing.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌍 Stöd för 14 språk</h3>
+                    <p>Full flerspråkiga AI-nyheter generation supporting 14 språk (Swedish, English, Arabic, Hebrew RTL, Japanese, Korean, Chinese, and 7 European languages) for global demokratisk transparens.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 45-Rule Riskvärmekarta</h3>
+                    <p>Advanced political risk scoring with 45 compliance/behavior rules applied across 349 riksdagsledamöter. Anomaly detection, early warning system, and accountability tracking dashboards.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Tidö Coalition Tracker</h3>
+                    <p>Specialized monitoring of the Tidö Agreement coalition dynamics, voting cohesion analysis, and policy implementation tracking for Sweden's current government configuration.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform Overview -->
+        <section id="platform-overview">
+            <h2>🎯 Platform Overview</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🌟 Autonomous Politisk underrättelse</h3>
+                    <p>Disrupting parliamentary journalism with AI-generated intelligence. What used to require a team of analysts can now be done by any citizen with an AI assistant.</p>
+                    <p><strong>Impact:</strong> Democratising access to politisk underrättelse — non-partisan, open-source, architecturally designed for equal treatment of all political groups.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔄 Built on CIA Data Backbone</h3>
+                    <p>Powered by the <a href="cia-project_sv.html" title="Citizen Intelligence Agency">Citizen Intelligence Agency</a> — 6 analysis frameworks, 50 risk rules, 110 database views (77 politicians + 33 documents), and 4 OSINT sources with OpenSSF Scorecard 7.2/10.</p>
+                    <p><strong>Foundation:</strong> Enterprise-grade open-source platform with SLSA Level 3 supply chain security, zero critical CVEs for 5+ years.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 OSINT Tradecraft Applied</h3>
+                    <p>Structured open-source intelligence methodology applied to public legislative data. Source verification via official Riksdag APIs, not scraped social media.</p>
+                    <p><strong>Trust:</strong> GDPR-by-design, public-data only, no user accounts, no ads, no tracking. Cannot be weaponised for partisan influence.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Platform Capabilities -->
+        <section id="capabilities">
+            <h2>⚙️ Platform Capabilities</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👤 MP Profiles</h3>
+                    <p>Comprehensive profiles for all Riksdag members including voting history, party affiliation, committee memberships, interpellations, and activity metrics.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Party Analysis</h3>
+                    <p>Party-level statistics and coalition analysis. Track party cohesion, voting discipline, and strategic positioning across issues and legislative periods.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 Committee Tracking</h3>
+                    <p>Follow committee work, proposals, and decisions through the legislative process. Track committee composition, activity levels, and policy influence.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>💬 Interpellation Monitoring</h3>
+                    <p>Track all interpellations (parliamentary questions) to ministers with full response history. Monitor accountability mechanisms and government responsiveness.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 Custom Reports</h3>
+                    <p>Generate custom reports for specific time periods, politicians, or issues. Export data for research and analysis purposes.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔗 Öppna data-integration</h3>
+                    <p>Integration with official svenska riksdagen open data sources. Automatiserade uppdateringar och realtidssynkronisering with riksdagssystemen.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security & Quality -->
+        <section id="security-quality">
+            <h2>🛡️ Security &amp; Quality</h2>
+            <p>Riksdagsmonitor demonstrates enterprise security practices with 99.998% availability target, comprehensive ISMS documentation, and full compliance with ISO 27001:2022, NIST CSF 2.0, and CIS Controls v8.1.</p>
+            
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0;">
+                <a href="https://github.com/Hack23/riksdagsmonitor/releases" title="GitHub Releases">
+                    <img src="https://img.shields.io/github/v/release/Hack23/riksdagsmonitor?style=for-the-badge" alt="Release" width="180" height="28" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/blob/master/LICENSE" title="License">
+                    <img src="https://img.shields.io/github/license/Hack23/riksdagsmonitor.svg?style=for-the-badge" alt="License" width="150" height="28" loading="lazy">
+                </a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" title="OpenSSF Scorecard">
+                    <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/riksdagsmonitor/badge" alt="Security Score" width="150" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/actions/workflows/release.yml" title="Release Workflow">
+                    <img src="https://github.com/Hack23/riksdagsmonitor/actions/workflows/release.yml/badge.svg?branch=master" alt="Release" width="200" height="20" loading="lazy">
+                </a>
+                <a href="https://github.com/Hack23/riksdagsmonitor/actions/workflows/scorecards.yml" title="Supply Chain Security">
+                    <img src="https://github.com/Hack23/riksdagsmonitor/actions/workflows/scorecards.yml/badge.svg?branch=master" alt="Scorecard" width="220" height="20" loading="lazy">
+                </a>
+            </div>
+        </section>
+        
+        <!-- Use Cases -->
+        <section id="use-cases">
+            <h2>💼 Use Cases</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>👥 Citizens &amp; Voters</h3>
+                    <p>Make informed voting decisions based on actual parliamentary behavior, not just campaign promises. Track your representatives' activity and accountability.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 Journalists &amp; Researchers</h3>
+                    <p>Access comprehensive parlamentsdata for investigative journalism and academic research. Evidence-based reporting on Riksdag political behavior and trends.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ Civil Society Organizations</h3>
+                    <p>Monitor specific policy areas and hold politicians accountable. Track legislative progress on issues that matter to your organization.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎓 Educators &amp; Students</h3>
+                    <p>Utbildningsverktyg för statsvetenskap, medborgarutbildning, and svenska demokratiska processer. Verkliga data för akademiska studier av riksdagens verksamhet.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ISMS Compliance -->
+        <section id="isms-compliance">
+            <h2>🔐 ISMS Compliance</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 Compliance Frameworks</h3>
+                    <p>Full alignment with ISO 27001:2022, NIST CSF 2.0, CIS Controls v8.1, GDPR (public official data), and NIS2 requirements.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🎯 Data Classification</h3>
+                    <p><strong>Konfidentialitet:</strong> Offentlig | <strong>Integritet:</strong> Hög | <strong>Tillgänglighet:</strong> Hög. Bearbetar enbart offentliga officiella data from svenska riksdagen open data sources.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📚 Full Documentation</h3>
+                    <p>Comprehensive ISMS documentation including architecture diagrams, threat models, security assessments, and CRA compliance assessment publicly available on GitHub.</p>
+                    <a href="riksdagsmonitor-docs_sv.html" title="Visa dokumentation">Visa all dokumentation →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Projects -->
+        <section id="related-projects">
+            <h2>🔗 Related Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 Citizen Intelligence Agency</h3>
+                    <p>The grundläggande OSINT-plattform med öppen källkod for Swedish politisk transparens som driver Riksdagsmonitor.</p>
+                    <a href="cia-project_sv.html" title="Citizen Intelligence Agency">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔐 CIA Compliance Manager</h3>
+                    <p>Security assessment platform demonstrating data integrity and compliance practices used in the platform.</p>
+                    <a href="compliance-manager_sv.html" title="Compliance Manager">Learn More →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🥋 Black Trigram</h3>
+                    <p>Educational gaming project showcasing secure development practices and quality assurance methodologies.</p>
+                    <a href="black-trigram_sv.html" title="Black Trigram">Learn More →</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hack23 Politisk underrättelse Ecosystem -->
+        <section id="ecosystem" style="background: linear-gradient(135deg, var(--surface-secondary), var(--surface-primary)); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h2 style="margin-top: 0;">🌐 Part of the Hack23 Politisk underrättelse Ecosystem</h2>
+            <p>Riksdagsmonitor is powered by open-source infrastructure designed for transparency, security, and democratic accountability.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="cia-project_sv.html" style="padding: 0.75rem 1.25rem; background: var(--accent-green); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🔍 Citizen Intelligence Agency</a>
+                <a href="euparliamentmonitor_sv.html" style="padding: 0.75rem 1.25rem; background: var(--accent-purple); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🇪🇺 EU Parliament Monitor</a>
+                <a href="european-parliament-mcp_sv.html" style="padding: 0.75rem 1.25rem; background: var(--accent-primary); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🔌 EP MCP Server</a>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0;">All projects: Apache-2.0 licensed • OpenSSF Scorecard 7.0+ • SLSA Level 3 provenance • CodeQL clean</p>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 Explore Riksdagenary Data</h2>
+            <p>Access comprehensive parlamentsdata and analys för svensk demokrati. Plattform med öppen källkod för informerat medborgarskap and systematisk transparens.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://riksdagsmonitor.com" title="Live Application" class="cta-button" style="font-size: 1.1rem;">🌐 Visit Riksdagsmonitor</a>
+                <a href="https://github.com/Hack23/riksdagsmonitor" title="GitHub Repository" class="cta-button">📂 View on GitHub</a>
+                <a href="riksdagsmonitor-features_sv.html" title="Funktioner" class="cta-button">✨ Funktioner</a>
+                <a href="projects_sv.html" title="Alla Projekt" class="cta-button">← Tillbaka till Projekt</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersecurity Consulting<br>
+          Gothenburg, Sweden | Remote</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn Company Page</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Tjänster</h3>
+          <ul>
+            <li><a href="services_sv.html">Security Consulting</a></li>
+            <li><a href="services_sv.html">Security Architecture</a></li>
+            <li><a href="services_sv.html">Cloud Security</a></li>
+            <li><a href="services_sv.html">DevSecOps Integration</a></li>
+            <li><a href="services_sv.html">Compliance &amp; ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Produkter Column -->
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resurser Column -->
+        <div class="footer-column">
+          <h3>Resurser</h3>
+          <ul>
+            <li><a href="blog_sv.html">Security Blog</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian Blog</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Public ISMS</a></li>
+            <li><a href="sitemap_sv.html">Webbplatskarta</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="why-hack23_sv.html">About Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Security Policy</a></li>
+            <li><a href="SECURITY.md">Report Security Issue</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub Organization</a></li>
+            <li><a href="accessibility-statement_sv.html">Accessibility</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. Alla rättigheter förbehållna. </p>
+        <p>
+          <a href="riksdagsmonitor.html" lang="en">English</a> | 
+          <a href="riksdagsmonitor_sv.html" lang="sv" aria-current="page">Svenska</a> | 
+          <a href="index_de.html" lang="de">Deutsch</a> | 
+          <a href="index_fr.html" lang="fr">Français</a> | 
+          <a href="index_es.html" lang="es">Español</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_da.html" lang="da">Dansk</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_ja.html" lang="ja">日本語</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="index_zh.html" lang="zh">中文</a> | 
+          <a href="index_ar.html" lang="ar">العربية</a> | 
+          <a href="index_he.html" lang="he">עברית</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
