@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EU Parliament Monitorアーキテクチャドキュメント：8つのエージェントワークフロー、51アーティファクトベースライン、17の方法論、C4モデル、STRIDE分析。AI搭載欧州議会インテリジェンス。"
+    />
+    <title>EU Parliament Monitorアーキテクチャ | AIニュースプラットフォームドキュメント | Hack23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css"><link rel="canonical" href="https://hack23.com/euparliamentmonitor-docs_ja.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="EU Parliament Monitor AIアーキテクチャドキュメント" />
+    <meta property="og:description" content="AI搭載欧州議会インテリジェンスアーキテクチャ：8ワークフロー、51アーティファクトベースライン、17の方法論、62 MCPツール。" />
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fi_FI">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="nb_NO">
+    <meta property="og:locale:alternate" content="sv_SE">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hack23.com/euparliamentmonitor-docs_ja.html" />
+    <meta property="og:site_name" content="Hack23 AB" />
+    <meta property="og:image" content="https://hack23.com/cia-icon-140.webp" />
+    
+    <!-- Additional SEO keywords -->
+    <meta name="keywords" content="EU Parliament Monitorアーキテクチャドキュメント、C4アーキテクチャモデル欧州議会、STRIDEスレットモデリングEUプラットフォーム、欧州議会コンプライアンスアーキテクチャ、オープンソースセキュリティプラットフォームドキュメント、EU政治透明性アーキテクチャ、CISO技術ドキュメントEU、開発者ドキュメント欧州議会、コンプライアンスアーキテクチャ設計EU、欧州議会システム設計、セキュリティ評価アーキテクチャEU">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "EU Parliament Monitor - アーキテクチャ & セキュリティドキュメント",
+      "description": "セキュリティアーキテクト、ソリューションアーキテクト、クラウドアーキテクト、開発者、CISOのための技術ドキュメント。26以上のアーキテクチャ図を含む：C4モデル（現在・将来）、セキュリティアーキテクチャパターン、リスク定量化を含むSTRIDEスレット分析、CRAコンプライアンス評価、データモデル、状態図、CI/CDワークフロー、APIドキュメント、事業継続計画。透明なシステム設計のオープンソース欧州議会インテリジェンスプラットフォーム。",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-02-19",
+      "inLanguage": "ja",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hack23.com/euparliamentmonitor-docs_ja.html"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "EU Parliament Monitor",
+        "applicationCategory": "WebApplication",
+        "applicationSubCategory": "European Parliament Intelligence Platform",
+        "operatingSystem": "Web Browser"
+      },
+      "audience": [
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Security Architect",
+          "name": "セキュリティアーキテクト & CISO"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Solution Architect",
+          "name": "ソリューション & クラウドアーキテクト"
+        },
+        {
+          "@type": "ProfessionalAudience",
+          "audienceType": "Developer",
+          "name": "ソフトウェア開発者 & DevOpsエンジニア"
+        }
+      ],
+      "featureList": [
+        "完全なC4アーキテクチャモデル（現在・将来）",
+        "セキュリティアーキテクチャドキュメント（現在・将来）",
+        "アタックツリーを含むSTRIDEスレット分析",
+        "CRA評価フレームワーク実装",
+        "包括的なデータモデル & エンティティ図",
+        "状態図 & プロセスフローチャート",
+        "SWOT分析（戦略 & 将来計画）",
+        "CI/CDワークフロー & DevOps統合パターン",
+        "ユニット/E2E/パフォーマンステストフレームワーク",
+        "事業継続 & ライフサイクル管理",
+        "完全なAPIドキュメント",
+        "財務セキュリティ計画",
+        "26以上の技術図 & ドキュメントリソース"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": "C4アーキテクチャ、セキュリティアーキテクチャ、EU Parliament Monitor、欧州議会透明性、STRIDEスレットモデリング、CRA評価、システム設計、技術ドキュメント、オープンソースセキュリティ、コンプライアンスフレームワーク、APIドキュメント、DevOps"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/euparliamentmonitor-docs_ja.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU Parliament Monitor",
+          "item": "https://hack23.com/euparliamentmonitor.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "EU Parliament Monitorアーキテクチャドキュメント",
+          "item": "https://hack23.com/euparliamentmonitor-docs_ja.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/euparliamentmonitor-docs_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/euparliamentmonitor-docs_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/euparliamentmonitor-docs_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/euparliamentmonitor-docs_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/euparliamentmonitor-docs_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/euparliamentmonitor-docs.html">
+    <link rel="alternate" hreflang="en-US" href="https://hack23.com/euparliamentmonitor-docs.html">
+    <link rel="alternate" hreflang="en-GB" href="https://hack23.com/euparliamentmonitor-docs.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/euparliamentmonitor-docs_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/euparliamentmonitor-docs_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/euparliamentmonitor-docs_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/euparliamentmonitor-docs_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/euparliamentmonitor-docs_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/euparliamentmonitor-docs_he.html">
+    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/euparliamentmonitor-docs_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/euparliamentmonitor-docs_ja.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/euparliamentmonitor-docs_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/euparliamentmonitor-docs_ko.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/euparliamentmonitor-docs_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/euparliamentmonitor-docs_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/euparliamentmonitor-docs_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/euparliamentmonitor-docs_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/euparliamentmonitor-docs_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/euparliamentmonitor-docs_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/euparliamentmonitor-docs_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/euparliamentmonitor-docs_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/euparliamentmonitor-docs_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/euparliamentmonitor-docs.html">
+</head>
+  <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="パンくずリスト">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="euparliamentmonitor_ja.html">EU Parliament Monitor</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        EU Parliament Monitorアーキテクチャドキュメント
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+      <div class="logo-container">
+        <span style="font-size: 4rem;" role="img" aria-label="EU Parliament Monitor">🏛️</span>
+      </div>
+      <h1>
+        EU Parliament Monitor ドキュメント
+        <span class="app-version">latest</span>
+      </h1>
+      <p>
+        EU Parliament Monitor（欧州議会インテリジェンスプラットフォーム）の包括的なアーキテクチャおよびISMSドキュメント。
+      </p>
+      <div class="badges">
+        <a
+          href="https://github.com/Hack23/euparliamentmonitor/releases"
+          title="GitHubリリース"
+        >
+          <img
+            src="https://img.shields.io/github/v/release/Hack23/euparliamentmonitor"
+            alt="GitHubリリース"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/euparliamentmonitor/blob/master/LICENSE"
+          title="ライセンス"
+        >
+          <img
+            src="https://img.shields.io/github/license/Hack23/euparliamentmonitor.svg"
+            alt="ライセンス"
+          />
+        </a>
+        <a
+          href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor"
+          title="OpenSSFスコアカード"
+        >
+          <img
+            src="https://api.securityscorecards.dev/projects/github.com/Hack23/euparliamentmonitor/badge"
+            alt="OpenSSFスコアカード"
+          />
+        </a>
+        <a
+          href="https://github.com/Hack23/euparliamentmonitor/actions/workflows/scorecards.yml"
+          title="スコアカードサプライチェーンセキュリティ"
+        >
+          <img
+            src="https://github.com/Hack23/euparliamentmonitor/actions/workflows/scorecards.yml/badge.svg?branch=master"
+            alt="スコアカードサプライチェーンセキュリティ"
+          />
+        </a>
+      </div>
+      <div class="app-link">
+        <a
+          href="index.html"
+          title="ホームへ"
+        >
+          ホーム
+        </a>
+        <a
+          href="euparliamentmonitor-features_ja.html"
+          title="プラットフォーム機能を見る"
+        >
+          プラットフォーム機能
+        </a>
+        <a
+          href="https://github.com/Hack23/euparliamentmonitor"
+          class="btn"
+          title="GitHubリポジトリを見る"
+        >
+          GitHubリポジトリ
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>プロジェクト概要</h2>
+        <p>
+          EU Parliament Monitorは、体系的な透明性をもって欧州議会の活動を監視するための包括的なオープンソースプラットフォームです。公式<a href="https://data.europarl.europa.eu/" title="欧州議会オープンデータ">欧州議会オープンデータ</a>を使用して、MEP、本会議、委員会、立法文書、投票記録を追跡します。プラットフォームはISO 27001:2022、NIST CSF 2.0、CIS Controls v8.1、GDPRに完全準拠しています。
+        </p>
+        
+        <!-- Project Badges -->
+        <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+          <a href="https://github.com/Hack23/euparliamentmonitor/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/euparliamentmonitor/actions/workflows/codeql.yml/badge.svg" alt="CodeQLセキュリティ" width="90" height="20" loading="lazy" decoding="async"></a>
+          <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/euparliamentmonitor?label=openssf" alt="OpenSSFスコアカード" width="100" height="20" loading="lazy" decoding="async"></a>
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSAレベル3" width="80" height="20" loading="lazy" decoding="async">
+          <a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki" width="80" height="20" loading="lazy" decoding="async"></a>
+        </div>
+        
+        <!-- Live Resources -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1rem 0;">
+          <a href="https://hack23.github.io/European-Parliament-MCP-Server/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-green); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📖 MCP APIドキュメント</a>
+          <a href="https://hack23.github.io/European-Parliament-MCP-Server/coverage/lcov-report/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-primary); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📈 カバレッジ</a>
+          <a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-purple); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📚 DeepWiki</a>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>主要機能</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>MEPモニタリング</h3>
+            <p>
+              投票履歴、委員会所属、出席状況、議会活動を含む現在・歴史的なMEP情報。
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>本会議追跡</h3>
+            <p>
+              投票、出席、演説、討論を含む本会議の包括的追跡。
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>委員会モニタリング</h3>
+            <p>
+              すべての欧州議会委員会にわたる委員会会議、文書、報告者、構成員のモニタリング。
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>文書検索</h3>
+            <p>
+              立法テキスト、報告書、修正案、公式EU議会文書の検索とアクセス。
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>議会質問</h3>
+            <p>
+              議会質問と機関の回答を追跡。MEPのアカウンタビリティ行動をモニタリング。
+            </p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>MCPサーバー統合</h3>
+            <p>
+              モデルコンテキストプロトコル経由でのEPデータへのAI搭載アクセスのための欧州議会MCPサーバーとの統合。
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <h2 id="diagrams">アーキテクチャ &amp; ドキュメント</h2>
+      <p>
+        EU Parliament Monitorの完全なアーキテクチャおよび技術ドキュメントを探索してください。
+      </p>
+
+      <div class="cards">
+        <!-- Architecture Group -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ 現在のアーキテクチャ</h3>
+          <p>
+            EU Parliament Monitorプラットフォームの現在のシステムコンテナ、コンポーネント、ダイナミクスを示すC4モデル。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/ARCHITECTURE.md"
+            title="現在のアーキテクチャを見る"
+          >
+            アーキテクチャを見る
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ 将来のアーキテクチャ</h3>
+          <p>
+            EU Parliament Intelligenceプラットフォームの進化と将来のシステム機能のビジョン。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_ARCHITECTURE.md"
+            title="将来のアーキテクチャを見る"
+          >
+            将来のアーキテクチャを見る
+          </a>
+        </div>
+
+        <!-- Behavior Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 状態図</h3>
+          <p>
+            EU Parliament Monitorのデータ取得、処理、表示のシステム状態遷移。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/STATEDIAGRAM.md"
+            title="状態図を見る"
+          >
+            状態図を見る
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 将来の状態図</h3>
+          <p>
+            将来のプラットフォーム機能とAI搭載機能の強化された状態遷移。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_STATEDIAGRAM.md"
+            title="将来の状態図を見る"
+          >
+            将来の状態を見る
+          </a>
+        </div>
+
+        <!-- Process Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 プロセスフローチャート</h3>
+          <p>
+            現在のEU Parliament Monitor実装のデータ収集、処理、モニタリングワークフロー。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FLOWCHART.md"
+            title="プロセスフローチャートを見る"
+          >
+            フローチャートを見る
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 将来のフローチャート</h3>
+          <p>
+            将来のリリースで計画されているAI統合と拡張データ処理による強化されたワークフロー。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_FLOWCHART.md"
+            title="将来のフローチャートを見る"
+          >
+            将来のフローを見る
+          </a>
+        </div>
+
+        <!-- Security Group -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 セキュリティアーキテクチャ</h3>
+          <p>
+            EU Parliament Monitorプラットフォームの包括的なセキュリティアーキテクチャ設計と実装パターン。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/SECURITY_ARCHITECTURE.md"
+            title="セキュリティアーキテクチャを見る"
+          >
+            セキュリティアーキテクチャを見る
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 将来のセキュリティアーキテクチャ</h3>
+          <p>
+            強化されたプライバシーとAI支援セキュリティ機能を組み込んだ高度なセキュリティアーキテクチャビジョン。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_SECURITY_ARCHITECTURE.md"
+            title="将来のセキュリティアーキテクチャを見る"
+          >
+            将来のセキュリティアーキテクチャを見る
+          </a>
+        </div>
+
+        <!-- Business Group -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 SWOT分析</h3>
+          <p>
+            現在のEU Parliament Monitorプラットフォームの戦略的強み、弱み、機会、脅威。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/SWOT.md"
+            title="SWOT分析を見る"
+          >
+            SWOT分析を見る
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 将来のSWOT</h3>
+          <p>
+            EU Parliament Intelligenceプラットフォームの将来の市場ポジショニングと開発ロードマップの戦略的分析。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_SWOT.md"
+            title="将来のSWOT分析を見る"
+          >
+            将来のSWOTを見る
+          </a>
+        </div>
+
+        <!-- DevOps Group -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 CI/CDワークフロー</h3>
+          <p>
+            現在のEU Parliament Monitorアプリケーションアーキテクチャのビルド、テスト、デプロイメント自動化。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/WORKFLOWS.md"
+            title="CI/CDワークフローを見る"
+          >
+            CI/CDワークフローを見る
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 将来のワークフロー</h3>
+          <p>
+            将来のリリースで計画されている自動コンプライアンスチェックとセキュリティ検証を含む高度なCI/CD。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_WORKFLOWS.md"
+            title="将来のワークフローを見る"
+          >
+            将来のDevOpsを見る
+          </a>
+        </div>
+
+        <!-- Conceptual Group -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧠 コンセプトマインドマップ</h3>
+          <p>
+            マインドマッピングで可視化されたEU Parliament Monitorのシステム構造とコンポーネント関係。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/MINDMAP.md"
+            title="マインドマップを見る"
+          >
+            マインドマップを見る
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧠 将来のコンセプトマップ</h3>
+          <p>
+            将来のEU Parliament Monitor開発のための進化ロードマップと機能拡張計画。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_MINDMAP.md"
+            title="将来のマインドマップを見る"
+          >
+            将来のコンセプトを見る
+          </a>
+        </div>
+
+        <!-- Data Model -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 データモデル</h3>
+          <p>
+            EU Parliament Monitorの包括的な政治データ機能をサポートする現在のデータアーキテクチャ。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/DATA_MODEL.md"
+            title="データモデルを見る"
+          >
+            データアーキテクチャを見る
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 将来のデータモデル</h3>
+          <p>
+            拡張されたEU議会データソースとAI統合機能をサポートする強化されたデータアーキテクチャ。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FUTURE_DATA_MODEL.md"
+            title="将来のデータモデルを見る"
+          >
+            将来のデータアーキテクチャを見る
+          </a>
+        </div>
+
+        <!-- Testing Documentation -->
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧪 ユニットテスト</h3>
+          <p>
+            EU Parliament Monitorコードベースのユニットテスト結果とカバレッジ。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/tree/master/docs/test-results/"
+            title="テスト結果を見る"
+          >
+            テスト結果
+          </a>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/UnitTestPlan.md"
+            title="ユニットテスト計画を見る"
+          >
+            テスト計画
+          </a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 テストカバレッジ</h3>
+          <p>
+            コードベースのどれだけが自動テストでカバーされているかを示すテストカバレッジレポート。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/tree/master/docs/coverage/"
+            title="コードカバレッジレポートを見る"
+          >
+            カバレッジレポートを見る
+          </a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔍 E2Eシステムテスト</h3>
+          <p>EU Parliament Monitorの完全なシステム検証を示すエンドツーエンドテスト計画。</p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/E2ETestPlan.md"
+            title="E2Eテスト計画を見る"
+          >
+            E2E計画
+          </a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>⚡ パフォーマンステスト</h3>
+          <p>
+            様々な負荷条件下でのEU Parliament Monitorのベンチマークとパフォーマンス分析。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/performance-testing.md"
+            title="パフォーマンステスト結果を見る"
+          >
+            パフォーマンスデータを見る
+          </a>
+        </div>
+
+        <!-- API Documentation -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📘 APIドキュメント</h3>
+          <p>
+            EU Parliament Monitorアプリケーションのすべてのコンポーネントと関数の詳細なAPIリファレンス。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/tree/master/docs/api/"
+            title="APIドキュメントを見る"
+          >
+            APIドキュメントを見る
+          </a>
+        </div>
+
+        <!-- Business Continuity -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 事業継続</h3>
+          <p>
+            EU Parliament Monitorプラットフォームの包括的な事業継続計画と復旧戦略。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/BCPPlan.md"
+            title="事業継続計画を見る"
+          >
+            チャートとマインドマップ版を見る
+          </a>
+        </div>
+
+        <!-- Lifecycle Management -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📅 ライフサイクル管理</h3>
+          <p>
+            EU Parliament Monitorのテクノロジーコンポーネントのメンテナンスとサービス終了計画。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/End-of-Life-Strategy.md"
+            title="サービス終了戦略を見る"
+          >
+            EOL戦略を見る
+          </a>
+        </div>
+
+        <!-- Financial Security Plan -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>💰 財務セキュリティ計画</h3>
+          <p>
+            EU Parliament Monitorプラットフォームを安全にデプロイするためのコストとセキュリティ実装ガイドライン。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/FinancialSecurityPlan.md"
+            title="財務セキュリティ計画を見る"
+          >
+            セキュリティ計画を見る
+          </a>
+        </div>
+
+        <!-- Threat Model -->
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🛡️ 証拠ベースの脅威モデル</h3>
+          <p>
+            透明なセキュリティ慣行を実証するアタックツリー、リスク定量化、セキュリティコントロールマッピングを含む包括的なSTRIDEスレット分析。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/THREAT_MODEL.md"
+            title="脅威モデルドキュメントを見る"
+          >
+            <img src="https://img.shields.io/badge/Threat_Model-Public_Documentation-blue?style=flat-square&logo=github&logoColor=white" alt="脅威モデル：公開ドキュメント" />
+          </a>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/THREAT_MODEL.md"
+            title="STRIDE分析を見る"
+          >
+            <img src="https://img.shields.io/badge/STRIDE-Complete_Analysis-green?style=flat-square&logo=security&logoColor=white" alt="STRIDE：完全分析" />
+          </a>
+        </div>
+
+        <!-- CRA Assessment -->
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ CRA評価</h3>
+          <p>
+            EUサイバーセキュリティ要件との規制準拠を実証するEU Parliament Monitorの完全なサイバーレジリエンス法（CRA）コンプライアンス評価。
+          </p>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/CRA-ASSESSMENT.md"
+            title="CRA評価ドキュメントを見る"
+          >
+            <img src="https://img.shields.io/badge/CRA_Assessment-Complete-blue?style=flat-square&logo=clipboard-check&logoColor=white" alt="CRA評価：完了" />
+          </a>
+          <a
+            href="https://github.com/Hack23/euparliamentmonitor/blob/master/CRA-ASSESSMENT.md"
+            title="プロダクト分類を見る"
+          >
+            <img src="https://img.shields.io/badge/Classification-Standard_OSS-green?style=flat-square&logo=tag&logoColor=white" alt="分類：標準OSS" />
+          </a>
+        </div>
+
+      </div>
+
+      <section id="project-classification">
+        <h2>🏷️ Hack23フレームワークに基づくプロジェクト分類</h2>
+        <p>
+          包括的なプロジェクト評価のための<a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md">Hack23分類 &amp; 事業継続フレームワーク</a>ガイドラインに従って：
+        </p>
+
+        <div class="cards">
+          <div class="card confidentiality-card">
+            <div class="scanner-effect"></div>
+            <h3>🎯 プロジェクト分類</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="プロジェクトタイプ：政治インテリジェンスプラットフォーム">
+                <img src="https://img.shields.io/badge/Type-Political_Intelligence-blue?style=for-the-badge&logo=chart-bar&logoColor=white" alt="プロジェクトタイプ：政治インテリジェンスプラットフォーム" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#project-type-classifications" title="ビジネスプロセス：シビックテクノロジー">
+                <img src="https://img.shields.io/badge/Process-Civic_Technology-teal?style=for-the-badge&logo=globe&logoColor=white" alt="ビジネスプロセス：シビックテクノロジー" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card integrity-card">
+            <div class="scanner-effect"></div>
+            <h3>🔒 セキュリティ分類</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#confidentiality-levels" title="機密性レベル：公開 — 機密性要件なし">
+                <img src="https://img.shields.io/badge/Confidentiality-Public-lightgrey?style=for-the-badge&logo=shield&logoColor=black" alt="機密性：公開" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#integrity-levels" title="完全性レベル：高 — 自動検証、権威ある情報源">
+                <img src="https://img.shields.io/badge/Integrity-High-orange?style=for-the-badge&logo=check-circle&logoColor=white" alt="完全性：高" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#availability-levels" title="可用性レベル：高 — 99.9%稼働率目標">
+                <img src="https://img.shields.io/badge/Availability-High-orange?style=for-the-badge&logo=server&logoColor=white" alt="可用性：高" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>⏱️ 事業継続</h3>
+            <div class="badge-group">
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rto-classifications" title="目標復旧時間：1〜4時間">
+                <img src="https://img.shields.io/badge/RTO-High_(1--4hrs)-yellow?style=for-the-badge&logo=clock&logoColor=white" alt="RTO：高（1〜4時間）" loading="lazy">
+              </a>
+              <a href="https://github.com/Hack23/homepage/blob/master/CLASSIFICATION.md#rpo-classifications" title="目標復旧時点：1〜4時間">
+                <img src="https://img.shields.io/badge/RPO-Hourly_(1--4hrs)-lightgreen?style=for-the-badge&logo=database&logoColor=white" alt="RPO：毎時（1〜4時間）" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <h3>💰 ビジネスインパクト分析マトリクス</h3>
+        <p>
+          CIAトライアド（機密性、完全性、可用性）にわたる潜在的なビジネスインパクトの包括的評価：
+        </p>
+        
+        <table class="documentation-map">
+          <thead>
+            <tr>
+              <th>インパクトカテゴリー</th>
+              <th>財務</th>
+              <th>運用</th>
+              <th>評判</th>
+              <th>規制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>🔒 機密性</strong></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="財務：軽微" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=exclamation-triangle&logoColor=black" alt="運用：軽微" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="評判：低" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="規制：軽微" loading="lazy"></td>
+            </tr>
+            <tr>
+              <td><strong>✅ 完全性</strong></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="財務：軽微" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=trending-down&logoColor=white" alt="運用：高" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Moderate-Industry_attention-yellow?style=for-the-badge&logo=newspaper&logoColor=black" alt="評判：中程度" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Low-Warnings-lightgreen?style=for-the-badge&logo=gavel&logoColor=white" alt="規制：低" loading="lazy"></td>
+            </tr>
+            <tr>
+              <td><strong>⏱️ 可用性</strong></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_impact-lightgrey?style=for-the-badge&logo=dollar-sign&logoColor=black" alt="財務：軽微" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/High-Major_degradation-orange?style=for-the-badge&logo=stop-circle&logoColor=white" alt="運用：高" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Low-Limited_visibility-lightgreen?style=for-the-badge&logo=newspaper&logoColor=white" alt="評判：低" loading="lazy"></td>
+              <td><img src="https://img.shields.io/badge/Negligible-No_implications-lightgrey?style=for-the-badge&logo=gavel&logoColor=black" alt="規制：軽微" loading="lazy"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          この分類は、高完全性の公開インテリジェンスプラットフォームとしてのEU Parliament Monitorの戦略的価値を示しています。評価は、最適なリソース配分のためのセキュリティ投資優先事項と事業継続計画を導きます。
+        </p>
+      </section>
+    </main>
+    
+    <footer role="contentinfo" aria-label="サイトフッター">
+      <div class="footer-container">
+        
+        <!-- Company Info Column -->
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>サイバーセキュリティコンサルティング<br>
+          ヨーテボリ、スウェーデン | リモート</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedInカンパニーページ</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>サービス</h3>
+          <ul>
+            <li><a href="services.html">セキュリティコンサルティング</a></li>
+            <li><a href="services.html">セキュリティアーキテクチャ</a></li>
+            <li><a href="services.html">クラウドセキュリティ</a></li>
+            <li><a href="services.html">DevSecOps統合</a></li>
+            <li><a href="services.html">コンプライアンス &amp; ISMS</a></li>
+          </ul>
+        </div>
+        
+        <!-- Products Column -->
+        <div class="footer-column">
+          <h3>プロダクト</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <!-- Resources Column -->
+        <div class="footer-column">
+          <h3>リソース</h3>
+          <ul>
+            <li><a href="blog.html">セキュリティブログ</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordianブログ</a></li>
+            <li><a href="cia-triad-faq.html">CIAトライアドFAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">公開ISMS</a></li>
+            <li><a href="sitemap.html">サイトマップ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company Column -->
+        <div class="footer-column">
+          <h3>会社情報</h3>
+          <ul>
+            <li><a href="why-hack23.html">Hack23について</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">セキュリティポリシー</a></li>
+            <li><a href="SECURITY.md">セキュリティ問題を報告</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub組織</a></li>
+            <li><a href="accessibility-statement.html">アクセシビリティ</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. All rights reserved. </p>
+        <p>
+          <a href="euparliamentmonitor-docs.html" lang="en">English</a> | 
+          <a href="euparliamentmonitor-docs_sv.html" lang="sv">Svenska</a> | 
+          <a href="euparliamentmonitor-docs_de.html" lang="de">Deutsch</a> | 
+          <a href="euparliamentmonitor-docs_fr.html" lang="fr">Français</a> | 
+          <a href="euparliamentmonitor-docs_es.html" lang="es">Español</a> | 
+          <a href="euparliamentmonitor-docs_nl.html" lang="nl">Nederlands</a> | 
+          <a href="euparliamentmonitor-docs_da.html" lang="da">Dansk</a> | 
+          <a href="euparliamentmonitor-docs_no.html" lang="no">Norsk</a> | 
+          <a href="euparliamentmonitor-docs_fi.html" lang="fi">Suomi</a> | 
+          <a href="euparliamentmonitor-docs_ja.html" lang="ja" aria-current="page">日本語</a> | 
+          <a href="euparliamentmonitor-docs_ko.html" lang="ko">한국어</a> | 
+          <a href="euparliamentmonitor-docs_zh.html" lang="zh">中文</a> | 
+          <a href="euparliamentmonitor-docs_ar.html" lang="ar">العربية</a> | 
+          <a href="euparliamentmonitor-docs_he.html" lang="he">עברית</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

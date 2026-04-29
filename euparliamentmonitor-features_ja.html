@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EU Parliament Monitor機能：8つのエージェント型AIワークフロー、51アーティファクト分析ベースライン、17の方法論、52テンプレート、170以上の毎日実行、1,700以上のアーティファクト。AI搭載EU議会インテリジェンス。">
+    <title>EU Parliament Monitor 機能 | AI搭載EU議会インテリジェンス | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"><link rel="canonical" href="https://hack23.com/euparliamentmonitor-features_ja.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="EU Parliament Monitor | AI搭載EU議会機能">
+    <meta property="og:description" content="8つのエージェント型ワークフロー、51アーティファクトベースライン、17の方法論、14言語で170以上の毎日実行。62 MCPツール搭載。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="da_DK">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fi_FI">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="he_IL">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="nb_NO">
+    <meta property="og:locale:alternate" content="sv_SE">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/euparliamentmonitor-features_ja.html">
+    <meta property="og:site_name" content="Hack23 AB">
+    <meta property="og:image" content="https://hack23.com/cia-icon-140.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EU Parliament Monitor | AI搭載EU議会機能">
+    <meta name="twitter:description" content="8つのエージェント型ワークフロー、51アーティファクトベースライン、14言語で170以上の毎日実行、1,700以上のアーティファクト。">
+    <meta name="twitter:image" content="https://hack23.com/cia-icon-140.webp">
+
+    <meta name="keywords" content="EU Parliament Monitor機能、MEPプロファイルOSINT、欧州議会投票記録、EU委員会モニタリング、立法文書検索、議会質問追跡、EU政治透明性、欧州議会オープンデータ、MEP出席記録、EU本会議、EU議会アカウンタビリティ">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://hack23.com/#eu-parliament-monitor",
+      "name": "EU Parliament Monitor",
+      "alternateName": "European Parliament Intelligence Platform",
+      "applicationCategory": "AnalyticsApplication",
+      "applicationSubCategory": "Political Intelligence Platform",
+      "operatingSystem": "Web",
+      "softwareVersion": "latest",
+      "description": "AI搭載欧州議会インテリジェンスプラットフォーム：8つの統合gh-awワークフローで14言語の自律的政治ニュースを生成。51アーティファクト分析ベースライン、17の方法論、52テンプレート、170以上の毎日実行、1,700以上のアーティファクト。EP MCPサーバー（62ツール）搭載。",
+      "inLanguage": "ja",
+      "creator": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "url": "https://github.com/Hack23/euparliamentmonitor",
+      "downloadUrl": "https://github.com/Hack23/euparliamentmonitor/releases",
+      "featureList": [
+        "MEPモニタリング（現在・過去）",
+        "本会議追跡",
+        "委員会モニタリング",
+        "立法文書検索",
+        "投票記録分析",
+        "議会質問追跡",
+        "欧州議会MCPサーバー統合"
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": [
+          "EU市民",
+          "ジャーナリスト",
+          "研究者",
+          "政策アナリスト",
+          "市民社会組織"
+        ]
+      },
+      "usageInfo": "EU政治透明性と欧州議会アカウンタビリティを監視するためのオープンソースプラットフォーム",
+      "keywords": "EU議会モニタリング、MEP追跡、欧州議会透明性、民主主義的アカウンタビリティEU、投票記録EU",
+      "browserRequirements": "JavaScriptが必要。推奨：Chrome、Firefox、Safari、Edge（最新バージョン）",
+      "permissions": "欧州議会の公開オープンデータへの読み取り専用アクセス"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hack23.com/euparliamentmonitor-features_ja.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "EU Parliament Monitor",
+          "item": "https://hack23.com/euparliamentmonitor.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "EU Parliament Monitor 機能",
+          "item": "https://hack23.com/euparliamentmonitor-features_ja.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hack23.com/euparliamentmonitor-features_ja.html#webpage",
+      "url": "https://hack23.com/euparliamentmonitor-features_ja.html",
+      "name": "EU Parliament Monitor 機能 | Hack23による欧州議会OSINT",
+      "description": "EU Parliament Monitor機能：MEPプロファイル、本会議追跡、委員会モニタリング、立法文書検索、投票記録、議会質問。",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://hack23.com/#website"
+      },
+      "about": {
+        "@id": "https://hack23.com/#eu-parliament-monitor"
+      },
+      "inLanguage": "ja",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-02-19"
+    }
+  ]
+}</script>
+
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/euparliamentmonitor-features_ar.html">
+    <link rel="alternate" hreflang="ar-SA" href="https://hack23.com/euparliamentmonitor-features_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/euparliamentmonitor-features_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/euparliamentmonitor-features_de.html">
+    <link rel="alternate" hreflang="de-DE" href="https://hack23.com/euparliamentmonitor-features_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/euparliamentmonitor-features.html">
+    <link rel="alternate" hreflang="en-US" href="https://hack23.com/euparliamentmonitor-features.html">
+    <link rel="alternate" hreflang="en-GB" href="https://hack23.com/euparliamentmonitor-features.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/euparliamentmonitor-features_es.html">
+    <link rel="alternate" hreflang="es-ES" href="https://hack23.com/euparliamentmonitor-features_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/euparliamentmonitor-features_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/euparliamentmonitor-features_fr.html">
+    <link rel="alternate" hreflang="fr-FR" href="https://hack23.com/euparliamentmonitor-features_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/euparliamentmonitor-features_he.html">
+    <link rel="alternate" hreflang="he-IL" href="https://hack23.com/euparliamentmonitor-features_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/euparliamentmonitor-features_ja.html">
+    <link rel="alternate" hreflang="ja-JP" href="https://hack23.com/euparliamentmonitor-features_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/euparliamentmonitor-features_ko.html">
+    <link rel="alternate" hreflang="ko-KR" href="https://hack23.com/euparliamentmonitor-features_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/euparliamentmonitor-features_nl.html">
+    <link rel="alternate" hreflang="nl-NL" href="https://hack23.com/euparliamentmonitor-features_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/euparliamentmonitor-features_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/euparliamentmonitor-features_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/euparliamentmonitor-features_sv.html">
+    <link rel="alternate" hreflang="sv-SE" href="https://hack23.com/euparliamentmonitor-features_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/euparliamentmonitor-features_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/euparliamentmonitor-features_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/euparliamentmonitor-features.html">
+</head>
+  <body>
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="パンくずリスト">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="/">ホーム</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="euparliamentmonitor_ja.html">EU Parliament Monitor</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        EU Parliament Monitor 機能
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+      <div class="logo-container">
+        <span style="font-size: 4rem;" role="img" aria-label="EU Parliament Monitor">🏛️</span>
+      </div>
+      <h1>EU Parliament Monitor 機能</h1>
+      <p>体系的なEU政治透明性のための包括的な欧州議会インテリジェンスプラットフォーム。</p>
+      <div class="badges">
+        <a href="https://github.com/Hack23/euparliamentmonitor/releases" title="GitHubリリース">
+          <img src="https://img.shields.io/github/v/release/Hack23/euparliamentmonitor" alt="GitHubリリース" />
+        </a>
+        <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" title="OpenSSFスコアカード">
+          <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/euparliamentmonitor/badge" alt="OpenSSFスコアカード" />
+        </a>
+        <a href="https://github.com/Hack23/euparliamentmonitor/blob/master/LICENSE" title="ライセンス">
+          <img src="https://img.shields.io/github/license/Hack23/euparliamentmonitor.svg" alt="ライセンス" />
+        </a>
+      </div>
+      <div class="app-link">
+        <a href="index.html" title="ホームへ">ホーム</a>
+        <a href="euparliamentmonitor_ja.html" title="EU Parliament Monitor概要">📖 概要</a>
+        <a href="euparliamentmonitor-docs_ja.html" title="アーキテクチャドキュメントを見る">📚 ドキュメント</a>
+        <a href="https://github.com/Hack23/euparliamentmonitor" class="btn" title="GitHubリポジトリを見る">GitHubリポジトリ</a>
+      </div>
+    </header>
+    <main>
+      <section id="overview" class="feature-section">
+        <h2>欧州議会インテリジェンスプラットフォーム</h2>
+        <p><a href="https://github.com/Hack23/euparliamentmonitor">EU Parliament Monitor</a>は、欧州連合レベルでの政治透明性に焦点を当てたオープンソースプラットフォームです。欧州議会の活動を包括的に監視し、市民、研究者、ジャーナリスト、市民社会組織が公式<a href="https://data.europarl.europa.eu/" title="欧州議会オープンデータ">欧州議会オープンデータ</a>からのデータ駆動型洞察を通じてEU代表者に説明責任を果たせるようにします。</p>
+
+        <!-- Project Badges -->
+        <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+          <a href="https://github.com/Hack23/euparliamentmonitor/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/euparliamentmonitor/actions/workflows/codeql.yml/badge.svg" alt="CodeQLセキュリティ" width="90" height="20" loading="lazy" decoding="async"></a>
+          <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/euparliamentmonitor?label=openssf" alt="OpenSSFスコアカード" width="100" height="20" loading="lazy" decoding="async"></a>
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSAレベル3" width="80" height="20" loading="lazy" decoding="async">
+          <a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki" width="80" height="20" loading="lazy" decoding="async"></a>
+        </div>
+
+        <!-- Live Resources -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1rem 0;">
+          <a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-green); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">🌐 ライブプラットフォーム</a>
+          <a href="https://euparliamentmonitor.com/political-intelligence/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-primary); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">🎯 インテリジェンス</a>
+          <a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-purple); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📚 DeepWiki</a>
+        </div>
+      </section>
+
+      <hr />
+
+      <h3 class="panel-caption">機能カテゴリー</h3>
+      <ol>
+        <li><a href="#mep-monitoring">MEPモニタリング</a></li>
+        <li><a href="#plenary-tracking">本会議追跡</a></li>
+        <li><a href="#committee-monitoring">委員会モニタリング</a></li>
+        <li><a href="#document-search">立法文書検索</a></li>
+        <li><a href="#parliamentary-questions">議会質問</a></li>
+        <li><a href="#mcp-integration">MCPサーバー経由のAIアクセス</a></li>
+      </ol>
+
+      <hr />
+
+      <section id="mep-monitoring" class="feature-section">
+        <h2 class="panel-caption">MEPモニタリング</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">議員プロファイル &amp; 活動追跡</h3>
+          <p>現在および過去の欧州議会議員全員の包括的なプロファイル。議会会期全体にわたる投票行動、委員会所属、立法活動、出席記録を追跡します。プラットフォームはMEPのパフォーマンスとアカウンタビリティについて客観的かつデータ駆動型の洞察を提供します。</p>
+          <h4>MEPプロファイル機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📊 投票履歴</h4>
+              <p>すべての本会議投票における各MEPの完全な投票記録。政治グループポジションとの投票一貫性および党派横断投票パターンを分析します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📋 委員会活動</h4>
+              <p>出席した会議、執筆した報告書、委員会構造内での役職を含む、議会委員会へのMEP参加を追跡します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📅 出席記録</h4>
+              <p>本会議と委員会会議へのMEP出席状況を監視します。同僚および歴史的基準と比較して出席率を確認します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🏛️ 政治グループ所属</h4>
+              <p>時間をかけた政治グループ所属の変化を追跡します。国内政党所属と欧州政治グループの整合性の関係を分析します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="plenary-tracking" class="feature-section">
+        <h2 class="panel-caption">本会議追跡</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">包括的な本会議モニタリング</h3>
+          <p>すべての投票、演説、討論、公式議事録を把握する欧州議会本会議の完全監視。プラットフォームは欧州議会の公式記録からEU立法決定と議会議事の詳細な分析を提供します。</p>
+          <h4>本会議機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🗳️ 投票分析</h4>
+              <p>個々のMEPポジション、政治グループ整合性、最終結果を含むすべての本会議投票の詳細結果。主要EU立法において異なるグループや国がどのように投票するかを追跡します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🎤 討論モニタリング</h4>
+              <p>本会議でのMEPによる演説と討論への貢献にアクセスします。特定のトピックや特定の代表者からの貢献を検索します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📅 会議アーカイブ</h4>
+              <p>欧州議会本会議の完全な歴史的アーカイブ。時間をかけてEUの政治的傾向を追跡するため、過去の投票や討論を検索・分析します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📊 出席分析</h4>
+              <p>主要な投票や討論にどのMEPが出席していたかを示すセッションレベルの出席データ。参加と欠席のパターンを特定します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="committee-monitoring" class="feature-section">
+        <h2 class="panel-caption">委員会モニタリング</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">議会委員会インテリジェンス</h3>
+          <p>詳細な立法作業の多くが行われる欧州議会のすべての委員会の包括的な監視。EU立法準備を理解するために、委員会会議、文書、報告者、構成員を追跡します。</p>
+          <h4>委員会機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🏛️ 委員会プロファイル</h4>
+              <p>任務、構成員、リーダーシップ、現在の立法議題を含む各議会委員会の詳細情報。EU委員会構造の全体像を把握します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📋 会議記録</h4>
+              <p>委員会会議、議題、結果の記録にアクセスします。委員会が議会全体に到達する前に立法をどのように準備するかを監視します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📄 委員会文書</h4>
+              <p>委員会報告書、意見書、作業文書を検索してアクセスします。委員会初期段階から最終投票まで立法プロセスを追跡します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>👤 報告者追跡</h4>
+              <p>委員会報告書の起草を担当する報告者を特定・監視します。委員会段階でEU立法を形成するのが誰かを理解します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="document-search" class="feature-section">
+        <h2 class="panel-caption">立法文書検索</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">完全な立法文書アクセス</h3>
+          <p>欧州議会の立法文書の完全なコーパスにわたる強力な検索とナビゲーション。直感的なインターフェースを通じて立法テキスト、委員会報告書、修正案、意見書、すべての公式EU議会文書にアクセスします。</p>
+          <h4>文書機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🔍 全文検索</h4>
+              <p>キーワード、トピック、MEP名、委員会、または日付範囲でEU議会のすべての文書を検索します。関連する立法や文書をすばやく見つけます。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📊 立法ステータス</h4>
+              <p>EU立法プロセスを通じた立法提案の現在のステータスを追跡します。第1読会から最終採択まで各イニシアチブがどこにあるかを確認します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📝 修正案追跡</h4>
+              <p>立法プロセス中に提案・採択された修正案を監視します。委員会の最初の提案から最終テキストまで立法がどのように発展するかを理解します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🌍 多言語アクセス</h4>
+              <p>すべての公式EU言語でEU議会文書にアクセスします。欧州議会の言語政策に沿った多言語立法テキストをナビゲートします。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="parliamentary-questions" class="feature-section">
+        <h2 class="panel-caption">議会質問</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">質問 &amp; アカウンタビリティ追跡</h3>
+          <p>MEPが欧州委員会、欧州連合理事会、その他のEU機関に提出した議会質問を追跡します。MEPが公式質問手続きを使用してEU機関に説明責任を求め、有権者の利益を前進させる方法を監視します。</p>
+          <h4>議会質問機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>❓ 質問アーカイブ</h4>
+              <p>トピック、MEP、政治グループ、または対象機関別の議会質問の完全なアーカイブ。MEPが有権者のためにどのような問題を提起しているかを理解します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📋 回答追跡</h4>
+              <p>議会質問に対する機関の回答を監視します。委員会やその他のEU機関からの回答時間と回答の質を追跡します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📊 質問分析</h4>
+              <p>トピック、MEP活動、政治グループの重点分野別に質問パターンを分析します。質問頻度の分析から新興の政治優先事項を特定します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🔎 トピック分析</h4>
+              <p>議会質問で最も活発なトピックを特定します。どのEU政策分野が選出された代表者から最も精査を受けているかを追跡します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section id="mcp-integration" class="feature-section">
+        <h2 class="panel-caption">欧州議会MCPサーバー経由のAIアクセス</h2>
+        <div class="feature-description">
+          <h3 class="panel-caption">AI搭載EU議会インテリジェンス</h3>
+          <p>EU Parliament Monitorは<a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="欧州議会MCPサーバー">欧州議会MCPサーバー</a>と統合し、AIアシスタントがモデルコンテキストプロトコル（MCP）経由でプログラム的に欧州議会データを照会・分析できるようにします。この統合によりEU政治インテリジェンスをAIワークフローに直接取り込みます。</p>
+          <h4>MCP統合機能：</h4>
+          <div class="cards">
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🤖 AIクエリインターフェース</h4>
+              <p>ClaudeなどのAIアシスタントがMCPツールを通じてEU議会データを直接照会できます。MEP、投票、委員会、立法について自然言語で質問します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🔌 MCPプロトコル</h4>
+              <p>AIツール統合のためのモデルコンテキストプロトコル標準を実装。Claude、その他の主要AIプラットフォームを含むMCP対応AIシステムと互換性があります。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>📡 リアルタイムデータ</h4>
+              <p>AIクエリは公式EP公開データソースから更新された現在の欧州議会データにアクセスします。AIシステムに正確で最新のEU政治インテリジェンスを提供します。</p>
+            </div>
+            <div class="card">
+              <div class="scanner-effect"></div>
+              <h4>🛡️ セキュアな統合</h4>
+              <p>MCPサーバー統合はセキュリティのベストプラクティスに従います。EU議会の公開データへの読み取り専用アクセスにより、データの整合性とプライバシーコンプライアンスを確保します。</p>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem;">
+            <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="欧州議会MCPサーバー" class="btn-primary">🤖 GitHubでMCPサーバーを見る</a>
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Call to Action -->
+      <section id="cta" class="cta-section">
+        <h2>�� EU Parliament Monitorを探索する</h2>
+        <p>EU政治透明性と民主主義的アカウンタビリティのための包括的な欧州議会データと分析にアクセスします。</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+          <a href="https://github.com/Hack23/euparliamentmonitor" title="GitHubリポジトリ" class="cta-button">📂 GitHubで見る</a>
+          <a href="euparliamentmonitor_ja.html" title="プロジェクト概要" class="cta-button">📖 プロジェクト概要</a>
+          <a href="euparliamentmonitor-docs_ja.html" title="ドキュメント" class="cta-button">📚 アーキテクチャドキュメント</a>
+          <a href="projects.html" title="すべてのプロジェクト" class="cta-button">← プロジェクトに戻る</a>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo" aria-label="サイトフッター">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>サイバーセキュリティコンサルティング<br>
+          ヨーテボリ、スウェーデン | リモート</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedInカンパニーページ</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">CEO: James Pether Sörling</a></p>
+        </div>
+        <div class="footer-column">
+          <h3>サービス</h3>
+          <ul>
+            <li><a href="services.html">セキュリティコンサルティング</a></li>
+            <li><a href="services.html">セキュリティアーキテクチャ</a></li>
+            <li><a href="services.html">クラウドセキュリティ</a></li>
+            <li><a href="services.html">DevSecOps統合</a></li>
+            <li><a href="services.html">コンプライアンス &amp; ISMS</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>プロダクト</h3>
+          <ul>
+            <li><a href="black-trigram-features.html">Black Trigram</a></li>
+            <li><a href="cia-features.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>リソース</h3>
+          <ul>
+            <li><a href="blog.html">セキュリティブログ</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordianブログ</a></li>
+            <li><a href="cia-triad-faq.html">CIAトライアドFAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">公開ISMS</a></li>
+            <li><a href="sitemap.html">サイトマップ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>会社情報</h3>
+          <ul>
+            <li><a href="why-hack23.html">Hack23について</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">セキュリティポリシー</a></li>
+            <li><a href="SECURITY.md">セキュリティ問題を報告</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub組織</a></li>
+            <li><a href="accessibility-statement.html">アクセシビリティ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. All rights reserved. </p>
+        <p>
+          <a href="euparliamentmonitor-features.html" lang="en">English</a> |
+          <a href="euparliamentmonitor-features_sv.html" lang="sv">Svenska</a> |
+          <a href="euparliamentmonitor-features_de.html" lang="de">Deutsch</a> |
+          <a href="euparliamentmonitor-features_fr.html" lang="fr">Français</a> |
+          <a href="euparliamentmonitor-features_es.html" lang="es">Español</a> |
+          <a href="euparliamentmonitor-features_nl.html" lang="nl">Nederlands</a> |
+          <a href="euparliamentmonitor-features_da.html" lang="da">Dansk</a> |
+          <a href="euparliamentmonitor-features_no.html" lang="no">Norsk</a> |
+          <a href="euparliamentmonitor-features_fi.html" lang="fi">Suomi</a> |
+          <a href="euparliamentmonitor-features_ja.html" lang="ja" aria-current="page">日本語</a> |
+          <a href="euparliamentmonitor-features_ko.html" lang="ko">한국어</a> |
+          <a href="euparliamentmonitor-features_zh.html" lang="zh">中文</a> |
+          <a href="euparliamentmonitor-features_ar.html" lang="ar">العربية</a> |
+          <a href="euparliamentmonitor-features_he.html" lang="he">עברית</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
