@@ -231,7 +231,7 @@
       "slogan": "Sicherheitsexzellenz durch transparente Innovation",
       "legalName": "Hack23 AB",
       "foundingDate": "2025-01-01",
-      "description": "Schwedisches Innovations-Hub, das Cybersicherheitsberatung und KI-gestützte politische Geheimdienstmedien vorantreibt. Öffentliches ISMS, Compliance-Automatisierung, autonome KI-generierte Parlamentsnachrichten für Schwedisches und Europäisches Parlament in 14 Sprachen und sicherheitsgestützte Innovation über fünf Geschäftsfelder: Cybersicherheitsberatung, KI-gestützte politische Geheimdienstmedien, CIA Compliance Manager, Citizen Intelligence Agency und Black Trigram Educational Gaming.",
+      "description": "Schwedisches Innovationszentrum, das Cybersicherheitsberatung und KI-gestützte politische Geheimdienstmedien vorantreibt. Öffentliches ISMS, Compliance-Automatisierung, autonome KI-generierte Parlamentsnachrichten für Schwedisches und Europäisches Parlament in 14 Sprachen und sicherheitsgestützte Innovation über fünf Geschäftsfelder: Cybersicherheitsberatung, KI-gestützte politische Geheimdienstmedien, CIA Compliance Manager, Citizen Intelligence Agency und Black Trigram Educational Gaming.",
       "industry": [
         "Informationssicherheit",
         "Cybersicherheitsberatung",
@@ -259,7 +259,7 @@
         "Agentische KI-Workflows",
         "Politische Geheimdienstplattformen",
         "Europäisches Parlament Überwachung",
-        "KI-gestörter Journalismus",
+        "KI-revolutionierter Journalismus",
         "Modellkontextprotokoll",
         "Autonome Inhaltsgenerierung",
         "Mehrsprachige politische Analyse",
@@ -2243,9 +2243,13 @@ te Innovation:</strong> Wir zeigen, dass angemessene Sicherheit Innovation besch
           const navMenu = document.querySelector('.nav-menu');
           
           if (navToggle && navMenu) {
-            // Get focusable elements for focus trapping
+            // Get focusable elements for focus trapping (cached per menu open)
+            let cachedFocusableElements = null;
             const getFocusableElements = function() {
-              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+              if (!cachedFocusableElements) {
+                cachedFocusableElements = Array.from(navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'));
+              }
+              return cachedFocusableElements;
             };
             
             // Close menu handler
@@ -2255,6 +2259,7 @@ te Innovation:</strong> Wir zeigen, dass angemessene Sicherheit Innovation besch
               navToggle.setAttribute('aria-label', 'Navigationsmenü öffnen');
               navMenu.setAttribute('aria-hidden', 'true');
               document.body.style.overflow = '';
+              cachedFocusableElements = null;
             };
             
             // Combined keydown handler for Escape key and focus trapping
@@ -2313,7 +2318,8 @@ te Innovation:</strong> Wir zeigen, dass angemessene Sicherheit Innovation besch
               // Prevent body scroll when menu is open
               if (isOpen) {
                 document.body.style.overflow = 'hidden';
-                // Focus first menu item for keyboard users
+                // Reset cache and focus first menu item for keyboard users
+                cachedFocusableElements = null;
                 const focusableElements = getFocusableElements();
                 if (focusableElements.length > 0) {
                   focusableElements[0].focus();
