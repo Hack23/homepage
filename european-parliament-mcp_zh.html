@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="European Parliament MCP Server：TypeScript/Node.js模型上下文协议服务器，提供62个MCP工具（15个OSINT情报+47个数据访问）、9个资源、7个提示词，1130+单元测试，SLSA三级，OpenSSF评分7.2/10。">
+    <title>European Parliament MCP Server | 欧洲议会模型上下文协议服务器 | Hack23</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="European Parliament MCP Server | 欧洲议会模型上下文协议服务器">
+    <meta property="og:description" content="62个MCP工具（15个OSINT情报+47个数据访问）、9个资源、7个提示词，1130+单元测试，SLSA三级，OpenSSF评分7.2/10。">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack23.com/european-parliament-mcp_zh.html">
+    <meta property="og:image" content="cia-icon-140.webp">
+    <meta property="og:site_name" content="Hack23 AB">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "European Parliament MCP Server",
+      "inLanguage": "zh-CN",
+      "applicationCategory": "DeveloperApplication",
+      "description": "TypeScript/Node.js模型上下文协议服务器，为AI代理提供62个MCP工具（15个OSINT情报+47个数据访问）、9个资源、7个提示词，实现对欧洲议会官方开放数据的结构化访问。",
+      "url": "https://hack23.com/european-parliament-mcp.html",
+      "publisher": {"@type": "Organization", "name": "Hack23 AB", "url": "https://hack23.com"},
+      "creator": {"@type": "Person", "name": "James Pether Sörling"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://hack23.com/"},
+        {"@type": "ListItem", "position": 2, "name": "项目", "item": "https://hack23.com/projects.html"},
+        {"@type": "ListItem", "position": 3, "name": "European Parliament MCP Server", "item": "https://hack23.com/european-parliament-mcp.html"}
+      ]
+    }
+  ]
+}</script>
+    <link rel="alternate" hreflang="en" href="https://hack23.com/european-parliament-mcp.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-SG" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://hack23.com/european-parliament-mcp_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/european-parliament-mcp.html">
+</head>
+<body>
+    <!-- 面包屑导航 -->
+    <nav aria-label="面包屑">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index_zh.html">首页</a></li>
+            <li class="breadcrumb-item"><a href="projects_zh.html">项目</a></li>
+            <li class="breadcrumb-item" aria-current="page">European Parliament MCP Server</li>
+        </ol>
+    </nav>
+
+    <header>
+        <nav aria-label="主导航">
+            <a href="index_zh.html" title="首页">🏠 Hack23</a>
+            <a href="services_zh.html" title="服务">服务</a>
+            <a href="projects_zh.html" title="项目">项目</a>
+            <a href="why-hack23_zh.html" title="为何选择Hack23">为何选择Hack23</a>
+            <a href="blog_zh.html" title="博客">博客</a>
+            <a href="https://github.com/Hack23/ISMS-PUBLIC" title="公共 ISMS">ISMS</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- 英雄区块 -->
+        <section id="ep-mcp-hero" class="confidentiality-card" style="padding: 3rem 2rem; margin-bottom: 2rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h1 class="m-0">🔌 European Parliament MCP Server</h1>
+                    <p style="font-size: 1.3rem; margin: 0.5rem 0 0; font-weight: 500;">欧洲议会官方数据的模型上下文协议服务器</p>
+                </div>
+            </div>
+            <p class="lead"><strong>TypeScript/Node.js模型上下文协议（MCP）服务器</strong>，为AI代理和工作流程提供对欧洲议会官方开放数据的结构化访问。包含<strong>62个MCP工具</strong>（15个OSINT情报+47个数据访问）、<strong>9个资源</strong>、<strong>7个提示词</strong>，通过1130+单元测试和71个端到端测试验证，覆盖率80%+，SLSA三级供应链安全，OpenSSF评分7.2/10。</p>
+            
+            <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/european-parliament-mcp-server?style=flat-square&logo=npm" alt="npm版本" width="100" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
+                <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=openssf+7.2" alt="OpenSSF评分卡" width="100" height="20" loading="lazy" decoding="async"></a>
+                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA三级" width="80" height="20" loading="lazy" decoding="async">
+            </div>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm包" class="btn-primary" style="font-size: 1.1rem;">📦 npm安装</a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub仓库" class="btn-primary">📂 在GitHub上查看</a>
+                <a href="european-parliament-mcp-features_zh.html" title="功能特性" class="btn-primary">✨ 功能特性</a>
+                <a href="european-parliament-mcp-docs_zh.html" title="技术文档" class="btn-primary">📚 技术文档</a>
+            </div>
+        </section>
+
+        <!-- 快速安装 -->
+        <section id="installation">
+            <h2>⚡ 快速安装</h2>
+            <pre><code>npx european-parliament-mcp-server</code></pre>
+            <p>或通过npm全局安装：</p>
+            <pre><code>npm install -g european-parliament-mcp-server</code></pre>
+        </section>
+
+        <!-- 关键指标 -->
+        <section id="key-metrics" style="background: var(--surface-secondary); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h2 style="margin-top: 0;">📊 关键指标</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; text-align: center;">
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-primary);">62</div><div>MCP工具总数</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-green);">15</div><div>OSINT情报工具</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-purple);">47</div><div>数据访问工具</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-primary);">9</div><div>MCP资源</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-green);">7</div><div>MCP提示词</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-purple);">1,130+</div><div>单元测试</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-primary);">71</div><div>端到端测试</div></div>
+                <div><div style="font-size: 2rem; font-weight: 700; color: var(--accent-green);">80%+</div><div>测试覆盖率</div></div>
+            </div>
+        </section>
+
+        <!-- MCP工具分类 -->
+        <section id="mcp-tools">
+            <h2>🛠️ MCP工具分类</h2>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔍 15个OSINT情报工具</h3>
+                    <p>专用开源情报工具，用于欧洲议会数据的高级分析与模式识别，支持对欧盟立法活动的深度情报洞察。</p>
+                    <ul>
+                        <li>议员投票行为分析</li>
+                        <li>政党凝聚力追踪</li>
+                        <li>委员会活动情报</li>
+                        <li>立法趋势分析</li>
+                        <li>议员关系映射</li>
+                    </ul>
+                </div>
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 47个数据访问工具</h3>
+                    <p>全面的数据访问工具集，覆盖欧洲议会开放数据API的所有主要数据集。</p>
+                    <ul>
+                        <li>议员个人资料与历史记录</li>
+                        <li>全会表决结果</li>
+                        <li>委员会成员与会议</li>
+                        <li>立法文件与修正案</li>
+                        <li>议会质询与答复</li>
+                        <li>出席率与参与度数据</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用场景 -->
+        <section id="use-cases">
+            <h2>💼 使用场景</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🤖 AI代理与工作流程</h3>
+                    <p>将European Parliament MCP Server集成至AI代理工作流程，实现对欧洲议会数据的自主查询。为EU Parliament Monitor等应用提供技术基础。</p>
+                </div>
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🔬 研究与分析</h3>
+                    <p>通过标准化MCP接口，研究人员可高效访问欧洲议会历史数据，进行大规模立法分析、投票行为研究和政治趋势挖掘。</p>
+                </div>
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>📰 新闻与舆论监测</h3>
+                    <p>记者和新闻媒体可利用MCP工具自动追踪议员活动、委员会动态和欧盟立法进展，加速新闻线索挖掘。</p>
+                </div>
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏛️ 公民科技与透明度</h3>
+                    <p>开发者可基于此MCP服务器构建公民技术应用，促进欧盟民主透明度，降低公民访问欧洲议会数据的技术门槛。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安全与合规 -->
+        <section id="security-compliance">
+            <h2>🛡️ 安全与供应链合规</h2>
+            <div class="cards">
+                <div class="card confidentiality-card">
+                    <div class="scanner-effect"></div>
+                    <h3>🏆 SLSA三级供应链安全</h3>
+                    <p>满足SLSA（软件制品供应链等级）三级要求，包括可验证的构建来源、不可篡改的构建过程及安全分发机制。</p>
+                </div>
+                <div class="card integrity-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📊 OpenSSF评分7.2/10</h3>
+                    <p>经OpenSSF评分卡评估获得7.2/10高分，体现了在安全开发实践、代码审查、漏洞管理和依赖安全方面的优秀表现。</p>
+                </div>
+                <div class="card availability-card">
+                    <div class="scanner-effect"></div>
+                    <h3>📋 合规标准</h3>
+                    <div class="badges">
+                        <img src="https://img.shields.io/badge/ISO_27001%3A2022-合规-green?style=flat-square" alt="ISO 27001:2022" loading="lazy">
+                        <img src="https://img.shields.io/badge/NIST_CSF_2.0-已实施-blue?style=flat-square" alt="NIST CSF 2.0" loading="lazy">
+                        <img src="https://img.shields.io/badge/CIS_Controls_v8.1-已实施-purple?style=flat-square" alt="CIS Controls v8.1" loading="lazy">
+                        <img src="https://img.shields.io/badge/GDPR-合规-darkgreen?style=flat-square" alt="GDPR" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术栈 -->
+        <section id="tech-stack">
+            <h2>⚙️ 技术栈</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>TypeScript / Node.js</h3>
+                    <p>完全采用TypeScript开发，提供完整的类型安全保障与优秀的开发者体验。Node.js运行时确保跨平台兼容性。</p>
+                </div>
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>模型上下文协议（MCP）</h3>
+                    <p>基于Anthropic MCP规范构建，确保与Claude、其他AI助手及支持MCP标准的工作流程框架的兼容性。</p>
+                </div>
+                <div class="card">
+                    <div class="scanner-effect"></div>
+                    <h3>欧洲议会开放数据API</h3>
+                    <p>专属对接欧洲议会官方开放数据API，提供对所有公开议会数据集的可靠、经过验证的访问。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生态系统 -->
+        <section id="ecosystem" style="background: linear-gradient(135deg, var(--surface-secondary), var(--surface-primary)); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+            <h2 style="margin-top: 0;">🌐 作为Hack23生态系统的技术基础</h2>
+            <p>European Parliament MCP Server是EU Parliament Monitor的技术核心，为14种语言的自主政治新闻生成提供数据支撑。</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.5rem 0;">
+                <a href="euparliamentmonitor_zh.html" style="padding: 0.75rem 1.25rem; background: var(--accent-primary); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🏛️ EU Parliament Monitor</a>
+                <a href="riksdagsmonitor_zh.html" style="padding: 0.75rem 1.25rem; background: var(--accent-green); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🏛️ Riksdagsmonitor</a>
+                <a href="cia-project_zh.html" style="padding: 0.75rem 1.25rem; background: var(--accent-purple); color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">🔍 Citizen Intelligence Agency</a>
+            </div>
+        </section>
+
+        <!-- 行动召唤 -->
+        <section id="cta" class="cta-section">
+            <h2>🎯 开始集成European Parliament MCP Server</h2>
+            <p>将欧洲议会数据接入您的AI工作流程，通过标准MCP接口获取62个专业工具。</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm包" class="cta-button">📦 npm安装</a>
+                <a href="https://github.com/Hack23/European-Parliament-MCP-Server" title="GitHub仓库" class="cta-button">📂 GitHub仓库</a>
+                <a href="european-parliament-mcp-features_zh.html" title="功能特性" class="cta-button">✨ 功能特性</a>
+                <a href="projects_zh.html" title="所有项目" class="cta-button">← 返回项目</a>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" aria-label="网站页脚">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>网络安全咨询<br>哥德堡，瑞典 | 远程</p>
+          <p>组织编号：5595347807</p>
+        </div>
+        <div class="footer-column">
+          <h3>产品</h3>
+          <ul>
+            <li><a href="riksdagsmonitor_zh.html">Riksdagsmonitor</a></li>
+            <li><a href="euparliamentmonitor_zh.html">EU Parliament Monitor</a></li>
+            <li><a href="european-parliament-mcp_zh.html">EP MCP服务器</a></li>
+            <li><a href="cia-project_zh.html">Citizen Intelligence Agency</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>资源</h3>
+          <ul>
+            <li><a href="blog_zh.html">博客</a></li>
+            <li><a href="sitemap_zh.html">站点地图</a></li>
+            <li><a href="accessibility-statement_zh.html">无障碍声明</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. 保留所有权利。</p>
+        <p>
+          <a href="european-parliament-mcp.html" lang="en">English</a> | 
+          <a href="european-parliament-mcp_sv.html" lang="sv">Svenska</a> | 
+          <a href="index_de.html" lang="de">Deutsch</a> | 
+          <a href="european-parliament-mcp_fr.html" lang="fr">Français</a> | 
+          <a href="index_es.html" lang="es">Español</a> | 
+          <a href="index_nl.html" lang="nl">Nederlands</a> | 
+          <a href="index_da.html" lang="da">Dansk</a> | 
+          <a href="index_no.html" lang="no">Norsk</a> | 
+          <a href="index_fi.html" lang="fi">Suomi</a> | 
+          <a href="index_ja.html" lang="ja">日本語</a> | 
+          <a href="index_ko.html" lang="ko">한국어</a> | 
+          <a href="european-parliament-mcp_zh.html" lang="zh" aria-current="page">中文</a> | 
+          <a href="index_ar.html" lang="ar">العربية</a> | 
+          <a href="index_he.html" lang="he">עברית</a>
+        </p>
+      </div>
+    </footer>
+</body>
+</html>
