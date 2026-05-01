@@ -157,6 +157,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io">
+	<link rel="dns-prefetch" href="https://scorecard.dev">
+	<link rel="dns-prefetch" href="https://slsa.dev">
 	<link rel="dns-prefetch" href="https://hack23.github.io">
 	
 	<!-- Preload LCP hero image for faster above-the-fold rendering -->
@@ -1258,8 +1260,8 @@
       </div>
       
       <!-- 🌐 Plateformes en Direct -->
-      <p style="margin: 1.5rem 0 0.5rem; font-weight: 600; color: var(--text-secondary);">🌐 Plateformes en direct&nbsp;:</p>
-      <nav aria-label="Liens vers les plateformes en direct" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem;">
+      <p class="live-platforms-title">🌐 Plateformes en direct&nbsp;:</p>
+      <nav aria-label="Liens vers les plateformes en direct" class="live-platforms-nav">
         <a href="https://riksdagsmonitor.com/news/index.html" target="_blank" rel="noopener" title="Actualités IA du Parlement suédois">🇸🇪 riksdagsmonitor.com/news</a>
         <a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener" title="Intelligence du Parlement européen">🇪🇺 euparliamentmonitor.com</a>
         <a href="https://ciacompliancemanager.com/" target="_blank" rel="noopener" title="Application CIA Compliance Manager">🛡️ ciacompliancemanager.com</a>
@@ -1425,7 +1427,7 @@
           </ul>
           <div class="card-actions">
             <a href="european-parliament-mcp_fr.html" class="btn-primary" title="En savoir plus →">En savoir plus →</a>
-            <a href="https://www.npmjs.com/package/european-parliament-mcp-server" class="btn-action-secondary" title="📦 Paquet npm">📦 Paquet npm</a>
+            <a href="https://www.npmjs.com/package/european-parliament-mcp-server" class="btn-action-secondary" target="_blank" rel="noopener" title="📦 Paquet npm">📦 Paquet npm</a>
           </div>
         </div>
         
@@ -1483,43 +1485,44 @@
       </div>
       
       <!-- Portfolio Comparison Table -->
-      <section id="portfolio-overview" aria-labelledby="portfolio-heading" style="margin-top: 2.5rem;">
+      <div id="portfolio-overview" class="portfolio-overview">
         <h2 id="portfolio-heading">📊 Aperçu du Portefeuille d'Intelligence Politique</h2>
-        <div style="overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <div class="portfolio-table-wrapper">
+          <table class="portfolio-table" aria-labelledby="portfolio-heading">
+            <caption class="visually-hidden">Comparaison du portefeuille d'intelligence politique&nbsp;: plateformes en direct, scores OpenSSF, niveaux SLSA et liens vers la documentation</caption>
             <thead>
               <tr style="background: var(--primary-dark); color: var(--card-bg);">
-                <th style="padding: 0.75rem 1rem; text-align: left;">Projet</th>
-                <th style="padding: 0.75rem 1rem; text-align: left;">Plateforme en Direct</th>
-                <th style="padding: 0.75rem 1rem; text-align: center;">OpenSSF</th>
-                <th style="padding: 0.75rem 1rem; text-align: center;">SLSA</th>
-                <th style="padding: 0.75rem 1rem; text-align: center;">Documentation Approfondie</th>
+                <th scope="col" style="padding: 0.75rem 1rem; text-align: left;">Projet</th>
+                <th scope="col" style="padding: 0.75rem 1rem; text-align: left;">Plateforme en Direct</th>
+                <th scope="col" style="padding: 0.75rem 1rem; text-align: center;">OpenSSF</th>
+                <th scope="col" style="padding: 0.75rem 1rem; text-align: center;">SLSA</th>
+                <th scope="col" style="padding: 0.75rem 1rem; text-align: center;">Documentation Approfondie</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--border-color);">
-                <td style="padding: 0.75rem 1rem; font-weight: 500;">🇸🇪 Riksdagsmonitor</td>
+                <th scope="row" style="padding: 0.75rem 1rem; font-weight: 500; text-align: left;">🇸🇪 Riksdagsmonitor</th>
                 <td style="padding: 0.75rem 1rem;"><a href="https://riksdagsmonitor.com/news/index.html" target="_blank" rel="noopener">riksdagsmonitor.com/news</a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/riksdagsmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard Riksdagsmonitor" width="80" height="20" loading="lazy" decoding="async"></a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Niveau 3" width="80" height="20" loading="lazy" decoding="async"></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://deepwiki.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener">DeepWiki</a></td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color); background: var(--badge-bg);">
-                <td style="padding: 0.75rem 1rem; font-weight: 500;">🇪🇺 EU Parliament Monitor</td>
+                <th scope="row" style="padding: 0.75rem 1rem; font-weight: 500; text-align: left;">🇪🇺 EU Parliament Monitor</th>
                 <td style="padding: 0.75rem 1rem;"><a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener">euparliamentmonitor.com</a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/euparliamentmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard EUParliamentMonitor" width="80" height="20" loading="lazy" decoding="async"></a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Niveau 3" width="80" height="20" loading="lazy" decoding="async"></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener">DeepWiki</a></td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color);">
-                <td style="padding: 0.75rem 1rem; font-weight: 500;">🔌 Serveur MCP EP</td>
+                <th scope="row" style="padding: 0.75rem 1rem; font-weight: 500; text-align: left;">🔌 Serveur MCP EP</th>
                 <td style="padding: 0.75rem 1rem;"><a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener">paquet npm</a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=score&amp;style=flat" alt="OpenSSF Scorecard EP MCP Server" width="80" height="20" loading="lazy" decoding="async"></a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Niveau 3" width="80" height="20" loading="lazy" decoding="async"></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener">DeepWiki</a></td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-color); background: var(--badge-bg);">
-                <td style="padding: 0.75rem 1rem; font-weight: 500;">🔍 Citizen Intelligence Agency</td>
+                <th scope="row" style="padding: 0.75rem 1rem; font-weight: 500; text-align: left;">🔍 Citizen Intelligence Agency</th>
                 <td style="padding: 0.75rem 1rem;"><a href="https://hack23.github.io/cia/" target="_blank" rel="noopener">Site Maven</a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=score&amp;style=flat" alt="OpenSSF Scorecard CIA" width="80" height="20" loading="lazy" decoding="async"></a></td>
                 <td style="padding: 0.75rem 1rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Niveau 3" width="80" height="20" loading="lazy" decoding="async"></td>
@@ -1528,7 +1531,7 @@
             </tbody>
           </table>
         </div>
-      </section>
+      </div>
       
       <p style="text-align: center; font-style: italic; color: var(--text-secondary); max-width: 800px; margin: 1.5rem auto;">
         💡 <strong>Vérifiez, ne faites pas confiance&nbsp;:</strong> Toutes les plateformes d'intelligence politique sont open source sous Apache-2.0. Chaque base de code passe CodeQL, dispose d'un OpenSSF Scorecard supérieur à 7.0, est livrée avec une provenance SLSA Niveau 3, et est documentée sur DeepWiki pour une transparence totale.
