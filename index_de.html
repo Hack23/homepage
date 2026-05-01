@@ -2250,6 +2250,10 @@ te Innovation:</strong> Wir zeigen, dass angemessene Sicherheit Innovation besch
             navToggle.setAttribute('aria-label', 'Navigationsmenü öffnen');
             navMenu.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
+            // Restore tabindex so hidden menu links are not keyboard-reachable
+            navMenu.querySelectorAll('a').forEach(function(link) {
+              link.setAttribute('tabindex', '-1');
+            });
           };
           
           if (navToggle && navMenu) {
