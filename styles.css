@@ -4112,6 +4112,30 @@ footer > p a:focus-visible {
   margin: 2rem 0;
 }
 
+.comparison-table__caption {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  caption-side: top;
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+.trust-statement {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.trust-statement p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
 /* Responsive comparison table */
 @media (max-width: 768px) {
   .comparison-table {
@@ -6914,4 +6938,82 @@ html[lang="he"] {
     background: #1a1a1a;
     border: 1px solid #333;
   }
+}
+
+/* Live Platforms Quick Links */
+.live-platforms-title {
+  margin: 1.5rem 0 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.live-platforms-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Portfolio Comparison Table */
+.portfolio-overview {
+  margin-top: 2.5rem;
+}
+
+.portfolio-overview-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 800px;
+}
+
+.portfolio-table thead tr {
+  background: var(--surface-primary);
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.portfolio-table th {
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.portfolio-table th:first-child {
+  text-align: left;
+}
+
+.portfolio-table td {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.portfolio-table td:first-child {
+  font-weight: 500;
+  text-align: left;
+}
+
+.portfolio-table .row-alt {
+  background: var(--surface-secondary);
+}
+
+/* Visually hidden (accessible) utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
