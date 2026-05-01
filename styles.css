@@ -6959,14 +6959,50 @@ html[lang="he"] {
   margin-top: 2.5rem;
 }
 
+.portfolio-overview-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
 .portfolio-table-wrapper {
   overflow-x: auto;
+  margin-bottom: 2rem;
 }
 
 .portfolio-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  min-width: 800px;
+}
+
+.portfolio-table thead tr {
+  background: var(--surface-primary);
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+.portfolio-table th {
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.portfolio-table th:first-child {
+  text-align: left;
+}
+
+.portfolio-table td {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.portfolio-table td:first-child {
+  font-weight: 500;
+  text-align: left;
+}
+
+.portfolio-table .row-alt {
+  background: var(--surface-secondary);
 }
 
 /* Visually hidden (accessible) utility */
