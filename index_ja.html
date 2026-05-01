@@ -1477,7 +1477,7 @@
         <div class="card card-green">
           <div class="scanner-effect"></div>
           <h3>🕵️ Citizen Intelligence Agency</h3>
-          <p>Javaベースのスウェーデン議会透明性プラットフォーム。リアルタイムリスクスコアリング付き344人の議員の政治活動データを包括的に追跡。20年以上の公共データ、SLSA Level 3セキュリティ。</p>
+          <p>Javaベースのスウェーデン議会透明性プラットフォーム。リアルタイムリスクスコアリング付き349人の議員の政治活動データを包括的に追跡。20年以上の公共データ、SLSA Level 3セキュリティ。</p>
           <ul class="card-feature-list">
             <li>6つの分析フレームワーク（CIS、NIST、ISO、GDPR、WCAG、BCP）</li>
             <li>50リスクルール、110データベースビュー、36ページ</li>
@@ -2152,7 +2152,7 @@
             <p>Citizen Intelligence Agency（CIA）は、スウェーデン議会の透明性と民主的責任プラットフォームです：</p>
             <ul>
               <li><strong>20年以上のデータ：</strong>包括的な歴史的スウェーデン議会記録</li>
-              <li><strong>リアルタイム監視：</strong>344人の現職議員の政治活動追跡</li>
+              <li><strong>リアルタイム監視：</strong>349人の現職議員の政治活動追跡</li>
               <li><strong>6つの分析フレームワーク：</strong>CIS、NIST、ISO、GDPR、WCAG、BCP</li>
               <li><strong>リスクスコアリング：</strong>50リスクルールによる自動議員リスク評価</li>
               <li><strong>SLSA Level 3：</strong>高保証サプライチェーンセキュリティ</li>
@@ -2295,7 +2295,7 @@
       "name": "Citizen Intelligence Agencyとは何ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Citizen Intelligence Agency（CIA）は、スウェーデン議会の透明性と民主的責任プラットフォームです。20年以上の包括的な歴史的スウェーデン議会記録、344人の現職議員のリアルタイムリスクスコアリング付き政治活動追跡、6つの分析フレームワーク（CIS、NIST、ISO、GDPR、WCAG、BCP）、50リスクルールによる自動議員リスク評価、SLSA Level 3サプライチェーンセキュリティ、GitHub Apache-2.0ライセンスのオープンソースを備えています。"
+        "text": "Citizen Intelligence Agency（CIA）は、スウェーデン議会の透明性と民主的責任プラットフォームです。20年以上の包括的な歴史的スウェーデン議会記録、349人の現職議員のリアルタイムリスクスコアリング付き政治活動追跡、6つの分析フレームワーク（CIS、NIST、ISO、GDPR、WCAG、BCP）、50リスクルールによる自動議員リスク評価、SLSA Level 3サプライチェーンセキュリティ、GitHub Apache-2.0ライセンスのオープンソースを備えています。"
       }
     },
     {
@@ -2351,78 +2351,89 @@
           const navToggle = document.querySelector('.nav-toggle');
           const navMenu = document.querySelector('.nav-menu');
           
-          // Helper: get all focusable elements within a container
-          function getFocusableElements(container) {
-            return Array.from(container.querySelectorAll(
-              'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-            ));
-          }
-          
-          // Helper: close menu and restore focus
-          function closeMenu() {
-            navMenu.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.setAttribute('aria-label', 'ナビゲーションメニューを開く');
-            document.body.style.overflow = '';
-            navToggle.focus();
-          }
-          
           if (navToggle && navMenu) {
-            // Keyboard handler for focus trapping and Escape key
-            function keydownHandler(e) {
-              if (!navMenu.classList.contains('open')) return;
-              
-              if (e.key === 'Escape') {
-                e.preventDefault();
-                closeMenu();
-                return;
-              }
-              
-              if (e.key === 'Tab') {
-                const focusable = getFocusableElements(navMenu);
-                if (focusable.length === 0) return;
-                const first = focusable[0];
-                const last = focusable[focusable.length - 1];
+            // Get focusable elements for focus trapping
+            const getFocusableElements = function() {
+              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+            };
+            
+            // Close menu handler
+            const closeMenu = function() {
+              navMenu.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', 'ナビゲーションメニューを開く');
+              navMenu.setAttribute('aria-hidden', 'true');
+              document.body.style.overflow = '';
+            };
+            
+            // Combined keydown handler for Escape key and focus trapping
+            const keydownHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Escape key closes menu
+                if (e.key === 'Escape') {
+                  closeMenu();
+                  navToggle.focus(); // Return focus to toggle button
+                }
                 
-                if (e.shiftKey) {
-                  if (document.activeElement === first || document.activeElement === navToggle) {
+                // Tab key for focus trapping
+                if (e.key === 'Tab') {
+                  const focusableElements = getFocusableElements();
+                  const firstFocusable = focusableElements[0];
+                  const lastFocusable = focusableElements[focusableElements.length - 1];
+                  
+                  if (e.shiftKey && document.activeElement === firstFocusable) {
                     e.preventDefault();
-                    last.focus();
-                  }
-                } else {
-                  if (document.activeElement === last) {
+                    lastFocusable.focus();
+                  } else if (!e.shiftKey && document.activeElement === lastFocusable) {
                     e.preventDefault();
-                    first.focus();
+                    firstFocusable.focus();
                   }
                 }
               }
-            }
+            };
             
-            // Click-outside handler
-            function clickHandler(e) {
-              if (navMenu.classList.contains('open') &&
-                  !navMenu.contains(e.target) &&
-                  !navToggle.contains(e.target)) {
-                closeMenu();
+            // Click outside handler
+            const clickHandler = function(e) {
+              if (navMenu.classList.contains('open')) {
+                // Close if click is on backdrop/padding, or completely outside menu and toggle
+                if (
+                  e.target === navMenu ||
+                  (!navToggle.contains(e.target) && !navMenu.contains(e.target))
+                ) {
+                  closeMenu();
+                }
               }
-            }
+            };
             
+            // Toggle menu on button click
             navToggle.addEventListener('click', function() {
               const isOpen = navMenu.classList.toggle('open');
               this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
               this.setAttribute('aria-label', isOpen ? 'ナビゲーションメニューを閉じる' : 'ナビゲーションメニューを開く');
-              document.body.style.overflow = isOpen ? 'hidden' : '';
+              navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
               
+              // Update tabindex for links to prevent focus when hidden
+              const menuLinks = navMenu.querySelectorAll('a');
+              menuLinks.forEach(link => {
+                link.setAttribute('tabindex', isOpen ? '0' : '-1');
+              });
+              
+              // Prevent body scroll when menu is open
               if (isOpen) {
-                const focusable = getFocusableElements(navMenu);
-                if (focusable.length > 0) focusable[0].focus();
-                document.addEventListener('keydown', keydownHandler);
-                document.addEventListener('click', clickHandler);
+                document.body.style.overflow = 'hidden';
+                // Focus first menu item for keyboard users
+                const focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                  focusableElements[0].focus();
+                }
               } else {
-                document.removeEventListener('keydown', keydownHandler);
-                document.removeEventListener('click', clickHandler);
+                document.body.style.overflow = '';
               }
             });
+            
+            // Add event listeners once — handlers gate on navMenu.classList.contains('open')
+            document.addEventListener('keydown', keydownHandler);
+            document.addEventListener('click', clickHandler);
           }
           
           // Back to top button with throttled scroll handler
