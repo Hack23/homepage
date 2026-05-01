@@ -899,7 +899,7 @@
       "applicationCategory": "Plataforma de Inteligencia Política",
       "operatingSystem": "Basado en la web",
       "isAccessibleForFree": true,
-      "inLanguage": ["en", "sv", "es", "de", "fr", "ar", "zh", "ja", "ko", "nl", "da", "no", "fi"],
+      "inLanguage": ["en", "sv", "es", "de", "fr", "ar", "zh", "ja", "ko", "nl", "da", "no", "fi", "he"],
       "featureList": [
         "Monitoreo de actividades de MEPs",
         "Análisis de votaciones del Parlamento Europeo",
@@ -921,7 +921,7 @@
         "@id": "https://hack23.com/#org"
       },
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
-      "codeRepository": "https://github.com/Hack23/eu-parliament-monitor",
+      "codeRepository": "https://github.com/Hack23/euparliamentmonitor",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -1513,9 +1513,9 @@
             <tr style="border-bottom:1px solid var(--border-color);">
               <td style="padding:0.75rem;font-weight:600;">🇪🇺 EU Parliament Monitor</td>
               <td style="padding:0.75rem;text-align:center;"><a href="https://euparliamentmonitor.com/" rel="noopener noreferrer" target="_blank">euparliamentmonitor.com</a></td>
-              <td style="padding:0.75rem;text-align:center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/eu-parliament-monitor" rel="noopener noreferrer" target="_blank"><img src="https://api.securityscorecards.dev/projects/github.com/Hack23/eu-parliament-monitor/badge" alt="OpenSSF Scorecard" loading="lazy" width="130" height="20"></a></td>
+              <td style="padding:0.75rem;text-align:center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" rel="noopener noreferrer" target="_blank"><img src="https://api.securityscorecards.dev/projects/github.com/Hack23/euparliamentmonitor/badge" alt="OpenSSF Scorecard" loading="lazy" width="130" height="20"></a></td>
               <td style="padding:0.75rem;text-align:center;"><a href="https://slsa.dev/spec/v1.0/levels" rel="noopener noreferrer" target="_blank"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" loading="lazy" width="120" height="20"></a></td>
-              <td style="padding:0.75rem;text-align:center;"><a href="https://deepwiki.com/Hack23/eu-parliament-monitor" rel="noopener noreferrer" target="_blank">DeepWiki</a></td>
+              <td style="padding:0.75rem;text-align:center;"><a href="https://deepwiki.com/Hack23/euparliamentmonitor" rel="noopener noreferrer" target="_blank">DeepWiki</a></td>
             </tr>
             <tr style="border-bottom:1px solid var(--border-color);">
               <td style="padding:0.75rem;font-weight:600;">🔌 EP MCP Server</td>
@@ -2258,19 +2258,23 @@
           const navToggle = document.querySelector('.nav-toggle');
           const navMenu = document.querySelector('.nav-menu');
           
+          // Close menu handler (defined at initNavigation scope so anchor scroll handler can call it)
+          const closeMenu = function() {
+            if (navMenu) {
+              navMenu.classList.remove('open');
+              navMenu.setAttribute('aria-hidden', 'true');
+            }
+            if (navToggle) {
+              navToggle.setAttribute('aria-expanded', 'false');
+              navToggle.setAttribute('aria-label', 'Open navigation menu');
+            }
+            document.body.style.overflow = '';
+          };
+
           if (navToggle && navMenu) {
             // Get focusable elements for focus trapping
             const getFocusableElements = function() {
               return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-            };
-            
-            // Close menu handler
-            const closeMenu = function() {
-              navMenu.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-              navToggle.setAttribute('aria-label', 'Open navigation menu');
-              navMenu.setAttribute('aria-hidden', 'true');
-              document.body.style.overflow = '';
             };
             
             // Combined keydown handler for Escape key and focus trapping
