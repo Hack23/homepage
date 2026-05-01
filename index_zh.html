@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 	<title>AI驱动的民主透明度 | 政治情报媒体 | Hack23</title>
 	<meta charset="UTF-8">
@@ -1355,8 +1355,8 @@
       </div>
       
       <!-- 🌐 实时平台快速链接 -->
-      <p style="margin: 1.5rem 0 0.5rem; font-weight: 600; color: var(--text-secondary);">🌐 实时平台：</p>
-      <nav aria-label="实时平台链接" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem;">
+      <p class="live-platforms-title">🌐 实时平台：</p>
+      <nav aria-label="实时平台链接" class="live-platforms-nav">
         <a href="https://riksdagsmonitor.com/news/" target="_blank" rel="noopener noreferrer" title="瑞典议会AI新闻">🇸🇪 riksdagsmonitor.com/news</a>
         <a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener noreferrer" title="欧盟议会情报">🇪🇺 euparliamentmonitor.com</a>
         <a href="https://ciacompliancemanager.com/" target="_blank" rel="noopener noreferrer" title="CIA Compliance Manager应用">🛡️ ciacompliancemanager.com</a>
@@ -1580,56 +1580,56 @@
       </div>
       
       <!-- Hack23政治情报产品组合表格 -->
-      <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">📊 政治情报产品组合概览</h3>
-      <div style="overflow-x: auto; margin-bottom: 2rem;">
-        <table style="width: 100%; border-collapse: collapse; min-width: 800px;">
-          <caption style="caption-side: top; text-align: left; font-weight: 600; padding: 0.5rem 0.75rem; color: var(--text-secondary);">各政治情报项目的实时平台、安全评分与文档概览</caption>
+      <h3 class="portfolio-overview-title">📊 政治情报产品组合概览</h3>
+      <div class="portfolio-table-wrapper">
+        <table class="portfolio-table">
+          <caption class="comparison-table__caption">各政治情报项目的实时平台、安全评分与文档概览</caption>
           <thead>
-            <tr style="background: var(--surface-primary); border-bottom: 2px solid var(--accent-primary);">
-              <th scope="col" style="padding: 0.75rem; text-align: left; font-weight: 600;">项目</th>
-              <th scope="col" style="padding: 0.75rem; text-align: center;">实时平台</th>
-              <th scope="col" style="padding: 0.75rem; text-align: center;">OpenSSF</th>
-              <th scope="col" style="padding: 0.75rem; text-align: center;">SLSA</th>
-              <th scope="col" style="padding: 0.75rem; text-align: center;">深度文档</th>
+            <tr>
+              <th scope="col">项目</th>
+              <th scope="col">实时平台</th>
+              <th scope="col">OpenSSF</th>
+              <th scope="col">SLSA</th>
+              <th scope="col">深度文档</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="padding: 0.75rem; font-weight: 500;">🇸🇪 Riksdagsmonitor</td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://riksdagsmonitor.com/news/" target="_blank" rel="noopener noreferrer">riksdagsmonitor.com/news</a></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/riksdagsmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async"></a></td>
-              <td style="padding: 0.75rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async"></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://deepwiki.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
+              <td>🇸🇪 Riksdagsmonitor</td>
+              <td><a href="https://riksdagsmonitor.com/news/" target="_blank" rel="noopener noreferrer">riksdagsmonitor.com/news</a></td>
+              <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/riksdagsmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></td>
+              <td><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></td>
+              <td><a href="https://deepwiki.com/Hack23/riksdagsmonitor" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
             </tr>
-            <tr style="background: var(--surface-secondary);">
-              <td style="padding: 0.75rem; font-weight: 500;">🇪🇺 EU Parliament Monitor</td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener noreferrer">euparliamentmonitor.com</a></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/euparliamentmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async"></a></td>
-              <td style="padding: 0.75rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async"></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
+            <tr class="row-alt">
+              <td>🇪🇺 EU Parliament Monitor</td>
+              <td><a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener noreferrer">euparliamentmonitor.com</a></td>
+              <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/euparliamentmonitor?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></td>
+              <td><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></td>
+              <td><a href="https://deepwiki.com/Hack23/euparliamentmonitor" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
             </tr>
             <tr>
-              <td style="padding: 0.75rem; font-weight: 500;">🔌 EP MCP Server</td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener noreferrer">npm包</a></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async"></a></td>
-              <td style="padding: 0.75rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async"></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
+              <td>🔌 EP MCP Server</td>
+              <td><a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener noreferrer">npm包</a></td>
+              <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></td>
+              <td><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></td>
+              <td><a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
             </tr>
-            <tr style="background: var(--surface-secondary);">
-              <td style="padding: 0.75rem; font-weight: 500;">🔍 Citizen Intelligence Agency</td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://hack23.github.io/cia/" target="_blank" rel="noopener noreferrer">Maven Site</a></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async"></a></td>
-              <td style="padding: 0.75rem; text-align: center;"><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async"></td>
-              <td style="padding: 0.75rem; text-align: center;"><a href="https://deepwiki.com/Hack23/cia" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
+            <tr class="row-alt">
+              <td>🔍 Citizen Intelligence Agency</td>
+              <td><a href="https://hack23.github.io/cia/" target="_blank" rel="noopener noreferrer">Maven Site</a></td>
+              <td><a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=score&amp;style=flat" alt="OpenSSF Scorecard" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></td>
+              <td><img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></td>
+              <td><a href="https://deepwiki.com/Hack23/cia" target="_blank" rel="noopener noreferrer">DeepWiki</a></td>
             </tr>
           </tbody>
         </table>
       </div>
       
       <!-- 信任与验证声明 -->
-      <p style="text-align: center; font-style: italic; color: var(--text-secondary); max-width: 800px; margin: 0 auto 1.5rem;">
-        💡 <strong>验证而非信任：</strong>所有政治情报平台均在Apache-2.0许可下开源。每个代码库均通过CodeQL审查，OpenSSF Scorecard评分高于7.0，附带SLSA Level 3溯源，并在DeepWiki上有完整文档，确保完全透明。
-      </p>
+      <div class="trust-statement">
+        <p>💡 <strong>验证而非信任：</strong>所有政治情报平台均在Apache-2.0许可下开源。每个代码库均通过CodeQL审查，OpenSSF Scorecard评分高于7.0，附带SLSA Level 3溯源，并在DeepWiki上有完整文档，确保完全透明。</p>
+      </div>
     </section>
 
     <!-- Premium Value Proposition Section -->
@@ -1787,9 +1787,9 @@
           <h3>🥋 Black Trigram</h3>
           <p>精准格斗模拟器，包含70个要害点系统、5种原型和真实的韩国武术技术。</p>
           <div class="badges" style="margin: 0.75rem 0;">
-            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
-            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/blacktrigram?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
-            <a href="https://www.npmjs.com/package/blacktrigram" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/v/blacktrigram" alt="npm版本" width="80" height="20" loading="lazy" decoding="async"></a>
+            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/blacktrigram?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <a href="https://www.npmjs.com/package/blacktrigram" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/v/blacktrigram" alt="npm版本" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
           </div>
           <div class="card-actions">
             <a href="black-trigram_zh.html" class="btn-primary" title="了解更多">了解更多 →</a>
@@ -1804,9 +1804,9 @@
           <h3>🔐 CIA Compliance Manager</h3>
           <p>安全评估平台，提供CIA三元组评估和NIST、ISO 27001、GDPR、HIPAA、SOC2合规映射。</p>
           <div class="badges" style="margin: 0.75rem 0;">
-            <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
-            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia-compliance-manager?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
-            <a href="https://www.npmjs.com/package/cia-compliance-manager" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/v/cia-compliance-manager" alt="npm版本" width="80" height="20" loading="lazy" decoding="async"></a>
+            <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia-compliance-manager?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <a href="https://www.npmjs.com/package/cia-compliance-manager" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/v/cia-compliance-manager" alt="npm版本" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
           </div>
           <div class="card-actions">
             <a href="compliance-manager_zh.html" class="btn-primary" title="了解更多">了解更多 →</a>
@@ -1824,13 +1824,13 @@
           <h3>🔍 Citizen Intelligence Agency</h3>
           <p>瑞典政治透明度OSINT平台，提供议会监督和问责指标。</p>
           <div class="badges" style="margin: 0.75rem 0;">
-            <a href="https://github.com/Hack23/cia/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/cia/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
-            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
-            <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async">
+            <a href="https://github.com/Hack23/cia/actions/workflows/codeql.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/Hack23/cia/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>
+            <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Level 3" width="80" height="20" loading="lazy" decoding="async" referrerpolicy="no-referrer">
           </div>
           <div class="card-actions">
             <a href="cia-project_zh.html" class="btn-primary" title="了解更多">了解更多 →</a>
-            <a href="cia-features_zh.html" title="功能">✨ 功能</a>
+            <a href="cia-features_zh.html" class="btn-action-secondary" title="功能">✨ 功能</a>
             <a href="https://hack23.github.io/cia/" class="btn-action-secondary" title="Maven文档">📚 文档</a>
           </div>
         </div>
