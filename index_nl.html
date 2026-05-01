@@ -858,7 +858,7 @@
       "url": "https://riksdagsmonitor.com",
       "codeRepository": "https://github.com/Hack23/riksdagsmonitor",
       "license": "https://www.apache.org/licenses/LICENSE-2.0",
-      "description": "AI-aangedreven politiek inlichtingenplatform dat Zweedse parlementaire journalistiek revoluctioneert. Volledig autonome agentische nieuwsgeneratie met 11 AI-workflows, 91 vaardigheden, die diepgaande politieke analyses produceren in 14 talen. Monitort 349 huidige Kamerleden, 2.494 historische politici, analyseert 3,5M+ stemmen en 109.000+ documenten — nul menselijke redacteuren vereist.",
+      "description": "AI-aangedreven politiek inlichtingenplatform dat Zweedse parlementaire journalistiek revolutioneert. Volledig autonome agentische nieuwsgeneratie met 11 AI-workflows, 91 vaardigheden, die diepgaande politieke analyses produceren in 14 talen. Monitort 349 huidige Kamerleden, 2.494 historische politici, analyseert 3,5M+ stemmen en 109.000+ documenten — nul menselijke redacteuren vereist.",
       "featureList": [
         "Autonome AI-Nieuwsgeneratie (11 Agentische Workflows)",
         "14-Talige Politieke Inlichtingendekking",
@@ -1292,7 +1292,7 @@
       <!-- 🌐 Live Platforms Quick Links -->
       <p style="margin: 1.5rem 0 0.5rem; font-weight: 600; color: var(--text-secondary);">🌐 Live Platforms:</p>
       <nav aria-label="Live platformlinks" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem;">
-        <a href="https://riksdagsmonitor.com/news/index.html" target="_blank" rel="noopener" title="Zweedse Parlement AI-nieuws">🇸🇪 riksdagsmonitor.com/news</a>
+        <a href="https://riksdagsmonitor.com/news/" target="_blank" rel="noopener" title="Zweedse Parlement AI-nieuws">🇸🇪 riksdagsmonitor.com/news</a>
         <a href="https://euparliamentmonitor.com/" target="_blank" rel="noopener" title="EU-Parlement Inlichtingen">🇪🇺 euparliamentmonitor.com</a>
         <a href="https://ciacompliancemanager.com/" target="_blank" rel="noopener" title="CIA Compliance Manager App">🛡️ ciacompliancemanager.com</a>
         <a href="https://blacktrigram.com/" target="_blank" rel="noopener" title="Black Trigram Spel">🥋 blacktrigram.com</a>
@@ -2301,21 +2301,27 @@
           const navToggle = document.querySelector('.nav-toggle');
           const navMenu = document.querySelector('.nav-menu');
           
+          // Get focusable elements for focus trapping (function-level so all handlers share it)
+          const getFocusableElements = function() {
+            if (!navMenu) return [];
+            return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+          };
+          
+          // Close menu handler (function-level so smooth-scroll handler can call it)
+          const closeMenu = function() {
+            if (!navMenu || !navToggle) return;
+            navMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Navigatiemenu openen');
+            navMenu.setAttribute('aria-hidden', 'true');
+            // Restore tabindex="-1" on links so they aren't keyboard-focusable when hidden
+            navMenu.querySelectorAll('a').forEach(link => {
+              link.setAttribute('tabindex', '-1');
+            });
+            document.body.style.overflow = '';
+          };
+          
           if (navToggle && navMenu) {
-            // Get focusable elements for focus trapping
-            const getFocusableElements = function() {
-              return navMenu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-            };
-            
-            // Close menu handler
-            const closeMenu = function() {
-              navMenu.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-              navToggle.setAttribute('aria-label', 'Navigatiemenu openen');
-              navMenu.setAttribute('aria-hidden', 'true');
-              document.body.style.overflow = '';
-            };
-            
             // Combined keydown handler for Escape key and focus trapping
             const keydownHandler = function(e) {
               if (navMenu.classList.contains('open')) {
@@ -2328,6 +2334,7 @@
                 // Tab key for focus trapping
                 if (e.key === 'Tab') {
                   const focusableElements = getFocusableElements();
+                  if (focusableElements.length === 0) return;
                   const firstFocusable = focusableElements[0];
                   const lastFocusable = focusableElements[focusableElements.length - 1];
                   
