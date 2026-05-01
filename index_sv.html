@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cybersäkerhet Sverige | Öppen ISMS | Hack23</title>
+	<title>AI-Driven demokratisk transparens | Politisk intelligensplattform | Hack23</title>
 	
 	<!-- Critical CSS - Inline for faster FCP -->
 	<style>
@@ -54,6 +54,10 @@
 			margin-bottom: var(--spacing-xl);
 			padding: var(--spacing-xl) var(--spacing-lg);
 			border-radius: var(--border-radius-lg);
+			/* Reserve minimum space for header content to reduce Cumulative Layout Shift (CLS) */
+			min-height: 400px;
+			/* Optimize layout performance by creating a new containing block */
+			contain: layout;
 		}
 		
 		h1 {
@@ -95,6 +99,8 @@
 			flex-wrap: wrap;
 			justify-content: center;
 			margin: var(--spacing-xl) 0;
+			/* Reserve minimum space for CTA buttons before they render */
+			min-height: 56px;
 		}
 		
 		.btn-primary-large,
@@ -221,8 +227,10 @@
       "slogan": "Säkerhetsexcellens Genom Transparent Innovation",
       "legalName": "Hack23 AB",
       "foundingDate": "2025-01-01",
-      "description": "Cybersäkerhetskonsulting som operationaliserar säkerhetsexcellens genom radikal transparens. Öppet ISMS, efterlevnadsautomation och säkerhetsdriven innovation.",
+      "description": "AI-driven politisk underrättelsemedia och cybersäkerhetskonsulting som operationaliserar demokratisk transparens. Autonom nyhetsgenering på 14 språk för riksdag och EU-parlament. 5 affärsgrenar: AI Politisk Underrättelsetjänst, CIA, CIA Compliance Manager, Cybersäkerhet, Black Trigram.",
       "industry": [
+        "AI-Driven Media",
+        "Politisk Underrättelsetjänst",
         "Informationssäkerhet",
         "Cybersäkerhetskonsulting",
         "Efterlevnadsautomation",
@@ -965,42 +973,51 @@
              fetchpriority="high"
              decoding="sync">
       </div>
-      <h1><span aria-hidden="true">🔐 </span>Hack23 AB <span class="header-subtitle">Cybersäkerhetskonsulting &amp; AI-driven Politisk Underrättelsetjänst | Sverige</span></h1>
+      <h1><span aria-hidden="true">🔐 </span>Hack23 AB <span class="header-subtitle">AI-Driven demokratisk transparens | Politisk underrättelsemedia</span></h1>
       
-      <p class="hero-tagline">Säkerhetsexcellens genom radikal transparens — och AI-driven politisk underrättelsemedia som omdefinierar parlamentarisk journalistik i Europa.</p>
+      <p class="hero-tagline">Stör parlamentarisk journalistik med AI-genererad politisk underrättelse och realtidsanalys av ansvarsskyldighet — ökar demokratisk transparens genom strukturerad OSINT-metodik tillämpad på offentliga lagstiftningsdata.</p>
       
-      <p class="hero-subtitle">30+ års expertis • CISSP/CISM-certifierad • AI-genererade nyheter på 14 språk • Göteborg-baserad</p>
+      <p class="hero-subtitle">Demokratiserar tillgången till politisk underrättelse — det som tidigare krävde ett team av analytiker kan nu göras av varje medborgare med en AI-assistent.</p>
       
       <div class="hero-cta">
-        <a href="services_sv.html" class="btn-primary-large">Utforska Tjänster</a>
+        <a href="#political-intelligence" class="btn-primary-large">AI Politisk Underrättelsetjänst</a>
+        <a href="services_sv.html" class="btn-secondary">Utforska Tjänster</a>
         <a href="https://github.com/Hack23/ISMS-PUBLIC" class="btn-secondary">Visa Offentliga ISMS</a>
-        <a href="#political-intelligence" class="btn-secondary">AI Politisk Underrättelsetjänst</a>
       </div>
+      
+      <!-- Live Platforms Navigation -->
+      <nav class="live-platforms" aria-label="Levande plattformslänkar">
+        <span class="live-platforms-label">🌐 Levande plattformar:</span>
+        <a href="https://riksdagen.hack23.com" target="_blank" rel="noopener" title="Riksdagsmonitor — Svenska riksdagens OSINT-plattform">Riksdagsmonitor</a>
+        <a href="https://www.euparliament.hack23.com" target="_blank" rel="noopener" title="EU-parlamentsmonitor — Europaparlamentets OSINT-plattform">EU-parlamentsmonitor</a>
+        <a href="https://ciacompliancemanager.com" target="_blank" rel="noopener" title="CIA Compliance Manager — säkerhetsbedömningsplattform">CIA Compliance</a>
+        <a href="https://blacktrigram.com" target="_blank" rel="noopener" title="Black Trigram — koreanskt kampspel">Black Trigram</a>
+      </nav>
       
       <!-- Detailed Introduction - Below the fold -->
       <details class="header-intro-details">
         <summary>📖 Läs Mer Om Hack23 AB</summary>
         <div class="header-intro">
-          <p class="intro-tagline">På <strong>Hack23 AB</strong> operationaliserar transparens tillit: varje säkerhetskontroll, riskbedömning och efterlevnadsbeslut är offentligt dokumenterat genom <strong>Sveriges enda helt öppna ISMS</strong>, vilket skapar oöverträffad trovärdighet inom cybersäkerhetskonsulting.</p>
+          <p class="intro-tagline">På <strong>Hack23 AB</strong> demokratiserar vi tillgången till politisk underrättelse och säkerhetsexpertis: AI-genererade riksdagsnyheter på 14 språk, <strong>Sveriges enda helt öppna ISMS</strong> och öppen källkods-säkerhetsverktyg — allt tillgängligt för allmänheten utan kostnad.</p>
           
-          <p class="intro-overview"><strong>Grundat 2025</strong> med bas i <strong>Göteborg, Sverige</strong>, levererar vi expertsäkerhetstjänster över fem integrerade affärsområden:</p>
+          <p class="intro-overview"><strong>Grundat 2025</strong> med bas i <strong>Göteborg, Sverige</strong>, levererar vi värde över fem integrerade affärsgrenar:</p>
           
           <div class="business-lines">
             <div class="business-line">
-              <strong>1. Cybersäkerhetskonsulting</strong>
-              <span>ISO 27001, GDPR, NIS2, AWS-säkerhetsarkitektur, DevSecOps-integration</span>
+              <strong>1. AI Politisk Underrättelsetjänst</strong>
+              <span>Autonom AI-nyhetsgenerering för svenska riksdagen och EU-parlamentet — 10+ agentiska arbetsflöden, 14 språk, noll mänskliga redaktörer</span>
             </div>
             <div class="business-line">
-              <strong>2. AI-driven Politisk Underrättelsemedier</strong>
-              <span>Autonom AI-nyhetsgenerering för svenska och EU-parlamenten — 10+ agentiska arbetsflöden, 14 språk, noll mänskliga redaktörer</span>
+              <strong>2. Citizen Intelligence Agency</strong>
+              <span>Svensk riksdagstransparens och demokratisk ansvarsplattform med OSINT-metodik</span>
             </div>
             <div class="business-line">
               <strong>3. CIA Compliance Manager</strong>
               <span>Automatiserade CIA-triadbedömningar med NIST/ISO 27001/GDPR/HIPAA/SOC2-efterlevnadskartläggning</span>
             </div>
             <div class="business-line">
-              <strong>4. Citizen Intelligence Agency</strong>
-              <span>Svensk riksdagstransparens och demokratisk ansvarsplattform</span>
+              <strong>4. Cybersäkerhetskonsulting</strong>
+              <span>ISO 27001, GDPR, NIS2, AWS-säkerhetsarkitektur, DevSecOps-integration</span>
             </div>
             <div class="business-line">
               <strong>5. Black Trigram</strong>
@@ -1008,7 +1025,7 @@
             </div>
           </div>
           
-          <p class="intro-leadership">Leds av <strong>James Pether Sörling (Certified Information Systems Security Professional (CISSP), Certified Information Security Manager (CISM), AWS Security Specialty)</strong> med <strong>30+ års erfarenhet</strong>. Hack23 bevisar att säkerhet accelererar—snarare än blockerar—innovation när den bygger på radikal transparens.</p>
+          <p class="intro-leadership">Leds av <strong>James Pether Sörling (CISSP, CISM, AWS Security Specialty)</strong> med <strong>30+ års erfarenhet</strong> inom säkerhetsarkitektur, molnsäkerhet och open source. Hack23 bevisar att demokratisk transparens och säkerhetsexcellens förstärker varandra när de byggs på öppen data och radikal öppenhet.</p>
         </div>
       </details>
       
@@ -1249,6 +1266,7 @@
       <h2 id="value-prop-heading">🌟 Varför Välja Hack23 AB?</h2>
       <p class="value-prop-intro">Sveriges enda cybersäkerhetskonsult med helt offentlig ISMS, som demonstrerar transparens och säkerhetsexcellens som accelererar innovation istället för att hindra den.</p>
       
+      <h3 class="subsection-title">Kärnegenskaper</h3>
       <div class="cards">
         <div class="card card-transparency">
           <h3>🔓 Radikal Transparens</h3>
@@ -1279,7 +1297,10 @@
             <li>Zero-trust-arkitekturer med verklig prestanda</li>
           </ul>
         </div>
-        
+      </div>
+      
+      <h3 class="subsection-title">Praktiskt värde</h3>
+      <div class="cards">
         <div class="card card-practical">
           <h3>🛠️ Praktiska Lösningar</h3>
           <p><strong>Ingen säkerhetsteater</strong>—endast implementerbara lösningar testade i produktion. Våra open source-projekt demonstrerar säkerhetsbästa praxis med mätbara resultat.</p>
@@ -1385,291 +1406,126 @@
           </div>
         </div>
         
-        <div class="text-center my-2">
-          <a href="services_sv.html" class="cta-button-large" style="display: inline-block; font-size: 1.1rem; padding: 1rem 2rem; background: var(--primary-color); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+        <div class="centered-cta">
+          <a href="services_sv.html" class="cta-button-large-primary">
             Se Alla Tjänster &amp; Expertområden →
           </a>
         </div>
       </section>
 
-<!-- Black Trigram Section - Enhanced -->
-<section id="black-trigram">
-  <h2>🔥 Black Trigram (흑괘) - Flaggskeppsprojekt</h2>
-  <div class="card black-trigram-card card-trigram">
-    <div class="scanner-effect"></div>
-    <div class="project-header">
-      <img src="black-trigram-140.webp" alt="Black Trigram Logotyp" width="140" height="94" class="project-logo img-responsive" loading="lazy" decoding="async">
-      <div>
-        <h3 class="m-0">🥋 어둠의 무예로 완벽한 일격을 추구하라</h3>
-        <p class="text-md"><strong>"Bemästra de mörka konsterna genom strävan efter den perfekta träffen"</strong></p>
-      </div>
-    </div>
-    <p><strong>Realistisk 3D precisionskampssimulator</strong> inspirerad av traditionella koreanska kampsporter, med fokus på precis anatomisk målsökning (70 vitala punkter), autentiska kamptekniker över 5 distinkta kamparearketyper och detaljerade fysikbaserade interaktioner.</p>
-    
-    <h4>🎯 Nyckelfunktioner:</h4>
-    <ul class="project-features-list">
-      <li><strong>70 Anatomiska Vitala Punkter</strong> - Strategiskt målsystem</li>
-      <li><strong>5 Unika Arketyper</strong> - Musa, Amsalja, Hacker, Underrättelseoperatör, Organiserad Brottslighet</li>
-      <li><strong>Autentiska Koreanska Kampsporter</strong> - Taekkyeon, Hapkido tekniker</li>
-      <li><strong>Realistisk Kampfysik</strong> - Avancerad traumasimulering</li>
-      <li><strong>Pedagogiskt Spelande</strong> - Traditionell filosofiintegration</li>
-      <li><strong>Kulturell Autenticitet</strong> - Djup koreansk kampsportsfilosofi</li>
-    </ul>
-
-    <!-- Key Badges - Visible by default -->
-    <div class="key-badges">
-      <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
-        <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
-      </a>
-      <a href="https://github.com/Hack23/blacktrigram/attestations" title="SLSA 3">
-        <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
-      </a>
-      <a href="https://bestpractices.coreinfrastructure.org/projects/10777" title="CII Best Practices">
-        <img src="https://bestpractices.coreinfrastructure.org/projects/10777/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
-      </a>
-    </div>
-    
-    <!-- All Badges - Collapsible -->
-    <details class="badge-showcase">
-      <summary>
-        <h4>🏆 Visa alla säkerhets- och kvalitetsbevis</h4>
-        <span class="summary-description">Se alla verifieringsinsignier och kvalitetsmått</span>
-      </summary>
-      
-      <div class="badge-grid">
-        <div class="badge-category">
-          <h5>🔒 Säkerhet</h5>
-          <div class="badges">
-            <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" title="OpenSSF Scorecard">
-              <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/blacktrigram/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
-            </a>
-            <a href="https://github.com/Hack23/blacktrigram/attestations" title="SLSA 3">
-              <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
-            </a>
-            <a href="https://bestpractices.coreinfrastructure.org/projects/10777" title="CII Best Practices">
-              <img src="https://bestpractices.coreinfrastructure.org/projects/10777/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml" title="Scorecard supply-chain security">
-              <img src="https://github.com/Hack23/blacktrigram/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard supply-chain security" width="200" height="20" loading="lazy">
-            </a>
-          </div>
-        </div>
-        
-        <div class="badge-category">
-          <h5>✅ Kvalitet</h5>
-          <div class="badges">
-            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Quality Gate Status">
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&amp;metric=alert_status" alt="Quality Gate Status" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Security Rating">
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&amp;metric=security_rating" alt="Security Rating" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Maintainability Rating">
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&amp;metric=sqale_rating" alt="Maintainability Rating" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Reliability Rating">
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&amp;metric=reliability_rating" alt="Reliability Rating" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://sonarcloud.io/summary/new_code?id=Hack23_blacktrigram" title="Lines of Code">
-              <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_blacktrigram&amp;metric=ncloc" alt="Lines of Code" width="200" height="20" loading="lazy">
-            </a>
-          </div>
-        </div>
-        
-        <div class="badge-category">
-          <h5>🚀 Build Status</h5>
-          <div class="badges">
-            <a href="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml" title="Test &amp; Report">
-              <img src="https://github.com/Hack23/blacktrigram/actions/workflows/test-and-report.yml/badge.svg?branch=main" alt="Test &amp; Report" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://github.com/Hack23/blacktrigram/releases" title="GitHub Release">
-              <img src="https://img.shields.io/github/v/release/Hack23/blacktrigram" alt="GitHub Release" width="200" height="20" loading="lazy">
-            </a>
-          </div>
-        </div>
-        
-        <div class="badge-category">
-          <h5>📋 Licens &amp; Compliance</h5>
-          <div class="badges">
-            <a href="https://github.com/Hack23/blacktrigram/blob/main/LICENSE" title="License">
-              <img src="https://img.shields.io/github/license/Hack23/blacktrigram.svg" alt="License" width="200" height="20" loading="lazy">
-            </a>
-            <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram?ref=badge_shield" title="FOSSA Status">
-              <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fblacktrigram.svg?type=shield" alt="FOSSA Status" width="200" height="20" loading="lazy">
-            </a>
-          </div>
-        </div>
-      </div>
-    </details>
-    <div class="d-flex flex-wrap flex-gap-1 mt-15">
-      <a href="https://blacktrigram.com" title="Spela Black Trigram" style="background: #ff6b35; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">🌐 Spela Nu</a>
-      <a href="https://github.com/Hack23/blacktrigram" title="GitHub Repository">📂 Repository</a>
-      <a href="black-trigram-features_sv.html" title="Spelfunktioner">✨ Funktioner</a>
-      <a href="black-trigram-docs.html" title="Speldokumentation">📚 Dokumentation</a>
-      <a href="https://www.youtube.com/channel/UCiGwB6sLC8rog_ZPAiXChAQ" title="Black Trigram YouTube Kanal" style="background: #FF0000; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold;">📺 YouTube</a>
-      <a href="https://www.tiktok.com/@blacktrigram" title="Black Trigram TikTok" style="background: #000000; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold;">🎵 TikTok</a>
-    </div>
-  </div>
-</section>
-
-
 
 		<section id="products">
         <h2>🚀 Produkter</h2>
         <p class="subtitle">Leveransmodell med öppen källkod med full transparens i arkitektur och säkerhetsdokumentation</p>
+        
         <div class="cards">
-          <div class="card confidentiality-card">
+          <div class="card card-red">
             <div class="scanner-effect"></div>
-            <h3>CIA Compliance Manager</h3>
-            <p>En omfattande plattform för säkerhetsbedömning inom CIA-triaden: Konfidentialitet, Integritet och Tillgänglighet.</p>
-            
-            <!-- Key Badges - Visible -->
-            <div class="key-badges key-badges--start">
-              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia-compliance-manager/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
-              </a>
-              <a href="https://github.com/Hack23/cia-compliance-manager/attestations" title="SLSA 3">
-                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
-              </a>
-              <a href="https://bestpractices.coreinfrastructure.org/projects/10365" title="CII Best Practices">
-                <img src="https://bestpractices.coreinfrastructure.org/projects/10365/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
-              </a>
+            <img src="black-trigram-140.webp" alt="Black Trigram" width="140" height="94" class="img-responsive" loading="lazy" decoding="async">
+            <h3>🥋 Black Trigram</h3>
+            <p>Precisionskampssimulator med 70 vitala punkters system, 5 arketyper och autentiska koreanska kampsportstekniker.</p>
+            <div class="badges" style="margin: 0.75rem 0;">
+              <a href="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/blacktrigram/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/blacktrigram" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/blacktrigram?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://www.npmjs.com/package/blacktrigram" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/blacktrigram" alt="npm version" width="80" height="20" loading="lazy" decoding="async"></a>
             </div>
-            
-            <!-- All Badges - Collapsible -->
-            <details class="badge-showcase badge-showcase--nested">
-              <summary>
-                <h4>Visa alla insignier</h4>
-              </summary>
-              <div class="badge-grid badge-grid--compact">
-                <div class="badge-category">
-                  <h5>Säkerhet &amp; Build</h5>
-                  <div class="badges">
-                    <a href="https://github.com/Hack23/cia-compliance-manager/releases" title="GitHub Release">
-                      <img src="https://img.shields.io/github/v/release/Hack23/cia-compliance-manager" alt="GitHub Release" width="200" height="20" loading="lazy">
-                    </a>
-                    <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml" title="Verify &amp; Release">
-                      <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/release.yml/badge.svg" alt="Verify &amp; Release" width="200" height="20" loading="lazy">
-                    </a>
-                    <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml" title="Scorecard Supply-Chain Security">
-                      <img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/scorecards.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security" width="200" height="20" loading="lazy">
-                    </a>
-                  </div>
-                </div>
-                <div class="badge-category">
-                  <h5>Licens &amp; Compliance</h5>
-                  <div class="badges">
-                    <a href="https://github.com/Hack23/cia-compliance-manager/blob/main/LICENSE" title="License">
-                      <img src="https://img.shields.io/github/license/Hack23/cia-compliance-manager.svg" alt="License" width="200" height="20" loading="lazy">
-                    </a>
-                    <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager?ref=badge_shield" title="FOSSA Status">
-                      <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FHack23%2Fcia-compliance-manager.svg?type=shield" alt="FOSSA Status" width="200" height="20" loading="lazy">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </details>
-            <div class="evidence-badges-simple mt-1">
-              <a href="cia-compliance-manager-features_sv.html" title="Visa funktioner">Funktioner</a>
-              <a href="cia-compliance-manager-docs_sv.html" title="Visa Dokumentation">Dokumentation</a>
-              <a href="https://ciacompliancemanager.com/" title="Starta applikationen">Starta App</a>
-              <a href="https://github.com/Hack23/cia-compliance-manager" title="Visa GitHub Repository">GitHub</a>
+            <div class="card-actions">
+              <a href="black-trigram_sv.html" class="btn-primary" title="Läs mer">Läs Mer →</a>
+              <a href="https://blacktrigram.com" class="btn-action-primary" title="Spela Nu">🎮 Spela Nu</a>
+              <a href="https://hack23.github.io/blacktrigram/" class="btn-action-secondary" title="API-dokumentation">📚 Docs</a>
             </div>
           </div>
           
-          <div class="card integrity-card">
+          <div class="card card-purple">
             <div class="scanner-effect"></div>
-            <h3>Medborgarunderrättelsebyrån</h3>
-            <p>En underrättelseplattform med öppen källkod för politisk transparens i Sverige, som ger insikter om styrning och ansvarsmetriker.</p>
+            <img src="cia-icon-140.webp" alt="CIA Compliance" width="80" height="80" loading="lazy" decoding="async">
+            <h3>🔐 CIA Compliance Manager</h3>
+            <p>Säkerhetsbedömningsplattform med CIA-triadutvärdering och efterlevnadsmappning till NIST, ISO 27001, GDPR, HIPAA, SOC2.</p>
+            <div class="badges" style="margin: 0.75rem 0;">
+              <a href="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/cia-compliance-manager/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia-compliance-manager" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia-compliance-manager?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://www.npmjs.com/package/cia-compliance-manager" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/cia-compliance-manager" alt="npm version" width="80" height="20" loading="lazy" decoding="async"></a>
+            </div>
+            <div class="card-actions">
+              <a href="compliance-manager_sv.html" class="btn-primary" title="Läs mer">Läs Mer →</a>
+              <a href="https://ciacompliancemanager.com/" class="btn-action-secondary" title="Prova Demo">🚀 Prova Demo</a>
+              <a href="https://hack23.github.io/cia-compliance-manager/" class="btn-action-secondary" title="API-dokumentation">📚 Docs</a>
+            </div>
+          </div>
+          
+          <div class="card card-green">
+            <div class="scanner-effect"></div>
+            <picture>
+              <source type="image/webp" srcset="cia-logo.webp">
+              <img src="cia-logo.png" alt="CIA-projekt" width="80" height="80" loading="lazy" decoding="async">
+            </picture>
+            <h3>🔍 Citizen Intelligence Agency</h3>
+            <p>Svensk politisk transparens OSINT-plattform med riksdagsövervakning och ansvarsmått.</p>
+            <div class="badges" style="margin: 0.75rem 0;">
+              <a href="https://github.com/Hack23/cia/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/cia/actions/workflows/codeql.yml/badge.svg" alt="CodeQL" width="90" height="20" loading="lazy" decoding="async"></a>
+              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/cia?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+              <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Nivå 3" width="80" height="20" loading="lazy" decoding="async">
+            </div>
+            <div class="card-actions">
+              <a href="cia-project_sv.html" class="btn-primary" title="Läs mer">Läs Mer →</a>
+              <a href="cia-features_sv.html" title="Funktioner">✨ Funktioner</a>
+              <a href="https://hack23.github.io/cia/" class="btn-action-secondary" title="Maven Site">📚 Docs</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="centered-cta">
+          <a href="projects_sv.html" class="cta-button" title="Visa alla projekt">Visa Alla Projekt &amp; Demos →</a>
+        </div>
+      </section>
+
+      <section id="past-projects">
+        <h2>Tidigare Projekt</h2>
+        <div class="cards">
+          <div class="card availability-card">
+            <div class="scanner-effect"></div>
+            <h3>Sonar-CloudFormation-Plugin</h3>
+            <p>SonarQube-plugin för analys av AWS CloudFormation-mallar med säkerhetsbästa praxis baserade på NIST, CWE och ISO-standarder.</p>
             
-            <!-- Key Badges - Visible -->
             <div class="key-badges key-badges--start">
-              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/cia" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/cia/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
+              <a href="https://bestpractices.coreinfrastructure.org/projects/4545" title="CII Best Practices">
+                <img src="https://bestpractices.coreinfrastructure.org/projects/4545/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
               </a>
-              <a href="https://slsa.dev/spec/v1.0/levels" title="SLSA Nivå 3">
-                <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" width="100" height="20" loading="lazy">
-              </a>
-              <a href="https://bestpractices.coreinfrastructure.org/projects/770" title="CII Best Practices">
-                <img src="https://bestpractices.coreinfrastructure.org/projects/770/badge" alt="CII Best Practices" width="200" height="20" loading="lazy">
+              <a href="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin" title="OpenSSF Scorecard">
+                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/sonar-cloudformation-plugin/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
               </a>
             </div>
             
-            <!-- All Badges - Collapsible -->
             <details class="badge-showcase badge-showcase--nested">
               <summary>
-                <h4>Visa alla insignier</h4>
+                <h4>Visa Alla Insignier</h4>
               </summary>
               <div class="badge-grid badge-grid--compact">
                 <div class="badge-category">
                   <h5>Kvalitet &amp; Säkerhet</h5>
                   <div class="badges">
-                    <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Kvalitetsportstatus">
-                      <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&amp;metric=alert_status" alt="Quality Gate Status" width="200" height="20" loading="lazy">
+                    <a href="https://github.com/Hack23/sonar-cloudformation-plugin/raw/master/LICENSE.txt" title="Licens">
+                      <img src="https://img.shields.io/github/license/Hack23/sonar-cloudformation-plugin.svg" alt="Licens" width="200" height="20" loading="lazy">
                     </a>
-                    <a href="https://sonarcloud.io/summary/new_code?id=Hack23_cia" title="Säkerhetsbetyg">
-                      <img src="https://sonarcloud.io/api/project_badges/measure?project=Hack23_cia&amp;metric=security_rating" alt="Security Rating" width="200" height="20" loading="lazy">
-                    </a>
-                  </div>
-                </div>
-                <div class="badge-category">
-                  <h5>Release &amp; Licens</h5>
-                  <div class="badges">
-                    <a href="https://github.com/Hack23/cia/releases" title="GitHub Release">
-                      <img src="https://img.shields.io/github/v/release/Hack23/cia" alt="GitHub Release" width="200" height="20" loading="lazy">
-                    </a>
-                    <a href="https://raw.githubusercontent.com/Hack23/cia/master/citizen-intelligence-agency/LICENSE.txt" title="Licens">
-                      <img src="https://img.shields.io/github/license/Hack23/cia.svg" alt="Licens" width="200" height="20" loading="lazy">
+                    <a href="https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin" title="Maven Central">
+                      <img src="https://img.shields.io/maven-central/v/com.hack23.sonar/sonar-cloudformation-plugin.svg" alt="Maven Central" width="200" height="20" loading="lazy">
                     </a>
                   </div>
                 </div>
               </div>
             </details>
-            <div class="evidence-badges-simple mt-1">
-              <a href="cia-features_sv.html" title="Visa funktioner">Funktioner</a>
-              <a href="cia-docs_sv.html" title="Visa Dokumentation">Dokumentation</a>
-              <a href="swedish-election-2026_sv.html" title="Sveriges Val 2026">🗳️ Val 2026</a>
-              <a href="https://github.com/Hack23/cia" title="Visa GitHub Repository">GitHub</a>
+            
+            <div class="card-actions">
+              <a href="https://github.com/Hack23/sonar-cloudformation-plugin" title="Visa GitHub Repository">GitHub</a>
+              <a href="https://mvnrepository.com/artifact/com.hack23.sonar/sonar-cloudformation-plugin" title="Maven Central">Maven Central</a>
             </div>
           </div>
           
-          <div class="card availability-card">
+          <div class="card">
             <div class="scanner-effect"></div>
-            <h3>Lambda i Privat VPC</h3>
-            <p>En multiregional aktiv/aktiv webbplats som utnyttjar Resilience Hub policy-efterlevnad och runbooks för snabb återhämtning från fel och hög tillgänglighet.</p>
-            
-            <!-- Key Badges - Visible -->
-            <div class="key-badges key-badges--start">
-              <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/lambda-in-private-vpc" title="OpenSSF Scorecard">
-                <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/lambda-in-private-vpc/badge" alt="OpenSSF Scorecard" width="150" height="20" loading="lazy">
-              </a>
-              <a href="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml" title="Verifiera och Distribuera">
-                <img src="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/main.yml/badge.svg" alt="Verify and Deploy" width="200" height="20" loading="lazy">
-              </a>
-            </div>
-            
-            <!-- All Badges - Collapsible -->
-            <details class="badge-showcase badge-showcase--nested">
-              <summary>
-                <h4>Visa alla insignier</h4>
-              </summary>
-              <div class="badge-grid badge-grid--compact">
-                <div class="badge-category">
-                  <h5>Build &amp; Compliance</h5>
-                  <div class="badges">
-                    <a href="https://github.com/Hack23/lambda-in-private-vpc/blob/main/LICENSE.md" title="Licens">
-                      <img src="https://img.shields.io/github/license/Hack23/lambda-in-private-vpc.svg" alt="Licens" width="200" height="20" loading="lazy">
-                    </a>
-                    <a href="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml" title="Scorecard Leveranskedjesäkerhet">
-                      <img src="https://github.com/Hack23/lambda-in-private-vpc/actions/workflows/scorecard.yml/badge.svg?branch=main" alt="Scorecard Supply-Chain Security" width="200" height="20" loading="lazy">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </details>
-            <div class="evidence-badges-simple mt-1">
-              <a href="https://github.com/Hack23/lambda-in-private-vpc" title="Visa GitHub Repository">GitHub</a>
-            </div>
+            <h3>CIA Dashboard</h3>
+            <p>Politisk aktivitetsdashboard för Sverige med omfattande visualiseringar av riksdagsaktivitet och politiska prestandamått.</p>
+            <a href="cia-docs_sv.html" title="Visa dokumentation">Visa Dokumentation</a>
           </div>
         </div>
       </section>
@@ -1677,7 +1533,7 @@
 
 
 
-      <section id="about-ceo">
+      <section id="about-developer">
         <h2>💼 VD James Pether Sörling</h2>
         
         <h3 class="subsection-title">Ledarskap &amp; Expertis</h3>
