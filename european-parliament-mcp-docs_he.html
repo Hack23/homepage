@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="תיעוד שרת MCP של הפרלמנט האירופי: ארכיטקטורת TypeScript, 62 כלי MCP, עיון ב-API, דפוסי אינטגרציה ותיעוד טכני.">
+    <title>תיעוד שרת MCP של הפרלמנט האירופי | תיעוד ארכיטקטורה טכנית | Hack23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="canonical" href="https://hack23.com/european-parliament-mcp-docs_he.html" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="תיעוד שרת MCP של הפרלמנט האירופי | עיון ב-API">
+    <meta property="og:description" content="תיעוד טכני של שרת MCP של הפרלמנט האירופי: ארכיטקטורת TypeScript, 62 כלי MCP, תיעוד API, דפוסי אינטגרציה.">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:url" content="https://hack23.com/european-parliament-mcp-docs_he.html" />
+    <meta property="og:image" content="cia-icon-140.webp" />
+    
+    <meta name="keywords" content="תיעוד שרת MCP של הפרלמנט האירופי, עיון API MCP, ארכיטקטורת TypeScript, אינטגרציית MCP EU, תיעוד טכני">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "European Parliament MCP Server - 62 Verktøy Arkitektur og Sikkerhetsdokumentasjon",
+      "description": "Teknisk dokumentasjon for European Parliament MCP Server: 62 MCP-verktøy (15 OSINT + 47 datatilgang), 9 ressurser, 7 prompts. 1130+ enhetstester, 71 E2E-tester, 80%+ dekning. SLSA Nivå 3, OpenSSF Scorecard 7.2/10. Inkluderer C4-arkitekturmodeller, sikkerhetsarkitektur, STRIDE-trusselanalyse, CRA-samsvar og ISMS-dokumentasjon.",
+      "image": "cia-icon-140.webp",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-04-29",
+      "inLanguage": "he",
+      "author": {
+        "@type": "Person",
+        "name": "James Pether Sörling",
+        "url": "https://hack23.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hack23 AB",
+        "url": "https://hack23.com"
+      },
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/Apache-2.0"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hjem",
+          "item": "https://hack23.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "European Parliament MCP Server",
+          "item": "https://hack23.com/european-parliament-mcp.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "European Parliament MCP Server Arkitekturdokumentasjon",
+          "item": "https://hack23.com/european-parliament-mcp-docs.html"
+        }
+      ]
+    }
+  ]
+}</script>
+
+    <link rel="alternate" hreflang="ar" href="https://hack23.com/european-parliament-mcp-docs_ar.html">
+    <link rel="alternate" hreflang="da" href="https://hack23.com/european-parliament-mcp-docs_da.html">
+    <link rel="alternate" hreflang="de" href="https://hack23.com/european-parliament-mcp-docs_de.html">
+    <link rel="alternate" hreflang="en" href="https://hack23.com/european-parliament-mcp-docs.html">
+    <link rel="alternate" hreflang="es" href="https://hack23.com/european-parliament-mcp-docs_es.html">
+    <link rel="alternate" hreflang="fi" href="https://hack23.com/european-parliament-mcp-docs_fi.html">
+    <link rel="alternate" hreflang="fr" href="https://hack23.com/european-parliament-mcp-docs_fr.html">
+    <link rel="alternate" hreflang="he" href="https://hack23.com/european-parliament-mcp-docs_he.html">
+    <link rel="alternate" hreflang="ja" href="https://hack23.com/european-parliament-mcp-docs_ja.html">
+    <link rel="alternate" hreflang="ko" href="https://hack23.com/european-parliament-mcp-docs_ko.html">
+    <link rel="alternate" hreflang="nl" href="https://hack23.com/european-parliament-mcp-docs_nl.html">
+    <link rel="alternate" hreflang="no" href="https://hack23.com/european-parliament-mcp-docs_no.html">
+    <link rel="alternate" hreflang="nb" href="https://hack23.com/european-parliament-mcp-docs_no.html">
+    <link rel="alternate" hreflang="sv" href="https://hack23.com/european-parliament-mcp-docs_sv.html">
+    <link rel="alternate" hreflang="zh" href="https://hack23.com/european-parliament-mcp-docs_zh.html">
+    <link rel="alternate" hreflang="x-default" href="https://hack23.com/european-parliament-mcp-docs.html">
+  </head>
+  <body>
+  <!-- Brødsmulesti-navigasjon -->
+  <nav aria-label="Brødsmulesti">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index_he.html">Hjem</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="european-parliament-mcp_he.html">European Parliament MCP Server</a>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        European Parliament MCP Server Arkitekturdokumentasjon
+      </li>
+    </ol>
+  </nav>
+
+    <header>
+      <div class="logo-container">
+        <span style="font-size: 4rem;" role="img" aria-label="European Parliament MCP Server">🇪🇺</span>
+      </div>
+      <h1>
+        European Parliament MCP Server Dokumentasjon
+        <span class="app-version">siste</span>
+      </h1>
+      <p>
+        Omfattende arkitektur- og ISMS-dokumentasjon for European Parliament Model Context Protocol (MCP) Server.
+      </p>
+      <div class="badges">
+        <a href="https://github.com/Hack23/European-Parliament-MCP-Server/releases" title="GitHub-utgivelse">
+          <img src="https://img.shields.io/github/v/release/Hack23/European-Parliament-MCP-Server" alt="GitHub-utgivelse" />
+        </a>
+        <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/LICENSE" title="Lisens">
+          <img src="https://img.shields.io/github/license/Hack23/European-Parliament-MCP-Server.svg" alt="Lisens" />
+        </a>
+        <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" title="OpenSSF Scorecard">
+          <img src="https://api.securityscorecards.dev/projects/github.com/Hack23/European-Parliament-MCP-Server/badge" alt="OpenSSF Scorecard" />
+        </a>
+        <a href="https://github.com/Hack23/European-Parliament-MCP-Server/attestations" title="SLSA Nivå 3">
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA 3" />
+        </a>
+        <a href="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/release.yml" title="Distribusjonsstatus">
+          <img src="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/release.yml/badge.svg" alt="Verifiser &amp; Utgi" />
+        </a>
+        <a href="https://www.npmjs.com/package/european-parliament-mcp-server" title="npm-versjon">
+          <img src="https://img.shields.io/npm/v/european-parliament-mcp-server" alt="npm-versjon" />
+        </a>
+      </div>
+      <div class="app-link">
+        <a href="index_he.html" title="Gå til hjem">Hjem</a>
+        <a href="european-parliament-mcp-features_he.html" title="Vis produktfunksjoner">Produktfunksjoner</a>
+        <a href="european-parliament-mcp_he.html" title="Prosjektoversikt">Prosjektoversikt</a>
+        <a href="https://github.com/Hack23/European-Parliament-MCP-Server" class="btn" title="Vis GitHub-repositorium">GitHub-repositorium</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview">
+        <h2>Prosjektoversikt</h2>
+        <p>
+          European Parliament MCP Server er en TypeScript/Node.js implementasjon av Model Context Protocol (MCP) designet for å gi KI-assistenter strukturert, programmatisk tilgang til åpne datasett fra Europaparlamentet. Tjeneren kobler til den offisielle Europaparlamentets åpne data-API og eksponerer 62 spesialbygde verktøy for spørring av MEP-er, plenumsmøter, stemmeregistre, komiteer og parlamentariske spørsmål.
+        </p>
+        <p>
+          Prosjektet oppnår <strong>SLSA Nivå 3</strong> forsyningskjedesikkerhet, opprettholder <strong>80%+ testdekning</strong> med 1130+ enhetstester og 71 E2E-tester, og inkluderer omfattende ISMS-dokumentasjon i samsvar med ISO 27001:2022, NIST CSF 2.0, CIS Controls v8.1 og GDPR.
+        </p>
+        
+        <div class="badges" style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1.5rem 0;">
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml" target="_blank" rel="noopener"><img src="https://github.com/Hack23/European-Parliament-MCP-Server/actions/workflows/codeql.yml/badge.svg" alt="CodeQL Sikkerhet" width="90" height="20" loading="lazy" decoding="async"></a>
+          <a href="https://scorecard.dev/viewer/?uri=github.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://img.shields.io/ossf-scorecard/github.com/Hack23/European-Parliament-MCP-Server?label=openssf" alt="OpenSSF Scorecard" width="100" height="20" loading="lazy" decoding="async"></a>
+          <img src="https://slsa.dev/images/gh-badge-level3.svg" alt="SLSA Nivå 3" width="80" height="20" loading="lazy" decoding="async">
+          <a href="https://www.npmjs.com/package/european-parliament-mcp-server" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/european-parliament-mcp-server" alt="npm-versjon" width="100" height="20" loading="lazy" decoding="async"></a>
+          <a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki" width="80" height="20" loading="lazy" decoding="async"></a>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1rem 0;">
+          <a href="https://hack23.github.io/European-Parliament-MCP-Server/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-green); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📖 TypeDoc API</a>
+          <a href="https://hack23.github.io/European-Parliament-MCP-Server/coverage/lcov-report/" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-primary); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📈 Dekning</a>
+          <a href="https://deepwiki.com/Hack23/European-Parliament-MCP-Server" target="_blank" rel="noopener" style="padding: 0.5rem 1rem; background: var(--accent-purple); color: white; border-radius: 4px; text-decoration: none; font-size: 0.9rem;">📚 DeepWiki</a>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Nøkkelfunksjoner</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🔌 MCP-protokoll</h3>
+            <p>Full Model Context Protocol implementasjon med 62 spesialiserte verktøy for tilgang til EU-parlamentsdata.</p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🇪🇺 EU-parlamentsdata</h3>
+            <p>Tilgang til MEP-er, plenumsmøter, stemmeregistre, komiteer, dokumenter og parlamentariske spørsmål.</p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🛡️ SLSA Nivå 3</h3>
+            <p>Forsyningskjedesikkerhet med byggeprovenansattestater og OpenSSF Scorecard validering.</p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>📘 TypeScript</h3>
+            <p>Streng TypeScript med Zod-skjemavalidering for alle innganger og API-svar.</p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🧪 Testdekning</h3>
+            <p>1130+ enhetstester og 71 E2E-tester som opprettholder 80%+ kodedekning.</p>
+          </div>
+          <div class="card">
+            <div class="scanner-effect"></div>
+            <h3>🔒 ISMS-samsvar</h3>
+            <p>ISO 27001:2022, NIST CSF 2.0, CIS Controls v8.1 og GDPR kompatibel med fullstendig dokumentasjon.</p>
+          </div>
+        </div>
+      </section>
+
+      <h2 id="diagrams">Arkitektur og dokumentasjon</h2>
+      <p>
+        Utforsk fullstendig arkitektur- og teknisk dokumentasjon for European Parliament MCP Server.
+      </p>
+
+      <div class="cards">
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Nåværende arkitektur</h3>
+          <p>C4-modell som viser gjeldende systemcontainere, komponenter og dynamikk i European Parliament MCP Server.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/ARCHITECTURE.md" title="Vis nåværende arkitektur">Vis arkitektur</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ Fremtidig arkitektur</h3>
+          <p>Visjon for fremtidig systemutvikling og kontekstbevisst EU-parlamentsdataplattformarkitektur.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_ARCHITECTURE.md" title="Vis fremtidig arkitektur">Vis fremtidig arkitektur</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Tilstandsdiagrammer</h3>
+          <p>MCP-verktøyutførelse og datatilgangstilstandsoverganger for gjeldende systemimplementasjon.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/STATEDIAGRAM.md" title="Vis tilstandsdiagrammer">Vis tilstandsdiagrammer</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Fremtidige tilstandsdiagrammer</h3>
+          <p>Kontekstbevisste og adaptive tilstandsoverganger for fremtidige plattformversjoner.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_STATEDIAGRAM.md" title="Vis fremtidige tilstandsdiagrammer">Vis fremtidige tilstander</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Prosessflytdiagrammer</h3>
+          <p>MCP-forespørselshåndtering og EU-parlamentsdatabehandlingsarbeidsflyter for gjeldende implementasjon.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FLOWCHART.md" title="Vis prosessflytdiagrammer">Vis flytdiagrammer</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔄 Fremtidige flytdiagrammer</h3>
+          <p>KI-forbedrede og kontekstbevisste arbeidsflyter planlagt for fremtidige utgivelser.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_FLOWCHART.md" title="Vis fremtidige flytdiagrammer">Vis fremtidige flyter</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Sikkerhetsarkitektur</h3>
+          <p>Omfattende sikkerhetsarkitekturdesign og implementeringsmønstre for MCP-tjenerplattformen.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/SECURITY_ARCHITECTURE.md" title="Vis sikkerhetsarkitektur">Vis sikkerhetsarkitektur</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🔐 Fremtidig sikkerhetsarkitektur</h3>
+          <p>Avansert sikkerhetsarkitekturvision som inkorporerer KI-forbedrede sikkerhetsfunksjoner for fremtidige versjoner.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_SECURITY_ARCHITECTURE.md" title="Vis fremtidig sikkerhetsarkitektur">Vis fremtidig sikkerhetsarkitektur</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 SWOT-analyse</h3>
+          <p>Strategiske styrker, svakheter, muligheter og trusler for gjeldende plattform og markedsposisjonering.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/SWOT.md" title="Vis SWOT-analyse">Vis SWOT-analyse</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>💼 Fremtidig SWOT</h3>
+          <p>Strategisk analyse av fremtidig EU-parlamentsdataplattformsposisjonering og markedsmuligheter.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_SWOT.md" title="Vis fremtidig SWOT-analyse">Vis fremtidig SWOT</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 CI/CD-arbeidsflyter</h3>
+          <p>Bygg-, test- og distribusjonsautomasjon for gjeldende applikasjonsarkitektur inkludert SLSA Nivå 3 byggeprovanans.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/.github/WORKFLOWS.md" title="Vis CI/CD-arbeidsflyter">Vis CI/CD-arbeidsflyter</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>🔧 Fremtidige arbeidsflyter</h3>
+          <p>Avansert CI/CD med sikkerhetsautomasjon og forbedrede kvalitetssperrer planlagt for fremtidige utgivelser.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FUTURE_WORKFLOWS.md" title="Vis fremtidige arbeidsflyter">Vis fremtidige arbeidsflyter</a>
+        </div>
+
+        <div class="card availability-card">
+          <div class="scanner-effect"></div>
+          <h3>🧠 Tankekart</h3>
+          <p>Konseptuelle tankekart over MCP-tjener systemrelasjoner og kapabilitetslandskap.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/MINDMAP.md" title="Vis tankekart">Vis tankekart</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Datamodell</h3>
+          <p>Detaljerte datastrukturer, enheter og relasjoner brukt i MCP-tjenerens API-arkitektur.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/DATA_MODEL.md" title="Vis datamodell">Vis datamodell</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>⚠️ Trusselmodell</h3>
+          <p>STRIDE-trusselanalyse med risikokvantifisering og angrepstrær for MCP-tjenerplattformen.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/THREAT_MODEL.md" title="Vis trusselmodell">Vis trusselmodell</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>🏛️ CRA-samsvarsvurdering</h3>
+          <p>Fullstendig Cyber Resilience Act (CRA) samsvarsvurdering som åpen kildekode-programvare.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/CRA-ASSESSMENT.md" title="Vis CRA-vurdering">Vis CRA-vurdering</a>
+        </div>
+
+        <div class="card integrity-card">
+          <div class="scanner-effect"></div>
+          <h3>📋 Forretningskontinuitetsplan</h3>
+          <p>BCP-rammeverk og katastrofegjenopprettingsstrategier for å sikre MCP-tjenerens motstandsdyktighet og tjenestetilgjengelighet.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/BCPPlan.md" title="Vis forretningskontinuitetsplan">Vis BCP</a>
+        </div>
+
+        <div class="card confidentiality-card">
+          <div class="scanner-effect"></div>
+          <h3>📊 Finansiell sikkerhetsplan</h3>
+          <p>Finansiell sikkerhets- og bærekraftplanlegging for åpen kildekode MCP-tjenerprosjektet.</p>
+          <a href="https://github.com/Hack23/European-Parliament-MCP-Server/blob/main/FinancialSecurityPlan.md" title="Vis finansiell sikkerhetsplan">Vis finansiell sikkerhetsplan</a>
+        </div>
+      </div>
+    </main>
+    
+    <footer role="contentinfo" aria-label="Nettstedets bunntekst">
+      <div class="footer-container">
+        
+        <div class="footer-column">
+          <h2>Hack23 AB</h2>
+          <p>Cybersikkerhetsrådgivning<br>
+          Göteborg, Sverige | Fjernarbeid</p>
+          <p>Org.nr: 5595347807</p>
+          <p><a href="https://www.linkedin.com/company/hack23/" rel="noopener noreferrer" target="_blank">LinkedIn-firmaside</a></p>
+          <p><a href="https://www.linkedin.com/in/jamessorling/" rel="noopener noreferrer" target="_blank">Adm. direktør: James Pether Sörling</a></p>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Tjenester</h3>
+          <ul>
+            <li><a href="services_he.html">Sikkerhetskonsultasjon</a></li>
+            <li><a href="services_he.html">Sikkerhetsarkitektur</a></li>
+            <li><a href="services_he.html">Skysikkerhet</a></li>
+            <li><a href="services_he.html">DevSecOps-integrering</a></li>
+            <li><a href="services_he.html">Samsvar og ISMS</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Produkter</h3>
+          <ul>
+            <li><a href="black-trigram-features_he.html">Black Trigram</a></li>
+            <li><a href="cia-features_he.html">Citizen Intelligence Agency</a></li>
+            <li><a href="cia-compliance-manager-features_he.html">CIA Compliance Manager</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Ressurser</h3>
+          <ul>
+            <li><a href="blog_he.html">Sikkerhetsblogg</a></li>
+            <li><a href="discordian-cybersecurity.html">🍎 Discordian-blogg</a></li>
+            <li><a href="cia-triad-faq.html">CIA Triad FAQ</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC" rel="noopener noreferrer" target="_blank">Offentlig ISMS</a></li>
+            <li><a href="sitemap.html">Nettstedskart</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Selskap</h3>
+          <ul>
+            <li><a href="why-hack23_he.html">Om Hack23</a></li>
+            <li><a href="https://github.com/Hack23/ISMS-PUBLIC/blob/main/Information_Security_Policy.md" rel="noopener noreferrer" target="_blank">Sikkerhetspolicy</a></li>
+            <li><a href="SECURITY.md">Rapporter sikkerhetsproblem</a></li>
+            <li><a href="https://github.com/Hack23" rel="noopener noreferrer" target="_blank">GitHub-organisasjon</a></li>
+            <li><a href="accessibility-statement_he.html">Tilgjengelighet</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2008-2026 Hack23 AB. Alle rettigheter forbeholdt.</p>
+        <p>
+          <a href="european-parliament-mcp-docs.html" lang="en">English</a> | 
+          <a href="european-parliament-mcp-docs_sv.html" lang="sv">Svenska</a> | 
+          <a href="european-parliament-mcp-docs_de.html" lang="de">Deutsch</a> | 
+          <a href="european-parliament-mcp-docs_fr.html" lang="fr">Français</a> | 
+          <a href="european-parliament-mcp-docs_es.html" lang="es">Español</a> | 
+          <a href="european-parliament-mcp-docs_nl.html" lang="nl">Nederlands</a> | 
+          <a href="european-parliament-mcp-docs_da.html" lang="da">Dansk</a> | 
+          <a href="european-parliament-mcp-docs_no.html" lang="no">Norsk</a> | 
+          <a href="european-parliament-mcp-docs_fi.html" lang="fi">Suomi</a> | 
+          <a href="european-parliament-mcp-docs_ja.html" lang="ja">日本語</a> | 
+          <a href="european-parliament-mcp-docs_ko.html" lang="ko">한국어</a> | 
+          <a href="european-parliament-mcp-docs_zh.html" lang="zh">中文</a> | 
+          <a href="european-parliament-mcp-docs_ar.html" lang="ar">العربية</a> | 
+          <a href="european-parliament-mcp-docs_he.html" lang="he" aria-current="page">עברית</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
