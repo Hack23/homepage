@@ -2264,6 +2264,10 @@
             if (navMenu) {
               navMenu.classList.remove('open');
               navMenu.setAttribute('aria-hidden', 'true');
+              // Restore tabindex="-1" on menu links so they aren't tabbable while hidden
+              navMenu.querySelectorAll('a').forEach(link => {
+                link.setAttribute('tabindex', '-1');
+              });
             }
             if (navToggle) {
               navToggle.setAttribute('aria-expanded', 'false');
