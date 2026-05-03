@@ -130,6 +130,7 @@ jobs:
           # Uses --size-only: only uploads files whose size differs from S3
           # This prevents re-uploading ~2000+ unchanged assets on every deploy
           # No --delete: preserves legacy asset URLs on S3 that may no longer be in repo
+          # Content-Type: auto-detected by AWS CLI from file extensions (js→application/javascript, css→text/css, etc.)
           echo "📦 Pass 1/2: Syncing static assets (JS, CSS, images, fonts, PDFs, etc.)..."
           aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
             "${EXCLUDES[@]}" \
