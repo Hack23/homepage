@@ -95,10 +95,11 @@ jobs:
       - name: Minify Action
         uses: dra1ex/minify-action@3c54a82e092a78c827659385d1be715126f13410 # v1.0.3
       - name: Deploy to S3 with proper cache headers
+        shell: bash
         run: |
           echo "🚀 Starting cost-optimized S3 deployment..."
           echo "ℹ️  Using --size-only to skip unchanged files (avoids full re-upload on every deploy)"
-          echo "ℹ️  Reduced from 6 sync passes to 2 (minimizes ListObjects + PutObject API calls)"
+          echo "ℹ️  3 sync passes: static assets (1yr), metadata (1day), HTML (1hr)"
           
           # Common excludes: files that should never be deployed to S3
           # Build/dev tooling, documentation source, scripts, config files
@@ -126,23 +127,43 @@ jobs:
             --exclude ".project"
           )
           
-          # Pass 1: Sync all non-HTML files (static assets) with immutable long cache
+          # Pass 1: Sync static assets (JS, CSS, images, fonts, PDFs, etc.) with immutable long cache (1 year)
+          # These are fingerprinted or rarely-changing binary/compiled assets.
           # Uses --size-only: only uploads files whose size differs from S3
-          # This prevents re-uploading ~2000+ unchanged assets on every deploy
+          # (git checkout sets all mtimes to "now", so timestamp comparison would re-upload everything)
           # No --delete: preserves legacy asset URLs on S3 that may no longer be in repo
           # Content-Type: auto-detected by AWS CLI from file extensions (js→application/javascript, css→text/css, etc.)
-          echo "📦 Pass 1/2: Syncing static assets (JS, CSS, images, fonts, PDFs, etc.)..."
+          echo "📦 Pass 1/3: Syncing static assets (JS, CSS, images, fonts, PDFs, etc.)..."
           aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
             "${EXCLUDES[@]}" \
             --exclude "*.html" \
+            --exclude "*.xml" \
+            --exclude "*.txt" \
+            --exclude "*.json" \
+            --exclude ".well-known/*" \
             --size-only \
             --no-progress \
             --cache-control "public, max-age=31536000, immutable"
           
-          # Pass 2: Sync HTML files with short cache (1 hour)
+          # Pass 2: Sync metadata files (xml, json, txt, .well-known) with medium cache (1 day)
+          # These include sitemap.xml, robots.txt, security.txt, mta-sts.txt, etc. that update frequently
+          # and must NOT have immutable/1-year cache headers.
+          echo "📋 Pass 2/3: Syncing metadata files (xml, json, txt, .well-known)..."
+          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
+            "${EXCLUDES[@]}" \
+            --exclude "*" \
+            --include "*.xml" \
+            --include "*.txt" \
+            --include "*.json" \
+            --include ".well-known/*" \
+            --size-only \
+            --no-progress \
+            --cache-control "public, max-age=86400, must-revalidate"
+          
+          # Pass 3: Sync HTML files with short cache (1 hour)
           # Uses --size-only: HTML files only re-upload when content actually changes
           # No --delete: preserves legacy HTML pages on S3 for URL permanence
-          echo "📄 Pass 2/2: Syncing HTML files..."
+          echo "📄 Pass 3/3: Syncing HTML files..."
           aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/ \
             "${EXCLUDES[@]}" \
             --exclude "*" \
@@ -152,7 +173,7 @@ jobs:
             --cache-control "public, max-age=3600, must-revalidate" \
             --content-type "text/html; charset=utf-8"
           
-          echo "✅ S3 deployment completed (2 sync passes, size-only comparison)"
+          echo "✅ S3 deployment completed (3 sync passes, size-only comparison)"
           echo "ℹ️  Legacy URLs preserved (no --delete flag)"
           echo "ℹ️  Only size-changed files uploaded (minimal CloudTrail events)"
 
