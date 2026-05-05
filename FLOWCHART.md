@@ -55,7 +55,7 @@ This document provides comprehensive flowcharts for the Hack23 homepage, documen
 %%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Start([📝 Code Push to Main]) --> Checkout[Checkout Repository]
-    Checkout --> Setup[Setup Node.js 24]
+    Checkout --> Setup[Setup Node.js 26]
     Setup --> Validate{Validate Content}
 
     Validate --> HTMLHint[🔍 HTMLHint Linting]
@@ -92,7 +92,7 @@ flowchart TD
 flowchart TD
     PR([🔀 Pull Request Opened]) --> Harden[🔒 Harden Runner]
     Harden --> Checkout[📥 Checkout Code]
-    Checkout --> SetupNode[⚙️ Setup Node.js 24]
+    Checkout --> SetupNode[⚙️ Setup Node.js 26]
 
     SetupNode --> ParallelChecks{Parallel Checks}
 
@@ -224,7 +224,7 @@ flowchart LR
 %%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 flowchart TD
     Tag([🏷️ Tag Push / Manual]) --> Checkout[📥 Checkout]
-    Checkout --> Setup[⚙️ Setup Node.js 24]
+    Checkout --> Setup[⚙️ Setup Node.js 26]
     Setup --> Minify[📦 Minify Assets]
     Minify --> Attest[🔏 Generate SLSA Attestation]
     Attest --> Release[📦 Create GitHub Release]

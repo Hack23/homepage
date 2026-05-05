@@ -89,7 +89,7 @@ This is a static HTML/CSS website with automated CI/CD pipelines and comprehensi
 
 ### 📋 Technical Requirements
 
-- **Node.js:** Version 24 (LTS)
+- **Node.js:** Version 26 (Current)
 - **Browser Testing:** Chrome/Chromium (for Lighthouse and accessibility audits)
 - **CI/CD:** GitHub Actions with automated deployments
 
