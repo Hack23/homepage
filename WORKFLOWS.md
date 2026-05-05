@@ -267,7 +267,7 @@ Three-layer caching approach (see [WORKFLOW_CACHING_GUIDE.md](WORKFLOW_CACHING_G
 %%{init: {"theme": "base", "themeVariables": {"primaryColor": "#2196F3", "primaryTextColor": "#1a1a2e", "lineColor": "#455A64", "secondaryColor": "#e8f5e9", "tertiaryColor": "#fff8e1", "primaryBorderColor": "#1565C0"}}}%%
 graph TB
     subgraph "Job 1: HTML Validation"
-        A1[Checkout] --> A2[Setup Node.js 24]
+        A1[Checkout] --> A2[Setup Node.js 26]
         A2 --> A3[Cache NPM]
         A3 --> A4[Install HTMLHint]
         A4 --> A5[Validate 74 HTML Files]
@@ -275,7 +275,7 @@ graph TB
     end
     
     subgraph "Job 2: Link Checking"
-        B1[Checkout] --> B2[Setup Node.js 24]
+        B1[Checkout] --> B2[Setup Node.js 26]
         B2 --> B3[Cache NPM & APT]
         B3 --> B4[Install Linkinator v6]
         B4 --> B5[Install jq]

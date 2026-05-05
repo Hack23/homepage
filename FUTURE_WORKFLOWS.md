@@ -153,7 +153,7 @@ Isolate build environment from external dependencies:
       --network none \
       --volume $PWD:/workspace \
       --workdir /workspace \
-      node:24-alpine \
+      node:26-alpine \
       sh -c "npm ci --offline && npm run build"
 ```
 
