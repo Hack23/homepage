@@ -7017,3 +7017,54 @@ html[lang="he"] {
   white-space: nowrap;
   border: 0;
 }
+
+/* CJK Text Handling - Enhanced support for Japanese, Chinese, Korean */
+html[lang="ja"],
+html[lang="zh"],
+html[lang="ko"] {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+html[lang="ja"] p,
+html[lang="zh"] p,
+html[lang="ko"] p,
+html[lang="ja"] li,
+html[lang="zh"] li,
+html[lang="ko"] li,
+html[lang="ja"] h1,
+html[lang="zh"] h1,
+html[lang="ko"] h1,
+html[lang="ja"] h2,
+html[lang="zh"] h2,
+html[lang="ko"] h2,
+html[lang="ja"] h3,
+html[lang="zh"] h3,
+html[lang="ko"] h3 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Container width safety for CJK content */
+@media (max-width: 480px) {
+  html[lang="ja"],
+  html[lang="zh"],
+  html[lang="ko"] {
+    font-size: 14px;
+  }
+  
+  html[lang="ja"] main,
+  html[lang="zh"] main,
+  html[lang="ko"] main,
+  html[lang="ja"] article,
+  html[lang="zh"] article,
+  html[lang="ko"] article {
+    padding: 0.5rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
