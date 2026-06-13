@@ -146,7 +146,7 @@ mindmap
 | Component | Current Version Source | LTS Strategy | EOL Trigger | Action Plan |
 |-----------|------------------------|--------------|-------------|-------------|
 | **Node.js** | `.github/workflows/copilot-setup-steps.yml` + `actions/setup-node@v6.4.0` | Active LTS | Active LTS goes EOL per [nodejs.org/en/about/previous-releases](https://nodejs.org/en/about/previous-releases) | Bump to next LTS within 60 days of new LTS GA; test all workflows on PR |
-| **GitHub Actions runners** | `ubuntu-latest` | GitHub-managed | GitHub deprecation notice | Track GitHub Actions changelog; pin to specific Ubuntu LTS if instability detected |
+| **GitHub Actions runners** | `ubuntu-26.04` | GitHub-managed | GitHub deprecation notice | Track GitHub Actions changelog; upgrade to next Ubuntu LTS when released |
 | **StepSecurity Harden Runner** | SHA-pinned (`v2.19.0` as of 2026-04) | Latest stable | Project EOL | Dependabot tracks; review monthly |
 | **OWASP ZAP (`ghcr.io/zaproxy/zaproxy:stable`)** | `:stable` tag | Stable channel | OWASP ZAP project EOL | Migrate to successor scanner if announced |
 | **Lighthouse CI** | `treosh/lighthouse-ci-action` | Latest stable | Action archived | Pin to last working SHA; evaluate alternatives (e.g., `chrome-launcher` direct) |
