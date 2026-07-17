@@ -1,7 +1,7 @@
 # Release v1.0.30
 
-**Release Date:** 2026-07-17 15:05:18 UTC
-**Commit:** `8aa5c1f0b16a29a4edb5a574a8acb553a2d3255b`
+**Release Date:** 2026-07-17 15:21:53 UTC
+**Commit:** `45dd28b7b89f21ee389f9046f76174a24f2ed190`
 **Pre-release:** false
 
 ## Documentation Generated
