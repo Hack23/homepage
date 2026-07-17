@@ -16,8 +16,6 @@ jobs:
     permissions:
       id-token: write    # Required for SLSA provenance and SBOM attestation
       issues: write       # Updated to write for release-drafter
-      security-events: write  # Needed for SBOM attestation
-      statuses: write    # Required for commit statuses updated by actions
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@bf7454d06d71f1098171f2acdf0cd4708d7b5920 # v2.20.0

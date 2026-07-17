@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-26.04
     # Only prepare job needs write permissions for commit and tagging
     permissions:
-      contents: write # Required for git auto-commit
+      contents: read # Required for checkout; GitHub App token performs commits and tags
     outputs:
       version: ${{ steps.get-version.outputs.version }}
       is_prerelease: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.prerelease) || contains(steps.get-version.outputs.version, '-') }}
