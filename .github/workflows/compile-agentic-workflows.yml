@@ -7,14 +7,12 @@ name: Compile Agentic Workflows
 on:
   workflow_dispatch:
 
-permissions:
-  contents: write
-  actions: write
-
 jobs:
   compile:
     name: Compile Agentic Workflows
     runs-on: ubuntu-26.04
+    permissions:
+      contents: write
 
     steps:
       - name: Harden Runner
