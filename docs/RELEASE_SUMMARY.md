@@ -1,7 +1,7 @@
-# Release v1.0.40
+# Release v1.0.41
 
-**Release Date:** 2026-08-10 20:46:05 UTC
-**Commit:** `bb7b64c9c9bea5e977594127121b34cb38803db1`
+**Release Date:** 2026-08-13 17:50:45 UTC
+**Commit:** `b193ed9817a18be0e2d9c4a9719b16db289c8df0`
 **Pre-release:** false
 
 ## Documentation Generated
@@ -25,4 +25,4 @@ This release includes:
 - 📦 SBOM attestation
 - ✅ SLSA build verification
 
-View all artifacts at: https://github.com/Hack23/homepage/releases/tag/v1.0.40
+View all artifacts at: https://github.com/Hack23/homepage/releases/tag/v1.0.41
