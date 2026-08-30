@@ -27,6 +27,11 @@ jobs:
             registry.npmjs.org:443
             deb.debian.org:80
             nodejs.org:443
+            # StepSecurity Harden-Runner agent endpoints (agent comms, telemetry,
+            # runtime event uploads) so the agent functions under egress block mode.
+            agent.api.stepsecurity.io:443
+            prod.app-api.stepsecurity.io:443
+            customer-transient-data-277233109775.s3.us-west-2.amazonaws.com:443
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       
       - name: Setup Node.js
