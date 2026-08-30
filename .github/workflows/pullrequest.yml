@@ -27,6 +27,17 @@ jobs:
             registry.npmjs.org:443
             deb.debian.org:80
             nodejs.org:443
+            # Container registries for Docker-based actions (e.g. minify-action).
+            ghcr.io:443
+            pkg-containers.githubusercontent.com:443
+            auth.docker.io:443
+            registry-1.docker.io:443
+            production.cloudflare.docker.com:443
+            # StepSecurity Harden-Runner agent endpoints (agent comms, telemetry,
+            # runtime event uploads) so the agent functions under egress block mode.
+            agent.api.stepsecurity.io:443
+            prod.app-api.stepsecurity.io:443
+            customer-transient-data-277233109775.s3.us-west-2.amazonaws.com:443
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       
       - name: Setup Node.js
@@ -111,7 +122,11 @@ jobs:
           path: internal-links-report.json
           retention-days: 30
           
-      # Test Minify Action - Verify minification works correctly
+      # Test Minify Action - Verify minification works correctly.
+      # This is a Docker container action; under harden-runner egress block mode
+      # it needs the container registry endpoints (ghcr.io, Docker Hub) allowed
+      # plus the StepSecurity agent endpoints (added above) so the container is
+      # not starved of network and does not hang.
       - name: Test Minify Action
         uses: dra1ex/minify-action@3c54a82e092a78c827659385d1be715126f13410 # v1.0.3
         
