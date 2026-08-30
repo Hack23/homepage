@@ -27,6 +27,12 @@ jobs:
             registry.npmjs.org:443
             deb.debian.org:80
             nodejs.org:443
+            # Container registries for Docker-based actions (e.g. minify-action).
+            ghcr.io:443
+            pkg-containers.githubusercontent.com:443
+            auth.docker.io:443
+            registry-1.docker.io:443
+            production.cloudflare.docker.com:443
             # StepSecurity Harden-Runner agent endpoints (agent comms, telemetry,
             # runtime event uploads) so the agent functions under egress block mode.
             agent.api.stepsecurity.io:443
@@ -116,16 +122,13 @@ jobs:
           path: internal-links-report.json
           retention-days: 30
           
-      # Minify - Verify minification works correctly using local tooling.
-      # The previous dra1ex/minify-action (Docker container action) hung under
-      # step-security/harden-runner v2.21.0 egress blocking, causing the job to
-      # time out. Local minification via html-minifier-terser/clean-css is far
-      # faster (~15s vs ~15min) and performs no outbound network calls.
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Minify HTML and CSS
-        run: npm run minify
+      # Test Minify Action - Verify minification works correctly.
+      # This is a Docker container action; under harden-runner egress block mode
+      # it needs the container registry endpoints (ghcr.io, Docker Hub) allowed
+      # plus the StepSecurity agent endpoints (added above) so the container is
+      # not starved of network and does not hang.
+      - name: Test Minify Action
+        uses: dra1ex/minify-action@3c54a82e092a78c827659385d1be715126f13410 # v1.0.3
         
       # Verify minified files exist and are smaller
       - name: Verify Minification Results
