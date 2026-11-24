@@ -54,7 +54,7 @@ The central idea has remained consistent throughout the project's evolution:
 
 The following timeline distinguishes the project's actual origin from the date of the surviving engineering documentation.
 
-```
+```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#2196F3","primaryTextColor":"#FFFFFF","primaryBorderColor":"#1565C0","lineColor":"#455A64","secondaryColor":"#4CAF50","tertiaryColor":"#9E9E9E","fontFamily":"Arial"}}}%%
 flowchart TD
     A["🏛️ 2008<br/>First CIA publication<br/>Political transparency"] 
@@ -226,7 +226,7 @@ These figures represent published historical coverage and documented analytical 
 
 ### 🧩 Analytical architecture
 
-```
+```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#2196F3","primaryTextColor":"#FFFFFF","primaryBorderColor":"#1565C0","lineColor":"#455A64","fontFamily":"Arial"}}}%%
 flowchart TD
     SOURCES["🌍 Public information sources"]
@@ -312,7 +312,7 @@ This represents an architectural shift: political intelligence is no longer limi
 
 ### 🔗 Ecosystem relationship
 
-```
+```mermaid
 %%{init: {"theme":"base","themeVariables":{"primaryColor":"#2196F3","primaryTextColor":"#FFFFFF","primaryBorderColor":"#1565C0","lineColor":"#455A64","fontFamily":"Arial"}}}%%
 flowchart TD
     CIA["🏛️ Citizen Intelligence Agency<br/>Political intelligence foundation"]
