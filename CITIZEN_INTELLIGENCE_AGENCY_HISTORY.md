@@ -1,20 +1,24 @@
-&#x20;\<p align="center">\
-&#x20; \<img src="[https://hack23.com/icon-192.png](https://hack23.com/icon-192.png)" alt="Hack23 Logo" width="144" height="144">\
-\</p>
+ <p align="center">
+  <img src="https://hack23.com/icon-192.png" alt="Hack23 Logo" width="144" height="144">
+</p>
 
-\<h1 align="center">🏛️ Citizen Intelligence Agency\</h1>
+<h1 align="center">🏛️ Citizen Intelligence Agency</h1>
 
-\<p align="center">\
-&#x20; \<strong>🔍 18 Years of Open-Source Political Intelligence\</strong>\<br>\
-&#x20; \<em>🗳️ From Java-based parliamentary transparency to AI-powered democratic intelligence\</em>\
-\</p>
+<p align="center">
+  <strong>🔍 18 Years of Open-Source Political Intelligence</strong><br>
+  <em>🗳️ From Java-based parliamentary transparency to AI-powered democratic intelligence</em>
+</p>
 
-\<p align="center">\
-&#x20; \<a href="[https://github.com/Hack23/cia](https://github.com/Hack23/cia)">\<img src="[https://img.shields.io/badge/Project-Citizen_Intelligence_Agency-0A66C2?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/Project-Citizen_Intelligence_Agency-0A66C2?style=for-the-badge\&logo=github\&logoColor=white)" alt="Citizen Intelligence Agency"/>\</a>\
-&#x20; \<a href="[https://github.com/Hack23](https://github.com/Hack23)">\<img src="[https://img.shields.io/badge/Organization-Hack23-555?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/Organization-Hack23-555?style=for-the-badge\&logo=github\&logoColor=white)" alt="Hack23"/>\</a>\
-&#x20; \<a href="[https://img.shields.io/badge/Origin-2008-success?style=for-the-badge](https://img.shields.io/badge/Origin-2008-success?style=for-the-badge)">\<img src="[https://img.shields.io/badge/Origin-2008-success?style=for-the-badge](https://img.shields.io/badge/Origin-2008-success?style=for-the-badge)" alt="Origin 2008"/>\</a>\
-&#x20; \<a href="[https://img.shields.io/badge/Repositories-Archived-9E9E9E?style=for-the-badge](https://img.shields.io/badge/Repositories-Archived-9E9E9E?style=for-the-badge)">\<img src="[https://img.shields.io/badge/Repositories-Archived-9E9E9E?style=for-the-badge](https://img.shields.io/badge/Repositories-Archived-9E9E9E?style=for-the-badge)" alt="Repositories archived"/>\</a>\
-\</p>
+<p align="center">
+  <a href="https://github.com/Hack23/cia">
+    <img src="https://img.shields.io/badge/Project-Citizen_Intelligence_Agency-0A66C2?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Citizen Intelligence Agency">
+  </a>
+  <a href="https://github.com/Hack23">
+    <img src="https://img.shields.io/badge/Organization-Hack23-555?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Hack23">
+  </a>
+  <img src="https://img.shields.io/badge/Origin-2008-success?style=for-the-badge" alt="Origin 2008">
+  <img src="https://img.shields.io/badge/Repositories-Archived-9E9E9E?style=for-the-badge" alt="Repositories archived">
+</p>
 
 **📋 Project:** Citizen Intelligence Agency (CIA)\
 **🏢 Organization:** Hack23 AB\
